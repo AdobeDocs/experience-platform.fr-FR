@@ -1,6 +1,6 @@
 ---
 source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # Contribution
@@ -15,7 +15,7 @@ Ce projet respecte le [Code de conduite](code-of-conduct.md) Adobe. En participa
 
 ## Guide du contributeur pour la documentation
 
-See the [Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consultez le [Guide du contributeur](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
 
 ## Une question ?
 
@@ -40,4 +40,4 @@ Nous apprécions les contributions de notre communauté ! Si vous souhaitez all
 
 ## Problèmes de sécurité
 
-Les problèmes de sécurité ne doivent pas être signalés dans cet analyseur d’anomalies. Soulevez plutôt [un problème auprès de nos experts en sécurité.](https://helpx.adobe.com/security/alertus.html)
+Les problèmes de sécurité ne doivent pas être signalés dans cet analyseur d’anomalies. Soulevez plutôt [un problème auprès de nos experts en sécurité.](https://helpx.adobe.com/fr/security/alertus.html)
