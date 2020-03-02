@@ -1,28 +1,28 @@
 ---
-title: Confidentialité dans le profil de données client en temps réel
-seo-title: Confidentialité dans le profil de données client en temps réel
-description: Le profil de données client en temps réel vous permet de rationaliser le processus de conformité de vos opérations de données aux règles de confidentialité.
-seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de conformité de vos opérations de données aux règles de confidentialité.
-translation-type: tm+mt
+title: Confidentialité du profil de données client en temps réel
+seo-title: Confidentialité du profil de données client en temps réel
+description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
+seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
+translation-type: ht
 source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ---
 
 
-# Confidentialité dans CDP en temps réel
+# Confidentialité dans la plateforme de données client en temps réel
 
-La plate-forme de données clientes en temps réel (CDP en temps réel) permet aux spécialistes du marketing de rassembler les données de plusieurs systèmes d’entreprise, ce qui leur permet de mieux identifier, comprendre et impliquer leurs clients. Adobe considère la confidentialité des données des consommateurs comme un principe fondamental de la conception et fournit divers contrôles pour aider les spécialistes du marketing à gérer la confidentialité des données de leurs clients.
+La plateforme de données client (CDP) en temps réel permet aux spécialistes marketing de rassembler des données issues de plusieurs systèmes d’entreprise, ce qui leur permet de mieux identifier, comprendre et interagir avec leurs clients. Adobe considère la confidentialité des données des clients comme un principe de conception fondamental et fournit divers contrôles pour aider les spécialistes marketing à gérer la confidentialité des données de leurs clients.
 
-La plupart des fonctionnalités CDP en temps réel sont optimisées par Adobe Experience Platform. Ce document fournit des informations sur les différentes technologies d’amélioration de la confidentialité prises en charge par CDP en temps réel, avec des liens vers la documentation de la plateforme d’expérience pour plus d’informations.
+La plupart des fonctionnalités de la plateforme CDP en temps réel fonctionnent avec Adobe Experience Platform. Ce document fournit des informations sur les différentes technologies d’amélioration de la confidentialité prises en charge par la plateforme CDP en temps réel ainsi que des liens vers la documentation plus exhaustive d’Experience Platform.
 
-## Service de confidentialité
+## Service confidentialité
 
-Le service de confidentialité d’Adobe Experience Platform vous permet de rationaliser le processus de conformité de vos opérations de données aux règles de confidentialité, telles que le Règlement général sur la protection des données (GDPR) et la Loi sur la protection des renseignements personnels des consommateurs (CCPA) de Californie. Comme le CDP en temps réel utilise les fonctionnalités de la plateforme Experience Platform pour la collecte et le stockage des données, les demandes d’accès et de suppression pour le GDPR et le CCPA doivent être gérées dans Platform. Consultez le document d’aperçu [de](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) Privacy Service pour une présentation plus détaillée du service.
+Le service confidentialité d’Adobe Experience Platform permet de rationaliser le processus de mise en conformité de vos opérations de données aux règles de confidentialité telles que le règlement général sur la protection des données (RGPD) et la Loi sur la protection de la confidentialité des consommateurs (CCPA) de Californie. Comme la plateforme CDP en temps réel utilise les fonctionnalités d’Experience Platform pour collecter et stocker les données, les demandes d’accès et de suppression dans le cadre du RGPD et de la CCPA doivent être gérées dans Platform. Consultez le document [Présentation du service confidentialité](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md) pour une présentation plus détaillée du service.
 
-Il existe deux méthodes pour soumettre des demandes individuelles de renseignements sur les RDDC et les personnes visées par l’ACCP pour accéder aux données sur les clients et les supprimer :
+Il existe deux manières de soumettre des requêtes individuelles pour consulter ou supprimer des données de propriétaires dans le cadre du RGPD ou de la CCPA :
 
-* Utilisez l’interface utilisateur [de](https://gdprui.cloud.adobe.io/) Privacy Service pour créer et surveiller des requêtes d’accès et de suppression dans un espace de travail visuel. Consultez le didacticiel [sur l’interface utilisateur de](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) Privacy Service pour obtenir des instructions détaillées.
-* Utilisez l’API [](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) Privacy Service pour gérer les demandes d’accès et de suppression avec les appels d’API RESTful. Consultez le didacticiel [sur l’API](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) Privacy Service pour obtenir des instructions détaillées.
+* Utiliser l’[interface utilisateur du service confidentialité](https://gdprui.cloud.adobe.io/) pour créer et surveiller des requêtes d’accès et de suppression dans un espace de travail visuel. Consultez le [tutoriel sur l’interface utilisateur du service confidentialité](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) pour obtenir des instructions étape par étape.
+* Utiliser [l’API du service confidentialité](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html) pour gérer les requêtes d’accès et de suppression avec les appels d’API RESTful. Consultez le [tutoriel sur L’API du service confidentialité](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md) pour obtenir des instructions étapes par étape.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
@@ -35,4 +35,4 @@ Real-time CDP provides two types of consumer opt-out capabilities:
 
 ## Étapes suivantes
 
-Ce document présente brièvement les fonctionnalités de protection de la vie privée du CDP en temps réel. Pour plus d’informations sur les meilleures pratiques et les étapes à suivre pour envoyer des demandes d’accès/de suppression, veuillez consulter la documentation [du Service de](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html)protection de la vie privée.
+Ce document présente brièvement les fonctionnalités de gestion de la confidentialité de la plateforme CDP en temps réel. Pour des informations plus détaillées sur les bonnes pratiques et les étapes à suivre pour envoyer des requêtes d’accès/de suppression, consultez la [documentation du service confidentialité](https://www.adobe.io/apis/experiencecloud/gdpr/docs.html).
