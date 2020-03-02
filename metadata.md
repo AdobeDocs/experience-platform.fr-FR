@@ -10,7 +10,7 @@ tutorials-title: Tutoriels
 tutorials-url: https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: true
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 28afcfb4a10a661984d44a5ae9082708a4ffb311
 
 ---
@@ -22,10 +22,10 @@ Le fichier metadata.md comprend des métadonnées de niveau référentiel qui so
 
 | métadonnées | utilisation |
 |--- |--- |
-| solution-title | Utilisé comme lien dans l’en-tête d’article. |
-| solution-hub-url | Ouvre la page hub helpx. |
-| solution-icon | Affiche l’icône de la solution en regard de son titre. Pas encore mis en œuvre. |
-| getting-started-url | Lien vers la page de prise en main de helpx. |
-| tutorials-url | Lien vers des tutoriels vidéo : tutoriels helpx ou KT. |
-| mini-toc-levels | Détermine le nombre de niveaux d’en-tête qui apparaissent dans le rail de droite. La valeur par défaut est 2. |
-| git-repo | Spécifie l’emplacement du référentiel principal pour une utilisation interne. |
+| solution-title | Utilisé comme lien dans l’en-tête d’article |
+| solution-hub-url | Ouvre la page hub helpx |
+| solution-icon | Affiche l’icône de la solution en regard de son titre. Pas encore mis en œuvre |
+| getting-started-url | Lien vers la page de prise en main de helpx |
+| tutorials-url | Lien vers des tutoriels vidéo : tutoriels helpx ou KT |
+| mini-toc-levels | Détermine le nombre de niveaux d’en-tête qui apparaissent dans le rail de droite. La valeur par défaut est 2 |
+| git-repo | Spécifie l’emplacement du référentiel principal pour une utilisation interne |
