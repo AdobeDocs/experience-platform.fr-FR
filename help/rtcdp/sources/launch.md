@@ -1,83 +1,84 @@
 ---
-title: Didacticiel Mise en oeuvre des balises de site Web avec Adobe Launch
-seo-title: Mise en oeuvre de balises de site Web avec Adobe Launch
-description: Utilisation d’Adobe Launch pour implémenter des balises de site Web dans Adobe Experience Platform
-seo-description: Utilisation d’Adobe Launch pour implémenter des balises de site Web dans Adobe Experience Platform
-translation-type: tm+mt
+title: Tutoriel Mise en œuvre des balises de site web avec Adobe Launch
+seo-title: Mise en œuvre des balises de site web avec Adobe Launch
+description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
+seo-description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
+translation-type: ht
 source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
 
 ---
 
 
-# Didacticiel :Mise en oeuvre de balises de site Web avec Adobe Launch
+# Tutoriel : Mise en œuvre des balises de site web avec Adobe Launch
 
-Ce didacticiel explique comment implémenter les balises de votre site Web pour envoyer des données à Adobe Experience Platform à l’aide d’Adobe Launch.
+Ce tutoriel explique comment mettre en œuvre les balises de votre site web pour envoyer des données à Adobe Experience Platform à l’aide d’Adobe Launch.
 
 ## Conditions préalables
 
 * Le schéma et le jeu de données nécessaires sont créés dans Platform.
-* La configuration nécessaire a été déployée dans Experience Edge et possède l’ID de configuration et le domaine Edge correspondants.
-* Le CMS de l’entreprise a déjà été configuré pour fournir un objet JavaScript sur chaque page avec les données à envoyer à la plateforme.
+* La configuration requise a été déployée dans Experience Edge et possède l’ID de configuration et le domaine Edge correspondants.
+* Le CMS de l’entreprise a déjà été configuré pour fournir un objet JavaScript sur chaque page avec les données à envoyer à Platform.
 
 ## Étapes
 
-Ce didacticiel décrit les étapes suivantes :
+Ce tutoriel décrit les étapes suivantes :
 
-1. Installez l’extension Adobe Experience Platform Web SDK.
-1. Créez une règle pour indiquer au lancement quelles données envoyer.
-1. Regroupez l’extension et la règle dans une bibliothèque.
+1. Installer l’extension Adobe Experience Platform Web SDK
+1. Créer une règle pour indiquer à Launch les données à envoyer
+1. Regrouper l’extension et la règle dans une bibliothèque
 
-## Installation de l’extension SDK Web d’Adobe Experience Platform
+## Installer l’extension Adobe Experience Platform Web SDK
 
-Installez d’abord l’extension SDK Web d’Adobe Experience Platform.
+Tout d’abord, installez l’extension Adobe Experience Platform Web SDK.
 
-1. In Launch, open the **[!UICONTROL Extensions]** tab.
+1. Dans Launch, ouvrez l’onglet **[!UICONTROL Extensions]**.
 
    ![image](assets/launch-overview.png)
 
-1. Sélectionnez l’extension SDK Web d’Adobe Experience Platform dans le catalogue de lancement de l’extension. L’écran de configuration s’ouvre.
+1. Sélectionnez l’extension Adobe Experience Platform Web SDK dans le catalogue d’extensions de Launch.
+L’écran de configuration s’ouvre.
 
    ![image](assets/launch-extension-install.png)
 
-   Pour plus d’informations, voir [Extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation sur le lancement.
+   Pour plus d’informations, consultez [Extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation de Launch.
 
-1. Configuration de l’extension.
+1. Configurez l’extension.
 
-   Les seuls paramètres dont vous avez besoin pour l’instant sont les suivants :
+   Pour l’instant, vous avez seulement besoin des paramètres suivants :
 
-   * **** ID de configuration : Indiquez l’ID de configuration que vous avez obtenu de votre représentant Adobe.
-   * **** Domaine Edge : Indiquez le domaine Edge que vous avez obtenu de votre représentant Adobe.
+   * **ID de configuration :** indiquez l’ID de configuration que votre représentant Adobe vous a remis.
+   * **Domaine Edge :** indiquez le domaine Edge que votre représentant Adobe vous a remis.
 
 1. Cliquez sur **[!UICONTROL Enregistrer]** et passez à l’étape suivante.
 
-## Créez une règle pour indiquer au lancement quelles données envoyer
+## Créer une règle pour indiquer à Launch les données à envoyer
 
-Créez ensuite une règle pour indiquer au lanceur quelles données vous souhaitez envoyer à Adobe Experience Platform et quand vous souhaitez l’envoyer.
+Ensuite, créez une règle pour indiquer à Launch les données à envoyer à Adobe Experience Platform et le moment auquel vous souhaitez les envoyer.
 
-1. Sous l’onglet **[!UICONTROL Règles]** , configurez un événement qui se déclenchera sur chaque nouvelle page du site Web au chargement de la bibliothèque de lancement.
+1. Sous l’onglet **[!UICONTROL Règles]**, configurez un événement qui se déclenche sur chaque nouvelle page du site web au chargement de la bibliothèque de Launch.
 
    ![image](assets/launch-make-a-rule.png)
 
-1. Ajouter une action.
+1. Ajoutez une action.
 
-   Pour configurer l’action, indiquez au lancement où trouver la couche de données. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page Web. Indiquez le chemin JavaScript vers l’objet de données.
+   Pour configurer l’action, indiquez à Launch où trouver la couche de données. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page web. Indiquez le chemin d’accès JavaScript vers l’objet de données.
 
    ![image](assets/launch-add-aep-action.png)
 
-   L’objet de données que vous envoyez doit être XDM valide et transmettre la validation par rapport au schéma utilisé par le jeu de données connecté à votre ID de configuration.
+   L’objet de données que vous envoyez doit être un XDM validé par le schéma utilisé par le jeu de données connecté à votre ID de configuration.
 
-1. Click **[!UICONTROL Keep Changes]**.
+1. Cliquez sur **[!UICONTROL Conserver les modifications]**.
 
-Pour plus d’informations, voir [Règles](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) dans la documentation sur le lancement.
+Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html) dans la documentation de Launch.
 
 ## Regrouper l’extension et la règle dans une bibliothèque
 
-Ensuite, [assemblez l’extension](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) et votre nouvelle règle dans une bibliothèque et testez ces modifications dans un environnement de développement.
+Ensuite, [regroupez l’extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/overview.html) et votre nouvelle règle dans une bibliothèque et testez ces modifications dans un environnement de développement.
 
 ![image](assets/launch-add-changes-to-library.png)
 
-Une fois les tests terminés, faites la promotion de la bibliothèque dans le flux de travail afin qu’elle puisse être déployée sur le site Production. Les données circulent désormais de chaque utilisateur vers Adobe Experience Platform.
+Une fois les tests terminés, faites la promotion de la bibliothèque dans le workflow afin qu’elle puisse être déployée sur le site de production. Les données circulent désormais de chaque utilisateur vers Adobe Experience Platform.
 
 ![image](assets/launch-promote-library.png)
 
-Pour plus d’informations, voir [Bibliothèques](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) dans la documentation de lancement.
+Pour plus d’informations, consultez [Bibliothèques](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) dans la documentation de Launch.
