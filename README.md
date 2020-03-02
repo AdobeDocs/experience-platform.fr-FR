@@ -1,6 +1,6 @@
 ---
 source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # Article Contribute
@@ -35,7 +35,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Modifications majeures d’employés d’Adobe
 
-Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une [!UICONTROL solution Adobe Experience Cloud], et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Consultez le Guide [de collaboration](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)interne.
+Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une [!UICONTROL solution Adobe Experience Cloud], et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Consultez le [Guide sur la collaboration interne](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
