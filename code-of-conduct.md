@@ -1,31 +1,31 @@
 ---
 source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # Code de conduite Adobe
 
 ## Notre engagement
 
-Dans l’intérêt de favoriser un environnement ouvert et accueillant, nous nous engageons, en tant que responsables et en tant que personnes contribuant à ce projet, à faire de la participation une expérience exempte de harcèlement pour tout le monde, quel que soit le niveau d’expérience, le sexe, l’identité ou l’expression de genre, l’identité ou l’orientation sexuelle, le handicap, l’apparence personnelle, la taille physique, l’origine ethnique, l’âge, la religion ou la nationalité.
+Afin de favoriser un environnement ouvert et accueillant, nous nous engageons, en tant que responsables et en tant que personnes contribuant à ce projet, à faire de la participation une expérience exempte de harcèlement pour tout le monde, quel que soit le niveau d’expérience, le sexe, l’identité ou l’expression de genre, l’identité ou l’orientation sexuelle, le handicap, l’apparence personnelle, la taille physique, l’origine ethnique, l’âge, la religion ou la nationalité.
 
 ## Nos critères
 
 Exemples de comportements qui contribuent à créer un environnement positif :
 
-* utiliser un langage ouvert et accueillant,
-* respecter les différents points de vue et expériences,
-* accepter poliment les critiques constructives,
-* se concentrer sur ce qui est meilleur pour la communauté,
-* faire preuve d’empathie envers les autres membres de la communauté.
+* Utiliser un langage accueillant et inclusif
+* Respecter les différents points de vue et expériences
+* Accepter poliment les critiques constructives
+* Se concentrer sur ce qui est meilleur pour la communauté
+* Faire preuve d’empathie envers les autres membres de la communauté
 
 Voici quelques exemples de comportements inacceptables de la part des validateurs :
 
-* Utilisation de langage ou d’images à connotation sexuelle, démontrer une attention à caractère sexuel ou faire des avances
-* Commentaires insultants/désobligeants, ainsi que les attaques personnelles ou politiques
-* harcèlement en public ou en privé,
-* publication d’informations privées de tierces personnes, telles que des adresses physiques ou électroniques, sans leur autorisation explicite,
-* tout comportement qui pourrait être raisonnablement considéré comme inapproprié dans le cadre professionnel.
+* Utiliser un langage ou des images à connotation sexuelle, démontrer une attention à caractère sexuel ou faire des avances
+* Adresser des commentaires insultants/désobligeants et des attaques personnelles ou politiques
+* Harceler en public ou en privé
+* Publier des informations privées de tierces personnes, telles que des adresses physiques ou électroniques, sans leur autorisation explicite
+* Tout comportement qui pourrait être raisonnablement considéré comme inapproprié dans le cadre professionnel
 
 ## Nos responsabilités
 
