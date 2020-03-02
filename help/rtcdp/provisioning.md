@@ -2,8 +2,8 @@
 title: Titre du document
 seo-title: Titre du document dans Adobe Experience Platform
 description: description
-seo-description: description du seo
-translation-type: tm+mt
+seo-description: description seo
+translation-type: ht
 source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 ---
@@ -13,16 +13,16 @@ source-git-commit: cd7c10fa789cf749296144b36e805da2ed76be8b
 
 Mots et choses
 
-## Subhead
+## Sous-titre
 
 Extensions
 
 > [!NOTE]
 > 
-> Voici la ligne 1.
+> Voici la ligne 1.
 >
-> Voici la ligne 2.
+> Voici la ligne 2.
 
 > [!VIDEO](https://youtu.be/ypS_CKym5NQ)
 
-Choisissez Edition > Règles [!UICONTROL de] traitement pour faire quelque chose. Utilisez [!DNL Microsoft Visual Code].
+Sélectionnez Modifier > [!UICONTROL Règles de traitement] pour effectuer une action. Utilisez [!DNL Microsoft Visual Code].
