@@ -1,70 +1,70 @@
 ---
-title: Page d’accueil et tableaux de bord de la plateforme de données clientes en temps réel
-seo-title: Page d’accueil et tableaux de bord de la plateforme de données clientes en temps réel
-description: Tableaux de bord, page d’accueil et première expérience utilisateur d’Adobe Experience Platform
-seo-description: Tableaux de bord, page d’accueil et première expérience utilisateur d’Adobe Experience Platform
-translation-type: tm+mt
+title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
+seo-title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
+description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
+seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
+translation-type: ht
 source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
 
 ---
 
 
-# Présentation des mesures de la plateforme de données clientes en temps réel
+# Présentation des mesures de la plateforme de données client en temps réel
 
-La page d’accueil Adobe Real-time Customer Data Platform (CDP en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez au CDP en temps réel.
+La page d’accueil de la plateforme de données client (CDP) en temps réel d’Adobe inclut un tableau de bord de mesures et s’affiche lorsque vous vous connectez à la plateforme CDP en temps réel.
 
-La page d’accueil n’est qu’un des emplacements où les cartes de mesure apparaissent. Le CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures vous informent sur les données, le profil et les audiences de segments du système.
+La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
 ![image](assets/home2.jpg)
 
-Si le système ne contient aucune donnée lorsque vous vous connectez au CDP en temps réel, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil fournit du matériel pédagogique pour une première expérience utilisateur. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création des <!--sources-->jeux de données, des profils, des segments et des destinations et du flux des données dans le système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
+Si le système ne contient aucune donnée lorsque vous vous connectez à la plateforme CDP en temps réel, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création <!--sources-->des jeux de données, profils, segments et destinations ainsi que de la transmission des données au système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
 
-## Affichage du tableau de bord de page d’accueil
+## Affichage du tableau de bord de la page d’accueil
 
 <!--The dashboard shows information in several areas. Each category of information displays for the time range shown beneath the data.-->
 
-Le tableau de bord est divisé en<!-- two areas.-->:
+Le tableau de bord se divise en plusieurs parties<!-- two areas.--> :
 
-* **Le tableau de bord** se trouve en haut du tableau de bord. Le tableau de bord indique le nombre de jeux de données, de profils, de segments et de destinations dans le système.
+* **Le tableau de classement** occupe toute la partie supérieure du tableau de bord. Le tableau de classement indique le nombre de jeux de données, de profils, de segments et de destinations du système.
 
    ![image](assets/home-leaderboard2.jpg)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
-* **Les éléments** récents répertorient les cinq jeux de données, sources, segments et destinations les plus récents ajoutés au système.
+* La section **Éléments récents** répertorie les cinq jeux de données, sources, segments et destinations ajoutés le plus récemment au système.
 
    ![image](assets/home-recent.jpg)
 
-D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de la plateforme de données clientes en temps réel.
+D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de la plateforme de données client en temps réel.
 
 ### Jeux de données
 
-Le compteur **[!UICONTROL Datasets]** indique le nombre de jeux de données dans le système et la quantité de données dans la plateforme. Ce compteur est mis à jour lorsqu’un jeu de données est créé.
+Le compteur **[!UICONTROL Jeux de données]** indique le nombre de jeux de données du système et la quantité de données de la plateforme. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
-Pour plus d’informations sur les jeux de données, voir [Assimilation de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Profils
 
-Le nombre de **[!UICONTROL profils]** indique le nombre total de personnes avec des profils dans le profil du client en temps réel. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+Le compte **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils dans le profil client en temps réel. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
-Ce nombre utilise la stratégie [de](profile/merge-policies.md) fusion par défaut telle qu’elle est définie dans la configuration de la stratégie de fusion dans le profil unifié.
+Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
-Le nombre de profils est mis à jour une fois toutes les 24 heures.
+Le nombre de profils est mis à jour une fois toutes les 24 heures.
 
-Pour plus d’informations sur les profils, voir [Une vue unifiée de votre client dans le CDP](profile/profile-overview.md)en temps réel.
+Pour plus d’informations sur les profils, consultez [Une vue unifiée de votre client dans la plateforme CDP en temps réel](profile/profile-overview.md).
 
 ### Segments
 
-**[!UICONTROL Les segments]** indiquent le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lorsque de nouveaux segments sont créés.
+La section **[!UICONTROL Segments]** indique le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments.
 
-Pour plus d’informations sur les segments, voir Présentation [du service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)de segmentation.
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
 
 ### Destinations
 
-**[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lorsque de nouvelles destinations sont créées.
+La section **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lors de la création de destinations.
 
-Pour plus d’informations sur les destinations, voir Présentation des [destinations](destinations/destinations-overview.md).
+Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
 
 <!-- ### Successful profile records
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Jeux de données récents
 
-La carte **[!UICONTROL Récents jeux]** de données présente les cinq jeux de données les plus récents créés au sein de l’entreprise. Cette liste est mise à jour lorsqu’un nouveau jeu de données est créé.
+La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
 
-Cliquez sur un jeu de données pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. A partir de là, vous pouvez cliquer sur une source spécifique pour plus de détails.
+Cliquez sur un jeu de données pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
-Pour plus d’informations sur les jeux de données, voir [Assimilation de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Sources récentes
 
-La carte de mesure Sources **** récentes présente les cinq sources les plus récentes créées au sein de l’organisation. Cette liste est mise à jour lorsqu’une nouvelle source est créée.
+La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
 
-Cliquez sur une source pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher la liste des sources. A partir de là, vous pouvez cliquer sur une source spécifique pour plus de détails.
+Cliquez sur une source pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
-Pour plus d’informations sur les sources, voir Présentation des [sources](sources/sources-overview.md).
+Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
 
 ### Segments récents
 
-La carte de mesure des segments **** récents présente les cinq segments les plus récents créés au sein de l’entreprise. Cette liste est mise à jour lorsqu’un nouveau segment est créé.
+La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
 
-Cliquez sur un segment pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres segments.
+Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
 
-Pour plus d’informations sur les segments, voir Présentation [du service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)de segmentation.
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
 
 ### Destinations récentes
 
-La carte de mesure Destinations **** récentes présente les cinq destinations les plus récentes créées au sein de l’entreprise. Cette liste est mise à jour lorsqu’une nouvelle destination est créée.
+La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
 
-Cliquez sur une destination pour afficher les détails de cet élément ou **[!UICONTROL Afficher tout]** pour afficher des informations sur d’autres destinations.
+Cliquez sur une destination pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de destinations.
 
-Pour plus d’informations sur les destinations, voir Présentation des [destinations](destinations/destinations-overview.md).
+Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
