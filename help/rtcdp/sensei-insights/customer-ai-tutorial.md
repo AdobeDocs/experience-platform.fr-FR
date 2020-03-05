@@ -5,7 +5,7 @@ description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 seo-description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 index: false
 translation-type: ht
-source-git-commit: fde2bb7af91dbcb0c701397c878b63044cb27a4d
+source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
 
@@ -27,8 +27,8 @@ Ce tutoriel décrit les étapes à suivre pour travailler avec Customer AI à l�
 Ce guide nécessite une compréhension pratique des divers services Platform impliqués dans l’utilisation de Customer AI. Avant de commencer ce tutoriel, consultez les documents suivants :
 
 * [Présentation du profil client en temps réel](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md)
-* [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md)
-* [Guide d’utilisation du créateur de segments](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md)
+* [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md)
+* [Guide d’utilisation du créateur de segments](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md)
 
 ## Configuration d’une instance
 
@@ -94,7 +94,7 @@ En suivant cette section, vous avez configuré une instance de Customer AI et ex
 
 ## Création de segments client avec des scores prévus
 
-Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client basés sur des scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments. Pour un tutoriel plus complet sur la création de segments, consultez le [guide d’utilisation du créateur de segments](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segment-builder-guide.md).
+Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client basés sur des scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments. Pour un tutoriel plus complet sur la création de segments, consultez le [guide d’utilisation du créateur de segments](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segment-builder-guide.md).
 
 Dans l’interface utilisateur de Platform, cliquez sur **Segments** dans le volet de navigation de gauche, puis cliquez sur **Créer un segment**.
 
