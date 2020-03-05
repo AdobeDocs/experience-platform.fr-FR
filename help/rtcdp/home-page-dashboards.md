@@ -4,7 +4,7 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: ht
-source-git-commit: 6dde6c90fe9073c50c0a9d3dd43ef045730d1e13
+source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
 
 ---
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur les profils, consultez [Une vue unifiée de votre
 
 La section **[!UICONTROL Segments]** indique le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Destinations
 
@@ -122,7 +122,7 @@ La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments c
 
 Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!end-user/markdown/segmentation_overview/segmentation.md).
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Destinations récentes
 
