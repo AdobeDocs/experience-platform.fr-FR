@@ -3,7 +3,7 @@ title: Guide du créateur de segments
 seo-title: Utilisation du créateur de segments du service de segmentation sur la plateforme de données client en temps réel
 description: Un guide décrivant l’utilisation du créateur de segments.
 seo-description: Un guide de l’utilisateur décrivant l’utilisation du créateur de segments du service de segmentation sur la plateforme de données client en temps réel.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 55e615d205e6fc015d8ca8514477fde143d943b5
 
 ---
