@@ -2,8 +2,8 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Real-Time Customer Data Platform Help
-translation-type: ht
-source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
+translation-type: tm+mt
+source-git-commit: 974ba457d1782d1ab6a65200255d0b83db7aa667
 
 ---
 
@@ -32,6 +32,14 @@ source-git-commit: ddf309a0291e655ab4cbc2953d671591835ed697
       * Destinations publicitaires {#advertiser-destinations}
          * [Présentation des destinations publicitaires](destinations/advertising-destinations.md)
          * [Google](destinations/google-destination.md)
+         * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+         * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+      *  Cloud destinations{#cloud-storage}
+         * [Présentation des destinations de  Cloud](destinations/cloud-storage-destinations.md)
+         * [Processus de création de cloud  de  destinations de](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Destination Amazon S3](destinations/amazon-s3-destination.md)
+         * [Destination SFTP](destinations/sftp-destination.md)
       * Destinations de marketing par e-mail {#email-destinations}
          * [Présentation des destinations de marketing par e-mail](destinations/email-marketing-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
