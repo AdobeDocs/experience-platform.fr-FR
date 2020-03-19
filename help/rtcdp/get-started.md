@@ -3,8 +3,8 @@ title: Prise en main de la plateforme de données client en temps réel Adobe
 seo-title: Prise en main de la plateforme de données client en temps réel Adobe
 description: Exemple de scénario pour la plateforme de données client en temps réel Adobe
 seo-description: Exemple de scénario pour la plateforme de données client en temps réel Adobe
-translation-type: ht
-source-git-commit: bf4ef1e8ceb38fe20365859bb28772263917030c
+translation-type: tm+mt
+source-git-commit: eb26b9fbe2f4b63ea411ca61735f6e1b5308777c
 
 ---
 
@@ -171,6 +171,14 @@ Par exemple, pour envoyer les données de gestion de la relation client de Luma,
 
 C’est fait. Vous venez d’ajouter Microsoft CRM en tant que source de données dans Experience Platform.
 
+### Étiquetage des données assimilées pour les stratégies d’utilisation
+
+Luma a de nombreuses règles internes qui limitent l&#39;utilisation de certains types d&#39;informations collectées, et doit également se conformer aux préoccupations légales et de confidentialité concernant l&#39;utilisation des données. Grâce à la gouvernance des données d’Adobe Experience Platform, des libellés d’utilisation de données prédéfinis peuvent être appliqués aux jeux de données (et à des champs spécifiques de ces jeux de données), ce qui permet à Luma de classer leurs données en fonction de restrictions d’utilisation spécifiques.
+
+![](assets/governance-labels.png)
+
+Une fois les étiquettes d’utilisation des données appliquées, Luma peut alors utiliser la gouvernance des données pour créer des stratégies d’utilisation des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions que vous êtes autorisé à effectuer sur les données qui contiennent certains libellés. Lorsque vous tentez d’effectuer une action dans le CDP en temps réel qui constitue une violation de la stratégie, l’action est empêchée et une alerte est donnée pour montrer quelle stratégie a été violée et pourquoi.
+
 ## Regroupement des données pour un client spécifique
 
 Dans ce scénario, parcourez les profils à la recherche de Marie Dupont. Son profil s’affiche, avec l’adresse électronique qu’elle a utilisée pour se connecter.
@@ -184,7 +192,7 @@ Toutes les informations que Luma possède sur le profil de Marie s’affichent. 
 | Identités | Affiche les identités liées entre elles dans Platform à partir des interactions entre Marie et Luma sur les différents canaux et périphériques. Son ECID du site web s’affiche. Son identité comprend également l’ECID de son application mobile, son identifiant de courrier électronique, un identifiant de logiciel de gestion de la relation client du jeu de données Microsoft Dynamics récemment ajouté et un identifiant de fidélité transmis à Adobe Experience Platform par le système de fidélité de Luma. |
 | Événements | Affiche toutes les données d’interaction entre Marie et la marque Luma. Cela inclut l’article qu’elle vient de consulter, l’historique de ses consultations, les courriels qu’elle a reçus, ses interactions avec le centre d’appel, ainsi que le canal et le périphérique utilisés pour chacune de ces interactions. |
 
-Le profil de la plateforme CDP en temps réel réduit le workflow de l’équipe marketing de Luma de plusieurs semaines à quelques minutes et offre des possibilités de personnalisation en fonction de cet aperçu client à 360 degrés. Le profil fusionne les données comportementales recueillies lors de sa navigation sur le site avant qu’elle ne se connecte, avec son profil client existant, créant ainsi un aperçu complet de Marie.
+Le CDP en temps réel réduit le flux de travail de l&#39;équipe marketing Luma de semaines en minutes et déverrouille les possibilités de personnalisation en fonction de ce client à 360 degrés. Le profil fusionne les données comportementales recueillies lors de sa navigation sur le site avant qu’elle ne se connecte, avec son profil client existant, créant ainsi un aperçu complet de Marie.
 
 L’équipe marketing peut utiliser ce profil client en temps réel amélioré pour mieux personnaliser l’expérience de Marie et accroître sa fidélité à la marque Luma.
 
@@ -228,20 +236,7 @@ Cliquez sur **[!UICONTROL Envoyer vers les destinations]**.
 Dans la plateforme CDP en temps réel Adobe, Luma peut intervenir en toute simplicité sur les segments ciblés afin de les personnaliser.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
 
-<!-- ![image](assets/luma-dest.png) -->
-
-<!-- ### Privacy
-
-Adobe Experience Platform includes privacy and security controls to ensure a segment is available to be activated to a particular destination based on its profile policy. If your activity violates policy, a warning appears. 
-
-![image](assets/luma-dule.png)
-
-With these controls, Experience Platform helps Luma be compliant with regulations and to market responsibly.  
-
-Luma can confidently address regional and organizational requirements for managing known and unknown customer data with unified governance tools.  
-
-These controls are flexible and can be modified to meet the requirements of Luma’s security and governance teams.
--->
+![image](assets/luma-dest.png)
 
 ### Sélection des destinations
 
@@ -265,6 +260,14 @@ Cliquez sur **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
 Lorsqu’un client de cette audience effectue un achat, son abonnement à cette audience est supprimé en temps réel. Il n’est plus admissible puisque son statut a changé.
 
 Cela permet au directeur de l’équipe des médias de Luma d’économiser des centaines de milliers de dollars en n’utilisant pas l’inventaire pour une audience qui n’est pas admissible.
+
+### Application de stratégies d’utilisation des données pour les destinations
+
+Adobe Experience Platform inclut des contrôles de confidentialité et de sécurité pour déterminer si un segment est disponible pour être activé sur une destination particulière.   est activée ou restreinte en fonction des objectifs marketing affectés à la destination au moment de sa création, ainsi que des stratégies d’utilisation des données définies par votre organisation.
+
+Si votre   enfreint la politique, un avertissement s’affiche. Cet avertissement contient des informations de lignage de données qui peuvent vous aider à identifier la raison pour laquelle la stratégie a été violée et ce que vous pouvez faire pour résoudre la violation.
+
+Grâce à ces contrôles, Experience Platform aide Luma à se conformer aux réglementations et à commercialiser de manière responsable. Ces contrôles sont souples et peuvent être modifiés pour répondre aux exigences des équipes de sécurité et de gouvernance de Luma, ce qui leur permet de répondre en toute confiance aux exigences régionales et organisationnelles de gestion des données clients connues et inconnues.
 
 ### Canevas de flux de données
 
