@@ -3,8 +3,8 @@ title: Activation de profils et de segments vers une destination
 seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données client en temps réel Adobe en mappant les segments aux destinations. Pour ce faire, procédez comme suit.
 seo-description: Activez les données de la plateforme de données client en temps réel Adobe en mappant les segments aux destinations. Pour ce faire, procédez comme suit.
-translation-type: ht
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+translation-type: tm+mt
+source-git-commit: 73925aa59f9981d8945fb0be6c4924e1831cf902
 
 ---
 
@@ -43,9 +43,9 @@ Suivez les étapes ci-dessous pour modifier les flux d’activation existants da
 
 ## Vérifier que l’activation du segment a réussi {#verify-activation}
 
-### Destinations de marketing par e-mail
+### Destinations de marketing par e-mail et cloud  destinations 
 
-Pour les destinations de marketing par e-mail, la plateforme CDP en temps réel Adobe crée un fichier `.txt` ou `.csv` séparé par des tabulations dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
+For email marketing destinations and cloud storage destinations, Adobe Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Les fichiers que vous recevriez pendant trois jours consécutifs pourraient ressembler à ceci :
