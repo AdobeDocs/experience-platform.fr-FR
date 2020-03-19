@@ -3,7 +3,7 @@ title: Présentation du service de segmentation
 seo-title: Service de segmentation dans la plateforme de données client en temps réel d’Adobe
 description: Présentation du service de segmentation.
 seo-description: Présentation du service de segmentation et des segments dans la plateforme de données client en temps réel d’Adobe.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: bcb4279d04e39905fa64b817fdadd8a875e27697
 
 ---
