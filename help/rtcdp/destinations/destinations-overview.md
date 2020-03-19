@@ -3,8 +3,8 @@ title: Présentation des destinations
 seo-title: Présentation des destinations
 description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 seo-description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-translation-type: ht
-source-git-commit: fe9f5a94b52e51fe317fc60efa7e140f4ed93cd0
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -37,7 +37,7 @@ Les commandes de l’[espace de travail des destinations](/help/rtcdp/destinatio
 
 Dans la plateforme CDP en temps réel Adobe, il existe deux types de destinations : les destinations d’exportation de profil et les destinations d’exportation de segment. La vidéo ci-dessous décrit les deux types de destinations.
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12&captions=fre_fr)
+>[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
 ### Destinations d’exportation de profil
 
@@ -49,7 +49,7 @@ Les destinations d’exportation de segment envoient les profils et les segments
 
 ### Catégories de destination
 
-Les destinations du [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md) sont regroupées par catégorie de destination (**publicité** ou **marketing par e-mail**). Pour plus d’informations sur chacune de ces catégories, consultez le [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md).
+The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinations-catalog.md) are grouped by destination category (**Advertising**, **Cloud storage**, or **Email marketing**). Pour plus d’informations sur chacune de ces catégories, consultez le [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md).
 
 ## Destinations et contrôles d’accès
 
