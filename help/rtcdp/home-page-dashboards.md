@@ -3,7 +3,7 @@ title: Page d’accueil et tableaux de bord de la plateforme de données client 
 seo-title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
 
 ---
