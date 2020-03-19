@@ -3,7 +3,7 @@ title: Présentation de l’administration
 seo-title: Présentation de l’administration de la plateforme CDP en temps réel
 description: description
 seo-description: description seo
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 33e187053790b98d2f1c36306b38c738833c4659
 
 ---
