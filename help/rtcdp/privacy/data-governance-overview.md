@@ -3,8 +3,8 @@ title: Présentation de la gouvernance des données
 seo-title: Gouvernance des données sur la plateforme de données client en temps réel
 description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
-translation-type: ht
-source-git-commit: c583d0ab89dad61e00ba117f7f2e0ec5ab427745
+translation-type: tm+mt
+source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
 
 ---
 
@@ -27,13 +27,11 @@ La gouvernance des données vous permet d’appliquer des étiquettes d’utilis
 
 Pour plus d’informations sur l’utilisation des étiquettes d’utilisation des données, consultez le [Guide de l’utilisateur des étiquettes d’utilisation des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) pour Adobe Experience Platform.
 
-<!-- (To be included after destinations support is available -- January 2020)
-## Set restrictions on destinations
+## Définir des restrictions sur les destinations
 
-You can set data usage restrictions on a destination by defining the marketing use cases for that destination. Defining use cases for destinations allows you to check for usage policy violations and ensure that any profiles or segments sent to that destination are compatible with Data Governance rules.
+Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des cas d’utilisation marketing pour cette destination. La définition de cas d’utilisation pour les destinations vous permet de rechercher les violations de la stratégie d’utilisation et de vous assurer que les  ou segments envoyés vers cette destination sont compatibles avec les règles de gouvernance des données.
 
-Marketing use cases can be defined during the _Setup_ phase for the _Edit Destination_ workflow. See the destination documentation for more information. 
--->
+Les cas d’utilisation marketing peuvent être définis pendant la phase de _configuration_ pour le flux de travail _Modifier la destination_ . Pour plus d’informations, voir la documentation de destination.
 
 
 ## Gérer des stratégies d’utilisation des données
@@ -42,9 +40,46 @@ Les stratégies d’utilisation des données doivent être définies et activée
 
 Adobe Experience Platform propose plusieurs **stratégies principales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être consultées en adressant une requête à l’[API du service stratégique des étiquettes DULE (Data Usage Labeling and Enforcement)](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), comme illustré dans la section « Répertorier toutes les stratégies » du [Guide du développeur du service stratégique](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). Vous pouvez également créer vos propres **stratégies personnalisées** pour modéliser des restrictions d’utilisation personnalisées, comme illustré dans la section « Créer une stratégie » du guide du développeur.
 
-## Appliquer des stratégies d’utilisation des données
+## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
-Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Pour plus d’informations, consultez le tutoriel sur l’[application des stratégies d’utilisation des données pour les segments d’audience](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/dule/data_governance_and_segmentation.md).
+>[!IMPORTANT]
+>Cette fonctionnalité est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. Il peut être activé sur demande. La documentation et la fonctionnalité peuvent changer.
+
+Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation  segments  vers des destinations dans le CDP en temps réel, la gouvernance des données applique automatiquement les stratégies d’utilisation en cas de violation.
+
+Le diagramme suivant illustre comment l’application des politiques est intégrée dans le flux de données du segment   :
+
+![](assets/enforcement-flow.png)
+
+Lorsqu’un segment est activé pour la première fois, le service de stratégie DULE vérifie les violations de stratégie en fonction des facteurs suivants :
+
+* Les libellés d’utilisation des données s’appliquent aux champs et aux jeux de données du segment à activer.
+* Objectif marketing de la destination.
+
+### Messages de violation de stratégie
+
+Si une violation de stratégie survient lors de la tentative d’activation d’un segment (ou de la [modification d’un segment](#policy-enforcement-for-activated-segments)déjà activé), l’action est empêchée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs stratégies ont été violées. Sélectionnez une violation de stratégie dans la colonne de gauche de la fenêtre contextuelle pour afficher les détails de cette violation.
+
+![](assets/violation-popover.png)
+
+L’onglet *Détails* de la fenêtre contextuelle indique l’action qui a déclenché la violation, la raison pour laquelle la violation s’est produite et fournit des suggestions pour résoudre le problème.
+
+Cliquez sur Liaison des **données** pour effectuer le suivi des destinations, des segments, des stratégies de fusion ou des jeux de données dont le ou les libellés de données ont déclenché la violation.
+
+![](assets/data-lineage.png)
+
+Une fois qu’une violation a été déclenchée, le bouton **Enregistrer** est désactivé pour le   jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux stratégies d’utilisation des données.
+
+### Application des stratégies pour les segments activés
+
+L’application de la stratégie s’applique toujours aux segments une fois qu’ils ont été activés, ce qui limite toute modification apportée à un segment ou à sa destination qui entraînerait une violation de la stratégie. En raison des nombreux composants impliqués dans l’activation des segments vers les destinations, l’une des actions suivantes peut potentiellement déclencher une violation :
+
+* Mise à jour des libellés d’utilisation des données
+* Modification des jeux de données d’un segment
+* Modification des prédicats de segment
+* Modification des configurations de destination
+
+Si l’une des actions ci-dessus déclenche une violation, cette action est empêchée d’être enregistrée et un message de violation de stratégie s’affiche, afin de vous assurer que vos segments activés continuent à respecter les stratégies d’utilisation des données lors de leur modification.
 
 ## Étapes suivantes
 
