@@ -4,7 +4,7 @@ seo-title: Prévoir les scores de propension des clients à l’aide de Customer
 description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 seo-description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
 
 ---
