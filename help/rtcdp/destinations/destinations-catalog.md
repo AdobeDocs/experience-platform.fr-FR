@@ -3,8 +3,8 @@ title: Catalogue des destinations
 seo-title: Catalogue des destinations
 description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc.
 seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc.
-translation-type: ht
-source-git-commit: f76c5326d4b658b76d8df3d285f185706b66a826
+translation-type: tm+mt
+source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
 
 ---
 
@@ -19,4 +19,5 @@ Vous pouvez activer vos données dans différentes catégories de destination da
 
 * [Solutions Adobe](/help/rtcdp/destinations/adobe-destinations.md)
 * [Destinations publicitaires](/help/rtcdp/destinations/advertising-destinations.md)
+* [Cloud destinations](/help/rtcdp/destinations/cloud-storage-destinations.md)
 * [Marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
