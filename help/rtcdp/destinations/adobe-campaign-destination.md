@@ -3,7 +3,7 @@ title: Adobe Campaign
 seo-title: Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 seo-description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -13,17 +13,17 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ## Présentation
 
-Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Pour plus d’informations, consultez [À propos d’Adobe Campaign Classic](https://docs.adobe.com/content/help/fr-FR/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
+Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Pour plus d’informations, consultez [À propos d’Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
 
 Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [connecter la destination](#connect-destination) dans la plateforme de données client en temps réel Adobe, puis [configurer une importation de données](#import-data-into-campaign) à partir de l’emplacement de stockage dans Adobe Campaign.
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Adobe Campaign, puis **[!UICONTROL Se connecter à la destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez  Adobe Campaign, puis **[!UICONTROL Connect destination]**.
 
    ![Se connecter à Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. Dans l’assistant de connexion à la destination, sélectionnez le **[!UICONTROL Type de connexion]** de votre emplacement de stockage. Pour Adobe Campaign, vous pouvez choisir parmi **Amazon S3**, **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Pour Adobe Campaign, vous pouvez choisir parmi **Amazon S3**, **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
    ![Configuration de l’assistant Campaign](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
