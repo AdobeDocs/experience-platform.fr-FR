@@ -15,11 +15,11 @@ source-git-commit: 9221c11a30bda3a155d73afec16be55ef8f5d133
 
 Cette page explique comment vous pouvez vous connecter au cloud  aux emplacements  des dans la plateforme de données clientes Adobe en temps réel.
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez votre cloud préféré  destination , puis sélectionnez **[!UICONTROL Connexion destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez votre cloud préféré   destination du, puis sélectionnez **[!UICONTROL Connect destination]**.
 
    ![Connexion au cloud  destination  du](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. À l’étape **Authentification** , si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez Compte **** existant et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre cloud  destination . Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**.
+2. À l’étape **Authentification** , si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez votre connexion existante. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion à votre cloud  destination . Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**.
 
    >[!NOTE]
    >
@@ -27,12 +27,12 @@ Cette page explique comment vous pouvez vous connecter au cloud  aux emplacement
 
    ![Connexion au cloud  destination  du - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
-3. Dans l’étape **[!UICONTROL Configuration]** , saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux de  de .
-   1. Pour les destinations Amazon S3, insérez le nom **[!UICONTROL du]** compartiment et le chemin **[!UICONTROL du]** dossier dans votre cloud  destination  où les fichiers seront distribués. Sélectionnez **[!UICONTROL Créer une destination]** après avoir rempli les champs ci-dessus.
-   2. Pour les destinations SFTP, insérez le chemin d’accès au **[!UICONTROL dossier.]**
+3. Dans l’ **[!UICONTROL Setup]** étape, entrez un **[!UICONTROL Name]** et un **[!UICONTROL Description]** pour votre flux  de .
+   1. Pour les destinations Amazon S3, insérez le **[!UICONTROL Bucket name]** et le **[!UICONTROL Folder path]** dans votre cloud  destination  où les fichiers seront distribués. Sélectionnez **[!UICONTROL Create Destination]** une fois que vous avez rempli les champs ci-dessus.
+   2. Pour les destinations SFTP, insérez la variable **[!UICONTROL Folder path]**
    ![Connexion au cloud  destination  du - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-4. Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement ou sélectionner **[!UICONTROL Suivant]** pour poursuivre le flux de travaux et sélectionner les segments à activer. Dans les deux cas, reportez-vous à la section suivante, [Activation des segments](#activate-segments), pour que le reste du flux de travail exporte les données.
+4. Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Save & Exit]** si vous souhaitez activer les segments ultérieurement ou **[!UICONTROL Next]** pour continuer le flux de travail et sélectionner les segments à activer. Dans les deux cas, reportez-vous à la section suivante, [Activation des segments](#activate-segments), pour que le reste du flux de travail exporte les données.
 
 ## Activer les segments {#activate-segments}
 
