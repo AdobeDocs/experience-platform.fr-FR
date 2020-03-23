@@ -3,7 +3,7 @@ title: Identités et espaces de noms d’identité
 seo-title: Identity Service d’Adobe Experience Platform
 description: description
 seo-description: description seo
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
