@@ -3,7 +3,7 @@ title: Destinations de marketing par e-mail
 seo-title: Destinations de marketing par e-mail
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 463212a8fabb9dd5962b4d3f523a6f2d88bb1d9d
 
 ---
@@ -21,11 +21,11 @@ Dans le flux de connexion à la destination, décrit dans la section ci-dessous,
 
 ## Étape 1 - Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez la destination de marketing par e-mail à laquelle vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Se connecter à la destination]**.
+1. In **[!UICONTROL Connections > Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
    ![Se connecter à la destination](/help/rtcdp/destinations/assets/connect-destination.png)
 
-2. Dans l’assistant de connexion, sélectionnez le **[!UICONTROL Type de connexion]** de votre emplacement de stockage. Vous pouvez choisir parmi **Amazon S3**, **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
+2. In the Connect wizard, select the **[!UICONTROL Connection type]** for your storage location. Vous pouvez choisir parmi **Amazon S3**, **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 Pour les **connexions S3**, vous devez fournir un identifiant de clé d’accès et une clé d’accès secrète.
 
