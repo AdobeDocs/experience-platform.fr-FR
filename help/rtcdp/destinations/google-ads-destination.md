@@ -48,7 +48,7 @@ Avant de créer la destination des publicités Google dans Adobe CDP en temps r�
 
 ## Créer une destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez Publicités Google, puis sélectionnez **[!UICONTROL Create destination]**.
    ![Connecter la destination des publicités Google](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. Dans l’assistant de création de destination, renseignez les informations de base de la destination.
