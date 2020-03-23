@@ -3,7 +3,7 @@ title: Qualité des données sur la plateforme de données client en temps réel
 seo-title: Qualité des données sur la plateforme de données client en temps réel d’Adobe
 description: Document sur la qualité des données sur la plateforme de données client en temps réel
 seo-description: Document décrivant la qualité des données avec le processus d’ingestion de lots et de données sur la plateforme de données client en temps réel d’Adobe
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: d7a2f7707b36c73f33ad52122d4debedc0877c7a
 
 ---
