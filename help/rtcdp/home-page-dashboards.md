@@ -40,13 +40,13 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 ### Jeux de données
 
-Le compteur **[!UICONTROL Jeux de données]** indique le nombre de jeux de données du système et la quantité de données de la plateforme. Ce compteur est mis à jour lors de la création d’un jeu de données.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
 Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Profils
 
-Le compte **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils dans le profil client en temps réel. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
@@ -102,32 +102,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Jeux de données récents
 
-La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
+The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. Cette liste est mise à jour lors de la création d’un jeu de données.
 
-Cliquez sur un jeu de données pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
 Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
 
 ### Sources récentes
 
-La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
+The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. Cette liste est mise à jour lors de la création d’une source.
 
-Cliquez sur une source pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
 Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
 
 ### Segments récents
 
-La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
+The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. Cette liste est mise à jour lors de la création d’un segment.
 
-Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
+Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
 Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
 
 ### Destinations récentes
 
-La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
+The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. Cette liste est mise à jour lors de la création d’une destination.
 
-Cliquez sur une destination pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de destinations.
+Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
 
 Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
