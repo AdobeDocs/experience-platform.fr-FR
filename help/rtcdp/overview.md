@@ -3,7 +3,7 @@ title: Présentation de la plateforme de données client en temps réel
 seo-title: Présentation de la plateforme de données client en temps réel
 description: Présentation de la plateforme de données client en temps réel
 seo-description: Présentation de la plateforme de données client en temps réel
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 08b35c862472308fbec282a7727035fb3924d19b
 
 ---
