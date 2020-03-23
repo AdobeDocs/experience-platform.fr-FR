@@ -3,7 +3,7 @@ title: Présentation du profil client en temps réel
 seo-title: Profil client en temps réel sur la plateforme de données client en temps réel
 description: Cette section présente la manière dont la plateforme de données client en temps réel vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
 seo-description: Plateforme de données client en temps réel, profil, données, expériences, canaux
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
 
 ---
