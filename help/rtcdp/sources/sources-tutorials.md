@@ -3,7 +3,7 @@ title: Tutoriels sur les sources
 seo-title: Tutoriels sur les sources de la plateforme CDP en temps réel Adobe
 description: Tutoriels sur les sources
 seo-description: Tutoriels sur les sources
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: cfd794ab385b917e0eec137a4d4f4cc2c6e769fb
 
 ---
