@@ -35,7 +35,7 @@ Notez les détails suivants qui sont spécifiques aux destinations Google Ad Man
 >
 >La liste blanche est obligatoire avant de configurer votre première destination Google Ad Manager dans Adobe CDP en temps réel. Veuillez vous assurer que le processus de liste blanche décrit ci-dessous a été terminé par Google avant de créer une destination.
 
-Avant de créer la destination Google Ad Manager dans le CDP en temps réel d’Adobe, vous devez contacter Google pour demander à Adobe d’être autorisé en tant que fournisseur de données et à ce que votre compte soit autorisé. Contactez Google et fournissez les informations suivantes :
+Avant de créer la destination Google Ad Manager dans Adobe CDP en temps réel, vous devez contacter Google pour demander à Adobe d’être autorisé en tant que fournisseur de données et à ce que votre compte soit autorisé. Contactez Google et fournissez les informations suivantes :
 
 * **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
@@ -45,7 +45,7 @@ Avant de créer la destination Google Ad Manager dans le CDP en temps réel d’
 
 ## Créer une destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez Google Ad Manager, puis **[!UICONTROL Create destination]**.
    ![Connecter la destination Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
 2. Dans l’assistant de création de destination, renseignez les informations de base de la destination.
