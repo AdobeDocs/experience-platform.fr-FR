@@ -3,7 +3,7 @@ title: Destination Oracle Eloqua
 seo-title: Destination Oracle Eloqua
 description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 seo-description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ Pour envoyer des données de segment à Oracle Eloqua, vous devez d’abord [con
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Oracle Eloqua, puis **[!UICONTROL Se connecter à la destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]** Oracle Eloqua, sélectionnez **[!UICONTROL Connect destination]**.
 
    ![Se connecter à Eloqua](/help/rtcdp/destinations/assets/connect-oracle-eloqua.png)
 
-1. Dans l’assistant de connexion à la destination, sélectionnez le **[!UICONTROL Type de connexion]** de votre emplacement de stockage. Pour Oracle Eloqua, vous pouvez choisir parmi **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Renseignez les informations ci-dessous en fonction du type de connexion, puis sélectionnez **[!UICONTROL Connexion]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Pour Oracle Eloqua, vous pouvez choisir parmi **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Configurer l’assistant Oracle Eloqua](/help/rtcdp/destinations/assets/eloqua-wizard.png)
 
