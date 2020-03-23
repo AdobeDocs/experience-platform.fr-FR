@@ -3,7 +3,7 @@ title: Stratégies de fusion
 seo-title: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 seo-description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
