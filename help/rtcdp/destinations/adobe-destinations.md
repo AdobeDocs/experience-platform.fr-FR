@@ -3,7 +3,7 @@ title: Destinations Adobe
 seo-title: Destinations Adobe
 description: Destinations Adobe
 seo-description: Destinations Adobe
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 520040dd7ac1e3fd3af4009eb5f112cb39e33850
 
 ---
