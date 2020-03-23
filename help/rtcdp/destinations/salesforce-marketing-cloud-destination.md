@@ -3,7 +3,7 @@ title: Salesforce Marketing Cloud
 seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 seo-description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 ---
@@ -19,11 +19,11 @@ Pour envoyer des données de segment à Salesforce Marketing Cloud, vous devez d
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Salesforce Marketing Cloud, puis **[!UICONTROL Se connecter à la destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]** Salesforce Marketing Cloud, sélectionnez **[!UICONTROL Connect destination]**.
 
    ![Connexion à Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-1. Dans l’assistant de connexion à la destination, sélectionnez le **[!UICONTROL Type de connexion]** de votre emplacement de stockage. Pour Salesforce Marketing Cloud, vous pouvez choisir parmi **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Renseignez les informations ci-dessous en fonction du type de connexion, puis sélectionnez **[!UICONTROL Connexion]**.
+1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Pour Salesforce Marketing Cloud, vous pouvez choisir parmi **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
 
    ![Configuration de l’assistant Salesforce](/help/rtcdp/destinations/assets/salesforce-step1.png)
 
@@ -47,4 +47,4 @@ Lors de l’[activation des segments](/help/rtcdp/destinations/activate-destinat
 
 ## Configuration de l’importation des données dans Salesforce Marketing Cloud {#import-data-into-salesforce}
 
-Après la connexion de la plateforme CDP en temps réel au stockage Amazon S3 ou SFTP, vous devez configurer l’importation des données depuis l’emplacement de stockage vers Salesforce Marketing Cloud. Pour découvrir la procédure à suivre, consultez [Importation d’abonnés dans Marketing Cloud à partir d’un fichier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) dans le centre d’aide de Salesforce.
+Après la connexion de la plateforme CDP en temps réel au stockage Amazon S3 ou SFTP, vous devez configurer l’importation des données depuis l’emplacement de stockage vers Salesforce Marketing Cloud. Pour découvrir la procédure à suivre, consultez [Importation d’abonnés dans Marketing Cloud à partir d’un fichier](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) dans le centre d’aide de Salesforce.
