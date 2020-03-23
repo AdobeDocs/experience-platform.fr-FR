@@ -43,7 +43,7 @@ Avant de créer la destination Google Display &amp; Video 360 dans le CDP en tem
 
 ## Créer une destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Display &amp; Video 360, and select **[!UICONTROL Create destination]**.
+1. Dans **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360, sélectionnez **[!UICONTROL Create destination]**.
    ![Connectez la destination Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. Dans l’assistant de création de destination, renseignez les informations de base de la destination.
