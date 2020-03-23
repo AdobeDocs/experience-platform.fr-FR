@@ -3,7 +3,7 @@ title: Présentation des sources
 seo-title: Sources dans Adobe Experience Platform
 description: Ce document présente les sources dans la plateforme de données client en temps réel
 seo-description: Ce document présente les sources dans la plateforme de données client en temps réel
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c0d5cf2e8345ad5ee84669fef508435e51700c23
 
 ---
