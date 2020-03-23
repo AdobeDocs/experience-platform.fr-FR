@@ -39,7 +39,7 @@ Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rt
 Suivez les étapes ci-dessous pour modifier les flux d’activation existants dans la plateforme CDP en temps réel :
 
 1. Sélectionnez **Destinations** dans la barre de navigation de gauche, ensuite cliquez sur l’onglet **Parcourir**, puis sur le nom de la destination.
-2. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite pour modifier les segments à envoyer vers la destination.
+2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
 
 ## Vérifier que l’activation du segment a réussi {#verify-activation}
 
@@ -67,6 +67,6 @@ Vérifiez la destination publicitaire vers laquelle vous activez vos données. S
 Pour désactiver un flux d’activation existant, procédez comme suit :
 
 1. Sélectionnez **Destinations** dans la barre de navigation de gauche, ensuite cliquez sur l’onglet **Parcourir**, puis sur le nom de la destination.
-2. Cliquez sur la commande **[!UICONTROL Activé]** dans le rail de droite pour modifier l’état du flux d’activation.
+2. Click the **[!UICONTROL Enabled]** control in the right rail to change the activation flow state.
 3. Dans la fenêtre **Mettre à jour l’état du flux de données**, sélectionnez **Confirmer** pour désactiver le flux d’activation.
 
