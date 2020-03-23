@@ -4,7 +4,7 @@ seo-title: Présentation de Customer AI (alpha)
 description: Ce document présente Sensei Insights — Customer AI (alpha)
 seo-description: Ce document présente Sensei Insights — Customer AI (alpha)
 index: false
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: aeacc6d839ead56418b856adcf0485df4a4af15c
 
 ---
