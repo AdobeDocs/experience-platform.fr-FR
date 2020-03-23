@@ -3,7 +3,7 @@ title: Visionneuse de profils
 seo-title: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
 description: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
 seo-description: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: f23a025336875adec1f4182fee451741833a1b63
 
 ---
