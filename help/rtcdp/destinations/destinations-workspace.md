@@ -3,7 +3,7 @@ title: Espace de travail des destinations
 seo-title: Espace de travail des destinations
 description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 132bc9787a86045adba559c769b02927a6045b17
 
 ---
@@ -19,7 +19,7 @@ L’espace de travail des destinations se compose de quatre sections : **Catalo
 
 ## Catalogue {#catalog}
 
-L’onglet **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations proposées par Adobe, auxquelles vous pouvez envoyer des données. Sélectionnez une destination dans le catalogue pour ouvrir le rail de droite. Ici, vous pouvez configurer une connexion à la destination (**Se connecter à la destination**) ou en savoir plus sur chaque destination en consultant la documentation (**Afficher la documentation**).
+The **[!UICONTROL Catalog]** tab displays a list of all destinations offered by Adobe, that you can send data to. Sélectionnez une destination dans le catalogue pour ouvrir le rail de droite. Ici, vous pouvez configurer une connexion à la destination (**Se connecter à la destination**) ou en savoir plus sur chaque destination en consultant la documentation (**Afficher la documentation**).
 
 ![Options du catalogue des destinations](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
 
@@ -27,7 +27,7 @@ Pour plus d’informations sur les catégories de destination et sur chaque dest
 
 ## Parcourir {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations dont le bouton Activer est sélectionné définissent la destination comme active et vice-versa. Vous pouvez également consulter les destinations où les données circulent en sélectionnant **Segments > Parcourir** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Les destinations dont le bouton Activer est sélectionné définissent la destination comme active et vice-versa. Vous pouvez également consulter les destinations où les données circulent en sélectionnant **Segments > Parcourir** et en sélectionnant un segment à inspecter. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
 
 ![Onglet Parcourir](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -45,11 +45,11 @@ Cliquez sur une ligne de destination pour afficher plus d’informations sur la 
 
 ![Cliquer sur la ligne de destination](/help/rtcdp/destinations/assets/click-destination-row.png)
 
-Sélectionnez le nom de la destination pour afficher des informations sur les segments activés vers cette destination. Cliquez sur **[!UICONTROL Modifier l’activation]** pour modifier ou ajouter les segments envoyés vers cette destination.
+Sélectionnez le nom de la destination pour afficher des informations sur les segments activés vers cette destination. Click **[!UICONTROL Edit activation]** to modify or add to the segments that are being sent to this destination.
 
 ## Comptes {#accounts}
 
-Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les connexions que vous avez établies avec différentes destinations. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque destination :
+In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque destination :
 
 ![Onglet Comptes](/help/rtcdp/destinations/assets/accounts-tab.png)
 
@@ -62,10 +62,10 @@ Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les con
 
 ## Flux de données {#data-flows}
 
-L’onglet **[!UICONTROL Flux de données]** affiche une représentation graphique des flux d’activation que vous avez configurés dans la plateforme de données client en temps réel.
+The **[!UICONTROL Data flows]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
 
 ![Data-flows1](/help/rtcdp/destinations/assets/data-flows1.png)
 
-Sélectionnez l’une des destinations affichées sur la page et appuyez sur **[!UICONTROL Afficher les flux]** pour afficher les informations sur tous les flux de données que vous avez configurés pour chaque destination.
+Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the data flows you have set up for each destination.
 
 ![Data-flows2](/help/rtcdp/destinations/assets/data-flows2.png)
