@@ -154,7 +154,7 @@ Par exemple, pour envoyer les données de gestion de la relation client de Luma,
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Par exemple, sélectionnez **[!UICONTROL Contacts]**. Un aperçu des données des contacts est automatiquement chargé afin que vous puissiez vous assurer que tout fonctionne comme prévu.
+   For example, select **[!UICONTROL Contacts]**. Un aperçu des données des contacts est automatiquement chargé afin que vous puissiez vous assurer que tout fonctionne comme prévu.
 
    Adobe Experience Platform élimine une grande partie du travail manuel de ce processus en mappant automatiquement les champs standard au schéma de profil du modèle de données d’expérience (XDM).
 
@@ -231,7 +231,7 @@ Comme Marie a ajouté un article qui semble être un cadeau dans le panier et l�
 
 Lorsque vous avez ajouté le segment « Personnes abandonnant un panier contenant un cadeau », vous pouvez consulter le nombre approximatif de personnes qui font partie de ce segment. Vous pouvez intervenir et offrir une personnalisation par le biais de différents canaux.
 
-Cliquez sur **[!UICONTROL Envoyer vers les destinations]**.
+Cliquez sur **[!UICONTROL Send to destinations]**.
 
 Dans la plateforme CDP en temps réel Adobe, Luma peut intervenir en toute simplicité sur les segments ciblés afin de les personnaliser.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
@@ -255,7 +255,7 @@ Vous pouvez également choisir un moment précis pour programmer le début ou la
 >[!NOTE]
 >Vous pouvez également cliquer dans le champ de la date pour programmer automatiquement un délai de 90 jours.
 
-Cliquez sur **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
+Click **[!UICONTROL Save]** to go to the next page.
 
 Lorsqu’un client de cette audience effectue un achat, son abonnement à cette audience est supprimé en temps réel. Il n’est plus admissible puisque son statut a changé.
 
