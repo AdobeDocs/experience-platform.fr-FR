@@ -3,7 +3,7 @@ title: Page de détails des destinations
 seo-title: Page de détails des destinations
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
 
 ---
