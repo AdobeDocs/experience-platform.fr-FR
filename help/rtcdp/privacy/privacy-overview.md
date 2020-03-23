@@ -3,7 +3,7 @@ title: Confidentialité du profil de données client en temps réel
 seo-title: Confidentialité du profil de données client en temps réel
 description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 5d3bedd97208d9eed3977a35e16a10f4864aedd9
 
 ---
