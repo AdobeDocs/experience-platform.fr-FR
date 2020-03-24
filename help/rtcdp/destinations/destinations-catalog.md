@@ -4,14 +4,16 @@ seo-title: Catalogue des destinations
 description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc.
 seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc.
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # Catalogue des destinations
 
-Le **catalogue des destinations** offre une liste des plateformes de destination disponibles qui sont prêtes à recevoir des données. Ces plateformes de destination comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc. Parcourez le catalogue pour déterminer les plateformes de destination les plus adaptées à vos cas d’utilisation en matière de publicité et de personnalisation, puis configurez des flux pour activer les segments vers les destinations.
+Le **catalogue des destinations** offre une liste des plateformes de destination disponibles qui sont prêtes à recevoir des données. Ces plateformes de destination comprennent les solutions Adobe, les plateformes publicitaires, les systèmes de gestion de la relation client (CRM), les plateformes de marketing par e-mail, etc.
+
+Parcourez le catalogue pour déterminer les plateformes de destination les plus adaptées à vos cas d’utilisation en matière de publicité et de personnalisation, puis configurez des flux pour activer les segments vers les destinations.
 
 ## Catégories de destination
 
