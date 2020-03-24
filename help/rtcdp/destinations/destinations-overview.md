@@ -4,12 +4,14 @@ seo-title: Présentation des destinations
 description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 seo-description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: b4b02913467c43d004574a1aa5cb2f793964ad1e
+source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ---
 
 
 # Présentation des destinations
+
+![Bannière de présentation des destinations](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
 Les **destinations** sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les **destinations** pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
