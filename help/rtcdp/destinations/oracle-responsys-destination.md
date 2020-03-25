@@ -4,7 +4,7 @@ seo-title: Destination Oracle Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 seo-description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 translation-type: tm+mt
-source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
+source-git-commit: fe56fe71c36e06f2eeed45436cb36b5a371d0484
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 3b9584cca8943c52bb3d8e4512d327d3dbeb9e04
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 
-Pour envoyer des données de segment à Oracle Responsys, vous devez d’abord établir la [connexion à la destination](#connect-destination) dans la plateforme de données client en temps réel d’Adobe, puis [configurer une importation de données](#import-data-into-responsys) à partir de votre emplacement de stockage dans Oracle Responsys.
+To send segment data to Oracle Responsys, you must first [connect to the destination](#connect-destination) in Adobe Real-time Customer Data Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into Oracle Responsys.
 
 ## Se connecter à la destination {#connect-destination}
 
@@ -23,23 +23,21 @@ Pour envoyer des données de segment à Oracle Responsys, vous devez d’abord �
 
    ![Connexion à Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-1. In the Connect destination wizard, select the **[!UICONTROL Connection type]** for your storage location. Pour Oracle Responsys, vous pouvez choisir entre **SFTP avec mot de passe** et **SFTP avec clé SSH**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect]**.
-
-   ![Configuration de l’assistant Responsys](/help/rtcdp/destinations/assets/responsys-wizard.png)
+1. À l’étape **Authentification** , si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez votre connexion existante. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion. Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Pour Oracle Responsys, vous pouvez choisir entre **SFTP avec mot de passe** et **SFTP avec clé SSH**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
    Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe.
 Pour les connexions **SFTP avec clé SSH**, vous devez fournir le domaine, le port, le nom d’utilisateur et la clé SSH.
 
-   ![Renseignement des informations dans Responsys](/help/rtcdp/destinations/assets/responsys-step2.png)
+   ![Renseignement des informations dans Responsys](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
-1. Dans **Informations de base**, renseignez les informations pertinentes pour votre destination, comme illustré ci-dessous :
+1. In the **Setup** step, fill in the relevant information for your destination as shown below:
    * **Nom** : choisissez un nom pertinent pour votre destination.
    * **Description** : saisissez une description pour votre destination.
    * **Chemin d’accès au dossier** : indiquez le chemin d’accès dans l’emplacement de stockage où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
    * **Format du fichier** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
    ![Informations de base de Responsys](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-1. Cliquez sur **Créer** après avoir renseigné les champs dans **Informations de base**. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
+1. Cliquez sur **Créer des destinations** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
 
 ## Attributs de destination {#destination-attributes}
 
