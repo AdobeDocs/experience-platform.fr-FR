@@ -4,7 +4,7 @@ seo-title: 'Flux de production de destinations de  Cloud '
 description: 'Instructions de connexion à votre cloud  emplacements '
 seo-description: 'Instructions de connexion à votre cloud  emplacements '
 translation-type: tm+mt
-source-git-commit: c4f1c0a6ef4d16e5fe763826016d56506fdca5dc
+source-git-commit: 60b10aa823af55d6f38651308dc93eeb57a7fee6
 
 ---
 
@@ -32,9 +32,7 @@ Pour les destinations Amazon S3, insérez le **[!UICONTROL Bucket name]** et le 
 
    ![Connexion au cloud Amazon S3  destination  - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
 
-
-
-   <br>Pour les destinations SFTP, insérez la variable **[!UICONTROL Folder path]**
+   Pour les destinations SFTP, insérez l’ **[!UICONTROL Folder path]** emplacement de remise des fichiers.
 
    ![Connexion au cloud SFTP  destination  du - étape d’authentification](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
