@@ -1,10 +1,10 @@
 ---
 title: Destination SFTP
 seo-title: Destination SFTP
-description: Créez une connexion sortante en direct à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
-seo-description: Créez une connexion sortante en direct à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
+description: Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
+seo-description: Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
 
 ## Présentation
 
-Créez une connexion sortante en direct à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
+Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
 
 Pour exporter des données, procédez comme suit :
 
@@ -23,7 +23,6 @@ Voir le flux de travail [Cloud   destinations de ](/help/rtcdp/destinations/clou
 
 Pour les destinations SFTP, saisissez les informations suivantes dans le processus de création de destination, à l’étape **Authentification** :
 
-* **Host**
-* **Nom d’utilisateur**
-* **Mot de passe**
-
+* **Hôte**: l&#39;adresse de votre  SFTP  emplacement du
+* **Nom d&#39;utilisateur**: le nom d&#39;utilisateur pour vous connecter à votre emplacement  SFTP 
+* **Mot de passe**: le mot de passe pour vous connecter à votre emplacement  SFTP 
