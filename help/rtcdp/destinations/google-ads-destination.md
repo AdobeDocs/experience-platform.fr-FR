@@ -4,7 +4,7 @@ seo-title: Destination des publicités Google
 description: Google Ads, anciennement appelé Google AdWords, est un service de publicité en ligne qui permet aux entreprises de payer la publicité par clic sur les recherches textuelles, les affichages graphiques, les vidéos YouTube et les affichages mobiles in-app.
 seo-description: Google Ads, anciennement appelé Google AdWords, est un service de publicité en ligne qui permet aux entreprises de payer la publicité par clic sur les recherches textuelles, les affichages graphiques, les vidéos YouTube et les affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 3e510c891c84fb3dc1632bd1182ef1e010ea898f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -51,12 +51,12 @@ Avant de créer la destination des publicités Google dans Adobe CDP en temps r�
 1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez Publicités Google, puis sélectionnez **[!UICONTROL Create destination]**.
    ![Connecter la destination des publicités Google](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. Dans l’assistant de création de destination, renseignez les informations de base de la destination.
+2. Dans le flux de travail Créer une destination, renseignez le champ [!UICONTROL Basic Information] pour la destination.
    ![Informations de base Publicités Google](/help/rtcdp/destinations/assets/google-2-basic-information.png)
-* **Nom** : renseignez le nom de votre choix pour cette destination.
-* **Description** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **Type** de compte : AdWords est la seule option disponible.
-* **ID** de compte : Renseignez votre ID de compte avec les publicités Google. Le format d’ID est généralement 123-456-7890.
+* **[!UICONTROL Name]**: Renseignez le nom préféré pour cette destination.
+* **[!UICONTROL Description]**: Facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
+* **[!UICONTROL Account Type]**: AdWords est la seule option disponible.
+* **[!UICONTROL Account ID]**: Renseignez votre ID de compte avec les publicités Google. Le format d’ID est généralement 123-456-7890.
 
 ## Activer les segments dans les publicités Google
 
