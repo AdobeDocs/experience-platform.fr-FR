@@ -4,7 +4,7 @@ seo-title: 'Flux de production de destinations de  Cloud '
 description: 'Instructions de connexion à votre cloud  emplacements '
 seo-description: 'Instructions de connexion à votre cloud  emplacements '
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -19,7 +19,7 @@ Cette page explique comment vous pouvez vous connecter au cloud  aux emplacement
 
    ![Connexion au cloud  destination  du](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. À l’étape **Authentification** , si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez votre connexion existante. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion à votre cloud  destination . Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Voir destination [](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 et destination [](/help/rtcdp/destinations/sftp-destination.md) SFTP pour plus d’informations sur la saisie des informations d’identification à l’étape **Authentification** .
+2. Au cours de l’ **[!UICONTROL Authentication]** étape, si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez votre connexion existante. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion à votre cloud  destination . Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Voir destination [](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 et destination [](/help/rtcdp/destinations/sftp-destination.md) SFTP pour plus d’informations sur la saisie des informations d’identification à l’étape **Authentification** .
 
    >[!NOTE]
    >
