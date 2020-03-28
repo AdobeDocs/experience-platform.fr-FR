@@ -4,7 +4,7 @@ seo-title: Destination Google Display & Video 360
 description: Display & Video 360, anciennement connu sous le nom de DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et  des campagnes numériques ciblées  des sources d’inventaire Display, Video et Mobile.
 seo-description: 'Display & Video 360, anciennement connu sous le nom de DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et  des campagnes numériques ciblées  des sources d’inventaire Display, Video et Mobile. '
 translation-type: tm+mt
-source-git-commit: 810028edc662a7f52484e37cf0fbdfafe5db650f
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -46,14 +46,14 @@ Avant de créer la destination Google Display &amp; Video 360 dans le CDP en tem
 1. Dans **[!UICONTROL Connections > Destinations]** Google Display &amp; Video 360, sélectionnez **[!UICONTROL Create destination]**.
    ![Connectez la destination Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
-2. Dans l’assistant de création de destination, renseignez les informations de base de la destination.
+2. Dans le flux de travail Créer une destination, renseignez le champ [!UICONTROL Basic Information] pour la destination.
    ![Informations de base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
-* **Nom** : renseignez le nom de votre choix pour cette destination.
-* **Description** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **Type de compte** : sélectionnez une option, en fonction de votre compte avec Google :
+* **[!UICONTROL Name]**: Renseignez le nom préféré pour cette destination.
+* **[!UICONTROL Description]**: Facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
+* **[!UICONTROL Account Type]**: Sélectionnez une option, selon votre compte auprès de Google :
    * Utilisez `Invite Advertiser` cette option pour autoriser   à être partagés uniquement avec une marque spécifique dans votre compte Display &amp; Video 360.
    * Utilisez `Invite Partner` cette option pour permettre   d’être partagés avec toutes les marques de votre compte Display &amp; Video 360.
-* **ID** de compte : Renseignez votre **[!DNL Invite partner]** ID de compte ou votre **[!DNL Invite advertiser]** ID de compte auprès de Google. En règle générale, il s’agit d’un identifiant à six ou sept chiffres.
+* **[!UICONTROL Account ID]**: Renseignez votre **[!DNL Invite partner]** ID de compte ou votre **[!DNL Invite advertiser]** ID de compte auprès de Google. En règle générale, il s’agit d’un identifiant à six ou sept chiffres.
 
 >[!NOTE]
 >
