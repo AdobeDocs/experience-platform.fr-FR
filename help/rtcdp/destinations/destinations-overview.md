@@ -4,7 +4,7 @@ seo-title: Présentation des destinations
 description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 seo-description: Les destinations sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les destinations dans la plateforme de données client en temps réel Adobe pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -13,16 +13,16 @@ source-git-commit: e66f4df13afb3c9f9ddb440ccb5e479caeef2142
 
 ![Bannière de présentation des destinations](/help/rtcdp/destinations/assets/destinations-overview-banner.png)
 
-Les **destinations** sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser les **destinations** pour activer vos données connues et inconnues pour les campagnes marketing intercanaux, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les **destinations** sont des intégrations précompilées avec les plateformes de destination qui permettent l’activation en toute simplicité des données à partir de la plateforme de données client en temps réel. Vous pouvez utiliser des destinations pour activer vos données connues et inconnues pour les campagnes marketing  cross-, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 
 ## Destinations et sources
 
-L’une des principales fonctionnalités de la plateforme CDP en temps réel consiste à envoyer vos données propriétaires et à les activer en fonction des besoins de votre entreprise. Utilisez **[!UICONTROL Sources]** pour envoyer des données dans la plateforme CDP en temps réel et **[!UICONTROL Destinations]** pour exporter des données de la plateforme CDP en temps réel.
+L’une des principales fonctionnalités de la plateforme CDP en temps réel consiste à envoyer vos données propriétaires et à les activer en fonction des besoins de votre entreprise. Utilisez les sources pour importer des données dans le CDP en temps réel et les destinations pour exporter des données du CDP en temps réel.
 
 ## Étapes des destinations
 
-* Utilisez **[!UICONTROL Destinations]** pour [activer](/help/rtcdp/destinations/activate-destinations.md) et envoyer des profils ou des segments aux plateformes d’automatisation du marketing, aux plateformes de publicité numérique, etc.
 * Choisissez parmi un [catalogue en libre-service](/help/rtcdp/destinations/destinations-catalog.md) de toutes les destinations disponibles dans la plateforme CDP en temps réel.
+* Utilisez **[!UICONTROL Destinations]** pour [activer](/help/rtcdp/destinations/activate-destinations.md) et envoyer des profils ou des segments aux plateformes d’automatisation du marketing, aux plateformes de publicité numérique, etc.
 * Planifiez régulièrement les exportations de données vers les destinations de votre choix.
 
 ## Commandes
@@ -55,6 +55,6 @@ The destinations in the [Destinations catalog](/help/rtcdp/destinations/destinat
 
 ## Destinations et contrôles d’accès
 
-La fonctionnalité **[!UICONTROL Destinations]** de la plateforme CDP en temps réel fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) et faites défiler la page vers le bas.
+La fonctionnalité de destinations dans le CDP en temps réel fonctionne avec les autorisations de d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-overview.md) et faites défiler la page vers le bas.
 
 Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de l’utilisateur du contrôle d’accès](https://www.adobe.io/apis/experienceplatform/home/permissions-and-sandboxes/permissions-and-sandboxes.html#!api-specification/markdown/narrative/technical_overview/access-control/access-control-user-guide.md).
