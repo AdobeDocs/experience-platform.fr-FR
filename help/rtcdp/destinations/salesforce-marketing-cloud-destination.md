@@ -4,7 +4,7 @@ seo-title: Salesforce Marketing Cloud
 description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 seo-description: Salesforce Marketing Cloud est une suite de marketing numérique anciennement connue sous le nom d’ExactTarget qui vous permet de créer et de personnaliser les parcours des visiteurs et des clients afin d’offrir une expérience personnalisée.
 translation-type: tm+mt
-source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
 
 ---
 
@@ -23,21 +23,21 @@ Pour envoyer des données de segment à Salesforce Marketing Cloud, vous devez d
 
    ![Connexion à Salesforce](/help/rtcdp/destinations/assets/connect-salesforce.png)
 
-2. À l’étape **Authentification** , si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez l’une de vos connexions existantes. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion. Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Pour Salesforce Marketing Cloud, vous pouvez choisir parmi **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. Au cours de l’ **[!UICONTROL Authentication]** étape, si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez l’une de vos connexions existantes. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion. Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Pour Salesforce Marketing Cloud, vous pouvez choisir entre **[!UICONTROL SFTP with Password]** et **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-   Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe.
-Pour les connexions **SFTP avec clé SSH**, vous devez fournir le domaine, le port, le nom d’utilisateur et la clé SSH.
+   For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+Pour **[!UICONTROL SFTP with SSH Key]** les connexions, vous devez fournir Domaine, Port, Nom d’utilisateur et Clé SSH.
 
    ![Renseignement des informations sur Salesforce](/help/rtcdp/destinations/assets/salesforce-authenticate.png)
 
-3. In the **Setup** step, fill in the relevant information for your destination as shown below:
-   * **Nom** : choisissez un nom pertinent pour votre destination.
-   * **Description** : saisissez une description pour votre destination.
-   * **Chemin d’accès au dossier** : indiquez le chemin d’accès dans l’emplacement de stockage où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
-   * **Format du fichier** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
+   * **[!UICONTROL Name]**: Choisissez un nom approprié pour votre destination.
+   * **[!UICONTROL Description]** : saisissez une description pour votre destination.
+   * **[!UICONTROL Folder Path]**: Indiquez le chemin d’accès dans votre  de  où le CDP en temps réel déposera vos données d’exportation au format CSV ou tabulé.
+   * **[!UICONTROL File Format]**: **[!UICONTROL CSV]** ou **[!UICONTROL TAB_DELIMITED]**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
    ![Informations de base sur Salesforce](/help/rtcdp/destinations/assets/salesforce-basic-information.png)
 
-4. Cliquez sur **Créer une destination** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
+4. Cliquez **[!UICONTROL Create destination]** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
 
 ## Attributs de destination {#destination-attributes}
 
