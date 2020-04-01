@@ -5,7 +5,7 @@ description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 seo-description: Ce tutoriel explique comment utiliser Customer AI (alpha)
 index: false
 translation-type: tm+mt
-source-git-commit: 1118983ce8f5704ef3a347c8c316a9cc5cc62815
+source-git-commit: e0d11adb7f0ece9344efb118b4199ecb1fc37bb3
 
 ---
 
@@ -88,7 +88,7 @@ Excluez les événements selon les besoins, puis cliquez sur **Terminer** pour c
 
 Si l’instance est créée avec succès, une opération de prédiction se déclenche immédiatement et les suivantes s’exécutent selon le planning défini.
 
->   **Remarque :** selon le volume des données d’entrée, les opérations de prédiction peuvent durer jusqu’à 24 heures.
+>[!NOTE] Selon la taille des données d’entrée, l’exécution de la prédiction peut prendre jusqu’à 24 heures.
 
 En suivant cette section, vous avez configuré une instance de Customer AI et exécuté une opération de prédiction. Une fois l’opération terminée, les insights notés renseignent automatiquement les profils avec les scores prévus. Veuillez patienter 24 heures avant de passer à la section suivante de ce tutoriel.
 
