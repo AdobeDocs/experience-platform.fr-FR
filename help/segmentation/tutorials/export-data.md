@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Exportation de données à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # Exportation de données  à l’aide d’API
 
-Le  Client en temps réel vous permet de créer un seul de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données disponibles dans le  du peuvent ensuite être exportées dans un jeu de données pour un traitement ultérieur. Ce didacticiel fournit des instructions étape par étape pour la création et la gestion des tâches d’exportation à l’aide de l’API [de  client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel.
+Le  Client en temps réel vous permet de créer un seul de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données disponibles dans le  du peuvent ensuite être exportées dans un jeu de données pour un traitement ultérieur. Ce didacticiel fournit des instructions étape par étape pour la création et la gestion des tâches d’exportation à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation.
 
 Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données  à l’aide de l’API d’accès aux  et des projections. Pour plus d&#39;informations sur ces autres modèles d&#39;accès, consultez le didacticiel [sur l&#39;API d&#39;accès aux](../../profile/api/entities.md) ou le didacticiel sur la [configuration des destinations et des projections](../../profile/api/edge-projections.md) de périphérie.
 
