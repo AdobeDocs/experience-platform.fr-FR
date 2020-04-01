@@ -1,0 +1,55 @@
+---
+product: experience-platform
+audience: user
+user-guide-title: Adobe Experience Platform Query Service Help
+translation-type: tm+mt
+source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+
+---
+
+
+# Adobe Experience Platform Query Service {#query}
+
+- [Présentation du service](home.md)
+- [Guide de démarrage rapide](quickstart.md)
+- API du service {#api}
+   - [Prise en main](api/getting-started.md)
+   - [Requêtes](api/queries.md)
+   - [Paramètres de connexion](api/connection-parameters.md)
+   - [de planifié](api/scheduled-queries.md)
+   - [S’exécute pour les  planifiées](api/runs-scheduled-queries.md)
+   - [Modèle](api/query-templates.md)
+- Interface utilisateur du service {#ui}
+   - [Présentation de l’interface](ui/overview.md)
+   - [Guide de l’utilisateur de l’éditeur de](ui/user-guide.md)
+- Créer une requête {#creating-queries}
+   - [Fonctions définies par Adobe](creating-queries/using-adobe-defined-functions.md)
+   - [Création d’un  d’aperçu](creating-queries/creating-queries.md)
+   - [Datasets vs tables et](creating-queries/datasets-and-tables.md)
+   - [Directives générales pour l&#39;exécution des](creating-queries/writing-queries.md)
+   - [ExperienceEvent](creating-queries/experience-event-queries.md)
+   - [Jonction de jeux de données](creating-queries/joining-datasets.md)
+   - [de données](creating-queries/deduplication.md)
+- [Génération de jeux de données à partir de résultats](creating-queries/create-datasets.md)
+- Référence SQL {#sql}
+   - [Présentation SQL](sql/overview.md)
+   - [Syntaxe SQL](sql/syntax.md)
+   - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
+   - [Spark SQL, fonctions](sql/spark-sql-functions.md)
+   - [Commandes de métadonnées](sql/metadata.md)
+   - [Déclarations préparées](sql/prepared-statements.md)
+- Exemple de {#samples}
+   - [Exemple de  d’aperçu](sample-queries/overview.md)
+   - [Adobe Analytics](sample-queries/adobe-analytics.md)
+   - [Adobe Target](sample-queries/adobe-target.md)
+- Connecter les clients au service {#clients}
+   - [Présentation des connexions client](clients/overview.md)
+   - [Aqua Data Studio](clients/aqua-data-studio.md)
+   - [Recherche](clients/looker.md)
+   - [Postico (Mac)](clients/postico.md)
+   - [Power BI (PC)](clients/power-bi.md)
+   - [PSQL](clients/psql.md)
+   - [RStudio](clients/rstudio.md)
+   - [Tableau](clients/tableau.md)
+- [Guide de dépannage](troubleshooting-guide.md)
+- [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
