@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enrichir les  des clients en temps réel avec des informations d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 34fff508f49327ce314a517d77efabb286ef055c
+source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
 
 ---
 
@@ -23,7 +23,7 @@ Ce fournit un didacticiel détaillé pour enrichir le client en temps réel de c
 
 Ce didacticiel nécessite une compréhension pratique des différents aspects d’Adobe Experience Platform impliqués dans l’assimilation de données  et la création de segments. Avant de commencer ce didacticiel, veuillez consulter la documentation des services suivants :
 
-* [](../../rtcdp/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [](../../rtcdp/overview.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 * [Service](../../identity-service/home.md)d&#39;identité : Permet d’activer les  de clients en temps réel en rapprochant les identités des sources de données disparates qui sont assimilées dans la plateforme.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plateforme organise les données d’expérience client.
 
@@ -59,7 +59,7 @@ La composition d’un  commence par l’affectation d’une classe. Les classes 
    * Pour ajouter des champs de mixage, cliquez sur le nom du mixin dans la fenêtre *Composition* . Vous aurez alors la possibilité d’ajouter des champs de mixage en cliquant sur **Ajouter champ** dans la fenêtre *Structure* . Veillez à fournir les propriétés de mixin en conséquence.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Une fois que vous avez terminé de créer votre  de, cliquez sur le champ de niveau supérieur de votre  dans la fenêtre *Structure* pour afficher les propriétés de l&#39; de lastructure dans la fenêtre de propriétés appropriée. Donnez un nom et une description, puis cliquez sur **Enregistrer** pour créer le  de.
+4. Une fois que vous avez terminé de créer votre  de, cliquez sur le champ de niveau supérieur de votre  dans la fenêtre *Structure* pour afficher les propriétés de l&#39; de lastructure dans la fenêtre de propriétés appropriée. Attribuez un nom et une description, puis cliquez sur **Enregistrer** pour créer le .
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
 5. Créez un jeu de données de sortie à l’aide de votre nouveau  de en cliquant sur **Jeu de données** dans la colonne de navigation de gauche, puis sur **Créer un jeu de données**. Dans l’écran suivant, choisissez **Créer un jeu de données à partir de**de.
