@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Création d’un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 
 ---
 
 
 # Création d’un segment
 
-Ce fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API [de de clients en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel.
+Ce fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation.
 
 Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le guide [Créateur de](../ui/overview.md)segments.
 
