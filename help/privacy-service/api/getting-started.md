@@ -40,10 +40,6 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 * Content-Type : application/json
 
-## Exemples d’appels d’API
-
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à lancer des appels à l’API de Privacy Service. Le sur les tâches [de](privacy-jobs.md) confidentialité passe en revue les différents appels d’API que vous pouvez effectuer à l’aide de l’API Privacy Service. Chaque exemple d’appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
-
 ## Étapes suivantes
 
-Maintenant que vous avez appris à passer des appels à l’aide de l’API de Privacy Service, vous pouvez créer vos propres  non interactifs. Pour savoir comment effectuer les mêmes opérations dans l’interface utilisateur de Privacy Service, consultez la présentation [de l’](../ui/overview.md)interface utilisateur.
+Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à lancer des appels à l’API de Privacy Service. Le sur les tâches [de](privacy-jobs.md) confidentialité passe en revue les différents appels d’API que vous pouvez effectuer à l’aide de l’API Privacy Service. Chaque exemple d’appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
