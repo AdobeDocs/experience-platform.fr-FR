@@ -4,7 +4,7 @@ seo-title: Gouvernance des données sur la plateforme de données client en temp
 description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: f5fbb1434b7154dcdbef12de7882ecd3d2f18d52
+source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
 
 ---
 
@@ -17,11 +17,11 @@ La gouvernance des données Adobe Experience Platform vous permet de gérer les 
 
 La plateforme CDP en temps réel repose sur Adobe Experience Platform. La plupart des fonctionnalités de gouvernance des données sont donc abordées dans la documentation d’Experience Platform. Ce document est destiné à compléter la [présentation de la gouvernance des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) pour Experience Platform et décrit les fonctionnalités de gouvernance disponibles dans la plateforme CDP en temps réel. Les sujets suivants sont abordés :
 
-* [Appliquer des étiquettes d’utilisation sur les données](#apply-usage-labels-to-your-data)
-* [Gérer des stratégies d’utilisation des données](#manage-data-usage-policies)
-* [Appliquer des stratégies d’utilisation des données](#enforce-data-usage-compliance)
+* [Appliquer des étiquettes d’utilisation sur les données](#labels)
+* [Gérer des stratégies d’utilisation des données](#policies)
+* [Appliquer des stratégies d’utilisation des données](#enforcement)
 
-## Appliquer des étiquettes d’utilisation sur les données
+## Appliquer des étiquettes d’utilisation sur les données {#labels}
 
 La gouvernance des données vous permet d’appliquer des étiquettes d’utilisation sur les données, soit au niveau du jeu de données, soit au niveau du champ du jeu de données. Les étiquettes d’utilisation des données vous permettent de classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
 
@@ -34,7 +34,7 @@ Vous pouvez définir des restrictions d’utilisation des données sur une desti
 Les cas d’utilisation marketing peuvent être définis pendant la phase de _configuration_ pour le flux de travail _Modifier la destination_ . Pour plus d’informations, voir la documentation de destination.
 
 
-## Gérer des stratégies d’utilisation des données
+## Gérer des stratégies d’utilisation des données {#policies}
 
 Les stratégies d’utilisation des données doivent être définies et activées pour que les étiquettes d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions de marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme CDP en temps réel. Pour plus d’informations, consultez la section « Stratégies d’utilisation des données » dans la [présentation de la gouvernance des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) d’Experience Platform.
 
@@ -56,7 +56,7 @@ Lorsqu’un segment est activé pour la première fois, le service de stratégie
 * Les libellés d’utilisation des données s’appliquent aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
 
-### Messages de violation de stratégie
+### Messages de violation de stratégie {#enforcement}
 
 Si une violation de stratégie survient lors de la tentative d’activation d’un segment (ou de la [modification d’un segment](#policy-enforcement-for-activated-segments)déjà activé), l’action est empêchée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs stratégies ont été violées. Sélectionnez une violation de stratégie dans la colonne de gauche de la fenêtre contextuelle pour afficher les détails de cette violation.
 
