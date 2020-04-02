@@ -4,7 +4,7 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6c8d0757d7e7568b1976823d9c52221374e67cbb
+source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
 
 ---
 
@@ -42,7 +42,7 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
-Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Pour plus d&#39;informations sur les jeux de données, consultez la présentation [des](../catalog/datasets/overview.md)jeux de données.
 
 ### Profils
 
@@ -58,7 +58,7 @@ Pour plus d’informations sur les profils, consultez [Une vue unifiée de votre
 
 La section **[!UICONTROL Segments]** indique le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](segmentation/segmentation-overview.md).
 
 ### Destinations
 
@@ -106,7 +106,7 @@ The **[!UICONTROL Recent datasets]** card shows the five most recent datasets cr
 
 Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
-Pour plus d’informations sur les jeux de données, consultez [Ingestion de données dans Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/data_ingestion_tutorial/data_ingestion_tutorial.md).
+Pour plus d&#39;informations sur les jeux de données, consultez la présentation [des](../catalog/datasets/overview.md)jeux de données.
 
 ### Sources récentes
 
@@ -122,7 +122,7 @@ The **[!UICONTROL Recent segments]** metric card shows the five most recent segm
 
 Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/segmentation-overview.md).
+Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](segmentation/segmentation-overview.md).
 
 ### Destinations récentes
 
