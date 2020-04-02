@@ -4,7 +4,7 @@ seo-title: Utilisation de stratégies de fusion dans la plateforme de données c
 description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 seo-description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 translation-type: tm+mt
-source-git-commit: f23a025336875adec1f4182fee451741833a1b63
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -15,5 +15,5 @@ Basée sur Adobe Experience Platform, la plateforme de données client en temps 
 
 Il est possible de créer des stratégies de fusion, de gérer des stratégies existantes et de définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Vous pouvez aussi spécifier des préférences concernant les sources de données et déterminer quelles données ont la priorité en cas de conflit lors de la fusion.
 
-Pour obtenir des instructions étape par étape sur l’utilisation de stratégies de fusion avec l’interface utilisateur d’Adobe Experience Platform, suivez le tutoriel [Utilisation de stratégies de fusion dans Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/tutorials/alltutorials.html#!api-specification/markdown/narrative/tutorials/merge_policies/create-merge-policies.md).
+You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [merge policies user guide](../../profile/ui/merge-policies.md).
 
