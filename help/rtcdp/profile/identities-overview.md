@@ -4,7 +4,7 @@ seo-title: Identity Service d’Adobe Experience Platform
 description: description
 seo-description: description seo
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -17,7 +17,7 @@ Désormais, plutôt que d’avoir cinq clients distincts interagissant avec votr
 
 ## Espaces de noms d’identité
 
-Les espaces de noms d’identité sont des composants d’Identity Service et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse électronique sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. Experience Platform permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la visionneuse de profils](/help/rtcdp/profile/profile-viewer.md). Pour en savoir plus sur les espaces de noms d’identité, consultez [Présentation d’espace de noms d’identité dans Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md).
+Les espaces de noms d’identité sont des composants d’Identity Service et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse électronique sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. Experience Platform permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la visionneuse de profils](/help/rtcdp/profile/profile-viewer.md). Pour en savoir plus sur les  d&#39;identité  , consultez la présentation [de l&#39;](../../identity-service/namespaces.md)identité .
 
 ## Graphiques d’identité
 
@@ -27,4 +27,4 @@ Identity Service gère un graphique d’identité visible par votre entreprise u
 
 ## Étapes suivantes
 
-Les identités et les relations entre elles sont définies et conservées par Identity Service et utilisées par le profil client en temps réel pour obtenir une vue d’ensemble de chaque client et de ses interactions. Pour en savoir plus, consultez la [documentation Identity Service dans Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md).
+Les identités et les relations entre elles sont définies et conservées par Identity Service et utilisées par le profil client en temps réel pour obtenir une vue d’ensemble de chaque client et de ses interactions. Pour en savoir plus, consultez la documentation [du service](../../identity-service/home.md)d&#39;identité.
