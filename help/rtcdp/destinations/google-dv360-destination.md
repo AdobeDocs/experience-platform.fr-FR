@@ -4,7 +4,7 @@ seo-title: Destination Google Display & Video 360
 description: Display & Video 360, anciennement connu sous le nom de DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et  des campagnes numériques ciblées  des sources d’inventaire Display, Video et Mobile.
 seo-description: 'Display & Video 360, anciennement connu sous le nom de DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et  des campagnes numériques ciblées  des sources d’inventaire Display, Video et Mobile. '
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Display &amp; Video 360, anciennement connu sous le nom de DoubleClick Bid Manag
 
 Notez les détails suivants qui sont spécifiques aux destinations Google Display &amp; Video 360 :
 
-* Vous pouvez envoyer les [identités](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) suivantes aux destinations Google Display &amp; Video 360 : Identifiant de cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md) suivantes aux destinations Google Display &amp; Video 360 : Identifiant de cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
 * Les audiences activées sont créées par programmation dans la plateforme Google.
 * La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Reportez-vous au nombre de  de  dans Google pour valider l’intégration et comprendre la taille de ciblage des  de  de de Google.
 
