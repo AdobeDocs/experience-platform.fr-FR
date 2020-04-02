@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluer un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 Une fois l’exportation terminée, vos données sont disponibles dans Data Lake dans la plateforme Experience Platform. Vous pouvez ensuite utiliser l’API [d’accès aux](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) données pour accéder aux données à l’aide de la `batchId` variable associée à l’exportation. Selon la taille du segment, les données peuvent être en blocs et le lot peut être constitué de plusieurs fichiers.
 
-Pour obtenir des instructions détaillées sur l’utilisation de l’API d’accès aux données pour accéder aux fichiers de commandes et les télécharger, suivez le didacticiel [Accès aux](../../data-access/api.md)données.
+Pour obtenir des instructions détaillées sur l’utilisation de l’API d’accès aux données pour accéder aux fichiers de commandes et les télécharger, suivez le didacticiel [Accès aux](../../data-access/tutorials/dataset-data.md)données.
 
 Vous pouvez également accéder aux données de segments exportées avec succès à l’aide du service de  de la plateforme Adobe Experience Platform. Grâce à l’interface utilisateur ou à l’API RESTful, le service de  de vous permet d’écrire, de valider et d’exécuter des  sur des données du lac Data.
 
