@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -454,7 +454,7 @@ Avec l’ID de lot, vous pouvez utiliser l’API d’accès aux données pour li
 
 Vous pouvez également utiliser l’API d’accès aux données pour renvoyer le nom, la taille en octets et un lien pour télécharger le fichier ou le dossier.
 
-Vous trouverez des étapes détaillées pour travailler avec l’API d’accès aux données dans le guide [du développeur d’accès aux](../../data-access/api.md)données.
+Vous trouverez des étapes détaillées pour travailler avec l’API d’accès aux données dans le guide [du développeur d’accès aux](../../data-access/home.md)données.
 
 ## Mettre à jour le de jeux de données 
 
