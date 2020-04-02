@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -53,7 +53,7 @@ La première étape de la segmentation consiste à définir un segment, représe
 
 Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de `/segment/definitions` fin dans l’API  client en temps réel. L’exemple suivant montre comment formater une demande de définition, y compris les informations requises pour qu’un segment soit défini avec succès.
 
-Les définitions de segment peuvent être évaluées de deux manières : segmentation par lot et segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont assimilées dans la plateforme. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire la [présentation sur la segmentation](../ui/streaming-segmentation.md)en flux continu.
+Les définitions de segment peuvent être évaluées de deux manières : segmentation par lot et segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont assimilées dans la plateforme. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire la [présentation sur la segmentation](../api/streaming-segmentation.md)en flux continu.
 
 **Format API**
 
