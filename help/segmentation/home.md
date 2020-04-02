@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
 
 ---
 
@@ -47,7 +47,7 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 
 La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos segments en réponse aux  des utilisateurs . Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée au client en temps réel. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre   reste pertinent.
 
-Pour en savoir plus sur la segmentation en flux continu, consultez la documentation [sur la segmentation en](./ui/streaming-segmentation.md)flux continu.
+Pour en savoir plus sur la segmentation en flux continu, consultez la documentation [sur la segmentation en](./api/streaming-segmentation.md)flux continu.
 
 ### Segmentation par lots
 
