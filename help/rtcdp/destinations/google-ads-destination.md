@@ -4,7 +4,7 @@ seo-title: Destination des publicités Google
 description: Google Ads, anciennement appelé Google AdWords, est un service de publicité en ligne qui permet aux entreprises de payer la publicité par clic sur les recherches textuelles, les affichages graphiques, les vidéos YouTube et les affichages mobiles in-app.
 seo-description: Google Ads, anciennement appelé Google AdWords, est un service de publicité en ligne qui permet aux entreprises de payer la publicité par clic sur les recherches textuelles, les affichages graphiques, les vidéos YouTube et les affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -19,7 +19,7 @@ Google Ads, anciennement appelé Google AdWords, est un service de publicité en
 
 Notez les détails suivants qui sont spécifiques aux destinations de publicités Google :
 
-* Vous pouvez envoyer les [identités](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md) suivantes vers les destinations de publicités Google : Identifiant de cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
+* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md) suivantes vers les destinations de publicités Google : Identifiant de cookie **Google, IDFA, GAID, ID Roku, ID Microsoft, ID Amazon Fire TV**.
 * Les audiences activées sont créées par programmation dans la plateforme Google.
 * La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Reportez-vous au nombre de  de  dans Google pour valider l’intégration et comprendre la taille de ciblage des  de  de de Google.
 
