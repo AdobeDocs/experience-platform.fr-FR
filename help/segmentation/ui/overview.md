@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 91792f81a50d5752e46236d61b6ad645e3fda86c
 
 ---
 
@@ -15,7 +15,7 @@ Le service de segmentation de la plate-forme Adobe Experience Platform fournit u
 
 ## Prise en main
 
-L’utilisation de définitions de segment nécessite une compréhension des différents services de la plateforme d’expérience impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation des services suivants :
+L’utilisation des définitions de segment nécessite une compréhension des différents services de la plateforme d’expérience impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation des services suivants :
 
 - [Service](../home.md)de segmentation : Le service de segmentation vous permet de diviser les données stockées dans la plateforme d’expérience qui se rapportent à des individus (tels que des clients, des, des utilisateurs ou des organisations) en groupes plus petits qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
 - [](../../profile/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
@@ -150,7 +150,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 ## Activer la segmentation programmée
 
-Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation à la demande ou programmée (continue). L’évaluation consiste à déplacer les données de du client en temps réel au moyen de définitions de segment afin de produire des  de correspondants. Une fois créés, les   sont enregistrés et stockés afin de pouvoir être exportés à l’aide des API de plateforme d’expérience.
+Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation à la demande ou programmée (continue). L’évaluation consiste à déplacer les données de du client en temps réel au moyen de définitions de segment afin de produire des  de correspondants. Une fois créés, les  de  sont enregistrés et stockés afin de pouvoir être exportés à l’aide des API de plateforme d’expérience.
 
 L’évaluation à la demande implique l’utilisation de l’API pour effectuer l’évaluation et créer   de segments selon les besoins, tandis que l’évaluation planifiée (également appelée &quot;segmentation programmée&quot;) vous permet de créer un calendrier récurrent pour évaluer les définitions de segments à un moment spécifique (au maximum une fois par jour).
 
@@ -173,6 +173,14 @@ L’activation des définitions de segment pour la diffusion en continu peut êt
 ![](../images/segment-builder/enable-streaming-segmentation.png)
 
 Une fois la segmentation en flux continu activée, une ligne de base doit être définie (il s’agit de l’exécution initiale après laquelle le segment sera toujours à jour). Le système gère automatiquement la segmentation, mais cela n’est possible que si la segmentation programmée a été activée. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section précédente de ce guide](#enable-scheduled-segmentation)d’utilisation.
+
+## Violations de la stratégie DOM
+
+>[!NOTE] Les violations de la stratégie DULE ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
+
+Une fois le segment créé, il est analysé par la gouvernance des données afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour plus d&#39;informations sur les violations de DULE et de stratégie, reportez-vous à l&#39;aperçu [du libellé d&#39;utilisation des](../../data-governance/labels/overview.md)données.
+
+![](../images/segment-builder/segment-dule-policy-violations.png)
 
 ## Étapes suivantes
 
