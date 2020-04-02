@@ -4,7 +4,7 @@ seo-title: Gouvernance des données sur la plateforme de données client en temp
 description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -15,7 +15,7 @@ La plateforme de données client (CDP) en temps réel rassemble les données de 
 
 La gouvernance des données Adobe Experience Platform vous permet de gérer les données client et de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. Elle joue un rôle essentiel sur la plateforme CDP en temps réel, ce qui vous permet de définir des stratégies d’utilisation, de classer vos données en fonction de ces stratégies et de rechercher les violations de stratégies lors de l’exécution de certaines actions de marketing.
 
-La plateforme CDP en temps réel repose sur Adobe Experience Platform. La plupart des fonctionnalités de gouvernance des données sont donc abordées dans la documentation d’Experience Platform. Ce document est destiné à compléter la [présentation de la gouvernance des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) pour Experience Platform et décrit les fonctionnalités de gouvernance disponibles dans la plateforme CDP en temps réel. Les sujets suivants sont abordés :
+La plateforme CDP en temps réel repose sur Adobe Experience Platform. La plupart des fonctionnalités de gouvernance des données sont donc abordées dans la documentation d’Experience Platform. Ce document est destiné à compléter la [présentation de la gouvernance des données](../../data-governance/home.md) pour Experience Platform et décrit les fonctionnalités de gouvernance disponibles dans la plateforme CDP en temps réel. Les sujets suivants sont abordés :
 
 * [Appliquer des étiquettes d’utilisation sur les données](#labels)
 * [Gérer des stratégies d’utilisation des données](#policies)
@@ -25,7 +25,7 @@ La plateforme CDP en temps réel repose sur Adobe Experience Platform. La plupar
 
 La gouvernance des données vous permet d’appliquer des étiquettes d’utilisation sur les données, soit au niveau du jeu de données, soit au niveau du champ du jeu de données. Les étiquettes d’utilisation des données vous permettent de classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
 
-Pour plus d’informations sur l’utilisation des étiquettes d’utilisation des données, consultez le [Guide de l’utilisateur des étiquettes d’utilisation des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/tutorials/dule/dule_working_with_labels.md) pour Adobe Experience Platform.
+Pour plus d’informations sur l’utilisation des étiquettes d’utilisation des données, consultez le [Guide de l’utilisateur des étiquettes d’utilisation des données](../../data-governance/labels/overview.md) pour Adobe Experience Platform.
 
 ## Définir des restrictions sur les destinations
 
@@ -36,9 +36,9 @@ Les cas d’utilisation marketing peuvent être définis pendant la phase de _co
 
 ## Gérer des stratégies d’utilisation des données {#policies}
 
-Les stratégies d’utilisation des données doivent être définies et activées pour que les étiquettes d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions de marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme CDP en temps réel. Pour plus d’informations, consultez la section « Stratégies d’utilisation des données » dans la [présentation de la gouvernance des données](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_overview.md) d’Experience Platform.
+Les stratégies d’utilisation des données doivent être définies et activées pour que les étiquettes d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions de marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme CDP en temps réel. Pour plus d’informations, consultez la section « Stratégies d’utilisation des données » dans la [présentation de la gouvernance des données](../../data-governance/home.md) d’Experience Platform.
 
-Adobe Experience Platform propose plusieurs **stratégies principales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être consultées en adressant une requête à l’[API du service stratégique des étiquettes DULE (Data Usage Labeling and Enforcement)](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), comme illustré dans la section « Répertorier toutes les stratégies » du [Guide du développeur du service stratégique](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html#!api-specification/markdown/narrative/technical_overview/data_governance/dule_policy_service_developer_guide.md). Vous pouvez également créer vos propres **stratégies personnalisées** pour modéliser des restrictions d’utilisation personnalisées, comme illustré dans la section « Créer une stratégie » du guide du développeur.
+Adobe Experience Platform propose plusieurs **stratégies principales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être consultées en adressant une requête à l’[API du service stratégique des étiquettes DULE (Data Usage Labeling and Enforcement)](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), comme illustré dans la section « Répertorier toutes les stratégies » du [Guide du développeur du service stratégique](../../data-governance/policies/overview.md). Vous pouvez également créer vos propres **stratégies personnalisées** pour modéliser des restrictions d’utilisation personnalisées, comme illustré dans la section « Créer une stratégie » du guide du développeur.
 
 ## (Beta) Enforce data usage compliance {#enforce-data-usage-compliance}
 
@@ -70,7 +70,7 @@ Cliquez sur Liaison des **données** pour effectuer le suivi des destinations, d
 
 Une fois qu’une violation a été déclenchée, le bouton **Enregistrer** est désactivé pour le   jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux stratégies d’utilisation des données.
 
-### Application des stratégies pour les segments activés
+### Application des stratégies pour les segments activés {#policy-enforcement-for-activated-segments}
 
 L’application de la stratégie s’applique toujours aux segments une fois qu’ils ont été activés, ce qui limite toute modification apportée à un segment ou à sa destination qui entraînerait une violation de la stratégie. En raison des nombreux composants impliqués dans l’activation des segments vers les destinations, l’une des actions suivantes peut potentiellement déclencher une violation :
 
@@ -83,4 +83,4 @@ Si l’une des actions ci-dessus déclenche une violation, cette action est emp�
 
 ## Étapes suivantes
 
-Maintenant que vous avez découvert les principales fonctionnalités de gouvernance des données sur la plateforme CDP en temps réel et la méthode utilisée par Experience Platform pour les activer, reportez-vous à la [documentation relative à la gouvernance des données sur Adobe Experience Platform](https://www.adobe.io/apis/experienceplatform/home/dule/duleservices.html). La documentation offre des présentations sur les principaux concepts de la gouvernance des données, ainsi que sur les workflows détaillés de gestion des étiquettes et des stratégies d’utilisation des données.
+Maintenant que vous avez découvert les principales fonctionnalités de gouvernance des données sur la plateforme CDP en temps réel et la méthode utilisée par Experience Platform pour les activer, reportez-vous à la [documentation relative à la gouvernance des données sur Adobe Experience Platform](../../data-governance/home.md). La documentation offre des présentations sur les principaux concepts de la gouvernance des données, ainsi que sur les workflows détaillés de gestion des étiquettes et des stratégies d’utilisation des données.
