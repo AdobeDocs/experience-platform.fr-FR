@@ -4,7 +4,7 @@ seo-title: Profil client en temps réel sur la plateforme de données client en 
 description: Cette section présente la manière dont la plateforme de données client en temps réel vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
 seo-description: Plateforme de données client en temps réel, profil, données, expériences, canaux
 translation-type: tm+mt
-source-git-commit: 5cba5a1e8139dd85f23250d42a1cd8d2318eb916
+source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ---
 
@@ -31,4 +31,4 @@ Platform vous permet d’afficher facilement les profils client et de rechercher
 
 ## Étapes suivantes
 
-Après avoir lu cette présentation, vous devez maintenant comprendre comment la plateforme CDP en temps réel utilise le profil client en temps réel pour optimiser la personnalisation sur plusieurs canaux à grande échelle. En combinant des identités issues de différentes sources, vous pouvez obtenir une vue d’ensemble de chacun de vos clients et rendre vos campagnes marketing plus efficaces que jamais. Pour des informations plus détaillées, notamment les bonnes pratiques et des tutoriels relatifs à l’utilisation des données de profil client en temps réel dans l’interface utilisateur et via les API, consultez la [documentation du profil client en temps réel sur Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/unified_profile_architectural_overview/unified_profile_architectural_overview.md).
+Après avoir lu cette présentation, vous devez maintenant comprendre comment la plateforme CDP en temps réel utilise le profil client en temps réel pour optimiser la personnalisation sur plusieurs canaux à grande échelle. En combinant des identités issues de différentes sources, vous pouvez obtenir une vue d’ensemble de chacun de vos clients et rendre vos campagnes marketing plus efficaces que jamais. For more detailed information, including best practices and tutorials for working with Real-time Customer Profile data in the user interface and via APIs, please refer to the [Real-time Customer Profile documentation](../../profile/home.md).
