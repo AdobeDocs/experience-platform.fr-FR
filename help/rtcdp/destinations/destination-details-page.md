@@ -4,7 +4,7 @@ seo-title: Page de détails des destinations
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: b784b67092ea8d30ad00cda9a40779b3890862fd
+source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
 
 ---
 
@@ -51,7 +51,7 @@ Le rail de droite contient des informations sur la destination. Pour plus d’in
 | Catégorie | Indique le type de destination. Pour plus d’informations, consultez le [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md). |
 | Type de connexion | Indique la forme sous laquelle vos audiences sont envoyées vers la destination. Il peut s’agir d’un **cookie** ou d’un **profil**. |
 | Fréquence | Indique la fréquence d’envoi des audiences vers la destination. Il peut s’agir d’un **flux continu** ou d’un **lot**. |
-| Identité | Représente l’espace de noms d’identité accepté par la destination. Par exemple, le champ Identité peut correspondre à GAID, IDFA ou un e-mail. Pour tous les espaces de noms d’identité acceptés, consultez les espaces de noms standard dans la [présentation de l’espace de noms d’identité](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md). |
+| Identité | Représente l’espace de noms d’identité accepté par la destination. Par exemple, le champ Identité peut correspondre à GAID, IDFA ou un e-mail. Pour tous les espaces de noms d’identité acceptés, consultez les espaces de noms standard dans la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
 | Créé par | Indique l’utilisateur qui a créé ce flux de destination. |
 | Créé | Indique la date et l’heure (UTC) de création de ce flux de destination. |
 
