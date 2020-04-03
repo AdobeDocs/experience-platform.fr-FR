@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 4b7cbfcbcbaa602d92f3dfe814b1269f770e3fe7
+source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
 
 ---
 
@@ -74,16 +74,18 @@ Pour télécharger l’intégralité des données de tâche au format CSV, cliqu
 
 ## Créer une demande de tâche de confidentialité
 
+>[!NOTE] Pour créer une demande de travail de confidentialité, vous devez fournir des informations d’identité aux clients spécifiques dont les données doivent être accessibles ou supprimées. Veuillez consulter le  sur les données [d&#39;identité pour les demandes](../identity-data.md) de confidentialité avant de poursuivre avec cette section.
+
 L’interface utilisateur de Privacy Service propose deux méthodes pour créer des demandes de tâche :
 
-* Utilisation du Créateur de requêtes
-* Téléchargement d’un fichier JSON
+* [Utilisation du Créateur de requêtes](#request-builder)
+* [Téléchargement d’un fichier JSON](#json)
 
 Les étapes d’utilisation de chacune de ces méthodes sont décrites dans les sections suivantes.
 
-### Utilisation du Créateur de requêtes
+### Utilisation du Créateur de requêtes {#request-builder}
 
-A l’aide du Créateur de requêtes, vous pouvez créer manuellement une nouvelle demande de tâche de confidentialité dans l’interface utilisateur. Le créateur de requêtes est préférable pour des jeux de requêtes plus simples et plus petits, car le créateur de requêtes limite les requêtes à n’avoir qu’un type d’ID par utilisateur. Pour les requêtes plus complexes, il peut être préférable de [télécharger un fichier](#upload-a-json-file) JSON à la place.
+A l’aide du Créateur de requêtes, vous pouvez créer manuellement une nouvelle demande de tâche de confidentialité dans l’interface utilisateur. Le créateur de requêtes est préférable pour des jeux de requêtes plus simples et plus petits, car le créateur de requêtes limite les requêtes à n’avoir qu’un type d’ID par utilisateur. Pour les requêtes plus complexes, il peut être préférable de [télécharger un fichier](#json) JSON à la place.
 
 Pour  à l’aide du créateur de requêtes, cliquez sur **Créer une requête** sous le widget Rapport d’état sur le côté droit de l’écran.
 
@@ -91,19 +93,31 @@ Pour  à l’aide du créateur de requêtes, cliquez sur **Créer une requête**
 
 La boîte de dialogue *Créer une demande* s’ouvre et affiche les options disponibles pour envoyer une demande de travail de confidentialité pour le type de réglementation actuellement sélectionné.
 
-![](../images/user-guide/request-builder.png)
+<img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Sélectionnez le type **de** tâche de la requête (&quot;Supprimer&quot; ou &quot;Accès&quot;) et un ou plusieurs **produits** disponibles à partir du . Sous ID **du client**, sélectionnez un type d’ID dans le menu déroulant (adresse électronique, ECID ou AAID). Tapez les valeurs d’ID dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque ID afin de l’ajouter au .
+Sélectionnez le type **de** tâche de la requête (&quot;Supprimer&quot; ou &quot;Accès&quot;) et un ou plusieurs **produits** disponibles à partir du .
 
-![](../images/user-guide/request-builder-fillout.png)
+<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Les ID inclus dans ce recevront une copie de toute notification par courrier électronique de la part de Privacy Service, qui sera envoyée lorsqu’une tâche se termine, se termine par des erreurs ou expire. Lorsque vous avez terminé, cliquez sur **Créer**.
+Sous *type* de  de, sélectionnez le type de  approprié pour les ID de client envoyés à Privacy Service.
 
-![](../images/user-guide/request-builder-create.png)
+<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+
+Lors de l&#39;utilisation du type de   _standard_ , sélectionnez un  de  dans le menu déroulant (adresse électronique, ECID ou AAID), puis saisissez les valeurs d&#39;ID dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque identifiant afin de l&#39;ajouter auformulaire.
+
+<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+
+Lors de l’utilisation du type de  de  _personnalisé_ , vous devez saisir manuellement le de la  avant de fournir les valeurs d’ID ci-dessous.
+
+<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+
+Lorsque vous avez terminé, cliquez sur **Créer**.
+
+<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
 La boîte de dialogue disparaît et la nouvelle tâche (ou les tâches) sont répertoriées dans le widget Demandes de travaux avec leur état de traitement actuel.
 
-### Téléchargement d’un fichier JSON
+### Téléchargement d’un fichier JSON {#json}
 
 Lorsque vous créez des requêtes plus complexes, comme celles qui utilisent plusieurs types d’ID pour chaque sujet de données traité, vous pouvez créer une requête en téléchargeant un fichier JSON.
 
@@ -113,12 +127,12 @@ Cliquez sur la flèche en regard de **Créer une requête**, sous le widget Rapp
 
 La boîte de dialogue *Télécharger JSON* s’affiche, vous permettant ainsi de faire glisser votre fichier JSON dans une fenêtre.
 
-![](../images/user-guide/upload-json.png)
+<img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
 Si vous ne disposez pas d’un fichier JSON à télécharger, cliquez sur **Télécharger Adobe-GDPR-Request.json** pour télécharger un modèle que vous pouvez renseigner en fonction des valeurs que vous avez collectées auprès de vos sujets de données.
 
 
-![](../images/user-guide/privacy-template.png)
+<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
 
 
 Recherchez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le téléchargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
