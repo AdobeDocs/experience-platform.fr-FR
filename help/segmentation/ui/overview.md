@@ -15,7 +15,7 @@ Le service de segmentation de la plate-forme Adobe Experience Platform fournit u
 
 ## Prise en main
 
-L’utilisation des définitions de segment nécessite une compréhension des différents services de la plateforme d’expérience impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation des services suivants :
+L’utilisation de définitions de segment nécessite une compréhension des différents services de la plateforme d’expérience impliqués dans la segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation des services suivants :
 
 - [Service](../home.md)de segmentation : Le service de segmentation vous permet de diviser les données stockées dans la plateforme d’expérience qui se rapportent à des individus (tels que des clients, des, des utilisateurs ou des organisations) en groupes plus petits qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
 - [](../../profile/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
@@ -150,7 +150,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 ## Activer la segmentation programmée
 
-Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation à la demande ou programmée (continue). L’évaluation consiste à déplacer les données de du client en temps réel au moyen de définitions de segment afin de produire des  de correspondants. Une fois créés, les  de  sont enregistrés et stockés afin de pouvoir être exportés à l’aide des API de plateforme d’expérience.
+Une fois les définitions de segment créées, vous pouvez les évaluer par le biais d’une évaluation à la demande ou programmée (continue). L’évaluation consiste à déplacer les données de du client en temps réel au moyen de définitions de segment afin de produire des  de correspondants. Une fois créés, les   sont enregistrés et stockés afin de pouvoir être exportés à l’aide des API de plateforme d’expérience.
 
 L’évaluation à la demande implique l’utilisation de l’API pour effectuer l’évaluation et créer   de segments selon les besoins, tandis que l’évaluation planifiée (également appelée &quot;segmentation programmée&quot;) vous permet de créer un calendrier récurrent pour évaluer les définitions de segments à un moment spécifique (au maximum une fois par jour).
 
