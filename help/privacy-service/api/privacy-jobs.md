@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
 
 ---
 
@@ -105,7 +105,7 @@ curl -X POST \
 | `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité pour le traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si `priority` elle est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Propriété facultative qui spécifie la manière dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. S’ `analyticsDeleteMethod` il est omis, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement relatif à la demande (doit être &quot;gdpr&quot; ou &quot;ccpa&quot;). |
+| `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
 
@@ -399,7 +399,7 @@ GET ?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation à  pour lequel vous voulez. Les valeurs acceptées sont `gdpr` et `ccpa`. |
+| `{REGULATION}` | Le type de réglementation à  pour lequel vous voulez. Les valeurs acceptées sont `gdpr`, `ccpa`et `pdpa_tha`. |
 | `{PAGE}` | Page de données à afficher, à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0` |
 | `{SIZE}` | Nombre de résultats à afficher sur chaque page. La valeur par défaut est `1` et la valeur maximale est `100`. Si le nombre maximal est dépassé, l’API renvoie une erreur de code 400. |
 
