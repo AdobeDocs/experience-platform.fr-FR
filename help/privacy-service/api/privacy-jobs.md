@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 8102610e2733a75f22cf62d70c0408e3832d0803
+source-git-commit: cde7acc2fd112b9a5d0b86b40b3bc712c6505064
 
 ---
 
@@ -238,7 +238,7 @@ curl -X POST \
 | `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité pour le traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si `priority` elle est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Propriété facultative qui spécifie la manière dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. S’ `analyticsDeleteMethod` il est omis, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement relatif à la demande (doit être &quot;gdpr&quot; ou &quot;ccpa&quot;). |
+| `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
 
