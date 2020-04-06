@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Source Connectors Help
+user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
+source-git-commit: 10893353215296546fffde109b6f87d90c4c1a55
 
 ---
 
@@ -11,10 +11,10 @@ source-git-commit: e9b3ca0fa76456e2e6757bcc37cd813f3e64fbf7
 # Connecteurs source {#source-connectors}
 
 - [Présentation des connecteurs source](home.md)
-- Interface utilisateur des connecteurs source {#ui}
-   - Adobe Applications {#adobe-applications}
-      - [Connecteur de données Analytics](ui/adobe-applications/analytics.md)
-      - [Champs de mappage Analytics](ui/adobe-applications/analytics-mapping.md)
-      - [Connecteur   Manager](ui/adobe-applications/audience-manager.md)
-      - [champ de mappage  Gestionnaire de](ui/adobe-applications/audience-manager-mapping.md)
-      - [Champs de](ui/adobe-applications/target-mapping.md)
+- Connecteurs d’application Adobe {#adobe-applications}
+   - [Connecteur Adobe Analytics](ui/adobe-applications/analytics.md)
+   - [Connecteur Adobe   Manager](ui/adobe-applications/audience-manager.md)
+   - Mapper les champs du connecteur d’application Adobe au XDM 
+      - [Adobe Analytics](ui/adobe-applications/analytics-mapping.md)
+      - [Adobe Audience Manager](ui/adobe-applications/audience-manager-mapping.md)
+      - [Adobe Target](ui/adobe-applications/target-mapping.md)
