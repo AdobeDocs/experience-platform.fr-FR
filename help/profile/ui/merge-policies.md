@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide de l’utilisateur des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: 83c7ff45af7266904121b7ff6edcb0f9b0559fee
+source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
 
 ---
 
@@ -86,6 +86,15 @@ Une fois les modifications nécessaires effectuées, cliquez sur **Enregistrer**
 
 ![](../images/merge-policies/edited.png)
 
+## Violations de la politique de gouvernance des données
+
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la stratégie de fusion enfreint l’une des stratégies d’utilisation des données définies par votre organisation. Les stratégies d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform. Il s’agit de règles qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur des données de plateforme spécifiques ou dont vous êtes limité à l’exécution. Si, par exemple, une stratégie de fusion a été utilisée pour créer un segment qui est activé sur une destination tierce et que votre entreprise a une stratégie d’utilisation des données empêchant l’exportation de données spécifiques vers des tiers, vous recevrez une notification &quot;Violation de la stratégie de gouvernance des données détectée&quot; lors de la tentative d’enregistrement de votre stratégie de fusion.
+
+Cette notification inclut un  de stratégies d’utilisation des données qui ont été violées et vous permet de  les détails de la violation en sélectionnant une stratégie dans la . Lors de la sélection d’une stratégie violée, l’onglet lignage *de* données fournit la *raison de la violation* et le ** affecté, chacun fournissant plus de détails sur la manière dont la stratégie d’utilisation des données a été violée.
+
+Pour en savoir plus sur la gouvernance des données dans Adobe Experience Platform, lisez tout d’abord la présentation [de la gouvernance des](../../data-governance/home.md)données.
+
+![](../images/merge-policies/policy-violation.png)
 
 ## Étapes suivantes
 
