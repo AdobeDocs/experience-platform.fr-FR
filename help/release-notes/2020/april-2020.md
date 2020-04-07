@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
+source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 
 ---
 
@@ -13,6 +13,23 @@ source-git-commit: b3ee2839412c9949d67c2ae976e3df32fea7731e
 # Notes de mise à jour d’Adobe Experience Platform
 
 ## Date de publication : 8 avril 2020
+
+## Services intelligents
+
+Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’un en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
+
+**Fonctionnalités clés**
+
+| Fonction | Description |
+|---|---|
+| AI client | L’IA du client permet aux spécialistes du marketing de générer des prévisions client au niveau individuel avec des explications. Avec l’aide de facteurs influents, l’IA du client peut vous dire ce qu’un client est susceptible de faire et pourquoi. En outre, les spécialistes du marketing peuvent tirer parti des prédictions et des informations sur l’IA du client pour personnaliser les expériences du client en diffusant les  et les messages  les plus appropriés. |
+| Attribution AI | Attribution AI est un service d’attribution algorithmique à plusieurs qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à l’API d’attribution, les marketeurs peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients. |
+
+**Problèmes connus**
+
+* Aucun problème connu pour le moment.
+
+Pour plus d’informations sur les services intelligents et sur ce qu’ils doivent faire pour  , voir l’aperçu [des services](../../intelligent-services/home.md)intelligents.
 
 ## Service confidentialité
 
