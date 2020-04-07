@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: March 4, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
+source-git-commit: 1e2299980572116d589e7164dd20e171433a284a
 
 ---
 
@@ -13,6 +13,26 @@ source-git-commit: 3f3704cc1e11a4d11278a34800c8bfdc24a80753
 # Notes de mise à jour d’Adobe Experience Platform
 
 ## Date de publication : 8 avril 2020
+
+## Gouvernance des données
+
+La gouvernance des données d’Adobe Experience Platform est une série de stratégies et de technologies utilisées pour gérer les données des clients et garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. Il joue un rôle clé dans Experience Platform à différents niveaux, notamment le catalogage, le lignage des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et les  sur les données pour les actions marketing.
+
+La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des stratégies d’entreprise qui s’appliquent aux données client. À partir de là, les données peuvent être classifiées en appliquant les étiquettes d’utilisation des données appropriées, et leur utilisation peut être contrôlée par la définition des stratégies d’utilisation des données.
+
+La structure DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d’utilisation des données via l’interface utilisateur de la plateforme d’expérience et l’API DULE Policy Service.
+
+### Nouvelles fonctionnalités
+
+| Fonction | Description |
+| -----------| ---------- |
+| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Les stratégies d’utilisation des données peuvent désormais être gérées dans l’espace de travail _Stratégies_ de l’interface utilisateur de la plateforme d’expérience. Pour plus d’informations, consultez le guide [de l’utilisateur](../../data-governance/policies/user-guide.md) des stratégies. |
+
+**Problèmes connus**
+
+* Aucun.
+
+Pour plus d’informations, consultez la présentation [de la gouvernance des](../../data-governance/home.md)données.
 
 ## Services intelligents
 
@@ -68,31 +88,3 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 * None (Aucun)
 
 For more information about sources, see the [sources overview](../../source-connectors/home.md).
-
-<!-- ## Access control
-
-Experience Platform leverages [Adobe Admin Console](https://adminconsole.adobe.com) product profiles to link users with permissions and sandboxes. Permissions control access to a variety of Platform capabilities, including data modeling, profile management, and sandbox administration.
-
-### Key features
-
-|Feature | Description|
-|--- | ---|
-|Permissions | In the Admin Console, the _Permissions_ tab within a Platform product profile allows you customize which Platform capabilities are available for the users attached to that profile. Available permission categories include: Data Modeling, Data Management, Profile Management, Identities, Data Monitoring, Sandbox Administration, Destinations, Sources.|
-|Access to sandboxes | The _Permissions_ tab within a Platform product profile can grant users access to specific sandboxes. See the section on [sandboxes](#sandboxes) below for more information.|
-
-For more information, please see the [access control overview](../../access-control/home.md).
-
-## Sandboxes
-
-Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
-
-### Key features
-
-|Feature | Description|
-|--- | ---|
-|Production sandbox | Experience Platform provides a single production sandbox, which cannot be deleted or reset.|
-|Non-production sandboxes | Multiple non-production sandboxes can be created for a single Platform instance, allowing you to test features, run experiments, and make custom configurations without impacting your production sandbox.|
-|Sandbox switcher | In the Experience Platform user interface, the sandbox switcher in the top-left corner of the screen allows you to switch between available sandboxes through a dropdown menu.|
-|`x-sandbox-name` header | All calls to Experience Platform APIs must now include the new `x-sandbox-name` header, whose value references the `name` attribute of the sandbox the operation will take place in.|
-
-For more information, please see the [sandboxes overview](../../sandboxes/home.md). -->
