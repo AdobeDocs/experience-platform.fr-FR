@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 04b2e07ba39df9f530c9c93c4bf1af9e2cf30169
+source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
 
 ---
 
@@ -409,6 +409,8 @@ Une réponse réussie renvoie l’état HTTP 200 (OK) et les détails de la stra
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une stratégie DULE pour une action marketing. Vous pouvez maintenant continuer à suivre le didacticiel sur l’ [application des stratégies](../enforcement/api-enforcement.md) DULE pour savoir comment rechercher les violations de stratégies et les gérer dans votre application d’expérience.
+En suivant ce didacticiel, vous avez créé une stratégie d’utilisation des données pour une action marketing. Vous pouvez maintenant continuer à suivre le didacticiel sur l’ [application des stratégies](../enforcement/api-enforcement.md) d’utilisation des données afin d’apprendre à rechercher les violations de stratégies et à les traiter dans votre application d’expérience.
 
-Pour plus d&#39;informations sur les différentes opérations disponibles dans l&#39;API de service de stratégie, consultez le guide [du développeur de](../api/getting-started.md)service de stratégie. Pour plus d’informations sur la manière d’appliquer des stratégies DULE pour les données de  de clients en temps réel, voir le didacticiel sur l’ [application de la conformité à l’utilisation des données pour  segments](../../segmentation/tutorials/governance.md)de .
+Pour plus d&#39;informations sur les différentes opérations disponibles dans l&#39;API de service de stratégie, consultez le guide [du développeur de](../api/getting-started.md)service de stratégie. Pour plus d’informations sur la manière d’appliquer des stratégies pour les données de client en temps réel, reportez-vous au didacticiel sur l’ [application de la conformité de l’utilisation des données pour  segments](../../segmentation/tutorials/governance.md)de .
+
+Pour savoir comment gérer les stratégies d’utilisation dans l’interface utilisateur de la plateforme d’expérience, consultez le guide [d’utilisation des](user-guide.md)stratégies.
