@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluer un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -34,7 +34,7 @@ Toutes les ressources de la plateforme d’expérience sont isolées dans des sa
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
-> [!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes POST, PUT et PATCH nécessitent un en-tête supplémentaire :
 
@@ -52,7 +52,7 @@ Si vous n’avez pas encore terminé le didacticiel [Créer un segment à l’ai
 
 Grâce à une évaluation planifiée, votre organisation IMS peut créer un calendrier récurrent pour exécuter automatiquement les tâches d’exportation.
 
-> [!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour les  individuels XDM. Si votre entreprise dispose de plus de cinq stratégies de fusion pour XDM Individuel  dans un seul de sandbox , vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour les  individuels XDM. Si votre entreprise dispose de plus de cinq stratégies de fusion pour XDM Individuel  dans un seul de sandbox , vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Création d’une planification
 
