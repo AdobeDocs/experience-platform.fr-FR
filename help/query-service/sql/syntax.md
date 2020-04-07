@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Syntaxe SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -116,7 +116,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query
 
 où `target_schema_title` correspond au titre du  XDM. Utilisez cette clause uniquement si vous souhaitez utiliser un  XDM existant pour le nouvel ensemble de données créé par le CTAS.
 
-et `select_query` est une `SELECT` instruction, dont la syntaxe est définie ci-dessus dans ce.
+et `select_query` est une `SELECT` instruction dont la syntaxe est définie ci-dessus dans ce.
 
 
 ### Exemple
@@ -317,7 +317,7 @@ where option can be one of:
 - `FORMAT`: Spécifiez le format de sortie, qui peut être TEXTE, XML, JSON ou YAML. La sortie non textuelle contient les mêmes informations que le format de sortie textuelle, mais elle est plus facile à analyser pour les. Ce paramètre est défini par défaut sur `TEXT`.
 - `statement`: Toute instruction `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`,  ou  dont vous souhaitez afficher le plan d’exécution.`CREATE TABLE AS``CREATE MATERIALIZED VIEW AS`
 
-> [!IMPORTANT] Gardez à l’esprit que l’instruction est réellement exécutée lorsque l’ `ANALYZE` option est utilisée. Bien que `EXPLAIN` ignore toute sortie qu’un `SELECT` utilisateur renvoie, d’autres effets secondaires de l’instruction se produisent comme d’habitude.
+>[!IMPORTANT] Gardez à l’esprit que l’instruction est réellement exécutée lorsque l’ `ANALYZE` option est utilisée. Bien que `EXPLAIN` ignore toute sortie qu’un `SELECT` utilisateur renvoie, d’autres effets secondaires de l’instruction se produisent comme d’habitude.
 
 #### Exemple
 
