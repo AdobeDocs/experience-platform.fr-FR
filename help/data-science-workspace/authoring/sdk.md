@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du développeur SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 13b6c08b1038d48cdff7147dfcd7b65ea2f95599
+source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 ---
 
@@ -245,7 +245,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Sa
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, sparkSession)</code></p>
+                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
                 <p>Recevoir les données de sortie sous forme de DataFrame et les stocker dans un jeu de données de plateforme</p>
             </td>
             <td>
