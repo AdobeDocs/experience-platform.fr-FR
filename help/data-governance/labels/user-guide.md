@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des libellés d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4a60956ade2d742ac83e138a2921a6a4893e06ef
+source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
 
 ---
 
@@ -98,6 +98,8 @@ Il est important de se rappeler que l’héritage se déplace du niveau supérie
 ## Étapes suivantes
 
 Maintenant que vous avez ajouté des libellés d’utilisation des données au niveau du jeu de données et du champ, vous pouvez commencer à assimiler des données dans la plateforme d’expérience. Pour en savoir plus,  en lisant la documentation [sur l&#39;ingestion de](../../ingestion/home.md)données.
+
+Vous pouvez également désormais définir des stratégies d’utilisation des données en fonction des étiquettes que vous avez appliquées. Pour plus d’informations, reportez-vous à la présentation [des stratégies d’utilisation des](../policies/overview.md)données.
 
 ## Ressources supplémentaires   
 
