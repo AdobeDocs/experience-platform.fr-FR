@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connexion à PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 8310204071375a55329f661c9ac678f96979a594
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -65,7 +65,7 @@ Cliquez sur **Copier** pour &quot;Commande PSQL&quot;.
 
 ![Image](../images/clients/psql/connect-bi.png)
 
-> [!IMPORTANT]: Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne.
+>[!IMPORTANT]: Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne.
 
 Collez la chaîne de commande dans un terminal ou une fenêtre de commande et appuyez sur Entrée.
 
