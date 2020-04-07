@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Appliquer la conformité d’utilisation des données aux segments de  '
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
 
 ---
 
@@ -42,7 +42,7 @@ Toutes les ressources de la plateforme d’expérience sont isolées dans des sa
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
-> [!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -253,7 +253,7 @@ Une réponse réussie renvoie un de libellés d’utilisation des données assoc
 
 ## Filtrage des champs de données
 
-> [!NOTE] Cette étape est facultative. Si vous ne souhaitez pas ajuster les données incluses dans votre segment en fonction des résultats de l’étape précédente de [recherche des étiquettes](#lookup-data-usage-labels-for-the-source-datasets)d’utilisation des données, vous pouvez passer à l’étape finale de l’ [évaluation des données en cas de violation](#evaluate-data-for-policy-violations)de stratégie.
+>[!NOTE] Cette étape est facultative. Si vous ne souhaitez pas ajuster les données incluses dans votre segment en fonction des résultats de l’étape précédente de [recherche des étiquettes](#lookup-data-usage-labels-for-the-source-datasets)d’utilisation des données, vous pouvez passer à l’étape finale de l’ [évaluation des données en cas de violation](#evaluate-data-for-policy-violations)de stratégie.
 
 Si vous souhaitez ajuster les données incluses dans votre segment  de , vous pouvez le faire en utilisant l’une des deux méthodes suivantes :
 
