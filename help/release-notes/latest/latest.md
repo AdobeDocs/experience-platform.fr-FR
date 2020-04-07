@@ -1,91 +1,73 @@
 ---
 title: 'Notes de mise à jour d’Adobe Experience Platform '
-description: Notes de mise à jour de la plateforme d’expérience 11 mars 2020
+description: Notes de mise à jour de la plateforme d’expérience 8 avril 2020
 doc-type: release notes
-last-update: March 10, 2020
+last-update: April 7, 2020
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-## Date de lancement : 11 mars 2020
+## Date de publication : 8 avril 2020
 
 ## Gouvernance des données
 
-Experience Platform permet aux de rassembler des données issues de plusieurs systèmes d’entreprise afin de mieux permettre aux spécialistes du marketing d’identifier, de comprendre et d’impliquer les clients. Experience Platform inclut une infrastructure de gouvernance des données de bout en bout, y compris l’étiquetage et l’application de l’utilisation des données (DULE), afin d’assurer l’utilisation appropriée des données dans la plateforme et lors du partage entre les systèmes.
-
 La gouvernance des données d’Adobe Experience Platform est une série de stratégies et de technologies utilisées pour gérer les données des clients et garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. Il joue un rôle clé dans Experience Platform à différents niveaux, notamment le catalogage, le lignage des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et les  sur les données pour les actions marketing.
 
-### Nouvelles fonctionnalités
+La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des stratégies d’entreprise qui s’appliquent aux données client. À partir de là, les données peuvent être classifiées en appliquant les étiquettes d’utilisation des données appropriées, et leur utilisation peut être contrôlée par la définition des stratégies d’utilisation des données.
 
->[!NOTE]
->Certaines des nouvelles fonctionnalités suivantes sont actuellement en version bêta et ne sont pas disponibles pour tous les utilisateurs. Les fonctionnalités bêta peuvent être modifiées.
-
-| Fonction | Description |
-| ------- | ----------- |
-| Application automatisée des stratégies d’utilisation des données pour la plateforme de données clientes en temps réel | Les stratégies d’utilisation des données sont désormais appliquées dans le processus d’activation des données vers les destinations. La gouvernance des données est également intégrée et appliquée lors de l’apport de modifications qui affectent les  de  existantes (telles que les modifications des libellés des jeux de données, des stratégies de fusion, des définitions de segment, etc.). |
-| Plage de données pour l&#39;application | Lorsqu’une stratégie d’utilisation des données est violée dans le CDP en temps réel, l’interface utilisateur affiche une notification qui contient des informations de lignage de données pour aider l’utilisateur à comprendre pourquoi les stratégies ont été violées et ce qu’il peut faire pour résoudre la violation. |
-
-
-### Problèmes connus
-
-* None (Aucun)
-
-Pour plus d’informations sur la gouvernance des données, voir l’aperçu [de la gouvernance des](../../data-governance/home.md)données.
-
-## Ingestion des données
-
-Adobe Experience Platform offre un ensemble de fonctionnalités très complet pour assimiler tout type de données et leur latence. L’intégration des données d’Adobe Experience Platform propose plusieurs alternatives pour l’assimilation de données, notamment des API par lots, des API de diffusion en continu, des connecteurs Adobe natifs, des partenaires d’intégration de données ou l’interface utilisateur d’Adobe Experience Platform.
+La structure DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d’utilisation des données via l’interface utilisateur de la plateforme d’expérience et l’API DULE Policy Service.
 
 ### Nouvelles fonctionnalités
 
 | Fonction | Description |
-|------- | -----------|
-| Récupération partielle par lot | L’assimilation partielle par lot permet d’assimiler des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont mises en lots séparément. Des détails sont ajoutés aux lots non validés pour expliquer pourquoi ils n’ont pas réussi la validation. Vous trouverez plus d&#39;informations sur l&#39;assimilation partielle de lots dans la documentation [sur l&#39;assimilation](../../ingestion/batch-ingestion/partial.md)partielle de lots. |
+| -----------| ---------- |
+| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Les stratégies d’utilisation des données peuvent désormais être gérées dans l’espace de travail _Stratégies_ de l’interface utilisateur de la plateforme d’expérience. Pour plus d’informations, consultez le guide [de l’utilisateur](../../data-governance/policies/user-guide.md) des stratégies. |
 
-### Problèmes connus
+**Problèmes connus**
 
-* None (Aucun)
+* Aucun.
 
-Pour en savoir plus sur l’assimilation de données dans Platform, consultez la documentation [sur l’](../../ingestion/home.md)assimilation des données.
+Pour plus d’informations, consultez la présentation [de la gouvernance des](../../data-governance/home.md)données.
 
+## Services intelligents
 
-## Destinations
+Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’un en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
 
-Dans [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec les plateformes de destination qui activent les données de manière transparente vers ces partenaires.
-
-### Nouvelles destinations
-
-De nouvelles destinations vous permettent d’activer vos données Adobe Experience Platform. Voir ci-dessous pour plus de détails :
-
-| Destination | Description |
-|--- | ---|
-|  Cloud destinations  | Le CDP en temps réel d’Adobe peut désormais diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de vos. Cela vous permet d’envoyer   et leurs attributs de  à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations. |
-| Destinations publicitaires | La carte de destination Google est maintenant divisée en trois cartes de destination, pour les trois plates-formes Google actuellement prises en charge dans le CDP en temps réel d’Adobe : Annonces Google, Google Ad Manager, Google Display &amp; Video 360. |
-
-Pour en savoir plus, consultez la présentation des [destinations](../../rtcdp/destinations/destinations-overview.md)
-
-## Identity Service
-
-La diffusion d’expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela est rendu plus difficile lorsque les données de vos clients sont fragmentées entre des systèmes disparates, ce qui donne à chaque client l’impression d’avoir plusieurs &quot;identités&quot;.
-
-Le service d’identité Adobe Experience Platform vous permet de mieux  de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de diffuser en temps réel des expériences numériques personnelles et impactées.
-
-### Nouvelles fonctionnalités
+**Fonctionnalités clés**
 
 | Fonction | Description |
-| ------- | ----------- |
-| Graphique privé amélioré | La fonctionnalité Graphique privé a été améliorée afin de réduire la latence de génération de graphiques d’un traitement par lots hebdomadaire à un graphique actualisé quotidiennement, ce qui permet aux clients du service d’identité d’accéder à des graphiques d’identité et à des liens plus récents. |
+|---|---|
+| AI client | L’IA du client permet aux spécialistes du marketing de générer des prévisions client au niveau individuel avec des explications. Avec l’aide de facteurs influents, l’IA du client peut vous dire ce qu’un client est susceptible de faire et pourquoi. En outre, les spécialistes du marketing peuvent tirer parti des prédictions et des informations sur l’IA du client pour personnaliser les expériences du client en diffusant les  et les messages  les plus appropriés. |
+| Attribution AI | Attribution AI est un service d’attribution algorithmique à plusieurs qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à l’API d’attribution, les marketeurs peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients. |
 
-### Problèmes connus
+**Problèmes connus**
+
+* Aucun problème connu pour le moment.
+
+Pour plus d’informations sur les services intelligents et sur ce qu’ils doivent faire pour  , voir l’aperçu [des services](../../intelligent-services/home.md)intelligents.
+
+## Service confidentialité
+
+Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d&#39;accéder à vos données personnelles ou de les supprimer de vos entrepôts de données sur demande. Le service de confidentialité d’Adobe Experience Platform fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations légales et de confidentialité de l’entreprise.
+
+**Nouvelles fonctionnalités**
+
+| Fonction | Description |
+| --- | --- |
+| Prise en charge de PDPA | Les demandes de protection de la vie privée peuvent maintenant être créées et suivies en vertu de la Loi sur la protection des données personnelles (PDPA) en Thaïlande. Lors de l’exécution de demandes de confidentialité dans l’API, le `regulation` tableau accepte la valeur &quot;pdpa_tha&quot;. |
+|  types de  de dans l’interface utilisateur | Vous pouvez désormais spécifier différents types de  de  dans le Créateur de requêtes dans l’interface utilisateur de Privacy Service. Pour plus d’informations, consultez le guide [d’utilisation](../../privacy-service/ui/user-guide.md) . |
+| Ancienne dépréciation du point de fin | L’ancien point de terminaison API (`data/privacy/gdpr`) a été abandonné. |
+
+Problèmes connus
 
 * None (Aucun)
 
-Pour plus d&#39;informations sur Identity Service, consultez la présentation [de](../../identity-service/home.md)Identity Service.
+Pour plus d&#39;informations sur Privacy Service, veuillez  en lisant la présentation [](../../privacy-service/home.md)Privacy Service.
 
 ## Sources
 
@@ -97,15 +79,12 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonction | Description |
 | ------- | ----------- |
-| Signaux obsolètes pour le connecteur Adobe   Manager | Les données de niveau signal de   Manager ne seront plus envoyées. Notez que l’appartenance aux segments pour les Caractéristiques et les Segments sera toujours incluse. Suite à ce changement, les jeux de données entrants ne seront plus générés. |
-| Jeu de données renommé | Les jeux de données générés par  connecteur  Manager auront des noms et des descriptions mis à jour. |
-| Activer la bascule  dans  Gestionnaire de  | La bascule  peut être activée ou désactivée pour convertir le jeu de données en client en temps réel. Basculer sera activé par défaut. |
-| Prise en charge de l’interface utilisateur pour les  de cloud  systèmes | Nouveau connecteur source pour Azure Data Lake   Gen2 dans l&#39;interface utilisateur. |
-| Prise en charge de l’interface utilisateur pour les systèmes CRM | Nouveau connecteur source pour HubSpot, Salesforce Service Cloud et ServiceNow dans l’interface utilisateur. |
-| Prise en charge de l’interface utilisateur pour les systèmes de base de données | Nouveau connecteur source pour AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server et MySQL dans l’interface utilisateur. |
+| Prise en charge des API et de l’interface utilisateur pour les bases de données | Nouveaux connecteurs source pour Apache Spark (sur HDInsights), Azure Synapse Analytics, Azure Table  , Hive (sur HDInsights) et Phoenix. |
+| Prise en charge des API et de l’interface utilisateur pour les applications basées sur les paiements | Nouveaux connecteurs source pour PayPal. |
+| Prise en charge des API et de l’interface utilisateur pour les applications basées sur des protocoles | Nouveaux connecteurs source pour Generic OData. |
 
 ### Problèmes connus
 
 * None (Aucun)
 
-Pour en savoir plus sur les sources, consultez l’aperçu [des](../../source-connectors/home.md)sources.
+For more information about sources, see the [sources overview](../../source-connectors/home.md).
