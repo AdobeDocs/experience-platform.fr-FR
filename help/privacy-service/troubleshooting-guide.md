@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FAQ sur Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
+source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
 
 ---
 
@@ -14,6 +14,52 @@ source-git-commit: 7e2e36e13cffdb625b7960ff060f8158773c0fe3
 Ce répond aux questions les plus fréquentes sur le service de confidentialité d’Adobe Experience Platform.
 
 Privacy Service fournit une API RESTful et une interface utilisateur pour aider les à  gérer les demandes de confidentialité des données client. Avec Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données personnelles ou privées sur vos clients, ce qui facilite la conformité automatisée avec les réglementations en matière de confidentialité d’entreprise et légales.
+
+## Lors de demandes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un ID utilisateur ? {#user-ids}
+
+Pour effectuer une nouvelle tâche de confidentialité dans l’API, la charge utile JSON de la requête doit contenir un `users` tableau des informations spécifiques pour chaque utilisateur auquel s’applique la requête de confidentialité. Chaque élément du `users` tableau est un objet qui représente un utilisateur particulier, identifié par sa `key` valeur.
+
+En retour, chaque objet utilisateur (ou `key`) contient son propre `userIDs` tableau. Ce tableau  des valeurs d’ID spécifiques **pour cet utilisateur** particulier.
+
+Consider the following example `users` array:
+
+```json
+"users": [
+  {
+    "key": "DavidSmith",
+    "action": ["access"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "dsmith@acme.com",
+        "type": "standard"
+      }
+    ]
+  },
+  {
+    "key": "user12345",
+    "action": ["access", "delete"],
+    "userIDs": [
+      {
+        "namespace": "email",
+        "value": "ajones@acme.com",
+        "type": "standard"
+      },
+      {
+        "namespace": "ECID",
+        "type": "standard",
+        "value":  "443636576799758681021090721276",
+        "isDeletedClientSide": false
+      }
+    ]
+  }
+]
+```
+
+Le tableau contient deux objets, représentant des utilisateurs individuels identifiés par leurs `key` valeurs (&quot;DavidSmith&quot; et &quot;user12345&quot;). &quot;DavidSmith&quot; n’a qu’un seul ID (son adresse électronique), tandis que &quot;user12345&quot; en a deux (son adresse électronique et son ECID).
+
+Pour plus d&#39;informations sur la fourniture d&#39;informations d&#39;identité des utilisateurs, consultez le guide sur les données d&#39; [identité pour les demandes](identity-data.md)de confidentialité.
+
 
 ## Puis-je utiliser Privacy Service pour nettoyer les données qui ont été envoyées accidentellement à Platform ?
 
@@ -45,4 +91,4 @@ Pour plus d’informations, reportez-vous à la section relative à la [recherch
 
 ### Utilisation de l’interface utilisateur
 
-Dans le de l’interface utilisateur de Privacy Service, recherchez la tâche que vous souhaitez télécharger à partir du widget Demandes de **travaux** . Cliquez sur l’ID de la tâche pour ouvrir la page Détails _de la_ tâche. A partir de là, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le guide [de l’utilisateur de](ui/user-guide.md) Privacy Service pour obtenir des instructions plus détaillées.
+Dans le de l’interface utilisateur de Privacy Service, recherchez la tâche que vous souhaitez télécharger à partir du widget Demandes de **travaux** . Cliquez sur l’ID de la tâche pour ouvrir la page Détails _de la_ tâche. A partir de là, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le guide [de l’utilisateur](ui/user-guide.md) Privacy Service pour obtenir des instructions plus détaillées.
