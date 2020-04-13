@@ -4,7 +4,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données client en temps réel Adobe en mappant les segments aux destinations. Pour ce faire, procédez comme suit.
 seo-description: Activez les données de la plateforme de données client en temps réel Adobe en mappant les segments aux destinations. Pour ce faire, procédez comme suit.
 translation-type: tm+mt
-source-git-commit: 336aa90cf1e059a92a36dd0ef3222ef6a6f5123b
+source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
 
 ---
 
@@ -29,7 +29,14 @@ Notez que si un flux d’activation existe déjà pour une destination, vous pou
 5. *Conditionnel*. Cette étape s’applique uniquement aux segments mappés aux destinations de marketing par e-mail. <br> Sur la **[!UICONTROL Destination Attributes]** page, sélectionnez **[!UICONTROL Add new field]** et sélectionnez les attributs à envoyer à la destination.
 Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rtcdp/destinations/email-marketing-destinations.md#identity) issu de votre schéma d’union. Pour plus d’informations sur les attributs obligatoires, consultez Identité dans l’article [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
    ![destination-attributes](/help/rtcdp/destinations/assets/destination-attributes.png)
-6. On the **[!UICONTROL Schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+
+   >[!IMPORTANT]
+   >
+   >Pour les destinations sociales, vous devez sélectionner le    de votre  dans cette étape. Vous ne pouvez passer à l’étape suivante qu’après avoir sélectionné l’une des options de l’image ci-dessous.
+
+   ![choisir les données](/help/rtcdp/destinations/assets/choose-data-origin.png)
+
 7. On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
 ![confirm-selection](/help/rtcdp/destinations/assets/confirm-selection.png)
@@ -61,6 +68,10 @@ La présence de ces fichiers dans votre emplacement de stockage est la confirmat
 ### Destinations publicitaires
 
 Vérifiez la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
+
+### Destinations des réseaux sociaux
+
+Pour Facebook, un   réussi signifie qu’un de  personnalisé Facebook serait créé par programmation dans le Gestionnaire [d’annonces](https://www.facebook.com/adsmanager/manage/)Facebook. L’appartenance au segment dans le   serait ajoutée et supprimée, car les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
 ## Désactiver l’activation {#disable-activation}
 
