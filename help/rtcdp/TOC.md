@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clientes en temps réel
 translation-type: tm+mt
-source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
+source-git-commit: ee2a490ebc802684a0761dc6589d6b30defc0398
 
 ---
 
@@ -133,7 +133,6 @@ source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
-   * [Tutoriels sur les sources](sources/sources-tutorials.md)
    * [Mise en œuvre des balises de site web avec Adobe Launch](sources/launch.md)
-* [Notes de mise à jour](https://www.adobe.io/apis/experienceplatform/home/services/release-notes.html#!end-user/markdown/release-notes/release-notes.md)
-* [Glossaire](https://www.adobe.io/apis/experienceplatform/home/services/acp-glossary.html)
+* [Notes de mise à jour](https://www.adobe.com/go/platform-release-notes-en)
+* [Glossaire](https://www.adobe.com/go/platform-glossary-en)
