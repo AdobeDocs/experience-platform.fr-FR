@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Observability Insights
 topic: overview
 translation-type: tm+mt
-source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 947955403a270914437d9172bca458f9c49ccd8f
 
 Observability Insights est une API RESTful qui vous permet d’exposer les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des informations sur les statistiques d’utilisation de la Plateforme, les contrôles d’intégrité des services de la Plateforme, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de la Plateforme.
 
-Ce présente un exemple d’appel à l’API Observability Insights et fournit un de mesures exposées qui sont compatibles avec le service. Pour un  complet des points de fin d’Observability, reportez-vous à la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
+Ce montre un exemple d&#39;appel à l&#39;API Observability Insights. Pour un  complet des points de fin d’Observability, reportez-vous à la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
 
 ## Prise en main
 
@@ -23,11 +23,9 @@ Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le did
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id : `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête qui spécifie le nom du sandbox dans lequel l’opération aura lieu. Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../sandboxes/home.md)sandbox.
 
 * x-sandbox-name : `{SANDBOX_NAME}`
-
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../sandboxes/home.md)sandbox.
 
 ## Récupérer les mesures d&#39;observabilité
 
@@ -48,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Paramètre | Description |
 | --- | --- |
 | `{METRIC}` | Mesure que vous souhaitez exposer. Lorsque vous combinez plusieurs mesures dans un seul appel, vous devez utiliser une esperluette (`&`) pour séparer des mesures individuelles. Par exemple : `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identifiant d’une ressource de plateforme particulière dont vous souhaitez exposer les mesures. Cet identifiant peut être facultatif, obligatoire ou non, selon les mesures utilisées. Pour un  des mesures disponibles, ainsi que les ID pris en charge (obligatoires et facultatifs) pour chaque mesure, reportez-vous au de référence sur les mesures [](metrics.md) disponibles ci-dessous. |
+| `{ID}` | Identifiant d’une ressource de plateforme particulière dont vous souhaitez exposer les mesures. Cet identifiant peut être facultatif, obligatoire ou non, selon les mesures utilisées. Pour obtenir un  des mesures disponibles, ainsi que les ID pris en charge (obligatoires et facultatifs) pour chaque mesure, reportez-vous au de référence sur les mesures [](metrics.md)disponibles. |
 | `{DATE_RANGE}` | Plage de dates des mesures à exposer, au format ISO 8601 (par exemple, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Requête**
