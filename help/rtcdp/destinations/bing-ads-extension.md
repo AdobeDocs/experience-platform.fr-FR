@@ -4,7 +4,7 @@ seo-title: Extension de suivi des universels Bing Ads (UET)
 description: L’extension UET (Universal Tracking) de Bing Ads est une destination publicitaire dans la plateforme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a94444b35cac0c002d729798d96fd54aaafbacd
 
 ---
 
@@ -18,6 +18,8 @@ Bing Publicités Universal  Tracking (UET) pour le lancement de la plateforme d�
 Bing Ads Universal Tracking (UET) est une extension publicitaire de la plateforme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page d’extension d’ [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
 Cette destination est une extension de lancement de plateforme d’expérience. Pour plus d’informations sur le fonctionnement des extensions de lancement dans le CDP en temps réel d’Adobe, voir Présentation [des extensions de lancement de plateforme](/help/rtcdp/destinations/experience-platform-launch-extensions.md)d’expérience.
+
+![Extension Publicités Bing](assets/bing-ads-extension.png)
 
 
 ## Conditions préalables {#prerequisites}
