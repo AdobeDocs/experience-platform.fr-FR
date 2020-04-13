@@ -4,15 +4,13 @@ seo-title: Présentation des jeux de données dans Adobe Experience Platform
 description: Présentation des jeux de données dans Adobe Experience Platform
 seo-description: Présentation des jeux de données dans Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: 1ce68714cb5e484c7150be30c0347274d1414258
 
 ---
 
 
 # Jeux de données
 
-L’espace de travail des jeux de données dans Experience Platform vous permet d’afficher et de gérer tous les jeux de données créés par votre organisation IMS ainsi que d’en créer.
+Dans l’interface utilisateur d’Adobe Experience Platform, vous pouvez  et gérer tous les jeux de données créés par votre organisation IMS, ainsi que en créer de nouveaux. Pour parcourir les jeux de données dans l’interface utilisateur, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche. The *[!UICONTROL Browse]* tab contains a list of datasets, including columns showing Name, Created (date and time), Source, Schema, and Last Batch Status, as well as the date and time the dataset was Last Updated.
 
-View the Datasets workspace by clicking **[!UICONTROL Datasets]** in the left-hand navigation. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la date et l’heure de création, la source, le schéma et l’état du dernier lot, ainsi que la date et l’heure de la dernière mise à jour du jeu de données.
-
-Pour plus d’informations sur l’utilisation de l’espace de travail DataSet, voir la présentation [](../../catalog/datasets/overview.md)DataSet.
+Pour plus d’informations sur les jeux de données dans la plateforme d’expérience, commencez par lire l’aperçu [des jeux de](../../catalog/datasets/overview.md)données.
