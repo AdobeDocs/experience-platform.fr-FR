@@ -2,10 +2,11 @@
 title: 'Notes de mise à jour d’Adobe Experience Platform '
 description: Notes de mise à jour de la plateforme d’expérience 8 avril 2020
 doc-type: release notes
-last-update: April 7, 2020
+last-update: April 13, 2020
 author: ens71067
+keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 7335a258a53d2685933b401dc4cd00bb60aa6c07
+source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
 
 ---
 
