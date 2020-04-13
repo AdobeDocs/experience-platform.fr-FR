@@ -4,7 +4,7 @@ seo-title: Extension OneTag Flash
 description: L’extension OneTag Flash est une destination publicitaire dans la plateforme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ L’extension OneTag Flash pour le lancement d’une plateforme d’expérience 
 Flashspeak OneTag est une extension publicitaire dans la plate-forme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page d’extension d’ [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
 Cette destination est une extension de lancement de plateforme d’expérience. Pour plus d’informations sur le fonctionnement des extensions de lancement dans le CDP en temps réel d’Adobe, voir Présentation [des extensions de lancement de plateforme](/help/rtcdp/destinations/experience-platform-launch-extensions.md)d’expérience.
+
+![Extension clignotante](assets/flashtalking-extension.png)
 
 ## Conditions préalables {#prerequisites}
 
