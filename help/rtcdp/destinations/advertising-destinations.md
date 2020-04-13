@@ -4,7 +4,7 @@ seo-title: Destinations publicitaires
 description: Connectez votre plateforme de données client en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 seo-description: Connectez votre plateforme de données client en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 4b021ce8fd81708fac5de7508cd19d99295634d9
 
 ---
 
@@ -19,7 +19,7 @@ Actuellement, CDP en temps réel prend en charge les destinations publicitaires 
 
 * [Adobe Advertising Cloud (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Balise de conversion de publicité Awin (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
-* [Awin Advertising Mastertag (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/awin-mastertag-extension.md)
+* [Balise principale publicitaire Awin (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/awin-mastertag-extension.md)
 * [Beemray (extension de lancement de plateforme d’expérience)](beemray-extension.md)
 * [Bing Publicités Universal Tracking (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/bing-ads-extension.md)
 * [Branche (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/branch-extension.md)
