@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Présentation du profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
 
 ---
 
@@ -15,9 +15,7 @@ Adobe Experience Platform vous permet d’offrir à vos clients des expériences
 
 ## Comprendre les  des clients en temps réel
 
-Le de clients en temps réel est un magasin d’entités de recherche générique qui fusionne les données de divers actifs de données d’entreprise, puis fournit un accès à ces données sous la forme d’un de clients individuels et d’une série deséries chronologiques connexes. Cette fonctionnalité permet aux spécialistes du marketing de générer des expériences coordonnées, cohérentes et pertinentes avec leurs   sur plusieurs, comme le montre la vidéo ci-dessous :
-
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&enable10seconds=on&speedcontrol=on)
+Le de clients en temps réel est un magasin d’entités de recherche générique qui fusionne les données de divers actifs de données d’entreprise, puis fournit un accès à ces données sous la forme d’un de clients individuels et d’une série deséries chronologiques connexes. Cette fonctionnalité permet aux spécialistes du marketing de piloter des expériences coordonnées, cohérentes et pertinentes avec leurs  de  sur plusieurs  de.
 
 ###  de données
 
@@ -47,11 +45,18 @@ Le service de segmentation de la plateforme d’Adobe Experience Platform produi
 
 ###  fragments et   de {#profile-fragments-and-union-schemas}
 
-L’une des principales fonctionnalités du de clients en temps réel est la capacité d’unifier les données de  multi. Lorsque le du client en temps réel est utilisé pour accéder à une entité, il peut vous fournir un fusionné de tous les fragments de  de l’entité pour l’ensemble des jeux de données, appelé lede l’analyse de l’. Les données  du client en temps réel sont fusionnées entre les sources lorsqu’une entité ou un  est accédé par son ID ou exporté en tant que segment. Pour en savoir plus sur l’accès aux  de et aux  de l’ [API d’, consultez le sous-guide en temps réel du développeur de l’API d’analyse des clients sur les](api/entities.md)entités, également appelé &quot;Accès aux&quot;.
+L’une des principales fonctionnalités du de clients en temps réel est la capacité d’unifier les données de  multi. Lorsque le du client en temps réel est utilisé pour accéder à une entité, il peut vous fournir un fusionné de tous les fragments de  de cette entité pour l’ensemble des jeux de données, appelé lede l’analyse de l’, et rendu possible par ce qui est appelé un d’exploration de l’offre. Les données  du client en temps réel sont fusionnées entre les sources lorsqu’une entité ou un  est accédé par son ID ou exporté en tant que segment. Pour en savoir plus sur l’accès aux  de et aux  de l’ [API d’, consultez le sous-guide en temps réel du développeur de l’API d’analyse des clients sur les](api/entities.md)entités, également appelé &quot;Accès aux&quot;.
 
 ### Stratégies de fusion
 
 Lorsque vous rassemblez des données provenant de plusieurs sources et les combinez afin de voir un complet de chacun de vos clients, les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront classées par priorité et quelles données seront combinées pour créer ce  de unifié. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour plus d’informations sur l’utilisation de stratégies de fusion à l’aide d’API, consultez le sous-guide [Stratégies de](api/merge-policies.md) fusion des API  client en temps réel ou le guide [utilisateur des stratégies de](ui/merge-policies.md) fusion pour savoir comment utiliser les stratégies de fusion à l’aide de l’interface utilisateur de la plateforme.
+
+## (Alpha) Configuration des attributs calculés
+
+>[!IMPORTANT]
+>La fonctionnalité d’attribut calculé décrite dans ce est en alpha. La documentation et la fonctionnalité peuvent changer.
+
+Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et  de . Les attributs calculés fonctionnent au niveau  du, ce qui signifie que vous pouvez  des valeurs de sur tous les enregistrements et tous les. Chaque attribut calculé contient un  de , ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de ou dans un. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat sur la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et pour obtenir des instructions détaillées sur leur utilisation, reportez-vous au [sous-guide en temps réel sur les attributs](api/computed-attributes.md)calculés de l’API  client. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans Adobe Experience Platform. Il inclut des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide de l’API  client en temps réel.
 
 ## Composants en temps réel
 
@@ -63,9 +68,18 @@ L’entrée en temps réel est rendue possible par un processus appelé ingestio
 
 ### Projections Edge
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs  en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en permanence au fur et à mesure des changements. Adobe Experience Platform permet cet accès en temps réel aux données grâce à l’utilisation de ce que l’on appelle les contours. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe  et  Adobe Campaign utilisent des bords afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection définissant le bord auquel les données seront envoyées et une configuration de projection définissant les informations spécifiques qui seront rendues disponibles sur le bord.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs  en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en permanence au fur et à mesure des changements. Adobe Experience Platform permet cet accès en temps réel aux données grâce à l’utilisation de ce que l’on appelle les contours. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe  et  Adobe Campaign utilisent des bords afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection définissant le bord auquel les données seront envoyées et une configuration de projection définissant les informations spécifiques qui seront rendues disponibles sur le bord. Pour en savoir plus et commencer à utiliser les bords et les projections, consultez le sous-guide [Projections](api/edge-projections.md)Edge en temps réel du client  API.
 
-Pour en savoir plus et commencer à utiliser les bords et les projections, consultez le sous-guide [Projections](api/edge-projections.md)Edge en temps réel du client  API.
+## Ajouter les données au client en temps réel 
+
+La plateforme peut être configurée pour envoyer vos données d’enregistrement et de série chronologique aux , prenant en charge l’assimilation en temps réel de flux continu et l’assimilation par lots. Pour plus d’informations, reportez-vous au didacticiel décrivant comment [ajouter des données à la clientèle en temps réel](tutorials/add-profile-data.md).
+
+>[!Note] :
+>Les données collectées par le biais des solutions Adobe, notamment Analytics Cloud, Marketing Cloud et Advertising Cloud, s’enchaînent dans la plateforme d’expérience et sont assimilées à des  de.
+
+###  des mesures d’assimilation en flux continu
+
+Observability Insights vous permet d’exposer les mesures clés dans Adobe Experience Platform. Outre les statistiques d’utilisation de la plateforme et les indicateurs de performances pour diverses fonctionnalités de la plateforme, il existe des mesures spécifiques liées aux  qui vous permettent d’obtenir des informations sur les taux de demande entrants, les taux d’assimilation réussis, les tailles d’enregistrements assimilés, etc. Pour en savoir plus, lisez d’abord l’aperçu [des statistiques sur l’](../observability/home.md)observabilité et pour obtenir un complet des mesures , reportez-vous à la documentation sur les mesures [](../observability/metrics.md)disponibles.
 
 ## Gouvernance des données et confidentialité
 
@@ -82,26 +96,8 @@ La gouvernance des données est gérée à plusieurs points. Il s’agit notamme
 
 Experience Platform permet à vos clients d’envoyer des demandes d’exclusion liées à l’utilisation et   de leurs données dans le client en temps réel. Pour plus d’informations sur le traitement des demandes d’exclusion, consultez la documentation sur le [traitement des demandes](../segmentation/honoring-opt-outs.md)d’exclusion.
 
-## Ajouter les données au client en temps réel 
+## Étapes suivantes et ressources supplémentaires
 
-La plateforme peut être configurée pour envoyer vos données d’enregistrement et de série chronologique aux , prenant en charge l’assimilation en temps réel de flux continu et l’assimilation par lots. Pour plus d’informations, reportez-vous au didacticiel décrivant comment [ajouter des données à la clientèle en temps réel](tutorials/add-profile-data.md).
+Pour en savoir plus sur les  clients en temps réel, veuillez continuer à lire la documentation fournie dans ce guide et compléter votre apprentissage en regardant la vidéo ci-dessous ou en explorant d’autres didacticiels [vidéo de la plateforme](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)d’expérience.
 
->[!Note] :
->Les données collectées par le biais des solutions Adobe, notamment Analytics Cloud, Marketing Cloud et Advertising Cloud, s’enchaînent dans la plateforme d’expérience et sont assimilées à des  de.
-
-## Création de segments  
-
-La pierre angulaire de votre campagne marketing est votre  . Le de clients en temps réel fournit les outils pour segmenter votre base de clients en  composé de membres répondant aux critères précis dont vous avez besoin. Avec la segmentation, vous pouvez isoler  membres  à l’aide de critères tels que :
-
-* Clients pour lesquels une semaine s’est écoulée depuis le dernier achat.
-* Clients pour lesquels la somme des achats est supérieure à 10 000 euros.
-* Clients qui ont vu un nombre défini de campagnes marketing uniques à partir d’un  prédéfini, spécifié par leur Campaign ID, et les ont explorées en 30 minutes.
-
-Pour commencer avec la segmentation, reportez-vous à la présentation [de la](../segmentation/home.md)segmentation.
-
-## (Alpha) Configuration des attributs calculés
-
->[!IMPORTANT]
->La fonctionnalité d’attribut calculé décrite dans ce est en alpha. La documentation et la fonctionnalité peuvent changer.
-
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et  de . Les attributs calculés fonctionnent au niveau  du, ce qui signifie que vous pouvez  des valeurs de sur tous les enregistrements et tous les. Chaque attribut calculé contient un  de , ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de ou dans un. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat sur la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et pour obtenir des instructions détaillées sur leur utilisation, reportez-vous au [sous-guide en temps réel sur les attributs](api/computed-attributes.md)calculés de l’API  client. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans Adobe Experience Platform. Il inclut des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide de l’API  client en temps réel.
+>[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
