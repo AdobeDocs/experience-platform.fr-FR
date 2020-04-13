@@ -4,7 +4,7 @@ seo-title: Extensions de lancement de plateforme d’expérience
 description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe.  Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe.  Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
 
 ---
 
@@ -17,6 +17,12 @@ Launch offre aux clients un moyen simple de déployer et de gérer toutes les ba
 Pour une présentation des fonctionnalités de lancement de plateforme d’expérience, voir les ressources ci-dessous :
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/fr-FR/launch/using/overview.html)
 * Vidéo [de rapide du lancement de la plate-forme d’expérience](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html).  avec [Présentation du processus de lancement](https://www.youtube.com/embed/rwqqkG1SERU) et de [publication de la plateforme d’expérience, présentation](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html), puis passez aux concepts suivants.
+
+## Comment trouver les extensions de lancement dans l’interface CDP en temps réel d’Adobe
+
+Pour rechercher les extensions de lancement dans l’interface CDP en temps réel d’Adobe, accédez à **[!UICONTROL Destinations > Catalog]** et sélectionnez **[!UICONTROL Extensions]** dans le **[!UICONTROL Types]** filtre.
+
+![Filtre Extensions dans l’interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
 ## Fonctionnement des extensions de lancement
 
