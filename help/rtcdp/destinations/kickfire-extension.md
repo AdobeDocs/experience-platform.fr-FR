@@ -4,7 +4,7 @@ seo-title: Extension KickFire
 description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 seo-description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes Adobe en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: bfcbc56f05fa1c3b5fafd57b1166e50130b6007d
+source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
 
 ---
 
@@ -18,6 +18,8 @@ Les informations d&#39;adresse IP de KickFire et les données de firmographie B2
 KickFire est une extension de personnalisation dans la plateforme de données clientes en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, voir le site Web [de](https://www.kickfire.com/)Kickfire.
 
 Cette destination est une extension de lancement de plateforme d’expérience. Pour plus d’informations sur le fonctionnement des extensions de lancement dans le CDP en temps réel d’Adobe, voir Présentation [des extensions de lancement de plateforme](/help/rtcdp/destinations/experience-platform-launch-extensions.md)d’expérience.
+
+![Extension Kickfire](/help/rtcdp/destinations/assets/kickfire-extension.png)
 
 ## Conditions préalables {#prerequisites}
 
