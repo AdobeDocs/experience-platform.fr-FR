@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mesures disponibles
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a988c990d3d4df706a44cdbc82f77bef20c2ea1
+source-git-commit: ff299a69a81f00cad3e90a83f7411e4b15d4f850
 
 ---
 
@@ -18,7 +18,7 @@ Les tableaux suivants  toutes les mesures exposées par Observability Insights, 
 Le tableau suivant décrit les mesures pour l’administration des données d’Adobe Experience Platform. Les mesures en **gras** sont les mesures d’assimilation en flux continu.
 
 | Mesure d’informations | Description | Paramètre  d’ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Nombre total de jeux de données créés. | S.O. |
 | timeseries.ingestion.dataset.size | Taille cumulée de toutes les données ingérées pour un jeu de données pour ou tous les jeux de données. | ID du jeu de données (facultatif) |
 | timeseries.ingestion.dataset.dailysize | Taille des données ingérées quotidiennement pour un jeu de données ou pour tous les jeux de données. | ID du jeu de données (facultatif) |
@@ -46,7 +46,7 @@ Le tableau suivant décrit les mesures pour l’administration des données d’
 Le tableau suivant décrit les mesures pour le service d’identité d’Adobe Experience Platform.
 
 | Mesure d’informations | Description | Paramètre  d’ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par Identity Service, pour un jeu de données ou tous les jeux de données. | ID du jeu de données (facultatif) |
 | timeseries.identity.dataset.recordfailed.count | Nombre d&#39;enregistrements ayant échoué par Identity Service, pour un jeu de données ou pour tous les jeux de données. | ID du jeu de données (facultatif) |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Nombre d&#39;enregistrements d&#39;identité correctement assimilés pour un  . |  ID  (**obligatoire**) |
@@ -62,7 +62,7 @@ Le tableau suivant décrit les mesures pour le service d’identité d’Adobe E
 Le tableau suivant décrit les mesures pour le service de confidentialité d’Adobe Experience Platform.
 
 | Mesure d’informations | Description | Paramètre  d’ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Nombre total d&#39;emplois créés à partir du RMPC. | ENV (**obligatoire**) |
 | timeseries.gdpr.jobs.completedjobs.count | Nombre total d&#39;emplois terminés du RPMD. | ENV (**obligatoire**) |
 | timeseries.gdpr.jobs.errorjobs.count | Nombre total de tâches d’erreur provenant de GDPR. | ENV (**obligatoire**) |
@@ -72,7 +72,7 @@ Le tableau suivant décrit les mesures pour le service de confidentialité d’A
 Le tableau ci-dessous décrit les mesures pour le service  de la plateforme Adobe Experience Platform.
 
 | Mesure d’informations | Description | Paramètre  d’ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Nombre total de  planifiées non périodiques. | S.O. |
 | timeseries.queryservice.query.scheduledrecurring.count | Nombre total de  planifiées périodiques. | S.O. |
 | timeseries.queryservice.query.batchquery.count | Nombre total de  par lot exécutés. | S.O. |
@@ -85,7 +85,7 @@ Le tableau ci-dessous décrit les mesures pour le service  de la plateforme Adob
 Le tableau suivant décrit les mesures pour les  de clients en temps réel.
 
 | Mesure d’informations | Description | Paramètre  d’ID |
-| ---- | ---- | ---- | ---- |
+| ---- | ---- | ---- |
 | timeseries.profiles.dataset.recordread.count | Nombre d&#39;enregistrements lus à partir du lac de données par , pour un jeu de données ou pour tous les jeux de données. | ID du jeu de données (facultatif) |
 | timeseries.profiles.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par , pour un jeu de données ou pour tous les jeux de données. | ID du jeu de données (facultatif) |
 | timeseries.profiles.dataset.recordfailed.count | Nombre d’enregistrements ayant échoué par , pour un jeu de données ou pour tous les jeux de données. | ID du jeu de données (facultatif) |
