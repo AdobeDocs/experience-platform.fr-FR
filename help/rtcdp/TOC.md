@@ -3,7 +3,7 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clientes en temps réel
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 51963edad2f903a4a91e1b7c5114bf81323346bc
 
 ---
 
@@ -36,6 +36,7 @@ source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
          * [Balise de conversion de publicité Awin (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/awin-conversiontag-extension.md)
          * [Balise principale publicitaire Awin (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/awin-mastertag-extension.md)
          * [Beemray (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/beemray-extension.md)
+         * [Bing Publicités Universal Tracking (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/bing-ads-extension.md)
          * [Branche (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/branch-extension.md)
          * [DoubleClick Floodlight (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
          * [Pixel Facebook (extension de lancement de plateforme d’expérience)](/help/rtcdp/destinations/facebook-pixel-extension.md)
