@@ -4,12 +4,12 @@ seo-title: Extension Publicités Google
 description: L’extension Publicités Google est une destination publicitaire dans la plateforme de données clientes en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 seo-description: L’extension Publicités Google est une destination publicitaire dans la plateforme de données clientes en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, voir la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: ff91395844c239415123a33d65fa0deb2221ae25
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
 
-# Destination des publicités Google
+# Extension Publicités Google
 
 ## Aperçu {#overview}
 
@@ -19,7 +19,7 @@ Google Ads est une extension publicitaire dans la plateforme de données cliente
 
 Cette destination est une extension de lancement de plateforme d’expérience. Pour plus d’informations sur le fonctionnement des extensions de lancement dans le CDP en temps réel d’Adobe, voir Présentation [des extensions de lancement de plateforme](/help/rtcdp/destinations/experience-platform-launch-extensions.md)d’expérience.
 
-![Extension Publicités Google](/help/rtcdp/destinations/assets/google-ads-extension.png)
+![Extension Publicités Google](/help/rtcdp/destinations/assets/google-extension-2.png)
 
 ## Conditions préalables {#prerequisites}
 
