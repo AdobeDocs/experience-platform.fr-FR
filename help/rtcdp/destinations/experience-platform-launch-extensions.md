@@ -4,7 +4,7 @@ seo-title: Extensions de lancement de plateforme d’expérience
 description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe.  Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe.  Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
-source-git-commit: 2a082dc46b50eba1a38eb9d6946e17f851b2fd3f
+source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 
 ---
 
@@ -18,13 +18,13 @@ Pour une présentation des fonctionnalités de lancement de plateforme d’expé
 * Experience Platform Launch [documentation](https://docs.adobe.com/content/help/fr-FR/launch/using/overview.html)
 * Vidéo [de rapide du lancement de la plate-forme d’expérience](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html).  avec [Présentation du processus de lancement](https://www.youtube.com/embed/rwqqkG1SERU) et de [publication de la plateforme d’expérience, présentation](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html), puis passez aux concepts suivants.
 
-## Comment trouver les extensions de lancement dans l’interface CDP en temps réel d’Adobe
+## Comment trouver les extensions de lancement dans l’interface CDP en temps réel d’Adobe {#how-to-find-extensions-in-interface}
 
 Pour rechercher les extensions de lancement dans l’interface CDP en temps réel d’Adobe, accédez à **[!UICONTROL Destinations > Catalog]** et sélectionnez **[!UICONTROL Extensions]** dans le **[!UICONTROL Types]** filtre.
 
 ![Filtre Extensions dans l’interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Fonctionnement des extensions de lancement
+## Fonctionnement des extensions de lancement {#how-extensions-work}
 
 Les extensions lancent des données de  brutes vers plusieurs types de destinations. Considérez les extensions comme un **type de destination Transfert** . Il s’agit d’un type d’intégration plus simple avec les plateformes de destination, qui ne transfère que les données  brutes. Par exemple, l’extension [de personnalisation de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou la voix de [confirmation de l’extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Client.
 
@@ -32,7 +32,7 @@ Les extensions lancent des données de  brutes vers plusieurs types de destinati
 
 ![Expérience Platform Launch Extensions par rapport à d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Avantages de l’utilisation des extensions de lancement
+## Avantages de l’utilisation des extensions de lancement {#extensions-benefits}
 
 Le lancement de la plate-forme d’expérience est gratuit pour les clients Experience Cloud existants. Le lancement simplifie le déploiement des balises sur votre site Web au moyen d’extensions simples d’utilisation que vous pouvez installer, configurer, mettre à jour et supprimer. Le lancement a une petite empreinte sur votre site Web et vous permet de continuer à charger rapidement vos pages.
 
@@ -42,7 +42,7 @@ Le lancement de la plate-forme d’expérience est gratuit pour les clients Expe
 
 Vous pouvez créer *des règles* qui déterminent le moment où transférer des données  aux extensions. Cette puissante fonctionnalité vous permet de transférer des données  uniquement dans certaines situations, plutôt que d’envoyer des données de  à chaque interaction. For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html).
 
-## Exemples d’utilisation des extensions de lancement
+## Exemples d’utilisation des extensions de lancement {#extensions-use-cases}
 
 Les extensions de lancement vous permettent de répondre à différents cas d’utilisation par les clients. Voici quelques exemples d’utilisation des extensions de lancement :
 
@@ -51,14 +51,14 @@ Les extensions de lancement vous permettent de répondre à différents cas d’
 * Vous pouvez activer une application de messagerie instantanée côté client au bon moment en fonction de la manière dont vos utilisateurs interagissent avec vos pages, conformément aux règles que vous avez définies dans Lancer.
 
 
-##  d&#39;extension
+##  d&#39;extension {#extension-categories}
 
 Les extensions de lancement peuvent se trouver sous le  suivant dans le CDP en temps réel d’Adobe :
 
 * [Publicité](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
 * [Plateforme](/help/rtcdp/destinations/dmp-destinations.md)
-* [Destinations de marketing par e-mail ](/help/rtcdp/destinations/email-marketing-destinations.md)
+* [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Personnalisation  ](/help/rtcdp/destinations/personalization-destinations.md)
-* [Des questionnaires (Survey)](/help/rtcdp/destinations/survey-destinations.md)
+* [Questionnaires](/help/rtcdp/destinations/survey-destinations.md)
 * [Voix du client](/help/rtcdp/destinations/voice-of-customer-destinations.md)
