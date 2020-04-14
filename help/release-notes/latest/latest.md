@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
+source-git-commit: dc1c9b7dd9ff4c8b20de96e4ee123d90be4580cc
 
 ---
 
@@ -14,6 +14,28 @@ source-git-commit: f90da5067121f7e00fd26a4dd5462cf567a7b09d
 # Notes de mise à jour d’Adobe Experience Platform
 
 ## Date de publication : 8 avril 2020
+
+## Système XDM (Experience Data Model)
+
+La normalisation et l’interopérabilité sont les concepts clés de la plateforme d’expérience. Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des  pour la gestion de l’expérience client.
+
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Il fournit des structures et des définitions communes à toute application pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des  de  clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+
+### Nouvelles fonctionnalités
+
+| Fonction | Description |
+| --- | --- |
+| Infos d’affichage de remplacement automatiques | Le Registre des  applique automatiquement les valeurs de titre et de description personnalisées configurées dans le `alternateDisplayInfo` descripteur. |
+| Restrictions des champs de l’échelle | Le Registre des  ne permet pas plus de 6000 champs scalaires dans un seul  de. |
+| Révision des performances | Le Registre des  a été remanié pour mieux répondre aux exigences de la Plateforme d’expérience. |
+
+**Corrections de bogues**
+
+* Mise à jour de XDM en XED converti pour prendre en charge un format XED plus propre pour les champs URI imbriqués dans XDM standard.
+
+**Problèmes connus**
+
+* Connu
 
 ## Gouvernance des données
 
