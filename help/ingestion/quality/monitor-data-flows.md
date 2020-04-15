@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyse de l'assimilation des données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8577d9b93098d5d6ec778d549bf5fc1e29c32d86
+source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
 
 ---
 
@@ -21,15 +21,21 @@ Dans l’interface utilisateur [de la plateforme](https://platform.adobe.com)d�
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance *en flux continu de bout en bout* s’affiche. Cet espace de travail fournit un graphique qui affiche le taux de messages en flux continu, ainsi qu’un détaillé des données entrantes.
+La page de surveillance *en flux continu de bout en bout* s’affiche. Cet espace de travail fournit un graphique qui affiche le taux de  en flux continu reçues par la plateforme, un graphique qui affiche le taux de  en flux continu qui ont été traitées avec succès par le [client en temps](../../profile/home.md)réel, ainsi qu’undétail des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
-Par défaut, le graphique indique le taux d’ingestion au cours des sept derniers jours. Vous pouvez ajuster cette plage de dates pour afficher diverses périodes en cliquant sur le bouton en surbrillance.
+Par défaut, le graphique supérieur montre le taux d’ingestion au cours des sept derniers jours. Vous pouvez ajuster cette plage de dates pour afficher diverses périodes en cliquant sur le bouton en surbrillance.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-graph.png)
+![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-Sous le graphique se trouve un  de tous les enregistrements d’assimilation en flux continu qui correspondent à la plage de dates affichée ci-dessus. Chaque lot répertorié affiche son ID, le nom du jeu de données, la date de sa dernière mise à jour, le nombre d’enregistrements du lot, ainsi que le nombre d’erreurs (le cas échéant). Vous pouvez cliquer sur l’un des enregistrements pour obtenir des informations plus détaillées sur cet enregistrement.
+Le graphique du bas montre le taux de  en flux continu traitées avec succès par  au cours des sept derniers jours. Vous pouvez ajuster cette plage de dates pour afficher diverses périodes en cliquant sur le bouton en surbrillance.
+
+> [!NOTE] Pour que les données s’affichent sur ce graphique, elles doivent être **explicitement** activées pour les  de. Pour savoir comment activer la diffusion en continu des données pour les  de, consultez le guide [d’utilisation des jeux de](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)données.
+
+![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+
+Sous les graphiques se trouve un  de tous les enregistrements d’assimilation en flux continu qui correspondent à la plage de dates affichée ci-dessus. Chaque lot répertorié affiche son ID, le nom du jeu de données, la date de sa dernière mise à jour, le nombre d’enregistrements du lot, ainsi que le nombre d’erreurs (le cas échéant). Vous pouvez cliquer sur l’un des enregistrements pour obtenir des informations plus détaillées sur cet enregistrement.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
 
