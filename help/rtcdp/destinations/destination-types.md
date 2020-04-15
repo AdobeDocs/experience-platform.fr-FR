@@ -4,7 +4,7 @@ seo-title: Types de destination et  de
 description: 'Dans la plate-forme de données clientes Adobe en temps réel, les destinations d’exportation de /segments capturent des données de, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des qualifiés vers des destinations. Les extensions lancent des données de  brutes vers plusieurs types de destinations. '
 seo-description: Dans la plate-forme de données clientes Adobe en temps réel, les destinations d’exportation de /segments capturent des données de, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des qualifiés vers des destinations. Les extensions lancent des données de  brutes vers plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: bc3f57d636c363c94555b2a779f5bb98a9eca13f
+source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
 
 ---
 
@@ -47,10 +47,11 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 Le CDP Adobe en temps réel tire parti de la puissance et de la flexibilité du lancement de la plate-forme d’expérience pour inclure les extensions de lancement dans l’interface CDP Adobe en temps réel.
 
+>[!TIP]
+>
+>Pour plus d’informations sur les extensions de lancement de plateforme d’expérience, y compris les cas d’utilisation et la manière de les trouver dans l’interface, voir la présentation [des extensions de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)lancement.
+
 Les extensions lancent des données de  brutes vers plusieurs types de destinations. Considérez les extensions comme un **type de destination Transfert** . Il s’agit d’un type d’intégration plus simple avec les plateformes de destination, qui ne transfère que les données  brutes. Par exemple, l’extension [de personnalisation de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou la voix de [confirmation de l’extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Client.
-
-Pour plus d’informations sur les extensions de lancement de plateforme d’expérience, voir la présentation [des extensions de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)lancement.
-
 
 ![Expérience Platform Launch Extensions par rapport à d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
