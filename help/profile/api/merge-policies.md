@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide du développeur d’API  client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -418,7 +418,7 @@ Une réponse réussie renvoie les détails de la nouvelle stratégie de fusion c
 
 Consultez la section [Composants des stratégies](#components-of-merge-policies) de fusion au début de ce pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion.
 
-## Mettre à jour une stratégie de fusion
+## Mettre à jour une stratégie de fusion {#update}
 
 Vous pouvez modifier une stratégie de fusion existante en modifiant des attributs individuels (PATCH) ou en remplaçant la stratégie de fusion complète par de nouveaux attributs (PUT). Des exemples de chacun d’eux sont présentés ci-dessous.
 
