@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Evaluer un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 8d77fc6c5b2824624ba308269f743a432a5288d2
+source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
 
 ---
 
@@ -452,7 +452,7 @@ Les sections suivantes décrivent ces options de manière plus détaillée.
 
 Si vous connaissez le spécifique auquel vous souhaitez accéder, vous pouvez le faire à l’aide de l’API de client en temps réel. Les étapes complètes pour accéder à des  de individuels sont disponibles dans les données de en temps réel [d’accès des clients à l’aide du didacticiel sur l’API](../../profile/api/entities.md) de l’APIde d’accès.
 
-## Exportation d’un segment
+## Exportation d’un segment {#export}
 
 Une fois la tâche de segmentation terminée (la valeur de l’ `status` attribut est &quot;SUCCEEDED&quot;), vous pouvez exporter votre  dans un jeu de données où vous pouvez y accéder et y donner suite.
 
