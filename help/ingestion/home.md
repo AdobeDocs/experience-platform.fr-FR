@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’intégration des données d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform vous permet de configurer des connexions source à différen
 
 Les connexions source peuvent être configurées pour collecter des données à partir d’autres applications Adobe (telles qu’Adobe Analytics et Adobe   Manager), de sources de de données tierces sur le cloud (telles que Azure Blob, Amazon S3, des serveurs FTP et des serveurs SFTP) et de systèmes de gestion de la relation client tiers (tels que Microsoft Dynamics et Salesforce).
 
-See the [Sources overview](../source-connectors/home.md) for more information.
+See the [Sources overview](../sources/home.md) for more information.
 
 ## Étapes suivantes
 
