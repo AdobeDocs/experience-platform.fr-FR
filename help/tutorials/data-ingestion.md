@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Didacticiels sur l’insertion de données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 2020f4b88f81f2d4fe3cfbd91cd18119ae580f4f
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
 
 # Incorporation de données dans la plateforme d’expérience
 
-Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les spécialistes du marketing à mieux comprendre le comportement de leurs clients. Adobe Experience Platform Data Ingestion représente les méthodes multiples par lesquelles Platform imprime des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans Data Lake pour être utilisées par les services Plateforme en aval. L’importation de données comprend l’assimilation par lot, l’assimilation en flux continu et l’assimilation à l’aide de connecteurs source. Pour en savoir plus, lisez l’aperçu [de l’administration des](../ingestion/home.md) données ou accédez directement à la documentation [sur les](../source-connectors/home.md)sources.
+Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les spécialistes du marketing à mieux comprendre le comportement de leurs clients. Adobe Experience Platform Data Ingestion représente les méthodes multiples par lesquelles Platform imprime des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans Data Lake pour être utilisées par les services Plateforme en aval. L’importation de données comprend l’assimilation par lot, l’assimilation en flux continu et l’assimilation à l’aide de connecteurs source. Pour en savoir plus, lisez l’aperçu [de l’administration des](../ingestion/home.md) données ou accédez directement à la documentation [sur les](../sources/home.md)sources.
 
 ## Création d’un connecteur source dans l’interface utilisateur et l’API
 
-Les connecteurs de source vous permettent d’assimiler des données provenant de plusieurs sources, où elles peuvent ensuite être étiquetées, structurées et améliorées à l’aide des services de plateforme. Pour commencer à créer un connecteur à l&#39;aide de l&#39;interface utilisateur, consultez la section [Création d&#39;un connecteur source dans la présentation](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/sources-ui-tutorial.md)de l&#39;interface utilisateur. Pour créer des connecteurs source à l’aide de l’API, rendez-vous sur la page [Création d’un connecteur source à l’aide de l’aperçu](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-api-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/api/sources-api-tutorial.md)de l’API du service de flux.
+Les connecteurs de source vous permettent d’assimiler des données provenant de plusieurs sources, où elles peuvent ensuite être étiquetées, structurées et améliorées à l’aide des services de plateforme. Pour commencer à créer un connecteur source, reportez-vous à la présentation [des](../sources/home.md)sources.
 
 ## Incorporer les données de lot
 
