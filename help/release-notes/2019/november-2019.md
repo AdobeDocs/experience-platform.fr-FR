@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,7 +15,7 @@ source-git-commit: 9bfb2ca8726421363c8446ecf581ed58d427eabf
 ## Date de publication : 18 novembre 2019
 
 Nouvelles versions :
-* [Plateforme de données client en temps réel](#real-time-customer-data-platform)
+* [Plateforme des données clients en temps réel](#real-time-customer-data-platform)
 * [Destinations](#destinations)
 * [Sources](#sources)
 
@@ -25,7 +25,7 @@ Mises à jour des fonctionnalités existantes :
 * [Profil client en temps réel](#real-time-customer-profile)
 * [Service de segmentation](#segmentation-service)
 
-## Plateforme de données client en temps réel
+## Plateforme des données clients en temps réel
 
 Basée sur Adobe Experience Platform, la plate-forme de données clientes en temps réel d’Adobe (CDP en temps réel) permet aux de rassembler des données connues et inconnues afin d’activer le client avec une prise de décision intelligente tout au long du parcours du client. La plateforme CDP en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
 
@@ -98,7 +98,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 * Les connecteurs source pour les  basés sur le cloud ne prennent pas en charge l’assimilation de fichiers compressés.
 
-Pour plus d’informations sur les sources, consultez [Présentation des sources](../../source-connectors/home.md).
+Pour plus d’informations sur les sources, consultez [Présentation des sources](../../sources/home.md).
 
 ## Espace de travail Data Science
 
