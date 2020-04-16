@@ -4,7 +4,7 @@ seo-title: 'Destinations '
 description: Les plateformes de  détectent les  de, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec le CDP en temps réel d’Adobe.
 seo-description: Les plateformes de  détectent les  de, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec le CDP en temps réel d’Adobe.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
