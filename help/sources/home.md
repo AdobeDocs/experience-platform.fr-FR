@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des connecteurs de source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 92ba230d71e419e33567833ad562e6ffef996d0a
+source-git-commit: e81f138f933d4bb2c36260480e360dfacd412da0
 
 ---
 
@@ -26,9 +26,10 @@ Les sources dans la plateforme d’expérience sont regroupées dans le  suivant
 Experience Platform permet d’assimiler des données à partir d’autres applications Adobe, notamment Adobe Analytics, Adobe  Gestionnaire de  et Experience Platform Launch. Pour plus d’informations, reportez-vous aux  connexes suivantes :
 
 - [Présentation du connecteur  Gestionnaire de Adobe](connectors/adobe-applications/audience-manager.md)
-- [Création d’un connecteur source Adobe   Manager dans l’interface utilisateur](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)
+- [Création d’un connecteur source Adobe   Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Présentation du connecteur de données Adobe Analytics](connectors/adobe-applications/analytics.md)
-- [Création d’un connecteur source Adobe Analytics dans l’interface utilisateur](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/adobe-analytics-ui-tutorial.md)
+- [Création d’un connecteur source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Création d’un connecteur source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Publicité
 
