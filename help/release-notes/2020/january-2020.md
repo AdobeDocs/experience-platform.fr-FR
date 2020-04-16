@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 38acbb4a0130763fe0c565215eda7c0713e1ff6e
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -78,7 +78,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 * None (Aucun)
 
-For more information about sources, see the [sources overview](../../source-connectors/home.md)
+For more information about sources, see the [sources overview](../../sources/home.md)
 
 ## Destinations
 
@@ -88,7 +88,7 @@ Dans le CDP [en temps réel d’](../../rtcdp/overview.md)Adobe, les destination
 
 | Fonction | Description |
 |--- | ---|
-| Prise en charge des  d’autorisation des | La fonctionnalité Destinations de la plateforme CDP en temps réel fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. |
+| Prise en charge des  d’autorisation des | La fonctionnalité Destinations de la plateforme des données clients en temps réel fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. |
 
 **d’accès**
 
