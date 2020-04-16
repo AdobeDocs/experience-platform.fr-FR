@@ -4,7 +4,7 @@ solution: Experience Platform
 title: ' et descripteurs XDM'
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -23,7 +23,7 @@ La capacité de comprendre les relations entre vos clients et leurs interactions
 
 ## Création d’un  ad hoc
 
-Dans des circonstances spécifiques, il peut être nécessaire de créer un de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de  &quot;ad hoc&quot;. Les  ad hoc sont utilisées dans divers d’assimilation [de](../ingestion/home.md) données pour la plateforme d’expérience, notamment l’assimilation de fichiers CSV et la création de certains types de connexions [](../source-connectors/home.md)source. La création d’un  de ad hoc s’effectue à l’aide de l’API de registre et est conçue pour être utilisée en association avec d’autres didacticiels de la plateforme d’expérience qui nécessitent la création d’unjeu dedonnées ad hoc dans le cadre de leur flux de travail. Pour commencer à créer un  de ad hoc, consultez le didacticiel relatif à la [création d’un  ad hoc à l’aide de l’API](../xdm/tutorials/ad-hoc.md).
+Dans des circonstances spécifiques, il peut être nécessaire de créer un de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de  &quot;ad hoc&quot;. Les  ad hoc sont utilisées dans divers d’assimilation [de](../ingestion/home.md) données pour la plateforme d’expérience, notamment l’assimilation de fichiers CSV et la création de certains types de connexions [](../sources/home.md)source. La création d’un  de ad hoc s’effectue à l’aide de l’API de registre et est destinée à être utilisée en association avec d’autres didacticiels de la plateforme d’expérience qui nécessitent la création d’unjournal ad hoc dans le cadre de leur processus. Pour commencer à créer un  de ad hoc, consultez le didacticiel relatif à la [création d’un  ad hoc à l’aide de l’API](../xdm/tutorials/ad-hoc.md).
 
 ## Étapes suivantes
 
