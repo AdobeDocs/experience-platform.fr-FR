@@ -6,7 +6,7 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: c2495b463d713f85ba621a7bf687c5959ec13adb
+source-git-commit: 33ce1e83514d7aa3cdc5fcee66f444d2fd203097
 
 ---
 
@@ -64,7 +64,7 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 
 | Destination | Description |
 |--- | ---|
-|  Cloud destinations  | Le CDP en temps réel d’Adobe peut désormais diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de vos. Cela vous permet d’envoyer   et leurs attributs de  à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations. |
+| Destinations de stockage dans le cloud | Le CDP en temps réel d’Adobe peut désormais diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de vos. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes, au moyen de fichiers CSV ou séparés par des tabulations. |
 | Destinations publicitaires | La carte de destination Google est maintenant divisée en trois cartes de destination, pour les trois plates-formes Google actuellement prises en charge dans le CDP en temps réel d’Adobe : Annonces Google, Google Ad Manager, Google Display &amp; Video 360. |
 
 Pour en savoir plus, consultez la présentation des [destinations](../../rtcdp/destinations/destinations-overview.md)
@@ -101,11 +101,11 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Jeu de données renommé | Les jeux de données générés par  connecteur  Manager auront des noms et des descriptions mis à jour. |
 | Activer la bascule  dans  Gestionnaire de  | La bascule  peut être activée ou désactivée pour convertir le jeu de données en client en temps réel. Basculer sera activé par défaut. |
 | Prise en charge de l’interface utilisateur pour les  de cloud  systèmes | Nouveau connecteur source pour Azure Data Lake   Gen2 dans l&#39;interface utilisateur. |
-| Prise en charge de l’interface utilisateur pour les systèmes CRM | Nouveau connecteur source pour HubSpot, Salesforce Service Cloud et ServiceNow dans l’interface utilisateur. |
+| Prise en charge de l’interface utilisateur pour les systèmes CRM | New source connector for HubSpot, Salesforce Service Cloud, and ServiceNow in the UI. |
 | Prise en charge de l’interface utilisateur pour les systèmes de base de données | Nouveau connecteur source pour AWS Redshift, Google BigQuery, MariaDB, Microsoft SQL Server et MySQL dans l’interface utilisateur. |
 
 ### Problèmes connus
 
 * None (Aucun)
 
-Pour en savoir plus sur les sources, consultez l’aperçu [des](../../source-connectors/home.md)sources.
+Pour en savoir plus sur les sources, consultez l’aperçu [des](../../sources/home.md)sources.
