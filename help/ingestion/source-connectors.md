@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteurs de source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
@@ -15,4 +15,4 @@ Adobe Experience Platform permet d’assimiler des données à partir de sources
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à divers fournisseurs de données. Ces connexions source vous permettent d’authentifier vos  systèmes  et services de gestion de la relation client, de définir les heures d’exécution de l’assimilation et de gérer le débit d’assimilation des données.
 
-Pour plus d’informations sur ces connecteurs source, consultez la documentation [sur les connecteurs](../source-connectors/home.md)source.
+Pour plus d’informations sur ces connecteurs source, consultez la documentation [sur les connecteurs](../sources/home.md)source.
