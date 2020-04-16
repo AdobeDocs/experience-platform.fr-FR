@@ -4,7 +4,7 @@ seo-title: Voix des destinations du client
 description: Les plateformes vocales rassemblent et rassemblent des données provenant de diverses sources, notamment des messages vocaux, des données d’appel et des conversations en ligne. Les informations collectées peuvent être filtrées et analysées afin de permettre aux d’optimiser leur site Web en fonction de leurs besoins.
 seo-description: Les plateformes vocales rassemblent et rassemblent des données provenant de diverses sources, notamment des messages vocaux, des données d’appel et des conversations en ligne. Les informations collectées peuvent être filtrées et analysées afin de permettre aux d’optimiser leur site Web en fonction de leurs besoins.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
