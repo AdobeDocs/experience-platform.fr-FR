@@ -4,7 +4,7 @@ seo-title: Destinations de la plateforme DMP (Platform)
 description: Les plates-formes  (DMP) permettent aux annonceurs, aux éditeurs et aux agences de créer desde  uniques, d’identifier leurs segments les plus précieux et de les utiliser dans n’importe quel numérique. Cela vous permet de créer un vrai 360  d'un de consommateurs, de construire et d'activer des significatifs.
 seo-description: Les plates-formes  (DMP) permettent aux annonceurs, aux éditeurs et aux agences de créer desde  uniques, d’identifier leurs segments les plus précieux et de les utiliser dans n’importe quel numérique. Cela vous permet de créer un vrai 360  d'un de consommateurs, de construire et d'activer des significatifs.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 
 ---
 
