@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Exemple de '
 topic: queries
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ---
 
 
 # Exemple de  pour les données Adobe Analytics
 
-Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en événements d’expérience XDM et assimilées à des jeux de données Adobe Experience Platform. Ce décrit un certain nombre de cas d’utilisation dans lesquels le service de Adobe Experience Platform utilise ces données. Les exemples de inclus doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage avec des événements d’expérience XDM, reportez-vous à la documentation [de mappage de champs](../../source-connectors/ui/adobe-applications/analytics-mapping.md) Analytics.
+Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en événements d’expérience XDM et assimilées à des jeux de données Adobe Experience Platform. Ce décrit un certain nombre de cas d’utilisation dans lesquels le service de Adobe Experience Platform utilise ces données. Les exemples de inclus doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage avec des événements d’expérience XDM, reportez-vous à la documentation [de mappage de champs](../../sources/connectors/adobe-applications/analytics-mapping.md) Analytics.
 
 ## Prise en main
 
