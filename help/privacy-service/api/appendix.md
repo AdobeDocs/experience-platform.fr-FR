@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identité acceptée  et qualificateurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
 
 ##  d&#39;identité standard 
 
-Toutes les identités envoyées au Service de la protection des renseignements personnels doivent être fournies sous une  d&#39;identité spécifique . Les  d’identité sont un composant d’ [Adobe Experience Platform Identity Service](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_architectural_overview.md) qui indique le contexte auquel une identité se rapporte.
+Toutes les identités envoyées au Service de la protection des renseignements personnels doivent être fournies sous une  d&#39;identité spécifique . Les  d’identité sont un composant d’ [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui indique le contexte auquel une identité se rapporte.
 
 Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, rendus disponibles par Experience Platform, ainsi que leurs `namespace` valeurs associées :
 
@@ -31,7 +31,7 @@ Le tableau suivant présente plusieurs types d’identité prédéfinis couramme
 
 >[!NOTE] Chaque type d’identité possède également une valeur `namespaceId` entière, qui peut être utilisée à la place de la `namespace` chaîne lors de la définition de la `type` propriété de l’identité sur &quot;namespaceId&quot;. Pour plus d’informations, reportez-vous à la section sur [qualificateurs](#namespace-qualifiers) de.
 
-Vous pouvez récupérer un  d’identité  en cours d’utilisation par votre organisation en envoyant une requête GET au point de `idnamespace/identities` fin dans l’API Identity Service. Pour plus d&#39;informations, consultez le guide [du développeur](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_services_architectural_overview/identity_services_api.md) Identity Service.
+Vous pouvez récupérer un  d’identité  en cours d’utilisation par votre organisation en envoyant une requête GET au point de `idnamespace/identities` fin dans l’API Identity Service. Pour plus d&#39;informations, consultez le guide [du développeur](../../identity-service/api/getting-started.md) Identity Service.
 
 ##  qualificatifs 
 
