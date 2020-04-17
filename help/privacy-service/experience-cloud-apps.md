@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Privacy Service et les applications Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -26,11 +26,11 @@ Voici un  des applications Experience Cloud intégrées à Privacy Service, y co
 
 | Application | Accès/suppression | Exclusion de la vente | Documentation et considérations |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>Advertising Cloud tire parti des fonctionnalités d’exclusion globales existantes fournies par le Centre de traitement des données personnelles d’Adobe. Pour plus d’informations, consultez le guide sur l’ [exécution de demandes](https://docs.adobe.com/content/help/en/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de confidentialité de données.</li></ul> |
-| Adobe Analytics | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics gère les demandes d’exclusion en utilisant des variables de de [confidentialité](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>Advertising Cloud tire parti des fonctionnalités d’exclusion globales existantes fournies par le Centre de traitement des données personnelles d’Adobe. Pour plus d’informations, consultez le guide sur l’ [exécution de demandes](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests) de confidentialité de données.</li></ul> |
+| Adobe Analytics | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://marketing.adobe.com/resources/help/en_US/analytics/gdpr/index.html)</li><li>Analytics gère les demandes d’exclusion en utilisant des variables de de [confidentialité](https://docs.adobe.com/content/help/fr-FR/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://marketing.adobe.com/resources/help/en_US/aam/aam-gdpr.html)</li><li>[Documentation d’exclusion](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
-| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://docs.campaign.adobe.com/doc/standard/getting_started/en/ACS_GDPR.html)</li><li>[Documentation d’exclusion](../segmentation/honoring-opt-outs.md)</li></ul> |
-| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation pour Data Lake](../catalog/privacy.md)</li><li>[Accès/suppression de la documentation pour les  de clients en temps réel](../profile/privacy.md)</li><li>La plateforme d’expérience honore les demandes d’ [exclusion pour  segments](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/segmentation/honoring-opt-outs.md) de.</li></ul> |
+| Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation](https://docs.campaign.adobe.com/doc/standard/getting_started/fr/ACS_GDPR.html)</li><li>[Documentation d’exclusion](../segmentation/honoring-opt-outs.md)</li></ul> |
+| Adobe Experience Platform | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation pour Data Lake](../catalog/privacy.md)</li><li>[Accès/suppression de la documentation pour les  de clients en temps réel](../profile/privacy.md)</li><li>La plateforme d’expérience honore les demandes d’ [exclusion pour  segments](../segmentation/honoring-opt-outs.md) de.</li></ul> |
 | Authentification Adobe Primetime | ✓ | S.O. | <ul><li>[Accès/suppression de la documentation](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Primetime n’a pas la capacité de transférer des données. Par conséquent, les demandes d’exclusion de la vente ne sont pas applicables.</li></ul> |
 | Adobe Target | ✓ | S.O. | <ul><li>[Accès/suppression de la documentation](https://marketing.adobe.com/resources/help/en_US/target/target/privacy-and-general-data-protection-regulation.html)</li><li> n’est pas en mesure de transférer des données, les demandes d’exclusion de la vente ne sont donc pas applicables.</li></ul> |
 
@@ -44,8 +44,8 @@ Voici un  des applications Experience Cloud qui ne sont pas intégrées à Priva
 
 | Application | Description de la documentation |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/EN/ACC_GDPR.html) | Présentation des fonctionnalités de GDPR pour  Adobe Campaign Classic. |
-| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/en_US/dtm/opt-in.html) | Cette section décrit la procédure à suivre pour empêcher le déclenchement des balises Adobe jusqu’à l’obtention du consentement. |
+| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/FR/ACC_GDPR.html) | Présentation des fonctionnalités de GDPR pour  Adobe Campaign Classic. |
+| [Adobe Dynamic Tag Manager](https://marketing.adobe.com/resources/help/fr_FR/dtm/opt-in.html) | Cette section décrit la procédure à suivre pour empêcher le déclenchement des balises Adobe jusqu’à l’obtention du consentement. |
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Présentation de la manière dont un administrateur de la confidentialité des clients ou un administrateur AEM peut traiter les demandes GDPR. |
 | [Adobe Experience Manager Livefyre](https://marketing.adobe.com/resources/help/en_US/livefyre/c_gdpr_compliance.html) | Cette section décrit la procédure à suivre pour autoriser l’accès à GDPR et supprimer des requêtes à l’aide de Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Comment les développeurs peuvent-ils utiliser les extensions et le créateur de règles pour définir les solutions d’accords préalables et de droits d’opposition ? |
