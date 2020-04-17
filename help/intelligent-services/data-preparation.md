@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Préparation des données en vue de les utiliser dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1d827d1637da05d3d2afc338f48911bb23039949
+source-git-commit: 03135f564bd72fb60e41b02557cb9ca9ec11e6e8
 
 ---
 
 
 # Préparation des données en vue de les utiliser dans les services intelligents
 
-Pour que les services intelligents découvrent les informations issues de vos données de marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Les services intelligents tirent parti des  du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services doivent être conformes au  **Consumer Experience  (CEE)** XDM.
+Pour que les services intelligents découvrent les informations issues de vos données de marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Les services intelligents tirent parti des  du modèle de données d’expérience (XDM) pour y parvenir. En particulier, tous les jeux de données utilisés dans Intelligent Services doivent être conformes au  XDM **Consumer ExperienceEvent (CEE)** .
 
 Ce fournit des conseils généraux sur le mappage des données de votre marketing de plusieurs à ce. Il présente des informations sur les champs importants duafin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
 
@@ -52,7 +52,7 @@ Le `xdm:channel` champ représente le marketing associé à l’événement Expe
 
 ## Mappage et importation de données
 
-Une fois que vous avez déterminé si vos données de série chronologique peuvent être mises en correspondance avec le  CEE, vous pouvez  le processus d’importation de vos données dans Intelligent Services. Contactez les services de conseil d’Adobe pour vous aider à mapper vos données avec l’ du et à les intégrer au service.
+Une fois que vous avez déterminé si vos données de marketing peuvent être mises en correspondance avec le  CEE, vous pouvezle processus d’importation de vos données dans Intelligent Services. Contactez les services de conseil d’Adobe pour vous aider à mapper vos données avec l’ du et à les intégrer au service.
 
 Si vous disposez d’une  Adobe Experience Platform et que vous souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
