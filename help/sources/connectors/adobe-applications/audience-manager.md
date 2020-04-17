@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur   Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -14,12 +14,12 @@ source-git-commit: 9f0200af0310eafbcc1851b089cfc254cb34af8f
 Le connecteur de données d’Adobe   Manager diffuse les données propriétaires collectées dans Adobe  Manager vers Adobe Experience Platform. Le connecteur  Gestionnaire de  de intègre trois de données à la plateforme :
 
 - **Données en temps réel :** Données capturées en temps réel sur  serveur de collecte de données de  Manager. Ces données sont utilisées dans  Gestionnaire de  de pour renseigner les caractéristiques basées sur les règles et apparaîtront dans la plateforme dans le temps de latence le plus court.
-- **Onboarded (inbound) data:** These are the files uploaded by a user into an Amazon S3 location hosted by Audience Manager. Audience Manager uses this data to populate onboarded traits using the inbound file method and will have some latency.
-- **Données  :**  Gestionnaire de  de utilise des données en temps réel et intégrées pour dériver le du client . These profiles are used to populate identity graphs and traits on segment realizations.
+- **Données intégrées (entrantes) :** Il s’agit des fichiers téléchargés par un utilisateur vers un emplacement Amazon S3 hébergé par  Gestionnaire de .  Gestionnaire de  de utilise ces données pour renseigner les caractéristiques intégrées à l’aide de la méthode de fichier entrant et aura une certaine latence.
+- **Données  :**  Gestionnaire de  de utilise des données en temps réel et intégrées pour dériver le du client . Ces  sont utilisés pour remplir des graphiques d’identité et des caractéristiques sur les réalisations de segments.
 
 Le connecteur  Gestionnaire de  de données mappe ces de données  aumodèle de données d’expérience (XDM) et les envoie à la plateforme. Les données en temps réel et les données intégrées sont envoyées sous la forme de données XDM ExperienceEvent, tandis que les données  sont envoyées sous la forme d’un  XDM individuel.
 
-Pour plus d’informations sur la création d’une connexion avec Adobe  Gestionnaire de à l’aide de l’interface utilisateur de la plateforme, reportez-vous au didacticiel [sur le connecteur du Gestionnaire de](https://www.adobe.io/apis/experienceplatform/home/tutorials/sources-ui-tutorials.html#!api-specification/markdown/narrative/tutorials/sources_tutorial/ui/adobe-applications/aam-ui-tutorial.md)de la plate-forme.
+Pour plus d’informations sur la création d’une connexion avec Adobe  Gestionnaire de à l’aide de l’interface utilisateur de la plateforme, reportez-vous au didacticiel [sur le connecteur du Gestionnaire de](../../tutorials/ui/create/adobe-applications/audience-manager.md)de la plate-forme.
 
 ## Qu’est-ce que le modèle de données d’expérience (XDM) ?
 
@@ -33,11 +33,11 @@ Pour plus d’informations sur l’utilisation de XDM dans Experience Platform, 
 
 Vous trouverez ci-dessous des exemples de la structure   Manager mappée à XDM ExperienceEvent et XDM Individuel dans Platform.
 
-### ExperienceEvent - for Realtime data and Onboarded data
+### ExperienceEvent - pour les données en temps réel et les données intégrées
 
 ![](images/aam-experience-events-for-dcs-and-onboarding-data.png)
 
-### XDM Individual Profile - for Profile data
+###  de XDM individuel - pour les données de  de
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
@@ -68,10 +68,10 @@ Bien que les utilisateurs puissent désactiver les jeux de données, il n’est 
 
 Adobe   Manager crée une connexion dans le catalogue : **connexion** Manager. Le catalogue est le système des enregistrements de l’emplacement et de la lignée des données dans Adobe Experience Platform. Une connexion est un objet Catalog qui est une instance spécifique au client de Connectors. Pour plus d’informations sur le catalogue, les connexions et les connecteurs, consultez la présentation [du service de](../../../catalog/home.md) catalogue.
 
-## What is the expected latency for Audience Manager Data on Platform?
+## Quelle est la latence attendue pour  données du Gestionnaire de sur la plateforme ?
 
-| Audience Manager Data | Latence | Notes |
+|  de données  Gestionnaire de | Latence | Notes |
 | --- | --- | --- |
-| Données en temps réel | &lt; 35 minutes. | Time from being captured at Realtime node to appearing on Platform Data Lake. |
-| Données entrantes | &lt; 13 heures | Time from being captured at S3 buckets to appearing on Platform Data Lake. |
-| Profile data | &lt; 2 jours | Temps écoulé entre la capture des données en temps réel/entrantes et leur ajout à un  utilisateur et leur affichage final sur Platform Data Lake. |
+| Données en temps réel | &lt; 35 minutes. | Temps passé de la capture au noeud Realtime à l’apparition sur Platform Data Lake. |
+| Données entrantes | &lt; 13 heures | Temps passé de la capture dans les seaux S3 à l&#39;apparition sur Platform Data Lake. |
+| Données  | &lt; 2 jours | Temps écoulé entre la capture des données en temps réel/entrantes et leur ajout à un  utilisateur et leur affichage final sur Platform Data Lake. |
