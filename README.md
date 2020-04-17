@@ -1,9 +1,9 @@
 ---
-source-git-commit: d6149bdf74ef8cec10264c414bd21bfdf3491bef
-translation-type: ht
+source-git-commit: 792d6962154a8cdca74b3c4e72d6f7a7663cbd6f
+translation-type: tm+mt
 
 ---
-# Article Contribute
+# Contribution de contenu
 
 Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie des équipes de documentation à nous faire part de leurs contributions au contenu.
 
@@ -11,7 +11,7 @@ Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie
 
 Ce projet a adopté le [code de conduite Adobe Open Source](code-of-conduct.md) ou le [code de conduite de la Fondation .NET](https://dotnetfoundation.org/code-of-conduct). Pour plus d’informations, reportez-vous à l’article [Contribution](contributing.md).
 
-## À propos de vos contributions au contenu Adobe
+## Méthodes de contribution au contenu Adobe
 
 Consultez le [Guide du contributeur de documents Adobe](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
 
@@ -33,26 +33,32 @@ Si vous faites partie de la communauté Adobe et si vous souhaitez créer un art
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Modifications majeures d’employés d’Adobe
+### Modifications majeures ou nouveaux articles des employés Adobe
 
-Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une [!UICONTROL solution Adobe Experience Cloud], et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Consultez le [Guide sur la collaboration interne](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html).
+Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Consultez le Guide [de collaboration](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html) interne pour en savoir plus.
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
+## Contact avec l’équipe de documentation de la plateforme d’expérience
+
+Comme indiqué ci-dessus, les membres de la communauté Adobe peuvent envoyer un problème qui sera affecté à l’auteur approprié. Si vous êtes un employé d’Adobe, vous pouvez envoyer un problème ou contacter directement l’équipe de documentation de la plateforme d’expérience. Pour trouver le rédacteur en chef d’une zone de plateforme spécifique, consultez le wiki [Documentation d’](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation)Adobe Experience Platform.
+
 ## Outils et configuration
+
+### Interface utilisateur de GitHub
 
 Les contributeurs de la communauté peuvent utiliser l’interface utilisateur de GitHub pour toute modification de base ou dupliquer le référentiel pour apporter des contributions importantes.
 
 Consultez le [Guide du contributeur de documents Adobe](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) pour plus de détails.
 
-## Utilisation de Markdown pour formater votre rubrique
+### Texte (Markdown) 
 
 Tous les articles de ce référentiel utilisent GitHub Flavored Markdown. Si vous n’êtes pas familiarisé avec Markdown, reportez-vous à :
 
 * [Concepts de base de Markdown](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Markdown cheatsheet imprimable](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-## Étiquettes
+### Étiquettes
 
 Dans le référentiel public, des étiquettes automatisées sont assignées à des requêtes de tirage afin de nous aider à gérer le workflow de requête de tirage et à vous aider à savoir ce qui se passe avec votre requête de tirage :
 
