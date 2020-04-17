@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
 
 ---
 
@@ -50,7 +50,7 @@ Pour des méthodes plus robustes d’accès à vos données, Experience Platform
 * [Présentation du service](../../query-service/home.md)
 * [Guide de l&#39;utilisateur de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
-## Création d’un jeu de données
+## Création d’un jeu de données {#create}
 
 Pour créer un jeu de données,  en cliquant sur **Créer un jeu** de données dans le *Jeu de données* .
 
