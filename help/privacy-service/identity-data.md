@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Données d’identité pour les demandes de confidentialité
 topic: overview
 translation-type: tm+mt
-source-git-commit: f2fe9c01c8355d0b312a0236f76085d1743aa8cc
+source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
 
 ---
 
@@ -23,13 +23,13 @@ Par exemple, lors du traitement des demandes de données client dans Privacy Ser
 
 Il est donc nécessaire que chaque identité envoyée au Service de la protection de la vie privée soit accompagnée d&#39;un **** qui fournit un contexte en reliant la valeur d&#39;identité à son système de  de de . Un   peut représenter un concept générique tel qu’une adresse électronique (&quot;Email&quot;) ou associer l’identité à une application spécifique, telle qu’un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou un Adobe  ID (&quot;TNTID&quot;).
 
-Le service d’identité Adobe Experience Platform conserve un stock de d’identité définis globalement et définis par l’utilisateur  . Pour plus d&#39;informations sur  , reportez-vous à l&#39;aperçu [des  de l&#39;](https://www.adobe.io/apis/experienceplatform/home/profile-identity-segmentation/profile-identity-segmentation-services.html#!api-specification/markdown/narrative/technical_overview/identity_namespace_overview/identity_namespace_overview.md)identité . Pour un de qualificatifs standard de  et de [couramment utilisés dans Privacy Service, reportez-vous à la section](api/appendix.md) de l’annexe du guide du développeur.
+Le service d’identité Adobe Experience Platform conserve un stock de d’identité définis globalement et définis par l’utilisateur  . Pour plus d&#39;informations sur  , reportez-vous à l&#39;aperçu [des  de l&#39;](../identity-service/namespaces.md)identité . Pour un de qualificatifs standard de  et de [couramment utilisés dans Privacy Service, reportez-vous à la section](api/appendix.md) de l’annexe du guide du développeur.
 
 ## ECID et service d’inclusion
 
-Adobe Experience Cloud Identity Service sert de cadre d’identification commun à Experience Cloud et affecte un identifiant unique et persistant à chaque de site. L’ECID (Experience Cloud ID) effectue le suivi du  d’un client par l’intermédiaire d’un cookie propriétaire, peut identifier de manière unique un périphérique dans plusieurs applications et vous permet d’identifier le même de site et ses données dans différentes applications Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+Adobe Experience Cloud Identity Service sert de cadre d’identification commun à Experience Cloud et affecte un identifiant unique et persistant à chaque de site. L’ECID (Experience Cloud ID) effectue le suivi du  d’un client par l’intermédiaire d’un cookie propriétaire, peut identifier de manière unique un périphérique dans plusieurs applications et vous permet d’identifier le même de site et ses données dans différentes applications Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/fr-FR/id-service/using/intro/overview.html) for more information.
 
-Le service d’inclusion, une extension du service d’identité Experience Cloud, vous permet de configurer des protocoles sur votre application pour permettre aux de déterminer si vous pouvez définir un cookie sur le périphérique  ou le navigateur du. Pour plus d’informations sur le service d’inscription, y compris sur la configuration du service pour votre application, reportez-vous à la documentation [](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html)du service d’inscription.
+Le service d’inclusion, une extension du service d’identité Experience Cloud, vous permet de configurer des protocoles sur votre application pour permettre aux de déterminer si vous pouvez définir un cookie sur le périphérique  ou le navigateur du. Pour plus d’informations sur le service d’inscription, y compris sur la configuration du service pour votre application, reportez-vous à la documentation [](https://docs.adobe.com/content/help/fr-FR/id-service/using/implementation/opt-in-service/optin-overview.html)du service d’inscription.
 
 Une fois que les de votre site ont reçu des ECID, vous pouvez utiliser la bibliothèque JavaScript de confidentialité d’Adobe pour récupérer ces ID en vue de les utiliser dans des demandes de confidentialité, comme décrit dans la section suivante.
 
