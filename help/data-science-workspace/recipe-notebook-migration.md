@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 105317c0b9a7cf74d55e3436a49e1dc6eeb31b32
+source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
 
 ---
 
@@ -427,11 +427,11 @@ Avec PySpark 3 (Spark 2.4) `sc = spark.sparkContext` est défini lors du chargem
 
 ![Charger 1](./images/migration/pyspark-migration/2.4-load.png)
 
-**Chargement des données de la plate-forme Expérience possible dans PySpark 2.3 - obsolète**
+**Chargement des données de la plateforme Experience Cloud dans PySpark 2.3 - obsolète**
 
 ![Charger 2](./images/migration/pyspark-migration/2.3-load-alt.png)
 
-**Chargement des données de la plate-forme Expérience possible dans PySpark 2.4**
+**Chargement des données de la plateforme Experience Cloud dans PySpark 2.4**
 
 Avec PySpark 3 (Spark 2.4), il n’est plus nécessaire de `org_id` définir et `dataset_id` plus nécessaire de le faire. De plus, `df = spark.read.format` a été remplacé par une magie personnalisée [`%dataset`](#magic) pour faciliter la lecture et l&#39;écriture des jeux de données.
 
