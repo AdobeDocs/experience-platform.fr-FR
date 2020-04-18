@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Annexe
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0081cbd414e983d767b4a6f3aceed85d72a34816
+source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
 
 ---
 
@@ -67,7 +67,7 @@ Voici un exemple de configuration qui spécifie l’utilisation d’un processeu
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 
-Les moteurs PySpark et Spark peuvent modifier les ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
+Les moteurs Spark peuvent modifier les ressources de calcul à des fins de formation et de notation. Ces ressources sont décrites dans le tableau suivant :
 
 | Ressource | Description | Type |
 | -------- | ----------- | ---- |
