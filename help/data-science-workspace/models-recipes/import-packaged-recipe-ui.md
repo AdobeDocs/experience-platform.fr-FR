@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importer une recette assemblée (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: a7db31793d33d4571a867f5632243c59b5cb7975
 
 ---
 
@@ -15,7 +15,7 @@ Ce didacticiel explique comment configurer et importer une recette assemblée à
 
 ## Conditions préalables
 
-Ce didacticiel nécessite une recette assemblée sous la forme d&#39;une URL d&#39;image Docker ou d&#39;un fichier binaire. Pour plus d’informations, consultez le didacticiel sur la manière de [compresser les fichiers source dans une recette](./package-source-files-recipe.md) .
+Ce didacticiel nécessite une recette assemblée sous la forme d’une URL d’image Docker. Pour plus d’informations, consultez le didacticiel sur la manière de [compresser les fichiers source dans une recette](./package-source-files-recipe.md) .
 
 ## Flux d’interface
 
@@ -23,10 +23,14 @@ L’importation d’une recette assemblée dans Data Science Workspace requiert 
 
 Le processus d’importation d’une recette de package se compose des étapes suivantes :
 - [Configuration d’une recette](#configure)
-- [Importer une recette binaire - PySpark](#pyspark)
-- [Importer une recette binaire - Scala Spark](#scala)
 - [Recette basée sur un Docker d&#39;importation - Python](#python)
 - [Importer la recette basée sur un Docker - R](#r)
+- [Importer une recette basée sur un Docker - PySpark](#pyspark)
+- [Recette basée sur un Docker d&#39;importation - Scala](#scala)
+
+ obsolète :
+- [Importer une recette binaire - PySpark](#pyspark-deprecated)
+- [Importer une recette binaire - Scala Spark](#scala-deprecated)
 
 ### Configuration d’une recette {#configure}
 
@@ -115,7 +119,147 @@ Vous trouverez ci-dessous un exemple de fichier de configuration présentant les
 
 Dans ce didacticiel, vous pouvez laisser les fichiers de configuration par défaut de la recette Ventes au détail dans la référence de l’espace de travail Data Science de la manière dont ils sont.
 
-### Importer une recette binaire - PySpark {#pyspark}
+### Recette basée sur un Docker d&#39;importation - Python {#python}
+
+en naviguant et en sélectionnant les **** situés dans le coin supérieur gauche de l’interface utilisateur de la plateforme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **Lancer**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+La page *Configurer* pour le flux de travail *Importer une recette* s’affiche. Entrez un nom et une description pour la recette, puis sélectionnez **Suivant** dans le coin supérieur droit.
+
+![configurer le processus](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL du Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source Python.
+
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l&#39;URL du Docker correspondant à la recette assemblée créée à l&#39;aide des fichiers source Python dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionnez **Python** dans la liste déroulante *Runtime* et **Classification** dans la liste déroulante *Type.* Une fois tout terminé, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à *Gérer les* de.
+
+>[!NOTE]
+> *Type *prend en charge **la classification**et **la régression**. Si votre modèle ne figure pas sous l’un de ces types, sélectionnez **Personnalisé**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_python.png)
+
+Ensuite, sélectionnez le d’entrée et de sortie des ventes au détail sous la section *Gérer les*, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Sous la section Gestion des *fonctionnalités* , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+
+### Importer la recette basée sur un Docker - R {#r}
+
+en naviguant et en sélectionnant les **** situés dans le coin supérieur gauche de l’interface utilisateur de la plateforme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **Lancer**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+La page *Configurer* pour le flux de travail *Importer une recette* s’affiche. Entrez un nom et une description pour la recette, puis sélectionnez **Suivant** dans le coin supérieur droit.
+
+![configurer le processus](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL de dossier a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source R.
+
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l’URL du Docker correspondant à la recette assemblée générée à l’aide des fichiers source R dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Sélectionnez **R** dans la liste déroulante *Runtime* et **Classification** dans la liste déroulante *Type.* Une fois tout terminé, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à *Gérer les* de.
+
+>[!NOTE]
+> *Type *prend en charge **la classification**et **la régression**. Si votre modèle ne figure pas sous l’un de ces types, sélectionnez **Personnalisé**.
+
+![](../images/models-recipes/import-package-ui/recipe_source_R.png)
+
+Ensuite, sélectionnez le d’entrée et de sortie des ventes au détail sous la section *Gérer les*, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Sous la section Gestion des *fonctionnalités* , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+
+### Importer une recette basée sur un Docker - PySpark {#pyspark}
+
+en naviguant et en sélectionnant les **** situés dans le coin supérieur gauche de l’interface utilisateur de la plateforme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **Lancer**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+La page *Configurer* pour le flux de travail *Importer une recette* s’affiche. Entrez un nom et une description pour la recette, puis sélectionnez **Suivant** dans le coin supérieur droit pour continuer.
+
+![configurer le processus](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL de dossier a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source PySpark.
+
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l’URL du Docker correspondant à la recette assemblée créée à l’aide des fichiers source PySpark dans le champ URL **de la** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json`. Sélectionnez **PySpark** dans la liste déroulante *Runtime* . Une fois l’exécution de PySpark sélectionnée, l’artefact par défaut est automatiquement renseigné sur **Docker**. Ensuite, sélectionnez **Classification** dans la liste déroulante *Type* . Une fois tout terminé, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à *Gérer les* de.
+
+>[!NOTE]
+> *Type *prend en charge **la classification**et **la régression**. Si votre modèle ne figure pas sous l’un de ces types, sélectionnez **Personnalisé**.
+
+![](../images/models-recipes/import-package-ui/pyspark-databricks.png)
+
+Ensuite, sélectionnez le d’entrée et de sortie des ventes au détail sous la section *Gérer les*, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Sous la section Gestion des *fonctionnalités* , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+
+### Recette basée sur un Docker d&#39;importation - Scala {#scala}
+
+en naviguant et en sélectionnant les **** situés dans le coin supérieur gauche de l’interface utilisateur de la plateforme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **Lancer**.
+
+![](../images/models-recipes/import-package-ui/launch-import.png)
+
+La page *Configurer* pour le flux de travail *Importer une recette* s’affiche. Entrez un nom et une description pour la recette, puis sélectionnez **Suivant** dans le coin supérieur droit pour continuer.
+
+![configurer le processus](../images/models-recipes/import-package-ui/configure-workflow.png)
+
+>[!NOTE]
+> Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL de dossier a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source Scala (Spark).
+
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l’URL du Docker correspondant à la recette assemblée créée à l’aide des fichiers source Scala dans le champ URL ** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Sélectionnez **Spark** dans la liste déroulante *Runtime* . Une fois l’exécution Spark sélectionnée, l’artefact par défaut est automatiquement renseigné sur **Docker**. Ensuite, sélectionnez **Régression** dans la liste déroulante *Type* . Une fois tout terminé, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à *Gérer les* de.
+
+>[!NOTE]
+> *Type *prend en charge **la classification**et **la régression**. Si votre modèle ne figure pas sous l’un de ces types, sélectionnez **Personnalisé**.
+
+![](../images/models-recipes/import-package-ui/scala-databricks.png)
+
+Ensuite, sélectionnez le d’entrée et de sortie des ventes au détail sous la section *Gérer les*, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
+
+![](../images/models-recipes/import-package-ui/recipe_schema.png)
+
+Sous la section Gestion des *fonctionnalités* , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+
+Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
+
+![](../images/models-recipes/import-package-ui/recipe_review.png)
+
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+
+## Étapes suivantes
+
+Ce didacticiel explique comment configurer et importer une recette dans Data Science Workspace. Vous pouvez désormais créer, former et évaluer un modèle à l’aide de la nouvelle recette créée.
+
+- [Formation et évaluation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md)
+- [Former et évaluer un modèle à l’aide de l’API](./train-evaluate-model-api.md)
+
+##  obsolète
+
+>[!CAUTION]
+>L’importation de recettes binaires n’est plus prise en charge dans PySpark 3 (Spark 2.4) et Scala (Spark 2.4).
+
+### Importer une recette binaire - PySpark {#pyspark-deprecated}
 
 Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, un fichier binaire **EGG** a été créé à l’aide des fichiers source PySpark de vente au détail.
 
@@ -128,14 +272,14 @@ De même, importez le fichier de configuration fourni en le faisant glisser et e
    ![](../images/models-recipes/import-package-ui/recipe_source.png)
 4. Vous pouvez rencontrer des erreurs à ce stade. Il s&#39;agit d&#39;un comportement normal et il est à prévoir. Sélectionnez le  d’entrée et de sortie des ventes au détail dans la section **Gérer le**, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **** fonctionnalités, cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+Sous la section Gestion des **fonctionnalités** , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
 5. Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Félicitations, vous avez créé la recette Ventes au détail ! Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
 
 
-### Importer une recette binaire - Scala Spark {#scala}
+### Importer une recette binaire - Scala Spark {#scala-deprecated}
 
 Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, un fichier binaire **JAR** a été créé à l’aide des fichiers source Scala Spark de vente au détail.
 
@@ -147,43 +291,8 @@ Dans le didacticiel Recette [des fichiers source du](./package-source-files-reci
    ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
 4. Vous pouvez rencontrer des erreurs à ce stade. Il s&#39;agit d&#39;un comportement normal et il est à prévoir. Sélectionnez le  d’entrée et de sortie des ventes au détail dans la section **Gérer le**, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
    ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **** fonctionnalités, cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
+Sous la section Gestion des **fonctionnalités** , cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
 5. Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
    ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Félicitations, vous avez créé la recette Ventes au détail ! Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
-
-### Recette basée sur un Docker d&#39;importation - Python {#python}
-
-Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL du Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source Python.
-
-1. Collez l&#39;URL Docker correspondant à la recette assemblée créée à l&#39;aide des fichiers source Python dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Cliquez sur **Suivant** lorsque les deux éléments ont été fournis.
-   ![](../images/models-recipes/import-package-ui/recipe_source_python.png)
-2. Sélectionnez le  d’entrée et de sortie des ventes au détail dans la section **Gérer le**, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **** fonctionnalités, cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
-3. Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Félicitations, vous avez créé la recette Ventes au détail ! Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
-
-### Importer la recette basée sur un Docker - R {#r}
-
-Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL de dossier a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source R.
-
-1. Collez l’URL du Docker correspondant à la recette assemblée générée à l’aide des fichiers source R dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve à l’adresse `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Cliquez sur **Suivant** lorsque les deux éléments ont été fournis.
-   ![](../images/models-recipes/import-package-ui/recipe_source_R.png)
-2. Sélectionnez le  d’entrée et de sortie des ventes au détail dans la section **Gérer le**, ils ont été créés à l’aide du script d’amorçage fourni dans le didacticiel [Création du](../models-recipes/create-retails-sales-dataset.md) jeu de données et dujournal de vente au détail.
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **** fonctionnalités, cliquez sur votre identification de client dans le lecteur de  pour développer le d’entrée Vente au détail . Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée, puis sélectionnez Fonction **d’** entrée ou Fonction **** dans la fenêtre Propriétés **du** champ de droite. Dans le cadre de ce didacticiel, définissez **weeklySales** comme fonction **de  du** et tout le reste comme fonction **d’** entrée. Cliquez sur **Suivant** pour consulter votre nouvelle recette configurée.
-3. Vérifiez la recette, ajoutez, modifiez ou supprimez des configurations, le cas échéant. Cliquez sur **Terminer** pour créer la recette.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Félicitations, vous avez créé la recette Ventes au détail ! Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
-
-## Étapes suivantes
-
-Ce didacticiel explique comment configurer et importer une recette dans Data Science Workspace. Vous pouvez désormais créer, former et évaluer un modèle à l’aide de la nouvelle recette créée.
-
-- [Formation et évaluation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md)
-- [Former et évaluer un modèle à l’aide de l’API](./train-evaluate-model-api.md)
+Passez aux étapes [](#next-steps) suivantes pour savoir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
