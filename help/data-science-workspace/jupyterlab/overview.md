@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 700c927680d9b9ba4dabc2d2e068e4da3c801cce
+source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
 
 ---
 
@@ -56,7 +56,7 @@ Vous trouverez des informations sur les principales fonctionnalités de JupyterL
 
 ### Accès à JupyterLab
 
-Dans <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>, cliquez sur **Modèles** dans la colonne de navigation de gauche, puis cliquez sur **Ordinateurs portables** trouvés dans la barre de navigation supérieure pour accéder à JupyterLab. Laissez un peu de temps à JupyterLab pour l&#39;initialisation complète.
+Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Ordinateurs portables** dans la colonne de navigation de gauche. Laissez un peu de temps à JupyterLab pour l&#39;initialisation complète.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -116,11 +116,9 @@ Les actions de cellule courantes sont décrites ci-dessous :
 
 ### Noisettes {#kernels}
 
-<!-- will need to edit this sparkmagic %% for data bricks not supported -->
-
 Les noyaux des ordinateurs portables sont les moteurs informatiques spécifiques à la langue pour le traitement des cellules des ordinateurs portables. Outre Python, JupyterLab fournit une prise en charge linguistique supplémentaire dans R, PySpark et Spark. Lorsque vous ouvrez un de bloc-notes, le noyau associé est lancé. Lorsqu&#39;une cellule d&#39;ordinateur portable est exécutée, le noyau effectue le calcul et produit des résultats qui peuvent consommer des ressources importantes en UC et en mémoire. Notez que la mémoire allouée n&#39;est pas libérée tant que le noyau n&#39;est pas fermé.
 
->[!NOTE] Les fonctionnalités PySpark et Spark sont prises en charge par <a href="https://github.com/jupyter-incubator/sparkmagic" target="_blank">SparkMagic</a>.
+>[!IMPORTANT] JupyterLab Launcher a été mis à jour de Spark 2.3 vers Spark 2.4. Les noyaux Spark et PySpark ne sont plus pris en charge dans les blocs-notes Spark 2.4.
 
 Certaines fonctionnalités et fonctionnalités sont limitées à des noyaux particuliers, comme décrit dans le tableau ci-dessous :
 
@@ -128,8 +126,9 @@ Certaines fonctionnalités et fonctionnalités sont limitées à des noyaux part
 | :----: | :--------------------------: | :-------------------- |
 | **Python** | Oui | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li><li>Service </li></ul> |
 | **r** | Oui | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
-| **PySpark** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
-| **Spark** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
+| **PySpark - désapprouvée** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
+| **Spark - désapprouvée** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
+| **Scala** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
 
 ### Sessions du noyau
 
@@ -143,9 +142,23 @@ Si le noyau est fermé ou inactif pendant une longue période, alors **Pas de no
 
 ### Ressource d’exécution PySpark/Spark {#execution-resource}
 
-<!-- need to update with databricks -->
+>[!IMPORTANT]
+>Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>
+>Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) pour obtenir un didacticiel détaillé sur la mise à jour de vos blocs-notes existants.
+>
+>Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) pour obtenir un didacticiel détaillé sur la mise à jour de vos blocs-notes existants.
 
 Les noyaux PySpark et Spark vous permettent de configurer les ressources de la grappe Spark dans votre ordinateur portable PySpark ou Spark en utilisant la commande configure (`%%configure`) et en fournissant un de configurations. Idéalement, ces configurations sont définies avant l’initialisation de l’application Spark. La modification des configurations lorsque l’application Spark est active requiert un indicateur de force supplémentaire après la commande (`%%configure -f`) qui redémarrera l’application pour que les modifications soient appliquées, comme illustré ci-dessous :
+
+>[!CAUTION]
+>Avec les ordinateurs portables PySpark 3 (Spark 2.4) et Scala (Spark 2.4), `%%` sparkmiracle n’est plus pris en charge. Les opérations suivantes ne peuvent plus être utilisées :
+* `%%help`
+* `%%info`
+* `%%cleanup`
+* `%%delete`
+* `%%configure`
+* `%%local`
 
 ```python
 %%configure -f 
@@ -160,8 +173,6 @@ Les noyaux PySpark et Spark vous permettent de configurer les ressources de la g
     }
 }
 ```
-
->[!TIP] Utilisez la commande d&#39;aide (`%%help`) pour  toutes les commandes disponibles.
 
 Toutes les propriétés configurables sont répertoriées dans le tableau ci-dessous :
 
@@ -183,8 +194,6 @@ Toutes les propriétés configurables sont répertoriées dans le tableau ci-des
 | conf | Propriété de configuration Spark | Carte de key=val |
 
 ### Lanceur
-
-<!-- Databricks update -->
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -242,7 +251,7 @@ Certains modèles de blocs-notes sont limités à certains noyaux. La disponibil
         <td >non</td>
     </tr>
     <tr>
-        <th  ><strong>PySpark</strong></th>
+        <th  ><strong>PySpark 3 (Spark 2.3 - désapprouvée)</strong></th>
         <td >oui</td>
         <td >oui</td>
         <td >non</td>
@@ -254,7 +263,31 @@ Certains modèles de blocs-notes sont limités à certains noyaux. La disponibil
         <td >non</td>
     </tr>
     <tr>
-        <th ><strong>Spark</strong></th>
+        <th ><strong>Spark (Spark 2.3 - désapprouvée)</strong></th>
+        <td >oui</td>
+        <td >oui</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >oui</td>
+    </tr>
+      <tr>
+        <th  ><strong>PySpark 3 (Spark 2.4)</strong></th>
+        <td >non</td>
+        <td >oui</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >non</td>
+        <td >oui</td>
+        <td >oui</td>
+        <td >non</td>
+    </tr>
+    <tr>
+        <th ><strong>Scala</strong></th>
         <td >oui</td>
         <td >oui</td>
         <td >non</td>
@@ -341,12 +374,21 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: Identité unique du jeu de données auquel il faut accéder
 
-### Lecture à partir d’un jeu de données dans PySpark/Spark
+### Lecture à partir d’un jeu de données dans PySpark/Spark/Scala
 
-Une fois qu&#39;un bloc-notes PySpark ou Spark actif est ouvert, développez l&#39;onglet Explorateur **de** données dans la barre latérale **gauche et  cliquez sur** DataSetpour  un  de jeux de données disponibles. Cliquez avec le bouton droit de la souris sur le jeu de données dont vous souhaitez accéder, puis cliquez sur **Explorer les données dans un bloc-notes**. Les cellules de code suivantes sont générées :
+>[!IMPORTANT]
+>Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>
+>Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux ordinateurs portables doivent suivre l’exemple [PySpark 3 (Spark 2.4)](#pyspark2.4) ci-dessous.
+>
+>Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux ordinateurs portables doivent suivre l’ [exemple Scala (Spark 2.4)](#spark2.4) ci-dessous.
+
+Une fois qu&#39;un bloc-notes PySpark ou Spark actif est ouvert, développez l&#39;onglet Explorateur **de** données dans la barre latérale **gauche et  cliquez sur** DataSetpour  un  de jeux de données disponibles. Cliquez avec le bouton droit de la souris sur le jeu de données dont vous souhaitez accéder, puis cliquez sur **Explorer les données dans le bloc-notes**. Les cellules de code suivantes sont générées :
+
+#### PySpark (Spark 2.3 - désapprouvée)
 
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd0 = spark.read.format("com.adobe.platform.dataset").\
     option('orgId', "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -355,8 +397,22 @@ pd0.describe()
 pd0.show(10, False)
 ```
 
+#### PySpark (Spark 2.4) {#pyspark2.4}
+
+Avec l&#39;introduction de Spark 2.4, la magie [`%dataset`](#magic) personnalisée est fournie.
+
+```python
+# PySpark 3 (Spark 2.4)
+
+%dataset read --datasetId {DATASET_ID} --dataFrame pd0
+pd0.describe()
+pd0.show(10, False)
+```
+
+#### Spark (Spark 2.3 - désapprouvée)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -366,6 +422,54 @@ val dataFrame = spark.read.
 dataFrame.printSchema()
 dataFrame.show()
 ```
+
+#### Scala (Spark 2.4) {#spark2.4}
+
+```scala
+// Scala (Spark 2.4)
+
+// initialize the session
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = SparkSession.builder().master("local").getOrCreate()
+
+val dataFrame = spark.read.format("com.adobe.platform.query")
+    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+    .option("ims-org", sys.env("IMS_ORG_ID"))
+    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
+    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
+    .option("mode", "batch")
+    .option("dataset-id", "{DATASET_ID}")
+    .load()
+dataFrame.printSchema()
+dataFrame.show()
+```
+
+>[!TIP]
+>Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`.
+
+### Utilisation de la magie %dataset dans les blocs-notes PySpark 3 (Spark 2.4) {#magic}
+
+Avec l&#39;introduction de Spark 2.4, la magie `%dataset` personnalisée est fournie pour les nouveaux portables PySpark 3 (Spark 2.4) (noyau Python 3).
+
+**Utilisation**
+
+`%dataset {action} --datasetId {id} --dataFrame {df}`
+
+**Description**
+
+Commande magique Data Science Workspace personnalisée pour lire ou écrire un jeu de données à partir d&#39;un bloc-notes Python (noyau Python 3).
+
+* **{action}**: Type d’action à exécuter sur le jeu de données. Deux actions sont disponibles &quot;read&quot; ou &quot;write&quot;.
+* **—datasetId {id}**: Utilisé pour fournir l’ID du jeu de données à lire ou à écrire. C&#39;est un argument obligatoire.
+* **—dataFrame {df}**: Le cadre de données des pandas. C&#39;est un argument obligatoire.
+   * Lorsque l&#39;action est &quot;read&quot;, {df} est la variable dans laquelle les résultats de l&#39;opération de lecture du jeu de données sont disponibles.
+   * Lorsque l&#39;action est &quot;write&quot;, ce dataframe {df} est écrit dans le jeu de données.
+* **—mode (facultatif)**: Les paramètres autorisés sont &quot;batch&quot; et &quot;interactive&quot;. Par défaut, le mode est défini sur &quot;interactif&quot;. Il est recommandé d’utiliser le mode &quot;batch&quot; lors de la lecture de grandes quantités de données.
+
+**Exemples**
+
+* **Exemple** de lecture : `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
+* **Exemple** d’écriture : `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
 ###  de données à l&#39;aide du service de  en Python
 
@@ -453,12 +557,21 @@ df <- dataset_reader$
 
 ### Filtrage des données ExperienceEvent dans PySpark/Spark
 
+>[!IMPORTANT]
+>Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>
+>Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) pour en savoir plus sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes PySpark, utilisez l’ [exemple PySpark 3 (spark 2.4)](#pyspark3-spark2.4) pour filtrer les données ExperienceEvent.
+>
+>Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) pour plus d’informations sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes Spark, utilisez l’ [exemple Scala (spark 2.4)](#scala-spark) pour filtrer les données d’ExperienceEvent.
+
 L’accès et le filtrage d’un jeu de données ExperienceEvent dans un bloc-notes PySpark ou Spark nécessitent que vous fournissiez l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre entreprise et les règles de filtre définissant une plage de temps spécifique. Une plage de temps de filtrage est définie à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de SQL.
 
 Les cellules suivantes filtrent un jeu de données ExperienceEvent en données existant exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
+#### PySpark 3 (Spark 2.3 - désapprouvée)
+
 ```python
-# PySpark
+# PySpark 3 (Spark 2.3 - deprecated)
 
 pd = spark.read.format("com.adobe.platform.dataset").\
     option("orgId", "YOUR_IMS_ORG_ID@AdobeOrg").\
@@ -473,8 +586,30 @@ timepd = spark.sql("""
 """)
 ```
 
+#### PySpark 3 (Spark 2.4) {#pyspark3-spark2.4}
+
+```python
+# PySpark 3 (Spark 2.4)
+
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+
+%dataset read --datasetId {DATASET_ID} --dataFrame df
+
+df.createOrReplaceTempView("event")
+timepd = spark.sql("""
+    SELECT *
+    FROM event
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timepd.show()
+```
+
+#### Spark (Spark 2.3 - désapprouvée)
+
 ```scala
-// Spark
+// Spark (Spark 2.3 - deprecated)
 
 import com.adobe.platform.dataset.DataSetOptions
 val dataFrame = spark.read.
@@ -491,6 +626,53 @@ val timedf = spark.sql("""
 """)
 ```
 
+#### Scala (Spark 2.4) {#scala-spark}
+
+```scala
+// Spark (Spark 2.4)
+
+// Turn off extra logging
+import org.apache.log4j.{Level, Logger}
+Logger.getLogger("org").setLevel(Level.OFF)
+Logger.getLogger("com").setLevel(Level.OFF)
+
+import org.apache.spark.sql.{Dataset, SparkSession}
+val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
+  .master("local")
+  .getOrCreate()
+
+// Stage Exploratory
+val dataSetId: String = "{DATASET_ID}"
+val orgId: String = sys.env("IMS_ORG_ID")
+val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
+val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
+val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
+val mode: String = "batch"
+
+var df = spark.read.format("com.adobe.platform.query")
+  .option("user-token", userToken)
+  .option("ims-org", orgId)
+  .option("api-key", clientId)
+  .option("mode", mode)
+  .option("dataset-id", dataSetId)
+  .option("service-token", serviceToken)
+  .load()
+df.createOrReplaceTempView("event")
+val timedf = spark.sql("""
+    SELECT * 
+    FROM event 
+    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
+    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
+""")
+timedf.show()
+```
+
+>[!TIP]
+>Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant reprend `val userToken` l’exemple ci-dessus et le déclare en ligne `option` comme alternative :
+> 
+```scala
+> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
+> ```
 
 ## Bibliothèques prises en charge {#supported-libraries}
 
