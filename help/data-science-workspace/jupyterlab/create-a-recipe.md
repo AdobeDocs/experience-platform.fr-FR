@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une recette à l’aide de cahiers Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 9f3fc3ec3ce560534b057185e3fef2cc2bc1234d
+source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 
 ---
 
@@ -38,9 +38,10 @@ Vous pouvez créer une recette à partir de zéro dans Data Science Workspace. P
 
 Le bloc-notes Recipe Builder vous permet d&#39;exécuter des exercices de formation et de notation dans le bloc-notes. Vous avez ainsi la possibilité d’apporter des modifications à leurs `train()` méthodes et à leurs `score()` méthodes entre les expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette à utiliser dans Data Science Workspace à l’aide du bloc-notes pour obtenir la fonctionnalité intégrée au bloc-notes du créateur de recettes.
 
->[!NOTE] Le bloc-notes Recipe Builder prend en charge l&#39;utilisation de tous les formats de fichier, mais la fonctionnalité Create Recipe ne prend actuellement en charge que Python.
+>[!NOTE]
+>Le bloc-notes Recipe Builder prend en charge l&#39;utilisation de tous les formats de fichier, mais la fonctionnalité Create Recipe ne prend actuellement en charge que Python.
 
-![](../images/jupyterlab/create-recipe/notebook_launcher.png)
+![](../images/jupyterlab/create-recipe/recipe-builder.png)
 
 Lorsque vous cliquez sur le bloc-notes Recipe Builder depuis le lanceur, le bloc-notes s&#39;ouvre dans l&#39;onglet. Le modèle utilisé dans le bloc-notes est la Recette de prévision des ventes au détail Python qui se trouve également dans [ce référentiel public.](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
@@ -50,7 +51,6 @@ Vous remarquerez que dans la barre d’outils, il y a trois autres actions : **T
 
 ## Apporter des modifications aux fichiers de recette
 
-<!-- Databricks update to recipe needed -->
 Pour apporter des modifications aux fichiers de recette, accédez à la cellule de Jupyter correspondant au chemin du fichier. Par exemple, si vous souhaitez apporter des modifications `evaluator.py`, recherchez `%%writefile demo-recipe/evaluator.py`.
 
  effectuer les modifications nécessaires à la cellule et, une fois terminé, exécuter simplement la cellule. La `%%writefile filename.py` commande écrira le contenu de la cellule dans le `filename.py`. Vous devrez exécuter manuellement la cellule pour chaque fichier avec des modifications.
@@ -69,9 +69,6 @@ Maintenant que vous connaissez les bases du portable JupyterLab  le, vous pouvez
 - [Fichier d’évaluateur](#evaluator-file)
 - [Fichier d’enregistrement de données](#data-saver-file)
 
-
-
-
 ### Fichier de configuration
 
 Le fichier de configuration requise est utilisé pour déclarer les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. Vous pouvez spécifier le numéro de version en cas de dépendance. Pour consulter d’autres bibliothèques, rendez-vous sur le site https://anaconda.org. Les  des principales bibliothèques déjà utilisées sont les suivantes :
@@ -84,9 +81,8 @@ numpy
 data_access_sdk_python
 ```
 
->[!NOTE] Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques ci-dessus.
-
-
+>[!NOTE]
+>Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques ci-dessus.
 
 ### Fichiers de configuration
 
@@ -101,9 +97,9 @@ Les utilisateurs doivent renseigner les variables suivantes avant d’exécuter 
 
 Pour rechercher le jeu de données et les ID de  de, accédez à l’onglet Données dans les blocs-notes de la barre de navigation de gauche (sous l’icône de dossier).
 
-![](../images/jupyterlab/create-recipe/data_tab.png)
+![](../images/jupyterlab/create-recipe/datasets.png)
 
-Vous trouverez les mêmes informations sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[de](https://platform.adobe.com/schema)**et Jeu de**[ données](https://platform.adobe.com/dataset/overview)** .
+Vous trouverez les mêmes informations sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[de](https://platform.adobe.com/schema)**et Jeu de**[données](https://platform.adobe.com/dataset/overview)** .
 
 Par défaut, les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données :
 
@@ -111,8 +107,6 @@ Par défaut, les paramètres de configuration suivants sont définis pour vous l
 - `ML_FRAMEWORK_IMS_TOKEN`
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
-
-
 
 ## Chargeur de données de formation
 
@@ -129,7 +123,8 @@ Cette étape utilise le cadre de données [pandas](https://pandas.pydata.org/pan
 - [SDK de plateforme](#platform-sdk)
 - [Sources externes](#external-sources)
 
->[!NOTE] Dans le bloc-notes Recipe Builder, les données sont chargées via le chargeur de `platform_sdk` données.
+>[!NOTE]
+>Dans le bloc-notes Recipe Builder, les données sont chargées via le chargeur de `platform_sdk` données.
 
 ### SDK de plateforme
 
@@ -155,11 +150,10 @@ df = pd.read_json(data)
 
 Vos données se trouvent maintenant dans l’objet dataframe et peuvent être analysées et manipulées dans la section [](#data-preparation-and-feature-engineering)suivante.
 
-
-
 ### À partir du SDK d’accès aux données (obsolète)
 
->[!CAUTION]  `data_access_sdk_python` n’est plus recommandé, reportez-vous à la section [Conversion du code d’accès aux données en SDK](../authoring/platform-sdk.md) de plateforme pour obtenir un guide sur l’utilisation du chargeur de données `platform_sdk` .
+>[!CAUTION]
+> `data_access_sdk_python` n’est plus recommandé, reportez-vous à la section [Conversion du code d’accès aux données en SDK](../authoring/platform-sdk.md) de plateforme pour obtenir un guide sur l’utilisation du `platform_sdk` chargeur de données.
 
 Les utilisateurs peuvent charger des données à l’aide du SDK d’accès aux données. La bibliothèque peut être importée en haut de la page en incluant la ligne :
 
@@ -176,7 +170,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
                      ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
 ```
 
->[!NOTE] Comme indiqué dans la section [Fichier de](#configuration-files)configuration, les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données à partir d’Experience Platform :
+>[!NOTE]
+>Comme indiqué dans la section [Fichier de](#configuration-files)configuration, les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données à partir d’Experience Platform :
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -297,17 +292,16 @@ df.dropna(0, inplace=True)
 
 La `load()` fonction du chargeur de données de score doit être renseignée avec le jeu de données de score comme sortie.
 
-
-
 ### Fichier de pipeline
 
-Le `pipeline.py` fichier inclut la logique de formation et de notation. Nous allons examiner les deux sections suivantes.
+Le `pipeline.py` fichier inclut la logique de formation et de notation.
 
 ### Formation
 
 L’objectif de la formation est de créer un modèle à l’aide des fonctionnalités et des étiquettes de votre jeu de données de formation.
 
->[!NOTE]  Les _fonctionnalités_ font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les _libellés_.
+>[!NOTE]\
+>_Les fonctionnalités_ font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les _libellés_.
 
 La `train()` fonction doit inclure le modèle d&#39;entraînement et renvoyer le modèle formé. Vous trouverez quelques exemples de différents modèles dans la documentation [du guide d’utilisation](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
 
@@ -346,8 +340,6 @@ def train(configProperties, data):
 ```
 
 Notez que selon votre application, vous aurez des arguments dans votre `GradientBoostingRegressor()` fonction. `xTrainingDataset` doit contenir les fonctionnalités utilisées pour la formation, tandis que `yTrainingDataset` doit contenir vos étiquettes.
-
-
 
 ### Score
 
@@ -456,7 +448,6 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-
 ## Formation et notation
 
 Lorsque vous avez terminé d&#39;apporter des modifications à votre carnet et que vous souhaitez former votre recette, vous pouvez cliquer sur les boutons associés en haut de la barre pour créer une session de formation dans la cellule. Lorsque vous cliquez sur le bouton, un journal des commandes et des sorties issues du script d’entraînement s’affiche dans le bloc-notes (sous la `evaluator.py` cellule). Conda installe d’abord toutes les dépendances, puis la formation est initiée.
@@ -467,7 +458,11 @@ Notez que vous devez exécuter la formation au moins une fois avant de pouvoir e
 
 ## Créer une recette
 
-Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **Créer une recette**. Après avoir appuyé sur le bouton, vous serez invité à saisir un nom de recette. Ce nom représente la recette réelle créée sur la plateforme.
+Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **Créer une recette** dans la barre de navigation supérieure droite.
+
+![](../images/jupyterlab/create-recipe/create-recipe.png)
+
+Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recette. Ce nom représente la recette réelle créée sur la plateforme.
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -491,7 +486,7 @@ En complétant ce didacticiel, vous avez appris à créer un modèle d&#39;appre
 
 Pour continuer à apprendre à utiliser les ressources dans Data Science Workspace, consultez la liste déroulante Recettes et modèles de Data Science Workspace.
 
-## Ressources supplémentaires   
+## Ressources supplémentaires
 
 La vidéo suivante est conçue pour vous aider à comprendre comment créer et déployer des modèles.
 
