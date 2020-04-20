@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bb6fe494933606d428d7bdf20ee38b7ac51c23ea
+source-git-commit: 61cf05b989bfbae4e26978fa915347f350d7364c
 
 ---
 
@@ -291,6 +291,10 @@ Les modifications récentes apportées aux blocs-notes JupyterLab nécessitent l
 
 - [Guide de migration de PySpark 2.3 à 2.4](#pyspark-notebook-migration)
 - [Guide de migration Spark 2.3 vers Spark 2.4 (Scala)](#spark-notebook-migration)
+
+La vidéo suivante est conçue pour vous aider à mieux comprendre les modifications requises pour les portables JupyterLab :
+
+>[!VIDEO](https://video.tv.adobe.com/v/33444?quality=12&learn=on)
 
 ## Guide de migration des ordinateurs portables PySpark 2.3 à 2.4 {#pyspark-notebook-migration}
 
