@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suppression d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 85b497d87fcfb54f390302036ce24c98c6dba6ff
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -21,9 +21,11 @@ Vous pouvez supprimer un objet Catalog en indiquant son ID dans le chemin d’un
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
+>[!IMPORTANT] Le point de `DELETE /batches/{ID}` fin est obsolète. Pour supprimer un lot, vous devez utiliser l&#39;API [d&#39;importation par](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lot.
+
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d’objet Catalog à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
