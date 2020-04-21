@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur   Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -43,7 +43,7 @@ Vous trouverez ci-dessous des exemples de la structure   Manager mappée à XDM 
 
 ## Comment les champs sont-ils mappés d’Adobe  Gestionnaire de à XDM ?
 
-Pour plus d&#39;informations, consultez la documentation pour [champs][audience-manager-mapping-fields] de mappage de  Manager.
+Pour plus d&#39;informations, consultez la documentation pour [champs](./mapping/audience-manager.md) de mappage de  Manager.
 
 ##  sur la plate-forme
 
