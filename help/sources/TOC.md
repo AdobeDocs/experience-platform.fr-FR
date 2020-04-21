@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
+source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
 
 ---
 
@@ -105,8 +105,8 @@ source-git-commit: fcab7fbb955e85006eeebe5fb45b2a62188adaa7
 - Didacticiels sur l’interface utilisateur {#ui-tutorials}
    - Création d’un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
-         - [Connecteur Adobe   Manager](tutorials/ui/create/adobe-applications/analytics.md)
-         - [Connecteur Adobe Analytics](tutorials/ui/create/adobe-applications/audience-manager.md)
+         - [Connecteur Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
+         - [Connecteur Adobe   Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connecteur d’attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicité {#create}
          - [Connecteur de publicités Google](tutorials/ui/create/advertising/ads.md)
