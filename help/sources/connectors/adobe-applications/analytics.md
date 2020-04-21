@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur de données Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
 
 ---
 
@@ -39,7 +39,7 @@ Pour en savoir plus sur XDM, consultez la présentation [du système](../../../x
 
 Lorsqu’une connexion source est établie pour importer des données Analytics dans la plate-forme d’expérience à l’aide de l’interface utilisateur de la plate-forme, les champs de données sont automatiquement mappés et assimilés dans le client en temps réel en quelques minutes. Pour plus d’informations sur la création d’une connexion source avec Adobe Analytics à l’aide de l’interface utilisateur de la plate-forme, voir le didacticiel [sur le connecteur de données](../../tutorials/ui/create/adobe-applications/analytics.md)Analytics.
 
-Pour plus d’informations sur le mappage des champs entre Analytics et la plateforme d’expérience, consultez le guide de mappage des [champs d’](./analytics-mapping.md) Adobe Analytics.
+Pour plus d’informations sur le mappage des champs entre Analytics et la plateforme d’expérience, consultez le guide de mappage des [champs d’](./mapping/analytics.md) Adobe Analytics.
 
 ## Quelle est la latence attendue pour les données Analytics sur la plateforme ?
 
