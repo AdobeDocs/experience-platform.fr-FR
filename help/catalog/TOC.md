@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Catalog and Datasets Help
+user-guide-title: Aide sur les catalogues et les jeux de données
 translation-type: tm+mt
-source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -22,6 +22,7 @@ source-git-commit: ee500b03bc0984fa24666867867d19a5d7446ced
    * [Suppression d’un objet](api/delete-object.md)
    * [Création d’un jeu de données](api/create-dataset.md)
    * [Création d’un lot](api/create-batch.md)
+   * [Étiquettes d’utilisation des données](api/labels.md)
    * [Annexe](api/appendix.md)
 * Jeux de données {#datasets}
    * [Présentation des jeux de données](datasets/overview.md)
