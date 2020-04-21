@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
+source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 
 ---
 
@@ -13,7 +13,8 @@ source-git-commit: 608f3f61764e6b578107f4ea7991bca12621330a
 * [Présentation de la gouvernance des données](home.md)
 * Étiquettes d’utilisation des données {#labels}
    * [Présentation des libellés d’utilisation des données](labels/overview.md)
-   * [Guide de l’utilisateur des libellés d’utilisation des données](labels/user-guide.md)
+   * [Gestion des libellés d’utilisation des données dans l’interface utilisateur](labels/user-guide.md)
+   * [Gestion des libellés d’utilisation des données dans l’API](labels/api.md)
    * [Etiquettes d’utilisation des données prises en charge](labels/reference.md)
 * Stratégies d’utilisation des données {#policies}
    * [Présentation des stratégies d’utilisation des données](policies/overview.md)
