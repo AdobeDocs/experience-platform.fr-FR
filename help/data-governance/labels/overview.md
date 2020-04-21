@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: 4d817a439cbc277c3df03e08554d5003b9f68a76
+source-git-commit: 4411018aa1d531b53bbe2431df71829fa07fee75
 
 ---
 
@@ -25,4 +25,4 @@ Pour plus d’informations sur les libellés d’utilisation des données dispon
 
 ## Étapes suivantes
 
-Maintenant que vous avez introduit des libellés d’utilisation des données, vous pouvez continuer à lire le guide [de l’](user-guide.md) utilisateur pour savoir comment gérer les libellés dans l’interface utilisateur de la plateforme d’expérience.
+Maintenant que vous avez introduit des libellés d’utilisation des données, vous pouvez continuer à lire le guide [de l’](user-guide.md) utilisateur pour savoir comment gérer les libellés dans l’interface utilisateur de la plateforme d’expérience. Pour savoir comment gérer les libellés à l’aide des API, voir la section appropriée du guide [du développeur du service de](../../catalog/api/labels.md)catalogue.
