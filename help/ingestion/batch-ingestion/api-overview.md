@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du développeur Adobe Experience Platform Batch Ingestion
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
 
 ---
 
@@ -54,7 +54,7 @@ Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) peuvent néces
 
 Lors de l’assimilation de données, il est important de comprendre le fonctionnement du XDM (Experience Data Model). Pour plus d&#39;informations sur la façon dont les types de champs XDM sont mappés sur différents formats, veuillez lire le [Guide](../../xdm/api/getting-started.md)du développeur du registre.
 
-Il existe une certaine flexibilité lors de l’assimilation des données : si un type ne correspond pas à ce qui se trouve dans le  de , les données seront converties en type de exprimé.  Si ce n’est pas le cas, le lot échoue avec un `TypeCompatibilityException`.
+Il existe une certaine flexibilité lors de l’assimilation des données : si un type ne correspond pas à ce qui se trouve dans le  de , les données seront converties en type de exprimé. Si ce n’est pas le cas, le lot échoue avec un `TypeCompatibilityException`.
 
 Par exemple, ni JSON ni CSV ne comportent de date ou de type date-heure. Par conséquent, ces valeurs sont exprimées en millisecondes (153126395959 ou en millisecondes en utilisant des chaînes [formatées selon la norme](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:590&quot;). (9000) et sont converties au moment de l’assimilation au type XDM .
 
@@ -167,7 +167,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 **Requête**
 
->[!NOTE] L’API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream.
+>[!NOTE] L’API prend en charge le téléchargement en une seule partie. Vérifiez que le type de contenu est application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -382,7 +382,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Paramètre | Description |
-| --------- | -----------  |
+| --------- | ----------- |
 | `{DATASET_ID}` | ID du jeu de données de référence. |
 
 **Réponse**
@@ -559,7 +559,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 Pour assimiler des fichiers CSV, vous devez créer une classe, un et un jeu de données prenant en charge le format CSV. Pour obtenir des informations détaillées sur la création de la classe et des  de nécessaires, suivez les instructions fournies dans le didacticiel [de création de](../../xdm/api/ad-hoc.md)ad hoc.
 
->[!NOTE] Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous demandez des erreurs de taille du corps, vous devrez basculer vers le transfert de fichiers volumineux.
+>[!NOTE] Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous demandez des erreurs de taille du corps, vous devrez basculer vers un transfert de fichier volumineux.
 
 ### Créer un jeu de données
 
@@ -790,7 +790,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Suppression d’un lot
+## Suppression d’un lot {#delete-a-batch}
 
 Vous pouvez supprimer un lot en exécutant la requête POST suivante avec le paramètre `action=REVERT` du à l&#39;ID du lot que vous souhaitez supprimer. Le lot est marqué comme &quot;inactif&quot;, ce qui le rend éligible pour la collecte de déchets. Le lot sera collecté de manière asynchrone, puis marqué comme &quot;supprimé&quot;.
 
