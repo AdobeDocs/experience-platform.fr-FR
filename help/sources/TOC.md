@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
+source-git-commit: 2fb034dced679d48c90c41ab3254a30fc14b43e0
 
 ---
 
@@ -16,6 +16,10 @@ source-git-commit: 85af933c14b3768790100a649de05a5e6bdb8560
       - [Connecteur de données Analytics](connectors/adobe-applications/analytics.md)
       - [Connecteur   Manager](connectors/adobe-applications/audience-manager.md)
       - [Connecteur d’attributs du client](connectors/adobe-applications/customer-attributes.md)
+      - Mappage des champs d’application Adobe {#mapping}
+         - [Champs de mappage Analytics](connectors/adobe-applications/mapping/analytics.md)
+         - [champs de mappage  Gestionnaire de](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Champs de](connectors/adobe-applications/mapping/target.md)
    - Publicité {#advertising}
       - [Connecteur de publicités Google](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
