@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Real-time Customer Profile Help
+user-guide-title: Aide sur les  de clients en temps réel
 translation-type: tm+mt
-source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
    * [(Alpha) Attributs calculés](api/computed-attributes.md)
    * [Projections Edge](api/edge-projections.md)
    * [Entités (accès  aux)](api/entities.md)
-   * [Stratégies de fusion](api/merge-policies.md)
+   * [Politiques de fusion](api/merge-policies.md)
    * [de recherche](api/profile-search.md)
    * [des tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
 * Interface utilisateur {#ui}
@@ -28,3 +28,4 @@ source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
    * [Autres didacticiels](https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html)
 * [Traitement des demandes de confidentialité](privacy.md)
 * [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
