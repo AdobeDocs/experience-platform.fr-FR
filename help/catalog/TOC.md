@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les catalogues et les jeux de données
 translation-type: tm+mt
-source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
+source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
 
 ---
 
@@ -31,3 +31,4 @@ source-git-commit: 30ea8b4eeeb5f11bfca65f2931902aae63e8f08e
 * [Traitement des demandes de confidentialité dans Data Lake](privacy.md)
 * [Protection des données dans la plate-forme Experience Platform](data-protection.md)
 * [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
