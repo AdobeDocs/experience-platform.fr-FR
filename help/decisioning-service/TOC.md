@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Decisioning Service
+user-guide-title: Service de prise de décision Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: bfe2854730f0b84e15848230808c4dd4ede2336a
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -17,3 +17,4 @@ source-git-commit: bfe2854730f0b84e15848230808c4dd4ede2336a
    - [Utilisation de l’exécution du service de prise de décision à l’aide d’API](tutorials/runtime.md)
    - [Gestion des entités du service de prise de décision à l’aide d’API](tutorials/entities.md)
 - [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/decisioning-ode.yaml)
+- [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
