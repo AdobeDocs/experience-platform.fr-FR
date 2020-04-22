@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Gestion des libellés d’utilisation des données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cac6ab568f030cf86ee68a1df9e45a3ac9d421cb
+source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
 
 ---
 
@@ -143,8 +143,6 @@ Une réponse réussie renvoie les étiquettes qui ont été ajoutées au jeu de 
 
 Vous pouvez supprimer les étiquettes appliquées à un jeu de données en effectuant une requête DELETE.
 
->[!NOTE] Vous ne devez utiliser cette opération que lors de la préparation du jeu de données parent pour suppression.
-
 **Format API**
 
 ```http
@@ -168,7 +166,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie HTTP status 200 (OK) indique que les étiquettes ont été supprimées. Vous pouvez [rechercher les étiquettes](#lookup) existantes pour le jeu de données dans un appel distinct pour le confirmer.
+Réponse réussie HTTP status 200 (OK), indiquant que les étiquettes ont été supprimées. Vous pouvez [rechercher les étiquettes](#lookup) existantes pour le jeu de données dans un appel distinct pour le confirmer.
 
 ## Étapes suivantes
 
