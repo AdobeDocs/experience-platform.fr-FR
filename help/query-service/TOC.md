@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Query Service Help
+user-guide-title: Aide d’Adobe Experience Platform Service
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 
 ---
 
@@ -53,3 +53,4 @@ source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
    - [Tableau](clients/tableau.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+- [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
