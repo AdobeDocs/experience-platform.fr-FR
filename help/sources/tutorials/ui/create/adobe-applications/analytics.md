@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Adobe Analytics dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: f09ff4d1b159a6989868c5cfc35b361cfb640a99
+source-git-commit: ac1e5dbe435d9e85e8ce3ad90c60dd31ba9248ff
 
 ---
 
@@ -23,7 +23,7 @@ L’écran   *source* toutes les connexions précédemment établies à Adobe An
 
 >[!NOTE] Vous pouvez établir plusieurs connexions intégrées à une source pour importer différentes données.
 
-![](../../../..//images/tutorials/create/analytics/AA-source_activity.png)
+![](/help/sources/images/tutorials/create/analytics/AA-source_activity.png)
 
 Dans le  des suites de rapports disponibles, sélectionnez celle que vous souhaitez importer dans la plateforme et cliquez sur **Suivant**.
 
