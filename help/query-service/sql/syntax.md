@@ -96,7 +96,7 @@ ON join condition
 ```
 
 
-##  , INTERSECT et EXCEPT
+## UNION, INTERSECT et EXCEPT
 
 Les clauses `UNION`, `INTERSECT`et `EXCEPT` sont prises en charge pour combiner ou exclure des lignes similaires de plusieurs tableaux :
 
