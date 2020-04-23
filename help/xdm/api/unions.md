@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' '
+title: Unions
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
@@ -9,7 +9,7 @@ source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
 ---
 
 
-#  
+# Unions
 
   de (ou  de de) sont des générés par le système, en lecture seule, qui permettent de [les champs de tous les](../../profile/home.md)segments de la même classe (XDM ExperienceEvent ou XDM Individuel) et qui sont activés pour lescénario d’événement client en temps réel.
 
@@ -110,7 +110,7 @@ Une réponse réussie renvoie les détails de la  de mise à jour, qui inclut d�
 }
 ```
 
-##   
+## List unions
 
 Lorsque vous définissez la balise &quot; &quot; sur un, le registre descrée et conserve automatiquement un de la classe sur laquelle leest basé. La valeur `$id` pour le   est similaire à la norme `$id` d’une classe, la seule différence étant qu’elle est annexée par deux traits de soulignement et le mot &quot; &quot; (`"__union"`).
 
