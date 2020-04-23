@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,13 +14,17 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Date de publication : 12 février 2020
 
-## Sources
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+
+* [Sources](#sources)
+
+## Sources {#sources}
 
 Adobe Experience Platform peut assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de plateforme. Vous pouvez assimiler des données à partir de diverses sources, telles que des applications Adobe, des  basés sur le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour divers fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des systèmes de  et des services de gestion de la relation client externes, de définir les heures d&#39;exécution de l&#39;assimilation et de gérer le débit d&#39;assimilation des données.
 
-### Nouvelles fonctionnalités
+**Nouvelles fonctionnalités**
 
 | Fonction | Description |
 | ------- | ----------- |
@@ -30,7 +34,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Prise en charge des API pour les systèmes de  de cloud  | Nouveaux connecteurs source pour l&#39;API Gen 2 d&#39;Azure Data Lake Service et l&#39;API  de Google Cloud l&#39;API  de Google. |
 | Prise en charge de l’interface utilisateur pour les  de cloud  systèmes | Nouveau connecteur source pour le Google Cloud   dans l’interface utilisateur. |
 
-### Problèmes connus
+**Problèmes connus**
 
 * None (Aucun)
 
