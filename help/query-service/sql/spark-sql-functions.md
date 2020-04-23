@@ -1416,7 +1416,7 @@ Exemple :
 
 Depuis : 1.5.0
 
-### , fonctions 
+### Aggregate fonctions
 
 #### approx_count_distinct
 
