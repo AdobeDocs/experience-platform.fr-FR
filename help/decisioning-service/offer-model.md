@@ -120,15 +120,15 @@ Les  de sont utilisées pour définir les critères d’un ensemble d’options 
 
 Lorsque des options sont explicitement placées dans une collection, leur jeu de balises est ignoré pour cette collection.
 
-##   
+## Offer Activities
 
-  configurer et contrôler le processus de prise de décision. Actuellement, la stratégie de décision est principalement prédéfinie, mais les futures itérations du modèle de domaine de décision   permettront la sélection de modèles, de règles et de contraintes supplémentaires.
+configurer et contrôler le processus de prise de décision. Actuellement, la stratégie de décision est principalement prédéfinie, mais les futures itérations du modèle de domaine de décision   permettront la sélection de modèles, de règles et de contraintes supplémentaires.
 
 Une expérience peut être assemblée à l’aide de nombreux   simultanément. Actuellement, jusqu’à 30   peuvent être traitées dans une seule demande de décision. Si plus de 30  ou emplacements  dans une expérience doivent être remplis avec du contenu, plusieurs demandes peuvent être effectuées pour le même . Toutefois, lorsque   sont inclus dans la même demande de décision, la déduplication des sera effectuée parmi ces.
 
 Si   de sont définis d’une manière qu’ils choisissent parmi des ensembles de de  disjoints, cela fait peu de différence que lessoient combinés dans la même requête ou divisés en requêtes distinctes. Mais les contraintes de temps réseau et de temps de réponse peuvent nécessiter la combinaison de   dans la même requête. Comme différentes requêtes peuvent être acheminées vers différents noeuds de service, les mêmes données de  de peuvent devoir être récupérées dans différents noeuds. Cela réduit la bande passante E/S disponible pour les autres requêtes.
 
-  sont utilisés pour insérer du contenu dans une expérience. Pour faciliter (et non pour s’assurer) que les éléments de contenu &quot;s’adaptent&quot; correctement, un   fait référence à un emplacement unique. Notez qu&#39;un emplacement n&#39;est pas toujours un emplacement/emplacement concret, mais plutôt une abstraction de ces emplacements/emplacements. Par exemple, dans une page Web avec une grille de mosaïques, chaque mosaïque peut être gouvernée par le même emplacement, en supposant qu’elle ait toutes la même forme et la même taille et qu’elle puisse contenir le même contenu. Cependant, une mosaïque individuelle est généralement fournie par son propre .
+sont utilisés pour insérer du contenu dans une expérience. Pour faciliter (et non pour s’assurer) que les éléments de contenu &quot;s’adaptent&quot; correctement, un   fait référence à un emplacement unique. Notez qu&#39;un emplacement n&#39;est pas toujours un emplacement/emplacement concret, mais plutôt une abstraction de ces emplacements/emplacements. Par exemple, dans une page Web avec une grille de mosaïques, chaque mosaïque peut être gouvernée par le même emplacement, en supposant qu’elle ait toutes la même forme et la même taille et qu’elle puisse contenir le même contenu. Cependant, une mosaïque individuelle est généralement fournie par son propre .
 
 La figure suivante illustre la manière dont les entités commerciales sont liées les unes aux autres :
 
