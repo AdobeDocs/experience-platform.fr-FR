@@ -2756,7 +2756,7 @@ Exemple :
 
 `row_number()`: Attribue un numéro séquentiel unique à chaque ligne, en commençant par une, selon l’ordre des lignes dans la partition de la fenêtre.
 
-#### _de_json
+#### schema_de_json
 
 `schema_of_json(json[, options])`: Renvoie des  au format DDL de la chaîne JSON.
 
