@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
+source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
 
 ---
 
@@ -14,30 +14,37 @@ source-git-commit: 2f0f155beacbc6a4ba2892ae211a9c0305e969ac
 
 ## Date de publication : 15 janvier 2020
 
-## Système XDM (Experience Data Model)
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+
+* [Système XDM (Experience Data Model)](#xdm)
+* [Service confidentialité](#privacy)
+* [Sources](#sources)
+* [Destinations](#destinations)
+
+## Système XDM (Experience Data Model) {#xdm}
 
 La normalisation et l’interopérabilité sont les concepts clés de la plateforme d’expérience. Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des  pour la gestion de l’expérience client.
 
 XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Il fournit des structures et des définitions communes à toute application pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des  de  clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
-### Nouvelles fonctionnalités
+**Nouvelles fonctionnalités**
 
 | Fonction | Description |
 |--- | ---|
 | Restrictions de type champ pour les champs de hiérarchie égale | Une fois qu’un champ XDM a été défini comme un certain type, tous les autres champs du même nom et de la même hiérarchie doivent utiliser le même type de champ, quelles que soient les classes ou les mixins dans lesquels ils sont utilisés. Par exemple, si un mixin pour la classe de XDM contient un `profile.age` champ de type &quot;integer&quot;, un mixin similaire pour XDM ExperienceEvent ne peut pas avoir un `profile.age` champ de type &quot;string&quot;. Pour utiliser un type de champ différent, le champ doit être d’une hiérarchie différente de celle définie précédemment (par exemple, `profile.person.age`). Cette fonctionnalité est destinée à prévenir les conflits lorsque des  sont rassemblés dans un  de. Bien que la contrainte n’affecte pas rétroactivement les  de existantes, il est vivement recommandé de vérifier votre pour les conflits de type champ et de les modifier si nécessaire. |
 | Validation de champ sensible à la casse | Les champs personnalisés du même niveau doivent porter des noms différents, indépendamment de la casse. Par exemple, si vous ajoutez un champ personnalisé nommé &quot;Courriel&quot;, vous ne pouvez pas ajouter un autre champ personnalisé au même niveau nommé &quot;Courriel&quot;. |
 
-### Problèmes connus
+**Problèmes connus**
 
 * None (Aucun)
 
 Pour en savoir plus sur l&#39;utilisation de XDM à l&#39;aide de l&#39;API de registre des et de l&#39;interface utilisateur de l&#39;éditeur de  de, consultez la documentation [du système](../../xdm/home.md)XDM.
 
-## Service confidentialité
+## Service confidentialité {#privacy}
 
 Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d&#39;accéder à vos données personnelles ou de les supprimer de vos entrepôts de données sur demande. Le service de confidentialité d’Adobe Experience Platform fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations légales et de confidentialité de l’entreprise.
 
-### Nouvelles fonctionnalités
+**Nouvelles fonctionnalités**
 
 | Fonction | Description |
 |--- | ---|
@@ -47,19 +54,19 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 | Prise en charge de l’authentification Adobe Primetime | Privacy Service accepte désormais les demandes d’accès/de suppression d’Adobe Primetime Authentication, en utilisant `primetimeAuthentication` comme valeur de produit. |
 | Améliorations de l’interface utilisateur de Privacy Service | Pages de suivi des tâches distinctes pour les règlements sur le RMR et l&#39;ACCP. Nouvelle liste déroulante Type _de_ règlement pour basculer entre les données de suivi pour le RDPC et l&#39;ACCP. |
 
-### Problèmes connus
+**Problèmes connus**
 
 * None (Aucun)
 
 Pour plus d&#39;informations sur Privacy Service, veuillez  en lisant la présentation [](../../privacy-service/home.md)Privacy Service.
 
-## Sources
+## Sources {#sources}
 
 Adobe Experience Platform peut assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de plateforme. Vous pouvez assimiler des données à partir de diverses sources, telles que des applications Adobe, des  basés sur le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour divers fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des systèmes de  et des services de gestion de la relation client externes, de définir les heures d&#39;exécution de l&#39;assimilation et de gérer le débit d&#39;assimilation des données.
 
-### Nouvelles fonctionnalités
+**Nouvelles fonctionnalités**
 
 | Fonction | Description |
 |--- | ---|
@@ -74,17 +81,17 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | Ingestion des données | Gestion des sources | Accès à la lecture, à la création, à la modification et à la désactivation des sources. |
 | Ingestion des données | Sources de  | Accès en lecture seule aux sources disponibles dans l’onglet *Catalogue* et aux sources authentifiées dans l’onglet *Parcourir* . |
 
-### Problèmes connus
+**Problèmes connus**
 
 * None (Aucun)
 
 For more information about sources, see the [sources overview](../../sources/home.md)
 
-## Destinations
+## Destinations {#destinations}
 
 Dans le CDP [en temps réel d’](../../rtcdp/overview.md)Adobe, les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données de manière transparente vers ces partenaires.
 
-### Nouvelles fonctionnalités
+**Nouvelles fonctionnalités**
 
 | Fonction | Description |
 |--- | ---|
@@ -98,7 +105,7 @@ Dans le CDP [en temps réel d’](../../rtcdp/overview.md)Adobe, les destination
 | Destinations | Destinations  | Accès en lecture seule aux destinations disponibles dans l’onglet _Catalogue_ et aux destinations authentifiées dans l’onglet _Parcourir_ . |
 | Destinations | Activer les destinations | Possibilité d’activer les données vers les destinations. Cette autorisation nécessite l’ajout de &quot;Gérer les destinations&quot; ou de &quot;Destinations &quot; à l’ du produit. |
 
-### Problèmes connus
+**Problèmes connus**
 
 * None (Aucun)
 
