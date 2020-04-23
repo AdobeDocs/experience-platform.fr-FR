@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Diffusion en flux continu de plusieurs messages dans une seule requête HTTP
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
 
 ---
 
@@ -47,7 +47,7 @@ Au lieu d’utiliser un jeu de données existant, vous pouvez créer un jeu de d
 **Format API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Propriété | Description |
@@ -57,7 +57,7 @@ POST /collection/{CONNECTION_ID}
 **Requête**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -229,7 +229,7 @@ La charge utile de la requête est un tableau d’objets JSON représentant le  
 **Format API**
 
 ```http
-POST /collection/{CONNECTION_ID}
+POST /collection/batch/{CONNECTION_ID}
 ```
 
 | Propriété | Description |
@@ -239,7 +239,7 @@ POST /collection/{CONNECTION_ID}
 **Requête**
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
+curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
   -H 'Content-Type: application/json' \
   -d '{
   "messages": [
@@ -539,7 +539,7 @@ Pour plus d&#39;informations sur la récupération des messages de lot ayant éc
 
 ## Confirmer les messages assimilés
 
-Les messages qui réussissent la validation DCCS sont diffusés en continu sur la plateforme. Sur Plate-forme, les messages par lot sont testés par validation en flux continu avant d’être assimilés dans le lac de données. L’état des lots, qu’ils soient réussis ou non, s’affiche dans le jeu de données spécifié par `{DATASET_ID}`.
+Les messages qui réussissent la validation DCCS sont diffusés en continu sur la plateforme. Sur Plateforme, les messages par lot sont testés par validation en flux continu avant d’être assimilés dans le lac de données. L’état des lots, qu’ils soient réussis ou non, s’affiche dans le jeu de données spécifié par `{DATASET_ID}`.
 
 Vous pouvez l’état des messages par lot qui sont diffusés en continu sur la plateforme à l’aide de l’interface utilisateur [de la plateforme](https://platform.adobe.com) d’expérience en accédant à l’onglet **Jeu de données** , en cliquant sur le jeu de données auquel vous effectuez la diffusion en continu et en vérifiant l’onglet **Jeu de** données  l’onglet .
 
