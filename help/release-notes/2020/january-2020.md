@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 5199a344a66381ef9d7eea1ea8314e5de7152e3b
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-## Date de publication : 15 janvier 2020
+**Date de publication : 15 janvier 2020**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
