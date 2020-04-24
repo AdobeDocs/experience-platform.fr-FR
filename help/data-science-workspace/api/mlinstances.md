@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
 
 Une instance MLInstance est une association d&#39;un [moteur](./engines.md) existant avec un ensemble approprié de configurations qui définit les paramètres d&#39;entraînement, les paramètres de notation ou les configurations de ressources matérielles.
 
-## Création d’une instance MLI
+## Création d’une instance MLI {#create-an-mlinstance}
 
 Vous pouvez créer une instance MLInstance en exécutant une requête POST tout en fournissant une charge utile de requête composée d’un ID de moteur (`{ENGINE_ID}`) valide et d’un ensemble approprié de configurations par défaut.
 
@@ -272,7 +272,7 @@ Vous pouvez mettre à jour une instance MLInstance existante en écrasant ses pr
 
 >[!TIP] Afin de garantir le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’instance MLInstance par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la requête PUT.
 
-L’exemple d’appel d’API suivant met à jour les paramètres de formation et de notation d’une instance MLInstance lors de l’utilisation initiale des propriétés suivantes :
+L’exemple d’appel d’API suivant met à jour les paramètres d’identification et de notation d’une instance MLInstance lors de l’utilisation initiale des propriétés suivantes :
 
 ```json
 {
