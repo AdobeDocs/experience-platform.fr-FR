@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-## Date de publication : 11 décembre 2019
+**Date de publication : 11 décembre 2019**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
