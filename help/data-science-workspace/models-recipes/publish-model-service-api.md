@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -123,7 +123,7 @@ En fonction de votre cas d’utilisation spécifique et de vos besoins, la créa
 
 Notez qu’un service ML peut être créé à l’aide d’une instance ML sans avoir à programmer d’expériences de formation ou de notation. Ce service ML crée des entités d&#39;expérience ordinaires et une seule exécution d&#39;expérience pour la formation et la notation.
 
-### Service ML avec une expérience planifiée pour le score
+### Service ML avec une expérience planifiée pour le score {#ml-service-with-scheduled-experiment-for-scoring}
 
 La création d’un service ML en publiant une instance ML avec des exécutions d’expériences planifiées pour la notation entraîne la création d’une entité Expérience ordinaire pour la formation. L’exécution d’expérience de formation générée sera utilisée pour toutes les exécutions d’expériences de score planifiées. Assurez-vous que vous disposez des valeurs `mlInstanceId`, `trainingDataSetId`et `scoringDataSetId` requises pour la création du service ML, qu’elles existent et qu’elles sont des valeurs valides.
 
@@ -197,7 +197,7 @@ curl -X POST
 
 À partir de la `JSON` réponse, les clés `trainingExperimentId` et `scoringExperimentId` suggèrent qu&#39;une nouvelle entité d&#39;expérience de formation et de notation a été créée pour ce service ML. La présence de l’ `scoringSchedule` objet fait référence aux détails du calendrier d’exécution de l’expérience de score. La `id` clé de la réponse fait référence au service ML que vous venez de créer.
 
-### Service ML avec des expériences planifiées pour la formation et la notation
+### Service ML avec des expériences planifiées pour la formation et la notation {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
 Pour publier une instance ML existante en tant que service ML avec une formation planifiée et des exécutions d’expériences de score, vous devez fournir des calendriers de formation et de notation. Lorsqu’un service ML de cette configuration est créé, des entités d’expérience planifiées pour la formation et la notation sont également créées. Notez que les calendriers de formation et de notation ne doivent pas nécessairement être les mêmes. Au cours de l’exécution d’une tâche de score, le dernier modèle formé produit par les exécutions d’expériences de formation programmée est récupéré et utilisé pour l’exécution de score planifiée.
 
@@ -281,7 +281,7 @@ curl -X POST "https://platform-int.adobe.io/data/sensei/mlServices"
 
 L&#39;ajout de `trainingExperimentId` et `scoringExperimentId` dans l&#39;organisme de réponse suggère la création d&#39;entités d&#39;expérience pour la formation et la notation. La présence de `trainingSchedule` et `scoringSchedule` suggère que les entités d&#39;expérience mentionnées ci-dessus pour la formation et la notation sont des expériences planifiées. La `id` clé de la réponse fait référence au service ML que vous venez de créer.
 
-## Récupération des services ML
+## Récupération des services ML {#retrieving-ml-services}
 
 La récupération d&#39;un service ML existant est aussi simple que l&#39;exécution d&#39;une `GET` requête vers `/mlServices` le point de fin. Assurez-vous d&#39;avoir l&#39;identification du service ML spécifique que vous essayez de récupérer.
 
