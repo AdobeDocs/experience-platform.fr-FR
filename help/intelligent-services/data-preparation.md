@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Préparation des données en vue de les utiliser dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 702ac3860e06951574fe48f7d8771a11f68bedc4
+source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
 
 ---
 
@@ -19,6 +19,10 @@ Ce fournit des conseils généraux sur le mappage des données de votre marketin
 
 Le Consumer ExperienceEvent décrit le comportement d’un individu en ce qui concerne les  de marketing numérique (web ou mobile) ainsi que les  de commerce en ligne ou hors ligne. L’utilisation de ce est requise pour les services intelligents en raison de ses champs (colonnes) sémantiquement bien définis, évitant ainsi les noms inconnus qui, autrement, rendraient les données moins claires.
 
+Les services intelligents utilisent plusieurs champs clés de ce pour générer des informations à partir de vos données de marketing, qui se trouvent toutes au niveau racine et sont développées pour afficher leurs sous-champs requis.
+
+![](./images/data-preparation/schema-expansion.gif)
+
 Comme tous les  XDM, le mixin CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au mixin CEE et différentes variantes peuvent être incluses dans plusieurs , si nécessaire.
 
 Un exemple complet du mixin se trouve dans le référentiel [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)public et doit être utilisé comme référence pour les champs clés décrits dans la section ci-dessous.
@@ -31,6 +35,8 @@ Les sections ci-dessous mettent en évidence les champs clés du mixage CEE qui 
 
 Ce champ représente le marketing associé à l’événement ExperienceEvent. Le champ contient des informations sur le type de  du, le type de support et le type d’emplacement. **Ce champ _doit_être fourni pour que l’attribut AI fonctionne avec vos données**.
 
+![](./images/data-preparation/channel.png)
+
 **Exemple de**
 
 ```json
@@ -42,7 +48,7 @@ Ce champ représente le marketing associé à l’événement ExperienceEvent. L
 }
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, veuillez vous référer aux [de l&#39;expérience les](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) de. Pour obtenir des exemples de mappages, reportez-vous au [tableau ci-dessous](#example-channels).
+Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, veuillez vous référer aux [de l&#39;expérience la](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) de. Pour obtenir des exemples de mappages, reportez-vous au [tableau ci-dessous](#example-channels).
 
 #### Exemple de mappage de  de {#example-channels}
 
@@ -63,25 +69,25 @@ Le tableau ci-dessous présente quelques exemples de marketing associés au  `xd
 
 Ce champ est un tableau d’éléments représentant les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
 
+![](./images/data-preparation/productListItems.png)
+
 **Exemple de**
 
 ```json
 [
   {
     "xdm:SKU": "1002352692",
-    "xdm:lineItemId": "12345678",
     "xdm:name": "24-Watt 8-Light Chrome Integrated LED Bath Light",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 159
+    "xdm:priceTotal": 159.45
   },
   {
     "xdm:SKU": "3398033623",
-    "xdm:lineItemId": "48693817",
     "xdm:name": "16ft RGB LED Strips",
     "xdm:currencyCode": "USD",
     "xdm:quantity": 1,
-    "xdm:priceTotal": 80
+    "xdm:priceTotal": 79.99
   }
 ]
 ```
@@ -91,6 +97,8 @@ Pour obtenir des informations complètes sur chacun des sous-champs requis pour 
 ### xdm:commerce
 
 Ce champ contient des informations propres au commerce sur ExperienceEvent, notamment le numéro de bon de commande et les informations de paiement.
+
+![](./images/data-preparation/commerce.png)
 
 **Exemple de**
 
@@ -128,6 +136,8 @@ Pour obtenir des informations complètes sur chacun des sous-champs requis pour 
 
 Ce champ représente les détails Web relatifs à l’événement ExperienceEvent, tels que l’interaction, les détails de la page et les  du.
 
+![](./images/data-preparation/web.png)
+
 **Exemple de**
 
 ```json
@@ -155,6 +165,8 @@ Pour obtenir des informations complètes sur chacun des sous-champs requis pour 
 ### xdm:marketing
 
 Ce champ contient des informations relatives aux  de  marketing qui sont actives avec le point de contact.
+
+![](./images/data-preparation/marketing.png)
 
 **Exemple de**
 
