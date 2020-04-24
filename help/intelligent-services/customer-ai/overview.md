@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Customer AI
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: 7987cec12c22e9b48ddc9fdc263d7cd28bd172f2
+source-git-commit: f4deee30f0f03b75dc7ee02152ceb6c519858c7c
 
 ---
 
@@ -42,4 +42,4 @@ Customer AI analyse les données d’événement d’expérience existantes pour
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le guide de [prise en main](./getting-started.md) . Ce guide vous guide tout au long de la configuration de toutes les pré-requêtes requises pour l’API du client. Si vous disposez déjà de toutes vos informations d’identification et données, consultez le guide [d’utilisateur](./user-guide.md)Customer AI. Ce tutoriel décrit les étapes à suivre pour utiliser Customer AI et explique comment créer des segments client à l’aide de scores de propension.
+Vous pouvez commencer par suivre le guide de [prise en main](./getting-started.md) . Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’API du client. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la [configuration d’une instance](./user-guide/configure.md)d’API client. Il décrit les étapes à suivre pour utiliser l’API du client.
