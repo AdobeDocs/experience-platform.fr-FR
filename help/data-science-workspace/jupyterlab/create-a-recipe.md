@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une recette à l’aide de cahiers Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -12,18 +12,6 @@ source-git-commit: 10f157e0c9f8ab6e487b7dc83416b9e3b2f324c4
 # Création d’une recette à l’aide de cahiers Jupyter
 
 Ce didacticiel porte sur deux sections principales. Tout d&#39;abord, vous allez créer un modèle d&#39;apprentissage automatique à l&#39;aide d&#39;un modèle dans JupyterLab Notebook. Ensuite, vous allez utiliser le bloc-notes pour créer une recette dans l&#39;espace de travail Data Science Workspace dans JupyterLab.
-- [Commencez avec l&#39;ordinateur portable JupyterLab  le](#get-started-with-the-jupyterlab-notebook-environment)
-- [Apporter des modifications aux fichiers de recette](#make-edits-to-recipe-files)
-- [Commencez avec le bloc-notes Recipe Builder](#get-started-with-the-recipe-builder-notebook)
-   - [Fichier de configuration](#requirements-file)
-   - [Fichiers de configuration](#configuration-files)
-   - [Chargeur de données de formation](#training-data-loader)
-   - [Score du chargeur de données](#scoring-data-loader)
-   - [Fichier de pipeline](#pipeline-file)
-   - [Fichier d’évaluateur](#evaluator-file)
-   - [Fichier d’enregistrement de données](#data-saver-file)
-- [Formation et notation](#training-and-scoring)
-- [Création d’une recette](#create-recipe)
 
 ## Concepts introduits :
 
@@ -45,7 +33,7 @@ Le bloc-notes Recipe Builder vous permet d&#39;exécuter des exercices de format
 
 Lorsque vous cliquez sur le bloc-notes Recipe Builder depuis le lanceur, le bloc-notes s&#39;ouvre dans l&#39;onglet. Le modèle utilisé dans le bloc-notes est la Recette de prévision des ventes au détail Python qui se trouve également dans [ce référentiel public.](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Vous remarquerez que dans la barre d’outils, il y a trois autres actions : **Train**, **Score** et **Créer une recette**. Ces icônes s’affichent uniquement dans le bloc-notes du Générateur de recettes. Vous trouverez plus d&#39;informations sur ces actions [dans la section](#training-and-scoring) Formation et score après avoir créé votre Recette dans le carnet.
+Vous remarquerez que dans la barre d’outils, il y a trois autres actions, à savoir : **[!UICONTROL Train]**, **[!UICONTROL Score]** et **[!UICONTROL Create Recipe]**. Ces icônes s’affichent uniquement dans le bloc-notes du Générateur de recettes. Vous trouverez plus d&#39;informations sur ces actions [dans la section](#training-and-scoring) Formation et score après avoir créé votre Recette dans le carnet.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -69,7 +57,7 @@ Maintenant que vous connaissez les bases du portable JupyterLab  le, vous pouvez
 - [Fichier d’évaluateur](#evaluator-file)
 - [Fichier d’enregistrement de données](#data-saver-file)
 
-### Fichier de configuration
+### Fichier de configuration {#requirements-file}
 
 Le fichier de configuration requise est utilisé pour déclarer les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. Vous pouvez spécifier le numéro de version en cas de dépendance. Pour consulter d’autres bibliothèques, rendez-vous sur le site https://anaconda.org. Les  des principales bibliothèques déjà utilisées sont les suivantes :
 
@@ -84,7 +72,7 @@ data_access_sdk_python
 >[!NOTE]
 >Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques ci-dessus.
 
-### Fichiers de configuration
+### Fichiers de configuration {#configuration-files}
 
 Les fichiers de configuration, `training.conf` et `scoring.conf`, sont utilisés pour spécifier les jeux de données que vous souhaitez utiliser pour la formation et le score, ainsi que pour ajouter des hyperparamètres. Il existe des configurations distinctes pour la formation et la notation.
 
@@ -108,7 +96,7 @@ Par défaut, les paramètres de configuration suivants sont définis pour vous l
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Chargeur de données de formation
+## Chargeur de données de formation {#training-data-loader}
 
 Le chargeur de données de formation a pour objectif d’instancier les données utilisées pour créer le modèle d’apprentissage automatique. En règle générale, le chargeur de données de formation accomplit deux  :
 - Charger les données de la plateforme
@@ -116,7 +104,7 @@ Le chargeur de données de formation a pour objectif d’instancier les données
 
 Les deux sections ci-dessous vont traiter le chargement des données et la préparation des données.
 
-### Chargement des données
+### Chargement des données {#loading-data}
 
 Cette étape utilise le cadre de données [pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Les données peuvent être chargées à partir de fichiers dans Adobe Experience Platform à l’aide du SDK de la plate-forme (`platform_sdk`) ou à partir de sources externes à l’aide des fonctions `read_csv()` ou `read_json()` des fonctions de pandas.
 
@@ -126,11 +114,11 @@ Cette étape utilise le cadre de données [pandas](https://pandas.pydata.org/pan
 >[!NOTE]
 >Dans le bloc-notes Recipe Builder, les données sont chargées via le chargeur de `platform_sdk` données.
 
-### SDK de plateforme
+### SDK de plateforme {#platform-sdk}
 
 Pour un didacticiel détaillé sur l’utilisation du chargeur de `platform_sdk` données, consultez le guide [SDK de](../authoring/platform-sdk.md)plateforme. Ce didacticiel fournit des informations sur l’authentification de création, la lecture de base des données et l’écriture de base des données.
 
-### Sources externes
+### Sources externes {#external-sources}
 
 Cette section explique comment importer un fichier JSON ou CSV dans un objet pandas. La documentation officielle de la bibliothèque des pandas se trouve ici :
 - [read_csv](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
@@ -180,7 +168,7 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 
 Maintenant que vous disposez de vos données, vous pouvez commencer par la préparation des données et l&#39;ingénierie des fonctionnalités.
 
-### Préparation des données et conception des fonctionnalités
+### Préparation des données et conception des fonctionnalités {#data-preparation-and-feature-engineering}
 
 Une fois les données chargées, elles sont préparées puis fractionnées dans les `train` jeux de données et `val` . L’exemple de code est illustré ci-dessous :
 
@@ -222,7 +210,7 @@ Ces données sont fractionnées entre `train` et `val` le jeu de données.
 
 La `load()` fonction doit se terminer avec le `train` jeu de données et `val` comme sortie.
 
-### Score du chargeur de données
+### Score du chargeur de données {#scoring-data-loader}
 
 La procédure de chargement des données pour le score est similaire aux données d’identification du chargement dans la `split()` fonction. Nous utilisons le SDK d’accès aux données pour charger les données à partir des données `scoringDataSetId` trouvées dans notre `recipe.conf` fichier.
 
@@ -292,11 +280,11 @@ df.dropna(0, inplace=True)
 
 La `load()` fonction du chargeur de données de score doit être renseignée avec le jeu de données de score comme sortie.
 
-### Fichier de pipeline
+### Fichier de pipeline {#pipeline-file}
 
 Le `pipeline.py` fichier inclut la logique de formation et de notation.
 
-### Formation
+### Formation {#training}
 
 L’objectif de la formation est de créer un modèle à l’aide des fonctionnalités et des étiquettes de votre jeu de données de formation.
 
@@ -341,7 +329,7 @@ def train(configProperties, data):
 
 Notez que selon votre application, vous aurez des arguments dans votre `GradientBoostingRegressor()` fonction. `xTrainingDataset` doit contenir les fonctionnalités utilisées pour la formation, tandis que `yTrainingDataset` doit contenir vos étiquettes.
 
-### Score
+### Score {#scoring}
 
 La `score()` fonction doit contenir l’algorithme de notation et renvoyer une mesure pour indiquer le degré de réussite du modèle. La `score()` fonction utilise les étiquettes des jeux de données de notation et le modèle entraîné pour générer un ensemble de fonctionnalités prédites. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de score. Dans cet exemple, la `score()` fonction utilise le modèle entraîné pour prédire les fonctionnalités à l’aide des libellés du jeu de données de score. Les fonctionnalités prévues sont renvoyées.
 
@@ -363,11 +351,11 @@ def score(configProperties, data, model):
     return data
 ```
 
-### Fichier d’évaluateur
+### Fichier d’évaluateur {#evaluator-file}
 
 Le `evaluator.py` fichier contient la logique de la manière dont vous souhaitez évaluer votre recette formée ainsi que la manière dont vos données de formation doivent être fractionnées. Dans l’exemple de vente au détail, la logique de chargement et de préparation des données de formation sera incluse. Nous allons passer en revue les deux sections ci-dessous.
 
-### Fractionner le jeu de données
+### Fractionner le jeu de données {#split-the-dataset}
 
 La phase de préparation des données pour la formation nécessite de fractionner le jeu de données à utiliser pour la formation et les tests. Ces `val` données seront utilisées implicitement pour évaluer le modèle après sa formation. Ce processus est distinct de la notation.
 
@@ -386,7 +374,7 @@ def split(self, configProperties={}, dataframe=None):
     return train, val
 ```
 
-### Évaluer le modèle formé
+### Évaluer le modèle formé {#evaluate-the-trained-model}
 
 La `evaluate()` fonction est exécutée après la formation du modèle et renvoie une mesure pour indiquer le degré de réussite du modèle. La `evaluate()` fonction utilise les étiquettes des jeux de données de test et le modèle Formé pour prédire un ensemble de fonctionnalités. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de test. Les algorithmes de notation courants sont les suivants :
 - [Erreur en pourcentage absolu moyen (MAPE)](https://en.wikipedia.org/wiki/Mean_absolute_percentage_error)
@@ -415,7 +403,7 @@ def evaluate(self, data=[], model={}, configProperties={}):
 
 La fonction renvoie un `metric` objet contenant un tableau de mesures d’évaluation. Ces mesures serviront à évaluer les performances du modèle formé.
 
-### Fichier d’enregistrement de données
+### Fichier d’enregistrement de données {#data-saver-file}
 
 Le `datasaver.py` fichier contient la `save()` fonction permettant d’enregistrer votre prédiction lors du test du score. La `save()` fonction prendra votre prédiction et utilisera les API du catalogue de plateformes d’expérience pour écrire les données dans le `scoringResultsDataSetId` fichier que vous avez spécifié dans votre `scoring.conf` fichier.
 
@@ -448,17 +436,17 @@ def save(configProperties, prediction):
     print(prediction)
 ```
 
-## Formation et notation
+## Formation et notation {#training-and-scoring}
 
 Lorsque vous avez terminé d&#39;apporter des modifications à votre carnet et que vous souhaitez former votre recette, vous pouvez cliquer sur les boutons associés en haut de la barre pour créer une session de formation dans la cellule. Lorsque vous cliquez sur le bouton, un journal des commandes et des sorties issues du script d’entraînement s’affiche dans le bloc-notes (sous la `evaluator.py` cellule). Conda installe d’abord toutes les dépendances, puis la formation est initiée.
 
-Notez que vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. En cliquant sur le bouton **Exécuter le score** , vous obtiendrez le score sur le modèle entraîné généré pendant la formation. Le script de notation apparaît sous `datasaver.py`.
+Notez que vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Cliquez sur le **[!UICONTROL Run Scoring]** bouton pour obtenir un score sur le modèle de formation qui a été généré pendant la formation. Le script de notation apparaît sous `datasaver.py`.
 
 À des fins de débogage, si vous souhaitez afficher la sortie masquée, ajoutez `debug` à la fin de la cellule de sortie et exécutez-la à nouveau.
 
-## Créer une recette
+## Créer une recette {#create-recipe}
 
-Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **Créer une recette** dans la barre de navigation supérieure droite.
+Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant **[!UICONTROL Create Recipe]** sur la barre de navigation supérieure droite.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -466,7 +454,7 @@ Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recet
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Une fois que vous avez appuyé sur **OK** , vous pourrez accéder à la nouvelle recette sur [Adobe Experience Platform](https://platform.adobe.com/). Vous pouvez cliquer sur le bouton **Recettes** pour accéder à l&#39;onglet **Recettes** sous Modèles **ML.**
+Lorsque vous appuyez sur **[!UICONTROL Ok]** Adobe, vous pourrez accéder à la nouvelle recette sur [Adobe Experience Platform](https://platform.adobe.com/). Vous pouvez cliquer sur le **[!UICONTROL View Recipes]** bouton pour accéder à l’ **[!UICONTROL Recipes]** onglet sous **[!UICONTROL ML Models]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -480,13 +468,13 @@ Une fois le processus terminé, la recette ressemblera à ceci :
 > - Ne créez pas simultanément des recettes dans différents cahiers
 
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 En complétant ce didacticiel, vous avez appris à créer un modèle d&#39;apprentissage automatique dans le bloc-notes Recipe Builder. Vous avez également appris à utiliser le bloc-notes pour créer une recette dans Data Science Workspace.
 
 Pour continuer à apprendre à utiliser les ressources dans Data Science Workspace, consultez la liste déroulante Recettes et modèles de Data Science Workspace.
 
-## Ressources supplémentaires
+## Ressources supplémentaires {#additional-resources}
 
 La vidéo suivante est conçue pour vous aider à comprendre comment créer et déployer des modèles.
 
