@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Services
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: dabeee04dd6ec2bbdd37a6987efcb54b285df7ca
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -15,7 +15,7 @@ Un MLService est un modèle de formation publié qui permet à votre organisatio
 
 Les calendriers de formation et de notation automatisés sont définis avec un horodatage de début, un horodatage de fin et une fréquence représentée sous la forme d’un  <a href="https://en.wikipedia.org/wiki/Cron" target="_blank">cron</a>. Les planifications peuvent être définies lors de la [création d’un service MLService](#create-an-mlservice) ou appliquées en [mettant à jour un service MLService](#update-an-mlservice)existant.
 
-## Création d’un service MLService
+## Création d’un service MLService {#create-an-mlservice}
 
 Vous pouvez créer un service MLService en exécutant une requête POST et une charge utile qui fournit un nom pour le service et un ID d’instance MLService valide. L’instance MLService utilisée pour créer un service MLService n’est pas nécessaire pour avoir des expériences de formation existantes, mais vous pouvez choisir de créer le service MLService avec un modèle existant en fournissant l’ID d’expérience et l’ID d’exécution de formation correspondants.
 
@@ -103,7 +103,7 @@ Une réponse réussie renvoie une charge utile contenant les détails du MLServi
 }
 ```
 
-## Récupération d’un de MLServices
+## Récupération d’un de MLServices {#retrieve-a-list-of-mlservices}
 
 Vous pouvez récupérer un de MLServices en exécutant une seule requête GET. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres  dans le chemin de requête. Pour un  de  de disponible, reportez-vous à la section de l’annexe sur les paramètres de [](./appendix.md#query)pour la récupérationdes ressources.
 
@@ -162,7 +162,7 @@ Une réponse réussie renvoie un  de MLServices et leurs détails, y compris leu
 }
 ```
 
-## Récupération d’un service MLService spécifique
+## Récupération d’un service MLService spécifique {#retrieve-a-specific-mlservice}
 
 Vous pouvez récupérer les détails d’une expérience spécifique en exécutant une requête GET qui inclut l’ID du service MLService souhaité dans le chemin d’accès à la requête.
 
@@ -206,7 +206,7 @@ Une réponse réussie renvoie une charge utile contenant les détails du service
 }
 ```
 
-## Mise à jour d’un service MLService
+## Mise à jour d’un service MLService {#update-an-mlservice}
 
 Vous pouvez mettre à jour un service MLService existant en remplaçant ses propriétés par une requête PUT qui inclut l’ID du service MLService  dans le chemin d’accès à la requête et fournit une charge JSON contenant des propriétés mises à jour.
 
