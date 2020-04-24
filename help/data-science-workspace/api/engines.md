@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Moteurs
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -489,7 +489,7 @@ Une réponse réussie renvoie une charge utile contenant les détails du nouveau
 }
 ```
 
-## Création d’un moteur de pipeline de fonctionnalités à l’aide d’artefacts binaires - obsolète
+## Création d’un moteur de pipeline de fonctionnalités à l’aide d’artefacts binaires - obsolète {#create-a-feature-pipeline-engine-using-binary-artifacts}
 
 >[!IMPORTANT]
 >Les artefacts binaires ne sont plus pris en charge et doivent être supprimés ultérieurement.
