@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un pipeline de fonctionnalités
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -14,17 +14,6 @@ source-git-commit: b9b0578a43182650b3cfbd71f46bcb817b3b0cda
 Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisés afin d’effectuer l’ingénierie de fonctionnalités à l’échelle de l’environnement d’exécution Sensei Machine Learning Framework (ci-après dénommé &quot;Runtime&quot;).
 
 Ce décrit les différentes classes d’un pipeline de fonctionnalités et fournit un didacticiel détaillé pour la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK [de création de](./sdk.md) modèles dans PySpark et Spark.
-
-Ce didacticiel décrit les étapes suivantes :
-- [Mise en oeuvre de vos classes Feature Pipeline](#implement-your-feature-pipeline-classes)
-   - [Définition de variables dans un fichier de configuration](#define-variables-in-the-configuration-json-file)
-   - [Préparation des données d’entrée avec DataLoader](#prepare-the-input-data-with-dataloader)
-   - [Transformation d’un jeu de données à l’aide de DatasetTransformer](#transform-a-dataset-with-datasettransformer)
-   - [Fonctionnalités de données de l&#39;ingénieur avec FeaturePipelineFactory](#engineer-data-features-with-featurepipelinefactory)
-   - [Stockez votre jeu de données de fonctionnalités avec DataSaver.](#store-your-feature-dataset-with-datasaver)
-   - [Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application](#specify-your-implemented-class-names-in-the-application-file)
-- [Création de l’artefact binaire](#build-the-binary-artifact)
-- [Création d’un moteur de pipeline de fonctionnalités à l’aide de l’API](#create-a-feature-pipeline-engine-using-the-api)
 
 ## Classes de pipeline de fonctionnalités
 
@@ -44,11 +33,11 @@ L’organigramme suivant montre l’ordre d’exécution du runtime :
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Mise en oeuvre de vos classes Feature Pipeline
+## Mise en oeuvre de vos classes Feature Pipeline {#implement-your-feature-pipeline-classes}
 
 Les sections suivantes fournissent des détails et des exemples sur l’implémentation des classes requises pour un pipeline de fonctionnalités.
 
-### Définition de variables dans le fichier JSON de configuration
+### Définition de variables dans le fichier JSON de configuration {#define-variables-in-the-configuration-json-file}
 
 Le fichier JSON de configuration se compose de paires clé-valeur et vous permet de spécifier les variables à définir ultérieurement lors de l’exécution. Ces paires clé-valeur peuvent définir des propriétés telles que l’emplacement du jeu de données d’entrée, l’ID du jeu de données de sortie, l’ID du client, les en-têtes de colonne, etc.
 
@@ -96,7 +85,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 ```
 
 
-### Préparation des données d’entrée avec DataLoader
+### Préparation des données d’entrée avec DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader est responsable de la récupération et du filtrage des données d’entrée. Votre implémentation de DataLoader doit étendre la classe abstraite `DataLoader` et remplacer la méthode abstraite `load`.
 
@@ -200,7 +189,7 @@ class MyDataLoader extends DataLoader {
 
 
 
-### Transformation d’un jeu de données à l’aide de DatasetTransformer
+### Transformation d’un jeu de données à l’aide de DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
 Un DataFrameTransformer fournit la logique de transformation d’un DataFrame d’entrée et renvoie un nouveau DataFrame dérivé. Cette classe peut être implémentée pour travailler en coopération avec une FeaturePipelineFactory, pour travailler comme composant d&#39;ingénierie de fonctionnalités unique ou vous pouvez choisir de ne pas implémenter cette classe.
 
@@ -255,7 +244,7 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 
 
-### Fonctionnalités de données de l&#39;ingénieur avec FeaturePipelineFactory
+### Fonctionnalités de données de l&#39;ingénieur avec FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
 Une FeaturePipelineFactory vous permet de mettre en oeuvre votre logique d’ingénierie de fonctionnalités en définissant et en associant une série de transformateurs Spark à travers un pipeline Spark. Cette classe peut être implémentée pour travailler en collaboration avec un DataTransformer, pour travailler en tant que composant d’ingénierie de fonctionnalités unique ou pour ne pas implémenter cette classe.
 
@@ -334,7 +323,7 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Stockez votre jeu de données de fonctionnalités avec DataSaver.
+### Stockez votre jeu de données de fonctionnalités avec DataSaver. {#store-your-feature-dataset-with-datasaver}
 
 DataSaver est chargé de stocker vos jeux de données de fonctionnalités résultants dans un emplacement  . Votre implémentation de DataSaver doit étendre la classe abstraite `DataSaver` et remplacer la méthode abstraite `save`.
 
@@ -467,7 +456,7 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application
+### Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application {#specify-your-implemented-class-names-in-the-application-file}
 
 Maintenant que vos classes Feature Pipeline sont définies et implémentées, vous devez spécifier les noms de vos classes dans le fichier d’application.
 
@@ -515,7 +504,7 @@ feature.dataSaver=MyDataSaver
 
 
 
-## Création de l’artefact binaire
+## Création de l’artefact binaire {#build-the-binary-artifact}
 
 Maintenant que vos classes Feature Pipeline ont été implémentées, vous pouvez les créer et les compiler dans un artefact binaire qui peut ensuite être utilisé pour créer un pipeline de fonctionnalités via des appels d’API.
 
@@ -543,11 +532,11 @@ mvn clean install
 
 La création réussie de votre pipeline de caractéristiques générera un `.jar` artefact dans le `/dist` répertoire. Cet artefact est utilisé pour créer un pipeline de fonctionnalités.
 
-## Création d’un moteur de pipeline de fonctionnalités à l’aide de l’API
+## Création d’un moteur de pipeline de fonctionnalités à l’aide de l’API {#create-a-feature-pipeline-engine-using-the-api}
 
 Maintenant que vous avez créé votre pipeline de fonctionnalités et créé l&#39;artefact binaire, vous pouvez [créer un moteur de pipeline de fonctionnalités à l&#39;aide de l&#39;API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)d&#39;apprentissage automatique Sensei. La création réussie d’un moteur de pipeline de fonctionnalités vous fournira un ID de moteur dans le corps de la réponse. Veillez à enregistrer cette valeur avant de passer aux étapes suivantes.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
