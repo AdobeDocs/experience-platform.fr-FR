@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et publication d’une présentation du modèle d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -47,7 +47,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    * Lots : Les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité.
    * JupyterLab : [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project Jupyter et est étroitement intégrée à Experience Platform.
 
-## Préparation de vos données
+## Préparation de vos données {#prepare-your-data}
 
 Pour créer un modèle d’apprentissage automatique qui recommande des produits personnalisés à vos clients, vous devez analyser les achats précédents de clients sur votre site Web. Cette section explique comment ces données sont assimilées à une plateforme via Adobe Analytics et comment ces données sont transformées en un jeu de données de fonctionnalités à utiliser par votre modèle d’apprentissage automatique.
 
@@ -68,7 +68,7 @@ Les autres jeux de données ont été préremplis avec des lots à des fins d’
 | Jeu de données d’entrée de recommandations |  d’entrée de recommandations | Les données Analytics sont transformées en jeu de données de formation à l’aide d’un pipeline de fonctionnalités. Ces données sont utilisées pour former le modèle d’apprentissage automatique de Recommandations de produit. `itemid` et `userid` correspondent à un produit acheté par ce client. |
 | Jeu de données de sortie de recommandations |  de sortie de recommandations | Le jeu de données pour lequel les résultats de notation sont stockés contient le des produits recommandés pour chaque client. |
 
-## Création de votre modèle
+## Création de votre modèle {#author-your-model}
 
 Le deuxième composant du cycle de vie de l’espace de travail Data Science implique la création de recettes et de modèles. La Recette des recommandations de produits est conçue pour générer des recommandations de produits à l’échelle en utilisant les données d’achat antérieures et l’apprentissage automatique.
 
@@ -85,7 +85,7 @@ Les recettes sont la base d&#39;un modèle puisqu&#39;elles contiennent des algo
 
 Vous avez maintenant examiné les  d’entrée et de sortie requises par la Recette des recommandations de produit. Vous pouvez maintenant passer à la section suivante pour savoir comment créer, former et évaluer un modèle de recommandations de produits.
 
-## Former et évaluer votre modèle
+## Former et évaluer votre modèle {#train-and-evaluate-your-model}
 
 Maintenant que vos données sont préparées et que la Recette est prête à être utilisée, vous pouvez créer, former et évaluer votre modèle d&#39;apprentissage automatique.
 
@@ -110,7 +110,7 @@ Vous pouvez choisir d’attendre la fin de l’exécution de la formation ou de 
 
 1. Sur la page Aperçu *du* modèle, cliquez sur **Train** près du coin supérieur droit pour créer une nouvelle session de formation. Sélectionnez le même jeu de données d&#39;entrée que celui utilisé lors de la création du modèle, puis cliquez sur **Suivant**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. La page *Configuration* s’affiche. Vous pouvez configurer ici la valeur **num_recommendations** de l’exécution de formation, également connue sous le nom d’hyperparamètre. Un modèle formé et optimisé utilisera les paramètres Hyperparamètres les plus performants en fonction des résultats de l&#39;entraînement.
+2. The *Configuration* page appears. Vous pouvez configurer ici la valeur **num_recommendations** de l’exécution de formation, également connue sous le nom d’hyperparamètre. Un modèle formé et optimisé utilisera les paramètres Hyperparamètres les plus performants en fonction des résultats de l&#39;entraînement.
 
    Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant que l’exécution de la formation ne se produise. L&#39;ajustement d&#39;hyperparamètres peut modifier la précision du modèle formé. L&#39;optimisation d&#39;un modèle étant un processus itératif, il peut être nécessaire de procéder à plusieurs exercices de formation avant d&#39;effectuer une évaluation satisfaisante.
 
@@ -130,7 +130,7 @@ Chaque fois qu’une session de formation se termine, vous pouvez  les mesures d
 3. Vous pouvez voir le jeu de données, les  de et les paramètres de configuration utilisés pour chaque exécution de formation sur le rail droit.
 4. Revenez à la page Modèle et identifiez les formations les plus performantes exécutées en observant leurs mesures d’évaluation.
 
-## Opérationaliser votre modèle
+## Opérationaliser votre modèle {#operationalize-your-model}
 
 La dernière étape du flux de travaux des sciences de données consiste à rendre opérationnel votre modèle afin de recueillir et d’exploiter les informations de votre banque de données.
 
