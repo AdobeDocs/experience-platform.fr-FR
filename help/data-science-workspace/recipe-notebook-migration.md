@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 057001b0b4488f578bdd07387a66c647a91798c8
+source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
 
 ---
 
@@ -144,12 +144,12 @@ COPY target/ml-retail-sample-spark-*-jar-with-dependencies.jar /application.jar
 
 ### Modifier les dépendances (Spark) {#change-dependencies-spark}
 
-Si vous utilisez une recette existante, des modifications sont requises dans le fichier pom.xml pour les dépendances. Remplacez la version de dépendance model-authoring-sdk par 1.0.0. Ensuite, mettez à jour la version Spark du fichier pom vers la version 2.4.3 et la version Scala vers la version 2.11.12.
+Si vous utilisez une recette existante, des modifications sont requises dans le fichier pom.xml pour les dépendances. Remplacez la version de dépendance model-authoring-sdk par 2.0.0. Ensuite, mettez à jour la version Spark du fichier pom vers la version 2.4.3 et la version Scala vers la version 2.11.12.
 
 ```json
 <groupId>com.adobe.platform.ml</groupId>
 <artifactId>authoring-sdk_2.11</artifactId>
-<version>1.0.0</version>
+<version>2.0.0</version>
 <classifier>jar-with-dependencies</classifier>
 ```
 
