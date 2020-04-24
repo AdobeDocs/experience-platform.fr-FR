@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Téléchargement de scores dans l’API client
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -34,7 +34,7 @@ Une nouvelle boîte de dialogue s’affiche, contenant un lien vers la documenta
 
 ![ID du jeu de données](./images/download-scores/access-scores.png)
 
-## Récupérez votre identifiant de lot
+## Récupérez votre identifiant de lot {#retrieve-your-batch-id}
 
 En utilisant votre ID de jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un ID de lot. Des paramètres  supplémentaires sont utilisés pour cet appel d’API afin de renvoyer un seul lot au lieu d’un de lots appartenant à votre organisation. Pour plus d’informations sur les types de paramètres  de disponibles, consultez le guide sur le [filtrage des données du catalogue à l’aide de paramètres](../../catalog/api/filter-data.md)de.
 
@@ -98,7 +98,7 @@ L’objet d’ID de lot de score contient un `relatedObjects` tableau. Ce tablea
 }
 ```
 
-## Récupérez le prochain appel d’API avec votre ID de lot
+## Récupérez le prochain appel d’API avec votre ID de lot {#retrieve-the-next-api-call-with-your-batch-id}
 
 Une fois que vous avez votre identifiant de lot, vous pouvez effectuer une nouvelle demande GET à `/batches`. La requête renvoie un lien utilisé comme requête d’API suivante.
 
@@ -152,7 +152,7 @@ Une réponse réussie renvoie une charge utile contenant un `_links` objet. Dans
 }
 ```
 
-## Récupérer vos fichiers
+## Récupérer vos fichiers {#retrieving-your-files}
 
 En utilisant la `href` valeur obtenue à l’étape précédente comme appel d’API, effectuez une nouvelle demande GET pour récupérer votre répertoire de fichiers.
 
