@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Ressources '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
+source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
 
 ---
 
@@ -12,6 +12,10 @@ source-git-commit: fe7b6acf86ebf39da728bb091334785a24d86b49
 # Ressources 
 
 Vous pouvez  un de toutes les ressources (, classes, mixins ou types de données) au sein d’unen exécutant une seule requête GET.
+
+>[!NOTE] Lors de la mise en vente des ressources, le Registre de  limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres  pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
+>
+> Si vous souhaitez remplacer entièrement la limite de 300 éléments, vous devez utiliser l’en-tête Accepter `application/vnd.adobe.xdm-v2+json` pour renvoyer tous les résultats dans une seule requête.
 
 **Format API**
 
@@ -42,8 +46,9 @@ Le format de réponse dépend de l’en-tête Accepter envoyé dans la requête.
 
 | En-tête Accepter | Description |
 | ------- | ------------ |
-| application/vnd.adobe.xed-id+json | Renvoie un bref résumé de chaque ressource, généralement l’en-tête préféré pour la liste |
-| application/vnd.adobe.xed+json | Renvoie le  JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus |
+| application/vnd.adobe.xed-id+json | Renvoie un bref résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
+| application/vnd.adobe.xed+json | Renvoie le JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
+| application/vnd.adobe.xdm-v2+json | Renvoie le  JSON complet pour tous les résultats d’une seule requête, en remplaçant la limite de 300 éléments. |
 
 **Réponse**
 
@@ -74,7 +79,7 @@ Le Registre des  de prend en charge l&#39;utilisation de paramètres  de pour la
 
 >[!NOTE] Lorsque vous combinez plusieurs paramètres de , ils doivent être séparés par des esperluettes (`&`).
 
-### Pagination
+### Pagination {#paging}
 
 Les paramètres  les plus courants pour la pagination sont les suivants :
 
@@ -84,7 +89,7 @@ Les paramètres  les plus courants pour la pagination sont les suivants :
 | `limit` | Limitez le nombre de ressources renvoyées. Exemple : `limit=5` renverra un de cinq ressources. |
 | `orderby` | Triez les résultats selon une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L’ajout d’un titre `-` avant (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
 
-### Filtrage
+### Filtrage {#filtering}
 
 Vous pouvez filtrer les résultats à l’aide du `property` paramètre, qui permet d’appliquer un opérateur spécifique à une propriété JSON donnée dans les ressources récupérées. Les opérateurs pris en charge sont les suivants :
 
