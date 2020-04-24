@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importer une recette assemblée (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: ebf7c883ce89fdf8b0d468ab21d1c3a1ba8aca06
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -46,7 +46,7 @@ Selon le formulaire du fichier de recette compressé à inclure dans la demande 
 - [Création d’un moteur avec une URL de Docker](#create-an-engine-with-a-docker-url)
 - [Création d’un moteur avec un artefact binaire (obsolète)](#create-an-engine-with-a-binary-artifact-deprecated)
 
-### Création d’un moteur avec une URL de Docker
+### Création d’un moteur avec une URL de Docker {#create-an-engine-with-a-docker-url}
 
 Pour créer un moteur avec un fichier de recette compressé stocké dans un  Docker, vous devez indiquer l&#39;URL du Docker au fichier de recette compressé.
 
@@ -199,11 +199,11 @@ Une réponse réussie renvoie une charge utile contenant les détails du nouveau
 
 Une réponse réussie affiche une charge JSON contenant des informations sur le nouveau moteur créé. La `id` clé représente l&#39;identifiant unique du moteur et est requise dans le didacticiel suivant pour créer une instance MLInstance. Assurez-vous que l’identifiant du moteur est enregistré avant de passer aux étapes suivantes.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Vous avez créé un moteur à l’aide de l’API et un identifiant de moteur unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de moteur dans le didacticiel suivant lorsque vous apprendrez à [créer, à former et à évaluer un modèle à l’aide de l’API](./train-evaluate-model-api.md).
 
-### Création d’un moteur avec un artefact binaire (obsolète)
+### Création d’un moteur avec un artefact binaire (obsolète) {#create-an-engine-with-a-binary-artifact-deprecated}
 
 <!-- Will need to remove binary artifact documentation once the old flags are turned off -->
 
