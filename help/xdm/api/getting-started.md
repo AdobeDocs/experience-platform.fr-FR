@@ -4,7 +4,7 @@ solution: Experience Platform
 title: 'Guide du développeur de l''API de registre des '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 387cbdebccb9ae54a2907d1afe220e9711927ca6
 
 ---
 
@@ -52,7 +52,7 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 * Content-Type : application/json
 
-## Connaissez votre ID_TENANT {#know-your-tenant-id}
+## Connaissez votre ID_TENANT {#know-your-tenant_id}
 
 Dans ce guide, vous verrez des références à un `TENANT_ID`. Cet identifiant permet de s’assurer que les ressources que vous créez sont correctement nommées et contenues dans votre organisation IMS. Si vous ne connaissez pas votre ID, vous pouvez y accéder en exécutant la requête GET suivante :
 
