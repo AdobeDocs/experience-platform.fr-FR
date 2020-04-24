@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Former et évaluer un modèle (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -79,7 +79,7 @@ Ce didacticiel nécessite une recette existante. Si vous n’avez pas de recette
 
 Ce didacticiel vous guide tout au long des étapes nécessaires pour créer, former et évaluer un modèle dans Data Science Workspace. Une fois que vous êtes arrivé à un modèle optimisé, vous pouvez utiliser le modèle formé pour générer des informations en suivant le didacticiel [Score a Model dans l’interface utilisateur](./score-model-ui.md) .
 
-## Référence
+## Référence {#reference}
 
 ### Configurations des recettes de vente au détail
 
