@@ -5,14 +5,14 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 817f994fc0622b1c46e98f8d773a4d91c1064824
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-## Date de publication : 18 novembre 2019
+**Date de publication : 18 novembre 2019**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 * [Plateforme des données clients en temps réel](#rtcdp)
@@ -171,7 +171,7 @@ Le service de segmentation définit un sous-ensemble particulier de  de en décr
 | Segments comme blocs de création | Lors de la création de segments à l’aide de l’interface utilisateur du créateur de segments, les utilisateurs peuvent désormais utiliser des segments précédemment définis comme blocs de création pour d’autres segments. <ul><li>Référencez l&#39;appartenance  actuelle à l&#39; : se met à jour au fur et à mesure que les gens entrent et sortent de  .</li><li>Copier la logique : prenez la définition de segment sélectionnée et -la dans le nouveau segment.</li></ul> |
 | Appartenance au segment  par ID   | L’appartenance à un segment peut désormais être affichée par  d’ID  (courrier électronique, ECID et nombre total). |
 | Prise en charge RBAC | Le créateur de segments prend désormais en charge les  et autorisations de base basées sur les rôles. |
-| Meilleure prise en charge du partage de  externe  entre les solutions Adobe et Platform | Les utilisateurs peuvent désormais importer des métadonnées de  externe (hors plateforme d’expérience) dans des scénarios où le nombre de  de  est important ou inconnu a priori. Cette version comprend l’accès aux métadonnées   Manager pour les clients qui ont configuré le connecteur de solution. Ces   métadonnées de peuvent être utilisées dans le créateur de segments pour créer des segments de plateforme d’expérience. <br/><br/> De plus, les segments créés dans la plateforme d’expérience seront désormais disponibles pour une utilisation dans les solutions Adobe intégrées, notamment  Gestionnaire de  de, et Ad Cloud. |
+| Meilleure prise en charge du partage de  externe  entre les solutions Adobe et Platform | Les utilisateurs peuvent désormais importer des métadonnées de  externe (hors plateforme d’expérience) dans des scénarios où le nombre de  de  est important ou inconnu a priori. Cette version comprend l’accès aux métadonnées   Manager pour les clients qui ont configuré le connecteur de solution. Ces   métadonnées de peuvent être utilisées dans le créateur de segments pour créer des segments de plateforme d’expérience. <br/><br/> En outre, les segments créés dans la plateforme d’expérience seront désormais disponibles pour une utilisation dans les solutions Adobe intégrées, notamment  Gestionnaire de  de, et Ad Cloud. |
 
 **Corrections de bogues**
 
