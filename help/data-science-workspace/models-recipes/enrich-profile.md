@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Enrichir les  des clients en temps réel avec des informations d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: b0b44f4aaf365f58086cfa17d27fbba6ed2a2a97
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -32,7 +32,7 @@ Outre le  de mentionné ci-dessus, il est vivement recommandé de consulter éga
 * [Principes de base de la composition](../../xdm/schema/composition.md)de  : Décrit les  XDM, les blocs de création, les principes et les meilleures pratiques pour la composition de à utiliser dans Experience Platform.
 * [Didacticiel](../../xdm/tutorials/create-schema-ui.md)de l’éditeur de  : Fournit des instructions détaillées sur la création de  d’à l’aide de l’éditeur de  de dans la plateforme d’expérience.
 
-## Création d’un  de sortie et d’un jeu de données
+## Création d’un  de sortie et d’un jeu de données {#create-an-output-schema-and-dataset}
 
 La première étape vers l’enrichissement du client en temps réel avec des informations de score consiste à savoir quel objet réel (tel qu’une personne) vos données définissent. La compréhension de vos données vous permet de décrire et de concevoir une structure qui donne du sens à vos données, tout comme la conception d&#39;une base de données relationnelle.
 
@@ -73,7 +73,7 @@ La composition d’un  commence par l’affectation d’une classe. Les classes 
 
 Maintenant que vous avez créé un jeu de données de de sortie, vous êtes prêt à passer à la section suivante pour le configurer et l&#39;activer pour les  de de  de données.
 
-## Configuration d’un  de sortie et d’un jeu de données
+## Configuration d’un  de sortie et d’un jeu de données {#configure-an-output-schema-and-dataset}
 
 Avant d’activer un jeu de données pour les  de, vous devez configurer le du jeu de données pour qu’il ait un champ d’identité principal, puis activer lejeu dedonnées pour les. Si vous souhaitez créer et activer une nouvelle  de, vous pouvez vous reporter au didacticiel sur la [création d’un  de à l’aide de l’éditeur](../../xdm/tutorials/create-schema-ui.md)de  decréation de. Sinon, suivez les instructions ci-dessous pour activer un  et un jeu de données existants.
 
@@ -97,7 +97,7 @@ Avant d’activer un jeu de données pour les  de, vous devez configurer le du j
 
 Lorsque des données sont ingérées dans un jeu de données compatible avec les , ces mêmes données sont également assimilées à des enregistrements . Maintenant que votre et votre jeu de données sont préparés, générez des données dans le jeu de données en exécutant des exécutions de score à l’aide d’un modèle approprié, puis poursuivez avec ce didacticiel pour créer des segments d’informations à l’aide du créateur de segments.
 
-## Création de segments à l’aide du créateur de segments
+## Création de segments à l’aide du créateur de segments {#create-segments-using-the-segment-builder}
 
 Maintenant que vous avez généré et assimilé des informations dans votre jeu de données compatible avec les , vous pouvez gérer ces données en identifiant des sous-ensembles d’éléments associés à l’aide du Créateur de segments. Suivez les étapes ci-dessous pour créer vos propres segments.
 
@@ -117,6 +117,6 @@ Maintenant que vous avez généré et assimilé des informations dans votre jeu 
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce vous a  décrit les étapes requises pour activer un  de et un jeu de données pour l’ et a brièvement décrit le processus de création de segments d’informations à l’aide du créateur de segments. Pour en savoir plus sur les segments et le créateur de segments, reportez-vous à la présentation [du service de](../../segmentation/home.md)segmentation.
