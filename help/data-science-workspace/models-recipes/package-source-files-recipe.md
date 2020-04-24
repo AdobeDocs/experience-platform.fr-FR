@@ -4,7 +4,7 @@ solution: Experience Platform
 title: compresser des fichiers source dans une recette ;
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4001e4fd6a2e04a04e7ea594175d9e3e5c8a00d6
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -29,7 +29,7 @@ Concepts à comprendre :
 
 de création de recette avec les fichiers source d’assemblage pour créer un fichier d’archive. Les fichiers source définissent la logique d’apprentissage automatique et les algorithmes utilisés pour résoudre un problème spécifique à portée de main. Ils sont écrits en Python, R, PySpark ou Scala. Les fichiers d’archives créés prennent la forme d’une image Docker. Une fois le fichier d’archive compressé créé, il est importé dans Data Science Workspace pour créer une recette [dans l’interface utilisateur](./import-packaged-recipe-ui.md) ou [à l’aide de l’API](./import-packaged-recipe-api.md).
 
-### Création de modèles basés sur le Docker
+### Création de modèles basés sur le Docker {#docker-based-model-authoring}
 
 Une image Docker permet au développeur de créer un package d’application avec toutes les parties dont il a besoin, telles que les bibliothèques et d’autres dépendances, et de l’expédier sous forme d’un package unique.
 
