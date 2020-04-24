@@ -4,18 +4,16 @@ solution: Experience Platform
 title: 'Ressources '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4b052cdd3aca9c771855b2dc2a97ca48c7b8ffb0
+source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
 
 ---
 
 
 # Ressources 
 
-Vous pouvez  un de toutes les ressources (, classes, mixins ou types de données) au sein d’unen exécutant une seule requête GET.
+Vous pouvez  un de toutes les ressources de registre de tous les d’un certain type (classes, mixins,, types de données ou descripteurs) au sein d’unjeu en exécutant une seule requête GET.
 
 >[!NOTE] Lors de la mise en vente des ressources, le Registre de  limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres  pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
->
-> Si vous souhaitez remplacer entièrement la limite de 300 éléments, vous devez utiliser l’en-tête Accepter `application/vnd.adobe.xdm-v2+json` pour renvoyer tous les résultats dans une seule requête.
 
 **Format API**
 
@@ -27,7 +25,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | où se trouvent les ressources (&quot;global&quot; ou &quot;locataire&quot;). |
-| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de . Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
+| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de . Les types valides sont `classes`, `mixins`, `schemas`, `datatypes`et `descriptors`. |
 | `{QUERY_PARAMS`} | Paramètres de  facultatifs pour filtrer les résultats par. Pour plus d’informations, consultez la section sur les paramètres [de ](#query) . |
 
 **Requête**
@@ -48,7 +46,7 @@ Le format de réponse dépend de l’en-tête Accepter envoyé dans la requête.
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Renvoie un bref résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
 | application/vnd.adobe.xed+json | Renvoie le JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
-| application/vnd.adobe.xdm-v2+json | Renvoie le  JSON complet pour tous les résultats d’une seule requête, en remplaçant la limite de 300 éléments. |
+| application/vnd.adobe.xdm-v2+json | Lors de l’utilisation du `/descriptors` point de fin, cet en-tête Accepter doit être utilisé pour utiliser les capacités de pagination. |
 
 **Réponse**
 
