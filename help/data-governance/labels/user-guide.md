@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des libellés d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: a19a9a31743002eb5fd3a5ecb6668b4c760faa9a
+source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
 
 ---
 
@@ -15,7 +15,7 @@ Ce guide de l’utilisateur décrit les étapes à suivre pour utiliser les libe
 
 ## Gestion des libellés d’utilisation des données au niveau du jeu de données
 
-Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **DataSet** dans le volet de navigation de gauche pour ouvrir l’espace de travail _DataSet_ . Cette page  tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
+Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir l’espace de travail _Data_ . Cette page  tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
 ![Onglet Jeu de données dans l’espace de travail de données](../images/labels/datasets.png)
 
@@ -25,29 +25,29 @@ La section suivante décrit la procédure à suivre pour créer un jeu de donné
 
 >[!NOTE] Dans cet exemple, un jeu de données est créé à l’aide d’un  de modèle de données d’expérience (XDM) préconfiguré. Pour plus d&#39;informations sur les  XDM, reportez-vous à la présentation [du système](../../xdm/home.md) XDM et aux [principes de base de la composition](../../xdm/schema/composition.md).
 
-Pour créer un jeu de données, cliquez sur **Créer un jeu** de données dans le coin supérieur droit de l’espace de travail _Jeu de données_ .
+Pour créer un jeu de données, cliquez sur **[!UICONTROL Create Dataset]** dans le coin supérieur droit de l’ _[!UICONTROL Datasets]_espace de travail.
 
 ![](../images/labels/create_dataset.png)
 
-L’écran _Créer un jeu de données_ s’affiche. A partir de là, cliquez sur **Créer un jeu de données à partir de** de.
+L’ _[!UICONTROL Create Dataset]_écran s’affiche. A partir de là, cliquez sur **[!UICONTROL Create Dataset from Schema]**.
 
 ![Création d’un jeu de données à partir d’](../images/labels/dataset_create.png)
 
-L&#39;écran _Sélectionner_ s&#39;affiche, qui  tous les disponibles que vous pouvez utiliser pour créer un jeu de données. Cliquez sur le bouton radio en regard d’un  pour le sélectionner. La _section_ du sur le côté droit affiche des détails supplémentaires sur le  de sélectionné. Once you have selected a schema, click **Next**.
+L’ _[!UICONTROL Select Schema]_écran s’affiche, qui  tous les disponibles  que vous pouvez utiliser pour créer un jeu de données. Cliquez sur le bouton radio en regard d’un  pour le sélectionner. La_[!UICONTROL Schemas]_ section sur le côté droit affiche des détails supplémentaires sur le  sélectionné. Une fois que vous avez sélectionné un , cliquez sur **[!UICONTROL Next]**.
 
 ![Sélectionner  de jeux de données](../images/labels/dataset_schema.png)
 
-L’écran _Configurer un jeu de données_ s’affiche. Indiquez un **nom** (obligatoire) et une **description** (facultative, mais recommandée) pour votre nouveau jeu de données, puis cliquez sur **Terminer**.
+L’écran _Configurer un jeu de données_ s’affiche. Indiquez un **nom** (obligatoire) et une **description** (facultatif, mais recommandé) pour votre nouveau jeu de données, puis cliquez sur **[!UICONTROL Finish]**.
 
 ![Configurer un jeu de données avec le nom et la description](../images/labels/dataset_configure.png)
 
-La page  de l&#39;ensemble de _données_ s&#39;affiche, affichant des informations sur le jeu de données nouvellement créé. Dans cet exemple, le jeu de données est nommé &quot;Membres de fidélité&quot;. Par conséquent, la barre de navigation supérieure affiche _Jeux de données > Membres_ de fidélité.
+La _[!UICONTROL Dataset Activity]_page s’affiche, affichant des informations sur le jeu de données nouvellement créé. Dans cet exemple, le jeu de données est nommé &quot;Membres de fidélité&quot;. Par conséquent, la barre de navigation supérieure affiche_ Jeux de données > Membres _de fidélité.
 
 ![Jeu de données  page  du](../images/labels/dataset_activity.png)
 
 ### Ajouter des libellés d’utilisation des données au jeu de données {#add-labels}
 
-Après avoir créé un nouveau jeu de données ou sélectionné un jeu de données existant dans le  de l’espace de travail _Data_ Set **, cliquez sur** Data Governance _pour ouvrir l’espace de travail_ Data Governance. L’espace de travail vous permet de gérer les libellés d’utilisation des données au niveau du jeu de données et du champ.
+Après avoir créé un jeu de données ou sélectionné un jeu de données existant dans le  de l&#39; _[!UICONTROL Datasets]_espace de travail, cliquez **[!UICONTROL Data Governance]**pour ouvrir l&#39;_[!UICONTROL Data Governance]_ espace de travail. L’espace de travail vous permet de gérer les libellés d’utilisation des données au niveau du jeu de données et du champ.
 
 ![Onglet Gouvernance des données de jeux de données](../images/labels/dataset_data_governance.png)
 
@@ -55,37 +55,37 @@ Pour modifier les libellés d’utilisation des données au niveau du jeu de don
 
 ![Modification des étiquettes au niveau des jeux de données](../images/labels/dataset_labels_edit_button.png)
 
-La boîte de dialogue _Modifier les étiquettes_ de gouvernance s’ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. N’oubliez pas que ces libellés seront hérités par tous les champs du jeu de données. L’en-tête Libellés __ appliqués se met à jour lorsque vous cochez chaque case, en indiquant les étiquettes que vous avez choisies. Une fois que vous avez sélectionné les étiquettes de votre choix, cliquez sur **Enregistrer les modifications**.
+La _[!UICONTROL Edit Governance Labels]_boîte de dialogue s&#39;ouvre. Dans la boîte de dialogue, cochez les cases en regard des libellés que vous souhaitez appliquer au jeu de données. N’oubliez pas que ces libellés seront hérités par tous les champs du jeu de données. L’_[!UICONTROL Applied Labels]_ en-tête se met à jour lorsque vous cochez chaque case, avec les étiquettes que vous avez choisies. Une fois que vous avez sélectionné les étiquettes de votre choix, cliquez sur **[!UICONTROL Save Changes]**.
 
-<img alt="Appliquer les étiquettes de gouvernance au niveau du jeu de données" src="../images/labels/dataset_apply_labels.png" width="450"><br>
+<img alt="Appliquer les étiquettes de gouvernance au niveau du jeu de données" src="../images/labels/apply-labels-dataset.png" width="700"><br>
 
-L’espace de travail Gouvernance _des_ données réapparaît, affichant les étiquettes que vous avez appliquées au niveau du jeu de données. Vous pouvez également constater que les étiquettes sont héritées jusqu’à chacun des champs du jeu de données.
+L’ _[!UICONTROL Data Governance]_espace de travail réapparaît, affichant les libellés que vous avez appliqués au niveau du jeu de données. Vous pouvez également constater que les étiquettes sont héritées jusqu’à chacun des champs du jeu de données.
 
 ![Etiquettes de jeux de données héritées par les champs](../images/labels/dataset_inherited_labels.png)
 
 Un &quot;x&quot; apparaît en regard des libellés au niveau du jeu de données, ce qui vous permet de supprimer les libellés. Les libellés hérités à côté de chaque champ n’ont pas de &quot;x&quot; en regard d’eux et apparaissent &quot;grisés&quot; sans possibilité de suppression ou de modification. En effet, les champs **hérités sont en lecture seule**, ce qui signifie qu’ils ne peuvent pas être supprimés au niveau du champ.
 
-La bascule **Afficher les étiquettes** héritées est activée par défaut, ce qui vous permet de voir les libellés hérités du jeu de données vers ses champs. Si vous désactivez cette option, les libellés hérités du jeu de données sont masqués.
+La **[!UICONTROL Show Inherited Labels]** bascule est activée par défaut, ce qui vous permet de voir les libellés hérités du jeu de données vers ses champs. Si vous désactivez cette option, les libellés hérités du jeu de données sont masqués.
 
 ![Masquer les étiquettes héritées](../images/labels/hide_inherited_labels.png)
 
 ## Gestion des libellés d’utilisation des données au niveau du champ du jeu de données
 
-En poursuivant le processus d’ [ajout et de modification des libellés d’utilisation des données au niveau](#add-labels)du jeu de données, vous pouvez également gérer les libellés au niveau du champ dans l’espace de travail de gouvernance _des_ données pour ce jeu de données.
+En poursuivant le processus d’ [ajout et de modification des libellés d’utilisation des données au niveau](#add-labels)du jeu de données, vous pouvez également gérer les libellés au niveau du champ dans l’ _[!UICONTROL Data Governance]_espace de travail pour ce jeu de données.
 
-Pour appliquer des étiquettes d’utilisation de données à un champ individuel, cochez la case en regard du nom du champ, puis cliquez sur **Modifier les étiquettes** de gouvernance.
+Pour appliquer des libellés d’utilisation de données à un champ individuel, cochez la case en regard du nom du champ, puis cliquez sur **[!UICONTROL Edit Governance Labels]**.
 
 ![Modifier les étiquettes des champs](../images/labels/fields_single_field.png)
 
-La boîte de dialogue _Modifier les étiquettes_ de gouvernance s’affiche. La boîte de dialogue affiche les en-têtes qui affichent les champs sélectionnés, les étiquettes appliquées et les étiquettes héritées. Notez que les libellés hérités (C2 et C5) sont grisés dans la boîte de dialogue. Il s’agit de libellés en lecture seule hérités du niveau du jeu de données. Ils ne peuvent donc être modifiés qu’au niveau du jeu de données.
+The _[!UICONTROL Edit Governance Labels]_dialog appears. La boîte de dialogue affiche les en-têtes qui affichent les champs sélectionnés, les étiquettes appliquées et les étiquettes héritées. Notez que les libellés hérités (C2 et C5) sont grisés dans la boîte de dialogue. Il s’agit de libellés en lecture seule hérités du niveau du jeu de données. Ils ne peuvent donc être modifiés qu’au niveau du jeu de données.
 
-<img alt="Modifier les étiquettes de gouvernance d’un champ individuel" src="../images/labels/fields_inherited_labels.png" width="450"><br>
+<img alt="Modifier les étiquettes de gouvernance d’un champ individuel" src="../images/labels/field-label-inheritance.png" width="700"><br>
 
-Sélectionnez des étiquettes de niveau champ en cochant la case en regard de chaque étiquette que vous souhaitez utiliser. Lorsque vous sélectionnez des libellés, l’en-tête Libellés __ appliqués se met à jour pour afficher les libellés appliqués aux champs affichés dans l’en-tête Champs __ sélectionnés. Une fois que vous avez terminé de sélectionner des libellés au niveau du champ, cliquez sur **Enregistrer les modifications**.
+Sélectionnez des étiquettes de niveau champ en cochant la case en regard de chaque étiquette que vous souhaitez utiliser. Lorsque vous sélectionnez des libellés, l’ _[!UICONTROL Applied Labels]_en-tête se met à jour pour afficher les libellés appliqués aux champs affichés dans l’_[!UICONTROL Selected Fields]_ en-tête. Une fois que vous avez terminé de sélectionner des libellés au niveau du champ, cliquez sur **[!UICONTROL Save Changes]**.
 
-<img alt="Application d’étiquettes au niveau du champ" src="../images/labels/fields_field_level_label.png" width="450"><br>
+<img alt="Application d’étiquettes au niveau du champ" src="../images/labels/apply-labels-field.png" width="700"><br>
 
-L’espace de travail Gouvernance _des_ données réapparaît, qui affiche désormais les étiquettes de niveau champ sélectionnées dans la ligne en regard du nom du champ. Notez que le libellé au niveau du champ comporte un &quot;x&quot; en regard, ce qui vous permet de supprimer le libellé.
+L’ _[!UICONTROL Data Governance]_espace de travail réapparaît, qui affiche désormais les étiquettes de niveau champ sélectionnées dans la ligne en regard du nom du champ. Notez que le libellé au niveau du champ comporte un &quot;x&quot; en regard, ce qui vous permet de supprimer le libellé.
 
 ![Champ présentant les libellés au niveau du champ](../images/labels/fields_show_field_level_labels.png)
 
@@ -101,7 +101,7 @@ Maintenant que vous avez ajouté des libellés d’utilisation des données au n
 
 Vous pouvez également désormais définir des stratégies d’utilisation des données en fonction des étiquettes que vous avez appliquées. Pour plus d’informations, reportez-vous à la présentation [des stratégies d’utilisation des](../policies/overview.md)données.
 
-## Ressources supplémentaires   
+## Ressources supplémentaires
 
 La vidéo suivante est destinée à vous aider à comprendre la gouvernance des données et explique comment appliquer des étiquettes à un jeu de données et à des champs individuels.
 
