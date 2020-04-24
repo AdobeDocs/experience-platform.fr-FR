@@ -6,14 +6,14 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 8cc3b63fc91877ca1337f65e8f5c0e949b7ef01f
+source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-## Date de publication : 8 avril 2020
+**Date de publication : 8 avril 2020**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 * [Services intelligents](#intelligent)
