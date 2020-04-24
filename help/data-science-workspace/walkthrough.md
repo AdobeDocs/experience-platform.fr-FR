@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’espace de travail des sciences de données
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 1f756e7bc71c9ff227757aee64af29e0772c24af
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -45,7 +45,7 @@ Dans notre tutoriel, nous utiliserons Python 3 dans le carnet Jupyter pour montr
 
 ![](./images/walkthrough/retail_sales.png)
 
-### Configuration
+### Configuration {#setup}
 
 Avec le bloc-notes Ventes au détail ouvert, la première chose que nous faisons est de charger les bibliothèques requises pour notre flux de travail. Le suivant  une brève description de ce à quoi chacun sert :
 - **numpy** - bibliothèque de calcul scientifique qui ajoute la prise en charge de tableaux et de matrices multidimensionnels volumineux
@@ -55,7 +55,7 @@ Avec le bloc-notes Ventes au détail ouvert, la première chose que nous faisons
 - **sklearn** - bibliothèque d’apprentissage automatique qui comprend la classification, la régression, le vecteur de prise en charge et les algorithmes de cluster
 - **avertissements** - bibliothèque qui contrôle les messages d’avertissement
 
-### Exploration des données
+### Exploration des données {#exploring-data}
 
 #### Charger des données
 
@@ -129,7 +129,7 @@ En utilisant le même jeu de données de vente au détail, nous pouvons génére
 
 Remarquez la diagonale de ceux qui sont au centre. Cela montre que lorsqu’une variable est comparée à elle-même, elle présente une corrélation positive complète. Une forte corrélation positive aura une magnitude proche de 1, tandis que des corrélations faibles seront plus proches de 0. Une corrélation négative est montrée avec un coefficient négatif montrant une tendance inverse.
 
-### Ingénierie des fonctionnalités
+### Ingénierie des fonctionnalités {#feature-engineering}
 
 Dans cette section, nous apporterons des modifications à notre jeu de données de vente au détail. Nous effectuerons les opérations suivantes :
 
@@ -177,7 +177,7 @@ Vous trouverez ci-dessous un résumé du jeu de données après les modification
 
 ![](./images/walkthrough/df_info_new.png)
 
-### Formation et vérification
+### Formation et vérification {#training-and-verification}
 
 Il est maintenant temps de créer quelques modèles des données et de sélectionner le modèle qui sera le plus performant pour prédire les ventes futures. Nous évaluerons les 5 algorithmes suivants :
 
