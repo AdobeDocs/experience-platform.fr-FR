@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du développeur SDK
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -13,18 +13,9 @@ source-git-commit: 897e897c80421c8eddd779222ddfa20298e72298
 
 Le kit SDK de création de modèles vous permet de développer des recettes d’apprentissage automatique et des pipelines de fonctionnalités personnalisés qui peuvent être utilisés dans l’espace de travail Data Science d’Adobe Experience Platform, afin de fournir des modèles applicables dans PySpark et Spark.
 
-Ce fournit des informations sur les différentes classes trouvées dans le SDK de création de modèles :
+Ce fournit des informations sur les différentes classes trouvées dans le SDK de création de modèles.
 
-- [DataLoader](#dataloader)
-   - [Chargement de données à partir d’un jeu de données de plateforme](#load-data-from-a-platform-dataset)
-- [DataSaver](#datasaver)
-   - [Enregistrer les données dans un jeu de données de plateforme](#save-data-to-a-platform-dataset)
-- [DatasetTransformer](#datasettransformer)
-- [FeaturePipelineFactory](#featurepipelinefactory)
-- [PipelineFactory](#pipelinefactory)
-- [MLEvaluator](#mlevaluator)
-
-## DataLoader
+## DataLoader {#dataloader}
 
 La classe DataLoader encapsule tout ce qui a trait à la récupération, au filtrage et au renvoi de données d’entrée brutes. Parmi les exemples de données d’entrée, citons la formation, la notation ou l’ingénierie des fonctionnalités. Les chargeurs de données étendent la classe abstraite `DataLoader` et doivent remplacer la méthode abstraite `load`.
 
@@ -83,7 +74,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Lo
     </tbody>
 </table>
 
-### Chargement de données à partir d’un jeu de données de plateforme
+### Chargement de données à partir d’un jeu de données de plateforme {#load-data-from-a-platform-dataset}
 
 L’exemple suivant récupère les données de la plateforme par ID et renvoie un DataFrame, où l’ID du jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration.
 
@@ -199,7 +190,7 @@ class MyDataLoader extends DataLoader {
 }
 ```
 
-## DataSaver
+## DataSaver {#datasaver}
 
 La classe DataSaver encapsule tout ce qui a trait au stockage des données de sortie, y compris celles issues de l’évaluation ou de l’ingénierie des fonctionnalités. Les économiseurs de données étendent la classe abstraite `DataSaver` et doivent remplacer la méthode abstraite `save`.
 
@@ -258,7 +249,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Sa
     </tbody>
 </table>
 
-### Enregistrer les données dans un jeu de données de plateforme
+### Enregistrer les données dans un jeu de données de plateforme {#save-data-to-a-platform-dataset}
 
 Pour stocker des données dans un jeu de données de plateforme, les propriétés doivent être fournies ou définies dans le fichier de configuration :
 
@@ -398,7 +389,7 @@ class ScoringDataSaver extends DataSaver {
 }
 ```
 
-## DatasetTransformer
+## DatasetTransformer {#datasettransformer}
 
 La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. L’exécution Sensei Machine Learning Runtime ne nécessite pas la définition de ce composant et est implémentée en fonction de vos besoins.
 
@@ -459,7 +450,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe de transforma
     </tbody>
 </table>
 
-## FeaturePipelineFactory
+## FeaturePipelineFactory {#featurepipelinefactory}
 
 La classe FeaturePipelineFactory contient des fonctionnalités  des algorithmes  et définit les étapes d’un tuyau de caractéristiques de l’à la fin.
 
@@ -541,7 +532,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark FeaturePipeline
     </tbody>
 </table>
 
-## PipelineFactory
+## PipelineFactory {#pipelinefactory}
 
 La classe PipelineFactory encapsule les méthodes et les définitions pour la formation et la notation des modèles, où la logique et les algorithmes de formation sont définis sous la forme d’un pipeline Spark.
 
@@ -650,7 +641,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark PipelineFactory
     </tbody>
 </table>
 
-## MLEvaluator
+## MLEvaluator {#mlevaluator}
 
 La classe MLEvaluator fournit des méthodes pour définir des mesures d’évaluation et déterminer des jeux de données de formation et de test.
 
