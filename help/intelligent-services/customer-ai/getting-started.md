@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en main de l’API client
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 0eeb41fa06864cc28b3a76c2a69c76ea5430d45a
+source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
 
 ---
 
@@ -22,7 +22,7 @@ Les guides pour l’IA du client nécessitent une compréhension pratique des di
 
 ## Téléchargement des scores AI client
 
->[!NOTE] Si vous n’avez pas besoin de télécharger des scores bruts, ignorez cette étape et passez au guide de l’interface utilisateur.
+>[!NOTE] Si vous n’avez pas besoin de télécharger des scores bruts, ignorez cette étape et passez au guide [de](./user-guide/configure.md)configuration.
 
 Le téléchargement des scores API du client s’effectue par le biais d’une combinaison d’appels d’API. Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
 
@@ -42,4 +42,4 @@ Ce guide fournit des exemples d’appels d’API pour démontrer comment formate
 
 ## Étapes suivantes
 
-Une fois que vous êtes prêt et que vos informations d’identification et vos  sont en place,  en suivant le guide [de l’interface utilisateur IA du](./user-guide.md)client. Ce guide vous guide tout au long de la création d’une instance et de son envoi pour formation et score.
+Une fois que vous avez suivi les étapes décrites dans le  ci-dessus, consultez la documentation [Entrée et Sortie](./input-output.md) . Ce  donne un bref aperçu des types de données utilisés et produits dans l’API du client.
