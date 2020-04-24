@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Planification d’un modèle (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 541acd9e1df8a53ae372f71230a705fb6a95d92b
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -24,7 +24,7 @@ Pour terminer ce didacticiel, vous devez avoir accès à Experience Platform. Si
 
 Ce didacticiel nécessite un service existant. Si vous ne disposez pas d’un service accessible, vous pouvez en créer un en suivant le didacticiel [Publier votre modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) .
 
-## Configuration des scores planifiés
+## Configuration des scores planifiés {#configure-scheduled-scoring}
 
 La notation du modèle peut être configurée pour être un processus automatisé sur une base planifiée. Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour configurer et appliquer un calendrier de notation :
 
@@ -41,7 +41,7 @@ La notation du modèle peut être configurée pour être un processus automatis�
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configuration de la formation planifiée
+## Configuration de la formation planifiée {#configure-scheduled-training}
 
 La configuration des exécutions de formation planifiées sur un service garantit que le modèle d’apprentissage automatique est mis à jour selon les modèles de données les plus récents. Chaque fois qu’une série de formations planifiées se termine, le modèle formé qui en résulte est utilisé pour mettre le service sous tension jusqu’à la prochaine série de formations planifiées.
 
