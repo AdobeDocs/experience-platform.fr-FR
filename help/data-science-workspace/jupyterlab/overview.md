@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: d42a5de7094d305249b05454ce4aba79776a46e1
+source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
 
 ---
 
@@ -51,16 +51,16 @@ Vous trouverez des informations sur les principales fonctionnalités de JupyterL
 * [Cellules de code](#code-cells)
 * [Noisettes](#kernels)
 * [Sessions du noyau](#kernel-sessions)
-* [Ressource d’exécution PySpark/Spark](#pysparkspark-execution-resource)
+* [Ressource d’exécution PySpark/Spark](#execution-resource)
 * [Lanceur](#launcher)
 
-### Accès à JupyterLab
+### Accès à JupyterLab {#access-jupyterlab}
 
 Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Ordinateurs portables** dans la colonne de navigation de gauche. Laissez un peu de temps à JupyterLab pour l&#39;initialisation complète.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
-### Interface de JupyterLab
+### Interface de JupyterLab {#jupyterlab-interface}
 
 L&#39;interface de JupyterLab se compose d&#39;une barre de menus, d&#39;une barre latérale gauche réductible et de la zone de travail principale contenant des onglets de  et de  de.
 
@@ -98,7 +98,7 @@ La zone de travail principale de JupyterLab vous permet d&#39;organiser les  de 
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
-### Cellules de code
+### Cellules de code {#code-cells}
 
 Les cellules de code sont le contenu principal des blocs-notes. Ils contiennent le code source dans la langue du noyau associé au bloc-notes et la sortie résultant de l&#39;exécution de la cellule de code. Un nombre d’exécutions est affiché à droite de chaque cellule de code qui représente son ordre d’exécution.
 
@@ -130,7 +130,7 @@ Certaines fonctionnalités et fonctionnalités sont limitées à des noyaux part
 | **Spark - désapprouvée** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
 | **Scala** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
 
-### Sessions du noyau
+### Sessions du noyau {#kernel-sessions}
 
 Chaque bloc-notes actif ou   sur JupyterLab utilise une session de noyau. Toutes les sessions actives peuvent être trouvées en développant l&#39;onglet **Running terminaux et kernels** de la barre latérale gauche. Le type et l&#39;état du noyau d&#39;un bloc-notes peuvent être identifiés en observant l&#39;angle supérieur droit de l&#39;interface du bloc-notes. Dans le diagramme ci-dessous, le noyau associé du bloc-notes est **Python 3** et son état actuel est représenté par un cercle gris à droite. Un cercle creux implique un noyau inactif et un cercle plein implique un noyau occupé.
 
@@ -193,7 +193,7 @@ Toutes les propriétés configurables sont répertoriées dans le tableau ci-des
 | name | Nom de l’application | chaîne |
 | conf | Propriété de configuration Spark | Carte de key=val |
 
-### Lanceur
+### Lanceur {#launcher}
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
@@ -799,7 +799,7 @@ timedf.show()
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Indicateurs SQL facultatifs pour le service 
+## Indicateurs SQL facultatifs pour le service {#optional-sql-flags-for-query-service}
 
 Ce tableau décrit les indicateurs SQL facultatifs pouvant être utilisés pour le service de  de.
 
