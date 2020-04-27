@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 304a84b81758b2f2a343977533f9120857a1fb33
+source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
 
 ---
 
@@ -66,4 +66,4 @@ Vous pouvez activer ou désactiver les stratégies d’utilisation des données 
 
 ## Étapes suivantes
 
-Ce  un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur de la plateforme d’expérience. Pour savoir comment gérer les stratégies à l’aide de l’API de stratégie DULE, consultez le didacticiel [sur la création de stratégies d’](./create.md)API. Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la présentation [de l’application des](../enforcement/overview.md)stratégies.
+Ce  un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur de la plateforme d’expérience. Pour savoir comment gérer les stratégies à l’aide de l’API de stratégie DULE, consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la présentation [de l’application des](../enforcement/overview.md)stratégies.
