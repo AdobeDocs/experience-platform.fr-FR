@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide du développeur d’API  client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
 
 ---
 
@@ -136,7 +136,12 @@ curl -X POST \
       }'
 ```
 
-|Propriété|Description||`type` **(Obligatoire)** |Type de destination à créer. La seule valeur acceptée, &quot;EDGE&quot;, crée une destination de bord.||`dataCenters` **(Obligatoire)** |Un tableau de chaînes qui  les bords vers lesquels les projections doivent être routées. Peut contenir une ou plusieurs des valeurs suivantes : &quot;OR1&quot; - Ouest des États-Unis, &quot;VA5&quot; - Est des États-Unis, &quot;NLD1&quot; - EMEA.||`ttl` **(Obligatoire)** |Spécifie l&#39;expiration de la projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600.||`replicationPolicy` **(Obligatoire)** |Définit le comportement de la réplication des données du concentrateur aux bords.  Valeurs prises en charge : PROACTIF, RÉACTIF. Valeur par défaut : RÉACTIF.|
+| Propriété | Description |
+|---|---|
+| `type` **(Obligatoire)** | Type de destination à créer. La seule valeur acceptée, &quot;EDGE&quot;, crée une destination de bord. |
+| `dataCenters` **(Obligatoire)** | Tableau de chaînes qui  les bords vers lesquels les projections doivent être routées. Peut contenir une ou plusieurs des valeurs suivantes : &quot;OR1&quot; - Ouest des États-Unis, &quot;VA5&quot; - Est des États-Unis, &quot;NLD1&quot; - EMEA. |
+| `ttl` **(Obligatoire)** | Indique l’expiration de la projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600. |
+| `replicationPolicy` **(Obligatoire)** | Définit le comportement de la réplication des données du concentrateur aux bords.  Valeurs prises en charge : PROACTIF, RÉACTIF. Valeur par défaut : RÉACTIF. |
 
 **Réponse**
 
