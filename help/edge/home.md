@@ -2,9 +2,9 @@
 title: Aide du SDK Web d’Adobe Experience Platform
 seo-title: Aide du SDK Web d’Adobe Experience Platform
 description: Découvrez le SDK Web d’Adobe Experience Platform et comment l’utiliser.
-seo-description: permettre aux clients d’Adobe Experience Cloud d’interagir avec les différents services dans Experience Cloud
+seo-description: permettre aux clients d’Adobe Experience Cloud d’interagir avec les différents services dans Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 6ad09df6f6867ebe057d0043dea4bc97de2b66b3
+source-git-commit: 5027ae2cd083631d7122346796ef93572c129d3f
 
 ---
 
