@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide de l’utilisateur  des clients en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: b5412b891a9457fa5e801d1f0479fc59fb08bf1b
+source-git-commit: ab289f07475abcbe966c723423825fd392eb3615
 
 ---
 
@@ -73,9 +73,9 @@ Cliquez sur **Fusionner les stratégies** pour  un de stratégies de fusion appa
 
 ![](../images/user-guide/profile-merge-policies.png)
 
-Pour plus d’informations sur l’utilisation des stratégies de fusion dans l’interface utilisateur, consultez le guide [d’utilisation des stratégies de](merge-policies.md)fusion.
+Pour plus d’informations sur l’utilisation des stratégies de fusion dans l’interface utilisateur, consultez le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-## Union schema
+##   
 
 Cliquez sur **** pourle dede l’de la banque de données de votre. Un   est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les ont été activés pour une utilisation dans le de clients en temps réel. Cliquez sur une classe dans le de gauche pour  la structure de son  dedela trame.
 
