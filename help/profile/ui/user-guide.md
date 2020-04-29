@@ -75,7 +75,7 @@ Cliquez sur **Fusionner les stratégies** pour  un de stratégies de fusion appa
 
 Pour plus d’informations sur l’utilisation des stratégies de fusion dans l’interface utilisateur, consultez le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-##   
+## Union schema
 
 Cliquez sur **** pourle dede l’de la banque de données de votre. Un   est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les ont été activés pour une utilisation dans le de clients en temps réel. Cliquez sur une classe dans le de gauche pour  la structure de son  dedela trame.
 
