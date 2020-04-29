@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Présentation de l’assimilation partielle par lot d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 ---
 
 
 
-# Récupération partielle par lot
+# Récupération partielle par lot (bêta)
 
 L’assimilation partielle par lot permet d’assimiler des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes dans Adobe Experience Platform, tandis que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
 
 Ce fournit un didacticiel sur la gestion de l’assimilation partielle des lots.
 
-En outre, l&#39; [annexe](#partial-batch-ingestion-error-types) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partiel.
+En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partiel.
+
+>[!IMPORTANT] Cette fonctionnalité n’existe qu’à l’aide de l’API. Veuillez contacter votre équipe pour accéder à cette fonctionnalité.
 
 ## Prise en main
 
@@ -47,7 +49,7 @@ Toutes les ressources de la plateforme d’expérience sont isolées dans des sa
 
 ## Activation d’un jeu de données pour l’assimilation partielle de lots dans l’API
 
->[!NOTE] Cette section décrit l&#39;activation d&#39;un jeu de données pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;API. Pour plus d&#39;informations sur l&#39;utilisation de l&#39;interface utilisateur, veuillez lire l&#39; [activation d&#39;un jeu de données pour l&#39;assimilation partielle de lots dans l&#39;étape de l&#39;interface utilisateur](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) .
+<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
 Vous pouvez créer un jeu de données ou modifier un jeu de données existant avec l’assimilation partielle activée.
 
@@ -71,35 +73,35 @@ De même, pour modifier un jeu de données existant, suivez les étapes du guide
 
 Dans le jeu de données, vous devrez ajouter la balise décrite ci-dessus.
 
-## Activation d’un jeu de données pour l’assimilation partielle de lots dans l’interface utilisateur
+<!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] Cette section décrit l’activation d’un jeu de données pour l’assimilation partielle de lots à l’aide de l’interface utilisateur. Si vous avez déjà activé un jeu de données pour l’assimilation partielle de lots à l’aide de l’API, vous pouvez passer à la section suivante.
+>[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
-Pour activer un jeu de données pour l’assimilation partielle via l’interface utilisateur de la plateforme, cliquez sur **Jeu de données** dans le volet de navigation de gauche. Vous pouvez [créer un jeu](#create-a-new-dataset-with-partial-batch-ingestion-enabled) de données ou [modifier un jeu](#modify-an-existing-dataset-to-enable-partial-batch-ingestion)de données existant.
+To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
-### Créer un jeu de données avec l’assimilation partielle par lot activée
+### Create a new dataset with partial batch ingestion enabled
 
-Pour créer un jeu de données, suivez les étapes du guide [de l’utilisateur](../../catalog/datasets/user-guide.md)des jeux de données. Une fois que vous avez atteint l’étape *Configurer le jeu de données* , notez les champs *Ingestion* partielle et Diagnostics *d’* erreur.
+To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
 
-La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-La bascule *Error Diagnostics* (Diagnostics *d’erreur) s’affiche uniquement lorsque la bascule Ingestion* partielle est désactivée. Cette fonctionnalité permet à Platform de générer des messages d’erreur détaillés sur vos lots assimilés. Si l’option d’ingestion ** partielle est activée, les diagnostics d’erreur améliorés sont automatiquement appliqués.
+The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
 
-Le seuil *d’erreur* vous permet de définir le pourcentage d’erreurs acceptables avant que le lot entier ne soit défaillant. Par défaut, cette valeur est définie sur 5 %.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
 
-### Modification d’un jeu de données existant pour activer l’assimilation partielle par lot
+### Modify an existing dataset to enable partial batch ingestion
 
-Pour modifier un jeu de données existant, sélectionnez le jeu de données à modifier. La barre latérale sur la droite contient des informations sur le jeu de données.
+To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
 
 ![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
 
-La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
 
-Le seuil *d’erreur* vous permet de définir le pourcentage d’erreurs acceptables avant que le lot entier ne soit défaillant. Par défaut, cette valeur est définie sur 5 %.
+The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
 ## Récupérer les erreurs d&#39;assimilation par lots partielles
 
@@ -176,7 +178,7 @@ Si le lot comporte une erreur et que les diagnostics d’erreur sont activés, l
 
 Ce didacticiel explique comment créer ou modifier un jeu de données pour activer l&#39;assimilation partielle de lots. Pour plus d&#39;informations sur l&#39;assimilation de lots, veuillez lire le guide [du développeur sur l&#39;assimilation de](./api-overview.md)lots.
 
-## Types d&#39;erreur d&#39;assimilation par lots partiels
+## Types d&#39;erreur d&#39;assimilation par lots partiels {#appendix}
 
 L’assimilation partielle par lot comporte quatre types d’erreur différents lors de l’assimilation de données.
 
