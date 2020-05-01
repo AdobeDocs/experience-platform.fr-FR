@@ -4,7 +4,7 @@ seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 3c6f9663ef5b83ceeb93539171017e2b282a613f
 
 ---
 
@@ -42,6 +42,9 @@ alloy("event", {
   }
 });
 ```
+
+>[!Note] :
+>Les données pouvant être envoyées dans chaque événement du champ XDM sont limitées à 32 Ko.
 
 ### Envoi de données autres que XDM
 
