@@ -1,68 +1,68 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Collecte de données à partir d’une base de données externe ou d’un système NoSQL via des connecteurs source et des API
+title: Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 00764a59629eb8a5a06ac28ad446084b0bdb2293
+source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
 
 ---
 
 
-# Collecte de données à partir d’une base de données externe ou d’un système NoSQL via des connecteurs source et des API
+# Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données ou d’un système NoSQL et les intégrer dans la plateforme par le biais de connecteurs source et d’API.
+Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données tierce et les importer dans la plate-forme par le biais des connecteurs et des API source.
 
 ## Prise en main
 
-Ce didacticiel vous oblige à avoir accès à une base de données tierce ou à un système NoSQL via une connexion de base valide et des informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin et la structure du fichier. Si vous ne disposez pas de ces informations, reportez-vous au didacticiel sur l’ [exploration d’une base de données ou d’un système NoSQL à l’aide de l’API](../explore/database-nosql.md) Flow Service avant d’essayer ce didacticiel.
+Ce didacticiel vous oblige à disposer d&#39;une connexion valide à une base de données tierce, ainsi que d&#39;informations sur le fichier que vous souhaitez importer dans la plate-forme (y compris le chemin et la structure du fichier). Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration d’une base de données à l’aide de l’API](../explore/database-nosql.md) Flow Service avant de tenter ce didacticiel.
 
-Ce didacticiel vous demande également de bien comprendre les composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite également une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-* [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plateforme d’expérience organise les données d’expérience client.
-   * [Principes de base de la composition](../../../../xdm/schema/composition.md)de  : Découvrez les éléments de base des  XDM, y compris les principes clés et les bonnes pratiques en matière de composition de .
-   * [Guide](../../../../xdm/api/getting-started.md)du développeur du Registre des  : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels vers l’API de Registre . Cela inclut votre `{TENANT_ID}`, le concept de &quot;&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-* [Service](../../../../catalog/home.md)de catalogue : Le catalogue est le système d’enregistrement de l’emplacement et de la lignée des données dans la plateforme d’expérience.
-* [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L’API d’assimilation par lot vous permet d’assimiler des données dans la plateforme d’expérience sous forme de fichiers de commandes.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+* [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+   * [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
+   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des Schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
+* [Service](../../../../catalog/home.md)de catalogue : Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données dans la plate-forme d’expérience.
+* [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L’API d’importation par lot vous permet d’assimiler des données dans la plate-forme d’expérience sous forme de fichiers par lot.
+* [Sandbox](../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données ou à un système NoSQL à l’aide de l’API Flow Service.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
-* x-gw-ims-org-id : `{IMS_ORG}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
 
 * Content-Type : `application/json`
 
-## Création d’une classe XDM ad hoc et d’une  de
+## Création d’une classe et d’un schéma XDM ad hoc
 
-Pour importer des données externes dans Platform via des connecteurs source, une classe XDM ad hoc et un  de doivent être créés pour les données source brutes.
+Pour importer des données externes dans la plate-forme via des connecteurs source, une classe XDM ad hoc et un schéma doivent être créés pour les données source brutes.
 
-Pour créer une classe ad hoc et un  de, suivez les étapes décrites dans le didacticiel [ de](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
+Pour créer une classe et un schéma ad hoc, suivez les étapes décrites dans le didacticiel [schéma](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
 
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un  ad hoc. Obtenez et stockez l’identifiant unique (`$id`) du  ad hoc, puis passez à l’étape suivante de ce didacticiel.
+Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. Récupérez et stockez l’identifiant unique (`$id`) du schéma ad hoc, puis passez à l’étape suivante de ce didacticiel.
 
 ## Création d’une connexion source {#source}
 
-Une fois un XDM ad hoc créé, vous pouvez désormais créer une connexion source à l’aide d’une requête POST sur l’API du service de flux. Une connexion source se compose d’une connexion de base, d’un fichier de données source et d’une référence au qui décrit les données source.
+Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’API du service de flux. Une connexion source se compose d’une connexion de base, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /sourceConnections
@@ -101,14 +101,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID d’une connexion de base pour une base de données ou un système NoSQL. |
-| `data.schema.id` | Le  `$id` du XDM ad hoc. |
+| `baseConnectionId` | ID d’une connexion à la base de données. |
+| `data.schema.id` | Le schéma `$id` XDM ad hoc. |
 | `params.path` | Chemin d’accès du fichier source. |
-| `connectionSpec.id` | ID de spécification de connexion pour une base de données ou un système NoSQL. |
+| `connectionSpec.id` | ID de spécification de connexion d&#39;une base de données ou d&#39;un système NoSQL. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée. Cet ID est requis dans les étapes suivantes pour créer une connexion .
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion source nouvellement créée. Cet identifiant est requis lors des étapes suivantes pour créer une connexion à une cible.
 
 ```json
 {
@@ -117,13 +117,13 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 }
 ```
 
-## Création d’un  XDM {#target}
+## Création d’un schéma XDM cible {#target}
 
-Dans les étapes précédentes, un XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans Platform, un de  doit également être créé pour structurer les données source en fonction de vos besoins. Le  est ensuite utilisé pour créer un jeu de données de plateforme dans lequel les données source sont contenues. Ce  le XDM  étend également la classe de  XDM individuels.
+Dans les étapes précédentes, un schéma XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans Platform, un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un jeu de données de plateforme dans lequel les données source sont contenues. Ce schéma XDM de cible étend également la classe de Profil XDM individuel.
 
-Un XDM  peut être créé en exécutant une requête POST sur l’API [de registre de l’](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Si vous préférez utiliser l’interface utilisateur dans la plateforme d’expérience, le didacticiel [de l’éditeur de ](../../../../xdm/tutorials/create-schema-ui.md) fournit des instructions étape par étape pour exécuter des actions similaires dans l’éditeur de  de.
+Un schéma XDM de cible peut être créé en exécutant une requête POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. Si vous préférez utiliser l’interface utilisateur dans la plate-forme d’expérience, le didacticiel [Editeur de](../../../../xdm/tutorials/create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de Schéma.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/schemas
@@ -131,7 +131,7 @@ POST /tenant/schemas
 
 **Requête**
 
-L’exemple de requête suivant crée un  XDM qui étend la classe de XDM Individuel.
+L&#39;exemple de demande suivant crée un schéma XDM qui étend la classe de Profil XDM Individuel.
 
 ```shell
 curl -X POST \
@@ -161,7 +161,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle  de, y compris son identifiant unique (`$id`). Cet identifiant est requis dans les étapes suivantes pour créer un jeu de données, un mappage et un flux de données .
+Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis dans les étapes suivantes pour créer un jeu de données de cible, un mappage et un flux de données.
 
 ```json
 {
@@ -221,11 +221,11 @@ Une réponse réussie renvoie les détails de la nouvelle  de, y compris son ide
 }
 ```
 
-## Création d’un jeu de données de 
+## Création d’un jeu de données de cible
 
-Vous pouvez créer un jeu de données  en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en indiquant l’ID du  de  dans la charge utile.
+Un jeu de données de cible peut être créé en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’ID du schéma de cible dans la charge utile.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /dataSets
@@ -252,11 +252,11 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `schemaRef.id` | ID du  XDM . |
+| `schemaRef.id` | ID du schéma XDM de cible. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID du jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données  du, comme requis dans les étapes suivantes pour créer une connexion  et un flux de données.
+Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
 
 ```json
 [
@@ -264,19 +264,19 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 ]
 ```
 
-## Création d’une connexion de base de jeux de données
+## Créer une connexion de base de jeux de données
 
-Pour importer des données externes dans la plateforme, une connexion de base de données de jeu de plateformes d’expérience doit d’abord être acquise.
+Pour importer des données externes dans la plate-forme, une connexion de base de données de jeu de plateformes d’expérience doit d’abord être acquise.
 
-Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [sur la connexion de base de jeux de](../create-dataset-base-connection.md)données.
+Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [de connexion de base de](../create-dataset-base-connection.md)jeux de données.
 
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`) et utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion .
+Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`), puis utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion de cible.
 
-## Création d’une connexion 
+## Création d’une connexion à une cible
 
-Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un  et un jeu de données de  dedonnées. A l’aide de ces identifiants, vous pouvez créer une connexion  à l’aide de l’API du service de flux afin de spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /targetConnections
@@ -315,16 +315,16 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de votre connexion de base de jeux de données. |
-| `data.schema.id` | Le `$id` du XDM . |
-| `params.dataSetId` | ID du jeu de données . |
+| `baseConnectionId` | ID de la connexion de base de votre jeu de données. |
+| `data.schema.id` | Le schéma `$id` XDM de la cible. |
+| `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion de votre base de données tierce. |
 
->[!NOTE] Lors de la création d&#39;une connexion de , veillez à utiliser la valeur de connexion de base du jeu de données pour la connexion de base `id` plutôt que la connexion de base du connecteur source tiers.
+>[!NOTE] Lors de la création d&#39;une connexion de cible, veillez à utiliser la valeur de connexion de base du jeu de données pour la connexion de base `id` plutôt que la connexion de base de votre connecteur source tiers.
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion . Cette valeur est requise dans une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle connexion à la cible. Cette valeur est requise à une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -335,9 +335,9 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Création d’un mappage {#mapping}
 
-Pour que les données source soient assimilées dans un jeu de données  de, elles doivent d’abord être mappées sur le auquel le jeu de données de l’analyse adhère. Pour ce faire, vous devez exécuter une requête POST sur l’API du service de conversion avec des mappages de données définis dans la charge utile de la demande.
+Pour que les données source soient assimilées à un jeu de données de cible, elles doivent d’abord être mises en correspondance avec le schéma de cible auquel adhère le jeu de données de cible. Pour ce faire, vous devez exécuter une requête POST sur l’API du service de conversion avec des mappages de données définis dans la charge utile de la demande.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /mappingSets
@@ -389,11 +389,11 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `xdmSchema` | Le `$id` du XDM . |
+| `xdmSchema` | Le schéma `$id` XDM de la cible. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du mappage nouvellement créé, y compris son identifiant unique (`id`). Cet identifiant est requis dans une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cet identifiant est nécessaire à une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -463,11 +463,11 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 }
 ```
 
-## Spécifications de flux de données de recherche {#specs}
+## Récupérer les spécifications de flux de données {#specs}
 
-Un flux de données est responsable de la collecte de données à partir de sources et de leur transmission dans la plateforme. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’API du service de flux. Les spécifications du flux de données sont chargées de collecter les données d&#39;une base de données externe ou d&#39;un système NoSQL.
+Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à la plate-forme. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’API du service de flux. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une base de données externe ou d&#39;un système NoSQL.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /flowSpecs?property=name=="CRMToAEP"
@@ -485,7 +485,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données qui est responsable de l’importation des données de votre base de données ou système NoSQL dans Platform. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l&#39;importation des données de votre base de données ou système NoSQL dans Platform. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
 
 ```json
 {
@@ -609,16 +609,16 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
 
 ## Création d’un flux de données
 
-La dernière étape vers la collecte des données est de créer un flux de données. A ce stade, vous devez préparer les valeurs requises suivantes :
+La dernière étape de la collecte des données consiste à créer un flux de données. A ce stade, les valeurs requises suivantes doivent être préparées :
 
 * [ID de connexion source](#source)
-* [ID de connexion](#target)
+* [ID de connexion à la Cible](#target)
 * [ID de mappage](#mapping)
 * [ID de spécification du flux de données](#specs)
 
-Un flux de données est responsable de la planification et de la collecte de données à partir d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /flows
@@ -648,16 +648,6 @@ curl -X POST \
         ],
         "transformations": [
             {
-                "name": "Copy",
-                "params": {
-                    "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
-                    }
-                }
-            },
-            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
@@ -675,14 +665,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `flowSpec.id` | ID de spécification de flux de données associé à votre base de données ou à votre système NoSQL. |
-| `sourceConnectionIds` | ID de connexion source associé à votre base de données ou à votre système NoSQL. |
-| `targetConnectionIds` | ID de connexion  associé à votre base de données ou à votre système NoSQL. |
-| `transformations.params.mappingId` | ID de mappage associé à votre base de données ou à votre système NoSQL. |
+| `flowSpec.id` | ID de spécification de flux de données associé à votre base de données. |
+| `sourceConnectionIds` | ID de connexion source associé à votre base de données. |
+| `targetConnectionIds` | ID de connexion de cible associé à votre base de données. |
+| `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’ID (`id`) du flux de données nouvellement créé.
+Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouvellement créé.
 
 ```json
 {
@@ -692,7 +682,30 @@ Une réponse réussie renvoie l’ID (`id`) du flux de données nouvellement cr�
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données d’une base de données ou d’un système NoSQL sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que les  de clients en temps réel et l’espace de travail des sciences de données. Pour plus d’informations, reportez-vous au  suivant :
+En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données d’une base de données tierce sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
 
 * [Présentation du profil client en temps réel](../../../../profile/home.md)
-* [Présentation de l’espace de travail Data Science](../../../../data-science-workspace/home.md)
+* [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Annexe
+
+La section suivante liste les différents connecteurs source d’enregistrement de cloud et leurs spécifications de connexion.
+
+### Spécification de connexion
+
+| Nom du connecteur | Identifiant de la spécification de connexion |
+| -------------- | --------------- |
+| Amazon Redshift | `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| Apache Hive sur Azure HDInsights | `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| Apache Spark sur Azure HDInsights | `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
+| Explorateur de données Azure | `0479cc14-7651-4354-b233-7480606c2ac3` |
+| Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
+| Enregistrement de table Azure | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
+| MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
+| Microsoft SQL Server | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |
+| MySQL | `26d738e0-8963-47ea-aadf-c60de735468a` |
+| Oracle | `d6b52d86-f0f8-475f-89d4-ce54c8527328` |
+| Phoenix | `102706fb-a5cd-42ee-afe0-bc42f017ff43` |
+| PostgreSQL  | `74a1c565-4e59-48d7-9d67-7c03b8a13137` |
