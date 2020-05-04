@@ -1,46 +1,46 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Création d’un  à l’aide de l’API de registre '
+title: Création d’un schéma à l’aide de l’API de registre de Schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 5aad9fa71051a58fe1c4678553f47077d81d23fc
+source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
 
 ---
 
 
-# Création d’un  à l’aide de l’API de registre 
+# Création d’un schéma à l’aide de l’API de registre de Schémas
 
-Le Registre des  permet d’accéder à la bibliothèque  dans Adobe Experience Platform. La bibliothèque de  de contient les ressources mises à votre disposition par Adobe, les partenaires Experience Platform et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
+Le registre des Schémas permet d’accéder à la bibliothèque de Schémas dans Adobe Experience Platform. La bibliothèque de Schémas contient des ressources mises à votre disposition par Adobe, les partenaires de la plateforme d’expérience et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
 
-Ce didacticiel utilise l&#39;API de registre de  pour vous guider dans les étapes de composition d&#39;un  de à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l’interface utilisateur dans la plateforme d’expérience, le didacticiel [de l’éditeur de ](create-schema-ui.md) fournit des instructions étape par étape pour exécuter des actions similaires dans l’éditeur de  de.
+Ce didacticiel utilise l&#39;API Schéma Registry pour vous aider à composer un schéma à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l’interface utilisateur dans la plate-forme d’expérience, le didacticiel [Editeur de](create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schéma.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-* [Système](../home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plateforme d’expérience organise les données d’expérience client.
-   * [Principes de base de la composition](../schema/composition.md)de  : Découvrez les éléments de base des  XDM, y compris les principes clés et les bonnes pratiques en matière de composition de .
-* [](../../profile/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+* [Système](../home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+   * [Principes de base de la composition](../schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
+* [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin d&#39;effectuer des appels vers l&#39;API de Registre du . Cela inclut votre `{TENANT_ID}`, le concept de &quot;&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API de registre de Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
 
-Ce didacticiel décrit les étapes de la composition d’un de membres de fidélité qui décrit les données relatives aux membres d’un de fidélité au détail. Avant de commencer, vous souhaiterez peut-être  le [de fidélité](#complete-schema) complet des membres de la Loyauté dans l&#39;annexe.
+Ce didacticiel décrit les étapes de la composition d&#39;un schéma Membres fidèles qui décrit les données relatives aux membres d&#39;un programme de fidélité de la vente au détail. Avant de commencer, vous souhaiterez peut-être prévisualisation le schéma [](#complete-schema) complet des membres de fidélité dans l&#39;annexe.
 
-## Composer un  avec une classe standard
+## Composer un schéma avec une classe standard
 
-Un  peut être considéré comme le modèle des données que vous souhaitez intégrer dans la plateforme d’expérience. Chaque  est composée d’une classe et de zéro ou plusieurs mixins. En d’autres termes, il n’est pas nécessaire d’ajouter un mixin pour définir un , mais dans la plupart des cas, au moins un mixin est utilisé.
+Un schéma peut être considéré comme le modèle des données que vous souhaitez intégrer dans la plateforme d’expérience. Chaque schéma est composé d&#39;une classe et de zéro ou plusieurs mixins. En d’autres termes, il n’est pas nécessaire d’ajouter un mixin pour définir un schéma, mais dans la plupart des cas, au moins un mixin est utilisé.
 
-### Affecter une classe
+### Attribuer une classe
 
-Le processus de composition  commence par la sélection d’une classe. La classe définit les principaux aspects comportementaux des données (enregistrements par rapport aux séries chronologiques), ainsi que les champs minimaux requis pour décrire les données qui seront assimilées.
+Le processus de composition du schéma commence par la sélection d&#39;une classe. La classe définit les principaux aspects comportementaux des données (enregistrements/séries chronologiques), ainsi que les champs minimaux requis pour décrire les données qui seront ingérées.
 
-Le que vous créez dans ce didacticiel utilise la classe XDM Individuelle . XDM Les  individuels sont une classe standard fournie par Adobe pour définir le comportement des enregistrements. Vous trouverez plus d&#39;informations sur le comportement dans les [bases de la composition](../schema/composition.md)des .
+Le schéma que vous créez dans ce didacticiel utilise la classe de Profil XDM Individuel. Le Profil individuel XDM est une classe standard fournie par Adobe pour définir le comportement des enregistrements. Pour plus d&#39;informations sur le comportement, consultez les [bases de la composition](../schema/composition.md)du schéma.
 
-Pour affecter une classe, un appel d’API est effectué pour créer (POST) une nouvelle  de dans l’ de client. Cet appel inclut la classe que le va implémenter. Chaque  de ne peut implémenter qu&#39;une seule classe.
+Pour affecter une classe, un appel d&#39;API est effectué pour créer (POST) un nouveau schéma dans le conteneur locataire. Cet appel comprend la classe que le schéma mettra en oeuvre. Chaque schéma ne peut mettre en oeuvre qu&#39;une seule classe.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/schemas
@@ -48,7 +48,7 @@ POST /tenant/schemas
 
 **Requête**
 
-La requête doit inclure un `allOf` attribut qui fait référence `$id` à une classe. Cet attribut définit la &quot;classe de base&quot; que le va implémenter. Dans cet exemple, la classe de base est la classe XDM Individuel . La classe `$id` de XDM individuel est utilisée comme valeur du `$ref` champ dans le `allOf` tableau ci-dessous.
+La requête doit inclure un `allOf` attribut qui fait référence à `$id` une classe. Cet attribut définit la &quot;classe de base&quot; que le schéma mettra en oeuvre. Dans cet exemple, la classe de base est la classe de Profil XDM Individuel. La classe `$id` de Profil XDM individuel est utilisée comme valeur du `$ref` champ dans le `allOf` tableau ci-dessous.
 
 ```SHELL
 curl -X POST \
@@ -72,7 +72,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie l’état de réponse HTTP 201 (Créé) avec un corps de réponse qui contient les détails du nouveau  de, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont attribuées par le Registre des  du.
+Une requête réussie renvoie HTTP Response Status 201 (Créé) avec un corps de réponse qui contient les détails du schéma nouvellement créé, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
 
 ```JSON
 {
@@ -110,11 +110,11 @@ Une requête réussie renvoie l’état de réponse HTTP 201 (Créé) avec un co
 }
 ```
 
-### Cherchez un 
+### Rechercher un schéma
 
-Pour  votre nouveau, exécutez une requête GET (lookup) à l’aide de l’ `meta:altId` ou de l’ `$id` URI codé en URL pour l’.
+Pour vue de votre schéma nouvellement créé, exécutez une requête de recherche (GET) à l’aide de l’ `meta:altId` URI codée ou de l’URL `$id` pour le schéma.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
@@ -134,7 +134,7 @@ curl -X GET \
 
 **Réponse **
 
-Le format de réponse dépend de l’en-tête Accepter envoyé avec la requête. Tentez de tester différents en-têtes d’Accepter pour identifier celui qui répond le mieux à vos besoins.
+Le format de réponse dépend de l’en-tête Accepter envoyé avec la demande. Tentez de tester différents en-têtes d&#39;Accepter pour déterminer lequel répond le mieux à vos besoins.
 
 ```JSON
 {
@@ -174,13 +174,13 @@ Le format de réponse dépend de l’en-tête Accepter envoyé avec la requête.
 
 ### Ajouter un mixin {#add-a-mixin}
 
-Maintenant que le Membres de la Fidélité a été créé et confirmé, des mixins peuvent être ajoutés.
+Maintenant que le schéma Membres Fidélité a été créé et confirmé, des mixins peuvent y être ajoutés.
 
-Différents mixins standard sont disponibles, selon la classe de  sélectionnée. Chaque mixin contient un `intendedToExtend` champ qui définit la ou les classes avec lesquelles ce mixin est compatible.
+Différents mixins standard sont disponibles, selon la classe de schéma sélectionnée. Chaque mixin contient un `intendedToExtend` champ qui définit la ou les classes avec lesquelles ce mixin est compatible.
 
-Les mixins définissent des concepts, tels que &quot;nom&quot; ou &quot;adresse&quot;, qui peuvent être réutilisés dans n’importe quel qui doit capturer les mêmes informations.
+Les mixins définissent des concepts, tels que &quot;nom&quot; ou &quot;adresse&quot;, qui peuvent être réutilisés dans n’importe quel schéma devant capturer les mêmes informations.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
@@ -188,9 +188,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette demande met à jour (PATCH) le Membres Fidélité pour inclure les champs dans le mixin &quot;-personne-détails&quot;.
+Cette demande met à jour (PATCH) le schéma Membres Fidélité pour inclure les champs dans le mixin &quot;profil-personne-détails&quot;.
 
-En ajoutant le mixin &quot;-personne-détails&quot;, le Membres de fidélité capture maintenant les informations sur les membres de la  de fidélité, comme leur prénom, leur nom et leur anniversaire.
+En ajoutant le mixin &quot;détails profil-personne&quot;, le schéma Membres Fidélité capture maintenant les informations sur les membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
 
 ```SHELL
 curl -X PATCH \
@@ -207,7 +207,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche le nouveau mixin dans le `meta:extends` tableau et contient un `$ref` au mixin dans l’attribut `allOf` .
+La réponse affiche le mixin nouvellement ajouté dans la `meta:extends` baie et contient un `$ref` au mixin dans l&#39; `allOf` attribut.
 
 ```JSON
 {
@@ -251,16 +251,16 @@ La réponse affiche le nouveau mixin dans le `meta:extends` tableau et contient 
 
 ### Ajouter un autre mixin
 
-Vous pouvez désormais ajouter un autre mixin standard en répétant les étapes à l’aide d’un autre mixin.
+Vous pouvez maintenant ajouter un autre mixin standard en répétant les étapes à l’aide d’un autre mixin.
 
->[!TIP] Il vaut la peine de consulter tous les mixins disponibles pour vous familiariser avec les champs inclus dans chacun. Vous pouvez (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des &quot;global&quot; et &quot;locataire&quot;, en ne renvoyant que les mixins dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe XDM Individuel , de sorte que le XDM Individuel  `$id` est utilisé :
+>[!TIP] Il vaut la peine de passer en revue tous les mixins disponibles pour vous familiariser avec les champs inclus dans chacun d&#39;eux. Vous pouvez liste (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;locataire&quot;, en renvoyant uniquement les mixins dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe de Profil individuel XDM, de sorte que le Profil individuel XDM `$id` est utilisé :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
@@ -268,7 +268,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette demande met à jour (PATCH) le Membres fidélité  d’inclure les champs dans le mixin &quot;-détails--personnels&quot;, en ajoutant les champs &quot;adresse de domicile&quot;, &quot;adresse électronique&quot; et &quot;téléphone d’accueil&quot; à la .
+Cette demande met à jour (PATCH) le schéma Membres Fidélité pour inclure les champs dans le mixin &quot;profil-détails-personnels&quot;, ajoutant les champs &quot;adresse de domicile&quot;, &quot;adresse électronique&quot; et &quot;téléphone d&#39;accueil&quot; au schéma.
 
 ```SHELL
 curl -X PATCH \
@@ -285,9 +285,9 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche le nouveau mixin dans le `meta:extends` tableau et contient un `$ref` au mixin dans l’attribut `allOf` .
+La réponse affiche le mixin nouvellement ajouté dans la `meta:extends` baie et contient un `$ref` au mixin dans l&#39; `allOf` attribut.
 
-Le  Membres de fidélité doit désormais contenir trois `$ref` valeurs dans le `allOf` tableau : &quot;&quot;, &quot;détails de la personne-&quot; et &quot;détails de la personne--&quot;, comme illustré ci-dessous.
+Le schéma Membres de fidélité doit maintenant contenir trois `$ref` valeurs dans la `allOf` baie : &quot;profil&quot;, &quot;profil-personne-details&quot; et &quot;profil-personne-details&quot;, comme illustré ci-dessous.
 
 ```JSON
 {
@@ -333,17 +333,17 @@ Le  Membres de fidélité doit désormais contenir trois `$ref` valeurs dans le 
 }
 ```
 
-### Définir un nouveau mixage
+### Définir un nouveau mixin
 
-Le des membres de fidélité doit capturer des informations propres au de fidélité. Ces informations ne sont incluses dans aucun des mixins standard.
+Le schéma Membres de fidélité doit capturer des informations propres au programme de fidélité. Ces informations ne sont incluses dans aucun des mixins standard.
 
-Le Registre des  tient compte de cela en vous permettant de définir vos propres mixins dans le locataire . Ces mixins sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
+Le Registre des Schémas en tient compte en vous permettant de définir vos propres mixins dans le conteneur locataire. Ces mixins sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
 
-Pour créer (POST) un nouveau mixin, votre requête doit inclure un `meta:intendedToExtend` champ contenant les `$id` classes de base avec lesquelles le mixin est compatible, ainsi que les propriétés que le mixin va inclure.
+Pour créer (POST) un nouveau mixin, votre demande doit inclure un `meta:intendedToExtend` champ contenant les `$id` classes de base avec lesquelles le mixin est compatible, ainsi que les propriétés que le mixin va inclure.
 
 Toutes les propriétés personnalisées doivent être imbriquées sous votre `TENANT_ID` afin d’éviter les collisions avec d’autres mixins ou champs.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/mixins
@@ -351,7 +351,7 @@ POST /tenant/mixins
 
 **Requête**
 
-Cette requête crée un nouveau mixin qui comporte un objet &quot;fidélité&quot; contenant quatre champs  spécifiques au de fidélité : &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; et &quot;membersSince&quot;.
+Cette demande crée un nouveau mixin qui comporte un objet &quot;loyalty&quot; contenant quatre champs spécifiques au programme de fidélité : &quot;loyaltyId&quot;, &quot;loyaltyLevel&quot;, &quot;loyaltyPoints&quot; et &quot;MemberSince&quot;.
 
 ```SHELL
 curl -X POST\
@@ -412,7 +412,7 @@ curl -X POST\
 
 **Réponse**
 
-Une requête réussie renvoie le statut de réponse HTTP 201 (Créé) avec un corps de réponse contenant les détails du nouveau mixin, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont attribuées par le Registre des  du.
+Une requête réussie renvoie HTTP Response Status 201 (Créé) avec un corps de réponse contenant les détails du mixin nouvellement créé, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
 
 ```JSON
 {
@@ -489,11 +489,11 @@ Une requête réussie renvoie le statut de réponse HTTP 201 (Créé) avec un co
 }
 ```
 
-### Ajouter le mixage personnalisé au 
+### Ajouter de mixin personnalisé au schéma
 
-Vous pouvez maintenant suivre les mêmes étapes pour [ajouter un mixin](#add-a-mixin) standard afin d’ajouter ce nouveau mixin à votre .
+Vous pouvez maintenant suivre les mêmes étapes pour [ajouter un mixin](#add-a-mixin) standard afin d’ajouter ce nouveau mixin à votre schéma.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
@@ -501,7 +501,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Requête**
 
-Cette demande met à jour (PATCH) le Membres Fidélité afin d’inclure les champs dans le nouveau mélange &quot;Détails du membre Fidélité&quot;.
+Cette demande met à jour (PATCH) le schéma Membres Fidélité afin d&#39;inclure les champs dans le nouveau mixin &quot;Détails Membres Fidélité&quot;.
 
 ```SHELL
 curl -X PATCH \
@@ -518,7 +518,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche maintenant le mixin nouvellement ajouté dans la `meta:extends` baie et contient un `$ref` au mixin dans l’ `allOf` attribut.
+Vous pouvez voir que le mixin a été ajouté avec succès car la réponse affiche maintenant le mixin nouvellement ajouté dans la `meta:extends` baie et contient un `$ref` au mixin dans l&#39; `allOf` attribut.
 
 ```JSON
 {
@@ -568,11 +568,11 @@ Vous pouvez constater que le mixin a bien été ajouté, car la réponse affiche
 }
 ```
 
-###  le actuel 
+### Vue du schéma actuel
 
-Vous pouvez maintenant effectuer une requête GET pour  la  actuelle du et voir comment les mixins ajoutés ont contribué à la structure globale de la .
+Vous pouvez maintenant effectuer une demande GET pour vue du schéma actuel et voir comment les mixins ajoutés ont contribué à la structure globale du schéma.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /tenant/schemas/{schema meta:altId or URL encoded $id URI}
@@ -592,9 +592,9 @@ curl -X GET \
 
 **Réponse**
 
-En utilisant l’en-tête `application/vnd.adobe.xed-full+json; version=1` Accepter, vous pouvez voir le  complet montrant toutes les propriétés. Ces propriétés sont les champs fournis par la classe et les mixins qui ont été utilisés pour composer le  du. Dans cet exemple de réponse, les attributs de propriété individuels ont été réduits pour l’espace. Vous pouvez le  complet du, y compris toutes les propriétés et leurs attributs, dans l’ [annexe](#appendix) à la fin de cette .
+En utilisant l’en-tête `application/vnd.adobe.xed-full+json; version=1` Accepter, vous pouvez voir le schéma complet qui affiche toutes les propriétés. Ces propriétés sont les champs fournis par la classe et les mixins qui ont été utilisés pour composer le schéma. Dans cet exemple de réponse, les attributs de propriété individuels ont été minimisés pour l’espace. Vous pouvez vue le schéma complet, y compris toutes les propriétés et leurs attributs, dans l’ [annexe](#appendix) à la fin de ce document.
 
-Sous `"properties"`cette page, vous pouvez voir le  de `_{TENANT_ID}` créé lors de l’ajout du mixin personnalisé. Au sein de ce   se trouve l’objet &quot;loyalty&quot; et les champs définis lors de la création du mixin.
+Sous `"properties"`, vous pouvez voir l’ `_{TENANT_ID}` espace de nommage créé lors de l’ajout du mixin personnalisé. Dans cet espace de nommage se trouvent l’objet &quot;loyalty&quot; et les champs définis lors de la création du mixin.
 
 ```JSON
 {
@@ -684,13 +684,13 @@ Sous `"properties"`cette page, vous pouvez voir le  de `_{TENANT_ID}` créé lor
 
 ### Création d’un type de données
 
-Le mixage Fidélité que vous avez créé contient des propriétés de fidélité spécifiques qui peuvent être utiles dans d’autres  de. Par exemple, les données peuvent être assimilées dans le cadre d’un d’expériences ou utilisées par un  qui implémente une autre classe. Dans ce cas, il est logique d’enregistrer la hiérarchie d’objets en tant que type de données afin de faciliter la réutilisation de la définition ailleurs.
+Le mixin Fidélité que vous avez créé contient des propriétés de fidélité spécifiques qui peuvent s’avérer utiles dans d’autres schémas. Par exemple, les données peuvent être ingérées dans le cadre d’un événement d’expérience ou utilisées par un schéma qui implémente une autre classe. Dans ce cas, il est logique d’enregistrer la hiérarchie d’objets en tant que type de données afin de faciliter la réutilisation de la définition ailleurs.
 
 Les types de données vous permettent de définir une hiérarchie d’objets une seule fois et d’y faire référence dans un champ comme vous le feriez pour tout autre type scalaire.
 
-En d’autres termes, les types de données permettent l’utilisation cohérente de structures à champs multiples, avec plus de souplesse que les mixins, car ils peuvent être inclus n’importe où dans un  en les ajoutant comme &quot;type&quot; d’un champ.
+En d’autres termes, les types de données permettent l’utilisation cohérente de structures à champs multiples, avec plus de flexibilité que les mixins, car ils peuvent être inclus n’importe où dans un schéma en les ajoutant comme &quot;type&quot; d’un champ.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/datatypes
@@ -698,7 +698,7 @@ POST /tenant/datatypes
 
 **Requête**
 
-La définition d’un type de données ne nécessite pas de champs `meta:extends` ou `meta:intendedToExtend` , pas plus que les champs ne doivent être imbriqués pour éviter les collisions.
+La définition d’un type de données ne nécessite pas de champs `meta:extends` ou `meta:intendedToExtend` de champs, et les champs ne doivent pas non plus être imbriqués pour éviter les collisions.
 
 ```SHELL
 curl -X POST \
@@ -749,7 +749,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie le statut de réponse HTTP 201 (Créé) avec un corps de réponse contenant les détails du type de données nouvellement créé, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont attribuées par le Registre des  du.
+Une requête réussie renvoie HTTP Response Status 201 (Créé) avec un corps de réponse contenant les détails du type de données nouvellement créé, y compris le `$id`, `meta:altIt`et `version`. Ces valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
 
 ```JSON
 {
@@ -811,13 +811,13 @@ Une requête réussie renvoie le statut de réponse HTTP 201 (Créé) avec un co
 }
 ```
 
-Vous pouvez effectuer une requête GET (recherche) à l’aide de l’ `$id` URI codée URL afin de directement le nouveau type de données. Veillez à inclure le paramètre `version` dans l’en-tête Accepter pour une demande de recherche.
+Vous pouvez exécuter une requête de recherche (GET) à l’aide de l’ `$id` URI codée URL pour vue directement le nouveau type de données. Veillez à inclure le `version` paramètre dans l’en-tête Accepter pour une demande de recherche.
 
-### Utiliser le type de données dans le 
+### Utiliser le type de données dans le schéma
 
-Maintenant que le type de données Détails de fidélité a été créé, vous pouvez mettre à jour (PATCH) le champ &quot;fidélité&quot; dans le mixin que vous avez créé pour référencer le type de données à la place des champs qui y étaient précédemment.
+Maintenant que le type de données Détails de fidélité a été créé, vous pouvez mettre à jour (PATCH) le champ &quot;fidélité&quot; dans le mixin que vous avez créé pour référencer le type de données à la place des champs qui existaient auparavant.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
@@ -903,7 +903,7 @@ La réponse inclut désormais une référence (`$ref`) au type de données dans 
 }
 ```
 
-L’exécution d’une requête GET pour rechercher le présente désormais la référence au type de données sous &quot;properties/_{TENANT_ID}&quot;, comme indiqué ici :
+L’exécution d’une requête GET pour rechercher le schéma montre maintenant la référence au type de données sous &quot;properties/_{TENANT_ID}&quot;, comme indiqué ici :
 
 ```JSON
 "_{TENANT_ID}": {
@@ -947,19 +947,19 @@ L’exécution d’une requête GET pour rechercher le présente désormais la r
 }
 ```
 
-### Définition d’un descripteur d’identité
+### Définir un descripteur d&#39;identité
 
-Les  sont utilisées pour l’assimilation de données dans Experience Platform. Ces données sont en fin de compte utilisées dans plusieurs services pour créer un seul  unifié d’un individu. Pour faciliter ce processus, les champs clés peuvent être marqués comme &quot;Identité&quot; et, lors de l’assimilation des données, les données contenues dans ces champs sont insérées dans le &quot;Graphique d’identité&quot; de cette personne. Les données du graphique peuvent ensuite être accessibles par l’utilisateur en temps [réel](../../profile/home.md) et d’autres services Experience Platform pour fournir un assemblé de chaque client.
+Les Schémas sont utilisés pour ingérer des données dans la plateforme d’expérience. Ces données sont en fin de compte utilisées sur plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être marqués comme &quot;Identité&quot; et, lors de l’assimilation des données, les données de ces champs sont insérées dans le &quot;Graphique d’identité&quot; de cette personne. Les données graphiques peuvent ensuite être consultées par le Profil [client en temps](../../profile/home.md) réel et d’autres services Experience Platform afin de fournir une vue raccordée à chaque client.
 
-Les champs généralement identifiés comme &quot;Identité&quot; sont les suivants : adresse électronique, numéro de téléphone, ID [Experience Cloud (ECID)](https://marketing.adobe.com/resources/help/en_US/mcvid/), ID CRM ou autres champs d’ID uniques.
+Les champs généralement identifiés comme &quot;Identité&quot; sont les suivants : adresse électronique, numéro de téléphone, identifiant [Experience Cloud (ECID)](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), identifiant CRM ou autres champs d’ID uniques.
 
-Tenez compte de tous les identifiants uniques propres à votre organisation, car il peut s’agir de bons champs d’identité.
+Pensez à tous les identifiants uniques propres à votre organisation, car il peut s’agir également de champs d’identité appropriés.
 
 Les descripteurs d’identité signalent que la &quot;sourceProperty&quot; de la &quot;sourceSchema&quot; est un identifiant unique qui doit être considéré comme une &quot;Identity&quot;.
 
-Pour plus d&#39;informations sur l&#39;utilisation des descripteurs, consultez le [guide](../api/getting-started.md)du développeur du Registre des.
+Pour plus d&#39;informations sur l&#39;utilisation des descripteurs, consultez le guide [de développement du registre des](../api/getting-started.md)Schémas.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/descriptors
@@ -967,7 +967,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité sur le champ &quot;loyaltyId&quot;. Cela indique à la plateforme d’expérience d’utiliser l’identifiant unique du membre  fidélité (dans ce cas, l’adresse électronique du membre) pour rassembler les informations sur l’individu.
+La requête suivante définit un descripteur d’identité sur le champ &quot;loyaltyId&quot;. Cela indique à la plateforme d’expérience d’utiliser l’identifiant unique du membre du programme de fidélité (dans ce cas, l’adresse électronique du membre) pour faciliter la collecte d’informations sur l’individu.
 
 ```SHELL
 curl -X POST \
@@ -988,11 +988,11 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] Vous pouvez des valeurs &quot;xdm:&quot; ou en créer de nouvelles, à l’aide de l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identity Service. La valeur de &quot;xdm:property&quot; peut être &quot;xdm:code&quot; ou &quot;xdm:id&quot;, selon le &quot;xdm:&quot; utilisé.
+>[!NOTE] Vous pouvez liste les valeurs &quot;xdm:espace de nommage&quot; disponibles ou en créer de nouvelles, à l’aide de l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identity Service. La valeur de &quot;xdm:property&quot; peut être &quot;xdm:code&quot; ou &quot;xdm:id&quot;, selon le &quot;xdm:espace de nommage&quot; utilisé.
 
 **Réponse**
 
-Une réponse réussie renvoie HTTP Status 201 (Créé) avec un corps de réponse contenant les détails du nouveau descripteur, y compris son `@id`corps. Il `@id` s’agit d’un champ en lecture seule attribué par le Registre des  du et utilisé pour référencer le descripteur dans l’API.
+Une réponse réussie renvoie HTTP Status 201 (Créé) avec un corps de réponse contenant les détails du descripteur nouvellement créé, y compris son `@id`caractère. Il `@id` s’agit d’un champ en lecture seule attribué par le Registre du Schéma et utilisé pour référencer le descripteur dans l’API.
 
 ```JSON
 {
@@ -1008,17 +1008,17 @@ Une réponse réussie renvoie HTTP Status 201 (Créé) avec un corps de réponse
 }
 ```
 
-## Activation des  pour une utilisation dans le client en temps réel 
+## Activer le schéma pour une utilisation dans le Profil client en temps réel
 
-En ajoutant la balise &quot; &quot; à l’ `meta:immutableTags` attribut, vous pouvez activer l’Membres de fidélité pour l’utilisation par le du client en temps réel.
+En ajoutant la balise &quot;union&quot; à l’ `meta:immutableTags` attribut, vous pouvez activer le schéma Membres de fidélité à utiliser par le Profil client en temps réel.
 
-Pour plus d&#39;informations sur l&#39;utilisation de  , reportez-vous à la section sur les [](../api/unions.md) dans le guide du développeur du registre des.
+Pour plus d&#39;informations sur l&#39;utilisation des vues d&#39;union, consultez la section sur les [unions](../api/unions.md) dans le guide de développement du registre des Schémas.
 
-### Ajouter balise &quot;&quot;
+### Balise Ajouter &quot;union&quot;
 
-Pour qu’un soit inclus dans le `meta:immutableTags` de l’ fusionné, la balise &quot;&quot; doit être ajoutée à l’attribut de l’. Pour ce faire, vous devez effectuer une demande PATCH pour mettre à jour le  de et ajouter le `meta:immutableTags` tableau avec la valeur &quot; &quot;.
+Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la balise &quot;union&quot; doit être ajoutée à l’ `meta:immutableTags` attribut du schéma. Pour ce faire, PATCH demande de mettre à jour le schéma et d&#39;ajouter le `meta:immutableTags` tableau avec la valeur &quot;union&quot;.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/schemas/{meta:altId or the url encoded $id URI}
@@ -1041,7 +1041,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse indique que l’opération a été effectuée correctement et que le  de contient désormais un attribut de niveau supérieur `meta:immutableTags`, qui est un tableau contenant la valeur &quot; &quot;.
+La réponse montre que l&#39;opération a bien été exécutée et le schéma contient désormais un attribut de niveau supérieur `meta:immutableTags`, qui est un tableau contenant la valeur &quot;union&quot;.
 
 ```JSON
 {
@@ -1094,13 +1094,13 @@ La réponse indique que l’opération a été effectuée correctement et que le
 }
 ```
 
-###    dans un 
+### schémas de Liste dans une union
 
-Vous avez maintenant ajouté avec succès votre  à l’ de XDM Individuel  le. Pour voir un  de tous les  qui font partie du mêmede , vous pouvez exécuter une requête GET à l’aide des paramètres de l’pour filtrer la réponse.
+Vous avez maintenant ajouté votre schéma à l&#39;union de Profil XDM. Pour afficher une liste de tous les schémas qui font partie de la même union, vous pouvez exécuter une requête GET à l’aide des paramètres de requête pour filtrer la réponse.
 
-En utilisant le paramètre `property` , vous pouvez spécifier que seuls les  contenant un `meta:immutableTags` champ `meta:class` égal à la `$id` classe de  XDM individuels sont renvoyés.
+En utilisant le paramètre `property` requête, vous pouvez spécifier que seuls les schémas contenant un `meta:immutableTags` champ `meta:class` `$id` égal à la classe de Profil XDM individuel sont renvoyés.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLASS_ID}
@@ -1108,7 +1108,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Requête**
 
-L’exemple de requête ci-dessous renvoie tous les qui font partie du XDM Individuel  le.
+L&#39;exemple de requête ci-dessous renvoie tous les schémas qui font partie de l&#39;union de Profil XDM.
 
 ```SHELL
 curl -X GET \
@@ -1122,7 +1122,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse est un filtré de  de, contenant uniquement ceux qui répondent aux deux exigences. N’oubliez pas que lors de l’utilisation de plusieurs paramètres de , une relation ET est supposée. Le format de la réponse du  dépend de l’en-tête Accepter envoyé dans la requête.
+La réponse est une liste filtrée de schémas, contenant uniquement ceux qui satisfont aux deux exigences. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est supposée. Le format de la réponse de la liste dépend de l’en-tête Accepter envoyé dans la demande.
 
 ```JSON
 {
@@ -1162,23 +1162,23 @@ La réponse est un filtré de  de, contenant uniquement ceux qui répondent aux 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à composer un  à l’aide de mixins standard et d’un mixin que vous avez défini. Vous pouvez désormais utiliser ce pour créer un jeu de données et assimiler des données d’enregistrement dans Adobe Experience Platform.
+En suivant ce didacticiel, vous avez réussi à composer un schéma à l’aide de mixins standard et d’un mixin que vous avez défini. Vous pouvez désormais utiliser ce schéma pour créer un jeu de données et assimiler des données d’enregistrement dans Adobe Experience Platform.
 
-Le  des membres fidèles complet, tel qu&#39;il a été créé tout au long de ce didacticiel, est disponible dans l&#39;annexe qui suit. En regardant le  du, vous pouvez voir comment les mixins contribuent à la structure globale et quels champs sont disponibles pour l’assimilation de données.
+Le schéma des membres fidèles complet, tel qu&#39;il a été créé tout au long de ce tutoriel, est disponible en annexe qui suit. En regardant le schéma, vous pouvez voir comment les mixins contribuent à la structure globale et quels champs sont disponibles pour l&#39;assimilation de données.
 
-Une fois que vous avez créé plusieurs  de, vous pouvez définir des relations entre eux à l’aide de descripteurs de relation. Pour plus d’informations, consultez le didacticiel pour [définir une relation entre deux](relationship-api.md) . Pour obtenir des exemples détaillés sur la manière d’effectuer toutes les opérations (GET, POST, PUT, PATCH et DELETE) dans le registre, reportez-vous au guide [du développeur du registre](../api/getting-started.md) lorsque vous travaillez avec l’API.
+Une fois que vous avez créé plusieurs schémas, vous pouvez définir des relations entre eux à l’aide de descripteurs de relation. Pour plus d&#39;informations, consultez le didacticiel pour [définir une relation entre deux schémas](relationship-api.md) . Pour obtenir des exemples détaillés sur la façon d&#39;effectuer toutes les opérations (GET, POST, PUT, PATCH et DELETE) dans le registre, reportez-vous au guide [du développeur du registre de](../api/getting-started.md) Schéma lorsque vous travaillez avec l&#39;API.
 
 ## Annexe {#appendix}
 
 Les informations suivantes complètent le didacticiel sur l’API.
 
-## Membres de fidélité complets {#complete-schema}
+## schéma Membres de fidélité complet {#complete-schema}
 
-Dans ce didacticiel, un  est composé pour décrire les membres d’un de fidélité au détail.
+Dans ce didacticiel, un schéma est composé pour décrire les membres d’un programme de fidélité au détail.
 
-Le  implémente la classe XDM Individuel  et combine plusieurs mixins ; l’ajout d’informations sur les membres de fidélité à l’aide des mixins &quot;Détails de la personne&quot; et &quot;Détails personnels&quot; standard, ainsi que par le biais d’un mixin &quot;Détails de fidélité&quot; défini au cours du didacticiel.
+Le schéma met en oeuvre la classe de Profil XDM Individuel et combine plusieurs mixins ; l’introduction d’informations sur les membres de fidélité à l’aide des mixins &quot;Détails de la personne&quot; et &quot;Détails personnels&quot; standard, ainsi qu’à l’aide d’un mixin &quot;Détails de fidélité&quot; défini dans le didacticiel.
 
-L’exemple suivant montre le  des membres de fidélité terminé au format JSON :
+L’exemple suivant montre le schéma Membres de fidélité terminé au format JSON :
 
 ```JSON
 {
