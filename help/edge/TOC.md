@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
 
 ---
 
@@ -17,12 +17,14 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 * Notions fondamentales {#fundamentals}
    * [Installation du SDK](fundamentals/installing-the-sdk.md)
    * [Exécution des commandes](fundamentals/executing-commands.md)
+   * [Configuration du bord](fundamentals/edge-configuration.md)
    * [Configuration du SDK](fundamentals/configuring-the-sdk.md)
    * [Suivi des événements](fundamentals/tracking-events.md)
    * [Fusion de données d’événement](fundamentals/merging-event-data.md)
    * [Débogage](fundamentals/debugging.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)
    * [Rendu du contenu personnalisé](fundamentals/rendering-personalization-content.md)
+   * [Gestion du scintillement](fundamentals/managing-flicker.md)
    * [Prise en charge du consentement](fundamentals/supporting-consent.md)
    * [Prise en charge des navigateurs intégrés à des applications](fundamentals/supporting-in-app-browsers.md)
 * Éléments à implémenter {#implement}
@@ -31,6 +33,8 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * Analytics {#analytics}
       * [Aperçu des analyses](solution-specific/analytics/analytics-overview.md)
       * [Variables mappées automatiquement](solution-specific/analytics/automatically-mapped-vars.md)
+   * Target {#target}
+      * [Présentation de la Cible](solution-specific/target/target-overview.md)
 * Référence {#ref}
    * [Informations collectées automatiquement](reference/automatic-information.md)
    * [Récupération des informations sur la bibliothèque](reference/retrieving-library-information.md)
