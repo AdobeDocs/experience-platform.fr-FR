@@ -4,7 +4,7 @@ seo-title: 'SDK Web d’Adobe Experience Platform : démarrage rapide avec La
 description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: e23b0ce9c20d5d2d770d1c1261fe08de5743325a
 
 ---
 
@@ -32,14 +32,11 @@ Pour pouvoir envoyer des données à Adobe Experience Platform, vous devez cr�
 - Ajoutez le mixin du SDK Web d’Adobe Experience Platform au schéma créé.
 - [Créez un jeu de données](https://platform.adobe.com/dataset/overview) avec votre schéma à l’emplacement où vous souhaitez que les données se trouvent.
 
-## Demande d’un ID de configuration
+## Création d’un ID de configuration
 
-Vous devez disposer d’un ID de configuration pour utiliser le SDK. L’ID de configuration garantit que vos données sont acheminées au bon endroit. Vous pouvez obtenir un ID de configuration soit auprès de votre consultant, soit auprès de l’Assistance clientèle. Vous devrez fournir les informations suivantes :
+Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) edge au lancement.
 
-- **ID d’organisation :** vous pouvez le trouver en suivant les instructions [ici](https://docs.adobe.com/content/help/fr-FR/core-services/interface/manage-users-and-products/organizations.html).
-- **ID de jeu de données :** il est disponible dans l’interface utilisateur des jeux de données lorsque vous cliquez sur un jeu de données.
-- **ID de schéma :** il est disponible dans l’URL de l’écran de création de schéma.
-- **Nom convivial :** il s’agit du nom convivial qui sera utilisé dans les futures interfaces utilisateur pour cette configuration.
+>Remarque : Votre organisation doit être mise en liste blanche pour la fonction. Veuillez contacter votre CSM pour qu&#39;il soit mis sur la liste pour une éventuelle liste blanche.
 
 ## Installation du SDK dans Launch
 
