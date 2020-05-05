@@ -1,68 +1,59 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Service  sur ordinateur portable Jupyter
+title: Service de Requête sur ordinateur portable Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: d0596dc3c744e192c4d2ad04d6365846a0115371
+source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
 
 ---
 
 
-# Service  sur ordinateur portable Jupyter
+# Service de Requête sur ordinateur portable Jupyter
 
-Adobe Experience Platform vous permet d’utiliser le langage de structuré (SQL) dans Data Science Workspace en intégrant le service de dans JupyterLab en tant que fonctionnalité standard.
+Adobe Experience Platform vous permet d’utiliser le langage de Requête structurée (SQL) dans Data Science Workspace en intégrant Requête Service dans JupyterLab en tant que fonctionnalité standard.
 
-Ce didacticiel présente l’exemple de  SQL suivant pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser les données Adobe Analytics :
-
-- [Accès au service JupyterLab et au service](#access-jupyterlab-and-query-service)
-- [vos données](#query-your-data)
-   - [Nombre de horaire](#hourly-visitor-count)
-   - [Nombre de  de  horaire](#hourly-activity-count)
-   - [Nombre de  par session](#number-of-events-per-visitor-session)
-   - [Pages populaires pour un jour donné](#popular-pages-for-a-given-day)
-   - [Utilisateurs actifs pour une journée donnée](#active-users-for-a-given-day)
-   - [Villes actives par utilisateur  par](#active-cities-by-user-activity)
+Ce didacticiel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser des données Adobe Analytics.
 
 ## Prise en main
 
 Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
 
-- Accès à Adobe Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de poursuivre
+- Accès à Adobe Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer
 
 - Un jeu de données Adobe Analytics
 
-- Une compréhension pratique des concepts clés suivants utilisés dans ce didacticiel :
+- Une compréhension pratique des concepts clés suivants utilisés dans ce tutoriel :
    - [Modèle de données d’expérience (XDM) et système XDM](../../xdm/home.md)
-   - [Service](../../query-service/home.md)
-   - [Syntaxe SQL du service](../../query-service/sql/overview.md)
+   - [Requête Service](../../query-service/home.md)
+   - [Syntaxe SQL Requête Service](../../query-service/sql/overview.md)
    - Adobe Analytics
 
-## Accès au service JupyterLab et au service 
+## Accès à JupyterLab et au service de Requête {#access-jupyterlab-and-query-service}
 
-1. Dans [Experience Platform](https://platform.adobe.com), accédez à **Models** à partir de la colonne de navigation de gauche. Cliquez sur **Ordinateurs portables** dans l’en-tête supérieur pour ouvrir JupyterLab. Laissez un moment à JupyterLab pour charger.
+1. Dans la plate-forme [](https://platform.adobe.com)d’expérience, accédez à **[!UICONTROL Notebooks]** partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
 
-   ![](../images/jupyterlab/query/notebook_ui.png)
+   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Si un nouvel onglet Lanceur ne s’affichait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **Fichier > Nouveau lanceur**.
+   > [!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL File]** puis sélectionnez **[!UICONTROL New Launcher]**.
 
-2. Dans l&#39;onglet Lanceur, cliquez sur l&#39;icône **vierge** dans un Python 3  pour ouvrir un bloc-notes vide.
+2. Dans l&#39;onglet Lanceur, cliquez sur l&#39; **[!UICONTROL Blank]** icône d&#39;un environnement Python 3 pour ouvrir un bloc-notes vide.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3 est actuellement le seul  pris en charge pour le service  dans les portables.
+   > [!NOTE] Python 3 est actuellement le seul environnement pris en charge pour Requête Service dans les portables.
 
-3. Dans le rail de sélection de gauche, cliquez sur l’icône **Données** et  cliquez sur le répertoire **DataSet** pour  tous les jeux de données.
+3. Dans le rail de sélection de gauche, cliquez sur l’ **[!UICONTROL Data]** icône et doublon sur le **[!UICONTROL Datasets]** répertoire pour liste de tous les jeux de données.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un jeu de données Adobe Analytics pour explorer et cliquez avec le bouton droit sur la liste, cliquez sur **données dans le bloc-notes** pour générer des  SQL dans le bloc-notes vide.
+4. Recherchez un jeu de données Adobe Analytics à explorer et cliquez avec le bouton droit sur la liste, cliquez **[!UICONTROL Query Data in Notebook]** pour générer des requêtes SQL dans le bloc-notes vide.
 
-5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de bloc-notes et le service de  de.
+5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de bloc-notes et le service de Requête.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copiez le nom du jeu de données Adobe Analytics du deuxième SQL généré, il sera la valeur après `FROM`.
+6. Copiez le nom du jeu de données Adobe Analytics à partir de la seconde requête SQL générée. Il s’agira de la valeur située après `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -70,7 +61,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. Copiez, collez et exécutez les instructions d’importation suivantes dans une nouvelle cellule. Les instructions suivantes seront utilisées pour visualiser vos données :
+8. Copiez, collez et exécutez les instructions d&#39;importation suivantes dans une nouvelle cellule. Les instructions suivantes seront utilisées pour visualiser vos données :
 
    ```python
    import plotly.plotly as py
@@ -78,7 +69,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    from plotly.offline import iplot
    ```
 
-9. Ensuite, copiez et collez les variables suivantes dans une nouvelle cellule. Modifiez leurs valeurs en fonction de vos besoins, puis exécutez-les.
+9. Ensuite, copiez et collez les variables suivantes dans une nouvelle cellule. Modifiez leurs valeurs selon vos besoins, puis exécutez-les.
 
    ```python
    target_table = "your Adobe Analytics dataset name"
@@ -88,24 +79,24 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    ```
 
    - `target_table` : Nom de votre jeu de données Adobe Analytics.
-   - `target_year` : Année spécifique à partir de laquelle proviennent les données  du.
-   - `target_month` : Mois spécifique d’où vient le .
-   - `target_day` : Jour spécifique d’où proviennent les données  du.
+   - `target_year` : Année spécifique à partir de laquelle proviennent les données de cible.
+   - `target_month` : Mois spécifique d’où provient la cible.
+   - `target_day` : Jour spécifique à partir duquel proviennent les données de la cible.
    >[!NOTE] Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables pour que les modifications soient appliquées.
 
-##  vos données
+## Requête de vos données {#query-your-data}
 
-Entrez les  SQL suivantes dans les cellules d&#39;un bloc-notes. Exécutez un  en cliquant sur sa cellule, puis sur le bouton **Lecture** . Les résultats  ou les journaux d’erreurs du sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de bloc-notes individuelles. Exécutez une requête en cliquant sur sa cellule, puis en cliquant sur le **[!UICONTROL play]** bouton. Les résultats de la requête ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et le service de  peut être rompue. Dans ce cas, redémarrez JupyterLab en cliquant sur le bouton **Power** situé dans le coin supérieur droit.
+Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et Requête Service peut se rompre. Dans ce cas, redémarrez JupyterLab en cliquant sur le **[!UICONTROL Power]** bouton situé dans le coin supérieur droit.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Le noyau du bloc-notes se réinitialisera, mais les cellules resteront, réexécuteront **toutes les** cellules pour continuer là où vous vous êtes arrêté.
+Le noyau du bloc-notes sera réinitialisé mais les cellules resteront, réexécutez **[!UICONTROL all]** les cellules pour continuer là où vous l&#39;aviez laissé.
 
-### Nombre de horaire
+### Nombre de visiteurs horaires {#hourly-visitor-count}
 
-Le suivant renvoie le nombre de horaires pour une date spécifiée :
+La requête suivante renvoie le nombre de visiteurs horaires pour une date spécifiée :
 
 #### Requête
 
@@ -123,9 +114,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Dans le  ci-dessus, le  `_acp_year` dans la `WHERE` clause est défini comme la valeur de `target_year`. Incluez des variables dans le SQL en les contenant entre accolades (`{}`).
+Dans la requête ci-dessus, la cible `_acp_year` de la `WHERE` clause est définie sur la valeur de `target_year`. Incluez des variables dans les requêtes SQL en les contenant entre accolades (`{}`).
 
-La première ligne du  contient la variable facultative `hourly_visitor`. Les résultats  seront stockés dans cette variable sous la forme d’un cadre de données Pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser plus tard les résultats  à l&#39;aide d&#39;un paquet Python souhaité. Exécutez le code Python suivant dans une nouvelle cellule pour générer un graphique à barres :
+La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats de la Requête seront stockés dans cette variable sous la forme d&#39;une base de données Pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l&#39;aide d&#39;un paquet Python souhaité. Exécutez le code Python suivant dans une nouvelle cellule pour générer un graphique à barres :
 
 ```python
 trace = go.Bar(
@@ -144,9 +135,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Nombre de  de  horaire
+### Nombre d&#39;activités horaires {#hourly-activity-count}
 
-Le suivant renvoie le nombre d’actions horaires pour une date spécifiée :
+La requête suivante renvoie le nombre d&#39;actions horaires pour une date spécifiée :
 
 #### Requête <!-- omit in toc -->
 
@@ -165,13 +156,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L&#39;exécution du  ci-dessus stocke les résultats dans `hourly_actions` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour des résultats :
+L&#39;exécution de la requête ci-dessus stockera les résultats dans `hourly_actions` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualisation des résultats :
 
 ```python
 hourly_actions.head()
 ```
 
-Le ci-dessus peut être modifié pour renvoyer le nombre d’actions horaires pour une plage de dates spécifiée à l’aide d’opérateurs logiques dans la clause **WHERE** :
+La requête ci-dessus peut être modifiée afin de renvoyer le nombre d’actions horaires pour une plage de dates spécifiée à l’aide d’opérateurs logiques dans la clause **WHERE** :
 
 #### Requête <!-- omit in toc -->
 
@@ -189,15 +180,15 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L&#39;exécution du modifié stocke les résultats dans `hourly_actions_date_range` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour des résultats :
+L&#39;exécution de la requête modifiée stockera les résultats dans `hourly_actions_date_range` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualisation des résultats :
 
 ```python
 hourly_actions_date_rage.head()
 ```
 
-### Nombre de  par session
+### Nombre de événements par session de visiteur {#number-of-events-per-visitor-session}
 
-Le suivant renvoie le nombre de  par session depour une date spécifiée :
+La requête suivante renvoie le nombre de événements par session de visiteur pour une date spécifiée :
 
 #### Requête <!-- omit in toc -->
 
@@ -215,7 +206,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Exécutez le code Python suivant pour générer un histogramme pour le nombre de par session de visite :
+Exécutez le code Python suivant pour générer un histogramme pour le nombre de événements par session de visite :
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -230,9 +221,9 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Pages populaires pour un jour donné
+### Pages populaires pour un jour donné {#popular-pages-for-a-given-day}
 
-Le suivant renvoie les dix pages les plus populaires pour une date spécifiée :
+La requête suivante renvoie les dix pages les plus populaires pour une date spécifiée :
 
 #### Requête <!-- omit in toc -->
 
@@ -249,9 +240,9 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Utilisateurs actifs pour une journée donnée
+### Utilisateurs actifs pour une journée donnée {#active-users-for-a-given-day}
 
-Le suivant renvoie les dix utilisateurs les plus actifs pour une date spécifiée :
+La requête suivante renvoie les dix utilisateurs les plus actifs pour une date spécifiée :
 
 #### Requête <!-- omit in toc -->
 
@@ -268,9 +259,9 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Villes actives par utilisateur  par 
+### Villes actives par activité utilisateur {#active-cities-by-user-activity}
 
-Le suivant  renvoie les dix villes qui génèrent une majorité d’utilisateurs  des pour une date spécifique :
+La requête suivante renvoie les dix villes qui génèrent la majorité des activités utilisateur pour une date spécifiée :
 
 #### Requête <!-- omit in toc -->
 
@@ -289,4 +280,4 @@ LIMIT  10;
 
 ## Étapes suivantes <!-- omit in toc -->
 
-Ce didacticiel présente quelques exemples d’utilisation de la  de dans les cahiers Jupyter. Suivez le didacticiel [Analyser vos données à l’aide des blocs-notes](./analyze-your-data.md) Jupyter pour voir comment des opérations similaires sont exécutées à l’aide du SDK d’accès aux données.
+Ce didacticiel a montré quelques exemples d’utilisation de Requête Service dans des cahiers Jupyter. Suivez le didacticiel [Analyser vos données à l’aide de Jupyter Notebooks](./analyze-your-data.md) pour voir comment des opérations similaires sont effectuées à l’aide du SDK d’accès aux données.
