@@ -4,54 +4,54 @@ solution: Experience Platform
 title: Téléchargement de scores dans l’API client
 topic: Downloading scores
 translation-type: tm+mt
-source-git-commit: 1cf1e9c814601bdd4c7198463593be78452004dc
+source-git-commit: 7c892d92a50312fb4b733431737b796651689804
 
 ---
 
 
 # Téléchargement de scores dans l’API client
 
-Ce sert de guide pour le téléchargement des scores pour l’IA du client.
+Ce document sert de guide pour le téléchargement de scores pour l’IA du client.
 
 ## Prise en main
 
-Customer AI vous permet de télécharger des scores au format de fichier parquet. Ce didacticiel nécessite que vous ayez lu et terminé la section des scores AI client téléchargée dans le guide de [prise en main](../getting-started.md) .
+Customer AI vous permet de télécharger des partitions au format de fichier parquet. Ce didacticiel nécessite que vous ayez lu et terminé la section Téléchargement des scores d’IA client dans le guide de [prise en main](../getting-started.md) .
 
-De plus, pour accéder aux scores de l’API client, vous devez disposer d’une instance de service avec un état d’exécution réussi. Pour créer une nouvelle instance de service, consultez [Configuration d’une instance](./configure.md)d’API client. Si vous avez récemment créé une instance de service et qu’elle est toujours en cours d’entraînement et de notation, veuillez compter 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores de l’IA du client, vous devez disposer d’une instance de service avec un état d’exécution réussi. Pour créer une instance de service, consultez [Configuration d’une instance](./configure.md)d’API client. Si vous avez récemment créé une instance de service et qu’elle continue à s’entraîner et à marquer des points, veuillez lui accorder 24 heures pour qu’elle se termine.
 
-Actuellement, il existe deux manières de télécharger les scores AI du client :
+Actuellement, il existe deux méthodes pour télécharger les scores d’IA client :
 
-1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si le Client en temps réel n’est pas activé,  en recherchant l’ID [](#dataset-id)de votre jeu de données.
-2. Si  est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de l’API du client, naviguez pour [télécharger un segment configuré avec l’API](#segment)du client.
+1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si le Profil client en temps réel n’est pas activé, début en accédant à la [recherche de votre ID](#dataset-id)de jeu de données.
+2. Si le Profil est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de l’API du client, naviguez pour [télécharger un segment configuré avec l’IA](#segment)du client.
 
 ## Find your dataset ID {#dataset-id}
 
-Dans votre instance de service pour obtenir des informations sur l’IA du client, cliquez sur la liste déroulante Actions *supplémentaires dans le volet supérieur droit, puis sélectionnez* **[!UICONTROL Access scores]**.
+Dans votre instance de service pour obtenir des informations sur l’IA du client, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
 
-![autres actions](../images/insights/more-actions.png)
+![Autres actions](../images/insights/more-actions.png)
 
 Une nouvelle boîte de dialogue s’affiche, contenant un lien vers la documentation des scores de téléchargement et l’ID du jeu de données de votre instance actuelle. Copiez l’ID du jeu de données dans le Presse-papiers et passez à l’étape suivante.
 
-![ID du jeu de données](../images/download-scores/access-scores.png)
+![ID de jeu de données](../images/download-scores/access-scores.png)
 
-## Récupérez votre identifiant de lot {#retrieve-your-batch-id}
+## Récupérer votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant votre ID de jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un ID de lot. Des paramètres  supplémentaires sont utilisés pour cet appel d’API afin de renvoyer un seul lot au lieu d’un de lots appartenant à votre organisation. Pour plus d’informations sur les types de paramètres  de disponibles, consultez le guide sur le [filtrage des données du catalogue à l’aide de paramètres](../../../catalog/api/filter-data.md)de.
+En utilisant l’ID de votre jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données du catalogue à l’aide de paramètres](../../../catalog/api/filter-data.md)de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
-GET /batches?&dataSet={DATASET_ID}&orderBy=desc:created&limit=1
+GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1
 ```
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | ID du jeu de données disponible dans la boîte de dialogue &quot;Accès aux scores&quot;. |
+| `{DATASET_ID}` | ID du jeu de données disponible dans la boîte de dialogue &quot;Accéder aux scores&quot;. |
 
 **Requête**
 
 ```shell
-curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&orderBy=desc:created&limit=1' \
+curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5cd9146b31dae914b75f654f&createdClient=acp_foundation_push&status=success&orderBy=desc:created&limit=1' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -60,49 +60,60 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un objet d’ID de lot de score. In this example, the object is `5e602f67c2f39715a87f46b1`.
-
-L’objet d’ID de lot de score contient un `relatedObjects` tableau. Ce tableau contient deux objets. Le premier objet a la `type` valeur &quot;batch&quot; et contient également un ID. Dans l’exemple de réponse ci-dessous, l’ID de lot est `035e2520-5e69-11ea-b624-51evfeba55d1`. Copiez l’ID de lot à utiliser dans l’appel d’API suivant.
+Une réponse réussie renvoie une charge utile contenant un objet d’identifiant de lot. Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant du lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’ID de lot à utiliser dans l’appel d’API suivant.
 
 ```json
-{   
-    "5e602f67c2f39715a87f46b1": {
-        "imsOrg": "{IMS_ORG}",
+{
+    "01E5QSWCAASFQ054FNBKYV6TIQ": {
+        "status": "success",
+        "tags": {
+            "Tags": [ ... ],
+        },
         "relatedObjects": [
             {
-                "id": "5c01a91863540e14cd3d0432",
-                "type": "dataSet"
-            },
-            {
-                "id": "035e2520-5e69-11ea-b624-51evfeba55d1",
-                "type": "batch"
+                "type": "dataSet",
+                "id": "5cd9146b31dae914b75f654f"
             }
         ],
-        "status": "success",
-        "metrics": {
-            "recordsRead": 46721830,
-            "recordsWritten": 46721830,
-            "avgNumExecutorsPerTask": 33,
-            "startTime": 1583362385336,
-            "inputSizeInKb": 10242034,
-            "endTime": 1583363197517
+        "id": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "externalId": "01E5QSWCAASFQ054FNBKYV6TIQ",
+        "replay": {
+            "predecessors": [
+                "01E5N7EDQQP4JHJ93M7C3WM5SP"
+            ],
+            "reason": "Replacing for 2020-04-09",
+            "predecessorListingType": "IMMEDIATE"
         },
-        "errors": [],
-        "created": 1550791457173,
-        "createdClient": "{CLIENT_CREATED}",
-        "createdUser": "{CREATED_BY}",
-        "updatedUser": "{CREATED_BY}",
-        "updated": 1550792060301,
-        "version": "1.0.116"
+        "inputFormat": {
+            "format": "parquet"
+        },
+        "imsOrg": "412657965Y566A4A0A495D4A@AdobeOrg",
+        "started": 1586715571808,
+        "metrics": {
+            "partitionCount": 1,
+            "outputByteSize": 2380339,
+            "inputFileCount": -1,
+            "inputByteSize": 2381007,
+            "outputRecordCount": 24340,
+            "outputFileCount": 1,
+            "inputRecordCount": 24340
+        },
+        "completed": 1586715582735,
+        "created": 1586715571217,
+        "createdClient": "acp_foundation_push",
+        "createdUser": "sensei_exp_attributionai@AdobeID",
+        "updatedUser": "acp_foundation_dataTracker@AdobeID",
+        "updated": 1586715583582,
+        "version": "1.0.5"
     }
 }
 ```
 
-## Récupérez le prochain appel d’API avec votre ID de lot {#retrieve-the-next-api-call-with-your-batch-id}
+## Récupérez le prochain appel d’API avec votre identifiant de lot. {#retrieve-the-next-api-call-with-your-batch-id}
 
-Une fois que vous avez votre identifiant de lot, vous pouvez effectuer une nouvelle demande GET à `/batches`. La requête renvoie un lien utilisé comme requête d’API suivante.
+Une fois que vous disposez de votre identifiant de lot, vous pouvez faire une nouvelle demande GET à `/batches`. La requête renvoie un lien utilisé comme requête d’API suivante.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET batches/{BATCH_ID}/files
@@ -126,7 +137,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/035e2520-5
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un `_links` objet. Dans l’ `_links` objet se trouve une valeur `href` avec un nouvel appel d’API. Copiez cette valeur pour passer à l’étape suivante.
+Une réponse réussie renvoie une charge utile contenant un `_links` objet. L’ `_links` objet contient un appel `href` d’API dont la valeur est un nouvel appel d’API. Copiez cette valeur pour passer à l’étape suivante.
 
 ```json
 {
@@ -156,7 +167,7 @@ Une réponse réussie renvoie une charge utile contenant un `_links` objet. Dans
 
 En utilisant la `href` valeur obtenue à l’étape précédente comme appel d’API, effectuez une nouvelle demande GET pour récupérer votre répertoire de fichiers.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET files/{DATASETFILE_ID}
@@ -164,7 +175,7 @@ GET files/{DATASETFILE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L’ID dataSetFile est renvoyé dans la `href` valeur de l’étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. Il est également accessible dans le `data` tableau sous le type d’objet `dataSetFileId`. |
+| `{DATASETFILE_ID}` | L&#39;ID dataSetFile est renvoyé dans la `href` valeur de l&#39;étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. Il est également accessible dans le `data` tableau sous le type d&#39;objet `dataSetFileId`. |
 
 **Requête**
 
@@ -178,7 +189,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 **Réponse**
 
-La réponse contient un tableau de données qui peut comporter une entrée unique ou un de fichiers appartenant à ce répertoire. L&#39;exemple ci-dessous contient un  de fichiers et a été condensé pour en faciliter la lecture. Dans ce scénario, vous devez suivre l’URL de chaque fichier pour accéder au fichier.
+La réponse contient un tableau de données qui peut comporter une entrée unique ou une liste de fichiers appartenant à ce répertoire. L&#39;exemple ci-dessous contient une liste de fichiers et a été condensé pour en faciliter la lecture. Dans ce scénario, vous devez suivre l’URL de chaque fichier pour accéder au fichier.
 
 ```json
 {
@@ -223,15 +234,15 @@ La réponse contient un tableau de données qui peut comporter une entrée uniqu
 | `_links.self.href` | URL de demande GET utilisée pour télécharger un fichier dans votre répertoire. |
 
 
-Copiez la `href` valeur de tout objet de fichier dans le `data` tableau, puis passez à l’étape suivante.
+Copiez la `href` valeur de tout objet de fichier dans le `data` tableau, puis passez à l&#39;étape suivante.
 
 ## Télécharger vos données de fichier
 
-Pour télécharger vos données de fichier, faites une requête GET vers la `"href"` valeur que vous avez copiée à l’étape précédente [récupérant vos fichiers](#retrieving-your-files).
+Pour télécharger vos données de fichier, faites une requête GET à la `"href"` valeur que vous avez copiée à l’étape précédente [récupérant vos fichiers](#retrieving-your-files).
 
->[!NOTE] Si vous effectuez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de votre requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
+>[!NOTE] Si vous effectuez cette requête directement en ligne de commande, vous pouvez être invité à ajouter une sortie après les en-têtes de la requête. L&#39;exemple de demande suivant utilise `--output {FILENAME.FILETYPE}`.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET files/{DATASETFILE_ID}?path={FILE_NAME}
@@ -239,7 +250,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L’ID dataSetFile est renvoyé dans la `href` valeur à partir d’une étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. |
+| `{DATASETFILE_ID}` | L&#39;ID dataSetFile est renvoyé dans la `href` valeur d&#39;une étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. |
 | `{FILE_NAME}` | Nom du fichier. |
 
 **Requête**
@@ -263,17 +274,17 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ## Téléchargement d’un segment configuré avec l’API du client {#segment}
 
-Vous pouvez également télécharger vos données de score en exportant votre   vers un jeu de données. Une fois la tâche de segmentation terminée (la valeur de l’ `status` attribut est &quot;SUCCEEDED&quot;), vous pouvez exporter votre  dans un jeu de données où vous pouvez y accéder et y donner suite. Pour en savoir plus sur la segmentation, consultez la présentation [de la](../../../segmentation/home.md)segmentation.
+Une autre façon de télécharger vos données de score consiste à exporter votre audience dans un jeu de données. Une fois la tâche de segmentation terminée (la valeur de l’ `status` attribut est &quot;SUCCEEDED&quot;), vous pouvez exporter votre audience dans un jeu de données où elle est accessible et où vous pouvez agir. Pour en savoir plus sur la segmentation, consultez la présentation [de la](../../../segmentation/home.md)segmentation.
 
->[!IMPORTANT] Afin d’utiliser cette méthode d’exportation, les  du client en temps réel doivent être activées pour le jeu de données.
+>[!IMPORTANT] Pour utiliser cette méthode d’exportation, le Profil client en temps réel doit être activé pour le jeu de données.
 
-La section [Exporter un segment](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation des segments décrit les étapes requises pour exporter un jeu de données  de . Le guide décrit et fournit des exemples des éléments suivants :
+La section [Exporter un segment](../../../segmentation/tutorials/evaluate-a-segment.md) du guide d’évaluation des segments décrit les étapes requises pour exporter un jeu de données d’audience. Le guide décrit et fournit des exemples des éléments suivants :
 
-- **Créez un jeu de données  de :** Créez le jeu de données pour contenir  membres .
-- **Générez    dans le jeu de données :** Renseigner le jeu de données avec des  individuels XDM en fonction des résultats d’une tâche de segment.
-- **Surveiller la progression de l’exportation :** Vérifiez la progression actuelle du processus d’exportation.
-- **Lire  données  du :** Récupérez le XDM individuel résultant représentant les membres de votre  de.
+- **Créez un jeu de données de cible :** Créez le jeu de données pour contenir les membres d&#39;audience.
+- **Générer des profils d’audience dans le jeu de données :** Remplissez le jeu de données avec des Profils individuels XDM en fonction des résultats d’une tâche de segment.
+- **Suivre la progression de l&#39;exportation :** Vérifier la progression actuelle du processus d&#39;exportation.
+- **Lire les données d&#39;audience :** Récupérez les Profils individuels XDM résultants représentant les membres de votre audience.
 
 ## Étapes suivantes
 
-Ce décrit les étapes requises pour télécharger les scores AI du client. Vous pouvez maintenant continuer à parcourir les autres services [et guides](../../home.md) intelligents proposés.
+Ce document décrit les étapes requises pour télécharger les scores d’IA client. Vous pouvez maintenant continuer à parcourir les autres services [et guides](../../home.md) intelligents qui sont proposés.
