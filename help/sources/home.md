@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des connecteurs de source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8ee88b27c79610827ff2627999e303b5fc43e1c6
+source-git-commit: b58b933fce9d1abe658a908ec07f390e4991c5c6
 
 ---
 
@@ -65,6 +65,7 @@ Experience Platform prend en charge l’assimilation de données à partir d’u
 Experience Platform prend en charge l’assimilation de données à partir d’une base de données tierce. Pour plus d’informations sur des connecteurs source spécifiques, reportez-vous aux documents connexes suivants :
 
 - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
+- [Connecteur Apache Cassandra](connectors/databases/cassandra.md)
 - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
 - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
 - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
