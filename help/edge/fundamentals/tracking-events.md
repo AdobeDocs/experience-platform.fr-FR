@@ -4,7 +4,7 @@ seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 45ee1f79ac5953b7c407083b4352b2c751e8aec9
+source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
 
 ---
 
@@ -81,35 +81,6 @@ alloy("event", {
 });
 ```
 
-### Commencement d’une vue
-
-Lorsqu’une vue a commencé, il est important d’en informer le SDK en définissant `viewStart` sur `true` dans la commande `event`. Cela indique, entre autres, que le SDK doit récupérer du contenu personnalisé et en effectuer le rendu. Même si vous n’utilisez pas la personnalisation actuellement, cette procédure simplifie considérablement son activation ultérieure ou celle d’autres fonctionnalités, car vous n’aurez pas à modifier le code de la page. En outre, le suivi des vues est utile lors de la consultation des rapports d’analyse une fois les données collectées.
-
-La définition d’une vue peut dépendre du contexte.
-
-* Sur un site web ordinaire, chaque page web est généralement considérée comme une vue unique. Dans ce cas, un événement avec `viewStart` défini sur `true` doit être exécuté le plus tôt possible en haut de la page.
-* Dans une application monopage \(SPA\), une vue est moins définie. Cela signifie généralement que l’utilisateur a navigué dans l’application et que la plupart du contenu a changé. Pour ceux qui maîtrisent les bases techniques des applications monopage, c’est généralement le cas lorsque l’application charge une nouvelle route. Chaque fois qu’un utilisateur passe à une nouvelle vue, quelle que soit la définition d’une _vue_, un événement avec `viewStart` défini sur `true` doit être exécuté.
-
-L’événement avec `viewStart` défini sur `true` constitue le mécanisme principal pour envoyer des données à Adobe Experience Cloud et pour demander du contenu à cette solution. Voici comment commencer une vue :
-
-```javascript
-alloy("event", {
-  "viewStart": true,
-  "xdm": {
-    "commerce": {
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3",
-        "purchaseOrderNumber": "VAU3123",
-        "currencyCode": "USD",
-        "priceTotal": 999.98
-      }
-    }
-  }
-});
-```
-
-Une fois les données envoyées, le serveur répond par du contenu personnalisé, entre autres. Ce contenu personnalisé est automatiquement rendu dans votre vue. Les gestionnaires de liens sont également automatiquement associés au nouveau contenu de la vue.
-
 ## Utilisation de l’API sendBeacon
 
 Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et n’interrompt pas la navigation dans la page. Pour indiquer au SDK Web d’Adobe Experience Platform d’utiliser `sendBeacon`, ajoutez l’option `"documentUnloading": true` à la commande d’événement.  Voici un exemple :
@@ -138,7 +109,7 @@ Si vous souhaitez gérer une réponse d’un événement, vous pouvez être aver
 
 ```javascript
 alloy("event", {
-  "viewStart": true,
+  "renderDecisions": true,
   "xdm": {
     "commerce": {
       "order": {
@@ -149,7 +120,7 @@ alloy("event", {
       }
     }
   }
-}).then(function() {
+}).then(function(results) {
     // Tracking the event succeeded.
   })
   .catch(function(error) {
