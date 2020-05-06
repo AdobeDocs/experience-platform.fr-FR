@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
+source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+workflow-type: tm+mt
+source-wordcount: '89'
+ht-degree: 73%
 
 ---
 
@@ -27,6 +30,7 @@ source-git-commit: db4bfec04a1116ce2b6a0be7ca0e8cb2f9639ad6
    * [Gestion du scintillement](fundamentals/managing-flicker.md)
    * [Prise en charge du consentement](fundamentals/supporting-consent.md)
    * [Prise en charge des navigateurs intégrés à des applications](fundamentals/supporting-in-app-browsers.md)
+   * [Récupération de l’ID Experience Cloud](fundamentals/retrieving-experience-cloud-id.md)
 * Éléments à implémenter {#implement}
    * [Produits](what-to-implement/commerce.md)
 * Considérations spécifiques aux solutions {#solutions}
