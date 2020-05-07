@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '1746'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Analyse de vos données à l&#39;aide de portables
 
-Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, conçus dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
+Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
 
 Les concepts suivants sont introduits :
 
@@ -54,7 +54,7 @@ La recette Ventes au détail est un exemple autonome qui utilise le même jeu de
 
 Nous allons passer en revue l’accès aux données en interne à partir d’Adobe Experience Platform et aux données en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la bibliothèque de pandas Python.
 
-#### Données externes {#external-data}
+#### Données externes
 
 A l&#39;ouverture du bloc-notes Ventes au détail, recherchez l&#39;en-tête &quot;Charger les données&quot;. Le code Python suivant utilise la structure `DataFrame` de données des pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur Github dans le DataFrame :
 
@@ -72,7 +72,7 @@ Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous p
 
 Nous allons maintenant passer en revue l’accès aux données de la plateforme d’expérience.
 
-#### Par ID de jeu de données
+##### Par ID de jeu de données
 
 Pour cette section, nous utilisons le jeu de données Ventes au détail qui est le même jeu de données que celui utilisé dans l&#39;exemple de carnet de ventes au détail.
 
@@ -148,7 +148,7 @@ En examinant les valeurs minimale et maximale pour `store`, nous voyons qu&#39;i
 
 Cela veut dire que 22 magasins sont de `storeType``A`, 17 `storeType``B`, et 6 `storeType``C`.
 
-### Visualisation des données
+#### Visualisation des données
 
 Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulons compléter cela par des visualisations pour rendre les choses plus claires et plus faciles à identifier les schémas. Les graphiques sont également utiles pour transmettre des résultats à une audience. Voici quelques bibliothèques Python utiles pour la visualisation :
 - [Matplotlib](https://matplotlib.org/)
@@ -167,7 +167,7 @@ Dans cette section, nous examinerons rapidement certains avantages liés à l’
 [ggplot](https://ggplot2.tidyverse.org/) est un paquet également construit sur matplotlib. Cependant, la principale différence est que l&#39;outil est un port de ggplot2 pour R. Comme pour seaborn, l&#39;objectif est d&#39;améliorer sur matplotlib. Les utilisateurs qui connaissent ggplot2 for R doivent prendre en compte cette bibliothèque.
 
 
-### Graphiques univariés
+##### Graphiques univariés
 
 Les graphiques univariés sont des tracés d’une variable individuelle. Un graphique unifié commun est utilisé pour visualiser vos données est la boîte et le tracé de muraille.
 
@@ -177,7 +177,7 @@ En utilisant notre jeu de données de vente au détail d&#39;avant, nous pouvons
 
 Un tracé de boîte et de muraille est utilisé pour montrer la distribution des données. Les lignes extérieures du tracé indiquent les quartiles supérieur et inférieur, tandis que la case s&#39;étend sur la plage interquartile. La ligne dans la zone marque la médiane. Les points de données plus de 1,5 fois le quartile supérieur ou inférieur sont marqués comme un cercle. Ces points sont considérés comme des valeurs aberrantes.
 
-### Graphiques multivariés
+##### Graphiques multivariés
 
 Les tracés multivariés permettent de visualiser l’interaction entre les variables. Avec la visualisation, les chercheurs de données peuvent voir s&#39;il y a des corrélations ou des modèles entre les variables. Un graphique multivarié commun utilisé est une matrice de corrélation. Avec une matrice de corrélation, les dépendances entre plusieurs variables sont quantifiées avec le coefficient de corrélation.
 
