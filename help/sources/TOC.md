@@ -3,7 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide des connecteurs de source Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
+source-git-commit: de523ebef35564ebc2e5991ee14ae1c7284bf092
+workflow-type: tm+mt
+source-wordcount: '513'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +38,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
    - Bases de données {#databases}
       - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
-      - [Connecteur Apache Cassandra](connectors/databases/cassandra.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
       - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
@@ -74,7 +76,6 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
          - [Connecteur ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de données {#databases}
          - [Connecteur Amazon Redshift](tutorials/api/create/databases/redshift.md)
-         - [Connecteur Apache Cassandra](tutorials/api/create/databases/cassandra.md)
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/api/create/databases/spark.md)
          - [Connecteur Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
@@ -112,8 +113,8 @@ source-git-commit: 2d22f48cc8f461774a77c3351332f21849d56545
       - [Collecte de données d’automatisation du marketing](tutorials/api/collect/marketing-automation.md)
       - [Collecte des données de paiement](tutorials/api/collect/payments.md)
       - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
-   - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/create-dataset-base-connection.md)
-   - [Création d’une connexion de base de jeux de données à l’aide de l’API du service de flux](tutorials/api/cloud-storage-parquet.md)
+   - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
+   - [Création d’une connexion de base de jeux de données à l’aide de l’API du service de flux](tutorials/api/create-dataset-base-connection.md)
 - Didacticiels sur l’interface utilisateur {#ui-tutorials}
    - Création d’un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
