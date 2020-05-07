@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
 workflow-type: tm+mt
 source-wordcount: '3356'
 ht-degree: 6%
@@ -54,7 +54,7 @@ Vous trouverez des informations sur les principales fonctionnalités de JupyterL
 * [Cellules de code](#code-cells)
 * [Noisettes](#kernels)
 * [Sessions du noyau](#kernel-sessions)
-* [Ressource d’exécution PySpark/Spark](#pyspark-spark-execution-resource)
+* [Ressource d’exécution PySpark/Spark](#execution-resource)
 * [Lanceur](#launcher)
 
 ### Accès à JupyterLab {#access-jupyterlab}
@@ -143,7 +143,7 @@ Si le noyau est fermé ou inactif pendant une longue période, alors **Pas de no
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Ressource d’exécution PySpark/Spark {#pyspark-spark-execution-resource}
+### Ressource d’exécution PySpark/Spark {#execution-resource}
 
 >[!IMPORTANT]
 >Avec la transition de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont abandonnés.
@@ -313,7 +313,7 @@ Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous pe
 
 ### Lire à partir d&#39;un jeu de données en Python/R
 
-Les portables Python et R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire des données avec et sans pagination est illustré ci-dessous.
+Les portables Python et R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire les données avec et sans pagination est illustré ci-dessous.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
