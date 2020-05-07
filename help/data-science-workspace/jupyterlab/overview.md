@@ -4,45 +4,48 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 606ae8784760e54a597b189958889199f85ebd0d
+workflow-type: tm+mt
+source-wordcount: '3356'
+ht-degree: 6%
 
 ---
 
 
 # Guide de l&#39;utilisateur de JupyterLab
 
-JupyterLab est une interface utilisateur Web pour <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> et est étroitement intégré à Adobe Experience Platform. Il fournit un de développement interactif  pour que les scientifiques de données puissent travailler avec des ordinateurs portables, du code et des données Jupyter.
+JupyterLab est une interface utilisateur Web pour <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> et est étroitement intégrée à Adobe Experience Platform. Il fournit un environnement de développement interactif pour que les chercheurs en données puissent travailler avec des ordinateurs portables, du code et des données Jupyter.
 
-Ce donne un aperçu de JupyterLab et de ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
+Ce document fournit un aperçu de JupyterLab et de ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 
-## JupyterLab sur la plateforme d’expérience
+## JupyterLab sur la plate-forme d’expérience
 
-L’intégration JupyterLab de la plate-forme d’expérience s’accompagne de modifications architecturales, de considérations de conception, d’extensions personnalisées pour les ordinateurs portables, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
+L’intégration de JupyterLab de la plate-forme d’expérience s’accompagne de modifications architecturales, de considérations de conception, d’extensions personnalisées d’ordinateurs portables, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
 
-Le suivant présente quelques-unes des fonctionnalités propres à JupyterLab sur la plate-forme :
+La liste suivante décrit certaines des fonctionnalités propres à JupyterLab sur la plate-forme :
 
 | Fonction | Description |
 | --- | --- |
-| **Noisettes** | Les noyaux fournissent un bloc-notes et d&#39;autres interfaces JupyterLab permettant d&#39;exécuter et d&#39;introduire du code dans différents langages de programmation. Experience Platform fournit des noyaux supplémentaires pour prendre en charge le développement en Python, R, PySpark et Spark. Consultez la section [Noisettes](#kernels) pour plus de détails. |
-| **Accès aux données** | Accédez aux jeux de données existants directement depuis JupyterLab avec la prise en charge complète des fonctionnalités de lecture et d’écriture. |
-| **Intégration du service de plateforme** | Les intégrations intégrées vous permettent d’utiliser d’autres services de plateformes directement depuis JupyterLab. Un complet des intégrations prises en charge est fourni dans la section relative à [l’intégration avec d’autres services](#service-integration)de plateforme. |
-| **Authentification** | Outre le modèle <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de sécurité intégré de</a>JupyterLab, chaque interaction entre votre application et la plateforme d’expérience, y compris la communication service-service de plateforme, est chiffrée et authentifiée par le biais du système de gestion des identités <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe (IMS)</a>. |
-| **Bibliothèques de développement** | Dans Experience Platform, JupyterLab fournit des bibliothèques préinstallées pour Python, R et PySpark. Consultez l’ [annexe](#supported-libraries) pour obtenir un complet des bibliothèques prises en charge. |
-| **Contrôleur de bibliothèque** | Lorsque les bibliothèques pré-installées manquent pour répondre à vos besoins, d&#39;autres bibliothèques peuvent être installées pour Python et R, et sont temporairement stockées dans des isolés afin de préserver l&#39;intégrité de Platform et de protéger vos données. Consultez la section [Noisettes](#kernels) pour plus de détails. |
+| **Noisettes** | Les noyaux fournissent un bloc-notes et d&#39;autres front-end JupyterLab la possibilité d&#39;exécuter et d&#39;introduire du code dans différents langages de programmation. Experience Platform fournit des noyaux supplémentaires pour prendre en charge le développement en Python, R, PySpark et Spark. Consultez la section [Noisettes](#kernels) pour plus de détails. |
+| **Accès aux données** | Accédez directement aux jeux de données existants dans JupyterLab avec la prise en charge complète des fonctions de lecture et d&#39;écriture. |
+| **Intégration du service de plateforme** | Les intégrations intégrées vous permettent d&#39;utiliser d&#39;autres services de plate-forme directement depuis JupyterLab. Une liste complète des intégrations prises en charge est fournie dans la section relative à l’ [intégration à d’autres services](#service-integration)de plateforme. |
+| **Authentification** | Outre le modèle <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de sécurité intégré de</a>JupyterLab, chaque interaction entre votre application et votre plateforme d’expérience, y compris la communication service-à-service de la plateforme, est chiffrée et authentifiée par le biais du système de gestion des identités <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe (IMS)</a>. |
+| **Bibliothèques de développement** | Dans Experience Platform, JupyterLab fournit des bibliothèques préinstallées pour Python, R et PySpark. Consultez l’ [annexe](#supported-libraries) pour obtenir une liste complète des bibliothèques prises en charge. |
+| **Contrôleur de bibliothèque** | Lorsque les bibliothèques pré-installées manquent à vos besoins, d&#39;autres bibliothèques peuvent être installées pour Python et R, et sont temporairement stockées dans des conteneurs isolés pour maintenir l&#39;intégrité de Platform et protéger vos données. Consultez la section [Noisettes](#kernels) pour plus de détails. |
 
->[!NOTE] D’autres bibliothèques sont disponibles uniquement pour la session au cours de laquelle elles ont été installées. Vous devez réinstaller les bibliothèques supplémentaires dont vous avez besoin lors du démarrage de nouvelles sessions.
+>[!NOTE] Les bibliothèques supplémentaires ne sont disponibles que pour la session au cours de laquelle elles ont été installées. Vous devez réinstaller les bibliothèques supplémentaires dont vous avez besoin lors du démarrage de nouvelles sessions.
 
-## Intégration à d’autres services de plateforme {#service-integration}
+## Intégration à d’autres services de plate-forme {#service-integration}
 
-La normalisation et l’interopérabilité sont les concepts clés de la plateforme d’expérience. L&#39;intégration de JupyterLab sur la plate-forme en tant qu&#39;IDE intégré lui permet d&#39;interagir avec d&#39;autres services de la plate-forme, ce qui vous permet d&#39;utiliser Platform à son plein potentiel. Les services Platform suivants sont disponibles dans JupyterLab :
+La normalisation et l’interopérabilité sont des concepts clés de la plate-forme d’expérience. L&#39;intégration de JupyterLab sur la plate-forme en tant qu&#39;IDE intégré lui permet d&#39;interagir avec d&#39;autres services de la plate-forme, ce qui vous permet d&#39;utiliser la plate-forme à son plein potentiel. Les services de plateforme suivants sont disponibles dans JupyterLab :
 
-* **Service de catalogue :** Accédez à des jeux de données et explorez-les avec des fonctionnalités de lecture et d’écriture.
-* **Service  :** Accédez aux jeux de données et explorez-les à l&#39;aide de SQL, ce qui vous permet de réduire les frais généraux d&#39;accès aux données lorsque vous traitez de grandes quantités de données.
-* **Sensei ML Framework :** Le développement de modèles avec la possibilité de former et de marquer des données, ainsi que la création de recettes d&#39;un simple clic.
+* **Service de catalogue :** Accédez et explorez des jeux de données avec des fonctionnalités de lecture et d&#39;écriture.
+* **Requête Service :** Accédez aux jeux de données et explorez-les à l&#39;aide de SQL, ce qui vous permet de réduire les frais généraux d&#39;accès aux données lorsque vous manipulez de grandes quantités de données.
+* **Sensei ML Framework :** Développement de modèles avec la possibilité de former et de marquer des données, ainsi que la création de recettes d&#39;un simple clic.
 
 >[!NOTE] Certaines intégrations de service Platform sur JupyterLab sont limitées à des noyaux spécifiques. Consultez la section sur les [noyaux](#kernels) pour plus de détails.
 
-## Principales fonctionnalités et opérations communes
+## Fonctions clés et opérations communes
 
 Vous trouverez des informations sur les principales fonctionnalités de JupyterLab et des instructions sur l&#39;exécution d&#39;opérations communes dans les sections suivantes :
 
@@ -51,50 +54,50 @@ Vous trouverez des informations sur les principales fonctionnalités de JupyterL
 * [Cellules de code](#code-cells)
 * [Noisettes](#kernels)
 * [Sessions du noyau](#kernel-sessions)
-* [Ressource d’exécution PySpark/Spark](#execution-resource)
+* [Ressource d’exécution PySpark/Spark](#pyspark-spark-execution-resource)
 * [Lanceur](#launcher)
 
 ### Accès à JupyterLab {#access-jupyterlab}
 
-Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Ordinateurs portables** dans la colonne de navigation de gauche. Laissez un peu de temps à JupyterLab pour l&#39;initialisation complète.
+Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Ordinateurs portables** dans la colonne de navigation de gauche. Il faut du temps pour que JupyterLab s&#39;initialise complètement.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
 ### Interface de JupyterLab {#jupyterlab-interface}
 
-L&#39;interface de JupyterLab se compose d&#39;une barre de menus, d&#39;une barre latérale gauche réductible et de la zone de travail principale contenant des onglets de  et de  de.
+L&#39;interface JupyterLab est composée d&#39;une barre de menus, d&#39;une barre latérale gauche réductible et de la zone de travail principale contenant des onglets de documents et d&#39;activités.
 
 **Barre de menus**
 
-La barre de menus en haut de l’interface comporte des menus de niveau supérieur qui exposent les actions disponibles dans JupyterLab avec leurs raccourcis clavier :
+La barre de menus en haut de l&#39;interface comporte des menus de niveau supérieur qui exposent les actions disponibles dans JupyterLab avec leurs raccourcis clavier :
 
-* **Fichier :** Actions relatives aux fichiers et répertoires
-* **Modifier :** Actions liées à la modification des  de et d&#39;autres  de
-* **:** Actions qui modifient l’aspect de JupyterLab
-* **Exécuter :** Actions d’exécution de code dans différents   tels que les ordinateurs portables et les consoles de code
+* **Fichier :** Actions liées aux fichiers et répertoires
+* **Modifier :** Actions liées à la modification des documents et autres activités
+* **Vue :** Actions qui modifient l&#39;apparence de JupyterLab
+* **Exécuter :** Actions d’exécution de code dans différentes activités, telles que les ordinateurs portables et les consoles de code
 * **Noyau :** Actions de gestion des noyaux
-* **Onglets :** Un  de  et deouverts
+* **Onglets :** Une liste de documents et d&#39;activités ouverts
 * **Paramètres :** Paramètres courants et éditeur de paramètres avancé
-* **Aide :** Un  de JupyterLab et des liens d&#39;aide du noyau
+* **Aide :** Une liste de liens vers l&#39;aide de JupyterLab et du noyau
 
 **Barre latérale gauche**
 
 La barre latérale gauche contient des onglets cliquables qui permettent d’accéder aux fonctionnalités suivantes :
 
-* **Navigateur de fichiers :**  de et de répertoires enregistrés pour les ordinateurs portables
-* **Explorateur de données :** Parcourir, accéder et explorer des jeux de données et des  de
-* **Cerceaux et terminaux en cours d&#39;exécution:** Un de sessions actives du noyau et du terminal avec la possibilité de s&#39;arrêter
-* **Commandes :** Un de commandes utiles
+* **Navigateur de fichiers :** liste de documents et répertoires d&#39;ordinateurs portables enregistrés
+* **Explorateur de données :** Parcourir, accéder et explorer des jeux de données et des schémas
+* **Noeuds et terminaux en cours d&#39;exécution :** Une liste de sessions actives du noyau et du terminal avec la possibilité d&#39;arrêter
+* **Commandes :** liste de commandes utiles
 * **Inspecteur de cellule :** Editeur de cellules qui donne accès aux outils et aux métadonnées utiles pour configurer un bloc-notes à des fins de présentation
-* **onglets :** d’onglets ouverts
+* **onglets :** liste d’onglets ouverts
 
-Cliquez sur un onglet pour exposer ses fonctionnalités, ou cliquez sur un onglet développé pour réduire la barre latérale gauche comme illustré ci-dessous :
+Cliquez sur un onglet pour exposer ses fonctionnalités ou cliquez sur un onglet développé pour réduire la barre latérale gauche comme illustré ci-dessous :
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
 **Domaine de travail principal**
 
-La zone de travail principale de JupyterLab vous permet d&#39;organiser les  de et les autres  de en panneaux d&#39;onglets qui peuvent être redimensionnés ou subdivisés. Faites glisser un onglet au centre d’un panneau d’onglets pour le faire migrer. Divisez un panneau en faisant glisser un onglet vers la gauche, la droite, le haut ou le bas du panneau :
+L&#39;aire de travail principale de JupyterLab vous permet d&#39;organiser les documents et autres activités en panneaux d&#39;onglets qui peuvent être redimensionnés ou subdivisés. Faites glisser un onglet au centre d’un panneau d’onglets pour migrer l’onglet. Divisez un panneau en faisant glisser un onglet vers la gauche, la droite, le haut ou le bas du panneau :
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
@@ -106,53 +109,53 @@ Les cellules de code sont le contenu principal des blocs-notes. Ils contiennent 
 
 Les actions de cellule courantes sont décrites ci-dessous :
 
-* **Ajouter une cellule :** Cliquez sur le symbole plus (**+**) dans le menu du bloc-notes pour ajouter une cellule vide. Les nouvelles cellules sont placées sous la cellule qui est en cours d’interaction ou à la fin du bloc-notes si aucune cellule particulière n’est active.
+* **Ajouter une cellule :** Cliquez sur le symbole plus (**+**) dans le menu du bloc-notes pour ajouter une cellule vide. Les nouvelles cellules sont placées sous la cellule qui est actuellement en cours d&#39;interaction avec, ou à la fin du bloc-notes si aucune cellule particulière n&#39;est active.
 
-* **Déplacer une cellule :** Placez votre curseur à droite de la cellule que vous souhaitez déplacer, puis cliquez et faites glisser la cellule vers un nouvel emplacement. De plus, le déplacement d&#39;une cellule d&#39;un bloc-notes vers un autre reproduit la cellule avec son contenu.
+* **Déplacer une cellule :** Placez votre curseur à droite de la cellule que vous souhaitez déplacer, puis cliquez et faites glisser la cellule vers un nouvel emplacement. En outre, le déplacement d&#39;une cellule d&#39;un bloc-notes vers un autre reproduit la cellule avec son contenu.
 
-* **Exécuter une cellule :** Cliquez sur le corps de la cellule à exécuter, puis sur l&#39;icône **play** (**▶**) dans le menu du bloc-notes. Un astérisque (**\***) s&#39;affiche dans le compteur d&#39;exécution de la cellule lorsque le noyau traite l&#39;exécution et est remplacé par un entier une fois l&#39;exécution terminée.
+* **Exécuter une cellule :** Cliquez sur le corps de la cellule à exécuter, puis sur l&#39;icône **play** (**▶**) du menu du bloc-notes. Un astérisque (**\***) s&#39;affiche dans le compteur d&#39;exécution de la cellule lorsque le noyau traite l&#39;exécution et est remplacé par un entier une fois l&#39;exécution terminée.
 
-* **Supprimer une cellule :** Cliquez sur le corps de la cellule que vous souhaitez supprimer, puis sur l&#39;icône **ciseau** .
+* **Supprimer une cellule :** Cliquez sur le corps de la cellule à supprimer, puis sur l&#39;icône **ciseau** .
 
 ### Noisettes {#kernels}
 
-Les noyaux des ordinateurs portables sont les moteurs informatiques spécifiques à la langue pour le traitement des cellules des ordinateurs portables. Outre Python, JupyterLab fournit une prise en charge linguistique supplémentaire dans R, PySpark et Spark. Lorsque vous ouvrez un de bloc-notes, le noyau associé est lancé. Lorsqu&#39;une cellule d&#39;ordinateur portable est exécutée, le noyau effectue le calcul et produit des résultats qui peuvent consommer des ressources importantes en UC et en mémoire. Notez que la mémoire allouée n&#39;est pas libérée tant que le noyau n&#39;est pas fermé.
+Les noyaux portables sont les moteurs informatiques spécifiques à la langue pour le traitement des cellules de portables. En plus de Python, JupyterLab fournit une prise en charge linguistique supplémentaire en R, PySpark et Spark. Lorsque vous ouvrez un document de bloc-notes, le noyau associé est lancé. Lorsqu&#39;une cellule d&#39;ordinateur portable est exécutée, le noyau effectue le calcul et produit des résultats qui peuvent consommer d&#39;importantes ressources de processeur et de mémoire. Notez que la mémoire allouée n&#39;est pas libérée tant que le noyau n&#39;est pas fermé.
 
->[!IMPORTANT] JupyterLab Launcher a été mis à jour de Spark 2.3 vers Spark 2.4. Les noyaux Spark et PySpark ne sont plus pris en charge dans les blocs-notes Spark 2.4.
+>[!IMPORTANT] Mise à jour de JupyterLab Launcher de Spark 2.3 à Spark 2.4. Les noyaux Spark et PySpark ne sont plus pris en charge dans les blocs-notes Spark 2.4.
 
-Certaines fonctionnalités et fonctionnalités sont limitées à des noyaux particuliers, comme décrit dans le tableau ci-dessous :
+Certaines fonctions et fonctionnalités sont limitées à des noyaux particuliers, comme décrit dans le tableau ci-dessous :
 
 | Noyau | Prise en charge de l’installation de la bibliothèque | Intégrations de plateformes |
 | :----: | :--------------------------: | :-------------------- |
-| **Python** | Oui | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li><li>Service </li></ul> |
-| **r** | Oui | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
-| **PySpark - désapprouvée** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
-| **Spark - désapprouvée** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
-| **Scala** | Non | <ul><li>Cadre LML Sensei</li><li>Service de catalogue</li></ul> |
+| **Python** | Oui | <ul><li>Cadre de gestion de Sensei ML</li><li>Service de catalogue</li><li>Requête Service</li></ul> |
+| **r** | Oui | <ul><li>Cadre de gestion de Sensei ML</li><li>Service de catalogue</li></ul> |
+| **PySpark - obsolète** | Non | <ul><li>Cadre de gestion de Sensei ML</li><li>Service de catalogue</li></ul> |
+| **Spark - désapprouvée** | Non | <ul><li>Cadre de gestion de Sensei ML</li><li>Service de catalogue</li></ul> |
+| **Scala** | Non | <ul><li>Cadre de gestion de Sensei ML</li><li>Service de catalogue</li></ul> |
 
 ### Sessions du noyau {#kernel-sessions}
 
-Chaque bloc-notes actif ou   sur JupyterLab utilise une session de noyau. Toutes les sessions actives peuvent être trouvées en développant l&#39;onglet **Running terminaux et kernels** de la barre latérale gauche. Le type et l&#39;état du noyau d&#39;un bloc-notes peuvent être identifiés en observant l&#39;angle supérieur droit de l&#39;interface du bloc-notes. Dans le diagramme ci-dessous, le noyau associé du bloc-notes est **Python 3** et son état actuel est représenté par un cercle gris à droite. Un cercle creux implique un noyau inactif et un cercle plein implique un noyau occupé.
+Chaque bloc-notes ou activité actif sur JupyterLab utilise une session de noyau. Toutes les sessions actives peuvent être trouvées en développant les terminaux **Running et l&#39;onglet kernels** de la barre latérale gauche. Le type et l&#39;état du noyau d&#39;un bloc-notes peuvent être identifiés en observant l&#39;angle supérieur droit de l&#39;interface du bloc-notes. Dans le diagramme ci-dessous, le noyau associé du bloc-notes est **Python 3** et son état actuel est représenté par un cercle gris à droite. Un cercle creux implique un noyau inactif et un cercle plein implique un noyau occupé.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
-Si le noyau est fermé ou inactif pendant une longue période, alors **Pas de noyau !** avec un cercle plein s’affiche. Activez un noyau en cliquant sur l&#39;état du noyau et en sélectionnant le type de noyau approprié, comme illustré ci-dessous :
+Si le noyau est fermé ou inactif pendant une longue période, alors **Pas de noyau !** avec un cercle plein s’affiche. Activez un noyau en cliquant sur son état et en sélectionnant le type de noyau approprié, comme indiqué ci-dessous :
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
-### Ressource d’exécution PySpark/Spark {#execution-resource}
+### Ressource d’exécution PySpark/Spark {#pyspark-spark-execution-resource}
 
 >[!IMPORTANT]
->Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>Avec la transition de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont abandonnés.
 >
 >Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) pour obtenir un didacticiel détaillé sur la mise à jour de vos blocs-notes existants.
 >
 >Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) pour obtenir un didacticiel détaillé sur la mise à jour de vos blocs-notes existants.
 
-Les noyaux PySpark et Spark vous permettent de configurer les ressources de la grappe Spark dans votre ordinateur portable PySpark ou Spark en utilisant la commande configure (`%%configure`) et en fournissant un de configurations. Idéalement, ces configurations sont définies avant l’initialisation de l’application Spark. La modification des configurations lorsque l’application Spark est active requiert un indicateur de force supplémentaire après la commande (`%%configure -f`) qui redémarrera l’application pour que les modifications soient appliquées, comme illustré ci-dessous :
+Les noyaux PySpark et Spark vous permettent de configurer les ressources de la grappe Spark dans votre bloc-notes PySpark ou Spark en utilisant la commande configure (`%%configure`) et en fournissant une liste de configurations. Idéalement, ces configurations sont définies avant l’initialisation de l’application Spark. La modification des configurations pendant que l’application Spark est active requiert un indicateur de force supplémentaire après la commande (`%%configure -f`) qui redémarrera l’application pour que les modifications soient appliquées, comme indiqué ci-dessous :
 
 >[!CAUTION]
->Avec les ordinateurs portables PySpark 3 (Spark 2.4) et Scala (Spark 2.4), `%%` sparkmiracle n’est plus pris en charge. Les opérations suivantes ne peuvent plus être utilisées :
+>Avec les ordinateurs portables PySpark 3 (Spark 2.4) et Scala (Spark 2.4), `%%` sparkmiracle n&#39;est plus pris en charge. Les opérations suivantes ne peuvent plus être utilisées :
 * `%%help`
 * `%%info`
 * `%%cleanup`
@@ -178,18 +181,18 @@ Toutes les propriétés configurables sont répertoriées dans le tableau ci-des
 
 | Propriété | Description | Type |
 | :------- | :---------- | :-----:|
-| espèce | Type de session (obligatoire) | `session kind`_ |
-| proxyUser | Utilisateur à emprunter l’identité qui exécutera cette session (par exemple, bob) | chaîne |
-| jars | Fichiers à placer sur le java `classpath` |  de chemins |
-| pyFiles | Fichiers à placer sur le `PYTHONPATH` |  de chemins |
-| fichiers | Fichiers à placer dans le répertoire de travail de l&#39;exécuteur testamentaire |  de chemins |
-| driverMemory | Mémoire du pilote en mégaoctets ou gigaoctets (par exemple, 1 000 M, 2G) | chaîne |
-| driverCores | Nombre de noyaux utilisés par le pilote (mode YARN uniquement) | int |
-| exécuteurMemory | Mémoire de l&#39;exécuteur testamentaire en mégaoctets ou en gigaoctets (par exemple, 1 000 M, 2G) | chaîne |
-| exécuteurCores | Nombre de noyaux utilisés par l&#39;exécuteur | int |
+| type | Type de session (obligatoire) | `session kind`_ |
+| proxyUser | L&#39;utilisateur à qui s&#39;imiter qui exécutera cette session (par exemple, bob) | chaîne |
+| jars | Fichiers à placer sur le java `classpath` | liste des chemins |
+| pyFiles | Fichiers à placer sur le `PYTHONPATH` | liste des chemins |
+| fichiers | Fichiers à placer dans le répertoire de travail de l&#39;exécuteur | liste des chemins |
+| driverMemory | Mémoire du pilote en mégaoctets ou gigaoctets (par exemple 1000 M, 2G) | chaîne |
+| driverCores | Nombre de coeurs utilisés par le pilote (mode YARN uniquement) | int |
+| exécuteurMémoire | Mémoire de l&#39;exécuteur testamentaire en mégaoctets ou gigaoctets (par exemple 1000 M, 2G) | chaîne |
+| exécuteurCores | Nombre de coeurs utilisés par l&#39;exécuteur | int |
 | numExecutors | Nombre d’exécuteurs (mode YARN uniquement) | int |
-| archives | Archives à décompresser dans le répertoire de travail de l’exécuteur testamentaire (mode YARN uniquement) |  de chemins |
-| queue | File d’attente YARN à soumettre (mode YARN uniquement) | chaîne |
+| archives | Archives à décompresser dans le répertoire de travail de l&#39;exécuteur (mode YARN uniquement) | liste des chemins |
+| queue | File d’attente YARN à envoyer (mode YARN uniquement) | chaîne |
 | name | Nom de l’application | chaîne |
 | conf | Propriété de configuration Spark | Carte de key=val |
 
@@ -197,32 +200,32 @@ Toutes les propriétés configurables sont répertoriées dans le tableau ci-des
 
 [//]: # (Talk about the different Notebooks, introduce that certain starter notebooks are limited to particular kernels)
 
-Le *lanceur* personnalisé fournit des modèles de blocs-notes utiles pour les noyaux pris en charge afin de vous aider à démarrer rapidement vos  de, notamment :
+Le *lanceur* personnalisé fournit des modèles de blocs-notes utiles pour les noyaux pris en charge afin de vous aider à démarrer votre tâche, notamment :
 
 | Modèle | Description |
 | --- | --- |
-| Vide | Un fichier bloc-notes vide. |
-| Starter | Un bloc-notes prérempli montrant l&#39;exploration des données à l&#39;aide de données d&#39;exemple. |
-| Ventes au détail | Un bloc-notes prérempli présentant la Recette <a href="https://adobe.ly/2wOgO3L" target="_blank">des ventes au</a> détail à l&#39;aide de données d&#39;exemple. |
-| Créateur de recettes | Modèle de cahier pour la création d&#39;une recette dans JupyterLab. Il est prérempli de code et de commentaires qui montrent et décrivent le processus de création de la recette. Consultez le <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">cahier pour obtenir un didacticiel</a> de recette pour une présentation détaillée. |
-| Service  | Un cahier prérempli démontrant l&#39;utilisation du service de  directement dans JupyterLab avec un échantillon de  qui analyse les données à l&#39;échelle. |
-|  XDM | Un bloc-notes prérempli qui présente l’exploration des données sur les données du d’expérience post-valeur, en mettant l’accent sur les fonctionnalités communes à l’ensemble de la structure de données. |
-|  XDM | Un cahier de notes prérempli présentant des exemples de  d’entreprise sur les données de l’ d’expérience. |
-| Agrégation | Un ordinateur portable prérempli montrant des échantillons de pour  de grandes quantités de données en petits blocs gérables. |
-| Mise en grappe | Un bloc-notes prérempli montrant le processus de modélisation d’apprentissage automatique de bout en bout à l’aide d’algorithmes de mise en grappe. |
+| Vierge | Un fichier bloc-notes vide. |
+| Démarrage | Un bloc-notes prérempli présentant l&#39;exploration des données à l&#39;aide de données d&#39;exemple. |
+| Ventes au détail | Un bloc-notes prérempli présentant la Recette <a href="https://adobe.ly/2wOgO3L" target="_blank">des ventes</a> au détail à l&#39;aide de données d&#39;exemple. |
+| Créateur de recettes | Modèle de bloc-notes pour la création d&#39;une recette dans JupyterLab. Il est prérempli de code et de commentaires qui montrent et décrivent le processus de création de la recette. Pour obtenir une présentation détaillée, reportez-vous au didacticiel <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de recette du</a> bloc-notes. |
+| Requête Service | Un cahier de notes prérempli montrant l&#39;utilisation de Requête Service directement dans JupyterLab avec des exemples de workflows qui analysent les données à l&#39;échelle. |
+| Événements XDM | Un bloc-notes prérempli présentant l’exploration des données sur les données du Événement d’expérience post-valeur, axé sur les fonctionnalités communes à l’ensemble de la structure de données. |
+| Requêtes XDM | Un cahier de notes prérempli présentant des exemples de requêtes commerciales sur les données du Événement d’expérience. |
+| Agrégation | Un bloc-notes prérempli présentant des échantillons de workflows pour agrégat de grandes quantités de données en petits blocs gérables. |
+| Mise en grappe | Un bloc-notes prérempli présentant le processus de modélisation d’apprentissage automatique de bout en bout à l’aide d’algorithmes de mise en grappe. |
 
-Certains modèles de blocs-notes sont limités à certains noyaux. La disponibilité des modèles pour chaque noyau est mise en correspondance dans le tableau suivant :
+Certains modèles de bloc-notes sont limités à certains noyaux. La disponibilité des modèles pour chaque noyau est mise en correspondance dans le tableau suivant :
 
 <table>
     <tr>
         <td></td>
-        <th><strong>Vide</strong></th>
-        <th><strong>Starter</strong></th>
+        <th><strong>Vierge</strong></th>
+        <th><strong>Démarrage</strong></th>
         <th><strong>Ventes au détail</strong></th>
         <th><strong>Créateur de recettes</strong></th>
-        <th><strong>Service </strong></th>
-        <th><strong> XDM</strong></th>
-        <th><strong> XDM</strong></th>
+        <th><strong>Requête Service</strong></th>
+        <th><strong>Événements XDM</strong></th>
+        <th><strong>Requêtes XDM</strong></th>
         <th><strong>Agrégation</strong></th>
         <th><strong>Mise en grappe</strong></th>
     </tr>
@@ -300,23 +303,23 @@ Certains modèles de blocs-notes sont limités à certains noyaux. La disponibil
     </tr>
 </table>
 
-Pour ouvrir un nouveau *lanceur*, cliquez sur **Fichier > Nouveau lanceur**. Vous pouvez également développer le navigateur **** de fichiers depuis la barre latérale gauche et cliquer sur le symbole plus (+) (**+**) :
+Pour ouvrir un nouveau *lanceur*, cliquez sur **Fichier > Nouveau lanceur**. Vous pouvez également développer le navigateur **** de fichiers depuis la barre latérale gauche et cliquer sur le symbole plus (**+**) :
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-## Accès aux données de la plate-forme à l’aide des ordinateurs portables
+## Accès aux données de la plate-forme à l’aide de portables
 
-Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de plateforme à partir d&#39;un jeu de données dans un bloc-notes. Cependant, la prise en charge de la pagination des données est limitée aux ordinateurs portables Python et R.
+Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de la plate-forme à partir d&#39;un jeu de données dans un bloc-notes. Cependant, la prise en charge de la pagination des données est limitée aux ordinateurs portables Python et R.
 
 ### Lire à partir d&#39;un jeu de données en Python/R
 
-Les portables Python et R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination.
+Les portables Python et R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire des données avec et sans pagination est illustré ci-dessous.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
 #### Lire à partir d&#39;un jeu de données en Python/R sans pagination
 
-L&#39;exécution du code suivant lit le jeu de données complet. Si l’exécution est réussie, les données sont enregistrées en tant que cadre de données Pandas référencé par la variable `df`.
+L&#39;exécution du code suivant lit le jeu de données complet. Si l’exécution est réussie, les données sont alors enregistrées en tant que base de données Pandas référencée par la variable `df`.
 
 ```python
 # Python
@@ -342,11 +345,11 @@ df <- dataset_reader$read()
 df
 ```
 
-* `{DATASET_ID}`: Identité unique du jeu de données auquel il faut accéder
+* `{DATASET_ID}`: L&#39;identité unique du jeu de données à accéder
 
 #### Lire à partir d&#39;un jeu de données en Python/R avec pagination
 
-L&#39;exécution du code suivant lit les données du jeu de données spécifié. La pagination est obtenue en limitant et en décalant les données par le biais des fonctions `limit()` et `offset()` respectivement. La limitation des données fait référence au nombre maximal de points de données à lire, tandis que la compensation fait référence au nombre de points de données à ignorer avant la lecture des données. Si l’opération de lecture s’exécute correctement, les données sont enregistrées en tant que cadre de données Pandas référencé par la variable `df`.
+L&#39;exécution du code suivant lit les données du jeu de données spécifié. La pagination est obtenue en limitant et en décalant les données par le biais des fonctions `limit()` et `offset()` respectivement. La limitation des données fait référence au nombre maximal de points de données à lire, tandis que la compensation fait référence au nombre de points de données à ignorer avant la lecture des données. Si l&#39;opération de lecture s&#39;exécute correctement, les données sont enregistrées en tant que base de données Pandas référencée par la variable `df`.
 
 ```python
 # Python
@@ -372,18 +375,18 @@ dataset_reader <- DatasetReader(client_context, "{DATASET_ID}")
 df <- dataset_reader$limit(100L)$offset(10L)$read() 
 ```
 
-* `{DATASET_ID}`: Identité unique du jeu de données auquel il faut accéder
+* `{DATASET_ID}`: L&#39;identité unique du jeu de données à accéder
 
 ### Lecture à partir d’un jeu de données dans PySpark/Spark/Scala
 
 >[!IMPORTANT]
->Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>Avec la transition de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont abandonnés.
 >
->Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux ordinateurs portables doivent suivre l’exemple [PySpark 3 (Spark 2.4)](#pyspark2.4) ci-dessous.
+>Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux portables doivent suivre l&#39; [exemple PySpark 3 (Spark 2.4)](#pyspark2.4) ci-dessous.
 >
->Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux ordinateurs portables doivent suivre l’ [exemple Scala (Spark 2.4)](#spark2.4) ci-dessous.
+>Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) si vous souhaitez convertir le code Spark 2.3 existant. Les nouveaux portables doivent suivre l&#39; [exemple Scala (Spark 2.4)](#spark2.4) ci-dessous.
 
-Une fois qu&#39;un bloc-notes PySpark ou Spark actif est ouvert, développez l&#39;onglet Explorateur **de** données dans la barre latérale **gauche et  cliquez sur** DataSetpour  un  de jeux de données disponibles. Cliquez avec le bouton droit de la souris sur le jeu de données dont vous souhaitez accéder, puis cliquez sur **Explorer les données dans le bloc-notes**. Les cellules de code suivantes sont générées :
+Lorsqu&#39;un bloc-notes PySpark ou Spark actif est ouvert, développez l&#39;onglet Explorateur **de** données dans la barre latérale gauche et cliquez sur **Datasets** pour mettre en vue une liste de jeux de données disponibles. Cliquez avec le bouton droit de la souris sur le jeu de données auquel vous souhaitez accéder et cliquez sur **Explorer les données dans un bloc-notes**. Les cellules de code suivantes sont générées :
 
 #### PySpark (Spark 2.3 - désapprouvée)
 
@@ -460,33 +463,33 @@ Avec l&#39;introduction de Spark 2.4, la magie `%dataset` personnalisée est fou
 Commande magique Data Science Workspace personnalisée pour lire ou écrire un jeu de données à partir d&#39;un bloc-notes Python (noyau Python 3).
 
 * **{action}**: Type d’action à exécuter sur le jeu de données. Deux actions sont disponibles &quot;read&quot; ou &quot;write&quot;.
-* **—datasetId {id}**: Utilisé pour fournir l’ID du jeu de données à lire ou à écrire. C&#39;est un argument obligatoire.
-* **—dataFrame {df}**: Le cadre de données des pandas. C&#39;est un argument obligatoire.
-   * Lorsque l&#39;action est &quot;read&quot;, {df} est la variable dans laquelle les résultats de l&#39;opération de lecture du jeu de données sont disponibles.
-   * Lorsque l&#39;action est &quot;write&quot;, ce dataframe {df} est écrit dans le jeu de données.
+* **—datasetId {id}**: Utilisé pour fournir l&#39;identifiant du jeu de données à lire ou à écrire. Il s&#39;agit d&#39;un argument obligatoire.
+* **—dataFrame {df}**: La base de données des pandas. Il s&#39;agit d&#39;un argument obligatoire.
+   * Lorsque l&#39;action est &quot;read&quot;, {df} est la variable où les résultats de l&#39;opération de lecture du jeu de données sont disponibles.
+   * Lorsque l&#39;action est &quot;write&quot;, ce dataframe {df} est écrit dans le dataset.
 * **—mode (facultatif)**: Les paramètres autorisés sont &quot;batch&quot; et &quot;interactive&quot;. Par défaut, le mode est défini sur &quot;interactif&quot;. Il est recommandé d’utiliser le mode &quot;batch&quot; lors de la lecture de grandes quantités de données.
 
 **Exemples**
 
 * **Exemple** de lecture : `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-* **Exemple** d’écriture : `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+* **Exemple** d&#39;écriture : `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-###  de données à l&#39;aide du service de  en Python
+### Données de Requête utilisant Requête Service en Python
 
-JupyterLab sur la plate-forme vous permet d’utiliser SQL dans un bloc-notes Python pour accéder aux données via <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Service</a>. L’accès aux données par l’intermédiaire du service de  peut s’avérer utile pour traiter des jeux de données volumineux en raison de ses temps d’exécution supérieurs. Notez que l’interrogation de données à l’aide du service de  est limitée à dix minutes de traitement.
+JupyterLab sur la plate-forme vous permet d’utiliser SQL dans un bloc-notes Python pour accéder aux données via <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Requête Service</a>. L&#39;accès aux données via Requête Service peut s&#39;avérer utile pour traiter des jeux de données volumineux en raison de ses délais d&#39;exécution supérieurs. Notez que l’interrogation de données à l’aide de Requête Service est limitée à dix minutes de temps de traitement.
 
-Avant d’utiliser le service  dans JupyterLab, assurez-vous de bien comprendre la syntaxe <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL du service de </a>.
+Avant d’utiliser Requête Service dans JupyterLab, assurez-vous de bien comprendre la syntaxe <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL de</a>Requête Service.
 
-L’interrogation de données à l’aide du service  requiert que vous fournissiez le nom du jeu de données . Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données souhaité à l’aide de l’explorateur **de données**. Cliquez avec le bouton droit de la souris sur la liste des jeux de données et cliquez sur **données dans le bloc-notes** pour générer les deux cellules de code suivantes dans votre bloc-notes :
+Pour interroger des données à l’aide de Requête Service, vous devez indiquer le nom du jeu de données de cible. Vous pouvez générer les cellules de code nécessaires en recherchant le jeu de données de votre choix à l’aide de l’explorateur **de** données. Cliquez avec le bouton droit sur la liste des jeux de données et cliquez sur Données de **Requête dans le bloc-notes** pour générer les deux cellules de code suivantes dans votre bloc-notes :
 
 
-Pour utiliser le service de  dans JupyterLab, vous devez d&#39;abord créer une connexion entre votre portable Python et votre service de . Pour ce faire, vous pouvez exécuter la première cellule générée.
+Pour utiliser Requête Service dans JupyterLab, vous devez d&#39;abord créer une connexion entre votre portable Python et Requête Service. Pour ce faire, vous pouvez exécuter la première cellule générée.
 
 ```python
 qs_connect()
 ```
 
-Dans la seconde cellule générée, la première ligne doit être définie avant le SQL. Par défaut, la cellule générée définit une variable facultative (`df0`) qui enregistre les résultats du sous la forme d’un cadre de données Pandas. <br>L&#39; `-c QS_CONNECTION` argument est obligatoire et indique au noyau d&#39;exécuter le SQL contre le service de . Voir l&#39; [annexe](#optional-sql-flags-for-query-service) pour un d&#39;arguments supplémentaires.
+Dans la seconde cellule générée, la première ligne doit être définie avant la requête SQL. Par défaut, la cellule générée définit une variable facultative (`df0`) qui enregistre les résultats de la requête sous la forme d’un cadre de données Pandas. <br>L&#39; `-c QS_CONNECTION` argument est obligatoire et indique au noyau d&#39;exécuter la requête SQL sur Requête Service. Voir l&#39; [annexe](#optional-sql-flags-for-query-service) pour une liste d&#39;arguments supplémentaires.
 
 ```python
 %%read_sql df0 -c QS_CONNECTION
@@ -496,7 +499,7 @@ LIMIT 10
 /* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
 ```
 
-Les variables Python peuvent être directement référencées dans un SQL en utilisant une syntaxe au format chaîne et en enroulant les variables entre accolades (`{}`), comme indiqué dans l&#39;exemple suivant :
+Les variables Python peuvent être directement référencées dans une requête SQL en utilisant une syntaxe au format chaîne et en encapsulant les variables entre accolades (`{}`), comme indiqué dans l&#39;exemple suivant :
 
 ```python
 table_name = 'name_of_the_dataset'
@@ -511,9 +514,9 @@ FROM {table_name}
 
 ### Filtrage des données ExperienceEvent en Python/R
 
-Pour accéder à un jeu de données ExperienceEvent et le filtrer dans un bloc-notes Python ou R, vous devez fournir l’ID du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtre qui définissent une plage de temps spécifique à l’aide d’opérateurs logiques. Lorsqu’une période est définie, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
+Pour accéder à un jeu de données ExperienceEvent et le filtrer dans un bloc-notes Python ou R, vous devez fournir l&#39;ID du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une plage de temps spécifique à l&#39;aide d&#39;opérateurs logiques. Lorsqu’une plage de temps est définie, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
-Un  d’opérateurs de filtrage est décrit ci-dessous :
+Une liste d’opérateurs de filtrage est décrite ci-dessous :
 
 * `eq()`: Egal à
 * `gt()`: Supérieur à
@@ -558,13 +561,13 @@ df <- dataset_reader$
 ### Filtrage des données ExperienceEvent dans PySpark/Spark
 
 >[!IMPORTANT]
->Avec le  de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont tous deux abandonnés.
+>Avec la transition de Spark 2.3 à Spark 2.4, les noyaux Spark et PySpark sont abandonnés.
 >
->Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) pour en savoir plus sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes PySpark, utilisez l’ [exemple PySpark 3 (spark 2.4)](#pyspark3-spark2.4) pour filtrer les données ExperienceEvent.
+>Les nouveaux portables PySpark 3 (Spark 2.4) utilisent le noyau Python3. Consultez le guide de conversion de [Pyspark 3 (Spark 2.3) en PySpark 3 (Spark 2.4)](../recipe-notebook-migration.md) pour en savoir plus sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes PySpark, utilisez l&#39; [exemple PySpark 3 (spark 2.4)](#pyspark3-spark2.4) pour filtrer les données ExperienceEvent.
 >
->Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) pour plus d’informations sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes Spark, utilisez l’ [exemple Scala (spark 2.4)](#scala-spark) pour filtrer les données d’ExperienceEvent.
+>Les nouveaux portables Spark devraient utiliser le noyau Scala. Consultez le guide de conversion de [Spark 2.3 en Scala (Spark 2.4)](../recipe-notebook-migration.md) pour plus d’informations sur la conversion de votre code existant. Si vous créez un nouveau bloc-notes Spark, utilisez l’ [exemple Scala (spark 2.4)](#scala-spark) pour filtrer les données ExperienceEvent.
 
-L’accès et le filtrage d’un jeu de données ExperienceEvent dans un bloc-notes PySpark ou Spark nécessitent que vous fournissiez l’identité du jeu de données (`{DATASET_ID}`), l’identité IMS de votre entreprise et les règles de filtre définissant une plage de temps spécifique. Une plage de temps de filtrage est définie à l’aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de SQL.
+L’accès et le filtrage d’un jeu de données ExperienceEvent dans un bloc-notes PySpark ou Spark nécessitent que vous fournissiez l’identité (`{DATASET_ID}`) du jeu de données, l’identité IMS de votre entreprise et les règles de filtrage définissant une plage de temps spécifique. Une plage de temps de filtrage est définie à l&#39;aide de la fonction `spark.sql()`, où le paramètre de fonction est une chaîne de requête SQL.
 
 Les cellules suivantes filtrent un jeu de données ExperienceEvent en données existant exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
@@ -668,7 +671,7 @@ timedf.show()
 ```
 
 >[!TIP]
->Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant reprend `val userToken` l’exemple ci-dessus et le déclare en ligne `option` comme alternative :
+>Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant extrait `val userToken` de l’exemple ci-dessus et le déclare en ligne `option` comme alternative :
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
@@ -682,7 +685,7 @@ timedf.show()
 | :------ | :------ |
 | ordinateur portable | 6.0.0 |
 | requêtes | 2.22.0 |
-| factice | 4.0.0 |
+| poliment | 4.0.0 |
 | folium | 0.10.0 |
 | ipywidgets | 7.5.1 |
 | bokeh | 1.3.1 |
@@ -696,23 +699,23 @@ timedf.show()
 | oreiller | 6.0.0 |
 | scikit-image | 0.15.0 |
 | scikit-learn | 0.21.3 |
-| scipy | 1.3.0 |
+| scintillement | 1.3.0 |
 | effrayant | 1.3.0 |
 | seaborn | 0.9.0 |
 | statsmodels | 0.10.1 |
 | élastique | 5.1.0.17 |
 | ggplot | 0.11.5 |
-| py-xgbooth | 0.90 |
+| py-xgboog | 0.90 |
 | opencv | 3.4.1 |
 | pyspark | 2.4.3 |
 | pytorche | 1.0.1 |
 | wxpython | 4.0.6 |
 | colorlover | 0.3.0 |
-| geopandas | 0.5.1 |
+| géopandas | 0.5.1 |
 | pyshp | 2.1.0 |
 | informe | 1.6.4 |
 | rpy2 | 2.9.4 |
-| r-essentiels | 3.6 |
+| essentiels | 3.6 |
 | r-arules | 1.6_3 |
 | r-fpc | 2.2_3 |
 | r-e1071 | 1.7_2 |
@@ -721,8 +724,8 @@ timedf.show()
 | r-ggthemes | 4.2.0 |
 | r-ggvis | 0.4.4 |
 | r-igraph | 1.2.4.1 |
-| sauts-de-page | 3.0 |
-| r-manipuler | 1.0.1 |
+| sauts | 3.0 |
+| remanipuler | 1.0.1 |
 | r-rocr | 1.0_7 |
 | r-rmysql | 0.10.17 |
 | r-rodbc | 1.3_15 |
@@ -756,12 +759,12 @@ timedf.show()
 | wordcloud | 1.5.0 |
 | graphviz | 2.40.1 |
 | python-graphviz | 0.11.1 |
-|  azure  | 0.36.0 |
-| jupyterlab | 1.0.4 |
+| enregistrement azur | 0.36.0 |
+| jupyterlablablablablablablablablablablabé | 1.0.4 |
 | pandas_ml | 0.6.1 |
 | tensorflow-gpu | 1.14.0 |
 | nodejs | 12.3.0 |
-| moquer | 3.0.5 |
+| se moquer | 3.0.5 |
 | ipymphe | 0.3.3 |
 | fonts-anacond | 1.0 |
 | psycopg2 | 2.8.3 |
@@ -769,7 +772,7 @@ timedf.show()
 | autovizwidget | 0.12.9 |
 | altair | 3.1.0 |
 | vega_datasets | 0.7.0 |
-| broyeur | 1.0.1 |
+| papeterie | 1.0.1 |
 | sql_Magic | 0.0.4 |
 | iso3166 | 1.0 |
 | nbimportateur | 0.3.1 |
@@ -787,26 +790,26 @@ timedf.show()
 | oreiller | 5.3.0 |
 | scikit-image | 0.13.0 |
 | scikit-learn | 0.19.0 |
-| scipy | 0.19.1 |
+| scintillement | 0.19.1 |
 | effrayant | 1.3.3 |
 | statsmodels | 0.8.0 |
 | élastique | 4.0.30.44 |
-| py-xgbooth | 0.60 |
+| py-xgboog | 0.60 |
 | opencv | 3.1.0 |
 | pyflèche | 0.8.0 |
 | boto3 | 1.5.18 |
-| azure---blob | 1.4.0 |
+| azure-enregistrement-blob | 1.4.0 |
 | python | 3.6.7 |
 | mkl-rt | 11.1 |
 
-## Indicateurs SQL facultatifs pour le service {#optional-sql-flags-for-query-service}
+## Indicateurs SQL facultatifs pour Requête Service {#optional-sql-flags-for-query-service}
 
-Ce tableau décrit les indicateurs SQL facultatifs pouvant être utilisés pour le service de  de.
+Ce tableau décrit les indicateurs SQL facultatifs qui peuvent être utilisés pour Requête Service.
 
 | **Indicateur** | **Description** |
 | --- | --- |
 | `-h`, `--help` | Afficher le message d’aide et quitter. |
-| `-n`, `--notify` | Active/désactive l’option permettant d’avertir les résultats  du. |
-| `-a`, `--async` | L&#39;utilisation de cet indicateur permet d&#39;exécuter le  de manière asynchrone et de libérer le noyau pendant l&#39;exécution du . Soyez prudent lorsque vous affectez des résultats  aux variables, car il se peut qu’ils ne soient pas définis si la  du n’est pas terminée. |
+| `-n`, `--notify` | Active/désactive l&#39;option de notification des résultats de la requête. |
+| `-a`, `--async` | L&#39;utilisation de cet indicateur exécute la requête de manière asynchrone et peut libérer le noyau pendant l&#39;exécution de la requête. Soyez prudent lorsque vous affectez des résultats de requête à des variables, car il se peut qu’ils ne soient pas définis si la requête n’est pas terminée. |
 | `-d`, `--display` | L’utilisation de cet indicateur empêche l’affichage des résultats. |
 
