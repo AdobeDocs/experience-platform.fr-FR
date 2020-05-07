@@ -3,50 +3,59 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+source-git-commit: f38a2ba85248bbd12f5ef2487e8d8e6fe3319b32
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 3%
 
 ---
 
 
 # Espace de travail Data Science {#data-science-workspace}
 
-* [Présentation de l’espace de travail Data Science](home.md)
-* [Présentation de l’espace de travail des sciences de données](walkthrough.md)
+* [Présentation de Data Science Workspace](home.md)
+* [Présentation de Data Science Workspace](walkthrough.md)
 * Ordinateurs portables JupyterLab {#jupyterlab}
    * [Guide de l&#39;utilisateur de JupyterLab](jupyterlab/overview.md)
-   * [Analyse de vos données à l’aide de blocs-notes](jupyterlab/analyze-your-data.md)
-   * [Service  sur ordinateur portable Jupyter](jupyterlab/query-service.md)
-   * [Création d’une recette à l’aide de cahiers Jupyter](jupyterlab/create-a-recipe.md)
-* API d’apprentissage automatique Sensei {#api}
+   * [Analyse de vos données à l&#39;aide de portables](jupyterlab/analyze-your-data.md)
+   * [Service de Requête sur ordinateur portable Jupyter](jupyterlab/query-service.md)
+   * [Création d&#39;une recette à l&#39;aide de cahiers Jupyter](jupyterlab/create-a-recipe.md)
+* API d&#39;apprentissage automatique Sensei {#api}
    * [Prise en main](api/getting-started.md)
    * [Moteurs](api/engines.md)
    * [MLInstances (recettes)](api/mlinstances.md)
    * [Expériences](api/experiments.md)
    * [Modèles](api/models.md)
    * [MLServices](api/mlservices.md)
-   * [Insights](api/insights.md)
+   * [Statistiques](api/insights.md)
    * [Annexe](api/appendix.md)
+* Apprentissage automatique en temps réel (Alpha) {#real-time-machine-learning}
+   * [Aperçu](real-time-machine-learning/home.md)
+   * [Prise en main](real-time-machine-learning/getting-started.md)
+   * [Formation d’un modèle ML en temps réel](real-time-machine-learning/training-ml-model.md)
+   * [Score d’un modèle ML en temps réel](real-time-machine-learning/scoring-ml-model.md)
+   * [Guide de référence du noeud](real-time-machine-learning/node-reference.md)
 * Recettes préétablies {#pre-built-recipes}
    * [Recette de recommandation de produit](pre-built-recipes/product-recommendations.md)
    * [Prédiction d’achat de produit](pre-built-recipes/product-purchase-prediction.md)
    * [Recette de vente au détail](pre-built-recipes/retail-sales.md)
 * Création de modèles {#authoring}
    * [SDK de création de modèle](authoring/sdk.md)
-   * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)
-   * [Guide du SDK de plateforme (Python)](authoring/platform-sdk.md)
+   * [Création d’un tuyau de fonction](authoring/feature-pipeline.md)
+   * [Guide SDK de plate-forme (Python)](authoring/platform-sdk.md)
 * Didacticiels sur les modèles et les recettes {#models-recipes}
    * [Création et publication d’une présentation du modèle d’apprentissage automatique](models-recipes/create-publish-model.md)
-   * [Création du de ventes au détail et du jeu de données](models-recipes/create-retails-sales-dataset.md)
-   * [et jeux de données](models-recipes/preview-schema-data.md)
-   * [compresser des fichiers source dans une recette ;](models-recipes/package-source-files-recipe.md)
-   * [Importer une recette assemblée (IU)](models-recipes/import-packaged-recipe-ui.md)
-   * [Importer une recette assemblée (API)](models-recipes/import-packaged-recipe-api.md)
-   * [Former et évaluer un modèle (IU)](models-recipes/train-evaluate-model-ui.md)
-   * [Former et évaluer un modèle (API)](models-recipes/train-evaluate-model-api.md)
+   * [Créer le schéma de vente au détail et le jeu de données](models-recipes/create-retails-sales-dataset.md)
+   * [schémas de Prévisualisation et jeux de données](models-recipes/preview-schema-data.md)
+   * [compresser les fichiers source dans une recette ;](models-recipes/package-source-files-recipe.md)
+   * [Importer une recette emballée (interface utilisateur)](models-recipes/import-packaged-recipe-ui.md)
+   * [Importer une recette (API) assemblée](models-recipes/import-packaged-recipe-api.md)
+   * [Formation et évaluation d’un modèle (IU)](models-recipes/train-evaluate-model-ui.md)
+   * [Formation et évaluation d’un modèle (API)](models-recipes/train-evaluate-model-api.md)
    * [Score d’un modèle (interface utilisateur)](models-recipes/score-model-ui.md)
    * [Score d’un modèle (API)](models-recipes/score-model-api.md)
-   * [Optimisation d’un modèle](models-recipes/optimize-model.md)
-   * [Enrichir les  des clients en temps réel avec des informations d’apprentissage automatique](models-recipes/enrich-profile.md)
+   * [Optimiser un modèle](models-recipes/optimize-model.md)
+   * [Enrichir le Profil client en temps réel grâce à des informations d’apprentissage automatique](models-recipes/enrich-profile.md)
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation automatisée et de la notation sur un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
