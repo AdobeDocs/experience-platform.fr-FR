@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide des connecteurs de source Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0e9b5e56ea40528446b69c1af6f6e0bbf17f8d08
+source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '518'
 ht-degree: 2%
 
 ---
@@ -144,6 +144,7 @@ ht-degree: 2%
          - [Connecteur MariaDB](tutorials/ui/create/databases/mariadb.md)
          - [Connecteur Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
          - [Connecteur MySQL](tutorials/ui/create/databases/mysql.md)
+         - [Connecteur Oracle](tutorials/ui/create/databases/oracle.md)
          - [Connecteur Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Connecteur PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - Automatisation du marketing {#marketing-automation}
