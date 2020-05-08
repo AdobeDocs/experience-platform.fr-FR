@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide des connecteurs de source Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 958decd19c0b2063e0e242dcd3ce321c02660707
+source-git-commit: e046054b871026c32858e06c022ea86f53fbafd5
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 2%
 
 ---
@@ -137,6 +137,7 @@ ht-degree: 2%
          - [Connecteur Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
+         - [Connecteur Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Connecteur Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/ui/create/databases/ats.md)
          - [Connecteur de Requête Google Big](tutorials/ui/create/databases/bigquery.md)
