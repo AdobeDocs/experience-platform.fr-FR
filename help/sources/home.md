@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs de source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: eadf285ef5fd373eec54e6680b5f253b0b16dcf9
+source-git-commit: 492adad9b38c8850130931d3d393f28c67057d07
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 1%
 
 ---
@@ -46,6 +46,7 @@ Les sources d’enregistrement Cloud peuvent importer vos propres données dans 
 
 - [Connecteur Azure Data Lake Enregistrement Gen2](connectors/cloud-storage/adls-gen2.md)
 - [Connecteur Azure Blob et Amazon S3](connectors/cloud-storage/blob-s3.md)
+- [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
 
