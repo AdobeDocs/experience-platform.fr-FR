@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement de fichiers Azure dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Ce didacticiel nécessite une compréhension pratique des composants suivants d�
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d&#39;une connexion à l&#39;Enregistrement de fichiers, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d&#39;un flux de données](../../dataflow/cloud-storage.md).
+Si vous disposez déjà d&#39;une connexion à l&#39;Enregistrement de fichiers, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d&#39;un flux de données](../../dataflow/batch/cloud-storage.md).
 
 ### Collecte des informations d’identification requises
 
@@ -67,4 +67,4 @@ Pour connecter un compte existant, sélectionnez le compte d&#39;Enregistrement 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre compte Azure File Enregistrement. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre compte Azure File Enregistrement. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/batch/cloud-storage.md).
