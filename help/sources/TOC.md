@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide des connecteurs de source Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b3512cd4d1e024597a47e1aa52a2e23e5fce5e44
+source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
 workflow-type: tm+mt
-source-wordcount: '534'
+source-wordcount: '551'
 ht-degree: 2%
 
 ---
@@ -26,8 +26,10 @@ ht-degree: 2%
    - Publicité {#advertising}
       - [Connecteur Publicités Google](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
+      - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Azure Data Lake Enregistrement Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connecteur Azure Blob et Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Connecteur de concentrateurs de Événement Azure](connectors/cloud-storage/eventhub.md)
       - [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
@@ -159,7 +161,8 @@ ht-degree: 2%
          - [Connecteur OData générique](tutorials/ui/create/protocols/odata.md)
    - Configuration d’un flux de données {#dataflow}
       - [Configuration d’un flux de données pour un connecteur de publicité](tutorials/ui/dataflow/advertising.md)
-      - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud](tutorials/ui/dataflow/cloud-storage.md)
+      - [Configuration d’un flux de données pour un connecteur d’enregistrement de cloud par lot](tutorials/ui/dataflow/batch/cloud-storage.md)
+      - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage.md)
       - [Configuration d’un flux de données pour un connecteur de base de données](tutorials/ui/dataflow/databases.md)
       - [Configuration d’un flux de données pour un connecteur CRM](tutorials/ui/dataflow/crm.md)
       - [Configuration d’un flux de données pour un connecteur de réussite client](tutorials/ui/dataflow/customer-success.md)
