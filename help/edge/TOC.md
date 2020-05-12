@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: 44f8fceda91d4ee1044491d7eec363e501d46e70
+source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 73%
+source-wordcount: '91'
+ht-degree: 74%
 
 ---
 
@@ -30,13 +30,15 @@ ht-degree: 73%
    * [Gestion du scintillement](fundamentals/managing-flicker.md)
    * [Prise en charge du consentement](fundamentals/supporting-consent.md)
    * [Prise en charge des navigateurs intégrés à des applications](fundamentals/supporting-in-app-browsers.md)
-   * [Récupération de l’ID Experience Cloud](fundamentals/retrieving-experience-cloud-id.md)
+   * [Identité](fundamentals/identity.md)
 * Éléments à implémenter {#implement}
    * [Produits](what-to-implement/commerce.md)
 * Considérations spécifiques aux solutions {#solutions}
    * Analytics {#analytics}
       * [Aperçu des analyses](solution-specific/analytics/analytics-overview.md)
       * [Variables mappées automatiquement](solution-specific/analytics/automatically-mapped-vars.md)
+   * Audience Manager {#aam}
+      * [Présentation d’Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
       * [Présentation de la Cible](solution-specific/target/target-overview.md)
 * Référence {#ref}
