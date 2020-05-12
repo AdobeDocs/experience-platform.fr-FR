@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur d'Enregistrement de fichiers Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: a5925c76ced3384e5eb3fc269dd8ffdbb2b820d2
+source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -29,4 +29,4 @@ La documentation ci-dessous fournit des informations sur la façon de connecter 
 ## Connectez Azure File Enregistrement à Platform à l&#39;aide de l&#39;interface utilisateur
 
 - [Création d&#39;un connecteur source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
