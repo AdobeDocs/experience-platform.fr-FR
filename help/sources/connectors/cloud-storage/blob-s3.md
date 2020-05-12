@@ -4,27 +4,30 @@ solution: Experience Platform
 title: Connecteur Azure Blob et Amazon S3
 topic: overview
 translation-type: tm+mt
-source-git-commit: ca3d2e7ac6d32b71e19e150f301f21b2d87c08ad
+source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
 
 # Connecteur Azure Blob et Amazon S3
 
-Adobe Experience Platform permet d’assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plateforme. Vous pouvez assimiler des données à partir de diverses sources, telles que des applications Adobe, des  basés sur le cloud, des bases de données et bien d’autres.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
 
-Cloud  sources de peuvent importer vos propres données dans Platform sans avoir à les télécharger, les mettre en forme ou les télécharger. Les données insérées peuvent être formatées au format JSON XDM, parquet XDM ou délimitées. Chaque étape du processus est intégrée dans le flux de travaux Sources à l’aide de l’interface utilisateur. La prise en charge des fournisseurs de  de cloud  inclut Azure Blob et Amazon S3.
+Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Plateforme vous permet d&#39;importer des données à partir d&#39;Azure Blob et S3 par lots.
 
-La documentation ci-dessous fournit des informations sur la façon de connecter Azure Blob et S3 à Platform à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de connecter Azure Blob et S3 à la plate-forme à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
-## Connectez Azure Blob et S3 à la plateforme à l&#39;aide d&#39;API
+## Connectez Azure Blob et S3 à la plate-forme à l&#39;aide d&#39;API
 
-- [Création d’un connecteur d’objet blob Azure à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/blob.md)
-- [Création d’un connecteur S3 à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/s3.md)
-- [Explorez un système de Cloud  à l’aide de l’API du service de flux](../../tutorials/api/explore/cloud-storage.md)
-- [Collecte de données  de Cloud à l’aide de l’API du service de flux](../../tutorials/api/collect/cloud-storage.md)
+- [Création d&#39;un connecteur Blob Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/blob.md)
+- [Création d’un connecteur S3 à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/s3.md)
+- [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
+- [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Connectez Blob et S3 à la plateforme à l’aide de l’interface utilisateur
+## Connectez Blob et S3 à la plate-forme à l’aide de l’interface utilisateur.
 
 - [Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [Configuration d’un flux de données pour un connecteur de Cloud  dans l’interface utilisateur](../../tutorials/ui/dataflow/cloud-storage.md)
+- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
