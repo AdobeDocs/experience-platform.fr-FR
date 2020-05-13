@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clientes en temps réel
 translation-type: tm+mt
-source-git-commit: e0807f32ff5f3d16a6805074951e3b09723c5181
+source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 42%
+source-wordcount: '413'
+ht-degree: 41%
 
 ---
 
@@ -76,7 +76,9 @@ ht-degree: 42%
       * Destinations de stockage dans le cloud {#cloud-storage}
          * [Présentation des destinations de stockage dans le cloud](destinations/cloud-storage-destinations.md)
          * [Processus de création de destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
+         * [Destination Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Destination Amazon S3](destinations/amazon-s3-destination.md)
+         * [Destination Azure EventHubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destination SFTP](destinations/sftp-destination.md)
       * Destinations des plateformes de Data Management {#dmp-destinations}
          * [Présentation des destinations de la plateforme Data Management](destinations/dmp-destinations.md)
