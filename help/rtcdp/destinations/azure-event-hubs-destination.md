@@ -1,18 +1,22 @@
 ---
-title: Destination des centres de Événement Azure
-seo-title: Destination des centres de Événement Azure
+title: (bêta) Destination des centres de Événement Azure
+seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser des données à partir de la plateforme d'expérience.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser des données à partir de la plateforme d'expérience.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 4%
+source-wordcount: '470'
+ht-degree: 6%
 
 ---
 
 
-# Destination des centres de Événement Azure
+# (bêta) Destination des centres de Événement Azure
+
+>[!IMPORTANT]
+>
+>La [!DNL Azure Event Hubs] destination dans le CDP en temps réel d’Adobe est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Aperçu {#overview}
 
@@ -21,7 +25,7 @@ ht-degree: 4%
 Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser des données à partir d’Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Azure Event Hubs]Microsoft, consultez la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
-* Pour vous connecter à [!DNL Azure Event Hubs] l’aide d’appels d’API, consultez le didacticiel [sur l’API]de destinations de diffusion en continu.
+* Pour vous connecter à [!DNL Azure Event Hubs] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
 * Pour vous connecter à [!DNL Azure Event Hubs] l’aide de l’interface utilisateur CDP en temps réel d’Adobe, reportez-vous aux sections ci-dessous.
 
 ![AWS Kinesis dans l’interface utilisateur](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
@@ -89,6 +93,6 @@ Vos données de plateforme d’expérience exportées s’affichent [!DNL Azure 
 
 >[!MORELIKETHIS]
 >
->* Didacticiel sur l&#39;API des concentrateurs de Événement Azure
+>* [Se connecter à Azure Événement Hubs et activer des données à l&#39;aide d&#39;appels d&#39;API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destination AWS Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
 >* [Types et catégories de destination](/help/rtcdp/destinations/destination-types.md)
