@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 0eca2f6e50024ec43c025dd75c34ca876d71c3f2
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 5%
+source-wordcount: '959'
+ht-degree: 6%
 
 ---
 
@@ -20,10 +20,21 @@ ht-degree: 5%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Mises à jour de l’interface utilisateur {#ux}](#user-interface-updates-ux)
    - [Espace de travail Data Science {#dsw}](#data-science-workspace-dsw)
    - [Destinations {#destinations}](#destinations-destinations)
    - [SDK Web Experience Platform et réseau Edge Experience Platform {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
    - [Sources {#sources}](#sources-sources)
+
+## Mises à jour de l’interface utilisateur {#ux}
+
+Adobe Experience Platform publie des mises à jour de la barre de domaine et d’en-tête afin d’améliorer votre expérience et de vous unir à d’autres applications Experience Cloud.
+
+- Il est plus facile de basculer entre vos organisations ou vers une autre application
+- Amélioration de l’aide à l’utilisateur, y compris les articles présentés et la documentation contextuelle dans le menu Aide.
+- Capacité à fournir des commentaires sur la plateforme d’expérience et les tickets d’assistance pour les fichiers
+
+Le déploiement de la nouvelle expérience est graduel. Vous pouvez vue l’expérience à l’adresse [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 ## Espace de travail Data Science {#dsw}
 
