@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clientes en temps réel
 translation-type: tm+mt
-source-git-commit: 72511172c07b79c485660d59595aa6c8fdd6bdaa
+source-git-commit: be885faf8c1408f372d2eb6cd8d6a8fa8fc69e14
 workflow-type: tm+mt
-source-wordcount: '413'
-ht-degree: 41%
+source-wordcount: '439'
+ht-degree: 38%
 
 ---
 
@@ -122,9 +122,12 @@ ht-degree: 41%
          * [Extension Balises d’appel](/help/rtcdp/destinations/invoca-extension.md)
          * [Extension de Medallia](destinations/medallia-extension.md)
          * [Extension de boîte de réception de l’URL de discussion](destinations/talkurl-extension.md)
-   * Tutoriels sur les destinations {#dest-tutorials}
+   * Didacticiels de l’interface utilisateur Destinations {#dest-tutorials}
       * [Connexion à une destination](/help/rtcdp/destinations/connect-destination.md)
       * [Activation de profils et de segments vers une destination](destinations/activate-destinations.md)
+   * Didacticiels sur l’API de destination {api-tutorials}
+      * [Se connecter aux destinations de diffusion en continu (AWS Kinesis et Azure Événement Hubs) et activer les données](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
+      * [Se connecter aux destinations de marketing par courrier électronique et activer les données](/help/tutorials/destinations/email-marketing-api.md)
 * Confidentialité et gouvernance des données {#privacy}
    * [Présentation de la confidentialité](privacy/privacy-overview.md)
    * [Présentation de la gouvernance des données](privacy/data-governance-overview.md)
