@@ -4,7 +4,10 @@ seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience P
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
+source-git-commit: 938e0e56111c96f6b0b378c9e14fb92af70c5e10
+workflow-type: tm+mt
+source-wordcount: '262'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: bb3841da8a566105fde1b7ac78dccd79a7ea15d4
 >
 >Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
-Le SDK Web d’Adobe Experience Platform prend en charge l’interrogation des solutions de personnalisation chez Adobe, y compris Adobe Cible. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](managing-flicker.md).
+Le SDK Web d’Adobe Experience Platform prend en charge l’interrogation des solutions de personnalisation chez Adobe, y compris Adobe Cible. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendu automatique du contenu
 
