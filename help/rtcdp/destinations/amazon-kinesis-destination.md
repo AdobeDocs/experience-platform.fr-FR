@@ -4,15 +4,20 @@ seo-title: Destination Amazon Kinesis
 description: Créez une connexion sortante en temps réel vers votre enregistrement Amazon Kinesis pour diffuser des données à partir d’Adobe Experience Platform.
 seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Amazon Kinesis pour diffuser des données à partir d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 5%
+source-wordcount: '446'
+ht-degree: 6%
 
 ---
 
 
-# Destination Amazon Kinesis
+# (bêta) Destination Amazon Kinesis
+
+
+>[!IMPORTANT]
+>
+>La [!DNL Amazon Kinesis] destination dans le CDP en temps réel d’Adobe est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Aperçu {#overview}
 
@@ -21,7 +26,7 @@ Le [!DNL Kinesis Data Streams] service d&#39;Amazon Web Services vous permet de 
 Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement pour diffuser des données à partir d’Adobe Experience Platform.
 
 * Pour plus d’informations sur [!DNL Amazon Kinesis]Amazon, voir la documentation [](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
-* Pour vous connecter à [!DNL Amazon Kinesis] l’aide d’appels d’API, consultez le didacticiel [sur l’API]de destinations de diffusion en continu.
+* Pour vous connecter à [!DNL Amazon Kinesis] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
 * Pour vous connecter à [!DNL Amazon Kinesis] l’aide de l’interface utilisateur CDP en temps réel d’Adobe, reportez-vous aux sections ci-dessous.
 
 ![Amazon Kinesis dans l’interface utilisateur](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
@@ -97,7 +102,7 @@ Vos données de plateforme d’expérience exportées s’affichent [!DNL Amazon
 
 >[!MORELIKETHIS]
 >
->* Didacticiel sur l’API Amazon Kinesis
+>* [Se connecter à Amazon Kinesis et activer des données à l’aide d’appels d’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
 >* [Destination des centres de Événement Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
 >* [Types et catégories de destination](/help/rtcdp/destinations/destination-types.md)
 
