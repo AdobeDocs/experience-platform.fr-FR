@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide de l’utilisateur du Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 667aadde831a1d010f8cbbbb20bd92f914558bd1
+source-git-commit: 5718a3930f1e12e62a7bbe60f249c7f6f3434fa7
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '880'
 ht-degree: 3%
 
 ---
@@ -26,21 +26,17 @@ Ce guide d’utilisation nécessite une bonne connaissance des différents servi
 * [Service](../../identity-service/home.md)d&#39;identité : Permet le Profil client en temps réel en rapprochant les identités des sources de données disparates qui sont incorporées dans la plate-forme.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 
-## Présentation du profil
+## Présentation
 
-Dans l’interface utilisateur [de la plateforme](http://platform.adobe.com)d’expérience, cliquez sur **Profils** dans le volet de navigation de gauche pour ouvrir l’onglet _Aperçu_ dans l’espace de travail _Profils._ Cet onglet affiche plusieurs widgets qui fournissent des informations de haut niveau sur le magasin de Profils, notamment l’audience adressable totale, le nombre d’enregistrements de Profil qui ont été ingérés au cours de la semaine écoulée, ainsi que des statistiques sur les enregistrements réussis et ayant échoué pour la même période.
+Dans l’interface utilisateur [de la plateforme](http://platform.adobe.com)d’expérience, cliquez sur **Profils** dans le volet de navigation de gauche pour ouvrir l’onglet _Aperçu_ . Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
 
-![](../images/user-guide/profile-overview.png)
+![](../images/user-guide/profiles-overview.png)
 
-## Exemples de profil de Vue
+## Parcourir Profil
 
-Cliquez sur **Parcourir** pour vue un exemple de liste de profils disponibles. Cet exemple comprend jusqu’à 50 profils du nombre [total de](#profile-count)profils. Les exemples sont actualisés par une tâche automatique qui sélectionne les nouvelles données de profil lors de leur assimilation. Chaque profil répertorié affiche son identifiant, son prénom, son nom et son adresse électronique personnelle. Cliquez sur l’ID d’un profil répertorié pour afficher ses détails dans le lecteur de [Profil](#profile-viewer).
+Cliquez sur l’onglet **Parcourir** pour parcourir les profils par identité. Cet onglet contient également votre nombre [total de](#profile-count)profils.
 
-![](../images/user-guide/profile-samples.png)
-
-Vous pouvez personnaliser les attributs affichés dans la liste en cliquant sur l’icône du sélecteur de colonnes. Cette option affiche une liste déroulante contenant des attributs de profil courants que vous pouvez ajouter ou supprimer.
-
-![](../images/user-guide/column-selector.png)
+![](../images/user-guide/profiles-browse.png)
 
 ### Nombre de Profils {#profile-count}
 
@@ -50,43 +46,53 @@ Le nombre de profils inclut également les profils dotés d’attributs (donnée
 
 Lorsque l’ingestion de profils dans le Profil Store augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
 
-![](../images/user-guide/profile-count.png)
+### espace de nommage d&#39;identité
 
-### Recherche de Profil
+Le sélecteur d&#39;espace de nommage **** d&#39;identité ouvre une boîte de dialogue dans laquelle vous pouvez choisir l&#39;espace de nommage d&#39;identité à rechercher et personnaliser les attributs affichés à partir de votre recherche en sélectionnant l&#39;icône de filtre et en choisissant les attributs à ajouter ou à supprimer.
 
-Si vous connaissez une identité liée pour un profil particulier (comme son adresse électronique), vous pouvez rechercher ce profil en cliquant sur **Rechercher un profil**. Il s&#39;agit de la manière la plus fiable d&#39;accéder à un profil spécifique, qu&#39;il apparaisse dans la liste des échantillons.
+![](../images/user-guide/profiles-search-filter.png)
 
-![](../images/user-guide/find-a-profile.png)
+Dans la boîte de dialogue *Sélectionner un espace de nommage* d&#39;identité, choisissez l&#39;espace de nommage de recherche ou utilisez la barre de **recherche** de la boîte de dialogue pour commencer à saisir le nom d&#39;un espace de nommage. Vous pouvez sélectionner un espace de nommage pour vue d&#39;autres détails, et une fois que vous avez trouvé l&#39;espace de nommage, vous pouvez sélectionner le bouton radio et appuyer sur **Sélectionner** pour continuer.
 
-Dans la boîte de dialogue qui s’affiche, sélectionnez un espace de nommage d’ID approprié dans la liste déroulante (&quot;Courriel&quot; dans cet exemple) et saisissez la valeur d’ID ci-dessous avant de cliquer sur **OK**. Si cette option est trouvée, les détails du profil ciblé s’affichent dans le lecteur de profil, comme décrit dans la section suivante.
+![](../images/user-guide/profiles-select-identity-namespace.png)
 
-![](../images/user-guide/find-a-profile-details.png)
+### Valeur d’identité
 
-### Visionneuse de profils {#profile-viewer}
+Après avoir sélectionné un espace de nommage **d&#39;** identité, vous revenez à l&#39;onglet *Parcourir* où vous pouvez saisir une valeur **d&#39;** identité. Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de nommage fourni. Par exemple, la sélection de l’espace de nommage **d’** identité &quot;courriel&quot; exigerait une valeur **d’** identité sous la forme d’une adresse électronique valide.
 
-Lors de la sélection ou de la recherche d’un profil spécifique, l’écran _Détails_ de la visionneuse de profils s’affiche. Cette page affiche des informations sur le profil sélectionné, telles que les attributs de base du profil, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil pour former une seule vue du client.
+![](../images/user-guide/profiles-show-profile.png)
 
-![](../images/user-guide/profile-viewer-detail.png)
+Une fois qu’une valeur a été saisie, sélectionnez **Afficher le profil** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez l’ID **de** Profilpour vue les détails du profil.
 
-Le lecteur de profil fournit également des onglets qui vous permettent de vue de événements et de segmenter les adhésions associées à ce profil, le cas échéant.
+![](../images/user-guide/profiles-display-profile.png)
 
-![](../images/user-guide/profile-viewer-events-seg.png)
+### Détails du Profil
+
+Lorsque vous sélectionnez l’ID **de** Profil, l’onglet _Détails_ s’ouvre. Cette page affiche des informations sur le profil sélectionné, y compris les attributs de base, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil pour former une seule vue du client.
+
+![](../images/user-guide/profiles-profile-detail.png)
+
+Vous pouvez vue des informations supplémentaires relatives au profil, y compris les attributs, les Événements et les segments auxquels le profil est membre.
+
+![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Stratégies de fusion
 
 Cliquez sur **Fusionner les stratégies** pour vue une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, qu’il s’agisse ou non de la stratégie de fusion par défaut et le schéma auquel elle s’applique.
 
-![](../images/user-guide/profile-merge-policies.png)
-
 Pour plus d’informations sur l’utilisation des stratégies de fusion dans l’interface utilisateur, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
+
+![](../images/user-guide/profiles-merge-policies.png)
 
 ## schéma Union
 
-Cliquez sur Schéma **** d’Unionpour vue les schémas d’union de votre banque de données de profil. Un schéma d’union est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans le Profil client en temps réel. Cliquez sur une classe dans la liste de gauche pour vue la structure de son schéma d&#39;union dans la trame.
+Cliquez sur Schéma **** d’Union pour vue les schémas d’union de votre Profil Store. Un schéma d’union est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans le Profil client en temps réel. Cliquez sur une classe dans la liste de gauche pour vue la structure de son schéma d&#39;union dans la trame.
 
-![](../images/user-guide/profile-union-schema.png)
+Par exemple, la sélection de &quot;Profil XDM&quot; affiche le schéma d’union pour la classe de Profil XDM individuel.
 
 Pour plus d&#39;informations sur les schémas d&#39;union et leur rôle dans le Profil client en temps réel, consultez la section sur les schémas d&#39;union du guide [de composition des](../../xdm/schema/composition.md) schémas.
+
+![](../images/user-guide/profiles-union-schema.png)
 
 ## Étapes suivantes
 
