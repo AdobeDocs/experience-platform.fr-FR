@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide des connecteurs de source Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 71080a1741ea0d660f63e2009f045c0e34f6c44b
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '563'
 ht-degree: 2%
 
 ---
@@ -65,9 +65,11 @@ ht-degree: 2%
       - Publicité {#advertising}
          - [Connecteur Publicités Google](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
+         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connecteur de blocage Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
+         - [Connecteur de concentrateurs de Événement Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connecteur SFTP](tutorials/api/create/cloud-storage/sftp.md)
@@ -128,8 +130,10 @@ ht-degree: 2%
       - Publicité {#create}
          - [Connecteur Publicités Google](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
+         - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Connecteur Azure Blob et Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Connecteur de concentrateurs de Événement Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Connecteur FTP et SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
