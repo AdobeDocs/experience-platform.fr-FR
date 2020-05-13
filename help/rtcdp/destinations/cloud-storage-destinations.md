@@ -1,25 +1,35 @@
 ---
-title: ' Cloud destinations '
-seo-title: ' Cloud destinations '
-description: Le CDP en temps réel d’Adobe peut diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de. Nous ajouterons d’autres destinations  nuage dans les  versions suivantes.
-seo-description: Le CDP en temps réel d’Adobe peut diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de. Nous ajouterons d’autres destinations  nuage dans les  versions suivantes.
+title: Destinations de stockage dans le cloud
+seo-title: Destinations de stockage dans le cloud
+description: Adobe Real-time CDP peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
+seo-description: Adobe Real-time CDP peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 34%
 
 ---
 
 
-#  Cloud destinations {#cloud-storage-destinations}
+# Destinations de stockage dans le cloud {#cloud-storage-destinations}
 
-Le CDP en temps réel d’Adobe peut diffuser vos segments sous forme de fichiers de données dans votre cloud Amazon S3 ou SFTP  des emplacements  de. Cela vous permet d’envoyer   et leurs attributs de  à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations.
+Adobe Real-time CDP peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement Cloud. Cela vous permet d’envoyer des audiences et leurs attributs de profil à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations pour Amazon S3 et SFTP. Pour les destinations AWS Kinesis et Azure Événement Hubs, les données sont extraites en flux continu de la plate-forme Experience au format JSON.
 
-![Adobe Cloud  destinations](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
+![ Destinations de stockage dans Adobe Cloud](/help/rtcdp/destinations/assets/cloud-storage-destinations.png)
 
-Le CDP en temps réel d’Adobe prend actuellement en charge deux destinations de  de cloud, à savoir [Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) et [SFTP](/help/rtcdp/destinations/sftp-destination.md). Nous ajouterons d’autres destinations  nuage dans les  versions suivantes.
-
-Pour plus d’informations sur la connexion à un cloud  des destinations  de, voir [Flux de travaux pour créer des destinations](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)de de cloud .
+Pour plus d’informations sur la connexion aux destinations de stockage dans le cloud, voir [Processus de création de destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
 ## Type d’exportation de données
 
-**Exportation** basée sur  : vous exportez des détails sur les individus dans le  de l’. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des , des adhésions aux segments, etc.
+**Exportation basée sur les profils** : vous exportez des détails sur les individus de l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à des segments, etc.
 
+## Destinations d’enregistrement Cloud disponibles
+
+* [Destination Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md)
+* [Destination SFTP](/help/rtcdp/destinations/sftp-destination.md)
+
+## Destinations de diffusion en continu de l’enregistrement Cloud disponibles
+
+* [Destination Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+* [Destination Azure EventHubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)
