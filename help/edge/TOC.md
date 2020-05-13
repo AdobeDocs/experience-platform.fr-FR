@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Edge Network
 translation-type: tm+mt
-source-git-commit: 1d864707226087d63a8f0afd9156efed0e369742
+source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 74%
+ht-degree: 76%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 74%
    * [Débogage](fundamentals/debugging.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)
    * [Rendu du contenu personnalisé](fundamentals/rendering-personalization-content.md)
-   * [Gestion du scintillement](fundamentals/managing-flicker.md)
    * [Prise en charge du consentement](fundamentals/supporting-consent.md)
    * [Prise en charge des navigateurs intégrés à des applications](fundamentals/supporting-in-app-browsers.md)
    * [Identité](fundamentals/identity.md)
@@ -40,7 +39,8 @@ ht-degree: 74%
    * Audience Manager {#aam}
       * [Présentation d’Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
-      * [Présentation de la Cible](solution-specific/target/target-overview.md)
+      * [Présentation de Target](solution-specific/target/target-overview.md)
+      * [Gestion des scintillements](solution-specific/target/flicker-management.md)
 * Référence {#ref}
    * [Informations collectées automatiquement](reference/automatic-information.md)
    * [Récupération des informations sur la bibliothèque](reference/retrieving-library-information.md)
