@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 9d4c645e830790a7d5430fe3d514464ca8bef025
+source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '875'
 ht-degree: 5%
 
 ---
@@ -19,9 +19,11 @@ ht-degree: 5%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Espace de travail Data Science](#dsw)
-- [SDK Web Experience Platform et réseau Edge Experience Platform](#edge)
-- [Sources](#sources)
+- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Espace de travail Data Science {#dsw}](#data-science-workspace-dsw)
+   - [Destinations {#destinations}](#destinations-destinations)
+   - [SDK Web Experience Platform et réseau Edge Experience Platform {#edge}](#experience-platform-web-sdk-and-experience-platform-edge-network-edge)
+   - [Sources {#sources}](#sources-sources)
 
 ## Espace de travail Data Science {#dsw}
 
@@ -37,6 +39,26 @@ Data Science Workspace utilise l’apprentissage automatique et l’intelligence
 | Recettes | Les nouvelles recettes PySpark et Spark suivent maintenant le processus Docker de la même façon que les recettes Python et R. |
 
 Pour plus d&#39;informations sur la migration de vos cahiers de travail et de vos recettes pour utiliser Spark 2.4, consultez le guide [de migration des](../../data-science-workspace/recipe-notebook-migration.md)cahiers de travail. Pour plus d’informations générales sur Data Science Workspace, voir la documentation [](../../data-science-workspace/home.md)d’aperçu.
+
+## Destinations {#destinations}
+
+Dans [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préétablies avec les plateformes de destination qui activent les données pour ces partenaires de manière transparente.
+
+**Nouvelles destinations**
+
+Le CDP en temps réel d’Adobe prend désormais en charge l’activation des données vers les destinations d’enregistrement cloud en flux continu, ce qui vous permet d’exporter des données et des événements d’audience vers ces destinations au format JSON. Vous pouvez ensuite décrire la logique métier au-dessus de ces événements dans vos destinations. Voir ci-dessous pour plus de détails :
+
+>[!NOTE]
+>
+>Les [!DNL Amazon Kinesis] destinations et les [!DNL Azure Event Hubs] destinations dans le CDP en temps réel d’Adobe sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+
+| Documentation | Description |
+|--- | ---|
+| [(bêta) Destination Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) | Cet article explique comment créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement pour diffuser des données à partir d’Adobe Experience Platform. |
+| [(bêta) Destination des centres de Événement Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md) | Cet article explique comment créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser des données à partir d’Adobe Experience Platform. |
+| [Didacticiel d’API - Connexion à des destinations de diffusion en continu et activation de données](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md) | Ce didacticiel explique comment utiliser les appels d’API pour se connecter à vos données Adobe Experience Platform, créer une connexion à une destination d’enregistrement cloud de flux continu (Amazon Kinesis ou Azure Événement Hubs), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée. |
+
+Pour plus d&#39;informations, consultez la présentation [des](/help/rtcdp/destinations/destinations-overview.md)Destinations.
 
 ## SDK Web Experience Platform et réseau Edge Experience Platform {#edge}
 
