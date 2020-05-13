@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 96faba8d608d2fd057d256855b8b82af10558324
+source-git-commit: 7a36a3e3180c4ed4a9db23c0a33f6af3d7a3a5ec
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '505'
 ht-degree: 2%
 
 ---
@@ -27,11 +27,11 @@ La documentation de la plate-forme d’expérience est fournie dans plusieurs fo
 
 >[!NOTE]
 >
->À compter de mai 2020, Adobe a déployé des mises à jour sur la barre d’en-tête et le domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
+>À compter de mai 2020, Adobe procède à des mises à jour de la barre d’en-tête et du domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
 >
 >* Liens vers les articles présentés
 >* Recommandations relatives à la documentation contextuelle
->* Capacité à fournir des commentaires sur les problèmes de documentation et de rapport
+>* Capacité à fournir des commentaires sur la plateforme d’expérience et à signaler les problèmes
 >* Amélioration des résultats de la recherche qui incluent également les résultats des forums de la communauté et du contenu vidéo.
 >
 > 
@@ -41,7 +41,7 @@ De temps à autre, vous pouvez recevoir un questionnaire pour obtenir des commen
 
 ## Didacticiels de la plateforme d’expérience
 
-Commencez avec Platform rapidement et facilement en suivant des didacticiels détaillés sur tout, de la préparation de vos données à l’assimilation à des algorithmes d’apprentissage automatique avancés. Ces didacticiels ont été conçus pour compléter les informations contenues dans la documentation de la plateforme d’expérience, de sorte que pour de meilleurs résultats, les documents restent disponibles tout en suivant les didacticiels. Consultez les didacticiels [de la plateforme](../tutorials/home.md) d’expérience pour commencer.
+Commencez rapidement et facilement avec Platform en suivant des didacticiels détaillés sur tout, de la préparation de vos données à l’assimilation à des algorithmes d’apprentissage automatique avancés. Ces didacticiels ont été conçus pour compléter les informations contenues dans la documentation de la plateforme d’expérience, de sorte que pour de meilleurs résultats, les documents restent disponibles tout en suivant les didacticiels. Consultez les didacticiels [de la plateforme](../tutorials/home.md) d’expérience pour commencer.
 
 ## documents et ressources de référence
 
