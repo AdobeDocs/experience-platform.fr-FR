@@ -1,32 +1,31 @@
 ---
-title: Soutien du consentement
-seo-title: Prise en charge des préférences de consentement du SDK Web d’Adobe Experience Platform
-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
-seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
+title: Prise en charge du consentement
+seo-title: Prise en charge des préférences de consentement du SDK Web d’Adobe Experience Platform
+description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
+seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '518'
+ht-degree: 99%
 
 ---
 
 
-# (Bêta) Consentement à l’appui
+# Soutien du consentement
 
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent changer.
+Pour respecter la confidentialité des utilisateurs, vous pouvez leur demander leur consentement avant d’autoriser le SDK à utiliser des données spécifiques à ceux-ci à certains usages. Actuellement, le SDK permet aux utilisateurs de donner ou de refuser leur consentement uniquement pour tous les usages, mais Adobe espère prochainement offrir un contrôle plus précis sur des usages spécifiques.
 
-Pour respecter la confidentialité de votre utilisateur, vous pouvez demander son consentement avant d’autoriser le SDK à utiliser des données spécifiques à l’utilisateur à certaines fins. Actuellement, le SDK permet uniquement aux utilisateurs de opt-in ou d’en dehors de tous les objectifs, mais Adobe espère à l’avenir fournir un contrôle plus précis sur des objectifs spécifiques.
+Si l’utilisateur choisit de donner son consentement pour tous les usages, le SDK est autorisé à effectuer les tâches suivantes :
 
-Si l’utilisateur choisit de se connecter à toutes les fins, le kit SDK est autorisé à effectuer les  suivantes :
+* envoyer des données vers et depuis les serveurs d’Adobe ;
+* lire et écrire des cookies ou des éléments de stockage web (sauf pour conserver les préférences de consentement de l’utilisateur).
 
-* Envoyez des données vers et depuis les serveurs d’Adobe.
-* Lisez et écrivez des cookies ou des éléments de  Web (sauf pour conserver les préférences d’inclusion de l’utilisateur).
-
-Si l’utilisateur choisit de ne pas participer à tous les , le SDK n’effectue aucune de ces opérations.
+Si l’utilisateur choisit de refuser son consentement pour tous les usages, le SDK n’effectue aucune de ces tâches.
 
 ## Configuration du consentement
 
-Par défaut, l’utilisateur est sélectionné à tous les fins. Pour empêcher le SDK d’exécuter le  ci-dessus jusqu’à ce que l’utilisateur se connecte, transmettez la configuration `"defaultConsent": { "general": "pending" }` du SDK comme suit :
+Par défaut, le consentement de l’utilisateur est donné pour tous les usages. Pour empêcher le SDK d’exécuter les tâches ci-dessus jusqu’à ce que l’utilisateur donne son consentement, transmettez `"defaultConsent": { "general": "pending" }` pendant la configuration du SDK de la manière suivante :
 
 ```javascript
 alloy("configure", {
@@ -36,13 +35,13 @@ alloy("configure", {
 });
 ```
 
-Lorsque le consentement par défaut à des fins générales est défini sur En attente, toute tentative d’exécution de commandes qui dépend des préférences d’inclusion de l’utilisateur (par exemple, la `event` commande) entraîne la mise en file d’attente de la commande dans le SDK. Ces commandes ne sont pas traitées tant que vous n’avez pas communiqué les préférences d’inclusion de l’utilisateur au SDK.
+Lorsque le consentement par défaut pour un usage général est défini sur En attente, toute tentative d’exécution de commandes qui dépend des préférences de consentement de l’utilisateur (par exemple, la commande`event`) entraîne la mise en file d’attente de la commande dans le SDK. Ces commandes ne sont pas traitées tant que vous n’avez pas communiqué les préférences de consentement de l’utilisateur au SDK.
 
-A ce stade, vous préférerez peut-être demander à l’utilisateur de opt-in quelque part dans l’interface utilisateur. Une fois les préférences de l’utilisateur collectées, communiquez ces préférences au SDK.
+À ce stade, vous préférerez peut-être demander à l’utilisateur de donner son consentement à un emplacement dans l’interface utilisateur. Une fois les préférences de l’utilisateur collectées, communiquez-les au SDK.
 
 ## Communication des préférences de consentement
 
-Si l’utilisateur accepte, exécutez la `setConsent` commande en définissant l’ `general` option `in` comme suit :
+Si l’utilisateur accorde son consentement, exécutez la commande `setConsent` en définissant l’option `general` sur `in` de la manière suivante :
 
 ```javascript
 alloy("setConsent", {
@@ -50,9 +49,9 @@ alloy("setConsent", {
 });
 ```
 
-L’utilisateur ayant désormais choisi de se connecter, le SDK exécute toutes les commandes mises en file d’attente précédentes. Les futures commandes qui dépendent du choix de l’utilisateur _ne seront pas_ mises en file d’attente et seront exécutées rapidement.
+L’utilisateur ayant donné son consentement, le SDK exécute toutes les commandes précédemment mises en file d’attente. Les prochaines commandes qui dépendent du consentement de l’utilisateur _ne seront pas_ mises en file d’attente et seront exécutées rapidement.
 
-Si l’utilisateur choisit de opt-out, exécutez la `setConsent` commande en définissant l’ `general` option `out` comme suit :
+Si l’utilisateur choisit de ne pas donner son consentement, exécutez la commande `setConsent` en définissant l’option `general` sur `out` de la manière suivante :
 
 ```javascript
 alloy("setConsent", {
@@ -62,14 +61,14 @@ alloy("setConsent", {
 
 >[!NOTE]
 >
->Une fois qu’un utilisateur s’est désabonné, le kit SDK ne vous permet pas de définir le consentement de l’utilisateur `in`.
+>Lorsque l’utilisateur n’a pas donné son consentement, le SDK ne vous permet pas de définir le consentement des utilisateurs sur `in`.
 
-Comme l’utilisateur a choisi de opt-out, les promesses qui ont été renvoyées à partir de commandes mises en file d’attente précédentes sont rejetées. Les futures commandes qui dépendront du choix de l&#39;utilisateur renverront des promesses qui seront également rejetées. Pour plus d&#39;informations sur la gestion ou la suppression des erreurs, reportez-vous à la section [Exécution des commandes](executing-commands.md).
+L’utilisateur ayant choisi de ne pas donner son consentement, les promesses qui ont été renvoyées à partir de commandes précédemment mises en file d’attente sont rejetées. Les prochaines commandes qui dépendent du consentement de l’utilisateur retournent les promesses également rejetées. Pour plus d’informations sur la gestion ou la suppression des erreurs, reportez-vous à la section [Exécution des commandes](executing-commands.md).
 
 >[!NOTE]
 >
->Actuellement, le SDK ne prend en charge que l’ `general` objectif. Bien que nous prévoyions de créer un ensemble d’objectifs ou de  plus robustes qui correspondront aux différentes fonctionnalités et offres de produits Adobe, l’implémentation actuelle est une approche d’inclusion totale ou inexistante.  Ceci s’applique uniquement au SDK Web d’Adobe Experience Platform et NON aux autres bibliothèques JavaScript d’Adobe.
+>Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  Cela s’applique uniquement au SDK Web d’Adobe Experience Platform et NON aux autres bibliothèques JavaScript d’Adobe.
 
 ## Persistance des préférences de consentement
 
-Après avoir communiqué les préférences de l’utilisateur au SDK à l’aide de la `setConsent` commande, le SDK conserve les préférences de l’utilisateur sur un cookie. La prochaine fois que l’utilisateur charge votre site Web dans le navigateur, le SDK récupérera et utilisera ces préférences persistantes. Il n’est pas nécessaire d’exécuter à nouveau la `setConsent` commande, sauf pour communiquer un changement dans les préférences de l’utilisateur, ce que vous pouvez faire à tout moment.
+Après avoir communiqué les préférences de l’utilisateur au SDK à l’aide de la commande `setConsent`, le SDK les conserve dans un cookie. La prochaine fois que l’utilisateur charge votre site web dans le navigateur, le SDK récupère ces préférences persistantes et les utilise. Il n’est pas nécessaire d’exécuter de nouveau la commande `setConsent`, sauf pour communiquer un changement dans les préférences de l’utilisateur, ce que vous pouvez faire à tout moment.
