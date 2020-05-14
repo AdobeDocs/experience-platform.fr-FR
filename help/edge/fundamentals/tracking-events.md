@@ -4,16 +4,15 @@ seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: c49ac064d310fbe12e19d58b80c2267a35d585e8
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 97%
 
 ---
 
 
 # Suivi des événements
-
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la commande `event`. La commande `event` constitue le principal moyen pour envoyer des données à Experience Cloud et pour récupérer du contenu personnalisé, des identités et des destinations d’audience.
 
