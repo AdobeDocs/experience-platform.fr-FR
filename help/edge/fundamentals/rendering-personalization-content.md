@@ -4,7 +4,7 @@ seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience P
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 34%
@@ -21,7 +21,7 @@ Le SDK Web d’Adobe Experience Platform prend en charge l’interrogation des s
 Le SDK effectue automatiquement le rendu du contenu personnalisé lorsque vous envoyez un événement au serveur et que vous définissez `renderDecisions` sur `true` comme option sur l’événement.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   "renderDecisions": true,
   "xdm": {
     "commerce": {
@@ -43,7 +43,7 @@ Le rendu du contenu personnalisé est asynchrone. Il ne doit donc pas y avoir d�
 Vous pouvez demander la liste des décisions à renvoyer comme promesse sur la `event` commande en utilisant `scopes`. Une portée est une chaîne qui permet à la solution de personnalisation de savoir quelle décision vous souhaitez prendre.
 
 ```javascript
-alloy("event",{
+alloy("sendEvent",{
     xdm:{...},
     scopes:['demo-1', 'demo-2']
   }).then(function(result){
