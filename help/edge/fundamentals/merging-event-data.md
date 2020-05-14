@@ -4,19 +4,19 @@ seo-title: Fusion des données d’événement du SDK Web d’Adobe Experience P
 description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 seo-description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 767f0e1bfdfcc898313b546c804ba1287f2aec50
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 100%
+source-wordcount: '436'
+ht-degree: 95%
 
 ---
 
 
-# (Version bêta) Fusion de données d’événement
+# Fusion de données d’événement
 
 >[!IMPORTANT]
 >
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>Cette fonctionnalité est encore en cours de développement et toutes les solutions ne pourront donc pas fusionner ces données.
 
 Parfois, toutes les données ne sont pas disponibles lorsqu’un événement se produit. Vous souhaiterez peut-être capturer les données que vous _possédez_ afin qu’elles ne soient pas perdues si, par exemple, l’utilisateur ferme le navigateur. D’un autre côté, vous pouvez également inclure toutes les données qui seront disponibles ultérieurement.
 
