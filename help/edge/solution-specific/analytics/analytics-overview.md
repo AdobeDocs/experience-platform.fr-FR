@@ -1,35 +1,34 @@
 ---
 title: Envoi de données à Adobe Analytics
 seo-title: Envoi de données à Adobe Analytics avec le SDK Web d’Adobe Experience Platform
-description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web de la plate-forme d’expérience
-seo-description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web de la plate-forme d’expérience
+description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web d’Experience Platform
+seo-description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 100%
 
 ---
 
 
-# (bêta) Envoi de données à Adobe Analytics
+# Envoi de données à Adobe Analytics
 
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent changer.
-
-Le SDK Web d’Adobe Experience Platform peut envoyer des données à Adobe Analytics. Cela fonctionne en traduisant `xdm` dans un format utilisable par Adobe Analytics.
+Le SDK Web d’Adobe Experience Platform peut envoyer des données à Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
 
 ## Configuration
 
-Adobe Analytics récupère automatiquement les données que vous envoyez si une suite de rapports est mappée dans l’interface utilisateur de configuration du client. Ici, vous pouvez mapper un ou plusieurs à une configuration donnée. Une fois qu’une suite de rapports est mappée, les données commencent automatiquement à circuler.
+Adobe Analytics récupère automatiquement les données que vous envoyez si une suite de rapports est mappée dans l’interface utilisateur de configuration du client. Ici, vous pouvez mapper un ou plusieurs rapports à une configuration donnée. Une fois qu’une suite de rapports est mappée, les données commencent automatiquement à circuler.
 
 ## Données mappées automatiquement
 
-Adobe Experience Platform Edge Network mappe automatiquement de nombreuses variables XDM. Le complet des variables mappées automatiquement est répertorié [ici](../analytics/automatically-mapped-vars.md).
+Adobe Experience Platform Edge Network mappe automatiquement de nombreuses variables XDM. La liste complète des variables mappées automatiquement se trouve [ici](../analytics/automatically-mapped-vars.md).
 
 ## Données mappées manuellement
 
-Toutes les données collectées par le réseau Edge sont accessibles via des règles de traitement. Les données sont aplaties à l’aide de la notation point et disponibles sous la forme contextData.
+Toutes les données collectées par le réseau Edge sont accessibles via des règles de traitement. Les données sont aplaties à l’aide d’une notation par points et disponibles en tant que contextData.
 
-Si vous aviez un  qui ressemblait à ça.
+Si vous aviez un schéma qui ressemblait à celui-ci.
 
 ```javascript
 {
@@ -54,7 +53,7 @@ Si vous aviez un  qui ressemblait à ça.
 }
 ```
 
-Il s’agirait alors des clés de données contextuelles à votre disposition.
+Il s’agirait alors des clés de données contextuelles mises à votre disposition.
 
 ```javascript
 a.x.key //value
