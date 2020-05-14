@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Création d'un connecteur d'Enregistrement de table Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9556b85b26e2eb3d4a2b3e41db5f0c3a14459d32
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '578'
+ht-degree: 2%
 
 ---
 
 
 # Création d&#39;un connecteur d&#39;Enregistrement de table Azure à l&#39;aide de l&#39;API Flow Service
+
+>[!NOTE]
+>Le connecteur d&#39;Enregistrement Azure Table est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
