@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Création d’un connecteur ServiceNow à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 90f00d726c94f2f13e7c52991fa59e7e5d3ecd31
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '697'
+ht-degree: 1%
 
 ---
 
 
 # Création d’un connecteur ServiceNow à l’aide de l’API du service de flux
+
+>[!NOTE]
+>Le connecteur ServiceNow est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
@@ -17,12 +23,12 @@ Ce didacticiel utilise l’API du service de flux pour vous guider tout au long 
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plateforme.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à un serveur ServiceNow à l’aide de l’API du service de flux.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un serveur ServiceNow à l’aide de l’API du service de flux.
 
 ### Collecte des informations d’identification requises
 
@@ -32,27 +38,27 @@ Pour que le service Flow se connecte à ServiceNow, vous devez fournir des valeu
 | ---------- | ----------- |
 | `endpoint` | Point de terminaison du serveur ServiceNow. |
 | `username` | Nom d’utilisateur utilisé pour la connexion au serveur ServiceNow pour l’authentification. |
-| `password` | mot de passe pour la connexion au serveur ServiceNow pour l’authentification. |
+| `password` | Mot de passe de connexion au serveur ServiceNow pour authentification. |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)ServiceNow.
+Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET)ServiceNow.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../../../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
-* x-gw-ims-org-id : `{IMS_ORG}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
 
 * Content-Type : `application/json`
 
@@ -60,9 +66,9 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 Pour créer une connexion ServiceNow, un ensemble de spécifications de connexion ServiceNow doit exister dans le service de flux. La première étape de la connexion de Platform à ServiceNow consiste à récupérer ces spécifications.
 
-**Format API**
+**Format d’API**
 
-Chaque source disponible possède son propre jeu de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d’authentification. L’envoi d’une requête GET au `/connectionSpecs` point de fin renverra les spécifications de connexion pour toutes les sources disponibles. Vous pouvez également inclure le `property=name=="service-now"` pour obtenir des informations spécifiques à ServiceNow.
+Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. L’envoi d’une requête GET au point de `/connectionSpecs` terminaison renverra les spécifications de connexion pour toutes les sources disponibles. Vous pouvez également inclure la requête `property=name=="service-now"` pour obtenir des informations spécifiques à ServiceNow.
 
 ```http
 GET /connectionSpecs
@@ -84,7 +90,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les spécifications de connexion pour ServiceNow, y compris son identifiant unique (`id`). Cet ID est requis à l’étape suivante pour créer une connexion de base.
+Une réponse réussie renvoie les spécifications de connexion pour ServiceNow, y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion de base.
 
 ```json
 {
@@ -133,7 +139,7 @@ Une réponse réussie renvoie les spécifications de connexion pour ServiceNow, 
 
 Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par compte ServiceNow, car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /connections
@@ -171,7 +177,7 @@ curl -X POST \
 | ------------- | --------------- |
 | `auth.params.server` | Point de terminaison de votre serveur ServiceNow. |
 | `auth.params.username` | Nom d’utilisateur utilisé pour la connexion au serveur ServiceNow pour l’authentification. |
-| `auth.params.password` | mot de passe pour la connexion au serveur ServiceNow pour l’authentification. |
+| `auth.params.password` | Mot de passe de connexion au serveur ServiceNow pour authentification. |
 | `connectionSpec.id` | ID de spécification de connexion associé à ServiceNow. |
 
 **Réponse**
@@ -187,4 +193,4 @@ Une réponse réussie renvoie les détails de la connexion de base nouvellement 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion de base ServiceNow à l’aide de l’API du service de flux et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de succès des clients à l’aide de l’API](../../explore/customer-success.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion de base ServiceNow à l’aide de l’API Flow Service et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet identifiant de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de réussite des clients à l’aide de l’API](../../explore/customer-success.md)Flow Service.
