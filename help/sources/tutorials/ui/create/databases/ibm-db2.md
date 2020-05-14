@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source IBM DB2 dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: e77dadb4257c16e19113f6224790fbb3b8207a52
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 
 
 # Création d’un connecteur source IBM DB2 dans l’interface utilisateur
+
+> [!NOTE]
+> Le connecteur IBM DB2 est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source IBM DB2 (ci-après dénommé &quot;DB2&quot;) à l’aide de l’interface utilisateur de la plate-forme.
 
