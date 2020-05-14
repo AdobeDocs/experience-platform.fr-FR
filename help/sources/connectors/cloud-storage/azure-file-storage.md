@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Connecteur d'Enregistrement de fichiers Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: 70c8f4657fcc54e87b91f7b263b7da9e1e3d9677
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
 
-# Connecteur d&#39;Enregistrement de fichiers Azure
+# (Bêta) Connecteur d&#39;Enregistrement de fichier Azure
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
 
