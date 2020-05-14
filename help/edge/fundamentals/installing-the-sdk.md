@@ -1,21 +1,20 @@
 ---
 title: Installation du SDK Web d’Adobe Experience Platform
-seo-title: SDK Web Adobe Experience Platform installation du SDK
-description: Découvrez comment installer le SDK Web de la plateforme d’expérience
-seo-description: Découvrez comment installer le SDK Web de la plateforme d’expérience
+seo-title: Installation du SDK Web d’Adobe Experience Platform
+description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
+seo-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '498'
+ht-degree: 100%
 
 ---
 
 
-# (bêta) Installation du SDK
+# Installation du SDK
 
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent changer.
-
-La première étape de la mise en oeuvre du SDK Web d’Adobe Experience Platform consiste à copier et coller le &quot;code de base&quot; suivant le plus haut possible dans la balise `<head>` de votre code HTML :
+La première étape de l’implémentation du SDK Web d’Adobe Experience Platform consiste à copier et coller le « code de base » suivant le plus haut possible dans la balise `<head>` de votre code HTML :
 
 ```markup
 <script>
@@ -27,7 +26,7 @@ La première étape de la mise en oeuvre du SDK Web d’Adobe Experience Platfor
 <script src="alloy.js" async></script>
 ```
 
-Le code de base crée une fonction globale nommée `alloy`. Utilisez cette fonction pour interagir avec le SDK. Si vous souhaitez nommer la fonction globale quelque chose d’autre, vous pouvez modifier le `alloy` nom comme suit :
+Le code de base crée une fonction globale appelée `alloy`. Utilisez cette fonction pour interagir avec le SDK. Si vous souhaitez appeler autrement la fonction globale, vous pouvez modifier le nom `alloy` de la manière suivante :
 
 ```markup
 <script>
@@ -42,37 +41,37 @@ Le code de base crée une fonction globale nommée `alloy`. Utilisez cette fonct
 Dans cet exemple, la fonction globale est renommée `mycustomname`, au lieu de `alloy`.
 
 >[!IMPORTANT]
->Pour éviter des problèmes potentiels, utilisez un nom contenant au moins un caractère qui n’est pas un chiffre et qui n’entre pas en conflit avec le nom d’une propriété déjà trouvée sur `window`.
+>Pour éviter des problèmes potentiels, utilisez un nom contenant au moins un caractère qui n’est pas un chiffre et qui n’entre pas en conflit avec le nom d’une propriété existant déjà sur `window`.
 
-Ce code de base, en plus de créer une fonction globale, charge également le code supplémentaire contenu dans un fichier externe \(`alloy.js`\) hébergé sur un serveur. Par défaut, ce code est chargé de manière asynchrone pour permettre à votre page Web d’être aussi performante que possible. Il s’agit de l’implémentation recommandée.
+Ce code de base, en plus de créer une fonction globale, charge également le code supplémentaire contenu dans un fichier externe \(`alloy.js`\) hébergé sur un serveur. Par défaut, ce code est chargé de manière asynchrone pour permettre à votre page web d’être aussi performante que possible. Il s’agit de l’implémentation recommandée.
 
 ## Prise en charge d’Internet Explorer
 
-Ce SDK utilise des promesses, qui est une méthode de communication de l’achèvement des  asynchrones. L’implémentation [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilisée par le kit SDK est prise en charge en mode natif par tous les navigateurs de, à l’exception d’Internet Explorer. Pour utiliser le kit SDK dans Internet Explorer, vous devez disposer d’un `window.Promise` polyremplissage [](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Ce SDK utilise des promesses, ce qui est une méthode de communication de l’achèvement des tâches asynchrones. L’implémentation de [promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles à l’exception d’Internet Explorer. Pour utiliser le SDK dans Internet Explorer, `window.Promise` doit être [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
-Pour déterminer si vous avez déjà `window.Promise` des polyplaties :
+Pour déterminer si `window.Promise` est déjà polyfillé :
 
-1. Ouvrez votre site Web dans Internet Explorer.
+1. Ouvrez votre site web dans Internet Explorer.
 1. Ouvrez la console de débogage du navigateur.
-1. Entrez `window.Promise` dans la console, puis appuyez sur Entrée.
+1. Saisissez `window.Promise` dans la console, puis appuyez sur Entrée.
 
-Si quelque chose d’autre que `undefined` apparaît, vous avez probablement déjà été polychargé `window.Promise`. Une autre façon de déterminer si `window.Promise` est polyrempli consiste à charger votre site Web après avoir suivi les instructions d’installation ci-dessus. Si le SDK renvoie une erreur en mentionnant quelque chose à propos d’une promesse, il est probable que vous n’ayez pas été polychargé `window.Promise`.
+Si autre chose que `undefined` s’affiche, `window.Promise` est déjà polyfillé. Une autre façon de déterminer si `window.Promise` est polyfillé consiste à charger votre site web après avoir suivi les instructions d’installation ci-dessus. Si le SDK renvoie une erreur à propos d’une promesse, il est probable que `window.Promise` n’ait pas été polyfillé.
 
-Si vous avez déterminé que vous devez polyremplir `window.Promise`, incluez la balise de script suivante au-dessus du code de base fourni précédemment :
+Si vous avez déterminé que vous devez polyfiller `window.Promise`, incluez la balise de script suivante au-dessus du code de base fourni précédemment :
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 ```
 
-Ceci charge un script qui s’assure qu’ `window.Promise` il s’agit d’une implémentation Promise valide.
+Cela charge un script qui s’assure que `window.Promise` est une implémentation de promesse valide.
 
 ## Chargement synchrone du fichier JavaScript
 
-Comme expliqué précédemment, le code de base que vous avez copié et collé dans le code HTML de votre site Web charge un fichier externe avec du code supplémentaire. Ce code supplémentaire contient les fonctionnalités de base du SDK. Toute commande que vous tentez d’exécuter pendant le chargement de ce fichier est mise en file d’attente, puis traitée une fois le fichier chargé. Il s’agit de la méthode d’installation la plus performante.
+Comme expliqué précédemment, le code de base que vous avez copié et collé dans le code HTML de votre site web charge un fichier externe avec du code supplémentaire. Ce code supplémentaire contient les fonctionnalités de base du SDK. Toute commande que vous tentez d’exécuter pendant le chargement de ce fichier est mise en file d’attente, puis traitée une fois le fichier chargé. Cette méthode d’installation est la plus performante.
 
-Dans certaines circonstances, toutefois, vous pouvez vouloir charger le fichier de manière synchrone \(d&#39;autres informations sur ces circonstances seront documentées ultérieurement\). Cela empêche le reste du HTML d’être analysé et rendu par le navigateur jusqu’à ce que le fichier externe ait été chargé et exécuté. Ce délai supplémentaire avant l’affichage du contenu principal pour les utilisateurs est généralement déconseillé, mais peut être pertinent en fonction des circonstances.
+Dans certaines circonstances, toutefois, vous pouvez vouloir charger le fichier de manière synchrone \(des informations supplémentaires sur ces circonstances seront documentées ultérieurement\). Cela empêche le reste du HTML d’être analysé et rendu par le navigateur jusqu’à ce que le fichier externe ait été chargé et exécuté. Ce délai supplémentaire avant l’affichage du contenu principal pour les utilisateurs est généralement déconseillé, mais peut être pertinent en fonction des circonstances.
 
-Pour charger le fichier de manière synchrone au lieu de manière asynchrone, supprimez l’ `async` attribut de la deuxième `script` balise, comme illustré ci-dessous :
+Pour charger le fichier de manière synchrone plutôt qu’asynchrone, supprimez l’attribut `async` de la deuxième balise `script`, comme illustré ci-dessous :
 
 ```markup
 <script>
