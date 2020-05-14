@@ -4,19 +4,15 @@ seo-title: Adobe Experience Platform Web SDK Récupération de l’ID Experience
 description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 12%
+source-wordcount: '398'
+ht-degree: 7%
 
 ---
 
 
-# (bêta) Récupération de l’ID Experience Cloud
-
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+# Récupération de l’ID Experience Cloud
 
 Le SDK Web d’Adobe Experience Platform tire parti d’ [Adobe Identity Service](../../identity-service/ecid.md). Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
 
