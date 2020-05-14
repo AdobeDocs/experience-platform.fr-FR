@@ -1,21 +1,20 @@
 ---
-title: Récupération des informations de bibliothèque
-seo-title: Récupération des informations de bibliothèque avec le SDK Web d’Adobe Experience Platform
-description: Découvrez comment récupérer des informations sur la bibliothèque chargée sur le site Web
-seo-description: Découvrez comment récupérer des informations sur la bibliothèque chargée sur le site Web par le kit SDK Adobe Experience Cloud collecte automatiquement les informations
+title: Récupération des informations sur la bibliothèque
+seo-title: Récupération des informations sur la bibliothèque avec le SDK Web d’Adobe Experience Platform
+description: Découvrez comment récupérer des informations sur la bibliothèque chargée sur le site web
+seo-description: Découvrez comment récupérer des informations sur la bibliothèque chargée sur le site web
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 100%
 
 ---
 
 
-# (bêta) Récupération des informations de bibliothèque
+# Récupération des informations sur la bibliothèque
 
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent changer.
-
-Il est souvent utile d’accéder à certains détails de la bibliothèque que vous avez chargée sur votre site Web. Pour ce faire, exécutez la `getLibraryInfo` commande comme suit :
+Il est souvent utile d’accéder à certains détails de la bibliothèque que vous avez chargée sur votre site web. Pour cela, exécutez la commande `getLibraryInfo` de la manière suivante :
 
 ```js
 alloy("getLibraryInfo").then(function(libraryInfo) {
@@ -23,6 +22,6 @@ alloy("getLibraryInfo").then(function(libraryInfo) {
 });
 ```
 
-Actuellement, l’ `libraryInfo` objet fourni contient les propriétés suivantes :
+Actuellement, l’objet `libraryInfo` fourni contient les propriétés suivantes :
 
-* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée était 1.0.0, la valeur serait `1.0.0`.
+* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`.
