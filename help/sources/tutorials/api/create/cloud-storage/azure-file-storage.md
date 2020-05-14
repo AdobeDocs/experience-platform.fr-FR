@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Création d'un connecteur d'Enregistrement de fichiers Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8beee3f15aa867026b28f9c395553d1c934ef7a3
+source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
 
 
 # Création d&#39;un connecteur d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;API Flow Service
+
+>[!NOTE]
+>Le connecteur d&#39;Enregistrement de fichiers Azure est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
