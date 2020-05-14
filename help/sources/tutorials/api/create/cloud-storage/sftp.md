@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Création d’un connecteur SFTP à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
 
 
 # Création d’un connecteur SFTP à l’aide de l’API du service de flux
+
+>[!NOTE]
+>Le connecteur SFTP est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
