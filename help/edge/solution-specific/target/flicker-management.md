@@ -1,11 +1,17 @@
 ---
-source-git-commit: e00dc3e8dec0117617081ca4fc9ffa752b01b3b7
-workflow-type: tm+mt
+title: Gestion de Flicker pour les expériences personnalisées
+seo-title: Adobe Experience Platform Web SDK gestion du scintillement
+description: Découvrez comment gérer le scintillement sur les expériences des utilisateurs
+seo-description: Découvrez comment gérer le scintillement à l’aide des propriétés du SDK Web Experience Platform
 translation-type: tm+mt
-source-wordcount: '459'
-ht-degree: 82%
+source-git-commit: 4bea14d18ce119bdec0d428f885d240f92244cfc
+workflow-type: tm+mt
+source-wordcount: '491'
+ht-degree: 76%
 
 ---
+
+
 # Gestion du scintillement
 
 Lorsque vous tentez d’effectuer le rendu du contenu de personnalisation, le SDK doit s’assurer qu’il n’y a pas de scintillement. Flicker, également appelé FOOC (Flash de contenu original), est lorsqu’un contenu original est brièvement affiché avant que l’alternative n’apparaisse pendant les tests/la personnalisation. Le SDK tente d’appliquer des styles CSS aux éléments de la page afin de s’assurer qu’ils sont masqués jusqu’à ce que le contenu de personnalisation soit correctement rendu.
