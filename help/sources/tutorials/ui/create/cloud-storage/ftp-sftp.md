@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Création d’un connecteur source FTP ou SFTP dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '529'
 ht-degree: 1%
 
 ---
 
 
 # Création d’un connecteur source FTP ou SFTP dans l’interface utilisateur
+
+>[!NOTE]
+>Les connecteurs FTP et SFTP sont en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP ou SFTP à l’aide de l’interface utilisateur de la plate-forme.
 
