@@ -4,7 +4,7 @@ seo-title: SDK Web d’Adobe Experience Platform et utilisation d’Adobe Cible
 description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Cible
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Cible
 translation-type: tm+mt
-source-git-commit: 9d66e926ff86f23b3dea34f37d3bb16ba97eb0ef
+source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
 workflow-type: tm+mt
 source-wordcount: '651'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Le SDK Web AEP permet à vos utilisateurs de rendre automatiquement les expérie
 
 ```javascript
 alloy
-("event", 
+("sendEvent", 
   { 
   "renderDecisions": true, 
   "xdm": {
@@ -65,7 +65,7 @@ Le compositeur d’expérience d’après les formulaires est une interface non 
 
 ```javascript
 alloy
-  ("event", { 
+  ("sendEvent", { 
     decisionScopes: [
       "foo", "bar"], 
       "xdm": {
@@ -91,7 +91,7 @@ alloy
 Le SDK Web AEP fournit une fonctionnalité grâce à laquelle vous pouvez récupérer les actions du compositeur d’expérience visuelle sans utiliser le SDK Web AEP pour générer les actions du compositeur d’expérience visuelle pour vous. Envoie un événement avec `__view__` défini comme `decisionScopes`un.
 
 ```javascript
-alloy("event", {
+alloy("sendEvent", {
   decisionScopes: [“__view__”,"foo", "bar"], 
   "xdm": { 
     "web": { 
