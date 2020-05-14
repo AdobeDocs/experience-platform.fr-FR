@@ -1,27 +1,26 @@
 ---
 title: Interaction avec plusieurs propriétés
-seo-title: Adobe Experience Platform Web SDK Interaction avec plusieurs propriétés
-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web de plateforme d’expérience
-seo-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web de plateforme d’expérience
+seo-title: Interaction avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
+description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
+seo-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0cc6e233646134be073d20e2acd1702d345ff35f
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 100%
 
 ---
 
 
-# (bêta) Interaction avec plusieurs propriétés
+# Interaction avec plusieurs propriétés
 
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent changer.
+Dans certains cas, il est possible que vous souhaitiez interagir avec deux propriétés différentes sur une même page. Ces cas comprennent notamment :
 
-Il peut arriver que vous souhaitiez interagir avec deux propriétés différentes sur la même page. Notamment : 
+* Des entreprises acquises et travaillant à l’intégration de leurs sites web respectifs.
+* Des relations de partage de données entre plusieurs entreprises.
+* Des clients qui testent de nouvelles solutions Adobe et qui ne souhaitent pas perturber leur implémentation existante.
 
-*  acquis et travaillant à l&#39;intégration de leurs sites Web
-* Relations de partage de données entre plusieurs 
-* Clients qui testent de nouvelles solutions Adobe et qui ne souhaitent pas perturber leur implémentation existante
-
-Le SDK vous permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. Dans l&#39;exemple suivant, nous avons fourni deux noms, `mycustomname1` et `mycustomname2`.
+Le SDK permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. Dans l’exemple suivant, nous avons fourni deux noms : `mycustomname1` et `mycustomname2`.
 
 ```markup
 <script>
@@ -33,11 +32,11 @@ Le SDK vous permet de créer une instance distincte pour chaque propriété en a
 <script src="alloy.js" async></script>
 ```
 
-Par conséquent, le script crée deux instances du SDK. La fonction globale permettant d’interagir avec la première instance est nommée `mycustomname1` et la fonction globale permettant d’interagir avec la seconde instance est nommée `mycustomname2`.
+Par conséquent, le script crée deux instances du SDK. La fonction globale permettant d’interagir avec la première instance est appelée `mycustomname1` et celle permettant d’interagir avec la seconde instance est appelée `mycustomname2`.
 
-En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance de données résultant d’une interaction avec `mycustomname1` est isolée de `mycustomname2` et inversement.
+En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance de données résultant d’une interaction avec `mycustomname1` est isolée de `mycustomname2`, et inversement.
 
-En suivant l’exemple ci-dessus, vous pouvez exécuter des commandes à l’aide de chacune des instances, comme suit :
+En suivant l’exemple ci-dessus, vous pouvez exécuter comme suit des commandes à l’aide de chacune des instances :
 
 ```javascript
 mycustomname1("configure", {
@@ -63,8 +62,8 @@ mycustomname2("event", {
 });
 ```
 
-Veillez à exécuter la `configure` commande pour chaque instance avant d’exécuter d’autres commandes sur la même instance.
+Veillez à exécuter la commande `configure` pour chaque instance avant d’exécuter d’autres commandes sur la même instance.
 
 ## Limites
 
-Pour éviter tout conflit avec les cookies, une seule instance du SDK Web d’Adobe Experience Platform dans une page peut avoir une instance particulière `configId`.  De même, une seule instance du SDK Web d’Adobe Experience Platform peut avoir une instance particulière `orgId`.
+Pour éviter tout conflit avec les cookies, une seule instance du SDK Web d’Adobe Experience Platform dans une page peut avoir un `configId` particulier.  De même, une seule instance du SDK Web d’Adobe Experience Platform peut avoir un `orgId` particulier.
