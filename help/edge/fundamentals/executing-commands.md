@@ -4,19 +4,15 @@ seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 9bd6feb767e39911097bbe15eb2c370d61d9842a
+source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 80%
+source-wordcount: '419'
+ht-degree: 79%
 
 ---
 
 
-# (Version bêta) Exécution des commandes
-
->[!IMPORTANT]
->
->Le SDK Web d’Adobe Experience Platform est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+# Exécution des commandes
 
 Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n’est pas nécessaire d’attendre que le fichier externe \(`alloy.js`\) soit chargé à partir du serveur avant d’exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
 
@@ -80,4 +76,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### Consentement
 
-Si un utilisateur n&#39;a pas donné son consentement à un usage particulier, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
+Si l&#39;utilisateur n&#39;a pas donné son consentement à une fin particulière, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
