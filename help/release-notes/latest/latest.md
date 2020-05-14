@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: May 13, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 53d72e6460c1ab3bc4459d8e108630f652b62dd6
+source-git-commit: e6731b54840eaf9dd2cdaeff5205e14277e78a3b
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1026'
 ht-degree: 6%
 
 ---
@@ -104,6 +104,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 | ------- | ----------- |
 | Prise en charge d’API et d’interface utilisateur supplémentaires pour les systèmes d’enregistrement cloud | Nouveaux connecteurs source pour l&#39;Enregistrement de fichiers Azure. |
 | Prise en charge supplémentaire des API et de l’interface utilisateur pour les bases de données | Nouveaux connecteurs source pour Azure Data Explorer, IBM DB2 et Oracle DB. |
+| Adobe Audience Manager vers la plate-forme de partage de données d’expérience | Le processus de mise en service du connecteur Audience Manager a été mis à jour. Les jeux de données Audience Manager pour le Profil client en temps réel sont désormais désactivés par défaut. Vous pouvez choisir manuellement les jeux de données à promouvoir au Profil. Les nouveaux paramètres par défaut ne sont pas rétroactifs et n’ont qu’un impact sur la mise en service des nouveaux connecteurs d’Audience Manager. Pour plus d’informations, consultez le guide [d’utilisation](../../catalog/datasets/user-guide.md)des jeux de données. |
 
 **Problèmes connus**
 
