@@ -4,56 +4,62 @@ solution: Experience Platform
 title: Création d’un connecteur Google BigQuery à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: e6a3f9a834300ffadb28a05c8f4e5355a8de2411
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '748'
+ht-degree: 1%
 
 ---
 
 
 # Création d’un connecteur Google BigQuery à l’aide de l’API du service de flux
 
+>[!NOTE]
+>Le connecteur Google BigQuery est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
+
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API du service de flux pour vous guider tout au long des étapes nécessaires à la connexion d’Experience Platform à Google BigQuery (ci-après dénommée &quot;BigQuery&quot;).
+Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de la plateforme d’expérience à Google BigQuery (ci-après appelée &quot;BigQuery&quot;).
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plateforme.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
+* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à BigQuery à l’aide de l’API du service de flux.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à BigQuery à l’aide de l’API du service de flux.
 
 ### Collecte des informations d’identification requises
 
-Pour que le service Flow puisse se connecter à BigQuery, vous devez fournir les propriétés de connexion suivantes :
+Pour que le service de flux se connecte à BigQuery, vous devez fournir les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `project` | ID de projet du projet BigQuery par défaut à . |
+| `project` | ID du projet BigQuery par défaut à requête. |
 | `clientID` | Valeur d’ID utilisée pour générer le jeton d’actualisation. |
 | `clientSecret` | Valeur secrète utilisée pour générer le jeton d’actualisation. |
 | `refreshToken` | Jeton d’actualisation obtenu auprès de Google utilisé pour autoriser l’accès à BigQuery. |
 
-Pour plus d’informations sur ces valeurs, reportez-vous à [ce](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)BigQuery.
+Pour plus d&#39;informations sur ces valeurs, consultez [ce document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing)BigQuery.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../../../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
-* x-gw-ims-org-id : `{IMS_ORG}`
+* x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
 
 * Content-Type : `application/json`
 
@@ -61,11 +67,11 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 Pour créer une connexion BigQuery, un ensemble de spécifications de connexion BigQuery doit exister dans le service de flux. La première étape de la connexion de Platform à BigQuery consiste à récupérer ces spécifications.
 
-**Format API**
+**Format d’API**
 
-Chaque source disponible possède son propre jeu de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d’authentification. Vous pouvez rechercher les spécifications de connexion pour BigQuery en exécutant une requête GET et en utilisant des paramètres de .
+Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. Vous pouvez rechercher les spécifications de connexion pour BigQuery en exécutant une requête GET et en utilisant des paramètres de requête.
 
-L&#39;envoi d&#39;une requête GET sans paramètres  retournera les spécifications de connexion pour toutes les sources disponibles. Vous pouvez inclure le `property=name=="google-big-query"` pour obtenir des informations spécifiques à BigQuery.
+L&#39;envoi d&#39;une demande GET sans paramètres de requête retournera les spécifications de connexion pour toutes les sources disponibles. Vous pouvez inclure la requête `property=name=="google-big-query"` pour obtenir des informations spécifiques à BigQuery.
 
 ```http
 GET /connectionSpecs
@@ -87,7 +93,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les spécifications de connexion pour BigQuery, y compris son identifiant unique (`id`). Cet ID est requis à l’étape suivante pour créer une connexion de base.
+Une réponse réussie renvoie les spécifications de connexion pour BigQuery, y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion de base.
 
 ```json
 {
@@ -140,9 +146,9 @@ Une réponse réussie renvoie les spécifications de connexion pour BigQuery, y 
 
 ## Créer une connexion de base
 
-Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par compte BigQuery, car elle peut être utilisée pour créer plusieurs connecteurs source afin d&#39;importer des données différentes.
+Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par compte BigQuery, car elle peut être utilisée pour créer plusieurs connecteurs de source afin d&#39;importer des données différentes.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /connections
@@ -178,7 +184,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.project` | ID de projet du projet BigQuery par défaut à . contre. |
+| `auth.params.project` | ID du projet BigQuery par défaut à requête. contre. |
 | `auth.params.clientId` | Valeur d’ID utilisée pour générer le jeton d’actualisation. |
 | `auth.params.clientSecret` | Valeur cliente utilisée pour générer le jeton d’actualisation. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu auprès de Google utilisé pour autoriser l’accès à BigQuery. |
@@ -197,4 +203,4 @@ Une réponse réussie renvoie les détails de la connexion de base nouvellement 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion de base BigQuery à l’aide de l’API Flow Service et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données ou des systèmes NoSQL à l’aide de l’API](../../explore/database-nosql.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion de base BigQuery à l&#39;aide de l&#39;API Flow Service et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cet ID de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données ou des systèmes NoSQL à l’aide de l’API](../../explore/database-nosql.md)Flow Service.
