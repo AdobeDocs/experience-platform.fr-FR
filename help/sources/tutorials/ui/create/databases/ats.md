@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement Azure Table dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 899c4fbe8a1bb3fef24f606e77f13ef5184d1eda
+source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
 
 # Création d&#39;un connecteur source d&#39;Enregistrement Azure Table dans l&#39;interface utilisateur
+
+>[!NOTE]
+>Le connecteur d&#39;Enregistrement Azure Table est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Azure Table Enregistrement (ci-après dénommé &quot;ATS&quot;) à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
 
