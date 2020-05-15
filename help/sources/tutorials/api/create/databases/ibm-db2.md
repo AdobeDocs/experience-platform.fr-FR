@@ -4,12 +4,18 @@ solution: Experience Platform
 title: Création d’un connecteur IBM DB2 à l’aide de l’API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 2%
 
 ---
 
 
 # Création d’un connecteur IBM DB2 à l’aide de l’API Flow Service
+
+>[!NOTE]
+>Le connecteur IBM DB2 est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
