@@ -4,15 +4,18 @@ solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement de fichiers Azure dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: aa1c6cb0f5702cfe444cb2046e4460e404f13e57
+source-git-commit: b8ebe57482fdd10ccd8bdcf1a86009a373ea579e
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 
 # Création d&#39;un connecteur source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur
+
+>[!NOTE]
+>L&#39;Enregistrement Azure Table est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
 
