@@ -4,10 +4,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 7dafdf0dd1ad3af2defab3bf6b784fd37e777062
+source-git-commit: faaa4eda5174bb8d27a76d767891df15df69e30a
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 77%
+source-wordcount: '775'
+ht-degree: 61%
 
 ---
 
@@ -29,9 +29,13 @@ Si un flux d’activation existe déjà pour une destination, vous pouvez voir l
 3. Sélectionnez **[!UICONTROL Activer]**.
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditionnel*. Cette étape s’applique uniquement aux segments mappés aux destinations d’enregistrement cloud et aux destinations de marketing par courrier électronique. <br> Sur la page **[!UICONTROL Attributs de destination]**, sélectionnez **[!UICONTROL Ajouter un nouveau champ]** et sélectionnez les attributs à envoyer à la destination.
+5. *Conditionnel*. Cette étape diffère selon le type de destination dans lequel vous activez vos segments. <br> Pour les destinations *de marketing par* courriel et les destinations *d’enregistrement* cloud, sur la page **[!UICONTROL Sélectionner les attributs]** , sélectionnez **[!UICONTROL Ajouter nouveau champ et sélectionnez les attributs à envoyer à la destination.]**
 Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rtcdp/destinations/email-marketing-destinations.md#identity) issu de votre schéma d’union. Pour plus d’informations sur les attributs obligatoires, consultez Identité dans l’article [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
-   ![Attributs des destinations](/help/rtcdp/destinations/assets/destination-attributes.png)
+   ![Attributs des destinations](/help/rtcdp/destinations/assets/select-attributes-step.png)
+Pour les destinations *des réseaux* sociaux, à l’étape de mappage **** d’identité, sélectionnez les attributs source à mapper aux identités de cible.
+   ![mappage d’identité avant de remplir des champs](/help/rtcdp/destinations/assets/facebook-identity-mapping-1.png)Dans l’exemple ci-dessous, l’adresse électronique personnelle dans le schéma d’identité a été hachée lors de l’assimilation dans la plateforme d’expérience afin de se conformer aux exigences [de hachage de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courrier électronique de Facebook. Appuyez sur **[!UICONTROL Suivant]** après avoir sélectionné le mappage.
+   ![mappage d’identité après le remplissage de champs](/help/rtcdp/destinations/assets/facebook-identity-mapping-2.png)
+
 6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
    >[!IMPORTANT]
@@ -76,6 +80,10 @@ Vérifiez la destination publicitaire vers laquelle vous activez vos données. S
 
 Pour Facebook, une activation réussie signifie qu’une audience personnalisée Facebook serait créée par programmation dans le Gestionnaire [d’annonces](https://www.facebook.com/adsmanager/manage/)Facebook. L’appartenance à un segment dans l’audience serait ajoutée et supprimée car les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
+>[!TIP]
+>
+>L’intégration entre Adobe Real-time CDP et Facebook prend en charge les remplissages d’audiences historiques. Toutes les qualifications des segments historiques sont envoyées à Facebook lorsque vous activez les segments vers la destination.
+
 ## Désactivation de l’activation {#disable-activation}
 
 Pour désactiver un flux d’activation existant, procédez comme suit :
@@ -84,3 +92,4 @@ Pour désactiver un flux d’activation existant, procédez comme suit :
 2. Cliquez sur la commande **[!UICONTROL Activé]** dans le rail de droite pour modifier l’état du flux d’activation.
 3. Dans la fenêtre **Mettre à jour l’état du flux de données**, sélectionnez **Confirmer** pour désactiver le flux d’activation.
 
+Dans AWS Kinesis, générez une paire de clés d’accès secrètes pour accorder un accès CDP Adobe en temps réel à votre compte AWS Kinesis. Pour en savoir plus, consultez la documentation [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)AWS Kinesis.
