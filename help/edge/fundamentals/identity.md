@@ -4,10 +4,10 @@ seo-title: Adobe Experience Platform Web SDK Récupération de l’ID Experience
 description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 7%
+source-wordcount: '416'
+ht-degree: 8%
 
 ---
 
@@ -77,6 +77,14 @@ La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-s
 | Chaîne | Oui | Aucune |
 
 Il s’agit de l’identifiant que vous souhaitez synchroniser pour l’espace de nommage donné.
+
+#### `authenticationState`
+
+| **Type** | **Obligatoire** | **Valeur par défaut** | **Valeurs possibles** |
+| -------- | ------------ | ----------------- | ------------------------------------ |
+| Chaîne | Oui | ambigu | ambigu, authentifié et déconnecté |
+
+Etat d’authentification de l’ID.
 
 #### `primary`
 
