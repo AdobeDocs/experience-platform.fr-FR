@@ -5,15 +5,18 @@ title: Rechercher une ressource
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
 
 # Rechercher une ressource
 
-Vous pouvez rechercher des ressources spécifiques en effectuant une requête GET qui inclut l’ `$id` (URI encodé en URL) de la ressource dans le chemin de requête.
+Vous pouvez rechercher des ressources spécifiques en exécutant une requête GET qui inclut l’ `$id` (URI encodé en URL) de la ressource dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -21,8 +24,8 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | où se trouvent les ressources (&quot;global&quot; ou &quot;locataire&quot;). |
-| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de . Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
+| `{CONTAINER_ID}` | conteneur où se trouvent les ressources (&quot;global&quot; ou &quot;locataire&quot;). |
+| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
 | `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
 
 **Requête**
@@ -41,13 +44,13 @@ Les demandes de recherche de ressources doivent `version` être incluses dans l�
 
 | Accepter | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw avec `$ref` et `allOf`, a des titres et des descriptions. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, a des titres et descriptions. |
 | `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, a des titres et des descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw avec `$ref` et `allOf`, sans titres ni descriptions. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, sans titres ni descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, aucun titre ou description. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, les descripteurs inclus. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, descripteurs inclus. |
 
->[!NOTE] Si vous fournissez la `major` version uniquement (1, 2, 3, etc.), le registre renverra automatiquement la dernière `minor` version (.1, .2, .3, etc.).
+>[!NOTE] Si vous fournissez la `major` version uniquement (1, 2, 3, etc), le registre renverra automatiquement la dernière `minor` version (.1, .2, .3, etc).
 
 **Réponse**
 
