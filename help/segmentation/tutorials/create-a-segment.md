@@ -5,39 +5,42 @@ title: Création d’un segment
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+workflow-type: tm+mt
+source-wordcount: '1328'
+ht-degree: 2%
 
 ---
 
 
 # Création d’un segment
 
-Ce fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation.
+Ce document fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation.
 
-Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le guide [Créateur de](../ui/overview.md)segments.
+Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le guide [du créateur de](../ui/overview.md)segments.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans la création de  segments  de. Avant de commencer ce didacticiel, veuillez consulter la documentation des services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans la création de segments d’audience. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [](../../profile/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer  segments  à partir de données de client en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plateforme organise les données d’expérience client.
+- [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir effectuer des appels aux API de plateforme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -49,13 +52,13 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Développement d’une définition de segment
 
-La première étape de la segmentation consiste à définir un segment, représenté dans un concept appelé définition **de** segment. Une définition de segment est un objet qui encapsule un écrit dans le langage de  de (PQL). Cet objet est également appelé prédicat **PQL**. Les prédicats PQL définissent les règles du segment en fonction des conditions liées aux données d’enregistrement ou de série chronologique que vous fournissez au client en temps réel. Consultez le guide [](../pql/overview.md) PQL pour en savoir plus sur l’écriture de  PQL.
+La première étape de la segmentation consiste à définir un segment, représenté dans un concept appelé définition **de** segment. Une définition de segment est un objet qui encapsule une requête écrite dans le langage PQL (Profil Requête Language). Cet objet est également appelé prédicat **** PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou série chronologique que vous fournissez au Profil client en temps réel. Consultez le guide [](../pql/overview.md) PQL pour en savoir plus sur l’écriture de requêtes PQL.
 
-Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de `/segment/definitions` fin dans l’API  client en temps réel. L’exemple suivant montre comment formater une demande de définition, y compris les informations requises pour qu’un segment soit défini avec succès.
+Vous pouvez créer une nouvelle définition de segment en adressant une requête POST au point de `/segment/definitions` terminaison dans l’API Profil client en temps réel. L&#39;exemple suivant montre comment formater une demande de définition, y compris les informations requises pour qu&#39;un segment soit défini avec succès.
 
-Les définitions de segment peuvent être évaluées de deux manières : segmentation par lot et segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont assimilées dans la plateforme. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire la [présentation sur la segmentation](../api/streaming-segmentation.md)en flux continu.
+Les définitions de segment peuvent être évaluées de deux manières : la segmentation par lot et la segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont ingérées dans la plate-forme. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire l’ [aperçu sur la segmentation](../api/streaming-segmentation.md)en flux continu.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /segment/definitions
@@ -63,7 +66,7 @@ POST /segment/definitions
 
 **Requête**
 
-La requête suivante crée une nouvelle définition de segment pour un appelé &quot;MonProfil&quot;.
+La requête suivante crée une nouvelle définition de segment pour un schéma appelé &quot;MonProfil&quot;.
 
 ```shell
 curl -X POST \
@@ -90,18 +93,18 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ------------ | 
-| `name` | **Obligatoire.** Nom unique par lequel faire référence au segment. |
-| `schema` | **Obligatoire.** associé aux entités du segment. Se compose d’un champ `id` ou `name` . |
-| `expression` | **Obligatoire.** Entité qui contient des informations sur les champs concernant la définition de segment. |
-| `expression.type` | Indique le type de  de . Actuellement, seul PQL est pris en charge. |
-| `expression.format` | Indique la structure du   en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text`: Représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
-| `expression.value` | Un   conforme au type indiqué dans `expression.format`. |
-| `mergePolicyId` | Identifiant de la stratégie de fusion à utiliser pour les données exportées. Pour plus d&#39;informations, veuillez lire le configuration de la stratégie de [fusion](../../profile/api/merge-policies.md). |
+| `name` | **Obligatoire.** Nom unique auquel faire référence au segment. |
+| `schema` | **Obligatoire.** schéma associé aux entités du segment. Se compose d’un champ `id` ou `name` d’un champ. |
+| `expression` | **Obligatoire.** Entité qui contient des informations de champs sur la définition de segment. |
+| `expression.type` | Indique le type d’expression. Actuellement, seul &quot;PQL&quot; est pris en charge. |
+| `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text`: Représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
+| `expression.value` | expression conforme au type indiqué dans `expression.format`. |
+| `mergePolicyId` | Identifiant de la stratégie de fusion à utiliser pour les données exportées. Pour plus d&#39;informations, consultez le document [de configuration de la stratégie de](../../profile/api/merge-policies.md)fusion. |
 | `description` | Description lisible de la définition. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle définition de segment, y compris sa définition générée par le système et en lecture seule `id` qui sera utilisée plus loin dans ce didacticiel.
+Une réponse positive renvoie les détails de la nouvelle définition de segment, y compris sa définition générée par le système et en lecture seule `id` qui sera utilisée plus loin dans ce didacticiel.
 
 ```json
 {
@@ -119,36 +122,36 @@ Une réponse réussie renvoie les détails de la nouvelle définition de segment
 }
 ```
 
-## Estimation et d&#39;un  de
+## Estimation et prévisualisation d&#39;une audience
 
-Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de  dans le client en temps réel pourobtenir des informations au niveau du résumé, afin de vous assurer que vous isolez le de attendu. Les estimations fournissent des informations statistiques sur une définition de segment, telles que la taille   prévue et l’intervalle de confiance. Les  de fournissent un paginé de l’ admissible pour une définition de segment, ce qui vous permet de comparer les résultats avec ce que vous attendez.
+Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation du Profil client en temps réel pour vue des informations de synthèse afin de vous assurer que vous isolez l’audience attendue. Les estimations fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée et l’intervalle de confiance. Les Prévisualisations fournissent des listes paginées de profils qualifiants pour une définition de segment, ce qui vous permet de comparer les résultats à ce que vous attendez.
 
-En estimant et en prévisualisant vos  de , vous pouvez tester et optimiser vos prédicats PQL jusqu’à ce qu’ils produisent un résultat désirable, où ils peuvent ensuite être utilisés dans une définition de segment mise à jour.
+En estimant et en prévisualisant votre audience, vous pouvez tester et optimiser vos prédicats PQL jusqu’à ce qu’ils produisent un résultat désirable, où ils peuvent ensuite être utilisés dans une définition de segment mise à jour.
 
-Deux étapes sont nécessaires pour  ou obtenir une estimation de votre segment :
+Deux étapes sont nécessaires pour prévisualisation ou obtenir une estimation de votre segment :
 
-1. [Création d’une tâche de](#create-a-preview-job)
-2. [d’estimation ou de](#view-an-estimate-or-preview) à l’aide de l’ID de la tâche d’
+1. [Création d’une tâche de prévisualisation](#create-a-preview-job)
+2. [Estimation de la Vue ou prévisualisation](#view-an-estimate-or-preview) à l&#39;aide de l&#39;ID de la tâche de prévisualisation
 
 ### Génération des estimations
 
-Les exemples de données sont utilisés pour évaluer les segments et estimer le nombre de  admissibles. Les nouvelles données sont chargées en mémoire chaque matin (entre 12h00 et 2h00 heure du Pacifique, soit entre 7 et 9h00 heure du Pacifique) et tous les de segmentation sont estimés à l’aide des données d’exemple de cette journée. Par conséquent, les nouveaux champs ajoutés ou les données supplémentaires recueillies seront pris en compte dans les estimations le lendemain.
+Les exemples de données servent à évaluer les segments et à estimer le nombre de profils admissibles. De nouvelles données sont chargées en mémoire chaque matin (entre 12h00 et 2h00 heure du Pacifique, soit entre 7 et 9h00 heure du Pacifique) et toutes les requêtes de segmentation sont estimées à l’aide des données d’exemple de cette journée. Par conséquent, les nouveaux champs ajoutés ou les données supplémentaires recueillies seront pris en compte dans les estimations le lendemain.
 
-La taille de l’échantillon dépend du nombre total d’entités dans votre  de stockage de. Ces tailles d’échantillon sont représentées dans le tableau suivant :
+La taille de l’échantillon dépend du nombre total d’entités dans votre magasin de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
-| Entités dans le magasin  | Taille d’échantillon |
+| Entités dans le magasin de profils | Taille d’exemple |
 | ------------------------- | ----------- |
 | Moins de 1 million | Jeu de données complet |
 | 1 à 20 millions | 1 million |
 | Plus de 20 millions | 5 % du total |
 
-Les estimations durent généralement entre 10 et 15 secondes, en commençant par une estimation approximative et en les affinant au fur et à mesure de la lecture d&#39;un plus grand nombre de documents.
+Les estimations durent généralement entre 10 et 15 secondes, en commençant par une estimation approximative et en se raffinant au fur et à mesure de la lecture d&#39;un plus grand nombre d&#39;enregistrements.
 
-### Création d’une tâche de 
+### Création d’une tâche de prévisualisation
 
-Vous pouvez créer une tâche de  de en exécutant une requête POST sur le point de `/preview` fin.
+Vous pouvez créer une tâche de prévisualisation en adressant une requête POST au point de `/preview` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /preview
@@ -156,7 +159,7 @@ POST /preview
 
 **Requête**
 
-La requête suivante crée une tâche de . Le corps de la requête contient les informations  du relatives au segment.
+La requête suivante crée une tâche de prévisualisation. Le corps de la demande contient les informations de requête relatives au segment.
 
 ```shell
 curl -X POST \
@@ -176,12 +179,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `predicateExpression` | Le PQL   de des données par. |
-| `predicateModel` | Le nom du XDM  les données  du est basé sur. |
+| `predicateExpression` | expression PQL de requête des données par. |
+| `predicateModel` | Nom du schéma XDM sur lequel reposent les données du Profil. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la tâche de  de nouvellement créée, y compris son ID et l’état de traitement actuel.
+Une réponse positive renvoie les détails de la tâche de prévisualisation nouvellement créée, y compris son identifiant et l’état de traitement actuel.
 
 ```json
 {
@@ -195,18 +198,18 @@ Une réponse réussie renvoie les détails de la tâche de  de nouvellement cré
 
 | Propriété | Description |
 | -------- | ----------- |
-| `state` | Etat actuel de la tâche de  du. Il sera à l’état &quot;EN COURS&quot; jusqu’à ce que le traitement soit terminé, puis devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
-| `previewId` | ID de la tâche de  de, à utiliser à des fins de recherche lors de l’affichage d’une estimation ou d’un  de, comme indiqué dans la section suivante. |
+| `state` | Etat actuel de la tâche de prévisualisation. Il sera à l’état &quot;EN COURS&quot; jusqu’à ce que le traitement soit terminé, puis devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
+| `previewId` | ID de la tâche de prévisualisation, à utiliser à des fins de recherche lors de l&#39;affichage d&#39;une estimation ou d&#39;une prévisualisation, comme indiqué dans la section suivante. |
 
-###  une estimation ou un 
+### Vue d’une estimation ou d’une prévisualisation
 
-Les processus d’estimation et de  sont exécutés de manière asynchrone, car les différents  de peuvent prendre plusieurs temps. Une fois qu’un  a été lancé, vous pouvez utiliser des appels d’API pour récupérer (GET) l’état actuel de l’estimation ou du  au fur et à mesure qu’il progresse.
+Les processus d’estimation et de prévisualisation sont exécutés de manière asynchrone, car différentes requêtes peuvent prendre différentes longueurs de temps. Une fois qu&#39;une requête a été lancée, vous pouvez utiliser des appels d&#39;API pour récupérer (GET) l&#39;état actuel de l&#39;estimation ou de la prévisualisation au fur et à mesure qu&#39;elle progresse.
 
-A l’aide de l’API  de client en temps réel, vous pouvez rechercher l’état actuel d’une tâche  par son identifiant. Si l’état est &quot;RESULT_READY&quot;, vous pouvez  les résultats. Selon que vous souhaitez  une estimation ou un  de, chacun possède son propre point de terminaison dans l’API. Vous trouverez ci-dessous des exemples de ces deux types de mesures.
+A l’aide de l’API Profil client en temps réel, vous pouvez rechercher l’état actuel d’une tâche de prévisualisation en fonction de son identifiant. Si l&#39;état est &quot;RESULT_READY&quot;, vous pouvez vue les résultats. Selon que vous souhaitez vue une estimation ou une prévisualisation, chacun possède son propre point de terminaison dans l&#39;API. Vous trouverez ci-dessous des exemples de ces deux types d&#39;utilisation.
 
-###  une estimation
+### Vue d’une estimation
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /estimate/{PREVIEW_ID}
@@ -214,11 +217,11 @@ GET /estimate/{PREVIEW_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{PREVIEW_ID}` | ID de la tâche de  de à. |
+| `{PREVIEW_ID}` | ID de la tâche de prévisualisation à vue. |
 
 **Requête**
 
-La requête suivante récupère une estimation, à l’aide de l’ `previewId` étape précédente.
+La requête suivante récupère une estimation, à l&#39;aide de l&#39; `previewId` étape précédente.
 
 ```shell
 curl -X GET \
@@ -254,12 +257,12 @@ Une réponse positive renvoie les détails de l’estimation.
 
 | Propriété | Description |
 | -------- | ----------- |
-| `state` | Etat actuel de la tâche de  du. Sera &quot;EN COURS&quot; jusqu&#39;à ce que le traitement soit terminé, puis devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
-| `_links.preview` | Lorsque l’état actuel de la tâche  est &quot;RESULT_READY&quot;, cet attribut fournit une URL pour  l’estimation. |
+| `state` | Etat actuel de la tâche de prévisualisation. Sera &quot;EN COURS&quot; jusqu&#39;à ce que le traitement soit terminé, à ce moment-là il devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
+| `_links.preview` | Lorsque l&#39;état actuel de la tâche de prévisualisation est &quot;RESULT_READY&quot;, cet attribut fournit une URL pour la vue de l&#39;estimation. |
 
-###  un
+### Vue d’une prévisualisation
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /preview/{PREVIEW_ID}
@@ -267,11 +270,11 @@ GET /preview/{PREVIEW_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{PREVIEW_ID}` | ID de la tâche de  de à. |
+| `{PREVIEW_ID}` | ID de la tâche de prévisualisation à vue. |
 
 **Requête**
 
-La requête suivante récupère un , à l’aide de la requête `previewId` créée à l’étape précédente.
+La requête suivante récupère une prévisualisation à l’aide de la requête `previewId` créée à l’étape précédente.
 
 ```shell
 curl -X GET \
@@ -284,7 +287,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du  du.
+Une réponse réussie renvoie les détails de la prévisualisation.
 
 ```json
 {
@@ -334,4 +337,4 @@ Une réponse réussie renvoie les détails du  du.
 
 ## Étapes suivantes
 
-Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segment afin de créer un   à l’aide de l’API de client en temps réel. Consultez le didacticiel sur l’ [évaluation et l’accès aux résultats](./evaluate-a-segment.md) des segments pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segment afin de créer une audience à l’aide de l’API Profil client en temps réel. Consultez le didacticiel sur l’ [évaluation et l’accès aux résultats](./evaluate-a-segment.md) des segments pour obtenir des instructions détaillées sur la façon d’y parvenir.
