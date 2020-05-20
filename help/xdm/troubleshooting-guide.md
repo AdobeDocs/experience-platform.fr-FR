@@ -5,6 +5,9 @@ title: Guide de dépannage du système XDM (Experience Data Model)
 topic: troubleshooting
 translation-type: tm+mt
 source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+workflow-type: tm+mt
+source-wordcount: '1918'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ Les modifications de rupture peuvent être apportées à un schéma tant qu’el
 
 ### Quelle est la taille maximale d’un type de champ long ?
 
-Un type de champ long est un entier dont la taille maximale est de 53 (+1) bits, ce qui lui donne une plage potentielle comprise entre -9007199254740992 et 9007199254740992. Ceci est dû à une limitation de la manière dont les implémentations JavaScript de JSON représentent des entiers longs.
+A long field type is an integer with a maximum size of 53(+1) bits, giving it a potential range between -9007199254740992 and 9007199254740992. Ceci est dû à une limitation de la manière dont les implémentations JavaScript de JSON représentent des entiers longs.
 
 Pour plus d&#39;informations sur les types de champ, consultez la section [Définition des types](api/appendix.md#field-types) de champ XDM dans le guide du développeur de l&#39;API de registre de Schéma.
 
@@ -96,13 +99,13 @@ Pour plus d&#39;informations sur les unions dans XDM, consultez la section [unio
 
 ### Comment dois-je formater mon fichier de données pour intégrer des données dans mon schéma ?
 
-Experience Platform accepte les fichiers de données au format Parquet ou JSON. Le contenu de ces fichiers doit être conforme au schéma référencé par le jeu de données. Pour plus d&#39;informations sur les meilleures pratiques d&#39;assimilation de fichiers de données, consultez la présentation [de l&#39;assimilation par](../ingestion/home.md)lot.
+Experience Platform accepts datafiles in either Parquet or JSON format. Le contenu de ces fichiers doit être conforme au schéma référencé par le jeu de données. For details about best practices for datafile ingestion, see the [batch ingestion overview](../ingestion/home.md).
 
 ## Erreurs et dépannage
 
-Vous trouverez ci-dessous une liste de messages d&#39;erreur que vous pouvez rencontrer lorsque vous utilisez l&#39;API de registre de Schémas.
+The following is a list of error messages that you may encounter when working with the Schema Registry API.
 
-### Objet introuvable
+### Object not found
 
 ```json
 {
@@ -114,9 +117,9 @@ Vous trouverez ci-dessous une liste de messages d&#39;erreur que vous pouvez ren
 }
 ```
 
-Cette erreur s&#39;affiche lorsque le système n&#39;a pas pu trouver une ressource particulière. La ressource a peut-être été supprimée ou le chemin d&#39;accès dans l&#39;appel d&#39;API n&#39;est pas valide. Assurez-vous d’avoir saisi un chemin d’accès valide pour votre appel d’API avant de réessayer. Vous pouvez vérifier que vous avez saisi l&#39;ID correct pour la ressource et que le chemin d&#39;accès est correctement espacé de noms avec le conteneur approprié (global ou locataire).
+Cette erreur s&#39;affiche lorsque le système n&#39;a pas pu trouver une ressource particulière. La ressource a peut-être été supprimée ou le chemin d&#39;accès dans l&#39;appel d&#39;API n&#39;est pas valide. Assurez-vous d’avoir saisi un chemin d’accès valide pour votre appel d’API avant de réessayer. You may want to check that you have entered the correct ID for the resource, and that the path is properly namespaced with the appropriate container (global or tenant).
 
-Pour plus d&#39;informations sur la construction de chemins de recherche dans l&#39;API, consultez les sections d&#39;identification [des](./api/getting-started.md#container) conteneurs [et des](api/getting-started.md#schema-identification) schémas du guide de développement du registre des Schémas.
+For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [schema identification](api/getting-started.md#schema-identification) sections in the Schema Registry developer guide.
 
 ### Le titre doit être unique
 
@@ -131,7 +134,7 @@ Pour plus d&#39;informations sur la construction de chemins de recherche dans l&
 }
 ```
 
-Ce message d&#39;erreur s&#39;affiche lorsque vous tentez de créer une ressource avec un titre déjà utilisé par une autre ressource. Les titres doivent être uniques pour tous les types de ressources. Par exemple, si vous essayez de créer un mixin avec un titre déjà utilisé par un schéma, cette erreur s’affichera.
+Ce message d&#39;erreur s&#39;affiche lorsque vous tentez de créer une ressource avec un titre déjà utilisé par une autre ressource. Les titres doivent être uniques pour tous les types de ressources. For example, if you try to create a mixin with a title that is already being used by a schema, you will receive this error.
 
 ### Les champs personnalisés doivent utiliser un champ de niveau supérieur
 
@@ -202,7 +205,7 @@ Pour obtenir une liste des codes d&#39;espace de nommage d&#39;identité pris en
 
 ### Accepter les erreurs d’en-tête
 
-La plupart des requêtes GET dans l&#39;API de registre de Schéma nécessitent un en-tête Accepter pour que le système détermine comment formater la réponse. Voici une liste d&#39;erreurs courantes associées à l&#39;en-tête Accepter. Pour les listes d&#39;en-têtes d&#39;Acceptation compatibles pour différentes demandes d&#39;API, reportez-vous aux sections correspondantes du guide [de développement du registre des](api/getting-started.md)Schémas.
+La plupart des requêtes GET dans l&#39;API de registre de Schéma nécessitent un en-tête Accepter pour que le système détermine comment formater la réponse. The following is a list of common errors associated with the Accept header. Pour les listes d&#39;en-têtes d&#39;Acceptation compatibles pour différentes demandes d&#39;API, reportez-vous aux sections correspondantes du guide [de développement du registre des](api/getting-started.md)Schémas.
 
 #### Accepter le paramètre d&#39;en-tête est requis
 
@@ -228,9 +231,9 @@ Ce message d’erreur s’affiche lorsqu’un en-tête Accepter est absent d’u
 }
 ```
 
-Ce message d’erreur s’affiche lorsqu’un en-tête Accepter n’est pas valide. Assurez-vous d’avoir saisi correctement un en-tête Accept compatible avec la demande d’API que vous tentez d’effectuer avant de réessayer.
+Ce message d’erreur s’affiche lorsqu’un en-tête Accepter n’est pas valide. Ensure that you have correctly entered an Accept header that is compatible with the API request you are trying to make before trying again.
 
-#### Format Accept inconnu disponible
+#### Unknown Accept format available
 
 ```json
 {
@@ -275,4 +278,4 @@ Pour obtenir la liste des en-têtes Accepter pris en charge, reportez-vous à la
 }
 ```
 
-Si vous tentez d’inclure une version dans votre en-tête Accepter lors de la mise en vente des ressources (GET), cette erreur s’affichera. Les versions ne sont requises que lorsque vous tentez une demande de recherche sur une ressource unique. Supprimez la version de l’en-tête Accepter pour résoudre l’erreur.
+Si vous tentez d’inclure une version dans votre en-tête Accepter lors de la mise en vente des ressources (GET), cette erreur s’affichera. Versions are required only when attempting a lookup request on a single resource. Remove the version from the Accept header to resolve the error.
