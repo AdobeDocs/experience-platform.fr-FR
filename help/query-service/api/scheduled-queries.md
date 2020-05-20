@@ -1,25 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Guide du développeur du service '
+title: Guide du développeur Requête Service
 topic: scheduled queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '947'
+ht-degree: 3%
 
 ---
 
 
-#  de planifié
+# requêtes planifiées
 
 ## Exemples d’appels d’API
 
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels à l’API du service . Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API de service . Chaque appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API Requête Service. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API Requête Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
 
-### Récupération d’un  de planifié 
+### Récupération d’une liste de requêtes planifiées
 
-Vous pouvez récupérer un de tous les  planifiés pour votre organisation IMS en envoyant une requête GET au point de `/schedules` terminaison.
+Vous pouvez récupérer une liste de toutes les requêtes planifiées pour votre organisation IMS en adressant une demande GET au point de `/schedules` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /schedules
@@ -30,20 +33,20 @@ GET /schedules?{QUERY_PARAMETERS}
 | -------- | ----------- |
 | `{QUERY_PARAMETERS}` | (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
 
-**Paramètres**
+**Paramètres de Requête**
 
-Vous trouverez ci-dessous un  de paramètres de disponibles pour répertorier les  de l’ programmée. Tous ces paramètres sont facultatifs. Un appel à ce point de fin sans paramètre récupérera tous les  planifiés disponibles pour votre entreprise.
+Voici une liste des paramètres de requête disponibles pour répertorier les requêtes planifiées. Tous ces paramètres sont facultatifs. L&#39;appel à ce point de terminaison sans paramètre récupère toutes les requêtes planifiées disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ de commande des résultats. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L’ajout d’un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
+| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L&#39;ajout d&#39;un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l&#39;ordre décroissant. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
-| `start` | Décale le  de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie un  commençant à partir du troisième répertorié. (*Default value: 0*) |
-| `property` | Filtrez les résultats en fonction des champs. Le **doit** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs jeux de  de. Les champs pris en charge sont `created`, `templateId`et `userId`. Les  des opérateurs pris en charge sont `>` (supérieur à), `<` (inférieur à) et `==` (égal à). Par exemple, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie tous les planifiés pour lesquels l’ID utilisateur est tel que spécifié. |
+| `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
+| `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `created`, `templateId`et `userId`. La liste des opérateurs pris en charge est `>` (supérieure à), `<` (inférieure à) et `==` (égale à). Par exemple, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes planifiées où l’ID utilisateur est spécifié. |
 
 **Requête**
 
-La requête suivante récupère le dernier  planifié créé pour votre organisation IMS.
+La requête suivante récupère la dernière requête planifiée créée pour votre organisation IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -55,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec un de planifiés  pour l’organisation IMS spécifiée. La réponse suivante renvoie le dernier  planifié créé pour votre organisation IMS.
+Une réponse réussie renvoie l’état HTTP 200 avec une liste de requêtes planifiées pour l’organisation IMS spécifiée. La réponse suivante renvoie la dernière requête planifiée créée pour votre organisation IMS.
 
 ```json
 {
@@ -119,11 +122,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec un de planifiés  pour l�
 }
 ```
 
-### Création d’un planifié 
+### Créer une nouvelle requête planifiée
 
-Vous pouvez créer un nouvel  planifié en envoyant une requête POST au point de `/schedules` fin.
+Vous pouvez créer une requête planifiée en adressant une requête POST au point de `/schedules` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /schedules
@@ -155,15 +158,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Propriété | Description |
 | -------- | ----------- |
-| `query.dbName` | Nom de la base de données pour laquelle vous créez un planifié. |
-| `query.sql` | Le SQL  que vous souhaitez créer. |
-| `query.name` | Nom du  planifié. |
-| `schedule.schedule` | Le calendrier cron pour le . Pour plus d&#39;informations sur les calendriers cron, veuillez lire la documentation sur le format [de ](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron . Dans cet exemple, &quot;30 * * * *&quot; signifie que le s’exécute toutes les heures à la note de 30 minutes. |
-| `schedule.startDate` | Date  de votre planifié , écrite en tant qu’horodatage UTC. |
+| `query.dbName` | Nom de la base de données pour laquelle vous créez une requête planifiée. |
+| `query.sql` | requête SQL que vous souhaitez créer. |
+| `query.name` | Nom de la requête planifiée. |
+| `schedule.schedule` | Le calendrier cron de la requête. Pour plus d&#39;informations sur les calendriers cron, veuillez lire la documentation sur le format [d&#39;expression](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron. Dans cet exemple, &quot;30 * * * *&quot; signifie que la requête s’exécute toutes les heures à la note de 30 minutes. |
+| `schedule.startDate` | Date de début de votre requête planifiée, écrite en tant qu’horodatage UTC. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de vos nouveaux  planifiés. Une fois que le  planifié est activé, il `state` passe de `REGISTERING` à `ENABLED`.
+Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de votre nouvelle requête planifiée. Une fois que la requête planifiée est activée, elle `state` passe de `REGISTERING` à `ENABLED`.
 
 ```json
 {
@@ -214,13 +217,13 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer les](#delete-a-specified-scheduled-query)planifiées que vous avez créées.
+>[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
 
-### Demander les détails d’un planifié spécifié 
+### Demander les détails d&#39;une requête planifiée spécifiée
 
-Vous pouvez récupérer les informations d’un planifié spécifique en faisant une requête GET au point de `/schedules` fin et en indiquant son ID dans le chemin d’accès à la requête.
+Vous pouvez récupérer des informations pour une requête planifiée spécifique en envoyant une requête GET au point de `/schedules` terminaison et en indiquant son identifiant dans le chemin de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}
@@ -228,7 +231,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du planifié que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -242,7 +245,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails du  planifié spécifié.
+Une réponse réussie renvoie l’état HTTP 200 avec les détails de la requête planifiée spécifiée.
 
 ```json
 {
@@ -295,19 +298,19 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails du  planifié
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer les](#delete-a-specified-scheduled-query)planifiées que vous avez créées.
+>[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
 
-### Mettre à jour les détails d’un planifié spécifié 
+### Mettre à jour les détails d’une requête planifiée spécifiée
 
-Vous pouvez mettre à jour les détails d’un planifié spécifié en effectuant une requête PATCH sur le `/schedules` point de fin et en indiquant son ID dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour les détails d’une requête planifiée spécifiée en envoyant une requête PATCH au point de `/schedules` terminaison et en indiquant son identifiant dans le chemin de requête.
 
-La requête PATCH prend en charge deux chemins différents : `/state` et `/schedule/schedule`.
+La demande PATCH prend en charge deux chemins différents : `/state` et `/schedule/schedule`.
 
-### Mettre à jour l&#39;état  du planifié
+### Mettre à jour l&#39;état de la requête planifiée
 
-Vous pouvez utiliser `/state` pour mettre à jour l’état du planifié sélectionné - Activé ou Désactivé. Pour mettre à jour l’état, vous devez définir la valeur sur `enable` ou `disable`.
+Vous pouvez utiliser `/state` pour mettre à jour l&#39;état de la requête planifiée sélectionnée - ACTIVÉE ou DÉSACTIVÉE. Pour mettre à jour l’état, vous devez définir la valeur comme `enable` ou `disable`.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -315,12 +318,12 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du planifié que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
 
 
 **Requête**
 
-Cette requête d’API utilise la syntaxe du correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le des fondamentaux de l’API.
+Cette requête d’API utilise la syntaxe de correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le document de base de l’API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -341,8 +344,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur que vous souhaitez appliquer au correctif. Dans ce cas, puisque vous mettez à jour l’état  du planifié, vous devez définir la valeur de `path` sur `/state`. |
-| `value` | Valeur mise à jour de la `/state`. Cette valeur peut être définie sur `enable` ou `disable` pour activer ou désactiver le  planifié. |
+| `path` | Chemin d’accès de la valeur à appliquer. Dans ce cas, puisque vous mettez à jour l’état de la requête planifiée, vous devez définir la valeur de `path` sur `/state`. |
+| `value` | Valeur mise à jour de la `/state`. Cette valeur peut être définie sur `enable` ou `disable` pour activer ou désactiver la requête planifiée. |
 
 **Réponse**
 
@@ -355,11 +358,11 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec le message suiv
 }
 ```
 
-### Mettre à jour le calendrier des  planifiées
+### Mettre à jour la planification de la requête planifiée
 
-Vous pouvez utiliser `/schedule/schedule` pour mettre à jour la planification cron du  planifié. Pour plus d&#39;informations sur les calendriers cron, veuillez lire la documentation sur le format [de ](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron .
+Vous pouvez utiliser `/schedule/schedule` pour mettre à jour la planification cron de la requête planifiée. Pour plus d&#39;informations sur les calendriers cron, veuillez lire la documentation sur le format [d&#39;expression](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) cron.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}
@@ -367,11 +370,11 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du planifié que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
 
 **Requête**
 
-Cette requête d’API utilise la syntaxe du correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le des fondamentaux de l’API.
+Cette requête d’API utilise la syntaxe de correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le document de base de l’API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm
@@ -392,8 +395,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur que vous souhaitez appliquer au correctif. Dans ce cas, étant donné que vous mettez à jour le calendrier  planifié, vous devez définir la valeur de `path` sur `/schedule/schedule`. |
-| `value` | Valeur mise à jour de la `/schedule`. Cette valeur doit prendre la forme d’un calendrier cron. Dans cet exemple, le  planifié s’exécutera toutes les heures à la note de 45 minutes. |
+| `path` | Chemin d’accès de la valeur à appliquer. Dans ce cas, puisque vous mettez à jour la planification de la requête planifiée, vous devez définir la valeur de `path` sur `/schedule/schedule`. |
+| `value` | Valeur mise à jour de la `/schedule`. Cette valeur doit prendre la forme d’un calendrier cron. Dans cet exemple, la requête planifiée s’exécute toutes les heures à la barre des 45 minutes. |
 
 **Réponse**
 
@@ -406,13 +409,13 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec le message suiv
 }
 ```
 
-### Supprimer un planifié spécifié 
+### Supprimer une requête planifiée spécifiée
 
-Vous pouvez supprimer un  planifié spécifié en faisant une requête DELETE au point de `/schedules` fin et en indiquant l’ID du planifié à supprimer dans le chemin d’accès à la requête.
+Vous pouvez supprimer une requête planifiée spécifiée en adressant une requête DELETE au point de `/schedules` terminaison et en indiquant l’identifiant de la requête planifiée que vous souhaitez supprimer dans le chemin de requête.
 
->[!NOTE] La planification **doit** être désactivée avant d’être supprimée.
+>[!NOTE] La planification **doit** être désactivée avant d&#39;être supprimée.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /schedules/{SCHEDULE_ID}
@@ -420,7 +423,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du planifié que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
 
 **Requête**
 
