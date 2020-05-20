@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Aide de Intelligent Services
 translation-type: tm+mt
 source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
+workflow-type: tm+mt
+source-wordcount: '65'
+ht-degree: 7%
 
 ---
 
@@ -11,7 +14,7 @@ source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
 # Adobe Intelligent Services {#intelligent-services}
 
 * [Présentation des services intelligents](home.md)
-* [Préparation des données en vue de les utiliser dans les services intelligents](data-preparation.md)
+* [Préparation des données en vue de leur utilisation dans les services intelligents](data-preparation.md)
 * Attribution AI {#attribution-ai}
    * [Aperçu](attribution-ai/overview.md)
    * [Prise en main de l’API d’attribution](attribution-ai/getting-started.md)
@@ -20,7 +23,7 @@ source-git-commit: 9bdd2b17953c1c72243ae07be3e40d53ced9360b
    * [Accès aux scores](attribution-ai/download-scores.md)
 * AI client {#customer-ai}
    * [Aperçu](customer-ai/overview.md)
-   * [Prise en main de Customer AI](customer-ai/getting-started.md)
+   * [Prise en main de l’API client](customer-ai/getting-started.md)
    * [Entrée et sortie](customer-ai/input-output.md)
    * Guide de l’interface utilisateur {#user-guide}
       * [Configuration d’une instance](customer-ai/user-guide/configure.md)
