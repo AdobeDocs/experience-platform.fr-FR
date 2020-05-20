@@ -1,29 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Flux ETL
+title: Processus ETL
 topic: overview
 translation-type: tm+mt
 source-git-commit: 943b45d1c6de5f0e2be761d8246b9de4c4c0b4e7
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 0%
 
 ---
 
 
-# Flux ETL
+# Processus ETL
 
-Différents outils d’extraction, de transformation et de chargement (ETL) peuvent présenter des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
+Divers outils d’extraction, de transformation et de chargement (ETL) peuvent présenter des formats différents, mais la plupart présentent des fonctionnalités similaires pour faciliter la combinaison de plusieurs sources de données.
 
 ## Exemple d’outil ETL
 
-Les diagrammes suivants fournissent des simulations d’actions ETL courantes et une expérience utilisateur générique basée sur des interactions standard. Ces images peuvent facilement être adaptées à une expérience utilisateur ETL spécifique.
+Les diagrammes suivants fournissent des simulations d’actions ETL courantes et une expérience utilisateur générique basée sur des interactions standard. Ces images peuvent être facilement adaptées à une expérience utilisateur ETL spécifique.
 
-Les actions illustrées ci-dessous sont décrites dans les étapes décrites dans le Guide [d&#39;intégration](home.md)ETL. Certaines étapes font référence à des &quot;figures&quot; spécifiques, d’autres décrivent des actions similaires au flux de travail illustré ici.
+Les actions illustrées ci-dessous sont décrites dans les étapes décrites dans le Guide [d&#39;intégration de l&#39;](home.md)ETL. Certaines étapes font référence à des &quot;figures&quot; spécifiques, d’autres décrivent des actions similaires au flux de travail présenté ici.
 
-### Figure 1 - Configuration du nouveau connecteur de plate-forme Adobe Experience Platform :
+### Figure 1 : configuration du nouveau connecteur de plate-forme Adobe Experience Platform :
 
 ![](images/image2.png)
 
-### Figure 2 - Connecteur de plateforme d’expérience activé :
+### Figure 2 : connecteur de plate-forme d’expérience activé :
 
 ![](images/image3.png)
 
@@ -35,7 +38,7 @@ Les actions illustrées ci-dessous sont décrites dans les étapes décrites dan
 
 ![](images/image5.png)
 
-### Figure 5 - Recherche de jeux de données de plateformes d’expérience source :
+### Figure 5 : recherche des jeux de données de plateformes d’expérience source :
 
 ![](images/image6.png)
 
@@ -43,7 +46,7 @@ Les actions illustrées ci-dessous sont décrites dans les étapes décrites dan
 
 ![](images/image7.png)
 
-### Figure 7 - Affichage des informations de de champs à partir de jeux de données :
+### Figure 7 - Affichage des informations de schéma de champ à partir des jeux de données :
 
 ![](images/image8.png)
 
@@ -55,14 +58,14 @@ Les actions illustrées ci-dessous sont décrites dans les étapes décrites dan
 
 ![](images/image10.png)
 
-### Figure 10 - Définition du jeu de données  du modèle de données d’expérience (XDM) :
+### Figure 10 - Définition du jeu de données de cible du modèle de données d’expérience (XDM) :
 
 ![](images/image11.png)
 
-### Figure 11 - Affichage du et des métadonnées hiérarchiques XDM pour prendre en charge la correspondance/les transformations :
+### Figure 11 - Affichage des schémas et métadonnées hiérarchiques XDM pour la prise en charge de la cartographie/transformation :
 
 ![](images/image12.png)
 
-### Figure 12 - Enregistrement et exécution/planification des transformations :
+### Figure 12 : enregistrement et exécution/planification des transformations :
 
 ![](images/image13.png)
