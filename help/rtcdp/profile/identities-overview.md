@@ -5,6 +5,9 @@ description: description
 seo-description: description seo
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +20,7 @@ Désormais, plutôt que d’avoir cinq clients distincts interagissant avec votr
 
 ## Espaces de noms d’identité
 
-Les espaces de noms d’identité sont des composants d’Identity Service et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse électronique sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. Experience Platform permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la visionneuse de profils](/help/rtcdp/profile/profile-viewer.md). Pour en savoir plus sur les  d&#39;identité  , consultez la présentation [de l&#39;](../../identity-service/namespaces.md)identité .
+Les espaces de noms d’identité sont des composants d’Identity Service et servent d’indicateurs fournissant un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « Email », l’utilisation d’une même adresse électronique sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. Experience Platform permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la visionneuse de profils](/help/rtcdp/profile/profile-viewer.md). Pour en savoir plus sur les espaces de nommage d&#39;identité, consultez la présentation [de l&#39;espace de nommage](../../identity-service/namespaces.md)d&#39;identité.
 
 ## Graphiques d’identité
 
