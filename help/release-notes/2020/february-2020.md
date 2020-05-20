@@ -6,6 +6,9 @@ last-update: February 14, 2019
 author: ens71067
 translation-type: tm+mt
 source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+workflow-type: tm+mt
+source-wordcount: '224'
+ht-degree: 9%
 
 ---
 
@@ -20,19 +23,19 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de plateforme. Vous pouvez assimiler des données à partir de diverses sources, telles que des applications Adobe, des  basés sur le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform peut assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de plate-forme. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour divers fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des systèmes de  et des services de gestion de la relation client externes, de définir les heures d&#39;exécution de l&#39;assimilation et de gérer le débit d&#39;assimilation des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour divers fournisseurs de données. Ces connexions source vous permettent d’authentifier et de vous connecter à des systèmes d’enregistrement externes et à des services de gestion de la relation client, de définir les heures d’exécution d’assimilation et de gérer le débit d’assimilation des données.
 
 **Nouvelles fonctionnalités**
 
 | Fonction | Description |
 | ------- | ----------- |
-| Prise en charge des API pour SaaS - Systèmes de service | Nouveaux connecteurs source pour l’API Salesforce Service Cloud et l’API ServiceNow. |
+| Prise en charge des API pour SaaS - Systèmes de services | Nouveaux connecteurs source pour l’API Salesforce Service Cloud et l’API ServiceNow. |
 | Prise en charge des API pour SaaS - Systèmes marketing | Nouveaux connecteurs source pour l’API HubSpot. |
 | Prise en charge des API pour les systèmes de base de données NoSQL | Nouveaux connecteurs source pour les API Redshift AWS, Google BigQuery, MariaDB, MySQL, PostgreSQL et SQL Server. |
-| Prise en charge des API pour les systèmes de  de cloud  | Nouveaux connecteurs source pour l&#39;API Gen 2 d&#39;Azure Data Lake Service et l&#39;API  de Google Cloud l&#39;API  de Google. |
-| Prise en charge de l’interface utilisateur pour les  de cloud  systèmes | Nouveau connecteur source pour le Google Cloud   dans l’interface utilisateur. |
+| Prise en charge des API pour les systèmes d’enregistrement cloud | Nouveaux connecteurs source pour l&#39;API Azure Data Lake Service Gen 2 et l&#39;API d&#39;Enregistrement Google Cloud. |
+| Prise en charge de l’interface utilisateur pour les systèmes d’enregistrement cloud | Nouveau connecteur source pour l’Enregistrement Google Cloud dans l’interface utilisateur. |
 
 **Problèmes connus**
 
