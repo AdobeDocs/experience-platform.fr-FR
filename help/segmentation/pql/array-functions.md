@@ -1,21 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Tableau,  et définition de fonctions
+title: Fonctions de tableau, de liste et de définition
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '740'
+ht-degree: 5%
 
 ---
 
 
-# Tableau,  et définition de fonctions
+# Fonctions de tableau, de liste et de définition
 
- langage de  de (PQL)  fonctions de afin de faciliter l’interaction avec les tableaux, les et les chaînes. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans la présentation [du de la langue  du](./overview.md).
+Les fonctions d’offres PQL (Profil Requête Language) facilitent l’interaction avec les tableaux, les listes et les chaînes. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
 
-## In
+## Dans
 
-La `in` fonction permet de déterminer si un élément est membre d’un tableau ou d’un.
+La `in` fonction est utilisée pour déterminer si un élément est membre d&#39;un tableau ou d&#39;une liste.
 
 **Format**
 
@@ -25,7 +28,7 @@ La `in` fonction permet de déterminer si un élément est membre d’un tableau
 
 **Exemple**
 
-Le PQL suivant  définit les personnes ayant un anniversaire en mars, juin ou septembre.
+La requête PQL suivante définit les personnes ayant un anniversaire en mars, juin ou septembre.
 
 ```sql
 person.birthMonth in [3, 6, 9]
@@ -33,7 +36,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Pas dans
 
-La `notIn` fonction permet de déterminer si un élément n’est pas membre d’un tableau ou d’un .
+La `notIn` fonction permet de déterminer si un élément n&#39;est pas membre d&#39;une baie ou d&#39;une liste.
 
 >[!NOTE] La fonction `notIn` assure *également* qu’aucune valeur n’est égale à null. Par conséquent, les résultats ne sont pas une négation exacte de la `in` fonction.
 
@@ -45,7 +48,7 @@ La `notIn` fonction permet de déterminer si un élément n’est pas membre d�
 
 **Exemple**
 
-Le PQL suivant définit les personnes dont les anniversaires ne sont pas définis en mars, juin ou septembre.
+La requête PQL suivante définit les personnes dont l’anniversaire n’est ni en mars, ni en juin, ni en septembre.
 
 ```sql
 person.birthMonth notIn [3, 6, 9]
@@ -53,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersectes
 
-La `intersects` fonction permet de déterminer si deux tableaux ou  ont au moins un membre commun.
+La `intersects` fonction est utilisée pour déterminer si deux baies ou listes ont au moins un membre commun.
 
 **Format**
 
@@ -63,7 +66,7 @@ La `intersects` fonction permet de déterminer si deux tableaux ou  ont au moins
 
 **Exemple**
 
-Le PQL suivant définit les personnes dont les couleurs préférées comprennent au moins une couleur rouge, bleue ou verte.
+La requête PQL suivante définit les personnes dont les couleurs préférées comprennent au moins une couleur rouge, bleue ou verte.
 
 ```sql
 person.favoriteColors.intersects(["red", "blue", "green"])
@@ -71,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersection
 
-La `intersection` fonction sert à déterminer les membres communs de deux tableaux ou de deux  de.
+La `intersection` fonction est utilisée pour déterminer les membres communs de deux tableaux ou listes.
 
 **Format**
 
@@ -81,7 +84,7 @@ La `intersection` fonction sert à déterminer les membres communs de deux table
 
 **Exemple**
 
-Le PQL suivant définit si la personne 1 et la personne 2 ont toutes deux des couleurs préférées de rouge, de bleu et de vert.
+La requête PQL suivante définit si la personne 1 et la personne 2 ont toutes deux des couleurs préférées de rouge, de bleu et de vert.
 
 ```sql
 person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "green"]
@@ -89,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Sous-ensemble de
 
-La `subsetOf` fonction sert à déterminer si un tableau spécifique (tableau A) est un sous-ensemble d&#39;un autre tableau (tableau B). En d’autres termes, tous les éléments du tableau A sont des éléments du tableau B.
+La `subsetOf` fonction est utilisée pour déterminer si un tableau spécifique (tableau A) est un sous-ensemble d&#39;un autre tableau (tableau B). En d&#39;autres termes, tous les éléments du tableau A sont des éléments du tableau B.
 
 **Format**
 
@@ -99,15 +102,15 @@ La `subsetOf` fonction sert à déterminer si un tableau spécifique (tableau A)
 
 **Exemple**
 
-Le PQL suivant définit les personnes qui ont visité toutes leurs villes préférées.
+La requête PQL suivante définit les personnes qui ont visité toutes leurs villes préférées.
 
 ```sql
 person.favoriteCities.subsetOf(person.visitedCities)
 ```
 
-## Superset de
+## Paramètre supérieur à
 
-La `supersetOf` fonction sert à déterminer si un tableau spécifique (tableau A) est un superset d&#39;un autre tableau (tableau B). En d’autres termes, ce tableau A contient tous les éléments du tableau B.
+La `supersetOf` fonction est utilisée pour déterminer si un tableau spécifique (tableau A) est un superset d&#39;un autre tableau (tableau B). En d&#39;autres termes, ce tableau A contient tous les éléments du tableau B.
 
 **Format**
 
@@ -117,7 +120,7 @@ La `supersetOf` fonction sert à déterminer si un tableau spécifique (tableau 
 
 **Exemple**
 
-Le PQL suivant définit les personnes qui ont mangé des sushis et des pizzas au moins une fois.
+La requête PQL suivante définit les personnes qui ont mangé au moins une fois des sushis et des pizzas.
 
 ```sql
 person.eatenFoods.supersetOf(["sushi", "pizza"])
@@ -125,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Inclut
 
-La `includes` fonction permet de déterminer si un tableau ou un contient un élément donné.
+La `includes` fonction permet de déterminer si un tableau ou une liste contient un élément donné.
 
 **Format**
 
@@ -135,7 +138,7 @@ La `includes` fonction permet de déterminer si un tableau ou un contient un él
 
 **Exemple**
 
-Le PQL suivant définit les personnes dont la couleur préférée est le rouge.
+La requête PQL suivante définit les personnes dont la couleur préférée est le rouge.
 
 ```sql
 person.favoriteColors.includes("red")
@@ -143,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Distinct
 
-La `distinct` fonction est utilisée pour supprimer les valeurs  d’un tableau ou d’un  de.
+La `distinct` fonction est utilisée pour supprimer des valeurs de duplicata d&#39;un tableau ou d&#39;une liste.
 
 **Format**
 
@@ -153,7 +156,7 @@ La `distinct` fonction est utilisée pour supprimer les valeurs  d’un tableau 
 
 **Exemple**
 
-Le PQL suivant spécifie les personnes qui ont passé des commandes dans plusieurs magasins.
+La requête PQL suivante spécifie les personnes qui ont passé des commandes dans plusieurs magasins.
 
 ```sql
 person.orders.storeId.distinct().count() > 1
@@ -161,7 +164,7 @@ person.orders.storeId.distinct().count() > 1
 
 ## Regrouper par
 
-La `groupBy` fonction est utilisée pour partitionner les valeurs d’un tableau ou d’un dans un groupe en fonction de la valeur de la   de l’.
+La `groupBy` fonction est utilisée pour partitionner les valeurs d&#39;un tableau ou d&#39;une liste dans un groupe en fonction de la valeur de l&#39;expression.
 
 **Format**
 
@@ -171,12 +174,12 @@ La `groupBy` fonction est utilisée pour partitionner les valeurs d’un tableau
 
 | Argument | Description |
 | --------- | ----------- |
-| `{ARRAY}` | Tableau ou à regrouper. |
-| `{EXPRESSION}` | Un   qui mappe chaque élément du tableau ou le  renvoyé. |
+| `{ARRAY}` | Tableau ou liste à regrouper. |
+| `{EXPRESSION}` | expression qui mappe chaque élément du tableau ou de la liste renvoyé. |
 
 **Exemple**
 
-Le PQL suivant regroupe toutes les commandes dans lesquelles la commande a été placée.
+La requête PQL suivante regroupe toutes les commandes dans lesquelles la commande a été placée.
 
 ```sql
 orders.groupBy(storeId)
@@ -184,7 +187,7 @@ orders.groupBy(storeId)
 
 ## Filtrer
 
-La `filter` fonction est utilisée pour filtrer un tableau ou un en fonction d’un  de.
+La `filter` fonction est utilisée pour filtrer un tableau ou une liste en fonction d&#39;une expression.
 
 **Format**
 
@@ -194,12 +197,12 @@ La `filter` fonction est utilisée pour filtrer un tableau ou un en fonction d�
 
 | Argument | Description |
 | --------- | ----------- |
-| `{ARRAY}` | Tableau ou à filtrer. |
-| `{EXPRESSION}` | Un  par lequel filtrer. |
+| `{ARRAY}` | Tableau ou liste à filtrer. |
+| `{EXPRESSION}` | expression par laquelle filtrer. |
 
 **Exemple**
 
-Le PQL suivant définit toutes les personnes de 21 ans ou plus.
+La requête PQL suivante définit toutes les personnes de 21 ans ou plus.
 
 ```sql
 person.filter(age >= 21)
@@ -207,7 +210,7 @@ person.filter(age >= 21)
 
 ## Carte
 
-La `map` fonction sert à créer un tableau en appliquant un   à chaque élément d’un tableau donné.
+La `map` fonction est utilisée pour créer un nouveau tableau en appliquant une expression à chaque élément d&#39;un tableau donné.
 
 **Format**
 
@@ -217,7 +220,7 @@ array.map(expression)
 
 **Exemple**
 
-Le PQL suivant crée un nouveau tableau de nombres et place la valeur des nombres d’origine.
+La requête PQL suivante crée un nouveau tableau de nombres et carré la valeur des nombres d’origine.
 
 ```sql
 numbers.map(square)
@@ -225,7 +228,7 @@ numbers.map(square)
 
 ## Premier `n` tableau
 
-La `topN` fonction est utilisée pour renvoyer les premiers `N` éléments d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction du de  numérique donné.
+La `topN` fonction est utilisée pour renvoyer les premiers éléments `N` d&#39;un tableau, lorsqu&#39;ils sont triés par ordre croissant en fonction de l&#39;expression numérique donnée.
 
 **Format**
 
@@ -235,13 +238,13 @@ La `topN` fonction est utilisée pour renvoyer les premiers `N` éléments d’u
 
 | Argument | Description |
 | --------- | ----------- |
-| `{ARRAY}` | Tableau ou à trier. |
-| `{VALUE}` | Propriété dans laquelle trier le tableau ou le. |
+| `{ARRAY}` | Tableau ou liste à trier. |
+| `{VALUE}` | Propriété dans laquelle trier le tableau ou la liste. |
 | `{AMOUNT}` | Nombre d’éléments à renvoyer. |
 
 **Exemple**
 
-Le PQL suivant renvoie les cinq premières commandes au prix le plus élevé.
+La requête PQL suivante renvoie les cinq premières commandes au prix le plus élevé.
 
 ```sql
 orders.topN(price, 5)
@@ -249,7 +252,7 @@ orders.topN(price, 5)
 
 ## Dernier `n` tableau
 
-La `bottomN` fonction est utilisée pour renvoyer les derniers éléments `N` d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction du de  numérique donné.
+La `bottomN` fonction est utilisée pour renvoyer les derniers éléments `N` d&#39;un tableau, lorsqu&#39;ils sont triés par ordre croissant en fonction de l&#39;expression numérique donnée.
 
 **Format**
 
@@ -259,13 +262,13 @@ La `bottomN` fonction est utilisée pour renvoyer les derniers éléments `N` d�
 
 | Argument | Description |
 | --------- | ----------- | 
-| `{ARRAY}` | Tableau ou à trier. |
-| `{VALUE}` | Propriété dans laquelle trier le tableau ou le. |
+| `{ARRAY}` | Tableau ou liste à trier. |
+| `{VALUE}` | Propriété dans laquelle trier le tableau ou la liste. |
 | `{AMOUNT}` | Nombre d’éléments à renvoyer. |
 
 **Exemple**
 
-Le PQL suivant renvoie les cinq premières commandes avec le prix le plus bas.
+La requête PQL suivante renvoie les cinq premières commandes ayant le prix le plus bas.
 
 ```sql
 orders.bottomN(price, 5)
@@ -273,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## Premier élément
 
-La `head` fonction est utilisée pour renvoyer le premier élément du tableau ou du.
+La `head` fonction est utilisée pour renvoyer le premier élément du tableau ou de la liste.
 
 **Format**
 
@@ -283,7 +286,7 @@ La `head` fonction est utilisée pour renvoyer le premier élément du tableau o
 
 **Exemple**
 
-Le PQL suivant renvoie la première des cinq premières commandes ayant le prix le plus élevé. Vous trouverez plus d&#39;informations sur la `topN` fonction dans la [première `n` section du tableau](#first-n-in-array) .
+La requête PQL suivante renvoie la première des cinq premières commandes ayant le prix le plus élevé. Vous trouverez plus d&#39;informations sur la `topN` fonction dans la [première section `n` de la baie de disques](#first-n-in-array) .
 
 ```sql
 orders.topN(price, 5).head()
@@ -291,4 +294,4 @@ orders.topN(price, 5).head()
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris sur les baies, les  et les fonctions définies, vous pouvez les utiliser dans votre PQL. Pour plus d&#39;informations sur les autres fonctions de PQL, veuillez lire la présentation [de la langue du](./overview.md).
+Maintenant que vous avez pris connaissance de la baie, de la liste et des fonctions définies, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
