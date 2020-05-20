@@ -5,21 +5,24 @@ title: Expériences
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+workflow-type: tm+mt
+source-wordcount: '744'
+ht-degree: 4%
 
 ---
 
 
 # Expériences
 
-Le développement et la formation du modèle se déroulent au niveau de l’expérience, où une expérience se compose d’une instance de l’IMC, d’exécutions de formation et d’exécutions de notation.
+Le développement et la formation de modèles se déroulent au niveau Expérience, où une Expérience se compose d’une instance de la MLI, de sessions de formation et d’exécutions de notation.
 
 ## Création d’une expérience
 
-Vous pouvez créer une expérience en exécutant une requête POST tout en fournissant un nom et un ID d’instance MLInstance valide dans la charge utile de la requête.
+Vous pouvez créer une expérience en exécutant une requête POST tout en fournissant un nom et un ID d&#39;instance MLInstance valide dans la charge utile de la requête.
 
 >[!NOTE] Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel d’API explicite ne crée pas et n’exécute pas automatiquement une session de formation.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /experiments
@@ -43,12 +46,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom souhaité pour l’expérience. L’exécution de formation correspondant à cette expérience héritera de cette valeur à afficher dans l’interface utilisateur comme nom de l’exécution de formation. |
-| `mlInstanceId` | ID d’instance MLInstance valide. |
+| `name` | Nom de l’expérience souhaité. L&#39;exécution de formation correspondant à cette expérience hérite de cette valeur à afficher dans l&#39;interface utilisateur comme nom de l&#39;exécution de formation. |
+| `mlInstanceId` | ID d&#39;instance MLInstance valide. |
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de l’expérience nouvellement créée, y compris son identifiant unique (`id`).
+Une réponse réussie renvoie une charge utile contenant les détails de l&#39;expérience nouvellement créée, y compris son identifiant unique (`id`).
 
 ```json
 {
@@ -64,11 +67,11 @@ Une réponse réussie renvoie une charge utile contenant les détails de l’exp
 }
 ```
 
-## Création et exécution d’une session de formation ou de notation
+## Créer et exécuter une formation ou une série de notation
 
-Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST et en fournissant un ID d’expérience valide et en spécifiant le  d’exécution. Les exécutions de score ne peuvent être créées que si l’expérience a une exécution de formation existante et réussie. La création réussie d&#39;une session de formation initiera la procédure d&#39;entraînement du modèle et son achèvement réussi générera un modèle formé. La création de modèles formés remplacera ceux qui existaient auparavant, de sorte qu’une expérience ne puisse utiliser qu’un seul modèle formé à un moment donné.
+Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST et en fournissant un ID d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de score ne peuvent être créées que si l’expérience a une exécution de formation existante et réussie. La création réussie d&#39;un cycle de formation initialise la procédure de formation du modèle et sa réussite génère un modèle formé. La création de modèles formés remplacera ceux qui existaient déjà, de sorte qu&#39;une expérience ne peut utiliser qu&#39;un seul modèle formé à un moment donné.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /experiments/{EXPERIMENT_ID}/runs
@@ -95,11 +98,11 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `{TASK}` | Indique le  de l’exécution. Définissez cette valeur comme `train` pour la formation, `score` pour la notation ou `fp` pour le pipeline de fonctionnalités. |
+| `{TASK}` | Indique la tâche de l’exécution. Définissez cette valeur comme `train` pour la formation, `score` pour la notation ou `fp` pour le pipeline de fonctionnalités. |
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de l’exécution nouvellement créée, y compris les paramètres de formation ou d’évaluation par défaut hérités et l’identifiant unique de l’exécution (`{RUN_ID}`).
+Une réponse réussie renvoie une charge utile contenant les détails de l&#39;exécution nouvellement créée, y compris les paramètres de formation ou d&#39;évaluation par défaut hérités et l&#39;identifiant unique de l&#39;exécution (`{RUN_ID}`).
 
 ```json
 {
@@ -126,12 +129,12 @@ Une réponse réussie renvoie une charge utile contenant les détails de l’ex�
 }
 ```
 
-## Récupérer un d&#39;expériences
+## Récupérer une liste d&#39;expériences
 
-Vous pouvez récupérer un d’expériences appartenant à une instance MLInstance particulière en exécutant une seule requête GET et en fournissant un ID d’instance MLInstance valide en tant que paramètre . Pour un  de  de disponible, reportez-vous à la section de l’annexe sur les paramètres de [](./appendix.md#query)pour la récupérationdes ressources.
+Vous pouvez récupérer une liste d&#39;expériences appartenant à une instance MLInstance particulière en exécutant une seule requête GET et en fournissant un ID MLInstance valide en tant que paramètre de requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
 
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /experiments
@@ -140,7 +143,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Fournissez un ID d’instance MLInstance valide pour récupérer un d’expériences appartenant à cette instance MLInstance particulière. |
+| `{MLINSTANCE_ID}` | Fournissez un ID d&#39;instance de liste de mesure valide pour récupérer une liste d&#39;expériences appartenant à cette instance particulière. |
 
 **Requête**
 
@@ -155,7 +158,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une  d’expériences partageant le même ID d’instance (`{MLINSTANCE_ID}`).
+Une réponse réussie renvoie une liste d’expériences partageant le même ID d’instance de la liste (`{MLINSTANCE_ID}`).
 
 ```json
 {
@@ -192,11 +195,11 @@ Une réponse réussie renvoie une  d’expériences partageant le même ID d’i
 }
 ```
 
-## Récupération d’une expérience spécifique {#retrieve-specific}
+## Récupérer une expérience spécifique {#retrieve-specific}
 
-Vous pouvez récupérer les détails d’une expérience spécifique en exécutant une requête GET qui inclut l’ID de l’expérience souhaitée dans le chemin d’accès de la requête.
+Vous pouvez récupérer les détails d’une expérience spécifique en exécutant une requête GET qui inclut l’ID de l’expérience souhaitée dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /experiments/{EXPERIMENT_ID}
@@ -220,7 +223,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de l’expérience demandée.
+Une réponse réussie renvoie une charge utile contenant les détails de l&#39;expérience demandée.
 
 ```json
 {
@@ -236,13 +239,13 @@ Une réponse réussie renvoie une charge utile contenant les détails de l’exp
 }
 ```
 
-## Récupération d’un d’exécutions d’expérience
+## Récupération d’une liste d’exécutions d’expérience
 
-Vous pouvez récupérer un d’exécutions de formation ou de notation appartenant à une expérience spécifique en exécutant une seule requête GET et en fournissant un ID d’expérience valide. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres  dans le chemin de requête. Pour un complet des paramètres de  disponibles, reportez-vous à la section de l’annexe sur les paramètres de [](./appendix.md#query)pour la récupérationdes ressources.
+Vous pouvez récupérer une liste d’exécutions de formation ou de notation appartenant à une expérience particulière en exécutant une seule demande GET et en fournissant un ID d’expérience valide. Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste complète des paramètres de requête disponibles, voir la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
 
->[!NOTE] Lorsque vous combinez plusieurs paramètres de , ils doivent être séparés par des esperluettes (&amp;).
+>[!NOTE] Lors de la combinaison de plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (&amp;).
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /experiments/{EXPERIMENT_ID}/runs
@@ -253,12 +256,12 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Paramètre | Description |
 | --- | --- |
 | `{EXPERIMENT_ID}` | ID d’expérience valide. |
-| `{QUERY_PARAMETER}` | L’un des paramètres [de ](./appendix.md#query) utilisés pour filtrer les résultats. |
-| `{VALUE}` | Valeur du paramètre  de précédent. |
+| `{QUERY_PARAMETER}` | L&#39;un des paramètres [de requête](./appendix.md#query) disponibles utilisés pour filtrer les résultats. |
+| `{VALUE}` | Valeur du paramètre de requête précédent. |
 
 **Requête**
 
-La requête suivante contient un  et récupère un de pistes de formation appartenant à une expérience.
+La requête suivante contient une requête et récupère une liste d&#39;exécutions de formation appartenant à une expérience.
 
 ```shell
 curl -X GET \
@@ -271,7 +274,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un  d’exécutions et chacun de leurs détails, y compris leur ID d’exécution d’expérience (`{RUN_ID}`).
+Une réponse réussie renvoie une charge utile contenant une liste d&#39;exécutions et chacun de leurs détails, y compris leur ID d&#39;exécution d&#39;expérience (`{RUN_ID}`).
 
 ```json
 {
@@ -297,11 +300,11 @@ Une réponse réussie renvoie une charge utile contenant un  d’exécutions et 
 
 ## Mettre à jour une expérience
 
-Vous pouvez mettre à jour une expérience existante en écrasant ses propriétés par le biais d’une requête PUT qui inclut l’ID de l’expérience de  dans le chemin d’accès à la requête et fournit une charge JSON contenant des propriétés mises à jour.
+Vous pouvez mettre à jour une expérience existante en remplaçant ses propriétés par une requête PUT qui inclut l’ID de l’expérience de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’expérience par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la requête PUT.
+>[!TIP] Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’expérience par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
-L’exemple d’appel d’API suivant met à jour le nom d’une expérience alors que ces propriétés étaient au départ :
+L’exemple d’appel d’API suivant met à jour le nom d’une expérience alors que ces propriétés étaient au départ les suivantes :
 
 ```json
 {
@@ -315,7 +318,7 @@ L’exemple d’appel d’API suivant met à jour le nom d’une expérience alo
 }
 ```
 
-**Format API**
+**Format d’API**
 
 ```http
 PUT /experiments/{EXPERIMENT_ID}
@@ -366,9 +369,9 @@ Une réponse réussie renvoie une charge utile contenant les détails mis à jou
 
 ## Suppression d’une expérience
 
-Vous pouvez supprimer une expérience unique en exécutant une requête DELETE qui inclut l’ID de l’expérience de  dans le chemin de la requête.
+Vous pouvez supprimer une seule expérience en exécutant une requête DELETE qui inclut l&#39;ID de l&#39;expérience de cible dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /experiments/{EXPERIMENT_ID}
@@ -399,11 +402,11 @@ curl -X DELETE \
 }
 ```
 
-## Supprimer les expériences par ID d&#39;instance de liste
+## Supprimer des expériences par ID d&#39;instance de liste
 
-Vous pouvez supprimer toutes les expériences appartenant à une instance MLInstance particulière en exécutant une requête DELETE qui inclut l’ID MLInstance en tant que paramètre .
+Vous pouvez supprimer toutes les expériences appartenant à une instance MLInstance particulière en exécutant une requête DELETE qui inclut l&#39;ID MLInstance en tant que paramètre de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
@@ -411,7 +414,7 @@ DELETE /experiments?mlInstanceId={MLINSTANCE_ID}
 
 | Paramètre | Description |
 | --- | ---|
-| `{MLINSTANCE_ID}` | ID d’instance MLInstance valide. |
+| `{MLINSTANCE_ID}` | ID d&#39;instance MLInstance valide. |
 
 **Requête**
 
