@@ -1,33 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Previews
+title: Prévisualisations
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 4%
 
 ---
 
 
-# Guide du développeur des 
+# Guide du développeur de Prévisualisations
 
 intro
 
-- Création d’un  de
-- Récupération de résultats  d’un spécifique
-- Annuler ou supprimer un spécifique 
+- Créer une prévisualisation
+- Récupération de résultats spécifiques à une prévisualisation
+- Annuler ou supprimer une prévisualisation spécifique
 
 ## Prise en main
 
-Les points de fin d’API utilisés dans ce guide font partie de l’API de segmentation. Avant de poursuivre, consultez le guide [du développeur de](./getting-started.md)segmentation.
+Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
 
-En particulier, la section [de](./getting-started.md#getting-started) prise en main du guide du développeur de segmentation comprend des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le  du et des informations importantes concernant les en-têtes requis nécessaires pour effectuer des appels à une API de plateforme d’expérience.
+En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
 
-## Création d’un  de
+## Créer une prévisualisation
 
-Vous pouvez créer un nouveau  en envoyant une requête POST au point de `/preview` fin.
+Vous pouvez créer une prévisualisation en envoyant une requête POST au point de `/preview` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /preview
@@ -56,7 +59,7 @@ body info
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 201 (Créé) avec les détails de votre  nouvellement créé.
+Une réponse réussie renvoie l’état HTTP 201 (Créé) avec les détails de votre nouvelle prévisualisation créée.
 
 ```json
 {
@@ -68,19 +71,19 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) avec les détails de v
 }
 ```
 
-information de réponse, x-location n’existe pas.
+information de réponse, x-location n&#39;existe pas.
 
-## Récupération de résultats  d’un spécifique
+## Récupération de résultats spécifiques à une prévisualisation
 
-Vous pouvez récupérer des informations détaillées sur un spécifique en envoyant une requête GET au point de `/preview` `id` fin et en indiquant la valeur de l’ de dans le chemin d’accès à la requête.
+Vous pouvez récupérer des informations détaillées sur une prévisualisation spécifique en envoyant une requête GET au point de `/preview` terminaison et en indiquant la valeur de la prévisualisation `id` dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}`: La `id` valeur du à récupérer.
+- `{PREVIEW_ID}`: Valeur `id` de la prévisualisation à récupérer.
 
 **Requête**
 
@@ -94,7 +97,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur le  spécifié.
+Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur la prévisualisation spécifiée.
 
 ```json
 {
@@ -111,17 +114,17 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-## Annuler ou supprimer un spécifique 
+## Annuler ou supprimer une prévisualisation spécifique
 
-Vous pouvez supprimer un spécifique en faisant une requête DELETE au point de `/preview` `id` fin et en fournissant la valeur de  de dans le chemin d’accès de la requête.
+Vous pouvez supprimer une prévisualisation spécifique en envoyant une requête DELETE au point de `/preview` terminaison et en indiquant la valeur de la prévisualisation `id` dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /preview/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}` La `id` valeur du à supprimer.
+- `{PREVIEW_ID}` Valeur `id` de la prévisualisation à supprimer.
 
 **Requête**
 
