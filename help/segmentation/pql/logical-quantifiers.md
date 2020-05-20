@@ -5,13 +5,16 @@ title: Quantificateurs logiques
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '191'
+ht-degree: 5%
 
 ---
 
 
 # Fonctions de quantificateur logique
 
-Des quantificateurs logiques peuvent être utilisés pour affirmer des conditions avec des tableaux dans le langage  de (PQL). Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans la présentation [du de la langue  du](./overview.md).
+Des quantificateurs logiques peuvent être utilisés pour affirmer des conditions avec des tableaux dans le langage PQL (Profil Requête Language). Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
 
 ## Existe
 
@@ -28,11 +31,11 @@ exists {VARIABLE} from {EXPRESSION} : {CONDITION}
 | ---------- | ----------- |
 | `{VARIABLE}` | Nom d’une variable. |
 | `{EXPRESSION}` | Tableau en cours de vérification. |
-| `{CONDITION}` | Un  facultatif  qui les valeurs du tableau renvoyées. |
+| `{CONDITION}` | expression facultative qui filtres les valeurs du tableau renvoyées. |
 
 **Exemple**
 
-Le PQL suivant reçoit tous les  dont le prix est supérieur à 50 $ ou dont le SKU est &quot;PS&quot;.
+La requête PQL suivante récupère tous les événements dont le prix est supérieur à 50 $ ou dont le SKU est &quot;PS&quot;.
 
 ```sql
 exists E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -40,7 +43,7 @@ exists E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Pour tous
 
-La `forall` fonction détermine tous les éléments d’un tableau qui répondent à toutes les conditions données.
+La `forall` fonction détermine tous les éléments d&#39;un tableau qui répondent à toutes les conditions données.
 
 **Format**
 
@@ -53,11 +56,11 @@ forall {VARIABLE} from {EXPRESSION} : {CONDITION}
 | ---------- | ----------- |
 | `{VARIABLE}` | Nom d’une variable. |
 | `{EXPRESSION}` | Tableau en cours de vérification. |
-| `{CONDITION}` | Un  facultatif  qui les valeurs du tableau renvoyées. |
+| `{CONDITION}` | expression facultative qui filtres les valeurs du tableau renvoyées. |
 
 **Exemple**
 
-Le PQL suivant reçoit tous les  dont le prix est supérieur à 50 $ et dont le SKU est &quot;PS&quot;.
+La requête PQL suivante récupère tous les événements dont le prix est supérieur à 50 $ et dont le SKU est &quot;PS&quot;.
 
 ```sql
 forall E from xEvent where (E.commerce.item.price > 50), I from E.productListItems where I.SKU = "PS"
@@ -65,4 +68,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les quantificateurs logiques, vous pouvez les utiliser dans votre  PQL. Pour plus d&#39;informations sur les autres fonctions de PQL, veuillez lire la présentation [de la langue du](./overview.md).
+Maintenant que vous avez découvert les quantificateurs logiques, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
