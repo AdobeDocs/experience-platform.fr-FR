@@ -1,21 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Recherche d’un objet
+title: Rechercher un objet
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 4dcd174eda98fee1e8cf668819809bd061c6e8bb
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 2%
 
 ---
 
 
-# Recherche d’un objet
+# Rechercher un objet
 
-Si vous connaissez l’identifiant unique d’un objet Catalog spécifique, vous pouvez exécuter une requête GET pour les détails de cet objet.
+Si vous connaissez l&#39;identifiant unique d&#39;un objet Catalog spécifique, vous pouvez exécuter une requête GET pour vue les détails de cet objet.
 
->[!NOTE] Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtrer par propriétés](filter-data.md) et de renvoyer uniquement les propriétés qui vous intéressent.
+>[!NOTE] Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtrer par propriétés](filter-data.md) et de ne renvoyer que les propriétés qui vous intéressent.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /{OBJECT_TYPE}/{OBJECT_ID}
@@ -25,11 +28,11 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 | Paramètre | Description |
 | --- | --- |
 | `{OBJECT_TYPE}` | Type d’objet Catalog à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez récupérer. |
+| `{OBJECT_ID}` | Identificateur de l&#39;objet spécifique que vous souhaitez récupérer. |
 
 **Requête**
 
-La requête suivante récupère un jeu de données par son ID, renvoyant ses `name`, `description`, `state`, `tags`et `files` propriétés.
+La requête suivante récupère un jeu de données par son identifiant, en renvoyant ses `name`, `description`, `state`, `tags`et `files` propriétés.
 
 ```shell
 curl -X GET \
@@ -60,4 +63,4 @@ Une réponse réussie renvoie le jeu de données spécifié avec uniquement le j
 }
 ```
 
->[!NOTE] Les propriétés dont les valeurs sont précédées d’un préfixe `@` représentent des objets interconnectés. Voir la section de l’annexe sur l’ [affichage des objets](appendix.md#view-interrelated-objects) interconnectés pour savoir comment les détails de ces objets.
+>[!NOTE] Les propriétés dont les valeurs comportent un préfixe `@` représentent des objets interconnectés. Consultez la section de l’annexe sur l’ [affichage des objets](appendix.md#view-interrelated-objects) interconnectés pour savoir comment vue les détails de ces objets.
