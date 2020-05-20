@@ -5,6 +5,9 @@ title: Création d’un connecteur Apache Cassandra à l’aide de l’API Flow 
 topic: overview
 translation-type: tm+mt
 source-git-commit: accbb95234085c7c1969e9fecc4f5db52426c8b7
+workflow-type: tm+mt
+source-wordcount: '637'
+ht-degree: 3%
 
 ---
 
