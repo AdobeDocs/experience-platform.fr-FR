@@ -5,6 +5,9 @@ title: Accès aux scores dans l’API d’attribution
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+workflow-type: tm+mt
+source-wordcount: '983'
+ht-degree: 2%
 
 ---
 
@@ -21,7 +24,7 @@ De plus, pour accéder aux scores de l’API d’attribution, vous devez dispose
 
 ## Find your dataset ID {#dataset-id}
 
-Dans votre instance de service pour obtenir des informations sur l’API d’attribution, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
+Dans votre instance de service pour obtenir des informations sur l’API d’attribution, cliquez sur la liste déroulante Actions ** supplémentaires dans le volet de navigation supérieur droit, puis sélectionnez scores **** d’accès.
 
 ![Autres actions](./images/download-scores/more-actions.png)
 
