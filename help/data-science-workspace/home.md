@@ -5,6 +5,9 @@ title: Présentation de Data Science Workspace
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '2736'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Avant de vous plonger dans les détails de Data Science Workspace, voici un bref
 
 | Terme | Définition |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Espace de travail Data Science | Data Science Workspace dans Experience Platform permet aux clients de créer des modèles d’apprentissage automatique utilisant des données dans Experience Platform et les solutions Adobe afin de générer des aperçus et des prédictions intelligents pour tisser de merveilleuses expériences numériques d’utilisateur final. |
+| Espace de travail Data Science | Data Science Workspace dans Experience Platform permet aux clients de créer des modèles d’apprentissage automatique utilisant des données dans Experience Platform et les solutions Adobe afin de générer des aperçus et des prédictions intelligents pour tisser de superbes expériences numériques d’utilisateur final. |
 | Intelligence artificielle | L&#39;intelligence artificielle est une théorie et un développement de systèmes informatiques capables d&#39;exécuter des tâches qui nécessitent normalement l&#39;intelligence humaine, comme la perception visuelle, la reconnaissance vocale, la prise de décision et la traduction entre les langues. |
 | Apprentissage automatique | L&#39;apprentissage automatique est le domaine d&#39;étude qui permet aux ordinateurs d&#39;apprendre sans être explicitement programmés. |
 | Cadre de gestion de Sensei ML | Sensei ML Framework est une structure d’apprentissage automatique unifiée à l’échelle d’Adobe qui utilise les données de la plate-forme d’expérience pour permettre aux chercheurs de données de développer des services de renseignement pilotés par l’apprentissage automatique d’une manière plus rapide, évolutive et réutilisable. |
