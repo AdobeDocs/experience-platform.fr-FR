@@ -5,6 +5,9 @@ title: Traitement des demandes de confidentialité dans Data Lake
 topic: overview
 translation-type: tm+mt
 source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+workflow-type: tm+mt
+source-wordcount: '1275'
+ht-degree: 0%
 
 ---
 
@@ -49,7 +52,7 @@ Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un sché
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l’interface utilisateur de la plateforme d’expérience, l’ _[!UICONTROL Schemas]_espace de travail vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour[définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field)d&#39;identité dans le didacticiel de l&#39;éditeur de Schémas.
+Dans l’interface utilisateur de la plateforme d’expérience, l’espace de travail _[!UICONTROL Schémas]_vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour[définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field)d&#39;identité dans le didacticiel de l&#39;éditeur de Schémas.
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs d’identité, vous pouvez passer à la section suivante lors de l’ [envoi des demandes](#submit)de confidentialité.
 
