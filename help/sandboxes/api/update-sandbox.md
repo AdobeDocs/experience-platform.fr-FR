@@ -5,17 +5,20 @@ title: Mise à jour d’un sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+workflow-type: tm+mt
+source-wordcount: '87'
+ht-degree: 4%
 
 ---
 
 
 # Mise à jour d’un sandbox
 
-Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en effectuant une requête PATCH qui inclut les sandbox `name` dans le chemin de requête et la propriété à mettre à jour dans la charge utile de la requête.
+Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en exécutant une requête PATCH qui inclut le sandbox dans le chemin de la requête et la propriété à mettre à jour dans la charge utile de la requête. `name`
 
 >[!NOTE] Actuellement, seule la `title` propriété d’un sandbox peut être mise à jour.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /sandboxes/{SANDBOX_NAME}
@@ -23,11 +26,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La `name` propriété du sandbox à mettre à jour. |
+| `{SANDBOX_NAME}` | Propriété `name` du sandbox à mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour la `title` propriété du sandbox nommé &quot;dev-2&quot;.
+La requête suivante met à jour la propriété `title` du sandbox nommé &quot;dev-2&quot;.
 
 ```shell
 curl -X PATCH \
