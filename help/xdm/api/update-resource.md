@@ -5,23 +5,26 @@ title: Mettre à jour une ressource
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 2%
 
 ---
 
 
 # Mettre à jour une ressource
 
-Vous pouvez modifier ou mettre à jour des ressources dans le du client  à l’aide d’une requête PATCH. Le Registre  prend en charge toutes les opérations de correctif JSON standard, y compris l’ajout, la suppression et le remplacement.
+Vous pouvez modifier ou mettre à jour des ressources dans le conteneur locataire à l’aide d’une requête PATCH. Le registre des Schémas prend en charge toutes les opérations de correctif JSON standard, y compris l’ajout, la suppression et le remplacement.
 
-Pour plus d’informations sur le correctif JSON, y compris les opérations disponibles, consultez la documentation [officielle sur le correctif](http://jsonpatch.com/)JSON.
+Pour plus d’informations sur le correctif JSON, y compris les opérations disponibles, voir la documentation [officielle sur le correctif](http://jsonpatch.com/)JSON.
 
->[!NOTE] Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la  sur le [remplacement d’une ressource à l’aide d’une opération](replace-resource.md)PUT.
+>[!NOTE] Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez le document sur le [remplacement d&#39;une ressource à l&#39;aide d&#39;une opération](replace-resource.md)PUT.
 
-## Ajouter de mixins à un 
+## Ajouter de mixins à un schéma
 
-L’une des opérations PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un  XDM, comme le montre l’exemple ci-dessous.
+L&#39;une des opérations PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un schéma XDM, comme le montre l&#39;exemple ci-dessous.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -29,14 +32,14 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de . Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
+| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
 | `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
 
 **Requête**
 
-Une opération PATCH vous permet de mettre à jour un  de afin d’inclure des champs définis dans un mixin créé précédemment. Pour ce faire, vous devez exécuter une requête PATCH au à l’aide de son `meta:altId` URI ou de son `$id` URI codé en URL.
+A l’aide d’une opération PATCH, vous pouvez mettre à jour un schéma afin d’inclure des champs définis dans un mixin créé précédemment. Pour ce faire, vous devez exécuter une requête PATCH au schéma à l’aide de son `meta:altId` URI ou de son `$id` URI codé en URL.
 
-Le corps de la requête comprend l’opération (`op`) que vous souhaitez effectuer, où (`path`) vous souhaitez effectuer l’opération et les informations (`value`) que vous souhaitez inclure dans l’opération. Dans cet exemple, la `$id` valeur du mixin est ajoutée aux champs `meta:extends` et `allOf` du de la  de .
+Le corps de la requête comprend l&#39;opération (`op`) que vous souhaitez effectuer, où (`path`) vous souhaitez effectuer l&#39;opération et les informations (`value`) que vous souhaitez inclure dans l&#39;opération. Dans cet exemple, la `$id` valeur du mixin est ajoutée aux champs `meta:extends` et `allOf` du schéma de cible.
 
 ```SHELL
 curl -X PATCH\
@@ -54,7 +57,7 @@ curl -X PATCH\
 
 **Réponse**
 
-La réponse montre que les deux opérations ont été exécutées avec succès. Le mixin `$id` a été ajouté à la `meta:extends` baie et une référence (`$ref`) au mixin s’affiche désormais dans la `$id` `allOf` baie.
+La réponse montre que les deux opérations ont été exécutées avec succès. Le mixin `$id` a été ajouté à la `meta:extends` baie et une référence (`$ref`) au mixin `$id` apparaît maintenant dans la `allOf` baie.
 
 ```JSON
 {
@@ -95,9 +98,9 @@ La réponse montre que les deux opérations ont été exécutées avec succès. 
 
 ## Mettre à jour des champs individuels pour une ressource
 
-Vous pouvez également envoyer des requêtes PATCH qui apportent plusieurs modifications à des champs individuels au sein d’une ressource de Registre .
+Vous pouvez également envoyer des requêtes PATCH qui apportent plusieurs modifications à des champs individuels au sein d&#39;une ressource de registre de Schéma.
 
-**Format API**
+**Format d’API**
 
 ```SHELL
 PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -105,12 +108,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de . Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
+| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
 | `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
 
 **Requête**
 
-Le corps de la demande comprend l’opération (`op`), l’emplacement (`path`) et les informations (`value`) nécessaires pour mettre à jour le mixin. Cette demande met à jour le mixage Détails de la propriété afin de supprimer le champ &quot;propertyCity&quot; et d’ajouter un nouveau champ &quot;propertyAddress&quot; qui référence un type de données standard contenant des informations d’adresse. Il ajoute également un nouveau champ &quot;emailAddress&quot; qui fait référence à un type de données standard avec des informations de courrier électronique.
+L’organisme de demande comprend l’opération (`op`), l’emplacement (`path`) et les informations (`value`) nécessaires pour mettre à jour le mixin. Cette demande met à jour le mixin Détails de la propriété afin de supprimer le champ &quot;propertyCity&quot; et d’ajouter un nouveau champ &quot;propertyAddress&quot; qui référence un type de données standard contenant des informations d’adresse. Il ajoute également un nouveau champ &quot;emailAddress&quot; qui fait référence à un type de données standard avec des informations de messagerie.
 
 ```SHELL
 curl -X PATCH \
