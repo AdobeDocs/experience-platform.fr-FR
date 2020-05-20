@@ -5,34 +5,37 @@ title: Exportation de données à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 1%
 
 ---
 
 
-# Exportation de données  à l’aide d’API
+# Exportation de données de Profil à l’aide d’API
 
-Le  Client en temps réel vous permet de créer un seul de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données disponibles dans le  du peuvent ensuite être exportées dans un jeu de données pour un traitement ultérieur. Ce didacticiel fournit des instructions étape par étape pour la création et la gestion des tâches d’exportation à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation.
+Le Profil client en temps réel vous permet de créer une vue unique de clients individuels en réunissant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données disponibles dans le Profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Ce didacticiel fournit des instructions détaillées pour la création et la gestion des tâches d’exportation à l’aide de l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentation.
 
-Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données  à l’aide de l’API d’accès aux  et des projections. Pour plus d&#39;informations sur ces autres modèles d&#39;accès, consultez le didacticiel [sur l&#39;API d&#39;accès aux](../../profile/api/entities.md) ou le didacticiel sur la [configuration des destinations et des projections](../../profile/api/edge-projections.md) de périphérie.
+Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données de Profil à l’aide de l’API d’accès au Profil et des projections. Pour plus d&#39;informations sur ces autres modèles d&#39;accès, consultez le didacticiel [sur l&#39;API d&#39;accès aux](../../profile/api/entities.md) Profils ou le didacticiel sur la [configuration de destinations et de projections](../../profile/api/edge-projections.md) de périphérie.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation des données  des. Avant de commencer ce didacticiel, veuillez consulter la documentation des services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans l’utilisation des données de Profil. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [](../../profile/home.md)du client en temps réel : Fournit un client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer  segments  à partir de données de client en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plateforme organise les données d’expérience client.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+- [Profil](../../profile/home.md)client en temps réel : Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-### En-têtes obligatoires
+### En-têtes requis
 
-Ce didacticiel nécessite également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels aux API de plateforme. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Ce didacticiel nécessite également que vous ayez suivi le didacticiel [d&#39;](../../tutorials/authentication.md) authentification afin d&#39;effectuer des appels aux API de plateforme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Les demandes d’API de plateforme nécessitent un en-tête qui spécifie le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -44,22 +47,22 @@ Toutes les requêtes POST, PUT et PATCH nécessitent un en-tête supplémentaire
 
 ## Création d’une tâche d’exportation
 
-L’exportation de données  nécessite d’abord la création d’un jeu de données dans lequel les données seront exportées, puis le lancement d’une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API de plateformes d’expérience, la première utilisant l’API de service de catalogue et la seconde utilisant l’API de  client en temps réel. Les sections qui suivent contiennent des instructions détaillées sur l&#39;exécution de chaque étape.
+Pour exporter des données de Profil, vous devez d’abord créer un jeu de données dans lequel les données seront exportées, puis lancer une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API de plateforme d’expérience, la première utilisant l’API de service de catalogue et la seconde utilisant l’API de Profil client en temps réel. Les sections qui suivent contiennent des instructions détaillées sur la façon de réaliser chaque étape.
 
-- [Création d’un jeu](#create-a-target-dataset) de données de  : créez un jeu de données contenant les données exportées.
-- [Lancer une nouvelle tâche](#initiate-export-job) d’exportation : renseignez le jeu de données avec les données de  XDM individuels.
+- [Création d&#39;un jeu de données](#create-a-target-dataset) de cible - Créez un jeu de données contenant les données exportées.
+- [Lancer une nouvelle tâche](#initiate-export-job) d&#39;exportation : renseignez le jeu de données avec des données de Profil XDM individuelles.
 
-### Création d’un jeu de données de 
+### Création d’un jeu de données de cible
 
-Lors de l’exportation de données , un jeu de données  doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
+Lors de l’exportation de données de Profil, un jeu de données de cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l&#39;exportation.
 
-L’une des considérations clés est le  sur lequel le jeu de données est basé (`schemaRef.id` dans l’exemple de requête d’API ci-dessous). Pour exporter un segment, le jeu de données doit être basé sur le individuel XDM   de (`https://ns.adobe.com/xdm/context/profile__union`). Un   est ungénéré par le système et en lecture seule qui permet de les champs de l’qui partagent la même classe, c’est-à-dire la classe de l’ensemble de l’ensemble de l’espace de travail XDM. Pour plus d&#39;informations sur   [](../../xdm/schema/composition.md#union)de l&#39;, veuillez consulter la section de l&#39;en temps réel du guidedu développeur du registre desclients.
+L’une des principales considérations à prendre en compte est le schéma sur lequel repose le jeu de données (`schemaRef.id` dans l’exemple de demande d’API ci-dessous). Pour exporter un segment, le jeu de données doit être basé sur le Schéma d&#39;Union de Profil individuel XDM (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma généré par le système et en lecture seule qui agrégat les champs des schémas qui partagent la même classe, dans ce cas la classe de Profil XDM Individuel. Pour plus d&#39;informations sur les schémas des vues d&#39;union, consultez la section Profil client en temps [réel du guide](../../xdm/schema/composition.md#union)de développement du registre des Schémas.
 
-Les étapes qui suivent dans ce didacticiel expliquent comment créer un jeu de données qui référence le XDM individuel    le à l’aide de l’API de catalogue. Vous pouvez également utiliser l’interface utilisateur d’Adobe Experience Platform pour créer un jeu de données qui fait référence au   d’ de. Les étapes d’utilisation de l’interface utilisateur sont décrites dans [ce didacticiel de l’interface utilisateur pour l’exportation de segments](./create-dataset-export-segment.md) , mais elles sont également applicables ici. Une fois terminé, vous pouvez revenir à ce didacticiel pour passer aux étapes nécessaires au [lancement d’une nouvelle tâche](#initiate-export-job)d’exportation.
+Les étapes suivantes de ce didacticiel expliquent comment créer un jeu de données qui référence le Schéma d&#39;Union d&#39;Profil individuel XDM à l&#39;aide de l&#39;API Catalog. Vous pouvez également utiliser l’interface utilisateur d’Adobe Experience Platform pour créer un jeu de données qui référence le schéma d’union. Les étapes d’utilisation de l’interface utilisateur sont décrites dans [ce didacticiel d’interface utilisateur pour l’exportation de segments](./create-dataset-export-segment.md) , mais elles sont également applicables ici. Une fois terminé, vous pouvez revenir à ce didacticiel pour passer aux étapes permettant d’ [initier une nouvelle tâche](#initiate-export-job)d’exportation.
 
-Si vous disposez déjà d’un jeu de données compatible et que vous connaissez son ID, vous pouvez passer directement à l’étape [de création d’une nouvelle tâche](#initiate-export-job)d’exportation.
+Si vous disposez déjà d’un jeu de données compatible et connaissez son ID, vous pouvez passer directement à l’étape [d’](#initiate-export-job)ouverture d’une nouvelle tâched’exportation.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /dataSets
@@ -67,7 +70,7 @@ POST /dataSets
 
 **Requête**
 
-La requête suivante crée un jeu de données, fournissant des paramètres de configuration dans la charge utile.
+La requête suivante crée un nouveau jeu de données, fournissant des paramètres de configuration dans la charge utile.
 
 ```shell
 curl -X POST \
@@ -94,12 +97,12 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `name` | Nom descriptif du jeu de données. |
-| `schemaRef.id` | ID de l’ () auquel le jeu de données sera associé. |
-| `fileDescription.persisted` | Valeur booléenne qui, lorsqu’elle est définie sur `true`, permet au jeu de données de persister dans le   de . |
+| `schemaRef.id` | ID de la vue d&#39;union (schéma) à laquelle le jeu de données sera associé. |
+| `fileDescription.persisted` | Valeur booléenne qui, lorsqu’elle est définie sur `true`, permet au jeu de données de persister dans la vue d’union. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;identifiant unique généré par le système et en lecture seule du jeu de données nouvellement créé. Un ID de jeu de données correctement configuré est nécessaire pour exporter avec succès les données .
+Une réponse réussie renvoie un tableau contenant l&#39;identifiant unique, généré par le système et en lecture seule du jeu de données nouvellement créé. Un ID de jeu de données correctement configuré est nécessaire pour exporter avec succès les données de Profil.
 
 ```json
 [
@@ -109,9 +112,9 @@ Une réponse réussie renvoie un tableau contenant l&#39;identifiant unique gén
 
 ### Lancer la tâche d&#39;exportation
 
-Une fois que vous disposez d’un jeu de données   persistant, vous pouvez créer une tâche d’exportation afin de conserver les données du jeu de données. Pour ce faire, vous devez envoyer une requête POST au `/export/jobs` point de terminaison dans l’API du client en temps réel et fournir les détails des données que vous souhaitez exporter dans le corps de la requête.
+Une fois que vous disposez d’un jeu de données persistant en union, vous pouvez créer une tâche d’exportation afin de conserver les données du Profil dans le jeu de données en envoyant une requête POST au point de `/export/jobs` terminaison dans l’API Profil client en temps réel et en fournissant les détails des données que vous souhaitez exporter dans le corps de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /export/jobs
@@ -119,7 +122,7 @@ POST /export/jobs
 
 **Requête**
 
-La requête suivante crée une nouvelle tâche d’exportation, fournissant des paramètres de configuration dans la charge utile.
+La demande suivante crée une nouvelle tâche d’exportation, fournissant des paramètres de configuration dans la charge utile.
 
 ```shell
 curl -X POST \
@@ -175,26 +178,26 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `fields` | *(Facultatif)* Limite les champs de données à inclure dans l’exportation à ceux fournis dans ce paramètre. Le même paramètre est également disponible lors de la création d’un segment. Par conséquent, les champs du segment ont peut-être déjà été filtrés. Si vous omettez cette valeur, tous les champs seront inclus dans les données exportées. |
-| `mergePolicy` | *(Facultatif)* Spécifie la stratégie de fusion pour régir les données exportées. Incluez ce paramètre lorsque plusieurs segments sont exportés. Si vous omettez cette valeur, le service d’exportation utilisera la stratégie de fusion fournie par le segment. |
+| `fields` | *(Facultatif)* Limite les champs de données à inclure dans l’exportation à ceux fournis dans ce paramètre. Le même paramètre est également disponible lors de la création d’un segment. Par conséquent, les champs du segment ont peut-être déjà été filtrés. Si cette valeur est omise, tous les champs seront inclus dans les données exportées. |
+| `mergePolicy` | *(Facultatif)* Spécifie la stratégie de fusion pour régir les données exportées. Incluez ce paramètre lorsqu’il existe plusieurs segments exportés. Si cette valeur est omise, le service d’exportation utilisera la stratégie de fusion fournie par le segment. |
 | `mergePolicy.id` | ID de la stratégie de fusion. |
 | `mergePolicy.version` | Version spécifique de la stratégie de fusion à utiliser. Si vous omettez cette valeur, la version la plus récente sera utilisée par défaut. |
-| `filter` | *(Facultatif)* Indique un ou plusieurs des  de suivants à appliquer au segment avant l’exportation. |
-| `filter.segments` | *(Facultatif)* Indique les segments à exporter. Si vous omettez cette valeur, toutes les données de tous les  seront exportées. Accepte un tableau d’objets de segment, chacun contenant les champs suivants :<ul><li>`segmentId`: **(Obligatoire en cas d’utilisation`segments`)** de l’ID de segment pour  à exporter.</li><li>`segmentNs` *(Facultatif)* Segmenter le   pour le groupe `segmentID`donné.</li><li>`status` *(Facultatif)* Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` la valeur `["realized", "existing"]` qui représente tous les  de qui tombent dans le segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `"realized"`, `"existing"`et `"exited"`.</br></br>Pour plus d’informations, reportez-vous au didacticiel [sur la](./create-a-segment.md)création de segments.</li></ul> |
-| `filter.segmentQualificationTime` | *(Facultatif)* Filtrage basé sur l’heure de qualification du segment. L’heure  et/ou l’heure de fin du peuvent être fournies. |
-| `filter.segmentQualificationTime.startTime` | *(Facultatif)* Le de qualification de segment  la durée d’un ID de segment pour un état donné. Il n’est pas fourni, il n’y aura aucun filtre sur l’heure de  du pour une qualification d’ID de segment. L’horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
-| `filter.segmentQualificationTime.endTime` | *(Facultatif)* Heure de fin de qualification de segment pour un ID de segment pour un état donné. Il n’est pas fourni, il n’y aura aucun filtre à l’heure de fin pour une qualification d’ID de segment. L’horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
-| `filter.fromIngestTimestamp ` | *(Facultatif)* Limite les  exportées à celles qui ont été mises à jour après cet horodatage. L’horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . <ul><li>`fromIngestTimestamp` pour les ****, le cas échéant: Inclut tous les  fusionnés dans lesquels l’horodatage mis à jour fusionné est supérieur à l’horodatage donné. Prend en charge `greater_than` l’opérande.</li><li>`fromTimestamp` pour les  ****: Tous les  ingérés après cet horodatage seront exportés correspondant au résultat de l’ résultant. Ce n&#39;est pas l&#39;heure de  elle-même, mais le temps d&#39;ingestion pour la  de la.</li> |
-| `filter.emptyProfiles` | *(Facultatif)* Valeur booléenne. Les  de peuvent contenir des enregistrements de  de, des enregistrements d’ExperienceEvent ou les deux. Les  sans enregistrements de et seuls les enregistrements d’ExperienceEvent sont appelés &quot;profils vides&quot;. Pour exporter tous les  de dans le magasin  de, y compris les &quot;profils vides&quot;, définissez la valeur de `emptyProfiles` sur `true`. Si `emptyProfiles` est défini sur `false`, seuls les avec des enregistrements de dans le magasin sont exportés. Par défaut, si `emptyProfiles` l’attribut n’est pas inclus, seuls les  contenant des enregistrements  de sont exportés. |
-| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs  série chronologique exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields`: Contrôlez les champs à exporter.</li><li>`eventList.filter`: Indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`:  série chronologique de  s’à celles qui ont été ingérées après l’horodatage fourni. Ce n&#39;est pas l&#39;heure de  elle-même, mais le temps d&#39;ingestion pour la  de la.</li></ul> |
-| `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId`: **(Obligatoire)** Identifiant du jeu de données dans lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch`: *(Facultatif)* Valeur booléenne par défaut `false`, si elle n’est pas fournie. Une valeur de `false` exporte tous les ID de segment dans un seul ID de lot. Une valeur de `true` exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur à `true` définir peut affecter les performances d’exportation par lot.</li></ul> |
-| `schema.name` | **(Obligatoire)** Nom du  de associé au jeu de données dans lequel les données doivent être exportées. |
+| `filter` | *(Facultatif)* Spécifie un ou plusieurs des filtres suivants à appliquer au segment avant l’exportation. |
+| `filter.segments` | *(Facultatif)* Indique les segments à exporter. Si cette valeur est omise, toutes les données de tous les profils seront exportées. Accepte un tableau d’objets de segment, chacun contenant les champs suivants :<ul><li>`segmentId`: **(Obligatoire en cas d’utilisation`segments`)** Identifiant de segment pour les profils à exporter.</li><li>`segmentNs` *(Facultatif)* Segmenter l’espace de nommage pour le segment donné `segmentID`.</li><li>`status` *(Facultatif)* Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` aura la valeur `["realized", "existing"]` qui représente tous les profils qui tombent dans le segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `"realized"`, `"existing"`et `"exited"`.</br></br>Pour plus d’informations, voir le didacticiel [sur la](./create-a-segment.md)création de segments.</li></ul> |
+| `filter.segmentQualificationTime` | *(Facultatif)* Filtrer en fonction de l’heure de qualification du segment. L’heure de début et/ou l’heure de fin peuvent être fournies. |
+| `filter.segmentQualificationTime.startTime` | *(Facultatif)* Heure de début de qualification des segments pour un ID de segment pour un état donné. Il n’est pas fourni, il n’y aura aucun filtre sur l’heure de début pour une qualification d’ID de segment. L&#39;horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
+| `filter.segmentQualificationTime.endTime` | *(Facultatif)* Heure de fin de qualification de segment pour un ID de segment pour un état donné. Il n’est pas fourni, il n’y aura pas de filtre à l’heure de fin pour une qualification d’ID de segment. L&#39;horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . |
+| `filter.fromIngestTimestamp ` | *(Facultatif)* Limite les profils exportés à inclure uniquement ceux qui ont été mis à jour après cet horodatage. L&#39;horodatage doit être fourni au format [RFC 3339](https://tools.ietf.org/html/rfc3339) . <ul><li>`fromIngestTimestamp` pour **les profils**, le cas échéant : Inclut tous les profils fusionnés où l’horodatage mis à jour fusionné est supérieur à l’horodatage donné. Prend en charge `greater_than` l’opérande.</li><li>`fromTimestamp` pour **événements**: Tous les événements ingérés après cet horodatage seront exportés correspondant au résultat du profil obtenu. Ce n&#39;est pas le temps de événement lui-même, mais le temps d&#39;assimilation des événements.</li> |
+| `filter.emptyProfiles` | *(Facultatif)* Valeur booléenne. Les Profils peuvent contenir des enregistrements de Profil, des enregistrements ExperienceEvent ou les deux. Les Profils sans enregistrement de Profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. Pour exporter tous les profils de la banque de Profils, y compris les &quot;profils vides&quot;, définissez la valeur de `emptyProfiles` sur `true`. Si `emptyProfiles` est défini sur `false`, seuls les profils contenant des enregistrements de Profil dans la boutique sont exportés. Par défaut, si `emptyProfiles` l’attribut n’est pas inclus, seuls les profils contenant des enregistrements de Profil sont exportés. |
+| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs de événement de série chronologique exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields`: Contrôlez les champs à exporter.</li><li>`eventList.filter`: Indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: Filtres les événements de série chronologique à ceux qui ont été ingérés après l’horodatage fourni. Ce n&#39;est pas le temps de événement lui-même, mais le temps d&#39;assimilation des événements.</li></ul> |
+| `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId`: **(Obligatoire)** ID du jeu de données dans lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch`: *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur `false`. Une valeur de `false` exporte tous les ID de segment dans un seul ID de lot. Une valeur de `true` exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur `true` peut affecter les performances d’exportation par lot.</li></ul> |
+| `schema.name` | **(Obligatoire)** Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
 
->[!NOTE] Pour exporter uniquement les données  du et ne pas inclure les données ExperienceEvent associées, supprimez l’objet &quot;additionalFields&quot; de la requête.
+>[!NOTE] Pour exporter uniquement les données de Profil et ne pas inclure les données ExperienceEvent associées, supprimez l’objet &quot;additionalFields&quot; de la requête.
 
 **Réponse**
 
-Une réponse réussie renvoie un jeu de données rempli avec des données , comme spécifié dans la requête.
+Une réponse réussie renvoie un jeu de données rempli avec des données de Profil comme spécifié dans la requête.
 
 ```json
 {
@@ -254,7 +257,7 @@ Une réponse réussie renvoie un jeu de données rempli avec des données , comm
 }
 ```
 
-Si la requête n’ `destination.segmentPerBatch` avait pas été incluse (si elle n’était pas présente, elle est définie par défaut `false`) ou si la valeur avait été définie sur `false`, l’ `destination` objet de la réponse ci-dessus ne contiendrait pas de `batches` tableau et n’en incluerait qu’un `batchId`, comme illustré ci-dessous. Ce lot unique inclurait tous les ID de segment, alors que la réponse ci-dessus montre un ID de segment unique par ID de lot.
+Si `destination.segmentPerBatch` la requête n’avait pas été incluse (si elle n’était pas présente, elle est définie par défaut `false`) ou si la valeur avait été définie sur `false`, l’objet `destination` de la réponse ci-dessus ne contiendrait pas de tableau et inclurait à la place un seul `batches` `batchId`tableau, comme illustré ci-dessous. Ce lot unique inclurait tous les ID de segment, alors que la réponse ci-dessus montre un identifiant de segment unique par ID de lot.
 
 ```json
   "destination": {
@@ -264,11 +267,11 @@ Si la requête n’ `destination.segmentPerBatch` avait pas été incluse (si el
   }
 ```
 
-##  toutes les tâches d’exportation
+## Liste de toutes les tâches d’exportation
 
-Vous pouvez renvoyer un  de toutes les tâches d’exportation pour une organisation IMS particulière en exécutant une requête GET vers le `export/jobs` point de fin. La requête prend également en charge les paramètres de  `limit` et `offset`, comme illustré ci-dessous.
+Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation IMS particulière en exécutant une demande GET au point de `export/jobs` terminaison. La demande prend également en charge les paramètres de requête `limit` et `offset`, comme indiqué ci-dessous.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/jobs
@@ -278,8 +281,8 @@ GET /export/jobs?offset=2
 
 | Propriété | Description |
 | -------- | ----------- |
-| `limit` | Spécifiez le nombre d’enregistrements à renvoyer. |
-| `offset` | Décale la page des résultats à renvoyer par le nombre fourni. |
+| `limit` | Spécifiez le nombre d&#39;enregistrements à renvoyer. |
+| `offset` | Décale la page de résultats à renvoyer par le nombre fourni. |
 
 **Requête**
 
@@ -416,11 +419,11 @@ La réponse comprend un `records` objet contenant les tâches d’exportation cr
 }
 ```
 
-## Suivi de la progression de l’exportation
+## Suivi de la progression de l&#39;exportation
 
-Pour  les détails d’une tâche d’exportation spécifique ou surveiller son état au cours de son traitement, vous pouvez envoyer une requête GET au `/export/jobs` point de fin et inclure le `id` chemin d’accès de la tâche d’exportation. La tâche d’exportation est terminée lorsque le `status` champ renvoie la valeur &quot;SUCCEEDED&quot;.
+Pour vue des détails d’une tâche d’exportation spécifique ou pour contrôler son état au fur et à mesure de son traitement, vous pouvez envoyer une requête GET au point de `/export/jobs` terminaison et inclure la tâche `id` d’exportation dans le chemin d’accès. La tâche d’exportation est terminée une fois que le `status` champ renvoie la valeur &quot;SUCCEEDED&quot;.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -518,13 +521,13 @@ curl -X GET \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `batchId` | Identifiant des lots créés à partir d’une exportation réussie, à utiliser à des fins de recherche lors de la lecture des données  du. |
+| `batchId` | Identifiant des lots créés à partir d&#39;une exportation réussie, à utiliser à des fins de recherche lors de la lecture des données de Profil. |
 
-## Annulation d’une tâche d’exportation
+## Annuler une tâche d’exportation
 
-Experience Platform vous permet d’annuler une tâche d’exportation existante, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche d’exportation n’a pas été terminée ou est devenue bloquée au cours de l’étape de traitement. Pour annuler une tâche d’exportation, vous pouvez exécuter une requête DELETE vers le `/export/jobs` point de fin et inclure la tâche `id` d’exportation que vous souhaitez annuler dans le chemin d’accès de la demande.
+Experience Platform vous permet d’annuler une tâche d’exportation existante, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche d’exportation n’a pas été terminée ou s’est retrouvée coincée dans l’étape de traitement. Pour annuler une tâche d’exportation, vous pouvez exécuter une requête DELETE sur le point de `/export/jobs` terminaison et inclure la tâche `id` d’exportation que vous souhaitez annuler dans le chemin d’accès de la demande.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
@@ -551,10 +554,10 @@ Une requête de suppression réussie renvoie l’état HTTP 204 (aucun contenu) 
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans Data Lake dans la plateforme Experience Platform. Vous pouvez ensuite utiliser l’API [d’accès aux](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) données pour accéder aux données à l’aide de la `batchId` variable associée à l’exportation. Selon la taille de l’exportation, les données peuvent être en blocs et le lot peut être constitué de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans Data Lake dans la plateforme Experience Platform. Vous pouvez ensuite utiliser l’API [d’accès aux](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) données pour accéder aux données à l’aide de l’API `batchId` associée à l’exportation. En fonction de la taille de l’exportation, les données peuvent se trouver en blocs et le lot peut se composer de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API d’accès aux données pour accéder aux fichiers de commandes et les télécharger, suivez le didacticiel [Accès aux](../../data-access/tutorials/dataset-data.md)données.
 
-Vous pouvez également accéder aux données de de clients en temps réel exportées avec succès à l’aide du service de Adobe Experience Platform. Grâce à l’interface utilisateur ou à l’API RESTful, le service de  de vous permet d’écrire, de valider et d’exécuter des  sur des données du lac Data.
+Vous pouvez également accéder aux données du Profil client en temps réel exportées avec succès à l’aide d’Adobe Experience Platform Requête Service. Grâce à l’interface utilisateur ou à l’API RESTful, Requête Service vous permet d’écrire, de valider et d’exécuter des requêtes sur des données du lac Data.
 
-Pour plus d&#39;informations sur la manière de  de données , veuillez consulter la documentation [du service de](../../query-service/home.md)de.
+Pour plus d&#39;informations sur la manière de requête des données d&#39;audience, consultez la documentation [de](../../query-service/home.md)Requête Service.
