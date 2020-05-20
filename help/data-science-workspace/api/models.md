@@ -5,19 +5,22 @@ title: Modèles
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 4%
 
 ---
 
 
 # Modèles
 
-Un modèle est l’instance d’une recette d’apprentissage automatique qui est formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale.
+Un modèle est l&#39;instance d&#39;une recette d&#39;apprentissage automatique qui est formée à l&#39;aide de données historiques et de configurations pour résoudre un cas d&#39;utilisation commerciale.
 
-## Récupération d’un  de modèles
+## Récupération d’une liste de modèles
 
-Vous pouvez récupérer un de détails de modèle appartenant à tous les modèles en exécutant une seule requête GET sur /models. Par défaut, ce se classe à partir du modèle créé le plus ancien et limite les résultats à 25. Vous pouvez choisir de filtrer les résultats en spécifiant certains paramètres de . Pour un  de  de disponible, reportez-vous à la section de l’annexe sur les paramètres de [](./appendix.md#query)pour la récupérationdes ressources.
+Vous pouvez récupérer une liste de détails de modèle appartenant à tous les modèles en exécutant une seule requête GET sur /models. Par défaut, cette liste se classe à partir du modèle créé le plus ancien et limite les résultats à 25. Vous pouvez choisir de filtrer les résultats en spécifiant certains paramètres de requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /models
@@ -91,15 +94,15 @@ Une réponse réussie renvoie une charge utile contenant les détails de vos mod
 | Propriété | Description |
 | --- | --- |
 | `id` | ID correspondant au modèle. |
-| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la `name` valeur du modèle. |
+| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la `name` valeur du modèle. |
 | `experimentId` | ID d’expérience valide. |
 | `experimentRunId` | ID d’exécution d’expérience valide. |
 
 ## Récupérer un modèle spécifique
 
-Vous pouvez récupérer un de détails de modèle appartenant à un modèle particulier en exécutant une seule requête GET et en fournissant un ID de modèle valide dans le chemin de la requête. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres  dans le chemin de requête. Pour un  de  de disponible, reportez-vous à la section de l’annexe sur les paramètres de [](./appendix.md#query)pour la récupérationdes ressources.
+Vous pouvez récupérer une liste de détails de modèle appartenant à un modèle particulier en exécutant une seule requête GET et en fournissant un ID de modèle valide dans le chemin de la requête. Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /models/{MODEL_ID}
@@ -108,12 +111,12 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identifiant du modèle formé ou publié. |
-| `{EXPERIMENT_RUN_ID}` | Identificateur de l’exécution de l’expérience. |
+| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
+| `{EXPERIMENT_RUN_ID}` | Identificateur de l&#39;exécution de l&#39;expérience. |
 
 **Requête**
 
-La requête suivante contient un  et récupère un de modèles formés partageant la même expérienceRunID ({EXPERIMENT_RUN_ID}).
+La requête suivante contient une requête et récupère une liste de modèles formés partageant la même expérienceRunID ({EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \
@@ -126,7 +129,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de votre modèle, y compris l&#39;identifiant unique des modèles (`id`).
+Une réponse réussie renvoie une charge utile contenant les détails de votre modèle, y compris l&#39;identifiant unique Modèles (`id`).
 
 ```json
 {
@@ -155,17 +158,17 @@ Une réponse réussie renvoie une charge utile contenant les détails de votre m
 | Propriété | Description |
 | --- | --- |
 | `id` | ID correspondant au modèle. |
-| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la `name` valeur du modèle. |
+| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la `name` valeur du modèle. |
 | `experimentId` | ID d’expérience valide. |
 | `experimentRunId` | ID d’exécution d’expérience valide. |
 
 ## Mettre à jour un modèle par ID
 
-Vous pouvez mettre à jour un modèle existant en écrasant ses propriétés par le biais d’une requête PUT qui inclut l’ID du modèle de  dans le chemin d’accès à la requête et fournit une charge JSON contenant des propriétés mises à jour.
+Vous pouvez mettre à jour un modèle existant en remplaçant ses propriétés par une requête PUT qui inclut l’ID du modèle de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin de garantir le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la requête PUT.
+>[!TIP] Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
-**Format API**
+**Format d’API**
 
 ```http
 PUT /models/{MODEL_ID}
@@ -173,7 +176,7 @@ PUT /models/{MODEL_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identifiant du modèle formé ou publié. |
+| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
 
 **Requête**
 
@@ -222,9 +225,9 @@ Une réponse réussie renvoie une charge utile contenant les détails mis à jou
 
 ## Supprimer un modèle par ID
 
-Vous pouvez supprimer un modèle unique en exécutant une requête DELETE qui inclut l&#39;ID du modèle de  dans le chemin de la requête.
+Vous pouvez supprimer un modèle unique en exécutant une requête DELETE qui inclut l&#39;ID du modèle de cible dans le chemin d&#39;accès à la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /models/{MODEL_ID}
@@ -232,7 +235,7 @@ DELETE /models/{MODEL_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identifiant du modèle formé ou publié. |
+| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
 
 **Requête**
 
@@ -247,7 +250,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un état 200 confirmant la suppression du modèle.
+Une réponse positive renvoie une charge utile contenant un état 200 confirmant la suppression du modèle.
 
 ```json
 {
