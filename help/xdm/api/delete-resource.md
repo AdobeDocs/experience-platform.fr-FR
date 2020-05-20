@@ -5,15 +5,18 @@ title: Supprimer une ressource
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 7%
 
 ---
 
 
 # Supprimer une ressource
 
-Il peut parfois être nécessaire de supprimer (SUPPRIMER) une ressource du Registre des . Seules les ressources que vous créez dans le  du client peuvent être supprimées. Pour ce faire, exécutez une requête DELETE à l’aide `$id` de la ressource que vous souhaitez supprimer.
+Il peut parfois être nécessaire de supprimer (SUPPRIMER) une ressource du registre des Schémas. Seules les ressources que vous créez dans le conteneur client peuvent être supprimées. Pour ce faire, vous devez exécuter une requête DELETE à l&#39;aide `$id` de la ressource que vous souhaitez supprimer.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -21,7 +24,7 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à supprimer de la bibliothèque de . Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
+| `{RESOURCE_TYPE}` | Type de ressource à supprimer de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
 | `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
 
 **Requête**
@@ -39,6 +42,6 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 204 (aucun contenu) et un corps vide.
+Une réponse réussie renvoie l’état HTTP 204 (Aucun contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d’envoyer une requête GET à la ressource. Vous devez inclure un en-tête Accepter dans la requête, mais vous devez recevoir l’état HTTP 404 (Introuvable) car la ressource a été supprimée du Registre des  de l’.
+Vous pouvez confirmer la suppression en tentant d&#39;envoyer une requête GET à la ressource. Vous devez inclure un en-tête Accepter dans la requête, mais vous devez recevoir l&#39;état HTTP 404 (Non trouvé) car la ressource a été supprimée du Registre du Schéma.
