@@ -4,15 +4,18 @@ audience: user
 user-guide-title: Service de prise de décision Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '53'
+ht-degree: 1%
 
 ---
 
 
-# Adobe Experience Platform Decisioning Service {#decisioning}
+# Service de prise de décision Adobe Experience Platform {#decisioning}
 
 - [Présentation du service de prise de décision](home.md)
 - [Modèle de domaine de prise de décision d’expérience](experience-model.md)
-- [modèle de domaine de prise de décision](offer-model.md)
+- [Modèle de domaine de prise de décision d’Offre](offer-model.md)
 - Tutoriels {#tutorials}
    - [Utilisation de l’exécution du service de prise de décision à l’aide d’API](tutorials/runtime.md)
    - [Gestion des entités du service de prise de décision à l’aide d’API](tutorials/entities.md)
