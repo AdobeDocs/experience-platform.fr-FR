@@ -5,6 +5,9 @@ title: Création et publication d’une présentation du modèle d’apprentissa
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1596'
+ht-degree: 0%
 
 ---
 
@@ -53,9 +56,9 @@ Pour créer un modèle d’apprentissage automatique qui fait des recommandation
 
 ### Explorer les données et comprendre les schémas
 
-1. Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et cliquez sur **[!UICONTROL Datasets]** pour liste tous les jeux de données existants et sélectionnez le jeu de données que vous souhaitez explorer. Dans ce cas, le jeu de données Analytics **Golden Data Set postValues**.
+1. Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et cliquez sur **[!UICONTROL Datasets]** pour liste à tous les jeux de données existants et sélectionnez le jeu de données que vous souhaitez explorer. Dans ce cas, le jeu de données Analytics **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
-2. Sélectionnez **[!UICONTROL Preview Dataset]** près de l’angle supérieur droit pour examiner les exemples d’enregistrements, puis cliquez sur **[!UICONTROL Close]**.
+2. Sélectionnez Jeu **[!UICONTROL de données de]** Prévisualisation en haut à droite pour examiner les exemples d’enregistrements, puis cliquez sur **[!UICONTROL Fermer]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
 3. Sélectionnez le lien sous Schéma dans le rail de droite pour vue du schéma du jeu de données, puis revenez à la page des détails du jeu de données.&quot;
    ![](../images/models-recipes/model-walkthrough/golden_schema_110.png)
@@ -76,11 +79,11 @@ Les recettes sont la base d&#39;un modèle car elles contiennent des algorithmes
 
 ### Explorez la recette des recommandations de produits
 
-1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Models]** la colonne de navigation de gauche, puis cliquez **[!UICONTROL Recipes]** en haut pour vue une liste de recettes disponibles pour votre organisation.
+1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de l’écran pour vue une liste de recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Recherchez et ouvrez le fichier fourni **[!UICONTROL Recommendations Recipe]** en cliquant sur son nom.
+2. Recherchez et ouvrez la recette **[!UICONTROL de]** recommandations fournie en cliquant sur son nom.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Dans le rail de droite, cliquez sur **[!UICONTROL Recommendations Input Schema]** pour vue le schéma qui alimente la recette. Le schéma **[!UICONTROL itemId]** et **[!UICONTROL userId]** correspondent à un produit acheté (**[!UICONTROL interactionType]**) par ce client à un moment spécifique (**[!UICONTROL timestamp]**). Suivez les mêmes étapes pour consulter les champs du **[!UICONTROL Recommendations Output Schema]**.
+3. Dans le rail de droite, cliquez sur Schéma **[!UICONTROL d’entrée]** Recommandations pour vue du schéma alimentant la recette. Les champs de schéma **[!UICONTROL itemId]** et **[!UICONTROL userId]** correspondent à un produit acheté (**[!UICONTROL interactionType]**) par ce client à un moment spécifique (**[!UICONTROL horodatage).]** Suivez les mêmes étapes pour consulter les champs du Schéma **[!UICONTROL de sortie des]**recommandations.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Vous avez maintenant passé en revue les schémas d’entrée et de sortie requis par la Recette des recommandations de produits. Vous pouvez maintenant passer à la section suivante pour découvrir comment créer, former et évaluer un modèle de recommandations de produits.
@@ -93,13 +96,13 @@ Maintenant que vos données sont préparées et que la Recette est prête à êt
 
 Un modèle est l&#39;instance d&#39;une Recette, ce qui vous permet de vous former et de marquer des données à l&#39;échelle.
 
-1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Models]** la colonne de navigation de gauche, puis cliquez **[!UICONTROL Recipes]** en haut de la page pour afficher une liste de toutes les recettes disponibles pour votre entreprise.
+1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de la page pour afficher une liste de toutes les recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
-2. Recherchez et ouvrez le fichier fourni **[!UICONTROL Recommendations Recipe]** en cliquant sur son nom, en entrant la page d&#39;aperçu de la Recette. Cliquez **[!UICONTROL Create a Model]** soit à partir du centre (s&#39;il n&#39;y a pas de modèles existants), soit en haut à droite de la page Aperçu de la recette.
+2. Recherchez et ouvrez la recette **[!UICONTROL de]** recommandations fournie en cliquant sur son nom, en entrant la page d&#39;aperçu de la recette. Cliquez sur **[!UICONTROL Créer un modèle]** à partir du centre (s&#39;il n&#39;y a pas de modèles existants) ou en haut à droite de la page Aperçu de la recette.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Une liste des jeux de données d’entrée disponibles pour la formation s’affiche, sélectionnez **[!UICONTROL Recommendations Input Dataset]** puis cliquez sur **[!UICONTROL Next]**.
+3. Une liste des jeux de données d’entrée disponibles pour la formation s’affiche, sélectionnez Jeu **[!UICONTROL de données d’entrée]** Recommendations et cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/model-walkthrough/select_dataset.png)
-4. Nommez le modèle, par exemple &quot;Modèle de recommandations de produits&quot;. Les configurations disponibles pour le modèle sont répertoriées, contenant les paramètres des comportements de formation et de notation par défaut du modèle. Aucune modification n’est nécessaire, car ces configurations sont spécifiques à votre entreprise. Vérifiez les configurations et cliquez sur **[!UICONTROL Finish]**.
+4. Nommez le modèle, par exemple &quot;Modèle de recommandations de produits&quot;. Les configurations disponibles pour le modèle sont répertoriées, contenant les paramètres des comportements de formation et de notation par défaut du modèle. Aucune modification n’est nécessaire, car ces configurations sont spécifiques à votre entreprise. Vérifiez les configurations et cliquez sur **[!UICONTROL Terminer]**.
    ![](../images/models-recipes/model-walkthrough/configure_model.png)
 5. Le modèle a maintenant été créé et la page *Aperçu* du modèle s&#39;affiche au cours d&#39;une nouvelle période de formation. Une exécution de formation est générée par défaut lors de la création d&#39;un modèle.
    ![](../images/models-recipes/model-walkthrough/model_post_creation.png)
@@ -108,9 +111,9 @@ Vous pouvez choisir d’attendre la fin de la session de formation ou de continu
 
 ### Formation du modèle à l’aide d’hyperparamètres personnalisés
 
-1. Sur la page Aperçu *du* modèle, cliquez **[!UICONTROL Train]** en haut à droite pour créer une nouvelle session de formation. Sélectionnez le même jeu de données d&#39;entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Next]**.
+1. Dans la page Aperçu *du* modèle, cliquez sur **[!UICONTROL Train]** en haut à droite pour créer une nouvelle session de formation. Sélectionnez le même jeu de données d&#39;entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. The *Configuration* page appears. Vous pouvez ici configurer la **[!UICONTROL num_recommendations]** valeur de la série d’exercices, également appelée Hyperparamètre. Un modèle formé et optimisé utilisera les paramètres Hyperparamètres les plus performants en fonction des résultats de l&#39;entraînement.
+2. The *Configuration* page appears. Vous pouvez configurer ici la valeur **[!UICONTROL num_recommendations]** de la série de formations, également appelée Hyperparamètre. Un modèle formé et optimisé utilisera les paramètres Hyperparamètres les plus performants en fonction des résultats de l&#39;entraînement.
 
    Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être affectés avant l’exécution de la formation. L&#39;ajustement d&#39;hyperparamètres peut modifier la précision du modèle formé. Comme l&#39;optimisation d&#39;un modèle est un processus itératif, il peut s&#39;avérer nécessaire de procéder à plusieurs exercices de formation avant d&#39;effectuer une évaluation satisfaisante.
 
@@ -138,11 +141,11 @@ La dernière étape du flux de travaux Data Science consiste à rendre opératio
 
 1. Sur la page *Présentation* du modèle des recommandations de produit, cliquez sur le nom de la série de formation la plus performante, avec les valeurs de rappel et de précision les plus élevées.
 2. Dans l’angle supérieur droit de la page des détails de l’exécution de la formation, cliquez sur **[!UICONTROL Score]**.
-3. Sélectionnez le **[!UICONTROL Recommendations Input Dataset]** jeu de données d&#39;entrée de score, qui est le même jeu de données que celui utilisé lors de la création du modèle et de l&#39;exécution de ses exécutions de formation. Then, click **[!UICONTROL Next]**.
+3. Sélectionnez le jeu **[!UICONTROL de données d’entrée de]** recommandations comme jeu de données d’entrée de score, qui est le même jeu de données que celui que vous avez utilisé lorsque vous avez créé le modèle et exécuté ses exécutions de formation. Cliquez ensuite sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/model-walkthrough/scoring_input.png)
-4. Sélectionnez le **[!UICONTROL Recommendations Output Dataset]** jeu de données de sortie de score. Les résultats de score seront stockés par lot dans ce jeu de données.
+4. Sélectionnez le jeu **[!UICONTROL de données de sortie]** Recommendations comme jeu de données de sortie de score. Les résultats de score seront stockés par lot dans ce jeu de données.
    ![](../images/models-recipes/model-walkthrough/scoring_output.png)
-5. Examinez les configurations d’évaluation. Ces paramètres contiennent les jeux de données d’entrée et de sortie sélectionnés plus tôt, ainsi que les schémas appropriés. Cliquez sur **[!UICONTROL Finish]** pour commencer l’exécution de notation. L&#39;exécution peut prendre plusieurs minutes.
+5. Examinez les configurations d’évaluation. Ces paramètres contiennent les jeux de données d’entrée et de sortie sélectionnés plus tôt, ainsi que les schémas appropriés. Cliquez sur **[!UICONTROL Terminer]** pour commencer l’exécution de notation. L&#39;exécution peut prendre plusieurs minutes.
    ![](../images/models-recipes/model-walkthrough/scoring_configure.png)
 
 
@@ -150,9 +153,9 @@ La dernière étape du flux de travaux Data Science consiste à rendre opératio
 
 Une fois l’exécution de score terminée, vous pourrez prévisualisation les résultats et vue les informations générées.
 
-1. Sur la page des séries de résultats, cliquez sur la série de résultats terminée, puis cliquez sur **[!UICONTROL Preview Scoring Results Dataset]** le rail de droite.
+1. Sur la page des séries de résultats, cliquez sur la série de résultats terminée, puis cliquez sur Jeu de données **[!UICONTROL des résultats de la série de]** Prévisualisations sur le rail de droite.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Dans le tableau de la prévisualisation, chaque ligne contient des recommandations de produit pour un client particulier, libellées **[!UICONTROL recommendations]** et **[!UICONTROL userId]** respectivement. Comme l’ **[!UICONTROL num_recommendations]** hyperparamètre a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
+2. Dans le tableau de la prévisualisation, chaque ligne contient des recommandations de produit pour un client particulier, intitulées **[!UICONTROL recommendations]** et **[!UICONTROL userId]** respectivement. Puisque l’hyperparamètre **[!UICONTROL num_recommendations]** a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Étapes suivantes {#next-steps}
