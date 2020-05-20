@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Création d’un  personnalisé '
+title: Création d’un espace de nommage personnalisé
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '77'
+ht-degree: 5%
 
 ---
 
 
-# Création d&#39;un  personnalisé 
+# Création d’un espace de nommage personnalisé
 
-A l’aide de l’API  d’identité  vous pouvez créer un d’identité  personnalisé qui sera disponible uniquement pour votre organisation.
+A l&#39;aide de l&#39;API d&#39;Espace de nommage d&#39;identité, vous pouvez créer un espace de nommage d&#39;identité personnalisé qui ne sera disponible que pour votre organisation.
 
-Pour obtenir des recommandations sur la création d’ de  personnalisées, reportez-vous à [la documentation](../troubleshooting-guide.md)FAQ sur Identity Service.
+Pour obtenir des recommandations sur la création d’espaces de nommage personnalisés, consultez [la documentation](../troubleshooting-guide.md)FAQ sur Identity Service.
 
->[!NOTE]   sont un qualificatif pour les identités. Ainsi, une fois qu’un   a été créé, il ne peut plus être supprimé.
+>[!NOTE] Les Espaces de nommage sont un qualificatif pour les identités. Ainsi, une fois un espace de nommage créé, il ne peut plus être supprimé.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /idnamespace/identities
@@ -59,4 +62,4 @@ curl -X POST \
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [l’ID natif d’une identité.](./list-native-id.md)
+Passez au didacticiel suivant pour [liste de l&#39;ID natif d&#39;une identité](./list-native-id.md)
