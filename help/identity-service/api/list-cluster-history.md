@@ -1,26 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Obtention de l’historique de cluster d’une identité
+title: Obtenir l'historique de cluster d'une identité
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 1%
 
 ---
 
 
-# Obtention de l’historique de cluster d’une identité
+# Obtenir l&#39;historique de cluster d&#39;une identité
 
-Les identités peuvent déplacer des grappes au cours de différentes exécutions de graphiques de périphériques. Identity Service offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
+Les identités peuvent déplacer des grappes au cours de diverses exécutions de graphiques de périphériques. Avec le temps, Identity Service permet d&#39;identifier les associations de cluster d&#39;une identité donnée.
 
-Utilisez un `graph-type` paramètre facultatif pour indiquer le type de sortie à partir duquel obtenir la grappe. Les options sont les suivantes :
+Utilisez un paramètre facultatif `graph-type` pour indiquer le type de sortie à partir duquel la grappe doit être récupérée. Les options sont les suivantes :
 
 - `None` - Ne pas procéder à l&#39;assemblage d&#39;identité.
-- `Private Graph` - Effectuez des assemblages d&#39;identité sur la base du graphique de votre identité privée. Si aucune `graph-type` valeur n’est fournie, il s’agit de la valeur par défaut.
+- `Private Graph` - Effectuez des assemblages d&#39;identité basés sur votre graphique d&#39;identité privée. Si aucun `graph-type` paramètre n’est fourni, il s’agit de la valeur par défaut.
 
-## Obtention de l’historique de cluster d’une identité unique
+## Obtenir l&#39;historique de cluster d&#39;une identité unique
 
-**Format API**
+**Format d’API**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
@@ -28,7 +31,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/cluster/history
 
 **Requête**
 
-Option 1 : Fournissez l’identité sous la forme   (`nsId`, par ID) et valeur d’ID (`id`).
+Option 1 : Fournissez l’identité sous forme d’espace de nommage (`nsId`, par ID) et de valeur d’ID (`id`).
 
 ```shell
 curl -X GET \
@@ -39,7 +42,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 2 : Fournissez l’identité sous la forme   (`ns`, par nom) et valeur d’ID (`id`).
+Option 2 : Fournissez l’identité sous forme d’espace de nommage (`ns`, par nom) et de valeur d’ID (`id`).
 
 ```shell
 curl -X GET \
@@ -50,7 +53,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 3 : Fournissez l’identité sous la forme XID (`xid`). Pour plus d’informations sur la manière d’obtenir le XID d’une identité, consultez la section de ce qui traite de l’ [obtention du XID pour une identité](./list-native-id.md).
+Option 3 : Fournissez l’identité sous la forme XID (`xid`). Pour plus d&#39;informations sur la façon d&#39;obtenir le XID d&#39;une identité, consultez la section de ce document qui traite de l&#39; [obtention du XID pour une identité](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -61,13 +64,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## Obtention de l’historique de cluster d’une multitude d’identités
+## Obtenir l’historique de cluster d’une multitude d’identités
 
-Utilisez la `POST` méthode comme équivalent par lot de la `GET` méthode décrite ci-dessus pour renvoyer les historiques de cluster de plusieurs identités.
+Utilisez la `POST` méthode en tant qu’équivalent par lot de la `GET` méthode décrite ci-dessus pour renvoyer les historiques de cluster de plusieurs identités.
 
->[!NOTE] La demande ne doit pas indiquer plus de 1 000 identités au maximum. Les demandes dépassant 1000 identités se traduiront par 400 codes d&#39;état.
+>[!NOTE] La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST https://platform-va7.adobe.io/data/core/identity/clusters/history
@@ -75,7 +78,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Corps de requête**
 
-Option 1 : Fournissez un de XID pour lesquels récupérer les membres de la grappe.
+Option 1 : Fournissez une liste de XID pour lesquels récupérer les membres de la grappe.
 
 ```shell
 {
@@ -84,7 +87,7 @@ Option 1 : Fournissez un de XID pour lesquels récupérer les membres de la grap
 }
 ```
 
-Option 2 : Fournissez un d’identités sous la forme d’identifiants composites, où chacun nomme la valeur d’ID et  l’par le code de.
+Option 2 : Fournissez une liste d’identités sous la forme d’identifiants composites, où chacun nomme la valeur d’identification et l’espace de nommage par code d’espace de nommage.
 
 ```shell
 {
@@ -104,7 +107,7 @@ Option 2 : Fournissez un d’identités sous la forme d’identifiants composite
 
 **Demande de stub**
 
-L’utilisation de `x-uis-cst-ctx: stub` l’en-tête renverra une réponse empilée. Il s&#39;agit là d&#39;une solution temporaire pour faciliter le développement rapide de l&#39;intégration, pendant que les services sont achevés. Cette mesure sera abandonnée lorsqu’elle n’est plus nécessaire.
+L&#39;utilisation de l&#39; `x-uis-cst-ctx: stub` en-tête renvoie une réponse empilée. Il s&#39;agit d&#39;une solution temporaire qui facilitera les progrès rapides du développement de l&#39;intégration, alors que les services sont en cours d&#39;achèvement. Cette mesure sera abandonnée lorsqu&#39;elle n&#39;est plus nécessaire.
 
 ```shell
 curl -X POST \
@@ -207,8 +210,8 @@ curl -X POST \
 }
 ```
 
->[!NOTE] La réponse comporte toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent à la même grappe ou qu’une ou plusieurs d’entre elles soient associées à une grappe.
+>[!NOTE] La réponse comporte toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent à la même grappe ou qu’une ou plusieurs d’entre elles soient associées ou non.
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [et mappages d’identité](./list-identity-mappings.md)
+Passez au didacticiel suivant pour découvrir les mappages d&#39;identité des [listes](./list-identity-mappings.md)
