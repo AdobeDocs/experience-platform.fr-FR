@@ -5,6 +5,9 @@ description: Utilisation de stratégies de fusion dans la plateforme de données
 seo-description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 85%
 
 ---
 
