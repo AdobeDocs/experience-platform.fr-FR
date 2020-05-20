@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d'un connecteur Gen2 pour Enregistrement Azure Data Lake à l'aide de l'API Flow Service
+title: Création d'un connecteur Gen2 d'Enregistrement Azure Data Lake à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
 source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
