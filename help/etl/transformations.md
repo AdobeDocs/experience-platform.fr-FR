@@ -5,26 +5,29 @@ title: Exemples de transformations ETL
 topic: overview
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '470'
+ht-degree: 0%
 
 ---
 
 
 # Exemple de transformations ETL
 
-Cet article présente les exemples de transformations qu’un développeur d’extraction, de transformation et de chargement (ETL) peut rencontrer.
+Cet article présente les exemples de transformations qu’un développeur d’extraction, de transformation, de chargement (ETL) peut rencontrer.
 
-## Fichier CSV aplati à la hiérarchie
+## Fichier CSV plat dans la hiérarchie
 
 ### Exemples de fichiers
 
-Des exemples de fichiers CSV et JSON sont disponibles dans le référentiel GitHub de référence ETL public géré par Adobe :
+Des exemples de fichiers CSV et JSON sont disponibles à partir de la réactivité GitHub de référence ETL publique gérée par Adobe :
 
-- [CRM_..csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_..json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profils.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profils.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
 
 ### Exemple de fichier CSV
 
-Les données CRM suivantes ont été exportées sous la forme `CRM_profiles.csv`:
+Les données CRM suivantes ont été exportées en tant que `CRM_profiles.csv`:
 
 ```shell
 TITLE   F_NAME  L_NAME  GENDER  DOB EMAIL   CRMID   ECID    LOYALTYID   ECID2   PHONE   STREET  CITY    STATE   COUNTRY ZIP LAT LONG
@@ -39,36 +42,36 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 
 ### Mappage
 
-Les exigences de mappage des données CRM sont décrites dans le tableau suivant et incluent les transformations suivantes :
+Les exigences de mappage des données de gestion de la relation client sont décrites dans le tableau suivant et incluent les transformations suivantes :
 - Colonnes d’identité avec `identityMap` propriétés
-- Date de naissance (DOB) à l&#39;année et au mois-jour
-- Chaînes permettant d’ ou de courts entiers.
+- Date de naissance (DOB) à l&#39;année et au mois Jour
+- Chaînes en Doublons ou entiers courts.
 
 | Colonne CSV | Chemin XDM | Formatage des données |
 | ---------- | -------- | --------------- |
 | TITRE | person.name.courtesyTitle | Copier comme chaîne |
 | F_NAME | person.name.firstName | Copier comme chaîne |
 | L_NAME | person.name.lastName | Copier comme chaîne |
-| SEXE | person.gender | Transformer le sexe en valeur d&#39;énumération personne.genre correspondante |
+| SEXE | person.gender | Transformer le sexe en personne correspondante.valeur d&#39;énumération du sexe |
 | DOB | person.bornDayAndMonth : &quot;MM-DD&quot;<br/>person.bornDate : &quot;AAAA-MM-JJ&quot;<br/>personne.naissanceAnnée : AAAA | Transformer la date de naissanceDayAndMonth en<br/>chaîneTransformer la date de naissance en<br/>chaîneTransformer la naissanceAnnée en tant que valeur abrégée |
-| COURRIEL | PersonalEmail.address | Copier comme chaîne |
-| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primaire:false}] | Copier en tant que chaîne dans le tableau CRMID dans identityMap et définir Primary comme false |
-| ECID | identityMap.ECID[{&quot;id&quot;:x, principal : false}] | Copier en tant que chaîne vers la première entrée du tableau ECID dans identityMap et définir Primary comme false |
-| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primaire:true}] | Copier en tant que chaîne dans le tableau LOYALTYID dans identityMap et définir Primary comme true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primaire:false}] | Copier en tant que chaîne à la seconde entrée dans le tableau ECID dans identityMap et définir Primary sur false |
+| COURRIEL | personalEmail.address | Copier comme chaîne |
+| CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copier comme chaîne dans le tableau CRMID dans identityMap et définir Primary comme false |
+| ECID | identityMap.ECID[{&quot;id&quot;:x, principal : false}] | Copier en tant que chaîne à la première entrée dans le tableau ECID dans identityMap et définir Primary comme false |
+| LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copier en tant que chaîne dans le tableau LOYALTYID dans identityMap et définir Primary comme true |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copier en tant que chaîne à la deuxième entrée dans le tableau ECID dans identityMap et définir Primary sur false |
 | TÉLÉPHONE | homePhone.number | Copier comme chaîne |
 | RUE | homeAddress.street1 | Copier comme chaîne |
 | VILLE | homeAddress.city | Copier comme chaîne |
 | ETAT | homeAddress.stateProvince | Copier comme chaîne |
 | PAYS | homeAddress.country | Copier comme chaîne |
 | ZIP | homeAddress.postalCode | Copier comme chaîne |
-| LAT | homeAddress.latitude | Convertir en  |
-| LONG | homeAddress.longitude | Convertir en  |
+| LAT | homeAddress.latitude | Convertir en doublon |
+| LONG | homeAddress.longitude | Convertir en doublon |
 
 
 ### Output XDM
 
-L’exemple suivant montre les deux premières lignes du fichier CSV transformé en XDM, comme illustré dans `CRM_profiles.json`:
+L’exemple suivant montre les deux premières lignes du fichier CSV transformé en XDM, comme indiqué dans `CRM_profiles.json`:
 
 ```json
 {
@@ -168,13 +171,13 @@ L’exemple suivant montre les deux premières lignes du fichier CSV transformé
 }
 ```
 
-## Datframe vers le XDM 
+## schéma de la base de données vers XDM
 
-La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit correspondre à celle du XDM sur lequel le téléchargement est effectué.
+La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit correspondre à celle du schéma XDM sur lequel le téléchargement est effectué.
 
-### Exemple de dataframe
+### Exemple de cadre de données
 
-La structure de l’exemple de base de données suivant a été mappée à un qui implémente la classe XDM Individuelle  et contient les champs les plus courants associés à l’ de ce type.
+La structure de l&#39;exemple de base de données suivant a été mappée à un schéma qui implémente la classe de Profil XDM Individuel et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [
@@ -247,7 +250,7 @@ La structure de l’exemple de base de données suivant a été mappée à un qu
 ]
 ```
 
-Lors de la création d’un cadre de données pour une utilisation dans Adobe Experience Platform, il est important de s’assurer que sa structure hiérarchique correspond exactement à celle d’un XDM existant afin que les champs soient correctement mappés.
+Lors de la création d’un cadre de données à utiliser dans Adobe Experience Platform, il est important de s’assurer que sa structure hiérarchique correspond exactement à celle d’un schéma XDM existant afin que les champs soient correctement mappés.
 
 ## Identités à la carte d&#39;identité
 
@@ -278,17 +281,17 @@ Lors de la création d’un cadre de données pour une utilisation dans Adobe Ex
 
 ### Mappage
 
-Les exigences de mappage pour le tableau des identités sont décrites dans le tableau suivant :
+Le tableau suivant décrit les exigences de mappage pour le tableau des identités :
 
 | Champ d&#39;identité | Champ identityMap | Type de données |
 | -------------- | ----------------- | --------- |
-| identities[0].id | [identityMapEmail][{"id"}] | copier comme chaîne |
+| identités[0].id | [identityMapEmail][{"id"}] | copier comme chaîne |
 | identités[1].id | [identityMapCRMID][{"id"}] | copier comme chaîne |
 | identités[2].id | [identityMapLOYALTYID][{"id"}] | copier comme chaîne |
 
 ### Output XDM
 
-Ci-dessous, le tableau des identités transformées en XDM :
+Ci-dessous, un tableau des identités transformées en XDM :
 
 ```JSON
 "identityMap": {
