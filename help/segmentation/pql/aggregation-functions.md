@@ -5,13 +5,16 @@ title: Fonctions d'agrégation
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 6%
 
 ---
 
 
 # Fonctions d&#39;agrégation
 
-Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux PQL (Language)  afin de former une seule valeur de résumé. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans la présentation [du de la langue  du](./overview.md).
+Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux PQL (Profil Requête Language) afin de former une seule valeur de synthèse. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
 
 ## Décompte
 
@@ -25,7 +28,7 @@ La `count` fonction renvoie le nombre d&#39;éléments dans le tableau donné.
 
 **Exemple**
 
-Le PQL suivant renvoie le nombre de commandes dans le tableau.
+La requête PQL suivante renvoie le nombre de commandes dans le tableau.
 
 ```sql
 orders.count()
@@ -43,7 +46,7 @@ La `sum` fonction renvoie la somme de toutes les valeurs sélectionnées dans le
 
 **Exemple**
 
-Le PQL suivant renvoie la somme des prix de toutes les commandes.
+La requête PQL suivante renvoie la somme de tous les prix de commande.
 
 ```sql
 orders.sum(order.price)
@@ -61,7 +64,7 @@ La `average` fonction renvoie la moyenne arithmétique de toutes les valeurs sé
 
 **Exemple**
 
-Le PQL suivant renvoie le prix moyen de toutes les commandes.
+La requête PQL suivante renvoie le prix moyen de toutes les commandes.
 
 ```sql
 orders.average(order.price)
@@ -79,7 +82,7 @@ La `min` fonction renvoie la plus petite des valeurs sélectionnées dans le tab
 
 **Exemple**
 
-Le PQL suivant renvoie le prix le plus bas de toutes les commandes.
+La requête PQL suivante renvoie le prix le plus bas de toutes les commandes.
 
 ```sql
 orders.min(order.price)
@@ -97,7 +100,7 @@ La `max` fonction renvoie la plus grande de toutes les valeurs sélectionnées d
 
 **Exemple**
 
-Le PQL suivant renvoie le prix le plus élevé de toutes les commandes.
+La requête PQL suivante renvoie le prix le plus élevé de toutes les commandes.
 
 ```sql
 orders.max(order.price)
@@ -105,4 +108,4 @@ orders.max(order.price)
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les fonctions d’agrégation, vous pouvez les utiliser dans votre  PQL. Pour plus d&#39;informations sur les autres fonctions de PQL, veuillez lire la présentation [de la langue du](./overview.md).
+Maintenant que vous avez pris connaissance des fonctions d’agrégation, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
