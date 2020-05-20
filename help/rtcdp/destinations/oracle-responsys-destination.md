@@ -5,6 +5,9 @@ description: Responsys est un outil de marketing par e-mail d’entreprise propo
 seo-description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '455'
+ht-degree: 75%
 
 ---
 
@@ -19,25 +22,25 @@ To send segment data to Oracle Responsys, you must first [connect to the destina
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connections > Destinations]** Oracle Responsys, sélectionnez **[!UICONTROL Connect destination]**.
+1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Oracle Responsys, puis **[!UICONTROL Se connecter à une destination]**.
 
    ![Connexion à Responsys](/help/rtcdp/destinations/assets/connect-oracle-responsys.png)
 
-2. Au cours de l’ **[!UICONTROL Authentication]** étape, si vous aviez précédemment configuré une connexion à votre cloud  destination , sélectionnez **[!UICONTROL Existing Account]** et sélectionnez l’une de vos connexions existantes. Vous pouvez également choisir **[!UICONTROL New Account]** de configurer une nouvelle connexion. Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Connect to destination]**. Pour Oracle Responsys, vous pouvez sélectionner entre **[!UICONTROL SFTP with Password]** et **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion. Renseignez les informations d’identification d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Pour Oracle Responsys, vous pouvez choisir entre **[!UICONTROL SFTP avec mot de passe]** et **[!UICONTROL SFTP avec clé SSH]**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
 
-   For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-Pour **[!UICONTROL SFTP with SSH Key]** les connexions, vous devez fournir Domaine, Port, Nom d’utilisateur et Clé SSH.
+   Pour les connexions **[!UICONTROL SFTP avec mot de passe]**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe.
+Pour les connexions **[!UICONTROL SFTP avec clé SSH]**, vous devez fournir le domaine, le port, le nom d’utilisateur et la clé SSH.
 
    ![Renseignement des informations dans Responsys](/help/rtcdp/destinations/assets/responsys-authentication.png)
 
 3. In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
-   * **[!UICONTROL Name]**: Choisissez un nom approprié pour votre destination.
+   * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
    * **[!UICONTROL Description]** : saisissez une description pour votre destination.
-   * **[!UICONTROL Folder Path]**: Indiquez le chemin d’accès dans votre  de  où le CDP en temps réel déposera vos données d’exportation au format CSV ou tabulé.
-   * **[!UICONTROL File Format]**: **CSV** ou **TAB_DELIMITED**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+   * **[!UICONTROL Chemin d’accès au dossier]** : indiquez le chemin d’accès dans l’emplacement de stockage où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
+   * **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
    ![Informations de base de Responsys](/help/rtcdp/destinations/assets/responsys-basic-information.png)
 
-4. Cliquez **[!UICONTROL Create destination]** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
+4. Cliquez sur **[!UICONTROL Créer une destination]** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
 
 ## Attributs de destination {#destination-attributes}
 
