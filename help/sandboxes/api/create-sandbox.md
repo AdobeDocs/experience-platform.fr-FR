@@ -5,15 +5,18 @@ title: Création d’un sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
 
 # Création d’un sandbox
 
-Vous pouvez créer un nouveau sandbox en envoyant une requête POST au point de `/sandboxes` fin.
+Vous pouvez créer un nouveau sandbox en envoyant une requête POST au point de `/sandboxes` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /sandboxes
@@ -40,13 +43,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Identifiant qui sera utilisé pour accéder au sandbox dans les futures demandes. Cette valeur doit être unique et la meilleure pratique consiste à la rendre aussi descriptive que possible. Ne peut pas contenir d&#39;espaces ni de majuscules. |
-| `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de la plateforme. |
+| `name` | Identifiant qui sera utilisé pour accéder au sandbox dans les futures requêtes. Cette valeur doit être unique et la meilleure pratique consiste à la rendre aussi descriptive que possible. Ne peut pas contenir d&#39;espaces ni de majuscules. |
+| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur de la plate-forme. |
 | `type` | Type de sandbox à créer. Actuellement, seuls les sandbox de type &quot;développement&quot; peuvent être créés par une organisation. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau sandbox créé, indiquant qu’il `state` s’agit d’une &quot;création&quot;.
+Une réponse réussie renvoie les détails du nouveau sandbox, indiquant qu’il `state` est en cours de &quot;création&quot;.
 
 ```json
 {
@@ -58,4 +61,4 @@ Une réponse réussie renvoie les détails du nouveau sandbox créé, indiquant 
 }
 ```
 
->[!NOTE] Les sandbox prennent environ 15 minutes pour être approvisionnées par le système, après quoi elles `state` deviendront &quot;actives&quot; ou &quot;en échec&quot;.
+>[!NOTE] Les sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi ils `state` deviendront &quot;actifs&quot; ou &quot;échoués&quot;.
