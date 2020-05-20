@@ -5,6 +5,9 @@ title: Recette de vente au détail
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 5%
 
 ---
 
@@ -57,7 +60,7 @@ Tout d’abord, le jeu de données de formation dans le schéma *DSWRetailSales*
 
 Le processus comprend trois éléments : une fonction de perte, un apprenant faible et un modèle additif.
 
-La fonction de perte fait référence à une mesure de la qualité d&#39;un modèle de prévision en termes de capacité à prévoir le résultat attendu - la régression des moindres carrés est utilisée dans cette recette.
+La fonction de perte se rapporte à une mesure de la qualité d&#39;un modèle de prévision en termes de capacité à prévoir le résultat attendu - la régression des moindres carrés est utilisée dans cette recette.
 
 En augmentant le gradient, un arbre de décision est utilisé comme apprenant faible. En règle générale, les arbres avec un nombre limité de couches, de noeuds et de divisions sont utilisés pour s’assurer que l’apprenant reste faible.
 
