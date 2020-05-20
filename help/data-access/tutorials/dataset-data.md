@@ -5,33 +5,36 @@ title: Présentation de l’accès aux données
 topic: tutorial
 translation-type: tm+mt
 source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+workflow-type: tm+mt
+source-wordcount: '1367'
+ht-degree: 2%
 
 ---
 
 
-#  de données de jeux de données à l’aide de l’API d’accès aux données
+# Données du jeu de données de Requête à l’aide de l’API d’accès aux données
 
-Ce propose un didacticiel détaillé qui explique comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API d’accès aux données d’Adobe Experience Platform. Vous serez également familiarisé avec certaines des fonctionnalités uniques de l’API d’accès aux données, telles que la pagination et les téléchargements partiels.
+Ce document fournit un didacticiel détaillé qui explique comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API d’accès aux données dans Adobe Experience Platform. Vous serez également familiarisé avec certaines des fonctionnalités uniques de l&#39;API d&#39;accès aux données, telles que la pagination et les téléchargements partiels.
 
 ## Prise en main
 
 Ce didacticiel explique comment créer et renseigner un jeu de données. Pour plus d’informations, consultez le didacticiel [sur la création de](../../catalog/datasets/create.md) jeux de données.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir effectuer des appels aux API de plateforme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -43,25 +46,25 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Diagramme de séquence
 
-Ce didacticiel suit les étapes décrites dans le diagramme de séquence ci-dessous, mettant en évidence les principales fonctionnalités de l’API d’accès aux données.</br>
+Ce didacticiel suit les étapes décrites dans le diagramme de séquence ci-dessous, mettant en évidence les principales fonctionnalités de l&#39;API d&#39;accès aux données.</br>
 ![](../images/sequence_diagram.png)
 
-L’API de catalogue vous permet de récupérer des informations sur les lots et les fichiers. L’API d’accès aux données vous permet d’accéder à ces fichiers et de les télécharger via HTTP sous forme de téléchargements complets ou partiels, selon la taille du fichier.
+L’API Catalog vous permet de récupérer des informations sur les lots et les fichiers. L&#39;API d&#39;accès aux données vous permet d&#39;accéder à ces fichiers et de les télécharger via HTTP sous la forme de téléchargements complets ou partiels, selon la taille du fichier.
 
 ## Localisation des données
 
-Avant de pouvoir commencer à utiliser l’API d’accès aux données, vous devez identifier l’emplacement des données auxquelles vous souhaitez accéder. Dans l’API de catalogue, vous pouvez utiliser deux points de fin pour parcourir les métadonnées d’une entreprise et récupérer l’ID d’un lot ou d’un fichier auquel vous souhaitez accéder :
+Avant de pouvoir commencer à utiliser l&#39;API d&#39;accès aux données, vous devez identifier l&#39;emplacement des données auxquelles vous souhaitez accéder. Dans l’API Catalogue, vous pouvez utiliser deux points de terminaison pour parcourir les métadonnées d’une organisation et récupérer l’ID d’un lot ou d’un fichier auquel vous souhaitez accéder :
 
-- `GET /batches`: Renvoie un  de lots sous votre organisation
-- `GET /dataSetFiles`: Renvoie un  de fichiers sous votre organisation
+- `GET /batches`: Renvoie une liste de lots sous votre organisation
+- `GET /dataSetFiles`: Renvoie une liste de fichiers sous votre organisation
 
-Pour un complet des points de fin dans l’API de catalogue, reportez-vous au Guide de référence [de l’](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
+Pour obtenir une liste complète des points de terminaison dans l’API Catalog, consultez le Guide de référence [de l’](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)API.
 
-## Récupérez un  de lots sous votre organisation IMS.
+## Récupérer une liste de lots sous votre organisation IMS
 
-A l’aide de l’API de catalogue, vous pouvez renvoyer un  de lots sous votre entreprise :
+A l’aide de l’API Catalogue, vous pouvez renvoyer une liste de lots sous votre organisation :
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /batches
@@ -79,7 +82,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches/' \
 
 **Réponse**
 
-La réponse comprend un objet qui  de tous les lots liés à l’organisation IMS, chaque valeur globale représentant un lot. Les objets de lot individuels contiennent les détails de ce lot spécifique. La réponse ci-dessous a été réduite au minimum pour l&#39;espace.
+La réponse comprend un objet qui liste tous les lots liés à l&#39;organisation IMS, chaque valeur globale représentant un lot. Les objets de lot individuels contiennent les détails de ce lot spécifique. La réponse ci-dessous a été réduite pour l&#39;espace.
 
 ```json
 {
@@ -100,11 +103,11 @@ La réponse comprend un objet qui  de tous les lots liés à l’organisation IM
 }
 ```
 
-### Filtrage des  de lots
+### Filtrage de la liste des lots
 
-Les  sont souvent tenus de trouver un lot particulier afin de récupérer les données pertinentes pour un cas d’utilisation particulier. Vous pouvez ajouter des paramètres à une `GET /batches` requête afin de filtrer la réponse renvoyée. La requête ci-dessous renvoie tous les lots créés après un moment donné, dans un jeu de données particulier, triés par date de création.
+Les Filtres sont souvent tenus de trouver un lot particulier afin de récupérer les données pertinentes pour un cas d’utilisation particulier. Des paramètres peuvent être ajoutés à une `GET /batches` requête afin de filtrer la réponse renvoyée. La requête ci-dessous renvoie tous les lots créés après une période spécifiée, dans un jeu de données particulier, triés par date de création.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
@@ -112,7 +115,7 @@ GET /batches?createdAfter={START_TIMESTAMP}&dataSet={DATASET_ID}&sort={SORT_BY}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{START_TIMESTAMP}` | L’horodatage  en millisecondes (par exemple, 1514836799000). |
+| `{START_TIMESTAMP}` | Horodatage du début en millisecondes (par exemple, 1514836799000). |
 | `{DATASET_ID}` | Identifiant du jeu de données. |
 | `{SORT_BY}` | Trie la réponse selon la valeur fournie. Par exemple, `desc:created` trie les objets par date de création dans l’ordre décroissant. |
 
@@ -186,13 +189,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-Un complet de paramètres et de  de se trouve dans la référence [API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog.
+Une liste complète des paramètres et des filtres se trouve dans la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog.
 
-## Récupérer un  de tous les fichiers appartenant à un lot spécifique
+## Récupérer une liste de tous les fichiers appartenant à un lot particulier
 
-Maintenant que vous disposez de l’ID du lot auquel vous souhaitez accéder, vous pouvez utiliser l’API d’accès aux données pour obtenir un de fichiers appartenant à ce lot.
+Maintenant que vous disposez de l&#39;ID du lot auquel vous souhaitez accéder, vous pouvez utiliser l&#39;API d&#39;accès aux données pour obtenir une liste de fichiers appartenant à ce lot.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /batches/{BATCH_ID}/files
@@ -200,7 +203,7 @@ GET /batches/{BATCH_ID}/files
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | Identifiant du lot du lot auquel vous essayez d&#39;accéder. |
+| `{BATCH_ID}` | Identifiant du lot auquel vous tentez d&#39;accéder. |
 
 **Requête**
 
@@ -243,13 +246,13 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c6f332168
 | -------- | ----------- |
 | `data._links.self.href` | URL d’accès à ce fichier. |
 
-La réponse contient un tableau de données qui  tous les fichiers du lot spécifié. Les fichiers sont référencés par leur ID de fichier, qui se trouve sous le `dataSetFileId` champ.
+La réponse contient un tableau de données qui liste tous les fichiers du lot spécifié. Les fichiers sont référencés par leur ID de fichier, qui se trouve sous le `dataSetFileId` champ.
 
 ## Accès à un fichier à l’aide d’un ID de fichier
 
-Une fois que vous disposez d’un ID de fichier unique, vous pouvez utiliser l’API d’accès aux données pour accéder aux détails spécifiques sur le fichier, y compris son nom, sa taille en octets et un lien pour le télécharger.
+Une fois que vous disposez d’un ID de fichier unique, vous pouvez utiliser l’API d’accès aux données pour accéder aux détails spécifiques sur le fichier, notamment son nom, sa taille en octets et un lien pour le télécharger.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /files/{FILE_ID}
@@ -269,7 +272,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Selon que l’ID de fichier pointe vers un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une entrée unique ou un de fichiers appartenant à ce répertoire. Chaque élément de fichier contiendra des détails tels que le nom du fichier, sa taille en octets et un lien permettant de télécharger le fichier.
+Selon que l&#39;ID de fichier pointe vers un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une entrée unique ou une liste de fichiers appartenant à ce répertoire. Chaque élément de fichier contient des détails tels que le nom du fichier, sa taille en octets et un lien permettant de télécharger le fichier.
 
 **Cas 1 : L’ID de fichier pointe vers un seul fichier**
 
@@ -351,7 +354,7 @@ Cette réponse renvoie un répertoire contenant deux fichiers distincts, avec de
 
 Vous pouvez récupérer les métadonnées d’un fichier en exécutant une requête HEAD. Cette opération renvoie les en-têtes de métadonnées du fichier, y compris sa taille en octets et son format de fichier.
 
-**Format API**
+**Format d’API**
 
 ```http
 HEAD /files/{FILE_ID}?path={FILE_NAME}
@@ -359,8 +362,8 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID}` | Identifiant du fichier. |
-| `{FILE_NAME`} | Nom de fichier (par exemple,.parquet) |
+| `{FILE_ID}` | Identificateur du fichier. |
+| `{FILE_NAME`} | Nom de fichier (par exemple, profils.parquet) |
 
 **Requête**
 
@@ -375,14 +378,14 @@ curl -I 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb2-44
 **Réponse**
 
 Les en-têtes de réponse contiennent les métadonnées du fichier interrogé, notamment :
-- `Content-Length`: Indique la taille de la charge utile en octets
+- `Content-Length`: Indique la taille de la charge utile en octets.
 - `Content-Type`: Indique le type de fichier.
 
 ## Accès au contenu d’un fichier
 
 Vous pouvez également accéder au contenu d’un fichier à l’aide de l’API d’accès aux données.
 
-**Format API**
+**Format d’API**
 
 ```shell
 GET /files/{FILE_ID}?path={FILE_NAME}
@@ -390,8 +393,8 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID}` | Identifiant du fichier. |
-| `{FILE_NAME`} | Nom de fichier (par exemple,.parquet). |
+| `{FILE_ID}` | Identificateur du fichier. |
+| `{FILE_NAME`} | Nom de fichier (par exemple, profils.parquet). |
 
 **Requête**
 
@@ -409,11 +412,11 @@ Une réponse réussie renvoie le contenu du fichier.
 
 ## Téléchargement du contenu partiel d’un fichier
 
-L’API d’accès aux données permet de télécharger des fichiers par blocs. Un en-tête de plage peut être spécifié lors d’une `GET /files/{FILE_ID}` demande de téléchargement d’une plage d’octets spécifique à partir d’un fichier. Si la plage n’est pas spécifiée, l’API télécharge l’intégralité du fichier par défaut.
+L&#39;API d&#39;accès aux données permet de télécharger des fichiers par blocs. Un en-tête de plage peut être spécifié lors d’une `GET /files/{FILE_ID}` demande de téléchargement d’une plage d’octets spécifique à partir d’un fichier. Si la plage n&#39;est pas spécifiée, l&#39;API télécharge l&#39;intégralité du fichier par défaut.
 
-L’exemple HEAD de la section [](#retrieve-the-metadata-of-a-file) précédente donne la taille d’un fichier spécifique en octets.
+L&#39;exemple HEAD de la section [](#retrieve-the-metadata-of-a-file) précédente donne la taille d&#39;un fichier spécifique en octets.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /files/{FILE_ID}?path={FILE_NAME}
@@ -421,8 +424,8 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID} ` | Identifiant du fichier. |
-| `{FILE_NAME}` | Nom de fichier (par exemple,.parquet) |
+| `{FILE_ID} ` | Identificateur du fichier. |
+| `{FILE_NAME}` | Nom de fichier (par exemple, profils.parquet) |
 
 **Requête**
 
@@ -437,25 +440,25 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `Range: bytes=0-99` | Spécifie la plage d’octets à télécharger. Si ce n’est pas spécifié, l’API télécharge le fichier entier. Dans cet exemple, les 100 premiers octets seront téléchargés. |
+| `Range: bytes=0-99` | Indique la plage d’octets à télécharger. Si ce n&#39;est pas spécifié, l&#39;API télécharge le fichier entier. Dans cet exemple, les 100 premiers octets seront téléchargés. |
 
 **Réponse**
 
-Le corps de la réponse comprend les 100 premiers octets du fichier (comme spécifié par l’en-tête &quot;Plage&quot; dans la requête), ainsi que l’état HTTP 206 (Contenu partiel). La réponse comprend également les en-têtes suivants :
+Le corps de la réponse comprend les 100 premiers octets du fichier (comme spécifié par l’en-tête &quot;Range&quot; dans la requête) ainsi que l’état HTTP 206 (Contenu partiel). La réponse comprend également les en-têtes suivants :
 
-- Content-Length : 100 (nombre d’octets renvoyés)
-- Content-type : application/parquet (un dossier en parquet a été demandé, par conséquent le type de contenu de réponse est parquet)
+- Content-Length: 100 (nombre d’octets renvoyés)
+- Type de contenu : application/parquet (un dossier de parquet a été demandé, par conséquent le type de contenu de la réponse est parquet)
 - Content-Range : octets 0-99/249058 (plage demandée (0-99) sur le nombre total d’octets (249058))
 
 ## Configuration de la pagination des réponses API
 
-Les réponses dans l’API d’accès aux données sont paginées. Par défaut, le nombre maximal d’entrées par page est 100. Les paramètres de pagination peuvent être utilisés pour modifier le comportement par défaut.
+Les réponses dans l’API d’accès aux données sont paginées. Par défaut, le nombre maximal d’entrées par page est de 100. Les paramètres de pagination peuvent être utilisés pour modifier le comportement par défaut.
 
 - `limit`: Vous pouvez spécifier le nombre d’entrées par page en fonction de vos besoins à l’aide du paramètre &quot;limit&quot;.
-- `start`: Le décalage peut être défini par le paramètre .
+- `start`: Le décalage peut être défini par le paramètre de requête &quot;début&quot;.
 - `&`: Vous pouvez utiliser une esperluette pour combiner plusieurs paramètres dans un seul appel.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /batches/{BATCH_ID}/files?start={OFFSET}
@@ -465,8 +468,8 @@ GET /batches/{BATCH_ID}/files?start={OFFSET}&limit={LIMIT}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | Identifiant du lot du lot auquel vous essayez d&#39;accéder. |
-| `{OFFSET}` | Index spécifié pour du tableau de résultats (par exemple, =0) |
+| `{BATCH_ID}` | Identifiant du lot auquel vous tentez d&#39;accéder. |
+| `{OFFSET}` | L&#39;index spécifié pour début le tableau de résultats (par exemple, début=0) |
 | `{LIMIT}` | Contrôle le nombre de résultats renvoyés dans le tableau de résultats (par exemple, limit=1). |
 
 **Requête**
@@ -481,9 +484,9 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/5c102cac7c
 
 **Réponse**:
 
-La réponse contient un `"data"` tableau avec un seul élément, comme spécifié par le paramètre de requête `limit=1`. Cet élément est un objet contenant les détails du premier fichier disponible, comme spécifié par le `start=0` paramètre de la requête (n’oubliez pas que dans la numérotation à base zéro, le premier élément est &quot;0&quot;).
+La réponse contient un `"data"` tableau avec un seul élément, comme spécifié par le paramètre de requête `limit=1`. Cet élément est un objet contenant les détails du premier fichier disponible, tel que spécifié par le `start=0` paramètre dans la requête (n’oubliez pas que dans la numérotation à base zéro, le premier élément est &quot;0&quot;).
 
-La `_links.next.href` valeur contient le lien vers la page suivante des réponses, où vous pouvez voir que le `start` paramètre a évolué vers `start=1`.
+La `_links.next.href` valeur contient le lien vers la page suivante des réponses, où vous pouvez voir que le `start` paramètre a avancé à `start=1`.
 
 ```json
 {
