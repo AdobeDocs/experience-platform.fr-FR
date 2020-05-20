@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Principes de base de l’API d’Adobe Experience Platform
+title: Concepts fondamentaux de l’API Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
 source-git-commit: c94f065a5d56ac495dd2d541531aaec94c187612
+workflow-type: tm+mt
+source-wordcount: '435'
+ht-degree: 2%
 
 ---
 
 
-# Principes de base de l’API d’Adobe Experience Platform
+# Concepts fondamentaux de l’API Adobe Experience Platform
 
-Les API d’Adobe Experience Platform utilisent plusieurs technologies et syntaxes sous-jacentes qui sont importantes à comprendre pour gérer efficacement les ressources de plateformes JSON. Ce donne un bref aperçu de ces technologies, ainsi que des liens vers la documentation externe pour plus d’informations.
+Les API Adobe Experience Platform utilisent plusieurs technologies et syntaxes sous-jacentes qui sont importantes à comprendre pour gérer efficacement les ressources de plateformes JSON. Ce document présente un bref aperçu de ces technologies, ainsi que des liens vers la documentation externe pour plus d&#39;informations.
 
 ## Pointeur JSON {#json-pointer}
 
-JSON Pointer est une syntaxe de chaîne standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) permettant d’identifier des valeurs spécifiques dans le  JSON. Un pointeur JSON est une chaîne de jetons séparés par `/` des caractères, qui spécifient des clés d’objet ou des index de tableau, et les jetons peuvent être une chaîne ou un nombre. Les chaînes de pointeur JSON sont utilisées dans de nombreuses opérations PATCH pour les API de plateforme, comme décrit plus loin dans cette  de. Pour plus d’informations sur le pointeur JSON, reportez-vous à la documentation [d’aperçu du pointeur](https://rapidjson.org/md_doc_pointer.html)JSON.
+JSON Pointer est une syntaxe de chaîne standard ([RFC 6901](https://tools.ietf.org/html/rfc6901)) permettant d’identifier des valeurs spécifiques dans les documents JSON. Un pointeur JSON est une chaîne de jetons séparés par `/` des caractères qui spécifient des clés d’objet ou des index de tableau, et les jetons peuvent être une chaîne ou un nombre. Les chaînes de pointeur JSON sont utilisées dans de nombreuses opérations PATCH pour les API de plateformes, comme décrit plus loin dans ce document. Pour plus d’informations sur le pointeur JSON, reportez-vous à la documentation [d’aperçu du pointeur](https://rapidjson.org/md_doc_pointer.html)JSON.
 
-### Exemple d’objet  JSON
+### Exemple d’objet de schéma JSON
 
 ```json
 {
@@ -68,7 +71,7 @@ JSON Pointer est une syntaxe de chaîne standard ([RFC 6901](https://tools.ietf.
 }
 ```
 
-### Exemple de pointeurs JSON en fonction d’un objet 
+### Exemple de pointeurs JSON basés sur un objet schéma
 
 | Pointeur JSON | Résout à |
 |--- | ---|
@@ -78,13 +81,13 @@ JSON Pointer est une syntaxe de chaîne standard ([RFC 6901](https://tools.ietf.
 | `"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!Note] :
->Lorsque vous traitez des attributs `xdm:sourceProperty` et `xdm:destinationProperty` des descripteurs de modèle de données d’expérience (XDM), toutes les `properties` clés doivent être **exclues** de la chaîne de pointeur JSON. Pour plus d&#39;informations, reportez-vous au sous-guide du développeur d&#39;API de Registre  sur les [descripteurs](../xdm/api/descriptors.md) .
+>Lors de l’utilisation des `xdm:sourceProperty` et `xdm:destinationProperty` attributs des descripteurs de modèle de données d’expérience (XDM), les clés `properties` doivent être **exclues** de la chaîne JSON Pointer. Pour plus d&#39;informations, consultez le sous-guide du développeur d&#39;API de registre de Schéma sur les [descripteurs](../xdm/api/descriptors.md) .
 
 ## Correctif JSON
 
-Il existe de nombreuses opérations PATCH pour les API de plateforme qui acceptent les objets de correctif JSON pour leurs charges de requête. Le correctif JSON est un format normalisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) pour décrire les modifications apportées à un  JSON. Il vous permet de définir des mises à jour partielles de JSON sans avoir à envoyer l’ensemble du dans un corps de requête.
+Il existe de nombreuses opérations PATCH pour les API de plateforme qui acceptent les objets de correctif JSON pour leurs charges utiles de demande. Le correctif JSON est un format normalisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) qui décrit les modifications apportées à un document JSON. Il vous permet de définir des mises à jour partielles de JSON sans avoir à envoyer l’ensemble du document dans un corps de requête.
 
-### Exemple d’objet de correctif JSON
+### Exemple d’objet Patch JSON
 
 ```json
 {
@@ -93,7 +96,7 @@ Il existe de nombreuses opérations PATCH pour les API de plateforme qui accepte
 }
 ```
 
-* `op`: Type d’opération de correctif. Bien que le correctif JSON prenne en charge plusieurs types d’opérations différents, toutes les opérations PATCH dans les API de plateforme ne sont pas compatibles avec chaque type d’opération. Les types d’opération disponibles sont les suivants :
+* `op`: Type d&#39;opération de correctif. Bien que le correctif JSON prenne en charge plusieurs types d’opérations différents, toutes les opérations PATCH dans les API de plateformes ne sont pas compatibles avec chaque type d’opération. Les types d&#39;opération disponibles sont les suivants :
    * `add`
    * `remove`
    * `replace`
@@ -102,12 +105,12 @@ Il existe de nombreuses opérations PATCH pour les API de plateforme qui accepte
    * `test`
 * `path`: Partie de la structure JSON à mettre à jour, identifiée à l’aide de la notation Pointeur [](#json-pointer) JSON.
 
-Selon le type d’opération indiqué dans `op`, l’objet JSON Patch peut nécessiter des propriétés supplémentaires. Pour plus d’informations sur les différentes opérations de correctif JSON et leur syntaxe requise, reportez-vous à la documentation [du correctif](http://jsonpatch.com/)JSON.
+Selon le type d’opération indiqué dans `op`, l’objet Patch JSON peut nécessiter des propriétés supplémentaires. Pour plus d’informations sur les différentes opérations de correctif JSON et leur syntaxe requise, consultez la documentation [sur le correctif](http://jsonpatch.com/)JSON.
 
-##  JSON
+## Schéma JSON
 
-Le  JSON est un format utilisé pour décrire et valider la structure des données JSON. [Le modèle de données d’expérience (XDM)](../xdm/home.md) tire parti des  JSON pour imposer des contraintes sur la structure et le format des données d’expérience client assimilées. Pour plus d&#39;informations sur le  JSON, veuillez consulter la documentation [officielle](https://json-schema.org/).
+Le Schéma JSON est un format utilisé pour décrire et valider la structure des données JSON. [Le modèle de données d’expérience (XDM)](../xdm/home.md) utilise les capacités de Schéma JSON pour imposer des contraintes sur la structure et le format des données d’expérience client imbriquées. Pour plus d&#39;informations sur le Schéma JSON, veuillez consulter la documentation [](https://json-schema.org/)officielle.
 
 ## Étapes suivantes
 
-Ce présente certaines des technologies et des syntaxes impliquées dans la gestion des ressources JSON pour Experience Platform. Pour plus d’informations sur l’utilisation des API de plateforme, y compris les meilleures pratiques et les réponses aux questions fréquentes, consultez le guide [de dépannage de](troubleshooting.md)plateforme.
+Ce document présente certaines des technologies et syntaxes impliquées dans la gestion des ressources JSON pour Experience Platform. Pour plus d’informations sur l’utilisation des API de plateforme, y compris les meilleures pratiques et les réponses aux questions fréquentes, consultez le guide [de dépannage de](troubleshooting.md)plateforme.
