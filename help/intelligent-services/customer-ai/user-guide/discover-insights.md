@@ -5,6 +5,9 @@ title: Découverte des informations avec l’API client
 topic: Discovering insights
 translation-type: tm+mt
 source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+workflow-type: tm+mt
+source-wordcount: '1062'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +24,7 @@ Pour utiliser les statistiques de l’IA du client, vous devez disposer d’une 
 
 ## Présentation de l’instance de service
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents disponibles. In the container for Customer AI, click **[!UICONTROL Open]**.
+In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents disponibles. Dans le conteneur de Customer AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](../images/insights/navigate-to-service.png)
 
@@ -44,7 +47,7 @@ Ensuite, la page d’informations de cette instance de service s’affiche, dans
 
 Il existe deux façons de vue des détails de l’instance de service : la première provient du tableau de bord et la seconde de l’instance de service.
 
-Pour vue des détails depuis le tableau de bord, cliquez sur un conteneur d’instance de service en évitant l’hyperlien qui est associé au nom. Cela ouvre un rail droit qui fournit des détails supplémentaires tels que la description, la fréquence de notation, l’objectif de prévision et la population admissible. De plus, vous pouvez modifier et supprimer l’instance en cliquant sur **[!UICONTROL Edit]** ou **[!UICONTROL Delete]**.
+Pour vue des détails depuis le tableau de bord, cliquez sur un conteneur d’instance de service en évitant l’hyperlien qui est associé au nom. Cela ouvre un rail droit qui fournit des détails supplémentaires tels que la description, la fréquence de notation, l’objectif de prévision et la population admissible. De plus, vous pouvez modifier et supprimer l’instance en cliquant sur **[!UICONTROL Modifier]** ou **[!UICONTROL Supprimer]**.
 
 ![rail droit](../images/insights/success-run.png)
 
@@ -52,7 +55,7 @@ Pour vue des détails depuis le tableau de bord, cliquez sur un conteneur d’in
 
 ![échec de l&#39;exécution du message](../images/insights/failed-run.png)
 
-La deuxième façon de vue des détails supplémentaires d’une instance de service se trouve dans la page d’informations. Vous pouvez cliquer dans **[!UICONTROL Show more]** l’angle supérieur droit pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition de score, la date de création et le type de propension. Pour plus d’informations sur l’une des propriétés répertoriées, consultez [Configuration d’une instance](./configure.md)d’API client.
+La deuxième façon de vue des détails supplémentaires d’une instance de service se trouve dans la page d’informations. Vous pouvez cliquer sur **[!UICONTROL Afficher plus]** en haut à droite pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition de score, la date de création et le type de propension. Pour plus d’informations sur l’une des propriétés répertoriées, consultez [Configuration d’une instance](./configure.md)d’API client.
 
 ![afficher plus](../images/insights/landing-show-more.png)
 
@@ -60,21 +63,21 @@ La deuxième façon de vue des détails supplémentaires d’une instance de ser
 
 ### Modification d’une instance
 
-Pour modifier une instance, cliquez sur **[!UICONTROL Edit]** dans le volet de navigation supérieur droit.
+Pour modifier une instance, cliquez sur **[!UICONTROL Modifier]** dans le volet de navigation supérieur droit.
 
 ![cliquez sur le bouton Modifier](../images/insights/edit-button.png)
 
-La boîte de dialogue Modifier s’affiche, vous permettant de modifier la *description* et la fréquence *de* score de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur **[!UICONTROL Edit]** dans le coin inférieur droit.
+La boîte de dialogue Modifier s’affiche, vous permettant de modifier la *description* et la fréquence *de* score de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur **[!UICONTROL Modifier]** dans le coin inférieur droit.
 
 ![modifier la fenêtre contextuelle](../images/insights/edit-instance.png)
 
 ### Autres actions
 
-Le **[!UICONTROL More actions]** bouton se trouve dans le volet de navigation supérieur droit en regard de **[!UICONTROL Edit]**. Cliquez sur **[!UICONTROL More actions]** pour ouvrir une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
+Le bouton Actions **** Plus se trouve dans le volet de navigation supérieur droit en regard de **[!UICONTROL Modifier]**. Cliquez sur **[!UICONTROL Autres actions]** pour ouvrir une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
-- **[!UICONTROL Delete]**: Supprime l’instance.
-- **[!UICONTROL Access scores]**: En cliquant sur les scores ** d’accès, vous ouvrez une boîte de dialogue contenant un lien vers les scores de [téléchargement pour le didacticiel d’IA](./download-scores.md) client. La boîte de dialogue fournit également l’ID de jeu de données requis pour effectuer des appels d’API.
-- **[!UICONTROL View run history]**: Une boîte de dialogue contenant la liste de toutes les exécutions de notation associées à l’instance de service s’affiche.
+- **[!UICONTROL Supprimer]**: Supprime l’instance.
+- **[!UICONTROL Scores]** d&#39;accès : En cliquant sur les scores ** d’accès, vous ouvrez une boîte de dialogue contenant un lien vers les scores de [téléchargement pour le didacticiel d’IA](./download-scores.md) client. La boîte de dialogue fournit également l’ID de jeu de données requis pour effectuer des appels d’API.
+- **[!UICONTROL Historique]** de l&#39;exécution des Vues : Une boîte de dialogue contenant la liste de toutes les exécutions de notation associées à l’instance de service s’affiche.
 
 ![Autres actions](../images/insights/more-actions.png)
 
@@ -100,22 +103,22 @@ Pour chaque intervalle de score, une carte est générée qui présente les 10 p
 
 ### Création d’un segment
 
-Le fait de cliquer sur le **[!UICONTROL Create Segment]** bouton dans l’un des compartiments pour une propension faible, moyenne et élevée vous redirige vers le créateur de segments.
+Le fait de cliquer sur le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments des propensions Faible, Moyen et Élevée vous redirige vers le créateur de segments.
 
 >[!NOTE]
->Le **[!UICONTROL Create Segment]** bouton n’est disponible que si le Profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur la façon d’activer le Profil client en temps réel, consultez la présentation [du Profil client en temps](../../../rtcdp/overview.md)réel.
+>Le bouton **[!UICONTROL Créer un segment]** n’est disponible que si le Profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur la façon d’activer le Profil client en temps réel, consultez la présentation [du Profil client en temps](../../../rtcdp/overview.md)réel.
 
 ![Cliquez sur Créer un segment](../images/insights/influential-factors-create-segment.png)
 
 ![Création d’un segment](../images/insights/create-segment.png)
 
-Le créateur de segments permet de définir un segment. Lors d’une sélection **[!UICONTROL Create Segment]** dans la page Statistiques, l’API du client ajoute automatiquement les informations d’intervalles sélectionnés au segment. Pour terminer la création de votre segment, renseignez simplement les conteneurs *Nom* et *Description* situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, cliquez sur **[!UICONTROL Save]** dans l’angle supérieur droit.
+Le créateur de segments permet de définir un segment. Lorsque vous sélectionnez **[!UICONTROL Créer un segment]** dans la page Statistiques, l’API du client ajoute automatiquement les informations de regroupement sélectionnées au segment. Pour terminer la création de votre segment, renseignez simplement les conteneurs *Nom* et *Description* situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, cliquez sur **[!UICONTROL Enregistrer]** dans l’angle supérieur droit.
 
 >!![NOTE] Les scores de propension étant écrits sur un profil individuel, ils sont disponibles dans le créateur de segments comme tout autre attribut de profil. Lorsque vous accédez au créateur de segments pour créer de nouveaux segments, vous pouvez afficher tous les divers scores de propension sous l’IA du client espace de nommage.
 
 ![Renseignez le segment](../images/insights/segment-saving.png)
 
-Pour vue de votre nouveau segment dans l’interface utilisateur de la plate-forme, cliquez **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page de *navigation* s’affiche et affiche tous les segments disponibles.
+Pour vue de votre nouveau segment dans l’interface utilisateur de la plateforme, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page de *navigation* s’affiche et affiche tous les segments disponibles.
 
 ![Tous vos segments](../images/insights/Segments-dashboard.png)
 
