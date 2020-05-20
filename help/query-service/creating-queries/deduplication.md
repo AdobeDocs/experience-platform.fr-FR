@@ -1,36 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' de données'
+title: déduplication de données
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '414'
+ht-degree: 1%
 
 ---
 
 
-#  de données dans le service 
+# déduplication de données dans Requête Service
 
-Le service de  de la plateforme Adobe Experience Platform prend en charge les de données  lorsqu’il peut être nécessaire de supprimer une ligne entière d’un calcul ou d’ignorer un ensemble spécifique de champs, car seule une partie des données de la ligne est un . Le modèle commun pour les  de consiste à utiliser la `ROW_NUMBER()` fonction sur une fenêtre pour un ID, ou une paire d’identifiants, au fil du temps (à l’aide du `timestamp` champ Modèle de données d’expérience (XDM)), afin de renvoyer un nouveau champ représentant le nombre de fois où un  de a été détecté. Lorsque cette valeur est `1`, elle fait référence à l’instance d’origine et, dans la plupart des cas, à l’instance que vous souhaitez utiliser, en ignorant toutes les autres instances. Cela se fait le plus souvent au sein d’une sous-sélection où le  est effectué à un niveau supérieur `SELECT` comme l’exécution d’un  nombre de.
+Adobe Experience Platform Requête Service prend en charge la déduplication des données lorsqu’il peut être nécessaire de supprimer une ligne entière d’un calcul ou d’ignorer un ensemble de champs spécifique, car seule une partie des données de la ligne est un duplicata. Le modèle de déduplication commun consiste à utiliser la `ROW_NUMBER()` fonction sur une fenêtre pour un identifiant, ou une paire d’identifiants, au fil du temps (à l’aide du `timestamp` champ Modèle de données d’expérience (XDM)) pour renvoyer un nouveau champ qui représente le nombre de fois où un duplicata a été détecté. Lorsque cette valeur est définie `1`, elle fait référence à l’instance d’origine et, dans la plupart des cas, à l’instance que vous souhaitez utiliser, en ignorant toutes les autres instances. Cela se fait le plus souvent dans une sous-sélection où la déduplication est effectuée à un niveau supérieur, `SELECT` comme l’exécution d’un nombre d’agrégats.
 
 ## Cas d’utilisation
 
-Certains cas d’utilisation pour les  de sont globaux dans la plage de dates et d’autres sont limités à un seul ou un seul ID d’utilisateur final dans la `identityMap`plage.
+Certains cas d’utilisation pour la déduplication sont globaux dans la plage de dates et certains sont limités à un seul visiteur ou un seul ID d’utilisateur final dans la `identityMap`plage.
 
-Ce  des exemples de sous-sélection et de  d’échantillon complet pour la déduplication de trois cas d’utilisation courants :
+Ce document présente des exemples de requêtes sous-sélectionnés et complets pour la déduplication de trois cas d’utilisation courants :
 - [ExperienceEvents](#experienceevents)
 - [Achats](#purchases)
 - [Mesures](#metrics)
 
 ### ExperienceEvents {#experienceevents}
 
-Dans le cas d’ ExperienceEvents, vous souhaiterez probablement ignorer la ligne entière.
+Dans le cas des événements d’expérience de duplicata, vous souhaiterez probablement ignorer la totalité de la ligne.
 
->[!CAUTION] De nombreuses visionneuses de données dans la plateforme d’expérience, y compris celles produites par le connecteur de données Adobe Analytics, sont déjà  au niveau d’ExperienceEvent. Par conséquent, la réapplication de ce niveau de  est inutile et ralentira votre  de. Il est important de comprendre la source de vos DataSet et de savoir si des  au niveau de l’événement ExperienceEvent ont déjà été appliquées. Pour les DataSet en flux continu (par exemple, ceux d’Adobe), vous devez appliquer un au niveau d’ExperienceEvent  car ces sources de données ont une sémantique &quot;au moins une fois&quot;.
+>[!CAUTION] De nombreux DataSets dans la plateforme d’expérience, y compris ceux produits par le connecteur de données Adobe Analytics, ont déjà appliqué une déduplication au niveau d’ExperienceEvent. Par conséquent, la réapplication de ce niveau de déduplication est inutile et ralentira votre requête. Il est important de comprendre la source de vos DataSets et de savoir si la déduplication au niveau d’ExperienceEvent a déjà été appliquée. Pour les DataSets en flux continu (par exemple, ceux d’Adobe Cible), vous devez appliquer une déduplication au niveau d’ExperienceEvent car ces sources de données ont une sémantique &quot;au moins une fois&quot;.
 
 **Portée :** Global
 
-**Touche Fenêtre :** id
+**Touche de fenêtre :** id
 
 #### Sous-sélection
 
@@ -58,11 +61,11 @@ SELECT COUNT(*) AS num_events FROM (
 
 ### Achats {#purchases}
 
-Si vous avez des achats, vous souhaiterez probablement conserver la majeure partie de la ligne ExperienceEvent, mais ignorez les champs liés à l’achat (comme la `commerce.orders` mesure). Pour les achats, il existe un champ spécial pour l’ID d’achat. Ce champ est `commerce.order.purchaseID`.
+Si vous effectuez des achats par duplicata, vous souhaiterez probablement conserver la majeure partie de la ligne ExperienceEvent, mais ignorer les champs liés à l’achat (par exemple la `commerce.orders` mesure). Pour les achats, il existe un champ spécial pour l’ID d’achat. Ce champ est `commerce.order.purchaseID`.
 
-**Portée :** {&quot;N&quot;:{&quot;visiteuse&quot;:[&quot;fs&quot;],&quot;visiteuses&quot;:[&quot;fp&quot;],&quot;visiteurs&quot;:[&quot;mp&quot;],&quot;visiteur&quot;:[&quot;ms&quot;]}} 
+**Portée :** Visiteur
 
-**Touche Fenêtre :** identityMap[$].id et commerce.order.purchaseID
+**Touche de fenêtre :** identityMap[$ESPACE DE NOMMAGE].id et commerce.order.purchaseID
 
 #### Sous-sélection
 
@@ -98,11 +101,11 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ### Mesures {#metrics}
 
-Si une mesure utilise l’ID unique facultatif et qu’un de cet ID s’affiche, vous voudrez probablement ignorer cette valeur de mesure et conserver le reste de l’événement ExperienceEvent. Dans XDM, la plupart des mesures utilisent le type de `Measure` données qui inclut un `id` champ facultatif que vous pouvez utiliser pour les  de.
+Si une mesure utilise l’identifiant unique facultatif et qu’un duplicata de cet identifiant s’affiche, vous voudrez probablement ignorer cette valeur et conserver le reste de l’événement ExperienceEvent. Dans XDM, la plupart des mesures utilisent le type de `Measure` données qui inclut un champ facultatif `id` que vous pouvez utiliser pour la déduplication.
 
-**Portée :** {&quot;N&quot;:{&quot;visiteuse&quot;:[&quot;fs&quot;],&quot;visiteuses&quot;:[&quot;fp&quot;],&quot;visiteurs&quot;:[&quot;mp&quot;],&quot;visiteur&quot;:[&quot;ms&quot;]}} 
+**Portée :** Visiteur
 
-**Touche Fenêtre :** identityMap[$ objet].id et id de mesure
+**Touche de fenêtre :** identityMap[$ESPACE DE NOMMAGE].id et id de l&#39;objet Measure
 
 #### Sous-sélection
 
