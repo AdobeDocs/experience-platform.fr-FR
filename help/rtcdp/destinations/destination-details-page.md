@@ -5,6 +5,9 @@ description: 'La page de détails d’une destination individuelle offre un aper
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
 source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 100%
 
 ---
 
