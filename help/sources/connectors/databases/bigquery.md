@@ -26,7 +26,7 @@ La documentation ci-dessous fournit des informations sur la connexion de Google 
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
-## Connexion de Google BigQuery à la plate-forme à l’aide de l’interface utilisateur
+## Connect Google BigQuery to Platform using the UI
 
 - [Création d’un connecteur source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
 - [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
