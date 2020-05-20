@@ -5,17 +5,20 @@ title: Suppression d’un sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 4%
 
 ---
 
 
 # Suppression d’un sandbox
 
-Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut les sandbox `name` dans le chemin de requête.
+Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut les sandbox `name` dans le chemin de la requête.
 
->[!NOTE] L’exécution de cet appel d’API met à jour la `status` propriété sandbox sur &quot;delete&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>[!NOTE] L’exécution de cet appel d’API met à jour la propriété `status` du sandbox en &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /sandboxes/{SANDBOX_NAME}
@@ -23,7 +26,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | Le sandbox `name` à supprimer. |
+| `{SANDBOX_NAME}` | Le `name` sandbox à supprimer. |
 
 **Requête**
 
@@ -40,7 +43,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails mis à jour du sandbox, indiquant qu’il `state` est &quot;supprimé&quot;.
+Une réponse réussie renvoie les détails mis à jour du sandbox, indiquant qu&#39;il `state` est &quot;supprimé&quot;.
 
 ```json
 {
