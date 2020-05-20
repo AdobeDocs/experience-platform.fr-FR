@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Datasets vs tables et '
+title: Jeu de données vs tables et schémas
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
-# Datasets vs tables et 
+# Jeu de données vs tables et schémas
 
-Passez en revue les  des jeux de données disponibles dans l’interface utilisateur [d’](https://platform.adobe.com/datasets)Adobe Experience Platform, en veillant à respecter les noms des jeux de données.
->[!NOTE] Certains noms de jeux de données ont des espaces et pourraient ne pas être sûrs pour SQL.
+Vérifiez la liste des jeux de données disponibles dans l’interface utilisateur [d’](https://platform.adobe.com/datasets)Adobe Experience Platform, en veillant à respecter les noms des jeux de données.
+>[!NOTE] Certains noms de jeux de données comportent des espaces et pourraient autrement ne pas être sûrs pour SQL.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-Vérifiez la structure hiérarchique du de jeux de données dans l’interface utilisateur en cliquant sur un nom de dans la table de jeux de données.
+Examinez la structure hiérarchique du schéma de jeux de données dans l’interface utilisateur en cliquant sur le nom d’un schéma dans la table de jeux de données.
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
@@ -25,10 +28,10 @@ Ouvrez la ligne de commande PSQL et utilisez les détails de la connexion à par
 
 ![](../images/clients/psql/connect-bi.png)
 
-Pour  les tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d` ou `SHOW TABLES;`.
+Pour vue des tables disponibles sur la plateforme avec SQL, vous pouvez utiliser soit `\d` , soit `SHOW TABLES;`.
 
 
-`\d` affiche le PostgreSQL standard 
+`\d` affiche la vue PostgreSQL standard
 
 ```
              List of relations
@@ -39,7 +42,7 @@ Pour  les tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d` ou
 (2 rows)
 ```
 
-`SHOW TABLES;` est une commande personnalisée qui donne un  plus détaillé et présente le tableau, ainsi que le nom du jeu de données figurant dans l’interface utilisateur de la plateforme.
+`SHOW TABLES;` est une commande personnalisée qui fournit une vue plus détaillée et présente le tableau, ainsi que le nom du jeu de données figurant dans l’interface utilisateur de la plate-forme.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -49,9 +52,9 @@ Pour  les tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d` ou
 (2 rows)
 ```
 
-Pour  le racine d’un tableau, utilisez la `\d table_name` commande.
+Pour vue au schéma racine d&#39;une table, utilisez la `\d table_name` commande.
 
->[!NOTE] Le  présenté présente les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du de jeux de données.
+>[!NOTE] Le schéma présenté montre les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du schéma de dataset.
 
 `\d luma_midvalues`
 
@@ -76,7 +79,7 @@ Pour  le racine d’un tableau, utilisez la `\d table_name` commande.
  search            | search                      |           |          | 
 ```
 
-Pour aller plus loin dans le , utilisez des traits de soulignement (`_`) pour déclarer la colonne dans le tableau à décrire. Par exemple : `\d table_name_column`.
+Pour aller plus loin dans le schéma, utilisez des traits de soulignement (`_`) pour déclarer la colonne dans le tableau à décrire. Par exemple : `\d table_name_column`.
 
 `\d luma_midvalues_web`
 
