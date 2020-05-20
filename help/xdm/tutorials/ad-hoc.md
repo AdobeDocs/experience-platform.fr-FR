@@ -1,34 +1,37 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d’un  ad hoc
+title: Création d’un schéma ad hoc
 topic: tutorials
 translation-type: tm+mt
 source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+workflow-type: tm+mt
+source-wordcount: '742'
+ht-degree: 2%
 
 ---
 
 
-# Création d’un  ad hoc
+# Création d’un schéma ad hoc
 
-Dans des circonstances spécifiques, il peut être nécessaire de créer un de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de  &quot;ad hoc&quot;. Les  ad hoc sont utilisées dans divers d’assimilation de données  pour la plateforme d’expérience, y compris l’assimilation de fichiers CSV et la création de certains types de connexions source.
+Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espacement des noms n’est utilisé que par un seul jeu de données. On parle alors de schéma &quot;ad hoc&quot;. Les schémas ad hoc sont utilisés dans divers workflows d’assimilation de données pour la plate-forme d’expérience, y compris l’assimilation de fichiers CSV et la création de certains types de connexions source.
 
-Ce décrit les étapes générales de création d’un ad hoc  à l’aide de l’API [de Registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)de l’. Il est destiné à être utilisé conjointement avec d’autres didacticiels de la plateforme d’expérience qui nécessitent la création d’un  ad hoc dans le cadre de leur flux de travail. Chacun de ces  fournit des informations détaillées sur la manière de configurer correctement un  ad hoc pour son cas d’utilisation spécifique.
+Ce document fournit des étapes générales pour la création d&#39;un schéma ad hoc à l&#39;aide de l&#39;API [de registre de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. Il est destiné à être utilisé conjointement avec d’autres didacticiels de la plateforme d’expérience qui nécessitent la création d’un schéma ad hoc dans le cadre de leur processus. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc en fonction de son cas d’utilisation spécifique.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique du système de modèle de données d’expérience (XDM). Avant de commencer ce didacticiel, consultez la documentation XDM suivante :
+Ce didacticiel nécessite une bonne compréhension du système de modèle de données d’expérience (XDM). Avant de commencer ce didacticiel, consultez la documentation XDM suivante :
 
 - [Présentation](../home.md)du système XDM : Présentation générale de XDM et de son implémentation dans la plateforme d’expérience.
-- [Principes de base de la composition](../schema/composition.md)de  : Présentation des composants de base du  XDM.
+- [Principes de base de la composition](../schema/composition.md)des schémas : Présentation des composants de base des schémas XDM.
 
-Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin d&#39;effectuer des appels vers l&#39;API de Registre du . Cela inclut votre `{TENANT_ID}`, le concept de &quot;&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API de registre de Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
 
 ## Création d’une classe ad hoc
 
-Le comportement des données d’un  XDM est déterminé par sa classe sous-jacente. La première étape de la création d’un  ad hoc consiste à créer une classe basée sur le `adhoc` comportement. Pour ce faire, vous devez envoyer une requête POST au point de `/tenant/classes` fin.
+Le comportement des données d&#39;un schéma XDM est déterminé par sa classe sous-jacente. La première étape de la création d’un schéma ad hoc consiste à créer une classe basée sur le `adhoc` comportement. Pour ce faire, vous devez envoyer une requête POST au point de `/tenant/classes` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/classes
@@ -38,7 +41,7 @@ POST /tenant/classes
 
 La requête suivante crée une nouvelle classe XDM, configurée par les attributs fournis dans la charge utile. En fournissant une `$ref` propriété définie sur `https://ns.adobe.com/xdm/data/adhoc` dans le `allOf` tableau, cette classe hérite du `adhoc` comportement. La requête définit également un `_adhoc` objet, qui contient les champs personnalisés de la classe.
 
->[!NOTE] Les champs personnalisés définis sous `_adhoc` varient selon le cas d’utilisation du ad hoc. Reportez-vous au processus spécifique du didacticiel approprié pour les champs personnalisés requis en fonction du cas d’utilisation.
+>[!NOTE] Les champs personnalisés définis sous `_adhoc` varient selon le cas d’utilisation du schéma ad hoc. Reportez-vous au processus spécifique du didacticiel approprié pour les champs personnalisés requis en fonction du cas d&#39;utilisation.
 
 ```shell
 curl -X POST \
@@ -139,13 +142,13 @@ Une réponse réussie renvoie les détails de la nouvelle classe, en remplaçant
 
 | Propriété | Description |
 | --- | --- |
-| `$id` | URI qui sert d’identificateur unique généré par le système en lecture seule pour la nouvelle classe ad hoc. Cette valeur est utilisée à l’étape suivante de la création d’un  ad hoc. |
+| `$id` | URI qui sert d’identificateur unique généré par le système en lecture seule pour la nouvelle classe ad hoc. Cette valeur est utilisée à l’étape suivante de la création d’un schéma ad hoc. |
 
-## Création d’un  ad hoc
+## Création d’un schéma ad hoc
 
-Une fois que vous avez créé une classe ad hoc, vous pouvez créer un nouvel  qui implémente cette classe en envoyant une requête POST au `/tenant/schemas` point de fin.
+Une fois que vous avez créé une classe ad hoc, vous pouvez créer un nouveau schéma qui implémente cette classe en envoyant une demande POST au point de `/tenant/schemas` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /tenant/schemas
@@ -153,7 +156,7 @@ POST /tenant/schemas
 
 **Requête**
 
-La requête suivante crée une nouvelle  de, fournissant une référence (`$ref`) à la `$id` classe ad hoc créée précédemment dans sa charge utile.
+La requête suivante crée un nouveau schéma, fournissant une référence (`$ref`) à la classe ad hoc précédemment créée dans sa charge `$id` de charge utile.
 
 ```shell
 curl -X POST \
@@ -177,7 +180,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau  de, y compris sa version générée par le système et en lecture seule `$id`.
+Une réponse positive renvoie les détails du schéma nouvellement créé, y compris son  généré par le système et en lecture seule `$id`.
 
 ```json
 {
@@ -214,13 +217,13 @@ Une réponse réussie renvoie les détails du nouveau  de, y compris sa version 
 }
 ```
 
-##  le ad hoc complet 
+## Vue du schéma ad hoc complet
 
->[!NOTE] Cette étape est facultative. Si vous ne souhaitez pas examiner la structure des champs de votre  ad hoc, vous pouvez passer à la section [étapes](#next-steps) suivante à la fin de ce didacticiel.
+>[!NOTE] Cette étape est facultative. Si vous ne souhaitez pas examiner la structure des champs de votre schéma ad hoc, vous pouvez passer à la section [étapes](#next-steps) suivantes à la fin de ce didacticiel.
 
-Une fois le  ad hoc créé, vous pouvez effectuer une demande de recherche (GET) pour  le de la forme étendue. Pour ce faire, utilisez l’en-tête Accept approprié dans la demande GET, comme illustré ci-dessous.
+Une fois le schéma ad hoc créé, vous pouvez effectuer une demande de recherche (GET) pour vue du schéma sous sa forme étendue. Pour ce faire, vous devez utiliser l’en-tête Accepter approprié dans la demande GET, comme indiqué ci-dessous.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /tenant/schemas/{SCHEMA_ID}
@@ -228,11 +231,11 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | L’ `$id` URI codé en URL ou `meta:altId` le ad hoc auquel vous souhaitez accéder. |
+| `{SCHEMA_ID}` | URI codé en URL `$id` ou `meta:altId` du schéma ad hoc auquel vous souhaitez accéder. |
 
 **Requête**
 
-La requête suivante utilise l’en-tête Accepter `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du . Notez que lorsque vous récupérez une ressource spécifique du Registre des  du, l’en-tête Accepter de la requête doit inclure la version majeure de la ressource en question.
+La requête suivante utilise l’en-tête Accepter `application/vnd.adobe.xed-full+json; version=1`, qui renvoie la forme développée du schéma. Notez que lors de la récupération d&#39;une ressource spécifique du Registre du Schéma, l&#39;en-tête Accepter de la demande doit inclure la version majeure de la ressource en question.
 
 ```shell
 curl -X GET \
@@ -246,7 +249,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du  du, y compris tous les champs imbriqués sous `properties`.
+Une réponse réussie renvoie les détails du schéma, y compris tous les champs imbriqués sous `properties`.
 
 ```json
 {
@@ -296,6 +299,6 @@ Une réponse réussie renvoie les détails du  du, y compris tous les champs imb
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce didacticiel, vous avez créé un nouveau  ad hoc. Si vous avez été amené à ce dans le cadre d’un autre didacticiel, vous pouvez désormais utiliser le  `$id` de votre ad hoc pour terminer le flux de travaux comme indiqué.
+En suivant ce didacticiel, vous avez créé un nouveau schéma ad hoc. Si vous avez été amené à ce document dans le cadre d’un autre didacticiel, vous pouvez désormais utiliser le schéma ad hoc `$id` pour terminer le processus comme indiqué.
 
-Pour plus d&#39;informations sur l&#39;utilisation de l&#39;API de Registre , consultez le guide [du](../api/getting-started.md)développeur.
+Pour plus d&#39;informations sur l&#39;utilisation de l&#39;API Schéma Registry, consultez le guide [du](../api/getting-started.md)développeur.
