@@ -5,6 +5,9 @@ description: Tableaux de bord, page d’accueil et première expérience client 
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+workflow-type: tm+mt
+source-wordcount: '642'
+ht-degree: 97%
 
 ---
 
@@ -40,13 +43,13 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 ### Jeux de données
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in Platform. Ce compteur est mis à jour lors de la création d’un jeu de données.
+Le compteur **[!UICONTROL Jeux de données]** indique le nombre de jeux de données du système et la quantité de données de la plateforme. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
-Pour plus d&#39;informations sur les jeux de données, consultez la présentation [des](../catalog/datasets/overview.md)jeux de données.
+Pour plus d&#39;informations sur les jeux de données, consultez l&#39;aperçu [des](../catalog/datasets/overview.md)jeux de données.
 
 ### Profils
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the Real-time Customer Profile. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+Le compte **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils dans le profil client en temps réel. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
@@ -102,32 +105,32 @@ The number of failed profile records is updated hourly. -->
 
 ### Jeux de données récents
 
-The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. Cette liste est mise à jour lors de la création d’un jeu de données.
+La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
 
-Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Cliquez sur un jeu de données pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
-Pour plus d&#39;informations sur les jeux de données, consultez la présentation [des](../catalog/datasets/overview.md)jeux de données.
+Pour plus d&#39;informations sur les jeux de données, consultez l&#39;aperçu [des](../catalog/datasets/overview.md)jeux de données.
 
 ### Sources récentes
 
-The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. Cette liste est mise à jour lors de la création d’une source.
+La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
 
-Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Cliquez sur une source pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
 Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
 
 ### Segments récents
 
-The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. Cette liste est mise à jour lors de la création d’un segment.
+La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
 
-Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
+Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
 
 Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](segmentation/segmentation-overview.md).
 
 ### Destinations récentes
 
-The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. Cette liste est mise à jour lors de la création d’une destination.
+La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
 
-Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
+Cliquez sur une destination pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de destinations.
 
 Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
