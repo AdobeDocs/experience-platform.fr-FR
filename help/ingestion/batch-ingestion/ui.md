@@ -5,8 +5,11 @@ title: Guide de l’interface utilisateur d’administration par lots d’Adobe 
 topic: ui guide
 translation-type: tm+mt
 source-git-commit: 54fea3a25d72c2950c5fce6ee1a71b6a61454383
+workflow-type: tm+mt
+source-wordcount: '11'
+ht-degree: 0%
 
 ---
 
 
-# Guide de l&#39;interface utilisateur d&#39;administration par lots
+# Guide de l&#39;interface utilisateur d&#39;importation par lot
