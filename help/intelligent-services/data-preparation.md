@@ -1,43 +1,46 @@
 ---
 keywords: Experience Platform;home;intelligent services;popular topics
 solution: Experience Platform
-title: Préparation des données en vue de les utiliser dans les services intelligents
+title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
 source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 1%
 
 ---
 
 
-# Préparation des données en vue de les utiliser dans les services intelligents
+# Préparation des données en vue de leur utilisation dans les services intelligents
 
-Pour que les services intelligents découvrent les informations issues de vos données de marketing, les données doivent être enrichies sémantiquement et conservées dans une structure standard. Les services intelligents tirent parti des  du modèle de données d’expérience (XDM) pour y parvenir. En particulier, tous les jeux de données utilisés dans Intelligent Services doivent être conformes au  XDM **Consumer ExperienceEvent (CEE)** .
+Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. En particulier, tous les jeux de données utilisés dans Intelligent Services doivent être conformes au schéma XDM **Consumer ExperienceEvent (CEE)** .
 
-Ce fournit des conseils généraux sur le mappage des données de votre marketing de plusieurs à ce. Il présente des informations sur les champs importants duafin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
+Ce document fournit des conseils généraux sur le mappage des données de vos événements marketing de plusieurs canaux à ce schéma, en décrivant les informations sur les champs importants du schéma afin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
 
-## Comprendre le CEE 
+## Comprendre le schéma CEE
 
-Le Consumer ExperienceEvent décrit le comportement d’un individu en ce qui concerne les  de marketing numérique (web ou mobile) ainsi que les  de commerce en ligne ou hors ligne. L’utilisation de ce est requise pour les services intelligents en raison de ses champs (colonnes) sémantiquement bien définis, évitant ainsi les noms inconnus qui, autrement, rendraient les données moins claires.
+Le schéma Consumer ExperienceEvent décrit le comportement d’une personne en ce qui concerne les événements de marketing numérique (Web ou mobile) ainsi que l’activité de commerce en ligne ou hors ligne. L&#39;utilisation de ce schéma est requise pour les services intelligents en raison de ses champs (colonnes) sémantiquement bien définis, évitant ainsi les noms inconnus qui, autrement, rendraient les données moins claires.
 
-Les services intelligents utilisent plusieurs champs clés de ce pour générer des informations à partir de vos données de marketing, qui se trouvent toutes au niveau racine et sont développées pour afficher leurs sous-champs requis.
+Les services intelligents utilisent plusieurs champs clés de ce schéma pour générer des informations à partir des données de vos événements marketing, qui se trouvent tous au niveau racine et sont développés pour afficher leurs sous-champs requis.
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Comme tous les  XDM, le mixin CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au mixin CEE et différentes variantes peuvent être incluses dans plusieurs , si nécessaire.
+Comme tous les schémas XDM, le mixin CEE est extensible. En d’autres termes, des champs supplémentaires peuvent être ajoutés au mixin CEE et différentes variantes peuvent être incluses dans plusieurs schémas si nécessaire.
 
-Un exemple complet du mixin se trouve dans le référentiel [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)public et doit être utilisé comme référence pour les champs clés décrits dans la section ci-dessous.
+Un exemple complet du mixin peut être trouvé dans le référentiel [XDM](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md)public et doit servir de référence pour les champs clés décrits dans la section ci-dessous.
 
 ## Champs clés
 
-Les sections ci-dessous mettent en évidence les champs clés du mixage CEE qui doivent être utilisés pour que les services intelligents génèrent des informations utiles, y compris des descriptions et des liens vers la documentation de référence pour d’autres exemples.
+Les sections ci-dessous mettent en évidence les champs clés du mixin CEE qui doivent être utilisés pour que les services intelligents génèrent des informations utiles, y compris des descriptions et des liens vers la documentation de référence pour d&#39;autres exemples.
 
-### xdm:
+### xdm:canal
 
-Ce champ représente le marketing associé à l’événement ExperienceEvent. Le champ contient des informations sur le type de  du, le type de support et le type d’emplacement. **Ce champ _doit_être fourni pour que l’attribut AI fonctionne avec vos données**.
+Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ contient des informations sur le type de canal, le type de support et le type d’emplacement. **Ce champ _doit_être fourni pour que l’API d’attribution fonctionne avec vos données**.
 
 ![](./images/data-preparation/channel.png)
 
-**Exemple de**
+**Exemple de schéma**
 
 ```json
 {
@@ -48,30 +51,30 @@ Ce champ représente le marketing associé à l’événement ExperienceEvent. L
 }
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, veuillez vous référer aux [de l&#39;expérience la](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) de. Pour obtenir des exemples de mappages, reportez-vous au [tableau ci-dessous](#example-channels).
+Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, veuillez consulter la section schéma [du canal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) d’expérience. Pour obtenir des exemples de mappages, reportez-vous au [tableau ci-dessous](#example-channels).
 
-#### Exemple de mappage de  de {#example-channels}
+#### Exemples de mappages de canaux {#example-channels}
 
-Le tableau ci-dessous présente quelques exemples de marketing associés au  `xdm:channel` :
+Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm:channel` schéma :
 
 | Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
-| Recherche payante | https:/<span>./ns.adobe.com/xdm/-types/search | payé | clicks |
-| Social - Marketing | https:/<span>./ns.adobe.com/xdm/-types/social | gagné | clicks |
-| Afficher  | https:/<span>./ns.adobe.com/xdm/-types/display | payé | clicks |
-| Courriel | https:/<span>./ns.adobe.com/xdm/-types/email | payé | clicks |
-|  de interne | https:/<span>./ns.adobe.com/xdm/-types/direct | détenu | clicks |
-| Afficher la vue publicitaire | https:/<span>./ns.adobe.com/xdm/-types/display | payé | impressions |
-| Redirection du code QR | https:/<span>./ns.adobe.com/xdm/-types/direct | détenu | clicks |
-| Mobile | https:/<span>./ns.adobe.com/xdm/-types/mobile | détenu | clicks |
+| Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
+| Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
+| Afficher  | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
+| Courriel | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
+| Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
+| Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
+| Redirection du code QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
+| Mobile | https:/<span>/ns.adobe.com/xdm/canal-types/mobile | détenu | clicks |
 
 ### xdm:productListItems
 
-Ce champ est un tableau d’éléments représentant les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
+Ce champ est un tableau d&#39;articles qui représentent les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
 
 ![](./images/data-preparation/productListItems.png)
 
-**Exemple de**
+**Exemple de schéma**
 
 ```json
 [
@@ -92,7 +95,7 @@ Ce champ est un tableau d’éléments représentant les produits sélectionnés
 ]
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:productListItems`, veuillez consulter les [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
+Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:productListItems`, veuillez consulter la section du schéma [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
 
 ### xdm:commerce
 
@@ -100,7 +103,7 @@ Ce champ contient des informations propres au commerce sur ExperienceEvent, nota
 
 ![](./images/data-preparation/commerce.png)
 
-**Exemple de**
+**Exemple de schéma**
 
 ```json
 {
@@ -130,15 +133,15 @@ Ce champ contient des informations propres au commerce sur ExperienceEvent, nota
   }
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:commerce`, veuillez consulter les [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
+Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:commerce`, veuillez consulter la section du schéma [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
 
 ### xdm:web
 
-Ce champ représente les détails Web relatifs à l’événement ExperienceEvent, tels que l’interaction, les détails de la page et les  du.
+Ce champ représente les détails Web relatifs à ExperienceEvent, tels que l’interaction, les détails de la page et le parrain.
 
 ![](./images/data-preparation/web.png)
 
-**Exemple de**
+**Exemple de schéma**
 
 ```json
 {
@@ -160,15 +163,15 @@ Ce champ représente les détails Web relatifs à l’événement ExperienceEven
 }
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:productListItems`, reportez-vous aux [de détails Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
+Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:productListItems`, consultez la section du schéma [de détails Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
 
 ### xdm:marketing
 
-Ce champ contient des informations relatives aux  de  marketing qui sont actives avec le point de contact.
+Ce champ contient des informations relatives aux activités marketing actives avec le point de contact.
 
 ![](./images/data-preparation/marketing.png)
 
-**Exemple de**
+**Exemple de schéma**
 
 ```json
 {
@@ -178,45 +181,45 @@ Ce champ contient des informations relatives aux  de  marketing qui sont actives
 }
 ```
 
-Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:productListItems`, veuillez consulter la [spécification sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) marketing.
+Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:productListItems`, consultez la section [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Mappage et importation de données
+## Mappage et assimilation de données
 
-Une fois que vous avez déterminé si vos données de marketing peuvent être mises en correspondance avec le  CEE, vous pouvezle processus d’importation de vos données dans Intelligent Services. Contactez les services de conseil d’Adobe pour vous aider à mapper vos données avec l’ du et à les intégrer au service.
+Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, vous pouvez début le processus d’intégration de vos données dans Intelligent Services. Contactez les services de conseil Adobe pour vous aider à mapper vos données au schéma et à les intégrer au service.
 
-Si vous disposez d’une  Adobe Experience Platform et que vous souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
+Si vous disposez d’un abonnement Adobe Experience Platform et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
 ### Utilisation d’Adobe Experience Platform
 
->[!NOTE] Les étapes ci-dessous nécessitent un  à la plateforme d’expérience. Si vous n’avez pas accès à la plateforme, passez directement à la section [étapes](#next-steps) suivantes.
+>[!NOTE] Les étapes ci-dessous nécessitent un abonnement à la plate-forme d’expérience. Si vous n’avez pas accès à la plate-forme, passez directement à la section [Étapes](#next-steps) suivantes.
 
-Cette section décrit le processus de mappage et d’assimilation des données dans Experience Platform en vue de les utiliser dans Intelligent Services, y compris des liens vers des didacticiels pour obtenir des étapes détaillées.
+Cette section décrit le processus de mappage et d’assimilation des données dans la plate-forme Experience pour une utilisation dans les services intelligents, y compris les liens vers des didacticiels pour obtenir des étapes détaillées.
 
-#### Création d’un  et d’un jeu de données CEE
+#### Créer un schéma et un jeu de données CEE
 
-Lorsque vous êtes prêt à la préparation de vos données pour l’ingestion, la première étape consiste à créer un nouveau XDM  qui utilise le mixin CEE. Les didacticiels suivants décrivent le processus de création d’un nouveau dans l’interface utilisateur ou l’API :
+Lorsque vous êtes prêt à début pour préparer vos données pour l&#39;assimilation, la première étape consiste à créer un nouveau schéma XDM qui utilise le mixin CEE. Les didacticiels suivants décrivent le processus de création d’un schéma dans l’interface utilisateur ou l’API :
 
-* [Création d’un  dans l’interface utilisateur](../xdm/tutorials/create-schema-ui.md)
-* [Création d’un  dans l’API](../xdm/tutorials/create-schema-api.md)
+* [Création d’un schéma dans l’interface utilisateur](../xdm/tutorials/create-schema-ui.md)
+* [Création d’un schéma dans l’API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] Les didacticiels ci-dessus suivent un processus générique de création d’un  de. Lors du choix d’une classe pour le  de, vous devez utiliser la classe **XDM ExperienceEvent**. Une fois cette classe choisie, vous pouvez ajouter le mixin CEE au .
+>[!IMPORTANT] Les didacticiels ci-dessus suivent un processus générique de création d’un schéma. Lorsque vous choisissez une classe pour le schéma, vous devez utiliser la classe **** XDM ExperienceEvent. Une fois cette classe choisie, vous pouvez ajouter le mixin CEE au schéma.
 
-Après avoir ajouté le mixin CEE au  du, vous pouvez ajouter d’autres mixins selon les besoins pour les champs supplémentaires de vos données.
+Après avoir ajouté le mixin CEE au schéma, vous pouvez ajouter d’autres mixins en fonction des champs supplémentaires de vos données.
 
-Une fois que vous avez créé et enregistré le  de, vous pouvez créer un jeu de données basé sur ce  de. Les didacticiels suivants décrivent le processus de création d’un jeu de données dans l’interface utilisateur ou l’API :
+Une fois le schéma créé et enregistré, vous pouvez créer un jeu de données basé sur ce schéma. Les didacticiels suivants décrivent le processus de création d’un nouveau jeu de données dans l’interface utilisateur ou l’API :
 
-* [Création d’un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (suivez le flux de travail pour utiliser un  existant)
+* [Créer un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (Suivez le processus pour utiliser un schéma existant)
 * [Création d’un jeu de données dans l’API](../catalog/datasets/create.md)
 
 #### Mapper et assimiler des données
 
-Après avoir créé un  CEE et un jeu de données, vous pouvez  le mappage de vos tableaux de données avec lejeu de données et assimiler ces données dans la plateforme. Consultez le didacticiel sur le [mappage d’un fichier CSV à un](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu’un jeu de données a été renseigné, il est possible d’utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
+Après avoir créé un schéma CEE et un jeu de données, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans la plate-forme. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
 
 ## Étapes suivantes {#next-steps}
 
-Ce  fournit des conseils généraux sur la préparation de vos données pour une utilisation dans Intelligent Services. Si vous avez besoin de conseils supplémentaires en fonction de votre cas d’utilisation, contactez l’assistance clientèle d’Adobe.
+Ce document fournit des conseils généraux sur la préparation de vos données en vue de leur utilisation dans les services intelligents. Si vous avez besoin de conseils supplémentaires en fonction de votre cas d’utilisation, contactez le service de conseil d’Adobe.
 
-Une fois que vous avez renseigné un jeu de données avec vos données d’expérience client, vous pouvez utiliser les services intelligents pour générer des informations. Pour commencer, reportez-vous au  suivant :
+Une fois que vous avez renseigné un jeu de données avec vos données d’expérience client, vous pouvez utiliser les services intelligents pour générer des informations. Pour commencer, reportez-vous aux documents suivants :
 
 * [Présentation de l’API d’attribution](./attribution-ai/overview.md)
 * [Présentation de Customer AI](./customer-ai/overview.md)
