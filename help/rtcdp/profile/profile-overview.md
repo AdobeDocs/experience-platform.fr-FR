@@ -5,6 +5,9 @@ description: Cette section présente la manière dont la plateforme de données 
 seo-description: Plateforme de données client en temps réel, profil, données, expériences, canaux
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 92%
 
 ---
 
