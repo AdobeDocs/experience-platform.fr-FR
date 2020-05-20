@@ -1,32 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Recherche de plusieurs objets
+title: Rechercher plusieurs objets
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
 
-# Recherche de plusieurs objets
+# Rechercher plusieurs objets
 
-Si vous souhaitez plusieurs objets spécifiques au lieu d’effectuer une requête par objet, le catalogue fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant un d’ID séparé par des virgules.
+Si vous souhaitez vue plusieurs objets spécifiques, plutôt que d’effectuer une requête par objet, Catalog fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une seule requête GET pour renvoyer plusieurs objets spécifiques en incluant une liste d’ID séparée par des virgules.
 
->[!NOTE] Même lors de la demande d’objets de catalogue spécifiques, il est toujours recommandé de `properties` le paramètre de renvoyer uniquement les propriétés dont vous avez besoin.
+>[!NOTE] Même lorsque vous demandez des objets de catalogue spécifiques, il est recommandé de n’envoyer que les propriétés dont vous avez besoin que `properties` le paramètre de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | Type d’objet Catalog à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> || `{ID}` | Identifiant de l&#39;un des objets spécifiques que vous souhaitez récupérer. |
+| `{OBJECT_TYPE}` | Type d&#39;objet Catalog à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{ID}` | Identifiant de l&#39;un des objets spécifiques que vous souhaitez récupérer. |
 
 **Requête**
 
-La requête suivante inclut un d’ID de jeu de données séparé par des virgules, ainsi qu’un de propriétés séparées par des virgules à renvoyer pour chaque jeu de données.
+La requête suivante inclut une liste d’ID de jeux de données séparés par des virgules ainsi qu’une liste de propriétés séparées par des virgules à renvoyer pour chaque jeu de données.
 
 ```shell
 curl -X GET \
@@ -39,9 +43,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un  des jeux de données spécifiés, contenant uniquement les propriétés demandées (`name`, `description`et `files`) pour chacun d’eux.
+Une réponse réussie renvoie une liste des jeux de données spécifiés, contenant uniquement les propriétés demandées (`name`, `description`et `files`) pour chacun d’eux.
 
->[!NOTE] Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par le `properties` , la réponse renvoie uniquement les propriétés demandées qu’il inclut, comme illustré dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
+>[!NOTE] Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
 
 ```json
 {
