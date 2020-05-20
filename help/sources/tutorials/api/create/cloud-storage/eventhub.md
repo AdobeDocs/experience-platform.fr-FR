@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur Azure Événement Hubs à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: fdffdd34d1ccb61d6c82fecc249ddeb501d79d0e
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '590'
 ht-degree: 2%
 
 ---
@@ -38,9 +38,10 @@ Pour que le service de flux puisse se connecter à votre compte Azure Événemen
 | ---------- | ----------- |
 | `sasKeyName` | Nom de la règle d&#39;autorisation, également connue sous le nom de clé SAS. |
 | `sasKey` | Signature d’accès partagé générée. |
-| `namespace` | espace de nommage de EventHub auquel vous accédez. |
+| `namespace` | L&#39;espace de nommage des Événements Hubs auxquels vous accédez. |
+| `connectionSpec.id` | ID de spécification de connexion Azure Événement Hubs : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
-Pour plus d&#39;informations sur ces valeurs, consultez [ce document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)EventHub.
+Pour plus d&#39;informations sur ces valeurs, consultez [ce document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Événement Hubs.
 
 ### Lecture des exemples d’appels d’API
 
@@ -86,10 +87,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for EventHub",
+            "specName": "Basic Authentication for Event Hubs",
             "params": {
                 "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey"
+                "sasKey": "sasKey",
+                "namespace": "namespace"
             }
         },
         "connectionSpec": {
@@ -103,6 +105,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | Nom de la règle d&#39;autorisation, également connue sous le nom de clé SAS. |
 | `auth.params.sasKey` | Signature d’accès partagé générée. |
+| `namespace` | L&#39;espace de nommage des Événements Hubs auxquels vous accédez. |
 | `connectionSpec.id` | ID de spécification de connexion Azure Événement Hubs : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Réponse**
