@@ -5,17 +5,20 @@ title: Fonctions de chaîne
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '760'
+ht-degree: 8%
 
 ---
 
 
 # Fonctions de chaîne
 
- langage  de (PQL)  les fonctions del&#39;algorithme pour simplifier l&#39;interaction avec les chaînes. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans la présentation [du de la langue  du](./overview.md).
+Les offres PQL (Profil Requête Language) simplifient l’interaction avec les chaînes. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
 
-## Aimer
+## J’aime
 
-La `like` fonction permet de déterminer si une chaîne correspond à un modèle spécifié.
+La `like` fonction est utilisée pour déterminer si une chaîne correspond à un modèle spécifié.
 
 **Format**
 
@@ -25,12 +28,12 @@ La `like` fonction permet de déterminer si une chaîne correspond à un modèle
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
-| `{STRING_2}` | Le  à faire correspondre à la première chaîne. Deux caractères spéciaux sont pris en charge pour créer un  de  : `%` et `_`. <ul><li>`%` est utilisée pour représenter zéro ou plusieurs caractères.</li><li>`_` est utilisée pour représenter exactement un caractère.</li></ul> |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
+| `{STRING_2}` | expression à comparer à la première chaîne. Deux caractères spéciaux sont pris en charge pour créer une expression : `%` et `_`. <ul><li>`%` est utilisée pour représenter zéro ou plusieurs caractères.</li><li>`_` est utilisé pour représenter exactement un caractère.</li></ul> |
 
 **Exemple**
 
-Le PQL suivant récupère toutes les villes contenant le modèle &quot;es&quot;.
+La requête PQL suivante récupère toutes les villes contenant le modèle &quot;es&quot;.
 
 ```sql
 city like "%es%"
@@ -38,7 +41,7 @@ city like "%es%"
 
 ## Commence par
 
-La `startsWith` fonction permet de déterminer si un de chaînes  avec une sous-chaîne spécifiée.
+La `startsWith` fonction est utilisée pour déterminer si une chaîne est début avec une sous-chaîne spécifiée.
 
 **Format**
 
@@ -48,13 +51,13 @@ La `startsWith` fonction permet de déterminer si un de chaînes  avec une sous-
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si le nom de la personne  par &quot;Joe&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si le nom de la personne est début avec &quot;Joe&quot;.
 
 ```sql
 person.name.startsWith("Joe")
@@ -62,7 +65,7 @@ person.name.startsWith("Joe")
 
 ## Ne commence pas par
 
-La `doesNotStartWith` fonction permet de déterminer si une chaîne ne  pas avec une sous-chaîne spécifiée.
+La `doesNotStartWith` fonction est utilisée pour déterminer si une chaîne ne se début pas avec une sous-chaîne spécifiée.
 
 **Format**
 
@@ -72,13 +75,13 @@ La `doesNotStartWith` fonction permet de déterminer si une chaîne ne  pas avec
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si le nom de la personne ne se pas  par &quot;Joe&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si le nom de la personne ne correspond pas à &quot;Joe&quot;.
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -86,7 +89,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Se termine par
 
-La `endsWith` fonction permet de déterminer si une chaîne se termine par une sous-chaîne spécifiée.
+La `endsWith` fonction est utilisée pour déterminer si une chaîne se termine par une sous-chaîne spécifiée.
 
 **Format**
 
@@ -96,13 +99,13 @@ La `endsWith` fonction permet de déterminer si une chaîne se termine par une s
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si l’adresse électronique de la personne se termine par &quot;.com&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si l’adresse électronique de la personne se termine par &quot;.com&quot;.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -120,13 +123,13 @@ La `doesNotEndWith` fonction permet de déterminer si une chaîne ne se termine 
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si l’adresse électronique de la personne ne se termine pas par &quot;.com&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si l’adresse électronique de la personne ne se termine pas par &quot;.com&quot;.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
@@ -134,7 +137,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains (Contient)
 
-La `contains` fonction permet de déterminer si une chaîne contient une sous-chaîne spécifiée.
+La `contains` fonction est utilisée pour déterminer si une chaîne contient une sous-chaîne spécifiée.
 
 **Format**
 
@@ -144,13 +147,13 @@ La `contains` fonction permet de déterminer si une chaîne contient une sous-ch
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si l’adresse électronique de la personne contient la chaîne &quot;2010@gm&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si l’adresse électronique de la personne contient la chaîne &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -168,13 +171,13 @@ La `doesNotContain` fonction permet de déterminer si une chaîne ne contient pa
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à rechercher dans la première chaîne. |
 | `{BOOLEAN}` | Paramètre facultatif permettant de déterminer si la vérification est sensible à la casse. Par défaut, cette valeur est définie sur true. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si l’adresse électronique de la personne ne contient pas la chaîne &quot;2010@gm&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si l’adresse électronique de la personne ne contient pas la chaîne &quot;2010@gm&quot;.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -182,7 +185,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Est égal
 
-La `equals` fonction permet de déterminer si une chaîne est égale à la chaîne spécifiée.
+La `equals` fonction est utilisée pour déterminer si une chaîne est égale à la chaîne spécifiée.
 
 **Format**
 
@@ -192,12 +195,12 @@ La `equals` fonction permet de déterminer si une chaîne est égale à la chaî
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à comparer à la première chaîne. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si le nom de la personne est &quot;John&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si le nom de la personne est &quot;John&quot;.
 
 ```sql
 person.name.equals("John")
@@ -215,12 +218,12 @@ La `notEqualTo` fonction permet de déterminer si une chaîne n’est pas égale
 
 | Argument | Description |
 | --------- | ----------- |
-| `{STRING_1}` | Chaîne pour laquelle effectuer la vérification. |
+| `{STRING_1}` | Chaîne sur laquelle effectuer la vérification. |
 | `{STRING_2}` | Chaîne à comparer à la première chaîne. |
 
 **Exemple**
 
-Le PQL suivant détermine, avec respect de la casse, si le nom de la personne n’est pas &quot;John&quot;.
+La requête PQL suivante détermine, avec respect de la casse, si le nom de la personne n’est pas &quot;John&quot;.
 
 ```sql
 person.name.notEqualTo("John")
@@ -228,7 +231,7 @@ person.name.notEqualTo("John")
 
 ## Correspond à
 
-La `matches` fonction permet de déterminer si une chaîne correspond à un  de normal spécifique. Veuillez vous reporter à [ce](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d&#39;informations sur les modèles de correspondance dans les  réguliers.
+La `matches` fonction permet de déterminer si une chaîne correspond à une expression régulière spécifique. Veuillez consulter [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d&#39;informations sur les modèles correspondants dans les expressions régulières.
 
 **Format**
 
@@ -238,15 +241,15 @@ La `matches` fonction permet de déterminer si une chaîne correspond à un  de 
 
 **Exemple**
 
-Le PQL suivant détermine, sans tenir compte de la casse, si le nom de la personne  par &quot;John&quot;.
+La requête PQL suivante détermine, sans tenir compte de la casse, si le nom de la personne début avec &quot;John&quot;.
 
 ```sql
 person.name.matches("(?i)^John")
 ```
 
-## Groupe de  réguliers
+## Groupe d&#39;expressions régulières
 
-La `regexGroup` fonction est utilisée pour extraire des informations spécifiques, en fonction de la  de régulière fournie.
+La `regexGroup` fonction est utilisée pour extraire des informations spécifiques, sur la base de l&#39;expression régulière fournie.
 
 **Format**
 
@@ -256,7 +259,7 @@ La `regexGroup` fonction est utilisée pour extraire des informations spécifiqu
 
 **Exemple**
 
-Le PQL suivant est utilisé pour extraire le nom de domaine d’une adresse électronique.
+La requête PQL suivante est utilisée pour extraire le nom de domaine d’une adresse électronique.
 
 ```sql
 emailAddress.regexGroup("@(\w+)", 1)
@@ -264,5 +267,5 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les fonctions de chaîne, vous pouvez les utiliser dans votre  PQL. Pour plus d&#39;informations sur les autres fonctions de PQL, veuillez lire la présentation [de la langue du](./overview.md).
+Maintenant que vous avez pris connaissance des fonctions de chaîne, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
 
