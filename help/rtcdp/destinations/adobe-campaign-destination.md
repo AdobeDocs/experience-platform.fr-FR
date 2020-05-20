@@ -5,6 +5,9 @@ description: Adobe Campaign est un ensemble de solutions qui permet de personnal
 seo-description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 92%
 
 ---
 
@@ -13,35 +16,35 @@ source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
 
 ## Présentation
 
-Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Pour plus d’informations, consultez [À propos d’Adobe Campaign Classic](https://docs.adobe.com/content/help/en/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
+Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Pour plus d’informations, consultez [À propos d’Adobe Campaign Classic](https://docs.adobe.com/content/help/fr-FR/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
 
 Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [connecter la destination](#connect-destination) dans la plateforme de données client en temps réel Adobe, puis [configurer une importation de données](#import-data-into-campaign) à partir de l’emplacement de stockage dans Adobe Campaign.
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connections > Destinations]**, sélectionnez  Adobe Campaign, puis **[!UICONTROL Connect destination]**.
+1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Adobe Campaign, puis **[!UICONTROL Se connecter à la destination]**.
 
    ![Se connecter à Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
-1. In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. Pour  Adobe Campaign, vous pouvez choisir entre **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** et **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+1. In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. Pour Adobe Campaign, vous pouvez choisir parmi **[!UICONTROL Amazon S3]**, **[!UICONTROL le protocole SFTP avec mot de passe]** et **[!UICONTROL le protocole SFTP avec clé SSH]**. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
 
    ![Configuration de l’assistant Campaign](/help/rtcdp/destinations/assets/adobe-campaign-wizard.png)
 
-   Pour les connexions **[!UICONTROL Amazon S3]**, vous devez fournir un identifiant de clé d’accès et une clé d’accès secrète.
-For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-Pour **[!UICONTROL SFTP with SSH Key]** les connexions, vous devez fournir Domaine, Port, Nom d’utilisateur et Clé SSH.
+   For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key.
+Pour les connexions **[!UICONTROL SFTP avec mot de passe]**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe.
+Pour les connexions **[!UICONTROL SFTP avec clé SSH]**, vous devez fournir le domaine, le port, le nom d’utilisateur et la clé SSH.
 
    ![Renseignement des informations sur Campaign](/help/rtcdp/destinations/assets/adobe-campaign-step2.png)
 
-1. In **[!UICONTROL Basic Information]**, fill in the relevant information for your destination, as shown below:
-   * **[!UICONTROL Name]**: Choisissez un nom approprié pour votre destination.
+1. Dans **[!UICONTROL Informations de base]**, renseignez les informations pertinentes pour votre destination, comme illustré ci-dessous :
+   * **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
    * **[!UICONTROL Description]** : saisissez une description pour votre destination.
-   * **[!UICONTROL Bucket Name]**: *Pour les connexions* S3. Indiquez l’emplacement du compartiment S3 où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
-   * **[!UICONTROL Folder Path]**: Indiquez le chemin d’accès dans votre  de  où le CDP en temps réel déposera vos données d’exportation au format CSV ou tabulé.
-   * **[!UICONTROL File Format]**: **CSV** ou **TAB_DELIMITED**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+   * **[!UICONTROL Nom du compartiment]** : *pour les connexions S3*. Indiquez l’emplacement du compartiment S3 où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
+   * **[!UICONTROL Chemin d’accès au dossier]** : indiquez le chemin d’accès dans l’emplacement de stockage où la plateforme CDP en temps réel dépose vos données d’exportation sous forme de fichiers CSV ou séparés par des tabulations.
+   * **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
    ![Informations de base sur Campaign](/help/rtcdp/destinations/assets/adobe-campaign-basic-information.png)
 
-1. Cliquez **[!UICONTROL Create]** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
+1. Cliquez sur **[!UICONTROL Créer]** après avoir rempli les champs ci-dessus. Votre destination est maintenant connectée et vous pouvez [activer des segments](/help/rtcdp/destinations/activate-destinations.md) vers la destination.
 
 ## Attributs de destination {#destination-attributes}
 
