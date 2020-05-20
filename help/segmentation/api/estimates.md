@@ -5,6 +5,9 @@ title: Estimations
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 3%
 
 ---
 
@@ -13,31 +16,31 @@ source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
 
 intro
 
-- Récupérer les résultats d’une tâche d’estimation spécifique
+- Récupérer les résultats d&#39;une tâche d&#39;estimation spécifique
 
 ## Prise en main
 
-Les points de fin d’API utilisés dans ce guide font partie de l’API de segmentation. Avant de poursuivre, consultez le guide [du développeur de](./getting-started.md)segmentation.
+Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
 
-En particulier, la section [de](./getting-started.md#getting-started) prise en main du guide du développeur de segmentation comprend des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le  du et des informations importantes concernant les en-têtes requis nécessaires pour effectuer des appels à une API de plateforme d’expérience.
+En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
 
-## Récupérer les résultats d’une tâche d’estimation spécifique
+## Récupérer les résultats d&#39;une tâche d&#39;estimation spécifique
 
-Vous pouvez récupérer les détails d’une tâche d’estimation spécifique en envoyant une requête GET au point de `/estimate` fin et en indiquant la `id` valeur de la tâche d’estimation dans le chemin de requête.
+Vous pouvez récupérer les détails d’une tâche d’estimation spécifique en envoyant une requête GET au point de `/estimate` terminaison et en indiquant la `id` valeur de la tâche d’estimation dans le chemin de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /estimate/{PREVIEW_ID}
 ```
 
-- `{PREVIEW_ID}`: La `id` valeur de la tâche d’estimation que vous souhaitez récupérer.
+- `{PREVIEW_ID}`: La `id` valeur de la tâche d&#39;estimation que vous souhaitez récupérer.
 
 **Requête**
 
-La requête suivante récupère les résultats d’une tâche d’estimation spécifique.
+La requête suivante récupère les résultats d&#39;une tâche d&#39;estimation spécifique.
 
-//Besoin d&#39;obtenir un ID de 
+//besoin d&#39;obtenir un ID de prévisualisation
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/{PREVIEW_ID} \
@@ -73,4 +76,4 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche 
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment récupérer les résultats des tâches d&#39;estimation, vous pouvez mieux
+Maintenant que vous savez comment récupérer les résultats d&#39;estimation des tâches, vous pouvez mieux
