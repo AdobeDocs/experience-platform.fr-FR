@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
 workflow-type: tm+mt
 source-wordcount: '416'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -30,7 +30,7 @@ Si vous souhaitez utiliser cet identifiant unique, utilisez la `getIdentity` com
 
 >[!NOTE]
 >
->Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l’ID Experience Cloud. Il n’est pas utilisé par une mise en oeuvre standard.
+>Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l’ID Experience Cloud. Elle n’est pas utilisée par une mise en œuvre standard.
 
 ```javascript
 alloy("getIdentity")
