@@ -5,6 +5,9 @@ title: Service de Requête sur ordinateur portable Jupyter
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '817'
+ht-degree: 1%
 
 ---
 
@@ -31,23 +34,23 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
 ## Accès à JupyterLab et au service de Requête {#access-jupyterlab-and-query-service}
 
-1. Dans la plate-forme [](https://platform.adobe.com)d’expérience, accédez à **[!UICONTROL Notebooks]** partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
+1. Dans [Experience Platform](https://platform.adobe.com), accédez à **[!UICONTROL Notebooks]** à partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL File]** puis sélectionnez **[!UICONTROL New Launcher]**.
+   > [!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL Fichier]** , puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
 
-2. Dans l&#39;onglet Lanceur, cliquez sur l&#39; **[!UICONTROL Blank]** icône d&#39;un environnement Python 3 pour ouvrir un bloc-notes vide.
+2. Dans l&#39;onglet Lanceur, cliquez sur l&#39;icône **[!UICONTROL vierge]** dans un environnement Python 3 pour ouvrir un bloc-notes vide.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
    > [!NOTE] Python 3 est actuellement le seul environnement pris en charge pour Requête Service dans les portables.
 
-3. Dans le rail de sélection de gauche, cliquez sur l’ **[!UICONTROL Data]** icône et doublon sur le **[!UICONTROL Datasets]** répertoire pour liste de tous les jeux de données.
+3. Dans le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]** et doublon cliquez sur le répertoire **[!UICONTROL Data]** Set pour liste à tous les jeux de données.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un jeu de données Adobe Analytics à explorer et cliquez avec le bouton droit sur la liste, cliquez **[!UICONTROL Query Data in Notebook]** pour générer des requêtes SQL dans le bloc-notes vide.
+4. Recherchez un jeu de données Adobe Analytics pour explorer et cliquez avec le bouton droit sur la liste, cliquez sur Données de **[!UICONTROL Requête dans le bloc-notes]** pour générer des requêtes SQL dans le bloc-notes vide.
 
 5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de bloc-notes et le service de Requête.
 
@@ -86,13 +89,13 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
 ## Requête de vos données {#query-your-data}
 
-Entrez les requêtes SQL suivantes dans des cellules de bloc-notes individuelles. Exécutez une requête en cliquant sur sa cellule, puis en cliquant sur le **[!UICONTROL play]** bouton. Les résultats de la requête ou les journaux d’erreurs sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de bloc-notes individuelles. Exécutez une requête en cliquant sur sa cellule, puis en cliquant sur le bouton **[!UICONTROL Lecture]** . Les résultats de la requête ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et Requête Service peut se rompre. Dans ce cas, redémarrez JupyterLab en cliquant sur le **[!UICONTROL Power]** bouton situé dans le coin supérieur droit.
+Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et Requête Service peut se rompre. Dans ce cas, redémarrez JupyterLab en cliquant sur le bouton **[!UICONTROL Power]** situé dans le coin supérieur droit.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Le noyau du bloc-notes sera réinitialisé mais les cellules resteront, réexécutez **[!UICONTROL all]** les cellules pour continuer là où vous l&#39;aviez laissé.
+Le noyau du bloc-notes sera réinitialisé mais les cellules resteront, réexécutez **[!UICONTROL toutes les]** cellules pour continuer là où vous l&#39;aviez laissé.
 
 ### Nombre de visiteurs horaires {#hourly-visitor-count}
 
