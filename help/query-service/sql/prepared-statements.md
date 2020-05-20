@@ -5,25 +5,28 @@ title: Déclarations préparées
 topic: prepared statements
 translation-type: tm+mt
 source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+workflow-type: tm+mt
+source-wordcount: '342'
+ht-degree: 8%
 
 ---
 
 
 # Déclarations préparées
 
-Dans SQL, les instructions préparées sont utilisées pour modéliser des  ou des mises à jour similaires. Le service de Adobe Experience Platform prend en charge les instructions préparées à l’aide d’un  de paramétré. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de réanalyser un  encore et encore.
+Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Requête Service prend en charge les instructions préparées à l’aide d’une requête paramétrée. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de réanalyser une requête encore et encore.
 
 ## Utilisation de déclarations préparées
 
 Lorsque vous utilisez des instructions préparées, les syntaxes suivantes sont prises en charge :
 
-- [PRÉPARER](#prepare)
+- [PRÉPARATION](#prepare)
 - [EXÉCUTER](#execute)
-- [DÉALLOCALISER](#deallocate)
+- [DÉALLOUER](#deallocate)
 
 ### Préparer une déclaration préparée {#prepare}
 
-Ce SQL enregistre le SELECT écrit  avec le nom donné comme `PLAN_NAME`. Vous pouvez utiliser des variables, telles que `$1` des valeurs réelles. Cette déclaration préparée sera enregistrée pendant la session en cours. Veuillez noter que les noms des plans **ne sont pas** sensibles à la casse.
+Cette requête SQL enregistre la requête SELECT écrite avec le nom donné comme `PLAN_NAME`. Vous pouvez utiliser des variables, par exemple `$1` au lieu de valeurs réelles. Cette déclaration préparée sera enregistrée pendant la session en cours. Veuillez noter que les noms des plans **ne sont pas** sensibles à la casse.
 
 #### Format SQL
 
@@ -31,7 +34,7 @@ Ce SQL enregistre le SELECT écrit  avec le nom donné comme `PLAN_NAME`. Vous p
 PREPARE {PLAN_NAME} AS {SELECT_QUERY}
 ```
 
-#### Exemple de code SQL
+#### Exemple de SQL
 
 ```sql
 PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
@@ -39,7 +42,7 @@ PREPARE test AS SELECT * FROM table WHERE country = $1 AND city = $2;
 
 ### Exécuter une instruction préparée {#execute}
 
-Ce SQL utilise l&#39;instruction préparée qui a été créée précédemment.
+Cette requête SQL utilise l&#39;instruction préparée qui a été créée précédemment.
 
 #### Format SQL
 
@@ -47,15 +50,15 @@ Ce SQL utilise l&#39;instruction préparée qui a été créée précédemment.
 EXECUTE {PLAN_NAME}('{PARAMETERS}')
 ```
 
-#### Exemple de code SQL
+#### Exemple de SQL
 
 ```sql
 EXECUTE test('canada', 'vancouver');
 ```
 
-### Déallouer une instruction préparée {#deallocate}
+### Dédistribuer une instruction préparée {#deallocate}
 
-Ce SQL est utilisé pour supprimer l&#39;instruction préparée nommée.
+Cette requête SQL est utilisée pour supprimer l&#39;instruction préparée nommée.
 
 #### Format SQL
 
@@ -63,21 +66,21 @@ Ce SQL est utilisé pour supprimer l&#39;instruction préparée nommée.
 DEALLOCATE {PLAN_NAME}
 ```
 
-#### Exemple de code SQL
+#### Exemple de SQL
 
 ```sql
 DEALLOCATE test;
 ```
 
-## Exemple de flux à l’aide d’instructions préparées
+## Exemple de flux utilisant des instructions préparées
 
-Au départ, vous pouvez disposer d’un  SQL, tel que celui ci-dessous :
+Au départ, vous pouvez avoir une requête SQL, telle que celle ci-dessous :
 
 ```sql
 SELECT * FROM table WHERE id >= 10000 AND id <= 10005;
 ```
 
-Le SQL ci-dessus renvoie la réponse suivante :
+La requête SQL ci-dessus renvoie la réponse suivante :
 
 | id | firstname | lastname | date de naissance | email | city | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
@@ -88,19 +91,19 @@ Le SQL ci-dessus renvoie la réponse suivante :
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chili |
 
-Ce SQL peut être paramétré à l&#39;aide de l&#39;instruction préparée suivante :
+Cette requête SQL peut être paramétrée à l&#39;aide de l&#39;instruction préparée suivante :
 
 ```sql
 PREPARE getIdRange AS SELECT * FROM table WHERE id >= $1 AND id <= $2; 
 ```
 
-Désormais, l’instruction préparée peut être exécutée à l’aide de l’appel suivant :
+Désormais, l&#39;instruction préparée peut être exécutée à l&#39;aide de l&#39;appel suivant :
 
 ```sql
 EXECUTE getIdRange(10000, 10005);
 ```
 
-Lors de l’appel, les résultats sont exactement les mêmes que précédemment :
+Lors de l’appel, les résultats sont identiques à ceux d’avant :
 
 | id | firstname | lastname | date de naissance | email | city | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
@@ -111,7 +114,7 @@ Lors de l’appel, les résultats sont exactement les mêmes que précédemment 
 | 10004 | aasir | waithaka | 1976-12-17 | example5@example.com | Nairobi | Kenya |
 | 10005 | fernando | rios | 2002-07-30 | example6@example.com | Santiago | Chili |
 
-Une fois l’instruction préparée terminée, vous pouvez la délocaliser à l’aide de l’appel suivant :
+Une fois que vous avez fini d’utiliser l’instruction préparée, vous pouvez la délocaliser en utilisant l’appel suivant :
 
 ```sql
 DEALLOCATE getIdRange;
