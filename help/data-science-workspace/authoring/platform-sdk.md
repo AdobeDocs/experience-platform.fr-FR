@@ -1,25 +1,28 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guide SDK de plateforme
+title: Guide SDK de la plate-forme
 topic: SDK authoring
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 5%
 
 ---
 
 
-# Guide SDK de plateforme
+# Guide SDK de la plate-forme
 
-Ce didacticiel vous fournit des informations sur la conversion `data_access_sdk_python` au nouveau Python `platform_sdk` en Python et en R. Ce didacticiel fournit des informations sur les opérations suivantes :
+Ce tutoriel vous fournit des informations sur la conversion `data_access_sdk_python` au nouveau Python `platform_sdk` en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
-- [Générer une authentification](#build-authentication)
+- [Créer l&#39;authentification](#build-authentication)
 - [Lecture de base des données](#basic-reading-of-data)
 - [Écriture de base des données](#basic-writing-of-data)
 
-## Générer une authentification {#build-authentication}
+## Créer l&#39;authentification {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers Adobe Experience Platform. Elle comprend une clé d’API, un ID d’organisation IMS, un jeton utilisateur et un jeton de service.
+L’authentification est requise pour effectuer des appels à Adobe Experience Platform. Elle comprend la clé d’API, l’ID d’organisation IMS, un jeton d’utilisateur et un jeton de service.
 
 ### Python
 
@@ -29,7 +32,7 @@ Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour cr�
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou que vous devez modifier l’organisation IMS, veuillez utiliser l’exemple de code suivant :
+Si vous n&#39;utilisez pas Jupyter Notebook ou que vous devez modifier l&#39;organisation IMS, veuillez utiliser l&#39;exemple de code suivant :
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -52,7 +55,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n’utilisez pas Jupyter Notebook ou que vous devez modifier l’organisation IMS, veuillez utiliser l’exemple de code suivant :
+Si vous n&#39;utilisez pas Jupyter Notebook ou que vous devez modifier l&#39;organisation IMS, veuillez utiliser l&#39;exemple de code suivant :
 
 ```r
 library(reticulate)
@@ -66,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lecture de base des données {#basic-reading-of-data}
 
-Avec le nouveau SDK de plate-forme, la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
+Avec le nouveau SDK de plate-forme, la taille de lecture maximale est de 32 Go, avec une durée de lecture maximale de 10 minutes.
 
 Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
@@ -90,7 +93,7 @@ df.head()
 
 ### r
 
-Pour lire les données dans R, utilisez l’exemple de code ci-dessous :
+Pour lire les données dans R, utilisez l&#39;exemple de code ci-dessous :
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -101,7 +104,7 @@ df
 
 ## Filtrage par décalage et limite {#filter-by-offset-and-limit}
 
-Le filtrage par ID de lot n’étant plus pris en charge, vous devez utiliser `offset` et `limit`pour étendre la lecture des données.
+Comme le filtrage par ID de lot n’est plus pris en charge, pour étendre la lecture des données, vous devez utiliser `offset` et `limit`.
 
 ### Python
 
@@ -117,9 +120,9 @@ df <- dataset_reader$limit(100L)$offset(1L)$read()
 df
 ```
 
-## Filtrer par date {#filter-by-date}
+## Filtrage par date {#filter-by-date}
 
-La granularité du filtrage des dates est désormais définie par l’horodatage, plutôt que par jour.
+La granularité du filtrage par date est désormais définie par l’horodatage, plutôt que par jour.
 
 ### Python
 
@@ -171,9 +174,9 @@ df <- dataset_reader$select(c('column-a','column-b'))$read()
 
 ## Obtenir les résultats triés {#get-sorted-results}
 
-Les résultats reçus peuvent être triés selon des colonnes spécifiées du jeu de données  du et dans leur ordre (asc/desc) respectivement.
+Les résultats reçus peuvent être triés selon des colonnes spécifiées du jeu de données de la cible et dans leur ordre (asc/desc) respectivement.
 
-Dans l’exemple suivant, le dataframe est trié par &quot;column-a&quot; en premier, dans l’ordre croissant. Les lignes ayant les mêmes valeurs pour &quot;column-a&quot; sont ensuite triées par &quot;column-b&quot; dans l’ordre décroissant.
+Dans l&#39;exemple suivant, le cadre de données est trié par &quot;colonne-a&quot; en premier dans l&#39;ordre croissant. Les lignes dont les valeurs sont identiques pour &quot;colonne-a&quot; sont ensuite triées par &quot;colonne-b&quot; dans l’ordre décroissant.
 
 ### Python
 
@@ -191,7 +194,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE] L’organisation IMS est définie dans le `client_context`.
 
-Pour écrire des données en Python et R, utilisez l’un des exemples suivants :
+Pour écrire des données en Python et R, utilisez l&#39;un des exemples suivants :
 
 ### Python
 
@@ -214,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré le chargeur de `platform_sdk` données, les données sont en cours de préparation et sont ensuite fractionnées en jeux de données `train` et `val` . Pour en savoir plus sur la préparation des données et l&#39;ingénierie des fonctionnalités, consultez la section sur la préparation des [données et l&#39;ingénierie](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) des fonctionnalités du didacticiel sur la création d&#39;une recette à l&#39;aide des cahiers JupyterLab.
+Une fois que vous avez configuré le chargeur de `platform_sdk` données, les données sont en préparation et sont ensuite fractionnées en jeux de données `train` et `val` de données. Pour en savoir plus sur la préparation des données et l&#39;ingénierie des fonctionnalités, veuillez consulter la section sur la préparation des [données et l&#39;ingénierie](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) des fonctionnalités du didacticiel pour créer une recette à l&#39;aide de cahiers JupyterLab.
