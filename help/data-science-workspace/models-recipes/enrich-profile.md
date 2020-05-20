@@ -5,6 +5,9 @@ title: Enrichir le Profil client en temps réel grâce à des informations d’a
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1226'
+ht-degree: 0%
 
 ---
 
@@ -38,37 +41,37 @@ La première étape vers l’enrichissement du Profil client en temps réel avec
 
 La composition d&#39;un schéma commence par l&#39;affectation d&#39;une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries chronologiques). Cette section fournit des instructions de base pour créer un schéma à l’aide du créateur de schémas. Pour un didacticiel plus détaillé, reportez-vous au didacticiel sur la [création d’un schéma à l’aide de l’éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma.
 
-1. Sur Adobe Experience Platform, cliquez sur l’ **[!UICONTROL Schema]** onglet pour accéder au navigateur de schéma. Cliquez sur **[!UICONTROL Create Schema]** Accédez à l’éditeur *de*Schéma, où vous pouvez créer et créer des schémas de manière interactive.
+1. Sur Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Schéma]** pour accéder à l’explorateur de schémas. Cliquez sur **[!UICONTROL Créer un Schéma]** pour accéder à l’éditeur *de*Schéma, où vous pouvez créer et créer des schémas de manière interactive.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Assign]** pour parcourir les classes disponibles.
-   * Pour affecter une classe existante, cliquez sur la classe souhaitée, puis cliquez sur **[!UICONTROL Assign Class]**.
+2. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Attribuer]** pour parcourir les classes disponibles.
+   * Pour affecter une classe existante, cliquez et mettez en surbrillance la classe souhaitée, puis cliquez sur **[!UICONTROL Attribuer une classe]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
-   * Pour créer une classe personnalisée, cliquez sur **[!UICONTROL Create New Class]** situé près du centre de la fenêtre du navigateur. Indiquez un nom de classe, une description et choisissez le comportement de la classe. Cliquez sur **[!UICONTROL Assign Class]** une fois que vous avez terminé.
+   * Pour créer une classe personnalisée, cliquez sur **[!UICONTROL Créer une classe]** située près du centre de la fenêtre du navigateur. Indiquez un nom de classe, une description et choisissez le comportement de la classe. Cliquez sur **[!UICONTROL Attribuer une classe]** une fois que vous avez terminé.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
    A ce stade, la structure de votre schéma doit contenir certains champs de classe et vous êtes prêt à affecter des mixins. Un mixin est un groupe d’un ou de plusieurs champs qui décrivent un concept particulier.
 
-3. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Add]** dans la sous-section *Mélanges* .
-   * Pour attribuer un mixin existant, cliquez et mettez en surbrillance le mixin souhaité, puis cliquez sur **[!UICONTROL Add Mixin]**. Contrairement aux classes, plusieurs mixins peuvent être affectés à un seul schéma tant qu&#39;il est approprié de le faire.
+3. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Ajouter]** dans la sous-section *Mélanges* .
+   * Pour attribuer un mixin existant, cliquez et mettez en surbrillance le mixin souhaité, puis cliquez sur **[!UICONTROL Ajouter Mixin]**. Contrairement aux classes, plusieurs mixins peuvent être affectés à un seul schéma tant qu&#39;il est approprié de le faire.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
-   * Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Create New Mixin]** situé près du centre de la fenêtre du navigateur. Indiquez un nom et une description pour le mixin, puis cliquez **[!UICONTROL Assign Mixin]** une fois que vous avez terminé.
+   * Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Créer un nouveau mixin]** situé près du centre de la fenêtre du navigateur. Indiquez un nom et une description pour le mixin, puis cliquez sur **[!UICONTROL Attribuer le mixin]** une fois que vous avez terminé.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Pour ajouter des champs de mixin, cliquez sur le nom du mixin dans la fenêtre *Composition* . Vous aurez alors la possibilité d&#39;ajouter des champs de mixin en cliquant sur **[!UICONTROL Add Field]** dans la fenêtre *Structure* . Veillez à fournir les propriétés de mixin en conséquence.
+   * Pour ajouter des champs de mixin, cliquez sur le nom du mixin dans la fenêtre *Composition* . Vous aurez alors la possibilité d’ajouter des champs de mixin en cliquant sur Champ **** Ajouter dans la fenêtre *Structure* . Veillez à fournir les propriétés de mixin en conséquence.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
-4. Une fois votre schéma créé, cliquez sur le champ de niveau supérieur de votre schéma dans la fenêtre *Structure* pour afficher les propriétés du schéma dans la fenêtre de propriétés appropriée. Indiquez un nom et une description, puis cliquez sur **[!UICONTROL Save]** pour créer le schéma.
+4. Une fois votre schéma créé, cliquez sur le champ de niveau supérieur de votre schéma dans la fenêtre *Structure* pour afficher les propriétés du schéma dans la fenêtre de propriétés appropriée. Indiquez un nom et une description, puis cliquez sur **[!UICONTROL Enregistrer]** pour créer le schéma.
    ![](../images/models-recipes/enrich-rtcdp/save_schema.png)
 
-5. Créez un jeu de données de sortie à l’aide de votre nouveau schéma en cliquant **[!UICONTROL Datasets]** dans la colonne de navigation de gauche, puis en cliquant sur **[!UICONTROL Create dataset]**. Dans l’écran suivant, choisissez **[!UICONTROL Create dataset from schema]**.
+5. Créez un jeu de données de sortie à l’aide de votre nouveau schéma en cliquant sur **[!UICONTROL Jeu de données]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un jeu de données]**. Dans l’écran suivant, choisissez **[!UICONTROL Créer un jeu de données à partir du schéma]**.
    ![](../images/models-recipes/enrich-rtcdp/dataset_overview.png)
 
-6. A l’aide de l’explorateur de schémas, recherchez et sélectionnez le schéma nouvellement créé, puis cliquez sur **[!UICONTROL Next]**.
+6. A l’aide de l’explorateur de schémas, recherchez et sélectionnez le schéma nouvellement créé, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/enrich-rtcdp/choose_schema.png)
 
-7. Indiquez un nom et une description facultative, puis cliquez sur **[!UICONTROL Finish]** pour créer le jeu de données.
+7. Indiquez un nom et une description facultative, puis cliquez sur **[!UICONTROL Terminer]** pour créer le jeu de données.
    ![](../images/models-recipes/enrich-rtcdp/configure_dataset.png)
 
 Maintenant que vous avez créé un jeu de données de schéma de sortie, vous êtes prêt à passer à la section suivante pour les configurer et les activer pour l&#39;enrichissement de Profil.
@@ -83,16 +86,16 @@ Avant de pouvoir activer un jeu de données pour le Profil, vous devez configure
 2. Développez la structure du schéma et recherchez un champ approprié à définir comme identifiant principal. Cliquez sur le champ de votre choix pour afficher ses propriétés.
    ![](../images/models-recipes/enrich-rtcdp/schema_structure.png)
 
-3. Définissez le champ en tant qu’identité principale en activant la **[!UICONTROL Identity]** propriété, la **[!UICONTROL Primary Identity]** propriété du champ, puis en sélectionnant un **[!UICONTROL Identity Namespace]** champ approprié. Cliquez sur **[!UICONTROL Apply]** une fois que vous avez apporté vos modifications.
+3. Définissez le champ comme identité principale en activant la propriété **[!UICONTROL Identity]** du champ, la propriété **[!UICONTROL Primary Identity]** , puis en sélectionnant un Espace de nommage **** Identity approprié. Cliquez sur **[!UICONTROL Appliquer]** une fois que vous avez apporté vos modifications.
    ![](../images/models-recipes/enrich-rtcdp/set_identity.png)
 
-4. Cliquez sur l&#39;objet de niveau supérieur de votre structure de schéma pour afficher les propriétés du schéma et activer le schéma pour le Profil en basculant le **[!UICONTROL Profile]** commutateur. Cliquez sur **[!UICONTROL Save]** pour finaliser vos modifications, les jeux de données créés à l&#39;aide de ce schéma peuvent désormais être activés pour le Profil.
+4. Cliquez sur l’objet de niveau supérieur de votre structure de schéma pour afficher les propriétés du schéma et activer le schéma pour le Profil en basculant le commutateur de **[!UICONTROL Profil]** . Cliquez sur **[!UICONTROL Enregistrer]** pour finaliser vos modifications, les jeux de données créés à l&#39;aide de ce schéma peuvent désormais être activés pour le Profil.
    ![](../images/models-recipes/enrich-rtcdp/enable_schema.png)
 
 5. Utilisez le navigateur de jeux de données pour rechercher le jeu de données sur lequel vous souhaitez activer le Profil et cliquez sur son nom pour accéder à ses détails.
    ![](../images/models-recipes/enrich-rtcdp/datasets.png)
 
-6. Activez le jeu de données pour le Profil en basculant le **[!UICONTROL Profile]** commutateur trouvé dans la colonne d&#39;informations appropriée.
+6. Activez le jeu de données pour le Profil en activant le commutateur de **[!UICONTROL Profil]** situé dans la colonne d&#39;informations appropriée.
    ![](../images/models-recipes/enrich-rtcdp/enable_dataset.png)
 
 Lorsque des données sont ingérées dans un jeu de données compatible avec les Profils, ces mêmes données sont également assimilées à des enregistrements de Profil. Maintenant que votre schéma et votre jeu de données sont préparés, générez des données dans le jeu de données en exécutant des exécutions de score à l’aide d’un modèle approprié, puis poursuivez ce didacticiel pour créer des segments d’informations à l’aide du Créateur de segments.
@@ -101,7 +104,7 @@ Lorsque des données sont ingérées dans un jeu de données compatible avec les
 
 Maintenant que vous avez généré et assimilé des informations dans votre jeu de données compatible avec les Profils, vous pouvez gérer ces données en identifiant des sous-ensembles d’éléments connexes à l’aide du Créateur de segments. Suivez les étapes ci-dessous pour créer vos propres segments.
 
-1. Sur Adobe Experience Platform, cliquez sur l’ **[!UICONTROL Segments]** onglet suivi de **[!UICONTROL Create Segment]** pour accéder au créateur de segments.
+1. Sur Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Segments]** suivi de **[!UICONTROL Créer un segment]** pour accéder au créateur de segments.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. Dans le créateur de segments, le rail de gauche permet d’accéder aux principaux blocs de création de segments : attributs, événements et segments existants. Chaque bloc de construction apparaît dans son onglet respectif. Sélectionnez la classe à laquelle votre schéma activé par Profil s’étend, puis recherchez les blocs de création de votre segment.
@@ -113,7 +116,7 @@ Maintenant que vous avez généré et assimilé des informations dans votre jeu 
 4. Lorsque vous créez votre segment, vous pouvez prévisualisation l’estimation des résultats des segments en observant le panneau Propriétés *du* segment.
    ![](../images/models-recipes/enrich-rtcdp/preview_segment.gif)
 
-5. Sélectionnez un segment approprié **[!UICONTROL Merge Policy]**, nommez-le et décrivez-le, puis cliquez sur **[!UICONTROL Save]** pour terminer votre nouveau segment.
+5. Sélectionnez une stratégie **[!UICONTROL de]** fusion appropriée, attribuez un nom et une description facultative, puis cliquez sur **[!UICONTROL Enregistrer]** pour terminer votre nouveau segment.
    ![](../images/models-recipes/enrich-rtcdp/save_segment.png)
 
 
