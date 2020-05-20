@@ -5,6 +5,9 @@ description: Présentation du service de segmentation.
 seo-description: Présentation du service de segmentation et des segments dans la plateforme de données client en temps réel d’Adobe.
 translation-type: tm+mt
 source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 95%
 
 ---
 
