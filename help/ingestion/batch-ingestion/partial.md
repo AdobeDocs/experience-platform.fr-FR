@@ -5,6 +5,9 @@ title: Présentation de l’assimilation partielle par lot d’Adobe Experience 
 topic: overview
 translation-type: tm+mt
 source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
+workflow-type: tm+mt
+source-wordcount: '795'
+ht-degree: 2%
 
 ---
 
@@ -12,48 +15,48 @@ source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
 
 # Récupération partielle par lot (bêta)
 
-L’assimilation partielle par lot permet d’assimiler des données contenant des erreurs, jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes dans Adobe Experience Platform, tandis que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
+L&#39;assimilation partielle par lot permet d&#39;assimiler des données contenant des erreurs, jusqu&#39;à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes dans Adobe Experience Platform, tandis que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
 
-Ce fournit un didacticiel sur la gestion de l’assimilation partielle des lots.
+Ce document fournit un didacticiel pour la gestion de l&#39;assimilation partielle des lots.
 
-En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partiel.
+En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partielle.
 
->[!IMPORTANT] Cette fonctionnalité n’existe qu’à l’aide de l’API. Veuillez contacter votre équipe pour accéder à cette fonctionnalité.
+>[!IMPORTANT] Cette fonctionnalité n&#39;existe qu&#39;à l&#39;aide de l&#39;API. Veuillez contacter votre équipe pour accéder à cette fonction.
 
 ## Prise en main
 
-Ce didacticiel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans l’assimilation partielle des lots. Avant de commencer ce didacticiel, veuillez consulter la documentation des services suivants :
+Ce didacticiel nécessite une connaissance approfondie des différents services Adobe Experience Platform impliqués dans l’assimilation partielle de lots. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [Importation](./overview.md)par lot : Méthode utilisée par la plateforme pour importer et stocker des données à partir de fichiers de données, tels que CSV et Parquet.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plateforme organise les données d’expérience client.
+- [Importation](./overview.md)par lot : Méthode par laquelle la plate-forme ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir effectuer des appels aux API de plateforme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plateforme.
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
-## Activation d’un jeu de données pour l’assimilation partielle de lots dans l’API
+## Activation d’un jeu de données pour l’assimilation par lots partielle dans l’API
 
 <!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
 
-Vous pouvez créer un jeu de données ou modifier un jeu de données existant avec l’assimilation partielle activée.
+Vous pouvez créer un nouveau jeu de données ou modifier un jeu de données existant avec l&#39;assimilation partielle activée.
 
-Pour créer un jeu de données, suivez les étapes du didacticiel [Création d’un jeu de données](../../catalog/api/create-dataset.md). Une fois que vous avez atteint l’étape *Créer un jeu* de données, ajoutez le champ suivant dans le corps de la requête :
+Pour créer un nouveau jeu de données, suivez les étapes du didacticiel [](../../catalog/api/create-dataset.md)Création d’un jeu de données. Une fois que vous avez atteint l’étape *Créer un jeu de données* , ajoutez le champ suivant dans le corps de la requête :
 
 ```json
 {
@@ -69,7 +72,7 @@ Pour créer un jeu de données, suivez les étapes du didacticiel [Création d�
 | -------- | ----------- |
 | `errorThresholdPercentage` | Le pourcentage d&#39;erreurs acceptables avant l&#39;ensemble du lot échoue. |
 
-De même, pour modifier un jeu de données existant, suivez les étapes du guide [du développeur du](../../catalog/api/update-object.md)catalogue.
+De même, pour modifier un jeu de données existant, suivez les étapes du guide [de développement](../../catalog/api/update-object.md)Catalogue.
 
 Dans le jeu de données, vous devrez ajouter la balise décrite ci-dessus.
 
@@ -103,15 +106,15 @@ The *Partial ingestion* toggle allows you to enable or disable the use of partia
 
 The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
 
-## Récupérer les erreurs d&#39;assimilation par lots partielles
+## Récupérer les erreurs d&#39;assimilation partielle des lots
 
-Si les lots contiennent des échecs, vous devrez récupérer les informations d’erreur sur ces échecs afin de pouvoir réassimiler les données.
+Si les lots contiennent des échecs, vous devrez récupérer les informations d&#39;erreur sur ces échecs afin de pouvoir réingérer les données.
 
-### Vérifier le statut
+### Vérifier l&#39;état
 
-Pour vérifier l’état du lot assimilé, vous devez indiquer l’ID du lot dans le chemin d’une requête GET.
+Pour vérifier l&#39;état du lot assimilé, vous devez indiquer l&#39;identifiant du lot dans le chemin d&#39;une requête GET.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
@@ -119,7 +122,7 @@ GET /catalog/batches/{BATCH_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot dont vous souhaitez vérifier l’état. |
+| `{BATCH_ID}` | Valeur `id` du lot dont vous souhaitez vérifier l&#39;état. |
 
 **Requête**
 
@@ -172,34 +175,34 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-Si le lot comporte une erreur et que les diagnostics d’erreur sont activés, l’état sera &quot;succès&quot; avec plus d’informations sur l’erreur fournie dans un fichier d’erreur téléchargeable.
+Si le lot comporte une erreur et que les diagnostics d&#39;erreur sont activés, l&#39;état est &quot;réussite&quot; et contient plus d&#39;informations sur l&#39;erreur fournie dans un fichier d&#39;erreur téléchargeable.
 
 ## Étapes suivantes
 
-Ce didacticiel explique comment créer ou modifier un jeu de données pour activer l&#39;assimilation partielle de lots. Pour plus d&#39;informations sur l&#39;assimilation de lots, veuillez lire le guide [du développeur sur l&#39;assimilation de](./api-overview.md)lots.
+Ce didacticiel explique comment créer ou modifier un jeu de données pour activer l&#39;assimilation par lots partielle. Pour plus d&#39;informations sur l&#39;assimilation de lots, consultez le guide [de développement sur l&#39;assimilation de](./api-overview.md)lots.
 
 ## Types d&#39;erreur d&#39;assimilation par lots partiels {#appendix}
 
-L’assimilation partielle par lot comporte quatre types d’erreur différents lors de l’assimilation de données.
+L&#39;assimilation partielle par lot comporte quatre types d&#39;erreur différents lors de l&#39;assimilation de données.
 
 - [Fichiers illisibles](#unreadable)
-- [ou en-têtes non valides](#schemas-headers)
+- [schémas ou en-têtes non valides](#schemas-headers)
 - [Lignes non analysables](#unparsable)
 - [Conversion XDM non valide](#conversion)
 
 ### Fichiers illisibles {#unreadable}
 
-Si le lot assimilé comporte des fichiers illisibles, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [de](../quality/retrieve-failed-batches.md)récupération des lots en échec.
+Si le lot ingéré contient des fichiers illisibles, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [](../quality/retrieve-failed-batches.md)Récupération des lots en échec.
 
-###  ou en-têtes non valides {#schemas-headers}
+### schémas ou en-têtes non valides {#schemas-headers}
 
-Si le lot assimilé comporte un  non valide ou des en-têtes non valides, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [de](../quality/retrieve-failed-batches.md)récupération des lots en échec.
+Si le lot assimilé comporte un schéma non valide ou des en-têtes non valides, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [](../quality/retrieve-failed-batches.md)Récupération des lots en échec.
 
 ### Lignes non analysables {#unparsable}
 
-Si le lot assimilé contient des lignes non analysables, les erreurs du lot sont stockées dans un fichier accessible à l’aide du point de fin décrit ci-dessous.
+Si le lot ingéré contient des lignes non analysables, les erreurs du lot sont stockées dans un fichier accessible à l&#39;aide du point de terminaison décrit ci-dessous.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/batches/{BATCH_ID}/failed?path=parse_errors
@@ -207,7 +210,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d’erreur. |
+| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d&#39;erreur. |
 
 **Requête**
 
@@ -236,9 +239,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails des lignes no
 
 ### Conversion XDM non valide {#conversion}
 
-Si le lot assimilé contient des conversions XDM non valides, les erreurs du lot sont stockées dans un fichier accessible à l’aide du point de fin suivant.
+Si le lot assimilé a des conversions XDM non valides, les erreurs du lot sont stockées dans un fichier accessible à l&#39;aide du point de terminaison suivant.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
@@ -246,7 +249,7 @@ GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d’erreur. |
+| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d&#39;erreur. |
 
 **Requête**
 
