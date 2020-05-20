@@ -1,68 +1,71 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Invitation de données de parquet à partir d’un système de  de cloud tiers système  à l’aide de l’API Flow Service
+title: Invitation de données de parquet à partir d’un système d’enregistrement cloud tiers à l’aide de l’API Flow Service
 topic: overview
 translation-type: tm+mt
 source-git-commit: 0e993e3b0ad4ff58a67e7db742f97c5fb2c3308d
+workflow-type: tm+mt
+source-wordcount: '1114'
+ht-degree: 3%
 
 ---
 
 
-# Invitation de données de parquet à partir d’un système de  de cloud tiers système  à l’aide de l’API Flow Service
+# Invitation de données de parquet à partir d’un système d’enregistrement cloud tiers à l’aide de l’API Flow Service
 
 Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API du service de flux pour vous guider tout au long des étapes d’assimilation des données de parquet d’un système de Cloud  tiers.
+Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes d’assimilation des données de parquet d’un système d’enregistrement cloud tiers.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-- [Sources](../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plateforme.
-- [Sandbox](../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+- [Sources](../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
+- [Sandbox](../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour pouvoir assimiler correctement les données de parquet d’un de cloud tiers  à l’aide de l’API de service de flux.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir assimiler avec succès les données relatives au parquet d’un enregistrement Cloud tiers à l’aide de l’API Flow Service.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
 
 - Content-Type : `application/json`
 
 ## Création d’une connexion
 
-Afin d’assimiler des données de parquet à l’aide des API Platform, vous devez posséder une connexion valide pour le cloud tiers  la source  à laquelle vous accédez. Si vous ne disposez pas encore d’une connexion pour le   avec lequel vous souhaitez travailler, vous pouvez en créer une à l’aide des didacticiels suivants :
+Pour importer des données de parquet à l’aide des API de plate-forme, vous devez posséder une connexion valide pour la source d’enregistrement de cloud tiers à laquelle vous accédez. Si vous n’avez pas encore de connexion pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
-- [Azure Data Lake   Gen2](./create/cloud-storage/adls-gen2.md)
+- [Enregistrement Azure Data Lake Gen2](./create/cloud-storage/adls-gen2.md)
 - [Google Cloud Store](./create/cloud-storage/google.md)
 - [SFTP](./create/cloud-storage/sftp.md)
 
 Récupérez et stockez l’identifiant unique (`$id`) de la connexion, puis passez à l’étape suivante de ce didacticiel.
 
-## Création d’un  
+## Création d’un schéma de cible
 
-Pour que les données source soient utilisées dans Platform, un de  doit également être créé pour structurer les données source en fonction de vos besoins. Le  est ensuite utilisé pour créer un jeu de données de plateforme dans lequel les données source sont contenues.
+Pour que les données source soient utilisées dans Platform, un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un jeu de données de plateforme dans lequel les données source sont contenues.
 
-Si vous préférez utiliser l’interface utilisateur dans la plateforme d’expérience, le didacticiel [de l’éditeur de ](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions étape par étape pour exécuter des actions similaires dans l’éditeur de  de.
+Si vous préférez utiliser l’interface utilisateur dans la plate-forme d’expérience, le didacticiel [Editeur de](../../../xdm/tutorials/create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de Schéma.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /schemaregistry/tenant/schemas
@@ -70,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Requête**
 
-L’exemple de requête suivant crée un  XDM qui étend la classe de XDM Individuel.
+L&#39;exemple de demande suivant crée un schéma XDM qui étend la classe de Profil XDM Individuel.
 
 ```shell
 curl -X POST \
@@ -113,7 +116,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle  de, y compris son identifiant unique (`$id`). Cet ID est requis à l’étape suivante pour créer une connexion source.
+Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis à l’étape suivante pour créer une connexion source.
 
 ```json
 {
@@ -195,9 +198,9 @@ Une réponse réussie renvoie les détails de la nouvelle  de, y compris son ide
 
 ## Création d’une connexion source {#source}
 
-Une fois un XDM  créé, une connexion source peut désormais être créée à l’aide d’une requête POST sur l’API du service de flux. Une connexion source consiste en une connexion pour l’API, un format de données source et une référence au XDM  récupéré à l’étape précédente.
+Avec un schéma XDM de cible créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’API du service de flux. Une connexion source consiste en une connexion pour l&#39;API, un format de données source et une référence au schéma XDM de cible récupéré à l&#39;étape précédente.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /sourceConnections
@@ -237,13 +240,13 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | La connexion de l’API qui représente votre cloud  . |
-| `data.schema.id` | Le (`$id`) si le  xdm  récupéré à l’étape précédente. |
+| `baseConnectionId` | Connexion de l’API qui représente votre enregistrement cloud. |
+| `data.schema.id` | Le (`$id`) si le schéma xdm de cible a été récupéré à l’étape précédente. |
 | `params.path` | Chemin d’accès du fichier source. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée. Stockez cette valeur comme elle est requise dans les étapes suivantes pour créer une connexion .
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion source nouvellement créée. Stocker cette valeur comme elle est requise dans les étapes suivantes pour créer une connexion à une cible.
 
 ```json
 {
@@ -252,19 +255,19 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 }
 ```
 
-## Création d’une connexion de base de jeux de données
+## Créer une connexion de base de jeux de données
 
-Pour importer des données externes dans la plateforme, une connexion de base de données de jeu de plateformes d’expérience doit d’abord être acquise.
+Pour importer des données externes dans la plate-forme, une connexion de base de données de jeu de plateformes d’expérience doit d’abord être acquise.
 
-Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [sur la connexion de base de jeux de](./create-dataset-base-connection.md)données.
+Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [de connexion de base de](./create-dataset-base-connection.md)jeux de données.
 
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`) et utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion .
+Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`), puis utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion de cible.
 
-## Création d’un jeu de données de 
+## Création d’un jeu de données de cible
 
-Vous pouvez créer un jeu de données  en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en indiquant l’ID du  de  dans la charge utile.
+Un jeu de données de cible peut être créé en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’ID du schéma de cible dans la charge utile.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /catalog/dataSets
@@ -294,11 +297,11 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `schemaRef.id` | ID de votre  XDM . |
+| `schemaRef.id` | ID de votre schéma XDM de cible. |
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID du jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données  du, comme requis dans les étapes suivantes pour créer une connexion  et un flux de données.
+Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
 
 ```json
 [
@@ -306,11 +309,11 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 ]
 ```
 
-## Création d’une connexion {#target}
+## Création d’une connexion à une cible {#target}
 
-Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un  et un jeu de données de  dedonnées. A l’aide de ces identifiants, vous pouvez créer une connexion  à l’aide de l’API du service de flux afin de spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /targetConnections
@@ -348,14 +351,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de votre connexion de base de jeux de données. |
-| `data.schema.id` | Le `$id` du XDM . |
-| `params.dataSetId` | ID du jeu de données . |
-| `connectionSpec.id` | Identifiant de spécification de connexion pour votre  Cloud . |
+| `baseConnectionId` | ID de la connexion de base de votre jeu de données. |
+| `data.schema.id` | Le schéma `$id` XDM de la cible. |
+| `params.dataSetId` | ID du jeu de données de cible. |
+| `connectionSpec.id` | ID de spécification de connexion de votre enregistrement cloud. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion . Stockez cette valeur comme elle est requise dans les étapes ultérieures.
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle connexion à la cible. Stocker cette valeur comme elle est requise dans les étapes ultérieures.
 
 ```json
 {
@@ -366,14 +369,14 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 
 ## Création d’un flux de données
 
-La dernière étape pour ingérer des données de parquet à partir d&#39;un de cloud tiers  est de créer un flux de données. Les valeurs requises suivantes sont désormais préparées :
+La dernière étape vers l&#39;assimilation de données sur le parquet à partir d&#39;un enregistrement Cloud tiers consiste à créer un flux de données. A l’heure actuelle, les valeurs requises suivantes sont préparées :
 
 - [ID de connexion source](#source)
-- [ID de connexion](#target)
+- [ID de connexion à la Cible](#target)
 
-Un flux de données est responsable de la planification et de la collecte de données à partir d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /flows
@@ -412,11 +415,11 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `sourceConnectionIds` | ID de connexion source récupéré lors d’une étape précédente. |
-| `targetConnectionIds` | L’ID de connexion  du a été récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | ID de connexion à la cible récupéré lors d’une étape précédente. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’ID (`id`) du flux de données nouvellement créé.
+Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouvellement créé.
 
 ```json
 {
@@ -427,7 +430,7 @@ Une réponse réussie renvoie l’ID (`id`) du flux de données nouvellement cr�
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données sur le parquet de votre système de  de nuages tiers sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que les  de clients en temps réel et l’espace de travail des sciences de données. Pour plus d’informations, reportez-vous au  suivant :
+En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données relatives au parquet de votre système d’enregistrement de cloud tiers sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
 
 - [Présentation du profil client en temps réel](../../../profile/home.md)
-- [Présentation de l’espace de travail Data Science](../../../data-science-workspace/home.md)
+- [Présentation de Data Science Workspace](../../../data-science-workspace/home.md)
