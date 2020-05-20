@@ -5,6 +5,9 @@ title: compresser les fichiers source dans une recette ;
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '1276'
+ht-degree: 0%
 
 ---
 
@@ -35,24 +38,24 @@ Une image Docker permet au développeur d&#39;assembler une application avec tou
 
 L&#39;image Docker construite est envoyée au Registre du Conteneur Azure à l&#39;aide des informations d&#39;identification qui vous ont été fournies pendant le processus de création de la recette.
 
-Pour obtenir vos informations d&#39;identification de Registre Azure Conteneur, connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Dans la colonne de navigation de gauche, accédez à **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Import Recipe]** puis sélectionnez **[!UICONTROL Launch]**. Voir la capture d&#39;écran ci-dessous pour référence.
+Pour obtenir vos informations d&#39;identification de Registre Azure Conteneur, connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Dans la colonne de navigation de gauche, accédez aux **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Importer la recette]** , puis sélectionnez **[!UICONTROL Lancement]**. Voir la capture d&#39;écran ci-dessous pour référence.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-La page *Configurer* s’ouvre. Indiquez un nom *de* recette approprié, par exemple &quot;Recette des ventes au détail&quot;, et éventuellement une description ou une URL de documentation. Une fois terminé, cliquez sur **[!UICONTROL Next]**.
+La page *Configurer* s’ouvre. Indiquez un nom *de* recette approprié, par exemple &quot;Recette des ventes au détail&quot;, et éventuellement une description ou une URL de documentation. Une fois terminé, cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
-Sélectionnez l’ *exécution* appropriée, puis choisissez une **[!UICONTROL Classification]** valeur pour *Type*. Les informations d&#39;identification de votre Registre Azure Conteneur sont générées une fois l&#39;opération terminée.
+Sélectionnez l’ *exécution* appropriée, puis choisissez une **[!UICONTROL classification]** pour *Type*. Les informations d&#39;identification de votre Registre Azure Conteneur sont générées une fois l&#39;opération terminée.
 
 >[!NOTE]
 >*Type *est la classe de problème d&#39;apprentissage automatique pour laquelle la recette est conçue et est utilisée après la formation pour aider à personnaliser l&#39;évaluation de la course de formation.
 
 >[!TIP]
->- Pour les recettes Python, sélectionnez le **[!UICONTROL Python]** runtime.
->- Pour les recettes R, sélectionnez le **[!UICONTROL R]** runtime.
->- Pour les recettes PySpark, sélectionnez le **[!UICONTROL PySpark]** runtime. Un type d’artefact est renseigné automatiquement.
->- Pour les recettes Scala, sélectionnez le **[!UICONTROL Spark]** runtime. Un type d’artefact est renseigné automatiquement.
+>- Pour les recettes Python, sélectionnez le **[!UICONTROL runtime Python]** .
+>- Pour les recettes R, sélectionnez le **[!UICONTROL runtime R]** .
+>- Pour les recettes PySpark, sélectionnez le **[!UICONTROL runtime PySpark]** . Un type d’artefact est renseigné automatiquement.
+>- Pour les recettes Scala, sélectionnez le **[!UICONTROL runtime Spark]** . Un type d’artefact est renseigné automatiquement.
 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
@@ -91,7 +94,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 
 Notez que lors de l&#39;exécution du script de connexion, vous devez fournir l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -178,7 +181,7 @@ Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala
 
 Lors de l&#39;exécution du script de connexion, vous devez indiquer l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
