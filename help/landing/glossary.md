@@ -382,7 +382,7 @@ ht-degree: 0%
 
 **Production Sandbox :** Un sandbox de production permettant d&#39;isoler les données virtuelles sur la plate-forme qui ne peuvent pas être réinitialisées ou supprimées.
 
-**Profil :** Profil est un modèle de données standard de la plateforme d’expérience utilisé pour définir les attributs des consommateurs. Un profil peut également être un agrégat de données et d&#39;attributs de événement liés à une personne et/ou à un dispositif.
+**Profil :** Profil est un modèle de données standard de la plateforme d’expérience utilisé pour définir les attributs des consommateurs. Un profil peut également être un agrégat de données et d’attributs liés à une personne ou un appareil.
 
 **Exportation Profil :** L’exportation de Profil est l’un des deux types de destinations dans la plateforme de données clientes en temps réel. L’exportation de Profil génère un fichier contenant des profils et des attributs et utilise des données d’identification personnelle brutes avec le courrier électronique ; elle est utilisée pour l’intégration avec les plateformes de marketing et d’automatisation des courriers électroniques.
 
