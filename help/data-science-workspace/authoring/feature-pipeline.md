@@ -1,47 +1,50 @@
 ---
 keywords: Experience Platform;Tutorial;Feature Pipeline;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Création d’un pipeline de fonctionnalités
+title: Création d’un tuyau de fonction
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '974'
+ht-degree: 0%
 
 ---
 
 
-# Création d’un pipeline de fonctionnalités
+# Création d’un tuyau de fonction
 
-Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisés afin d’effectuer l’ingénierie de fonctionnalités à l’échelle de l’environnement d’exécution Sensei Machine Learning Framework (ci-après dénommé &quot;Runtime&quot;).
+Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisés pour effectuer l’ingénierie de fonctionnalités à l’échelle via Sensei Machine Learning Framework Runtime (ci-après appelé &quot;Runtime&quot;).
 
-Ce décrit les différentes classes d’un pipeline de fonctionnalités et fournit un didacticiel détaillé pour la création d’un pipeline de fonctionnalités personnalisé à l’aide du SDK [de création de](./sdk.md) modèles dans PySpark et Spark.
+Ce document décrit les différentes classes d&#39;un tuyau de fonction et fournit un didacticiel détaillé pour la création d&#39;un tuyau de fonction personnalisé à l&#39;aide du kit SDK [de création de](./sdk.md) modèle dans PySpark et Spark.
 
-## Classes de pipeline de fonctionnalités
+## Classes de tuyau de fonction
 
-Le tableau suivant décrit les principales classes abstraites que vous devez étendre pour créer un pipeline de fonctionnalités :
+Le tableau suivant décrit les principales classes abstraites que vous devez étendre pour construire un pipeline de caractéristiques :
 
 | Classe abstraite | Description |
 | -------------- | ----------- |
-| DataLoader | Une classe DataLoader fournit une implémentation pour la récupération des données d’entrée. |
-| DatasetTransformer | Une classe DatasetTransformer fournit des implémentations pour transformer le jeu de données d’entrée. Vous pouvez choisir de ne pas fournir de classe DatasetTransformer et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe FeaturePipelineFactory à la place. |
-| FeaturePipelineFactory | Une classe FeaturePipelineFactory crée un pipeline Spark consistant en une série de transformateurs Spark pour effectuer l’ingénierie de fonctionnalités. Vous pouvez choisir de ne pas fournir une classe FeaturePipelineFactory et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe DatasetTransformer à la place. |
-| DataSaver | Une classe DataSaver fournit la logique pour l’  d’un jeu de données de fonctionnalités. |
+| DataLoader | Une classe DataLoader fournit une implémentation pour la récupération des données d&#39;entrée. |
+| DatasetTransformer | Une classe DatasetTransformer fournit des implémentations pour transformer le jeu de données d&#39;entrée. Vous pouvez choisir de ne pas fournir de classe DatasetTransformer et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe FeaturePipelineFactory à la place. |
+| FeaturePipelineFactory | Une classe FeaturePipelineFactory crée un pipeline Spark consistant en une série de transformateurs Spark pour effectuer l&#39;ingénierie de fonctionnalités. Vous pouvez choisir de ne pas fournir une classe FeaturePipelineFactory et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe DatasetTransformer à la place. |
+| DataSaver | Une classe DataSaver fournit la logique de l&#39;enregistrement d&#39;un jeu de données de fonctionnalités. |
 
-Lorsqu’une tâche de pipeline de fonctionnalités est lancée, l’exécution commence par exécuter DataLoader pour charger des données d’entrée sous la forme d’un DataFrame, puis modifie le DataFrame en exécutant DataFrameTransformer ou FeaturePipelineFactory, ou les deux. Enfin, le jeu de données des fonctionnalités qui en résulte est stocké via DataSaver.
+Lorsqu&#39;une tâche de pipeline de fonctionnalités est lancée, l&#39;exécution commence par exécuter DataLoader pour charger des données d&#39;entrée sous la forme d&#39;un DataFrame, puis modifie le DataFrame en exécutant DatasetTransformer ou FeaturePipelineFactory, ou les deux. Enfin, le jeu de données des fonctionnalités qui en résulte est stocké via DataSaver.
 
-L’organigramme suivant montre l’ordre d’exécution du runtime :
+L’organigramme suivant présente l’ordre d’exécution du runtime :
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Mise en oeuvre de vos classes Feature Pipeline {#implement-your-feature-pipeline-classes}
+## Mise en oeuvre des classes de tuyau de fonction {#implement-your-feature-pipeline-classes}
 
-Les sections suivantes fournissent des détails et des exemples sur l’implémentation des classes requises pour un pipeline de fonctionnalités.
+Les sections suivantes fournissent des détails et des exemples sur l&#39;implémentation des classes requises pour un pipeline de fonctionnalités.
 
 ### Définition de variables dans le fichier JSON de configuration {#define-variables-in-the-configuration-json-file}
 
-Le fichier JSON de configuration se compose de paires clé-valeur et vous permet de spécifier les variables à définir ultérieurement lors de l’exécution. Ces paires clé-valeur peuvent définir des propriétés telles que l’emplacement du jeu de données d’entrée, l’ID du jeu de données de sortie, l’ID du client, les en-têtes de colonne, etc.
+Le fichier JSON de configuration se compose de paires clé-valeur et est destiné à vous permettre de spécifier les variables à définir ultérieurement au cours de l’exécution. Ces paires clé-valeur peuvent définir des propriétés telles que l’emplacement du jeu de données d’entrée, l’ID du jeu de données de sortie, l’ID du client, les en-têtes de colonne, etc.
 
-L’exemple suivant montre les paires clé-valeur trouvées dans un fichier de configuration. Développez l’exemple pour afficher les détails :
+L&#39;exemple suivant montre les paires clé-valeur trouvées dans un fichier de configuration. Développez l’exemple pour afficher les détails :
 
 
 **exemple de configuration JSON**
@@ -70,7 +73,7 @@ L’exemple suivant montre les paires clé-valeur trouvées dans un fichier de c
 
 
 
-Vous pouvez accéder à la configuration JSON à l’aide de n’importe quelle méthode de classe qui définit `configProperties` comme paramètre. Par exemple :
+Vous pouvez accéder à la configuration JSON à l’aide de toute méthode de classe qui définit `configProperties` comme paramètre. Par exemple :
 
 **PySpark**
 
@@ -89,7 +92,7 @@ val input_dataset_id: String = configProperties.get("datasetId")
 
 DataLoader est responsable de la récupération et du filtrage des données d’entrée. Votre implémentation de DataLoader doit étendre la classe abstraite `DataLoader` et remplacer la méthode abstraite `load`.
 
-L’exemple suivant récupère un jeu de données Platform par ID et le renvoie sous forme de DataFrame, où l’ID du jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration. Développez chaque exemple pour afficher les détails :
+L&#39;exemple suivant récupère un jeu de données de plateforme par ID et le renvoie sous la forme d&#39;un DataFrame, où l&#39;ID de jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration. Développez chaque exemple pour afficher les détails :
 
 
 **Exemple PySpark**
@@ -191,9 +194,9 @@ class MyDataLoader extends DataLoader {
 
 ### Transformation d’un jeu de données à l’aide de DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
-Un DataFrameTransformer fournit la logique de transformation d’un DataFrame d’entrée et renvoie un nouveau DataFrame dérivé. Cette classe peut être implémentée pour travailler en coopération avec une FeaturePipelineFactory, pour travailler comme composant d&#39;ingénierie de fonctionnalités unique ou vous pouvez choisir de ne pas implémenter cette classe.
+Un DatasetTransformer fournit la logique de transformation d’un DataFrame d’entrée et renvoie un nouveau DataFrame dérivé. Cette classe peut être implémentée pour travailler en coopération avec une FeaturePipelineFactory, pour travailler comme seul composant d&#39;ingénierie de fonctionnalités, ou vous pouvez choisir de ne pas implémenter cette classe.
 
-L’exemple suivant étend la classe DatasetTransformer. Développez chaque exemple pour afficher les détails :
+L&#39;exemple suivant étend la classe DatasetTransformer. Développez chaque exemple pour afficher les détails :
 
 
 **Exemple PySpark**
@@ -246,9 +249,9 @@ class MyDatasetTransformer extends DatasetTransformer {
 
 ### Fonctionnalités de données de l&#39;ingénieur avec FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
-Une FeaturePipelineFactory vous permet de mettre en oeuvre votre logique d’ingénierie de fonctionnalités en définissant et en associant une série de transformateurs Spark à travers un pipeline Spark. Cette classe peut être implémentée pour travailler en collaboration avec un DataTransformer, pour travailler en tant que composant d’ingénierie de fonctionnalités unique ou pour ne pas implémenter cette classe.
+Une FeaturePipelineFactory vous permet de mettre en oeuvre votre logique d&#39;ingénierie de caractéristiques en définissant et en assemblant une série de transformateurs Spark à travers un tuyau Spark. Cette classe peut être implémentée pour travailler en coopération avec un DatasetTransformer, pour travailler comme seul composant d&#39;ingénierie de fonctionnalités, ou vous pouvez choisir de ne pas implémenter cette classe.
 
-L’exemple suivant étend la classe FeaturePipelieFactory et implémente une série de transformateurs Spark en plusieurs étapes dans un pipeline Spark. Développez chaque exemple pour afficher les détails :
+L&#39;exemple suivant étend la classe FeaturePipelieFactory et implémente une série de transformateurs Spark en plusieurs étapes dans un pipeline Spark. Développez chaque exemple pour afficher les détails :
 
 
 **Exemple PySpark**
@@ -323,11 +326,11 @@ class MyFeaturePipelineFactory(uid:String) extends FeaturePipelineFactory(uid) {
 
 
 
-### Stockez votre jeu de données de fonctionnalités avec DataSaver. {#store-your-feature-dataset-with-datasaver}
+### Stockage de votre jeu de données de fonctionnalités avec DataSaver {#store-your-feature-dataset-with-datasaver}
 
-DataSaver est chargé de stocker vos jeux de données de fonctionnalités résultants dans un emplacement  . Votre implémentation de DataSaver doit étendre la classe abstraite `DataSaver` et remplacer la méthode abstraite `save`.
+DataSaver est responsable du stockage des jeux de données de fonctionnalités qui en résultent dans un emplacement d’enregistrement. Votre implémentation de DataSaver doit étendre la classe abstraite `DataSaver` et remplacer la méthode abstraite `save`.
 
-L’exemple suivant étend la classe DataSaver qui stocke les données dans un jeu de données Platform par ID, où l’ID du jeu de données (`featureDatasetId`) et l’ID du client (`tenantId`) sont des propriétés définies dans le fichier de configuration. Développez chaque exemple pour afficher les détails :
+L&#39;exemple suivant étend la classe DataSaver qui stocke les données dans un jeu de données Platform par ID, où l&#39;ID de jeu de données (`featureDatasetId`) et l&#39;ID de client (`tenantId`) sont des propriétés définies dans le fichier de configuration. Développez chaque exemple pour afficher les détails :
 
 
 **Exemple PySpark**
@@ -456,11 +459,11 @@ class MyDataSaver extends DataSaver {
 }
 ```
 
-### Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application {#specify-your-implemented-class-names-in-the-application-file}
+### Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application. {#specify-your-implemented-class-names-in-the-application-file}
 
-Maintenant que vos classes Feature Pipeline sont définies et implémentées, vous devez spécifier les noms de vos classes dans le fichier d’application.
+Maintenant que vos classes Feature Pipeline sont définies et implémentées, vous devez spécifier les noms de vos classes dans le fichier d&#39;application.
 
-Les exemples suivants indiquent les noms de classe implémentés. Développez l’exemple pour afficher les détails :
+Les exemples suivants spécifient les noms de classe implémentés. Développez l’exemple pour afficher les détails :
 
 
 **Exemple PySpark**
@@ -506,38 +509,38 @@ feature.dataSaver=MyDataSaver
 
 ## Création de l’artefact binaire {#build-the-binary-artifact}
 
-Maintenant que vos classes Feature Pipeline ont été implémentées, vous pouvez les créer et les compiler dans un artefact binaire qui peut ensuite être utilisé pour créer un pipeline de fonctionnalités via des appels d’API.
+Maintenant que vos classes Feature Pipeline ont été mises en oeuvre, vous pouvez les créer et les compiler dans un artefact binaire qui peut ensuite être utilisé pour créer un Pipeline Feature via des appels d&#39;API.
 
 **PySpark**
 
-Pour créer un module PySpark Feature Pipeline, exécutez le script `setup.py` Python situé dans le répertoire racine du SDK de création de modèles.
+Pour créer un pipeline de fonctionnalités PySpark, exécutez le script `setup.py` Python situé dans le répertoire racine du SDK de création de modèles.
 
->[!NOTE] La création d&#39;un Pipeline de fonctionnalités PySpark nécessite l&#39;installation de Python 3 sur votre machine.
+>[!NOTE] Pour construire un Pipeline de fonctionnalités PySpark, vous devez installer Python 3 sur votre machine.
 
 ```shell
 python3 setup.py bdist_egg
 ```
 
-La création réussie de votre pipeline de caractéristiques générera un `.egg` artefact dans le `/dist` répertoire. Cet artefact est utilisé pour créer un pipeline de fonctionnalités.
+La création réussie de votre pipeline de fonctionnalités générera un `.egg` artefact dans le `/dist` répertoire. Cet artefact est utilisé pour créer un tuyau de fonctionnalités.
 
 **Spark**
 
 Pour créer un pipeline de fonctionnalités Spark, exécutez la commande de console suivante dans le répertoire racine du SDK de création de modèles :
 
->[!NOTE] La création d’un tuyau de fonction Spark nécessite l’installation de Scala et de sbt sur votre machine.
+>[!NOTE] La création d&#39;un tuyau de fonction Spark nécessite l&#39;installation de Scala et de sbt sur votre machine.
 
 ```shell
 mvn clean install
 ```
 
-La création réussie de votre pipeline de caractéristiques générera un `.jar` artefact dans le `/dist` répertoire. Cet artefact est utilisé pour créer un pipeline de fonctionnalités.
+La création réussie de votre pipeline de fonctionnalités générera un `.jar` artefact dans le `/dist` répertoire. Cet artefact est utilisé pour créer un tuyau de fonctionnalités.
 
 ## Création d’un moteur de pipeline de fonctionnalités à l’aide de l’API {#create-a-feature-pipeline-engine-using-the-api}
 
-Maintenant que vous avez créé votre pipeline de fonctionnalités et créé l&#39;artefact binaire, vous pouvez [créer un moteur de pipeline de fonctionnalités à l&#39;aide de l&#39;API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)d&#39;apprentissage automatique Sensei. La création réussie d’un moteur de pipeline de fonctionnalités vous fournira un ID de moteur dans le corps de la réponse. Veillez à enregistrer cette valeur avant de passer aux étapes suivantes.
+Maintenant que vous avez créé votre pipeline de fonctionnalités et créé l&#39;artefact binaire, vous pouvez [créer un moteur de pipeline de fonctionnalités à l&#39;aide de l&#39;API](../api/engines.md#create-a-feature-pipeline-engine-using-binary-artifacts)d&#39;apprentissage automatique Sensei. La création réussie d&#39;un moteur de pipeline de fonctionnalités vous fournira un ID de moteur dans le corps de la réponse. Veillez à enregistrer cette valeur avant de passer aux étapes suivantes.
 
 ## Étapes suivantes {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the Feature Pipeline Engine. Update this document once those tutorials are available)
 
-En lisant ce , vous avez créé un pipeline de fonctionnalités à l&#39;aide du kit de développement de création de modèles, créé un artefact binaire et utilisé cet artefact pour créer un moteur de pipeline de fonctionnalités via un appel d&#39;API. Vous êtes maintenant prêt à [créer un modèle](../api/mlinstances.md#create-an-mlinstance) de pipeline de fonctionnalités à l’aide de votre nouveau moteur et de votre nouveau, qui transforment les jeux de données et extraient les fonctionnalités de données à l’échelle.
+En lisant ce document, vous avez créé un tuyau de fonction à l&#39;aide du SDK de création de modèle, créé un artefact binaire et utilisé cet artefact pour créer un moteur de tuyau de fonction par le biais d&#39;un appel d&#39;API. Vous êtes maintenant prêt à [créer un modèle](../api/mlinstances.md#create-an-mlinstance) de tuyau de fonction à l&#39;aide de votre nouveau moteur et de votre nouveau début pour transformer les jeux de données et extraire des fonctions de données à l&#39;échelle.
