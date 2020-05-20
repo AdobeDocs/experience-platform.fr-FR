@@ -18,7 +18,7 @@ JupyterLab est une interface utilisateur Web pour <a href="https://jupyter.org/"
 
 Ce document fournit un aperçu de JupyterLab et de ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 
-## JupyterLab sur la plate-forme d’expérience
+## JupyterLab sur la plateforme d’expérience
 
 L’intégration de JupyterLab de la plate-forme d’expérience s’accompagne de modifications architecturales, de considérations de conception, d’extensions personnalisées d’ordinateurs portables, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
 
@@ -210,7 +210,7 @@ Le *lanceur* personnalisé fournit des modèles de blocs-notes utiles pour les n
 | Créateur de recettes | Modèle de bloc-notes pour la création d&#39;une recette dans JupyterLab. Il est prérempli de code et de commentaires qui montrent et décrivent le processus de création de la recette. Pour obtenir une présentation détaillée, reportez-vous au didacticiel <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de recette du</a> bloc-notes. |
 | Requête Service | Un cahier de notes prérempli montrant l&#39;utilisation de Requête Service directement dans JupyterLab avec des exemples de workflows qui analysent les données à l&#39;échelle. |
 | Événements XDM | Un bloc-notes prérempli présentant l’exploration des données sur les données du Événement d’expérience post-valeur, axé sur les fonctionnalités communes à l’ensemble de la structure de données. |
-| Requêtes XDM | Un cahier de notes prérempli présentant des exemples de requêtes commerciales sur les données du Événement d’expérience. |
+| Requêtes XDM | Un bloc-notes prérempli présentant des exemples de requêtes commerciales sur les données du Événement d’expérience. |
 | Agrégation | Un bloc-notes prérempli présentant des échantillons de workflows pour agrégat de grandes quantités de données en petits blocs gérables. |
 | Mise en grappe | Un bloc-notes prérempli présentant le processus de modélisation d’apprentissage automatique de bout en bout à l’aide d’algorithmes de mise en grappe. |
 
