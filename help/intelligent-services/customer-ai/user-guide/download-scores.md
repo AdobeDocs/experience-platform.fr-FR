@@ -5,6 +5,9 @@ title: Téléchargement de scores dans l’API client
 topic: Downloading scores
 translation-type: tm+mt
 source-git-commit: 7c892d92a50312fb4b733431737b796651689804
+workflow-type: tm+mt
+source-wordcount: '933'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +29,7 @@ Actuellement, il existe deux méthodes pour télécharger les scores d’IA clie
 
 ## Find your dataset ID {#dataset-id}
 
-Dans votre instance de service pour obtenir des informations sur l’IA du client, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL Access scores]**.
+Dans votre instance de service pour obtenir des informations sur l’IA du client, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez Scores **** d’accès.
 
 ![Autres actions](../images/insights/more-actions.png)
 
