@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connexion avec RStudio
+title: Se connecter avec RStudio
 topic: connect
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 2%
 
 ---
 
 
-# Connexion avec RStudio
+# Se connecter avec RStudio
 
-Ce décrit les étapes nécessaires pour connecter R Studio au service de Adobe Experience Platform.
+Ce document décrit les étapes nécessaires pour connecter R Studio à Adobe Experience Platform Requête Service.
 
 Après avoir installé RStudio, sur l&#39;écran *Console* qui s&#39;affiche, vous devrez d&#39;abord préparer votre script R pour utiliser PostgreSQL.
 
@@ -22,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Une fois que vous avez préparé votre script R pour utiliser PostgreSQL, vous pouvez maintenant connecter RStudio à Service en chargeant le pilote PostgreSQL.
+Une fois que vous avez préparé votre script R pour utiliser PostgreSQL, vous pouvez maintenant connecter RStudio à Requête Service en chargeant le pilote PostgreSQL.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -37,16 +40,16 @@ con <- dbConnect(drv,
 | Propriété | Description |
 | -------- | ----------- |
 | `{DATABASE_NAME}` | Nom de la base de données qui sera utilisée. |
-| `{HOST_NUMBER` et `{PORT_NUMBER}` | Point de terminaison hôte et son port pour le service de . |
-| `{USERNAME}` et `{PASSWORD}` | Informations de connexion qui seront utilisées. Le nom d&#39;utilisateur prend la forme de `ORG_ID@AdobeOrg`. |
+| `{HOST_NUMBER` et `{PORT_NUMBER}` | Point de terminaison hôte et son port pour Requête Service. |
+| `{USERNAME}` et `{PASSWORD}` | Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur prend la forme de `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Pour plus d’informations sur la recherche du nom de base de données, de l’hôte, du port et des informations d’identification de connexion, consultez la page [d’identification de la plateforme](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur ****, puis sur **Credentials**.
+>[!NOTE] Pour plus d&#39;informations sur la recherche de votre nom de base de données, de votre hôte, de votre port et de vos informations de connexion, consultez la page [d&#39;identification de la plate-forme](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à la plateforme, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à  Service, vous pouvez écrire des  pour exécuter et modifier des instructions SQL. Par exemple, vous pouvez utiliser `dbGetQuery(con, sql)` pour exécuter , où `sql` se trouve le SQL que vous souhaitez exécuter.
+Maintenant que vous êtes connecté à Requête Service, vous pouvez écrire des requêtes pour exécuter et modifier des instructions SQL. Par exemple, vous pouvez utiliser `dbGetQuery(con, sql)` pour exécuter des requêtes, où `sql` est la requête SQL à exécuter.
 
-Le suivant utilise un jeu de données contenant [ExperienceEvents](../creating-queries/experience-event-queries.md) et crée un histogramme du de page d’un site Web, en fonction de la hauteur d’écran du périphérique.
+La requête suivante utilise un jeu de données contenant [ExperienceEvents](../creating-queries/experience-event-queries.md) et crée un histogramme des vues de page d’un site Web, en fonction de la hauteur d’écran du périphérique.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -67,7 +70,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-Une réponse positive renvoie les résultats du  :
+Une réponse positive renvoie les résultats de la requête :
 
 ```r
 df_pageviews
@@ -81,4 +84,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des  de, veuillez lire le [guide](../creating-queries/creating-queries.md)de  de en cours d&#39;exécution.
+Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide [des requêtes](../creating-queries/creating-queries.md)en cours d&#39;exécution.
