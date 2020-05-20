@@ -1,10 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Guide du développeur du service '
+title: Guide du développeur Requête Service
 topic: connection parameters
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
@@ -13,13 +16,13 @@ source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 
 ## Exemples d’appels d’API
 
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels à l’API du service . Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API de service . Chaque appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API Requête Service. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API Requête Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
 
 ### Demander des paramètres de connexion pour le service interactif
 
-Vous pouvez récupérer vos paramètres de connexion pour utiliser le service [](../creating-queries/writing-queries.md) interactif en envoyant une requête GET au `/connection_parameters` point de terminaison. Pour plus d&#39;informations sur les clients qui utilisent des paramètres de connexion pour se connecter via le service interactif, veuillez lire la documentation sur les clients [du service](../clients/overview.md).
+Vous pouvez récupérer vos paramètres de connexion pour utiliser le service [](../creating-queries/writing-queries.md) interactif en faisant une requête GET au `/connection_parameters` point de terminaison. Pour plus d&#39;informations sur les clients qui utilisent les paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les clients [de](../clients/overview.md)Requête Service.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /connection_parameters
