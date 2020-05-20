@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Mappages d''identité '
+title: Mappages d'identité des Listes
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 2%
 
 ---
 
 
-# Mappages d&#39;identité 
+# Mappages d&#39;identité des Listes
 
-Un mappage est un ensemble de toutes les identités d’une grappe, pour un   spécifié.
+Un mappage est un ensemble de toutes les identités d’une grappe, pour un espace de nommage spécifié.
 
 ## Obtenir un mappage d&#39;identité pour une seule identité
 
-Si une identité est définie, récupérez toutes les identités liées du même   que celle représentée par l’identité dans la requête.
+Si une identité est définie, récupérez toutes les identités associées du même espace de nommage que celles représentées par l’identité dans la demande.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
@@ -25,7 +28,7 @@ GET https://platform-{REGION}.adobe.io/data/core/identity/mapping
 
 **Requête**
 
-Option 1 : Fournissez l’identité sous la forme   (`nsId`, par ID) et valeur d’ID (`id`).
+Option 1 : Fournissez l’identité sous forme d’espace de nommage (`nsId`, par ID) et de valeur d’ID (`id`).
 
 ```shell
 curl -X GET \
@@ -36,7 +39,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 2 : Fournissez l’identité sous la forme   (`ns`, par nom) et valeur d’ID (`id`).
+Option 2 : Fournissez l’identité sous forme d’espace de nommage (`ns`, par nom) et de valeur d’ID (`id`).
 
 ```shell
 curl -X GET \
@@ -47,7 +50,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Option 3 : Fournissez l’identité sous la forme XID (`xid`). Pour plus d’informations sur la manière d’obtenir le XID d’une identité, consultez la section de ce qui traite de l’ [obtention du XID pour une identité](./list-native-id.md).
+Option 3 : Fournissez l’identité sous la forme XID (`xid`). Pour plus d&#39;informations sur la façon d&#39;obtenir le XID d&#39;une identité, consultez la section de ce document qui traite de l&#39; [obtention du XID pour une identité](./list-native-id.md).
 
 ```shell
 curl -X GET \
@@ -60,11 +63,11 @@ curl -X GET \
 
 ### Obtenir des mappages d’identité pour plusieurs identités
 
-Utilisez la `POST` méthode comme équivalent de lot de la `GET` méthode décrite ci-dessus pour récupérer les mappages pour plusieurs identités.
+Utilisez la `POST` méthode en tant qu’équivalent par lot de la `GET` méthode décrite ci-dessus pour récupérer les mappages pour plusieurs identités.
 
->[!NOTE] La demande ne doit pas indiquer plus de 1 000 identités au maximum. Les demandes dépassant 1000 identités se traduiront par 400 codes d&#39;état.
+>[!NOTE] La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST https://platform.adobe.io/data/core/identity/mappings
@@ -72,7 +75,7 @@ POST https://platform.adobe.io/data/core/identity/mappings
 
 **Corps de requête**
 
-Option 1 : Fournissez un de XID pour lesquels récupérer les mappages.
+Option 1 : Fournissez une liste de XID pour lesquels récupérer les mappages.
 
 ```shell
 {
@@ -81,7 +84,7 @@ Option 1 : Fournissez un de XID pour lesquels récupérer les mappages.
 }
 ```
 
-Option 2 : Fournissez un d’identités sous forme d’identifiants composites, où chacun nomme la valeur d’ID et  l’par ID de. Cet exemple illustre l’utilisation de cette méthode lors du remplacement de la valeur par défaut `graph-type` de &quot;Graphique privé&quot;.
+Option 2 : Fournissez une liste d’identités sous la forme d’identifiants composites, où chacun nomme la valeur d’identification et l’espace de nommage par identifiant d’espace de nommage. Cet exemple illustre l&#39;utilisation de cette méthode lors du remplacement de la valeur par défaut `graph-type` de &quot;Graphique privé&quot;.
 
 ```shell
 {
@@ -178,9 +181,9 @@ Si aucune identité associée n’a été trouvée avec l’entrée fournie, un 
 }
 ```
 
-- `lastAssociationTime`: Horodatage de la dernière association de l’identité d’entrée à cette identité.
-- `regions`: Fournit les informations `regionId` et `lastAssociationTime` l&#39;endroit où l&#39;identité a été vue.
+- `lastAssociationTime`: Horodatage de la dernière association de l&#39;identité d&#39;entrée à cette identité.
+- `regions`: Fournit les informations `regionId` et `lastAssociationTime` pour l&#39;endroit où l&#39;identité a été vue.
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [disponible](./list-namespaces.md).
+Passez au didacticiel suivant pour [liste des espaces de nommage](./list-namespaces.md)disponibles.
