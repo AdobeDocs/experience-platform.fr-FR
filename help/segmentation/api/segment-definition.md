@@ -5,33 +5,36 @@ title: Définitions de segment
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 45a196d13b50031d635ceb7c5c952e42c09bd893
+workflow-type: tm+mt
+source-wordcount: '515'
+ht-degree: 3%
 
 ---
 
 
 # Guide du développeur de définitions de segment
 
-Adobe Experience Platform vous permet de créer des segments qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe d’.
+Adobe Experience Platform vous permet de créer des segments qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils.
 
 Ce guide du développeur fournit des instructions sur les domaines suivants pour les définitions de segment :
 
-- [Récupération d’un  de définitions de segment](#retrieve-a-list-of-segment-definitions)
-- [Création d’une définition de segment](#create-a-new-segment-definition)
+- [Récupération d’une liste de définitions de segment](#retrieve-a-list-of-segment-definitions)
+- [Créer une définition de segment](#create-a-new-segment-definition)
 - [Récupération d’une définition de segment spécifique](#retrieve-a-specific-segment-definition)
-- [Suppression d’une définition de segment spécifique](#delete-a-specific-segment-definition)
+- [Supprimer une définition de segment spécifique](#delete-a-specific-segment-definition)
 - [Mettre à jour une définition de segment spécifique](#update-a-specific-segment-definition)
 
 ## Prise en main
 
-Les points de fin d’API utilisés dans ce guide font partie de l’API de segmentation. Avant de poursuivre, consultez le guide [du développeur de](./getting-started.md)segmentation.
+Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
 
-En particulier, la section [de](./getting-started.md#getting-started) prise en main du guide du développeur de segmentation comprend des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le  du et des informations importantes concernant les en-têtes requis nécessaires pour effectuer des appels à une API de plateforme d’expérience.
+En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
 
-## Récupération d’un  de définitions de segment
+## Récupération d’une liste de définitions de segment
 
-Vous pouvez récupérer un  de toutes les définitions de segment pour votre organisation IMS en envoyant une requête GET au point de `/segment/definitions` fin.
+Vous pouvez récupérer une liste de toutes les définitions de segment pour votre organisation IMS en adressant une demande GET au point de `/segment/definitions` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /segment/definitions
@@ -40,15 +43,15 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 - `{QUERY_PARAMETERS}`: (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
 
-**Paramètres**
+**Paramètres de Requête**
 
-Vous trouverez ci-dessous un des paramètres  de disponibles pour répertorier les définitions de segment. Tous ces paramètres sont facultatifs. Un appel à ce point de fin sans paramètre récupérera toutes les définitions de segment disponibles pour votre entreprise.
+Voici une liste des paramètres de requête disponibles pour répertorier les définitions de segment. Tous ces paramètres sont facultatifs. L’appel à ce point de terminaison sans paramètres récupérera toutes les définitions de segment disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `start` | ??? |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. |
-| `page` | Indique de quelle page les résultats des définitions de segment . |
+| `page` | Indique la page à partir de laquelle les résultats des définitions de segment seront débuts. |
 | `sort` | Spécifiez le champ par lequel trier les résultats. |
 | `evaluationInfo.continuous.enabled` | Indique si la définition de segment est activée en flux continu. |
 
@@ -64,7 +67,7 @@ cur -X GET https://platform.adobe.io/data/core/ups/segment/definitions?QUERY \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec un de définitions de segment pour l’organisation IMS spécifiée comme JSON.
+Une réponse réussie renvoie l’état HTTP 200 avec une liste de définitions de segment pour l’organisation IMS spécifiée en tant que JSON.
 
 ```json
 {
@@ -157,11 +160,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec un de définitions de segm
 }
 ```
 
-## Création d’une définition de segment
+## Créer une définition de segment
 
-Vous pouvez créer une définition de segment en envoyant une requête POST au point de `/segment/definitions` fin.
+Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de `/segment/definitions` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /segment/definitions
@@ -202,7 +205,7 @@ corps d&#39;explication
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails de la définition de segment que vous venez de créer.
+Une réponse réussie renvoie l’état HTTP 200 avec les détails de la nouvelle définition de segment créée.
 
 ```json
 {
@@ -250,9 +253,9 @@ expliquer le corps et les en-têtes
 
 ## Récupération d’une définition de segment spécifique
 
-Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en exécutant une requête GET vers le `/segment/definitions` point de fin et en fournissant la `id` valeur de la définition de segment dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête GET au point de `/segment/definitions` terminaison et en indiquant la `id` valeur de la définition de segment dans le chemin de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /segment/definitions/{SEGMENT_ID}
@@ -316,11 +319,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-## Suppression d’une définition de segment spécifique
+## Supprimer une définition de segment spécifique
 
-Vous pouvez demander de supprimer une définition de segment spécifiée en effectuant une requête DELETE au point de `/segment/definitions` fin et en fournissant la `id` valeur de la définition de segment dans le chemin de demande.
+Vous pouvez demander de supprimer une définition de segment spécifiée en faisant une requête DELETE au point de `/segment/definitions` terminaison et en fournissant la `id` valeur de la définition de segment dans le chemin de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /segment/definitions/{SEGMENT_ID}
@@ -344,9 +347,9 @@ Une réponse réussie renvoie l’état HTTP 200 sans message.
 
 ## Mettre à jour une définition de segment spécifique
 
-Vous pouvez mettre à jour une définition de segment spécifiée en effectuant une requête PATCH sur le `/segment/definitions` point de fin et en fournissant la `id` valeur de la définition de segment dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour une définition de segment spécifiée en exécutant une requête PATCH sur le point de `/segment/definitions` terminaison et en fournissant la `id` valeur de la définition de segment dans le chemin de requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /segment/definitions/{SEGMENT_ID}
