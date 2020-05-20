@@ -1,23 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' ExperienceEvent'
+title: requêtes ExperienceEvent
 topic: queries
 translation-type: tm+mt
 source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+workflow-type: tm+mt
+source-wordcount: '293'
+ht-degree: 0%
 
 ---
 
 
-#  ExperienceEvent
+# requêtes ExperienceEvent
 
-Outre les  SQL standard, le service de Adobe Experience Platform prend en charge l’écriture d’un à l’aide d’ExperienceEvents. Un ExperienceEvent est une classe XDM (Experience Data Model) qui représente un instantané non agrégé immuable du système lorsqu’un utilisateur interagit avec un site Web ou un service et peut donc être utilisé pour les  de domaine de temps. Pour plus d’informations sur XDM et les  d’expérience, reportez-vous à la présentation du système XDM. En combinant le service de  à ExperienceEvents, vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le suivant  des exemples de  impliquant ExperienceEvents.
+Outre les requêtes SQL standard, Adobe Experience Platform Requête Service prend en charge l’écriture de requêtes à l’aide d’ExperienceEvents. ExperienceEvent est une classe XDM (Experience Data Model) qui représente un instantané non agrégé immuable du système lorsqu’un utilisateur interagit avec un site Web ou un service et peut donc être utilisé pour l’analyse du domaine temporel. Vous trouverez plus d’informations sur XDM et les Événements d’expérience dans la présentation du système XDM. En combinant Requête Service et ExperienceEvents, vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant ExperienceEvents.
 
-## Création d’un rapport de tendances de  par jour sur une période spécifique
+## Création d’un rapport de tendances de événements par jour sur une plage de dates spécifique
 
-L’exemple suivant crée un rapport de tendances de  sur une période donnée, regroupé par date. Plus précisément, il récapitule diverses valeurs d’analyse sous la forme A, B et C, puis récapitule le nombre de fois où les parkas ont été consultés.
+L&#39;exemple suivant montre comment créer un rapport de tendances de événements sur une plage de dates spécifiée, regroupé par date. Plus précisément, il résume diverses valeurs d’analyse sous la forme A, B et C, puis récapitule le nombre de fois où les parkas ont été consultés.
 
-La colonne d’horodatage trouvée dans les jeux de données du d’expérience se trouve en UTC. L’exemple suivant utilise la `from_utc_timestamp()` fonction pour transformer l’horodatage de UTC en EDT. Elle utilise ensuite la `date_format()` fonction pour isoler la date du reste de l’horodatage.
+La colonne d’horodatage trouvée dans les jeux de données du Événement d’expérience se trouve en UTC. L&#39;exemple suivant utilise la `from_utc_timestamp()` fonction pour transformer l&#39;horodatage de UTC en EDT. Elle utilise ensuite la `date_format()` fonction pour isoler la date du reste de l’horodatage.
 
 ```sql
 SELECT 
@@ -75,9 +78,9 @@ ORDER BY Day ASC, pageViews DESC;
  (31 rows)
 ```
 
-## Récupération d’un  de organisé par nombre de  de page.
+## Récupération d’une liste de visiteurs organisée par nombre de vues de page.
 
-L’exemple suivant crée un rapport qui  les ID des utilisateurs qui ont consulté le plus de pages.
+L&#39;exemple suivant crée un rapport qui liste les identifiants des utilisateurs qui ont consulté le plus de pages.
 
 ```sql
 SELECT 
@@ -105,9 +108,9 @@ LIMIT 10;
 (10 rows)
 ```
 
-## Relecture d’une session 
+## Relecture d’une session visiteur
 
-L’exemple suivant  les 100 dernières pages consultées par un utilisateur spécifique.
+L&#39;exemple suivant liste les 100 dernières pages consultées par un utilisateur donné.
 
 
 ```sql
@@ -151,9 +154,9 @@ LIMIT 100;
 2019-11-08 20:14:05.0 | typed_bookmark |                                                                    | Seasonal Sale                       |     |     |     |          1.0
 ```
 
-## Affichage d’un rapport de cumul d’un
+## Affichage du rapport de cumul d&#39;un visiteur
 
-L’exemple suivant montre un rapport  de  de différentes valeurs d’analyse pour un utilisateur spécifique.
+L’exemple suivant montre un rapport d’agrégat de diverses valeurs d’analyse pour un utilisateur spécifié.
 
 ```sql
 SELECT 
@@ -182,5 +185,5 @@ ORDER BY pageViews DESC;
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les exemples de  d’utilisation des fonctions Adobe définies (ADF), consultez le guide des fonctions Adobe définies. Pour obtenir des directives générales sur l&#39;exécution des , veuillez lire le [guide sur l&#39;exécution des  dans le service](./writing-queries.md)de l&#39;.
+Pour plus d’informations sur les exemples de requêtes utilisant les fonctions Adobe définies (ADF), consultez le guide Fonctions Adobe définies. Pour obtenir des directives générales sur l&#39;exécution des requêtes, veuillez lire le [guide sur l&#39;exécution des requêtes dans Requête Service](./writing-queries.md).
 
