@@ -5,15 +5,18 @@ title: Réinitialisation d’un sandbox
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
 
 # Réinitialisation d’un sandbox
 
-Les sandbox de développement disposent d’une fonctionnalité de réinitialisation en usine qui supprime toutes les ressources non par défaut d’un sandbox. Vous pouvez réinitialiser un sandbox en effectuant une requête PUT qui inclut les sandbox `name` dans le chemin de la requête.
+Les sandbox de développement disposent d’une fonctionnalité de réinitialisation en usine qui supprime toutes les ressources non par défaut d’un sandbox. Vous pouvez réinitialiser un sandbox en exécutant une requête PUT qui inclut les sandbox `name` dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 PUT /sandboxes/{SANDBOX_NAME}
@@ -42,11 +45,11 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `action` | Ce paramètre doit être fourni dans la charge utile de requête avec la valeur &quot;reset&quot; pour réinitialiser le sandbox. |
+| `action` | Ce paramètre doit être fourni dans la charge utile de la demande avec la valeur &quot;reset&quot; pour réinitialiser le sandbox. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu’il `state` s’agit d’une &quot;réinitialisation&quot;.
+Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu’il `state` est &quot;réinitialisé&quot;.
 
 ```json
 {
@@ -59,4 +62,4 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu�
 }
 ```
 
->[!NOTE] Une fois qu’un sandbox est réinitialisé, il faut environ 15 minutes pour être approvisionné par le système. Une fois l’approvisionnement effectué, le sandbox `state` devient &quot;actif&quot; ou &quot;échec&quot;.
+>[!NOTE] Une fois qu&#39;un sandbox est réinitialisé, il faut environ 15 minutes pour être approvisionné par le système. Une fois l’approvisionnement effectué, le sandbox `state` devient &quot;actif&quot; ou &quot;échec&quot;.
