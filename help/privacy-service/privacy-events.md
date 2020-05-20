@@ -4,9 +4,9 @@ solution: Experience Platform
 title: S’abonner aux Événements de confidentialité
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e4cd042722e13dafc32b059d75fca2dab828df60
+source-git-commit: ab29c7771122267634dea24582b07f605abd7ed8
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '861'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Ce document décrit la procédure à suivre pour configurer une intégration des
 
 ## Prise en main
 
-Ce tutoriel utilise **ngrok**, un logiciel qui expose les serveurs locaux à l&#39;internet public à travers des tunnels sécurisés. Veuillez [installer ngrok](https://ngrok.com/download) avant de commencer ce tutoriel afin de suivre et de créer un webhook sur votre machine locale. Ce guide nécessite également le téléchargement d’un référentiel GIT contenant un serveur simple écrit dans [Node.js](https://nodejs.org/).
+Ce tutoriel utilise **ngrok**, un logiciel qui expose les serveurs locaux à l&#39;internet public à travers des tunnels sécurisés. Veuillez [installer ngrok](https://ngrok.com/download) avant de commencer ce tutoriel afin de suivre et de créer un webhook sur votre machine locale. Ce guide nécessite également le téléchargement d’un référentiel GIT contenant un simple serveur [Node.js](https://nodejs.org/) .
 
 ## Création d’un serveur local
 
@@ -60,71 +60,73 @@ Ces commandes installent toutes les dépendances et initialisent le serveur. En 
 
 ## Création d’un hook Web à l’aide de ngrok
 
-Dans le même répertoire et dans une nouvelle fenêtre de ligne de commande, tapez la commande suivante :
+Ouvrez une nouvelle fenêtre de ligne de commande et accédez au répertoire dans lequel vous avez installé ngrok précédemment. A partir de là, tapez la commande suivante :
 
 ```shell
-ngrok http -bind-tls=true 3000
+./ngrok http -bind-tls=true 3000
 ```
 
 Une sortie réussie ressemble à ce qui suit :
 
 ![sortie de graphique](images/privacy-events/ngrok-output.png)
 
-Notez l&#39; `Forwarding` URL (`https://e142b577.ngrok.io`), car elle sera utilisée pour identifier votre webhook à l&#39;étape suivante.
+Notez l&#39; `Forwarding` URL (`https://212d6cd2.ngrok.io`), car elle sera utilisée pour identifier votre webhook à l&#39;étape suivante.
 
-## Créer une nouvelle intégration à l’aide de la console d’E/S d’Adobe
+## Création d’un projet dans Adobe Developer Console
 
-Connectez-vous à [Adobe I/O Console](https://console.adobe.io) et cliquez sur l’onglet **Intégrations** . La fenêtre _Intégrations_ s&#39;affiche. A partir de là, cliquez sur **Nouvelle intégration**.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel relatif à la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation d’Adobe Developer Console.
 
-![Intégrations des Vues dans la console d&#39;E/S d&#39;Adobe](images/privacy-events/integrations.png)
+## Événements de confidentialité Ajouter au projet
 
-La fenêtre *Créer une intégration* s’affiche. Sélectionnez **Recevoir des événements temps réels** proches, puis cliquez sur **Continuer**.
+Une fois que vous avez terminé de créer un projet dans la console, cliquez sur **[!UICONTROL Ajouter événement]** dans l’écran Présentation _du_ projet.
 
-![Créer une nouvelle intégration](images/privacy-events/new-integration.png)
+![](./images/privacy-events/add-event-button.png)
 
-L’écran suivant fournit des options permettant de créer des intégrations avec différents événements, produits et services disponibles pour votre organisation en fonction de vos abonnements, droits et autorisations. Pour cette intégration, sélectionnez Événements **** Privacy Service, puis cliquez sur **Continuer**.
+La boîte de dialogue événements __ Ajouter apparaît. Sélectionnez **[!UICONTROL Experience Cloud]** pour filtrer la liste d’un type d&#39;événement disponible, puis sélectionnez Événements **** Privacy Service avant de cliquer sur **[!UICONTROL Suivant]**.
 
-![Sélectionner des Événements de confidentialité](images/privacy-events/privacy-events.png)
+![](./images/privacy-events/add-privacy-events.png)
 
-Le formulaire Détails *de l’* intégration s’affiche, vous obligeant à fournir un nom et une description pour l’intégration, ainsi qu’un certificat de clé publique.
+La boîte de dialogue _Configurer l&#39;enregistrement_ du événement s&#39;affiche. Sélectionnez les événements que vous souhaitez recevoir en cochant les cases correspondantes. Les Événements que vous sélectionnez apparaissent sous Événements __abonnés dans la colonne de gauche. Lorsque vous avez terminé, cliquez sur**[!UICONTROL  Suivant ]**.
 
-![Détails de l’intégration](images/privacy-events/integration-details.png)
+![](./images/privacy-events/choose-subscriptions.png)
 
-Si vous ne disposez pas d’un certificat public, vous pouvez en générer un à l’aide de la commande terminal suivante :
+L’écran suivant vous invite à fournir une clé publique pour l’enregistrement du événement. Vous avez la possibilité de générer automatiquement une paire de clés ou de télécharger votre propre clé publique générée dans le terminal.
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+Pour les besoins de ce didacticiel, la première option est suivie. Cliquez sur la zone d’options **[!UICONTROL Générer une paire]** de clés, puis cliquez sur le bouton **[!UICONTROL Générer la paire de clés]** dans le coin inférieur droit.
 
-Une fois que vous avez généré un certificat, faites glisser et déposez le fichier dans la zone Certificats **de clés** publiques ou cliquez sur **Sélectionner un fichier** pour parcourir votre répertoire de fichiers et sélectionner directement le certificat.
+![](./images/privacy-events/generate-key-value.png)
 
-Après avoir ajouté votre certificat, l’option Enregistrement *du* Événement s’affiche. Cliquez sur **Ajouter Événement Inscription**.
+Lorsque la paire de clés est générée, elle est automatiquement téléchargée par le navigateur. Vous devez stocker ce fichier vous-même, car il n’est pas conservé dans la Console développeur.
 
-![Enregistrement du Événement Ajouter](images/privacy-events/add-event-registration.png)
+L’écran suivant vous permet de vérifier les détails de la paire de clés nouvellement générée. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
-La boîte de dialogue se développe pour afficher d’autres commandes. Ici vous pouvez sélectionner vos types d&#39;événement et enregistrer votre webhook. Saisissez un nom pour l’enregistrement du événement, l’URL du crochet Web (l’ `Forwarding` adresse renvoyée lors de la première [création du crochet](#create-a-webhook-using-ngrok)Web), ainsi qu’une brève description. Enfin, sélectionnez les types d&#39;événement auxquels vous souhaitez vous abonner, puis cliquez sur **Enregistrer**.
+![](./images/privacy-events/keypair-generated.png)
 
-![Formulaire d&#39;inscription au Événement](images/privacy-events/event-registration-form.png)
+Dans l’écran suivant, indiquez le nom et la description de l’enregistrement du événement. Il est recommandé de créer un nom unique et facilement identifiable afin de différencier cette inscription de événement des autres sur le même projet.
 
-Une fois le Événement Registration form rempli, cliquez sur **Create integration** (Créer l&#39;intégration) et l&#39;intégration d&#39;E/S sera terminée.
+![](./images/privacy-events/event-details.png)
 
-![Créer une intégration](images/privacy-events/create-integration.png)
+Plus loin dans le même écran, vous disposez de deux options pour configurer la manière de recevoir des événements. Sélectionnez **[!UICONTROL Webhook]** et fournissez l’ `Forwarding` URL du webhook de réseau créé précédemment sous URL __Webhook. Ensuite, sélectionnez votre style de diffusion préféré (unique ou par lot) avant de cliquer sur**[!UICONTROL  Enregistrer les événements ]**configurés pour terminer l’enregistrement du événement.
+
+![](./images/privacy-events/webhook-details.png)
+
+La page de détails de votre projet réapparaît, les Événements de confidentialité s’affichant sous _[!UICONTROL Événements]_dans le volet de navigation de gauche.
 
 ## Données du événement de Vue
 
-Une fois que vous avez créé vos tâches d&#39;intégration d&#39;E/S et de confidentialité traitées, vous pouvez vue les notifications reçues pour cette intégration. Dans l&#39;onglet **Intégrations** de la console d&#39;E/S, accédez à votre intégration et cliquez sur **Vue**.
+Une fois que vous avez enregistré des Événements de confidentialité avec votre projet et que vos tâches de confidentialité ont été traitées, vous pouvez vue les notifications reçues pour cette inscription. Dans l’onglet **[!UICONTROL Projets]** de la Console développeur, sélectionnez votre projet dans la liste pour ouvrir la page d’aperçu _des_ produits. Sélectionnez Événements **[!UICONTROL de]** confidentialité dans le volet de navigation de gauche.
 
-![Intégration de Vue](images/privacy-events/view-integration.png)
+![](./images/privacy-events/events-left-nav.png)
 
-La page de détails de l’intégration s’affiche. Cliquez sur **Événements** pour vue des enregistrements de événement pour l’intégration. Recherchez l’enregistrement Événements de confidentialité et cliquez sur **Vue**.
+L&#39;onglet Détails __ d&#39;inscription s&#39;affiche, vous permettant de vue d&#39;informations supplémentaires sur l&#39;inscription, de modifier sa configuration ou de vue des événements reçus depuis l&#39;activation de votre webhook.
 
-![Inscription au Événement de Vue](images/privacy-events/view-registration.png)
+![](./images/privacy-events/registration-details.png)
 
-La fenêtre Détails *du* Événement s’affiche, vous permettant de vue d’informations supplémentaires sur l’enregistrement, de modifier sa configuration ou de vue les événements réellement reçus depuis l’activation de votre webhook. Vous pouvez vue les détails du événement et accéder à l’option Suivi **du** débogage.
+Cliquez sur l’onglet Suivi **** du débogage pour vue d’une liste de événements reçus. Cliquez sur un événement répertorié pour en vue les détails.
 
-![Suivi du débogage](images/privacy-events/debug-tracing.png)
+![](images/privacy-events/debug-tracing.png)
 
-La section **Charge utile** fournit des détails sur le événement sélectionné, y compris son type d&#39;événement (`"com.adobe.platform.gdpr.productcomplete"`), comme indiqué dans l’exemple ci-dessus.
+La section _[!UICONTROL Charge utile]_fournit des détails sur le événement sélectionné, y compris son type d&#39;événement (`com.adobe.platform.gdpr.productcomplete`), comme indiqué dans l’exemple ci-dessus.
 
 ## Étapes suivantes
 
