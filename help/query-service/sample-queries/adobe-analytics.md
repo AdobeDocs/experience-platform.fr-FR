@@ -1,25 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Exemple de '
+title: Exemples de requêtes
 topic: queries
 translation-type: tm+mt
 source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+workflow-type: tm+mt
+source-wordcount: '869'
+ht-degree: 1%
 
 ---
 
 
-# Exemple de  pour les données Adobe Analytics
+# Exemples de requêtes pour les données Adobe Analytics
 
-Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en événements d’expérience XDM et assimilées à des jeux de données Adobe Experience Platform. Ce décrit un certain nombre de cas d’utilisation dans lesquels le service de Adobe Experience Platform utilise ces données. Les exemples de inclus doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage avec des événements d’expérience XDM, reportez-vous à la documentation [de mappage de champs](../../sources/connectors/adobe-applications/mapping/analytics.md) Analytics.
+Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en événements d’expérience XDM et assimilées à la plateforme Adobe Experience en tant que jeux de données. Ce document décrit un certain nombre de cas d’utilisation où Adobe Experience Platform Requête Service utilise ces données et les exemples de requêtes inclus doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur la mise en correspondance des champs [Analytics, reportez-vous à la documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) relative au mappage des champs vers XDM ExperienceEvents.
 
 ## Prise en main
 
-Les exemples SQL de cet  nécessitent que vous modifiez le code SQL et renseigniez les paramètres attendus pour votre  en fonction du jeu de données, de l&#39;eVar, de l&#39; ou de la période que vous souhaitez évaluer. Spécifiez des paramètres partout où vous le verrez `{ }` dans les exemples SQL suivants.
+Les exemples SQL de ce document nécessitent que vous modifiez le code SQL et remplissiez les paramètres attendus pour vos requêtes en fonction du jeu de données, de l&#39;eVar, du événement ou de la période que vous souhaitez évaluer. Fournissez des paramètres où vous le voyez `{ }` dans les exemples SQL suivants.
 
-## Exemples d&#39;utilisation courante de SQL
+## Exemples SQL couramment utilisés
 
-### Nombre de horaires pour un jour donné
+### Nombre de visiteurs horaires pour un jour donné
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
@@ -61,7 +64,7 @@ ORDER BY Count DESC
 LIMIT  10;
 ```
 
-### 10 villes principales par utilisateur  par 
+### Les 10 meilleures villes par activité d&#39;utilisateurs
 
 ```sql
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
@@ -109,7 +112,7 @@ ORDER BY total_order_revenue DESC
 LIMIT  10;
 ```
 
-### Nombre de  par jour
+### Nombre de Événements par jour
 
 ```sql
 SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
@@ -126,9 +129,9 @@ ORDER BY Hour;
 
 ## Variables de marchandisage (syntaxe de produit)
 
-Dans Adobe Analytics, les données personnalisées au niveau du produit peuvent être collectées au moyen de variables configurées spécialement appelées &quot;Variables de marchandisage&quot;. Elles sont basées sur une eVar ou un  personnalisé. La différence entre ces variables et leur utilisation standard est qu’elles représentent une valeur distincte pour chaque produit trouvé sur l’accès plutôt qu’une seule valeur pour l’accès. Ces variables sont appelées Variables de marchandisage Syntaxe du produit. Cela permet de collecter des informations comme un &quot;montant d&#39;escompte&quot; par produit ou des informations sur l&#39;&quot;emplacement sur la page&quot; du produit dans les résultats de recherche du client.
+Dans Adobe Analytics, les données personnalisées au niveau du produit peuvent être collectées par le biais de variables configurées spécialement appelées &quot;Variables de marchandisage&quot;. Elles sont basées sur une eVar ou un Événement personnalisé. La différence entre ces variables et leur utilisation standard est qu’elles représentent une valeur distincte pour chaque produit trouvé sur l’accès plutôt qu’une seule valeur pour l’accès. Ces variables sont appelées Variables de marchandisage Syntaxe du produit. Cela permet de collecter des informations telles qu&#39;un &quot;montant d&#39;escompte&quot; par produit ou des informations sur l&#39;&quot;emplacement sur la page&quot; du produit dans les résultats de recherche du client.
 
-Voici les champs XDM pour accéder aux variables de marchandisage dans votre jeu de données Analytics :
+Voici les champs XDM pour accéder aux variables de marchandisage de votre jeu de données Analytics :
 
 ### eVars
 
@@ -144,11 +147,11 @@ Où `[#]` est un index de tableau et `evar#` est la variable eVar spécifique.
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-Où `[#]` est un index de tableau et `event#` est la variable de personnalisée spécifique.
+Où `[#]` est un index de tableau et `event#` est la variable de événement personnalisée spécifique.
 
-### Exemple de 
+### Exemples de requêtes
 
-Voici un exemple de  renvoyant une eVar et un de marchandisage pour le premier produit trouvé dans le `productListItems`.
+Voici un exemple de requête renvoyant une eVar et un événement de marchandisage pour le premier produit trouvé dans le `productListItems`.
 
 ```sql
 SELECT
@@ -162,7 +165,7 @@ WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
 LIMIT 10
 ```
 
-Ce suivant  &quot;explose&quot; la variable `productListItems` et renvoie chaque eVar de marchandisage et chaque  de marchandisage par produit. Le `_id` champ est inclus pour montrer la relation avec l’accès d’origine. La `_id` valeur est une clé primaire unique dans le jeu de données ExperienceEvent.
+Cette requête suivante &quot;explose&quot; la variable `productListItems` et renvoie chaque eVar et événement de marchandisage par produit. Le `_id` champ est inclus pour montrer la relation avec l’accès d’origine. La `_id` valeur est une clé primaire unique dans le jeu de données ExperienceEvent.
 
 ```sql
 SELECT
@@ -182,9 +185,9 @@ FROM (
 LIMIT 20
 ```
 
-### Erreur courante lors de l’implémentation de l’exemple de
+### Erreur courante lors de l’implémentation des exemples de requêtes
 
-L’erreur &quot;Aucun champ struct de ce type&quot; se produit lorsque vous tentez de récupérer un champ qui n’existe pas dans votre jeu de données actuel. Evaluez le motif renvoyé dans le message d’erreur afin d’identifier un champ disponible, puis mettez à jour votre  et relancez l’exécution.
+L&#39;erreur &quot;Aucun champ struct de ce type&quot; se produit lorsque vous tentez de récupérer un champ qui n&#39;existe pas dans votre jeu de données actuel. Evaluez le motif renvoyé dans le message d’erreur afin d’identifier un champ disponible, puis mettez à jour votre requête et réexécutez-la.
 
 ```
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
@@ -192,26 +195,26 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Variables de marchandisage (syntaxe de conversion)
 
-La syntaxe des conversions est un autre type de variable de marchandisage d’Adobe Analytics. Avec Syntaxe du produit, la valeur est collectée en même temps que le produit, mais les données doivent être présentes sur la même page. Il existe des scénarios où les données se produisent sur une page avant la conversion ou l’ intéressant le produit. Prenons l&#39;exemple de la méthode de recherche de produits  la méthode d&#39;utilisation.
+La syntaxe de conversion est un autre type de variable de marchandisage d’Adobe Analytics. Avec Syntaxe du produit, la valeur est collectée en même temps que le produit, mais les données doivent être présentes sur la même page. Il existe des scénarios où les données se produisent sur une page avant la conversion ou le événement d’intérêt lié au produit. Par exemple, prenez en compte le cas d’utilisation du rapports de méthode de recherche de produits.
 
-1. Un utilisateur effectue une recherche interne et effectue une recherche pour &quot;chapeau d’hiver&quot; qui définit la variable eVar de marchandisage activée pour la syntaxe de conversion sur &quot;recherche interne:chapeau d’hiver&quot;.
-2. L’utilisateur clique sur &quot;beanie gaufre&quot; et accède à la page des détails du produit.\
-   a. Le débarquement ici déclenche un  `Product View` pour la &quot;beanie gaufre&quot; pour 12,99 $.\
-   b. Parce que `Product View` est configuré comme de liaison  le produit &quot;waffle beanie&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne:chapeau d’hiver&quot;. Chaque fois que le produit &quot;waffle beanie&quot; est collecté, il est associé à &quot;recherche interne:chapeau hivernal&quot; jusqu’à ce que (1) le paramètre d’expiration soit (2) une nouvelle valeur eVar6 soit définie et que le de liaison se produise à nouveau avec ce produit.
-3. L’utilisateur ajoute le produit à son panier, en déclenchant le `Cart Add` .
-4. L’utilisateur effectue une autre recherche interne pour &quot;chemise d’été&quot;, qui définit la syntaxe de conversion activée pour l’eVar de marchandisage eVar6 sur &quot;recherche interne:chemise d’été&quot;.
+1. Un utilisateur effectue une recherche interne de &quot;chapeau d’hiver&quot; qui définit la variable eVar6 de marchandisage activée pour la syntaxe de conversion sur &quot;recherche interne : chapeau d’hiver&quot;.
+2. L’utilisateur clique sur &quot;gaufre&quot; et accède à la page des détails du produit.\
+   a. L&#39;atterrissage ici déclenche un `Product View` événement pour la &quot;beanie gaufre&quot; pour 12,99 $.\
+   b. Etant donné que `Product View` est configuré comme événement de liaison, le produit &quot;waffle beanie&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne : chapeau d&#39;hiver&quot;. Chaque fois que le produit &quot;waffle beanie&quot; est collecté, il est associé à &quot;recherche interne : chapeau d&#39;hiver&quot; jusqu&#39;à ce que (1) le paramètre d&#39;expiration soit atteint ou (2) une nouvelle valeur eVar6 soit définie et que le événement de liaison se produise de nouveau avec ce produit.
+3. L’utilisateur ajoute le produit à son panier, en déclenchant le `Cart Add` événement.
+4. L’utilisateur effectue une autre recherche interne pour &quot;chemise d’été&quot;, qui définit l’eVar de marchandisage eVar6 activée pour la syntaxe de conversion sur &quot;recherche interne : chemise d’été&quot;.
 5. L&#39;utilisateur clique sur &quot;t-shirt sportif&quot; et accède à la page des détails du produit.\
-   a. Ici, atterrir déclenche un  `Product View` pour &quot;t-shirt sportif pour 19,99 $.\
-   b. Le `Product View` est toujours notre de liaison  donc maintenant le produit &quot;t-shirt sportif&quot; est maintenant lié à la valeur eVar6 de &quot;recherche interne:chemise d&#39;été&quot; et le produit précédent &quot;beanie gaufre&quot; est toujours lié à une valeur eVar6 de &quot;recherche interne:beanie de gaufre&quot;.
-6. L’utilisateur ajoute le produit à son panier, en déclenchant le `Cart Add` .
-7. L’utilisateur procède à l’extraction avec les deux produits.
+   a. Le débarquement ici déclenche un `Product View` événement pour &quot;t-shirt sportif pour 19,99 $.\
+   b. Le `Product View` événement est toujours notre événement de liaison donc maintenant le produit &quot;t-shirt sportif&quot; est maintenant lié à la valeur eVar6 de &quot;recherche interne : chemise d&#39;été&quot; et le produit précédent &quot;beanie de gaufre&quot; est toujours lié à une valeur eVar6 de &quot;recherche interne : beanie de gaufre&quot;.
+6. L’utilisateur ajoute le produit à son panier, en déclenchant le `Cart Add` événement.
+7. L’utilisateur extrait les données avec les deux produits.
 
-Dans le , les commandes, les recettes, les  de produits et les ajouts au panier seront rapportés par rapport à l’eVar6 et s’aligneront sur le  deproduit lié.
+Dans le rapports, les commandes, les recettes, les vues de produits et les ajouts au panier seront signalés par rapport à l’eVar6 et s’aligneront sur l’activité du produit lié.
 
-| eVar6 (Méthode de recherche de produits) | recette | commandes | de produits | ajouts au panier |
+| eVar6 (méthode de recherche de produits) | recette | commandes | vues de produits | ajouts au panier |
 |---|---|---|---|---|
 | recherche interne:chemise d’été | 19.99 | 1 | 1 | 1 |
-| recherche interne:chapeau d’hiver | 12.99 | 1 | 1 | 1 |
+| recherche interne:chapeau hivernal | 12.99 | 1 | 1 | 1 |
 
 Voici les champs XDM pour générer la syntaxe de conversion dans votre jeu de données Analytics :
 
@@ -221,7 +224,7 @@ Voici les champs XDM pour générer la syntaxe de conversion dans votre jeu de d
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-Où `evar#` se trouve la variable eVar spécifique.
+Où `evar#` est la variable eVar spécifique.
 
 ### Produit
 
@@ -231,9 +234,9 @@ productListItems[#].sku
 
 Où `[#]` est un index de tableau.
 
-### Exemple de 
+### Exemples de requêtes
 
-Voici un exemple de la valeur à la paire de  de produit et de spécifique, dans ce cas le de produit.
+Voici un exemple de requête qui lie la valeur à la paire produit/événement spécifique, dans ce cas le événement vue produit.
 
 ```sql
 SELECT
@@ -252,7 +255,7 @@ WHERE commerce.productViews.value = 1 OR commerce.purchases.value = 1 OR _experi
 LIMIT 100
 ```
 
-Voici un exemple de qui conserve la valeur liée aux occurrences suivantes du produit concerné. Le sous-le plus bas établit la relation des valeurs avec le produit sur le de liaison déclaré. Le sous-suivant effectue l’attribution de cette valeur liée lors des interactions suivantes avec le produit concerné. Et le niveau supérieur sélectionne   les résultats pour produire le .
+Voici un exemple de requête conservant la valeur liée aux occurrences suivantes du produit concerné. La sous-requête la plus basse établit la relation des valeurs avec le produit sur le événement de liaison déclaré. La sous-requête suivante effectue l’attribution de cette valeur liée dans les interactions suivantes avec le produit concerné. Et le niveau supérieur sélectionne les agrégats des résultats pour produire le rapports.
 
 ```sql
 SELECT
