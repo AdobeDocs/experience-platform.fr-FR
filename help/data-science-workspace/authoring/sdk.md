@@ -5,23 +5,26 @@ title: Guide du développeur SDK
 topic: Overview
 translation-type: tm+mt
 source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+workflow-type: tm+mt
+source-wordcount: '946'
+ht-degree: 1%
 
 ---
 
 
 # Guide du développeur SDK
 
-Le kit SDK de création de modèles vous permet de développer des recettes d’apprentissage automatique et des pipelines de fonctionnalités personnalisés qui peuvent être utilisés dans l’espace de travail Data Science d’Adobe Experience Platform, afin de fournir des modèles applicables dans PySpark et Spark.
+Le SDK de création de modèles vous permet de développer des recettes d’apprentissage automatique personnalisées et des pipelines de fonctionnalités qui peuvent être utilisés dans l’espace de travail Data Science d’Adobe Experience Platform, ce qui vous permet de mettre en oeuvre des modèles dans PySpark et Spark.
 
-Ce fournit des informations sur les différentes classes trouvées dans le SDK de création de modèles.
+Ce document fournit des informations sur les différentes classes trouvées dans le SDK de création de modèles.
 
 ## DataLoader {#dataloader}
 
-La classe DataLoader encapsule tout ce qui a trait à la récupération, au filtrage et au renvoi de données d’entrée brutes. Parmi les exemples de données d’entrée, citons la formation, la notation ou l’ingénierie des fonctionnalités. Les chargeurs de données étendent la classe abstraite `DataLoader` et doivent remplacer la méthode abstraite `load`.
+La classe DataLoader encapsule tout ce qui a trait à la récupération, au filtrage et au renvoi de données d’entrée brutes. Parmi les exemples de données d’entrée, citons celles destinées à la formation, à la notation ou à l’ingénierie des fonctionnalités. Les chargeurs de données étendent la classe abstraite `DataLoader` et doivent remplacer la méthode abstraite `load`.
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe PySpark Data Loader :
+Le tableau suivant décrit les méthodes abstraites d&#39;une classe PySpark Data Loader :
 
 <table>
     <thead>
@@ -34,7 +37,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe PySpark Data 
         <tr>
             <td>
                 <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
-                <p>Charger et renvoyer des données de plateforme sous forme de données Pandas DataFrame</p>
+                <p>Charger et renvoyer des données de plateforme sous forme de DataFrame Pandas</p>
             </td>
             <td>
                 <ul>
@@ -62,7 +65,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Lo
         <tr>
             <td>
                 <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
-                <p>Chargement et renvoi des données de plateforme en tant que DataFrame</p>
+                <p>Charger et renvoyer des données de plateforme en tant que DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -76,7 +79,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Lo
 
 ### Chargement de données à partir d’un jeu de données de plateforme {#load-data-from-a-platform-dataset}
 
-L’exemple suivant récupère les données de la plateforme par ID et renvoie un DataFrame, où l’ID du jeu de données (`datasetId`) est une propriété définie dans le fichier de configuration.
+L&#39;exemple suivant récupère les données de la plateforme par ID et renvoie un DataFrame, où l&#39;ID de l&#39;ensemble de données (`datasetId`) est une propriété définie dans le fichier de configuration.
 
 **PySpark**
 
@@ -192,11 +195,11 @@ class MyDataLoader extends DataLoader {
 
 ## DataSaver {#datasaver}
 
-La classe DataSaver encapsule tout ce qui a trait au stockage des données de sortie, y compris celles issues de l’évaluation ou de l’ingénierie des fonctionnalités. Les économiseurs de données étendent la classe abstraite `DataSaver` et doivent remplacer la méthode abstraite `save`.
+La classe DataSaver encapsule tout ce qui a trait au stockage des données de sortie, y compris celles issues de la notation ou de l’ingénierie de fonctionnalités. Les économiseurs de données étendent la classe abstraite `DataSaver` et doivent remplacer la méthode abstraite `save`.
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe PySpark Data Saver :
+Le tableau suivant décrit les méthodes abstraites d&#39;une classe d&#39;économiseur de données PySpark :
 
 <table>
     <thead>
@@ -249,7 +252,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe Spark Data Sa
     </tbody>
 </table>
 
-### Enregistrer les données dans un jeu de données de plateforme {#save-data-to-a-platform-dataset}
+### Enregistrer des données dans un jeu de données de plateforme {#save-data-to-a-platform-dataset}
 
 Pour stocker des données dans un jeu de données de plateforme, les propriétés doivent être fournies ou définies dans le fichier de configuration :
 
@@ -391,13 +394,13 @@ class ScoringDataSaver extends DataSaver {
 
 ## DatasetTransformer {#datasettransformer}
 
-La classe DatasetTransformer modifie et transforme la structure d’un jeu de données. L’exécution Sensei Machine Learning Runtime ne nécessite pas la définition de ce composant et est implémentée en fonction de vos besoins.
+La classe DatasetTransformer modifie et transforme la structure d&#39;un jeu de données. L&#39;exécution d&#39;apprentissage automatique Sensei n&#39;exige pas la définition de ce composant et est implémentée en fonction de vos besoins.
 
-En ce qui concerne un pipeline de caractéristiques, les transformateurs de jeux de données peuvent être utilisés en collaboration avec une usine de pipeline de caractéristiques pour préparer les données pour l&#39;ingénierie de caractéristiques.
+En ce qui concerne un pipeline de fonctionnalités, les transformateurs de jeux de données peuvent être utilisés en collaboration avec une usine de traitement de données pour préparer les données en vue de l&#39;ingénierie de fonctionnalités.
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes de classe d’une classe de transformateur de jeux de données PySpark :
+Le tableau suivant décrit les méthodes de classe d&#39;une classe de transformateur de dataset PySpark :
 
 <table>
     <thead>
@@ -416,7 +419,7 @@ Le tableau suivant décrit les méthodes de classe d’une classe de transformat
                 <ul>
                     <li><code class=" language-undefined">self</code>: Auto-référence</li>
                     <li><code class=" language-undefined">configProperties</code>: Carte des propriétés de configuration</li>
-                    <li><code class=" language-undefined">dataset</code>: Jeu de données d’entrée pour la transformation</li>
+                    <li><code class=" language-undefined">dataset</code>: Jeu de données d'entrée pour la transformation</li>
                 </ul>
             </td>
         </tr>
@@ -425,7 +428,7 @@ Le tableau suivant décrit les méthodes de classe d’une classe de transformat
 
 **Spark**
 
-Le tableau suivant décrit les méthodes abstraites d’une classe de transformateur de jeux de données Spark :
+Le tableau suivant décrit les méthodes abstraites d&#39;une classe de transformateur de dataset Spark :
 
 <table>
     <thead>
@@ -443,7 +446,7 @@ Le tableau suivant décrit les méthodes abstraites d’une classe de transforma
             <td>
                 <ul>
                     <li><code class=" language-undefined">configProperties</code>: Carte des propriétés de configuration</li>
-                    <li><code class=" language-undefined">dataset</code>: Jeu de données d’entrée pour la transformation</li>
+                    <li><code class=" language-undefined">dataset</code>: Jeu de données d'entrée pour la transformation</li>
                 </ul>
             </td>
         </tr>
@@ -452,11 +455,11 @@ Le tableau suivant décrit les méthodes abstraites d’une classe de transforma
 
 ## FeaturePipelineFactory {#featurepipelinefactory}
 
-La classe FeaturePipelineFactory contient des fonctionnalités  des algorithmes  et définit les étapes d’un tuyau de caractéristiques de l’à la fin.
+La classe FeaturePipelineFactory contient des algorithmes d&#39;extraction de fonction et définit les étapes d&#39;un tuyau de fonction du début à la fin.
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes de classe d’une fabrique de fonctionnalités PySpark FeaturePipelineFactory :
+Le tableau suivant décrit les méthodes de classe d&#39;une PySpark FeaturePipelineFactory :
 
 <table>
     <thead>
@@ -469,7 +472,7 @@ Le tableau suivant décrit les méthodes de classe d’une fabrique de fonctionn
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
-                <p>Création et renvoi d’un pipeline Spark contenant une série de transformateurs Spark</p>
+                <p>Créer et renvoyer un tuyau Spark contenant une série de transformateurs Spark</p>
             </td>
             <td>
                 <ul>
@@ -481,7 +484,7 @@ Le tableau suivant décrit les méthodes de classe d’une fabrique de fonctionn
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Récupérer et renvoyer la carte param des propriétés de configuration</p>
+                <p>Récupération et renvoi du mappage de paramètres à partir des propriétés de configuration</p>
             </td>
             <td>
                 <ul>
@@ -509,7 +512,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark FeaturePipeline
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
-                <p>Création et renvoi d’un pipeline contenant une série de transformateurs</p>
+                <p>Créer et renvoyer un pipeline contenant une série de transformateurs</p>
             </td>
             <td>
                 <ul>
@@ -520,7 +523,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark FeaturePipeline
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>Récupérer et renvoyer la carte param des propriétés de configuration</p>
+                <p>Récupération et renvoi du mappage de paramètres à partir des propriétés de configuration</p>
             </td>
             <td>
                 <ul>
@@ -538,7 +541,7 @@ La classe PipelineFactory encapsule les méthodes et les définitions pour la fo
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes de classe d’une fabrique de pipelines PySpark :
+Le tableau suivant décrit les méthodes de classe d&#39;une usine de pipelines PySpark :
 
 <table>
     <thead>
@@ -563,13 +566,13 @@ Le tableau suivant décrit les méthodes de classe d’une fabrique de pipelines
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
-                <p>Renvoie un pipeline personnalisé qui contient la logique et l’algorithme pour former un modèle. Cette méthode n’est pas requise si un pipeline Spark est utilisé</p>
+                <p>Renvoie un pipeline personnalisé qui contient la logique et l'algorithme pour former un modèle. Cette méthode n'est pas requise si un pipeline Spark est utilisé</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">self</code>: Auto-référence</li>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
-                    <li><code class=" language-undefined">dataframe</code>: Jeu de données de fonctionnalités pour la saisie des informations de formation</li>
+                    <li><code class=" language-undefined">dataframe</code>: Jeu de données de fonctionnalités pour la saisie de formation</li>
                 </ul>
             </td>
         </tr>
@@ -583,14 +586,14 @@ Le tableau suivant décrit les méthodes de classe d’une fabrique de pipelines
                     <li><code class=" language-undefined">self</code>: Auto-référence</li>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
                     <li><code class=" language-undefined">dataframe</code>: Jeu de données d’entrée pour le score</li>
-                    <li><code class=" language-undefined">model</code>: Modèle entraîné utilisé pour la notation</li>
+                    <li><code class=" language-undefined">model</code>: Modèle formé utilisé pour la notation</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
-                <p>Récupérer et renvoyer la carte param des propriétés de configuration</p>
+                <p>Récupération et renvoi du mappage de paramètres à partir des propriétés de configuration</p>
             </td>
             <td>
                 <ul>
@@ -618,7 +621,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark PipelineFactory
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
-                <p>Création et renvoi d’un pipeline qui contient la logique et l’algorithme de formation et de notation des modèles</p>
+                <p>Création et renvoi d’un pipeline contenant la logique et l’algorithme de formation et de notation des modèles</p>
             </td>
             <td>
                 <ul>
@@ -629,7 +632,7 @@ Le tableau suivant décrit les méthodes de classe d’une Spark PipelineFactory
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
-                <p>Récupérer et renvoyer la carte param des propriétés de configuration</p>
+                <p>Récupération et renvoi du mappage de paramètres à partir des propriétés de configuration</p>
             </td>
             <td>
                 <ul>
@@ -643,11 +646,11 @@ Le tableau suivant décrit les méthodes de classe d’une Spark PipelineFactory
 
 ## MLEvaluator {#mlevaluator}
 
-La classe MLEvaluator fournit des méthodes pour définir des mesures d’évaluation et déterminer des jeux de données de formation et de test.
+La classe MLEvaluator fournit des méthodes pour définir des mesures d&#39;évaluation et déterminer des jeux de données de formation et de test.
 
 **PySpark**
 
-Le tableau suivant décrit les méthodes de classe d’un MLEvaluator PySpark :
+Le tableau suivant décrit les méthodes de classe d&#39;un MLEvaluator PySpark :
 
 <table>
     <thead>
@@ -660,26 +663,26 @@ Le tableau suivant décrit les méthodes de classe d’un MLEvaluator PySpark :
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
-                <p>Divise le jeu de données d’entrée en sous-ensembles de formation et de test.</p>
+                <p>Divise le jeu de données d’entrée en sous-ensembles de données de formation et de test.</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">self</code>: Auto-référence</li>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
-                    <li><code class=" language-undefined">dataframe</code>: Jeu de données d’entrée à fractionner</li>
+                    <li><code class=" language-undefined">dataframe</code>: Jeu de données d'entrée à fractionner</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
-                <p>Evalue un modèle formé et renvoie les résultats de l'évaluation</p>
+                <p>Évaluer un modèle formé et renvoyer les résultats de l'évaluation</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">self</code>: Auto-référence</li>
                     <li><code class=" language-undefined">dataframe</code>: Un DataFrame constitué de données de formation et de test</li>
-                    <li><code class=" language-undefined">model</code>: Un modèle bien formé</li>
+                    <li><code class=" language-undefined">model</code>: Un modèle formé</li>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
                 </ul>
             </td>
@@ -689,7 +692,7 @@ Le tableau suivant décrit les méthodes de classe d’un MLEvaluator PySpark :
 
 **Spark**
 
-Le tableau suivant décrit les méthodes de classe d’un MLEvaluator Spark :
+Le tableau suivant décrit les méthodes de classe d&#39;un MLEvaluator Spark :
 
 <table>
     <thead>
@@ -702,24 +705,24 @@ Le tableau suivant décrit les méthodes de classe d’un MLEvaluator Spark :
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
-                <p>Divise le jeu de données d’entrée en sous-ensembles de formation et de test.</p>
+                <p>Divise le jeu de données d’entrée en sous-ensembles de données de formation et de test.</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
-                    <li><code class=" language-undefined">data</code>: Jeu de données d’entrée à fractionner</li>
+                    <li><code class=" language-undefined">data</code>: Jeu de données d'entrée à fractionner</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
                 <p><i>abstrait</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
-                <p>Evalue un modèle formé et renvoie les résultats de l'évaluation</p>
+                <p>Évaluer un modèle formé et renvoyer les résultats de l'évaluation</p>
             </td>
             <td>
                 <ul>
                     <li><code class=" language-undefined">configProperties</code>: Propriétés de configuration</li>
-                    <li><code class=" language-undefined">model</code>: Un modèle bien formé</li>
+                    <li><code class=" language-undefined">model</code>: Un modèle formé</li>
                     <li><code class=" language-undefined">data</code>: Un DataFrame constitué de données de formation et de test</li>
                 </ul>
             </td>
