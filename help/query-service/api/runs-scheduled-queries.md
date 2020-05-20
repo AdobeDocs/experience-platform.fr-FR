@@ -1,25 +1,28 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: 'Guide du développeur du service '
+title: Guide du développeur Requête Service
 topic: runs for scheduled queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+workflow-type: tm+mt
+source-wordcount: '659'
+ht-degree: 2%
 
 ---
 
 
-# S’exécute pour les  planifiées
+# S’exécute pour les requêtes planifiées.
 
 ## Exemples d’appels d’API
 
-Maintenant que vous comprenez les en-têtes à utiliser, vous êtes prêt à commencer à lancer des appels à l’API du service . Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API de service . Chaque appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API Requête Service. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API Requête Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
 
-### Récupérer un  de toutes les exécutions pour un planifié spécifique 
+### Récupérer une liste de toutes les exécutions pour une requête planifiée spécifiée
 
-Vous pouvez récupérer un  de toutes les exécutions pour un  de planifié spécifique, qu’il soit en cours d’exécution ou déjà terminé. Pour ce faire, vous devez envoyer une requête GET au `/schedules/{SCHEDULE_ID}/runs` point de terminaison, où `{SCHEDULE_ID}` correspond à la `id` valeur du planifié dont vous souhaitez récupérer les exécutions.
+Vous pouvez récupérer une liste de toutes les exécutions pour une requête planifiée spécifique, qu’elles soient en cours d’exécution ou déjà terminées. Pour ce faire, vous devez envoyer une requête GET au point de `/schedules/{SCHEDULE_ID}/runs` terminaison, où `{SCHEDULE_ID}` correspond à la valeur `id` de la requête planifiée dont vous souhaitez récupérer les exécutions.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}/runs
@@ -28,23 +31,23 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du planifié que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
 | `{QUERY_PARAMETERS}` | (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
 
-**Paramètres**
+**Paramètres de Requête**
 
-Vous trouverez ci-dessous un de paramètres de disponibles pour les exécutions de liste d’une  planifiée spécifiée. Tous ces paramètres sont facultatifs. Un appel à ce point de fin sans paramètre récupère toutes les exécutions disponibles pour le  planifié spécifié.
+Voici une liste des paramètres de requête disponibles pour les exécutions de liste pour une requête planifiée spécifiée. Tous ces paramètres sont facultatifs. L’exécution d’un appel à ce point de terminaison sans paramètres récupérera toutes les exécutions disponibles pour la requête planifiée spécifiée.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ de commande des résultats. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L’ajout d’un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
+| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L&#39;ajout d&#39;un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l&#39;ordre décroissant. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
-| `start` | Décale le  de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie un  commençant à partir du troisième répertorié. (*Default value: 0*) |
-| `property` | Filtrez les résultats en fonction des champs. Le **doit** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs jeux de  de. Les champs pris en charge sont `created`, `state`et `externalTrigger`. Les  des opérateurs pris en charge sont `>` (supérieur à), `<` (inférieur à) et `==` (égal à) et `!=` (différent de). Par exemple, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` renverra toutes les exécutions qui ont été créées manuellement, réussies et créées après le 20 avril 2019. |
+| `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
+| `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `created`, `state`et `externalTrigger`. La liste des opérateurs pris en charge est `>` (supérieure à), `<` (inférieure à) et `==` (égale à), et `!=` (différente de). Par exemple, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` renvoie toutes les exécutions qui ont été créées manuellement, qui ont réussi et qui ont été créées après le 20 avril 2019. |
 
 **Requête**
 
-La requête suivante récupère les quatre dernières exécutions pour le  planifié spécifié.
+La requête suivante récupère les quatre dernières exécutions pour la requête planifiée spécifiée.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs?limit=4
@@ -56,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec un d’exécutions pour le planifié spécifié  en tant que JSON. La réponse suivante renvoie les quatre dernières exécutions pour le  planifié spécifié.
+Une réponse réussie renvoie l’état HTTP 200 avec une liste d’exécutions pour la requête planifiée spécifiée en tant que JSON. La réponse suivante renvoie les quatre dernières exécutions pour la requête planifiée spécifiée.
 
 ```json
 {
@@ -144,13 +147,13 @@ Une réponse réussie renvoie l’état HTTP 200 avec un d’exécutions pour le
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour un](#immediately-stop-a-run-for-a-specific-scheduled-query)planifié spécifié.
+>[!NOTE] Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour une requête](#immediately-stop-a-run-for-a-specific-scheduled-query)planifiée spécifiée.
 
-### Déclenchez immédiatement une exécution pour un planifié spécifique 
+### Déclencher immédiatement une exécution pour une requête planifiée spécifique
 
-Vous pouvez immédiatement déclencher une exécution pour un planifié spécifié en faisant une requête POST au `/schedules/{SCHEDULE_ID}/runs` point de fin, où `{SCHEDULE_ID}` correspond à la `id` valeur du planifié  dont vous souhaitez déclencher l’exécution.
+Vous pouvez immédiatement déclencher une exécution pour une requête planifiée spécifiée en envoyant une requête POST au point de `/schedules/{SCHEDULE_ID}/runs` terminaison, où `{SCHEDULE_ID}` est la valeur `id` de la requête planifiée dont vous souhaitez déclencher l&#39;exécution.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /schedules/{SCHEDULE_ID}/runs
@@ -177,11 +180,11 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec le message suiv
 }
 ```
 
-### Récupération des détails d’une exécution pour un planifié spécifique 
+### Récupération des détails d’une exécution pour une requête planifiée spécifique
 
-Vous pouvez récupérer les détails d’une exécution pour un  planifié spécifique en faisant une requête GET au `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` point de fin et en fournissant l’ID du  planifié et l’exécution dans le chemin de requête.
+Vous pouvez récupérer des détails sur une exécution pour une requête planifiée spécifique en faisant une requête GET au point de `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` terminaison et en fournissant à la fois l’ID de la requête planifiée et l’exécution dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
@@ -189,8 +192,8 @@ GET /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du  planifié dont vous souhaitez récupérer les détails. |
-| `{RUN_ID}` | Valeur `id` de l’exécution que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée dont vous souhaitez récupérer les détails. |
+| `{RUN_ID}` | Valeur `id` de l&#39;exécution que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -238,11 +241,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de l’exécu
 }
 ```
 
-### Arrêter immédiatement une exécution pour un planifié spécifique 
+### Arrêter immédiatement une exécution pour une requête planifiée spécifique
 
-Vous pouvez immédiatement arrêter une exécution pour un  planifié spécifique en faisant une requête PATCH au point de `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` fin et en fournissant l’ID du planifié et l’exécution dans le chemin de requête.
+Vous pouvez immédiatement arrêter une exécution pour une requête planifiée spécifique en exécutant une requête PATCH sur le point de `/schedules/{SCHEDULE_ID}/runs/{RUN_ID}` terminaison et en fournissant l’ID de la requête planifiée et l’exécution dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
@@ -250,12 +253,12 @@ PATCH /schedules/{SCHEDULE_ID}/runs/{RUN_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` du  planifié dont vous souhaitez récupérer les détails. |
-| `{RUN_ID}` | Valeur `id` de l’exécution que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée dont vous souhaitez récupérer les détails. |
+| `{RUN_ID}` | Valeur `id` de l&#39;exécution que vous souhaitez récupérer. |
 
 **Requête**
 
-Cette requête d’API utilise la syntaxe du correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le des fondamentaux de l’API.
+Cette requête d’API utilise la syntaxe de correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le document de base de l’API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d65a28abf00a495d82_28e74200-e3de-11e9-8f5d-7f27416c5f0d_sample_scheduled_query7omob151bm_birvwm/runs/c2NoZWR1bGVkX18yMDIwLTAxLTA4VDIwOjQ1OjAwKzAwOjAw
