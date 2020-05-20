@@ -5,13 +5,16 @@ title: Formation et évaluation d’un modèle (IU)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '985'
+ht-degree: 2%
 
 ---
 
 
 # Formation et évaluation d’un modèle (IU)
 
-Dans Adobe Experience Platform Data Science Workspace, un modèle d’apprentissage automatique est créé en incorporant une recette existante adaptée à l’intention du modèle. Le modèle est ensuite formé et évalué afin d&#39;optimiser son efficacité et son efficacité d&#39;exploitation en affinant ses Hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques avec une seule Recette.
+Dans l’espace de travail Data Science d’Adobe Experience Platform, un modèle d’apprentissage automatique est créé en incorporant une recette existante adaptée à l’intention du modèle. Le modèle est ensuite formé et évalué afin d&#39;optimiser son efficacité et son efficacité d&#39;exploitation en affinant ses Hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques avec une seule Recette.
 
 Ce didacticiel décrit les étapes de création, de formation et d&#39;évaluation d&#39;un modèle.
 
@@ -23,42 +26,42 @@ Ce didacticiel nécessite une recette existante. Si vous n&#39;avez pas de recet
 
 ## Créer un modèle
 
-1. Dans Adobe Experience Platform, cliquez sur le **[!UICONTROL Models]** lien situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Cliquez **[!UICONTROL Create Model]** en haut à droite de la page pour lancer un processus de création de modèle.
+1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Cliquez sur **[!UICONTROL Créer un modèle]** en haut à droite de la page pour lancer un processus de création de modèle.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Parcourez la liste des recettes existantes, recherchez et sélectionnez la recette à utiliser pour créer le modèle, puis cliquez sur **[!UICONTROL Next]**.
+2. Parcourez la liste des recettes existantes, recherchez et sélectionnez la recette à utiliser pour créer le modèle, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/train-evaluate-ui/select_recipe.png)
 
-3. Sélectionnez un jeu de données d’entrée approprié, puis cliquez sur **[!UICONTROL Next]**. Ceci définira le jeu de données de formation en entrée par défaut pour le modèle.
+3. Sélectionnez un jeu de données d’entrée approprié et cliquez sur **[!UICONTROL Suivant]**. Ceci définira le jeu de données de formation en entrée par défaut pour le modèle.
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
-4. Attribuez un nom au modèle et passez en revue les configurations de modèle par défaut. Les configurations par défaut ont été appliquées lors de la création de Recette, de la révision et de la modification des valeurs de configuration en cliquant sur les valeurs par doublon. Pour fournir un nouveau jeu de configurations, cliquez **[!UICONTROL Upload New Config]** et faites glisser un fichier JSON contenant des configurations de modèle dans la fenêtre du navigateur. Cliquez sur **[!UICONTROL Finish]** pour créer le modèle.
+4. Attribuez un nom au modèle et passez en revue les configurations de modèle par défaut. Les configurations par défaut ont été appliquées lors de la création de Recette, de la révision et de la modification des valeurs de configuration en cliquant sur les valeurs par doublon. Pour fournir un nouveau jeu de configurations, cliquez sur **[!UICONTROL Télécharger une nouvelle configuration]** et faites glisser un fichier JSON contenant des configurations de modèle dans la fenêtre du navigateur. Cliquez sur **[!UICONTROL Terminer]** pour créer le modèle.
    >[!NOTE]Les configurations sont uniques et spécifiques à la recette prévue, ce qui signifie que les configurations de la recette Ventes au détail ne fonctionneront pas pour la recette Recommandations de produits. Consultez la section de [référence](#reference) pour obtenir une liste des configurations Recette vente au détail.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Créer une session de formation
 
-1. Dans Adobe Experience Platform, cliquez sur le **[!UICONTROL Models]** lien situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Recherchez et cliquez sur le nom du modèle à former.
+1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Recherchez et cliquez sur le nom du modèle à former.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Toutes les sessions de formation existantes avec leur statut actuel sont répertoriées. Pour les modèles créés à l’aide de l’interface utilisateur de l’espace de travail Data Science, une session de formation est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
-3. Créez une nouvelle session de formation en cliquant **[!UICONTROL Train]** près de l&#39;angle supérieur droit de la page d&#39;aperçu du modèle.
+3. Créez une nouvelle formation en cliquant sur **[!UICONTROL Train]** près de l&#39;angle supérieur droit de la page d&#39;aperçu du modèle.
    ![](../images/models-recipes/train-evaluate-ui/training_input.png)
 
-4. Sélectionnez le jeu de données d&#39;entrée de formation pour l&#39;exécution de la formation, puis cliquez sur **[!UICONTROL Next]**.
+4. Sélectionnez le jeu de données d’entrée de formation pour l’exécution de la formation, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
-5. Les configurations par défaut fournies lors de la création du modèle sont affichées, modifiées et modifiées en conséquence en cliquant sur les valeurs par doublon. Cliquez sur **[!UICONTROL Finish]** pour créer et exécuter l’exécution de la formation.
+5. Les configurations par défaut fournies lors de la création du modèle sont affichées, modifiées et modifiées en conséquence en cliquant sur les valeurs par doublon. Cliquez sur **[!UICONTROL Terminer]** pour créer et exécuter la série de formations.
    >[!NOTE]Les configurations sont uniques et spécifiques à la recette prévue, ce qui signifie que les configurations de la recette Ventes au détail ne fonctionneront pas pour la recette Recommandations de produits. Consultez la section de [référence](#reference) pour obtenir une liste des configurations Recette vente au détail.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Évaluer le modèle
 
-1. Dans Adobe Experience Platform, cliquez sur le **[!UICONTROL Models]** lien situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Recherchez et cliquez sur le nom du modèle à évaluer.
+1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Recherchez et cliquez sur le nom du modèle à évaluer.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
 2. Toutes les sessions de formation existantes avec leur statut actuel sont répertoriées. Avec plusieurs séries d&#39;exercices de formation terminés, les mesures d&#39;évaluation peuvent être comparées à différents exercices de formation dans le graphique d&#39;évaluation du modèle, puis sélectionnez une mesure d&#39;évaluation à l&#39;aide de la liste déroulante au-dessus du graphique.
