@@ -5,6 +5,9 @@ title: Planification d’un modèle (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 0%
 
 ---
 
@@ -28,13 +31,13 @@ Ce didacticiel nécessite un service existant. Si vous ne disposez pas d’un se
 
 La notation du modèle peut être configurée pour être un processus automatisé sur une base planifiée. Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour configurer et appliquer un calendrier de notation :
 
-1. Dans Adobe Experience Platform, cliquez sur l’ **[!UICONTROL Services]** onglet situé dans la colonne de navigation de gauche pour accéder à la Galerie *de* services. Recherchez le service sur lequel vous souhaitez planifier des exécutions de score et cliquez sur **[!UICONTROL Open]** pour vue à sa page *Aperçu* .
+1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la Galerie *de* services. Recherchez le service sur lequel vous souhaitez planifier des exécutions de score et cliquez sur **[!UICONTROL Ouvrir]** pour vue à sa page *Aperçu* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. La page Aperçu affiche les informations d’évaluation du service. Cliquez sur le **[!UICONTROL Update Schedule]** lien pour configurer un calendrier de notation.
+2. La page Aperçu affiche les informations d’évaluation du service. Cliquez sur le lien **[!UICONTROL Mettre à jour le calendrier]** pour configurer un calendrier de notation.
    ![](../images/models-recipes/schedule/service_overview_score.png)
 
-3. Configurez la fréquence, la date de début, la date de fin, le jeu de données d’entrée et le jeu de données de sortie pour le calendrier de notation. Une fois les configurations satisfaites, cliquez sur **[!UICONTROL Create]** pour mettre à jour le calendrier de notation du service.
+3. Configurez la fréquence, la date de début, la date de fin, le jeu de données d’entrée et le jeu de données de sortie pour le calendrier de notation. Une fois les configurations satisfaites, cliquez sur **[!UICONTROL Créer]** pour mettre à jour le calendrier de notation du service.
    ![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
 
 4. Votre calendrier de notation mis à jour est affiché dans la page *Présentation* du service.
@@ -47,13 +50,13 @@ La configuration des exécutions de formation planifiées sur un service garanti
 
 Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour configurer et appliquer un calendrier de formation :
 
-1. Dans Adobe Experience Platform, cliquez sur l’ **[!UICONTROL Services]** onglet situé dans la colonne de navigation de gauche pour accéder à la Galerie *de* services. Recherchez le service sur lequel vous souhaitez planifier les exécutions de formation et cliquez sur **[!UICONTROL Open]** pour vue à sa page *Aperçu* .
+1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la Galerie *de* services. Recherchez le service sur lequel vous souhaitez planifier les exécutions de formation et cliquez sur **[!UICONTROL Ouvrir]** pour vue à sa page *Aperçu* .
    ![](../images/models-recipes/schedule/click_to_open.png)
 
-2. La page Aperçu affiche les informations de formation du service. Cliquez sur le **[!UICONTROL Update Schedule]** lien pour configurer un calendrier de formation.
+2. La page Aperçu affiche les informations de formation du service. Cliquez sur le lien **[!UICONTROL Mettre à jour le calendrier]** pour configurer un calendrier de formation.
    ![](../images/models-recipes/schedule/service_overview_train.png)
 
-3. Configurez la fréquence, la date de début, la date de fin et le jeu de données d’entrée utilisés pour le programme de formation. Une fois les configurations satisfaites, cliquez sur **[!UICONTROL Create]** pour mettre à jour le calendrier de formation du Service.
+3. Configurez la fréquence, la date de début, la date de fin et le jeu de données d’entrée utilisés pour le programme de formation. Une fois les configurations satisfaites, cliquez sur **[!UICONTROL Créer]** pour mettre à jour le calendrier de formation du Service.
    ![](../images/models-recipes/schedule/12_configure_training_schedule.png)
 
 4. Votre programme de formation mis à jour est affiché dans la page *Présentation* du service.
