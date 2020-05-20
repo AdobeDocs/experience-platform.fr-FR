@@ -5,6 +5,9 @@ title: Connexion à PSQL
 topic: connect
 translation-type: tm+mt
 source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+workflow-type: tm+mt
+source-wordcount: '177'
+ht-degree: 1%
 
 ---
 
@@ -29,23 +32,23 @@ brew install postgres
 which psql
 ```
 
-Après avoir exécuté ces commandes, vous devriez voir ce qui suit :
+Après avoir exécuté ces commandes, vous devriez voir les éléments suivants :
 
 ```shell
 /usr/local/bin/psql
 ```
 
-## Installation de postgres sur un ordinateur
+## Installer des postgres sur un PC
 
 Téléchargez et installez Postgres à partir de cet [emplacement](https://www.postgresql.org/download/windows/).
 
-Modifiez votre variable de chemin d’accès :
+Modifiez la variable de chemin d&#39;accès :
 
 ![Image](../images/clients/psql/path.png)
 
 Ajouter les deux lignes affichées qui incluent &quot;Postgres&quot;.
 
-Enregistrez vos mises à jour, puis ouvrez une invite de commande et saisissez :
+Enregistrez vos mises à jour, puis ouvrez une invite de commande et tapez :
 
 ```shell
 psql -V
@@ -57,7 +60,7 @@ Vous devriez voir quelque chose comme ceci :
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect PSQL et service de 
+## Connecter PSQL et Requête Service
 
 Revenez à l’interface utilisateur de la plate-forme sur la page &quot;Connect BI Tools&quot;.
 
