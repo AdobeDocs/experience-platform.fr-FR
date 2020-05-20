@@ -1,10 +1,13 @@
 ---
 title: Destination SFTP
 seo-title: Destination SFTP
-description: Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
-seo-description: Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
+description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
+seo-description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 translation-type: tm+mt
 source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 66%
 
 ---
 
@@ -13,16 +16,16 @@ source-git-commit: c3fe5753fb23f99076f9c85b4e07af2d25a121a9
 
 ## Présentation
 
-Créez une connexion sortante en direct vers votre serveur SFTP pour exporter régulièrement des fichiers de données délimités à partir de la plateforme d’expérience.
+Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 
-Pour exporter des données, procédez comme suit :
+Pour exporter des données, procédez comme suit :
 
-## Se connecter à la destination {#connect-destination}
+## Connexion à la destination {#connect-destination}
 
-Voir le flux de travail [Cloud   destinations de ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)pour obtenir des instructions sur la connexion à vos destinations de de cloud, y compris SFTP.
+Pour obtenir des instructions pour se connecter aux destinations de stockage dans le cloud, notamment SFTP, consultez [Processus des destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
 
 Pour les destinations SFTP, saisissez les informations suivantes dans le processus de création de destination, à l’étape **Authentification** :
 
-* **Hôte**: l&#39;adresse de votre  SFTP  emplacement du
-* **Nom d&#39;utilisateur**: le nom d&#39;utilisateur pour vous connecter à votre emplacement  SFTP 
-* **Mot de passe**: le mot de passe pour vous connecter à votre emplacement  SFTP 
+* **Hôte**: l&#39;adresse de votre emplacement d&#39;enregistrement SFTP
+* **Nom d&#39;utilisateur**: nom d’utilisateur pour la connexion à votre emplacement d’enregistrement SFTP
+* **Mot de passe**: mot de passe pour la connexion à l’emplacement de l’enregistrement SFTP
