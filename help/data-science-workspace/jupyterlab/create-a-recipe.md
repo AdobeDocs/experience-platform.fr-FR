@@ -5,6 +5,9 @@ title: Création d'une recette à l'aide de cahiers Jupyter
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+workflow-type: tm+mt
+source-wordcount: '2333'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Ce didacticiel s&#39;articule autour de deux sections principales. Tout d&#39;ab
 
 ## Commencez avec l&#39;environnement d&#39;ordinateur portable JupyterLab
 
-Vous pouvez créer une recette à partir de zéro dans Data Science Workspace. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l’ **[!UICONTROL Notebooks]** onglet à gauche. Créez un bloc-notes en sélectionnant le modèle Recipe Builder dans le lanceur JupyterLab.
+Vous pouvez créer une recette à partir de zéro dans Data Science Workspace. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l’onglet **[!UICONTROL Ordinateurs portables]** sur la gauche. Créez un bloc-notes en sélectionnant le modèle Recipe Builder dans le lanceur JupyterLab.
 
 Le bloc-notes Recipe Builder vous permet d&#39;exécuter des exécutions de formation et de score dans le bloc-notes. Vous disposez ainsi de la souplesse nécessaire pour modifier leurs `train()` méthodes et leurs `score()` méthodes entre les expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et du score, vous pouvez créer une recette à utiliser dans Data Science Workspace à l&#39;aide du bloc-notes pour obtenir la fonctionnalité intégrée au bloc-notes du créateur de recettes.
 
@@ -33,7 +36,7 @@ Le bloc-notes Recipe Builder vous permet d&#39;exécuter des exécutions de form
 
 Lorsque vous cliquez sur le bloc-notes du Générateur de recettes depuis le lanceur, le bloc-notes s&#39;ouvre dans l&#39;onglet. Le modèle utilisé dans le bloc-notes est la Recette de prévision des ventes au détail Python qui se trouve également dans [ce référentiel public.](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/)
 
-Vous remarquerez que dans la barre d&#39;outils, il y a trois autres actions, à savoir - **[!UICONTROL Train]**, **[!UICONTROL Score]** et **[!UICONTROL Create Recipe]**. Ces icônes n&#39;apparaîtront que dans le bloc-notes Recipe Builder. Vous trouverez plus d&#39;informations sur ces actions [dans la section](#training-and-scoring) Formation et score après avoir créé votre Recette dans le bloc-notes.
+Vous remarquerez que dans la barre d&#39;outils, il y a trois autres actions : **[!UICONTROL Train]**, **[!UICONTROL Score]** et **[!UICONTROL Create Recipe]**. Ces icônes n&#39;apparaîtront que dans le bloc-notes Recipe Builder. Vous trouverez plus d&#39;informations sur ces actions [dans la section](#training-and-scoring) Formation et score après avoir créé votre Recette dans le bloc-notes.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
@@ -440,13 +443,13 @@ def save(configProperties, prediction):
 
 Lorsque vous avez terminé d&#39;apporter des modifications à votre bloc-notes et que vous souhaitez former votre recette, vous pouvez cliquer sur les boutons associés en haut de la barre pour créer une session de formation dans la cellule. Lorsque vous cliquez sur le bouton, un journal des commandes et des sorties du script d&#39;entraînement s&#39;affiche dans le bloc-notes (sous la `evaluator.py` cellule). Conda installe d&#39;abord toutes les dépendances, puis la formation est initiée.
 
-Notez que vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Cliquez sur le **[!UICONTROL Run Scoring]** bouton pour obtenir un score sur le modèle de formation qui a été généré pendant la formation. Le script d’évaluation s’affiche sous `datasaver.py`.
+Notez que vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Cliquez sur le bouton **[!UICONTROL Exécuter le score]** pour marquer le modèle entraîné généré pendant la formation. Le script d’évaluation s’affiche sous `datasaver.py`.
 
 Pour le débogage, si vous souhaitez afficher la sortie masquée, ajoutez `debug` à la fin de la cellule de sortie et réexécutez-la.
 
 ## Créer une recette {#create-recipe}
 
-Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **[!UICONTROL Create Recipe]** la barre de navigation supérieure droite.
+Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie formation/score, vous pouvez créer une recette à partir du bloc-notes en appuyant sur **[!UICONTROL Créer une recette]** dans le volet de navigation supérieur droit.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
@@ -454,7 +457,7 @@ Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recet
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Une fois que vous avez appuyé sur **[!UICONTROL Ok]** vous pourrez accéder à la nouvelle recette sur [Adobe Experience Platform](https://platform.adobe.com/). Vous pouvez cliquer sur le **[!UICONTROL View Recipes]** bouton pour accéder à l’ **[!UICONTROL Recipes]** onglet sous **[!UICONTROL ML Models]**
+Une fois que vous avez appuyé sur **[!UICONTROL Ok]** , vous pouvez accéder à la nouvelle recette sur [Adobe Experience Platform](https://platform.adobe.com/). Vous pouvez cliquer sur le bouton Recettes **[!UICONTROL de]** Vue pour accéder à l&#39;onglet **[!UICONTROL Recettes]** sous Modèles **[!UICONTROL ML.]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
