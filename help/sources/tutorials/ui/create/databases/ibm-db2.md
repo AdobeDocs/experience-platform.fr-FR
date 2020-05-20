@@ -52,7 +52,7 @@ Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez **[!UICONTROL IBM DB2]** et cliquez **sur l’icône + (+)** pour créer un connecteur DB2.
+Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez **[!UICONTROL IBM DB2]** et cliquez sur **l’icône + (+)** pour créer un connecteur DB2.
 
 ![catalogue](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
