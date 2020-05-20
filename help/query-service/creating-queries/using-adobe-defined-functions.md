@@ -5,22 +5,25 @@ title: Fonctions définies par Adobe
 topic: queries
 translation-type: tm+mt
 source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+workflow-type: tm+mt
+source-wordcount: '248'
+ht-degree: 6%
 
 ---
 
 
 # Utilisation de fonctions définies par Adobe
 
-L’un des principaux facteurs de différenciation d’Adobe est qu’ils comprennent les données d’expérience et ce que les clients doivent pouvoir faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’aide qui facilitent votre travail.
+L’un des principaux facteurs d’différenciation d’Adobe est qu’il comprend les données d’expérience et ce que les clients doivent pouvoir faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui facilitent votre travail.
 
-Ce couvre les fonctions définies par Adobe (ADF) pour prendre en charge trois  Analytics clés :
+Ce document couvre les fonctions définies par Adobe (ADF) pour prendre en charge trois activités Analytics clés :
 - [Sessionisation](#sessionization)
 - [Attribution](#attribution)
 - [Cheminement](#pathing)
 
 ## Sessionisation
 
-Le `SESS_TIMEOUT()` groupe reproduit les regroupements de visites trouvés avec Adobe Analytics. Il effectue un regroupement temporel similaire, mais avec des paramètres personnalisables.
+Il `SESS_TIMEOUT()` reproduit les regroupements de visites trouvés avec Adobe Analytics. Il effectue un regroupement temporel similaire, mais avec des paramètres personnalisables.
 
 **Syntaxe :**
 
@@ -30,7 +33,7 @@ Le `SESS_TIMEOUT()` groupe reproduit les regroupements de visites trouvés avec 
 
 Structure avec champs `(timestamp_diff, num, is_new, depth)`
 
-### Explorer le niveau de ligne `SESS_TIMEOUT()` et la sortie
+### Explorez le niveau de ligne `SESS_TIMEOUT()` et la sortie
 
 ```sql
 SELECT analyticsVisitor,
@@ -53,7 +56,7 @@ LIMIT 100;
 
 ![Image](../images/queries/adobe-functions/sess-timeout.png)
 
-### Créer un rapport de tendances avec des, des sessions et des  de page
+### Créer un rapport de tendances avec des visiteurs, des sessions et des vues de page
 
 ```sql
 SELECT
@@ -84,15 +87,15 @@ LIMIT 31;
 
 ## Attribution
 
-L’attribution est la manière dont vous affectez des mesures ou des conversions, telles que les recettes, les commandes ou les abonnements, à vos efforts marketing.
+L’attribution est la manière dont vous affectez des mesures ou des conversions telles que les recettes, les commandes ou les abonnements à vos efforts marketing.
 
-Dans Adobe Analytics, les paramètres d’attribution sont configurés à l’aide de variables comme les eVars et sont générés au fur et à mesure que les données sont ingérées.
+Dans Adobe Analytics, les paramètres d’attribution sont configurés à l’aide de variables telles que les eVars et sont générés à mesure que les données sont ingérées.
 
-Les adaptateurs ADF d’attribution trouvés dans le service  permettent de définir et de générer ces affectations au moment  de l’.
+Les adaptateurs ADF d’attribution trouvés dans Requête Service permettent de définir et de générer ces allocations au moment de la requête.
 
-Cet exemple se concentre sur l’attribution Dernière touche, mais Adobe  également l’attribution Première touche .
+Cet exemple porte sur l’attribution Dernière touche, mais Adobe offre également l’attribution Première touche.
 
->[!NOTE] D’autres options avec les délais d’expiration et l’expiration basée sur les  seront disponibles dans les futures versions du service .
+>[!NOTE] D’autres options avec délais d’expiration et expiration basée sur le événement seront disponibles dans les versions futures de Requête Service.
 
 **Syntaxe :**
 
@@ -121,7 +124,7 @@ LIMIT 50;
 
 ![Image](../images/queries/adobe-functions/row-level-attribution.png)
 
-### Créer une ventilation des commandes par niveau de dernier membre (eVar10)
+### Créer une ventilation des commandes par niveau de membre précédent (eVar10)
 
 ```sql
 SELECT
@@ -147,7 +150,7 @@ LIMIT 25;
 
 ## Cheminement
 
-Le cheminement permet de comprendre comment les clients naviguent sur votre site. Les `NEXT()` et `PREVIOUS()` les ADF rendent cela possible.
+Le cheminement permet de comprendre comment les clients naviguent sur votre site. Les `NEXT()` et `PREVIOUS()` ADF rendent cela possible.
 
 **Syntaxe :**
 
@@ -179,7 +182,7 @@ LIMIT 10;
 
 ![Image](../images/queries/adobe-functions/select-current-page.png)
 
-### Créer un rapport de ventilation pour les cinq premiers noms de page à l’entrée de la session
+### Créer un rapport de ventilation pour les cinq premiers noms de page à l&#39;entrée de la session
 
 ```sql
   SELECT 
