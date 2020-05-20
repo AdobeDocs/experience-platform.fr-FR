@@ -5,6 +5,9 @@ description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de s
 seo-description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 3083f6fb25a331eb6dd1d9a63b65aa206481dcb3
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 100%
 
 ---
 
@@ -40,7 +43,7 @@ L’écran de configuration s’ouvre.
 
    ![image](assets/launch-extension-install.png)
 
-   Pour plus d’informations, consultez [Extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation de Launch.
+   Pour plus d’informations, consultez [Extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation de Launch.
 
 1. Configurez l’extension.
 
@@ -49,13 +52,13 @@ L’écran de configuration s’ouvre.
    * **ID de configuration :** indiquez l’ID de configuration que votre représentant Adobe vous a remis.
    * **Domaine Edge :** indiquez le domaine Edge que votre représentant Adobe vous a remis.
 
-1. Click **[!UICONTROL Save]** and continue to the next step.
+1. Cliquez sur **[!UICONTROL Enregistrer]** et passez à l’étape suivante.
 
 ## Créer une règle pour indiquer à Launch les données à envoyer
 
 Ensuite, créez une règle pour indiquer à Launch les données à envoyer à Adobe Experience Platform et le moment auquel vous souhaitez les envoyer.
 
-1. Under the **[!UICONTROL Rules]** tab, configure an event that will trigger on each new page of the website when the Launch library loads.
+1. Sous l’onglet **[!UICONTROL Règles]**, configurez un événement qui se déclenche sur chaque nouvelle page du site web au chargement de la bibliothèque de Launch.
 
    ![image](assets/launch-make-a-rule.png)
 
@@ -67,13 +70,13 @@ Ensuite, créez une règle pour indiquer à Launch les données à envoyer à Ad
 
    L’objet de données que vous envoyez doit être un XDM validé par le schéma utilisé par le jeu de données connecté à votre ID de configuration.
 
-1. Cliquez sur **[!UICONTROL Keep Changes]**.
+1. Cliquez sur **[!UICONTROL Conserver les modifications]**.
 
-Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) dans la documentation de Launch.
+Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html) dans la documentation de Launch.
 
 ## Regrouper l’extension et la règle dans une bibliothèque
 
-Ensuite, [regroupez l’extension](https://docs.adobe.com/content/help/en/launch/using/reference/publish/overview.html) et votre nouvelle règle dans une bibliothèque et testez ces modifications dans un environnement de développement.
+Ensuite, [regroupez l’extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/overview.html) et votre nouvelle règle dans une bibliothèque et testez ces modifications dans un environnement de développement.
 
 ![image](assets/launch-add-changes-to-library.png)
 
@@ -81,4 +84,4 @@ Une fois les tests terminés, faites la promotion de la bibliothèque dans le wo
 
 ![image](assets/launch-promote-library.png)
 
-Pour plus d’informations, consultez [Bibliothèques](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html) dans la documentation de Launch.
+Pour plus d’informations, consultez [Bibliothèques](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) dans la documentation de Launch.
