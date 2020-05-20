@@ -5,13 +5,16 @@ title: Fonctions de mappage
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 6%
 
 ---
 
 
 # Fonctions de mappage
 
- langage  de (PQL)  fonctions delangage pour faciliter l’interaction avec les cartes. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans la présentation [du de la langue  du](./overview.md).
+Les offres PQL (Profil Requête Language) facilitent l’interaction avec les cartes. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
 
 ## Get
 
@@ -25,7 +28,7 @@ La `get` fonction est utilisée pour récupérer la valeur d’un mappage pour u
 
 **Exemple**
 
-Le PQL suivant obtient la valeur de la carte d’identité pour la clé `example@example.com`.
+La requête PQL suivante obtient la valeur de la carte d’identité de la clé `example@example.com`.
 
 ```sql
 identityMap.get("example@example.com")
@@ -43,7 +46,7 @@ La `keys` fonction est utilisée pour récupérer toutes les clés d’une carte
 
 **Exemple**
 
-Le PQL suivant récupère toutes les clés de la carte `identityMap`.
+La requête PQL suivante récupère toutes les clés de la carte `identityMap`.
 
 ```sql
 identityMap.keys()
@@ -61,7 +64,7 @@ La `values` fonction est utilisée pour récupérer toutes les valeurs d’une c
 
 **Exemple**
 
-Le PQL suivant récupère toutes les valeurs de la carte `identityMap`.
+La requête PQL suivante récupère toutes les valeurs de la carte `identityMap`.
 
 ```sql
 identityMap.values()
@@ -69,4 +72,4 @@ identityMap.values()
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les fonctions de carte, vous pouvez les utiliser dans votre  PQL. Pour plus d&#39;informations sur les autres fonctions de PQL, veuillez lire la présentation [de la langue du](./overview.md).
+Maintenant que vous avez pris connaissance des fonctions de carte, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
