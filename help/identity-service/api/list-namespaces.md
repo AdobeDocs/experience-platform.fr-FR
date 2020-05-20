@@ -1,17 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' disponible '
+title: espaces de nommage Listes disponibles
 topic: API guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
 
-#  disponible 
+# espaces de nommage Listes disponibles
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /idnamespace/identities
@@ -30,7 +33,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un   disponible.   avec une valeur &quot;personnalisée&quot; de &quot;false&quot; sont des  standard, tandis que ceux avec une valeur &quot;personnalisé&quot; de &quot;true&quot; sont des que votre organisation a créés.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de nommage disponible. Les Espaces de nommage dont la valeur personnalisée est &quot;false&quot; sont des espaces de nommage standard, tandis que ceux dont la valeur personnalisée est &quot;true&quot; sont des espaces de nommage créés par votre entreprise.
 
 >[!NOTE] Cette réponse a été tronquée pour l&#39;espace.
 
@@ -74,4 +77,4 @@ La réponse comprend un tableau d’objets, chaque objet représentant un   disp
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [créer un  personnalisé](./create-custom-namespace.md)
+Passez au didacticiel suivant pour [créer un espace de nommage personnalisé](./create-custom-namespace.md)
