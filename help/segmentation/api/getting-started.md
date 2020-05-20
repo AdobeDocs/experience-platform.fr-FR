@@ -1,42 +1,45 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur du service de segmentation
+title: Guide du développeur de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 1%
 
 ---
 
 
-# Guide du développeur du service de segmentation
+# Guide du développeur de Segmentation Service
 
-La segmentation vous permet de créer des segments et de générer   dans Adobe Experience Platform à partir de vos données de client en temps réel.
+La segmentation vous permet de créer des segments et de générer des audiences dans Adobe Experience Platform à partir de vos données de Profil client en temps réel.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation de la segmentation.
+Ce guide nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans l’utilisation de la segmentation.
 
-- [Segmentation](../home.md): Permet de créer  segments  à partir de données de client en temps réel.
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plateforme d’expérience organise les données d’expérience client.
-- [](../../profile/home.md)du client en temps réel : Fournit un client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en un  virtuel distinct pour aider à développer et à développer des applications d’expérience numérique.
+- [Segmentation](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+- [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires que vous devez connaître pour utiliser correctement la segmentation à l’aide de l’API.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour utiliser correctement la segmentation à l’aide de l’API.
 
 ### Lecture des exemples d’appels d’API
 
-La documentation de l’API du service de segmentation fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+La documentation de l’API du service de segmentation fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
-### En-têtes obligatoires
+### En-têtes requis
 
-La documentation de l’API exige également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels vers les points de fin de plateforme. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+La documentation de l’API exige également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels vers les points de terminaison de la plate-forme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plateforme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête qui spécifie le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -78,12 +81,12 @@ Segment definitions define which profiles will be part of which audience segment
 
 For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
 
-## Tâches de segment
+## Tâches de segmentation
 
-Les tâches de segmentation traitent les définitions de segment précédemment établies pour générer un segment  de . Vous pouvez utiliser le `/segment/jobs` point de fin pour récupérer un de tâches de segment, créer une tâche de segment, récupérer les détails d’une tâche de segment spécifique ou supprimer une tâche de segment spécifique.
+Les tâches de segmentation traitent les définitions de segment précédemment établies pour générer un segment d’audience. Vous pouvez utiliser le `/segment/jobs` point de terminaison pour récupérer une liste de tâches de segment, créer une tâche de segment, récupérer les détails d’une tâche de segment spécifique ou supprimer une tâche de segment spécifique.
 
-Pour plus d’informations sur l’utilisation de ce point de fin, consultez le guide [du développeur de tâches de](./segment-jobs.md)segment.
+Pour plus d’informations sur l’utilisation de ce point de terminaison, consultez le guide [des développeurs d’emplois de](./segment-jobs.md)segment.
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’API de segmentation, sélectionnez l’un des sous-guides pour savoir comment utiliser des points de fin de segmentation spécifiques. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de la plateforme, consultez le guide [de l’utilisateur](../ui/overview.md)Segmentation.
+Pour commencer à lancer des appels à l’aide de l’API de segmentation, sélectionnez l’un des sous-guides pour savoir comment utiliser des points de terminaison spécifiques à la segmentation. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de la plate-forme, consultez le guide [d’utilisateur](../ui/overview.md)Segmentation.
