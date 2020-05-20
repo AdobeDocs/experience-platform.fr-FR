@@ -4,6 +4,9 @@ audience: user
 user-guide-title: Sandbox dans l’aide d’Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 4%
 
 ---
 
@@ -16,9 +19,9 @@ source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
    * [Guide de l’utilisateur de Sandbox](ui/user-guide.md)
 * API Sandbox {#api}
    * [Prise en main](api/getting-started.md)
-   * [types de sandbox pris en charge](api/list-sandbox-types.md)
-   * [tous les sandbox](api/list-all-sandboxes.md)
-   * [des sandbox actifs pour l’utilisateur actuel](api/list-active-sandboxes.md)
+   * [Types de sandbox pris en charge par la Liste](api/list-sandbox-types.md)
+   * [Liste de tous les sandbox](api/list-all-sandboxes.md)
+   * [Liste des sandbox actifs pour l’utilisateur actuel](api/list-active-sandboxes.md)
    * [Rechercher un sandbox](api/look-up-sandbox.md)
    * [Création d’un sandbox](api/create-sandbox.md)
    * [Mise à jour d’un sandbox](api/update-sandbox.md)
