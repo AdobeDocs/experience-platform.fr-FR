@@ -4,9 +4,9 @@ seo-title: Destinations de stockage dans le cloud
 description: Adobe Real-time CDP peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
 seo-description: Adobe Real-time CDP peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
 translation-type: tm+mt
-source-git-commit: a18f89531cf024f61b054b47a660bd26766bebf6
+source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '185'
 ht-degree: 34%
 
 ---
@@ -32,4 +32,4 @@ Pour plus d’informations sur la connexion aux destinations de stockage dans le
 ## Destinations de diffusion en continu de l’enregistrement Cloud disponibles
 
 * [Destination Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
-* [Destination Azure EventHubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)
+* [Destination des centres de Événement Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
