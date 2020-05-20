@@ -5,6 +5,9 @@ title: Création d’un connecteur source Adobe Analytics dans l’interface uti
 topic: overview
 translation-type: tm+mt
 source-git-commit: d2f8e11591b30a0bfd345e56a33a8bb62501358c
+workflow-type: tm+mt
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -23,17 +26,17 @@ Ce didacticiel nécessite une compréhension pratique des composants suivants d�
 
 ## Création d’une connexion source avec Adobe Analytics
 
-Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail des sources. L’écran *Catalogue* affiche les sources disponibles pour créer des connexions entrantes avec, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
+Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran *Catalogue* affiche les sources disponibles pour créer des connexions entrantes avec, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie des applications ** Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Accounts]**.
+Sous la catégorie des applications ** Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Sélectionner des données
 
-L’étape *Adobe Analytics* s’affiche. Les flux de jeux de données précédemment établis pour Analytics sont répertoriés dans cet écran. Vous pouvez créer un flux de jeux de données en cliquant sur **[!UICONTROL Select data]**.
+L’étape *Adobe Analytics* s’affiche. Les flux de jeux de données précédemment établis pour Analytics sont répertoriés dans cet écran. Vous pouvez créer un flux de jeux de données en cliquant sur **[!UICONTROL Sélectionner les données]**.
 
 >[!NOTE] Plusieurs connexions entrantes à une source peuvent être établies pour apporter différentes données.
 
@@ -41,7 +44,7 @@ L’étape *Adobe Analytics* s’affiche. Les flux de jeux de données précéde
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-Dans la liste des suites de rapports disponibles, sélectionnez celle que vous souhaitez importer dans la plateforme et cliquez sur **[!UICONTROL Next]**.
+Dans la liste des suites de rapports disponibles, sélectionnez celle que vous souhaitez importer dans la plateforme et cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
