@@ -30,7 +30,7 @@ Pour plus d’informations sur les étiquettes d’utilisation des données disp
 
 Tous les segments d’audience créés par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des étiquettes d’utilisation de leurs jeux de données correspondants. Cela permet aux applications créées sur la plateforme d’expérience (telle que la plateforme de données clientes en temps réel) de fournir une application automatique de la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
 
-Outre l’héritage d’étiquettes au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Selon la manière dont votre application basée sur une plateforme utilise les segments, vous pouvez éventuellement spécifier les champs utilisés, ce qui empêche le segment d’hériter des étiquettes des champs exclus.
+Outre l’héritage d’étiquettes au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Selon la manière dont votre application basée sur une plateforme utilise les segments, vous pouvez éventuellement spécifier les champs utilisés, ce qui empêche le segment d’hériter des libellés des champs exclus.
 
 Pour plus d&#39;informations sur le fonctionnement de l&#39;application automatique dans le CDP en temps réel, consultez l&#39;aperçu [de la gouvernance des données CDP en temps](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)réel.
 
