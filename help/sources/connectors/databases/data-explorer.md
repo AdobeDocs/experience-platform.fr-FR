@@ -20,7 +20,7 @@ Différents types de bases de données tierces sont pris en charge, y compris le
 
 La documentation ci-dessous fournit des informations sur la façon de connecter Azure Data Explorer à la plate-forme à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
-## Connectez Azure Data Explorer à la plateforme à l&#39;aide d&#39;API
+## Connect Azure Data Explorer to Platform using APIs
 
 - [Création d&#39;un connecteur Azure Data Explorer à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/databases/data-explorer.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
