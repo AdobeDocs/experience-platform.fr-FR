@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs de source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '758'
 ht-degree: 1%
 
 ---
@@ -77,6 +77,8 @@ Experience Platform prend en charge l’assimilation de données à partir d’u
 - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
 - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
+- [Connecteur GreenPlum](connectors/databases/greenplum.md)
+- [Connecteur HP Vertica](connectors/databases/hp-vertica.md)
 - [Connecteur IBM DB2](connectors/databases/ibm-db2.md)
 - [Connecteur MariaDB](connectors/databases/mariadb.md)
 - [Connecteur Microsoft SQL Server](connectors/databases/sql-server.md)
