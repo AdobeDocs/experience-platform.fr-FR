@@ -4,9 +4,9 @@ solution: Experience Platform
 title: S'abonner aux événements d'assimilation de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4817162fe2b7cbf4ae4c1ed325db2af31da5b5d3
+source-git-commit: 1498739d753bdb569e0d3e091e4160bdae40a32f
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '851'
 ht-degree: 2%
 
 ---
@@ -39,42 +39,54 @@ Vous trouverez ci-dessous une liste de notifications d&#39;état d&#39;assimilat
 
 Le schéma de événement de notification d’ingestion de données est un schéma de modèle de données d’expérience (XDM) contenant des champs et des valeurs qui fournissent des détails sur l’état des données ingérées. Veuillez visiter le repo public XDM GitHub afin de vue du dernier schéma [de charge utile de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notification.
 
-## S&#39;abonner aux notifications d&#39;état d&#39;importation de données
+## S’abonner aux notifications d’état d’assimilation de données
 
-Grâce aux Événements [d’E/S](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, vous pouvez vous abonner à plusieurs types de notification à l’aide de hameçons Web. Pour en savoir plus sur les hameçons WebHooks et sur la façon de s’abonner à des Événements d’E/S Adobe à l’aide de hameçons WebHooks, reportez-vous à l’ [introduction du guide des hameçons](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) WebHooks des Événements d’E/S Adobe.
+Grâce aux Événements [d’E/S](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, vous pouvez vous abonner à plusieurs types de notification à l’aide de hameçons Web. Les sections ci-dessous décrivent les étapes à suivre pour s’abonner aux notifications de plateforme pour les événements d’assimilation de données à l’aide d’Adobe Developer Console.
 
-### Créer une nouvelle intégration à l’aide de la console d’E/S d’Adobe
+### Création d’un projet dans Adobe Developer Console
 
-Connectez-vous à la console [d’E/S](https://console.adobe.io/home) Adobe et cliquez sur l’onglet *Intégrations* ou sur **Créer une intégration** sous Début rapide. Lorsque l’écran *Intégration* s’affiche, cliquez sur **Nouvelle intégration** pour créer une nouvelle intégration.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel relatif à la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation d’Adobe Developer Console.
 
-![Créer une nouvelle intégration](../images/quality/subscribe-events/create_integration_start.png)
+### événements de la plateforme Ajouter expérience sur le projet
 
-L’écran *Créer une nouvelle intégration* s’affiche. Sélectionnez **Recevoir des événements temps réels** proches, puis cliquez sur **Continuer**.
+Une fois que vous avez créé un nouveau projet, accédez à l’écran d’aperçu de ce projet. De là, cliquez sur **[!UICONTROL Ajouter événement]**.
 
-![Recevoir des événements en temps quasi réel](../images/quality/subscribe-events/create_integration_receive_events.png)
+![](../images/quality/subscribe-events/add-event-button.png)
 
-L’écran suivant fournit des options permettant de créer des intégrations avec différents événements, produits et services disponibles pour votre organisation en fonction de vos abonnements, droits et autorisations. Pour cette intégration, sélectionnez Notifications **de** plateformes sous Plate-forme d’expérience, puis cliquez sur **Continuer**.
+La boîte de dialogue événements __Ajouter apparaît. Cliquez sur Plate-forme****d’expérience pour filtrer la liste des options disponibles, puis sur Notifications**[!UICONTROL  de ]**plateforme avant de cliquer sur**[!UICONTROL  Suivant ]**.
 
-![Sélectionner le fournisseur de événements](../images/quality/subscribe-events/create_integration_select_provider.png)
+![](../images/quality/subscribe-events/select-platform-events.png)
 
-Le formulaire Détails *de l’* intégration s’affiche, vous obligeant à fournir un nom et une description pour l’intégration, ainsi qu’un certificat de clé publique.
+L’écran suivant affiche une liste de types d&#39;événement auxquels s’abonner. Sélectionnez Notification **[!UICONTROL d’importation de]** données, puis cliquez sur **[!UICONTROL Suivant]**.
 
-Si vous ne disposez pas d’un certificat public, vous pouvez en générer un dans le terminal à l’aide de la commande suivante :
+![](../images/quality/subscribe-events/choose-event-subscriptions.png)
 
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
-```
+L’écran suivant vous invite à créer un JSON Web Token (JWT). Vous avez la possibilité de générer automatiquement une paire de clés ou de télécharger votre propre clé publique générée dans le terminal.
 
-Une fois que vous avez généré un certificat, faites glisser et déposez le fichier dans la zone Certificats **de clés** publiques ou cliquez sur **Sélectionner un fichier** pour parcourir votre répertoire de fichiers et sélectionner directement le certificat.
+Pour les besoins de ce didacticiel, la première option est suivie. Cochez la case d&#39;option **[!UICONTROL Générer une paire]** de clés, puis cliquez sur le bouton **[!UICONTROL Générer la paire]** de clés dans le coin inférieur droit.
 
-Après avoir ajouté votre certificat, l’option Enregistrement *du* Événement s’affiche. Cliquez sur **Ajouter Événement Inscription**.
+![](../images/quality/subscribe-events/generate-keypair.png)
 
-![détails de l’intégration](../images/quality/subscribe-events/create_integration_details.png)
+Lorsque la paire de clés est générée, elle est automatiquement téléchargée par le navigateur. Vous devez stocker ce fichier vous-même, car il n’est pas conservé dans la Console développeur.
 
-La boîte de dialogue des détails *d&#39;enregistrement du* Événement s&#39;étend pour afficher d&#39;autres commandes. Ici vous pouvez sélectionner vos types d&#39;événement et enregistrer votre webhook. Entrez un nom pour l’enregistrement du événement, l’URL du crochet Web *(Facultatif)*, ainsi qu’une brève description. Enfin, sélectionnez les types d&#39;événement auxquels vous souhaitez vous abonner (Notification d&#39;importation de données), puis cliquez sur **Enregistrer**.
+L’écran suivant vous permet de vérifier les détails de la paire de clés nouvellement générée. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
-![Sélectionner des événements](../images/quality/subscribe-events/create_integration_select_event.png)
+![](../images/quality/subscribe-events/keypair-generated.png)
+
+Dans l’écran suivant, indiquez le nom et la description de l’enregistrement du événement. Il est recommandé de créer un nom unique et facilement identifiable afin de différencier cette inscription de événement des autres sur le même projet.
+
+![](../images/quality/subscribe-events/registration-details.png)
+
+Plus loin dans le même écran, vous pouvez éventuellement configurer la manière de recevoir des événements. **[!UICONTROL Webhook]** vous permet de fournir une adresse webhook personnalisée pour recevoir des événements, tandis que l’action **** Runtime vous permet de faire de même avec [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime/docs.html).
+
+Ce didacticiel ignore cette étape de configuration facultative. Une fois que vous avez terminé, cliquez sur **[!UICONTROL Enregistrer les événements]** configurés pour terminer l’enregistrement du événement.
+
+![](../images/quality/subscribe-events/receive-events.png)
+
+La page des détails de l&#39;enregistrement de événement nouvellement créé s&#39;affiche, dans laquelle vous pouvez consulter les événements reçus, effectuer le suivi du débogage et modifier sa configuration.
+
+![](../images/quality/subscribe-events/registration-complete.png)
 
 ## Étapes suivantes
 
-Une fois que vous avez créé votre intégration d&#39;E/S, vous pouvez vue les notifications reçues pour cette intégration. Consultez le guide [Suivi des Événements](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) d’E/S Adobe pour obtenir des instructions détaillées sur la manière de suivre vos événements.
+Une fois que vous avez enregistré des notifications de plateforme à votre projet, vous pouvez vue recevoir des événements du tableau de bord du projet. Consultez le guide [Suivi des Événements](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) d’E/S Adobe pour obtenir des instructions détaillées sur la manière de suivre vos événements.
