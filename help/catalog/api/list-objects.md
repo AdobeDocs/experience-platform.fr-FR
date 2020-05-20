@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' d’objets'
+title: Objets Liste
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 1%
 
 ---
 
 
-#  d’objets
+# Objets Liste
 
-Vous pouvez récupérer un de tous les objets disponibles d’un type spécifique par le biais d’un appel d’API unique, la meilleure pratique étant d’inclure des  qui limitent la taille de la réponse.
+Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique par le biais d’un appel d’API unique, la meilleure pratique étant d’inclure des filtres qui limitent la taille de la réponse.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /{OBJECT_TYPE}
@@ -23,11 +26,11 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 | Paramètre | Description |
 | --- | --- |
 | `{OBJECT_TYPE}` | Type d’objet Catalog à répertorier. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Paramètre  utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données](filter-data.md) du catalogue. |
+| `{FILTER}` | Paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données](filter-data.md) du catalogue. |
 
 **Requête**
 
-L’exemple de requête ci-dessous récupère un de jeux de données, avec un `limit` filtre qui réduit la réponse à cinq résultats et un `properties` filtre qui limite les propriétés affichées pour chaque jeu de données.
+L’exemple de requête ci-dessous récupère une liste de jeux de données, un `limit` filtre réduisant la réponse à cinq résultats et un `properties` filtre limitant les propriétés affichées pour chaque jeu de données.
 
 ```shell
 curl -X GET \
@@ -40,9 +43,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un  d’objets Catalog sous la forme de paires clé-valeur, filtré par les paramètres  fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet Catalog en question, qui peut ensuite être utilisé dans un autre appel pour [cet objet](look-up-object.md) spécifique pour plus de détails.
+Une réponse positive renvoie une liste d’objets Catalog sous la forme de paires clé-valeur, filtrée par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet Catalog en question, qui peut ensuite être utilisé dans un autre appel à la [vue de cet objet](look-up-object.md) spécifique pour plus de détails.
 
->[!NOTE] Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par le `properties` , la réponse renvoie uniquement les propriétés demandées qu’il inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
+>[!NOTE] Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
 
 ```json
 {
