@@ -126,7 +126,7 @@ Selon que vous utilisez l’interface utilisateur ou l’API, la configuration s
 
 **Pour les opérations basées sur l’interface utilisateur :**
 - Un navigateur Web moderne et standard. Bien que la dernière version de Chrome soit recommandée, les versions majeures actuelles et précédentes de Firefox, Internet Explorer et Safari sont également prises en charge.
-   - Chaque fois qu&#39;une nouvelle version majeure est publiée, les débuts de plateformes prenant en charge la version la plus récente et la prise en charge de la troisième version la plus récente sont supprimés.
+   - Chaque fois qu&#39;une nouvelle version majeure est publiée, les débuts de plateformes prenant en charge la version la plus récente tandis que la prise en charge de la troisième version la plus récente est supprimée.
 - Les cookies et JavaScript doivent être activés dans tous les navigateurs.
 
 **Pour les interactions API et développeurs :**
