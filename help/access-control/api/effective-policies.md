@@ -1,19 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: ' des stratégies efficaces'
+title: Vue de politiques efficaces
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+workflow-type: tm+mt
+source-wordcount: '273'
+ht-degree: 1%
 
 ---
 
 
-#  des stratégies efficaces
+# Vue de politiques efficaces
 
-Pour  des stratégies efficaces pour l’utilisateur actuel, faites une requête POST au point de `/acl/effective-policies` fin dans l’API . Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans la charge utile de requête sous la forme d’un tableau. Ceci est illustré dans l’exemple d’appel d’API ci-dessous.
+Pour vue des stratégies efficaces pour l’utilisateur actuel, envoyez une requête POST au point de `/acl/effective-policies` terminaison dans l’API de Contrôle d&#39;accès. Les autorisations et types de ressources que vous souhaitez récupérer doivent être fournis dans la charge utile de la demande sous la forme d&#39;un tableau. Ceci est démontré dans l’exemple d’appel d’API ci-dessous.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /acl/effective-policies
@@ -21,7 +24,7 @@ POST /acl/effective-policies
 
 **Requête**
 
-Les requêtes suivantes récupèrent des informations sur l’autorisation &quot;Gérer les jeux de données&quot; et l’accès au type de ressource &quot;&quot; pour l’utilisateur actuel.
+Les requêtes suivantes récupèrent des informations sur l&#39;autorisation &quot;Gérer les jeux de données&quot; et l&#39;accès au type de ressource &quot;schémas&quot; pour l&#39;utilisateur actuel.
 
 ```shell
 curl -X POST \
@@ -37,11 +40,11 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Pour obtenir un complet des autorisations et des types de ressources pouvant être fournis dans le tableau de charge utile, reportez-vous à la section de l’annexe sur les autorisations [acceptées et les types](#accepted-permissions-and-resource-types)de ressources.
+>[!NOTE] Pour obtenir une liste complète des autorisations et des types de ressources qui peuvent être fournis dans le tableau de charge utile, reportez-vous à la section de l&#39;annexe sur les autorisations [acceptées et les types](#accepted-permissions-and-resource-types)de ressources.
 
 **Réponse**
 
-Une réponse réussie renvoie des informations sur les autorisations et les types de ressources fournis dans la requête. La réponse inclut les autorisations actives dont dispose l’utilisateur actuel pour les types de ressource spécifiés dans la requête. Si des autorisations incluses dans la charge utile de requête sont actives pour l’utilisateur actuel, l’API renvoie l’autorisation avec un astérisque (`*`) pour indiquer que l’autorisation est active. Les autorisations fournies dans la requête qui ne sont pas actives pour l’utilisateur sont ignorées de la charge utile de réponse.
+Une réponse réussie renvoie des informations sur les autorisations et les types de ressources fournis dans la requête. La réponse inclut les autorisations actives dont dispose l&#39;utilisateur actuel pour les types de ressources spécifiés dans la requête. Si des autorisations incluses dans la charge utile de requête sont actives pour l’utilisateur actuel, l’API renvoie l’autorisation avec un astérisque (`*`) pour indiquer que l’autorisation est active. Toutes les autorisations fournies dans la requête qui ne sont pas actives pour l’utilisateur sont ignorées de la charge utile de réponse.
 
 ```json
 {
@@ -60,15 +63,15 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce  décrit comment effectuer des appels à l’API  pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus d’informations sur les  de la plateforme d’expérience, reportez-vous à la présentation [du  de](../home.md).
+Ce document décrit comment appeler l&#39;API Contrôle d&#39;accès pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus d’informations sur le contrôle d&#39;accès pour la plateforme d’expérience, voir la présentation [du](../home.md)contrôle d&#39;accès.
 
 ## Annexe
 
-Cette section fournit des informations supplémentaires sur l’utilisation de l’API .
+Cette section fournit des informations supplémentaires sur l’utilisation de l’API de Contrôle d&#39;accès.
 
 ### Autorisations et types de ressources acceptés
 
-Vous trouverez ci-dessous un  d’autorisations et de types de ressources que vous pouvez inclure dans la charge utile d’une requête POST au point de `/acl/active-permissions` fin.
+Vous trouverez ci-dessous une liste d’autorisations et de types de ressources que vous pouvez inclure dans la charge utile d’une requête POST au point de `/acl/active-permissions` terminaison.
 
 **Autorisations**
 
