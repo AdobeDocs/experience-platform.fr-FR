@@ -5,34 +5,37 @@ title: Validation de l’assimilation en flux continu
 topic: overview
 translation-type: tm+mt
 source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+workflow-type: tm+mt
+source-wordcount: '842'
+ht-degree: 3%
 
 ---
 
 
 # Validation de l’assimilation en flux continu
 
-L’assimilation en flux continu vous permet de télécharger vos données vers Adobe Experience Platform à l’aide de points de fin de flux continu en temps réel. Les API d’assimilation en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.
+L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’assimilation en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.
 
 ## Prise en main
 
-Ce guide nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plateforme d’expérience organise les données d’expérience client.
-- [Ingestion](../streaming-ingestion/overview.md)en flux continu : L’une des méthodes par lesquelles les données peuvent être envoyées à la plateforme d’expérience.
+- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+- [Ingestion](../streaming-ingestion/overview.md)en flux continu : L’une des méthodes par lesquelles les données peuvent être envoyées à la plate-forme d’expérience.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [manière de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de la plateforme d’expérience.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [sur l’](../../tutorials/authentication.md)authentification. Le didacticiel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme illustré ci-dessous :
+Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
-- x-gw-ims-org-id : `{IMS_ORG}`
+- x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au Registre des  d’, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes des API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au Registre des Schémas, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -54,13 +57,13 @@ Le service de validation en flux continu couvre la validation dans les domaines 
 
 ## Validation synchrone
 
-La validation synchrone est une méthode de validation qui fournit des commentaires immédiats sur les raisons de l’échec de l’assimilation. Toutefois, en cas d’échec, les enregistrements dont la validation échoue sont ignorés et empêchés d’être envoyés en aval. Par conséquent, la validation synchrone ne doit être utilisée que pendant le processus de développement. Lors d’une validation synchrone, les appelants sont informés du résultat de la validation XDM et, en cas d’échec, de la raison de l’échec.
+La validation synchrone est une méthode de validation qui fournit des informations immédiates sur les raisons de l’échec de l’assimilation. Cependant, en cas d’échec, les enregistrements dont la validation a échoué sont ignorés et empêchés d’être envoyés en aval. Par conséquent, la validation synchrone ne doit être utilisée que pendant le processus de développement. Lors d’une validation synchrone, les appelants sont informés du résultat de la validation XDM et, en cas d’échec, de la raison de l’échec.
 
-Par défaut, la validation synchrone n’est pas activée. Pour l’activer, vous devez transmettre le paramètre facultatif  `synchronousValidation=true` lors des appels d’API. En outre, la validation synchrone n’est actuellement disponible que si votre point de fin de flux se trouve dans le centre de données VA7.
+Par défaut, la validation synchrone n’est pas activée. Pour l&#39;activer, vous devez transmettre le paramètre de requête facultatif `synchronousValidation=true` lors des appels d&#39;API. En outre, la validation synchrone n’est actuellement disponible que si votre point de terminaison de flux se trouve sur le centre de données VA7.
 
-Si un message échoue lors de la validation synchrone, il n’est pas écrit dans la file d’attente de sortie, ce qui fournit des commentaires immédiats aux utilisateurs.
+Si un message échoue lors de la validation synchrone, il ne sera pas écrit dans la file d’attente de sortie, ce qui fournit des commentaires immédiats aux utilisateurs.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /collection/{CONNECTION_ID}?synchronousValidation=true
@@ -72,7 +75,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Requête**
 
-Envoyez la requête suivante pour assimiler des données à votre entrée de données avec une validation synchrone :
+Envoyez la demande suivante pour assimiler des données à votre entrée de données avec une validation synchrone :
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -86,7 +89,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Réponse**
 
-Lorsque la validation synchrone est activée, une réponse réussie inclut toutes les erreurs de validation survenues dans sa charge utile :
+Lorsque la validation synchrone est activée, une réponse réussie comprend toutes les erreurs de validation rencontrées dans sa charge utile :
 
 ```json
 {
@@ -131,13 +134,13 @@ Lorsque la validation synchrone est activée, une réponse réussie inclut toute
 }
 ```
 
-La réponse ci-dessus  combien de  violations ont été découvertes et quelles étaient les violations. Par exemple, cette réponse indique que les clés `workEmail` et `person` n’étaient pas définies dans le  de et ne sont donc pas autorisées. Il indique également la valeur de `_id` comme étant incorrecte, car le attendait un `string`, mais un `long` a été inséré à la place. Notez qu’une fois cinq erreurs rencontrées, le service de validation **arrête** le traitement de ce message. D&#39;autres messages continueront toutefois d&#39;être analysés.
+La réponse ci-dessus liste combien de violations de schéma ont été constatées et quelles en ont été les violations. Par exemple, cette réponse indique que les clés `workEmail` et `person` n’ont pas été définies dans le schéma et que, par conséquent, elles ne sont pas autorisées. Il indique également la valeur de `_id` comme incorrecte, car le schéma attendait un `string`, mais un `long` a été inséré à la place. Notez qu’une fois cinq erreurs rencontrées, le service de validation **arrête** le traitement de ce message. D&#39;autres messages continueront cependant d&#39;être analysés.
 
 ## Validation asynchrone
 
-La validation asynchrone est une méthode de validation qui ne fournit aucun retour immédiat. En revanche, les données sont envoyées à un lot en échec dans Data Lake afin d’éviter toute perte de données. Ces données ayant échoué peuvent être récupérées ultérieurement pour   et relecture supplémentaires. Cette méthode doit être utilisée en production. Sauf demande contraire, l’assimilation en flux continu fonctionne dans un asynchrone.
+La validation asynchrone est une méthode de validation qui ne fournit pas de commentaires immédiats. En revanche, les données sont envoyées à un lot en échec dans Data Lake afin d’éviter toute perte de données. Ces données ayant échoué peuvent être récupérées ultérieurement pour une analyse et une relecture ultérieures. Cette méthode doit être utilisée en production. Sauf demande contraire, l’assimilation en flux continu fonctionne en mode de validation asynchrone.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /collection/{CONNECTION_ID}
@@ -149,7 +152,7 @@ POST /collection/{CONNECTION_ID}
 
 **Requête**
 
-Envoyez la requête suivante pour assimiler des données à votre entrée de données avec une validation asynchrone :
+Envoyez la demande suivante pour assimiler des données à votre entrée de données avec une validation asynchrone :
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
@@ -161,11 +164,11 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | Corps JSON des données que vous souhaitez importer. |
 
->[!NOTE] Aucun paramètre  supplémentaire n’est requis, car la validation asynchrone est activée par défaut.
+>[!NOTE] Aucun paramètre de requête supplémentaire n’est requis, car la validation asynchrone est activée par défaut.
 
 **Réponse**
 
-Lorsque la validation asynchrone est activée, une réponse réussie renvoie les éléments suivants :
+Lorsque la validation asynchrone est activée, une réponse positive renvoie les éléments suivants :
 
 ```json
 {
@@ -178,7 +181,7 @@ Lorsque la validation asynchrone est activée, une réponse réussie renvoie les
 }
 ```
 
-Veuillez noter que la réponse indique que la validation synchrone a été ignorée, car elle n&#39;a pas été explicitement demandée.
+Veuillez noter comment la réponse indique que la validation synchrone a été ignorée, car elle n&#39;a pas été explicitement demandée.
 
 ## Annexe
 
@@ -186,11 +189,11 @@ Cette section contient des informations sur la signification des différents cod
 
 ### Codes d’état
 
-| Code d’état | Ce que ça veut dire |
+| Code de statut | Ce que signifie |
 | ----------- | ------------- |
-| 200 | Succès. Pour la validation synchrone, cela signifie qu’il a réussi les contrôles de validation. Pour une validation asynchrone, cela signifie qu’il a reçu le message uniquement avec succès. Les utilisateurs peuvent connaître l’état final du message en observant le jeu de données. |
-| 400 | Erreur. Il y a quelque chose qui cloche dans ta demande. Un message d’erreur contenant des détails supplémentaires est reçu des services de validation en flux continu. |
-| 401 | Erreur. Votre demande est non autorisée - vous devrez demander avec un jeton de porteur. Pour plus d&#39;informations sur la demande d&#39;accès, consultez ce [didacticiel](../../tutorials/authentication.md) ou ce billet [de](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)blog. |
-| 500 | Erreur. Erreur système interne. |
+| 200 | Succès. Pour une validation synchrone, cela signifie qu’elle a réussi les contrôles de validation. Pour une validation asynchrone, cela signifie qu’il a reçu le message uniquement avec succès. Les utilisateurs peuvent déterminer l’état final du message en observant le jeu de données. |
+| 400 | Erreur. Il y a quelque chose qui cloche dans votre demande. Un message d’erreur contenant des détails supplémentaires est reçu des Services de validation en flux continu. |
+| 401 | Erreur. Votre demande n&#39;est pas autorisée ; vous devrez la demander avec un jeton de porteur. Pour plus d&#39;informations sur la façon de demander un accès, consultez ce [tutoriel](../../tutorials/authentication.md) ou cet article [de](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)blog. |
+| 500 | Erreur. Une erreur système interne s&#39;est produite. |
 | 501 | Erreur. Cela signifie que la validation synchrone **n’est pas** prise en charge pour cet emplacement. |
 | 503 | Erreur. Le service est actuellement indisponible. Les clients doivent réessayer au moins trois fois en utilisant une stratégie de sauvegarde exponentielle. |
