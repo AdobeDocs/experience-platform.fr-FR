@@ -48,7 +48,7 @@ Les informations d’identification de votre serveur étant prêtes, vous pouvez
 
 Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
 
-Sous la catégorie Enregistrement ** Cloud, sélectionnez **FTP** ou **SFTP** pour afficher une barre d’informations sur la droite de l’écran. La barre d&#39;informations fournit une brève description de la source sélectionnée ainsi que des options permettant de vue de sa documentation ou de se connecter à la source. Pour créer une connexion de base entrante, cliquez sur **Connexion source**.
+Sous la catégorie d’Enregistrement ** Cloud, sélectionnez **FTP** ou **SFTP** pour afficher une barre d’informations sur la droite de l’écran. La barre d&#39;informations fournit une brève description de la source sélectionnée ainsi que des options permettant de vue de sa documentation ou de se connecter à la source. Pour créer une connexion de base entrante, cliquez sur **Connexion source**.
 
 ![](../../../../images/tutorials/create/sftp/sftp_sources_catalog.png)
 
