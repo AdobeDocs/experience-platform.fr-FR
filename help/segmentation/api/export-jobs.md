@@ -5,6 +5,9 @@ title: Exportation de tâches
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+workflow-type: tm+mt
+source-wordcount: '522'
+ht-degree: 4%
 
 ---
 
@@ -13,22 +16,22 @@ source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
 
 intro
 
-- Récupération d’un  de tâches d’exportation
-- Création d’une tâche d’exportation
+- Récupération d’une liste de tâches d’exportation
+- Créer une tâche d’exportation
 - Récupération d’une tâche d’exportation spécifique
 - Annuler ou supprimer une tâche d’exportation spécifique
 
 ## Prise en main
 
-Les points de fin d’API utilisés dans ce guide font partie de l’API de segmentation. Avant de poursuivre, consultez le guide [du développeur de](./getting-started.md)segmentation.
+Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
 
-En particulier, la section [de](./getting-started.md#getting-started) prise en main du guide du développeur de segmentation comprend des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le  du et des informations importantes concernant les en-têtes requis nécessaires pour effectuer des appels à une API de plateforme d’expérience.
+En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
 
-## Récupération d’un  de tâches d’exportation
+## Récupération d’une liste de tâches d’exportation
 
-Vous pouvez récupérer un  de toutes les tâches d’exportation pour votre organisation IMS en envoyant une requête GET au point de `/export/jobs` fin.
+Vous pouvez récupérer une liste de toutes les tâches d’exportation pour votre organisation IMS en adressant une demande GET au point de `/export/jobs` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/jobs
@@ -37,15 +40,15 @@ GET /export/jobs?{QUERY_PARAMETERS}
 
 - `{QUERY_PARAMETERS}`: (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
 
-**Paramètres**
+**Paramètres de Requête**
 
-Vous trouverez ci-dessous un des paramètres de disponibles pour répertorier les tâches d’exportation. Tous ces paramètres sont facultatifs. Un appel à ce point de fin sans paramètre récupérera toutes les tâches d’exportation disponibles pour votre entreprise.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les tâches d’exportation. Tous ces paramètres sont facultatifs. Effectuer un appel vers ce point de terminaison sans paramètres récupérera toutes les tâches d’exportation disponibles pour votre entreprise.
 
 | Paramètre | Description |
 | --------- | ----------- |
 | `limit` | Indique le nombre de tâches d’exportation renvoyées. |
 | `offset` | Indique le décalage des pages de résultats. |
-| `status` |  les résultats selon l’état. Les valeurs prises en charge sont `NEW`, `SUCCEEDED`et `FAILED`. |
+| `status` | Filtres les résultats en fonction de l’état. Les valeurs prises en charge sont `NEW`, `SUCCEEDED`et `FAILED`. |
 
 **Requête**
 
@@ -59,7 +62,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec un de tâches d’exportation pour l’organisation IMS spécifiée comme JSON. La réponse suivante renvoie un  de toutes les tâches d’exportation réussies pour l’organisation IMS.
+Une réponse réussie renvoie l’état HTTP 200 avec une liste de tâches d’exportation pour l’organisation IMS spécifiée en tant que JSON. La réponse suivante renvoie une liste de toutes les tâches d&#39;exportation réussies pour l&#39;organisation IMS.
 
 ```json
 {
@@ -161,11 +164,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec un de tâches d’exportat
 }
 ```
 
-## Création d’une tâche d’exportation
+## Créer une tâche d’exportation
 
-Vous pouvez créer une tâche d’exportation en envoyant une requête POST au point de `/export/jobs` fin.
+Vous pouvez créer une tâche d’exportation en adressant une demande POST au point de `/export/jobs` terminaison.
 
-**Format API**
+**Format d’API**
 
 ```http
 POST /export/jobs
@@ -223,21 +226,21 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `fields` | Facultatif. des champs exportés, séparés par des virgules. Si rien n’est indiqué, tous les champs seront exportés. |
-| `mergePolicy` | Facultatif. Si elle n’est pas fournie, l’exportation applique la même stratégie de fusion que le segment donné. |
-| `filter` | Facultatif. Si rien n’est indiqué, toutes les données seront exportées. |
-| `filter.segments` | Facultatif. de segments pour la tâche d’exportation. |
-| `filter.segmentQualificationTime` | Facultatif. Filtre pour l’heure de qualification du segment. Le  et/ou l’heure de fin peuvent être fournis. |
-| `filter.fromIngestTimestamp` | Facultatif. Horodatage au format RFC-3339. |
+| `fields` | Facultative. liste des champs exportés, séparés par des virgules. Si rien n’est indiqué, tous les champs seront exportés. |
+| `mergePolicy` | Facultative. Si elle n’est pas fournie, l’exportation applique la même stratégie de fusion que le segment donné. |
+| `filter` | Facultative. Si rien n’est indiqué, toutes les données seront exportées. |
+| `filter.segments` | Facultative. filtres de segment pour la tâche d’exportation. |
+| `filter.segmentQualificationTime` | Facultative. Filtre pour l’heure de qualification du segment. Le début et/ou l&#39;heure de fin peuvent être fournis. |
+| `filter.fromIngestTimestamp` | Facultative. Horodatage au format RFC-3339. |
 | `destination.datasetId` | Obligatoire. Valeur `id` du jeu de données vers lequel les données sont exportées. |
 | `segments.segmentId` | Obligatoire. Valeur `id` du segment en cours d’exportation. |
-| `segments.sgementNs` | Facultatif. Le `namespace` segment donné. |
+| `segments.sgementNs` | Facultative. Le `namespace` segment donné. |
 
 
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails de votre tâche d’exportation nouvellement créée.
+Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche d’exportation que vous venez de créer.
 
 ```json
 {
@@ -328,9 +331,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de votre tâc
 
 ## Récupération d’une tâche d’exportation spécifique
 
-Vous pouvez récupérer des informations détaillées sur une tâche d’exportation spécifique en faisant une requête GET au point de `/export/jobs` fin et en indiquant la `id` valeur de la tâche d’exportation dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur une tâche d’exportation spécifique en envoyant une requête GET au point de `/export/jobs` terminaison et en indiquant la `id` valeur de la tâche d’exportation dans le chemin de la requête.
 
-**Format API**
+**Format d’API**
 
 ```http
 GET /export/jobs/{EXPORT_JOB_ID}
@@ -441,9 +444,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 
 ## Annuler ou supprimer une tâche d’exportation spécifique
 
-Vous pouvez demander de supprimer une tâche d’exportation spécifiée en effectuant une requête DELETE au point de `/export/jobs` fin et en indiquant la `id` valeur de la tâche d’exportation dans le chemin d’accès de la requête.
+Vous pouvez demander la suppression d’une tâche d’exportation spécifiée en faisant une requête DELETE au point de `/export/jobs` terminaison et en indiquant la `id` valeur de la tâche d’exportation dans le chemin de la demande.
 
-**Format API**
+**Format d’API**
 
 ```http
 DELETE /export/jobs/{EXPORT_JOB_ID}
