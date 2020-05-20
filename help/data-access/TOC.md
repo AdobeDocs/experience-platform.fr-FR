@@ -11,7 +11,7 @@ ht-degree: 4%
 ---
 
 
-# Adobe Experience Platform Data Access {#data-access}
+# Accès aux données de la plate-forme Adobe Experience Platform {#data-access}
 
 - [Présentation de l’accès aux données](home.md)
 - Tutoriels {#tutorials}
