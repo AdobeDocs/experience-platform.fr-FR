@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75c446aed75100bd2b5b4a3d365c090cb01dcc69
+source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Pour plus d&#39;informations, consultez la documentation relative aux champs [de
 
 Les jeux de données sont un concept d&#39;enregistrement et de gestion pour une collection de données, généralement une table, qui contient des schémas (colonnes) et des champs (lignes) et est rendue disponible par une connexion aux données. Les données du Gestionnaire d’Audiences se composent de données en temps réel, de données entrantes et de données de Profil. Pour localiser vos jeux de données Audience Manager, utilisez la fonction de recherche dans l’interface utilisateur avec les conventions d’affectation de nom fournies pour chaque type de données.
 
-Bien que les utilisateurs puissent désactiver les jeux de données, il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance à un segment dans le Profil.
+Par défaut, les jeux de données d’Audience Manager sont désactivés pour le Profil et les utilisateurs peuvent activer ou désactiver les jeux de données en fonction de leurs cas d’utilisation. Il n’est pas recommandé de désactiver les jeux de données qui seront utilisés pour l’appartenance à un segment dans le Profil.
 
 | Nom du jeu de données | Description |
 | ------------ | ----------- |
