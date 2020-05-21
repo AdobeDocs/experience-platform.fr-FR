@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 1b367eb65d1e592412d601d089725671e42b7bbd
+source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1445'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,8 @@ Un exemple complet du mixin peut être trouvé dans le référentiel [XDM](https
 ## Champs clés
 
 Les sections ci-dessous mettent en évidence les champs clés du mixin CEE qui doivent être utilisés pour que les services intelligents génèrent des informations utiles, y compris des descriptions et des liens vers la documentation de référence pour d&#39;autres exemples.
+
+>[!IMPORTANT] Le `xdm:channel` champ (expliqué dans la première section ci-dessous) est **requis** pour que l’API d’attribution fonctionne avec vos données, tandis que l’IA du client ne comporte aucun champ obligatoire. Tous les autres champs clés sont fortement recommandés, mais pas obligatoires.
 
 ### xdm:canal
 
@@ -185,7 +187,9 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 ## Mappage et assimilation de données
 
-Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, vous pouvez début le processus d’intégration de vos données dans Intelligent Services. Contactez les services de conseil Adobe pour vous aider à mapper vos données au schéma et à les intégrer au service.
+Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, l’étape suivante consiste à déterminer les données à importer dans les services intelligents. Toutes les données historiques utilisées dans les services intelligents doivent respecter une période minimale de quatre mois, plus le nombre de jours prévus comme période de consultation.
+
+Après avoir décidé de la plage de données à envoyer, contactez les services de conseil d’Adobe pour aider à faire correspondre vos données au schéma et à les intégrer au service.
 
 Si vous disposez d’un abonnement Adobe Experience Platform et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
@@ -211,9 +215,81 @@ Une fois le schéma créé et enregistré, vous pouvez créer un jeu de données
 * [Créer un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (Suivez le processus pour utiliser un schéma existant)
 * [Création d’un jeu de données dans l’API](../catalog/datasets/create.md)
 
-#### Mapper et assimiler des données
+#### Ajouter une balise d&#39;espace de nommage d&#39;identité principale au jeu de données
+
+Si vous importez des données d’Adobe Audience Manager, d’Adobe Analytics ou d’une autre source externe, vous devez ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
+
+Si vous importez des données à partir d’un fichier CSV local, vous pouvez passer à la section suivante sur le [mappage et l’assimilation des données](#ingest).
+
+Avant de suivre l’exemple d’appel d’API ci-dessous, consultez la section [](../catalog/api/getting-started.md) Prise en main du Guide du développeur du catalogue pour obtenir des informations importantes sur les en-têtes requis.
+
+**Format d’API**
+
+```http
+PATCH /dataSets/{DATASET_ID}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{DATASET_ID}` | ID du jeu de données que vous avez créé précédemment. |
+
+**Requête**
+
+En fonction de la source à partir de laquelle vous importez des données, vous devez fournir les valeurs appropriées `primaryIdentityNamespace` `sourceConnectorId` et de balise dans la charge utile de la requête.
+
+La demande suivante ajoute les valeurs de balise appropriées pour Audience Manager :
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["mcid"],
+          "sourceConnectorId": ["audiencemanager"],
+        }
+      }'
+```
+
+La demande suivante ajoute les valeurs de balise appropriées pour Analytics :
+
+```shell
+curl -X PATCH \
+  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "tags": {
+          "primaryIdentityNameSpace": ["aaid"],
+          "sourceConnectorId": ["analytics"],
+        }
+      }'
+```
+
+>[!NOTE] Pour plus d&#39;informations sur l&#39;utilisation des espaces de nommage d&#39;identité dans Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
+
+**Réponse**
+
+Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la demande PATCH.
+
+```json
+[
+    "@/dataSets/5ba9452f7de80400007fc52a"
+]
+```
+
+#### Mapper et assimiler des données {#ingest}
 
 Après avoir créé un schéma CEE et un jeu de données, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans la plate-forme. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
+
+Si vos données sont stockées dans une application tierce prise en charge, vous pouvez également choisir de créer un connecteur [](../sources/home.md) source pour intégrer les données de vos événements marketing dans la plate-forme en temps réel.
 
 ## Étapes suivantes {#next-steps}
 
