@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exportation de données à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: d0b9223aebca0dc510a7457e5a5c65ac4a567933
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1953'
 ht-degree: 1%
 
 ---
@@ -172,6 +172,9 @@ curl -X POST \
     },
     "schema": {
       "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
   }'
 ```
@@ -192,6 +195,7 @@ curl -X POST \
 | `additionalFields.eventList` | *(Facultatif)* Contrôle les champs de événement de série chronologique exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields`: Contrôlez les champs à exporter.</li><li>`eventList.filter`: Indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: Filtres les événements de série chronologique à ceux qui ont été ingérés après l’horodatage fourni. Ce n&#39;est pas le temps de événement lui-même, mais le temps d&#39;assimilation des événements.</li></ul> |
 | `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId`: **(Obligatoire)** ID du jeu de données dans lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch`: *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur `false`. Une valeur de `false` exporte tous les ID de segment dans un seul ID de lot. Une valeur de `true` exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur `true` peut affecter les performances d’exportation par lot.</li></ul> |
 | `schema.name` | **(Obligatoire)** Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
+| `evaluationInfo.segmentation` | *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur `false`. Une valeur de `true` indique que la segmentation doit être effectuée sur la tâche d’exportation. |
 
 >[!NOTE] Pour exporter uniquement les données de Profil et ne pas inclure les données ExperienceEvent associées, supprimez l’objet &quot;additionalFields&quot; de la requête.
 
