@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 8a613237d3d835039185954e580d3c86a5e465ae
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '215'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 3%
    * [Analyse de vos données à l&#39;aide de portables](jupyterlab/analyze-your-data.md)
    * [Service de Requête sur ordinateur portable Jupyter](jupyterlab/query-service.md)
    * [Création d&#39;une recette à l&#39;aide de cahiers Jupyter](jupyterlab/create-a-recipe.md)
+   * [Collaboration dans JupyterLab à l&#39;aide de Git](jupyterlab/using-git-for-collaboration.md)
 * API d&#39;apprentissage automatique Sensei {#api}
    * [Prise en main](api/getting-started.md)
    * [Moteurs](api/engines.md)
