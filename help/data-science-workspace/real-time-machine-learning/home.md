@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l'apprentissage automatique en temps réel
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 8f9454730e3bab451ac75070fcd1623698df9196
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 2%
@@ -35,11 +35,11 @@ Le processus suivant décrit les étapes et les résultats typiques de la créat
 
 ### Extraction de données et préparations
 
-Les données sont ingérées et transformées avec le modèle de données d’expérience (XDM) sur la plate-forme Adobe Experience Platform. Ces données sont utilisées pour la formation aux modèles. Pour en savoir plus sur XDM, consultez la présentation [de](../../xdm/home.md)XDM.
+Les données sont ingérées et transformées avec le modèle de données d’expérience (XDM) sur la plateforme d’expérience Adobe. Ces données sont utilisées pour la formation aux modèles. Pour en savoir plus sur XDM, consultez la présentation [de](../../xdm/home.md)XDM.
 
 ### Création  
 
-Créez un modèle d’apprentissage automatique en temps réel en le rédigeant à partir de zéro ou en l’incorporant sous la forme d’un modèle ONNX sérialisé et préformé dans les portables Jupyter d’Adobe Experience Platform.
+Créez un modèle d’apprentissage automatique en temps réel en le rédigeant à partir de zéro ou en l’incorporant sous la forme d’un modèle ONNX sérialisé et préformé dans les blocs-notes Jupyter de la plateforme Adobe Experience Platform.
 
 ### Déploiement
 
@@ -51,7 +51,7 @@ Utilisez le point de terminaison de l’API REST de prédiction pour générer d
 
 ### Diffusion
 
-Les marketeurs peuvent ensuite définir des segments et des règles qui associent les scores d’apprentissage automatique en temps réel aux expériences à l’aide d’Adobe Cible. Cela permet aux visiteurs du site Web de votre marque de bénéficier en temps réel d’une même expérience hyper-personnalisée ou d’une page suivante.
+Les marketeurs peuvent ensuite définir des segments et des règles qui associent les scores d’apprentissage automatique en temps réel aux expériences à l’aide de Adobe Cible. Cela permet aux visiteurs du site Web de votre marque de bénéficier en temps réel d’une même expérience hyper-personnalisée ou d’une page suivante.
 
 ## Fonctionnalité actuelle
 
@@ -61,7 +61,7 @@ L&#39;apprentissage automatique en temps réel est actuellement en alpha. Les fo
 > Limites Alpha :
 > - Actuellement, seuls les modèles ONNX sont pris en charge.
 > - Les fonctions utilisées dans les noeuds ne peuvent pas être sérialisées. Par exemple, une fonction lambda utilisée dans un noeud Pandas.
-> - Une mise en veille de 60 secondes est effectuée manuellement après le déploiement d’Edge.
+> - 20 secondes de sommeil s’écoulent après que le déploiement Edge a été effectué manuellement.
 > - Pour un apprentissage approfondi, vos données doivent être envoyées de telle sorte que, lorsqu&#39; `df.values` elles sont appelées, elles retournent un tableau acceptable par votre modèle DL. Cela est dû au fait que le noeud de notation du modèle ONNX utilise `df.values` et envoie la sortie pour marquer par rapport au modèle.
 
 
