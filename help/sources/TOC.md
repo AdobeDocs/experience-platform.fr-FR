@@ -1,9 +1,9 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aide des connecteurs de source Adobe Experience Platform
+user-guide-title: Aide sur les connecteurs de source d’expérience Adobe
 translation-type: tm+mt
-source-git-commit: f23684ee152836bab85eeb8360436e4059f44417
+source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 2%
@@ -24,7 +24,7 @@ ht-degree: 2%
          - [Champs de mappage Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Champs de Mapping de ciblage](connectors/adobe-applications/mapping/target.md)
    - Publicité {#advertising}
-      - [Connecteur Publicités Google](connectors/advertising/ads.md)
+      - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
       - [Connecteur Azure Data Lake Enregistrement Gen2](connectors/cloud-storage/adls-gen2.md)
@@ -65,7 +65,7 @@ ht-degree: 2%
 - Didacticiels sur les API {#api-tutorials}
    - Création d’un connecteur source {#create}
       - Publicité {#advertising}
-         - [Connecteur Publicités Google](tutorials/api/create/advertising/ads.md)
+         - [Connecteur Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -132,7 +132,7 @@ ht-degree: 2%
          - [Connecteur Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connecteur d’attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicité {#create}
-         - [Connecteur Publicités Google](tutorials/ui/create/advertising/ads.md)
+         - [Connecteur Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
