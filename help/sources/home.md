@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation des connecteurs de source Adobe Experience Platform
+title: Présentation des connecteurs source de la plate-forme Adobe
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7c94d7a0aace7525e776f13e2975f91cf2b29e23
+source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Présentation des connecteurs source
 
-Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
+La plateforme Adobe Experience Platform permet d’importer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
 
 La plate-forme d’expérience fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à divers fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir les heures d’exécution pour l’assimilation et de gérer le débit d’assimilation des données.
 
@@ -26,9 +26,9 @@ Les sources de la plate-forme d’expérience sont regroupées dans les catégor
 
 ### Applications Adobe
 
-Experience Platform permet d’importer des données d’autres applications Adobe, notamment Adobe Analytics, Adobe Audience Manager et Experience Platform Launch. Pour plus d’informations, consultez les documents connexes suivants :
+Experience Platform permet d’importer des données à partir d’autres applications Adobe, notamment Adobe Analytics, Adobe Audience Manager et Experience Platform Launch. Pour plus d’informations, consultez les documents connexes suivants :
 
-- [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
+- [Présentation du connecteur Audience Manager d’Adobe](connectors/adobe-applications/audience-manager.md)
 - [Création d’un connecteur source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Présentation du connecteur de données Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Création d’un connecteur source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
@@ -38,7 +38,7 @@ Experience Platform permet d’importer des données d’autres applications Ado
 
 Experience Platform prend en charge l’importation de données à partir d’un système de publicité tiers. Pour plus d’informations sur des connecteurs source spécifiques, reportez-vous aux documents connexes suivants :
 
-- [Connecteur Publicités Google](connectors/advertising/ads.md)
+- [Connecteur Google AdWords](connectors/advertising/ads.md)
 
 ### Stockage dans le cloud
 
