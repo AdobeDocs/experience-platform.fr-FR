@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descripteurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 599991af774e283d9fb60216e3d3bd5b17cf8193
+source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1499'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ Les sections suivantes présentent un aperçu des types de descripteurs disponib
 
 #### Descripteur d&#39;identité
 
-Un descripteur d’identité signale que la &quot;sourceProperty&quot; de &quot;sourceSchema&quot; est un champ d’identité, comme décrit par [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Un descripteur d’identité signale que la &quot;sourceProperty&quot; de la &quot;sourceSchema&quot; est un champ d’identité tel que décrit par le service [d’identité de la plateforme d’](../../identity-service/home.md)expérience Adobe.
 
 ```json
 {
@@ -304,20 +304,25 @@ Un descripteur d’identité signale que la &quot;sourceProperty&quot; de &quot;
 
 #### Descripteur de nom convivial
 
-Les descripteurs de nom conviviaux permettent à un utilisateur de modifier les `title` valeurs et les `description` valeurs des champs de schéma de bibliothèque principaux. Particulièrement utile lorsque vous travaillez avec des &quot;eVars&quot; et d’autres champs &quot;génériques&quot; que vous souhaitez étiqueter comme contenant des informations spécifiques à votre entreprise. L’interface utilisateur peut les utiliser pour afficher un nom plus convivial ou uniquement pour afficher les champs dont le nom est convivial.
+Les descripteurs de nom conviviaux permettent à l’utilisateur de modifier les `title`champs de schéma de bibliothèque principale, `description`et `meta:enum` les valeurs correspondantes. Particulièrement utile lorsque vous travaillez avec des &quot;eVars&quot; et d’autres champs &quot;génériques&quot; que vous souhaitez étiqueter comme contenant des informations spécifiques à votre entreprise. L’interface utilisateur peut les utiliser pour afficher un nom plus convivial ou uniquement pour afficher les champs dont le nom est convivial.
 
 ```json
 {
   "@type": "xdm:alternateDisplayInfo",
   "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/274f17bc5807ff307a046bab1489fb18",
-  "xdm:sourceVersion": 1
-  "xdm:sourceProperty": "/eVars/eVar1",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/xdm:eventType",
   "xdm:title": {
-    "en_us":{"Loyalty ID"}
+    "en_us": "Event Type"
   },
   "xdm:description": {
-    "en_us":{"Unique ID of loyalty program member."}
+    "en_us": "The type of experience event detected by the system."
   },
+  "meta:enum": {
+    "click": "Mouse Click",
+    "addCart": "Add to Cart",
+    "checkout": "Cart Checkout"
+  }
 }
 ```
 
@@ -329,6 +334,7 @@ Les descripteurs de nom conviviaux permettent à un utilisateur de modifier les 
 | `xdm:sourceProperty` | Chemin d’accès à la propriété spécifique qui sera l’identité. Le chemin doit commencer par un &quot;/&quot; et ne pas se terminer par un. N’incluez pas de &quot;propriétés&quot; dans le chemin d’accès (par exemple, utilisez &quot;/personalEmail/address&quot; au lieu de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit dans la casse de titre. |
 | `xdm:description` | Une description facultative peut être ajoutée avec le titre. |
+| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’interface utilisateur de la plate-forme d’expérience. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement par le biais d’une requête [](./update-resource.md)PUT. |
 
 #### Descripteur de relation
 
