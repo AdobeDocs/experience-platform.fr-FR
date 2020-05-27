@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Création d'un connecteur Blob Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7ffe560f455973da3a37ad102fbb8cc5969d5043
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '556'
-ht-degree: 2%
+source-wordcount: '619'
+ht-degree: 1%
 
 ---
 
 
 # Création d&#39;un connecteur Blob Azure à l&#39;aide de l&#39;API Flow Service
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39;API Flow Service pour vous guider à travers les étapes permettant de connecter la plateforme Experience Platform à un enregistrement Azure Blob (ci-après appelé &quot;Blob&quot;).
 
@@ -22,7 +22,7 @@ Si vous préférez utiliser l’interface utilisateur dans Experience Platform, 
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 * [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
@@ -35,9 +35,10 @@ Pour que le service de flux se connecte à votre enregistrement Blob, vous devez
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion requise pour accéder aux données dans votre enregistrement Blob. |
+| `connectionString` | Chaîne de connexion requise pour accéder aux données dans votre enregistrement Blob. Le modèle de chaîne de connexion Blob est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour Blob est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Azure Blob.
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Azure Blob.
 
 ### Lecture des exemples d’appels d’API
 
@@ -71,6 +72,8 @@ POST /connections
 
 **Requête**
 
+Pour créer une connexion Blob, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande POST. L&#39;ID de spécification de connexion pour Blob est `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+
 ```shell
 curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -85,7 +88,7 @@ curl -X POST \
         "auth": {
             "specName": "ConnectionString",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -97,8 +100,8 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion de votre enregistrement Blob. |
-| `connectionSpec.id` | ID de spécification de connexion de l&#39;enregistrement Blob : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `auth.params.connectionString` | Chaîne de connexion requise pour accéder aux données dans votre enregistrement Blob. Le modèle de chaîne de connexion Blob est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | L&#39;ID de spécification de connexion de l&#39;enregistrement Blob est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Réponse**
 
