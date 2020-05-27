@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l'utilisateur du portable d'apprentissage automatique en temps réel
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >L&#39;apprentissage automatique en temps réel n&#39;est pas encore disponible pour tous les utilisateurs. Cette fonction est en alpha et est encore en cours de test. Ce document est sujet à changement.
 
-Le guide suivant décrit les étapes nécessaires à la création d&#39;une application d&#39;apprentissage automatique en temps réel. En utilisant le modèle de bloc-notes ML **** Python fourni par Adobe, ce guide couvre la formation d&#39;un modèle, la création d&#39;un DSL, la publication d&#39;un DSL sur Edge et le score de la demande. Au fur et à mesure que vous progressez dans la mise en oeuvre de votre modèle d’apprentissage automatique en temps réel, il est prévu que vous modifiez le modèle en fonction des besoins de votre jeu de données.
+Le guide suivant décrit les étapes nécessaires à la création d&#39;une application d&#39;apprentissage automatique en temps réel. En utilisant le modèle de bloc-notes ML **[!UICONTROL Python fourni en temps]** réel par Adobe, ce guide couvre la formation d&#39;un modèle, la création d&#39;un DSL, la publication d&#39;un DSL sur Edge et le score de la demande. Au fur et à mesure que vous progressez dans la mise en oeuvre de votre modèle d’apprentissage automatique en temps réel, il est prévu que vous modifiez le modèle en fonction des besoins de votre jeu de données.
 
 ## Créer un bloc-notes d&#39;apprentissage automatique en temps réel
 
-Dans l’interface utilisateur d’Adobe Experience Platform, sélectionnez **[!UICONTROL Ordinateurs portables]** dans *Data Science*. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
+Dans l’interface utilisateur de la plateforme d’expérience Adobe, sélectionnez **[!UICONTROL Ordinateurs portables]** dans *Data Science*. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
 
 ![ouvrir JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -82,6 +82,8 @@ Début en chargeant vos données de formation.
 >[!NOTE]
 >Dans le modèle ML **** en temps réel, le jeu de données [CSV d&#39;assurance](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automobile est saisi à Github.
 
+![Charger les données de formation](../images/rtml/load_training.png)
+
 Si vous souhaitez utiliser un jeu de données dans Adobe Experience Platform, annulez la mise en commentaire de la cellule ci-dessous. Ensuite, vous devez remplacer `DATASET_ID` par la valeur appropriée.
 
 ![dataset rtml](../images/rtml/rtml-dataset.png)
@@ -114,7 +116,7 @@ En utilisant le modèle ML *en temps* réel, vous devez analyser, prétraiter, f
 La cellule de transformation *des* données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
 
 >[!NOTE]
->L&#39;exemple suivant a été condensé à des fins de lisibilité à l&#39;aide de `[ ... ]`. Veuillez vue le modèle ML ** en temps réel pour la cellule de code complète.
+>L&#39;exemple suivant a été condensé à des fins de lisibilité à l&#39;aide de `[ ... ]`. Veuillez vue et développer la section de transformation des données des modèles ML *en temps* réel pour la cellule de code complète.
 
 ```python
 df1.rename(columns = {config_properties['ten_id']+'.identification.ecid' : 'ecid',
@@ -189,7 +191,7 @@ cat_cols = ['age_bucket', 'gender', 'city', 'dayofweek', 'country', 'carbrand', 
 df_final = pd.get_dummies(df_final, columns = cat_cols)
 ```
 
-Exécutez la cellule fournie pour afficher un exemple de résultat. La table de sortie renvoyée par le jeu de `carinsurancedataset.csv` données renvoie les modifications définies.
+Exécutez la cellule fournie pour afficher un exemple de résultat. La table de sortie renvoyée par le jeu de `carinsurancedataset.csv` données renvoie les modifications que vous avez définies.
 
 ![Exemple de conversion de données](../images/rtml/table-return.png)
 
@@ -237,18 +239,23 @@ import skl2onnx, subprocess
 model.generate_onnx_resources()
 ```
 
+>[!NOTE]
+>Modifiez la valeur de `model_path` chaîne (`model.onnx`) pour changer le nom de votre modèle.
+
 ```python
 model_path = "model.onnx"
+```
 
+>[!NOTE]
+>La cellule suivante n&#39;est ni modifiable, ni modifiable. Elle est nécessaire au fonctionnement de votre application d&#39;apprentissage automatique en temps réel.
+
+```python
 model = ModelUpload(params={'model_path': model_path})
 msg_model = model.process(None, 1)
 model_id = msg_model.model['model_id']
  
 print("Model ID : ", model_id)
 ```
-
->[!NOTE]
->Modifiez la valeur `model_path` de chaîne pour nommer votre modèle.
 
 ![modèle ONNX](../images/rtml/onnx-model-rail.png)
 
@@ -272,7 +279,7 @@ Cette section décrit la création d&#39;un DSL. Vous allez créer les noeuds qu
 ### Création de noeuds
 
 >[!NOTE]
-> Il est probable que vous ayez plusieurs noeuds en fonction du type de données utilisé. L&#39;exemple suivant illustre un seul noeud dans le modèle ML ** en temps réel. Veuillez vue le modèle ML ** en temps réel pour la cellule de code complète.
+> Il est probable que vous ayez plusieurs noeuds en fonction du type de données utilisé. L&#39;exemple suivant illustre un seul noeud dans le modèle ML ** en temps réel. Veuillez vue la section Création *de* noeuds des modèles ML *en temps* réel pour la cellule de code complète.
 
 Le noeud Pandas ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, suivie de l’entrée des paramètres sous la forme d’une fonction de mappage. L’exemple ci-dessous effectue cette opération en utilisant `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}`. Une fois la carte en place, vous avez la possibilité de la définir `inplace` en tant que `True` ou `False`. Définissez `inplace` la variable comme `True` ou `False` selon si vous souhaitez appliquer ou non la transformation. Par défaut, `"inplace": False` crée une colonne. La prise en charge d’un nouveau nom de colonne est définie pour être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Spécifiez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple, `leasing` est spécifié. Pour plus d’informations sur les noeuds disponibles et sur leur utilisation, consultez le guide [de référence des](./node-reference.md)noeuds.
 
@@ -323,7 +330,7 @@ Ensuite, connectez les noeuds aux bords. Chaque tuple est une connexion Edge.
 edges = [(nodes[i], nodes[i+1]) for i in range(len(nodes)-1)]
 ```
 
-Une fois vos noeuds connectés, créez le graphique.
+Une fois vos noeuds connectés, créez le graphique. La cellule ci-dessous est obligatoire et ne peut pas être modifiée ni supprimée.
 
 ```python
 dsl = GraphBuilder.generate_dsl(nodes=nodes, edges=edges)
@@ -337,7 +344,7 @@ Une fois terminé, un `edge` objet est renvoyé contenant chacun des noeuds et l
 ## Publier sur Edge (Hub)
 
 >[!NOTE]
->L’apprentissage automatique en temps réel est temporairement déployé et géré par Adobe Experience Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
+>L’apprentissage automatique en temps réel est temporairement déployé et géré par le Adobe Experience Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
 
 Maintenant que vous avez créé un graphique DSL, vous pouvez déployer votre graphique sur le bord.
 
@@ -413,10 +420,33 @@ Utilisez la cellule suivante dans le modèle ML ** en temps réel pour obtenir u
 
 Une fois le score terminé, l’URL d’Edge, la charge utile et la sortie notée de l’Edge sont renvoyées.
 
-## Suppression d’une application déployée à partir d’Edge (facultatif)
+## Liste de vos applications déployées à partir du Edge
 
->!![CAUTION]
-Cette cellule est utilisée pour supprimer votre application Edge déployée. N&#39;utilisez pas la cellule suivante, sauf si vous devez supprimer une application Edge déployée.
+Pour générer une liste de vos applications actuellement déployées sur le périphérique, exécutez la cellule de code suivante. Cette cellule ne peut pas être modifiée ni supprimée.
+
+```python
+services = edge_utils.list_deployed_services()
+print(services)
+```
+
+La réponse renvoyée est un tableau de vos services déployés.
+
+```json
+[
+    {
+        "created": "2020-05-25T19:18:52.731Z",
+        "deprecated": false,
+        "id": "40eq76c0-1c6f-427a-8f8f-54y9cdf041b7",
+        "type": "edge",
+        "updated": "2020-05-25T19:18:52.731Z"
+    }
+]
+```
+
+## Suppression d’un ID d’application ou de service déployé sur le serveur Edge (facultatif)
+
+>[!CAUTION]
+>Cette cellule est utilisée pour supprimer votre application Edge déployée. N&#39;utilisez pas la cellule suivante, sauf si vous devez supprimer une application Edge déployée.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
