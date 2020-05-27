@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en main de l’apprentissage automatique en temps réel
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 626bb7a0856a663e235ecd2b19954f4617fe9b6f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -17,18 +17,18 @@ ht-degree: 0%
 >[!IMPORTANT]
 >L&#39;apprentissage automatique en temps réel n&#39;est pas encore disponible pour tous les utilisateurs. Cette fonction est en alpha et est encore en cours de test. Ce document est sujet à changement.
 
-Pour utiliser l’apprentissage automatique en temps réel, vous devez avoir accès à une organisation configurée avec Adobe Experience Platform et Data Science Workspace. De plus, vous devez disposer d’un jeu de données complet pour la formation et la notation.
+Afin d’utiliser l’apprentissage automatique en temps réel, vous devez avoir accès à une organisation configurée avec Adobe Experience Platform et Data Science Workspace. De plus, vous devez disposer d’un jeu de données complet pour la formation et la notation.
 
 Les guides pour l&#39;apprentissage automatique en temps réel exigent une compréhension pratique des cahiers [Python 3, des cahiers](../jupyterlab/overview.md)Jupyter, des données et de l&#39;apprentissage automatique.
 
-Termes clés:
+**Termes clés:**
 
 - **DSL :** Langue spécifique au domaine.
 - **Edge :** Le service de notation en temps réel de l&#39;apprentissage automatique peut être exécuté sur des clusters Edge plus proches de vos activations et applications.
-- **Hub :** L’alpha actuel exécute le service de notation d’apprentissage automatique en temps réel sur le hub Adobe Experience Platform pendant que le réseau Experience Edge Network est en cours de développement.
+- **Hub :** L’alpha actuel exécute le service de notation d’apprentissage automatique en temps réel sur le hub de plateforme d’expérience Adobe, tandis que le réseau Experience Edge Network est en cours de développement.
 - **Noeud :** Un noeud est l’unité fondamentale dont les graphiques sont formés. Chaque noeud exécute une tâche spécifique et peut être chaîné ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche exécutée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation de données ou de schéma, ou une inférence d’apprentissage automatique. Le noeud envoie la valeur transformée ou déduite au(x) noeud(s) suivant(s).
 
-## Jeu de données dans Adobe Experience Platform
+## Jeu de données sur la plateforme d’expérience Adobe
 
 Pour début à l&#39;aide de l&#39;apprentissage automatique en temps réel, vous devez avoir accès à un jeu de données. Vous avez la possibilité d&#39;utiliser un jeu de données externe et de le télécharger vers votre environnement JupyterLab ou de créer un nouveau jeu de données dans Platform si vous ne l&#39;avez pas déjà fait.
 
