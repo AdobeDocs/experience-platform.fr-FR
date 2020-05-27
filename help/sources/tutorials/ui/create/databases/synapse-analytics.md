@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur source Azure Synapse Analytics dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '495'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 1%
 > [!NOTE]
 > Le connecteur Azure Synapse Analytics est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Azure Synapse Analytics (ci-après appelé &quot;Synapse&quot;) à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Azure Synapse Analytics (ci-après appelé &quot;Synapse&quot;) à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
 
 * [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -36,7 +36,7 @@ Pour accéder à votre compte Synapse sur la plate-forme, vous devez fournir les
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion associée à votre authentification Synapse. |
+| `connectionString` | Chaîne de connexion associée à votre authentification Synapse. Le modèle de chaîne de connexion Synapse est `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`défini. |
 
 Pour plus d&#39;informations sur cette valeur, consultez [ce document](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse)Synapse.
 
