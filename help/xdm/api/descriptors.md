@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Descripteurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c8cc57a8629f04c7af68b6f5cfee365527caa3c1
+source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
 workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 1%
@@ -334,7 +334,7 @@ Les descripteurs de nom conviviaux permettent à l’utilisateur de modifier les
 | `xdm:sourceProperty` | Chemin d’accès à la propriété spécifique qui sera l’identité. Le chemin doit commencer par un &quot;/&quot; et ne pas se terminer par un. N’incluez pas de &quot;propriétés&quot; dans le chemin d’accès (par exemple, utilisez &quot;/personalEmail/address&quot; au lieu de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit dans la casse de titre. |
 | `xdm:description` | Une description facultative peut être ajoutée avec le titre. |
-| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’interface utilisateur de la plate-forme d’expérience. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement par le biais d’une requête [](./update-resource.md)PUT. |
+| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’interface utilisateur de la plate-forme d’expérience. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement via une requête [](./update-resource.md)PATCH. |
 
 #### Descripteur de relation
 
