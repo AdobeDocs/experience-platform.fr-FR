@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur d'Enregistrement de table Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 37a5f035023cee1fc2408846fb37d64b9a3fc4b6
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 >[!NOTE]
 >Le connecteur d&#39;Enregistrement Azure Table est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39;API Flow Service pour vous guider à travers les étapes nécessaires pour connecter Azure Table Enregistrement (ci-après appelé &quot;ATS&quot;) à Experience Platform.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 * [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
@@ -36,10 +36,10 @@ Pour que le service de flux puisse se connecter à ATS, vous devez fournir des v
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion à laquelle se connecter à l&#39;instance d&#39;Enregistrement Azure Table. |
-| `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour ATS est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`défini. |
+| `connectionString` | Chaîne de connexion utilisée pour la connexion à une instance ATS. Le modèle de chaîne de connexion pour ATS est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ID utilisé pour générer une connexion. L&#39;ID de spécification de connexion fixe pour ATS est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)ATS.
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction)ATS.
 
 ### Lecture des exemples d’appels d’API
 
@@ -73,7 +73,7 @@ POST /connections
 
 **Requête**
 
-Pour créer une connexion ATS, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande POST. L&#39;ID de spécification de connexion pour ATS est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`défini.
+Pour créer une connexion ATS, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande POST. L’ID de spécification de connexion pour ATS est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`défini.
 
 ```shell
 curl -X POST \
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "{CONNECTION_STRING}"
+                "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}"
             }
         },
         "connectionSpec": {
@@ -101,8 +101,8 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion associée à votre compte ATS. |
-| `connectionSpec.id` | ID de spécification de connexion ATS : `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Chaîne de connexion utilisée pour la connexion à une instance ATS. Le modèle de chaîne de connexion pour ATS est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | L&#39;ID de spécification de connexion ATS est : `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Réponse**
 
