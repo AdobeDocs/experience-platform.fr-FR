@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: 8449681a7fd0fc5dccf4837a1e8e512f1e2f2601
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Guide du développeur de l’API de Profil client en temps réel
 
-Le Profil client en temps réel vous permet de voir une vue holistique de chacun de vos clients individuels dans Adobe Experience Platform. Profil vous permet de consolider des données clients disparates provenant de plusieurs canaux, tels que des données en ligne, hors ligne, de gestion de la relation client et tierces, en une vue unifiée offrant un compte interactif horodaté de chaque interaction client.
+Le Profil client en temps réel vous permet de voir une vue holistique de chacun de vos clients individuels dans la plate-forme Adobe Experience Platform. Profil vous permet de consolider des données clients disparates provenant de plusieurs canaux, tels que des données en ligne, hors ligne, de gestion de la relation client et tierces, en une vue unifiée offrant un compte interactif horodaté de chaque interaction client.
 
 ## Prise en main {#getting-started}
 
 L’API Profil client en temps réel vous permet d’effectuer des opérations CRUD de base sur des ressources de Profil, telles que la configuration d’attributs calculés, l’accès aux entités, l’exportation de données de Profil et la suppression de jeux de données ou de lots inutiles.
 
-L’utilisation de ce guide du développeur nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation des données de Profil. Avant de commencer à utiliser l’API Profil client en temps réel, consultez la documentation relative aux services suivants :
+L’utilisation de ce guide de développement nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation des données de Profil. Avant de commencer à utiliser l’API Profil client en temps réel, consultez la documentation relative aux services suivants :
 
 * [Profil](../home.md)client en temps réel : Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+* [Service](../../identity-service/home.md)d’identité de la plateforme d’expérience Adobe : Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
+* [Service](../../segmentation/home.md)de segmentation de la plateforme d’expérience Adobe : Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
@@ -63,13 +63,13 @@ Vous pouvez créer, vue, modifier et supprimer des attributs calculés à l’ai
 
 ## Projections Edge
 
-Adobe Experience Platform permet la personnalisation en temps réel des expériences client en rendant les données facilement accessibles sur des serveurs stratégiquement situés appelés &quot;arêtes&quot;. L’API Profil client en temps réel fournit des points de terminaison pour travailler avec les arêtes via des composants appelés &quot;projections&quot;. Cela inclut les configurations de projection pour déterminer quelles données doivent être projetées sur chaque bord, ainsi que les destinations de projection pour définir où acheminer une projection.
+La plate-forme Adobe Experience Platform permet la personnalisation en temps réel des expériences client en rendant les données facilement accessibles sur des serveurs stratégiquement situés appelés &quot;arêtes&quot;. L’API Profil client en temps réel fournit des points de terminaison pour travailler avec les arêtes via des composants appelés &quot;projections&quot;. Cela inclut les configurations de projection pour déterminer quelles données doivent être projetées sur chaque bord, ainsi que les destinations de projection pour définir où acheminer une projection.
 
 Pour obtenir des informations détaillées sur l&#39;utilisation des projections de bord, veuillez consulter le sous-guide [des projections de](edge-projections.md)bord.
 
 ## Entités
 
-Adobe Experience Platform vous permet d’accéder aux données du Profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l&#39;aide de l&#39;API, suivez les étapes décrites dans le sous-guide [](entities.md)Entités.
+Grâce à Adobe Experience Platform, vous pouvez accéder aux données du Profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Pour savoir comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l&#39;aide de l&#39;API, suivez les étapes décrites dans le sous-guide [](entities.md)Entités.
 
 ## Stratégies de fusion
 
@@ -78,10 +78,6 @@ Lorsque vous rassemblez des données provenant de plusieurs sources dans Experie
 L’API Profil client en temps réel vous permet de créer des stratégies de fusion, de gérer des stratégies existantes et de définir une stratégie de fusion par défaut pour votre entreprise. Pour en savoir plus sur l’utilisation des stratégies de fusion à l’aide de l’API, consultez le sous-guide [Stratégies de](merge-policies.md)fusion.
 
 Pour obtenir un guide sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur de la plate-forme, consultez le guide [d’utilisateur](../ui/merge-policies.md)Fusionner les stratégies.
-
-## Recherche de Profil
-
-La recherche par Profil permet de rechercher et d’indexer des champs configurables contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Pour commencer à utiliser la recherche par Profil, consultez le sous-guide [de recherche](profile-search.md)
 
 ## Tâches du système de Profil
 
