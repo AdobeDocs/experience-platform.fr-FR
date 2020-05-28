@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide du développeur de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3fbacf57d5f6741726cb54fb55eab05042046f49
+source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 1%
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
@@ -86,6 +86,10 @@ For more information on using this endpoint, please read the [segment definition
 Les tâches de segmentation traitent les définitions de segment précédemment établies pour générer un segment d’audience. Vous pouvez utiliser le `/segment/jobs` point de terminaison pour récupérer une liste de tâches de segment, créer une tâche de segment, récupérer les détails d’une tâche de segment spécifique ou supprimer une tâche de segment spécifique.
 
 Pour plus d’informations sur l’utilisation de ce point de terminaison, consultez le guide [des développeurs d’emplois de](./segment-jobs.md)segment.
+
+## Recherche de segments
+
+La recherche de segments permet de rechercher et d’indexer des champs configurables contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Pour commencer à utiliser la recherche de segments, consultez le guide du développeur de [recherche](segment-search.md)
 
 ## Étapes suivantes
 
