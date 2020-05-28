@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur HP Vertica à l’aide de l’API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 1%
 >[!NOTE]
 >Le connecteur HP Vertica est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes nécessaires pour connecter HP Vertica à la plate-forme Experience.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 - [Sources](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): Experience Platform permet d’importer des données à partir de diverses sources tout en vous offrant la possibilité de structurer, de mapper et d’améliorer les données entrantes à l’aide des services Platform.
 - [Sandbox](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
@@ -36,7 +36,7 @@ Pour que le service de flux se connecte à HP Vertica, vous devez fournir des va
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance HP Vertica. Le modèle de chaîne de connexion pour HP Vertica est `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance HP Vertica. Le modèle de chaîne de connexion pour HP Vertica est `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 | `connectionSpec.id` | Identificateur nécessaire pour créer une connexion. L&#39;ID de spécification de connexion fixe pour HP Vertica est : `a8b6a1a4-5735-42b4-952c-85dce0ac38b5` |
 
 Pour plus d&#39;informations sur l&#39;acquisition d&#39;une chaîne de connexion, consultez [ce document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)HP Vertica.
@@ -89,7 +89,7 @@ curl -X POST \
         "auth": {
             "specName": "Connection String Based Authentication",
             "params": {
-                "connectionString": "Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>"
+                "connectionString": "Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}"
             }
         },
         "connectionSpec": {
@@ -101,7 +101,7 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion associée à votre compte HP Vertica. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre compte HP Vertica. Le modèle de chaîne de connexion pour HP Vertica est : `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | ID de spécification de connexion HP Vertica : `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Réponse**
