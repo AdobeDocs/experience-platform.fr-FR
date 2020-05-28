@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source HP Vertica dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: a015d2612bc5a72004e15dc5706c7718617a0af4
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 > [!NOTE]
 > Le connecteur HP Vertica est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HP Vertica à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HP Vertica à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
 
 * [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -36,7 +36,7 @@ Les sections suivantes fournissent des informations supplémentaires que vous de
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance HP Vertica. Le modèle de chaîne de connexion pour HP Vertica est `Server=<server>;Port=<port>;Database=<database>;UID=<user name>;PWD=<password>` |
+| `connectionString` | Chaîne de connexion utilisée pour la connexion à votre instance HP Vertica. Le modèle de chaîne de connexion pour HP Vertica est `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
 Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm)HP Vertica.
 
