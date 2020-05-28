@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '591'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Azure Blob (ci-après dénommé &quot;Blob&quot;) ou Amazon S3 (ci-après dénommé &quot;S3&quot;) à l’aide de l’interface utilisateur de la plate-forme.
+Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Azure Blob (ci-après dénommé &quot;Blob&quot;) ou Amazon S3 (ci-après dénommé &quot;S3&quot;) à l’aide de l’interface utilisateur de la plate-forme.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
 
 - [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    - [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -37,9 +37,22 @@ Experience Platform prend en charge les formats de fichier suivants à assimiler
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre enregistrement Blob sur la plate-forme, vous devez fournir une chaîne **de connexion d&#39;Enregistrement** Azure valide. Vous pouvez en savoir plus sur les chaînes de connexion, y compris les moyens de les obtenir via <a href="https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string" target="_blank">ce document</a>Microsoft Azure.
+Pour accéder à votre enregistrement Blob sur la plate-forme, vous devez fournir une valeur valide pour les informations d’identification suivantes :
 
-De même, l&#39;accès à votre compartiment S3 sur la plate-forme nécessite que vous fournissiez votre clé **d&#39;accès** S3 et votre clé **secrète** S3. For more information, refer to <a href="https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/" target="_blank">this AWS document</a>.
+| Informations d’identification | Description |
+| ---------- | ----------- |
+| `connectionString` | Chaîne de connexion requise pour accéder aux données dans votre enregistrement Blob. Le modèle de chaîne de connexion Blob est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+
+Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Azure Blob.
+
+De même, l’accès à votre compartiment S3 sur la plate-forme nécessite que vous fournissiez vos valeurs valides pour les informations d’identification suivantes :
+
+| Informations d’identification | Description |
+| ---------- | ----------- |
+| `s3AccessKey` | ID de clé d&#39;accès pour votre enregistrement S3. |
+| `s3SecretKey` | ID de clé secrète de votre enregistrement S3. |
+
+Pour plus d’informations sur la prise en main, consultez [ce document](https://aws.amazon.com/blogs/security/wheres-my-secret-access-key/)AWS.
 
 ## Connecter votre compte Blob ou S3
 
