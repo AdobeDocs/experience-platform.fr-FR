@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 95e002c60389ca7e4c1dcf32bbcf6f552cd55d95
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
-source-wordcount: '1697'
+source-wordcount: '1694'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Entités (accès au Profil)
 
-Adobe Experience Platform vous permet d’accéder aux données du Profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide décrit comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l’aide de l’API. Pour plus d&#39;informations sur l&#39;accès aux données de Profil à l&#39;aide de l&#39;interface utilisateur de la plate-forme, consultez le guide [d&#39;utilisation du](../ui/user-guide.md)Profil.
+La plateforme Adobe Experience Platform vous permet d’accéder aux données du Profil client en temps réel à l’aide des API RESTful ou de l’interface utilisateur. Ce guide décrit comment accéder aux entités, plus communément appelées &quot;profils&quot;, à l’aide de l’API. Pour plus d&#39;informations sur l&#39;accès aux données de Profil à l&#39;aide de l&#39;interface utilisateur de la plate-forme, consultez le guide [d&#39;utilisation du](../ui/user-guide.md)Profil.
 
 ## Prise en main
 
@@ -776,7 +776,7 @@ En utilisant cette charge dans le corps de la requête, vous pouvez exécuter un
 
 ## Accéder aux événements de séries chronologiques dans plusieurs entités de schéma
 
-Vous pouvez accéder à plusieurs entités connectées par le biais d’un descripteur de relation. L&#39;exemple d&#39;appel d&#39;API suivant suppose qu&#39;une relation a déjà été définie entre deux schémas. Pour plus d&#39;informations sur les descripteurs de relation, consultez le sous-guide []descripteurs du guide de développement API du registre de Schéma](../../xdm/api/descriptors.md).
+Vous pouvez accéder à plusieurs entités connectées par le biais d’un descripteur de relation. L&#39;exemple d&#39;appel d&#39;API suivant suppose qu&#39;une relation a déjà été définie entre deux schémas. Pour plus d&#39;informations sur les descripteurs de relation, veuillez lire le sous-guide [](../../xdm/api/descriptors.md)descripteurs du guide du développeur de l&#39;API de registre de Schéma.
 
 Vous pouvez inclure des paramètres de requête dans le chemin d’accès à la requête afin de spécifier les données à accéder. Vous pouvez inclure plusieurs paramètres, séparés par des esperluettes (&amp;). Une liste complète des paramètres valides est fournie dans la section des paramètres [de](#query-parameters) requête de l&#39;appendice.
 
