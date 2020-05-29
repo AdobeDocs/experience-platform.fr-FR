@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’utilisateur des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 235a43ad72dee45db1b3d35ae84ce9a1c4d729b8
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Guide de l’utilisateur des stratégies d’utilisation des données
 
-La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Stratégies_ de l’interface utilisateur de la plateforme d’expérience.
+La gouvernance des données de la plateforme Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Stratégies_ de l’interface utilisateur de la plateforme d’expérience.
 
 ## Conditions préalables
 
@@ -70,3 +70,7 @@ Vous pouvez activer ou désactiver les stratégies d’utilisation des données 
 ## Étapes suivantes
 
 Ce document fournit un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur de la plateforme d’expérience. Pour savoir comment gérer les stratégies à l’aide de l’API DULE Policy, consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur la manière d’appliquer des stratégies d’utilisation des données, voir l’aperçu [de l’application des](../enforcement/overview.md)stratégies.
+
+La vidéo suivante montre comment utiliser les stratégies d’utilisation dans l’interface utilisateur de la plateforme d’expérience :
+
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
