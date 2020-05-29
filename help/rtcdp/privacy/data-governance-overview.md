@@ -4,10 +4,10 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: e21cf6794e6c9ee522482cd9ccb95d66b06d330a
+source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
 workflow-type: tm+mt
-source-wordcount: '920'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 97%
 
 ---
 
@@ -87,3 +87,7 @@ Si l’une des actions ci-dessus déclenche une violation, l’enregistrement de
 ## Étapes suivantes
 
 Maintenant que vous avez découvert les principales fonctionnalités de gouvernance des données sur la plateforme des données clients en temps réel et la méthode utilisée par Experience Platform pour les activer, reportez-vous à la [documentation sur la gouvernance des données sur Adobe Experience Platform](../../data-governance/home.md). Cette documentation présente les principaux concepts de la gouvernance des données, ainsi que les processus détaillés de gestion des libellés et des politiques d’utilisation des données.
+
+La vidéo suivante présente un aperçu de la gouvernance des données dans le CDP en temps réel, y compris l&#39;utilisation de cas d&#39;utilisation marketing sur les destinations et des exemples de workflows pour différents scénarios :
+
+>[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
