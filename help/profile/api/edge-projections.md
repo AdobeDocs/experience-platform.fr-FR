@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: bb7aad4de681316cc9f9fd1d9310695bd220adb1
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
-source-wordcount: '1873'
+source-wordcount: '1940'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,14 @@ ht-degree: 2%
 
 # Destinations et projections des périphériques
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Ce guide fournit des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour travailler avec les projections de périmètre, y compris les destinations et les configurations.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. La plate-forme Adobe Experience Platform permet cet accès en temps réel aux données à l’aide de ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Ce guide fournit des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour travailler avec les projections de périmètre, y compris les destinations et les configurations.
 
 ## Prise en main
 
 Les points de terminaison API utilisés dans ce guide font partie de l’API Profil client en temps réel. Avant de continuer, veuillez consulter le guide [du développeur de Profil client en temps](getting-started.md)réel. En particulier, la section [](getting-started.md#getting-started) Prise en main du guide du développeur de Profils contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+
+>[!NOTE]
+>Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un `Content-Type` en-tête. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
 
 ## Destinations des projections
 
@@ -425,6 +428,9 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 **Requête**
 
+>[!NOTE]
+>La demande POST pour créer une configuration requiert un en-tête spécifique, comme illustré ci-dessous. `Content-Type` L’utilisation d’un en-tête incorrect génère une erreur HTTP Status 415 (Type de support non pris en charge). `Content-Type`
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/config/projections?schemaName=_xdm.context.profile \
@@ -432,7 +438,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/vnd.adobe.platform.projectionConfig+json; version=1' \
   -d '{
         "selector": "emails,person(firstName)",
         "name": "my_test_projection",
