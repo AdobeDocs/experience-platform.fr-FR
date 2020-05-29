@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 824e9eda41488efc362a6105c552f522185c046d
+source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
 workflow-type: tm+mt
 source-wordcount: '2057'
 ht-degree: 3%
@@ -45,8 +45,8 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
         "attributeMerge": {
             "type": "{ATTRIBUTE_MERGE_TYPE}"
         },
-        "default": {BOOLEAN},
-        "updateEpoch": {UPDATE_TIME}
+        "default": "{BOOLEAN}",
+        "updateEpoch": "{UPDATE_TIME}"
     }
 ```
 
@@ -724,7 +724,7 @@ Une requête de suppression réussie renvoie HTTP Status 200 (OK) et un corps de
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de Profil client en temps réel. Consultez la documentation [d’](../../segmentation/home.md) Adobe Experience Platform Segmentation Service pour commencer à définir et à utiliser des segments.
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de Profil client en temps réel. Consultez la documentation [du service](../../segmentation/home.md) de segmentation de la plateforme d’expérienceAdobe pour commencer à définir et à utiliser des segments.
 
 
 
