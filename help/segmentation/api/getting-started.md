@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide du développeur de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e25ce403034a94d7024e8c244cb438bd9dfe0c5f
+source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -73,13 +73,13 @@ For more information on using this endpoint, please read the [PQL conversions de
 
 Schedules are a tool that can be used to automatically run export jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 
 
-For more information on using this endpoint, please read the [schedules developer guide](./schedules.md).
+For more information on using this endpoint, please read the [schedules developer guide](./schedules.md). -->
 
-## Segment definitions
+## Définitions de segment
 
-Segment definitions define which profiles will be part of which audience segments. You can use the `/segment/definitions` endpoint to retrieve a list of segment definitions, create a new segment definition, retrieve details of a specific segment definition, delete a specific segment definition, or overwrite details of a specific segment definition.
+Les définitions de segment définissent les profils qui feront partie des segments d’audience. Vous pouvez utiliser le `/segment/definitions` point de terminaison pour récupérer une liste de définitions de segment, créer une définition de segment, récupérer les détails d’une définition de segment spécifique, supprimer une définition de segment spécifique ou remplacer les détails d’une définition de segment spécifique.
 
-For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md). -->
+Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le guide [du développeur des définitions de](./segment-definitions.md)segment.
 
 ## Tâches de segmentation
 
