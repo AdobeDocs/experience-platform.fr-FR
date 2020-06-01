@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Présentation du profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 86fe1f407afb24d7222cff51cf9937a42571fd54
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 3%
+source-wordcount: '1775'
+ht-degree: 2%
 
 ---
 
@@ -44,7 +44,7 @@ Chaque entreprise veut communiquer avec ses clients d&#39;une manière qui lui s
 
 ### Segmentation
 
-Le service de segmentation de la plate-forme Adobe Experience Platform produit les audiences nécessaires pour alimenter les expériences de vos clients individuels. Lorsqu’un segment d’audience est créé, l’ID de ce segment est ajouté à la liste des adhésions de segment pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du Profil client en temps réel à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, lisez tout d’abord la présentation [du service de](../segmentation/home.md)segmentation.
+Adobe Experience Platform Segmentation Service produit les audiences nécessaires à l’alimentation de vos clients individuels. Lorsqu’un segment d’audience est créé, l’ID de ce segment est ajouté à la liste des adhésions de segment pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du Profil client en temps réel à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, lisez tout d’abord la présentation [du service de](../segmentation/home.md)segmentation.
 
 ### Fragments de Profil et schémas d’union {#profile-fragments-and-union-schemas}
 
@@ -59,7 +59,7 @@ Lorsque vous rassemblez des données provenant de plusieurs sources et les combi
 >[!IMPORTANT]
 >La fonctionnalité d&#39;attribut calculée décrite dans ce document est en alpha. La documentation et les fonctionnalités peuvent changer.
 
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements. Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et des instructions détaillées sur leur utilisation, consultez le [sous-guide API Profil client en temps réel sur les attributs](api/computed-attributes.md)calculés. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans Adobe Experience Platform. Il comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide de l’API Profil client en temps réel.
+Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements. Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et des instructions détaillées sur leur utilisation, consultez le [sous-guide API Profil client en temps réel sur les attributs](api/computed-attributes.md)calculés. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans la plateforme d’expérience Adobe et comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide de l’API Profil client en temps réel.
 
 ## Composants en temps réel
 
@@ -71,14 +71,14 @@ L’entrée en temps réel est rendue possible par un processus appelé assimila
 
 ### Projections Edge
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Pour en savoir plus et commencer à utiliser les arêtes et les projections, consultez le sous-guide [Projections](api/edge-projections.md)Edge de l&#39;API Profil client en temps réel.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. La plate-forme Adobe Experience Platform permet cet accès en temps réel aux données à l’aide de ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Pour en savoir plus et commencer à utiliser les arêtes et les projections, consultez le sous-guide [Projections](api/edge-projections.md)Edge de l&#39;API Profil client en temps réel.
 
-## Ajouter de données au Profil client en temps réel
+## Ajouter les données au Profil client en temps réel
 
 La plate-forme peut être configurée pour envoyer vos données d&#39;enregistrement et de série chronologique au Profil, en prenant en charge l&#39;assimilation en temps réel de flux continu et l&#39;assimilation par lot. Pour plus d’informations, voir le didacticiel qui décrit comment [ajouter des données au Profil](tutorials/add-profile-data.md)client en temps réel.
 
 >[!Note] :
->Les données collectées par le biais des solutions Adobe, y compris Analytics Cloud, Marketing Cloud et Advertising Cloud, s’enchaînent dans la plateforme d’expérience et sont assimilées au Profil.
+>Les données collectées par le biais des solutions Adobe, y compris Analytics Cloud, Marketing Cloud et Advertising Cloud, s’enchaînent dans la plate-forme d’expérience et sont ingérées dans le Profil.
 
 ### Mesures d’assimilation en flux continu Profil
 
@@ -98,6 +98,37 @@ La gouvernance des données est gérée à plusieurs points. Il s’agit notamme
 ### Gestion des demandes d’exclusion et de confidentialité des données
 
 Experience Platform permet à vos clients d’envoyer des demandes d’exclusion liées à l’utilisation et à l’enregistrement de leurs données dans le Profil client en temps réel. Pour plus d’informations sur la façon dont les demandes d’exclusion sont traitées, consultez la documentation sur le [traitement des demandes](../segmentation/honoring-opt-outs.md)d’exclusion.
+
+## Directives Profils
+
+Experience Platform a une série de directives à suivre pour utiliser efficacement le Profil.
+
+| Section | Limite |
+| ------- | -------- |
+| schéma union Profil | Un maximum de **20** jeux de données peut contribuer au schéma d&#39;union de Profil. |
+| Relations multientités | Il est possible de créer un maximum de **5** relations multientités. |
+| Profondeur JSON pour l’association à plusieurs entités | La profondeur maximale de JSON est de **4**. |
+| Données de la série chronologique | Les données de séries chronologiques **ne sont pas** autorisées dans le Profil pour les entités non-personnes. |
+| Relations de schéma avec des non-personnes | Les relations de schéma avec des non-personnes **ne sont pas** autorisées. |
+| Fragment de Profil | La taille maximale recommandée d’un fragment de profil est de **10 ko**.<br><br> La taille maximale absolue d’un fragment de profil est de **1 Mo**. |
+| Entité non-personne | La taille totale maximale pour une seule entité non-personne est de **200 Mo**. |
+| Jeu de données par entité non-personne | Un maximum de **1** jeux de données peut être associé à une entité non-personne. |
+
+<!--
+| Section | Boundary | Enforcement |
+| ------- | -------- | ----------- |
+| Profile union schema | A maximum of **20** datasets can contribute to the Profile union schema. | A message stating you've reached the maximum number of datasets appears. You must either disable or clean up other obsolete datasets in order to create a new dataset. |
+| Multi-entity relationships | A maximum of **5** multi-entity relationship can be created. | A message stating all available mappings have been used appears when the fifth relationship is mapped. An error message letting you know you have exceeded the number of available mappings appears when attempting to map a sixth relationship. | 
+| JSON depth for multi-entity association | The maximum JSON depth is **4**. | When trying to use the relationship selector with a field that is more than four levels deep, an error message appears, stating it is ineligible for multi-entity association. |
+| Time series data | Time-series data is **not** permitted in Profile for non-people entities. | A message stating that this data cannot be enabled for Profile because it is of an unsupported type appears. |
+| Non-people schema relationships | Non-people schema relationships are **not** permitted. | Relationships between two non-people schemas cannot be created. The relationships checkbox will be disabled. |
+| Profile fragment | The recommended maximum size of a profile fragment is **10kB**.<br><br> The absolute maximum size of a profile fragment is **1MB**. | If you upload a fragment that is larger than 10kB, a warning appears, stating that performance may be degraded since the fragment exceeds the recommended maximum working size.<br><br> If you upload a fragment that is larger than 1MB, ingestion will fail, and an alert letting you know that records have failed will be sent. |
+| Non-person entity | The maximum total size for a single non-person entity is **200MB**. | If you load an object as a non-person entity that is larger than 200MB, an alert will appear, stating that the entity has exceeded the maximum allowable size and will not be useable for segmentation. |
+| Datasets per non-person entity | A maximum of **1** dataset can be associated to a non-person entity. | If you try to create a second dataset that is associated to the same non-person entity, an error appears, stating that only one dataset can be active per non-person entity. |
+
+--->
+
+>!![NOTE] Une entité non-personne fait référence à toute classe XDM qui **ne fait pas** partie du Profil.
 
 ## Étapes suivantes et ressources supplémentaires
 
