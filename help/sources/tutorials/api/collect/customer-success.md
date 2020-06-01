@@ -4,25 +4,25 @@ solution: Experience Platform
 title: Collecte de données à partir d’un système de succès client via des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: c216e321fd913773578107df027d953f10d99a36
+source-git-commit: 6df2ccd06f506ada0be5805143c487edb853396b
 workflow-type: tm+mt
-source-wordcount: '1496'
-ht-degree: 2%
+source-wordcount: '1663'
+ht-degree: 1%
 
 ---
 
 
 # Collecte de données à partir d’un système de succès client via des connecteurs et des API source
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client (&quot;CS&quot;) et les intégrer à la plate-forme par le biais des connecteurs et des API source.
+Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client et les intégrer à la plate-forme par le biais des connecteurs et des API source.
 
 ## Prise en main
 
-Ce didacticiel vous oblige à avoir accès à un système CS tiers via une connexion de base valide et des informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin et la structure du fichier. Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration d’une base de données ou d’un système NoSQL à l’aide de l’API](../explore/customer-success.md) Flow Service avant de tenter ce didacticiel.
+Ce didacticiel vous demande d&#39;avoir accès à un système de succès client tiers par le biais d&#39;une connexion valide et d&#39;informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin et la structure du fichier. Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration d’une base de données ou d’un système NoSQL à l’aide de l’API](../explore/customer-success.md) Flow Service avant de tenter ce didacticiel.
 
-Ce didacticiel nécessite également une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
 * [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -31,7 +31,7 @@ Ce didacticiel nécessite également une bonne compréhension des composants sui
 * [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L’API d’importation par lot vous permet d’assimiler des données dans la plate-forme d’expérience sous forme de fichiers par lot.
 * [Sandbox](../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système CS à l’aide de l’API Flow Service.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour établir une connexion réussie à un système de succès client à l’aide de l’API Flow Service.
 
 ### Lecture des exemples d’appels d’API
 
@@ -59,11 +59,23 @@ Pour importer des données externes dans la plate-forme via des connecteurs sour
 
 Pour créer une classe et un schéma ad hoc, suivez les étapes décrites dans le didacticiel [schéma](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
 
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. Récupérez et stockez l’identifiant unique (`$id`) du schéma ad hoc, puis passez à l’étape suivante de ce didacticiel.
+Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. L’identifiant unique (`$id`) du schéma ad hoc est nécessaire pour passer à l’étape suivante de ce didacticiel.
 
 ## Création d’une connexion source {#source}
 
-Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’API du service de flux. Une connexion source se compose d’une connexion de base, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’API du service de flux. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+
+Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
+
+Utilisez les valeurs d’énumération suivantes pour les connecteurs **basés sur des** fichiers :
+
+| Data.format | Valeur maximale |
+| ----------- | ---------- |
+| Fichiers délimités | `delimited` |
+| Fichiers JSON | `json` |
+| Fichiers de parquet | `parquet` |
+
+Pour tous les connecteurs **basés sur des** tables, utilisez la valeur enum : `tabular`.
 
 **Format d’API**
 
@@ -82,13 +94,13 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source connection for CS",
-        "baseConnectionId": "60a5c8b9-3c30-43ba-a5c8-b93c3093ba66",
-        "description": "Source Connection for CS to ingest Account",
+        "name": "Source connection for Customer Success",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "description": "Source connection for a Customer Success connector",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/classes/51dd6dce662f8aebe4353c74bbb49c77cb3cbcd6c6b29021",
+                "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/classes/5d032b2230d5495aef49437d04d1c5fac4788b17ae85bf93",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
@@ -96,18 +108,18 @@ curl -X POST \
             "path": "Account"
         },
         "connectionSpec": {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
+            "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
-    }
-}'
+        }
+    }}'
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID d&#39;une connexion de base pour un système CS |
+| `baseConnectionId` | ID de connexion unique du système de succès client tiers auquel vous accédez. |
 | `data.schema.id` | Le schéma `$id` XDM ad hoc. |
 | `params.path` | Chemin d’accès du fichier source. |
-| `connectionSpec.id` | ID de spécification de connexion d&#39;un système CS. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système de succès client tiers spécifique. Consultez l’ [annexe](#appendix) pour une liste d’ID de spécification de connexion. |
 
 **Réponse**
 
@@ -115,8 +127,8 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 
 ```json
 {
-    "id": "01b7cbea-cf18-4552-b7cb-eacf18055294",
-    "etag": "\"2103ac94-0000-0200-0000-5e543ad70000\""
+    "id": "17faf955-2cf8-4b15-baf9-552cf88b1540",
+    "etag": "\"2900a761-0000-0200-0000-5ed18cea0000\""
 }
 ```
 
@@ -148,8 +160,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for CS",
-        "description": "Target schema for CS",
+        "title": "Target schema for a Customer Success connector",
+        "description": "Target schema for Database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -161,6 +173,10 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
@@ -170,13 +186,13 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-    "meta:altId": "_{TENANT_ID}.schemas.deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
+    "meta:altId": "_{TENANT_ID}.schemas.b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for CS",
+    "title": "Target schema for a Customer Success connector",
     "type": "object",
-    "description": "Target schema for CS",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -211,13 +227,14 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1582578764554,
-        "repo:lastModifiedDate": 1582578764554,
+        "repo:createdDate": 1590791550228,
+        "repo:lastModifiedDate": 1590791550228,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "213e4bf7cbac74e3a9e6f988da321e2f7353acacd9ea651a5652bd49b28b8d2a"
+        "eTag": "d730441903b95425145d9c742647ab4426d86549159182913e5f99cc904be5b1",
+        "meta:globalLibVersion": "1.10.4.2"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
@@ -232,7 +249,7 @@ Un jeu de données de cible peut être créé en exécutant une requête POST su
 **Format d’API**
 
 ```http
-POST /dataSets
+POST catalog/dataSets
 ```
 
 **Requête**
@@ -246,9 +263,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for CS",
+        "name": "Target dataset for a Customer Success connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -264,21 +281,15 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 
 ```json
 [
-    "@/dataSets/5e543e8a60b15218ad44b95f"
+    "@/dataSets/5ed18e0f4f90b719196f44a9"
 ]
 ```
 
-## Créer une connexion de base de jeux de données
-
-Pour importer des données externes dans la plate-forme, une connexion de base de données de jeu de plateformes d’expérience doit d’abord être acquise.
-
-Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [de connexion de base de](../create-dataset-base-connection.md)jeux de données.
-
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`), puis utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion de cible.
-
 ## Création d’une connexion à une cible
 
-Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. Vous pouvez maintenant créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
+Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -317,10 +328,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la connexion de base de votre jeu de données. |
 | `data.schema.id` | Le schéma `$id` XDM de la cible. |
 | `params.dataSetId` | ID du jeu de données de cible. |
-| `connectionSpec.id` | ID de spécification de connexion pour votre système de réussite client. |
+| `connectionSpec.id` | ID de spécification de connexion fixe au lac de données. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -328,8 +338,8 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle con
 
 ```json
 {
-    "id": "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5",
-    "etag": "\"5d02211d-0000-0200-0000-5e543f0f0000\""
+    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
+    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
 }
 ```
 
@@ -355,12 +365,20 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b750bd161fef405bc324d0c8809b02c494d73e60e7ae9b3e",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
                 "sourceAttribute": "Name",
                 "identity": false,
                 "identityGroup": null,
@@ -368,16 +386,8 @@ curl -X POST \
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "CreatedDate",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -397,75 +407,18 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "7c3547d3cfc14f568a51c32b4c0ed739",
+    "version": 0,
+    "createdDate": 1590792069173,
+    "modifiedDate": 1590792069173,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
-## Rechercher les spécifications de flux de données {#specs}
+## Récupérer les spécifications de flux de données {#specs}
 
-Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à la plate-forme. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’API du service de flux. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une base de données externe ou d&#39;un système NoSQL.
+Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à la plate-forme. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’API du service de flux. Les spécifications de flux de données sont responsables de la collecte de données à partir d’un système de succès client tiers.
 
 **Format d’API**
 
@@ -485,7 +438,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l’importation des données de votre système CS dans la plate-forme. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l’introduction des données de votre système de succès client dans la plate-forme. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
 
 ```json
 {
@@ -616,7 +569,7 @@ La dernière étape de la collecte des données consiste à créer un flux de do
 * [ID de mappage](#mapping)
 * [ID de spécification du flux de données](#specs)
 
-Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Pour planifier une assimilation, vous devez d&#39;abord définir la valeur du temps de début en secondes. Ensuite, vous devez définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur d&#39;intervalle désigne la période entre deux ingérations consécutives et la création d&#39;une assimilation ponctuelle ne nécessite pas la définition d&#39;un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
 
 **Format d’API**
 
@@ -634,41 +587,40 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Creating a dataflow for a Customer Success connector",
+        "description": "Creating a dataflow for a Customer Success connector",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "01b7cbea-cf18-4552-b7cb-eacf18055294"
+            "17faf955-2cf8-4b15-baf9-552cf88b1540"
         ],
         "targetConnectionIds": [
-            "5ebaf0b3-66dc-46bf-baf0-b366dc76bfd5"
+            "bc36ecd6-3b04-4067-b6ec-d63b04b0673d"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
                     "deltaColumn": {
-                        "name": "updatedAt",
-                        "dateFormat": "YYYY-MM-DD",
-                        "timezone": "UTC"
+                        "name": "date-time"
                     }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "7c3547d3cfc14f568a51c32b4c0ed739",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
-            "frequency":"minute",
-            "interval":"30"
+            "startTime": "1590792316",
+            "frequency": "minute",
+            "interval": "15",
+            "backfill": "true"
         }
     }'
 ```
@@ -679,13 +631,35 @@ Une réponse réussie renvoie l&#39;identifiant `id` du flux de données nouvell
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
+| Propriété | Description |
+| --- | --- |
+| `flowSpec.id` | ID de spécification de flux récupéré à l’étape précédente. |
+| `sourceConnectionIds` | ID de connexion source récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | ID de connexion à la cible récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | ID de mappage récupéré lors d’une étape précédente. |
+| `scheduleParams.startTime` | Heure début du flux de données en secondes. |
+| `scheduleParams.frequency` | Les valeurs de fréquence sélectionnables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L&#39;intervalle n&#39;est pas requis lorsque la fréquence est définie comme `once` et doit être supérieure ou égale à `15` pour d&#39;autres valeurs de fréquence. |
+
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données d&#39;un système CS sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données d’un système de succès client sur une base planifiée. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
 
 * [Présentation du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
+
+## Annexe
+
+La section suivante liste les différents connecteurs source d’enregistrement de cloud et leurs spécifications de connexion.
+
+### Spécification de connexion
+
+| Nom du connecteur | Spécification de connexion |
+| -------------- | --------------- |
+| Salesforce Service Cloud | `cb66ab34-8619-49cb-96d1-39b37ede86ea` |
+| ServiceNow | `eb13cb25-47ab-407f-ba89-c0125281c563` |
