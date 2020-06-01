@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tâches de segmentation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: db4cdbfb7719d94919c896162ca7875fdf7d2502
+source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '657'
 ht-degree: 3%
 
 ---
@@ -323,6 +323,102 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
     "updateTime": 1579304339000,
     "creationTime": 1579304260897,
     "updateEpoch": 1579304339
+}
+```
+
+## Récupération en masse des tâches de segment
+
+Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segment spécifiées en envoyant une requête POST au point de `/segment/jobs/bulk-get` terminaison et en fournissant les `id` valeurs des tâches de segment dans le corps de la requête.
+
+**Format d’API**
+
+```http
+POST /segment/jobs/bulk-get
+```
+
+**Requête**
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "ids": [
+            {
+                "id": "cc3419d3-0389-47f1-b174-fead6b3c830d"
+            },
+            {
+                "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8"
+            }
+        ]
+    }'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie l’état HTTP 207 avec les tâches de segment demandées.
+
+>[!NOTE] La réponse suivante a été tronquée pour l’espace, affichant uniquement des détails partiels de chaque tâche de segment. La réponse complète liste les détails complets des tâches de segmentation demandées.
+
+```json
+{
+    "results": {
+        "cc3419d3-0389-47f1-b174-fead6b3c830d": {
+            "id": "cc3419d3-0389-47f1-b174-fead6b3c830d",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "30230300-ccf1-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-ccf1-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        },
+        "c527dc3f-07fe-4b96-be4e-23f38e734ff8": {
+            "id": "c527dc3f-07fe-4b96-be4e-23f38e734ff8",
+            "imsOrgId": "{IMS_ORG}",
+            "status": "SUCCEEDED",
+            "segments": [
+                {
+                    "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                    "segment": {
+                        "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
+                }
+            ],
+            "updateTime": 1573204395000,
+            "creationTime": 1573203600535,
+            "updateEpoch": 1573204395
+        }
+    }
 }
 ```
 
