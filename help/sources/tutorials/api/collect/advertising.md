@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collecte de données publicitaires via les connecteurs et les API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3d8682eb1a33b7678ed814e5d6d2cb54d233c03e
+source-git-commit: 577027e52041d642e03ca5abf5cb8b05c689b9f2
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1596'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 2%
 
 # Collecte de données publicitaires via les connecteurs et les API source
 
-Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système publicitaire et les amener à la plate-forme par le biais des connecteurs et des API source.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+
+Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les amener à la plate-forme par le biais des connecteurs et API source.
 
 ## Prise en main
 
 Ce didacticiel nécessite des informations sur le fichier que vous souhaitez importer dans Platform, y compris le chemin et la structure du fichier. Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration d’une application publicitaire à l’aide de l’API](../../api/create/advertising/ads.md) Flow Service avant de tenter ce didacticiel.
 
-Ce didacticiel nécessite également une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
 * [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -57,11 +59,23 @@ Pour importer des données externes dans la plate-forme via des connecteurs sour
 
 Pour créer une classe et un schéma ad hoc, suivez les étapes décrites dans le didacticiel [schéma](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
 
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. Récupérez et stockez l’identifiant unique (`$id`) du schéma ad hoc, puis passez à l’étape suivante de ce didacticiel.
+Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. L’identifiant unique (`$id`) du schéma ad hoc est nécessaire pour passer à l’étape suivante de ce didacticiel.
 
 ## Création d’une connexion source {#source}
 
 Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’API du service de flux. Une connexion source se compose d’une connexion de base, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+
+Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
+
+Utilisez les valeurs d’énumération suivantes pour les connecteurs **basés sur des** fichiers :
+
+| Data.format | Valeur maximale |
+| ----------- | ---------- |
+| Fichiers délimités | `delimited` |
+| Fichiers JSON | `json` |
+| Fichiers de parquet | `parquet` |
+
+Pour tous les connecteurs **basés sur des** tables, utilisez la valeur enum : `tabular`.
 
 **Format d’API**
 
@@ -84,7 +98,7 @@ curl -X POST \
         "baseConnectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
         "description": "Advertising source connection",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -102,10 +116,10 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de connexion de votre application publicitaire |
+| `baseConnectionId` | ID de connexion unique de l’application publicitaire tierce à laquelle vous accédez. |
 | `data.schema.id` | Le schéma `$id` XDM ad hoc. |
 | `params.path` | Chemin d’accès du fichier source. |
-| `connectionSpec.id` | ID de spécification de connexion de votre application publicitaire. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre application publicitaire tierce spécifique. |
 
 **Réponse**
 
@@ -276,17 +290,11 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 ]
 ```
 
-## Créer une connexion de base de jeux de données
-
-Pour créer une connexion de cible et assimiler des données externes à Platform, une connexion de base de jeux de données doit d&#39;abord être acquise.
-
-Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [de connexion de base de](../create-dataset-base-connection.md)jeux de données.
-
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`) de la connexion de base, puis passez à l’étape suivante de ce didacticiel.
-
 ## Création d’une connexion à une cible
 
-Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
+Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’API du service de flux pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -305,11 +313,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "4316ba76-e66b-4218-96ba-76e66bf21802",
         "name": "Target Connection for advertising",
         "description": "Target Connection for advertising",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
@@ -327,12 +333,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la connexion de base de votre jeu de données. |
 | `data.schema.id` | Le schéma `$id` XDM de la cible. |
 | `params.dataSetId` | ID du jeu de données de cible. |
-| `connectionSpec.id` | ID de spécification de connexion de votre publicité. |
-
->[!IMPORTANT] Lors de la création d&#39;une connexion de cible, veillez à utiliser la valeur de connexion de base de l&#39;ensemble de données pour la connexion de base `id` plutôt que l&#39;ID de connexion de votre connecteur source tiers.
+| `connectionSpec.id` | ID de spécification de connexion fixe au lac de données. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
 {
@@ -401,73 +404,16 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Stocker cette valeur comme elle est requise à une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cette valeur est requise à une étape ultérieure pour créer un flux de données.
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc"
+    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "version": 0,
+    "createdDate": 1589398562232,
+    "modifiedDate": 1589398562232,
+    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
+    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
 }
 ```
 
@@ -626,6 +572,8 @@ La dernière étape de la collecte des données publicitaires consiste à créer
 
 Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
+Pour planifier une assimilation, vous devez d&#39;abord définir la valeur du temps de début en secondes. Ensuite, vous devez définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur d&#39;intervalle désigne la période entre deux ingérations consécutives et la création d&#39;une assimilation ponctuelle ne nécessite pas la définition d&#39;un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+
 **Format d’API**
 
 ```https
@@ -658,7 +606,7 @@ curl -X POST \
             {
             "name": "Mapping",
             "params": {
-                "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                "mappingId": "febec6a6785e45ea9ed594422cc483d7",
                 "mappingVersion": "0"
                 }
             }
@@ -673,10 +621,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `flowSpec.id` | ID de spécification du flux de données |
-| `sourceConnectionIds` | ID de connexion source |
-| `targetConnectionIds` | ID de connexion à la Cible |
-| `transformations.params.mappingId` | ID de mappage |
+| `flowSpec.id` | ID de spécification de flux récupéré à l’étape précédente. |
+| `sourceConnectionIds` | ID de connexion source récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | ID de connexion à la cible récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | ID de mappage récupéré lors d’une étape précédente. |
+| `scheduleParams.startTime` | Heure début du flux de données en secondes. |
+| `scheduleParams.frequency` | Les valeurs de fréquence sélectionnables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L&#39;intervalle n&#39;est pas requis lorsque la fréquence est définie comme `once` et doit être supérieure ou égale à `15` pour d&#39;autres valeurs de fréquence. |
 
 **Réponse**
 
@@ -684,7 +635,8 @@ Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouve
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
