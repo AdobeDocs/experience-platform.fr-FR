@@ -4,37 +4,37 @@ solution: Experience Platform
 title: Se connecter aux destinations de diffusion en continu et activer les données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1847'
 ht-degree: 2%
 
 ---
 
 
-# Connectez-vous aux destinations de diffusion en continu et activez les données dans la plate-forme de données client en temps réel d’Adobe à l’aide d’API.
+# Connectez-vous aux destinations de diffusion en continu et activez les données dans Adobe Real-time Customer Data Platform à l’aide d’API.
 
 >[!NOTE]
 >
->Les [!DNL Amazon Kinesis] destinations et les [!DNL Azure Event Hubs] destinations dans le CDP en temps réel d’Adobe sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Les destinations [!DNL Amazon Kinesis] et les [!DNL Azure Event Hubs] destinations en Adobe Real-time CDP sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-Ce didacticiel explique comment utiliser les appels d’API pour se connecter à vos données Adobe Experience Platform, créer une connexion à une destination d’enregistrement de cloud de flux continu ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou [Azure Événement Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
+Ce didacticiel explique comment utiliser les appels d’API pour se connecter à vos données de plateforme d’expérience Adobe, créer une connexion à une destination d’enregistrement de cloud de flux continu ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou [Azure Événement Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
 
 Ce didacticiel utilise la [!DNL Amazon Kinesis] destination dans tous les exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
 ![Présentation : étapes de création d’une destination de diffusion en continu et d’activation de segments](/help/rtcdp/destinations/assets/flow-prelim.png)
 
-Si vous préférez utiliser l’interface utilisateur du CDP en temps réel d’Adobe pour vous connecter à une destination et activer des données, consultez les didacticiels [Connexion d’une destination](../../rtcdp/destinations/connect-destination.md) et [Activation de profils et de segments à une destination](../../rtcdp/destinations/activate-destinations.md) .
+Si vous préférez utiliser l’interface utilisateur dans Adobe Real-time CDP pour vous connecter à une destination et activer des données, consultez les didacticiels [Connexion d’une destination](../../rtcdp/destinations/connect-destination.md) et [Activation de profils et de segments à une destination](../../rtcdp/destinations/activate-destinations.md) .
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 * [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
 * [Service](../../catalog/home.md)de catalogue : Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données dans la plate-forme d’expérience.
 * [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en flux continu dans Adobe CDP en temps réel.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en flux continu dans Adobe Real-time CDP.
 
 ### Collecte des informations d’identification requises
 
@@ -310,8 +310,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "region": "{REGION}"
     },
     "params": { // use these values for Azure Event Hubs connections
-        "eventHubName": "{EVENT_HUB_NAME}",
-        "namespace": "EVENT_HUB_NAMESPACE"
+        "eventHubName": "{EVENT_HUB_NAME}"
     }
 }'
 ```
@@ -321,7 +320,6 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{NAME_OF_DATA_STREAM}`: *Pour les connexions Amazon Kinesis.* Indiquez le nom de votre flux de données existant dans votre compte Amazon Kinesis. Adobe Real-time CDP exportera les données dans ce flux.
 * `{REGION}`: *Pour les connexions Amazon Kinesis.* Région de votre compte Amazon Kinesis dans laquelle Adobe Real-time CDP diffusera vos données.
 * `{EVENT_HUB_NAME}`: *Pour les connexions Azure Événement Hubs.* Renseignez le nom Azure Événement Hub où Adobe Real-time CDP diffusera vos données. Pour plus d’informations, voir [Création d’un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de événement dans la documentation Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Pour les connexions Azure Événement Hubs.* Renseignez l&#39;espace de nommage Azure Événement Hubs où Adobe Real-time CDP diffusera vos données. Pour plus d’informations, voir [Création d’un espace de nommage](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) Événement Hubs dans la documentation Microsoft.
 
 **Réponse**
 
@@ -376,7 +374,7 @@ curl -X POST \
     }
 ```
 
-* `{FLOW_SPEC_ID}`: Utilisez le flux pour la destination de diffusion en continu à laquelle vous souhaitez vous connecter. Pour obtenir la spécification de flux, effectuez une opération GET sur le `flowspecs` point de terminaison. Voir la documentation de Swagger ici : https://platform.adobe.io/data/foundation/flowservice/swagger#/Flow%20Specs%20API/getFlowSpecs. Dans la réponse, recherchez `upsTo` et copiez l’ID correspondant de la destination de diffusion en continu à laquelle vous souhaitez vous connecter.
+* `{FLOW_SPEC_ID}`: L’ID de spécification de flux pour les destinations basées sur un profil est `71471eba-b620-49e4-90fd-23f1fa0174d8`défini. Utilisez cette valeur dans l’appel.
 * `{SOURCE_CONNECTION_ID}`: Utilisez l’ID de connexion source que vous avez obtenu à l’étape [Connexion à votre plateforme](#connect-to-your-experience-platform-data)d’expérience.
 * `{TARGET_CONNECTION_ID}`: Utilisez l’ID de connexion à la cible que vous avez obtenu lors de l’étape [Connexion à la destination](#connect-to-streaming-destination)de diffusion en continu.
 
@@ -392,7 +390,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 ```
 
 
-## Activer les données vers votre nouvelle destination
+## Activer les données vers votre nouvelle destination {#activate-data}
 
 ![Etape de présentation des étapes de destination 5](/help/rtcdp/destinations/assets/step5-create-streaming-destination-api.png)
 
@@ -451,6 +449,18 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
                 "path": "{PROFILE_ATTRIBUTE}"
             }
         }
+    },
+        },
+        {
+        "op": "add",
+        "path": "/transformations/0/params/profileSelectors/selectors/-",
+        "value": {
+            "type": "JSON_PATH",
+            "value": {
+                "operator": "EXISTS",
+                "path": "{PROFILE_ATTRIBUTE}"
+            }
+        }
     }
 ]
 ```
@@ -458,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 * `{DATAFLOW_ID}`: Utilisez le flux de données que vous avez obtenu à l’étape précédente.
 * `{ETAG}`: Utilisez la balise que vous avez obtenue à l’étape précédente.
 * `{SEGMENT_ID}`: Indiquez l’ID de segment à exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, sélectionnez API **** Segmentation Service dans le menu de navigation de gauche et recherchez l’ `GET /segment/jobs` opération.
-* `{PROFILE_ATTRIBUTE}`: Par exemple, `"person.lastName"`
+* `{PROFILE_ATTRIBUTE}`: Par exemple, `personalEmail.address` ou `person.lastName`
 
 **Réponse**
 
@@ -503,8 +513,23 @@ La réponse renvoyée doit inclure dans le `transformations` paramètre les segm
         "name": "GeneralTransform",
         "params": {
             "profileSelectors": {
-                "selectors": []
-            },
+                        "selectors": [
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "personalEmail.address",
+                                    "operator": "EXISTS"
+                                }
+                            },
+                            {
+                                "type": "JSON_PATH",
+                                "value": {
+                                    "path": "person.lastname",
+                                    "operator": "EXISTS"
+                                }
+                            }
+                        ]
+                    },
             "segmentSelectors": {
                 "selectors": [
                     {
@@ -520,6 +545,50 @@ La réponse renvoyée doit inclure dans le `transformations` paramètre les segm
         }
     }
 ],
+```
+
+**Données exportées**
+
+>[!IMPORTANT]
+>
+> Outre les attributs de profil et les segments de l&#39;étape [Activer les données vers votre nouvelle destination](#activate-data), les données exportées dans AWS Kinesis et les centres de Événement Azure incluront également des informations sur la carte d&#39;identité. Il s’agit des identités des profils exportés (par exemple, [ECID](https://docs.adobe.com/content/help/fr-FR/id-service/using/intro/id-request.html), ID mobile, ID Google, adresse électronique, etc.). Consultez un exemple ci-dessous.
+
+```
+{
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "72ddd79b-6b0a-4e97-a8d2-112ccd81bd02": {
+        "lastQualificationTime": "2020-03-03T21:24:39Z",
+        "status": "exited"
+      },
+      "7841ba61-23c1-4bb3-a495-00d695fe1e93": {
+        "lastQualificationTime": "2020-03-04T23:37:33Z",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "14575006536349286404619648085736425115"
+      },
+      {
+        "id": "66478888669296734530114754794777368480"
+      }
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
 
 ## Étapes suivantes
