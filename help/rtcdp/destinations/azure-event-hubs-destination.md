@@ -4,9 +4,9 @@ seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser des données à partir de la plateforme d'expérience.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser des données à partir de la plateforme d'expérience.
 translation-type: tm+mt
-source-git-commit: 47e03d3f58bd31b1aec45cbf268e3285dd5921ea
+source-git-commit: 883bea4aba0548e96b891987f17b8535c4d2eba7
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '481'
 ht-degree: 6%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->La [!DNL Azure Event Hubs] destination dans le CDP en temps réel d’Adobe est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La [!DNL Azure Event Hubs] destination en Adobe Real-time CDP est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Aperçu {#overview}
 
 [!DNL Azure Event Hubs] est une plate-forme de diffusion de données massives et un service d’assimilation de événements. Il peut recevoir et traiter des millions de événements par seconde. Les données envoyées à un hub de événement peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou de cartes de traitement par lot/d’enregistrement.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser des données à partir d’Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser des données à partir de la plateforme d’expérience Adobe.
 
 * Pour plus d&#39;informations sur [!DNL Azure Event Hubs]Microsoft, consultez la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Pour vous connecter à [!DNL Azure Event Hubs] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
@@ -64,31 +64,45 @@ Pour obtenir des informations sur le processus d’activation des segments, voir
 
 ## Données exportées {#exported-data}
 
-Vos données de plateforme d’expérience exportées s’affichent [!DNL Azure Event Hubs] au format JSON. Par exemple, un flux de événement contenant l’identité de courriel haché d’une audience qui a quitté un certain segment peut ressembler à ceci :
+Vos données de plateforme d’expérience exportées s’affichent [!DNL Azure Event Hubs] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
 
 ```
 {
-   "segmentMembership":{
-      "ups":{
-         "7841ba61-23c1-4bb3-a495-00d695fe1e93":{
-            "lastQualificationTime":"2020-03-03T21:24:39Z",
-            "status":"exited"
-         }
+  "person": {
+    "email": "yourstruly@adobe.con"
+  },
+  "segmentMembership": {
+    "ups": {
+      "7841ba61-23c1-4bb3-a495-00d3g5fe1e93": {
+        "lastQualificationTime": "2020-05-25T21:24:39Z",
+        "status": "exited"
+      },
+      "59bd2fkd-3c48-4b18-bf56-4f5c5e6967ae": {
+        "lastQualificationTime": "2020-05-25T23:37:33Z",
+        "status": "existing"
       }
-   }
-},
-"identityMap":{
-   "email_lc_sha256":[
+    }
+  },
+  "identityMap": {
+    "ecid": [
       {
-         "id":"655332b5fa2aea4498bf7a290cff017cb4"
+        "id": "14575006536349286404619648085736425115"
       },
       {
-         "id":"66baf76ef9de8b42df8903f00e0e3dc0b7"
+        "id": "66478888669296734530114754794777368480"
       }
-   ]
-},
+    ],
+    "email_lc_sha256": [
+      {
+        "id": "655332b5fa2aea4498bf7a290cff017cb4"
+      },
+      {
+        "id": "66baf76ef9de8b42df8903f00e0e3dc0b7"
+      }
+    ]
+  }
+}
 ```
-
 
 
 >[!MORELIKETHIS]
