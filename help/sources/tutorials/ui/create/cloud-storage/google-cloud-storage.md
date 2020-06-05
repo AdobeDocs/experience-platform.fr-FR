@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source d’Enregistrement Google Cloud dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 799445eca080175e2bffc49c6714f0c812b9bbea
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '553'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 # Création d’un connecteur source d’Enregistrement Google Cloud dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source d’Enregistrement Google Cloud (ci-après dénommé &quot;GCS&quot;) à l’aide de l’interface utilisateur de la plate-forme.
+Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source d’Enregistrement Google Cloud (ci-après dénommé &quot;GCS&quot;) à l’aide de l’interface utilisateur de la plate-forme.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
 
 * [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -41,20 +41,30 @@ Pour accéder à vos données GCS sur la plate-forme, vous devez fournir un ID *
 
 ## Connecter votre compte GCS
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte GCS à la plate-forme.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte GCS afin de vous connecter à la plate-forme.
 
-Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
 
-Sous la catégorie Enregistrement ** Cloud, sélectionnez **Google Cloud Enregistrement** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d&#39;informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la vue source de sa documentation ou de se connecter à la source. Pour créer une connexion de base entrante, cliquez sur **Connexion source**.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-![](../../../../images/tutorials/create/google-cloud-storage/sources-catalog.png)
+Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez Enregistrement **** Google Cloud et cliquez sur **l’icône + (+)** pour créer un nouveau connecteur GCS.
 
-La boîte de dialogue _Se connecter à l’Enregistrement_ Google Cloud s’affiche. Dans le formulaire d’entrée, indiquez un nom, une description facultative et vos informations d’identification GCS pour la connexion de base. Lorsque vous avez terminé, cliquez sur **Se connecter** , puis accordez un certain temps à la nouvelle connexion de base pour établir.
+![catalogue](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-![](../../../../images/tutorials/create/google-cloud-storage/gcs-credentials.png)
+La page *[!UICONTROL Se connecter à l’Enregistrement]* Google Cloud s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
-Une fois une connexion de base établie, vous pouvez passer à la section suivante et configurer un flux de données pour importer des données dans la plate-forme.
+### Nouveau compte
+
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez le nom de la connexion, une description facultative et vos informations d’identification GCS. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un certain temps à l’établissement du nouveau compte.
+
+![connecter](../../../../images/tutorials/create/google-cloud-storage/connect.png)
+
+### Compte existant
+
+Pour connecter un compte existant, sélectionnez le compte GCS avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![existant](../../../../images/tutorials/create/google-cloud-storage/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion de base à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données dans la plate-forme](../../dataflow/batch/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/batch/cloud-storage.md).
