@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Microsoft SQL Server dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Exp
 
 Sous la catégorie *Bases de données* , sélectionnez **Microsoft SQL Server** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour créer une connexion de base entrante, sélectionnez **Connexion source**.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/sources-catalog.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
 La page *Se connecter à Microsoft SQL Server* s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
@@ -56,13 +56,13 @@ La page *Se connecter à Microsoft SQL Server* s&#39;affiche. Sur cette page, vo
 
 Si vous utilisez de nouvelles informations d’identification, sélectionnez **Nouveau compte**. Dans le formulaire d&#39;entrée qui s&#39;affiche, indiquez un nom, une description facultative et vos informations d&#39;identification SQL Server pour la connexion de base. Lorsque vous avez terminé, sélectionnez **Se connecter** , puis accordez un certain temps à la nouvelle connexion de base pour établir.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
 ### Compte existant
 
 Pour connecter un compte existant, sélectionnez le compte SQL Server avec lequel vous souhaitez vous connecter, puis sélectionnez **Suivant** pour continuer.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing-credentials.png)
+![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
 
 ## Étapes suivantes
 
