@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '3356'
+source-wordcount: '3349'
 ht-degree: 6%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 6%
 
 # Guide de l&#39;utilisateur de JupyterLab
 
-JupyterLab est une interface utilisateur Web pour <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> et est étroitement intégrée à Adobe Experience Platform. Il fournit un environnement de développement interactif pour que les chercheurs en données puissent travailler avec des ordinateurs portables, du code et des données Jupyter.
+JupyterLab est une interface utilisateur web pour <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> et est étroitement intégrée dans [!DNL Adobe Experience Platform]le projet. Il fournit un environnement de développement interactif pour que les chercheurs en données puissent travailler avec des ordinateurs portables, du code et des données Jupyter.
 
 Ce document fournit un aperçu de JupyterLab et de ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 
-## JupyterLab sur la plateforme d’expérience
+## JupyterLab sur la plate-forme d’expérience
 
-L’intégration de JupyterLab de la plate-forme d’expérience s’accompagne de modifications architecturales, de considérations de conception, d’extensions personnalisées d’ordinateurs portables, de bibliothèques préinstallées et d’une interface sur le thème Adobe.
+L&#39;intégration JupyterLab de la plateforme Experience Platform s&#39;accompagne de modifications architecturales, de considérations de conception, d&#39;extensions personnalisées de blocs-notes, de bibliothèques préinstallées et d&#39;une interface sur le thème de l&#39;Adobe.
 
 La liste suivante décrit certaines des fonctionnalités propres à JupyterLab sur la plate-forme :
 
@@ -29,7 +29,7 @@ La liste suivante décrit certaines des fonctionnalités propres à JupyterLab s
 | **Noisettes** | Les noyaux fournissent un bloc-notes et d&#39;autres front-end JupyterLab la possibilité d&#39;exécuter et d&#39;introduire du code dans différents langages de programmation. Experience Platform fournit des noyaux supplémentaires pour prendre en charge le développement en Python, R, PySpark et Spark. Consultez la section [Noisettes](#kernels) pour plus de détails. |
 | **Accès aux données** | Accédez directement aux jeux de données existants dans JupyterLab avec la prise en charge complète des fonctions de lecture et d&#39;écriture. |
 | **Intégration du service de plateforme** | Les intégrations intégrées vous permettent d&#39;utiliser d&#39;autres services de plate-forme directement depuis JupyterLab. Une liste complète des intégrations prises en charge est fournie dans la section relative à l’ [intégration à d’autres services](#service-integration)de plateforme. |
-| **Authentification** | Outre le modèle <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de sécurité intégré de</a>JupyterLab, chaque interaction entre votre application et votre plateforme d’expérience, y compris la communication service-à-service de la plateforme, est chiffrée et authentifiée par le biais du système de gestion des identités <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">Adobe (IMS)</a>. |
+| **Authentification** | Outre le modèle <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">de sécurité intégré de</a>JupyterLab, chaque interaction entre votre application et la plateforme d’expérience, y compris la communication service-à-service de la plateforme, est chiffrée et authentifiée par le biais de l’ <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliothèques de développement** | Dans Experience Platform, JupyterLab fournit des bibliothèques préinstallées pour Python, R et PySpark. Consultez l’ [annexe](#supported-libraries) pour obtenir une liste complète des bibliothèques prises en charge. |
 | **Contrôleur de bibliothèque** | Lorsque les bibliothèques pré-installées manquent à vos besoins, d&#39;autres bibliothèques peuvent être installées pour Python et R, et sont temporairement stockées dans des conteneurs isolés pour maintenir l&#39;intégrité de Platform et protéger vos données. Consultez la section [Noisettes](#kernels) pour plus de détails. |
 
@@ -59,7 +59,7 @@ Vous trouverez des informations sur les principales fonctionnalités de JupyterL
 
 ### Accès à JupyterLab {#access-jupyterlab}
 
-Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Ordinateurs portables** dans la colonne de navigation de gauche. Il faut du temps pour que JupyterLab s&#39;initialise complètement.
+Dans [Adobe Experience Platform](https://platform.adobe.com), sélectionnez **Notebooks** dans la colonne de navigation de gauche. Il faut du temps pour que JupyterLab s&#39;initialise complètement.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -476,7 +476,7 @@ Commande magique Data Science Workspace personnalisée pour lire ou écrire un j
 
 ### Données de Requête utilisant Requête Service en Python
 
-JupyterLab sur la plate-forme vous permet d’utiliser SQL dans un bloc-notes Python pour accéder aux données via <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Requête Service</a>. L&#39;accès aux données via Requête Service peut s&#39;avérer utile pour traiter des jeux de données volumineux en raison de ses délais d&#39;exécution supérieurs. Notez que l’interrogation de données à l’aide de Requête Service est limitée à dix minutes de temps de traitement.
+JupyterLab sur la plate-forme vous permet d&#39;utiliser SQL dans un bloc-notes Python pour accéder aux données via le service <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">de Requête de la plateforme</a>Adobe Experience Platform. L&#39;accès aux données via Requête Service peut s&#39;avérer utile pour traiter des jeux de données volumineux en raison de ses délais d&#39;exécution supérieurs. Notez que l’interrogation de données à l’aide de Requête Service est limitée à dix minutes de temps de traitement.
 
 Avant d’utiliser Requête Service dans JupyterLab, assurez-vous de bien comprendre la syntaxe <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">SQL de</a>Requête Service.
 
