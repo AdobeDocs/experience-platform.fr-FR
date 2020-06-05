@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’API d’attribution
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '654'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ L’IA de l’attribution est utilisée pour attribuer des crédits aux points d
 
 Les extrants de l’IA d’attribution peuvent être répartis en différentes dimensions et peuvent être utilisés à différentes étapes du parcours du client. Pour ce faire, il n&#39;est pas nécessaire de traduire les besoins des entreprises en problèmes d&#39;apprentissage automatique, de choisir des algorithmes, des formations ou de déployer des modèles.
 
-Les données de l’API d’attribution peuvent provenir de sources de données Adobe (Analytics, par exemple) ou non.
+Les données de l’IA d’attribution peuvent provenir de l’Adobe (p. ex. [!DNL Analytics]) ou des sources de données autres que Adobe.
 
 Attribution AI prend en charge deux catégories de scores, algorithmique et basée sur des règles. Les scores algorithmiques incluent les scores incrémentiels et influencés. Les scores basés sur des règles sont les suivants : Première touche, Dernière touche, Linéaire, En forme de U et Décalage temporel.
 
@@ -60,7 +60,7 @@ L’API d’attribution peut être utilisée pour aider les cas d’utilisation 
 
 ### Autres fonctionnalités
 
-Attribution AI offre également l’intégration à d’autres solutions Adobe, telles qu’Adobe Analytics. Vous pouvez ainsi utiliser ces solutions pour utiliser le modèle algorithmique personnalisable afin d’évaluer les performances des médias et de fournir des informations analytiques.
+Attribution AI offre également l&#39;intégration à d&#39;autres solutions Adobe telles que [!DNL Adobe Analytics]. Vous pouvez ainsi utiliser ces solutions pour utiliser le modèle algorithmique personnalisable afin d’évaluer les performances des médias et de fournir des informations analytiques.
 
 ## Étapes suivantes
 
