@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 37213f29e8099f8587cde9eb66f9b75de3ad8a3a
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1729'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Analyse de vos données à l&#39;aide de portables
 
-Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
+Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, conçus dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
 
 Les concepts suivants sont introduits :
 
-- **JupyterLab :** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l’interface Web de nouvelle génération pour Project Jupyter et est étroitement intégrée à Adobe Experience Platform.
+- **JupyterLab :** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter, et est étroitement intégrée dans [!DNL Adobe Experience Platform].
 - **Lots :** Les jeux de données sont composés de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
 - **SDK d’accès aux données (obsolète) :** Le SDK d’accès aux données est désormais obsolète. Veuillez utiliser le guide [Platform SDK](../authoring/platform-sdk.md) .
 
@@ -38,7 +38,7 @@ Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s&#3
 
 ### Créer un bloc-notes
 
-Dans l’interface utilisateur d’Adobe Experience Platform, cliquez sur l’onglet Data Science du menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39;onglet JupyterLab qui ouvre le lanceur JupyterLab. Vous devriez voir une page similaire à celle-ci.
+Dans l’ [!DNL Adobe Experience Platform] interface utilisateur, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39;onglet JupyterLab qui ouvre le lanceur JupyterLab. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ La recette Ventes au détail est un exemple autonome qui utilise le même jeu de
 
 >[!NOTE] La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) de plate-forme. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
 
-Nous allons passer en revue l’accès aux données en interne à partir d’Adobe Experience Platform et aux données en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la bibliothèque de pandas Python.
+Nous allons passer en revue l&#39;accès aux données en interne [!DNL Adobe Experience Platform] et en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la bibliothèque de pandas Python.
 
 #### Données externes
 
@@ -70,7 +70,7 @@ Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous p
 
 #### Données de la plate-forme d’expérience
 
-Nous allons maintenant passer en revue l’accès aux données de la plateforme d’expérience.
+Nous allons maintenant passer en revue l&#39;accès aux [!DNL Experience Platform] données.
 
 ##### Par ID de jeu de données
 
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Si vous travaillez sur d’autres noyaux autres que Python, reportez-vous à [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données sur Adobe Experience Platform.
+Si vous travaillez sur d&#39;autres noyaux autres que Python, veuillez consulter [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données sur le [!DNL Adobe Experience Platform].
 
 La sélection de la cellule exécutable, puis l&#39;activation du bouton de lecture dans la barre d&#39;outils, exécutera le code exécutable. La sortie pour `head()` sera un tableau avec les clés de votre jeu de données sous forme de colonnes et les n premières lignes du jeu de données. `head()` accepte un argument entier pour spécifier le nombre de lignes à générer. Par défaut, il s’agit de 5.
 
@@ -190,7 +190,7 @@ Remarquez la diagonale de 1 en bas au centre. Cela montre que lorsqu’une varia
 
 ## Étapes suivantes
 
-Ce didacticiel explique comment créer un nouveau bloc-notes Jupyter dans Data Science Workspace et comment accéder aux données à l’extérieur ainsi qu’à partir d’Adobe Experience Platform. Nous avons notamment suivi les étapes suivantes :
+Ce didacticiel explique comment créer un nouveau bloc-notes Jupyter dans Data Science Workspace et comment accéder aux données à l’extérieur et à partir de [!DNL Adobe Experience Platform]celui-ci. Nous avons notamment suivi les étapes suivantes :
 - Créer un bloc-notes Jupyter
 - Accéder aux jeux de données et aux schémas
 - Explorer les jeux de données
