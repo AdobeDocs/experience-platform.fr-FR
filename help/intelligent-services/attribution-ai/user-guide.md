@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur de l’API d’attribution
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Il existe trois types différents de données d’entrée utilisées pour défin
 - **Fenêtre de recherche :** Fournit une période indiquant le nombre de jours avant l’inclusion des points de contact du événement de conversion.
 - **Points de contact :** événements marketing destinataires, individuels et ou de niveau cookie utilisés pour évaluer l’impact numérique ou basé sur les recettes des conversions.
 
-### Définir des événements de conversion
+### Définir des événements de conversion {#define-conversion-events}
 
 Pour définir un événement de conversion, vous devez attribuer un nom au événement et sélectionner le type d&#39;événement en cliquant sur le menu déroulant **Entrer le nom** de champ.
 
@@ -144,7 +144,7 @@ Pour modifier l’heure de la journée à laquelle vous souhaitez que le score s
 
 ![icône horloge](./images/user-guide/time_of_day.png)
 
-### Modélisation basée sur la région (facultatif)
+### Modélisation basée sur la région (facultatif) {#region-based-modeling-optional}
 
 Les comportements de vos clients peuvent différer considérablement selon le pays et la région géographique. Pour les entreprises internationales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
 
