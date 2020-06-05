@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur Salesforce
 topic: overview
 translation-type: tm+mt
-source-git-commit: f46e95b1e1af3ff5021561eb45f408e45c657834
+source-git-commit: 565c8c4b084343e5488a725a6a93d5d50d59fe66
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connecteur Salesforce
 
-Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
+La plateforme Adobe Experience Platform permet d’importer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
 
 Experience Platform prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. Salesforce prend en charge les fournisseurs de gestion de la relation client.
 
@@ -28,5 +28,5 @@ La documentation ci-dessous fournit des informations sur la connexion de Salesfo
 
 ## Connexion de Salesforce à la plate-forme à l’aide de l’interface utilisateur
 
-- [Création d’un connecteur source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/dynamics-salesforce.md)
+- [Création d’un connecteur source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/salesforce.md)
 - [Configuration d’un flux de données pour un connecteur CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)
