@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Enrichir le Profil client en temps réel grâce à des informations d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Enrichir le Profil client en temps réel grâce à des informations d’apprentissage automatique
 
-L’espace de travail Data Science d’Adobe Experience Platform fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prévisions et des statistiques de données. Lorsque des informations d’apprentissage automatique sont ingérées dans un jeu de données compatible avec les Profils, ces mêmes données sont également assimilées à des enregistrements de Profil qui peuvent ensuite être segmentés en sous-ensembles d’éléments connexes à l’aide du service de segmentation de la plateforme d’expérience.
+[!DNL Adobe Experience Platform] Data Science Workspace fournit les outils et les ressources nécessaires à la création, à l’évaluation et à l’utilisation de modèles d’apprentissage automatique pour générer des prévisions et des statistiques sur les données. Lorsque des informations d’apprentissage automatique sont ingérées dans un jeu de données compatible avec les Profils, ces mêmes données sont également assimilées à des enregistrements de Profil qui peuvent ensuite être segmentés en sous-ensembles d’éléments connexes à l’aide du service de segmentation de la plateforme d’expérience.
 
 Ce document fournit un didacticiel détaillé pour enrichir le Profil client en temps réel avec des informations d’apprentissage automatique. Les étapes sont divisées en sections suivantes :
 
@@ -24,7 +24,7 @@ Ce document fournit un didacticiel détaillé pour enrichir le Profil client en 
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des différents aspects d’Adobe Experience Platform impliqués dans l’assimilation de données de Profil et la création de segments. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents aspects de l’ [!DNL Adobe Experience Platform] assimilation des données de Profil et de la création de segments. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
 * [Profil](../../rtcdp/overview.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [Service](../../identity-service/home.md)d&#39;identité : Permet le Profil client en temps réel en rapprochant les identités des sources de données disparates qui sont incorporées dans la plate-forme.
@@ -41,7 +41,7 @@ La première étape vers l’enrichissement du Profil client en temps réel avec
 
 La composition d&#39;un schéma commence par l&#39;affectation d&#39;une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries chronologiques). Cette section fournit des instructions de base pour créer un schéma à l’aide du créateur de schémas. Pour un didacticiel plus détaillé, reportez-vous au didacticiel sur la [création d’un schéma à l’aide de l’éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma.
 
-1. Sur Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Schéma]** pour accéder à l’explorateur de schémas. Cliquez sur **[!UICONTROL Créer un Schéma]** pour accéder à l’éditeur *de*Schéma, où vous pouvez créer et créer des schémas de manière interactive.
+1. Sur Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Schéma]** pour accéder au navigateur de schéma. Cliquez sur **[!UICONTROL Créer un Schéma]** pour accéder à l’éditeur *de*Schéma, où vous pouvez créer et créer des schémas de manière interactive.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
 2. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Attribuer]** pour parcourir les classes disponibles.
@@ -50,16 +50,17 @@ La composition d&#39;un schéma commence par l&#39;affectation d&#39;une classe.
 
    * Pour créer une classe personnalisée, cliquez sur **[!UICONTROL Créer une classe]** située près du centre de la fenêtre du navigateur. Indiquez un nom de classe, une description et choisissez le comportement de la classe. Cliquez sur **[!UICONTROL Attribuer une classe]** une fois que vous avez terminé.
       ![](../images/models-recipes/enrich-rtcdp/create_new_class.png)
+
    A ce stade, la structure de votre schéma doit contenir certains champs de classe et vous êtes prêt à affecter des mixins. Un mixin est un groupe d’un ou de plusieurs champs qui décrivent un concept particulier.
 
 3. Dans la fenêtre *Composition* , cliquez sur **[!UICONTROL Ajouter]** dans la sous-section *Mélanges* .
-   * Pour attribuer un mixin existant, cliquez et mettez en surbrillance le mixin souhaité, puis cliquez sur **[!UICONTROL Ajouter Mixin]**. Contrairement aux classes, plusieurs mixins peuvent être affectés à un seul schéma tant qu&#39;il est approprié de le faire.
+   * Pour attribuer un mixin existant, cliquez et mettez en surbrillance le mixin souhaité, puis cliquez sur **[!UICONTROL Ajouter le mixin]**. Contrairement aux classes, plusieurs mixins peuvent être affectés à un seul schéma tant qu&#39;il est approprié de le faire.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
    * Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Créer un nouveau mixin]** situé près du centre de la fenêtre du navigateur. Indiquez un nom et une description pour le mixin, puis cliquez sur **[!UICONTROL Attribuer le mixin]** une fois que vous avez terminé.
       ![](../images/models-recipes/enrich-rtcdp/create_new_mixin.png)
 
-   * Pour ajouter des champs de mixin, cliquez sur le nom du mixin dans la fenêtre *Composition* . Vous aurez alors la possibilité d’ajouter des champs de mixin en cliquant sur Champ **** Ajouter dans la fenêtre *Structure* . Veillez à fournir les propriétés de mixin en conséquence.
+   * Pour ajouter des champs de mixin, cliquez sur le nom du mixin dans la fenêtre *Composition* . Vous aurez alors la possibilité d’ajouter des champs de mixin en cliquant sur **[!UICONTROL Ajouter le champ]** dans la fenêtre *Structure* . Veillez à fournir les propriétés de mixin en conséquence.
       ![](../images/models-recipes/enrich-rtcdp/mixin_properties.png)
 
 4. Une fois votre schéma créé, cliquez sur le champ de niveau supérieur de votre schéma dans la fenêtre *Structure* pour afficher les propriétés du schéma dans la fenêtre de propriétés appropriée. Indiquez un nom et une description, puis cliquez sur **[!UICONTROL Enregistrer]** pour créer le schéma.
@@ -80,7 +81,7 @@ Maintenant que vous avez créé un jeu de données de schéma de sortie, vous ê
 
 Avant de pouvoir activer un jeu de données pour le Profil, vous devez configurer le schéma du jeu de données pour qu&#39;il ait un champ d&#39;identité principal, puis activer le schéma pour le Profil. Si vous souhaitez créer et activer un nouveau schéma, vous pouvez vous reporter au didacticiel sur la [création d’un schéma à l’aide de l’éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma. Sinon, suivez les instructions ci-dessous pour activer un schéma et un jeu de données existants.
 
-1. Sur Adobe Experience Platform, utilisez l’explorateur de schémas pour rechercher le schéma de sortie sur lequel vous souhaitez activer le Profil et cliquez sur son nom pour vue sa composition.
+1. Sur Adobe Experience Platform, utilisez le navigateur de schémas pour rechercher le schéma de sortie sur lequel vous souhaitez activer le Profil et cliquez sur son nom pour vue sa composition.
    ![](../images/models-recipes/enrich-rtcdp/schemas.png)
 
 2. Développez la structure du schéma et recherchez un champ approprié à définir comme identifiant principal. Cliquez sur le champ de votre choix pour afficher ses propriétés.
@@ -104,7 +105,7 @@ Lorsque des données sont ingérées dans un jeu de données compatible avec les
 
 Maintenant que vous avez généré et assimilé des informations dans votre jeu de données compatible avec les Profils, vous pouvez gérer ces données en identifiant des sous-ensembles d’éléments connexes à l’aide du Créateur de segments. Suivez les étapes ci-dessous pour créer vos propres segments.
 
-1. Sur Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Segments]** suivi de **[!UICONTROL Créer un segment]** pour accéder au créateur de segments.
+1. Sur la plateforme Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Segments]** suivi de **[!UICONTROL Créer un segment]** pour accéder au créateur de segments.
    ![](../images/models-recipes/enrich-rtcdp/segments_overview.png)
 
 2. Dans le créateur de segments, le rail de gauche permet d’accéder aux principaux blocs de création de segments : attributs, événements et segments existants. Chaque bloc de construction apparaît dans son onglet respectif. Sélectionnez la classe à laquelle votre schéma activé par Profil s’étend, puis recherchez les blocs de création de votre segment.
