@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ressources de Liste
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 58549241f05f1bd604f33762f681c60946fa52f5
+source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '519'
 ht-degree: 2%
 
 ---
@@ -86,9 +86,9 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 
 | Paramètre | Description |
 | --- | --- |
-| `start` | Spécifiez où les résultats répertoriés doivent être enregistrés. Exemple : `start=2` aura liste les résultats du troisième élément renvoyé plus tard. |
+| `start` | Indiquez où doivent commencer les résultats répertoriés. Cette valeur peut être obtenue à partir de l’ `_page.next` attribut d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la `_page.next` valeur est nulle, aucune page supplémentaire n’est disponible. |
 | `limit` | Limiter le nombre de ressources renvoyées. Exemple : `limit=5` retournera une liste de cinq ressources. |
-| `orderby` | Triez les résultats selon une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L&#39;ajout d&#39;un titre `-` avant le titre (`orderby=-title`) triera les éléments par titre dans l&#39;ordre décroissant (Z-A). |
+| `orderby` | Triez les résultats selon une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). Ajouter un titre `-` avant (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
 
 ### Filtrage {#filtering}
 
