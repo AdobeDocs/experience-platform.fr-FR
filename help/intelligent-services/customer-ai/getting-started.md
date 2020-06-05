@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prise en main de Customer AI
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: f7c59ef097c00073fbf9f6522b6e70ed24cc8bf1
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '532'
 ht-degree: 15%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 15%
 
 Les guides de l’API client exigent une compréhension pratique des différents services de plate-forme impliqués dans l’utilisation de l’IA client. Avant de début, veuillez consulter les documents suivants :
 
-- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondamental qui permet à Adobe Experience Cloud, optimisé par Experience Platform, de transmettre le message approprié à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle la plate-forme d’expérience est créée, XDM System, rend opérationnels les schémas de modèles de données d’expérience à utiliser par les services de la plate-forme.
-- [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les éléments de base, les principes et les meilleures pratiques de composition de schémas à utiliser dans Adobe Experience Platform.
+- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondamental qui permet [!DNL Adobe Experience Cloud], propulsé par Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle la plate-forme d’expérience est créée, XDM System, rend opérationnels les schémas de modèles de données d’expérience à utiliser par les services de la plate-forme.
+- [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les éléments de base, les principes et les meilleures pratiques de composition des schémas à utiliser dans [!DNL Adobe Experience Platform]le cadre de ce modèle.
 - [schémas](../../xdm/tutorials/create-schema-ui.md)de construction : Ce didacticiel décrit les étapes de création d’un schéma à l’aide de l’éditeur de Schéma dans la plate-forme d’expérience.
-- [Présentation](../../rtcdp/overview.md)du Profil client en temps réel : Basée sur Adobe Experience Platform, la plateforme de données clientes en temps réel d’Adobe (CDP en temps réel) aide les sociétés à rassembler des données connues et inconnues afin d’activer les profils clients avec une prise de décision intelligente tout au long du parcours des clients. La plateforme CDP en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
+- [Présentation](../../rtcdp/overview.md)du Profil client en temps réel : Basé sur [!DNL Adobe Experience Platform]un CDP en temps réel [!DNL Adobe Real-time Customer Data Platform] (Real-time CDP), il permet aux sociétés de rassembler des données connues et inconnues afin d’activer les profils client avec une prise de décision intelligente tout au long du parcours du client. La plateforme CDP en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
 - [Présentation](../../segmentation/home.md)du service de segmentation : La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de personnes commercialisables de votre base de clients. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différents segments, vous pouvez vous concentrer sur les différentes audiences afin de fournir une expérience marketing plus personnalisée.
 - [Guide](../../segmentation/tutorials/create-a-segment.md)de l’utilisateur du créateur de segments : La plate-forme vous permet de créer et d’accéder facilement aux segments, ainsi que d’utiliser différents blocs de construction pour caractériser davantage vos segments.
 
