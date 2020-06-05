@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’utilisateur de l’API d’attribution
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 3e1e7bea7113b5db6b9bd02ce0dbe8cfd486206c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Ce document sert de guide pour l’interaction avec l’API d’attribution dans
 
 ## Création d’une instance
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents Adobe disponibles. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents Adobe disponibles. In the container for Attribution AI, click **Open**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
@@ -64,19 +64,19 @@ Une fois qu’un événement est sélectionné, une nouvelle liste déroulante s
 
 ![aucune liste déroulante](./images/user-guide/conversion_event_1.png)
 
-Les boutons événement ** Ajouter et Groupe ** Ajouter sont utilisés pour définir davantage votre conversion. Selon la conversion que vous définissez, vous devrez peut-être utiliser les boutons événement ** Ajouter et Groupe ** Ajouter pour fournir un contexte plus détaillé.
+Les boutons *Ajouter le événement* et *Ajouter le groupe* sont utilisés pour définir davantage votre conversion. Selon la conversion que vous définissez, vous devrez peut-être utiliser les boutons événement *de* Ajoute et *Ajouter un groupe* pour fournir un contexte plus détaillé.
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Cliquez sur **Ajouter événement** pour créer d’autres champs qui peuvent être remplis à l’aide de la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction *AND* à la définition de chaîne sous le nom *de* conversion. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
+Le fait de cliquer sur le événement **** Ajouter crée des champs supplémentaires qui peuvent être remplis à l’aide de la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction *AND* à la définition de chaîne sous le nom *de* conversion. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
-Cliquez sur Groupe **** Ajouterpour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne &quot;Ou&quot;. &quot;Ou&quot; est utilisé pour définir plusieurs chemins de conversion réussis. &quot;Et&quot; étend le chemin de conversion pour inclure d’autres conditions.
+Cliquez sur **Ajouter le groupe** pour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne &quot;Ou&quot;. &quot;Ou&quot; est utilisé pour définir plusieurs chemins de conversion réussis. &quot;Et&quot; étend le chemin de conversion pour inclure d’autres conditions.
 
 ![utilisation et ou](./images/user-guide/and_or.png)
 
-Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter conversion** pour créer une nouvelle carte de conversion. Vous pouvez répéter le processus ci-dessus pour définir plusieurs conversions.
+Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter la conversion** pour créer une nouvelle carte de conversion. Vous pouvez répéter le processus ci-dessus pour définir plusieurs conversions.
 
 ![ajouter une conversion](./images/user-guide/add_conversion.png)
 
@@ -102,13 +102,13 @@ Une fois qu’un opérateur pour un point de contact est sélectionné, *la sais
 
 ![liste déroulante des points de contact](./images/user-guide/touchpoint_dropdown.png)
 
-Les boutons *Ajouter événement* et Groupe ** Ajouter sont utilisés pour définir plus précisément votre point de contact. En raison de la nature complexe qui entoure les points de contact, il n&#39;est pas rare d&#39;avoir plusieurs événements et groupes pour un seul point de contact.
+Les boutons *Ajouter le événement* et *Ajouter le groupe* sont utilisés pour définir davantage votre point de contact. En raison de la nature complexe qui entoure les points de contact, il n&#39;est pas rare d&#39;avoir plusieurs événements et groupes pour un seul point de contact.
 
-Lorsque vous cliquez dessus, **Ajouter événement** permet l’ajout de champs supplémentaires. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
+Lorsque vous cliquez dessus, le événement **de** Ajoute permet d’ajouter d’autres champs. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
 
 ![ajouter un événement](./images/user-guide/touchpoint_add_event.png)
 
-Cliquez sur le groupe **** Ajouterpour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquez sur **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins d’accès réussis. Ce point de contact particulier n&#39;a qu&#39;un seul chemin réussi, par conséquent &quot;Ou&quot; n&#39;est pas nécessaire.
+Cliquez sur le groupe **** Ajouter pour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquez sur **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins d’accès réussis. Ce point de contact particulier n&#39;a qu&#39;un seul chemin réussi, par conséquent &quot;Ou&quot; n&#39;est pas nécessaire.
 
 ![présentation du point de contact](./images/user-guide/add_group_touchpoint.png)
 
@@ -116,7 +116,7 @@ Cliquez sur le groupe **** Ajouterpour créer d’autres champs distincts de l�
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Vous pouvez ajouter d’autres points de contact en cliquant sur **Ajouter point de contact** et en répétant le processus ci-dessus.
+Vous pouvez ajouter d’autres points de contact en cliquant sur **Ajouter le point de contact** et en répétant le processus ci-dessus.
 
 ![ajouter un point de contact](./images/user-guide/add_touchpoint.png)
 
@@ -148,7 +148,7 @@ Pour modifier l’heure de la journée à laquelle vous souhaitez que le score s
 
 Les comportements de vos clients peuvent différer considérablement selon le pays et la région géographique. Pour les entreprises internationales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
 
-Pour définir une nouvelle région, début en cliquant sur **Ajouter région**. Dans le conteneur qui s’affiche, nommez la région. Une seule valeur (&quot;placeContext.geo.countryCode&quot;) est renseignée à partir de la liste déroulante *Entrer le nom* de champ. Sélectionnez cette valeur.
+Pour définir une nouvelle région, début en cliquant sur **Ajouter la région**. Dans le conteneur qui s’affiche, nommez la région. Une seule valeur (&quot;placeContext.geo.countryCode&quot;) est renseignée à partir de la liste déroulante *Entrer le nom* de champ. Sélectionnez cette valeur.
 
 ![Sélectionner une région à](./images/user-guide/select_region_att.png)
 
