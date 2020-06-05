@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur Microsoft Dynamics à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6c86cec91774f3444dc90042cd7ad5c71429aabd
+source-git-commit: 72c1d53295d5c4204c02959c857edc06f246534c
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '729'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Création d’un connecteur Microsoft Dynamics à l’aide de l’API du service de flux
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39;API Flow Service pour vous guider à travers les étapes de connexion de Platform à un compte Microsoft Dynamics (ci-après appelé &quot;Dynamics&quot;) pour la collecte de données de gestion de la relation client.
 
-Si vous préférez utiliser l’interface utilisateur dans Experience Platform, le didacticiel [sur l’interface utilisateur du connecteur source](../../../ui/create/crm/dynamics-salesforce.md) Dynamics ou Salesforce fournit des instructions détaillées pour exécuter des actions similaires.
+Si vous préférez utiliser l’interface utilisateur dans Experience Platform, le didacticiel [sur l’interface utilisateur du connecteur source](../../../ui/create/crm/dynamics.md) Dynamics fournit des instructions détaillées pour effectuer des actions similaires.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 * [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
