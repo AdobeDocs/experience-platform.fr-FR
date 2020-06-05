@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Découverte des informations dans l'API d'attribution
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 1%
@@ -57,7 +57,7 @@ La boîte de dialogue Modifier s’affiche, vous permettant de modifier la descr
 
 ![modifier la fenêtre contextuelle](./images/insights/edit-popover.png)
 
-### Autres actions
+### Autres actions {#more-actions}
 
 Le bouton Actions ** Plus se trouve dans le volet de navigation supérieur droit en regard de *Modifier*. Cliquez sur **Autres actions** pour ouvrir une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
