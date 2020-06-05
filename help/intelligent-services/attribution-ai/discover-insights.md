@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Découverte des informations dans l'API d'attribution
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Les instances de service d’IA d’attribution fournissent des informations qui peuvent être utilisées pour faciliter la prise et la mesure des décisions marketing liées aux performances marketing et au retour sur investissement. La sélection d’une instance de service fournit des visualisations et des filtres pour vous aider à comprendre l’impact de chaque interaction client dans chaque phase du parcours client.
 
-Ce document sert de guide pour l’interaction avec les informations d’instance de service dans l’interface utilisateur d’Adobe Intelligent Services.
+Ce document sert de guide pour l’interaction avec les informations d’instance de service dans l’interface utilisateur Adobe Intelligent Services.
 
 ## Prise en main
 
@@ -24,7 +24,7 @@ Pour utiliser des informations sur l’API d’attribution, vous devez disposer 
 
 ## Présentation des instances de service
 
-In the Adobe Experience Platform UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services Adobe Intelligent Services disponibles. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents Adobe disponibles. In the container for Attribution AI, click **Open**.
 
 ![Accès à votre instance](./images/insights/open_Attribution_ai.png)
 
@@ -44,7 +44,7 @@ Pour vue des détails supplémentaires pour une instance de service, cliquez sur
 
 ![afficher plus](./images/insights/show-more.png)
 
-Une liste détaillée s’affiche. Pour plus d&#39;informations sur l&#39;une des propriétés répertoriées, consultez le guide [d&#39;utilisation de l&#39;IA](./user-guide.md)Attribution.
+Une liste détaillée s’affiche. Pour plus d&#39;informations sur l&#39;une des propriétés répertoriées, consultez le guide [d&#39;utilisation de l&#39;API](./user-guide.md)Attribution.
 
 ![afficher les détails](./images/insights/advanced-details.png)
 
