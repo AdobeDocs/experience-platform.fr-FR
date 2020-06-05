@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Customer AI
 topic: Customer AI overview
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 25%
+source-wordcount: '487'
+ht-degree: 26%
 
 ---
 
@@ -35,9 +35,9 @@ Customer AI n’est pas conçue pour :
 
 - L’intelligence artificielle du client ne doit pas être utilisée pour prévoir les prix dynamiques, ni le prix auquel le client va faire un achat.
 - L’intelligence artificielle du client ne peut pas déterminer si le fait de donner une offre rend le client plus susceptible d’acheter un article. Bien que vous puissiez décider d&#39;envoyer des offres d&#39;escompte en fonction des scores de propension, ce n&#39;est pas nécessairement le meilleur moyen de convertir ces clients.
-- L’IA du client n’est pas un outil de recommandation de produit. Si vous disposez de milliers de SKU, n’utilisez pas l’API client comme proxy pour une solution de recommandations de produits réelle telle qu’Adobe Cible.
+- L’IA du client n’est pas un outil de recommandation de produit. Si vous disposez de milliers de SKU, n’utilisez pas l’IA du client comme proxy pour une solution de recommandations de produits réelle telle que [!DNL Adobe Target].
 - L’intelligence artificielle du client ne peut pas prédire à quel stade du voyage d’achat se trouve le client, par exemple, s’il est en phase de &quot;connaissance&quot;, de &quot;prise en compte&quot;, d’achat ou de &quot;rétention&quot;.
-- N’utilisez pas l’intelligence artificielle du client pour déterminer les clients susceptibles d’acheter un produit lancé à l’avenir. Cela nécessite la présence de certains événements de réussite dans le passé pour que l’intelligence artificielle du client puisse correctement former l’algorithme d’apprentissage automatique à vos données.
+- N’utilisez pas l’intelligence artificielle du client pour déterminer les clients susceptibles d’acheter un produit lancé à l’avenir. Pour ce faire, certains événements de réussite doivent être présents dans le passé pour que l’API du client puisse correctement former l’algorithme d’apprentissage automatique à vos données.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’IA du client.
 
