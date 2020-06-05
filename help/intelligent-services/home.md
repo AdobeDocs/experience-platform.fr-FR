@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des services intelligents
 topic: Intelligent Services overview
 translation-type: tm+mt
-source-git-commit: c9d1fca0b14607f83657d5d8a751c2d0cc46bea0
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Présentation des services intelligents
 
-Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’une société en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’une expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer des prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
+Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’une société en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’une expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer des prédictions dans [!DNL Adobe Experience Cloud]des applications [!DNL Adobe Experience Platform]tierces et tierces.
 
 La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À l’aide d’exemples d’utilisation commerciale, cette vidéo explique un flux de travail de haut niveau et décrit les fonctionnalités de l’API d’attribution et de l’IA du client.
 
@@ -22,11 +22,11 @@ La vidéo suivante est conçue pour vous aider à comprendre les services intell
 
 ## Avantages des services intelligents
 
-Les services intelligents, reposant sur Adobe Experience Platform, permettent aux spécialistes du marketing chargés de l’expérience client d’accéder à l’IA en tant que service, ce qui facilite la prédiction du comportement des clients, la mesure de l’impact d’une campagne ou la garantie d’un meilleur retour sur investissement. Vous trouverez ci-dessous une liste des avantages offerts par Intelligent Services.
+Les services intelligents, reposant sur [!DNL Adobe Experience Platform]ces services, permettent aux spécialistes du marketing responsables de l&#39;expérience client d&#39;accéder à l&#39;IA en tant que service, ce qui facilite la prédiction du comportement des clients, la mesure de l&#39;impact d&#39;une campagne ou la garantie d&#39;un meilleur retour sur investissement. Vous trouverez ci-dessous une liste des avantages offerts par Intelligent Services.
 
 ### Rapidité rentable sur le marché
 
-L’expertise d’Adobe en IA/ML est associée à une expérience CXM approfondie et les services intelligents ont été conçus spécialement pour permettre aux spécialistes du marketing de lancer immédiatement l’IA/ML pour les cas courants d’utilisation du marketing, sans avoir à embaucher des spécialistes des données rares et onéreux, ce qui accélère la vitesse de commercialisation et la convivialité.
+Adobe possède une expertise en IA/ML associée à une expérience CXM approfondie, et les services intelligents ont été conçus spécifiquement pour que les spécialistes du marketing puissent lancer l&#39;IA/ML immédiatement pour les cas courants d&#39;utilisation du marketing, sans avoir à embaucher des scientifiques de données rares et onéreux, ce qui accélère la vitesse du marché et la convivialité.
 
 ### Plus grande précision des informations prédictives
 
@@ -40,7 +40,7 @@ Permettre aux spécialistes du marketing de commencer immédiatement à utiliser
 
 ### Incorporer
 
-Les données client sont assimilées et transformées avec le modèle de données d’expérience (XDM) sur la plate-forme Adobe Experience Platform. Pour en savoir plus sur XDM, consultez la présentation [de](../xdm/home.md)XDM.
+Les données du client sont assimilées et transformées avec le modèle de données d’expérience (XDM) sur [!DNL Adobe Experience Platform]. Pour en savoir plus sur XDM, consultez la présentation [de](../xdm/home.md)XDM.
 
 ### Configurez les
 
@@ -52,7 +52,7 @@ Une fois que les modèles ont terminé la formation et le score, les scores sont
 
 ### Agir
 
-Enfin, vous pouvez décider des actions à entreprendre avec les prédictions, telles que la consommation d’informations, l’activation d’applications dans Adobe Experience Cloud et la création de tableaux de bord personnalisés.
+Enfin, vous pouvez décider des actions à entreprendre avec les prédictions, telles que la consommation d’informations, l’activation d’applications sur l’ensemble du site [!DNL Adobe Experience Cloud]et la création de tableaux de bord personnalisés.
 
 ## Étapes suivantes
 
