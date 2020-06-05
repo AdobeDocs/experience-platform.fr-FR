@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0a2247a9267d4da481b3f3a5dfddf45d49016e61
+source-git-commit: 9fd00ec198f61843bb9a395103215e5441b23745
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
@@ -56,18 +56,30 @@ Pour plus d’informations sur la prise en main, consultez [ce document](https:/
 
 ## Connecter votre compte Blob ou S3
 
-Les informations d’identification de votre enregistrement cloud étant prêtes, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte Blob ou S3 à la plateforme.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un compte Blob ou S3 pour vous connecter à la plate-forme.
 
-Connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a> , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
 
-Sous la catégorie Enregistrement ** Cloud, sélectionnez l’Enregistrement **Blob** Azure ou **Amazon S3** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d&#39;informations fournit une brève description de la source sélectionnée ainsi que des options permettant de vue de sa documentation ou de se connecter à la source. Pour créer une connexion de base entrante, cliquez sur **Connexion source**.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-![](../../../../images/tutorials/create/s3/s3_sources_catalog.png)
+Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez Enregistrement **[!UICONTROL Blob]** Azure ou **[!UICONTROL Amazon S3]** cliquez **sur l&#39;icône + (+) pour créer un connecteur Blob ou S3.**
 
-Dans le formulaire d’entrée, fournissez la connexion de base avec un nom, une description facultative et vos informations d’identification Blob ou S3. Enfin, cliquez sur **Se connecter** , puis accordez un certain temps à la nouvelle connexion de base pour établir.
+![catalogue](../../../../images/tutorials/create/blob/catalog.png)
 
-![](../../../../images/tutorials/create/s3/s3_credentials.png)
+La page *[!UICONTROL Se connecter à l&#39;Enregistrement]* Blob Azure s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+
+### Nouveau compte
+
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez le nom de la connexion, une description facultative et vos informations d’identification Blob ou S3. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un certain temps à l’établissement du nouveau compte.
+
+![connecter](../../../../images/tutorials/create/blob/new.png)
+
+### Compte existant
+
+Pour connecter un compte existant, sélectionnez le compte Blob ou S3 avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![existant](../../../../images/tutorials/create/blob/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion de base à votre compte Azure Blob ou Amazon S3. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données dans la plate-forme](../../dataflow/batch/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre compte Blob ou S3. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/batch/cloud-storage.md).
