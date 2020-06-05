@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide SDK de la plate-forme
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '451'
 ht-degree: 5%
 
 ---
@@ -22,7 +22,7 @@ Ce tutoriel vous fournit des informations sur la conversion `data_access_sdk_pyt
 
 ## Créer l&#39;authentification {#build-authentication}
 
-L’authentification est requise pour effectuer des appels à Adobe Experience Platform. Elle comprend la clé d’API, l’ID d’organisation IMS, un jeton d’utilisateur et un jeton de service.
+L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform]une clé d’API, un ID d’organisation IMS, un jeton d’utilisateur et un jeton de service.
 
 ### Python
 
@@ -154,7 +154,7 @@ Le nouveau SDK de plate-forme prend en charge les opérations suivantes :
 | Inférieur à (`<`) | `lt()` |
 | Inférieur ou égal à (`<=`) | `le()` |
 | And (`&`) | `And()` |
-| OU (`|`) | `Or()` |
+| Sinon (`|`) | `Or()` |
 
 ## Filtrage par colonnes sélectionnées {#filter-by-selected-columns}
 
