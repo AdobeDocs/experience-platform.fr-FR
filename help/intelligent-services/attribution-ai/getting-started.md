@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prise en main dans l’API d’attribution
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 6161f5a9ca0df341272a96a8a19ce6c34f6d5d3e
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Prise en main dans l’API d’attribution
 
-Les guides ci-dessous vous permettent de comprendre les différents services Adobe Experience Platform impliqués dans l’utilisation de l’API d’attribution. Avant de commencer les didacticiels, veuillez consulter les documents suivants :
+Les guides ci-après exigent une compréhension des différents [!DNL Adobe Experience Platform] services liés à l&#39;utilisation de l&#39;IA Attribution. Avant de commencer les didacticiels, veuillez consulter les documents suivants :
 
-- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondamental qui permet à Adobe Experience Cloud, optimisé par Experience Platform, de transmettre le message approprié à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle la plate-forme d’expérience est créée, XDM System, rend opérationnels les schémas de modèles de données d’expérience à utiliser par les services de la plate-forme.
-- [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les éléments de base, les principes et les meilleures pratiques de composition de schémas à utiliser dans Adobe Experience Platform.
+- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondamental qui permet [!DNL Adobe Experience Cloud], propulsé par Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle la plate-forme d’expérience est créée, XDM System, rend opérationnels les schémas de modèles de données d’expérience à utiliser par les services de la plate-forme.
+- [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les éléments de base, les principes et les meilleures pratiques de composition des schémas à utiliser dans [!DNL Adobe Experience Platform]le cadre de ce modèle.
 - [schémas](../../xdm/tutorials/create-schema-ui.md)de construction : Ce didacticiel décrit les étapes de création d’un schéma à l’aide de l’éditeur de Schéma dans la plate-forme d’expérience.
 
-Attribution AI nécessite que les jeux de données soient conformes au schéma CEE (Consumer Experience Événements), qui est un mélange dans le modèle [de données d’](../../xdm/home.md) expérience (XDM). Contactez l’assistance d’Adobe à l’adresse attributionai-support@adobe.com pour mettre en oeuvre ces données ou apporter des modifications à celles-ci. Si des données de dépenses des médias sont présentes, vous pouvez effectuer d’autres analyses, telles que les recettes incrémentielles et le RSI. Si les données du profil client sont disponibles, vous pouvez en outre attribuer des crédits au niveau du profil client.
+Attribution AI nécessite que les jeux de données soient conformes au schéma CEE (Consumer Experience Événements), qui est un mélange dans le modèle [de données d’](../../xdm/home.md) expérience (XDM). Veuillez contacter l&#39;assistance Adobe à l&#39;adresse attributionai-support@adobe.com afin de mettre en oeuvre ces données ou d&#39;y apporter des modifications. Si des données de dépenses des médias sont présentes, vous pouvez effectuer d’autres analyses, telles que les recettes incrémentielles et le RSI. Si les données du profil client sont disponibles, vous pouvez en outre attribuer des crédits au niveau du profil client.
 
 ## Terminologie
 
