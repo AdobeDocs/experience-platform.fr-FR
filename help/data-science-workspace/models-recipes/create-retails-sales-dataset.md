@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Créer un schéma de vente au détail et un jeu de données
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 91c7b7e285a4745da20ea146f2334510ca11b994
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Créer un schéma de vente au détail et un jeu de données
 
-Ce didacticiel présente les conditions préalables et les ressources requises pour tous les autres didacticiels de la plateforme de données Data Science Workspace d’Adobe Experience Platform. Une fois terminé, le schéma de vente au détail et les jeux de données seront disponibles pour vous et les membres de votre organisation IMS sur la plate-forme d’expérience.
+Ce didacticiel présente les conditions préalables et les ressources requises pour tous les autres didacticiels [!DNL Adobe Experience Platform] Data Science Workspace. Une fois terminé, le schéma de vente au détail et les jeux de données seront disponibles pour vous et les membres de votre organisation IMS sur la plate-forme d’expérience.
 
 ## Prise en main
 
 Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
-- Accès à Adobe Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
-- Autorisation d’effectuer des appels à l’API de plateforme d’expérience. Suivez le didacticiel [Authentification et accédez aux API](../../tutorials/authentication.md) Adobe Experience Platform pour obtenir les valeurs suivantes afin de terminer ce didacticiel avec succès :
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+- Autorisation d’effectuer des appels à l’API de plateforme d’expérience. Suivez le didacticiel [Authenticate and access Adobe Experience Platform API](../../tutorials/authentication.md) pour obtenir les valeurs suivantes afin de terminer ce didacticiel :
    - Autorisation : `{ACCESS_TOKEN}`
    - x-api-key : `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
    - Certificat client : `{PRIVATE_KEY}`
-- Exemples de données et de fichiers source pour la Recette [des ventes](../pre-built-recipes/retail-sales.md)au détail. Téléchargez les ressources requises pour cet espace de travail et d’autres didacticiels Data Science Workspace depuis le référentiel [public d’](https://github.com/adobe/experience-platform-dsw-reference/)Adobe Git.
+- Exemples de données et de fichiers source pour la Recette [des ventes](../pre-built-recipes/retail-sales.md)au détail. Téléchargez les ressources requises pour cet espace de travail et d’autres didacticiels Data Science Workspace à partir du référentiel [Git public](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
 - [Python >= 2.7](https://www.python.org/downloads/) et les paquets Python suivants :
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
