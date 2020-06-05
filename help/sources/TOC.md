@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs de source d’expérience Adobe
 translation-type: tm+mt
-source-git-commit: 165d76224f4aeb292e72df1e2574ae1d0821c44c
+source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 2%
@@ -142,7 +142,8 @@ ht-degree: 2%
          - [Connecteur FTP et SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - CRM {#crm}
-         - [Connecteur Microsoft Dynamics et Salesforce](tutorials/ui/create/crm/dynamics-salesforce.md)
+         - [Connecteur Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
+         - [Connecteur Salesforce](tutorials/ui/create/crm/salesforce.md)
       - Réussite des clients {#customer-success}
          - [Connecteur Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Connecteur ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
