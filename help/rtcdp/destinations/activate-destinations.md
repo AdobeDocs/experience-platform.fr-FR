@@ -4,7 +4,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 237ca5fc950b46ae4718850ab1360cdf52b8b112
+source-git-commit: 24e4746b28620210c138a1e803b6afadff79ab30
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 53%
@@ -18,7 +18,7 @@ Activez les données de la plateforme des données clients en temps réel d’Ad
 
 ## Conditions préalables {#prerequisites}
 
-Pour activer des données vers des destinations, vous devez avoir réussi à vous [connecter à une destination](/help/rtcdp/destinations/assets/connect-destination.png). Si vous ne l’avez pas déjà fait, accédez au [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md), parcourez les destinations prises en charge et configurez une ou plusieurs destinations.
+Pour activer des données vers des destinations, vous devez avoir réussi à vous [connecter à une destination](/help/rtcdp/destinations/assets/connect-destination-1.png). Si vous ne l’avez pas déjà fait, accédez au [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md), parcourez les destinations prises en charge et configurez une ou plusieurs destinations.
 
 ## Activation des données {#activate-data}
 
@@ -29,7 +29,7 @@ Si un flux d’activation existe déjà pour une destination, vous pouvez voir l
 3. Sélectionnez **[!UICONTROL Activer]**.
 4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
    ![segments-to-destination](/help/rtcdp/destinations/assets/select-segments.png)
-5. *Conditionnel*. Cette étape diffère selon le type de destination dans lequel vous activez vos segments. <br> Pour les destinations *de marketing par* courriel et les destinations *d’enregistrement* cloud, sur la page **[!UICONTROL Sélectionner les attributs]** , sélectionnez **[!UICONTROL Ajouter nouveau champ et sélectionnez les attributs à envoyer à la destination.]**
+5. *Conditionnel*. Cette étape diffère selon le type de destination dans lequel vous activez vos segments. <br> Pour les destinations *de marketing par* courriel et les destinations *d’enregistrement* cloud, sur la page **[!UICONTROL Sélectionner les attributs]** , sélectionnez **[!UICONTROL Ajouter un nouveau champ et sélectionnez les attributs à envoyer à la destination.]**
 Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rtcdp/destinations/email-marketing-destinations.md#identity) issu de votre schéma d’union. Pour plus d’informations sur les attributs obligatoires, consultez Identité dans l’article [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
    ![Attributs des destinations](/help/rtcdp/destinations/assets/select-attributes-step.png)
 
@@ -48,7 +48,7 @@ Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rt
    ![Identifiant de fidélité en tant qu&#39;identité](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans Adobe Experience Platform, conformément aux exigences [de hachage des](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques de Facebook. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Le CDP Adobe en temps réel hachera les adresses électroniques pour se conformer aux exigences de Facebook.
+   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans la plate-forme d’expérience Adobe, conformément aux exigences [de hachage de](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courrier électronique de Facebook. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Adobe Real-time CDP hachera les adresses électroniques pour se conformer aux exigences de Facebook.
 
    ![mappage d’identité après le remplissage de champs](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -98,7 +98,7 @@ Pour Facebook, une activation réussie signifie qu’une audience personnalisée
 
 >[!TIP]
 >
->L’intégration entre Adobe Real-time CDP et Facebook prend en charge les remplissages d’audiences historiques. Toutes les qualifications des segments historiques sont envoyées à Facebook lorsque vous activez les segments vers la destination.
+>L&#39;intégration entre le CDP en temps réel d&#39;Adobe et Facebook prend en charge les renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées à Facebook lorsque vous activez les segments vers la destination.
 
 ## Désactivation de l’activation {#disable-activation}
 
@@ -108,4 +108,4 @@ Pour désactiver un flux d’activation existant, procédez comme suit :
 2. Cliquez sur la commande **[!UICONTROL Activé]** dans le rail de droite pour modifier l’état du flux d’activation.
 3. Dans la fenêtre **Mettre à jour l’état du flux de données**, sélectionnez **Confirmer** pour désactiver le flux d’activation.
 
-Dans AWS Kinesis, générez une paire de clés d’accès secrètes pour accorder un accès CDP Adobe en temps réel à votre compte AWS Kinesis. Pour en savoir plus, consultez la documentation [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)AWS Kinesis.
+Dans AWS Kinesis, générez une paire de clés d’accès secrète pour accorder un accès Adobe CDP en temps réel à votre compte AWS Kinesis. Pour en savoir plus, consultez la documentation [](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)AWS Kinesis.
