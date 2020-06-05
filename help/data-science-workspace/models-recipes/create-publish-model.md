@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et publication d’une présentation du modèle d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Faites semblant de posséder un site Web de vente au détail en ligne. Lorsque vos clients effectuent des achats sur votre site Web de vente au détail, vous souhaitez leur présenter des recommandations de produits personnalisées afin d’exposer une variété d’autres produits de votre offre d’entreprise. Au cours de l’existence de votre site Web, vous avez continuellement rassemblé les données client et souhaitez utiliser ces données pour générer des recommandations de produits personnalisées.
 
-Adobe Experience Platform Data Science Workspace vous permet d’atteindre votre objectif à l’aide de la recette [de recommandations de produits prédéfinie](../pre-built-recipes/product-recommendations.md). Suivez ce didacticiel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des informations dans Data Science Workspace.
+[!DNL Adobe Experience Platform] Data Science Workspace fournit les moyens d’atteindre votre objectif en utilisant la recette [de recommandations de produits prédéfinie](../pre-built-recipes/product-recommendations.md). Suivez ce didacticiel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des informations dans Data Science Workspace.
 
 Ce didacticiel reflète le flux de travail de Data Science Workspace et décrit les étapes suivantes pour créer un modèle d’apprentissage automatique :
 
@@ -31,7 +31,7 @@ Ce didacticiel reflète le flux de travail de Data Science Workspace et décrit 
 
 Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
 
-* Accès à Adobe Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+* Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
 
 * Ressources d’activation. Contactez votre gestionnaire de compte pour que les éléments suivants soient mis en service.
    * Recommandations Recette
@@ -42,7 +42,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    * PostValues de l’ensemble de données d’or
    * Schéma d&#39;ensemble de données en or
 
-* Téléchargez les trois fichiers Jupyter Notebook requis depuis le référentiel <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">public Git d’</a>Adobe. Ils seront utilisés pour démontrer le flux de travaux JupyterLab dans Data Science Workspace.
+* Téléchargez les trois fichiers Jupyter Notebook requis à partir du référentiel <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Git public</a>Adobe, qui seront utilisés pour démontrer le flux de travaux JupyterLab dans Data Science Workspace.
 
 * Une compréhension pratique des concepts clés suivants utilisés dans ce tutoriel :
    * [Modèle](../../xdm/home.md)de données d’expérience : Effort de normalisation mené par Adobe pour définir des schémas standard tels que Profil et ExperienceEvent, pour la gestion de l’expérience client.
@@ -52,7 +52,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
 ## Préparation de vos données {#prepare-your-data}
 
-Pour créer un modèle d’apprentissage automatique qui fait des recommandations de produits personnalisées à vos clients, les achats précédents de clients sur votre site Web doivent être analysés. Cette section explique comment ces données sont ingérées dans la plate-forme via Adobe Analytics et comment ces données sont transformées en un jeu de données de fonctionnalités qui sera utilisé par votre modèle d’apprentissage automatique.
+Pour créer un modèle d’apprentissage automatique qui fait des recommandations de produits personnalisées à vos clients, les achats précédents de clients sur votre site Web doivent être analysés. Cette section explique comment ces données sont ingérées dans la plate-forme via [!DNL Adobe Analytics]et comment ces données sont transformées en un jeu de données de fonctionnalités à utiliser par votre modèle d’apprentissage automatique.
 
 ### Explorer les données et comprendre les schémas
 
@@ -79,7 +79,7 @@ Les recettes sont la base d&#39;un modèle car elles contiennent des algorithmes
 
 ### Explorez la recette des recommandations de produits
 
-1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de l’écran pour vue une liste de recettes disponibles pour votre organisation.
+1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur Recettes **** dans la partie supérieure pour vue une liste de recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Recherchez et ouvrez la recette **[!UICONTROL de]** recommandations fournie en cliquant sur son nom.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -96,7 +96,7 @@ Maintenant que vos données sont préparées et que la Recette est prête à êt
 
 Un modèle est l&#39;instance d&#39;une Recette, ce qui vous permet de vous former et de marquer des données à l&#39;échelle.
 
-1. Dans Adobe Experience Platform, accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de la page pour afficher une liste de toutes les recettes disponibles pour votre organisation.
+1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur Recettes **** en haut de la page pour afficher une liste de toutes les Recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Recherchez et ouvrez la recette **[!UICONTROL de]** recommandations fournie en cliquant sur son nom, en entrant la page d&#39;aperçu de la recette. Cliquez sur **[!UICONTROL Créer un modèle]** à partir du centre (s&#39;il n&#39;y a pas de modèles existants) ou en haut à droite de la page Aperçu de la recette.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
