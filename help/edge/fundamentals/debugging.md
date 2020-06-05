@@ -4,7 +4,7 @@ seo-title: Débogage du SDK Web d’Adobe Experience Platform
 description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 seo-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 31a527cb4ad1348262131f827c7e932404542c4b
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 100%
@@ -19,7 +19,7 @@ Lorsque le débogage est activé, le SDK envoie des messages à la console du na
 Le débogage est désactivé par défaut, mais peut être activé de trois manières différentes :
 
 * Commande `configure`
-* Commande `debug`
+* Commande `setDebug`
 * Paramètre de chaîne de requête
 
 ## Activation/désactivation du débogage avec la commande Configure
@@ -42,7 +42,7 @@ alloy("configure", {
 Activez/désactivez le débogage avec une commande `debug` distincte de la manière suivante :
 
 ```javascript
-alloy("debug", {
+alloy("setDebug", {
   "enabled": true
 });
 ```
