@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un tuyau de fonction
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Création d’un tuyau de fonction
 
-Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisés pour effectuer l’ingénierie de fonctionnalités à l’échelle via Sensei Machine Learning Framework Runtime (ci-après appelé &quot;Runtime&quot;).
+[!DNL Adobe Experience Platform] vous permet de créer et de créer des pipelines de fonctionnalités personnalisés pour effectuer l&#39;ingénierie de fonctionnalités à l&#39;échelle via le cadre d&#39;apprentissage automatique Sensei (ci-après appelé &quot;Runtime&quot;).
 
 Ce document décrit les différentes classes d&#39;un tuyau de fonction et fournit un didacticiel détaillé pour la création d&#39;un tuyau de fonction personnalisé à l&#39;aide du kit SDK [de création de](./sdk.md) modèle dans PySpark et Spark.
 
