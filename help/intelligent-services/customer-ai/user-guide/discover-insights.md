@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Découverte des informations avec l’API client
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: ec0de4c8775367be9e6016529471254ad9f8f453
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1062'
-ht-degree: 4%
+source-wordcount: '1059'
+ht-degree: 5%
 
 ---
 
 
 # Découverte des informations avec l’API client
 
-Dans le cadre d’Intelligent Services, l’API du client permet aux spécialistes du marketing d’exploiter Adobe Sensei pour anticiper l’action future de vos clients. Customer AI est utilisée pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique, en choisissant un algorithme, une formation ou un déploiement.
+L&#39;intelligence artificielle des clients, dans le cadre d&#39;Intelligent Services, permet aux spécialistes du marketing d&#39;exploiter Adobe Sensei pour anticiper les prochaines actions de vos clients. Customer AI est utilisée pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique, en choisissant un algorithme, une formation ou un déploiement.
 
 Ce document sert de guide pour l’interaction avec les informations d’instance de service dans l’interface utilisateur d’intelligence artificielle du client Intelligent Services.
 
@@ -24,7 +24,7 @@ Pour utiliser les statistiques de l’IA du client, vous devez disposer d’une 
 
 ## Présentation de l’instance de service
 
-In the Adobe Experience Platform UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents disponibles. Dans le conteneur de Customer AI, cliquez sur **[!UICONTROL Ouvrir]**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents disponibles. Dans le conteneur de Customer AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](../images/insights/navigate-to-service.png)
 
@@ -124,7 +124,7 @@ Pour vue de votre nouveau segment dans l’interface utilisateur de la plateform
 
 ## Étapes suivantes
 
-Ce document décrit les informations fournies par une instance de service d’IA client. Vous pouvez maintenant poursuivre la lecture du didacticiel sur le [téléchargement des scores dans l’API](./download-scores.md) client ou parcourir les autres guides [Adobe Intelligent Services](../../home.md) qui sont proposés.
+Ce document décrit les informations fournies par une instance de service d’IA client. Vous pouvez maintenant continuer à suivre le didacticiel sur le [téléchargement des scores dans l’API](./download-scores.md) client ou parcourir les autres guides des services [intelligents](../../home.md) Adobe qui sont proposés.
 
 ## Ressources supplémentaires
 
