@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'une recette à l'aide de cahiers Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '2333'
+source-wordcount: '2330'
 ht-degree: 0%
 
 ---
@@ -18,14 +18,14 @@ Ce didacticiel s&#39;articule autour de deux sections principales. Tout d&#39;ab
 
 ## Concepts introduits :
 
-- **Recettes :** Une recette est le terme utilisé par Adobe pour désigner une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente un apprentissage automatique, un algorithme d’IA ou un ensemble d’algorithmes, une logique de traitement et une configuration nécessaires à la création et à l’exécution d’un modèle formé et qui contribue ainsi à résoudre des problèmes commerciaux spécifiques.
+- **Recettes :** Une recette est le terme Adobe pour une spécification de modèle et est un conteneur de niveau supérieur qui représente un apprentissage automatique, un algorithme AI ou un ensemble d&#39;algorithmes, une logique de traitement et une configuration nécessaires pour créer et exécuter un modèle formé et aider ainsi à résoudre des problèmes commerciaux spécifiques.
 - **Modèle :** Un modèle est l&#39;instance d&#39;une recette d&#39;apprentissage automatique qui est formée à l&#39;aide de données historiques et de configurations pour résoudre un cas d&#39;utilisation commerciale.
 - **Formation :** La formation est le processus d’apprentissage des schémas et des connaissances à partir de données étiquetées.
 - **Scoring :** Le score est le processus de génération d’informations à partir de données à l’aide d’un modèle formé.
 
 ## Commencez avec l&#39;environnement d&#39;ordinateur portable JupyterLab
 
-Vous pouvez créer une recette à partir de zéro dans Data Science Workspace. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l’onglet **[!UICONTROL Ordinateurs portables]** sur la gauche. Créez un bloc-notes en sélectionnant le modèle Recipe Builder dans le lanceur JupyterLab.
+Vous pouvez créer une recette à partir de zéro dans Data Science Workspace. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l’onglet **[!UICONTROL Notebooks]** sur la gauche. Créez un bloc-notes en sélectionnant le modèle Recipe Builder dans le lanceur JupyterLab.
 
 Le bloc-notes Recipe Builder vous permet d&#39;exécuter des exécutions de formation et de score dans le bloc-notes. Vous disposez ainsi de la souplesse nécessaire pour modifier leurs `train()` méthodes et leurs `score()` méthodes entre les expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et du score, vous pouvez créer une recette à utiliser dans Data Science Workspace à l&#39;aide du bloc-notes pour obtenir la fonctionnalité intégrée au bloc-notes du créateur de recettes.
 
@@ -90,7 +90,7 @@ Pour trouver le jeu de données et les ID de schéma, accédez à l&#39;onglet D
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-Les mêmes informations se trouvent sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[Schéma](https://platform.adobe.com/schema)**et Jeu de**[données](https://platform.adobe.com/dataset/overview)** .
+Les mêmes informations se trouvent sur la plateforme [d’expérience](https://platform.adobe.com/) Adobe sous les onglets **[Schéma](https://platform.adobe.com/schema)**et Jeu de données**[](https://platform.adobe.com/dataset/overview)** .
 
 Par défaut, les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données :
 
@@ -109,7 +109,7 @@ Les deux sections suivantes traitent du chargement des données et de la prépar
 
 ### Chargement de données {#loading-data}
 
-Cette étape utilise la base de données [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)pandas. Les données peuvent être chargées à partir de fichiers dans Adobe Experience Platform à l’aide du SDK de plate-forme (`platform_sdk`) ou à partir de sources externes à l’aide de pandas `read_csv()` ou `read_json()` de fonctions.
+Cette étape utilise la base de données [](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)pandas. Les données peuvent être chargées à partir de fichiers dans [!DNL Adobe Experience Platform] utilisant le SDK de plateforme (`platform_sdk`), ou à partir de sources externes utilisant les fonctions `read_csv()` ou `read_json()` fonctions de pandas.
 
 - [SDK de plate-forme](#platform-sdk)
 - [Sources externes](#external-sources)
@@ -457,7 +457,7 @@ Après avoir appuyé sur le bouton, vous êtes invité à saisir un nom de recet
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Une fois que vous avez appuyé sur **[!UICONTROL Ok]** , vous pouvez accéder à la nouvelle recette sur [Adobe Experience Platform](https://platform.adobe.com/). Vous pouvez cliquer sur le bouton Recettes **[!UICONTROL de]** Vue pour accéder à l&#39;onglet **[!UICONTROL Recettes]** sous Modèles **[!UICONTROL ML.]**
+Une fois que vous aurez appuyé sur **[!UICONTROL Ok]** , vous pourrez accéder à la nouvelle recette sur la plateforme [d&#39;expérience](https://platform.adobe.com/)Adobe. Vous pouvez cliquer sur le bouton Recettes **[!UICONTROL de]** Vue pour accéder à l&#39;onglet **[!UICONTROL Recettes]** sous Modèles **[!UICONTROL ML.]**
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
