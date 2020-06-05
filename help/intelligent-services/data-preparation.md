@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 8e24c7c50d700bc3644ce710f77073e537207a6f
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1437'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
 | Afficher  | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
-| Courriel | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
+| E-mail | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
 | Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
 | Redirection du code QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
@@ -189,11 +189,11 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, l’étape suivante consiste à déterminer les données à importer dans les services intelligents. Toutes les données historiques utilisées dans les services intelligents doivent respecter une période minimale de quatre mois, plus le nombre de jours prévus comme période de consultation.
 
-Après avoir décidé de la plage de données à envoyer, contactez les services de conseil d’Adobe pour aider à faire correspondre vos données au schéma et à les intégrer au service.
+Après avoir décidé de la plage de données à envoyer, contactez les services de conseil Adobe pour les aider à mapper vos données au schéma et à les intégrer au service.
 
-Si vous disposez d’un abonnement Adobe Experience Platform et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
+Si vous avez un [!DNL Adobe Experience Platform] abonnement et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
-### Utilisation d’Adobe Experience Platform
+### Utilisation de la plate-forme d’expérience Adobe
 
 >[!NOTE] Les étapes ci-dessous nécessitent un abonnement à la plate-forme d’expérience. Si vous n’avez pas accès à la plate-forme, passez directement à la section [Étapes](#next-steps) suivantes.
 
@@ -217,7 +217,7 @@ Une fois le schéma créé et enregistré, vous pouvez créer un jeu de données
 
 #### Ajouter une balise d&#39;espace de nommage d&#39;identité principale au jeu de données
 
-Si vous importez des données d’Adobe Audience Manager, d’Adobe Analytics ou d’une autre source externe, vous devez ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
+Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
 
 Si vous importez des données à partir d’un fichier CSV local, vous pouvez passer à la section suivante sur le [mappage et l’assimilation des données](#ingest).
 
@@ -293,7 +293,7 @@ Si vos données sont stockées dans une application tierce prise en charge, vous
 
 ## Étapes suivantes {#next-steps}
 
-Ce document fournit des conseils généraux sur la préparation de vos données en vue de leur utilisation dans les services intelligents. Si vous avez besoin de conseils supplémentaires en fonction de votre cas d’utilisation, contactez le service de conseil d’Adobe.
+Ce document fournit des conseils généraux sur la préparation de vos données en vue de leur utilisation dans les services intelligents. Si vous avez besoin de conseils supplémentaires en fonction de votre cas d’utilisation, veuillez contacter le service d’assistance Adobe.
 
 Une fois que vous avez renseigné un jeu de données avec vos données d’expérience client, vous pouvez utiliser les services intelligents pour générer des informations. Pour commencer, reportez-vous aux documents suivants :
 
