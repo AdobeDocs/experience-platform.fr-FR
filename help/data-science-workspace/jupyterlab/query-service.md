@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Service de Requête sur ordinateur portable Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '799'
 ht-degree: 1%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 # Service de Requête sur ordinateur portable Jupyter
 
-Adobe Experience Platform vous permet d’utiliser le langage de Requête structurée (SQL) dans Data Science Workspace en intégrant Requête Service dans JupyterLab en tant que fonctionnalité standard.
+[!DNL Adobe Experience Platform] vous permet d’utiliser le langage SQL (Structured Requête Language) dans Data Science Workspace en intégrant Requête Service dans JupyterLab en tant que fonctionnalité standard.
 
-Ce didacticiel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser des données Adobe Analytics.
+Ce didacticiel présente des exemples de requêtes SQL pour des cas d&#39;utilisation courants afin d&#39;explorer, de transformer et d&#39;analyser [!DNL Adobe Analytics] des données.
 
 ## Prise en main
 
 Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
 
-- Accès à Adobe Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer
+- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer
 
-- Un jeu de données Adobe Analytics
+- Un [!DNL Adobe Analytics] jeu de données
 
 - Une compréhension pratique des concepts clés suivants utilisés dans ce tutoriel :
    - [Modèle de données d’expérience (XDM) et système XDM](../../xdm/home.md)
    - [Requête Service](../../query-service/home.md)
    - [Syntaxe SQL Requête Service](../../query-service/sql/overview.md)
-   - Adobe Analytics
+   - [!DNL Adobe Analytics]
 
 ## Accès à JupyterLab et au service de Requête {#access-jupyterlab-and-query-service}
 
@@ -50,13 +50,13 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un jeu de données Adobe Analytics pour explorer et cliquez avec le bouton droit sur la liste, cliquez sur Données de **[!UICONTROL Requête dans le bloc-notes]** pour générer des requêtes SQL dans le bloc-notes vide.
+4. Recherchez un [!DNL Adobe Analytics] jeu de données à explorer et cliquez avec le bouton droit sur la liste, cliquez sur Données de **[!UICONTROL Requête dans le bloc-notes]** pour générer des requêtes SQL dans le bloc-notes vide.
 
 5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de bloc-notes et le service de Requête.
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copiez le nom du jeu de données Adobe Analytics à partir de la seconde requête SQL générée. Il s’agira de la valeur située après `FROM`.
+6. Copiez le nom du [!DNL Adobe Analytics] jeu de données à partir de la seconde requête SQL générée, il sera la valeur après `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
@@ -81,7 +81,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    target_day = "01"
    ```
 
-   - `target_table` : Nom de votre jeu de données Adobe Analytics.
+   - `target_table` : Nom de votre [!DNL Adobe Analytics] jeu de données.
    - `target_year` : Année spécifique à partir de laquelle proviennent les données de cible.
    - `target_month` : Mois spécifique d’où provient la cible.
    - `target_day` : Jour spécifique à partir duquel proviennent les données de la cible.
