@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source ServiceNow dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 2162c66b1664ecaaf0b609fe3f7ccf58c4a5d31d
+source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 >[!NOTE]
 >Le connecteur ServiceNow est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source ServiceNow à l’aide de l’interface utilisateur de la plate-forme.
+Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source ServiceNow à l’aide de l’interface utilisateur de la plate-forme.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
 
 * [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -60,13 +60,13 @@ La page *Se connecter à ServiceNow* s&#39;affiche. Sur cette page, vous pouvez 
 
 Si vous utilisez de nouvelles informations d’identification, sélectionnez **Nouveau compte**. Dans le formulaire d’entrée qui s’affiche, indiquez le nom de la connexion, une description facultative et vos informations d’identification ServiceNow. Lorsque vous avez terminé, sélectionnez **Se connecter** , puis accordez un certain temps à l’établissement du nouveau compte.
 
-![](../../../../images/tutorials/create/servicenow/new-credentials.png)
+![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Compte existant
 
 Pour connecter un compte existant, sélectionnez le compte ServiceNow auquel vous souhaitez vous connecter, puis sélectionnez **Suivant** pour continuer.
 
-![](../../../../images/tutorials/create/servicenow/existing-credentials.png)
+![](../../../../images/tutorials/create/servicenow/existing.png)
 
 ## Étapes suivantes
 
