@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source de la plate-forme Adobe
 topic: overview
 translation-type: tm+mt
-source-git-commit: 22425c33e39cf788eec6fd0a54f65fb89fdaff4f
+source-git-commit: f181d544e93f0924bf4c239fad93d78c974afdc0
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -51,6 +51,7 @@ Les sources d’enregistrement Cloud peuvent importer vos propres données dans 
 - [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
 - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
 - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+- [Connecteur HDFS](connectors/cloud-storage/hdfs.md)
 
 ### Gestion de la relation client
 
@@ -76,6 +77,7 @@ Experience Platform prend en charge l’assimilation de données à partir d’u
 - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
 - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
 - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
+- [Connecteur CouchBase](connectors/databases/couchbase.md)
 - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
 - [Connecteur GreenPlum](connectors/databases/greenplum.md)
 - [Connecteur HP Vertica](connectors/databases/hp-vertica.md)
