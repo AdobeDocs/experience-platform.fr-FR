@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: c4162d88a688ce2028de08b63e7b7eab954a0e29
+source-git-commit: 4a831a0e72ac614bb4646ea3aa5f511984e5aa07
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données tierce et les importer dans la plate-forme par le biais des connecteurs et des API source.
 
@@ -22,7 +22,7 @@ Ce didacticiel décrit les étapes à suivre pour récupérer des données d’u
 
 Ce didacticiel vous oblige à disposer d&#39;une connexion valide à une base de données tierce, ainsi que d&#39;informations sur le fichier que vous souhaitez importer dans la plate-forme (y compris le chemin et la structure du fichier). Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration d’une base de données à l’aide de l’API](../explore/database-nosql.md) Flow Service avant de tenter ce didacticiel.
 
-Ce didacticiel nécessite également une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
 * [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
    * [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
@@ -704,6 +704,7 @@ La section suivante liste les différents connecteurs source d’enregistrement 
 | Explorateur de données Azure | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | Azure Synapse Analytics | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | Enregistrement de table Azure | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
+| CouchBase | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | Google BigQuery | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
 | IBM DB2 | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
 | MariaDB | `000eb99-cd47-43f3-827c-43caf170f015` |
