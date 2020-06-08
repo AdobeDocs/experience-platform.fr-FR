@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Importer une recette (API) assemblée
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 1%
+source-wordcount: '974'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Ce didacticiel utilise l&#39;API [d&#39;apprentissage automatique](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei pour créer un [moteur](../api/engines.md), également appelé Recette dans l&#39;interface utilisateur.
 
-Avant de commencer, il est important de noter qu’Adobe Experience Platform Data Science Workspace utilise des termes différents pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes API sont utilisés dans ce didacticiel et le tableau suivant décrit les termes corrélés :
+Avant de commencer, il est important de noter que l’espace de travail scientifique des données de la plateforme Adobe utilise différents termes pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes API sont utilisés dans ce didacticiel et le tableau suivant décrit les termes corrélés :
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | ---- | ---- |
@@ -31,23 +31,21 @@ Un moteur contient des algorithmes d’apprentissage automatique et une logique 
 
 ## Prise en main
 
-Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;un artefact binaire ou d&#39;une URL de Docker. Suivez les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) pour créer un fichier de recette empaqueté ou pour fournir le vôtre.
+Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;une URL Docker. Suivez les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) pour créer un fichier de recette empaqueté ou pour fournir le vôtre.
 
-- Artefact binaire (obsolète) : L&#39;artefact binaire (ex. JAR, EGG) utilisé pour créer un moteur.
 - `{DOCKER_URL}`: Adresse URL d&#39;une image Docker d&#39;un service intelligent.
 
-Ce didacticiel nécessite que vous ayez suivi le didacticiel [](../../tutorials/authentication.md) Authentication to Adobe Experience Platform (Authentification vers la plate-forme Adobe) pour pouvoir invoquer les API de plateforme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Ce didacticiel nécessite que vous ayez suivi le didacticiel [](../../tutorials/authentication.md) Authentication to Adobe Experience Platform (Authentification vers la plateforme) afin de pouvoir invoquer les API de plateforme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
-- `{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.
+- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique de la plateforme d’expérience Adobe.
+- `{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique de la plateforme d’expérience Adobe.
 
 ## Création d’un moteur
 
 Selon le formulaire du fichier de recette emballé à inclure dans la demande d&#39;API, un moteur est créé de l&#39;une des deux manières suivantes :
 
 - [Création d’un moteur avec une URL de dossier](#create-an-engine-with-a-docker-url)
-- [Création d’un moteur avec un artefact binaire (obsolète)](#create-an-engine-with-a-binary-artifact-deprecated)
 
 ### Création d’un moteur avec une URL de dossier {#create-an-engine-with-a-docker-url}
 
@@ -205,72 +203,3 @@ Une réponse réussie affiche une charge JSON contenant des informations sur le 
 ## Étapes suivantes {#next-steps}
 
 Vous avez créé un moteur à l&#39;aide de l&#39;API et un identifiant de moteur unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de moteur dans le didacticiel suivant lorsque vous apprendrez à [créer, former et évaluer un modèle à l&#39;aide de l&#39;API](./train-evaluate-model-api.md).
-
-### Création d’un moteur avec un artefact binaire (obsolète) {#create-an-engine-with-a-binary-artifact-deprecated}
-
-<!-- Will need to remove binary artifact documentation once the old flags are turned off -->
-
->[!CAUTION]
-> Les artefacts binaires sont utilisés dans les anciennes recettes PySpark et Spark. Data Science Workspace prend désormais en charge les URL Docker pour toutes les recettes. Avec cette mise à jour, tous les moteurs sont désormais créés à l&#39;aide d&#39;une URL Docker. Consultez la section [URL du](#create-an-engine-with-a-docker-url) Docker de ce document. Les artefacts binaires sont définis pour être supprimés dans une version ultérieure.
-
-Pour créer un moteur à l&#39;aide d&#39;un artefact `.jar` `.egg` binaire ou assemblé localement, vous devez indiquer le chemin d&#39;accès absolu au fichier d&#39;artefact binaire dans votre système de fichiers local. Pensez à naviguer jusqu&#39;au répertoire contenant l&#39;artefact binaire dans un environnement Terminal, puis exécutez la commande `pwd` Unix pour obtenir le chemin d&#39;accès absolu.
-
-L’appel suivant crée un moteur avec un artefact binaire :
-
-**Format d’API**
-
-```http
-POST /engines
-```
-
-**Requête**
-
-```shell
-curl -X POST \
-    https://platform.adobe.io/data/sensei/engines \
-    -H 'Authorization: {ACCESS_TOKEN}' \
-    -H 'X-API-KEY: {API_KEY}' \
-    -H 'content-type: multipart/form-data' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -F 'engine={
-        "name": "Retail Sales Engine PySpark",
-        "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-        "type": "PySpark"
-    }' \
-    -F 'defaultArtifact=@path/to/binary/artifact/file/pysparkretailapp-0.1.0-py3.7.egg'
-```
-
-| Propriété | Description |
-| -------  | ----------- |
-| `engine.name` | Nom souhaité pour le moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur de l&#39;espace de travail des sciences de données en tant que nom de la Recette. |
-| `engine.description` | Description facultative du moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur de l&#39;espace de travail des sciences de données comme description de la Recette. Ne supprimez pas cette propriété, laissez cette valeur être une chaîne vide si vous choisissez de ne pas fournir de description. |
-| `engine.type` | Type d&#39;exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;artefact binaire a été développé. Lorsque vous téléchargez un artefact binaire pour créer un moteur, `type` est soit `Spark` soit `PySpark`. |
-| `defaultArtifact` | Chemin d’accès absolu au fichier d’artefact binaire utilisé pour créer le moteur. Veillez à inclure `@` avant le chemin d’accès au fichier. |
-
-**Réponse**
-
-```JSON
-{
-    "id": "00000000-1111-2222-3333-abcdefghijkl",
-    "name": "Retail Sales Engine PySpark",
-    "description": "A description for Retail Sales Engine, this Engines execution type is PySpark",
-    "type": "PySpark",
-    "created": "2019-01-01T00:00:00.000Z",
-    "createdBy": {
-        "userId": "your_user_id@AdobeID"
-    },
-    "updated": "2019-01-01T00:00:00.000Z",
-    "artifacts": {
-        "default": {
-            "image": {
-                "location": "wasbs://some-storage-location.net/some-path/your-uploaded-binary-artifact.egg",
-                "name": "pysparkretailapp-0.1.0-py3.7.egg",
-                "executionType": "PySpark",
-                "packagingType": "egg"
-            }
-        }
-    }
-}
-```
-
-Une réponse réussie affiche une charge JSON contenant des informations sur le nouveau moteur créé. La `id` clé représente l&#39;identifiant unique du moteur et est requise dans le didacticiel suivant pour créer une instance MLInstance. Assurez-vous que l&#39;identifiant du moteur est enregistré avant de passer aux étapes [](#next-steps)suivantes.
