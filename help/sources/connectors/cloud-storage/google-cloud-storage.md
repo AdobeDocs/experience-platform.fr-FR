@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur d’Enregistrement Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 256a193e56e69078d1c01c622656f0b1a18e73ff
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connecteur d’Enregistrement Google Cloud
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure, ce qui vous permet d’importer vos données à partir de ces systèmes.
 
 Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Plateforme vous permet d’importer des données de l’Enregistrement Google Cloud par lots.
 
