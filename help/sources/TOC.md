@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs de source d’expérience Adobe
 translation-type: tm+mt
-source-git-commit: 328b897c54453f23ad7b68fb2a288712cb4fe538
+source-git-commit: bfbaaf0367b601c4ad521f42cd5ff6bdd25a8274
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 2%
       - [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connecteur HDFS](connectors/cloud-storage/hdfs.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
@@ -46,6 +47,7 @@ ht-degree: 2%
       - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
+      - [Connecteur CouchBase](connectors/databases/couchbase.md)
       - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
       - [Connecteur GreenPlum](connectors/databases/greenplum.md)
       - [Connecteur HP Vertica](connectors/databases/hp-vertica.md)
@@ -74,6 +76,7 @@ ht-degree: 2%
          - [Connecteur de concentrateurs de Événement Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/api/create/cloud-storage/google.md)
+         - [Connecteur HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Connecteur SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Connecteur HubSpot](tutorials/api/create/crm/hubspot.md)
@@ -89,6 +92,7 @@ ht-degree: 2%
          - [Connecteur Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Connecteur Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/api/create/databases/ats.md)
+         - [Connecteur CouchBase](tutorials/api/create/databases/couchbase.md)
          - [Connecteur Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [Connecteur GreenPlum](tutorials/api/create/databases/greenplum.md)
          - [Connecteur HP Vertica](tutorials/api/create/databases/hp-vertica.md)
