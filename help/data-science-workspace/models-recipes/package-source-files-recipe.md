@@ -4,9 +4,9 @@ solution: Experience Platform
 title: compresser les fichiers source dans une recette ;
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # compresser les fichiers source dans une recette ;
 
-Ce didacticiel explique comment assembler les fichiers source d’exemples de ventes au détail fournis dans un fichier d’archive, qui peut être utilisé pour créer une recette dans Adobe Experience Platform Data Science Workspace en suivant le processus d’importation de la recette dans l’interface utilisateur ou à l’aide de l’API.
+Ce didacticiel explique comment assembler les fichiers source d’exemples de ventes au détail fournis dans un fichier d’archive, qui peut être utilisé pour créer une recette dans Adobe Experience Platform Data Science Workspace en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 
 Concepts à comprendre :
 
-- **Recettes**: Une recette est le terme d’Adobe pour une spécification de modèle et est un conteneur de niveau supérieur qui représente un apprentissage automatique spécifique, un algorithme d’intelligence artificielle ou un ensemble d’algorithmes, une logique de traitement et une configuration nécessaires à la création et à l’exécution d’un modèle formé et qui aide ainsi à résoudre des problèmes commerciaux spécifiques.
+- **Recettes**: Une recette est un terme Adobe pour une spécification de modèle et est un conteneur de niveau supérieur qui représente un apprentissage automatique, un algorithme d&#39;intelligence artificielle ou un ensemble d&#39;algorithmes, une logique de traitement et une configuration nécessaires pour construire et exécuter un modèle formé et aider ainsi à résoudre des problèmes commerciaux spécifiques.
 - **Fichiers** source : Fichiers individuels de votre projet contenant la logique d&#39;une recette.
 
 ## Conditions préalables
@@ -94,7 +94,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 
 Notez que lors de l&#39;exécution du script de connexion, vous devez fournir l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -152,7 +152,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 
 Notez que lors de l&#39;exécution du script de connexion, vous devez fournir l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -181,7 +181,7 @@ Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala
 
 Lors de l&#39;exécution du script de connexion, vous devez indiquer l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -196,46 +196,3 @@ Ce didacticiel a été consacré à la création d&#39;un package de fichiers so
 
 - [Importer une recette mise en package dans l&#39;interface utilisateur](./import-packaged-recipe-ui.md)
 - [Importer une recette assemblée à l&#39;aide de l&#39;API](./import-packaged-recipe-api.md)
-
-## Création de fichiers binaires (obsolète)
-
->[!CAUTION]
-> Les binaires ne sont pas pris en charge dans les nouvelles recettes PySpark et Scala et sont définis pour être supprimés dans une version ultérieure. Veuillez suivre les workflows [](#docker-based-model-authoring) Docker lorsque vous travaillez avec PySpark et Scala. Les workflows suivants ne s&#39;appliquent qu&#39;aux recettes Spark 2.3.
-
-### Création de fichiers binaires PySpark (obsolète)
-
-Si vous ne l’avez pas fait, clonez le référentiel github sur votre système local à l’aide de la commande suivante :
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Accédez au référentiel cloné sur votre système local et exécutez les commandes suivantes afin de créer le `.egg` fichier requis pour importer une recette PySpark :
-
-```BASH
-cd recipes/pyspark
-./build.sh
-```
-
-Le `.egg` fichier est généré dans le `dist` dossier.
-
-Vous pouvez maintenant passer aux étapes [](#next-steps)suivantes.
-
-#### Création de fichiers binaires Scala (obsolète)
-
-Si vous ne l’avez pas déjà fait, exécutez la commande suivante pour cloner le référentiel Github sur votre système local :
-
-```BASH
-git clone https://github.com/adobe/experience-platform-dsw-reference.git
-```
-
-Pour créer l&#39;artefact `.jar` utilisé pour importer une recette Scala, accédez au référentiel cloné et procédez comme suit :
-
-```BASH
-cd recipes/scala/
-./build.sh
-```
-
-L&#39;artefact généré avec dépendances se trouve dans le `.jar` `/target` répertoire.
-
-Vous pouvez maintenant passer aux étapes [](#next-steps)suivantes.
