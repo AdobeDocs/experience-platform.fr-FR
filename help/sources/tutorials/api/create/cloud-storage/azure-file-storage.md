@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur d'Enregistrement de fichiers Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3a882656f93b86093b356be5dbc12b3e4321cfb8
+source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 1%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 1%
 >[!NOTE]
 >Le connecteur d&#39;Enregistrement de fichiers Azure est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates au sein de Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39;API du service de flux pour vous guider à travers les étapes de connexion de l&#39;Enregistrement de fichiers Azure à la plate-forme d&#39;expérience.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
 
 * [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
@@ -75,7 +75,8 @@ POST /connections
 
 **Requête**
 
-Pour créer une connexion d&#39;Enregistrement de fichiers Azure, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande POST. L&#39;ID de spécification de connexion pour l&#39;Enregistrement de fichier Azure est `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`valide.
+La demande suivante crée une nouvelle connexion d&#39;Enregistrement de fichier Azure, configurée par les propriétés fournies dans la charge utile :
+
 
 ```shell
 curl -X POST \
