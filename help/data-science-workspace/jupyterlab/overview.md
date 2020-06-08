@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 440310339003bf23c9fcfc69a6ec1eacddc9f413
 workflow-type: tm+mt
-source-wordcount: '2773'
-ht-degree: 6%
+source-wordcount: '3672'
+ht-degree: 11%
 
 ---
 
@@ -37,13 +37,14 @@ La liste suivante décrit certaines des fonctionnalités propres à JupyterLab s
 
 ## Intégration à d’autres services de plate-forme {#service-integration}
 
-La normalisation et l’interopérabilité sont des concepts clés de la plate-forme d’expérience. L&#39;intégration de JupyterLab sur la plate-forme en tant qu&#39;IDE intégré lui permet d&#39;interagir avec d&#39;autres services de la plate-forme, ce qui vous permet d&#39;utiliser la plate-forme à son plein potentiel. Les services de plateforme suivants sont disponibles dans JupyterLab :
+La normalisation et l&#39;interopérabilité sont les concepts clés qui sous-tendent [!DNL Experience Platform]. L&#39;intégration de JupyterLab sur [!DNL Platform] en tant qu&#39;IDE intégré lui permet d&#39;interagir avec d&#39;autres [!DNL Platform] services, ce qui vous permet d&#39;utiliser [!DNL Platform] au maximum son potentiel. Les [!DNL Platform] services suivants sont disponibles dans JupyterLab :
 
 * **Service de catalogue :** Accédez et explorez des jeux de données avec des fonctionnalités de lecture et d&#39;écriture.
 * **Requête Service :** Accédez aux jeux de données et explorez-les à l&#39;aide de SQL, ce qui vous permet de réduire les frais généraux d&#39;accès aux données lorsque vous manipulez de grandes quantités de données.
 * **Sensei ML Framework :** Développement de modèles avec la possibilité de former et de marquer des données, ainsi que la création de recettes d&#39;un simple clic.
+* **Modèle de données d’expérience (XDM) :** La normalisation et l’interopérabilité sont des concepts clés de la plateforme d’expérience Adobe. [Le modèle de données d’expérience (XDM)](https://www.adobe.com/go/xdm-home-en), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
->[!NOTE] Certaines intégrations de service Platform sur JupyterLab sont limitées à des noyaux spécifiques. Consultez la section sur les [noyaux](#kernels) pour plus de détails.
+>[!NOTE] Certaines intégrations [!DNL Platform] de service sur JupyterLab sont limitées à des noyaux spécifiques. Consultez la section sur les [noyaux](#kernels) pour plus de détails.
 
 ## Fonctions clés et opérations communes
 
@@ -230,6 +231,82 @@ Pour ouvrir un nouveau *lanceur*, cliquez sur **Fichier > Nouveau lanceur**. Vou
 
 Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de la plate-forme à partir d&#39;un jeu de données dans un bloc-notes. Cependant, la prise en charge de la pagination des données est limitée aux ordinateurs portables Python et R.
 
+### Limites des données des ordinateurs portables
+
+Les informations suivantes définissent la quantité maximale de données pouvant être lues, le type de données utilisé et la période estimée de lecture des données. Pour Python et R, un serveur de portables configuré à 40 Go de RAM a été utilisé pour les tests. Pour PySpark et Scala, une grappe de serveurs de données configurée à 64 Go de RAM, 8 coeurs, 2 DBU avec un maximum de 4 travailleurs a été utilisée pour les bancs d’essai décrits ci-dessous.
+
+Les données du schéma ExperienceEvent utilisées variaient en taille en commençant par un millier de lignes (1K) allant jusqu’à un milliard de lignes (1B). Notez que pour les mesures PySpark et Spark, une période de 10 jours a été utilisée pour les données XDM.
+
+Les données de schéma ad hoc ont été prétraitées à l’aide de l’outil de création de table en tant que sélection de Requête Service (CTAS). Ces données varient également en taille en commençant par un millier (1K) de lignes allant jusqu&#39;à un milliard (1B) de lignes.
+
+#### Limites de données des ordinateurs portables Python
+
+**schéma XDM ExperienceEvent :** Vous devriez être en mesure de lire un maximum de 2 millions de lignes (environ 6,1 Go de données sur le disque) de données XDM en moins de 22 minutes. Ajouter des lignes supplémentaires peut entraîner des erreurs.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M |
+| ----------------------- | ------ | ------ | ----- | ----- | ----- |
+| Taille sur le disque (Mo) | 18.73 | 187.5 | 308 | 3000 | 6050 |
+| SDK (en secondes) | 20.3 | 86.8 | 63 | 659 | 1315 |
+
+**schéma ad hoc :** Vous devriez être en mesure de lire un maximum de 5 millions de lignes (environ 5,6 Go de données sur le disque) de données non XDM (ad hoc) en moins de 14 minutes. Ajouter des lignes supplémentaires peut entraîner des erreurs.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M | 5M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
+| Taille sur le disque (en Mo) | 1.21 | 11.72 | 115 | 1120 | 2250 | 3380 | 5630 |
+| SDK (en secondes) | 7.27 | 9.04 | 27.3 | 180 | 346 | 487 | 819 |
+
+#### Limites de données des ordinateurs portables R
+
+**schéma XDM ExperienceEvent :** Vous devriez être en mesure de lire un maximum de 1 million de lignes de données XDM (3 Go de données sur le disque) en moins de 13 minutes.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M |
+| ----------------------- | ------ | ------ | ----- | ----- |
+| Taille sur le disque (Mo) | 18.73 | 187.5 | 308 | 3000 |
+| Noyau R (en secondes) | 14.03 | 69.6 | 86.8 | 775 |
+
+**schéma ad hoc :** Vous devriez pouvoir lire un maximum de 3 millions de lignes de données ad hoc (293 Mo de données sur le disque) en 10 minutes environ.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M |
+| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
+| Taille sur le disque (en Mo) | 0.082 | 0.612 | 9.0 | 91 | 188 | 293 |
+| SDK R (en s) | 7.7 | 4.58 | 35.9 | 233 | 470.5 | 603 |
+
+#### Limites de données des blocs-notes PySpark (noyau Python) :
+
+**schéma XDM ExperienceEvent :** En mode Interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 20 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode Lot. En mode Batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Taille du disque | 2.93MB | 4.38MB | 29.02 | 2.69 Go   | 5.39 Go   | 8.09 Go   | 13.42 Go   | 26.82 Go   | 134.24 Go   | 268.39 Go   | 1.31TB |
+| SDK (mode interactif) | 33s | 32.4s | 55.1s | 253.5s | 489.2s | 729.6s | 1206.8s | - | - | - | - |
+| SDK (mode Batch) | 815.8s | 492.8s | 379.1s | 637.4s | 624.5s | 869.2s | 1104.1s | 1786s | 5387.2s | 10624.6s | 50547s |
+
+**schéma ad hoc :** En mode Interactif, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (~1,05 To de données sur disque) de données non-XDM en moins de 3 minutes. En mode Batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non-XDM en 18 minutes environ.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
+| Taille du disque | 1.12MB | 11.24MB | 109.48MB | 2.69 Go   | 2.14 Go   | 3.21 Go   | 5.36 Go   | 10.71 Go   | 53.58 Go   | 107.52 Go   | 535.88 Go   | 1.05TB |
+| Mode interactif SDK (en secondes) | 28.2s | 18.6s | 20.8s | 20.9s | 23.8s | 21.7s | 24.7s | 22s | 28.4s | 40s | 97.4s | 154.5s |
+| Mode de traitement par lots du SDK (en secondes) | 428.8s | 578.8s | 641.4s | 538.5s | 630.9s | 467.3s | 411s | 675s | 702s | 719.2s | 1022.1s | 1122.3s |
+
+#### Limites des données du bloc-notes Spark (noyau Scala) :
+
+**schéma XDM ExperienceEvent :** En mode Interactif, vous devriez pouvoir lire un maximum de 5 millions de lignes (environ 13,42 Go de données sur disque) de données XDM en 18 minutes environ. Le mode interactif ne prend en charge que jusqu’à 5 millions de lignes. Si vous souhaitez lire des jeux de données plus volumineux, il est conseillé de passer en mode Lot. En mode Batch, vous devriez pouvoir lire un maximum de 500 millions de lignes (environ 1,31 To de données sur disque) de données XDM en 14 heures environ.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M |
+|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
+| Taille du disque | 2.93MB | 4.38MB | 29.02 | 2.69 Go   | 5.39 Go   | 8.09 Go   | 13.42 Go   | 26.82 Go   | 134.24 Go   | 268.39 Go   | 1.31TB |
+| Mode interactif SDK (en secondes) | 37.9s | 22.7s | 45.6s | 231.7s | 444.7s | 660.6s | 1100s | - | - | - | - |
+| Mode de traitement par lots du SDK (en secondes) | 374.4s | 398.5s | 527s | 487.9s | 588.9s | 829s | 939.1s | 1441s | 5473.2s | 10118.8 | 49207.6 |
+
+**schéma ad hoc :** En mode Interactif, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (~1,05 To de données sur disque) de données non-XDM en moins de 3 minutes. En mode Batch, vous devriez être en mesure de lire un maximum de 1 milliard de lignes (environ 1,05 To de données sur disque) de données non-XDM en 16 minutes environ.
+
+| Nombre de lignes | 1K | 10K | 100K | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
+|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
+| Taille du disque | 1.12MB | 11.24MB | 109.48MB | 2.69 Go   | 2.14 Go   | 3.21 Go   | 5.36 Go   | 10.71 Go   | 53.58 Go   | 107.52 Go   | 535.88 Go   | 1.05TB |
+| Mode interactif SDK (en secondes) | 35.7s | 31s | 19.5s | 25.3s | 23s | 33.2s | 25.5s | 29.2s | 29.7s | 36.9s | 83.5s | 139s |
+| Mode de traitement par lots du SDK (en secondes) | 448.8s | 459.7s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397s | 518.8s | 487.9s | 760.2s | 975.4s |
+
 ### Lire à partir d&#39;un jeu de données en Python/R
 
 Les portables Python et R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire les données avec et sans pagination est illustré ci-dessous.
@@ -296,7 +373,7 @@ df <- dataset_reader$limit(100L)$offset(10L)$read()
 
 * `{DATASET_ID}`: L&#39;identité unique du jeu de données à accéder
 
-### Lecture à partir d’un jeu de données dans PySpark/Scala
+### Lecture à partir d’un jeu de données dans PySpark/Spark/Scala
 
 Lorsqu&#39;un bloc-notes PySpark ou Scala actif est ouvert, développez l&#39;onglet Explorateur **de** données dans la barre latérale gauche et cliquez sur **Datasets** par doublon pour vue une liste de jeux de données disponibles. Cliquez avec le bouton droit de la souris sur le jeu de données auquel vous souhaitez accéder et cliquez sur **Explorer les données dans un bloc-notes**. Les cellules de code suivantes sont générées :
 
