@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 36305d9098f24b40efd333e7d8a331ebca41ca59
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '3460'
+source-wordcount: '3459'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 # Guides de migration des recettes et des blocs-notes
 
 >[!NOTE]
->Les ordinateurs portables et les recettes utilisant Python/R restent inchangés. La migration s&#39;applique uniquement aux recettes et cahiers PySpark/Spark existants.
+>Les ordinateurs portables et les recettes utilisant Python/R restent inchangés. La migration ne s&#39;applique qu&#39;aux recettes et cahiers PySpark/Spark (2.3).
 
 Les guides suivants décrivent les étapes et les informations requises pour migrer des recettes et des cahiers de notes existants.
 
@@ -54,7 +54,7 @@ Avant de créer l&#39;image Docker, consultez les exemples de lecture et d&#39;�
 
 #### Lecture d’un jeu de données
 
-Cette section décrit les modifications nécessaires à la lecture d’un jeu de données et utilise l’exemple [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) fourni par Adobe.
+Cette section décrit les modifications nécessaires à la lecture d&#39;un jeu de données et utilise l&#39;exemple [helper.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/helper/Helper.scala) , fourni par Adobe.
 
 **Ancienne manière de lire un jeu de données**
 
@@ -88,7 +88,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 
 #### Écrire dans un jeu de données
 
-Cette section décrit les modifications nécessaires à la création d’un jeu de données à l’aide de l’exemple [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) fourni par Adobe.
+Cette section décrit les modifications nécessaires à la création d&#39;un jeu de données à l&#39;aide de l&#39;exemple [ScoringDataSaver.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/ScoringDataSaver.scala) fourni par Adobe.
 
 **Ancienne méthode d&#39;écriture d&#39;un jeu de données**
 
@@ -172,7 +172,7 @@ L&#39;étape suivante consiste à suivre les fichiers source du [package dans un
 
 Pour créer une recette, vous devez d&#39;abord compléter le didacticiel sur les fichiers [source du](./models-recipes/package-source-files-recipe.md) package et disposer de l&#39;URL de l&#39;image du dossier. Vous pouvez créer une recette à l&#39;aide de l&#39;interface utilisateur ou de l&#39;API.
 
-Pour créer votre recette à l&#39;aide de l&#39;interface utilisateur, suivez le didacticiel [d&#39;importation d&#39;une recette emballée (IU)](./models-recipes/import-packaged-recipe-ui.md) pour Scala.
+Pour créer votre recette à l&#39;aide de l&#39;interface utilisateur, suivez le didacticiel [Importer une recette (IU)](./models-recipes/import-packaged-recipe-ui.md) emballée pour Scala.
 
 Pour créer votre recette à l&#39;aide de l&#39;API, suivez le didacticiel [d&#39;importation de recette (API)](./models-recipes/import-packaged-recipe-api.md) emballée pour Scala.
 
@@ -190,7 +190,7 @@ Avant de créer l&#39;image Docker, consultez les exemples de lecture et d&#39;�
 
 #### Lecture d’un jeu de données
 
-Cette section décrit les modifications nécessaires à la lecture d’un jeu de données à l’aide de l’exemple [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) fourni par Adobe.
+Cette section décrit les modifications nécessaires à la lecture d&#39;un jeu de données à l&#39;aide de l&#39;exemple [helper.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/helper.py) fourni par Adobe.
 
 **Ancienne manière de lire un jeu de données**
 
@@ -225,7 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 
 #### Écrire dans un jeu de données
 
-Cette section décrit les modifications nécessaires à la création d’un jeu de données à l’aide de l’exemple [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) fourni par Adobe.
+Cette section décrit les modifications nécessaires à la création d&#39;un jeu de données à l&#39;aide de l&#39;exemple [data_saver.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/pyspark/pysparkretailapp/data_saver.py) fourni par Adobe.
 
 **Ancienne méthode d&#39;écriture d&#39;un jeu de données**
 
