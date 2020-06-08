@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importer une recette emballée (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '2451'
+source-wordcount: '1798'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Importer une recette emballée (interface utilisateur)
 
-Ce didacticiel explique comment configurer et importer une recette assemblée à l&#39;aide de l&#39;exemple Ventes au détail fourni. D’ici la fin de ce didacticiel, vous serez prêt à créer, à former et à évaluer un modèle dans l’espace de travail des données de la plateforme Adobe Experience Platform.
+Ce didacticiel explique comment configurer et importer une recette assemblée à l&#39;aide de l&#39;exemple Ventes au détail fourni. D’ici la fin de ce didacticiel, vous serez prêt à créer, former et évaluer un modèle dans Adobe Experience Platform Data Science Workspace.
 
 ## Conditions préalables
 
@@ -30,10 +30,6 @@ Le processus d&#39;importation d&#39;une recette de package comprend les étapes
 - [Importer une recette basée sur un Docker - R](#r)
 - [Importer une recette basée sur un Docker - PySpark](#pyspark)
 - [Recette basée sur un Docker d&#39;importation - Scala](#scala)
-
-workflows obsolètes :
-- [Importer une recette binaire - PySpark](#pyspark-deprecated)
-- [Importer une recette binaire - Scala Spark](#scala-deprecated)
 
 ### Configurer une recette {#configure}
 
@@ -256,46 +252,3 @@ Ce didacticiel fournit des informations sur la configuration et l&#39;importatio
 
 - [Formation et évaluation d&#39;un modèle dans l&#39;interface utilisateur](./train-evaluate-model-ui.md)
 - [Formation et évaluation d&#39;un modèle à l&#39;aide de l&#39;API](./train-evaluate-model-api.md)
-
-## workflows obsolètes
-
->[!CAUTION]
->L&#39;importation de recettes binaires n&#39;est plus prise en charge dans PySpark 3 (Spark 2.4) et Scala (Spark 2.4).
-
-### Importer une recette binaire - PySpark {#pyspark-deprecated}
-
-Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, un fichier binaire **EGG** a été créé à l’aide des fichiers source PySpark des ventes au détail.
-
-1. Dans [Adobe Experience Platform](https://platform.adobe.com/), recherchez le panneau de navigation de gauche et cliquez sur **Workflows**. Dans l&#39;interface Workflows, **lancez** un nouveau processus **Importer la recette à partir du fichier** source.
-   ![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. Saisissez un nom approprié pour la recette Ventes au détail. Par exemple, &quot;Recette de vente au détail PySpark&quot;. Vous pouvez éventuellement inclure une description de recette et une URL de documentation. Cliquez sur **Suivant** lorsque vous avez terminé.
-   ![](../images/models-recipes/import-package-ui/recipe_info.png)
-3. Importez la recette Ventes au détail PySpark qui a été créée dans les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) en la faisant glisser et en la déposant, ou utilisez le **navigateur** du système de fichiers. La recette emballée doit être située dans `experience-platform-dsw-reference/recipes/pyspark/dist`.
-De même, importez le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/pyspark/pipeline.json`. Cliquez sur **Suivant** lorsque les deux fichiers ont été fournis.
-   ![](../images/models-recipes/import-package-ui/recipe_source.png)
-4. Vous pouvez rencontrer des erreurs à ce stade. Il s&#39;agit d&#39;un comportement normal et il faut s&#39;y attendre. Sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail sous la section **Gérer les Schémas**, ils ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [Création du schéma de vente au détail et du jeu de données](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **fonctionnalités** , cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée et en sélectionnant Fonction **d’** entrée ou Fonction **de** Cible dans la fenêtre Propriétés **du** champ de droite. Pour les besoins de ce didacticiel, définissez **weeklySales** comme fonction **de** Cible et tout le reste comme fonction **de** saisie. Cliquez sur **Suivant** pour examiner votre nouvelle recette configurée.
-5. Consultez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **Terminer** pour créer la recette.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
-
-
-### Importer une recette binaire - Scala Spark {#scala-deprecated}
-
-Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, un fichier binaire **JAR** a été créé à l’aide des fichiers source Scala Spark de vente au détail.
-
-1. Dans [Adobe Experience Platform](https://platform.adobe.com/), recherchez le panneau de navigation de gauche et cliquez sur **Workflows**. Dans l&#39;interface Workflows, **lancez** un nouveau processus **Importer la recette à partir du fichier** source.
-   ![](../images/models-recipes/import-package-ui/workflow_ss.png)
-2. Saisissez un nom approprié pour la recette Ventes au détail. Par exemple, &quot;Recette de vente au détail Scala Spark&quot;. Vous pouvez éventuellement inclure une description de recette et une URL de documentation. Cliquez sur **Suivant** lorsque vous avez terminé.
-   ![](../images/models-recipes/import-package-ui/recipe_info_scala.png)
-3. Importez la recette Ventes au détail Scala Spark qui a été créée dans les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) en faisant glisser et en déposant, ou utilisez le **navigateur** du système de fichiers. La recette emballée **avec dépendances** se trouve dans `experience-platform-dsw-reference/recipes/scala/target`. De même, importez le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **Navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/scala/src/main/resources/pipelineservice.json`. Cliquez sur **Suivant** lorsque les deux fichiers ont été fournis.
-   ![](../images/models-recipes/import-package-ui/recipe_source_scala.png)
-4. Vous pouvez rencontrer des erreurs à ce stade. Il s&#39;agit d&#39;un comportement normal et il faut s&#39;y attendre. Sélectionnez les schémas d&#39;entrée et de sortie des ventes au détail sous la section **Gérer les Schémas**, ils ont été créés à l&#39;aide du script d&#39;amorçage fourni dans le didacticiel [Création du schéma de vente au détail et du jeu de données](../models-recipes/create-retails-sales-dataset.md) .
-   ![](../images/models-recipes/import-package-ui/recipe_schema.png)
-Sous la section Gestion des **fonctionnalités** , cliquez sur votre identification de client dans le lecteur de schéma pour développer le schéma d’entrée Ventes au détail. Sélectionnez les fonctions d’entrée et de sortie en mettant en surbrillance la fonction souhaitée et en sélectionnant Fonction **d’** entrée ou Fonction **de** Cible dans la fenêtre Propriétés **du** champ de droite. Pour les besoins de ce didacticiel, définissez **weeklySales** comme fonction **de** Cible et tout le reste comme fonction **de** saisie. Cliquez sur **Suivant** pour examiner votre nouvelle recette configurée.
-5. Consultez la recette, ajoutez, modifiez ou supprimez des configurations si nécessaire. Cliquez sur **Terminer** pour créer la recette.
-   ![](../images/models-recipes/import-package-ui/recipe_review.png)
-
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
