@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentation du produit Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: a5268c2d31d356ce479bdcc143050cd513259235
+source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
 workflow-type: tm+mt
-source-wordcount: '6973'
+source-wordcount: '6961'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## A 
 
-**Contrôle d&#39;accès :** {#access-control} Le Contrôle d&#39;accès de la plate-forme d’expérience lie les utilisateurs disposant d’autorisations d’accès et d’environnements de sandbox par le biais de profils de produits dans Adobe Admin Console.
+**Contrôle d&#39;accès :** {#access-control} Contrôle d&#39;accès for Experience Platform lie les utilisateurs avec des autorisations d’accès et des environnements de sandbox par le biais de profils de produits dans la console d’administration Adobe.
 
 **ID de clé d&#39;accès :** L’ID de clé d’accès est un identifiant unique associé à une clé d’accès secret Amazon S3. L’ID de clé d’accès et la clé d’accès secrète sont utilisés conjointement pour signer les demandes AWS.
 
@@ -26,17 +26,17 @@ ht-degree: 0%
 
 **Activité :** Dans le service de prise de décision, une activité est un ensemble d’offres dont le spécialiste du marketing souhaite que le moteur de décision sélectionne la meilleure offre.
 
-**Adobe Admin Console :** Adobe Admin Console fournit un emplacement central pour la gestion des autorisations d’accès et de fonctionnalités pour votre entreprise.
+**Console d’administration Adobe :** Adobe Admin Console fournit un emplacement central pour la gestion des accès et des autorisations de fonctionnalités pour votre entreprise.
 
-**Adobe Experience Platform :** Adobe Experience Platform normalise les données et le contenu dans toute l’entreprise, optimise les profils en temps réel pour les consommateurs, permet la science des données et accélère la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience tout au long du parcours des clients.
+**Plate-forme d’expérience Adobe :** La plateforme Adobe Experience Platform normalise les données et le contenu dans toute l’entreprise, ce qui alimente les profils en temps réel pour les consommateurs, permet la science des données et accélère la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience tout au long du parcours des clients.
 
-**Adobe Connectors :** Les connecteurs Adobe sont des connexions préconfigurées créées par Adobe pour permettre aux données d’entrer et de sortir d’Experience Platform. Les connecteurs sont Microsoft Dynamics, Salesforce, Amazon S3 et Azure Blob.
+**Connecteurs Adobe :** Les connecteurs Adobe sont des connexions préconfigurées créées par Adobe pour permettre aux données d’entrer et de sortir d’Experience Platform. Les connecteurs sont Microsoft Dynamics, Salesforce, Amazon S3 et Azure Blob.
 
-**Adobe Intelligent Services :** Adobe Sensei est le cadre du renseignement qui alimente la plate-forme d’expérience. Il fournit également un ensemble de services d&#39;IA qui permet aux marques d&#39;améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**Adobe Intelligent Services :** Adobe Sensei est le cadre du renseignement qui alimente la plateforme d’expériences. Il fournit également un ensemble de services d&#39;IA qui permet aux marques d&#39;améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
-**E/S Adobe :** Les E/S Adobe font partie d’Experience Platform et permettent aux développeurs d’accéder à tout ce dont ils ont besoin pour intégrer, étendre et personnaliser Adobe Experience Platform, y compris les API, les événements, la console de développement et des outils utiles.
+**E/S Adobe :** Les E/S Adobe font partie de la plate-forme Experience Platform et permettent aux développeurs d’accéder à tout ce dont ils ont besoin pour intégrer, étendre et personnaliser Adobe Experience Platform, y compris les API, les événements, la console de développement et des outils utiles.
 
-**Adobe Sensei :** Adobe Sensei est le cadre du renseignement qui alimente la plate-forme d’expérience. Il fournit également un ensemble de services d&#39;IA qui permet aux marques d&#39;améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**Adobe Sensei :** Adobe Sensei est le cadre du renseignement qui alimente la plateforme d’expériences. Il fournit également un ensemble de services d&#39;IA qui permet aux marques d&#39;améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
 **Paquet Amazon S3 :** Les compartiments Amazon S3 sont les conteneurs fondamentaux des données stockées dans l’écosystème Amazon. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
@@ -100,7 +100,7 @@ ht-degree: 0%
 
 **Connexion :** Une connexion est un pipeline virtuel qui permet aux données d’entrer et de sortir de la plateforme d’expérience. Les connexions sont maintenant remplacées par Sources.
 
-**Connecteur :** Les connecteurs Adobe Experience Platform Source aident les utilisateurs à assimiler facilement des données provenant de plusieurs sources, ce qui leur permet de structurer, d’étiqueter et d’améliorer les données à l’aide d’Experience Platform Services. Les données peuvent être ingérées à partir de diverses sources, telles que l’enregistrement cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+**Connecteur :** Les connecteurs Adobe Experience Platform Source aident les utilisateurs à assimiler facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide d’Experience Platform Services. Les données peuvent être ingérées à partir de diverses sources, telles que l’enregistrement cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 
 **Condition :** Dans le lancement de la plateforme d’expérience, une condition est un composant de règle qui évalue une instruction logique qui doit renvoyer `true` ou `false`. Toutes les conditions doivent être évaluées `true` et toutes les conditions d’exception doivent l’être `false` avant l’exécution des actions de la règle.
 
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 **Espace de nommage d&#39;identité personnalisée :** Les espaces de nommage d&#39;identité personnalisés sont des identifiants créés par le client qui représentent les identités d&#39;une organisation ou d&#39;une entreprise spécifique.
 
-**AI du client :** L’API client est un service Adobe Sensei qui enrichit les profils clients avec des propensions basées sur l’IA et permet la segmentation et le ciblage des clients.
+**AI du client :** Customer AI est un service Adobe Sensei qui enrichit les profils clients grâce à des propensions basées sur l’IA et permet la segmentation et le ciblage des clients.
 
 [Retour au début](#adobe-experience-platform-glossary)
 
@@ -158,7 +158,7 @@ ht-degree: 0%
 
 **Étiquettes des jeux de données :** Les étiquettes d’utilisation des données peuvent être ajoutées aux jeux de données. Tous les champs de ce jeu de données héritent des étiquettes du jeu de données.
 
-**Espace de travail des sciences de données :** L’espace de travail Data Science dans Experience Platform permet aux clients de créer des modèles d’apprentissage automatique à l’aide de données issues de la plate-forme Experience et des applications Adobe afin de générer des aperçus et des prédictions intelligents et de tisser de superbes expériences numériques d’utilisateur final.
+**Espace de travail des sciences de données :** Data Science Workspace dans Experience Platform permet aux clients de créer des modèles d’apprentissage automatique utilisant des données dans les applications Experience Platform et Adobe afin de générer des aperçus et des prédictions intelligents pour tisser de superbes expériences numériques d’utilisateur final.
 
 **Source de données :** Une source de données est une origine de données désignée par l’utilisateur. Par exemple, une source de données est une application mobile, un événement de profil et/ou d’expérience, un événement de profil de site Web ou un service de gestion de la relation client.
 
@@ -186,7 +186,7 @@ ht-degree: 0%
 
 **Stratégie d&#39;enregistrement Delta :** `Delta save strategy` est une option permettant d’ingérer des données tierces via une connexion. Cette option permet à l’utilisateur de spécifier que des lignes de données source nouvelles ou modifiées sont imbriquées dans la plate-forme d’expérience. De nouvelles lignes sont ajoutées à la fin du jeu de données et les lignes modifiées sont mises à jour dans le jeu de données de la plateforme d’expérience.
 
-**Destination :** Dans la plateforme de données clientes en temps réel, une destination est un terme général pour tout système, tel qu’une application Adobe, un serveur publicitaire ou un réseau publicitaire où une audience est activée et diffusée.
+**Destination :** Dans la plateforme de données clientes en temps réel, une destination est un terme général pour tout système, tel qu’une application Adobe, un serveur d’annonces ou un réseau publicitaire sur lequel une audience est activée et diffusée.
 
 **Catégorie de destination :** Une catégorie de destination est un regroupement de destinations de plateforme de données clientes en temps réel présentant des caractéristiques similaires.
 
@@ -216,7 +216,7 @@ ht-degree: 0%
 
 **Événements :** Les Événements sont les données de comportement associées à un profil.
 
-**Modèle de données d’expérience (XDM) :** Le modèle de données d’expérience (XDM) est le concept d’utilisation de schémas standard pour unifier les données à utiliser avec la plate-forme d’expérience et les applications Adobe Experience Cloud. XDM normalise la structure des données et accélère et simplifie le processus d&#39;obtention de connaissances à partir de quantités massives de données.
+**Modèle de données d’expérience (XDM) :** Le modèle de données d’expérience (XDM) est le concept d’utilisation de schémas standard pour unifier les données à utiliser avec la plateforme d’expérience et les applications Adobe Experience Cloud. XDM normalise la structure des données et accélère et simplifie le processus d&#39;obtention de connaissances à partir de quantités massives de données.
 
 **Lancement de la plate-forme d’expérience :** Launch est un écosystème de gestion des balises et des SDK, intégré aux applications Experience Platform et Experience Cloud. Launch fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyses, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques clients.
 
@@ -320,7 +320,7 @@ ht-degree: 0%
 
 **Machine Learning (ML) :** L&#39;apprentissage automatique est le domaine d&#39;étude qui permet aux ordinateurs d&#39;apprendre sans être explicitement programmés.
 
-**Modèle d&#39;apprentissage automatique :** Un modèle d’apprentissage automatique est l’instance d’une recette d’apprentissage automatique qui est formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale. Dans Adobe Data Science Workspace, les modèles d’apprentissage automatique sont appelés recettes.
+**Modèle d&#39;apprentissage automatique :** Un modèle d’apprentissage automatique est l’instance d’une recette d’apprentissage automatique qui est formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale. Dans Adobe Data Science Workspace, les modèles d&#39;apprentissage automatique sont appelés des recettes.
 
 **Mappage :** Dans Plate-forme de données client en temps réel, le mappage des données est le processus de mappage des champs de données source aux champs de cible liés à la destination.
 
@@ -354,7 +354,7 @@ ht-degree: 0%
 
 **Bibliothèque d&#39;Offres :** Dans le service de prise de décision, la bibliothèque d’offres est une bibliothèque centrale utilisée pour gérer les offres personnalisées et de secours, les règles de décision et les activités.
 
-**Organisation :** Une organisation est le nom utilisé pour identifier une société ou un groupe spécifique au sein d’une société entre des produits Adobe. L’administrateur peut configurer et gérer l’accès et les autorisations des fonctions pour les utilisateurs d’une organisation.
+**Organisation :** Une organisation est le nom utilisé pour identifier une société ou un groupe spécifique au sein d’une société sur plusieurs produits Adobe. L’administrateur peut configurer et gérer l’accès et les autorisations des fonctions pour les utilisateurs d’une organisation.
 
 **Remplacer la stratégie d&#39;enregistrement :** `Overwrite` la stratégie d’enregistrement est une option permettant d’ingérer des données tierces via une connexion, où l’utilisateur indique si les données imbriquées seront remplacées selon un calendrier spécifié. Experience Platform assimilera le jeu de données spécifié à partir de la source tierce et remplacera le jeu de données sur Experience Platform.
 
@@ -400,17 +400,17 @@ ht-degree: 0%
 
 **Éditeur de Requête :** Requête Editor est un outil permettant d’écrire, de valider et d’envoyer des instructions SQL dans Requête Service.
 
-**Requête Service for Adobe Experience Platform :** *Experience Platform Requête Service* permet aux analystes de données de requête d’ExperienceEvents et de fichiers XDM pour une utilisation dans les analyses et l’apprentissage automatique. Grâce à Requête Service, les analystes et les analystes de données pourront extraire tous leurs jeux de données stockés dans Experience Platform - y compris les données comportementales ainsi que les points de vente, la gestion de la relation client, etc. - et les requête à ces jeux de données pour répondre à des questions spécifiques sur les données.
+**Requête Service pour la plateforme d’expérience Adobe :** *Experience Platform Requête Service* permet aux analystes de données de requête d’ExperienceEvents et de fichiers XDM pour une utilisation dans les analyses et l’apprentissage automatique. Grâce à Requête Service, les analystes et les analystes de données pourront extraire tous leurs jeux de données stockés dans Experience Platform - y compris les données comportementales ainsi que les points de vente, la gestion de la relation client, etc. - et les requête à ces jeux de données pour répondre à des questions spécifiques sur les données.
 
 [Retour au début](#adobe-experience-platform-glossary)
 
 ## r
 
-**Plate-forme de données client en temps réel :** La plate-forme de données client en temps réel d’Adobe rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel tout au long du parcours client numérique.
+**Plate-forme de données client en temps réel :** Adobe Real-time Customer Data Platform (plateforme de données client en temps réel) rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel tout au long du parcours client numérique.
 
 **Profil client en temps réel :** Le Profil client en temps réel est un profil centralisé pour la gestion d’expérience ciblée et personnalisée.
 
-**Recette :** Une recette est le terme utilisé par Adobe pour désigner une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente un apprentissage automatique, un algorithme d’IA ou un ensemble d’algorithmes, une logique de traitement et une configuration nécessaires à la création et à l’exécution d’un modèle formé et qui contribue ainsi à résoudre des problèmes commerciaux spécifiques.
+**Recette :** Une recette est le terme Adobe pour une spécification de modèle et est un conteneur de niveau supérieur qui représente un apprentissage automatique, un algorithme AI ou un ensemble d&#39;algorithmes, une logique de traitement et une configuration nécessaires pour créer et exécuter un modèle formé et aider ainsi à résoudre des problèmes commerciaux spécifiques.
 
 **Enregistrer :** Un enregistrement est une donnée qui persiste sous forme de lignes dans un jeu de données.
 
@@ -426,7 +426,7 @@ ht-degree: 0%
 
 **Composant de règle :** Dans le lancement de la plateforme d’expérience, les composants de règle sont les événements, conditions et actions qui constituent une règle.
 
-**Exécution :** L’exécution spécifie un environnement d’exécution pour une recette d’apprentissage automatique. Les runtimes Spark et PySpark permettent le téléchargement direct d&#39;un fichier source de recettes binaire (.jar). Les runtimes Python, R et Tensorflow permettent d&#39;entrer une URL vers une image docker pour une source de recettes.
+**Exécution :** L’exécution spécifie un environnement d’exécution pour une recette d’apprentissage automatique. Les runtimes Python, R, Spark, PySpark et Tensorflow permettent d&#39;entrer une URL vers une image de docker pour une source de recettes.
 
 [Retour au début](#adobe-experience-platform-glossary)
 
@@ -440,7 +440,7 @@ ht-degree: 0%
 
 **Commutateur sandbox :** Le contrôle sandbox Switch dans Experience Platform permet aux utilisateurs de naviguer entre les sandbox auxquels ils ont accès. Le changement d’un sandbox modifiera tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
 
-**Planification :** La planification est une spécification définie par l’utilisateur sur la fréquence ou la cadence d’assimilation des données d’une source de données tierce vers Adobe Experience Platform.
+**Planification :** La planification est une spécification définie par l’utilisateur sur la fréquence ou la cadence d’assimilation des données d’une source de données tierce vers la plateforme d’expérience Adobe.
 
 **Scoring :** Le score est le processus de génération d’informations à partir de données à l’aide d’un modèle formé.
 
@@ -470,11 +470,11 @@ ht-degree: 0%
 
 **Segmentation :** La segmentation consiste à diviser un grand groupe de clients, de prospects ou de consommateurs en groupes plus petits qui partagent des attributs similaires et réagissent de la même manière aux stratégies marketing.
 
-**Sensei ML Framework :** Sensei ML Framework est une structure d’apprentissage automatique unifiée à l’échelle d’Adobe qui utilise les données de la plate-forme d’expérience pour permettre aux chercheurs de données de développer des services de renseignement pilotés par l’apprentissage automatique d’une manière plus rapide, évolutive et réutilisable.
+**Sensei ML Framework :** Sensei ML Framework est un cadre d&#39;apprentissage automatique unifié à travers Adobe qui utilise les données sur la plateforme d&#39;expérience pour donner aux scientifiques des données les moyens de développer des services de renseignement pilotés par l&#39;apprentissage automatique d&#39;une manière plus rapide, évolutive et réutilisable.
 
 **Étiquettes de données sensibles :** Les libellés &quot;S&quot; sensibles sont utilisés pour classer les données jugées sensibles, par exemple les différents types de données comportementales ou géographiques que vous souhaitez marquer comme sensibles.
 
-**Services :** Une structure puissante permettant d’activer les services AI et ML en exploitant les services Adobe Intelligent Services. Les services offrent des expériences client personnalisées en temps réel ou rendent opérationnels des services intelligents personnalisés.
+**Services :** Un cadre puissant pour rendre opérationnels les services d&#39;IA et de ML en exploitant les services intelligents Adobe. Les services offrent des expériences client personnalisées en temps réel ou rendent opérationnels des services intelligents personnalisés.
 
 **Étiquette de données S1 :** `S1` l’étiquette de données est utilisée pour classifier les données spécifiant la latitude et la longitude qui peuvent être utilisées pour déterminer l’emplacement précis d’un périphérique.
 
@@ -484,19 +484,19 @@ ht-degree: 0%
 
 **Attribut source :** Un attribut source est un champ du jeu de données source.  Les attributs source sont mappés aux champs de schéma de cible.
 
-**Connecteur source :** Les connecteurs Adobe Experience Platform Source aident les utilisateurs à assimiler facilement des données provenant de plusieurs sources, ce qui leur permet de structurer, d’étiqueter et d’améliorer les données à l’aide d’Experience Platform Services. Les données peuvent être ingérées à partir de diverses sources, telles que l’enregistrement cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+**Connecteur source :** Les connecteurs Adobe Experience Platform Source aident les utilisateurs à assimiler facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide d’Experience Platform Services. Les données peuvent être ingérées à partir de diverses sources, telles que l’enregistrement cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 
 **Catégorie source :** Une catégorie source est un regroupement de sources de plateformes de données clientes en temps réel présentant des caractéristiques similaires.
 
 **Catalogue source :** Un catalogue source est une liste de sources disponibles dans la plateforme de données clientes en temps réel.
 
-**Espace de nommage d&#39;identité standard :** Les espaces de nommage d’identité standard sont des identifiants prédéfinis par Adobe, y compris les solutions Adobe et standard utilisées pour identifier les utilisateurs.
+**Espace de nommage d&#39;identité standard :** Les espaces de nommage d&#39;identité standard sont des identifiants prédéfinis Adobe, notamment les solutions standards Adobe et industrielles utilisées pour identifier les utilisateurs.
 
 **Schéma standard :** Les schémas standard sont composés de classes et de mixins et sont destinés à être réutilisés.
 
 **Ingestion en flux continu :** L’assimilation en flux continu fournit aux utilisateurs une méthode d’envoi en temps réel des données des périphériques client et serveur vers la plate-forme d’expérience.
 
-**URL du point de terminaison de la diffusion en continu :** Une URL de point de terminaison de diffusion en continu est un point de terminaison unique fourni par Adobe et lié à l’organisation IMS d’un client pour diffuser des données dans la plateforme d’expérience.
+**URL du point de terminaison de la diffusion en continu :** Une URL de point de terminaison de diffusion en flux continu est un point de terminaison unique fourni par Adobe et lié à l’organisation IMS d’un client pour diffuser des données dans Experience Platform.
 
 **Segmentation en flux continu :** La segmentation en flux continu est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données entrantes sur le Profil client en temps réel. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui garantit que votre audience de cible reste pertinente.
 
