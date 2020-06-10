@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d’un connecteur HDFS à l’aide de l’API du service de flux
+title: Création d’un connecteur Apache HDFS à l’aide de l’API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: e5789a10c49b2933a0727692dedf2601a214dbc2
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '558'
 ht-degree: 2%
 
 ---
 
 
-# Création d’un connecteur HDFS à l’aide de l’API du service de flux
+# Création d’un connecteur Apache HDFS à l’aide de l’API Flow Service
 
 >[!NOTE]
->Le connecteur HDFS est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
+>Le connecteur Apache HDFS est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
 
 Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources afin de les intégrer à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes permettant de connecter un système de fichiers distribué Hadoop (ci-après appelé &quot;HDFS&quot;) à la plate-forme d’expérience.
+Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes nécessaires à la connexion d’un système de fichiers distribué Apache Hadoop (ci-après appelé &quot;HDFS&quot;) à la plate-forme Experience Platform.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants de la plateforme d’expérience Adobe :
+Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
 * [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
