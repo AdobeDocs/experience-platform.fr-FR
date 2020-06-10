@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API de registre de Schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 14cd3d17c7d9ba602d02925abddec9e0b246a8c8
+source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Création d’un schéma à l’aide de l’API de registre de Schémas
 
-Le registre des Schémas permet d’accéder à la bibliothèque de Schémas dans Adobe Experience Platform. La bibliothèque de Schémas contient des ressources mises à votre disposition par Adobe, les partenaires de la plateforme d’expérience et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
+Le registre des Schémas permet d’accéder à la bibliothèque de Schémas dans Adobe Experience Platform. La bibliothèque de Schémas contient les ressources mises à votre disposition par Adobe, les partenaires de la plateforme d’expérience et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
 
 Ce didacticiel utilise l&#39;API Schéma Registry pour vous aider à composer un schéma à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l’interface utilisateur dans la plate-forme d’expérience, le didacticiel [Editeur de](create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schéma.
 
@@ -492,7 +492,7 @@ Une requête réussie renvoie HTTP Response Status 201 (Créé) avec un corps de
 }
 ```
 
-### Ajouter de mixin personnalisé au schéma
+### Ajouter le mixin personnalisé au schéma
 
 Vous pouvez maintenant suivre les mêmes étapes pour [ajouter un mixin](#add-a-mixin) standard afin d’ajouter ce nouveau mixin à votre schéma.
 
@@ -1017,7 +1017,7 @@ En ajoutant la balise &quot;union&quot; à l’ `meta:immutableTags` attribut, v
 
 Pour plus d&#39;informations sur l&#39;utilisation des vues d&#39;union, consultez la section sur les [unions](../api/unions.md) dans le guide de développement du registre des Schémas.
 
-### Balise Ajouter &quot;union&quot;
+### Ajouter la balise &quot;union&quot;
 
 Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la balise &quot;union&quot; doit être ajoutée à l’ `meta:immutableTags` attribut du schéma. Pour ce faire, PATCH demande de mettre à jour le schéma et d&#39;ajouter le `meta:immutableTags` tableau avec la valeur &quot;union&quot;.
 
@@ -1778,7 +1778,7 @@ L’exemple suivant montre le schéma Membres de fidélité terminé au format J
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1853,7 +1853,7 @@ L’exemple suivant montre le schéma Membres de fidélité terminé au format J
                         "active": "Active",
                         "incomplete": "Incomplete",
                         "pending_verification": "Pending Verification",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1905,7 +1905,7 @@ L’exemple suivant montre le schéma Membres de fidélité terminé au format J
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -1970,7 +1970,7 @@ L’exemple suivant montre le schéma Membres de fidélité terminé au format J
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
@@ -2035,7 +2035,7 @@ L’exemple suivant montre le schéma Membres de fidélité terminé au format J
                     "meta:enum": {
                         "active": "Active",
                         "incomplete": "Incomplete",
-                        "blacklisted": "Blacklisted",
+                        "denylist": "Deny List",
                         "blocked": "Blocked"
                     },
                     "meta:xdmField": "xdm:status",
