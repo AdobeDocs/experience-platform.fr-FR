@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: b6cfdf56c20065bdc3e8a9fedf6007ddd74eaeaa
+source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '429'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [Espace de travail Data Science](#dsw)
+- [Segmentation](#segmentation)
 - [Sources](#sources)
 
 ## Espace de travail Data Science {#dsw}
@@ -35,6 +36,20 @@ Notez que l&#39;apprentissage automatique en temps réel est en alpha et est enc
 | JupyterLab Launcher Démarrage ML en temps réel | Le JupyterLab Launcher inclut désormais un ordinateur portable Python pour Real-time Machine Learning (Alpha). |
 
 Pour plus d&#39;informations sur l&#39;alpha d&#39;apprentissage automatique en temps réel, consultez la présentation [de l&#39;apprentissage automatique en temps](../../data-science-workspace/real-time-machine-learning/home.md)réel.
+
+## Segmentation {#segmentation}
+
+Le service de segmentation de la plateforme Adobe Experience Platform fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces segments sont configurés et maintenus de manière centralisée sur la plate-forme, ce qui les rend facilement accessibles par toute application Adobe.
+
+Le service de segmentation définit un sous-ensemble particulier de profils en décrivant les critères qui distinguent un groupe de personnes commercialisables au sein de votre base de clients. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries chronologiques représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonction | Description |
+| ------- | ----------- |
+| Champs de date | Une fonction &quot;anniversaire&quot; a été ajoutée pour les fonctions de date, permettant aux utilisateurs d’évaluer les dates sans l’année. |
+
+Pour plus d’informations sur la segmentation, voir Présentation de la [segmentation.](../../segmentation/home.md)
 
 ## Sources {#sources}
 
