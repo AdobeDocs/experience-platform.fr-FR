@@ -4,10 +4,10 @@ seo-title: Destination Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 seo-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 32%
+source-wordcount: '544'
+ht-degree: 31%
 
 ---
 
@@ -34,15 +34,15 @@ Notez les détails suivants spécifiques aux destinations de publicités Google 
 
 ### Compte Publicités Google existant
 
-Google a suspendu toute nouvelle intégration de publicités Google avec des fournisseurs tiers. Vous devez disposer d’une intégration existante avec les publicités Google afin de pouvoir exécuter les étapes de liste blanche dans la section suivante et de créer une destination des publicités Google dans le fichier CDP en temps réel Adobe.
+Google a suspendu toute nouvelle intégration de publicités Google avec des fournisseurs tiers. Vous devez disposer d’une intégration existante avec les publicités Google afin de pouvoir exécuter les étapes de liste autorisées dans la section suivante et de créer une destination des publicités Google dans Adobe Real-time CDP.
 
-### Liste blanche
+### Autoriser la liste
 
 >[!NOTE]
 >
->La mise en liste blanche est obligatoire avant de configurer votre première destination de publicités Google dans le fichier CDP en temps réel Adobe. Assurez-vous que la procédure de liste blanche décrite ci-dessous a été effectuée par Google avant de créer une destination.
+>La liste d’autorisation est obligatoire avant de configurer votre première destination de publicités Google dans Adobe Real-time CDP. Assurez-vous que le processus d&#39;autorisation de liste décrit ci-dessous a été effectué par Google avant de créer une destination.
 
-Avant de créer la destination des publicités Google dans le CDP en temps réel d’Adobe, vous devez contacter Google pour demander que Adobe soit autorisé en tant que fournisseur de données et que votre compte soit autorisé. Contactez Google et fournissez les informations suivantes :
+Avant de créer la destination des publicités Google dans le CDP en temps réel d’Adobe, vous devez contacter Google pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
 
 * **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
@@ -55,6 +55,7 @@ Avant de créer la destination des publicités Google dans le CDP en temps réel
    ![Connecter la destination des publicités Google](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Informations de base Publicités Google](/help/rtcdp/destinations/assets/google-2-basic-information.png)
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
