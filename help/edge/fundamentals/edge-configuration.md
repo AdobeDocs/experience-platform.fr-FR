@@ -4,9 +4,9 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 2d58f7f95c6ad125e66856350aee2f29a0499061
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 3%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Configuration Edge
 
-La configuration du SDK Web d’Adobe Experience Platon est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée au réseau Edge d’Adobe Experience Platform, elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+La configuration du SDK Web Adobe Experience Platon est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée au réseau Edge d’Adobe Experience Platform, elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
 ## Création d’un identifiant de configuration Edge
 
@@ -24,7 +24,7 @@ Les ID de configuration Edge peuvent être créés dans Lancement à l’aide de
 
 >[!NOTE]
 >
->L’outil de configuration des arêtes est disponible pour les clients figurant sur la liste blanche, qu’ils utilisent le paramètre Lancer comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations Développer dans Lancement. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la documentation sur le lancement.
+>L’outil de configuration des arêtes est disponible pour les clients sur la liste autorisée, qu’ils utilisent le lancement comme gestionnaire de balises ou non. En outre, les utilisateurs ont besoin des autorisations Développer dans Lancement. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la documentation sur le lancement.
 
 Vous pouvez créer une configuration de bord en cliquant sur **[UICONTROL New Edge Configuration]** dans la partie supérieure droite de l&#39;écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement.
 
@@ -52,7 +52,7 @@ Contrôle si le SDK effectue ou non des synchronisations d’identité avec des 
 
 Les synchronisations d’identifiants peuvent être regroupées en conteneurs pour permettre l’exécution de différentes synchronisations d’identifiants à des moments différents. Cela contrôle quel conteneur d’ID synchronisé est exécuté pour un ID de configuration donné.
 
-#### Adobe Experience Platform
+#### Adobe Experience Platform
 
 Les paramètres répertoriés ici vous permettent d’envoyer des données à Adobe Experience Platform. Vous ne devez activer cette section que si vous avez acheté Adobe Experience Platform.
 
@@ -74,7 +74,7 @@ Les configurations Edge prennent en charge l’envoi de données à des jeux de 
 
 Pour configurer Adobe Cible, vous devez fournir un code client. Les autres champs sont facultatifs.
 
-![Bloc des paramètres d’Adobe Cible](../../assets/edge_configuration_target.png)
+![Bloc des paramètres de la Cible Adobe](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Pour configurer Adobe Cible, vous devez fournir un code client. Les autres champ
 
 ##### [!UICONTROL Code client]
 
-ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à [!UICONTROL Adobe Cible] > [!UICONTROL Configuration]> [!UICONTROL Implémentation] > [!UICONTROL modifier les paramètres en regard du bouton télécharger pour le fichier at.js ou le fichier mbox.js.]
+ID unique d’un compte de cible. Pour ce faire, vous pouvez accéder à [!UICONTROL Adobe Cible] > [!UICONTROL Configuration]> [!UICONTROL Implémentation] > [!UICONTROL modifier les paramètres en regard du bouton télécharger pour le fichier at.js ou le fichier mbox.js.]
 
 ##### [!UICONTROL Jeton de propriété]
 
@@ -92,15 +92,15 @@ Le jeton de propriété se trouve dans Cible  Adobe > [!UICONTROL configuration]
 
 ##### [!UICONTROL ID d’Environnement Cible]
 
-[Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) d’Adobe Cible vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
+[Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) de Adobe Cible vous aident à gérer votre implémentation à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-Adobe conseille de définir cette option différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de rester simple. Cependant, si vous avez déjà défini des environnements  Adobe Cible, vous pouvez les utiliser.
+Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements [!UICONTROL d&#39;Cible] Adobe, vous pouvez les utiliser.
 
 #### Adobe Audience Manager
 
 Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette section. Les autres paramètres sont facultatifs mais encouragés.
 
-![Bloc des paramètres d’Adobe Audience Manager](../../assets/edge_configuration_aam.png)
+![Bloc des paramètres de gestion de l&#39;Audience Adobe](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinations des cookies activées]
 
@@ -114,8 +114,8 @@ Permet au SDK de partager des informations de segment par le biais des destinati
 
 Contrôle si les données sont envoyées à Adobe Analytics. Vous trouverez d’autres informations dans la présentation [d’](../solution-specific/analytics/analytics-overview.md)Analytics.
 
-![Bloc des paramètres d’Adobe Analytics](../../assets/edge_configuration_aa.png)
+![Bloc des paramètres Adobe Analytics](../../assets/edge_configuration_aa.png)
 
 ##### [!UICONTROL Identifiant de Report Suite]
 
-La suite de rapports se trouve dans la section Admin d’Adobe Analytics sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont alors copiées dans chaque suite de rapports.
+La suite de rapports se trouve dans la section d’administration d’Adobe Analytics sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont alors copiées dans chaque suite de rapports.
