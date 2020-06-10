@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de dépannage de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1447196da7dbf59c1f498de40f12ed74c328c0e6
+source-git-commit: e77b76bdcfa5137d9bd77400b15f2fe8db3b7c0b
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '704'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Enfin, basculez &quot;Bloquer les cookies tiers&quot; sur &quot;Désactivé&quot
 
 ![chrome avancé](./images/faq/toggle-off.png)
 
->[!NOTE] Vous pouvez également désactiver les cookies tiers et la liste blanche [*.]ds.adobe.net
+>[!NOTE] Vous pouvez également désactiver les cookies tiers et ajouter [*.]ds.adobe.net à la liste autorisée.
 
 Accédez à &quot;chrome://flags/&quot; dans la barre d&#39;adresse. Recherchez et désactivez l’indicateur intitulé *&quot;Même site par défaut&quot;* en utilisant le menu déroulant à droite.
 
@@ -64,7 +64,7 @@ Ensuite, dans la barre de navigation supérieure, sélectionnez le menu **Dével
 
 ## Pourquoi est-ce que je vois un message &quot;403 interdit&quot; quand je tente de télécharger ou de supprimer un fichier dans JupyterLab ?
 
-Si votre navigateur est activé avec un logiciel de blocage des publicités tel que Ghostery ou AdBlock Plus, le domaine &quot;\*.adobe.net&quot; doit être placé sur la liste blanche dans chaque logiciel de blocage des publicités pour que JupyterLab fonctionne normalement. En effet, les machines virtuelles JupyterLab s’exécutent sur un domaine différent de celui de la plate-forme d’expérience.
+Si votre navigateur est activé avec un logiciel de blocage des publicités tel que Ghostery ou AdBlock Plus, le domaine &quot;\*.adobe.net&quot; doit être autorisé dans chaque logiciel de blocage des publicités pour que JupyterLab fonctionne normalement. En effet, les machines virtuelles JupyterLab s’exécutent sur un domaine différent de celui de la plate-forme d’expérience.
 
 ## Pourquoi certaines parties de mon portable Jupyter semblent-elles brouillées ou ne s&#39;affichent pas sous forme de code ?
 
@@ -84,7 +84,7 @@ Pour une liste complète des bibliothèques Python préinstallées, consultez la
 
 ## Puis-je installer des bibliothèques PySpark personnalisées ?
 
-Malheureusement, vous ne pouvez pas installer de bibliothèques supplémentaires pour le noyau PySpark. Toutefois, vous pouvez contacter votre représentant du service clientèle Adobe pour que les bibliothèques PySpark personnalisées soient installées pour vous.
+Malheureusement, vous ne pouvez pas installer de bibliothèques supplémentaires pour le noyau PySpark. Toutefois, vous pouvez contacter votre représentant du service à la clientèle Adobe pour que des bibliothèques PySpark personnalisées soient installées pour vous.
 
 Pour une liste des bibliothèques PySpark préinstallées, consultez la section [Annexe du Guide](./jupyterlab/overview.md#supported-libraries)d&#39;utilisation de JupyterLab.
 
