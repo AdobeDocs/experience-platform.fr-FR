@@ -4,10 +4,10 @@ seo-title: Destination Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes digitales ciblées dans des sources d’inventaire Display, Video et Mobile.
 seo-description: 'Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes digitales ciblées dans des sources d’inventaire Display, Video et Mobile. '
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 27%
+source-wordcount: '586'
+ht-degree: 26%
 
 ---
 
@@ -32,13 +32,13 @@ Notez les détails suivants spécifiques aux destinations Google Display &amp; V
 
 ## Conditions préalables
 
-### Liste blanche
+### Autoriser la liste
 
 >[!NOTE]
 >
->La liste blanche est obligatoire avant de configurer votre première destination Google Display &amp; Video 360 dans Adobe Real-time CDP. Assurez-vous que la procédure de liste blanche décrite ci-dessous a été effectuée par Google avant de créer une destination.
+>La liste d’autorisation est obligatoire avant de configurer votre première destination Google Display &amp; Video 360 dans Adobe Real-time CDP. Assurez-vous que le processus d&#39;autorisation de liste décrit ci-dessous a été effectué par Google avant de créer une destination.
 
-Avant de créer la destination Google Display &amp; Video 360 dans Adobe Real-time CDP, vous devez contacter Google pour demander que Adobe soit autorisé en tant que fournisseur de données et que votre compte soit autorisé. Contactez Google et fournissez les informations suivantes :
+Avant de créer la destination Google Display &amp; Video 360 dans Adobe Real-time CDP, vous devez contacter Google pour demander que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
 
 * **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
@@ -50,6 +50,7 @@ Avant de créer la destination Google Display &amp; Video 360 dans Adobe Real-ti
    ![Connecter la destination Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-destination.png)
 
 2. In the Create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
    ![Informations de base Google Display &amp; Video 360](/help/rtcdp/destinations/assets/google-dv360-basic-information.png)
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
