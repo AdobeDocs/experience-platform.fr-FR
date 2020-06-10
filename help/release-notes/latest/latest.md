@@ -1,13 +1,13 @@
 ---
 title: 'Notes de mise à jour d’Adobe Experience Platform '
-description: Notes de mise à jour de la plateforme d’expérience le 10 juin 2020
+description: Notes de mise à jour les plus récentes pour Experience Platform
 doc-type: release notes
 last-update: June 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 35af498a41d779cc155cff7f030cccb57f68b8fa
+source-git-commit: 1dad479708291e911719c3f3dd5edd2e9b497973
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '431'
 ht-degree: 6%
 
 ---
