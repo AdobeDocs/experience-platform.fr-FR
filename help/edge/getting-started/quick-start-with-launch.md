@@ -4,17 +4,17 @@ seo-title: 'SDK Web d’Adobe Experience Platform : démarrage rapide avec La
 description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: 2ccb2c17590780f7f1bd5e553164209763ab9e24
+source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 31%
+source-wordcount: '548'
+ht-degree: 30%
 
 ---
 
 
 # Bienvenue
 
-Ce guide vous explique comment configurer le SDK Web d’Adobe Experience Platform lors du lancement. Pour pouvoir utiliser cette fonction, vous devez être autorisé à accéder à la liste blanche. Si vous souhaitez monter sur la liste d&#39;attente, veuillez vous adresser à votre CSM.
+Ce guide décrit les différentes étapes de la configuration du SDK Web d’Adobe Experience Platform au lancement. Pour pouvoir utiliser cette fonctionnalité, vous devez disposer d’autorisations et être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez vous adresser à votre CSM.
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionneront sans CNAME, mais vous en aurez besoin avant de passer en production
 - Vous pouvez accéder à la plateforme de données Adobe Experience Platform. Si vous n’avez pas acheté Platform, nous vous fournirons la Experience Platform Data Services Foundation pour une utilisation limitée avec le SDK, sans frais supplémentaires.
@@ -26,7 +26,7 @@ Vous pouvez créer un ID de configuration à l’aide de l’outil [de configura
 
 >[!NOTE]
 >
->Votre organisation doit être mise en liste blanche pour la fonction. Veuillez contacter votre CSM pour qu&#39;il soit mis sur la liste pour une éventuelle liste blanche.
+>Votre organisation doit se trouver sur la liste autorisée de la fonction. Veuillez contacter votre CSM pour être mis sur la liste autorisée.
 
 ## Préparation d’un Schéma
 
@@ -61,6 +61,6 @@ Une fois que vous disposez de données, vous pouvez effectuer les opérations su
 - [En savoir plus sur le débogage](../fundamentals/debugging.md)
 - Découvrez comment [personnaliser l’expérience](../fundamentals/rendering-personalization-content.md)
 - Découvrez comment envoyer des données à plusieurs solutions
-   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
+   - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
    - [Adobe Target](../solution-specific/target/target-overview.md)
