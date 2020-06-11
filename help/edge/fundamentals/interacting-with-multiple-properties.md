@@ -4,7 +4,7 @@ seo-title: Interaction avec plusieurs propriétés du SDK Web d’Adobe Experie
 description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
 seo-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 100%
@@ -40,7 +40,7 @@ En suivant l’exemple ci-dessus, vous pouvez exécuter comme suit des commandes
 
 ```javascript
 mycustomname1("configure", {
-  "configId": "ebebf826-a01f-4458-8cec-ef61de241c93",
+  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
@@ -51,7 +51,7 @@ mycustomname1("sendEvent", {
 });
 
 mycustomname2("configure", {
-  "configId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
   "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
@@ -66,4 +66,4 @@ Veillez à exécuter la commande `configure` pour chaque instance avant d’exé
 
 ## Limites
 
-Pour éviter tout conflit avec les cookies, une seule instance du SDK Web d’Adobe Experience Platform dans une page peut avoir un `configId` particulier.  De même, une seule instance du SDK Web d’Adobe Experience Platform peut avoir un `orgId` particulier.
+Pour éviter tout conflit avec les cookies, une seule instance du SDK Web d’Adobe Experience Platform dans une page peut avoir un `edgeConfigId` particulier.  De même, une seule instance du SDK Web d’Adobe Experience Platform peut avoir un `orgId` particulier.
