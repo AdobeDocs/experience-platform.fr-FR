@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 06733eb374d1b9409102a7cf13d61ed266cedaad
+source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,10 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gérer 
 
 Les étiquettes d’utilisation des données peuvent être appliquées à des jeux de données entiers ou à des champs de jeux de données individuels. Les étiquettes ajoutées au niveau du jeu de données sont héritées de tous les champs de ce jeu de données.
 
-Pour plus d’informations sur le service, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données. Pour savoir comment utiliser les libellés d’utilisation dans l’interface utilisateur de la plateforme d’expérience, voir le guide [d’utilisation des libellés d’utilisation des](../../data-governance/labels/user-guide.md)données.
+Pour plus d’informations sur le service, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données. Pour savoir comment utiliser les libellés d’utilisation dans [!DNL Platform], consultez les guides suivants :
+
+* [Gestion des libellés dans l’interface utilisateur](../../data-governance/labels/user-guide.md)
+* [Gestion des libellés dans l’API](../../data-governance/labels/api.md)
 
 ## Jeu de données dans les services de plateformes en aval
 
