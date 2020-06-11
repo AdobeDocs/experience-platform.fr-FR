@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Gérer les étiquettes d’utilisation des données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d685f1851badf54ce1d1ac3cbacd69d62894c33f
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
@@ -14,13 +14,15 @@ ht-degree: 3%
 
 # Gérer les étiquettes d’utilisation des données à l’aide d’API
 
-Ce document décrit la procédure à suivre pour gérer les étiquettes d’utilisation des données au niveau du jeu de données et des champs à l’aide de l’API du service de catalogue.
+L’API Service de dataset vous permet de gérer par programmation les étiquettes d’utilisation des jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’API Catalog Service qui gère les métadonnées des jeux de données.
+
+Ce document décrit la procédure à suivre pour gérer les libellés d’utilisation des données au niveau du jeu de données et des champs à l’aide de l’API Service de dataset.
 
 ## Prise en main
 
-Avant de lire ce guide, il est recommandé de lire la présentation [du service de](../../catalog/home.md) catalogue pour une présentation plus précise du service. En outre, vous devez également suivre les étapes décrites dans la section [Prise en main du Guide du développeur de catalogue pour](../../catalog/api/getting-started.md) collecter les informations d’identification requises pour appeler l’API de catalogue.
+Avant de lire ce guide, suivez les étapes décrites dans la section [](../../catalog/api/getting-started.md) Prise en main du guide du développeur de catalogue afin de rassembler les informations d’identification requises pour appeler [!DNL Platform] les API.
 
-Pour appeler les points de terminaison décrits dans les sections ci-dessous, vous devez disposer de la `id` valeur unique d&#39;un jeu de données spécifique. Si vous ne possédez pas cette valeur, reportez-vous à la section du guide du développeur sur la [liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
+Pour appeler les points de terminaison décrits dans les sections ci-dessous, vous devez disposer de la `id` valeur unique d&#39;un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
 
 ## Rechercher des étiquettes pour un jeu de données {#lookup}
 
@@ -29,7 +31,7 @@ Vous pouvez rechercher les étiquettes d’utilisation des données qui ont ét�
 **Format d’API**
 
 ```http
-GET /dataSets/{DATASET_ID}/labels
+GET /datasets/{DATASET_ID}/labels
 ```
 
 | Paramètre | Description |
@@ -40,7 +42,7 @@ GET /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -82,8 +84,8 @@ Vous pouvez créer un ensemble de libellés pour un jeu de données en les fourn
 **Format d’API**
 
 ```http
-POST /dataSets/{DATASET_ID}/labels
-PUT /dataSets/{DATASET_ID}/labels
+POST /datasets/{DATASET_ID}/labels
+PUT /datasets/{DATASET_ID}/labels
 ```
 
 | Paramètre | Description |
@@ -96,7 +98,7 @@ La demande POST suivante ajoute une série d’étiquettes au jeu de données, a
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +151,7 @@ Vous pouvez supprimer les étiquettes appliquées à un jeu de données en exéc
 **Format d’API**
 
 ```http
-DELETE /dataSets/{DATASET_ID}/labels
+DELETE /datasets/{DATASET_ID}/labels
 ```
 
 | Paramètre | Description |
@@ -160,7 +162,7 @@ DELETE /dataSets/{DATASET_ID}/labels
 
 ```shell
 curl -X DELETE \
-  'https://platform.adobe.io/data/foundation/catalog/dataSets/5abd49645591445e1ba04f87/labels' \
+  'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -176,3 +178,5 @@ Réponse réussie : état HTTP 200 (OK), indiquant que les étiquettes ont été
 Maintenant que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et des champs, vous pouvez commencer à assimiler des données dans la plate-forme d’expérience. Pour en savoir plus, début en lisant la documentation [sur l&#39;assimilation des](../../ingestion/home.md)données.
 
 Vous pouvez également désormais définir des stratégies d’utilisation des données en fonction des étiquettes que vous avez appliquées. Pour plus d’informations, voir la présentation [des stratégies d’utilisation des](../policies/overview.md)données.
+
+Pour plus d&#39;informations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez l&#39;aperçu [des jeux de](../../catalog/datasets/overview.md)données.
