@@ -4,10 +4,10 @@ seo-title: 'SDK Web d’Adobe Experience Platform : démarrage rapide avec La
 description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: dc5ee796ca390d06fc8e08bd6c30e88a0d96dd53
+source-git-commit: 62b18ed8f70ad87b04f60ade5730ff30d8985415
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 30%
+source-wordcount: '511'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,6 @@ ht-degree: 30%
 Ce guide décrit les différentes étapes de la configuration du SDK Web d’Adobe Experience Platform au lancement. Pour pouvoir utiliser cette fonctionnalité, vous devez disposer d’autorisations et être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez vous adresser à votre CSM.
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionneront sans CNAME, mais vous en aurez besoin avant de passer en production
-- Vous pouvez accéder à la plateforme de données Adobe Experience Platform. Si vous n’avez pas acheté Platform, nous vous fournirons la Experience Platform Data Services Foundation pour une utilisation limitée avec le SDK, sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur
 
 ## Création d’un ID de configuration
