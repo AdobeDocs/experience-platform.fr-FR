@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du service de catalogue
 topic: overview
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -57,8 +57,8 @@ Le tableau suivant décrit les différents types d’objet pris en charge par Ca
 | Compte | `/accounts` | Lors de la création de connexions source, les informations d’identification d’authentification doivent être fournies. Un compte représente un ensemble d’informations d’identification d’authentification utilisées pour créer une connexion d’un type spécifique. Chaque connexion possède un ensemble de paramètres uniques qui sont conservés par Catalog et sécurisés dans un coffre de clés Azure. |
 | Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à assimiler en une seule unité. Un objet batch du catalogue décrit les mesures d&#39;assimilation du lot (telles que le nombre d&#39;enregistrements traités ou la taille sur le disque) et peut également inclure des liens vers des jeux de données, des vues et d&#39;autres ressources qui ont été affectées par l&#39;opération de traitement par lot. |
 | Connexion | `/connections` | Une connexion est une instance unique d&#39;un connecteur source, propre à votre organisation et configurée à l&#39;aide des informations d&#39;identification d&#39;authentification appropriées pour le type de connecteur. |
-| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources doivent collecter les données d’autres applications Adobe (telles qu’Adobe Analytics et Adobe Audience Manager), de sources d’enregistrement de cloud tierces (telles que Azure Blob, Amazon S3, des serveurs FTP et des serveurs SFTP) et de systèmes de gestion de la relation client tiers (tels que Microsoft Dynamics et Salesforce). |
-| Jeu de données | `/dataSets` | Un jeu de données est un concept d&#39;enregistrement et de gestion utilisé pour la collecte de données (généralement un tableau) qui contient un schéma (colonnes) et des champs (lignes). |
+| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources doivent collecter les données d’autres applications Adobe (telles que Adobe Analytics et Adobe Audience Manager), les sources d’enregistrement de cloud tierces (telles que Azure Blob, Amazon S3, les serveurs FTP et les serveurs SFTP) et les systèmes de gestion de la relation client tiers (tels que Microsoft Dynamics et Salesforce). |
+| Jeu de données | `/dataSets` | Un jeu de données est un concept d&#39;enregistrement et de gestion utilisé pour la collecte de données (généralement un tableau) qui contient un schéma (colonnes) et des champs (lignes). See the [datasets overview](./datasets/overview.md) for more information. |
 | Fichier de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur la plate-forme. En tant qu’enregistrements de fichiers littéraux, vous pouvez trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a assimilé le fichier. |
 
 ## Étapes suivantes
