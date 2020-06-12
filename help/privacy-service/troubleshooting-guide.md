@@ -4,19 +4,19 @@ solution: Experience Platform
 title: FAQ sur Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 64cb2de507921fcb4aaade67132024a3fc0d3dee
+source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 
-# FAQ sur Privacy Service
+# Guide de dépannage de Privacy Service
 
-Ce document répond aux questions les plus fréquentes sur Adobe Experience Platform Privacy Service.
+Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour aider les sociétés à gérer les demandes de confidentialité des données client. Grâce à Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données personnelles ou privées sur vos clients, ce qui vous permet de vous conformer automatiquement aux réglementations en matière de confidentialité en vigueur au sein de l’organisation et de la législation.
 
-Privacy Service fournit une API RESTful et une interface utilisateur pour aider les sociétés à gérer les demandes de confidentialité des données client. Grâce à Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données personnelles ou privées sur vos clients, ce qui vous permet de vous conformer automatiquement aux réglementations en matière de confidentialité en vigueur au sein de l’organisation et de la législation.
+Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes de l’API.
 
 ## Lors de l’exécution de demandes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un ID utilisateur ? {#user-ids}
 
@@ -76,7 +76,7 @@ Vous pouvez récupérer des détails sur une tâche particulière à l’aide de
 
 ### Utilisation de l’API
 
-Pour récupérer l’état d’une tâche particulière à l’aide de l’API Privacy Service, effectuez une requête au point de terminaison racine (`GET /`), en utilisant l’ID de la tâche dans le chemin de la requête. Pour en savoir plus, consultez la section sur la [vérification de l’état d’un travail](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide du développeur de Privacy Service.
+Pour récupérer l’état d’une tâche particulière à l’aide de l’API Privacy Service, envoyez une requête au point de terminaison racine (`GET /`), en utilisant l’ID de la tâche dans le chemin de la requête. Pour en savoir plus, consultez la section sur la [vérification de l’état d’un travail](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide du développeur de Privacy Service.
 
 ### Utilisation de l’interface utilisateur
 
@@ -95,3 +95,18 @@ Pour plus d’informations, voir la section relative à la [recherche d’un emp
 ### Utilisation de l’interface utilisateur
 
 Dans le tableau de bord d’interface utilisateur de Privacy Service, recherchez la tâche que vous souhaitez télécharger à partir du widget Demandes de **travaux** . Cliquez sur l’ID de la tâche pour ouvrir la page Détails _de la_ tâche. A partir de là, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le guide [d’utilisation de](ui/user-guide.md) Privacy Service pour obtenir des instructions plus détaillées.
+
+## Messages d’erreur courants
+
+Le tableau suivant présente quelques erreurs courantes dans le Service de la protection des renseignements personnels, avec des descriptions pour aider à résoudre leurs problèmes respectifs.
+
+| Message d’erreur | Description |
+| --- | --- |
+| ID utilisateur introuvable. | Certains des ID utilisateur fournis dans la demande sont introuvables et ont été ignorés. Assurez-vous d’utiliser les espaces de nommage et les valeurs d’ID corrects dans la charge utile de la demande. Consultez le document sur la [fourniture de données](./identity-data.md) d&#39;identité pour une explication plus détaillée. |
+| Espace de nommage non valide | Un espace de nommage d&#39;identité fourni pour un ID d&#39;utilisateur n&#39;était pas valide. Consultez la section sur les espaces de nommage [d&#39;identité](./api/appendix.md#standard-namespaces) standard dans l&#39;annexe du guide du développeur du service de protection des renseignements personnels pour obtenir une liste des espaces de nommage acceptés. Si vous utilisez un espace de nommage personnalisé, veillez à définir la `type` propriété de l’identifiant sur &quot;personnalisé&quot;. |
+| Partiellement terminé | La tâche s&#39;est terminée correctement, mais certaines données n&#39;étaient pas applicables à la demande donnée et ont été ignorées. |
+| Les données ne sont pas au format requis. | Une ou plusieurs valeurs de données pour l’application spécifiée étaient incorrectement formatées. Pour plus d’informations, consultez les détails de la tâche. |
+| L&#39;organisation IMS n&#39;a pas été configurée. | Ce message se produit lorsque votre organisation IMS n’a pas été configurée pour Privacy Service. Contactez votre administrateur pour plus d’informations. |
+| L’accès et les autorisations sont requis. | L’accès et les autorisations sont nécessaires pour utiliser Privacy Service. Contactez votre administrateur pour obtenir un accès. |
+| Un problème est survenu lors du transfert et de l&#39;archivage des données d&#39;accès. | Lorsque cette erreur se produit, rechargez les données d’accès et réessayez. |
+| La charge de travail a été dépassée pour la limite de taux de document actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi et réessayez. |
