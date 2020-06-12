@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’utilisateur de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 8a488944d530a4850f8946ed30af769ecb6e954f
+source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,11 @@ Le tableau de bord de l’interface utilisateur de Privacy Service fournit deux 
 
 ### Type de règlement
 
-Privacy Service prend en charge les demandes d’emploi pour deux types de réglementation :
+Privacy Service prend en charge les demandes d’emploi pour trois types de réglementation :
 
-* Règlement général sur la protection des données
-* La Loi sur la protection des renseignements personnels des consommateurs de Californie (CCPA).
+* Règlement général sur la protection des données (RGPD) de l&#39;Union européenne
+* La Loi sur la protection des renseignements personnels des consommateurs de Californie (CCPA)
+* La loi thaïlandaise sur la protection des données personnelles (PDPA_THA)
 
 Les tâches de chaque type de réglementation sont suivies séparément. Pour passer d&#39;un type de réglementation à un autre, cliquez sur le menu déroulant Type **de** réglementation et sélectionnez le type de réglementation souhaité dans la liste.
 
@@ -132,7 +133,7 @@ La boîte de dialogue *Télécharger JSON* s’affiche, ce qui vous permet de fa
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Si vous n’avez pas de fichier JSON à télécharger, cliquez sur **Télécharger Adobe-GDPR-Request.json** pour télécharger un modèle que vous pouvez renseigner en fonction des valeurs que vous avez collectées auprès de vos personnes concernées.
+Si vous n’avez pas de fichier JSON à télécharger, cliquez sur **Télécharger Adobe-GDPR-Request.json** pour télécharger un modèle que vous pouvez renseigner en fonction des valeurs que vous avez collectées auprès de vos sujets de données.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
