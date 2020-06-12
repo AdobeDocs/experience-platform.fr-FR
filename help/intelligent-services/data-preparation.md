@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
 workflow-type: tm+mt
-source-wordcount: '1437'
+source-wordcount: '1595'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,26 @@ Pour que les services intelligents puissent découvrir des informations issues d
 
 Ce document fournit des conseils généraux sur le mappage des données de vos événements marketing de plusieurs canaux à ce schéma, en décrivant les informations sur les champs importants du schéma afin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
 
-## Comprendre le schéma CEE
+## Résumé du flux de travail
+
+Le processus de préparation varie selon que vos données sont stockées dans Adobe Experience Platform ou en externe. Cette section résume les étapes nécessaires à suivre, selon l&#39;un ou l&#39;autre scénario.
+
+### Préparation de données externes
+
+Si vos données sont stockées en dehors de [!DNL Experience Platform], procédez comme suit :
+
+1. Contactez les services de conseil Adobe pour demander des informations d&#39;identification d&#39;accès pour un conteneur d&#39;Enregistrement Azure Blob dédié.
+1. A l’aide de vos informations d’identification d’accès, téléchargez vos données vers le conteneur Blob.
+1. Travaillez avec Adobe Consulting Services pour associer vos données au schéma [](#cee-schema) Consumer ExperienceEvent et les intégrer à Intelligent Services.
+
+### [!DNL Experience Platform] préparation des données
+
+Si vos données sont déjà stockées dans [!DNL Platform], procédez comme suit :
+
+1. Examinez la structure du schéma [](#cee-schema) Consumer ExperienceEvent et déterminez si vos données peuvent être mises en correspondance avec ses champs.
+1. Contactez les services de conseil Adobe pour vous aider à mapper vos données au schéma et à les intégrer dans les services intelligents, ou [suivez les étapes décrites dans ce guide](#mapping) si vous souhaitez mapper les données vous-même.
+
+## Comprendre le schéma CEE {#cee-schema}
 
 Le schéma Consumer ExperienceEvent décrit le comportement d’une personne en ce qui concerne les événements de marketing numérique (Web ou mobile) ainsi que l’activité de commerce en ligne ou hors ligne. L&#39;utilisation de ce schéma est requise pour les services intelligents en raison de ses champs (colonnes) sémantiquement bien définis, évitant ainsi les noms inconnus qui, autrement, rendraient les données moins claires.
 
@@ -59,7 +78,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs requis pour 
 
 Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm:channel` schéma :
 
-| Canal | `@type` | `mediaType` | `mediaAction` |
+| Channel | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
@@ -185,7 +204,7 @@ Ce champ contient des informations relatives aux activités marketing actives av
 
 Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:productListItems`, consultez la section [marketing sechma](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/marketing.schema.md) .
 
-## Mappage et assimilation de données
+## Mappage et assimilation de données (#mapping)
 
 Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, l’étape suivante consiste à déterminer les données à importer dans les services intelligents. Toutes les données historiques utilisées dans les services intelligents doivent respecter une période minimale de quatre mois, plus le nombre de jours prévus comme période de consultation.
 
@@ -193,7 +212,7 @@ Après avoir décidé de la plage de données à envoyer, contactez les services
 
 Si vous avez un [!DNL Adobe Experience Platform] abonnement et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
-### Utilisation de la plate-forme d’expérience Adobe
+### Utilisation d’Adobe Experience Platform
 
 >[!NOTE] Les étapes ci-dessous nécessitent un abonnement à la plate-forme d’expérience. Si vous n’avez pas accès à la plate-forme, passez directement à la section [Étapes](#next-steps) suivantes.
 
