@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: d0fcae6b1b75584a2c26d6eee5b47e0d60a142ba
+source-git-commit: 8704d762ea71b44133cd6d394587342198c54b99
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '183'
 ht-degree: 1%
 
 ---
@@ -20,15 +20,17 @@ Adobe Experience Platform Privacy Service fournit une API RESTful et une interfa
 
 Vous devez disposer d’un Adobe ID pour pouvoir vous authentifier dans l’interface utilisateur de Privacy Service. En outre, vous devez disposer des droits d’administrateur système au sein de l’entreprise à laquelle votre Adobe ID est associé.
 
-Accédez à la page de connexion d’Adobe Experience Cloud à l’adresse https://experience.adobe.com. Cliquez sur **Se connecter avec un Adobe ID** et saisissez vos informations d’identification Adobe ID lorsque vous y êtes invité. Une fois connecté, cliquez sur **Administration**.
+Accédez à la page de connexion Adobe Experience Cloud à l’adresse https://experience.adobe.com. Cliquez sur **[!UICONTROL Se connecter avec un Adobe ID]** et saisissez vos informations d’identification Adobe ID lorsque vous y êtes invité.
 
-![Onglet Administration](../images/ui-overview/admin-tab.png)
+Une fois connecté, cliquez sur Interface utilisateur **** Confidentialité.
 
->[!NOTE] L&#39;onglet Administration s&#39;affiche uniquement si vous disposez de droits d&#39;administrateur système au sein de votre organisation.
+![](../images/ui-overview/quick-access.png)
 
-Enfin, sélectionnez **Lancer l’interface utilisateur** de traitement des données personnelles dans l’écran suivant pour ouvrir l’interface utilisateur de Privacy Service.
+### Connexion à partir de la plate-forme d’expérience
 
-![Page Administration](../images/ui-overview/admin-page.png)
+Si vous avez accès à l’interface utilisateur d’Adobe Experience Platform, vous pouvez également accéder à l’interface utilisateur de Privacy Service via l’onglet **[!UICONTROL Demandes]** dans le volet de navigation de gauche.
+
+![](../images/ui-overview/platform.png)
 
 ## Étapes suivantes
 
