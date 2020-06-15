@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expériences
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 01cfbc86516a05df36714b8c91666983f7a1b0e8
+source-git-commit: 63a128202826ec39911e70d34dda9dfb2bc585b2
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Le développement et la formation de modèles se déroulent au niveau Expérience, où une Expérience se compose d’une instance de la MLI, de sessions de formation et d’exécutions de notation.
 
-## Création d’une expérience
+## Création d’une expérience {#create-an-experiment}
 
 Vous pouvez créer une expérience en exécutant une requête POST tout en fournissant un nom et un ID d&#39;instance MLInstance valide dans la charge utile de la requête.
 
@@ -67,7 +67,7 @@ Une réponse réussie renvoie une charge utile contenant les détails de l&#39;e
 }
 ```
 
-## Créer et exécuter une formation ou une série de notation
+## Créer et exécuter une formation ou une série de notation {#experiment-training-scoring}
 
 Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST et en fournissant un ID d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de score ne peuvent être créées que si l’expérience a une exécution de formation existante et réussie. La création réussie d&#39;un cycle de formation initialise la procédure de formation du modèle et sa réussite génère un modèle formé. La création de modèles formés remplacera ceux qui existaient déjà, de sorte qu&#39;une expérience ne peut utiliser qu&#39;un seul modèle formé à un moment donné.
 
@@ -98,7 +98,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `{TASK}` | Indique la tâche de l’exécution. Définissez cette valeur comme `train` pour la formation, `score` pour la notation ou `fp` pour le pipeline de fonctionnalités. |
+| `{TASK}` | Indique la tâche de l’exécution. Définissez cette valeur comme `train` pour la formation, `score` pour la notation ou `featurePipeline` pour le pipeline de fonctionnalités. |
 
 **Réponse**
 
@@ -219,7 +219,6 @@ curl -X GET \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
 
 **Réponse**
 
@@ -369,7 +368,7 @@ Une réponse réussie renvoie une charge utile contenant les détails mis à jou
 
 ## Suppression d’une expérience
 
-Vous pouvez supprimer une seule expérience en exécutant une requête DELETE qui inclut l&#39;ID de l&#39;expérience de cible dans le chemin de la requête.
+Vous pouvez supprimer une seule expérience en exécutant une requête de DELETE qui inclut l’ID de l’expérience de cible dans le chemin de la requête.
 
 **Format d’API**
 
@@ -404,7 +403,7 @@ curl -X DELETE \
 
 ## Supprimer des expériences par ID d&#39;instance de liste
 
-Vous pouvez supprimer toutes les expériences appartenant à une instance MLInstance particulière en exécutant une requête DELETE qui inclut l&#39;ID MLInstance en tant que paramètre de requête.
+Vous pouvez supprimer toutes les expériences appartenant à une instance MLInstance particulière en exécutant une demande de DELETE qui inclut l&#39;ID MLInstance en tant que paramètre de requête.
 
 **Format d’API**
 
