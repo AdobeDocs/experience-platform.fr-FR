@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Moteurs
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: d9f4649f5946fa3eea8d6a2ab65a07568f9c697f
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1118'
 ht-degree: 3%
 
 ---
@@ -202,7 +202,7 @@ curl -X POST \
                 "executionType": "PySpark",
                 "packagingType": "docker"
             },
-           "defaultMLInstanceConfigs": [
+           "defaultMLInstanceConfigs": [ ...
            ]
        }
    }
@@ -219,6 +219,7 @@ curl -X POST \
 | `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul Azure ACR ou Public (non authentifié) Dockerhub est pris en charge. |
 | `artifacts.default.image.executionType` | Type d&#39;exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Type d&#39;emballage du moteur. Cette valeur doit être définie sur `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Paramètres de votre fichier `pipeline.json` de configuration. |
 
 **Réponse**
 
@@ -242,7 +243,8 @@ Une réponse réussie renvoie une charge utile contenant les détails du nouveau
                 "name": "datatransformation",
                 "executionType": "PySpark",
                 "packagingType": "docker"
-            }
+            },
+        "defaultMLInstanceConfigs": [ ... ]
         }
     }
 }
@@ -468,7 +470,7 @@ Une réponse réussie renvoie une charge utile contenant les détails mis à jou
 
 ## Suppression d’un moteur
 
-Vous pouvez supprimer un moteur en exécutant une requête DELETE tout en spécifiant l&#39;ID du moteur de cible dans le chemin de la requête. La suppression d&#39;un moteur entraîne la suppression en cascade de toutes les instances MLInstances qui font référence à ce moteur, y compris les exécutions d&#39;expériences et d&#39;expériences appartenant à ces instances MLInstances.
+Vous pouvez supprimer un moteur en exécutant une requête de DELETE tout en spécifiant l&#39;ID du moteur de cible dans le chemin de la requête. La suppression d&#39;un moteur entraîne la suppression en cascade de toutes les instances MLInstances qui font référence à ce moteur, y compris les exécutions d&#39;expériences et d&#39;expériences appartenant à ces instances MLInstances.
 
 **Format d’API**
 
