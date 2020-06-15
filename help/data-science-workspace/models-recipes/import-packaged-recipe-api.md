@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importer une recette (API) assemblée
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 20e26c874204da75cac7e8d001770702658053f1
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Ce didacticiel utilise l&#39;API [d&#39;apprentissage automatique](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) Sensei pour créer un [moteur](../api/engines.md), également appelé Recette dans l&#39;interface utilisateur.
 
-Avant de commencer, il est important de noter que l’espace de travail scientifique des données de la plateforme Adobe utilise différents termes pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes API sont utilisés dans ce didacticiel et le tableau suivant décrit les termes corrélés :
+Avant de commencer, il est important de noter que l’espace de travail Adobe Experience Platform Data Science Workspace utilise des termes différents pour faire référence à des éléments similaires dans l’API et l’interface utilisateur. Les termes API sont utilisés dans ce didacticiel et le tableau suivant décrit les termes corrélés :
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | ---- | ---- |
@@ -35,24 +35,22 @@ Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;u
 
 - `{DOCKER_URL}`: Adresse URL d&#39;une image Docker d&#39;un service intelligent.
 
-Ce didacticiel nécessite que vous ayez suivi le didacticiel [](../../tutorials/authentication.md) Authentication to Adobe Experience Platform (Authentification vers la plateforme) afin de pouvoir invoquer les API de plateforme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Ce didacticiel nécessite que vous ayez suivi le didacticiel [](../../tutorials/authentication.md) Authentification à l’Adobe Experience Platform afin de réussir à envoyer des appels aux API Platform. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique de la plateforme d’expérience Adobe.
-- `{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique de la plateforme d’expérience Adobe.
+- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+- `{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.
 
 ## Création d’un moteur
 
-Selon le formulaire du fichier de recette emballé à inclure dans la demande d&#39;API, un moteur est créé de l&#39;une des deux manières suivantes :
-
-- [Création d’un moteur avec une URL de dossier](#create-an-engine-with-a-docker-url)
+Vous pouvez créer des moteurs en adressant une requête POST au point de terminaison /engine. Le moteur créé est configuré en fonction du formulaire du fichier de recette empaqueté qui doit être inclus dans la demande d&#39;API.
 
 ### Création d’un moteur avec une URL de dossier {#create-an-engine-with-a-docker-url}
 
 Pour créer un moteur avec un fichier de recette empaqueté stocké dans un conteneur Docker, vous devez fournir l&#39;URL Docker au fichier de recette empaqueté.
 
 >[!CAUTION]
-> Si vous utilisez Python ou R, utilisez la requête ci-dessous. Si vous utilisez PySpark ou Scala, utilisez l’exemple de demande PySpark/Scala situé sous l’exemple Python/R.
+> Si vous utilisez Python ou R, utilisez la requête ci-dessous. Si vous utilisez PySpark ou Scala, utilisez l’exemple de requête PySpark/Scala situé sous l’exemple Python/R.
 
 **Format d’API**
 
