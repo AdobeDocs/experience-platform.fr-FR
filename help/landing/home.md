@@ -1,64 +1,95 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de la plateforme d’expérience Adobe
+title: Présentation des Adobes Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efc8598d14bcae9637ce80c25f1285d93aeee742
+source-git-commit: 19b67b57fa277c7ff85646a341cfb5dba1dd92e1
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '637'
 ht-degree: 4%
 
 ---
 
 
-# Présentation de la plateforme d’expérience Adobe
+# Présentation des Adobes Experience Platform
 
 >[!NOTE]
 >
->La documentation de la plateforme d’expérience Adobe a récemment été déplacée. Veuillez prendre quelques instants pour revoir la nouvelle navigation et pour mettre à jour les signets existants.
+>La documentation des Adobes Experience Platform a récemment été déplacée. Veuillez prendre quelques instants pour revoir la nouvelle navigation et pour mettre à jour les signets existants.
 
-Adobe Experience Platform est le système le plus puissant, le plus flexible et le plus ouvert du marché pour la création et la gestion de solutions complètes qui motivent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique pour améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
+L&#39;Adobe Experience Platform est le système le plus puissant, le plus flexible et le plus ouvert du marché pour la création et la gestion de solutions complètes qui permettent aux clients d&#39;acquérir de l&#39;expérience. L’Experience Platform permet aux entreprises de centraliser et de standardiser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique pour améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 
-Basé sur des API ouvertes, Experience Platform expose aux développeurs toutes les fonctionnalités du système, ce qui permet l’intégration aisée de solutions d’entreprise à l’aide d’outils familiers. Experience Platform aide également les partenaires à construire et intégrer leurs propres produits et technologies, selon les besoins. Cette puissance et cette flexibilité rendent Experience Platform unique sur le marché. Il fournit aux partenaires, aux clients et à une communauté de développeurs une base sur laquelle bâtir des innovations qui pilotent The Experience Business : dépasser les attentes des clients en offrant une expérience continuellement améliorée et entièrement personnalisée, tirée d&#39;une vue de 360 degrés du client et de ses préférences individuelles.
+Basé sur des API ouvertes, l&#39;Experience Platform expose toutes les fonctionnalités du système aux développeurs, ce qui facilite l&#39;intégration des solutions d&#39;entreprise à l&#39;aide d&#39;outils familiers. Experience Platform aide également les partenaires à construire et à intégrer leurs propres produits et technologies au besoin. Cette puissance et cette flexibilité rendent l&#39;Experience Platform unique sur le marché. Il fournit aux partenaires, aux clients et à une communauté de développeurs une base sur laquelle bâtir des innovations qui pilotent The Experience Business : dépasser les attentes des clients en offrant une expérience continuellement améliorée et entièrement personnalisée, tirée d&#39;une vue de 360 degrés du client et de ses préférences individuelles.
+
+## Prise en charge des langues
+
+L’interface utilisateur et la documentation de l’Adobe Experience Platform sont disponibles en plusieurs langues.
+
+### Langues de l’interface utilisateur
+
+L’interface utilisateur de l’Adobe Experience Platform est actuellement disponible dans les langues suivantes :
+
+* Anglais
+* Français
+* Allemand
+* Japonais
+
+La langue de votre interface utilisateur par défaut est déterminée par la région spécifiée dans votre profil utilisateur. Pour modifier votre langue :
+
+>[!NOTE]
+>
+> La sélection d’une région détermine la langue et le contenu sur Adobe.com.
+
+1. Cliquez sur la langue actuelle dans le pied de page de l’interface de l’Experience Platform.
+1. Dans les paramètres de votre profil, cliquez sur **[!UICONTROL Modifier la région]**.
+1. Sélectionnez votre région.
+
+### Langues de documentation
+
+La documentation de l&#39;Adobe Experience Platform est disponible en plusieurs langues. Pour modifier la langue, cliquez dans la liste déroulante des langues et sélectionnez la langue souhaitée.
+
+![image](assets/lang.jpg)
 
 ## Documentation Experience Platform
 
-La documentation de la plate-forme d’expérience est fournie dans plusieurs formats pour une variété de fonctionnalités et de services. Pour en savoir plus sur les types de documentation disponibles, ainsi que pour lire de brèves descriptions de chacun des services de la plate-forme, veuillez visiter la documentation [de la plate-forme](documentation/overview.md)d’expérience. Ou, pour en savoir plus sur un service de plateforme spécifique immédiatement, sélectionnez un guide dans la liste alphabétique dans le volet de navigation de gauche.
+La documentation de l’Experience Platform est fournie dans plusieurs formats pour une variété de fonctionnalités et de services. Pour en savoir plus sur les types de documentation disponibles, ainsi que pour lire de brèves descriptions de chacun des services Platform, veuillez consulter la documentation [](documentation/overview.md)Experience Platform. Ou, pour commencer immédiatement à en savoir plus sur un service Platform spécifique, sélectionnez un guide dans la liste alphabétique dans le volet de navigation de gauche.
 
 >[!NOTE]
 >
->Depuis mai 2020, Adobe procède à des mises à jour de la barre d’en-tête et du domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
+>Depuis mai 2020, Adobe met à jour la barre d’en-tête et le domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
 >
 >* Liens vers les articles présentés
 >* Recommandations relatives à la documentation contextuelle
->* Capacité à fournir des commentaires sur la plateforme d’expérience et à signaler les problèmes
+>* Capacité à fournir des commentaires sur l’Experience Platform et à signaler les problèmes
 >* Amélioration des résultats de la recherche qui incluent également les résultats des forums de la communauté et du contenu vidéo.
+
 >
 > 
 De temps à autre, vous pouvez recevoir un questionnaire pour obtenir des commentaires supplémentaires.
 >
 >Ce déploiement est graduel, vous ne verrez peut-être pas les modifications immédiatement. Vous pouvez à tout moment vue l’expérience mise à jour en accédant à [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
-## Didacticiels de la plateforme d’expérience
+## Didacticiels à l’intention des Experience Platform
 
-Commencez rapidement et facilement avec Platform en suivant des didacticiels détaillés sur tout, de la préparation de vos données à l’assimilation à des algorithmes d’apprentissage automatique avancés. Ces didacticiels ont été conçus pour compléter les informations contenues dans la documentation de la plateforme d’expérience, de sorte que pour de meilleurs résultats, les documents restent disponibles tout en suivant les didacticiels. Consultez les didacticiels [de la plateforme](../tutorials/home.md) d’expérience pour commencer.
+Commencez avec Platform rapidement et facilement en suivant avec des didacticiels détaillés, allant de la préparation de vos données à l&#39;assimilation à des algorithmes d&#39;apprentissage automatique élaborés. Ces didacticiels ont été conçus pour compléter les informations contenues dans la documentation de l’Experience Platform, de sorte que, pour de meilleurs résultats, les documents restent disponibles tout en complétant les didacticiels. Consultez les didacticiels [](../tutorials/home.md) Experience Platform pour commencer.
 
 ## Didacticiels vidéo
 
-Visionnez des didacticiels [](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vidéo présentant un large éventail de rubriques relatives à la plateforme d’expérience.
+Visionnez des didacticiels [](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html) vidéo sur une grande variété de sujets Experience Platform.
 
 ## documents et ressources de référence
 
-* [**Notes **](../release-notes/latest/latest.md)<br/>de mise à jour Trouvez des informations sur la version la plus récente de la plateforme d’expérience et passez en revue les versions antérieures.
+* [**Notes **](../release-notes/latest/latest.md)<br/>de mise à jour Trouvez des informations sur la version la plus récente de l’Experience Platform et passez en revue les versions antérieures.
 
 * [**Glossaire **](glossary.md)<br/>Consultez la terminologie d’Adobe Experience Platform.
 
 * [**Guide **](troubleshooting.md)<br/>de dépannage Trouvez des résolutions d&#39;erreurs courantes et des réponses aux questions fréquentes.
 
-* [**Principes fondamentaux **](api-fundamentals.md)<br/>des API Découvrez les principes de base de l’utilisation des API de plateformes.
+* [**Principes fondamentaux **](api-fundamentals.md)<br/>des API Découvrez les principes de base de l’utilisation des API Platform.
 
-* [**Référence de l’API aux **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>API de la plate-forme d’expérience Discover, y compris les en-têtes, les paramètres, les exemples de requêtes et les réponses.*Ces documents sont hébergés sur les E/S Adobe.*
+* [**Référence **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de l&#39;API API aux API Experience Platform de Discover, y compris les en-têtes, les paramètres, les exemples de requêtes et les réponses.
+*Ces documents sont hébergés sur les E/S Adobe.*
 
 
 
