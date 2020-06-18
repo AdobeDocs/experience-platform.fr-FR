@@ -4,24 +4,17 @@ solution: Experience Platform
 title: Optimiser un modèle
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1242'
 ht-degree: 0%
 
 ---
 
 
-# Optimiser un modèle
+# Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
 
-
-Ce tutoriel va passer en revue :
-
-- Configuration du code de recette
-- Définition de mesures personnalisées
-- Utilisation de mesures d’évaluation prédéfinies et de graphiques de visualisation
-
-D’ici la fin de ce didacticiel, vous devriez être en mesure de configurer le code de recette, de définir des mesures personnalisées, d’utiliser des mesures d’évaluation prédéfinies et des graphiques de visualisation par défaut.
+Le cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils dans l&#39;espace de travail des sciences de données pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
 
 ## Que sont les mesures ?
 
@@ -30,10 +23,6 @@ Après la mise en oeuvre et la formation d&#39;un modèle, l&#39;étape suivante
 - Zone sous la courbe
 - Matrice de confusion
 - Rapport de classification
-
-## Qu&#39;est-ce que le cadre d&#39;analyse des modèles ?
-
-Le cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils dans l&#39;espace de travail des sciences de données pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
 
 ## Configuration du code de recette
 
