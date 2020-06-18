@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur Amazon Kinesis
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1eb6883ec9b78e5d4398bb762bba05a61c0f8308
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,22 @@ ht-degree: 0%
 
 # (Bêta) Connecteur Amazon Kinesis
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
+>[!NOTE]
+>Le connecteur Amazon Kinesis est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Plateforme vous permet d’importer des données d’Amazon Kinesis en temps réel.
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
 
-La documentation ci-dessous fournit des informations sur la connexion d’Amazon Kinesis à la plate-forme à l’aide d’API ou de l’interface utilisateur :
+Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données d’Amazon Kinesis en temps réel.
 
-## Connexion d’Amazon Kinesis à une plateforme à l’aide d’API
+La documentation ci-dessous fournit des informations sur la connexion d’Amazon Kinesis à Platform à l’aide d’API ou de l’interface utilisateur :
+
+## Connexion d’Amazon Kinesis à Platform à l’aide d’API
 
 - [Création d’un connecteur Amazon Kinesis à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Connexion d’Amazon Kinesis à la plate-forme à l’aide de l’interface utilisateur
+## Connexion d’Amazon Kinesis à Platform à l’aide de l’interface utilisateur
 
 - [Création d’un connecteur source Amazon Kinesis dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
