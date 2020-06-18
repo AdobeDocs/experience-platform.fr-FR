@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur source Azure Événement Hubs dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75581529ede3772606bc18fea683da5d396996c5
+source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '476'
 ht-degree: 1%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 1%
 # Création d&#39;un connecteur source Azure Événement Hubs dans l&#39;interface utilisateur
 
 >[!NOTE]
-> Le connecteur Azure Événement Hubs est en version bêta. Les fonctionnalités et la documentation peuvent être modifiées.
+> Le connecteur Azure Événement Hubs est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source d’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes d&#39;authentification d&#39;un connecteur source Azure Événement Hubs (ci-après dénommé &quot;Événement Hubs&quot;) à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes d&#39;authentification d&#39;un connecteur source Azure Événement Hubs (ci-après appelé &quot;Événements Hubs&quot;) à l&#39;aide de l&#39;interface utilisateur Platform.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    - [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -44,9 +44,9 @@ Pour plus d&#39;informations sur ces valeurs, consultez [ce document](https://do
 
 ## Connectez votre compte Événement Hubs.
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte Événement Hubs à la plateforme.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte Événement Hubs à Platform.
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’onglet *Catalogue* affiche diverses sources pour lesquelles il est possible de se connecter à Plateforme. Chaque source affiche le nombre de comptes existants qui lui sont associés.
+Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’onglet *Catalogue* affiche diverses sources pour lesquelles vous pouvez vous connecter à Platform. Chaque source affiche le nombre de comptes existants qui lui sont associés.
 
 Sous *Cloud Enregistrement* catégorie, sélectionnez **Azure Événement Hubs** et cliquez sur **l&#39;icône + (+)** pour créer un nouveau connecteur Événement Hubs.
 
@@ -68,4 +68,4 @@ Pour connecter un compte existant, sélectionnez le compte Événement Hubs avec
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez connecté votre compte Événement Hubs à Platform. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/streaming/cloud-storage.md).
+En suivant ce didacticiel, vous avez connecté votre compte Événement Hubs à Platform. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/streaming/cloud-storage.md).
