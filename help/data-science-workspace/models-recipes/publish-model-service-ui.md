@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,11 @@ ht-degree: 0%
 
 # Publication d’un modèle en tant que service (interface utilisateur)
 
-Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle en tant que service, formé et évalué, ce qui permet aux utilisateurs de votre organisation IMS de marquer des données sans avoir à créer leurs propres modèles.
-
-Ce didacticiel décrit toutes les étapes nécessaires pour publier un modèle en tant que service et pour marquer des données à l’aide d’un service dans la Galerie *de* services. Il est divisé en plusieurs sections principales :
-
-- [Publication d’un modèle](#publish-a-model)
-- [Score à l’aide d’un service](#access-a-service)
+Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle en tant que service, formé et évalué, ce qui permet aux utilisateurs de votre organisation IMS de noter des données sans avoir à créer leurs propres modèles.
 
 ## Prise en main
 
-Pour terminer ce didacticiel, vous devez avoir accès à Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+Pour terminer ce didacticiel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform]votre entreprise, contactez votre administrateur système avant de continuer.
 
 Ce didacticiel nécessite un modèle existant avec une formation réussie. Si vous ne disposez pas d’un modèle publiable, suivez le [didacticiel Formation et évaluez un modèle dans le didacticiel sur l’interface utilisateur](./train-evaluate-model-ui.md) avant de continuer.
 
