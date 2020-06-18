@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source Google AdWords dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: e7211c9ebfd8fecff3780198d71e18436f3ffab3
+source-git-commit: b9e9207741044f118d53ab8eb3d3d6cd7451132d
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -14,13 +14,16 @@ ht-degree: 0%
 
 # Création d’un connecteur source Google AdWords dans l’interface utilisateur
 
-Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit la procédure à suivre pour créer un connecteur source Google AdWords à l’aide de l’interface utilisateur de la plate-forme.
+>[!NOTE]
+>Le connecteur Google AdWords est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit la procédure à suivre pour créer un connecteur source Google AdWords à l’aide de l’interface utilisateur de Platform.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -29,7 +32,7 @@ Si vous disposez déjà d’une connexion Google AdWords, vous pouvez ignorer le
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre plateforme de compte Google AdWords, vous devez fournir les valeurs suivantes :
+Pour accéder à votre compte Google AdWords Platform, vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -43,9 +46,9 @@ Pour plus d&#39;informations sur la prise en main, reportez-vous à ce document 
 
 ## Connectez votre compte Google AdWords
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte Google AdWords à la plate-forme.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte Google AdWords à Platform.
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
+Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
 
 Sous la catégorie *Publicité* , sélectionnez **Google AdWords** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour créer une connexion de base entrante, sélectionnez **Connexion source**.
 
@@ -67,4 +70,4 @@ Pour connecter un compte existant, sélectionnez le compte Google AdWords avec l
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion de base à votre compte Google AdWords. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données publicitaires dans la plate-forme](../../dataflow/advertising.md).
+En suivant ce didacticiel, vous avez établi une connexion de base à votre compte Google AdWords. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données publicitaires dans Platform](../../dataflow/advertising.md).
