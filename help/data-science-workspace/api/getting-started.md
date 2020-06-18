@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du développeur d'API d'apprentissage automatique Sensei
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 2%
@@ -26,7 +26,7 @@ Vous devez avoir suivi le didacticiel d’ [authentification](../../tutorials/au
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
