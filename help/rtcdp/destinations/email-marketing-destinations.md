@@ -4,10 +4,10 @@ seo-title: Destinations de marketing par e-mail
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 121ae74e9c352b1f6fc12093d815e711ebd817b8
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '731'
+ht-degree: 56%
 
 ---
 
@@ -26,17 +26,28 @@ Dans le flux de connexion à la destination, décrit dans la section ci-dessous,
 
 1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez la destination de marketing par e-mail à laquelle vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-   ![Se connecter à la destination](/help/rtcdp/destinations/assets/connect-destination-1.png)
+   ![Se connecter à la destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
-2. Dans l’assistant de connexion, sélectionnez le **[!UICONTROL Type de connexion]** de votre emplacement de stockage. Vous pouvez choisir parmi **Amazon S3**, **le protocole SFTP avec mot de passe** et **le protocole SFTP avec clé SSH**. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
+2. In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. Dans le sélecteur de type **** Connexion, vous pouvez sélectionner **Amazon S3**, **SFTP avec mot de passe**, **SFTP avec clé SSH.** Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
 
-Pour les **connexions S3**, vous devez fournir un identifiant de clé d’accès et une clé d’accès secrète.
+   For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
 
-Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe.
+   For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 
-Pour les connexions **SFTP avec clé SSH**, vous devez fournir le domaine, le port, le nom d’utilisateur et la clé SSH.
+   For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-## Étape 2 - Sélectionner les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés {#destination-attributes}
+3. À l’étape **[!UICONTROL Configuration]** , saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre nouvelle destination, ainsi que le format **[!UICONTROL Fichier pour les fichiers exportés.]** <br>
+Si vous avez sélectionné l’option enregistrement Amazon S3 à l’étape précédente, insérez le nom **[!UICONTROL du]** compartiment et le chemin **[!UICONTROL du]** dossier dans la destination de l’enregistrement de cloud où les fichiers seront distribués. Pour l’option enregistrement SFTP, insérez le chemin **[!UICONTROL du]** dossier dans lequel les fichiers seront distribués. <br>
+Cette étape vous permet également de sélectionner tout cas **[!UICONTROL d’utilisation]** marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données. <br>
+   ![Etape de configuration du courrier électronique](/help/rtcdp/destinations/assets/email-setup-step.png)
+
+## Étape 2 : sélectionnez les membres de segment à inclure dans vos exportations de destination. {#select-segments}
+
+On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. Pour en savoir plus sur les champs des sections ci-dessous.
+
+![Sélectionner des segments](/help/rtcdp/destinations/assets/email-select-segments.png)
+
+## Étape 3 - Sélectionner les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés {#destination-attributes}
 
 Au cours de cette étape, vous sélectionnez les champs à exporter vers des destinations de marketing par e-mail.
 
@@ -44,7 +55,7 @@ Au cours de cette étape, vous sélectionnez les champs à exporter vers des des
 
 ### Identité {#identity}
 
-Nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Il s’agit du champ dans lequel les identités de vos utilisateurs sont déclenchées. Généralement, ce champ correspond à l’adresse électronique, mais il peut également s’agir d’un identifiant du programme de fidélité ou d’un numéro de téléphone. Consultez le tableau ci-dessous pour connaître les identifiants uniques les plus courants et leur champ XDM dans le schéma unifié.
+Nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Il s’agit du champ dans lequel les identités de vos utilisateurs sont déclenchées. Généralement, ce champ correspond à l’adresse électronique, mais il peut également s’agir d’un identifiant du programme de fidélité ou d’un numéro de téléphone. Consultez le tableau ci-dessous pour connaître les identifiants uniques les plus courants et leur champ XDM dans le schéma d’union.
 
 | Identifiant unique | Champ XDM dans le schéma unifié |
 ---------|----------
