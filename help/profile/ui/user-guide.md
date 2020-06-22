@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide de l’utilisateur du Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: da3793a528fa919633e777423d77e7be9cbc0154
+source-git-commit: 4589d0cdca36992feea208850abdda1a9dc246c0
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1208'
 ht-degree: 2%
 
 ---
@@ -32,19 +32,21 @@ Dans l’interface utilisateur [de l’](http://platform.adobe.com)Experience Pl
 
 ![](../images/user-guide/profiles-overview.png)
 
-## Parcourir Profil
+## Parcourir
 
-Cliquez sur l’onglet **Parcourir** pour parcourir les profils par identité.
+Sélectionnez l’onglet *Parcourir* pour parcourir les profils par identité.
+
+![](../images/user-guide/profiles-browse.png)
 
 ### Mesures de Profil {#profile-metrics}
 
-Sur le côté droit de l&#39;onglet **Parcourir** se trouvent plusieurs mesures de profil importantes liées à vos données de profil, y compris le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
+Sur le côté droit de l&#39;onglet *Parcourir* se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
 Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
 
-![](../images/user-guide/profiles-browse.png)
+![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Nombre de Profils {#profile-count}
 
@@ -92,13 +94,13 @@ Lorsque vous sélectionnez l’ID **de** Profil, l’onglet _Détails_ s’ouvre
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Vous pouvez vue des informations supplémentaires relatives au profil, y compris les attributs, les Événements et les segments auxquels le profil est membre.
+Vous pouvez vue d’autres informations relatives au profil, y compris *les attributs*, les *Événements* et les *segments* auxquels le profil est membre.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Stratégies de fusion
 
-Cliquez sur **Fusionner les stratégies** pour vue une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, qu’il s’agisse ou non de la stratégie de fusion par défaut et le schéma auquel elle s’applique.
+Sélectionnez l’onglet *Fusionner les stratégies* pour vue une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, qu’il s’agisse ou non de la stratégie de fusion par défaut et le schéma auquel elle s’applique.
 
 For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
 
@@ -106,7 +108,7 @@ For more information on merge policies, see the [Merge Policies user guide](merg
 
 ## schéma Union
 
-Cliquez sur Schéma **** d’Union pour vue les schémas d’union de votre Profil Store. Un schéma d’union est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans le Profil client en temps réel. Cliquez sur une classe dans la liste de gauche pour vue la structure de son schéma d&#39;union dans la trame.
+Sélectionnez l’onglet Schéma ** d’Unionpour vue aux schémas d’union de votre Profil Store. Un schéma d’union est une fusion de tous les champs de modèle de données d’expérience (XDM) de la même classe, dont les schémas ont été activés pour une utilisation dans le Profil client en temps réel. Sélectionnez une classe dans la liste de gauche pour vue de la structure de son schéma d&#39;union dans la trame.
 
 Par exemple, la sélection de &quot;Profil XDM&quot; affiche le schéma d’union pour la classe de Profil XDM individuel.
 
