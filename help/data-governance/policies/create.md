@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: da4fe8be360d5530d96078e4ef024bccf7f080f5
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1216'
 ht-degree: 3%
 
 ---
 
 
-# Création d’une stratégie d’utilisation des données
+# Création d’une stratégie d’utilisation des données dans l’API
 
-L’étiquetage et l’application de l’utilisation des données (DULE) constituent le mécanisme de base de la gouvernance des données de la plate-forme Adobe Experience. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service vous permet de créer et de gérer des stratégies DULE afin de déterminer les actions marketing à entreprendre par rapport aux données contenant certains libellés DULE.
+L&#39;étiquetage et l&#39;application de l&#39;utilisation des données (DULE) est le mécanisme de base de la gouvernance des données d&#39;Adobe Experience Platform. L&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service vous permet de créer et de gérer des stratégies DULE afin de déterminer les actions marketing à entreprendre par rapport aux données contenant certains libellés DULE.
 
 Ce document fournit un didacticiel détaillé pour la création d’une stratégie DULE à l’aide de l’API Policy Service. Pour un guide plus complet sur les différentes opérations disponibles dans l’API, consultez le guide [du développeur](../api/getting-started.md)Policy Service.
 
@@ -22,16 +22,16 @@ Ce document fournit un didacticiel détaillé pour la création d’une stratég
 
 Ce didacticiel nécessite une compréhension pratique des concepts clés suivants liés à la création et à l&#39;évaluation des politiques DULE :
 
-* [Gouvernance](../home.md)des données : Cadre selon lequel la plate-forme applique la conformité à l’utilisation des données.
+* [Gouvernance](../home.md)des données : Cadre selon lequel Platform applique la conformité à l’utilisation des données.
 * [Étiquettes](../labels/overview.md)d&#39;utilisation des données : Les étiquettes d’utilisation des données sont appliquées aux champs de données XDM, en spécifiant les restrictions d’accès à ces données.
-* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin de réussir à appeler l&#39;API DULE Policy Service, y compris les en-têtes requis et comment lire des exemples d&#39;appels d&#39;API.
 
 ## Définir une action marketing {#define-action}
 
-Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données de la plateforme d’expérience, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données Experience Platform, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
 La première étape de la création d&#39;une stratégie DULE consiste à déterminer l&#39;action marketing qu&#39;elle évaluera. Pour ce faire, utilisez l’une des options suivantes :
 
@@ -44,7 +44,7 @@ Vous pouvez rechercher les actions marketing existantes à évaluer par votre st
 
 **Format d’API**
 
-Selon que vous recherchez une action marketing fournie par Experience Platform ou une action marketing personnalisée créée par votre entreprise, utilisez les points de `marketingActions/core` terminaison ou les `marketingActions/custom` points de terminaison, respectivement.
+Selon que vous recherchez une action marketing fournie par un Experience Platform ou une action marketing personnalisée créée par votre organisation, utilisez les points de `marketingActions/core` terminaison ou les `marketingActions/custom` points de terminaison, respectivement.
 
 ```http
 GET /marketingActions/core
@@ -416,4 +416,4 @@ En suivant ce didacticiel, vous avez créé avec succès une stratégie d’util
 
 Pour plus d&#39;informations sur les différentes opérations disponibles dans l&#39;API de service de stratégie, consultez le guide [du développeur](../api/getting-started.md)Policy Service. Pour plus d’informations sur la manière d’appliquer des stratégies pour les données du Profil client en temps réel, voir le didacticiel sur l’ [application de la conformité d’utilisation des données pour les segments](../../segmentation/tutorials/governance.md)d’audience.
 
-Pour savoir comment gérer les stratégies d’utilisation dans l’interface utilisateur de la plate-forme d’expérience, consultez le guide [d’utilisation de la](user-guide.md)stratégie.
+Pour savoir comment gérer les stratégies d’utilisation dans l’interface utilisateur de l’Experience Platform, consultez le guide [d’utilisation des](user-guide.md)stratégies.
