@@ -4,10 +4,10 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: af7fa6048fa60392a98975fe6fc36e8302355a05
+source-git-commit: c81723d00f6b0a9338c8dd3be8c79385677b4e93
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 97%
+source-wordcount: '1085'
+ht-degree: 72%
 
 ---
 
@@ -30,18 +30,22 @@ La gouvernance des données vous permet d’appliquer des libellés d’utilisat
 
 Pour plus d’informations sur l’utilisation des libellés d’utilisation des données, consultez le [Guide de l’utilisateur des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour Adobe Experience Platform.
 
-## Définition de restrictions sur les destinations
+## Configuration des cas d’utilisation marketing pour les destinations {#destinations}
 
-Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des cas d’utilisation marketing pour cette destination. La définition de cas d’utilisation pour les destinations vous permet de rechercher des violations de la politique d’utilisation et de vous assurer que les profils ou segments envoyés vers cette destination sont compatibles avec les règles de gouvernance des données.
+Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des cas d’utilisation marketing (également appelés actions marketing) pour cette destination. Un cas d’utilisation marketing pour une destination indique l’intention des données qui seront exportées vers cette destination.
 
-Les cas d’utilisation marketing peuvent être définis pendant la phase de _configuration_ pour le processus _Modifier la destination_. Pour plus d’informations, consultez la documentation sur les destinations.
+>[!NOTE] Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir la présentation [des stratégies d’utilisation des](../../data-governance/policies/overview.md) données dans la documentation de l’Experience Platform.
+
+La définition de cas d’utilisation marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des cas d’utilisation marketing appropriés à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
+
+Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des cas d’utilisation marketing s’affiche à différents moments du processus de configuration. Consultez la documentation [de](../destinations/destinations-overview.md) destination pour connaître les étapes de configuration de votre destination particulière.
 
 
 ## Gestion des politiques d’utilisation des données {#policies}
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme des données clients en temps réel. Pour plus d’informations, consultez la section « Politiques d’utilisation des données » dans la [présentation de la gouvernance des données](../../data-governance/home.md) d’Experience Platform.
 
-Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Il est possible de consulter ces politiques en adressant une requête à l’[API DULE Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml), comme illustré dans la section « Répertorier toutes les politiques » du [Guide du développeur de Policy Service](../../data-governance/policies/overview.md). Vous pouvez également créer vos propres **politiques personnalisées** pour modéliser des restrictions d’utilisation personnalisées, comme illustré dans la section « Créer une politique » du guide du développeur.
+Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation de l’Experience Platform.
 
 ## (Version bêta) Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
 
@@ -58,6 +62,11 @@ Lorsqu’un segment est activé pour la première fois, DULE Policy Service vér
 
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
+
+>[!NOTE] Si des étiquettes d’utilisation de données n’ont été appliquées qu’à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu de données), l’application de ces étiquettes de niveau champ sur l’activation se fait uniquement dans les conditions suivantes :
+>* Les champs sont utilisés dans la définition de segment.
+>* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination de la cible.
+
 
 ### Messages de violation de politique {#enforcement}
 
