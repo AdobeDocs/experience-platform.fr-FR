@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Stratégies
 
-Les stratégies d’utilisation des données sont des règles adoptées par votre entreprise qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur les données dans la plate-forme d’expérience ou dont vous êtes limité à l’exécution.
+Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur les données de l’Experience Platform ou dont vous êtes limité à l’exécution.
 
 Le `/policies` point de terminaison est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
 
@@ -133,7 +133,7 @@ La réponse comprend un &quot;décompte&quot; indiquant le nombre total de strat
 }
 ```
 
-## Rechercher une stratégie spécifique
+## Rechercher une stratégie
 
 Chaque stratégie contient un `id` champ qui peut être utilisé pour demander les détails d’une stratégie spécifique. Si l’ `id` une stratégie est inconnue, elle peut être trouvée à l’aide de la demande d’énumération (GET) pour liste toutes les stratégies dans un conteneur spécifique (`core` ou `custom`), comme indiqué à l’étape précédente.
 
@@ -506,7 +506,7 @@ Une demande de mise à jour réussie renverra un état HTTP 200 (OK) et le corps
 
 ## Suppression d’une stratégie
 
-Si vous devez supprimer une stratégie que vous avez créée, vous pouvez le faire en émettant une requête DELETE à la stratégie que vous souhaitez supprimer. `id` Il est recommandé d’effectuer d’abord une demande de recherche (GET) pour vue à la stratégie et vérifier que celle-ci est la bonne stratégie que vous souhaitez supprimer. **Une fois supprimées, les stratégies ne peuvent plus être récupérées.**
+Si vous devez supprimer une stratégie que vous avez créée, vous pouvez le faire en envoyant une demande de DELETE à la stratégie que vous souhaitez supprimer `id` . Il est recommandé d’effectuer d’abord une demande de recherche (GET) pour vue à la stratégie et vérifier que celle-ci est la bonne stratégie que vous souhaitez supprimer. **Une fois supprimées, les stratégies ne peuvent plus être récupérées.**
 
 **Format d’API**
 
