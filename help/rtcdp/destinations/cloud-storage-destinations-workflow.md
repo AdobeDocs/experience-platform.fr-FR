@@ -4,10 +4,10 @@ seo-title: Processus des destinations de stockage dans le cloud
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 37c51435ce8330dbd61857bda408df03ff21a491
+source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 67%
+source-wordcount: '503'
+ht-degree: 49%
 
 ---
 
@@ -31,13 +31,22 @@ Cette page explique comment se connecter aux emplacements de stockage dans le cl
    ![Connexion à la destination de stockage dans le cloud - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. À l’étape **[!UICONTROL Configuration]** , saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux d’activations. <br>
+Cette étape vous permet également de sélectionner tout cas **[!UICONTROL d’utilisation]** marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données. <br>
 Pour les destinations Amazon S3, insérez le nom **[!UICONTROL du]** compartiment et le chemin **[!UICONTROL du]** dossier dans la destination de l’enregistrement cloud où les fichiers seront distribués. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
-   ![Connexion à l’enregistrement cloud Amazon S3 - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-setup-step.png)
+   ![Connexion à l’enregistrement cloud Amazon S3 - étape d’authentification](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
 
-   Pour les destinations SFTP, insérez le chemin **[!UICONTROL du]** dossier dans lequel les fichiers seront distribués.
+   Pour les destinations SFTP, insérez le chemin **[!UICONTROL du]** dossier dans lequel les fichiers seront distribués. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
    ![Connexion à la destination de l’enregistrement cloud SFTP - étape d’authentification](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
+
+   Pour les destinations Amazon Kinesis, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+
+   ![Connexion à la destination de l&#39;enregistrement Kinesis Cloud - étape d&#39;authentification](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+
+   Pour les destinations Azure Événement Hubs, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+
+   ![Connexion à la destination de l&#39;enregistrement Kinesis Cloud - étape d&#39;authentification](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le processus et choisir les segments à activer. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
