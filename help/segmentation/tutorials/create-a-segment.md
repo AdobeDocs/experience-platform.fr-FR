@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
 source-wordcount: '1328'
 ht-degree: 2%
@@ -20,27 +20,27 @@ Pour plus d’informations sur la création de segments à l’aide de l’inter
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans la création de segments d’audience. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents services d’Adobe Experience Platform impliqués dans la création de segments d’audience. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
 - [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [Service](../home.md)de segmentation des Adobes Experience Platform : Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ La première étape de la segmentation consiste à définir un segment, représe
 
 Vous pouvez créer une nouvelle définition de segment en adressant une requête POST au point de `/segment/definitions` terminaison dans l’API Profil client en temps réel. L&#39;exemple suivant montre comment formater une demande de définition, y compris les informations requises pour qu&#39;un segment soit défini avec succès.
 
-Les définitions de segment peuvent être évaluées de deux manières : la segmentation par lot et la segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont ingérées dans la plate-forme. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire l’ [aperçu sur la segmentation](../api/streaming-segmentation.md)en flux continu.
+Les définitions de segment peuvent être évaluées de deux manières : la segmentation par lot et la segmentation en flux continu. La segmentation par lot évalue les segments en fonction d’un calendrier prédéfini ou lorsque l’évaluation est déclenchée manuellement, tandis que la segmentation en flux continu évalue les segments dès que les données sont saisies dans Platform. Ce didacticiel utilisera la segmentation **par** lot. Pour plus d’informations sur la segmentation en flux continu, veuillez lire l’ [aperçu sur la segmentation](../api/streaming-segmentation.md)en flux continu.
 
 **Format d’API**
 
@@ -122,7 +122,7 @@ Une réponse positive renvoie les détails de la nouvelle définition de segment
 }
 ```
 
-## Estimation et prévisualisation d&#39;une audience
+## Estimation et prévisualisation d&#39;une audience {#estimate-and-preview-an-audience}
 
 Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation du Profil client en temps réel pour vue des informations de synthèse afin de vous assurer que vous isolez l’audience attendue. Les estimations fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée et l’intervalle de confiance. Les Prévisualisations fournissent des listes paginées de profils qualifiants pour une définition de segment, ce qui vous permet de comparer les résultats à ce que vous attendez.
 
