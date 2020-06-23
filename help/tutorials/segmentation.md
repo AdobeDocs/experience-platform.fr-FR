@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Didacticiels de segmentation
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6705cb699b0785e317a6e437fc8a01ca77266f84
+source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '576'
 ht-degree: 8%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 8%
 
 # Didacticiels de segmentation
 
-Le service de segmentation de la plateforme Adobe Experience Platform fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces segments sont configurés et maintenus de manière centralisée sur la plate-forme et sont facilement accessibles par toute solution Adobe. Pour en savoir plus sur la segmentation, lisez tout d’abord l’aperçu [du service de](../segmentation/home.md)segmentation.
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces segments sont configurés et maintenus de manière centralisée sur Platform et sont facilement accessibles par toute solution Adobe. Pour en savoir plus sur la segmentation, lisez tout d’abord l’aperçu [du service de](../segmentation/home.md)segmentation.
 
 ## Création d’une définition de segment
 
-Une définition de segment est le jeu de règles utilisé pour décrire les principales caractéristiques ou le comportement d’une audience de cible. Une fois conceptualisée, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres d’audience admissibles pour un segment. Le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment peuvent être effectués à l’aide de l’interface utilisateur ou des API de la plateforme. Pour créer une définition de segment, suivez le didacticiel [de](../segmentation/tutorials/create-a-segment.md) création d’une API de segment ou le guide [d’utilisateur de l’interface utilisateur du créateur de](../segmentation/ui/overview.md)segments.
+Une définition de segment est le jeu de règles utilisé pour décrire les principales caractéristiques ou le comportement d’une audience de cible. Une fois conceptualisée, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres d’audience admissibles pour un segment. Vous pouvez développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’interface utilisateur ou des API Platform. Pour créer une définition de segment, suivez le didacticiel [de](../segmentation/tutorials/create-a-segment.md) création d’une API de segment ou le guide [d’utilisateur de l’interface utilisateur du créateur de](../segmentation/ui/overview.md)segments.
 
 ## Évaluer un segment et accéder aux résultats
 
@@ -30,7 +30,7 @@ Pour exporter des segments contenant des données de Profil, il faut d&#39;abord
 
 ## Configuration des stratégies de fusion
 
-Adobe Experience Platform vous permet de rassembler des données à partir de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour utiliser des stratégies de fusion dans l’interface utilisateur de la plate-forme, consultez le guide [d’utilisation des stratégies de](../profile/ui/merge-policies.md)fusion. Pour utiliser des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le guide [du développeur des stratégies de](../profile/api/merge-policies.md)fusion.
+L&#39;Adobe Experience Platform vous permet de rassembler des données provenant de plusieurs sources et de les combiner afin de voir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour utiliser des stratégies de fusion dans l’interface utilisateur de Platform, consultez le guide [d’utilisation des stratégies de](../profile/ui/merge-policies.md)fusion. Pour utiliser des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le guide [du développeur des stratégies de](../profile/api/merge-policies.md)fusion.
 
 ## Appliquer la conformité d’utilisation des données aux segments
 
@@ -41,7 +41,7 @@ Les segments qui sont activés pour une utilisation dans le Profil client en tem
 >[!NOTE]
 >La segmentation en flux continu est en version bêta et sera disponible sur demande. Les fonctionnalités et la documentation peuvent être modifiées.
 
-La segmentation en flux continu (également appelée évaluation continue de la requête) permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est mise à jour sans exécuter les tâches de segmentation planifiées. Pour en savoir plus, consultez la présentation [de la segmentation](../segmentation/api/streaming-segmentation.md)en flux continu.
+La segmentation en flux continu permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à l’Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter de tâches de segmentation planifiées. Pour en savoir plus, consultez la présentation [de la segmentation](../segmentation/api/streaming-segmentation.md)en flux continu.
 
 ## Segmentation multientité
 
