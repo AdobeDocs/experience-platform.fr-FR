@@ -4,49 +4,47 @@ solution: Experience Platform
 title: Segmentation en flux continu
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 2%
+source-wordcount: '1343'
+ht-degree: 1%
 
 ---
 
 
-# Évaluer les événements en temps réel avec la segmentation en flux continu (bêta)
+# Évaluer les événements en temps quasi réel avec la segmentation en flux continu
 
->[!NOTE] La segmentation en flux continu est une fonctionnalité bêta qui sera disponible sur demande.
-
-La segmentation en flux continu (également appelée évaluation continue de la requête) permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est mise à jour sans exécuter les tâches de segmentation planifiées.
+La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent en [!DNL Platform]jeu, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises [!DNL Platform], ce qui signifie que l’appartenance à un segment est mise à jour sans exécuter de tâches de segmentation planifiées.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
 ## Prise en main
 
-Ce guide du développeur nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans la segmentation en flux continu. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce guide du développeur nécessite une bonne compréhension des différents [!DNL Adobe Experience Platform] services impliqués dans la segmentation en flux continu. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [Profil](../../profile/home.md)client en temps réel : Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [Segmentation](../home.md): Permet de créer des segments et des audiences à partir de vos données de Profil client en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [!DNL Real-time Customer Profile](../../profile/home.md): Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
+- [!DNL Segmentation](../home.md): Permet de créer des segments et des audiences à partir de vos [!DNL Real-time Customer Profile] données.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plateforme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer [!DNL Platform] les API.
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide du développeur fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce guide du développeur fournit des exemples d’appels d’API pour démontrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE] Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -54,22 +52,39 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 Des en-têtes supplémentaires peuvent être nécessaires pour exécuter des requêtes spécifiques. Les en-têtes corrects sont affichés dans chacun des exemples de ce document. Veuillez prêter une attention particulière aux exemples de demandes afin de vous assurer que tous les en-têtes requis sont inclus.
 
-### Types de requêtes activés pour la segmentation en flux continu
+### Types de requêtes activés pour la segmentation en flux continu {#streaming-segmentation-query-types}
 
-Le tableau suivant liste les différents types de requêtes de segmentation et indique si elles prennent en charge ou non la segmentation en flux continu.
+>[!NOTE] Vous devez activer la segmentation planifiée pour l’organisation afin que la segmentation en flux continu fonctionne. Vous trouverez des informations sur l’activation de la segmentation planifiée dans la section [Activer la segmentation planifiée.](#enable-scheduled-segmentation)
 
-| Type de Requête | Exemple de requête | Segmentation en flux continu prise en charge |
-| ---------- | ------------ | --------------------------------- |
-| Données démographiques simples | &quot;Donnez-moi toutes les personnes dont l&#39;adresse est au Canada.&quot; | Pris en charge |
-| événements de séries chronologiques | &quot;Donnez-moi toutes les personnes qui ont téléchargé Lightroom.&quot; | Pris en charge |
-| Données démographiques et séries chronologiques | &quot;Donnez-moi tous ceux qui vivent au Canada et qui ont passé commande au cours des 30 derniers jours.&quot; | Pris en charge |
-| Absence de événements | &quot;Donnez-moi tous ceux qui ont abandonné deux chariots séparés dans les deux jours qui suivent.&quot; | Pris en charge |
-| Multi-entité | &quot;Donnez-moi toutes les personnes dont le type de droits est &quot;Expérimenté&quot;.&quot; | Non pris en charge |
-| Fonctions PQL avancées | &quot;Donnez-moi tous les profils qui ont passé une commande la semaine dernière, et incluez le SKU et le nom de tous les produits achetés.&quot; | Non pris en charge |
+Pour qu’un segment soit évalué à l’aide de la segmentation en flux continu, la requête doit se conformer aux directives suivantes.
+
+| Type de Requête | Détails |
+| ---------- | ------- |
+| Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. |
+| Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant **au cours des sept derniers jours**. |
+| Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
+| Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil, **au cours des sept derniers jours**. |
+| Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
+
+La section suivante liste des exemples de définition de segment qui **ne seront pas** activés pour la segmentation en flux continu.
+
+| Type de Requête | Détails |
+| ---------- | ------- | 
+| Accès entrant dans une fenêtre de temps relative | Si la définition de segment fait référence à un événement entrant **qui ne se trouve pas** dans la **dernière période** de sept jours. Par exemple, au cours des deux **dernières semaines**. |
+| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques d’Adobe Audience Manager (AAM).</li></ul> |
+| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques d’Adobe Audience Manager (AAM).</li></ul> |
+| requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
+
+En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
+
+| Type de Requête | Ligne directrice |
+| ---------- | -------- |
+| requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
+| Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
 
-Avant de créer un segment compatible avec la diffusion en continu ou de mettre à jour un segment existant pour qu’il soit compatible avec la diffusion en continu, veillez à ne pas dupliquer les informations en récupérant une liste de tous les segments compatibles avec la diffusion en continu.
+Vous pouvez récupérer une liste de tous vos segments qui sont activés pour la segmentation en flux continu au sein de votre organisation IMS en envoyant une requête GET au point de `/segment/definitions` terminaison.
 
 **Format d’API**
 
@@ -88,7 +103,7 @@ curl -X GET \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME'
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Réponse**
@@ -182,7 +197,7 @@ Une réponse réussie renvoie un tableau de segments de votre organisation IMS q
 
 ## Création d’un segment compatible avec la diffusion en continu
 
-Après avoir confirmé que le segment que vous souhaitez créer n’existe pas déjà, vous pouvez créer un nouveau segment qui est activé pour la segmentation en flux continu.
+Un segment est automatiquement activé en flux continu s’il correspond à l’un des types de segmentation de [flux continu répertoriés ci-dessus](#streaming-segmentation-query-types).
 
 **Format d’API**
 
@@ -191,8 +206,6 @@ POST /segment/definitions
 ```
 
 **Requête**
-
-La requête suivante crée un segment pour lequel la segmentation en flux continu est activée. Note that the `continuous` section is set to `enabled: true`.
 
 ```shell
 curl -X POST \
@@ -213,22 +226,11 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
     }
 }'
 ```
 
->[!NOTE] Il s’agit d’une requête standard &quot;créer un segment&quot;, avec le paramètre ajouté de la `continuous` section défini sur `enabled: true`. Pour plus d&#39;informations sur la création d&#39;une définition de segment, consultez la documentation sur la création [de](../tutorials/create-a-segment.md)segment.
+>[!NOTE] Il s’agit d’une requête standard &quot;créer un segment&quot;. Pour plus d&#39;informations sur la création d&#39;une définition de segment, consultez le didacticiel sur la [création d&#39;un segment](../tutorials/create-a-segment.md).
 
 **Réponse**
 
@@ -272,176 +274,11 @@ Une réponse réussie renvoie les détails de la nouvelle définition de segment
 }
 ```
 
-## Activation d’un segment existant pour la segmentation en flux continu
+## Activer l’évaluation planifiée {#enable-scheduled-segmentation}
 
-Vous pouvez activer un segment existant pour la segmentation en flux continu en fournissant l’ID de la définition de segment dans le chemin d’une requête PATCH. En outre, la charge utile de cette demande PATCH doit inclure tous les détails de la définition de segment existante, accessible en adressant une demande GET à la définition de segment en question.
+Une fois l’évaluation en flux continu activée, une ligne de base doit être créée (après quoi le segment sera toujours à jour). L’évaluation planifiée (également appelée segmentation planifiée) doit d’abord être activée pour que le système puisse exécuter automatiquement le nettoyage. Avec la segmentation planifiée, votre organisation IMS peut respecter un calendrier récurrent pour exécuter automatiquement des tâches d’exportation afin d’évaluer les segments.
 
-### Rechercher une définition de segment existante
-
-Pour rechercher une définition de segment existante, vous devez indiquer son identifiant dans le chemin d’une requête GET.
-
-**Format d’API**
-
-```http
-GET /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `{SEGMENT_DEFINITION_ID}` | ID de la définition de segment que vous souhaitez rechercher. |
-
-**Requête**
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004\
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Réponse**
-
-Une réponse réussie renverra les détails de la définition de segment que vous avez demandée.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "sandbox": {
-        "sandboxId": "",
-        "sandboxName": "",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": false
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}
-```
-
->[!NOTE] Pour la prochaine requête, vous aurez besoin des détails complets de la définition de segment qui ont été renvoyés dans cette réponse. Veuillez copier les détails de cette réponse à utiliser dans le corps de la requête suivante.
-
-### Activer le segment existant pour la segmentation en flux continu
-
-Maintenant que vous connaissez les détails du segment que vous souhaitez mettre à jour, vous pouvez exécuter une requête PATCH pour mettre à jour le segment afin d’activer la segmentation en flux continu.
-
-**Format d’API**
-
-```http
-PATCH /segment/definitions/{SEGMENT_DEFINITION_ID}
-```
-
-**Requête**
-
-La charge utile de la requête suivante fournit les détails de la définition de segment (obtenue à l’étape [](#look-up-an-existing-segment-definition)précédente) et la met à jour en modifiant sa `continuous.enabled` propriété en `true`conséquence.
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/core/ups/segment/definitions/15063cb-2da8-4851-a2e2-bf59ddd2f004 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
-  -d '{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/json",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "mergePolicyId": "50de2f9c-990c-4b96-945f-9570337ffe6d",
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    }
-}'
-```
-
-**Réponse**
-
-Une réponse positive renvoie les détails de la définition de segment nouvellement mise à jour.
-
-```json
-{
-    "id": "15063cb-2da8-4851-a2e2-bf59ddd2f004",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "ttlInDays": 30,
-    "imsOrgId": "4A21D36B544916100A4C98A7@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "{SANDBOX_ID}",
-        "sandboxName": "{SANDBOX_NAME}",
-        "type": "production",
-        "default": true
-    },
-    "name": "TestStreaming1",
-    "expression": {
-        "type": "PQL",
-        "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "batch": {
-            "enabled": false
-        },
-        "continuous": {
-            "enabled": true
-        },
-        "synchronous": {
-            "enabled": false
-        }
-    },
-    "creationTime": 1572029711000,
-    "updateEpoch": 1572029712000,
-    "updateTime": 1572029712000
-}
-```
-
-## Activer l’évaluation planifiée
-
-Une fois l’évaluation en flux continu activée, une ligne de base doit être créée (après quoi le segment sera toujours à jour). Cela est fait automatiquement par le système, mais l&#39;évaluation planifiée (également appelée segmentation programmée) doit d&#39;abord être activée pour que le nettoyage ait lieu.
-
-Avec la segmentation planifiée, votre organisation IMS peut créer un calendrier récurrent pour exécuter automatiquement des tâches d’exportation afin d’évaluer les segments.
-
->[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel au sein d’un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel dans un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Créer un calendrier
 
@@ -554,4 +391,4 @@ La même opération peut être utilisée pour désactiver une planification en r
 
 Maintenant que vous avez activé à la fois les segments nouveaux et existants pour la segmentation en flux continu et activé la segmentation planifiée pour développer une base de référence et effectuer des évaluations périodiques, vous pouvez commencer à créer des segments pour votre organisation.
 
-Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le guide [d’utilisation du créateur de](../ui/overview.md)segments.
+Pour savoir comment exécuter des actions similaires et utiliser des segments à l’aide de l’interface utilisateur de l’Adobe Experience Platform, consultez le guide [d’utilisation du créateur de](../ui/overview.md)segments.
