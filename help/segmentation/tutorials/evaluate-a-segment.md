@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Évaluer un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 21935bb36d8c2a0ef17e586c0909cf316ef026cf
+source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
 workflow-type: tm+mt
 source-wordcount: '2841'
 ht-degree: 2%
@@ -18,22 +18,22 @@ Ce document fournit un didacticiel pour évaluer les segments et accéder aux r�
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans la création de segments d’audience. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents services d’Adobe Experience Platform impliqués dans la création de segments d’audience. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
 - [Profil](../../profile/home.md)client en temps réel : Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Adobe Experience Platform Segmentation Service](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+- [Service](../home.md)de segmentation des Adobes Experience Platform : Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 ### En-têtes requis
 
-Ce didacticiel nécessite également que vous ayez suivi le didacticiel [d&#39;](../../tutorials/authentication.md) authentification afin d&#39;effectuer des appels aux API de plateforme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Ce didacticiel nécessite également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin de pouvoir invoquer les API Platform. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Les requêtes aux API Platform nécessitent un en-tête qui spécifie le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -51,11 +51,11 @@ Une fois que vous avez développé, testé et enregistré votre définition de s
 
 Si vous n’avez pas encore terminé la procédure [Créer un segment à l’aide du didacticiel API](./create-a-segment.md) de Profil client en temps réel ou créé une définition de segment à l’aide du créateur [de](../ui/overview.md)segments, veuillez le faire avant de continuer ce didacticiel.
 
-## Évaluation programmée
+## Évaluation programmée {#scheduled-evaulation}
 
 Grâce à une évaluation planifiée, votre organisation IMS peut créer un calendrier récurrent pour exécuter automatiquement les tâches d’exportation.
 
->[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel dans un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel au sein d’un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Créer un calendrier
 
@@ -413,7 +413,7 @@ Une réponse positive renvoie les détails de la tâche de segmentation et fourn
 
 ## Interprétation des résultats des segments
 
-Lorsque les tâches de segmentation sont exécutées avec succès, le `segmentMembership` mappage est mis à jour pour chaque profil inclus dans le segment. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont assimilés à Platform, ce qui permet l’intégration à d’autres solutions telles qu’Adobe Audience Manager.
+Lorsque les tâches de segmentation sont exécutées avec succès, le `segmentMembership` mappage est mis à jour pour chaque profil inclus dans le segment. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont ingérés dans Platform, ce qui permet l’intégration à d’autres solutions telles que l’Adobe Audience Manager.
 
 L&#39;exemple suivant montre à quoi ressemble l&#39;attribut pour chaque enregistrement de profil individuel : `segmentMembership`
 
@@ -475,7 +475,7 @@ L’une des principales considérations à prendre en compte est le schéma sur 
 Il existe deux façons de créer le jeu de données nécessaire :
 
 - **Utilisation des API :** Les étapes suivantes de ce didacticiel expliquent comment créer un jeu de données qui référence le Schéma d&#39;Union d&#39;Profil individuel XDM à l&#39;aide de l&#39;API Catalog.
-- **Utilisation de l’interface utilisateur :** Pour utiliser l’interface utilisateur d’Adobe Experience Platform pour créer un jeu de données qui référence le schéma d’union, suivez les étapes du didacticiel [](../ui/overview.md) d’interface utilisateur, puis revenez à ce didacticiel pour passer à la procédure de [génération de profils](#generate-xdm-profiles-for-audience-members)d’audience.
+- **Utilisation de l’interface utilisateur :** Pour utiliser l’interface utilisateur de l’Adobe Experience Platform pour créer un jeu de données faisant référence au schéma d’union, suivez les étapes du didacticiel [](../ui/overview.md) IU, puis revenez à ce didacticiel pour passer à la procédure de [génération de profils](#generate-xdm-profiles-for-audience-members)d’audience.
 
 Si vous disposez déjà d’un jeu de données compatible et connaissez son ID, vous pouvez passer directement à l’étape de [génération de profils](#generate-xdm-profiles-for-audience-members)d’audience.
 
@@ -951,7 +951,7 @@ curl -X GET \
 
 ## Étapes suivantes
 
-Une fois l’exportation terminée, vos données sont disponibles dans Data Lake dans la plateforme Experience Platform. Vous pouvez ensuite utiliser l’API [d’accès aux](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) données pour accéder aux données à l’aide de l’API `batchId` associée à l’exportation. En fonction de la taille du segment, les données peuvent se trouver en blocs et le lot peut se composer de plusieurs fichiers.
+Une fois l’exportation terminée, vos données sont disponibles dans Data Lake en Experience Platform. Vous pouvez ensuite utiliser l’API [d’accès aux](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) données pour accéder aux données à l’aide de l’API `batchId` associée à l’exportation. En fonction de la taille du segment, les données peuvent se trouver en blocs et le lot peut se composer de plusieurs fichiers.
 
 Pour obtenir des instructions détaillées sur l’utilisation de l’API d’accès aux données pour accéder aux fichiers de commandes et les télécharger, suivez le didacticiel [Accès aux](../../data-access/tutorials/dataset-data.md)données.
 
