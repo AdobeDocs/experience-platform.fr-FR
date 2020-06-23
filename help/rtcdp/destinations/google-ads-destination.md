@@ -4,7 +4,7 @@ seo-title: Destination Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 seo-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 28%
@@ -55,8 +55,7 @@ Avant de créer la destination des publicités Google dans le CDP en temps réel
    ![Connecter la destination des publicités Google](/help/rtcdp/destinations/assets/google-2-destination.png)
 
 2. À l’étape **Configuration** du processus de création de destination, renseignez les informations [!UICONTROL de] base de la destination. <br>
-
-   ![Informations de base Publicités Google](/help/rtcdp/destinations/assets/google-ads-setup-step.png)
+   ![Informations de base Publicités Google](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Type]** de compte : AdWords est la seule option disponible.
