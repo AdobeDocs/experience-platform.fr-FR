@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2386'
 ht-degree: 4%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 # Présentation du service de segmentation
 
-Le service de segmentation de la plateforme Adobe Experience Platform fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces segments sont configurés et maintenus de manière centralisée sur la plate-forme et sont facilement accessibles par toute solution Adobe.
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces segments sont configurés et maintenus de manière centralisée sur Platform et sont facilement accessibles par toute solution Adobe.
 
-Ce document présente un aperçu du service de segmentation et du rôle qu’il joue dans Adobe Experience Platform.
+Ce document présente un aperçu du service de segmentation et du rôle qu’il joue dans l’Adobe Experience Platform.
 
 ## Prise en main de Segmentation Service
 
@@ -30,7 +30,7 @@ Il est important de comprendre les termes clés suivants utilisés tout au long 
 
 La segmentation est le processus consistant à définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre magasin de profils afin d’identifier un groupe de clients potentiels dans votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat.
 
-Une fois qu’un segment a été conceptuellement défini, il est créé dans la plate-forme d’expérience. En règle générale, les segments sont créés par le spécialiste du marketing ou de l’audience, bien que certaines organisations préfèrent les créer par leur service marketing, en collaboration avec leurs analystes de données. Après avoir examiné les données envoyées à la plate-forme, l’analyste des données compose la définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou conditions du segment. Cette opération est effectuée à l’aide de l’interface utilisateur ou de l’API.
+Une fois qu’un segment a été conceptuellement défini, il est créé en Experience Platform. En règle générale, les segments sont créés par le spécialiste du marketing ou de l’audience, bien que certaines organisations préfèrent les créer par leur service marketing, en collaboration avec leurs analystes de données. Après avoir examiné les données envoyées à Platform, l’analyste de données compose la définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou conditions du segment. Cette opération est effectuée à l’aide de l’interface utilisateur ou de l’API.
 
 ## Création de segments
 
@@ -45,8 +45,6 @@ Pour plus d’informations sur la création de définitions de segment à l’ai
 ## Évaluer les segments
 
 ### Segmentation en flux continu
-
->[!NOTE] La segmentation en flux continu est une fonctionnalité bêta qui sera disponible sur demande.
 
 La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données entrantes sur le Profil client en temps réel. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui garantit que votre audience de cible reste pertinente.
 
@@ -77,7 +75,7 @@ Lors de la création d’un segment, vous devez fournir un nom de segment. Le no
 ### Stratégies de fusion
 
 Les stratégies de fusion sont des règles utilisées par le Profil pour déterminer comment les données seront hiérarchisées et combinées en une vue unifiée dans certaines conditions.
-Si aucune stratégie de fusion n&#39;est définie, la stratégie de fusion de plateformes par défaut est utilisée. Si vous préférez utiliser une stratégie de fusion propre à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
+Si aucune stratégie de fusion n’est définie, la stratégie de fusion Platform par défaut est utilisée. Si vous préférez utiliser une stratégie de fusion propre à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
 
 >[!NOTE] L&#39;estimation des tailles d&#39;audiences est basée sur la stratégie de fusion de profils par défaut de l&#39;entreprise.
 
@@ -96,7 +94,7 @@ Ces fonctions avancées sont décrites plus en détail dans les sections suivant
 
 ## Segmentation séquentielle {#sequential}
 
-Un parcours utilisateur standard est séquentiel par nature.  Adobe Experience Platform vous permet de définir une série ordonnée de segments afin de refléter ce parcours, capturant ainsi des séquences de événements au fur et à mesure de leur apparition. Vous pouvez classer les événements dans l’ordre souhaité en utilisant la chronologie du événement visuel dans le créateur de segments.
+Un parcours utilisateur standard est séquentiel par nature.  L’Adobe Experience Platform vous permet de définir une série ordonnée de segments pour refléter ce parcours, capturant ainsi des séquences de événements au fur et à mesure de leur apparition. Vous pouvez classer les événements dans l’ordre souhaité en utilisant la chronologie du événement visuel dans le créateur de segments.
 
 Un exemple de parcours client qui nécessiterait une segmentation séquentielle serait la vue de produit > produit ajouté > passage en caisse > Aucun achat.
 
@@ -167,7 +165,7 @@ Adding this specific data to the segment itself allows execution engines to pers
 
 ### Cas d’utilisation
 
-Pour illustrer la valeur de cette fonctionnalité de segmentation avancée, considérez trois cas d’utilisation standard qui illustrent les défis qui se posaient dans les applications marketing avant l’amélioration de la charge utile de segment :
+Pour illustrer la valeur de cette fonction de segmentation avancée, considérez trois cas d’utilisation standard qui illustrent les défis qui se posaient dans les applications marketing avant l’amélioration de la charge utile de segment :
 - Personnalisation du courrier électronique
 - Reciblage des courriels
 - Reciblage publicitaire
@@ -212,7 +210,7 @@ Les données de date vous permettent d’attribuer un contexte temporel à vos d
 
 ### Événements d’expérience
 
-En tant que schéma Adobe Experience Platform, XDM ExperienceEvents enregistre les interactions client explicites et implicites avec les applications intégrées à la plate-forme, y compris un instantané du système au moment où l’interaction a eu lieu. ExperienceEvents sont des enregistrements de faits. Il s’agit donc d’une source de données disponible lors de la définition de segment.
+En tant que schéma d’Adobe Experience Platform, XDM ExperienceEvents enregistre les interactions client explicites et implicites avec les applications intégrées Platform, y compris un instantané du système au moment où l’interaction a eu lieu. ExperienceEvents sont des enregistrements de faits. Il s’agit donc d’une source de données disponible lors de la définition de segment.
 
 Comme le montre le tableau ci-dessous, les données de événement sont rendues à l’aide de mots-clés qui aident à affiner le comportement des événements et à spécifier les attributs de événement.
 
@@ -231,7 +229,7 @@ Les définitions de segment existantes peuvent également être utilisées comme
 
 Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attribut au nouveau segment.
 
-Actuellement, seul Adobe Audience Manager est pris en charge en tant qu’audience. D’autres sources seront activées à l’avenir.
+Actuellement, seul l’Adobe Audience Manager est pris en charge en tant qu’audience. D’autres sources seront activées à l’avenir.
 
 ### Autres types de données
 
@@ -259,6 +257,6 @@ Le service de segmentation fournit un processus consolidé pour créer des segme
 - La segmentation est le processus de définition d&#39;un sous-ensemble de profils à partir de votre banque de profils, ce qui vous permet de caractériser le comportement ou les attributs d&#39;un groupe vendable souhaité. Le service de segmentation rend ce processus possible.
 - Lors de la planification d’un segment, gardez à l’esprit qu’un segment peut être référencé à partir de tout autre segment et combiné avec celui-ci.
 - Un segment peut être créé à partir de règles basées sur des données de profil, des données de série chronologique associées, ou les deux.
-- Les segments peuvent être évalués à la demande ou de manière continue. Lors de l’évaluation à la demande, toutes les données de profil sont transmises simultanément par le biais des définitions de segment. Lorsqu’elles sont évaluées en permanence, les données sont diffusées par le biais des définitions de segment lors de leur entrée dans la plate-forme.
+- Les segments peuvent être évalués à la demande ou de manière continue. Lors de l’évaluation à la demande, toutes les données de profil sont transmises simultanément par le biais des définitions de segment. Lorsqu’elles sont évaluées en continu, les données sont diffusées par le biais des définitions de segment lorsqu’elles entrent dans Platform.
 
 Pour savoir comment définir des segments dans l’interface utilisateur, consultez le guide [du créateur de](./ui/overview.md)segments. Pour plus d’informations sur la création de définitions de segment à l’aide de l’API, voir le didacticiel sur la [création de segments à l’aide de l’API](./tutorials/create-a-segment.md).
