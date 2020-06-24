@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API de registre de Schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7cf873d19d26df9ebb70d11ee6e6513173ab45bb
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '2418'
 ht-degree: 1%
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Création d’un schéma à l’aide de l’API de registre de Schémas
 
-Le registre des Schémas permet d’accéder à la bibliothèque de Schémas dans Adobe Experience Platform. La bibliothèque de Schémas contient les ressources mises à votre disposition par Adobe, les partenaires de la plateforme d’expérience et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
+Le registre des Schémas est utilisé pour accéder à la bibliothèque de Schémas dans l’Adobe Experience Platform. La bibliothèque de Schémas contient les ressources mises à votre disposition par Adobe, les partenaires Experience Platform et les fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
 
-Ce didacticiel utilise l&#39;API Schéma Registry pour vous aider à composer un schéma à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l’interface utilisateur dans la plate-forme d’expérience, le didacticiel [Editeur de](create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schéma.
+Ce didacticiel utilise l&#39;API Schéma Registry pour vous aider à composer un schéma à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l’interface utilisateur dans l’Experience Platform, le didacticiel [Editeur de](create-schema-ui.md) Schéma fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schéma.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-* [Système](../home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+* [Système](../home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition](../schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
 * [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API de registre de Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
 
@@ -33,7 +33,7 @@ Ce didacticiel décrit les étapes de la composition d&#39;un schéma Membres fi
 
 ## Composer un schéma avec une classe standard
 
-Un schéma peut être considéré comme le modèle des données que vous souhaitez intégrer dans la plateforme d’expérience. Chaque schéma est composé d&#39;une classe et de zéro ou plusieurs mixins. En d’autres termes, il n’est pas nécessaire d’ajouter un mixin pour définir un schéma, mais dans la plupart des cas, au moins un mixin est utilisé.
+Un schéma peut être considéré comme le plan directeur des données que vous souhaitez intégrer à l&#39;Experience Platform. Chaque schéma est composé d&#39;une classe et de zéro ou plusieurs mixins. En d’autres termes, il n’est pas nécessaire d’ajouter un mixin pour définir un schéma, mais dans la plupart des cas, au moins un mixin est utilisé.
 
 ### Attribuer une classe
 
@@ -135,7 +135,7 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-**Réponse **
+**Réponse**
 
 Le format de réponse dépend de l’en-tête Accepter envoyé avec la demande. Tentez de tester différents en-têtes d&#39;Accepter pour déterminer lequel répond le mieux à vos besoins.
 
@@ -952,7 +952,7 @@ L’exécution d’une requête GET pour rechercher le schéma montre maintenant
 
 ### Définir un descripteur d&#39;identité
 
-Les Schémas sont utilisés pour ingérer des données dans la plateforme d’expérience. Ces données sont en fin de compte utilisées sur plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être marqués comme &quot;Identité&quot; et, lors de l’assimilation des données, les données de ces champs sont insérées dans le &quot;Graphique d’identité&quot; de cette personne. Les données graphiques peuvent ensuite être consultées par le Profil [client en temps](../../profile/home.md) réel et d’autres services Experience Platform afin de fournir une vue raccordée à chaque client.
+Les Schémas sont utilisés pour importer des données dans l’Experience Platform. Ces données sont en fin de compte utilisées sur plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être marqués comme &quot;Identité&quot; et, lors de l’assimilation des données, les données de ces champs sont insérées dans le &quot;Graphique d’identité&quot; de cette personne. Les données graphiques peuvent ensuite être consultées par le Profil [client en temps](../../profile/home.md) réel et d’autres services Experience Platform afin de fournir une vue groupée à chaque client.
 
 Les champs généralement identifiés comme &quot;Identité&quot; sont les suivants : adresse électronique, numéro de téléphone, identifiant [Experience Cloud (ECID)](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), identifiant CRM ou autres champs d’ID uniques.
 
@@ -970,7 +970,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité sur le champ &quot;loyaltyId&quot;. Cela indique à la plateforme d’expérience d’utiliser l’identifiant unique du membre du programme de fidélité (dans ce cas, l’adresse électronique du membre) pour faciliter la collecte d’informations sur l’individu.
+La requête suivante définit un descripteur d’identité sur le champ &quot;loyaltyId&quot;. Ceci indique à l’Experience Platform d’utiliser l’identifiant unique du membre du programme de fidélité (dans ce cas, l’adresse électronique du membre) pour faciliter la collecte d’informations sur l’individu.
 
 ```SHELL
 curl -X POST \
@@ -1165,11 +1165,11 @@ La réponse est une liste filtrée de schémas, contenant uniquement ceux qui sa
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à composer un schéma à l’aide de mixins standard et d’un mixin que vous avez défini. Vous pouvez désormais utiliser ce schéma pour créer un jeu de données et assimiler des données d’enregistrement dans Adobe Experience Platform.
+En suivant ce didacticiel, vous avez réussi à composer un schéma à l’aide de mixins standard et d’un mixin que vous avez défini. Vous pouvez désormais utiliser ce schéma pour créer un jeu de données et intégrer des données d’enregistrement dans un Adobe Experience Platform.
 
 Le schéma des membres fidèles complet, tel qu&#39;il a été créé tout au long de ce tutoriel, est disponible en annexe qui suit. En regardant le schéma, vous pouvez voir comment les mixins contribuent à la structure globale et quels champs sont disponibles pour l&#39;assimilation de données.
 
-Une fois que vous avez créé plusieurs schémas, vous pouvez définir des relations entre eux à l’aide de descripteurs de relation. Pour plus d&#39;informations, consultez le didacticiel pour [définir une relation entre deux schémas](relationship-api.md) . Pour obtenir des exemples détaillés sur la façon d&#39;effectuer toutes les opérations (GET, POST, PUT, PATCH et DELETE) dans le registre, reportez-vous au guide [du développeur du registre de](../api/getting-started.md) Schéma lorsque vous travaillez avec l&#39;API.
+Une fois que vous avez créé plusieurs schémas, vous pouvez définir des relations entre eux à l’aide de descripteurs de relation. Pour plus d&#39;informations, consultez le didacticiel pour [définir une relation entre deux schémas](relationship-api.md) . Pour obtenir des exemples détaillés sur la façon d&#39;effectuer toutes les opérations (GET, POST, PUT, PATCH et DELETE) dans le registre, consultez le guide [de développement du registre de](../api/getting-started.md) Schéma lorsque vous travaillez avec l&#39;API.
 
 ## Annexe {#appendix}
 
