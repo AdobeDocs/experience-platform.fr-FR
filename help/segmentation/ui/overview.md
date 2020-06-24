@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
 source-wordcount: '2562'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Actuellement, les calendriers ne peuvent être créés qu&#39;à l&#39;aide de l
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Segmentation en flux continu
+## Segmentation en flux continu {#streaming-segmentation}
 
 >[!NOTE] Pour que la segmentation en flux continu fonctionne, le client doit activer la segmentation planifiée pour l’entreprise. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section précédente de ce guide](#enable-scheduled-segmentation)d’utilisateur.
 
