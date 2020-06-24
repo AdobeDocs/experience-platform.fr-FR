@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Didacticiels de segmentation
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 636fae71f9c826ce9715bd96a974e5f6afbffb42
+source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '556'
 ht-degree: 8%
 
 ---
@@ -36,10 +36,7 @@ L&#39;Adobe Experience Platform vous permet de rassembler des données provenant
 
 Les segments qui sont activés pour une utilisation dans le Profil client en temps réel contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui contiennent à leur tour les étiquettes d’utilisation des données applicables. Pour connaître les étapes spécifiques à l&#39;application de la conformité à l&#39;utilisation des données pour un segment d&#39;audience, suivez le tutoriel d&#39;application de la conformité à l&#39;utilisation des [données pour les segments](../segmentation/tutorials/governance.md).
 
-## (bêta) Segmentation de diffusion en continu
-
->[!NOTE]
->La segmentation en flux continu est en version bêta et sera disponible sur demande. Les fonctionnalités et la documentation peuvent être modifiées.
+## Segmentation en flux continu
 
 La segmentation en flux continu permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à l’Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter de tâches de segmentation planifiées. Pour en savoir plus, consultez la présentation [de la segmentation](../segmentation/api/streaming-segmentation.md)en flux continu.
 
