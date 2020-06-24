@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d’un schéma à l’aide de l’éditeur de Schéma
+title: Création d’un schéma à l’aide de l’éditeur de schéma.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: c07f926a71447e840c692ed15e85c9e02f1106ab
+source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -12,35 +12,35 @@ ht-degree: 0%
 ---
 
 
-# Création d’un schéma à l’aide de l’éditeur de Schéma
+# Création d’un schéma à l’aide de l’éditeur de schéma.
 
-Le registre des Schémas fournit une interface utilisateur et une API RESTful à partir de laquelle vous pouvez vue et gérer toutes les ressources de la bibliothèque de Schémas de la plate-forme Adobe Experience Platform. La bibliothèque de Schémas contient les ressources mises à votre disposition par Adobe, les partenaires de la plateforme d’expérience et les fournisseurs dont vous utilisez les applications, ainsi que les ressources que vous définissez et enregistrez dans le registre des Schémas.
+Le registre des Schémas fournit une interface utilisateur et une API RESTful à partir de laquelle vous pouvez vue et gérer toutes les ressources de la bibliothèque de Schémas d&#39;Adobes Experience Platform. La bibliothèque de Schémas contient les ressources mises à votre disposition par Adobe, les partenaires Experience Platform et les fournisseurs dont vous utilisez les applications, ainsi que les ressources que vous définissez et enregistrez dans le registre des Schémas.
 
-Ce didacticiel décrit les étapes de création d’un schéma à l’aide de l’éditeur de Schéma dans la plate-forme d’expérience. Si vous préférez composer un schéma à l&#39;aide de l&#39;API Schéma Registry, lisez d&#39;abord le guide [du développeur](../api/getting-started.md) Schéma Registry avant de tenter le didacticiel [créant un schéma à l&#39;aide de l&#39;API](create-schema-api.md).
+Ce didacticiel décrit les étapes de création d’un schéma à l’aide de l’éditeur de Schéma dans l’Experience Platform. Si vous préférez composer un schéma à l&#39;aide de l&#39;API Schéma Registry, lisez d&#39;abord le guide [du développeur](../api/getting-started.md) Schéma Registry avant de tenter le didacticiel [créant un schéma à l&#39;aide de l&#39;API](create-schema-api.md).
 
 Ce didacticiel comprend également des étapes pour [définir une nouvelle classe](#create-new-class) que vous pouvez ensuite utiliser pour composer un schéma.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des différents aspects d’Adobe Experience Platform impliqués dans l’utilisation de l’éditeur de Schéma. Avant de commencer ce didacticiel, veuillez consulter la documentation relative aux concepts suivants :
+Ce didacticiel nécessite une compréhension pratique des différents aspects de l&#39;Adobe Experience Platform impliqués dans l&#39;utilisation de l&#39;éditeur de Schéma. Avant de commencer ce didacticiel, veuillez consulter la documentation relative aux concepts suivants :
 
-* [Modèle de données d’expérience (XDM)](../home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+* [Modèle de données d’expérience (XDM)](../home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
 * [Principes de base de la composition](../schema/composition.md)des schémas : Présentation des schémas XDM et de leurs blocs de création, y compris les classes, les mixins, les types de données et les champs.
 * [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Ce didacticiel nécessite que vous ayez accès à la plate-forme d’expérience. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+Ce didacticiel nécessite que vous ayez accès à un Experience Platform. Si vous n&#39;avez pas accès à une organisation IMS en Experience Platform, contactez votre administrateur système avant de continuer.
 
-## Parcourir les schémas existants dans l’espace de travail Schémas
+## Parcourir les schémas existants dans l’espace de travail Schémas {#browse}
 
-L’espace de travail Schémas de la plate-forme d’expérience fournit une visualisation de la bibliothèque de Schémas, ce qui vous permet de vue et de gérer tous les schémas disponibles et d’en créer de nouveaux. L’espace de travail comprend également l’éditeur de Schéma, la trame sur laquelle vous allez composer un schéma tout au long de ce didacticiel.
+L’espace de travail Schémas de l’Experience Platform fournit une visualisation de la bibliothèque de Schémas, ce qui vous permet de vue et de gérer tous les schémas disponibles, ainsi que d’en composer de nouveaux. L’espace de travail comprend également l’éditeur de Schéma, la trame sur laquelle vous allez composer un schéma tout au long de ce didacticiel.
 
-Après vous être connecté à Experience Platform, cliquez sur **Schémas** dans le volet de navigation de gauche et vous serez redirigé vers l’espace de travail Schémas. Vous verrez une liste de schémas (une représentation de la bibliothèque de Schémas) où vous pouvez vue, gérer et personnaliser tous les schémas qui vous sont accessibles. La liste comprend le nom, le type, la classe et le comportement (enregistrement ou série chronologique) sur lesquels le schéma est basé, ainsi que la date et l’heure de la dernière modification du schéma.
+Après vous être connecté à l’Experience Platform, cliquez sur **Schémas** dans le volet de navigation de gauche et vous serez redirigé vers l’espace de travail Schémas. Vous verrez une liste de schémas (une représentation de la bibliothèque de Schémas) où vous pouvez vue, gérer et personnaliser tous les schémas qui vous sont accessibles. La liste comprend le nom, le type, la classe et le comportement (enregistrement ou série chronologique) sur lesquels le schéma est basé, ainsi que la date et l’heure de la dernière modification du schéma.
 
 Cliquez sur l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage pour toutes les ressources du registre, y compris les classes, les mixins et les types de données.
 
 ![Vue de la bibliothèque de Schémas](../images/tutorials/create-schema/schemas_filter.png)
 
-## Création et attribution d’un nom à un schéma
+## Création et attribution d’un nom à un schéma {#create}
 
 Pour commencer à composer un schéma, cliquez sur **Créer un Schéma** dans le coin supérieur droit de l’espace de travail Schémas.
 
@@ -62,7 +62,7 @@ Il convient de tenir compte de plusieurs points importants lors du choix d’un 
 
 Ce didacticiel compose un schéma d’assimilation de données relatives aux membres d’un programme de fidélité. Par conséquent, le schéma est nommé &quot;Membres de fidélité&quot;.
 
-## Attribuer une classe
+## Attribuer une classe {#class}
 
 La section *Composition* se trouve à gauche de l’éditeur. Il contient actuellement deux sous-sections : *Schéma* et *classe*.
 
@@ -86,7 +86,7 @@ Les champs apparaissent au format &quot;fieldName&quot;. | Type de données&quot
 
 >[!NOTE] Vous pouvez [modifier la classe d&#39;un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma n&#39;ait été enregistré, mais cela doit se faire avec une extrême prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
 
-## Ajouter un mixin
+## Ajouter un mixin {#mixin}
 
 Maintenant qu&#39;une classe a été affectée, la section *Composition* contient une troisième sous-section : *Mélanges*.
 
@@ -96,9 +96,9 @@ Pour ajouter un mixin, cliquez sur **Ajouter** dans la sous-section *Mélanges* 
 
 ![](../images/tutorials/create-schema/add_mixin_button.png)
 
-La boîte de dialogue *Ajouter Mixin* s’affiche. Les mixins ne sont destinés qu&#39;à des classes spécifiques. Par conséquent, la liste des mixins n&#39;affiche que ceux compatibles avec la classe que vous avez sélectionnée (dans ce cas, la classe de Profil XDM Individuel).
+La boîte de dialogue *Ajouter le mixin* s’affiche. Les mixins ne sont destinés qu&#39;à des classes spécifiques. Par conséquent, la liste des mixins n&#39;affiche que ceux compatibles avec la classe que vous avez sélectionnée (dans ce cas, la classe de Profil XDM Individuel).
 
-La sélection du bouton radio en regard d&#39;un mixin vous donne la possibilité de **Prévisualisation de la structure** de mixin. Sélectionnez le mixin &quot;Détails de la personne du Profil&quot;, puis cliquez sur **Ajouter Mixin**.
+La sélection du bouton radio en regard d&#39;un mixin vous donne la possibilité de **Prévisualisation de la structure** de mixin. Sélectionnez le mixin &quot;Détails de la personne du Profil&quot;, puis cliquez sur **Ajouter le mixin**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
@@ -114,11 +114,11 @@ Notez que le champ &quot;nom&quot; possède un type de données &quot;Nom de la 
 
 Cliquez sur les différents champs de la trame pour afficher les champs supplémentaires qu’ils contribuent à la structure du schéma.
 
-## Ajouter un autre mixin
+## Ajouter un autre mixin {#mixin-2}
 
-Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre mixin. Lorsque vous vue cette fois la boîte de dialogue *Ajouter Mixin* , notez que le mixin &quot;Détails de la personne du Profil&quot; a été grisé et que le bouton radio situé à côté ne peut pas être sélectionné. Cela vous évite de dupliquer accidentellement des mixins que vous avez déjà inclus dans le schéma actuel.
+Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre mixin. Lorsque vous vue cette fois la boîte de dialogue *Ajouter le mixin* , notez que le mixin &quot;Détails de la personne du Profil&quot; a été grisé et que le bouton radio situé à côté ne peut pas être sélectionné. Cela vous évite de dupliquer accidentellement des mixins que vous avez déjà inclus dans le schéma actuel.
 
-Vous pouvez maintenant ajouter le mixin &quot;Détails personnels du Profil&quot; à partir de la boîte de dialogue *Ajouter Mixin* .
+Vous pouvez maintenant ajouter le mixin &quot;Détails personnels du Profil&quot; à partir de la boîte de dialogue *Ajouter le mixin* .
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
@@ -128,11 +128,11 @@ Tout comme le champ &quot;nom&quot;, les champs que vous venez d’ajouter repr�
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Définir un nouveau mixin
+## Définir un nouveau mixin {#define-mixin}
 
 Le schéma &quot;Membres fidèles&quot; est destiné à capturer les données relatives aux membres d’un programme de fidélité. Il nécessite donc certains champs spécifiques liés à la fidélité. Aucun mixin standard ne contient les champs nécessaires, vous devrez donc définir un nouveau mixin.
 
-Cette fois-ci, lorsque vous ouvrez la boîte de dialogue *Ajouter Mixin* , sélectionnez **Créer un nouveau mixin**. Vous serez alors invité à fournir un nom **** d&#39;affichage et une **description** pour votre mixin.
+Cette fois-ci, lorsque vous ouvrez la boîte de dialogue *Ajouter le mélange* , sélectionnez **Créer un nouveau mélange**. Vous serez alors invité à fournir un nom **** d&#39;affichage et une **description** pour votre mixin.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
@@ -140,29 +140,29 @@ Comme pour les noms de classe, le nom du mixin doit être court et simple, décr
 
 Pour ce didacticiel, nommez le nouveau mixin &quot;Détails de fidélité&quot;.
 
-Cliquez sur **Ajouter Mixin** pour revenir à l’éditeur de schéma. Les &quot;Détails de fidélité&quot; doivent maintenant apparaître sous *Mélanges* sur le côté gauche de la trame, mais aucun champ n’y est associé pour le moment et aucun nouveau champ n’apparaît donc sous *Structure*.
+Cliquez sur **Ajouter le mixin** pour revenir à l’éditeur de schéma. Les &quot;Détails de fidélité&quot; doivent maintenant apparaître sous *Mélanges* sur le côté gauche de la trame, mais aucun champ n’y est associé pour le moment et aucun nouveau champ n’apparaît donc sous *Structure*.
 
-## Ajouter champs au mixin
+## Ajouter des champs au mixin {#mixin-fields}
 
 Maintenant que vous avez créé le mixin &quot;Détails de fidélité&quot;, il est temps de définir les champs que le mixin va contribuer au schéma.
 
-Pour commencer, cliquez sur le nom du mixin dans la section *Mélanges* . Une fois que vous avez effectué cette opération, *les propriétés* du mixin s’affichent sur le côté droit de l’éditeur et un bouton Champ **** Ajouter s’affiche en regard du nom du schéma sous *Structure*.
+Pour commencer, cliquez sur le nom du mixin dans la section *Mélanges* . Une fois que vous avez effectué cette opération, *les propriétés* du mixin s’affichent sur le côté droit de l’éditeur et un bouton de champ **de** Ajoute s’affiche en regard du nom du schéma sous *Structure*.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Cliquez sur Champ **** Ajouter en regard de &quot;Membres fidèles&quot; pour créer un nouveau noeud dans la structure. Ce noeud (appelé &quot;_locataireId&quot; dans cet exemple) représente l’ID de client de votre organisation IMS, précédé d’un trait de soulignement. La présence de l’ID de client indique que les champs que vous ajoutez sont contenus dans l’espace de nommage de votre organisation.
+Cliquez sur **Ajouter le champ** en regard de &quot;Membres fidèles&quot; pour créer un nouveau noeud dans la structure. Ce noeud (appelé &quot;_locataireId&quot; dans cet exemple) représente l’ID de client de votre organisation IMS, précédé d’un trait de soulignement. La présence de l’ID de client indique que les champs que vous ajoutez sont contenus dans l’espace de nommage de votre organisation.
 
-En d&#39;autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans le Registre des Schémas dans une zone spécifique accessible uniquement à votre organisation IMS. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage pour éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
+En d&#39;autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans le Registre des Schémas dans une zone spécifique accessible uniquement à votre organisation IMS. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage afin d’éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
 
 À l’intérieur de ce noeud avec espacement de noms se trouve un &quot;nouveau champ&quot;. C&#39;est le début du mixin &quot;Détails de fidélité&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
-En utilisant les propriétés *de* champ sur le côté droit de l’éditeur, début en créant un champ &quot;fidélité&quot; avec le type &quot;Objet&quot; qui sera utilisé pour conserver vos champs liés à la fidélité. Lorsque vous avez terminé, cliquez sur **Appliquer**.
+En utilisant les propriétés *de* champ sur le côté droit de l’éditeur, début en créant un champ &quot;fidélité&quot; avec le type &quot;Objet&quot; qui sera utilisé pour conserver vos champs liés à la fidélité. When finished, click **Apply**.
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-Les modifications sont appliquées et le nouvel objet &quot;fidélité&quot; s’affiche. Cliquez sur Champ **** Ajouter en regard de l’objet pour ajouter d’autres champs liés à la fidélité. Un &quot;nouveau champ&quot; apparaît et la section Propriétés *du* champ est visible sur le côté droit de la trame.
+Les modifications sont appliquées et le nouvel objet &quot;fidélité&quot; s’affiche. Cliquez sur **Ajouter le champ** en regard de l’objet pour ajouter d’autres champs liés à la fidélité. Un &quot;nouveau champ&quot; apparaît et la section Propriétés *du* champ est visible sur le côté droit de la trame.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -181,28 +181,28 @@ Différentes options de contrainte sont disponibles en fonction du type de donn�
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Ajouter d’autres champs à mixer
+## Ajouter d’autres champs à mixer {#mixin-fields-2}
 
 Maintenant que vous avez ajouté le champ &quot;loyaltyId&quot;, vous pouvez ajouter d’autres champs pour capturer des informations relatives à la fidélité, telles que :
 
 * Points (entiers)
 * Membre depuis (date)
 
-Chaque champ est ajouté en cliquant sur Champ **** Ajouter sur l’objet de fidélité et en renseignant les informations requises.
+Chaque champ est ajouté en cliquant sur **Ajouter le champ** sur l’objet de fidélité et en renseignant les informations requises.
 
 Une fois terminé, l’objet Fidélité contient des champs pour : Identifiant de fidélité, points et membre depuis.
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## Ajouter champ &quot;enum&quot; à mixer
+## Ajouter le champ &#39;enum&#39; à mixin {#enum}
 
 Lors de la définition de champs dans l’éditeur de Schéma, vous pouvez appliquer d’autres options aux types de champs de base afin de limiter davantage les données que le champ peut contenir.
 
-Par exemple, un champ &quot;Niveau de fidélité&quot;, où la valeur ne peut être que l’une des quatre options possibles. Pour ajouter ce champ au schéma, cliquez sur Champ **** Ajouter en regard de l’objet &quot;fidélité&quot; et renseignez les champs obligatoires sous Propriétés *du* champ.
+Par exemple, un champ &quot;Niveau de fidélité&quot;, où la valeur ne peut être que l’une des quatre options possibles. Pour ajouter ce champ au schéma, cliquez sur **Ajouter le champ** en regard de l’objet &quot;fidélité&quot; et renseignez les champs obligatoires sous Propriétés *du* champ.
 
 Pour **Type**, sélectionnez &quot;Chaîne&quot; et d&#39;autres cases à cocher s&#39;affichent pour **Tableau**, **Enum** et **Identité.**
 
-Cochez la case **Enum** pour ouvrir la section Valeurs ** Enum ci-dessous. Vous pouvez saisir ici la **valeur** (dans chamelCase) et le **libellé** (un nom facultatif et facile à lire dans Title Case) pour chaque niveau de fidélité acceptable.
+Cochez la case **Enum** pour ouvrir la section Valeurs ** Enum ci-dessous. Vous pouvez saisir ici la **valeur** (dans camelCase) et le **libellé** (un nom facultatif et lisible dans Title Case) pour chaque niveau de fidélité acceptable.
 
 Une fois toutes les propriétés de champ remplies, cliquez sur **Appliquer** et le champ &quot;loyaltyLevel&quot; sera ajouté à l’objet &quot;loyalty&quot;.
 
@@ -215,7 +215,7 @@ Plus d&#39;informations sur les contraintes supplémentaires disponibles :
 * **Enum :** Indique que ce champ doit contenir l’une des valeurs d’une liste énumérée de valeurs possibles.
 * **Identité :** Indique que ce champ est un champ d’identité. D&#39;autres informations sur les champs d&#39;identité sont fournies [plus loin dans ce didacticiel](#identity-field).
 
-## Convertir un objet à champs multiples en un type de données
+## Convertir un objet à champs multiples en un type de données {#datatype}
 
 Après avoir ajouté plusieurs champs spécifiques à la fidélité, l’objet &quot;fidélité&quot; contient désormais une structure de données commune qui peut s’avérer utile dans d’autres schémas.
 
@@ -233,13 +233,13 @@ Dans un schéma ultérieur, vous pouvez désormais attribuer un champ au **type*
 
 ## Définir un champ de schéma comme champ d’identité {#identity-field}
 
-Les Schémas sont utilisés pour ingérer des données dans la plateforme d’expérience et ces données sont en fin de compte utilisées pour identifier les individus et rassembler des informations provenant de sources multiples. Pour faciliter ce processus, les champs clés peuvent être marqués comme des champs &quot;Identité&quot;.
+Les Schémas sont utilisés pour ingérer des données dans l&#39;Experience Platform, et ces données sont en fin de compte utilisées pour identifier les individus et rassembler des informations provenant de sources multiples. Pour faciliter ce processus, les champs clés peuvent être marqués comme des champs &quot;Identité&quot;.
 
-Experience Platform facilite la désignation d’un champ d’identité grâce à l’utilisation d’une case à cocher **Identité** dans l’éditeur de Schémas.
+L’Experience Platform facilite la détection d’un champ d’identité en cochant la case **Identité** dans l’éditeur de Schémas.
 
 Par exemple, il peut y avoir des milliers de membres du programme de fidélité appartenant au même &quot;niveau&quot;, mais chaque membre du programme de fidélité a un &quot;loyaltyId&quot; unique (qui dans ce cas est l&#39;adresse électronique du membre individuel). Le fait que &quot;loyaltyId&quot; soit un identifiant unique pour chaque membre en fait un bon candidat pour un champ d&#39;identité, contrairement à &quot;level&quot;.
 
-Dans la section *Structure* de l’éditeur, cliquez sur le champ &quot;loyaltyId&quot; que vous avez créé et la case à cocher **Identity** apparaît sous Propriétés *du* champ. Cochez la case et vous aurez la possibilité de définir cette option comme identité **** principale. Cochez également cette case.
+Dans la section *Structure* de l’éditeur, cliquez sur le champ &quot;loyaltyId&quot; que vous avez créé et la case à cocher **Identity** apparaît sous Propriétés *du* champ. Cochez la case et vous aurez la possibilité de définir cette option comme identité **de** Principal. Cochez également cette case.
 
 Ensuite, vous devez fournir un espace de noms **d’identité**. Il existe plusieurs espaces de nommage prédéfinis, mais comme &quot;loyaltyId&quot; est l&#39;adresse électronique du membre, sélectionnez &quot;Email&quot; dans la liste déroulante. Vous pouvez maintenant cliquer sur **Appliquer** pour confirmer les mises à jour du champ &quot;loyaltyId&quot;.
 
@@ -263,9 +263,9 @@ More information about relationships and other schema metadata can be found in t
 
 ## Activation du schéma à utiliser dans le Profil client en temps réel {#profile}
 
-L’éditeur de Schéma permet d’activer un schéma à utiliser avec le Profil [client en temps](../../profile/home.md)réel. Profil fournit une vue holistique de chaque client en construisant un profil robuste de 360° d’attributs du client ainsi qu’un compte horodaté de chaque interaction du client dans tout système intégré à Experience Platform.
+L’éditeur de Schéma permet d’activer un schéma à utiliser avec le Profil [client en temps](../../profile/home.md)réel. Profil fournit une vue holistique de chaque client en construisant un profil robuste de 360° d&#39;attributs du client ainsi qu&#39;un compte horodaté de chaque interaction du client dans tout système intégré à l&#39;Experience Platform.
 
-Pour qu&#39;un schéma puisse être activé pour une utilisation avec le Profil client en temps réel, une identité principale doit être définie. Vous recevrez un message d&#39;erreur &quot;Identité principale manquante&quot; si vous tentez d&#39;activer un schéma sans avoir préalablement défini d&#39;identité principale.
+Pour qu&#39;un schéma puisse être activé pour une utilisation avec le Profil client en temps réel, une identité principale doit être définie. Vous recevrez un message d&#39;erreur &quot;Identité de Principal manquante&quot; si vous tentez d&#39;activer un schéma sans avoir préalablement défini d&#39;identité principale.
 
 ![](../images/tutorials/create-schema/missing_primary_identity.png)
 
@@ -285,7 +285,7 @@ Cliquez sur **Profil** et une fenêtre contextuelle s’affiche, vous demandant 
 
 Maintenant que vous avez fini de composer un schéma &quot;Membres fidèles&quot;, vous pouvez voir le schéma complet dans la section *Structure* de l&#39;éditeur. Cliquez sur **Enregistrer** et le schéma sera enregistré dans la bibliothèque de Schémas, ce qui le rendra accessible par le registre des Schémas.
 
-Votre nouveau schéma peut désormais être utilisé pour importer des données dans la plate-forme. N&#39;oubliez pas qu&#39;une fois que le schéma a été utilisé pour ingérer des données, seuls des changements additifs peuvent être apportés. Pour plus d’informations sur le contrôle des versions de schéma, consultez les [bases de la composition](../schema/composition.md) des schémas.
+Votre nouveau schéma peut désormais être utilisé pour importer des données dans Platform. N&#39;oubliez pas qu&#39;une fois que le schéma a été utilisé pour ingérer des données, seuls des changements additifs peuvent être apportés. Pour plus d’informations sur le contrôle des versions de schéma, consultez les [bases de la composition](../schema/composition.md) des schémas.
 
 Le schéma &quot;Membres de la fidélité&quot; est également disponible pour être affiché et géré à l’aide de l’API de registre du Schéma. Pour commencer à travailler avec l&#39;API, début en lisant le guide [du développeur de l&#39;API de registre de](../api/getting-started.md)Schéma.
 
@@ -295,7 +295,7 @@ Les informations suivantes sont complémentaires au didacticiel de l’éditeur 
 
 ### Create a new class {#create-new-class}
 
-Experience Platform offre la possibilité de définir un schéma basé sur une classe unique pour votre entreprise.
+Experience Platform offre la possibilité de définir un schéma en fonction d’une classe propre à votre entreprise.
 
 Ouvrez la boîte de dialogue *Attribuer une classe* en cliquant sur **Attribuer** dans la section *Classe* de l&#39;éditeur de Schémas. Dans la boîte de dialogue, sélectionnez **Créer une classe**.
 
@@ -303,7 +303,7 @@ Vous pouvez ensuite attribuer à votre nouvelle classe un nom **** d’affichage
 
 ![Détails de la nouvelle classe](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Lors de la création d&#39;un schéma qui implémente une classe définie par votre organisation, n&#39;oubliez pas que les mixins sont disponibles pour une utilisation uniquement avec des classes compatibles. La classe que vous avez définie étant nouvelle, aucun mixin compatible n’est répertorié dans la boîte de dialogue *Ajouter Mixin* . Vous devez sélectionner **Créer un nouveau mixin** et définir un mixin à utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, le mixin que vous avez défini sera répertorié et disponible pour utilisation.
+>[!NOTE] Lors de la création d&#39;un schéma qui implémente une classe définie par votre organisation, n&#39;oubliez pas que les mixins sont disponibles pour une utilisation uniquement avec des classes compatibles. La classe que vous avez définie étant nouvelle, aucun mixin compatible n’est répertorié dans la boîte de dialogue *Ajouter le mixin* . Vous devez sélectionner **Créer un nouveau mixin** et définir un mixin à utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, le mixin que vous avez défini sera répertorié et disponible pour utilisation.
 
 ### Modification de la classe d’un schéma {#change-class}
 
