@@ -4,9 +4,9 @@ seo-title: Installation du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 5998473c665cb80ffddc092847533f51d81cf581
+source-git-commit: e0dee4e39143ae9d7f5e4aaf9c352555f1c7f5d0
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '571'
 ht-degree: 87%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 87%
 
 # Installation du SDK
 
-Le SDK Web AEP est disponible sur un CDN que vous pouvez utiliser. Vous pouvez référencer ce fichier ou le télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans une version réduite et non réduite. La version non réduite est utile pour le débogage.
+Le Adobe Experience Platform Web SDK est disponible sur un réseau CDN (Content diffusion Network) que vous pouvez utiliser. Vous pouvez référencer ce fichier ou le télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans une version réduite et non réduite. La version non réduite est utile pour le débogage.
 
 [https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js)[https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js](https://cdn1.adoberesources.net/alloy/1.0.0/alloy.js)
 
-## Ajout du code
+## Ajouter le code
 
 La première étape de l’implémentation du SDK Web d’Adobe Experience Platform consiste à copier et coller le « code de base » suivant le plus haut possible dans la balise `<head>` de votre code HTML :
 
