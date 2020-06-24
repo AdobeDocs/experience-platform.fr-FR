@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
+source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
 workflow-type: tm+mt
-source-wordcount: '2562'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,23 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 
 Vous pouvez faire glisser une audience de l’onglet *[!UICONTROL Audience]* sur le canevas du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans la nouvelle règle de segment.
 
-Pour les [!DNL Platform] audiences créées à l’aide du créateur de segments, vous avez la possibilité de convertir l’audience en jeu de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine.
+Pour [!DNL Platform] les audiences créées à l’aide du créateur [!UICONTROL de]segments, vous avez la possibilité de convertir l’audience en l’ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les dernières modifications apportées à votre définition de segment avant de la convertir en logique de règle.
 
 >[!NOTE] Lors de l’ajout d’une audience provenant d’une source externe, seul l’appartenance à l’audience est référencée. Vous ne pouvez pas convertir l’audience en règles. Par conséquent, les règles utilisées pour créer l’audience d’origine ne peuvent pas être modifiées dans la nouvelle définition de segment.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
+
+Si des conflits surviennent lors de la conversion d’audiences en règles, le créateur [!UICONTROL de] segments tentera de préserver au mieux les options existantes.
+
+### vue de code
+
+Vous pouvez également vue une version basée sur un code d’une règle créée dans le créateur [!UICONTROL de]segments. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner vue **[!UICONTROL de]** code pour voir votre segment comme étant PQL.
+
+![](../images/segment-builder/code-view.png)
+
+La vue de code fournit un bouton qui vous permet de copier la valeur du segment à utiliser dans les appels d’API. Pour obtenir la dernière version du segment, veillez à enregistrer vos dernières modifications dans le segment.
+
+![](../images/segment-builder/copy-code.png)
 
 ## Conteneurs
 
