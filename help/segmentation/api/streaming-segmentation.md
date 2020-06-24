@@ -4,15 +4,17 @@ solution: Experience Platform
 title: Segmentation en flux continu
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: d00973a07c5fb137f756040fb1dc6eac5a1630f5
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
 
 
 # Évaluer les événements en temps quasi réel avec la segmentation en flux continu
+
+>[!NOTE] Le document suivant indique comment utiliser la segmentation en flux continu à l’aide de l’API. Pour plus d’informations sur l’utilisation de la segmentation en flux continu à l’aide de l’interface utilisateur, consultez le guide [du créateur de](../ui/overview.md#streaming-segmentation)segments.
 
 La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent en [!DNL Platform]jeu, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées au fur et à mesure que les données sont transmises [!DNL Platform], ce qui signifie que l’appartenance à un segment est mise à jour sans exécuter de tâches de segmentation planifiées.
 
@@ -278,7 +280,7 @@ Une réponse réussie renvoie les détails de la nouvelle définition de segment
 
 Une fois l’évaluation en flux continu activée, une ligne de base doit être créée (après quoi le segment sera toujours à jour). L’évaluation planifiée (également appelée segmentation planifiée) doit d’abord être activée pour que le système puisse exécuter automatiquement le nettoyage. Avec la segmentation planifiée, votre organisation IMS peut respecter un calendrier récurrent pour exécuter automatiquement des tâches d’exportation afin d’évaluer les segments.
 
->[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel dans un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel au sein d’un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Créer un calendrier
 
