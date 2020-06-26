@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Présentation du profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 86fe1f407afb24d7222cff51cf9937a42571fd54
+source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1796'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Présentation du profil client en temps réel
 
-Adobe Experience Platform vous permet de proposer à vos clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Grâce au Profil client en temps réel, vous pouvez voir une vue holistique de chaque client qui combine les données de plusieurs canaux, y compris les données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos diverses données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client. Cette présentation vous aidera à comprendre le rôle et l’utilisation du Profil client en temps réel dans la plate-forme d’expérience.
+L’Adobe Experience Platform vous permet de proposer à vos clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Grâce au Profil client en temps réel, vous pouvez voir une vue holistique de chaque client qui combine les données de plusieurs canaux, y compris les données en ligne, hors ligne, CRM et tierces. Le profil vous permet de consolider vos diverses données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client. Cette présentation vous aidera à comprendre le rôle et l’utilisation du Profil client en temps réel dans l’Experience Platform.
 
 ## Comprendre le Profil client en temps réel
 
@@ -24,15 +24,15 @@ Le Profil client en temps réel est un magasin d’entités de recherche génér
 
 Bien que le Profil client en temps réel traite les données imbriquées et utilise Adobe Experience Platform Identity Service pour fusionner les données associées par le biais du mappage d’identité, il conserve ses propres données dans le magasin de Profils. En d’autres termes, le magasin de Profils est distinct des données du catalogue (Data Lake) et des données du service d’identité (graphique d’identité).
 
-### Services de Profil et de plate-forme
+### Services Profil et Platform
 
-La relation entre le Profil client en temps réel et d’autres services dans la plate-forme d’expérience est mise en évidence dans le diagramme suivant :
+La relation entre le Profil client en temps réel et d’autres services au sein de l’Experience Platform est mise en évidence dans le diagramme suivant :
 
-![Relation entre le Profil et d’autres services Experience Platform.](images/profile-overview/profile-in-platform.png)
+![La relation entre le Profil et les autres services Experience Platform.](images/profile-overview/profile-in-platform.png)
 
 ### Profils et enregistrements de données
 
-Un profil est la représentation d&#39;un sujet, d&#39;une organisation ou d&#39;un individu, également appelé données d&#39;enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse électronique. Avec Experience Platform, vous pouvez personnaliser des profils pour utiliser des types de données pertinentes pour votre entreprise. La classe de Profil de modèle de données d’expérience standard (XDM) est la classe privilégiée sur laquelle construire un schéma pour décrire les données d’enregistrement client et fournit les données qui font partie intégrante de nombreuses interactions entre les services de plateforme. Pour plus d’informations sur l’utilisation des schémas dans Experience Platform, veuillez commencer par lire la présentation [du système](../xdm/home.md)XDM.
+Un profil est la représentation d&#39;un sujet, d&#39;une organisation ou d&#39;un individu, également appelé données d&#39;enregistrement. Par exemple, le profil d’un produit peut inclure un SKU et une description, tandis que le profil d’une personne contient des informations telles que le prénom, le nom et l’adresse électronique. Avec Experience Platform, vous pouvez personnaliser les profils pour utiliser des types de données pertinentes pour votre entreprise. La classe de Profil de données d’expérience standard (XDM) est la classe privilégiée sur laquelle construire un schéma pour décrire les données d’enregistrement des clients et fournit les données qui font partie intégrante de nombreuses interactions entre les services Platform. Pour plus d&#39;informations sur l&#39;utilisation des schémas en Experience Platform, veuillez commencer par lire la présentation [du système](../xdm/home.md)XDM.
 
 ### événements de séries chronologiques
 
@@ -44,22 +44,22 @@ Chaque entreprise veut communiquer avec ses clients d&#39;une manière qui lui s
 
 ### Segmentation
 
-Adobe Experience Platform Segmentation Service produit les audiences nécessaires à l’alimentation de vos clients individuels. Lorsqu’un segment d’audience est créé, l’ID de ce segment est ajouté à la liste des adhésions de segment pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du Profil client en temps réel à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, lisez tout d’abord la présentation [du service de](../segmentation/home.md)segmentation.
+Le service de segmentation des Adobes Experience Platform produit les audiences nécessaires à l’alimentation de vos clients individuels. Lorsqu’un segment d’audience est créé, l’ID de ce segment est ajouté à la liste des adhésions de segment pour tous les profils admissibles. Les règles de segmentation sont créées et appliquées aux données du Profil client en temps réel à l’aide des API RESTful et de l’interface utilisateur du créateur de segments. Pour en savoir plus sur la segmentation, lisez tout d’abord la présentation [du service de](../segmentation/home.md)segmentation.
 
 ### Fragments de Profil et schémas d’union {#profile-fragments-and-union-schemas}
 
-L’une des principales caractéristiques du Profil client en temps réel est la possibilité d’unifier les données à canaux multiples. Lorsque le Profil client en temps réel est utilisé pour accéder à une entité, il peut vous fournir une vue fusionnée de tous les fragments de profil pour cette entité entre les jeux de données, appelés vue d&#39;union, et rendue possible par ce qu&#39;on appelle un schéma d&#39;union. Les données du Profil client en temps réel sont fusionnées entre les sources lorsqu’une entité ou un profil est accessible par son identifiant ou exporté en tant que segment. Pour en savoir plus sur l’accès aux profils et aux vues d’union, consultez le sous-guide du développeur API Profil client en temps réel sur les [entités, également appelé &quot;Accès au Profil&quot;](api/entities.md).
+L’une des principales caractéristiques du Profil client en temps réel est la possibilité d’unifier les données à canaux multiples. Lorsque le Profil client en temps réel est utilisé pour accéder à une entité, il peut vous fournir une vue fusionnée de tous les fragments de profil pour cette entité entre les jeux de données, appelés vue d&#39;union, et rendue possible par ce qu&#39;on appelle un schéma d&#39;union. Les données du Profil client en temps réel sont fusionnées entre les sources lorsqu’une entité ou un profil est accessible par son identifiant ou exporté en tant que segment. Pour en savoir plus sur l’accès aux profils et aux vues d’union à l’aide de l’API Profil client en temps réel, consultez le guide [des points de terminaison des](api/entities.md)entités.
 
 ### Stratégies de fusion
 
-Lorsque vous rassemblez des données provenant de plusieurs sources et les combinez afin d’obtenir une vue complète de chacun de vos clients, les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour plus d’informations sur l’utilisation des stratégies de fusion à l’aide des API, consultez le sous-guide [Stratégies de](api/merge-policies.md) fusion de l’API du Profil client en temps réel ou le guide [d’utilisateur des stratégies de](ui/merge-policies.md) fusion pour savoir comment utiliser les stratégies de fusion à l’aide de l’interface utilisateur de la plate-forme.
+Lorsque vous rassemblez des données provenant de plusieurs sources et les combinez afin d’obtenir une vue complète de chacun de vos clients, les stratégies de fusion sont les règles que Platform utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour plus d’informations sur l’utilisation des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le guide [des points de terminaison des stratégies de](api/merge-policies.md)fusion. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur de l’Experience Platform, consultez le guide [d’utilisation des stratégies de](ui/merge-policies.md)fusion.
 
 ## (Alpha) Configurer des attributs calculés
 
 >[!IMPORTANT]
 >La fonctionnalité d&#39;attribut calculée décrite dans ce document est en alpha. La documentation et les fonctionnalités peuvent changer.
 
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements. Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et des instructions détaillées sur leur utilisation, consultez le [sous-guide API Profil client en temps réel sur les attributs](api/computed-attributes.md)calculés. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans la plateforme d’expérience Adobe et comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide de l’API Profil client en temps réel.
+Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements. Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Pour plus d’informations sur les attributs calculés et pour obtenir des instructions détaillées sur leur utilisation à l’aide de l’API Profil client en temps réel, consultez le guide [des points de terminaison des attributs](api/computed-attributes.md)calculés. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans l’Adobe Experience Platform et il inclut des exemples d’appels d’API pour effectuer des opérations CRUD de base.
 
 ## Composants en temps réel
 
@@ -69,39 +69,39 @@ Cette section présente les composants qui permettent au Profil client en temps 
 
 L’entrée en temps réel est rendue possible par un processus appelé assimilation en flux continu. À mesure que les données de profil et de série chronologique sont ingérées, le Profil client en temps réel décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé segmentation en flux continu, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. En conséquence, vous pouvez instantanément effectuer des calculs et prendre des décisions pour fournir aux clients des expériences améliorées et individualisées lorsqu’ils interagissent avec votre marque. Lors de l’assimilation, les données sont également validées pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d&#39;informations sur la validation effectuée lors de l&#39;assimilation, veuillez commencer par lire l&#39;aperçu [de la qualité d&#39;assimilation des](../ingestion/quality/overview.md)données.
 
-### Projections Edge
+### Configurations et destinations de projection Edge
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. La plate-forme Adobe Experience Platform permet cet accès en temps réel aux données à l’aide de ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Pour en savoir plus et commencer à utiliser les arêtes et les projections, consultez le sous-guide [Projections](api/edge-projections.md)Edge de l&#39;API Profil client en temps réel.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. L&#39;Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l&#39;on appelle les contours. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que l’Adobe Target et l’Adobe Campaign utilisent des bords afin de fournir des expériences personnalisées aux clients en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Pour en savoir plus et commencer à utiliser des projections à l’aide de l’API Profil client en temps réel, consultez le guide [des points de terminaison de projection](api/edge-projections.md)Edge.
 
 ## Ajouter les données au Profil client en temps réel
 
-La plate-forme peut être configurée pour envoyer vos données d&#39;enregistrement et de série chronologique au Profil, en prenant en charge l&#39;assimilation en temps réel de flux continu et l&#39;assimilation par lot. Pour plus d’informations, voir le didacticiel qui décrit comment [ajouter des données au Profil](tutorials/add-profile-data.md)client en temps réel.
+Platform peut être configuré pour envoyer vos données d&#39;enregistrement et de série chronologique au Profil, en prenant en charge l&#39;assimilation en temps réel de flux continu et l&#39;assimilation par lot. Pour plus d’informations, voir le didacticiel qui décrit comment [ajouter des données au Profil](tutorials/add-profile-data.md)client en temps réel.
 
 >[!Note] :
->Les données collectées par le biais des solutions Adobe, y compris Analytics Cloud, Marketing Cloud et Advertising Cloud, s’enchaînent dans la plate-forme d’expérience et sont ingérées dans le Profil.
+>Les données collectées par le biais des solutions Adobe, notamment Analytics Cloud, Marketing Cloud et Advertising Cloud, sont acheminées vers l’Experience Platform et ingérées dans le Profil.
 
 ### Mesures d’assimilation en flux continu Profil
 
-Observability Insights vous permet d’exposer les mesures clés dans Adobe Experience Platform. Outre les statistiques d&#39;utilisation de la plate-forme et les indicateurs de performances de diverses fonctionnalités de la plate-forme, il existe des mesures spécifiques liées au Profil qui vous permettent d&#39;obtenir des informations sur les taux de demande entrants, les taux d&#39;assimilation réussis, les tailles d&#39;enregistrements assimilés, etc. Pour en savoir plus, lisez tout d’abord l’aperçu [des statistiques d’](../observability/home.md)observabilité et pour obtenir une liste complète des mesures de Profil, consultez la documentation sur les mesures [](../observability/metrics.md)disponibles.
+Observability Insights vous permet d’exposer les mesures clés dans l’Adobe Experience Platform. Outre les statistiques d’utilisation de Platform et les indicateurs de performances de diverses fonctionnalités de Platform, il existe des mesures spécifiques liées aux Profils qui vous permettent de mieux comprendre les taux de requêtes entrantes, les taux d’assimilation réussis, les tailles d’enregistrements assimilés, etc. Pour en savoir plus, lisez tout d’abord l’aperçu [des statistiques d’](../observability/home.md)observabilité et pour obtenir une liste complète des mesures de Profil, consultez la documentation sur les mesures [](../observability/metrics.md)disponibles.
 
 ## Gouvernance des données et confidentialité
 
 La gouvernance des données est une série de stratégies et de technologies utilisées pour gérer les données des clients et assurer le respect des réglementations, restrictions et politiques applicables à l&#39;utilisation des données.
 
-En ce qui concerne l’accès aux données, la gouvernance des données joue un rôle clé au sein de la plate-forme d’expérience à divers niveaux :
+En ce qui concerne l&#39;accès aux données, la gouvernance des données joue un rôle clé au sein des Experience Platform à divers niveaux :
 * Étiquetage de l’utilisation des données
 * Stratégies d’accès aux données
 * Contrôle d&#39;accès sur les données pour les actions marketing
 
-La gouvernance des données est gérée à plusieurs points. Il s’agit notamment de décider quelles données sont incorporées dans la plate-forme et quelles données sont accessibles après l’assimilation pour une action marketing donnée. Pour plus d’informations, commencez par lire la présentation [de la gouvernance des](../data-governance/home.md)données.
+La gouvernance des données est gérée à plusieurs points. Il s’agit notamment de décider quelles données sont ingérées dans Platform et quelles données sont accessibles après l’assimilation pour une action marketing donnée. Pour plus d’informations, commencez par lire la présentation [de la gouvernance des](../data-governance/home.md)données.
 
 ### Gestion des demandes d’exclusion et de confidentialité des données
 
-Experience Platform permet à vos clients d’envoyer des demandes d’exclusion liées à l’utilisation et à l’enregistrement de leurs données dans le Profil client en temps réel. Pour plus d’informations sur la façon dont les demandes d’exclusion sont traitées, consultez la documentation sur le [traitement des demandes](../segmentation/honoring-opt-outs.md)d’exclusion.
+L’Experience Platform permet à vos clients d’envoyer des demandes d’exclusion liées à l’utilisation et à l’enregistrement de leurs données dans le Profil client en temps réel. Pour plus d’informations sur la façon dont les demandes d’exclusion sont traitées, consultez la documentation sur le [traitement des demandes](../segmentation/honoring-opt-outs.md)d’exclusion.
 
 ## Directives Profils
 
-Experience Platform a une série de directives à suivre pour utiliser efficacement le Profil.
+L&#39;Experience Platform a une série de directives à suivre pour utiliser efficacement le Profil.
 
 | Section | Limite |
 | ------- | -------- |
@@ -128,10 +128,14 @@ Experience Platform a une série de directives à suivre pour utiliser efficacem
 
 --->
 
->!![NOTE] Une entité non-personne fait référence à toute classe XDM qui **ne fait pas** partie du Profil.
+>[!NOTE]
+>Une entité non-personne fait référence à toute classe XDM qui **ne fait pas** partie du Profil.
 
 ## Étapes suivantes et ressources supplémentaires
 
-Pour en savoir plus sur le Profil client en temps réel, veuillez continuer à lire la documentation fournie dans ce guide et compléter votre apprentissage en regardant la vidéo ci-dessous ou en explorant d’autres didacticiels [vidéo de la plateforme](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)d’expérience.
+Pour en savoir plus sur le Profil client en temps réel, veuillez continuer à lire la documentation et compléter votre apprentissage en regardant la vidéo ci-dessous ou en explorant d&#39;autres didacticiels [vidéo](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html)Experience Platform.
+
+>[!WARNING]
+>L’interface utilisateur Platform affichée dans la vidéo suivante est obsolète. Consultez le guide [d&#39;utilisation du Profil client en temps](ui/user-guide.md) réel pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
