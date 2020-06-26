@@ -4,7 +4,7 @@ seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -66,7 +66,7 @@ alloy("commandName", options)
 
 ### Objets de réponse
 
-Toutes les promesses retournées par les commandes sont résolues avec un `result` objet. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations de bibliothèque sont transmises sous la forme d’une propriété de l’objet de résultats dans la commande suivante.
+Toutes les promesses retournées par les commandes sont résolues avec un `result` objet. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations de bibliothèque sont transmises sous la forme d’une propriété de l’objet result dans la commande suivante.
 
 ```js
 alloy("getLibraryInfo").then(function(result) {
@@ -76,4 +76,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### Consentement
 
-Si l&#39;utilisateur n&#39;a pas donné son consentement à une fin particulière, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
+Si un utilisateur n&#39;a pas donné son consentement à un usage particulier, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
