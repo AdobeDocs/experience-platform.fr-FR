@@ -4,10 +4,10 @@ seo-title: Débogage du SDK Web d’Adobe Experience Platform
 description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 seo-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 7d4f364ebb9df1ce58481a35007ea75f86ab7825
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 100%
+source-wordcount: '324'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Lorsque le débogage est activé, le SDK envoie des messages à la console du navigateur qui peuvent s’avérer utiles pour déboguer votre implémentation et comprendre le comportement du SDK. Le débogage permet également une validation synchrone du côté serveur des données collectées par rapport au schéma configuré.
 
-Le débogage est désactivé par défaut, mais peut être activé de trois manières différentes :
+Le débogage est désactivé par défaut, mais il est possible de l’activer de trois manières différentes :
 
 * Commande `configure`
 * Commande `setDebug`
@@ -34,7 +34,8 @@ alloy("configure", {
 });
 ```
 
->[!Hint]
+>[!TIP]
+>
 >Le débogage est ainsi activé pour tous les utilisateurs de la page web plutôt que pour votre navigateur personnel uniquement.
 
 ## Activation/désactivation du débogage avec la commande Debug
@@ -61,7 +62,7 @@ Tout comme la commande `debug`, si vous préférez ne pas modifier le code de vo
 
 ## Priorité et durée
 
-Lorsque le débogage est défini par le biais de la commande`debug` ou du paramètre de chaîne de requête, il remplace toute option `debug` définie dans la commande `configure`. Dans ces deux cas, le débogage reste activé/désactivé pendant la durée de la session. En d’autres termes, si vous activez le débogage à l’aide de la commande debug ou du paramètre de chaîne de requête, il reste activé jusqu’à :
+Lorsque le débogage est défini par le biais de la commande`debug` ou du paramètre de chaîne de requête, il remplace toute option `debug` définie dans la commande `configure`. Dans ces deux cas, le débogage reste également activé pendant la durée de la session. En d’autres termes, si vous activez le débogage à l’aide de la commande debug ou du paramètre de chaîne de requête, il reste activé jusqu’à :
 
 * la fin de votre session ;
 * l’exécution de la commande `debug` ;
