@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9a2e6f7db441b804f17ec91d06d359439c3d5da5
+source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1878'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Ce document fournit des conseils généraux sur le mappage des données de vos �
 
 ## Résumé du flux de travail
 
-Le processus de préparation varie selon que vos données sont stockées dans Adobe Experience Platform ou en externe. Cette section résume les étapes nécessaires à suivre, selon l&#39;un ou l&#39;autre scénario.
+Le processus de préparation varie selon que vos données sont stockées dans l’Adobe Experience Platform ou en externe. Cette section résume les étapes nécessaires à suivre, selon l&#39;un ou l&#39;autre scénario.
 
 ### Préparation de données externes
 
@@ -28,7 +28,7 @@ Si vos données sont stockées en dehors de [!DNL Experience Platform], procéde
 
 1. Contactez les services de conseil Adobe pour demander des informations d&#39;identification d&#39;accès pour un conteneur d&#39;Enregistrement Azure Blob dédié.
 1. A l’aide de vos informations d’identification d’accès, téléchargez vos données vers le conteneur Blob.
-1. Travaillez avec Adobe Consulting Services pour associer vos données au schéma [](#cee-schema) Consumer ExperienceEvent et les intégrer à Intelligent Services.
+1. Travaillez avec Adobe Consulting Services pour faire correspondre vos données au schéma [](#cee-schema) Consumer ExperienceEvent et les intégrer à Intelligent Services.
 
 ### [!DNL Experience Platform] préparation des données
 
@@ -41,6 +41,8 @@ Si vos données sont déjà stockées dans [!DNL Platform], procédez comme suit
 
 Le schéma Consumer ExperienceEvent décrit le comportement d’une personne en ce qui concerne les événements de marketing numérique (Web ou mobile) ainsi que l’activité de commerce en ligne ou hors ligne. L&#39;utilisation de ce schéma est requise pour les services intelligents en raison de ses champs (colonnes) sémantiquement bien définis, évitant ainsi les noms inconnus qui, autrement, rendraient les données moins claires.
 
+Le schéma CEE, comme tous les schémas XDM ExperienceEvent, capture l’état du système basé sur les séries chronologiques lorsqu’un événement (ou un ensemble de événements) s’est produit, y compris le moment et l’identité du sujet concerné. Les Événements d&#39;expérience sont des données factuelles de ce qui s&#39;est passé, et ils sont donc immuables et représentent ce qui s&#39;est passé sans agrégation ni interprétation.
+
 Les services intelligents utilisent plusieurs champs clés de ce schéma pour générer des informations à partir des données de vos événements marketing, qui se trouvent tous au niveau racine et sont développés pour afficher leurs sous-champs requis.
 
 ![](./images/data-preparation/schema-expansion.gif)
@@ -51,13 +53,38 @@ Un exemple complet du mixin peut être trouvé dans le référentiel [XDM](https
 
 ## Champs clés
 
-Les sections ci-dessous mettent en évidence les champs clés du mixin CEE qui doivent être utilisés pour que les services intelligents génèrent des informations utiles, y compris des descriptions et des liens vers la documentation de référence pour d&#39;autres exemples.
+Il y a plusieurs champs clés dans le mixin CEE qui doivent être utilisés pour que les services intelligents puissent générer des informations utiles. Cette section décrit le cas d’utilisation et les données attendues pour ces champs et fournit des liens vers la documentation de référence pour d’autres exemples.
 
->[!IMPORTANT] Le `xdm:channel` champ (expliqué dans la première section ci-dessous) est **requis** pour que l’API d’attribution fonctionne avec vos données, tandis que l’IA du client ne comporte aucun champ obligatoire. Tous les autres champs clés sont fortement recommandés, mais pas obligatoires.
+### Champs obligatoires
 
-### xdm:canal
+Bien que l’utilisation de tous les champs clés soit fortement recommandée, deux champs sont **requis** pour que les services intelligents fonctionnent :
 
-Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ contient des informations sur le type de canal, le type de support et le type d’emplacement. **Ce champ _doit_être fourni pour que l’API d’attribution fonctionne avec vos données**.
+* [Un champ d&#39;identité principal](#identity)
+* [xdm:timestamp](#timestamp)
+* [xdm:canal](#channel) (obligatoire uniquement pour l’API d’attribution)
+
+#### Identité du Principal {#identity}
+
+L&#39;un des champs de votre schéma doit être défini en tant que champ d&#39;identité principal, ce qui permet à Intelligent Services de lier chaque instance de données de séries chronologiques à une personne.
+
+Vous devez déterminer le meilleur champ à utiliser comme identité principale en fonction de la source et de la nature de vos données. Un champ d&#39;identité doit inclure un espace de nommage **d&#39;** identité qui indique le type de données d&#39;identité que le champ attend comme valeur. Certaines valeurs d’espace de nommage valides sont les suivantes :
+
+* &quot;email&quot;
+* &quot;phone&quot;
+* &quot;mcid&quot; (pour les ID d’Adobe Audience Manager)
+* &quot;aid&quot; (pour les identifiants Analytics Adobe)
+
+Si vous ne savez pas quel champ vous devez utiliser comme identité principale, contactez les services de conseil d’Adobe pour déterminer la meilleure solution.
+
+#### xdm:timestamp {#timestamp}
+
+Ce champ représente la date et l&#39;heure auxquelles le événement s&#39;est produit. Cette valeur doit être fournie sous forme de chaîne, conformément à la norme ISO 8601.
+
+#### xdm:canal {#channel}
+
+>[!NOTE] Ce champ est obligatoire uniquement lors de l’utilisation de l’API d’attribution.
+
+Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ contient des informations sur le type de canal, le type de support et le type d’emplacement.
 
 ![](./images/data-preparation/channel.png)
 
@@ -74,7 +101,7 @@ Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ co
 
 Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:channel`, veuillez consulter la section schéma [du canal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) d’expérience. Pour obtenir des exemples de mappages, reportez-vous au [tableau ci-dessous](#example-channels).
 
-#### Exemples de mappages de canaux {#example-channels}
+##### Exemples de mappages de canaux {#example-channels}
 
 Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm:channel` schéma :
 
@@ -82,14 +109,18 @@ Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
-| Afficher  | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
-| E-mail | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
+| Afficher | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
+| Email | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
 | Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
 | Redirection du code QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Mobile | https:/<span>/ns.adobe.com/xdm/canal-types/mobile | détenu | clicks |
 
-### xdm:productListItems
+### Champs recommandés
+
+Les autres champs clés sont décrits dans cette section. Bien que ces champs ne soient pas nécessairement requis pour que les services intelligents fonctionnent, il est fortement recommandé d’en utiliser autant que possible afin d’obtenir des informations plus précises.
+
+#### xdm:productListItems
 
 Ce champ est un tableau d&#39;articles qui représentent les produits sélectionnés par un client, y compris le SKU, le nom, le prix et la quantité du produit.
 
@@ -118,7 +149,7 @@ Ce champ est un tableau d&#39;articles qui représentent les produits sélection
 
 Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:productListItems`, veuillez consulter la section du schéma [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
 
-### xdm:commerce
+#### xdm:commerce
 
 Ce champ contient des informations propres au commerce sur ExperienceEvent, notamment le numéro de bon de commande et les informations de paiement.
 
@@ -156,7 +187,7 @@ Ce champ contient des informations propres au commerce sur ExperienceEvent, nota
 
 Pour obtenir des informations complètes sur chacun des sous-champs obligatoires pour `xdm:commerce`, veuillez consulter la section du schéma [de détails](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-commerce.schema.md) commerciaux.
 
-### xdm:web
+#### xdm:web
 
 Ce champ représente les détails Web relatifs à ExperienceEvent, tels que l’interaction, les détails de la page et le parrain.
 
@@ -186,7 +217,7 @@ Ce champ représente les détails Web relatifs à ExperienceEvent, tels que l’
 
 Pour obtenir des informations complètes sur chacun des sous-champs requis pour `xdm:productListItems`, consultez la section du schéma [de détails Web](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-web.schema.md) ExperienceEvent.
 
-### xdm:marketing
+#### xdm:marketing
 
 Ce champ contient des informations relatives aux activités marketing actives avec le point de contact.
 
@@ -212,11 +243,11 @@ Après avoir décidé de la plage de données à envoyer, contactez les services
 
 Si vous avez un [!DNL Adobe Experience Platform] abonnement et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
-### Utilisation d’Adobe Experience Platform
+### Utilisation de l’Adobe Experience Platform
 
->[!NOTE] Les étapes ci-dessous nécessitent un abonnement à la plate-forme d’expérience. Si vous n’avez pas accès à la plate-forme, passez directement à la section [Étapes](#next-steps) suivantes.
+>[!NOTE] Les étapes ci-dessous nécessitent un abonnement à l&#39;Experience Platform. Si vous n’avez pas accès à Platform, passez directement à la section [Étapes](#next-steps) suivantes.
 
-Cette section décrit le processus de mappage et d’assimilation des données dans la plate-forme Experience pour une utilisation dans les services intelligents, y compris les liens vers des didacticiels pour obtenir des étapes détaillées.
+Cette section décrit le processus de mappage et d’assimilation de données dans un Experience Platform pour une utilisation dans les services intelligents, y compris les liens vers des didacticiels pour obtenir des étapes détaillées.
 
 #### Créer un schéma et un jeu de données CEE
 
@@ -234,7 +265,13 @@ Une fois le schéma créé et enregistré, vous pouvez créer un jeu de données
 * [Créer un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (Suivez le processus pour utiliser un schéma existant)
 * [Création d’un jeu de données dans l’API](../catalog/datasets/create.md)
 
+Une fois le jeu de données créé, vous pouvez le trouver dans l’interface utilisateur Platform de l’espace de travail *[!UICONTROL Datasets]* .
+
+![](images/data-preparation/dataset-location.png)
+
 #### Ajouter une balise d&#39;espace de nommage d&#39;identité principale au jeu de données
+
+>[!NOTE] Les prochaines versions d&#39;Intelligent Services intégreront le service [d&#39;identité des](../identity-service/home.md) Adobes Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
 
 Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
 
@@ -256,7 +293,7 @@ PATCH /dataSets/{DATASET_ID}
 
 En fonction de la source à partir de laquelle vous importez des données, vous devez fournir les valeurs appropriées `primaryIdentityNamespace` `sourceConnectorId` et de balise dans la charge utile de la requête.
 
-La demande suivante ajoute les valeurs de balise appropriées pour Audience Manager :
+La demande suivante ajoute les valeurs de balise appropriées pour l’Audience Manager :
 
 ```shell
 curl -X PATCH \
@@ -306,9 +343,9 @@ Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de d
 
 #### Mapper et assimiler des données {#ingest}
 
-Après avoir créé un schéma CEE et un jeu de données, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans la plate-forme. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans Platform. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
 
-Si vos données sont stockées dans une application tierce prise en charge, vous pouvez également choisir de créer un connecteur [](../sources/home.md) source pour intégrer les données de vos événements marketing dans la plate-forme en temps réel.
+Si vos données sont stockées dans une application tierce prise en charge, vous pouvez également choisir de créer un connecteur [](../sources/home.md) source pour intégrer les données de vos événements marketing dans Platform en temps réel.
 
 ## Étapes suivantes {#next-steps}
 
