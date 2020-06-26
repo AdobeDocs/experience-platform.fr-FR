@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Traitement des demandes de confidentialité dans Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3584202554baf46aad174d671084751e6557bbc
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -14,28 +14,28 @@ ht-degree: 0%
 
 # Traitement des demandes de confidentialité dans Data Lake
 
-Le service de confidentialité d’Adobe Experience Platform traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles, conformément aux règles de confidentialité légales et organisationnelles.
+Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
 Ce document couvre les concepts essentiels liés au traitement des demandes de protection des renseignements personnels pour les données des clients stockées dans le lac Data.
 
 ## Prise en main
 
-Avant de lire ce guide, il est recommandé de bien comprendre les services Experience Platform suivants :
+Il est recommandé de bien comprendre les services d’Experience Platform suivants avant de lire ce guide :
 
 * [Privacy Service](../privacy-service/home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou les supprimer.
-* [Service](home.md)de catalogue : Système d’enregistrement pour l’emplacement et le lignage des données dans la plateforme d’expérience. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées du jeu de données.
-* [Système](../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+* [Service](home.md)de catalogue : Système d’enregistrement pour l’emplacement et le lignage des données dans l’Experience Platform. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées du jeu de données.
+* [Système](../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 * [Service](../identity-service/home.md)d&#39;identité : Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
 
 ## Comprendre les espaces de nommage d&#39;identité {#namespaces}
 
-Adobe Experience Platform Identity Service relie les données d’identité des clients entre les systèmes et les périphériques. Identity Service utilise des espaces de nommage **** d&#39;identité pour fournir un contexte aux valeurs d&#39;identité en les rattachant à leur système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Adresse électronique&quot;) ou associer l’identité à une application spécifique, telle qu’un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou un Adobe Cible ID (&quot;TNTID&quot;).
+Adobe Experience Platform Identity Service relie les données d&#39;identité des clients entre les systèmes et les périphériques. Identity Service utilise des espaces de nommage **** d&#39;identité pour fournir un contexte aux valeurs d&#39;identité en les rattachant à leur système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Email&quot;) ou associer l’identité à une application spécifique, telle qu’un Advertising Cloud ID (&quot;AdCloud&quot;) ou un ID d’Adobe Target (&quot;TNTID&quot;).
 
 Identity Service conserve un stock d&#39;espaces de nommage d&#39;identité définis globalement (standard) et définis par l&#39;utilisateur (personnalisés). Les espaces de nommage standard sont disponibles pour toutes les organisations (par exemple, &quot;Courriel&quot; et &quot;ECID&quot;), tandis que votre organisation peut également créer des espaces de nommage personnalisés en fonction de ses besoins particuliers.
 
-Pour plus d’informations sur les espaces de nommage d’identité dans la plate-forme d’expérience, voir la présentation [de l’espace de nommage](../identity-service/namespaces.md)d’identité.
+Pour plus d&#39;informations sur les espaces de nommage d&#39;identité dans l&#39;Experience Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
 
-## Ajout de données d&#39;identité aux jeux de données
+## Ajouter des données d&#39;identité aux jeux de données
 
 Lors de la création de demandes de confidentialité pour Data Lake, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur **d’** identité dans leur schéma XDM associé.
 
@@ -43,7 +43,9 @@ Lors de la création de demandes de confidentialité pour Data Lake, des valeurs
 
 Cette section décrit les étapes à suivre pour ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données existant. Si vous disposez déjà d’un jeu de données avec un descripteur d’identité, vous pouvez passer à la section [](#nested-maps)suivante.
 
->[!IMPORTANT] Lorsque vous décidez des champs de schéma à définir en tant qu’identités, gardez à l’esprit les [limites de l’utilisation de champs](#nested-maps)de type mappage imbriqués.
+>[!IMPORTANT]
+>
+>Lorsque vous décidez des champs de schéma à définir en tant qu’identités, gardez à l’esprit les [limites de l’utilisation de champs](#nested-maps)de type mappage imbriqués.
 
 Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un schéma de jeux de données :
 
@@ -52,7 +54,7 @@ Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un sché
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l’interface utilisateur de la plateforme d’expérience, l’espace de travail _[!UICONTROL Schémas]_vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour[définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field)d&#39;identité dans le didacticiel de l&#39;éditeur de Schémas.
+Dans l&#39;interface utilisateur de l&#39;Experience Platform, l&#39;espace de travail _[!UICONTROL Schémas]_vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour[définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field)d&#39;identité dans le didacticiel de l&#39;éditeur de Schémas.
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs d’identité, vous pouvez passer à la section suivante lors de l’ [envoi des demandes](#submit)de confidentialité.
 
@@ -100,7 +102,7 @@ curl -X POST \
 | `xdm:sourceSchema` | ID URI unique du schéma XDM de votre jeu de données. |
 | `xdm:sourceVersion` | Version du schéma XDM spécifiée dans `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Chemin d’accès au champ de schéma auquel le descripteur est appliqué. |
-| `xdm:namespace` | L’un des espaces de nommage [d’identité](../privacy-service/api/appendix.md#standard-namespaces) standard reconnus par Privacy Service, ou un espace de nommage personnalisé défini par votre organisation. |
+| `xdm:namespace` | L&#39;un des espaces de nommage [d&#39;identité](../privacy-service/api/appendix.md#standard-namespaces) standard reconnus par le Privacy Service ou un espace de nommage personnalisé défini par votre organisation. |
 | `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, selon l’espace de nommage utilisé sous `xdm:namespace`. |
 | `xdm:isPrimary` | Valeur booléenne facultative. Lorsque la valeur est true, cela indique que le champ est une identité principale. Les Schémas ne peuvent contenir qu&#39;une seule identité primaire. La valeur par défaut est false si elle n’est pas incluse. |
 
@@ -124,9 +126,9 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et les détails du des
 
 ## Envoi de requêtes {#submit}
 
->[!NOTE] Cette section traite de la façon de formater les demandes de protection de la vie privée pour le lac Data. Il est vivement recommandé de consulter la documentation de l’interface utilisateur [de](../privacy-service/ui/overview.md) Privacy Service ou de l’API [de](../privacy-service/api/getting-started.md) Privacy Service pour obtenir des instructions complètes sur la façon d’envoyer une tâche de confidentialité, y compris sur la façon de formater correctement les données d’identité d’utilisateur envoyées dans les charges de demande.
+>[!NOTE] Cette section traite de la façon de formater les demandes de protection de la vie privée pour le lac Data. Il est vivement recommandé de consulter la documentation relative à l’interface utilisateur [](../privacy-service/ui/overview.md) Privacy Service ou à l’API [](../privacy-service/api/getting-started.md) Privacy Service pour connaître les étapes complètes d’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité de l’utilisateur envoyées dans les charges de demande.
 
-La section suivante décrit comment faire des demandes de confidentialité pour Data Lake à l’aide de l’interface utilisateur ou de l’API de Privacy Service.
+La section suivante décrit comment effectuer des demandes de confidentialité pour Data Lake à l’aide de l’interface utilisateur ou de l’API du Privacy Service.
 
 ### Utilisation de l’interface utilisateur
 
@@ -183,9 +185,9 @@ curl -X POST \
 
 ## Supprimer le traitement de demande
 
-Lorsqu’Experience Platform reçoit une demande de suppression de Privacy Service, Platform envoie une confirmation à Privacy Service que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les dossiers sont ensuite retirés du lac Data dans les sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service de plateforme.
+Lorsque l’Experience Platform reçoit une demande de suppression du Privacy Service, Platform envoie une confirmation au Privacy Service que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les dossiers sont ensuite retirés du lac Data dans les sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service Platform.
 
-Dans les prochaines versions, Platform enverra une confirmation à Privacy Service après la suppression physique des données.
+Dans les prochaines versions, Platform enverra une confirmation au Privacy Service après la suppression physique des données.
 
 ## Étapes suivantes
 
