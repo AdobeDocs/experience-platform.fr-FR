@@ -4,17 +4,17 @@ seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience P
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 34%
+source-wordcount: '232'
+ht-degree: 24%
 
 ---
 
 
 # Présentation des options de personnalisation
 
-Le SDK Web d’Adobe Experience Platform prend en charge l’interrogation des solutions de personnalisation chez Adobe, y compris Adobe Cible. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
+Le Adobe Experience Platform Web SDK prend en charge l’interrogation des solutions de personnalisation à Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendu automatique du contenu
 
@@ -90,9 +90,10 @@ Cela renverra une liste de décisions en tant qu’objet JSON pour chaque décis
 }
 ```
 
-{info}Si vous utilisez des étendues de Cible pour créer des mBoxes sur le serveur, seules les requêtes sont traitées en une seule fois et non individuellement. La mbox globale est toujours envoyée.
-{info}
+>[!TIP]
+>
+> Si vous utilisez des étendues de Cible pour devenir des mBoxes sur le serveur, seules elles sont des requêtes à la fois et non pas individuellement. La mbox globale est toujours envoyée.
 
 ### Récupérer le contenu automatique
 
-Si vous souhaitez inclure les décisions de rendu automatique, vous pouvez définir `result.decisions` `renderDecisions` la valeur false et inclure la plage spéciale `__view__`
+Si vous souhaitez que les `result.decisions` décisions de rendu automatique soient incluses, vous pouvez définir la valeur false `renderDecisions` et inclure la portée spéciale `__view__`.
