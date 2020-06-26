@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2057'
+source-wordcount: '2052'
 ht-degree: 3%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 3%
 
 # Stratégies de fusion
 
-Adobe Experience Platform vous permet de rassembler des données à partir de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
+L&#39;Adobe Experience Platform vous permet de rassembler des données provenant de plusieurs sources et de les combiner afin de voir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API Profil client en temps réel. Avant de continuer, consultez le guide [du développeur de l’API Profil client en temps](getting-started.md)réel. En particulier, la section [](getting-started.md#getting-started) Prise en main du guide du développeur de Profils contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas de la manière spécifique dont vous avez besoin. Toute API accédant aux données du Profil requiert une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elle n’est pas explicitement fournie. La plate-forme fournit une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour un schéma spécifique et la marquer comme la stratégie par défaut de votre organisation. Chaque organisation peut avoir plusieurs stratégies de fusion par schéma, mais chaque schéma ne peut avoir qu&#39;une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion par défaut est utilisé lorsque le nom du schéma est fourni et qu’une stratégie de fusion est requise mais pas fournie. Lorsque vous définissez une stratégie de fusion comme stratégie par défaut, toute stratégie de fusion existante précédemment définie comme stratégie par défaut sera automatiquement mise à jour afin de ne plus être utilisée comme stratégie par défaut.
+Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas de la manière spécifique dont vous avez besoin. Toute API accédant aux données du Profil requiert une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elle n’est pas explicitement fournie. Platform fournit une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour un schéma spécifique et la marquer comme la stratégie par défaut de votre organisation. Chaque organisation peut avoir plusieurs stratégies de fusion par schéma, mais chaque schéma ne peut avoir qu&#39;une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion par défaut est utilisé lorsque le nom du schéma est fourni et qu’une stratégie de fusion est requise mais pas fournie. Lorsque vous définissez une stratégie de fusion comme stratégie par défaut, toute stratégie de fusion existante précédemment définie comme stratégie par défaut sera automatiquement mise à jour afin de ne plus être utilisée comme stratégie par défaut.
 
 ### Objet de stratégie de fusion complète
 
@@ -59,7 +59,7 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
 | `attributeMerge` | [Objet de fusion](#attribute-merge) d’attributs indiquant la manière dont la stratégie de fusion attribuera la priorité aux valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Objet [schéma](#schema) sur lequel la stratégie de fusion peut être utilisée. |
 | `default` | Valeur booléenne indiquant si cette stratégie de fusion est la stratégie par défaut du schéma spécifié. |
-| `version` | Version conservée de la plateforme de la stratégie de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
+| `version` | Platform a conservé la version de la stratégie de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
 | `updateEpoch` | Date de la dernière mise à jour de la stratégie de fusion. |
 
 **Exemple de stratégie de fusion**
@@ -86,7 +86,7 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
 
 ### Graphique d&#39;identité {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d’identité utilisés globalement et pour chaque organisation sur Experience Platform. L’ `identityGraph` attribut de la stratégie de fusion définit comment déterminer les identités associées pour un utilisateur.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d&#39;identité utilisés globalement et pour chaque organisation sur Experience Platform. L’ `identityGraph` attribut de la stratégie de fusion définit comment déterminer les identités associées pour un utilisateur.
 
 **identityGraph, objet**
 
@@ -693,7 +693,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion mise à jo
 
 ## Supprimer une stratégie de fusion
 
-Une stratégie de fusion peut être supprimée en faisant une requête DELETE au point de `/config/mergePolicies` terminaison et en incluant l&#39;ID de la stratégie de fusion que vous souhaitez supprimer dans le chemin de requête.
+Vous pouvez supprimer une stratégie de fusion en adressant une requête de DELETE au point de `/config/mergePolicies` terminaison et en incluant l’ID de la stratégie de fusion que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -724,7 +724,7 @@ Une requête de suppression réussie renvoie HTTP Status 200 (OK) et un corps de
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de Profil client en temps réel. Consultez la documentation [du service](../../segmentation/home.md) de segmentation de la plateforme d’expérienceAdobe pour commencer à définir et à utiliser des segments.
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de Profil client en temps réel. Consultez la documentation [du Service de segmentation des](../../segmentation/home.md) Adobes Experience Platform pour commencer à définir et à utiliser des segments.
 
 
 
