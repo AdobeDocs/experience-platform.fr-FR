@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1501'
 ht-degree: 2%
 
 ---
@@ -14,14 +14,14 @@ ht-degree: 2%
 
 # Tâches du système de Profil (supprimer des requêtes)
 
-Adobe Experience Platform vous permet d’assimiler des données provenant de plusieurs sources et de créer des profils solides pour chaque client. Les données ingérées dans Platform sont stockées dans Data Lake ainsi que dans le magasin de données du Profil client en temps réel. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, il est nécessaire d’utiliser l’API Profil client en temps réel pour créer une tâche système de Profil, également appelée &quot;demande de suppression&quot;, qui peut également être modifiée, surveillée ou supprimée si nécessaire.
+L’Adobe Experience Platform vous permet d’assimiler des données provenant de plusieurs sources et de créer des profils solides pour chaque client. Les données ingérées dans Platform sont stockées dans le lac Data ainsi que dans la banque de données du Profil client en temps réel. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, il est nécessaire d’utiliser l’API Profil client en temps réel pour créer une tâche système de Profil, également appelée &quot;demande de suppression&quot;, qui peut également être modifiée, surveillée ou supprimée si nécessaire.
 
 >[!NOTE]
 >Si vous essayez de supprimer des jeux de données ou des lots de Data Lake, veuillez consulter la présentation [du service de](../../catalog/home.md) catalogue pour obtenir des instructions.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API Profil client en temps réel. Avant de continuer, consultez le guide [du développeur de l’API Profil client en temps](getting-started.md)réel. En particulier, la section [](getting-started.md#getting-started) Prise en main du guide du développeur de Profils contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Vue de suppression de requêtes
 
@@ -103,10 +103,10 @@ Le lancement d’une nouvelle demande de suppression est effectué par le biais 
 
 ### Suppression d’un jeu de données
 
-Pour supprimer un jeu de données, l’ID de jeu de données doit être inclus dans le corps de la requête POST. Cette action va supprimer TOUTES les données d&#39;un jeu de données donné. Experience Platform vous permet de supprimer des jeux de données en fonction des schémas d’enregistrements et de séries chronologiques.
+Pour supprimer un jeu de données, l’ID de jeu de données doit être inclus dans le corps de la requête POST. Cette action va supprimer TOUTES les données d&#39;un jeu de données donné. Experience Platform vous permet de supprimer des jeux de données en fonction de schémas d&#39;enregistrements et de séries chronologiques.
 
 >[!CAUTION]
-> Lorsque vous essayez de supprimer un jeu de données compatible avec les Profils à l’aide de l’interface utilisateur de la plateforme d’expérience, le jeu de données est désactivé pour l’assimilation mais ne sera pas supprimé tant qu’une demande de suppression n’aura pas été créée à l’aide de l’API. Pour plus d&#39;informations, voir l&#39; [annexe](#appendix) du présent document.
+> Lorsque vous essayez de supprimer un jeu de données compatible avec les Profils à l’aide de l’interface utilisateur Experience Platform, le jeu de données est désactivé pour l’assimilation mais ne sera pas supprimé tant qu’une demande de suppression n’aura pas été créée à l’aide de l’API. Pour plus d&#39;informations, voir l&#39; [annexe](#appendix) du présent document.
 
 **Format d’API**
 
@@ -277,7 +277,7 @@ Une fois que l’état de la demande de suppression est &quot;TERMINÉ&quot;, vo
 
 ## Suppression d’une demande de suppression
 
-Experience Platform vous permet de supprimer une requête précédente, qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou s’est retrouvée bloquée dans l’étape de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point de `/system/jobs` terminaison et inclure l’ID de la requête de suppression que vous souhaitez supprimer sur le chemin d’accès de la requête.
+L’Experience Platform vous permet de supprimer une requête précédente, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou s’est retrouvée bloquée dans l’étape de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête de DELETE sur le point de `/system/jobs` terminaison et inclure l’ID de la requête de suppression que vous souhaitez supprimer sur le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -306,15 +306,15 @@ Une requête de suppression réussie renvoie HTTP Status 200 (OK) et un corps de
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les étapes nécessaires pour supprimer des jeux de données et des lots du magasin de Profils d’Experience Platform, vous pouvez supprimer en toute sécurité les données qui ont été ajoutées par erreur ou dont votre entreprise n’a plus besoin. N&#39;oubliez pas qu&#39;une demande de suppression ne peut pas être annulée. Par conséquent, vous ne devez supprimer que les données dont vous êtes certain que vous n&#39;avez pas besoin maintenant et dont vous n&#39;aurez pas besoin à l&#39;avenir.
+Maintenant que vous connaissez les étapes de suppression des jeux de données et des lots du magasin de Profils dans l’Experience Platform, vous pouvez supprimer en toute sécurité les données qui ont été ajoutées par erreur ou dont votre organisation n’a plus besoin. N&#39;oubliez pas qu&#39;une demande de suppression ne peut pas être annulée. Par conséquent, vous ne devez supprimer que les données dont vous êtes certain que vous n&#39;avez pas besoin maintenant et dont vous n&#39;aurez pas besoin à l&#39;avenir.
 
 ## Annexe {#appendix}
 
 Les informations suivantes complètent l&#39;action de suppression d&#39;un jeu de données du magasin de Profils.
 
-### Suppression d’un jeu de données à l’aide de l’interface utilisateur de la plateforme d’expérience
+### Suppression d’un jeu de données à l’aide de l’interface utilisateur Experience Platform
 
-Lors de l’utilisation de l’interface utilisateur de la plateforme d’expérience pour supprimer un jeu de données activé pour le Profil, une boîte de dialogue s’ouvre et vous demande : &quot;Voulez-vous vraiment supprimer ce jeu de données du lac des données d’expérience ? Utilisez l&#39;API &quot;tâches profil systems&quot; pour supprimer ce jeu de données du service Profil.&quot;
+Lorsque vous utilisez l’interface utilisateur de l’Experience Platform pour supprimer un jeu de données activé pour le Profil, une boîte de dialogue s’ouvre et vous demande : &quot;Voulez-vous vraiment supprimer ce jeu de données du lac des données d’expérience ? Utilisez l&#39;API &quot;tâches profil systems&quot; pour supprimer ce jeu de données du service Profil.&quot;
 
 Cliquez sur **Supprimer** dans l&#39;interface utilisateur pour désactiver le jeu de données à assimiler, mais NE supprime PAS automatiquement le jeu de données dans le serveur principal. Pour supprimer définitivement le jeu de données, une requête de suppression doit être créée manuellement en suivant les étapes décrites dans ce guide pour [créer une requête](#create-a-delete-request)de suppression.
 
