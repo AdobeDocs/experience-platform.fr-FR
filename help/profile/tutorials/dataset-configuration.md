@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Configuration d’un jeu de données pour Profile et Identity Service à l’aide des API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Configuration d’un jeu de données pour Profile et Identity Service à l’aide des API
 
-Ce didacticiel porte sur le processus d’activation d’un jeu de données à utiliser dans le service d’Profil et d’identité client en temps réel, en ventilant les étapes suivantes :
+Ce didacticiel porte sur le processus d’activation d’un jeu de données à utiliser dans le service d’Profil et d’identité des clients en temps réel, en ventilant les étapes suivantes :
 
 1. Activez un jeu de données à utiliser dans le Profil client en temps réel à l’aide de l’une des deux options suivantes :
    - [Créer un jeu de données](#create-a-dataset-enabled-for-profile-and-identity)
@@ -25,22 +25,22 @@ Ce didacticiel porte sur le processus d’activation d’un jeu de données à u
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans la gestion de jeux de données activés pour le Profil. Avant de commencer ce didacticiel, veuillez consulter la documentation relative aux services de plateformes connexes :
+Ce didacticiel nécessite une bonne compréhension des différents services d&#39;Adobe Experience Platform impliqués dans la gestion des jeux de données compatibles avec les Profils. Avant de commencer ce didacticiel, veuillez consulter la documentation relative aux services Platform connexes :
 
 - [Profil](../home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Service](../../identity-service/home.md)d&#39;identité : Permet le Profil client en temps réel en rapprochant les identités des sources de données disparates qui sont incorporées dans la plate-forme.
+- [Service](../../identity-service/home.md)d&#39;identité : Permet le Profil client en temps réel en rapprochant les identités des sources de données disparates qui sont ingérées dans Platform.
 - [Service](../../catalog/home.md)de catalogue : API RESTful qui vous permet de créer des jeux de données et de les configurer pour le service d’Profil client et d’identité en temps réel.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -50,7 +50,7 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 - Content-Type : application/json
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les demandes aux API de plateforme requièrent un en-tête qui spécifie le nom du sandbox dans lequel l&#39;opération aura lieu. Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu. Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -248,7 +248,7 @@ Le Profil client en temps réel et le service d’identité utilisent les donné
 
 ## Confirmer l’assimilation des données par Profil client en temps réel {#confirm-data-ingest-by-real-time-customer-profile}
 
-Lors du premier chargement de données dans un nouveau jeu de données, ou dans le cadre d’un processus impliquant un nouveau ETL ou une nouvelle source de données, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été téléchargées comme prévu. A l’aide de l’API d’accès au Profil client en temps réel, vous pouvez récupérer des données de lot lors de leur chargement dans un jeu de données. Si vous ne parvenez pas à récupérer l’une des entités attendues, il se peut que votre jeu de données ne soit pas activé pour le Profil client en temps réel. Après avoir confirmé que votre jeu de données a été activé, veillez à ce que le format et les identifiants de vos données source répondent à vos attentes. Pour obtenir des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour accéder aux données de Profil, veuillez suivre le [sous-guide Entités, également appelé &quot;API d’accès au Profil&quot;](../api/entities.md).
+Lors du premier chargement de données dans un nouveau jeu de données, ou dans le cadre d’un processus impliquant un nouveau ETL ou une nouvelle source de données, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été téléchargées comme prévu. A l’aide de l’API d’accès au Profil client en temps réel, vous pouvez récupérer des données de lot lors de leur chargement dans un jeu de données. Si vous ne parvenez pas à récupérer l’une des entités attendues, il se peut que votre jeu de données ne soit pas activé pour le Profil client en temps réel. Après avoir confirmé que votre jeu de données a été activé, veillez à ce que le format et les identifiants de vos données source répondent à vos attentes. Pour obtenir des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour accéder aux données du Profil, veuillez suivre le guide [des points de terminaison](../api/entities.md)entités, également appelé &quot;API d’accès au Profil&quot;.
 
 ## Confirmer l&#39;assimilation de données par le service d&#39;identité {#confirm-data-ingest-by-identity-service}
 
