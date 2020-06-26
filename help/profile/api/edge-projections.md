@@ -4,21 +4,21 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9600f315f162b6cd86e2dbe2fffc793cc91c9319
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1919'
 ht-degree: 2%
 
 ---
 
 
-# Destinations et projections des périphériques
+# Configurations de projection Edge et points de terminaison de destination
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. La plate-forme Adobe Experience Platform permet cet accès en temps réel aux données à l’aide de ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que Adobe Cible et Adobe Campaign utilisent des arêtes afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Ce guide fournit des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour travailler avec les projections de périmètre, y compris les destinations et les configurations.
+Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. L&#39;Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l&#39;on appelle les contours. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que l’Adobe Target et l’Adobe Campaign utilisent des bords afin de fournir des expériences personnalisées aux clients en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Ce guide fournit des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour travailler avec les projections de périmètre, y compris les destinations et les configurations.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API Profil client en temps réel. Avant de continuer, veuillez consulter le guide [du développeur de Profil client en temps](getting-started.md)réel. En particulier, la section [](getting-started.md#getting-started) Prise en main du guide du développeur de Profils contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 >[!NOTE]
 >Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un `Content-Type` en-tête. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
@@ -292,7 +292,7 @@ La réponse comprend les détails mis à jour pour la destination, y compris son
 
 ### Suppression d’une destination
 
-Si votre organisation ne requiert plus de destination de projection, elle peut être supprimée en faisant une requête DELETE au point de `/config/destinations` terminaison et en incluant l&#39;ID de la destination que vous souhaitez supprimer dans le chemin de la demande.
+Si votre organisation ne requiert plus de destination de projection, elle peut être supprimée en adressant une requête de DELETE au point de `/config/destinations` terminaison et en incluant l&#39;ID de la destination que vous souhaitez supprimer dans le chemin de la demande.
 
 >[!CAUTION]
 >La réponse de l’API à la demande de suppression est immédiate, mais les modifications réelles apportées aux données sur les bords se produisent de manière asynchrone. En d&#39;autres termes, les données du profil seront supprimées de toutes les arêtes (les `dataCenters` données spécifiées dans la destination de la projection), mais le processus prendra du temps.
@@ -639,4 +639,4 @@ Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément
 
 ## Étapes suivantes
 
-Ce guide vous montre les étapes nécessaires à la configuration des projections et des destinations des arêtes, y compris la manière de formater correctement le `selector` paramètre. Vous pouvez désormais créer de nouvelles destinations et projections de périphérie spécifiques aux besoins de votre entreprise. Pour découvrir d’autres actions disponibles par le biais de l’API Profil, consultez le guide [de développement de l’API Profil client en temps](getting-started.md)réel.
+Ce guide vous montre les étapes nécessaires à la configuration des projections et des destinations, y compris la manière de formater correctement le `selector` paramètre. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
