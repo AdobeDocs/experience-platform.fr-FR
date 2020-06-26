@@ -4,10 +4,10 @@ seo-title: Fusion des données d’événement du SDK Web d’Adobe Experience P
 description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 seo-description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 4bff4b20ccc1913151aa1783d5123ffbb141a7d0
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 95%
+source-wordcount: '411'
+ht-degree: 41%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 95%
 
 >[!IMPORTANT]
 >
->Cette fonctionnalité est encore en cours de développement et toutes les solutions ne pourront donc pas fusionner ces données.
+>Cette fonctionnalité est encore en cours de développement. Toutes les solutions ne pourront pas fusionner les données de événement comme décrit sur cette page.
 
 Parfois, toutes les données ne sont pas disponibles lorsqu’un événement se produit. Vous souhaiterez peut-être capturer les données que vous _possédez_ afin qu’elles ne soient pas perdues si, par exemple, l’utilisateur ferme le navigateur. D’un autre côté, vous pouvez également inclure toutes les données qui seront disponibles ultérieurement.
 
@@ -58,15 +58,15 @@ alloy("sendEvent", {
 });
 ```
 
-En transmettant la même valeur d’ID de fusion d’événements aux deux commandes d’événement dans cet exemple, les données de la deuxième commande d’événement sont ajoutées aux données précédemment envoyées dans la première commande d’événement. Un enregistrement pour chaque commande d’événement est créé dans Experience Data Platform, mais pendant la création des rapports, les enregistrements sont joints ensemble à l’aide de l’ID de fusion d’événements et s’affichent comme un événement unique.
+By passing the same `eventMergeID` value to both event commands in this example, the data in the second event command is augmented to data previously sent on the first event command. A record for each event command is created in the Experience Data Platform, but during reporting the records are joined together using the `eventMergeID` and appear as a single event.
 
-Si vous envoyez des données sur un événement particulier à des fournisseurs tiers, vous pouvez inclure le même ID de fusion d’événements avec ces données. Par la suite, si vous décidez d’importer les données tierces dans Adobe Experience Platform, l’ID de fusion d’événements sera utilisé pour fusionner toutes les données collectées à la suite de l’événement discret qui s’est produit sur votre page web.
+If you are sending data about a particular event to third-party providers, you can include the same `eventMergeID` with that data as well. Later, if you choose to import the third-party data into the Adobe Experience Platform, `eventMergeID` will be used to merge together all data that was collected as a result of the discrete event that occurred on your webpage.
 
-## Génération d’un ID de fusion d’événements
+## Génération d’une `eventMergeID`
 
-La valeur de l’ID de fusion d’événements peut être n’importe quelle chaîne de votre choix, mais souvenez-vous que tous les événements envoyés à l’aide du même ID sont signalés comme un seul et même événement. Veillez donc à appliquer l’unicité lorsque les événements ne doivent pas être fusionnés. Si vous souhaitez que le SDK génère un ID de fusion d’événements unique (suivant la [spécification UUID v4](https://www.ietf.org/rfc/rfc4122.txt) largement adoptée), vous pouvez utiliser la commande `createEventMergeId`.
+The `eventMergeID` value can be any string you choose, but remember that all events sent using the same ID are reported as a single event, so be careful to enforce uniqueness when events should not be merged. If you would like the SDK to generate a unique `eventMergeID` on your behalf (following the widely-adopted [UUID v4 specification](https://www.ietf.org/rfc/rfc4122.txt)), you can use the `createEventMergeId` command to do so.
 
-Comme pour toutes les commandes, une promesse est renvoyée, car vous pouvez exécuter la commande avant que le SDK ne soit chargé. La promesse sera résolue avec un ID de fusion d’événements unique dès que possible. Vous pouvez attendre que la promesse soit résolue avant d’envoyer les données au serveur de la manière suivante :
+Comme pour toutes les commandes, une promesse est renvoyée, car vous pouvez exécuter la commande avant que le SDK ne soit chargé. The promise will be resolved with a unique `eventMergeID` as soon as possible. Vous pouvez attendre que la promesse soit résolue avant d’envoyer les données au serveur de la manière suivante :
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
@@ -110,7 +110,7 @@ eventMergeIdPromise.then(function(results) {
 });
 ```
 
-Suivez ce même modèle si vous souhaitez accéder à l’ID de fusion d’événements pour d’autres raisons (par exemple, pour l’envoyer à un fournisseur tiers) :
+Follow this same pattern if you would like access to the `eventMergeID` for other reasons (for example, to send it to a third-party provider):
 
 ```javascript
 var eventMergeIdPromise = alloy("createEventMergeId");
