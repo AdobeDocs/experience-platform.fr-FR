@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Guide du développeur de l’API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d0ccaa5511375253a2eca8f1235c2f953b734709
+source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
 workflow-type: tm+mt
-source-wordcount: '2434'
+source-wordcount: '2431'
 ht-degree: 1%
 
 ---
 
 
-# (Alpha) Attributs calculés
+# (Alpha) Point de terminaison des attributs calculés
 
 >[!IMPORTANT]
 >La fonctionnalité d&#39;attribut calculée décrite dans ce document est actuellement en alpha et n&#39;est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
@@ -21,19 +21,17 @@ Les attributs calculés vous permettent de calculer automatiquement la valeur de
 
 Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires.
 
-Ce guide vous aidera à mieux comprendre les attributs calculés dans Adobe Experience Platform et comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide du `/config/computedAttributes` point de terminaison.
+Ce guide vous aidera à mieux comprendre les attributs calculés dans l’Adobe Experience Platform et inclut des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide du `/config/computedAttributes` point de terminaison.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API Profil client en temps réel. Avant de continuer, veuillez consulter le guide [du développeur de Profil client en temps](getting-started.md)réel.
-
-En particulier, la section [](getting-started.md) Prise en main du guide du développeur de Profils contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Présentation des attributs calculés
 
-Adobe Experience Platform vous permet d’importer et de fusionner facilement des données provenant de plusieurs sources afin de générer des Profils client en temps réel. Chaque profil contient des informations importantes relatives à une personne, telles que ses coordonnées, ses préférences et son historique d&#39;achat, ce qui lui permet d&#39;obtenir une vue de 360 degrés du client.
+L’Adobe Experience Platform vous permet d’importer et de fusionner facilement des données provenant de plusieurs sources afin de générer des Profils client en temps réel. Chaque profil contient des informations importantes relatives à une personne, telles que ses coordonnées, ses préférences et son historique d&#39;achat, ce qui lui permet d&#39;obtenir une vue de 360 degrés du client.
 
-Certaines informations collectées dans le profil sont facilement comprises lors de la lecture directe des champs de données (par exemple, &quot;prénom&quot;), tandis que d’autres données nécessitent plusieurs calculs ou l’utilisation d’autres champs et valeurs pour générer les informations (par exemple, &quot;total des achats sur toute la durée de vie&quot;). Pour faciliter la compréhension de ces données d&#39;un seul coup d&#39;oeil, Platform vous permet de créer des attributs **** calculés qui effectuent automatiquement ces références et calculs, renvoyant la valeur dans le champ approprié.
+Certaines informations collectées dans le profil sont facilement comprises lors de la lecture directe des champs de données (par exemple, &quot;prénom&quot;), tandis que d’autres données nécessitent plusieurs calculs ou l’utilisation d’autres champs et valeurs pour générer les informations (par exemple, &quot;total des achats sur toute la durée de vie&quot;). Pour faciliter la compréhension de ces données d’un seul coup d’oeil, Platform vous permet de créer des attributs **** calculés qui effectuent automatiquement ces références et calculs, renvoyant la valeur dans le champ approprié.
 
 Les attributs calculés incluent la création d’une expression, ou &quot;règle&quot;, qui fonctionne sur les données entrantes et stocke la valeur résultante dans un attribut ou un événement de profil. Les Expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de spécifier qu’une règle évalue les événements entrants uniquement, un événement et des données de profil entrants ou un événement, des données de profil et des événements historiques entrants.
 
@@ -58,7 +56,7 @@ Le flux de travaux de ce didacticiel utilise un schéma compatible Profil et sui
 
 ### Vue d’un schéma
 
-Les étapes qui suivent utilisent l’interface utilisateur d’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. Si vous préférez utiliser l&#39;API Schéma Registry, reportez-vous au guide [du développeur](../../xdm/api/getting-started.md) Schéma Registry pour savoir comment créer un mixin, ajouter un mixin à un schéma et activer un schéma à utiliser avec le Profil client en temps réel.
+Les étapes qui suivent utilisent l’interface utilisateur de l’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. Si vous préférez utiliser l&#39;API Schéma Registry, reportez-vous au guide [du développeur](../../xdm/api/getting-started.md) Schéma Registry pour savoir comment créer un mixin, ajouter un mixin à un schéma et activer un schéma à utiliser avec le Profil client en temps réel.
 
 Dans l’interface utilisateur, cliquez sur **Schémas** dans le rail de gauche et utilisez la barre de recherche de l’onglet *Parcourir* pour trouver rapidement le schéma à mettre à jour.
 
@@ -70,19 +68,19 @@ Une fois le schéma localisé, cliquez sur son nom pour ouvrir l’éditeur de S
 
 ### Création d’un mixin
 
-Pour créer un nouveau mixin, cliquez sur **Ajouter** en regard de *mixins* dans la section *Composition* située à gauche de l’éditeur. Cela ouvre la boîte de dialogue de mixin **** Ajouteroù vous pouvez voir les mixins existants. Cliquez sur le bouton radio pour **Créer un nouveau mixin** afin de définir votre nouveau mixin.
+Pour créer un nouveau mixin, cliquez sur **Ajouter** en regard de *mixins* dans la section *Composition* située à gauche de l’éditeur. Cette opération ouvre la boîte de dialogue **Ajouter le mixin** où vous pouvez voir les mixins existants. Cliquez sur le bouton radio pour **Créer un nouveau mixin** afin de définir votre nouveau mixin.
 
-Donnez un nom et une description au mixin, puis cliquez sur **Ajouter mixin** une fois terminé.
+Donnez un nom et une description au mixin, puis cliquez sur **Ajouter le mixin** une fois terminé.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ### Ajouter un champ d’attribut calculé au schéma
 
-Votre nouveau mixin doit maintenant apparaître dans la section *Mélanges* sous *Composition*. Cliquez sur le nom du mixin et plusieurs boutons de champs **** Ajouter *apparaissent dans la section* Structurede l’éditeur.
+Votre nouveau mixin doit maintenant apparaître dans la section *Mélanges* sous *Composition*. Cliquez sur le nom du mixin et plusieurs boutons de champs **de** Ajoute s&#39;affichent dans la section *Structure* de l&#39;éditeur.
 
-Sélectionnez le champ **** Ajouter en regard du nom du schéma afin d’ajouter un champ de niveau supérieur ou vous pouvez choisir d’ajouter le champ n’importe où dans le schéma de votre choix.
+Sélectionnez **Ajouter le champ** en regard du nom du schéma pour ajouter un champ de niveau supérieur ou vous pouvez ajouter le champ n’importe où dans le schéma de votre choix.
 
-Après avoir cliqué sur un champ **** Ajouter, un nouvel objet s’ouvre, nommé en fonction de votre ID de client, indiquant que le champ se trouve dans l’espace de nommage correct. Dans cet objet, un champ ** Nouveau s’affiche. Ceci si le champ dans lequel vous allez définir l&#39;attribut calculé.
+Après avoir cliqué sur **Ajouter un champ** , un nouvel objet s’ouvre, nommé en fonction de votre ID de client, indiquant que le champ se trouve dans l’espace de nommage approprié. Dans cet objet, un champ ** Nouveau s’affiche. Ceci si le champ dans lequel vous allez définir l&#39;attribut calculé.
 
 ![](../images/computed-attributes/New-field.png)
 
@@ -482,10 +480,10 @@ Une mise à jour réussie renvoie l’état HTTP 204 (aucun contenu) et un corps
 
 ## Suppression d’un attribut calculé
 
-Il est également possible de supprimer un attribut calculé à l’aide de l’API. Pour ce faire, vous devez envoyer une requête DELETE au point de `/config/computedAttributes` terminaison et inclure l’ID de l’attribut calculé que vous souhaitez supprimer dans le chemin de requête.
+Il est également possible de supprimer un attribut calculé à l’aide de l’API. Pour ce faire, vous devez envoyer une requête de DELETE au point de `/config/computedAttributes` terminaison et inclure l’ID de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!Note] :
->Soyez prudent lors de la suppression d&#39;un attribut calculé, car il peut être utilisé dans plusieurs schémas et l&#39;opération DELETE ne peut pas être annulée.
+>Soyez prudent lors de la suppression d&#39;un attribut calculé, car il peut être utilisé dans plusieurs schémas et l&#39;opération du DELETE ne peut pas être annulée.
 
 **Format d’API**
 
