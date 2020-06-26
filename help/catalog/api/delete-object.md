@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Suppression d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6c17351b04fedefd4b57b9530f1d957da8183a68
+source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 # Suppression d’un objet
 
-Vous pouvez supprimer un objet Catalog en indiquant son identifiant dans le chemin d’une requête DELETE.
+Vous pouvez supprimer un objet Catalog en indiquant son identifiant dans le chemin d’une requête de DELETE.
 
->[!WARNING] Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut entraîner des modifications de rupture ailleurs dans la plate-forme d’expérience.
+>[!WARNING] Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut entraîner des modifications irréversibles ailleurs dans l’Experience Platform.
 
 **Format d’API**
 
@@ -24,7 +24,9 @@ Vous pouvez supprimer un objet Catalog en indiquant son identifiant dans le chem
 DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 ```
 
->[!IMPORTANT] Le `DELETE /batches/{ID}` point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser l&#39;API [d&#39;importation de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lot.
+>[!IMPORTANT]
+>
+>Le `DELETE /batches/{ID}` point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser l&#39;API [d&#39;importation de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lot.
 
 | Paramètre | Description |
 | --- | --- |
@@ -46,7 +48,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;état HTTP 200 (OK) et un tableau contenant l&#39;ID du jeu de données supprimé. Cet identifiant doit correspondre à celui envoyé dans la demande DELETE. L’exécution d’une requête GET sur l’objet supprimé renvoie l’état HTTP 404 (Introuvable), confirmant que le jeu de données a bien été supprimé.
+Une réponse réussie renvoie l&#39;état HTTP 200 (OK) et un tableau contenant l&#39;ID du jeu de données supprimé. Cet identifiant doit correspondre à celui envoyé dans la demande du DELETE. L’exécution d’une requête GET sur l’objet supprimé renvoie l’état HTTP 404 (Introuvable), confirmant que le jeu de données a bien été supprimé.
 
 ```json
 [
