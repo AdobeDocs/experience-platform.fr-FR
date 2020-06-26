@@ -1,28 +1,28 @@
 ---
-title: Récupération de l’ID Experience Cloud
-seo-title: Adobe Experience Platform Web SDK Récupération de l’ID Experience Cloud
+title: Récupération de l'ID d'Experience Cloud
+seo-title: Adobe Experience Platform du SDK Web Récupération de l'ID d'Experience Cloud
 description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’ID Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: a9dd5fd93397e57d0876bec334d54c517fa86939
+source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '412'
 ht-degree: 10%
 
 ---
 
 
-# Récupération de l’ID Experience Cloud
+# Identité - Récupération de l&#39;ID d&#39;Experience Cloud
 
-Le SDK Web d’Adobe Experience Platform tire parti d’ [Adobe Identity Service](../../identity-service/ecid.md). Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
+Le Adobe Experience Platform Web SDK exploite le service [d’identité](../../identity-service/ecid.md)Adobe. Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
 
 ## Identité de premier niveau
 
-Le service d’ID stocke l’identité dans un cookie dans un domaine propriétaire. Le service d’ID tente de définir le cookie à l’aide d’un en-tête HTTP sur le domaine si le service d’ID échoue, puis revient à définir les cookies par le biais de JavaScript. Adobe recommande de configurer un CNAME afin que vos cookies ne soient pas plafonnés par les restrictions ITP côté client.
+L’ [!DNL Identity Service] utilisateur stocke l’identité dans un cookie dans un domaine propriétaire. Le cookie [!DNL Identity Service] tente de le définir à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la [!DNL Identity Service] fonction revient à définir des cookies via Javascript. Adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
 
 ## Identité tierce
 
-Les services d’ID peuvent synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur l’ensemble du site. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le `thirdPartyCookiesEnabled` paramètre de la configuration. Si vous souhaitez désactiver cette fonctionnalité, définissez l’ensemble `thirdPartyCookiesEnabled` sur false.
+Il [!DNL Identity Service] peut synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le `thirdPartyCookiesEnabled` paramètre de la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez la valeur `thirdPartyCookiesEnabled` sur false.
 
 ## Récupération de l’ID de Visiteur
 
@@ -30,7 +30,7 @@ Si vous souhaitez utiliser cet identifiant unique, utilisez la `getIdentity` com
 
 >[!NOTE]
 >
->Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l’ID Experience Cloud. Elle n’est pas utilisée par une mise en œuvre standard.
+>Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l’ID d’Experience Cloud. Elle n’est pas utilisée par une mise en œuvre standard.
 
 ```javascript
 alloy("getIdentity")
@@ -45,7 +45,7 @@ alloy("getIdentity")
 
 ## Synchronisation des identités
 
-De plus, Identity Service vous permet de synchroniser vos propres identifiants avec l&#39;ECID à l&#39;aide de la `syncIdentity` commande.
+En outre, la [!DNL Identity Service] permet de synchroniser vos propres identifiants avec l&#39;ECID à l&#39;aide de la `syncIdentity` commande.
 
 ```javascript
 alloy("syncIdentity",{
@@ -68,7 +68,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | Chaîne | Oui | Aucune |
 
-La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Cette liste figure dans l’interface utilisateur d’Adobe Experience Platform sous Identités.
+La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Cette liste figure dans l’interface utilisateur de l’Adobe Experience Platform sous [!UICONTROL Identités].
 
 #### `id`
 
@@ -92,7 +92,7 @@ Etat d’authentification de l’ID.
 | -------- | ------------ | ----------------- |
 | Booléen | facultatif | false |
 
-Cette identité doit-elle être utilisée comme fragment principal dans le profil unifié ? Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur.
+Détermine si cette identité doit être utilisée comme fragment principal dans le profil unifié. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur.
 
 #### `hashEnabled`
 
