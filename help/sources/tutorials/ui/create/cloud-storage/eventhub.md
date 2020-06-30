@@ -4,68 +4,68 @@ solution: Experience Platform
 title: Création d'un connecteur source Azure Événement Hubs dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '449'
 ht-degree: 1%
 
 ---
 
 
-# Création d&#39;un connecteur source Azure Événement Hubs dans l&#39;interface utilisateur
+# Création d’un connecteur [!DNL Azure Event Hubs] source dans l’interface utilisateur
 
 >[!NOTE]
-> Le connecteur Azure Événement Hubs est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+> Le [!DNL Azure Event Hubs] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes d&#39;authentification d&#39;un connecteur source Azure Événement Hubs (ci-après appelé &quot;Événements Hubs&quot;) à l&#39;aide de l&#39;interface utilisateur Platform.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Azure Event Hubs] (ci-après dénommé &quot;[!DNL Event Hubs]&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
 
 ## Prise en main
 
 Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’un compte Événement Hubs, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage.md).
+Si vous disposez déjà d’un [!DNL Event Hubs] compte, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage.md).
 
 ### Collecte des informations d’identification requises
 
-Pour authentifier votre connecteur source Événement Hubs, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour authentifier votre connecteur [!DNL Event Hubs] source, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `sasKeyName` | Nom de la règle d&#39;autorisation, également connue sous le nom de clé SAS. |
 | `sasKey` | Signature d’accès partagé générée. |
-| `namespace` | L&#39;espace de nommage des Événements Hubs auxquels vous accédez. |
+| `namespace` | espace de nommage de l’ [!DNL Event Hubs] accès auquel vous accédez. |
 
 Pour plus d&#39;informations sur ces valeurs, consultez [ce document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Événement Hubs.
 
-## Connectez votre compte Événement Hubs.
+## Connecter votre [!DNL Event Hubs] compte
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte Événement Hubs à Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre [!DNL Event Hubs] compte à [!DNL Platform].
 
-Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’onglet *Catalogue* affiche diverses sources pour lesquelles vous pouvez vous connecter à Platform. Chaque source affiche le nombre de comptes existants qui lui sont associés.
+Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’onglet *[!UICONTROL Catalogue]* affiche diverses sources auxquelles il est possible de se connecter [!DNL Platform]. Chaque source affiche le nombre de comptes existants qui lui sont associés.
 
-Sous *Cloud Enregistrement* catégorie, sélectionnez **Azure Événement Hubs** et cliquez sur **l&#39;icône + (+)** pour créer un nouveau connecteur Événement Hubs.
+Sous *[!UICONTROL Cloud Enregistrement]* catégorie, sélectionnez **[!UICONTROL Azure Événement Hubs]** et cliquez sur **l&#39;icône + (+)** pour créer un nouveau connecteur Événement Hubs.
 
 ![](../../../../images/tutorials/create/eventhub/catalog.png)
 
-La boîte de dialogue *Se connecter aux concentrateurs* de Événement Azure s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La boîte de dialogue *[!UICONTROL Se connecter aux concentrateurs]* de Événement Azure s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **Nouveau compte**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et les informations d’identification de Événement Hubs. Lorsque vous avez terminé, sélectionnez **Se connecter** , puis accordez un peu de temps à la nouvelle connexion pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et les informations d’identification de Événement Hubs. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un peu de temps à la nouvelle connexion pour établir.
 
 ![](../../../../images/tutorials/create/eventhub/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte Événement Hubs avec lequel vous souhaitez vous connecter, puis sélectionnez **Suivant** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte Événement Hubs avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/eventhub/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez connecté votre compte Événement Hubs à Platform. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/streaming/cloud-storage.md).
+En suivant ce didacticiel, vous avez connecté votre compte Événement Hubs à [!DNL Platform]. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/streaming/cloud-storage.md).
