@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Recette de recommandation de produit
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '421'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ La recette de recommandations de produits utilise l&#39;apprentissage automatiqu
 
 ## Comment démarrer ?
 
-Pour commencer, suivez le didacticiel Adobe Experience Platform Lab (voir le lien Lab ci-dessous). Ce didacticiel vous explique comment créer la recette de recommandations de produits dans un bloc-notes Jupyter en suivant le processus de création de recettes [du](../jupyterlab/create-a-recipe.md) bloc-notes et en implémentant la recette dans l’espace de travail des données de la plateforme d’expérience.
+Pour commencer, suivez le didacticiel du laboratoire d&#39;Adobes Experience Platform (voir le lien Lab ci-dessous). Ce didacticiel vous montre comment créer la recette de recommandations de produits dans un bloc-notes Jupyter en suivant le processus de création de recettes [du](../jupyterlab/create-a-recipe.md) bloc-notes et en implémentant la recette dans [!DNL Experience Platform][!DNL Data Science Workspace].
 
 * [Lab : Prédire l&#39;avenir avec l&#39;espace de travail Data Science](https://expleague.azureedge.net/labs/L777/index.html)
 * [Ressources Lab](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources)
