@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Connecteur Apache Cassandra
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fd2f526ee3efb4ae9f4d7af851bb5cd5d63cfa9
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
 
-# Connecteur Apache Cassandra
+# [!DNL Apache Cassandra ]connecteur
 
-Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
 
-Experience Platform prend en charge l’assimilation de données à partir d’une base de données tierce. La plate-forme peut se connecter à différents types de bases de données, telles que relationnelles, NoSQL ou les entrepôts de données. Apache Cassandra prend en charge les fournisseurs de bases de données.
+[!DNL Experience Platform] prend en charge l’importation de données à partir d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, tels que relational, NoSQL ou datas warehouse. La prise en charge des fournisseurs de base de données comprend [!DNL Apache Cassandra].
 
-La documentation ci-dessous fournit des informations sur la façon de connecter Apache Cassandra à la plate-forme à l’aide d’API :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Apache Cassandra] à [!DNL Platform] l’aide des API :
 
-## Connectez Apache Cassandra à la plate-forme à l’aide d’API.
+## Se connecter [!DNL Apache Cassandra] à [!DNL Platform] l’aide des API
 
 - [Création d’un connecteur Apache Cassandra à l’aide de l’API Flow Service](../../tutorials/api/create/databases/cassandra.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
