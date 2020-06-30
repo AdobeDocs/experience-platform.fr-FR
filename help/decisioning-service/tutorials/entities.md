@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des entités du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '7249'
+source-wordcount: '7207'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Gestion des objets et des règles de prise de décision à l’aide d’API
 
-Ce document fournit un didacticiel pour travailler avec les entités commerciales de Decisioning Service à l’aide des API Adobe Experience Platform.
+Ce document fournit un didacticiel pour travailler avec les entités commerciales à l&#39; [!DNL Decisioning Service] utilisation des API d&#39;Adobe Experience Platform.
 
 Le didacticiel comporte deux parties :
 
@@ -24,31 +24,31 @@ Le didacticiel comporte deux parties :
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des services Experience Platform et des conventions d’API. Le référentiel de plateformes est un service utilisé par plusieurs autres services de plateformes pour stocker des objets métier et divers types de métadonnées. Il offre un moyen sécurisé et flexible de gérer et de requête ces objets pour plusieurs services d’exécution. Le Service de prise de décision en fait partie. Avant de commencer ce didacticiel, consultez la documentation relative aux éléments suivants :
+Ce didacticiel nécessite une bonne compréhension des [!DNL Experience Platform] services et des conventions d’API. Le [!DNL Platform] référentiel est un service utilisé par plusieurs autres [!DNL Platform] services pour stocker des objets d’entreprise et divers types de métadonnées. Il offre un moyen sécurisé et flexible de gérer et de requête ces objets pour plusieurs services d’exécution. Le [!DNL Decisioning Service] est l&#39;un de ceux-là. Avant de commencer ce didacticiel, consultez la documentation relative aux éléments suivants :
 
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [Service](./../home.md)de prise de décision : Explique les concepts et les composants utilisés pour la prise de décision d’expérience en général et la prise de décision d’Offre en particulier. Illustre les stratégies utilisées pour choisir la meilleure option à présenter lors de l’expérience d’un client.
-- [Langage de Requête de Profil (PQL)](../../segmentation/pql/overview.md): PQL est un langage puissant pour écrire des expressions sur des instances XDM. PQL est utilisé pour définir des règles de décision.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Decisioning Service](./../home.md): Explique les concepts et les composants utilisés pour la prise de décision d’expérience en général et la prise de décision d’Offre en particulier. Illustre les stratégies utilisées pour choisir la meilleure option à présenter lors de l’expérience d’un client.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est un langage puissant pour écrire des expressions sur des instances XDM. PQL est utilisé pour définir des règles de décision.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les [!DNL Platform] API.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE] Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -56,7 +56,7 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Conventions de l’API Repository
 
-Le service de prise de décision est contrôlé par un certain nombre d’objets métier qui sont liés les uns aux autres. Tous les objets métier sont stockés dans le référentiel d’objets métier de la plate-forme. L&#39;une des principales fonctionnalités de ce référentiel est que les API sont orthogonales par rapport au type d&#39;objet métier. Au lieu d&#39;utiliser une API POST, GET, PUT, PATCH ou DELETE qui indique le type de ressource dans son point de terminaison API, il n&#39;y a que 6 points de terminaison génériques, mais ils acceptent ou retournent un paramètre qui indique le type de l&#39;objet lorsque cette désambiguïfication est nécessaire. Le schéma doit être enregistré dans le référentiel, mais au-delà, le référentiel est utilisable pour un ensemble ouvert de types d&#39;objet.
+[!DNL Decisioning Service] est contrôlée par un certain nombre d’objets commerciaux qui sont liés les uns aux autres. Tous les objets métier sont stockés dans le référentiel [!DNL Platform’s] Business Object Repository. L&#39;une des principales fonctionnalités de ce référentiel est que les API sont orthogonales par rapport au type d&#39;objet métier. Au lieu d&#39;utiliser une API POST, GET, PUT, PATCH ou DELETE qui indique le type de ressource dans son point de terminaison API, il n&#39;y a que 6 points de terminaison génériques, mais ils acceptent ou retournent un paramètre qui indique le type de l&#39;objet lorsque cette désambiguïfication est nécessaire. Le schéma doit être enregistré dans le référentiel, mais au-delà, le référentiel est utilisable pour un ensemble ouvert de types d&#39;objet.
 
 Outre les en-têtes répertoriés ci-dessus, les API permettant de créer, lire, mettre à jour, supprimer et requête des objets de référentiel ont les conventions suivantes :
 
@@ -92,7 +92,7 @@ La liste des conteneurs accessibles est obtenue en appelant le point de terminai
 
 ## Gestion de l&#39;accès aux conteneurs
 
-Un administrateur peut regrouper des entités, des ressources et des autorisations d’accès similaires dans des profils. Cela réduit la charge de gestion et est pris en charge par l’interface utilisateur [de la Console d’administration d’](https://auth.services.adobe.com/fr_FR/index.html?callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fadobeid%2FONESIE1%2FAdobeID%2Ftoken%3Fredirect_uri%3Dhttps%253A%252F%252Fadminconsole.adobe.com%252Fredirect.html%253Ftarget%253D%25252Foverview%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize&amp;client_id=ONESIE1&amp;scope=openid%2CAdobeID%2Cadditional_info.projectedProductContext%2Cread_organizations%2Cread_members%2Cread_countries_regions%2Cadditional_info.roles%2Cadobeio_api%2Cread_auth_src_domains%2CauthSources.rwd&amp;denied_callback=https%3A%2F%2Fims-na1.adobelogin.com%2Fims%2Fdenied%2FONESIE1%3Fredirect_uri%3Dhttps%253A%252F%252Fadminconsole.adobe.com%252Fredirect.html%253Ftarget%253D%25252Foverview%2523from_ims%253Dtrue%2526old_hash%253D%2526api%253Dauthorize%26response_type%3Dtoken&amp;relay=6e938255-62f5-42c8-8176-178f6f1ab5bc&amp;locale=fr_FR&amp;flow_type=token&amp;ctx_id=admin_console_logo&amp;idp_flow_type=login#/)Adobe. Pour créer des profils et y affecter des utilisateurs, vous devez être un administrateur de produit pour la plateforme et les Offres Adobe Experience Platform de votre entreprise.
+Un administrateur peut regrouper des entités principales, des ressources et des autorisations d’accès similaires dans des profils. Cela réduit la charge de gestion et est pris en charge par l’interface utilisateur [Admin Console de](https://adminconsole.adobe.com)Adobe. Pour créer des profils et y affecter des utilisateurs, vous devez être un administrateur de produits pour que votre entreprise puisse y avoir Adobe Experience Platform.
 
 Il suffit de créer des profils de produits qui correspondent à certaines autorisations en une seule étape, puis d’ajouter simplement des utilisateurs à ces profils. Les Profils agissent comme des groupes auxquels des autorisations ont été accordées et chaque utilisateur réel ou technique de ce groupe hérite de ces autorisations.
 
@@ -100,9 +100,9 @@ Il suffit de créer des profils de produits qui correspondent à certaines autor
 
 Lorsque l&#39;administrateur a autorisé l&#39;accès aux conteneurs pour les utilisateurs réguliers ou les intégrations, ces conteneurs apparaîtront dans la liste dite &quot;d&#39;accueil&quot; du référentiel. La liste peut être différente pour différents utilisateurs ou intégrations, car il s’agit d’un sous-ensemble de tous les conteneurs accessibles à l’appelant. La liste des conteneurs peut être filtrée par leur association aux contextes de produits. Le paramètre de filtre est appelé `product` et peut être répété. Si plusieurs filtres contextuels de produits sont donnés, l’union des conteneurs qui ont des associations avec l’un des contextes de produits donnés est renvoyée. Notez qu’un seul conteneur peut être associé à plusieurs contextes de produits.
 
-Le contexte des conteneurs du service de prise de décision de plateforme est actuellement `dma_offers`en cours.
+Le contexte des [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`en cours.
 
->[!NOTE] Le contexte des Conteneurs de décision de plateforme va bientôt changer `acp`. Le filtrage est facultatif, mais les filtres ne `dma_offers` nécessiteront que des modifications dans une prochaine version. Pour se préparer à ce changement, les clients ne doivent utiliser aucun filtres ou appliquer les deux contextes de produits comme filtre.
+>[!NOTE] Le contexte [!DNL Platform Decisioning Containers] va bientôt changer `acp`. Le filtrage est facultatif, mais les filtres ne `dma_offers` nécessiteront que des modifications dans une prochaine version. Pour se préparer à ce changement, les clients ne doivent utiliser aucun filtres ou appliquer les deux contextes de produits comme filtre.
 
 **Requête**
 
@@ -233,7 +233,7 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Bien que `instanceId` soit donné en tant que paramètre de chemin, les applications doivent, chaque fois que possible, ne pas construire le chemin elles-mêmes et suivre à la place les liens vers les instances contenues dans les opérations de liste et de recherche. Voir les sections ‎ 6.4.4 et ‎ 6.4.6 pour plus de détails.
+>[!NOTE] Bien que `instanceId` soit donné comme paramètre de chemin, les applications doivent, chaque fois que possible, ne pas construire le chemin elles-mêmes et suivre à la place les liens vers les instances contenues dans les opérations de liste et de recherche. Voir les sections ‎ 6.4.4 et ‎ 6.4.6 pour plus de détails.
 
 **Réponse**
 
@@ -288,7 +288,7 @@ L’API du référentiel répondra avec l’état 304 Non modifié lorsque la de
 
 ### Instances de Liste pour un schéma - Tri et pagination
 
-Les clients ne pourront pas garder le suivi des instances qu’ils créent et, par conséquent, y accéder par leur instanceId physique. L’utilisation de l’API d’instance de lecture constitue l’exception. Les clients ignorent également les instances que d’autres clients ont créées.
+Les clients ne pourront pas suivre les instances qu’ils créent et, par conséquent, y accéder par leur instanceId physique. L’utilisation de l’API d’instance de lecture constitue l’exception. Les clients ignorent également les instances que d’autres clients ont créées.
 
 Un modèle d’accès plus typique consistera à parcourir le jeu de toutes les instances.
 
@@ -347,7 +347,8 @@ La pagination est contrôlée par les paramètres suivants :
 Le filtrage des résultats des listes est possible et se produit indépendamment du mécanisme de pagination. Les Filtres ignorent simplement les instances dans l’ordre des listes ou demandent explicitement de n’inclure que celles qui répondent à une condition donnée. Un client peut demander que l’expression de propriété soit utilisée comme filtre ou spécifier une liste d’URI à utiliser comme valeurs de la clé primaire des instances.
 
 - **`property`**: Contient un chemin de nom de propriété suivi d’un opérateur de comparaison suivi d’une valeur. <br/>
-La liste des instances renvoyées contient celles pour lesquelles l’expression est évaluée comme vraie. Par exemple, en supposant que l’instance possède une propriété de charge utile `status` et que les valeurs possibles soient `draft`, `approved``archived` , puis le paramètre de requête `deleted` `property=_instance.status==approved` renvoie uniquement les instances pour lesquelles l’état est approuvé. <br/>
+La liste des instances renvoyées contient celles pour lesquelles l’expression est évaluée comme vraie. Par exemple, en supposant que l’instance possède une propriété de charge utile 
+`status` et les valeurs possibles sont `draft`, `approved`, `archived` puis `deleted` le paramètre de requête `property=_instance.status==approved` ne renvoie que les instances pour lesquelles l’état est approuvé. <br/>
 <br/>
 La propriété à comparer à la valeur donnée est identifiée comme un chemin d’accès. Les composants de chemin d'accès individuels sont séparés par ".", par exemple : `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
@@ -762,7 +763,7 @@ La référence à la règle est incorporée dans la propriété `xdm:selectionCo
 
 - **`xdm:eligibilityRule`** - Cette propriété contient une référence à une règle d&#39;éligibilité. La valeur est celle `@id` d’une instance de schémahttps://ns.adobe.com/experience/offer-management/eligibility-rule.
 
-L’ajout et la suppression d’une règle peuvent également s’effectuer avec une opération PATCH :
+Vous pouvez également Ajouter et supprimer une règle à l’aide d’une opération PATCH :
 
 ```
 [
@@ -835,7 +836,7 @@ Voir [Mise à jour et correction d’instances](#updating-and-patching-instances
 
 La valeur de la propriété de condition de la règle contient une expression PQL. Les données contextuelles sont référencées via l’expression de chemin d’accès spécial @{schemaID}.
 
-Les règles s’alignent naturellement sur les segments de la plateforme d’expérience et, souvent, une règle réutilise simplement l’intention d’un segment en testant la `segmentMembership` propriété d’un profil. La `segmentMembership` propriété contient les résultats des conditions de segments qui ont déjà été évaluées. Cela permet à une organisation de définir une fois leurs audiences spécifiques à un domaine, de les nommer et d’évaluer les conditions une seule fois.
+Les règles s’alignent naturellement avec les segments dans la [!DNL Experience Platform] règle ; souvent, une règle réutilise simplement l’intention d’un segment en testant la `segmentMembership` propriété d’un profil. La `segmentMembership` propriété contient les résultats des conditions de segments qui ont déjà été évaluées. Cela permet à une organisation de définir une fois leurs audiences spécifiques à un domaine, de les nommer et d’évaluer les conditions une seule fois.
 
 ## Gestion des collections d’offres
 
