@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -18,31 +18,31 @@ Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, conçus 
 
 Les concepts suivants sont introduits :
 
-- **JupyterLab :** [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter, et est étroitement intégrée dans [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans[!DNL Adobe Experience Platform].
 - **Lots :** Les jeux de données sont composés de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
-- **SDK d’accès aux données (obsolète) :** Le SDK d’accès aux données est désormais obsolète. Veuillez utiliser le guide [Platform SDK](../authoring/platform-sdk.md) .
+- **SDK d’accès aux données (obsolète) :** Le SDK d’accès aux données est désormais obsolète. Veuillez utiliser le [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
 
 ## Explorez des blocs-notes dans Data Science Workspace.
 
 Dans cette section, nous étudions les données qui étaient précédemment incorporées au schéma de vente au détail.
 
-Data Science Workspace permet aux utilisateurs de créer des portables Jupyter via la plate-forme JupyterLab, où ils peuvent créer et modifier des workflows d&#39;apprentissage automatique. JupyterLab est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents d&#39;ordinateurs portables via un navigateur Web. Ces blocs-notes peuvent contenir du code exécutable et des éléments de texte enrichi. Pour nos besoins, nous utiliserons Markdown pour la description de l&#39;analyse et le code Python exécutable pour effectuer l&#39;exploration et l&#39;analyse des données.
+Data Science Workspace permet aux utilisateurs de créer [!DNL Jupyter Notebooks] par le biais de la [!DNL JupyterLab] plateforme, où ils peuvent créer et modifier des workflows d’apprentissage automatique. [!DNL JupyterLab] est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents de bloc-notes par le biais d&#39;un navigateur Web. Ces blocs-notes peuvent contenir du code exécutable et des éléments de texte enrichi. Pour nos besoins, nous utiliserons Markdown pour la description de l&#39;analyse et le code exécutable [!DNL Python] afin d&#39;explorer et d&#39;analyse des données.
 
 ### Choisir votre espace de travail
 
-Lors du lancement de JupyterLab, une interface web pour les portables Jupyter est présentée. Selon le type de bloc-notes que nous choisissons, un noyau correspondant sera lancé.
+Lors du lancement [!DNL JupyterLab], une interface Web est présentée pour les portables Jupyter. Selon le type de bloc-notes que nous choisissons, un noyau correspondant sera lancé.
 
-Lorsque nous comparons l&#39;environnement à utiliser, nous devons tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec Python, en tant qu&#39;utilisateur régulier, la limite de RAM est de 2 Go. Même en tant qu&#39;utilisateur, nous serions limités à 20 Go de RAM. S&#39;il s&#39;agit de calculs plus volumineux, il serait logique d&#39;utiliser Spark qui offre 1,5 To et qui est partagé avec toutes les instances d&#39;un ordinateur portable.
+Lorsque nous comparons l&#39;environnement à utiliser, nous devons tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec [!DNL Python], en tant qu’utilisateur régulier, la limite de RAM est de 2 Go. Même en tant qu&#39;utilisateur, nous serions limités à 20 Go de RAM. S&#39;il s&#39;agit de calculs plus volumineux, il serait logique d&#39;utiliser [!DNL Spark] les offres de 1,5 To qui sont partagées avec toutes les instances d&#39;ordinateur portable.
 
 Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s&#39;exécute dans un cluster CPU.
 
 ### Créer un bloc-notes
 
-Dans l’ [!DNL Adobe Experience Platform] interface utilisateur, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39;onglet JupyterLab qui ouvre le lanceur JupyterLab. Vous devriez voir une page similaire à celle-ci.
+Dans l’ [!DNL Adobe Experience Platform] interface utilisateur, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39; [!DNL JupyterLab] onglet qui va ouvrir le [!DNL JupyterLab] lanceur. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-Dans notre tutoriel, nous utiliserons Python 3 dans le Jupyter Notebook pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers de travail sont fournis. Nous utiliserons la recette Ventes au détail pour Python 3.
+Dans notre tutoriel, nous utiliserons le [!DNL Python] 3 du Jupyter Notebook pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers de travail sont fournis. Nous utiliserons la recette Ventes au détail pour [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -50,13 +50,13 @@ La recette Ventes au détail est un exemple autonome qui utilise le même jeu de
 
 ### Données d’accès
 
->[!NOTE] La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) de plate-forme. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
+>[!NOTE] La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) Platform. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
 
-Nous allons passer en revue l&#39;accès aux données en interne [!DNL Adobe Experience Platform] et en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la bibliothèque de pandas Python.
+Nous allons passer en revue l&#39;accès aux données en interne [!DNL Adobe Experience Platform] et en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la [!DNL Python] bibliothèque pandas.
 
 #### Données externes
 
-A l&#39;ouverture du bloc-notes Ventes au détail, recherchez l&#39;en-tête &quot;Charger les données&quot;. Le code Python suivant utilise la structure `DataFrame` de données des pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur Github dans le DataFrame :
+A l&#39;ouverture du bloc-notes Ventes au détail, recherchez l&#39;en-tête &quot;Charger les données&quot;. Le [!DNL Python] code suivant utilise la structure `DataFrame` de données de pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur [!DNL Github] dans DataFrame :
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -68,7 +68,7 @@ Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous p
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
-#### Données de la plate-forme d’expérience
+#### [!DNL Experience Platform] data
 
 Nous allons maintenant passer en revue l&#39;accès aux [!DNL Experience Platform] données.
 
@@ -86,7 +86,7 @@ Puisque le jeu de données est le même, nous voulons remplacer les données de 
 
 Désormais, nous pouvons cliquer avec le bouton droit sur le `Retail-Training-<your-alias>` jeu de données et sélectionner l&#39;option &quot;Explorer les données dans le bloc-notes&quot; dans la liste déroulante. Une entrée de code exécutable apparaît dans votre bloc-notes.
 
->[!TIP] reportez-vous au guide du SDK [de la](../authoring/platform-sdk.md) plate-forme pour convertir votre code.
+>[!TIP] reportez-vous au [!DNL Platform SDK](../authoring/platform-sdk.md) guide pour convertir votre code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -96,7 +96,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Si vous travaillez sur d&#39;autres noyaux autres que Python, veuillez consulter [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données sur le [!DNL Adobe Experience Platform].
+Si vous travaillez sur d&#39;autres noyaux autres que [!DNL Python], veuillez consulter [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données sur le [!DNL Adobe Experience Platform].
 
 La sélection de la cellule exécutable, puis l&#39;activation du bouton de lecture dans la barre d&#39;outils, exécutera le code exécutable. La sortie pour `head()` sera un tableau avec les clés de votre jeu de données sous forme de colonnes et les n premières lignes du jeu de données. `head()` accepte un argument entier pour spécifier le nombre de lignes à générer. Par défaut, il s’agit de 5.
 
@@ -122,7 +122,7 @@ Maintenant que nous pouvons accéder à vos données, concentrons-nous sur les d
 
 #### Résumé statistique
 
-Nous pouvons exploiter la bibliothèque de pandas de Python pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
+Nous pouvons exploiter la bibliothèque [!DNL Python's] pandas pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
 
 ```PYTHON
 df.info()
@@ -150,7 +150,7 @@ Cela veut dire que 22 magasins sont de `storeType``A`, 17 `storeType``B`, et 6 `
 
 #### Visualisation des données
 
-Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulons compléter cela par des visualisations pour rendre les choses plus claires et plus faciles à identifier les schémas. Les graphiques sont également utiles pour transmettre des résultats à une audience. Voici quelques bibliothèques Python utiles pour la visualisation :
+Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulons compléter cela par des visualisations pour rendre les choses plus claires et plus faciles à identifier les schémas. Les graphiques sont également utiles pour transmettre des résultats à une audience. Voici quelques [!DNL Python] bibliothèques utiles pour la visualisation :
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -158,7 +158,7 @@ Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulo
 
 Dans cette section, nous examinerons rapidement certains avantages liés à l’utilisation de chaque bibliothèque.
 
-[Matplotlib](https://matplotlib.org/) est le plus ancien package de visualisation Python. Leur but est de rendre les choses faciles et difficiles possibles. Cela a tendance à être vrai car le paquet est extrêmement puissant mais il est aussi livré avec la complexité. Il n&#39;est pas toujours facile d&#39;obtenir un graphique à l&#39;apparence raisonnable sans prendre beaucoup de temps et d&#39;efforts.
+[Matplotlib](https://matplotlib.org/) est le plus ancien package de [!DNL Python] visualisation. Leur but est de rendre les choses faciles et difficiles possibles. Cela a tendance à être vrai car le paquet est extrêmement puissant mais il est aussi livré avec la complexité. Il n&#39;est pas toujours facile d&#39;obtenir un graphique à l&#39;apparence raisonnable sans prendre beaucoup de temps et d&#39;efforts.
 
 [Pandas](https://pandas.pydata.org/) est principalement utilisé pour son objet DataFrame qui permet la manipulation de données avec l&#39;indexation intégrée. Cependant, pandas inclut également une fonctionnalité de traçage intégrée basée sur matplotlib.
 
