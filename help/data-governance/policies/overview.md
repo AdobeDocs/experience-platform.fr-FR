@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 92092620a7ba9129eef4bde852b1e0afc6612d74
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 1%
 
 # Présentation des stratégies d’utilisation des données
 
-Pour que les étiquettes d’utilisation des données prennent efficacement en charge la conformité des données, des stratégies d’utilisation des données doivent être mises en oeuvre. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur les données de l’Experience Platform, ou dont vous êtes limité à l’exécution.
+Pour que les étiquettes d’utilisation des données prennent efficacement en charge la conformité des données, des stratégies d’utilisation des données doivent être mises en oeuvre. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Ce document fournit un aperçu général des stratégies d’utilisation des données et fournit des liens vers d’autres documents sur l’utilisation des stratégies dans l’interface utilisateur ou l’API.
 
 ## Actions marketing {#marketing-actions}
 
-**Les actions** marketing (également appelées cas **d’utilisation** marketing) dans le cadre de la gouvernance des données, sont des actions qu’un utilisateur de données Experience Platform peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
+**Les actions** marketing (également appelées cas **d’utilisation**[!DNL Experience Platform] marketing) dans le cadre de la gouvernance des données, sont des actions qu’un utilisateur de données peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 2. Étiquette(s) d&#39;utilisation des données pour laquelle l&#39;action est limitée ne peut pas être exécutée
 
-Un exemple d’action marketing peut être le désir d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types de données spécifiques (tels que les informations d’identification personnelle) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant une étiquette &quot;I&quot; (données d’identité), vous recevrez une réponse du service de stratégie vous indiquant qu’une stratégie d’utilisation des données a été enfreinte.
+Un exemple d’action marketing peut être le désir d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données (tels que les informations d’identification personnelle) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant une étiquette &quot;I&quot; (données d’identité), vous recevrez une réponse de la part de l’utilisateur vous indiquant qu’une stratégie d’utilisation des données a été enfreinte. [!DNL Policy Service]
 
 >[!NOTE] Les actions marketing ne limitent pas l’utilisation des données. Ils doivent être inclus dans les stratégies d’utilisation des données activées pour que ces actions soient évaluées en cas de violation des stratégies.
 
