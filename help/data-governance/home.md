@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gouvernance des données Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 42d4fe7eecf1f64fab1c9554cfdc4bfeb42ffdeb
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1448'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # Présentation de la gouvernance des données
 
-L&#39;une des principales fonctionnalités de l&#39;Adobe Experience Platform consiste à rassembler les données issues de plusieurs systèmes d&#39;entreprise afin de mieux permettre aux spécialistes du marketing d&#39;identifier, de comprendre et d&#39;impliquer les clients. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données dans Platform sont conformes aux règles d’utilisation des données.
+L&#39;une des principales fonctionnalités de l&#39;Adobe Experience Platform consiste à rassembler les données issues de plusieurs systèmes d&#39;entreprise afin de mieux permettre aux spécialistes du marketing d&#39;identifier, de comprendre et d&#39;impliquer les clients. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données dans [!DNL Platform] le cadre de la stratégie d’utilisation des données sont conformes à ces dernières.
 
-La gouvernance des données dans Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé au sein de l’Experience Platform à divers niveaux, notamment le catalogage, le lignage des données, l’étiquetage de l’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données pour les actions marketing.
+La gouvernance des données dans Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé à [!DNL Experience Platform] différents niveaux, notamment le catalogage, la lignée de données, l’étiquetage de l’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données pour les actions marketing.
 
 ## Rôles de gouvernance des données
 
@@ -44,7 +44,7 @@ Les marketeurs sont le point final de la gouvernance des données. Ils demandent
 
 ## Structure DULE
 
-L’étiquetage et l’application de l’utilisation des données (DULE) constituent le cadre de base de la gouvernance des données Experience Platform. DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d&#39;utilisation des données. Une fois les étiquettes de données appliquées et les stratégies d’utilisation des données mises en place, les actions marketing peuvent être évaluées afin de garantir une utilisation correcte des données.
+L’étiquetage et l’application de l’utilisation des données (DULE) constituent le cadre de base de la gouvernance des [!DNL Experience Platform] données. DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d&#39;utilisation des données. Une fois les étiquettes de données appliquées et les stratégies d’utilisation des données mises en place, les actions marketing peuvent être évaluées afin de garantir une utilisation correcte des données.
 
 Le cadre de DULE comporte trois éléments clés : Étiquettes, politiques et application de la loi.
 
@@ -66,17 +66,17 @@ La structure DULE comprend des étiquettes d’utilisation de données prédéfi
 
 >[!NOTE] Consultez le guide sur les étiquettes [d’utilisation des données](labels/reference.md) prises en charge pour obtenir une liste complète des étiquettes disponibles, ainsi que des définitions pour chaque type d’étiquette.
 
-Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Il est recommandé d’étiqueter les données dès qu’elles sont ingérées dans l’Experience Platform ou dès que les données sont disponibles dans Platform.
+Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Il est recommandé d’étiqueter les données dès leur assimilation [!DNL Experience Platform]ou dès que les données sont disponibles dans [!DNL Platform].
 
 Pour plus d’informations, voir la présentation des étiquettes [d’utilisation des](./labels/overview.md) données.
 
 ## Stratégies d’utilisation des données
 
-Pour que les étiquettes d’utilisation des données prennent efficacement en charge la conformité des données, des stratégies d’utilisation des données doivent être mises en oeuvre. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur les données de l’Experience Platform, ou dont vous êtes limité à l’exécution.
+Pour que les étiquettes d’utilisation des données prennent efficacement en charge la conformité des données, des stratégies d’utilisation des données doivent être mises en oeuvre. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Un exemple d’action marketing peut être le désir d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données, tels que les informations d’identification personnelle (informations d’identification personnelle), ne peuvent pas être exportés et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au jeu de données, vous recevrez une réponse du service de stratégie vous indiquant qu’une stratégie d’utilisation des données a été enfreinte.
 
-Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent créer des stratégies à l’aide de l’API DULE Policy Service ou de l’interface utilisateur Experience Platform.
+Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent créer des stratégies à l’aide de l’API DULE Policy Service ou de l’interface [!DNL Experience Platform] utilisateur.
 
 >[!IMPORTANT] Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
 
@@ -117,7 +117,7 @@ Le tableau suivant décrit les termes clés liés à la gouvernance des données
 | **Géofence** | Une géofence est une limite géographique virtuelle, définie par un GPS ou la technologie RFID, qui permet au logiciel de déclencher une réponse lorsqu&#39;un dispositif portable entre dans une zone particulière ou en sort. |
 | **Libellés d’identité** | Les étiquettes &quot;I&quot; d’identité sont utilisées pour classer les données qui peuvent identifier ou contacter une personne spécifique. |
 | **Ciblage axé sur l’intérêt** | Le ciblage basé sur l’intérêt, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies : les données collectées sur site servent à faire des inférences sur l’intérêt des utilisateurs, sont utilisées dans un autre contexte, tel que sur un autre site ou une autre application (hors site) et servent à sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences. |
-| **Action marketing** | Une action marketing, dans le cadre de la gouvernance des données, est une action entreprise par un utilisateur de données Experience Platform, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données. |
+| **Action marketing** | Une action marketing, dans le cadre de la gouvernance des données, est une action entreprise par un utilisateur de [!DNL Experience Platform] données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données. |
 | **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing autorisées ou non pour des données spécifiques. |
 | **Étiquettes sensibles** | Les étiquettes &quot;S&quot; sensibles sont utilisées pour classer les données que vous, et votre entreprise, considérez comme sensibles. |
 
