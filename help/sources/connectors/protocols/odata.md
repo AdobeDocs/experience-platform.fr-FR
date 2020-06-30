@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Connecteur OData générique
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7328226b8349ffcdddadbd27b74fc54328b78dc5
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
 
-# (bêta) Connecteur OData générique
+# (Bêta) [!DNL Generic OData] Connecteur
 
 >[!NOTE]
->Le connecteur OData générique est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
+>Le [!DNL Generic OData] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
-L’Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
 
-Experience Platform fournit la prise en charge de l’assimilation de données à partir d’une application de protocoles tierces. Les fournisseurs de protocoles sont pris en charge, notamment par Generic OData.
+[!DNL Experience Platform] prend en charge l’importation de données à partir d’une application de protocoles tierces. Les fournisseurs de protocoles prennent en charge [!DNL Generic OData].
 
-La documentation ci-dessous fournit des informations sur la connexion de Generic OData à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Generic OData] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Connexion de données génériques à Platform à l’aide d’API
+## Se connecter [!DNL Generic OData] à [!DNL Platform] l’aide des API
 
 - [Création d’un connecteur OData générique à l’aide de l’API du service de flux](../../tutorials/api/create/protocols/odata.md)
 - [Explorez une application de protocoles à l’aide de l’API du service de flux](../../tutorials/api/explore/protocols.md)
 - [Collecte de données à partir d’une application de protocoles à l’aide de l’API du service de flux](../../tutorials/api/collect/protocols.md)
 
-## Connexion de données génériques à Platform à l’aide de l’interface utilisateur
+## Se connecter [!DNL Generic OData] à [!DNL Platform] l’aide de l’interface utilisateur
 
 - [Création d’un connecteur source OData générique dans l’interface utilisateur](../../tutorials/ui/create/protocols/odata.md)
 - [Configuration d’un flux de données pour un connecteur de protocole dans l’interface utilisateur](../../tutorials/ui/dataflow/protocols.md)
