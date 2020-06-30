@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Attribuer une étiquette à un champ en tant qu’identité
 topic: api guide
 translation-type: tm+mt
-source-git-commit: 40ce232e39f62f1ee478ef05229dd2fc125ee4c0
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '145'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Attribuer une étiquette à un champ en tant qu’identité
 
-Les champs qui contiennent des informations d’identification personnelle peuvent être étiquetés comme champs d’identité. Une valeur fournie dans un champ d&#39;identité est interprétée comme une identité par Identity Service. L’espace de nommage de l’identité est spécifié dans le cadre de l’étiquetage du champ.
+Les champs qui contiennent des informations d’identification personnelle peuvent être étiquetés comme champs d’identité. Une valeur fournie dans un champ d&#39;identité est interprétée comme une identité par [!DNL Identity Service]. L’espace de nommage de l’identité est spécifié dans le cadre de l’étiquetage du champ.
 
 Les critères suivants doivent être respectés pour qu’un champ soit étiqueté comme identité :
 
