@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Création d’un connecteur source d’Enregistrement Google Cloud dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 75ba0bce7ce070af851bbf7e220dbf08febc4c20
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '540'
 ht-degree: 1%
 
 ---
 
 
-# Création d’un connecteur source d’Enregistrement Google Cloud dans l’interface utilisateur
+# Création d’un connecteur [!DNL Google Cloud Storage] source dans l’interface utilisateur
 
-Les connecteurs source dans Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source d’Enregistrement Google Cloud (ci-après dénommé &quot;GCS&quot;) à l’aide de l’interface utilisateur de la plate-forme.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Google Cloud Storage] (ci-après appelé &quot;GCS&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de la plateforme d’expérience Adobe :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -29,7 +29,7 @@ Si vous disposez déjà d’une connexion de base GCS, vous pouvez ignorer le re
 
 ### Formats de fichiers pris en charge
 
-Experience Platform prend en charge les formats de fichier suivants à assimiler à partir d’enregistrements externes :
+[!DNL Experience Platform] prend en charge les formats de fichier suivants à ingérer à partir d’enregistrements externes :
 
 * Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules. La valeur des en-têtes de champ des fichiers au format DSV ne doit être composée que de caractères alphanumériques et de traits de soulignement. La prise en charge des fichiers DSV généraux sera assurée à l’avenir.
 * Notation d’objet JavaScript (JSON) : Les fichiers de données au format JSON doivent être compatibles XDM.
@@ -37,13 +37,13 @@ Experience Platform prend en charge les formats de fichier suivants à assimiler
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à vos données GCS sur la plate-forme, vous devez fournir un ID **de clé d&#39;** accès GCS valide et un **secret**. Pour en savoir plus sur la manière d’obtenir ces valeurs, consultez le guide <a href="https://cloud.google.com/docs/authentication/production" target="_blank">d’authentification</a> serveur à serveur pour Google Cloud.
+Pour accéder à vos données GCS sur [!DNL Platform], vous devez fournir un identifiant **de clé d&#39;** accès GCS valide et un **secret**. Vous pouvez en savoir plus sur la manière d’obtenir ces valeurs en lisant le guide <a href="https://cloud.google.com/docs/authentication/production" target="_blank">d’authentification</a> serveur à serveur pour [!DNL Google Cloud].
 
 ## Connecter votre compte GCS
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte GCS afin de vous connecter à la plate-forme.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte GCS auquel vous connecter [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
+Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
@@ -67,4 +67,4 @@ Pour connecter un compte existant, sélectionnez le compte GCS avec lequel vous 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/batch/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/batch/cloud-storage.md).
