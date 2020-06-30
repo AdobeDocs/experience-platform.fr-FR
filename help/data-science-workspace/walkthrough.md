@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Présentation de Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
-source-git-commit: 19823c7cf0459e045366f0baae2bd8a98416154c
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
 
 
-# Présentation de Data Science Workspace
+# [!DNL Data Science Workspace] parcours
 
-Ce document fournit une présentation de l’espace de travail Data Science Workspace d’Adobe Experience Platform. Plus précisément, nous allons passer en revue le processus général qu&#39;un chercheur en données doit suivre pour résoudre un problème à l&#39;aide de l&#39;apprentissage automatique.
+Ce document fournit une passerelle pour l&#39;Adobe Experience Platform [!DNL Data Science Workspace]. Plus précisément, nous allons passer en revue le processus général qu&#39;un chercheur en données doit suivre pour résoudre un problème à l&#39;aide de l&#39;apprentissage automatique.
 
 ## Conditions préalables
 
-- Un compte Adobe ID enregistré
-   - Le compte ID Adobe doit avoir été ajouté à une organisation disposant d’un accès à Adobe Experience Platform et à Data Science Workspace.
+- Un compte d&#39;Adobe ID enregistré
+   - Le compte d&#39;Adobe ID doit avoir été ajouté à une organisation ayant accès à l&#39;Adobe Experience Platform et au [!DNL Data Science Workspace]
 
 ## Motivation du chercheur en données
 
@@ -29,22 +29,22 @@ Un détaillant doit faire face à de nombreux défis pour rester compétitif sur
 
 La solution d&#39;un chercheur en données consiste à exploiter la richesse des données historiques auxquelles un détaillant a accès, à prédire les tendances futures et à optimiser les décisions de tarification. Nous utiliserons les données des ventes passées pour former notre modèle d&#39;apprentissage automatique et nous utiliserons le modèle pour prédire les tendances futures des ventes. Ainsi, le détaillant pourra avoir des informations pour les aider à modifier les prix.
 
-Dans cet aperçu, nous allons passer en revue les étapes qu&#39;un scientifique spécialiste des données doit franchir pour créer un ensemble de données et un modèle pour prédire les ventes hebdomadaires. Nous passerons en revue les sections suivantes de l’exemple de carnet de vente au détail sur l’espace de travail Data Science d’Adobe Experience Platform :
+Dans cet aperçu, nous allons passer en revue les étapes qu&#39;un scientifique spécialiste des données doit franchir pour créer un ensemble de données et un modèle pour prédire les ventes hebdomadaires. Nous passerons en revue les sections suivantes de l&#39;exemple de carnet de vente au détail sur l&#39;Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuration](#setup)
 - [Exploration des données](#exploring-data)
 - [Ingénierie des fonctionnalités](#feature-engineering)
 - [Formation et vérification](#training-and-verification)
 
-### Ordinateurs portables dans Data Science Workspace
+### Ordinateurs portables dans [!DNL Data Science Workspace]
 
-Tout d&#39;abord, nous voulons créer un bloc-notes JupyterLab pour ouvrir l&#39;exemple de bloc-notes &quot;Ventes au détail&quot;. Suivez les étapes effectuées par le data scientist dans le bloc-notes pour mieux comprendre un processus typique.
+Tout d&#39;abord, nous voulons créer un [!DNL JupyterLab] bloc-notes pour ouvrir l&#39;exemple de bloc-notes &quot;Ventes au détail&quot;. Suivez les étapes effectuées par le data scientist dans le bloc-notes pour mieux comprendre un processus typique.
 
-Dans l’interface utilisateur d’Adobe Experience Platform, cliquez sur l’onglet Data Science du menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39;onglet JupyterLab qui ouvre le lanceur JupyterLab. Vous devriez voir une page similaire à celle-ci.
+Dans l’interface utilisateur de l’Adobe Experience Platform, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder au [!DNL Data Science Workspace]. A partir de cette page, cliquez sur l&#39; [!DNL JupyterLab] onglet qui va ouvrir le [!DNL JupyterLab] lanceur. Vous devriez voir une page similaire à celle-ci.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Dans notre tutoriel, nous utiliserons Python 3 dans le Jupyter Notebook pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers sont fournis. Nous utiliserons l&#39;exemple &quot;Ventes au détail&quot; pour Python 3.
+Dans notre tutoriel, nous utiliserons [!DNL Python] 3 dans le [!DNL Jupyter Notebook] pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers sont fournis. Nous utiliserons l&#39;échantillon &quot;Ventes au détail&quot; pour [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
@@ -62,7 +62,7 @@ Avec le bloc-notes Ventes au détail ouvert, la première chose que nous faisons
 
 #### Charger les données
 
-Une fois les bibliothèques chargées, nous pouvons début de regarder les données. Le code Python suivant utilise la structure `DataFrame` de données des pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur Github dans le DataFrame des pandas :
+Une fois les bibliothèques chargées, nous pouvons début de regarder les données. Le [!DNL Python] code suivant utilise la structure de `DataFrame` données des pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur [!DNL Github] dans le DataFrame des pandas :
 
 ![](./images/walkthrough/read_csv.png)
 
@@ -76,7 +76,7 @@ Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous p
 
 #### Résumé statistique
 
-Nous pouvons exploiter la bibliothèque de pandas de Python pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
+Nous pouvons exploiter la bibliothèque [!DNL Python's] pandas pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
 
 ```PYTHON
 df.info()
@@ -141,7 +141,7 @@ Dans cette section, nous apporterons des modifications à notre jeu de données 
 - convertir isHoliday en variable numérique
 - prévoir les ventes hebdomadaires de la semaine prochaine
 
-#### Colonnes Ajouter semaine et année
+#### Ajouter les colonnes semaine et année
 
 Le format actuel de la date (`2010-02-05`) est difficile à différencier si les données sont pour chaque semaine. C’est pourquoi nous allons convertir la date en semaine et en année.
 
