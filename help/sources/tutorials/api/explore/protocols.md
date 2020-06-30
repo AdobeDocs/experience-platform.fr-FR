@@ -4,48 +4,48 @@ solution: Experience Platform
 title: Explorer un système de protocole à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 95779ae70c723c20370f9636032de366ccd928ca
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '567'
 ht-degree: 1%
 
 ---
 
 
-# Explorer un système de protocole à l’aide de l’API du service de flux
+# Explorer un système de protocole à l’aide de l’ [!DNL Flow Service] API
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API Flow Service pour explorer les applications de protocoles.
+Ce didacticiel utilise l&#39; [!DNL Flow Service] API pour explorer les applications de protocoles.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-* [Sources](../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à une application de protocoles à l’aide de l’API Flow Service.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à une application de protocoles à l&#39;aide de l&#39; [!DNL Flow Service] API.
 
 ### Obtention d’une connexion de base
 
-Pour explorer votre système de protocole à l’aide des API de plate-forme, vous devez posséder un ID de connexion de base valide. Si vous n&#39;avez pas encore de connexion de base pour le système de protocole que vous souhaitez utiliser, vous pouvez en créer une à l&#39;aide du didacticiel suivant :
+Pour explorer votre système de protocole à l’aide [!DNL Platform] d’API, vous devez posséder un ID de connexion de base valide. Si vous n&#39;avez pas encore de connexion de base pour le système de protocole que vous souhaitez utiliser, vous pouvez en créer une à l&#39;aide du didacticiel suivant :
 
 * [OData générique](../create/protocols/odata.md)
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Explorez vos tableaux de données
 
-En utilisant l’ID de connexion pour votre application de protocoles, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès de la table que vous souhaitez inspecter ou assimiler dans la plate-forme.
+En utilisant l’ID de connexion pour votre application de protocoles, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l&#39;appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou intégrer [!DNL Platform].
 
 **Format d’API**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tables de votre application de protocoles. Trouvez la table que vous souhaitez apporter à Plateforme et prenez note de sa `path` propriété, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tables de votre application de protocoles. Trouvez la table que vous souhaitez introduire [!DNL Platform] et prenez note de sa `path` propriété, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -189,4 +189,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre application de protocoles, trouvé le chemin de la table que vous souhaitez intégrer dans Platform, et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre application de protocoles et les importer dans Platform](../collect/protocols.md).
+En suivant ce tutoriel, vous avez exploré votre application de protocoles, trouvé le chemin du tableau dans lequel vous souhaitez insérer [!DNL Platform], et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre application de protocoles et les importer dans Platform](../collect/protocols.md).
