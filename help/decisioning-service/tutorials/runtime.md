@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Utilisation de l’exécution du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '1985'
 ht-degree: 0%
 
 ---
@@ -14,36 +14,36 @@ ht-degree: 0%
 
 # Utilisation de l’exécution du service de prise de décision à l’aide d’API
 
-Ce document fournit un didacticiel pour l’utilisation des services d’exécution de Decisioning Service à l’aide des API Adobe Experience Platform.
+Ce document fournit un didacticiel sur l’utilisation des services d’exécution liés à l’ [!DNL Decisioning Service] utilisation des API d’Adobe Experience Platform.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension des services Experience Platform impliqués dans la prise de décision et la détermination de la prochaine meilleure offre à présenter lors des expériences client. Avant de commencer ce didacticiel, consultez la documentation relative aux éléments suivants :
+Ce didacticiel nécessite une bonne compréhension des [!DNL Experience Platform] services impliqués dans la prise de décision et la détermination de la prochaine meilleure offre à présenter lors des expériences client. Avant de commencer ce didacticiel, consultez la documentation relative aux éléments suivants :
 
-- [Service](./../home.md)de prise de décision : Fournit la structure permettant d’ajouter et de supprimer des offres et de créer des algorithmes pour choisir le meilleur à présenter lors de l’expérience d’un client.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [Langage de Requête de Profil (PQL)](../../segmentation/pql/overview.md): PQL est utilisé pour définir des règles et des filtres.
+- [!DNL Decisioning Service](./../home.md): Fournit la structure permettant d’ajouter et de supprimer des offres et de créer des algorithmes pour choisir le meilleur à présenter lors de l’expérience d’un client.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est utilisé pour définir des règles et des filtres.
 - [Gérez les objets et les règles de prise de décision à l’aide des API](./entities.md): Avant d’utiliser le runtime des services de prise de décision, vous devez configurer les entités associées.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les [!DNL Platform] API.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../tutorials/authentication.md)sandbox.
+>[!NOTE] Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../tutorials/authentication.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -55,7 +55,7 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 >[!NOTE] `UUID` est une chaîne au format UUID unique au niveau mondial et ne doit pas être réutilisée pour différents appels d’API.
 
-Le service de prise de décision est contrôlé par un certain nombre d’objets métier qui sont liés les uns aux autres. Tous les objets métier sont stockés dans le référentiel d’objets métier de la plate-forme, le référentiel d’objets XDM Core. L&#39;une des principales fonctionnalités de ce référentiel est que les API sont orthogonales par rapport au type d&#39;objet métier. Au lieu d&#39;utiliser une API POST, GET, PUT, PATCH ou DELETE qui indique le type de ressource dans son point de terminaison API, il n&#39;y a que 6 points de terminaison génériques, mais ils acceptent ou retournent un paramètre qui indique le type de l&#39;objet lorsque cette désambiguïfication est nécessaire. Le schéma doit être enregistré dans le référentiel, mais au-delà, le référentiel est utilisable pour un ensemble ouvert de types d&#39;objet.
+[!DNL Decisioning Service] est contrôlée par un certain nombre d’objets commerciaux qui sont liés les uns aux autres. Tous les objets d’entreprise sont stockés dans le référentiel d’objets [!DNL Platform’s] métier, le référentiel d’objets XDM Core. L&#39;une des principales fonctionnalités de ce référentiel est que les API sont orthogonales par rapport au type d&#39;objet métier. Au lieu d&#39;utiliser une API POST, GET, PUT, PATCH ou DELETE qui indique le type de ressource dans son point de terminaison API, il n&#39;y a que 6 points de terminaison génériques, mais ils acceptent ou retournent un paramètre qui indique le type de l&#39;objet lorsque cette désambiguïfication est nécessaire. Le schéma doit être enregistré dans le référentiel, mais au-delà, le référentiel est utilisable pour un ensemble ouvert de types d&#39;objet.
 
 Chemins d’accès aux points de terminaison pour tous les API du référentiel d’objets de base XDM début `https://platform.adobe.io/data/core/ode/`.
 
@@ -63,7 +63,7 @@ Le premier élément de chemin suivant le point de terminaison est le `container
 
 ## Compilation de modèles de décision
 
-L&#39;activation des entités logiques métier se produit automatiquement et en permanence. Dès qu&#39;une nouvelle option est enregistrée dans le référentiel et qu&#39;elle est marquée comme &quot;approuvée&quot;, elle sera candidate à l&#39;inclusion de l&#39;ensemble d&#39;options disponibles. Dès qu&#39;une règle de décision est mise à jour, l&#39;ensemble de règles est réassemblé et préparé pour l&#39;exécution. À cette étape d’activation automatique, toutes les contraintes définies par la logique métier qui ne dépendent pas du contexte d’exécution seront évaluées. Les résultats de cette étape d’activation sont envoyés dans un cache où ils sont disponibles pour l’exécution du service de prise de décision.
+L&#39;activation des entités logiques métier se produit automatiquement et en permanence. Dès qu&#39;une nouvelle option est enregistrée dans le référentiel et qu&#39;elle est marquée comme &quot;approuvée&quot;, elle sera candidate à l&#39;inclusion de l&#39;ensemble d&#39;options disponibles. Dès qu&#39;une règle de décision est mise à jour, l&#39;ensemble de règles est réassemblé et préparé pour l&#39;exécution. À cette étape d’activation automatique, toutes les contraintes définies par la logique métier qui ne dépendent pas du contexte d’exécution seront évaluées. Les résultats de cette étape d’activation sont envoyés dans un cache où ils sont disponibles pour l’ [!DNL Decisioning Service] exécution.
 
 ### Effets des placements, des filtres et des états de cycle de vie
 
@@ -171,11 +171,11 @@ Le seul paramètre pour cet appel d&#39;API est `containerId`. Le résultat est 
 
 ## Appels de l&#39;API REST pour exécuter les décisions
 
-L’API REST est l’un des itinéraires pour les applications s’exécutant sur la plate-forme afin d’obtenir la meilleure expérience possible en fonction des règles, modèles et contraintes définis par l’entreprise pour ses utilisateurs. Les applications envoient l’une des identités du profil (ID de profil et espace de nommage d’identité) que le service de prise de décision consulte le profil et les informations sont utilisées pour appliquer la logique métier. Des données contextuelles supplémentaires peuvent être transmises à la demande et si elles sont spécifiées dans les règles de fonctionnement, elles seront incluses dans les données pour prendre la décision.
+L’API REST est l’un des itinéraires pour les applications s’exécutant au-dessus de [!DNL Platform] afin d’obtenir la meilleure expérience possible en fonction des règles, modèles et contraintes définis par l’entreprise pour ses utilisateurs. Les applications envoient l’une des identités du profil (ID de profil et espace de nommage d’identité) qui [!DNL Decisioning Service] recherche le profil et les informations sont utilisées pour appliquer la logique métier. Des données contextuelles supplémentaires peuvent être transmises à la demande et si elles sont spécifiées dans les règles de fonctionnement, elles seront incluses dans les données pour prendre la décision.
 
 Les applications peuvent obtenir de meilleures performances en demandant une décision pour jusqu&#39;à 30 activités à la fois. Les URI des activités sont transmis dans la même requête. L’API REST est synchrone et renvoie les options proposées pour toutes ces activités ou l’option de secours si aucune option de personnalisation ne satisfait aux contraintes.
 
-Il est possible que deux activités différentes proposent la même option que leur &quot;meilleur&quot;. Pour éviter de répéter une expérience composée, le service de prise de décision arbitre par défaut entre les activités référencées dans la même requête. L&#39;arbitrage signifie que pour chacune des activités, les options du top N sont prises en considération, mais aucune option ne sera proposée à plusieurs reprises dans ces activités. Si deux activités ont la même option classée en tête de liste, l&#39;une d&#39;elles sera élue pour utiliser son deuxième meilleur choix ou son troisième meilleur, etc. Ces règles de déduplication tentent d&#39;éviter que l&#39;une des activités n&#39;utilise son option de secours.
+Il est possible que deux activités différentes proposent la même option que leur &quot;meilleur&quot;. Pour éviter de répéter une expérience composée, [!DNL Decisioning Service] arbitre par défaut entre les activités référencées dans la même requête. L&#39;arbitrage signifie que pour chacune des activités, les options du top N sont prises en considération, mais aucune option ne sera proposée à plusieurs reprises dans ces activités. Si deux activités ont la même option classée en tête de liste, l&#39;une d&#39;elles sera élue pour utiliser son deuxième meilleur choix ou son troisième meilleur, etc. Ces règles de déduplication tentent d&#39;éviter que l&#39;une des activités n&#39;utilise son option de secours.
 
 La demande de décision contient les arguments qu&#39;elle contient pour une demande POST. Le corps est formaté en tant que valeur d’ `Content-Type` en-tête JSON. `application/vnd.adobe.xdm+json; schema="{REQUEST_SCHEMA_AND_VERSION}"`
 
@@ -220,7 +220,7 @@ curl -X POST {DECISION_SERVICE_ENDPOINT_PATH}/{CONTAINER_ID}/decisions \
 }’
 ```
 
-- **`xdm:dryRun`** - Lorsque la valeur de cette propriété facultative est définie sur true, la demande de décision obéira à des contraintes de plafonnement mais ne tirera pas réellement ces compteurs, il est prévu que l&#39;appelant n&#39;a jamais l&#39;intention de présenter la proposition au profil. Le Service de prise de décision n&#39;enregistrera pas la proposition comme événement de décision officiel de XDM et n&#39;apparaîtra pas dans les jeux de données de rapports. La valeur par défaut de cette propriété est false et lorsque la propriété est omise, la décision n&#39;est pas considérée comme une série d&#39;essais et doit donc être présentée à l&#39;utilisateur final.
+- **`xdm:dryRun`** - Lorsque la valeur de cette propriété facultative est définie sur true, la demande de décision obéira à des contraintes de plafonnement mais ne tirera pas réellement ces compteurs, il est prévu que l&#39;appelant n&#39;a jamais l&#39;intention de présenter la proposition au profil. La proposition [!DNL Decisioning Service] ne sera pas enregistrée comme événement officiel de décision XDM et ne figurera pas dans les ensembles de données de rapports. La valeur par défaut de cette propriété est false et lorsque la propriété est omise, la décision n&#39;est pas considérée comme une série d&#39;essais et doit donc être présentée à l&#39;utilisateur final.
 - **`xdm:validateContextData`** - Cette propriété facultative active ou désactive la validation des données contextuelles. Si la validation est activée, pour chaque élément de données contextuelles fourni, le schéma (d’après le `@type` champ) est extrait du registre XDM et l’ `xdm:data` objet est validé par rapport à celui-ci.
 
 La demande par ce schéma contient un tableau d&#39;URI référençant les activités d&#39;offre, une identité de profil et un tableau d&#39;éléments de données contextuelles :
@@ -292,4 +292,4 @@ Notez que la syntaxe PQL n’utilise pas de préfixes dans les noms de propriét
 Tous les enregistrements des entités de événement de profil et d’expérience sont déjà gérés dans le magasin de profils. En transmettant une ou plusieurs identités de profil à la demande, le profil de ces identités sera identifié et consulté à partir du magasin. Les données sont alors automatiquement disponibles pour les règles de décision et les modèles évalués par la stratégie de décision.
 
 Pour récupérer les enregistrements de profil et d’expérience, la stratégie de fusion par défaut est appliquée.
-Notez qu&#39;après avoir téléchargé des enregistrements de profil dans la base de données de la plate-forme, il y a un léger retard jusqu&#39;à ce que les enregistrements de profil puissent être recherchés. Il en va de même pour l’assimilation d’enregistrements de profil et d’expérience via les API de diffusion en continu, et ce n’est qu’après quelques secondes que les données seront disponibles pour l’évaluation des règles de décision qui évaluent les données du événement de profil et d’expérience.
+Notez qu’après avoir téléchargé des enregistrements de profil dans la [!DNL Platform] base de données, il y a un léger retard jusqu’à ce que les enregistrements de profil puissent être recherchés. Il en va de même pour l’assimilation d’enregistrements de profil et d’expérience via les API de diffusion en continu, et ce n’est qu’après quelques secondes que les données seront disponibles pour l’évaluation des règles de décision qui évaluent les données du événement de profil et d’expérience.
