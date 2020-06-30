@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Importer une recette emballée (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: f2a7300d4ad75e3910abbdf2ecc2946a2dfe553c
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1798'
+source-wordcount: '1760'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Importer une recette emballée (interface utilisateur)
 
-Ce didacticiel explique comment configurer et importer une recette assemblée à l&#39;aide de l&#39;exemple Ventes au détail fourni. D’ici la fin de ce didacticiel, vous serez prêt à créer, former et évaluer un modèle dans Adobe Experience Platform Data Science Workspace.
+Ce didacticiel explique comment configurer et importer une recette assemblée à l&#39;aide de l&#39;exemple Ventes au détail fourni. D&#39;ici la fin de ce didacticiel, vous serez prêt à créer, former et évaluer un modèle en Adobe Experience Platform [!DNL Data Science Workspace].
 
 ## Conditions préalables
 
@@ -22,7 +22,7 @@ Ce didacticiel nécessite une recette empaquetée sous la forme d&#39;une URL d&
 
 ## Processus de l’interface utilisateur
 
-L&#39;importation d&#39;une recette empaquetée dans Data Science Workspace requiert des configurations de recette spécifiques, compilées dans un seul fichier JSON (JavaScript Object Notation), cette compilation de configurations de recette est appelée fichier **de** configuration. Une recette assemblée avec un ensemble particulier de configurations est appelée instance **de** recette. Une recette peut être utilisée pour créer de nombreuses instances de recette dans Data Science Workspace.
+L&#39;importation d&#39;une recette empaquetée dans [!DNL Data Science Workspace] requiert des configurations de recette spécifiques, compilées dans un seul fichier JSON (JavaScript Object Notation), cette compilation de configurations de recette est appelée fichier **de** configuration. Une recette assemblée avec un ensemble particulier de configurations est appelée instance **de** recette. Une recette peut être utilisée pour créer de nombreuses instances de recette dans [!DNL Data Science Workspace].
 
 Le processus d&#39;importation d&#39;une recette de package comprend les étapes suivantes :
 - [Configurer une recette](#configure)
@@ -33,7 +33,7 @@ Le processus d&#39;importation d&#39;une recette de package comprend les étapes
 
 ### Configurer une recette {#configure}
 
-Chaque instance de recette dans Data Science Workspace est accompagnée d’un ensemble de configurations qui adaptent l’instance de recette à un cas d’utilisation particulier. Les fichiers de configuration définissent les comportements de formation et de notation par défaut d&#39;un modèle créé à l&#39;aide de cette instance de recette.
+Chaque instance de recette dans [!DNL Data Science Workspace] est accompagnée d&#39;un ensemble de configurations qui adaptent l&#39;instance de recette à un cas d&#39;utilisation particulier. Les fichiers de configuration définissent les comportements de formation et de notation par défaut d&#39;un modèle créé à l&#39;aide de cette instance de recette.
 
 >[!NOTE] Les fichiers de configuration sont spécifiques à la recette et à la casse.
 
@@ -116,11 +116,11 @@ Vous trouverez ci-dessous un exemple de fichier de configuration présentant les
 | `evaluation.metrics` | Chaîne | liste séparée par des virgules des mesures d&#39;évaluation à utiliser pour évaluer un modèle. |
 | `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA` | Chaîne | schéma de sortie utilisé pour marquer un modèle. Laissez ce champ vide lors de l’importation dans l’interface utilisateur, remplacez-le par un ID de schéma d’évaluation lors de l’importation à l’aide de l’API. |
 
-Pour les besoins de ce didacticiel, vous pouvez laisser les fichiers de configuration par défaut de la recette Ventes au détail dans Data Science Workspace Reference comme ils sont.
+Pour les besoins de ce didacticiel, vous pouvez laisser les fichiers de configuration par défaut de la recette Ventes au détail dans la [!DNL Data Science Workspace] Référence comme ils sont.
 
-### Importer une recette basée sur un Docker - Python {#python}
+### Importer une recette basée sur un Docker - [!DNL Python] {#python}
 
-Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’interface utilisateur de la plate-forme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’ [!DNL Platform] interface utilisateur. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -131,7 +131,7 @@ La page *Configurer* pour le flux de travail *Importer une recette* s&#39;affich
 >[!NOTE]
 > Dans les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) , une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l&#39;aide de fichiers source Python.
 
-Une fois que vous êtes sur la page *Sélectionner la source* , collez l&#39;URL du Docker correspondant à la recette empaquetée créée à l&#39;aide de fichiers source Python dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionnez **[!UICONTROL Python]** dans la liste déroulante *Runtime* et **[!UICONTROL Classification]** dans la liste déroulante *Type.* Une fois que tout a été renseigné, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à *Gérer les schémas*.
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide de fichiers [!DNL Python] source dans le champ URL **** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/python/retail/retail.config.json`. Sélectionnez **[!UICONTROL Python]** dans la liste déroulante *Runtime* et **[!UICONTROL Classification]** dans la liste déroulante *Type.* Une fois que tout a été renseigné, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à *Gérer les schémas*.
 
 >[!NOTE]
 > *Type *prend en charge la **[!UICONTROL classification]**et **[!UICONTROL la régression]**. Si votre modèle ne tombe pas sous l&#39;un de ces types, sélectionnez **[!UICONTROL Personnalisé]**.
@@ -148,11 +148,11 @@ Consultez la recette, ajoutez, modifiez ou supprimez des configurations si néce
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans [!DNL Data Science Workspace] l&#39;utilisation de la recette de vente au détail nouvellement créée.
 
 ### Importer une recette basée sur un Docker - R {#r}
 
-Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’interface utilisateur de la plate-forme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’ [!DNL Platform] interface utilisateur. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -180,11 +180,11 @@ Consultez la recette, ajoutez, modifiez ou supprimez des configurations si néce
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans [!DNL Data Science Workspace] l&#39;utilisation de la recette de vente au détail nouvellement créée.
 
 ### Importer une recette basée sur un Docker - PySpark {#pyspark}
 
-Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’interface utilisateur de la plate-forme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’ [!DNL Platform] interface utilisateur. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -212,11 +212,11 @@ Consultez la recette, ajoutez, modifiez ou supprimez des configurations si néce
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans [!DNL Data Science Workspace] l&#39;utilisation de la recette de vente au détail nouvellement créée.
 
 ### Recette basée sur un Docker d&#39;importation - Scala {#scala}
 
-Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’interface utilisateur de la plate-forme. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
+Début en naviguant et en sélectionnant **[!UICONTROL des Workflows]** situés dans le coin supérieur gauche de l’ [!DNL Platform] interface utilisateur. Ensuite, sélectionnez *Importer la recette* et cliquez sur **[!UICONTROL Lancer]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -225,9 +225,9 @@ La page *Configurer* pour le flux de travail *Importer une recette* s&#39;affich
 ![configurer le workflow](../images/models-recipes/import-package-ui/configure-workflow.png)
 
 >[!NOTE]
-> Dans les fichiers source du [package dans un didacticiel Recette](./package-source-files-recipe.md) , une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide des fichiers source Scala (Spark).
+> Dans le didacticiel Recette [des fichiers source du](./package-source-files-recipe.md) package, une URL Docker a été fournie à la fin de la création de la recette Ventes au détail à l’aide de fichiers source Scala ([!DNL Spark]).
 
-Une fois que vous êtes sur la page *Sélectionner la source* , collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source Scala dans le champ URL ** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Sélectionnez **[!UICONTROL Spark]** dans la liste déroulante *Runtime* . Une fois l&#39;exécution Spark sélectionnée, l&#39;artefact par défaut est automatiquement renseigné sur **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Régression]** dans la liste déroulante *Type* . Une fois que tout a été renseigné, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à *Gérer les schémas*.
+Une fois que vous êtes sur la page *Sélectionner la source* , collez l&#39;URL du Docker correspondant à la recette assemblée générée à l&#39;aide des fichiers source Scala dans le champ URL ** source. Importez ensuite le fichier de configuration fourni en le faisant glisser et en le déposant, ou utilisez le **navigateur** du système de fichiers. Le fichier de configuration fourni se trouve sur `experience-platform-dsw-reference/recipes/scala/retail/pipelineservice.json`. Sélectionnez **[!UICONTROL Spark]** dans la liste déroulante *Runtime* . Une fois l&#39; [!DNL Spark] exécution sélectionnée, l&#39;artefact par défaut est automatiquement renseigné en **[!UICONTROL Docker]**. Ensuite, sélectionnez **[!UICONTROL Régression]** dans la liste déroulante *Type* . Une fois que tout a été renseigné, cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit pour accéder à *Gérer les schémas*.
 
 >[!NOTE]
 > *Type *prend en charge la **[!UICONTROL classification]**et **[!UICONTROL la régression]**. Si votre modèle ne tombe pas sous l&#39;un de ces types, sélectionnez **[!UICONTROL Personnalisé]**.
@@ -244,11 +244,11 @@ Consultez la recette, ajoutez, modifiez ou supprimez des configurations si néce
 
 ![](../images/models-recipes/import-package-ui/recipe_review.png)
 
-Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans Data Science Workspace à l’aide de la nouvelle recette Ventes au détail.
+Passez aux étapes [](#next-steps) suivantes pour découvrir comment créer un modèle dans [!DNL Data Science Workspace] l&#39;utilisation de la recette de vente au détail nouvellement créée.
 
 ## Étapes suivantes {#next-steps}
 
-Ce didacticiel fournit des informations sur la configuration et l&#39;importation d&#39;une recette dans Data Science Workspace. Vous pouvez désormais créer, former et évaluer un modèle à l&#39;aide de la recette nouvellement créée.
+Ce didacticiel fournit des informations sur la configuration et l&#39;importation d&#39;une recette dans [!DNL Data Science Workspace]. Vous pouvez désormais créer, former et évaluer un modèle à l&#39;aide de la recette nouvellement créée.
 
 - [Formation et évaluation d&#39;un modèle dans l&#39;interface utilisateur](./train-evaluate-model-ui.md)
 - [Formation et évaluation d&#39;un modèle à l&#39;aide de l&#39;API](./train-evaluate-model-api.md)
