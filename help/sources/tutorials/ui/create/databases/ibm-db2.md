@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source IBM DB2 dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 0%
 > [!NOTE]
 > Le connecteur IBM DB2 est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source IBM DB2 (ci-après dénommé &quot;DB2&quot;) à l’aide de l’interface utilisateur Platform.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source IBM DB2 (ci-après appelé &quot;DB2&quot;) à l’aide de l’interface [!DNL Platform] utilisateur.
 
 ## Prise en main
 
 Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -33,7 +33,7 @@ Si vous disposez déjà d’une connexion DB2 valide, vous pouvez ignorer le res
 
 ### Collecte des informations d’identification requises
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à DB2 à l’aide de l’API Flow Service.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à DB2 à l’aide de l’ [!DNL Flow Service] API.
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -46,7 +46,7 @@ Pour plus d’informations sur la prise en main, reportez-vous à [ce document](
 
 ## Connexion de votre compte IBM DB2
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte DB2 afin de vous connecter à Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte DB2 auquel vous connecter [!DNL Platform].
 
 Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui y sont associés.
 
