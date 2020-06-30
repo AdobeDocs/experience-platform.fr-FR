@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source MySQL dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5ad763d2167c68f3293a2813248efaee22230a52
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Si vous disposez déjà d’une connexion de base MySQL, vous pouvez ignorer le 
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre compte MySQL sur Platform, vous devez fournir la valeur suivante :
+Pour accéder à votre compte MySQL sur [!DNL Platform], vous devez fournir la valeur suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -42,25 +42,25 @@ Vous pouvez en savoir plus sur les chaînes de connexion et comment les obtenir 
 
 ## Connexion de votre compte MySQL
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte MySQL à Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer une nouvelle connexion de base entrante afin de lier votre compte MySQL à [!DNL Platform].
 
-Connectez-vous à <a href="https://platform.adobe.com" target="_blank">l’Adobe Experience Platform</a> , puis sélectionnez **Sources** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
+Connectez-vous à <a href="https://platform.adobe.com" target="_blank">l’Adobe Experience Platform</a> , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *Catalogue* affiche diverses sources pour lesquelles vous pouvez créer des connexions de base entrantes et chaque source affiche le nombre de connexions de base existantes qui lui sont associées.
 
-Sous la catégorie *Bases de données* , sélectionnez **MySQL** pour afficher une barre d’informations sur la droite de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour créer une connexion de base entrante, sélectionnez **Connexion source**.
+Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez **[!UICONTROL MySQL]** pour afficher une barre d’informations sur la droite de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour créer une connexion de base entrante, sélectionnez **[!UICONTROL Connexion source]**.
 
 ![](../../../../images/tutorials/create/my-sql/catalog.png)
 
-La page *Se connecter à MySQL* s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page *[!UICONTROL Se connecter à MySQL]* s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **Nouveau compte**. Dans le formulaire d’entrée qui s’affiche, fournissez la connexion de base avec un nom, une description facultative et vos informations d’identification MySQL. Lorsque vous avez terminé, sélectionnez **Se connecter** , puis accordez un certain temps à la nouvelle connexion de base pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, fournissez la connexion de base avec un nom, une description facultative et vos informations d’identification MySQL. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un certain temps à la nouvelle connexion de base pour établir.
 
 ![](../../../../images/tutorials/create/my-sql/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte MySQL avec lequel vous souhaitez vous connecter, puis sélectionnez **Suivant** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte MySQL avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/my-sql/existing.png)
 
