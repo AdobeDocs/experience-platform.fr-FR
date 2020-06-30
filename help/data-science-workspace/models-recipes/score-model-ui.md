@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Score d’un modèle (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 0%
 
 # Score d’un modèle (interface utilisateur)
 
-Pour obtenir un score dans l’espace de travail Data Science d’Adobe Experience Platform, il est possible d’alimenter les données d’entrée dans un modèle existant. Les résultats de score sont ensuite stockés et visibles dans un jeu de données de sortie spécifié en tant que nouveau lot.
+Le score dans l&#39;Adobe Experience Platform [!DNL Data Science Workspace] peut être obtenu en alimentant les données d&#39;entrée dans un modèle existant. Les résultats de score sont ensuite stockés et visibles dans un jeu de données de sortie spécifié en tant que nouveau lot.
 
-Ce didacticiel présente les étapes requises pour marquer un modèle dans l’interface utilisateur de Data Science Workspace.
+Ce didacticiel présente les étapes requises pour marquer un modèle dans l’interface [!DNL Data Science Workspace] utilisateur.
 
 ## Prise en main
 
-In order to complete this tutorial, you must have access to Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+Pour terminer ce didacticiel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform]votre entreprise, contactez votre administrateur système avant de continuer.
 
 Ce didacticiel nécessite un modèle formé. Si vous n&#39;avez pas de modèle formé, suivez le [train et évaluez un modèle dans le didacticiel sur l&#39;interface utilisateur](./train-evaluate-model-ui.md) avant de continuer.
 
-## Create a new scoring run
+## Créer une nouvelle série de notes
 
 Une série de scores est créée à l’aide de configurations optimisées à partir d’une série de formations précédemment terminée et évaluée. L&#39;ensemble des configurations optimales d&#39;un modèle est généralement déterminé en examinant les mesures d&#39;évaluation des séries de formations.
 
-1. Recherchez la période de formation la plus optimale pour utiliser ses configurations pour la notation. Open the desired Training run by clicking on its name.
+1. Recherchez la période de formation la plus optimale pour utiliser ses configurations pour la notation. Ouvrez l’exécution de formation souhaitée en cliquant sur son nom.
 
-2. Dans l&#39;onglet **[!UICONTROL Evaluation]** des sessions de formation, cliquez sur le bouton **[!UICONTROL Note]** en haut à droite de l&#39;écran. This will initiate a new *Run Scoring* workflow.
+2. Dans l&#39;onglet **[!UICONTROL Evaluation]** des sessions de formation, cliquez sur le bouton **[!UICONTROL Note]** en haut à droite de l&#39;écran. Cette opération déclenchera un nouveau processus *d’exécution du score* .
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Sélectionnez le jeu de données de score d’entrée et cliquez sur **[!UICONTROL Suivant]**.
@@ -63,4 +63,4 @@ Une série de scores affiche l’un des quatre états suivants : En attente, Ter
 
 ## Étapes suivantes
 
-Ce didacticiel vous a guidé tout au long des étapes permettant de marquer des données à l’aide d’un modèle de données dans l’espace de travail des sciences de données. Suivez le didacticiel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre entreprise de noter des données en leur fournissant un accès facile à un service d’apprentissage automatique.
+Ce didacticiel vous a guidé tout au long des étapes permettant de marquer des données à l&#39;aide d&#39;un modèle de formation en [!DNL Data Science Workspace]. Suivez le didacticiel sur la [publication d’un modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md) pour permettre aux utilisateurs de votre entreprise de noter des données en leur fournissant un accès facile à un service d’apprentissage automatique.
