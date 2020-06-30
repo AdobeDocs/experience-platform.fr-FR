@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur d'Enregistrement de fichiers Azure
 topic: overview
 translation-type: tm+mt
-source-git-commit: c843ebb72ee3f1e8d2233dd2be4021403417813b
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ ht-degree: 0%
 >[!NOTE]
 >Le connecteur d&#39;Enregistrement de fichiers Azure est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure, ce qui vous permet d’importer vos données à partir de ces systèmes.
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]vous permet d’importer vos données à partir de ces systèmes.
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d&#39;importer des données de l&#39;Enregistrement Azure File par lots.
+Les sources d’enregistrement Cloud peuvent importer vos propres données [!DNL Platform] sans avoir à les télécharger, les mettre en forme ou les télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir de [!DNL Azure File Storage] lots.
 
-La documentation ci-dessous fournit des informations sur la connexion de l&#39;Enregistrement de fichiers Azure à Platform à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Azure File Storage] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Connectez l&#39;Enregistrement de fichiers Azure à Platform à l&#39;aide d&#39;API
+## Se connecter [!DNL Azure File Storage] à [!DNL Platform] l’aide des API
 
 - [Création d&#39;un connecteur d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Connectez Azure File Enregistrement à Platform à l&#39;aide de l&#39;interface utilisateur
+## Se connecter [!DNL Azure File Storage] à [!DNL Platform] l’aide de l’interface utilisateur
 
 - [Création d&#39;un connecteur source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
