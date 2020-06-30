@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Connecteur Amazon Kinesis
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
 
-# (Bêta) Connecteur Amazon Kinesis
+# (Bêta) [!DNL Amazon Kinesis] Connecteur
 
 >[!NOTE]
->Le connecteur Amazon Kinesis est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
+>Le [!DNL Amazon Kinesis] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure. Vous pouvez importer vos données de ces systèmes dans Platform.
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données d’Amazon Kinesis en temps réel.
+Les sources d’enregistrement Cloud peuvent importer vos propres données [!DNL Platform] sans avoir à les télécharger, les mettre en forme ou les télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données [!DNL Amazon Kinesis] en temps réel.
 
-La documentation ci-dessous fournit des informations sur la connexion d’Amazon Kinesis à Platform à l’aide d’API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Amazon Kinesis] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Connexion d’Amazon Kinesis à Platform à l’aide d’API
+## Se connecter [!DNL Amazon Kinesis] à [!DNL Platform] l’aide des API
 
 - [Création d’un connecteur Amazon Kinesis à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Connexion d’Amazon Kinesis à Platform à l’aide de l’interface utilisateur
+## Se connecter [!DNL Amazon Kinesis] à [!DNL Platform] l’aide de l’interface utilisateur
 
 - [Création d’un connecteur source Amazon Kinesis dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
