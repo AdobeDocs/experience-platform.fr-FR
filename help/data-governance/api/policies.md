@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ba9d4b31cfc3b7924879a91bd125f72159e55fc4
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Stratégies
 
-Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter sur les données de l’Experience Platform ou dont vous êtes limité à l’exécution.
+Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
 Le `/policies` point de terminaison est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
 
@@ -406,7 +406,7 @@ Une demande de mise à jour réussie renvoie un état HTTP 200 (OK) et le corps 
 
 Une partie spécifique d’une stratégie peut être mise à jour à l’aide d’une demande PATCH. Contrairement aux requêtes PUT qui _réécrivent_ la stratégie, les requêtes PATCH ne mettent à jour que le chemin spécifié dans le corps de la requête. Cela s’avère particulièrement utile lorsque vous souhaitez activer ou désactiver une stratégie, car vous devez uniquement envoyer le chemin d’accès spécifique que vous souhaitez mettre à jour (`/status`) et sa valeur (`ENABLE` ou `DISABLE`).
 
-L&#39;API Policy Service prend actuellement en charge les opérations &quot;add&quot;, &quot;replace&quot; et &quot;remove&quot; PATCH et vous permet de combiner plusieurs mises à jour en un seul appel en les ajoutant comme un objet dans la baie, comme le montrent les exemples suivants.
+L&#39; [!DNL Policy Service] API prend actuellement en charge les opérations &quot;add&quot;, &quot;replace&quot; et &quot;remove&quot; PATCH et vous permet de combiner plusieurs mises à jour en un seul appel en les ajoutant comme un objet dans la baie, comme le montrent les exemples suivants.
 
 **Format d’API**
 
@@ -506,7 +506,7 @@ Une demande de mise à jour réussie renverra un état HTTP 200 (OK) et le corps
 
 ## Suppression d’une stratégie
 
-Si vous devez supprimer une stratégie que vous avez créée, vous pouvez le faire en envoyant une demande de DELETE à la stratégie que vous souhaitez supprimer `id` . Il est recommandé d’effectuer d’abord une demande de recherche (GET) pour vue à la stratégie et vérifier que celle-ci est la bonne stratégie que vous souhaitez supprimer. **Une fois supprimées, les stratégies ne peuvent plus être récupérées.**
+Si vous devez supprimer une stratégie que vous avez créée, vous pouvez le faire en envoyant une demande de DELETE à la stratégie que vous souhaitez supprimer. `id` Il est recommandé d’effectuer d’abord une demande de recherche (GET) pour vue à la stratégie et vérifier que celle-ci est la bonne stratégie que vous souhaitez supprimer. **Une fois supprimées, les stratégies ne peuvent plus être récupérées.**
 
 **Format d’API**
 
