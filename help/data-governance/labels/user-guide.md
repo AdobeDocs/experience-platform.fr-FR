@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’utilisateur des étiquettes d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: 475e774d5e7ebac036b42aa94736ba8e22c7185f
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Guide de l’utilisateur des étiquettes d’utilisation des données
 
-Ce guide d’utilisateur décrit les étapes à suivre pour utiliser des libellés d’utilisation des données (également appelés libellés DULE) dans l’interface utilisateur de la plateforme d’expérience. Avant d&#39;utiliser le guide, veuillez consulter l&#39;aperçu [de la gouvernance des](../home.md) données pour une présentation plus robuste du cadre DULE.
+Ce guide d’utilisateur décrit les étapes à suivre pour utiliser des libellés d’utilisation des données (également appelés libellés DULE) dans l’interface [!DNL Experience Platform] utilisateur. Avant d&#39;utiliser le guide, veuillez consulter l&#39;aperçu [de la gouvernance des](../home.md) données pour une présentation plus robuste du cadre DULE.
 
 ## Gestion des étiquettes d’utilisation des données au niveau du jeu de données
 
-Pour gérer les étiquettes d’utilisation des données au niveau des jeux de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir l’espace de travail _Datasets_ . Cette page liste tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
+Pour gérer les étiquettes d’utilisation des données au niveau des jeux de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à l’Adobe Experience Platform, sélectionnez **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir l’espace de travail _Datasets_ . Cette page liste tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
 ![Onglet Jeu de données dans l’espace de travail de données](../images/labels/datasets.png)
 
@@ -100,12 +100,12 @@ Il est important de se souvenir que l&#39;héritage passe du niveau supérieur a
 
 ## Étapes suivantes
 
-Maintenant que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et des champs, vous pouvez commencer à assimiler des données dans la plate-forme d’expérience. Pour en savoir plus, début en lisant la documentation [sur l&#39;assimilation des](../../ingestion/home.md)données.
+Maintenant que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et du champ, vous pouvez commencer à assimiler des données dans [!DNL Experience Platform]. Pour en savoir plus, début en lisant la documentation [sur l&#39;assimilation des](../../ingestion/home.md)données.
 
 Vous pouvez également désormais définir des stratégies d’utilisation des données en fonction des étiquettes que vous avez appliquées. Pour plus d’informations, voir la présentation [des stratégies d’utilisation des](../policies/overview.md)données.
 
 ## Ressources supplémentaires
 
-La vidéo suivante est destinée à vous aider à comprendre la gouvernance des données et explique comment appliquer des étiquettes à un jeu de données et à des champs individuels.
+La vidéo suivante est destinée à vous aider à comprendre [!DNL Data Governance]comment appliquer des étiquettes à un jeu de données et à des champs individuels.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
