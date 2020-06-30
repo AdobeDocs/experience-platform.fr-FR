@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Obtenir l'historique de cluster d'une identité
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '303'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Obtenir l&#39;historique de cluster d&#39;une identité
 
-Les identités peuvent déplacer des grappes au cours de diverses exécutions de graphiques de périphériques. Avec le temps, Identity Service permet d&#39;identifier les associations de cluster d&#39;une identité donnée.
+Les identités peuvent déplacer des grappes au cours de diverses exécutions de graphiques de périphériques. [!DNL Identity Service] permet d’obtenir une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
 
 Utilisez un paramètre facultatif `graph-type` pour indiquer le type de sortie à partir duquel la grappe doit être récupérée. Les options sont les suivantes :
 
