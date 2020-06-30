@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Modèle de domaine de prise de décision d’expérience
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0f13ea667eecf936c69bcd98b0035a4355d73631
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
 
 
-# Modèle de domaine de prise de décision d’expérience
+# Modèle de domaine d’expérience [!DNL Decisioning]
 
-Dans cette section, les composants du service de prise de décision sont expliqués et la manière dont ces composants interagissent est détaillée. Les concepts et leurs relations forment le *Domaine* du problème de prise de décision. Ces composants fondamentaux entrent en jeu, quelle que soit la manière dont vous utilisez le service de prise de décision.
+Dans cette section, les composants de [!DNL Decisioning Service] sont expliqués et la manière dont ces composants interagissent est détaillée. Les concepts et leurs relations forment le *Domaine* du problème de prise de décision. Ces composants fondamentaux entrent en jeu, quelle que soit votre utilisation [!DNL Decisioning Service].
 
 ## Options de décision
 
-Une option *de* décision d’expérience est une expérience potentielle qui peut être présentée à un client spécifique. Une option est également appelée choix ou alternative. Lorsque vous choisissez la meilleure option pour un client, le service de prise de décision prend en compte les options ***d<sub>1</sub>***à***<sub>dN</sub>*** parmi un ensemble fini d’options **`D`**.
+Une option *de* décision d’expérience est une expérience potentielle qui peut être présentée à un client spécifique. Une option est également appelée choix ou alternative. Lorsque vous choisissez la meilleure option pour un client, [!DNL Decisioning Service] considère les options ***d<sub>1</sub>***à***<sub>dN</sub>*** parmi un ensemble fini d’options **`D`**.
 
 Les décisions sont prises en identifiant la meilleure option parmi un ensemble d&#39;options disponibles. Une approche consiste à éliminer successivement les options *de* décision ***<sub>di</sub>***du jeu*** D ***jusqu’à ce qu’il ne reste plus qu’une seule option, puis à choisir un &quot;gagnant&quot; de manière aléatoire parmi les autres. Une autre forme de prise de décision consiste à classer les options de décision restantes (admissibles) en fonction de leur résultat attendu.
 
@@ -50,9 +50,9 @@ Le cadre de décision général est présenté dans le diagramme suivant.
 
 ## Activités de décision
 
-*Les activités* de décision configurent l’algorithme et fournissent les paramètres pour une stratégie de décision spécifique. Les paramètres de stratégie incluent les contraintes appliquées aux options et la fonction de classement. Toutes les décisions sont prises dans le cadre d&#39;une activité. Le service de prise de décision héberge de nombreuses activités et les activités peuvent être réutilisées sur plusieurs canaux. À tout moment, la meilleure option est évaluée en fonction de l’ensemble de contraintes, de règles et de modèles le plus récent.
+*Les activités* de décision configurent l’algorithme et fournissent les paramètres pour une stratégie de décision spécifique. Les paramètres de stratégie incluent les contraintes appliquées aux options et la fonction de classement. Toutes les décisions sont prises dans le cadre d&#39;une activité. [!DNL Decisioning Service] héberge de nombreuses activités et les activités peuvent être réutilisées sur plusieurs canaux. À tout moment, la meilleure option est évaluée en fonction de l’ensemble de contraintes, de règles et de modèles le plus récent.
 
-Une activité de décision définit la collecte des options de décision à envisager. Il filtres le sous-ensemble de toutes les options qui intéressent cette activité. Cela permet au service de prise de décision de gérer les catégories thématiques dans le catalogue de toutes les options.
+Une activité de décision définit la collecte des options de décision à envisager. Il filtres le sous-ensemble de toutes les options qui intéressent cette activité. Cela permet [!DNL Decisioning service] à la gestion des catégories thématiques dans le catalogue de toutes les options.
 
 Une activité de décision spécifie une option *de* secours si les contraintes combinées disqualifient toutes les autres options. Cela signifie qu&#39;il y a toujours une réponse à la question : Quelle est actuellement la &quot;meilleure&quot; option ?
 
@@ -65,7 +65,7 @@ Jusqu&#39;à présent, seule la *logique* commerciale qui affecte la décision a
 Les données contextuelles de décision peuvent être divisées en données liées au profil d’utilisateur, en données métier et en données collectées en interne.
 
 - *Les entités* de Profil sont utilisées pour représenter les données de l&#39;utilisateur final, mais toutes les entités de profil ne représentent pas un individu. Il peut s&#39;agir d&#39;un foyer, d&#39;un groupe social ou de toute autre matière. Les événements d’expérience sont des enregistrements de données de série chronologique joints à un profil. S’il existe une expérience, ces données constituent le *sujet* de cette expérience.
-- De l&#39;autre côté, il y a les entités ** commerciales. Ils peuvent être considérés comme les *objets* des interactions. Ces entités sont souvent référencées dans les événements d&#39;expérience des entités de profil. Les sites Web et les pages, les magasins, les détails des produits, le contenu numérique, les données d&#39;inventaire des produits, etc., sont des exemples d&#39;entités commerciales.
-- La dernière catégorie de données dans le contexte de la décision est celle des données qui ont été créées pendant le fonctionnement du service de prise de décision. Chaque événement de décision entre dans cette catégorie, ainsi que les réponses des clients, les données de proposition forment un ensemble de données internes appelé l&#39;historique ** proposition-réponse.
+- De l&#39;autre côté, il y a les entités ** commerciales. Ils peuvent être considérés comme les *objets* des interactions. Ces entités sont souvent référencées dans les événements d&#39;expérience des entités de profil. Les sites Web et les pages, les magasins, les détails des produits, le contenu numérique, les données d&#39;inventaire des produits, etc. sont des exemples d&#39;entités commerciales.
+- La dernière catégorie de données dans le contexte de la décision est celle des données qui ont été créées pendant le fonctionnement de la [!DNL Decisioning Service]. Chaque événement de décision entre dans cette catégorie, ainsi que les réponses des clients, les données de proposition forment un ensemble de données internes appelé l&#39;historique ** proposition-réponse.
 
-Il existe trois façons dont les données peuvent faire partie du contexte de décision. Les données d’enregistrement et de série chronologique peuvent être téléchargées via des fichiers de jeux de données. Ce chemin est principalement destiné à la synchronisation en masse avec des systèmes externes. Les données d’enregistrement et de série chronologique peuvent également être transférées dans la plate-forme où les données sont indexées et jointes aux entités de formulaire. Par le troisième chemin, les données contextuelles peuvent être transmises en tant que paramètres à la demande de décision. Cette forme de données est de nature éphémère et n&#39;est pertinente que pour la décision demandée. Il n’est pas conservé en tant qu’entité et n’est pas disponible pour d’autres requêtes.
+Il existe trois façons dont les données peuvent faire partie du contexte de décision. Les données d’enregistrement et de série chronologique peuvent être téléchargées via des fichiers de jeux de données. Ce chemin est principalement destiné à la synchronisation en masse avec des systèmes externes. Les données d’enregistrement et de série chronologique peuvent également être diffusées en continu [!DNL Platform] où les données sont indexées et jointes aux entités de formulaire. Par le troisième chemin, les données contextuelles peuvent être transmises en tant que paramètres à la demande de décision. Cette forme de données est de nature éphémère et n&#39;est pertinente que pour la décision demandée. Il n’est pas conservé en tant qu’entité et n’est pas disponible pour d’autres requêtes.
