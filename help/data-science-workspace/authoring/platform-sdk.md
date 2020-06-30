@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guide SDK de la plate-forme
+title: Guide du SDK Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '447'
 ht-degree: 5%
 
 ---
 
 
-# Guide SDK de la plate-forme
+# [!DNL Platform] Guide SDK
 
 Ce tutoriel vous fournit des informations sur la conversion `data_access_sdk_python` au nouveau Python `platform_sdk` en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
@@ -69,7 +69,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lecture de base des données {#basic-reading-of-data}
 
-Avec le nouveau SDK de plate-forme, la taille de lecture maximale est de 32 Go, avec une durée de lecture maximale de 10 minutes.
+Avec le nouveau [!DNL Platform] SDK, la taille de lecture maximale est de 32 Go, avec une durée de lecture maximale de 10 minutes.
 
 Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
@@ -144,7 +144,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Le nouveau SDK de plate-forme prend en charge les opérations suivantes :
+Le nouveau [!DNL Platform] SDK prend en charge les opérations suivantes :
 
 | Opération | Fonction |
 | --------- | -------- |
@@ -217,4 +217,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré le chargeur de `platform_sdk` données, les données sont en préparation et sont ensuite fractionnées en jeux de données `train` et `val` de données. Pour en savoir plus sur la préparation des données et l&#39;ingénierie des fonctionnalités, veuillez consulter la section sur la préparation des [données et l&#39;ingénierie](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) des fonctionnalités du didacticiel pour créer une recette à l&#39;aide de cahiers JupyterLab.
+Une fois que vous avez configuré le chargeur de `platform_sdk` données, les données sont en préparation et sont ensuite fractionnées en jeux de données `train` et `val` de données. Pour en savoir plus sur la préparation des données et l&#39;ingénierie des fonctionnalités, consultez la section sur la préparation des [données et l&#39;ingénierie](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) des fonctionnalités du didacticiel sur la création d&#39;une recette à l&#39;aide de [!DNL JupyterLab] cahiers.
