@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Guide du développeur d'API d'apprentissage automatique Sensei
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 4f74acdc41d5049c1aa8eb3dfcef4e9d75c785ca
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 2%
+source-wordcount: '196'
+ht-degree: 3%
 
 ---
 
 
-# Guide du développeur d&#39;API d&#39;apprentissage automatique Sensei
+# [!DNL Sensei Machine Learning] Guide du développeur d’API
 
-L&#39;API d&#39;apprentissage automatique Sensei fournit un mécanisme permettant aux chercheurs de données d&#39;organiser et de gérer les services d&#39;apprentissage automatique, de l&#39;intégration d&#39;algorithmes à l&#39;expérimentation en passant par le déploiement de services.
+L’ [!DNL Sensei Machine Learning] API fournit un mécanisme permettant aux chercheurs de données d’organiser et de gérer les services d’apprentissage automatique, de l’intégration des algorithmes à l’expérimentation en passant par le déploiement de services.
 
 Ce guide du développeur décrit les étapes à suivre pour vous aider à début à l’aide de l’API [d’apprentissage automatique](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)Sensei et présente les appels d’API pour effectuer des opérations CRUD sur diverses ressources de l’espace de travail Data Science.
 
@@ -26,11 +26,11 @@ Vous devez avoir suivi le didacticiel d’ [authentification](../../tutorials/au
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
-Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
