@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un connecteur source FTP ou SFTP dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '554'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!NOTE]
 >Les connecteurs FTP et SFTP sont en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP ou SFTP à l’aide de l’interface utilisateur Platform.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP ou SFTP à l’aide de l’interface [!DNL Platform] utilisateur.
 
 ## Prise en main
 
@@ -32,7 +32,7 @@ Si vous disposez déjà d’une connexion FTP ou SFTP valide, vous pouvez ignore
 
 ### Formats de fichiers pris en charge
 
-Experience Platform prend en charge les formats de fichier suivants pour être assimilés à partir de sources externes :
+[!DNL Experience Platform] prend en charge les formats de fichier suivants à ingérer à partir de sources externes :
 
 * Valeurs séparées par des délimiteurs (DSV) : La prise en charge des fichiers de données au format DSV est actuellement limitée aux valeurs séparées par des virgules (CSV). La valeur des en-têtes de champ des fichiers au format DSV ne doit être composée que de caractères alphanumériques et de traits de soulignement. Le support de DSV général sera assuré à l&#39;avenir.
 * Notation d’objet JavaScript (JSON) : Les fichiers de données au format JSON doivent être compatibles XDM.
@@ -40,11 +40,11 @@ Experience Platform prend en charge les formats de fichier suivants pour être a
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre serveur FTP ou SFTP sur Platform, vous devez indiquer le nom **d’** hôte du serveur, un nom **d’** utilisateur et un **mot de passe**.
+Pour accéder à votre serveur FTP ou SFTP sur [!DNL Platform], vous devez indiquer le nom **d’** hôte du serveur, un nom **d’** utilisateur et un **mot de passe**.
 
 ## Connexion à votre serveur FTP ou SFTP
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un compte FTP ou SFTP pour vous connecter à Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un compte FTP ou SFTP auquel vous connecter [!DNL Platform].
 
 Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
 
