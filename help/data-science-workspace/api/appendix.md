@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Annexe
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 2940f69d193ff8a4ec6ad4a58813b5426201ef45
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '298'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 # Annexe
 
-Les sections suivantes contiennent des informations de référence sur les différentes fonctionnalités de l&#39;API d&#39;apprentissage automatique Sensei.
+Les sections suivantes contiennent des informations de référence sur les différentes fonctionnalités de l’ [!DNL Sensei Machine Learning] API.
 
 ## Paramètres de Requête pour la récupération de ressources {#query}
 
-L’API d’apprentissage automatique Sensei prend en charge les paramètres de requête lors de la récupération des ressources. Les paramètres de requête disponibles et leur utilisation sont décrits dans le tableau suivant :
+L’ [!DNL Sensei Machine Learning] API prend en charge les paramètres de requête lors de la récupération des ressources. Les paramètres de requête disponibles et leur utilisation sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
