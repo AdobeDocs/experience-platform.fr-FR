@@ -4,9 +4,9 @@ solution: Experience Platform
 title: schémas de Prévisualisation et jeux de données
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # schémas de Prévisualisation et jeux de données
 
-Une fois le script d&#39;amorçage terminé, du didacticiel [Créer le schéma de vente au détail et le jeu de données](./create-retails-sales-dataset.md) . Les schémas de sortie et les jeux de données peuvent être affichés sur la plate-forme d’expérience. Pour vue des schémas et des jeux de données, procédez comme suit :
+Une fois le script d&#39;amorçage terminé, du didacticiel [Créer le schéma de vente au détail et le jeu de données](./create-retails-sales-dataset.md) . Les schémas de sortie et les jeux de données peuvent être affichés sur [!DNL Experience Platform]. Pour vue des schémas et des jeux de données, procédez comme suit :
 
 1. Cliquez sur le lien **[!UICONTROL Schémas]** situé dans la colonne de navigation de gauche et recherchez le schéma d’entrée créé par le script d’amorçage. Le nom du schéma correspond à ce qui a été défini à `config.yaml` l’étape précédente. Vue les détails du schéma et sa composition en cliquant dessus.
 
@@ -30,10 +30,10 @@ Une fois le script d&#39;amorçage terminé, du didacticiel [Créer le schéma d
 
 ## Étapes suivantes
 
-Vous avez maintenant saisi avec succès des données d’exemple Ventes au détail dans la plate-forme d’expérience à l’aide du script d’amorçage fourni.
+Vous avez maintenant assimilé avec succès des données d’exemple Ventes au détail à [!DNL Experience Platform] l’aide du script d’amorçage fourni.
 
 Pour continuer à travailler avec les données imbriquées :
 - [Analyse de vos données à l&#39;aide de portables Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilisez les ordinateurs portables Jupyter de Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
+   - Utilisez les ordinateurs portables Jupyter dans [!DNL Data Science Workspace] pour accéder, explorer, visualiser et comprendre vos données.
 - [compresser les fichiers source dans une recette ;](./package-source-files-recipe.md)
-   - Suivez ce didacticiel pour apprendre à importer votre propre modèle dans Data Science Workspace en regroupant les fichiers source dans un fichier Recette important.
+   - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette important.
