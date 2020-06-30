@@ -4,32 +4,32 @@ solution: Experience Platform
 title: Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7cd9bec7336d0e1d9f3036cf862633f498002af8
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '682'
 ht-degree: 2%
 
 ---
 
 
-# Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.
+# Explorez un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
+Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer un système d’enregistrement cloud tiers.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-* [Sources](../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
-* [Sandbox](../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d’enregistrement cloud à l’aide de l’API de service de flux.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
 
 ### Obtention d’une connexion de base
 
-Pour explorer un enregistrement cloud tiers à l’aide des API de plateforme, vous devez posséder un ID de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
+Pour explorer un enregistrement cloud tiers à l’aide [!DNL Platform] d’API, vous devez posséder un identifiant de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
@@ -39,17 +39,17 @@ Pour explorer un enregistrement cloud tiers à l’aide des API de plateforme, v
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -66,7 +66,7 @@ En utilisant la connexion de base pour votre enregistrement cloud, vous pouvez e
 | `objectType` | Type d’objet que vous souhaitez explorer. Définissez cette valeur comme suit : <ul><li>`folder`: Explorer un répertoire spécifique</li><li>`root`: Explorez le répertoire racine.</li></ul> |
 | `object` | Ce paramètre n’est requis que lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. |
 
-Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès du fichier que vous souhaitez importer dans la plate-forme :
+Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès au fichier que vous souhaitez importer [!DNL Platform]:
 
 **Format d’API**
 
@@ -168,4 +168,4 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez exploré votre système d&#39;enregistrement cloud, trouvé le chemin d&#39;accès du fichier que vous souhaitez apporter à Platform et consulté sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre enregistrement cloud et les importer dans Platform](../collect/cloud-storage.md).
+En suivant ce didacticiel, vous avez exploré votre système d’enregistrement de cloud, trouvé le chemin d’accès au fichier que vous souhaitez importer [!DNL Platform]et consulté sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre enregistrement cloud et les importer dans Platform](../collect/cloud-storage.md).
