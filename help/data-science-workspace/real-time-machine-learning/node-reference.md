@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de référence des noeuds d’apprentissage automatique en temps réel
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: dc63ad0c0764355aed267eccd1bcc4965b04dba4
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Le guide suivant décrit les bibliothèques de noeuds prises en charge pour l’
 
 ## Découverte de noeuds à utiliser dans votre pipeline ML
 
-Copiez le code suivant dans un bloc-notes Python pour vue tous les noeuds disponibles pour l&#39;utilisation.
+Copiez le code suivant dans un [!DNL Python] bloc-notes pour vue tous les noeuds disponibles pour l&#39;utilisation.
 
 ```python
 from pprint import pprint
@@ -57,7 +57,7 @@ Les noeuds standard s&#39;appuient sur les bibliothèques de données open sourc
 
 ### ModelUpload
 
-Le noeud ModelUpload est un noeud interne d’Adobe qui prend un chemin_modèle et télécharge le modèle depuis le chemin d’accès du modèle local vers la banque de blocs d’apprentissage automatique en temps réel.
+Le noeud ModelUpload est un noeud Adobe interne qui prend un chemin_modèle et télécharge le modèle depuis le chemin d&#39;accès du modèle local vers la banque de blocs d&#39;apprentissage automatique en temps réel.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode est un noeud interne d’Adobe qui utilise un ID de modèle pour extraire le modèle ONNX préentraîné et l’utilise pour marquer les données entrantes.
+ONNXNode est un noeud Adobe interne qui utilise un ID de modèle pour extraire le modèle ONNX préentraîné et l&#39;utilise pour marquer les données entrantes.
 
 >[!TIP]
 >Spécifiez les colonnes dans le même ordre que celui dans lequel vous souhaitez que les données soient envoyées au modèle ONNX pour obtenir un score.
