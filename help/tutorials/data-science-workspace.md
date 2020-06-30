@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Didacticiels sur l’espace de travail Data Science
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 4d7d61660e6691d77701db1c089b84eee7f60974
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -137,7 +137,7 @@ Pour en savoir plus, consultez le didacticiel consacré à la [création d’un 
 
 ## Création d’une application d’apprentissage automatique en temps réel (alpha)
 
-La combinaison d’un calcul transparent à la fois sur le concentrateur et sur le bord réduit considérablement la latence traditionnellement impliquée dans l’alimentation d’expériences hyper-personnalisées à la fois pertinentes et réactives. Par conséquent, l&#39;apprentissage automatique en temps réel fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page Web personnalisée, l’apparition d’une offre et les remises pour réduire le taux de fréquentation tout en augmentant les conversions sur un site Web de stockage.
+La combinaison d’un calcul transparent sur le Hub et sur le Hub [!DNL Edge] réduit considérablement la latence traditionnellement impliquée dans l’activation d’expériences hyper-personnalisées à la fois pertinentes et réactives. Par conséquent, l&#39;apprentissage automatique en temps réel fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page Web personnalisée, l’apparition d’une offre et les remises pour réduire le taux de fréquentation tout en augmentant les conversions sur un site Web de stockage.
 
 **Ce guide vous aidera à :**
 - Comprendre l&#39;architecture d&#39;apprentissage automatique en temps réel.
