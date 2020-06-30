@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Étiquettes d’utilisation des données prises en charge
 topic: labels
 translation-type: tm+mt
-source-git-commit: 2f8da8688897476f89ca1b176e0c988d6e79264b
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1878'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 L&#39;Adobe Experience Platform comprend l&#39;infrastructure de gouvernance des données avec l&#39;application de la loi et l&#39;étiquetage d&#39;utilisation des données (DULE) en tête.  Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation de données aux jeux de données et aux champs afin de classer les données en fonction du type de stratégies d&#39;utilisation qui s&#39;appliquent à ces données.
 
-Ce document décrit tous les libellés d’utilisation des données actuellement pris en charge par l’Experience Platform. Vous trouverez plus d&#39;informations sur la gouvernance des données et le DULE dans l&#39;aperçu [de la gouvernance des](../home.md)données.
+Ce document décrit tous les libellés d’utilisation des données actuellement pris en charge par [!DNL Experience Platform]. Vous trouverez plus d&#39;informations sur [!DNL Data Governance] et DULE dans l&#39;aperçu [de la gouvernance des](../home.md)données.
 
 ## Libellés de contrat
 
@@ -101,7 +101,7 @@ Les publicités sont des messages ou des notifications, y compris des textes et 
 
 En fin de compte, l&#39;interprétation de l&#39;étiquette et la façon dont les données associées à cette étiquette sont appliquées dépend de vous. À titre de référence, les cadres du CCI et de la DAA sont présentés ci-dessous :
 
-IAB : 3. Sélection de la publicité, diffusion, rapports : La collecte d&#39;informations, combinée à des informations collectées précédemment, pour sélectionner et diffuser des publicités pour vous, et pour mesurer la diffusion et l&#39;efficacité de ces publicités. Cela comprend l’utilisation d’informations collectées précédemment sur vos centres d’intérêt pour sélectionner des publicités, le traitement de données sur les publicités affichées, leur fréquence, leur moment et leur emplacement d’affichage, ainsi que le fait que vous ayez pris des mesures relatives à la publicité, notamment en cliquant sur une publicité ou en faisant un achat. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service pour personnaliser ultérieurement la publicité et/ou le contenu pour vous dans d’autres contextes, tels que des sites Web ou des applications, au fil du temps.
+IAB : 3. Sélection de la publicité, diffusion, rapports : La collecte d&#39;informations, combinée à des informations collectées précédemment, pour sélectionner et diffuser des publicités pour vous, et pour mesurer la diffusion et l&#39;efficacité de ces publicités. Cela comprend l&#39;utilisation d&#39;informations collectées précédemment sur vos centres d&#39;intérêt pour sélectionner des publicités, le traitement de données sur les publicités affichées, leur fréquence, leur moment et leur emplacement d&#39;affichage, ainsi que le fait que vous ayez pris des mesures relatives à la publicité, notamment en cliquant sur une publicité ou en faisant un achat. Cela n’inclut pas la personnalisation, qui est la collecte et le traitement d’informations sur votre utilisation de ce service pour personnaliser ultérieurement la publicité et/ou le contenu pour vous dans d’autres contextes, tels que des sites Web ou des applications, au fil du temps.
 
 DAA : La publicité comportementale en ligne n&#39;inclut pas les activités des premières parties, les Diffusions publicitaires ou les Rapports publicitaires, ni la publicité contextuelle (c&#39;est-à-dire la publicité basée sur le contenu de la page Web visitée, la visite actuelle d&#39;un consommateur sur une page Web ou une requête de recherche).
 
