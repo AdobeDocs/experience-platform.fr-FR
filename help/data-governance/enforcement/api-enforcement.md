@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 3e5245a718295cc5318c277a5cf9ee71da2a911b
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '875'
 ht-degree: 3%
 
 ---
@@ -18,18 +18,18 @@ Une fois que vous avez créé des étiquettes d’utilisation de données pour v
 
 >[!NOTE] Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser `DRAFT` les stratégies à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` dans le chemin d’accès à la demande.
 
-Ce document décrit la procédure à suivre pour utiliser l’API de service de stratégie afin de rechercher les violations de stratégie dans différents scénarios.
+Ce document décrit la procédure à suivre pour utiliser l’ [!DNL Policy Service] API afin de rechercher les violations de stratégie dans différents scénarios.
 
 ## Prise en main
 
 Ce didacticiel nécessite une compréhension pratique des concepts clés suivants liés à l&#39;application des politiques DULE :
 
-* [Gouvernance](../home.md)des données : Cadre selon lequel la plate-forme applique la conformité à l’utilisation des données.
+* [Gouvernance](../home.md)des données : Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
    * [Étiquettes](../labels/overview.md)d&#39;utilisation des données : Les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), en spécifiant les restrictions d’utilisation de ces données.
    * [Stratégies](../policies/overview.md)d’utilisation des données : Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing qui sont autorisées ou restreintes pour certains jeux de libellés DULE.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin de réussir à appeler l&#39;API DULE Policy Service, y compris les en-têtes requis et comment lire des exemples d&#39;appels d&#39;API.
+Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin de réussir à appeler l&#39; [!DNL Policy Service] API DULE, y compris les en-têtes requis et comment lire des exemples d&#39;appels d&#39;API.
 
 ## Évaluer à l’aide de libellés DULE et d’une action marketing
 
@@ -365,4 +365,4 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes D
 
 En lisant ce document, vous avez réussi à rechercher des violations de stratégie lors de l&#39;exécution d&#39;une action marketing sur un jeu de données ou un ensemble de libellés DULE. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience afin d’appliquer de manière appropriée les violations de stratégie lorsqu’elles se produisent.
 
-Pour savoir comment appliquer des stratégies d’utilisation des données pour les segments d’audience dans le Profil client en temps réel, consultez le [didacticiel](../../segmentation/tutorials/governance.md)suivant.
+Pour savoir comment appliquer des stratégies d’utilisation des données pour les segments d’audience dans [!DNL Real-time Customer Profile], consultez le [didacticiel](../../segmentation/tutorials/governance.md)suivant.
