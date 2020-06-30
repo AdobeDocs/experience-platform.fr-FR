@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Optimiser un modèle
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
 
-Le cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils dans l&#39;espace de travail des sciences de données pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
+Le Cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils leur permettant [!DNL Data Science Workspace] de faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
 
 ## Que sont les mesures ?
 
@@ -28,7 +28,7 @@ Après la mise en oeuvre et la formation d&#39;un modèle, l&#39;étape suivante
 
 Actuellement, Model Insights Framework prend en charge les runtimes suivants :
 - [Scala](#scala)
-- [Python/Tensorflow](#pythontensorflow)
+- [!DNL Python/Tensorflow](#pythontensorflow)
 - [r](#r)
 
 Vous trouverez un exemple de code pour les recettes dans le référentiel de référence [](https://github.com/adobe/experience-platform-dsw-reference) experience-platform-dsw sous `recipes`. Des fichiers spécifiques de ce référentiel seront référencés tout au long de ce didacticiel.
@@ -95,19 +95,19 @@ Une fois définie dans la recette, l&#39;étape suivante consiste à l&#39;activ
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Dans l’espace de travail Data Science, l’utilisateur peut consulter les informations sous l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
+Dans la [!DNL Data Science Workspace]boîte de dialogue, l’utilisateur peut voir les informations de l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
 
-### Python/Tensorflow {#pythontensorflow}
+### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Pour l&#39;instant, il n&#39;existe aucune mesure d&#39;évaluation par défaut pour Python ou Tensorflow. Par conséquent, pour obtenir les mesures d’évaluation pour Python ou Tensorflow, vous devez créer une mesure d’évaluation personnalisée. Cela peut être fait en implémentant la `Evaluator` classe.
+Pour l’instant, il n’existe aucune mesure d’évaluation par défaut pour [!DNL Python] ou [!DNL Tensorflow]. Par conséquent, pour obtenir les mesures d’évaluation pour [!DNL Python] ou [!DNL Tensorflow], vous devez créer une mesure d’évaluation personnalisée. Cela peut être fait en implémentant la `Evaluator` classe.
 
-#### Mesures d&#39;évaluation personnalisées pour Python
+#### Mesures d’évaluation personnalisées pour [!DNL Python]
 
 Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être implémentées pour l’évaluateur : `split()` et `evaluate()`.
 
-Pour Python, ces méthodes seraient définies dans [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la `Evaluator` classe. Suivez le lien [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple du `Evaluator`.
+Par exemple, [!DNL Python]ces méthodes seraient définies dans [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la `Evaluator` classe. Suivez le lien [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple du `Evaluator`.
 
-La création de mesures d&#39;évaluation en Python nécessite que l&#39;utilisateur mette en oeuvre les `evaluate()` méthodes et les `split()` méthodes.
+La création de mesures d’évaluation dans [!DNL Python] exige que l’utilisateur mette en oeuvre les `evaluate()` et `split()` méthodes.
 
 La `evaluate()` méthode renvoie l’objet metric qui contient un tableau d’objets metric avec les propriétés de `name`, `value`et `valueType`.
 
@@ -117,7 +117,7 @@ La `split()` méthode doit renvoyer une base de données de formation et de test
 
 #### Mesures d’évaluation personnalisées pour Tensorflow
 
-Pour Tensorflow, similaire à Python, les méthodes `evaluate()` et `split()` dans la `Evaluator` classe devront être implémentées. Par exemple, `evaluate()`les mesures doivent être renvoyées pendant `split()` le retour des ensembles de données de train et d&#39;essai.
+Car [!DNL Tensorflow], comme [!DNL Python], les méthodes `evaluate()` et `split()` dans la `Evaluator` classe devront être implémentées. Par exemple, `evaluate()`les mesures doivent être renvoyées pendant `split()` le retour des ensembles de données de train et d&#39;essai.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -152,7 +152,7 @@ Les données sont tout d’abord chargées dans un jeu de données à partir d�
 
 ## Utilisation de mesures prédéfinies et de graphiques de visualisation
 
-Le cadre d’analyse du modèle Sensei prendra en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithmes d’apprentissage automatique de haut niveau courantes ainsi que les mesures d’évaluation et visualisations correspondantes.
+Il [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithmes d’apprentissage automatique de haut niveau courantes ainsi que les mesures d’évaluation et visualisations correspondantes.
 
 | Type d&#39;algorithme XML | Mesures d’évaluation | Visualisations |
 --- | --- | ---
