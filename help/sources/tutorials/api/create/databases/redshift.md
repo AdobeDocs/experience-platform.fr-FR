@@ -4,58 +4,58 @@ solution: Experience Platform
 title: Création d’un connecteur Redshift Amazon à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: e4ed6ae3ee668cd0db741bd07d2fb7be593db4c9
+source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
 
 
-# Création d’un connecteur Redshift Amazon à l’aide de l’API du service de flux
+# Création d’un [!DNL Amazon Redshift] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
->Le connecteur Redshift Amazon est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>Le [!DNL Amazon Redshift] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes nécessaires à la connexion de l’Experience Platform à Amazon Redshift (ci-après &quot;Redshift&quot;).
+Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Experience Platform] à [!DNL Amazon Redshift] (ci-après appelé &quot;[!DNL Redshift]&quot;).
 
 ## Prise en main
 
 Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-* [Sources](../../../../home.md): Experience Platform permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à Redshift à l’aide de l’API de service de flux.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Redshift] l’aide de l’ [!DNL Flow Service] API.
 
 ### Collecte des informations d’identification requises
 
-Pour que le service de flux se connecte à Redshift, vous devez fournir les propriétés de connexion suivantes :
+Pour [!DNL Flow Service] se connecter à [!DNL Redshift], vous devez fournir les propriétés de connexion suivantes :
 
 | **Informations d’identification** | **Description** |
 | -------------- | --------------- |
-| `server` | Serveur associé à votre compte Redshift. |
-| `username` | Nom d’utilisateur associé à votre compte Redshift. |
-| `password` | Mot de passe associé à votre compte Redshift. |
-| `database` | Base de données Redshift accessible. |
+| `server` | Serveur associé à votre [!DNL Redshift] compte. |
+| `username` | Nom d’utilisateur associé à votre [!DNL Redshift] compte. |
+| `password` | Mot de passe associé à votre [!DNL Redshift] compte. |
+| `database` | La [!DNL Redshift] base de données à laquelle vous accédez. |
 
 Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)Redshift.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources en Experience Platform, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à la [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -65,13 +65,13 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Rechercher les spécifications de connexion
 
-Pour créer une connexion Redshift, un ensemble de spécifications de connexion Redshift doit exister dans le service de flux. La première étape pour connecter Platform à Redshift est de récupérer ces spécifications.
+Pour créer une [!DNL Redshift] connexion, un ensemble de spécifications de [!DNL Redshift] connexion doit exister dans [!DNL Flow Service]. La première étape pour se connecter [!DNL Platform] à [!DNL Redshift] est de récupérer ces spécifications.
 
 **Format d’API**
 
-Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. Vous pouvez rechercher les spécifications de connexion pour Redshift en exécutant une requête GET et en utilisant des paramètres de requête.
+Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. Vous pouvez rechercher les spécifications de connexion en [!DNL Redshift] exécutant une requête GET et en utilisant des paramètres de requête.
 
-L&#39;envoi d&#39;une demande GET sans paramètres de requête retournera les spécifications de connexion pour toutes les sources disponibles. Vous pouvez inclure la requête `property=name=="amazon-redshift"` pour obtenir des informations spécifiquement pour Redshift.
+L&#39;envoi d&#39;une demande GET sans paramètres de requête retournera les spécifications de connexion pour toutes les sources disponibles. Vous pouvez inclure la requête `property=name=="amazon-redshift"` pour obtenir des informations spécifiques pour [!DNL Redshift].
 
 ```http
 GET /connectionSpecs
@@ -80,7 +80,7 @@ GET /connectionSpecs?property=name=="amazon-redshift"
 
 **Requête**
 
-La requête suivante récupère les spécifications de connexion pour Redshift.
+La requête suivante récupère les spécifications de connexion pour [!DNL Redshift].
 
 ```shell
 curl -X GET \
@@ -93,7 +93,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les spécifications de connexion pour Redshift, y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion de base.
+Une réponse réussie renvoie les spécifications de connexion pour [!DNL Redshift], y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion de base.
 
 ```json
 {
@@ -146,7 +146,7 @@ Une réponse réussie renvoie les spécifications de connexion pour Redshift, y 
 
 ## Créer une connexion de base
 
-Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par compte Redshift, car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
+Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par [!DNL Redshift] compte, car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
 
 **Format d’API**
 
@@ -185,11 +185,11 @@ curl -X POST \
 
 | Propriété | Description |
 | ------------- | --------------- |
-| `auth.params.server` | Votre serveur Redshift. |
-| `auth.params.database` | Base de données associée à votre compte Redshift. |
-| `auth.params.password` | Mot de passe associé à votre compte Redshift. |
-| `auth.params.username` | Nom d’utilisateur associé à votre compte Redshift. |
-| `connectionSpec.id` | Spécification `id` de connexion de votre compte Redshift récupérée à l&#39;étape précédente. |
+| `auth.params.server` | Votre [!DNL Redshift] serveur. |
+| `auth.params.database` | Base de données associée à votre [!DNL Redshift] compte. |
+| `auth.params.password` | Mot de passe associé à votre [!DNL Redshift] compte. |
+| `auth.params.username` | Nom d’utilisateur associé à votre [!DNL Redshift] compte. |
+| `connectionSpec.id` | Spécification `id` de connexion de votre [!DNL Redshift] compte récupérée à l’étape précédente. |
 
 **Réponse**
 
@@ -204,4 +204,4 @@ Une réponse réussie renvoie les détails de la connexion de base nouvellement 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion de base Redshift à l’aide de l’API Flow Service et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données ou des systèmes NoSQL à l’aide de l’API](../../explore/database-nosql.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion [!DNL Redshift] de base à l’aide de l’ [!DNL Flow Service] API et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données ou des systèmes NoSQL à l’aide de l’API](../../explore/database-nosql.md)Flow Service.
