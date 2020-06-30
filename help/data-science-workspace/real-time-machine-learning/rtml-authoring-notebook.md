@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l'utilisateur du portable d'apprentissage automatique en temps réel
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 695eba3885dc319a9b7f73eb710b2ada0b17d24d
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Le guide suivant décrit les étapes nécessaires à la création d&#39;une appl
 
 ## Créer un bloc-notes d&#39;apprentissage automatique en temps réel
 
-Dans l’interface utilisateur de la plateforme d’expérience Adobe, sélectionnez **[!UICONTROL Ordinateurs portables]** dans *Data Science*. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
+Dans l’interface utilisateur de l’Adobe Experience Platform, sélectionnez **[!UICONTROL Ordinateurs portables]** dans *Data Science*. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
 
 ![ouvrir JupyterLab](../images/rtml/open-jupyterlab.png)
 
-Le lanceur JupyterLab s&#39;affiche. Faites défiler l&#39;écran jusqu&#39;à *Real-Time Machine Learning* et sélectionnez le bloc-notes ML **en temps** réel. Un modèle s&#39;ouvre et contient des cellules d&#39;exemple de bloc-notes avec un exemple de jeu de données.
+Le [!DNL JupyterLab] lanceur s&#39;affiche. Faites défiler l&#39;écran jusqu&#39;à *Real-Time Machine Learning* et sélectionnez le bloc-notes ML **[!UICONTROL en temps]** réel. Un modèle s&#39;ouvre et contient des cellules d&#39;exemple de bloc-notes avec un exemple de jeu de données.
 
 ![python blanc](../images/rtml/authoring-notebook.png)
 
@@ -70,7 +70,7 @@ pprint(nf.discover_nodes())
 
 ## Formation à un modèle d&#39;apprentissage automatique en temps réel
 
-En utilisant l&#39;une des options suivantes, vous allez écrire du code Python pour lire, prétraiter et analyser des données. Ensuite, vous devez former votre propre modèle ML, le sérialiser au format ONNX, puis le télécharger dans la boutique de modèles d&#39;apprentissage automatique en temps réel.
+A l’aide de l’une des options suivantes, vous allez écrire du [!DNL Python] code pour lire, prétraiter et analyser des données. Ensuite, vous devez former votre propre modèle ML, le sérialiser au format ONNX, puis le télécharger dans la boutique de modèles d&#39;apprentissage automatique en temps réel.
 
 - [Formation de votre propre modèle sur des portables JupyterLab](#training-your-own-model)
 - [Téléchargement de votre propre modèle ONNX préentraîné vers des portables JupyterLab](#pre-trained-model-upload)
@@ -80,15 +80,15 @@ En utilisant l&#39;une des options suivantes, vous allez écrire du code Python 
 Début en chargeant vos données de formation.
 
 >[!NOTE]
->Dans le modèle ML **** en temps réel, le jeu de données [CSV d&#39;assurance](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automobile est saisi à Github.
+>Dans le modèle ML **** en temps réel, le jeu de données [CSV d&#39;assurance](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) automobile est récupéré à partir de [!DNL Github].
 
 ![Charger les données de formation](../images/rtml/load_training.png)
 
-Si vous souhaitez utiliser un jeu de données dans Adobe Experience Platform, annulez la mise en commentaire de la cellule ci-dessous. Ensuite, vous devez remplacer `DATASET_ID` par la valeur appropriée.
+Si vous souhaitez utiliser un jeu de données depuis l’Adobe Experience Platform, annulez la mise en commentaire de la cellule ci-dessous. Ensuite, vous devez remplacer `DATASET_ID` par la valeur appropriée.
 
 ![dataset rtml](../images/rtml/rtml-dataset.png)
 
-Pour accéder à un jeu de données dans votre bloc-notes JupyterLab, sélectionnez l&#39;onglet **Data** dans le volet de navigation de gauche de JupyterLab. Les répertoires *Datasets* et *Schémas* s’affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit de la souris, puis sélectionnez l&#39;option **[!UICONTROL Explorer les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas du bloc-notes. Cette cellule a ta `dataset_id`cellule.
+Pour accéder à un jeu de données dans votre [!DNL JupyterLab] bloc-notes, sélectionnez l&#39;onglet **Données** dans le volet de navigation de gauche de [!DNL JupyterLab]. Les répertoires *[!UICONTROL Datasets]* et *[!UICONTROL Schémas]* s’affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit de la souris, puis sélectionnez l&#39;option **[!UICONTROL Explorer les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas du bloc-notes. Cette cellule a ta `dataset_id`cellule.
 
 ![accès aux jeux de données](../images/rtml/access-dataset.png)
 
@@ -109,11 +109,11 @@ config_properties = {
 
 ### Préparation de votre modèle
 
-En utilisant le modèle ML *en temps* réel, vous devez analyser, prétraiter, former et évaluer votre modèle ML. Pour ce faire, il applique les transformations de données et crée un canal de formation.
+En utilisant le modèle ML *[!UICONTROL en temps]* réel, vous devez analyser, prétraiter, former et évaluer votre modèle ML. Pour ce faire, il applique les transformations de données et crée un canal de formation.
 
 **Transformations de données**
 
-La cellule de transformation *des* données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
+La cellule de transformation *[!UICONTROL des]* données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
 
 >[!NOTE]
 >L&#39;exemple suivant a été condensé à des fins de lisibilité à l&#39;aide de `[ ... ]`. Veuillez vue et développer la section de transformation des données des modèles ML *en temps* réel pour la cellule de code complète.
@@ -261,7 +261,7 @@ print("Model ID : ", model_id)
 
 ### Téléchargement de votre propre modèle ONNX préentraîné {#pre-trained-model-upload}
 
-A l&#39;aide du bouton de téléchargement situé dans les blocs-notes JupyterLab, téléchargez votre modèle ONNX préformé sur l&#39;environnement des blocs-notes Data Science Workspace.
+A l&#39;aide du bouton Télécharger situé dans [!DNL JupyterLab] les cahiers, téléchargez votre modèle ONNX préentraîné sur l&#39;environnement des [!DNL Data Science Workspace] cahiers.
 
 ![icône de téléchargement](../images/rtml/upload.png)
 
@@ -321,7 +321,7 @@ nodes = [json_df_node,
         onnx_node]
 ```
 
-Ensuite, connectez les noeuds aux bords. Chaque tuple est une connexion Edge.
+Ensuite, connectez les noeuds aux bords. Chaque tuple est une [!DNL Edge] connexion.
 
 >[!TIP]
 > Comme les noeuds dépendent les uns des autres de façon linéaire (chaque noeud dépend de la sortie du noeud précédent), vous pouvez créer des liens en utilisant une simple compréhension de la liste Python. Ajoutez vos propres connexions si un noeud dépend de plusieurs entrées.
@@ -344,12 +344,12 @@ Une fois terminé, un `edge` objet est renvoyé contenant chacun des noeuds et l
 ## Publier sur Edge (Hub)
 
 >[!NOTE]
->L’apprentissage automatique en temps réel est temporairement déployé et géré par le Adobe Experience Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
+>L’apprentissage automatique en temps réel est temporairement déployé et géré par le Adobe Expereince Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
 
-Maintenant que vous avez créé un graphique DSL, vous pouvez déployer votre graphique sur le bord.
+Maintenant que vous avez créé un graphique DSL, vous pouvez déployer le graphique sur le [!DNL Edge].
 
 >[!IMPORTANT]
->Ne publiez pas souvent sur Edge, cela peut surcharger les noeuds Edge. Il n’est pas recommandé de publier le même modèle plusieurs fois.
+>Ne publiez pas [!DNL Edge] souvent, cela peut surcharger les [!DNL Edge] noeuds. Il n’est pas recommandé de publier le même modèle plusieurs fois.
 
 ```python
 edge_utils = EdgeUtils()
@@ -365,7 +365,7 @@ Si vous n&#39;avez pas besoin de mettre à jour votre DSL, vous pouvez passer à
 >[!NOTE]
 >Les cellules suivantes ne sont requises que si vous souhaitez mettre à jour un fichier DSL existant qui a été publié sur Edge.
 
-Vos modèles continueront probablement de se développer. Plutôt que de créer un tout nouveau service, il est possible de mettre à jour un service existant avec votre nouveau modèle. Vous pouvez définir un noeud que vous souhaitez mettre à jour, lui attribuer un nouvel ID, puis recharger la nouvelle liste de distribution sur le serveur Edge.
+Vos modèles continueront probablement de se développer. Plutôt que de créer un tout nouveau service, il est possible de mettre à jour un service existant avec votre nouveau modèle. Vous pouvez définir un noeud que vous souhaitez mettre à jour, lui attribuer un nouvel ID, puis recharger la nouvelle liste de distribution de données sur le [!DNL Edge]serveur.
 
 Dans l’exemple ci-dessous, le noeud 0 est mis à jour avec un nouvel ID.
 
@@ -397,7 +397,7 @@ Vous recevez le DSL mis à jour.
 
 ## Scores {#scoring}
 
-Après la publication sur Edge, le score est effectué par une requête POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML ** en temps réel utilise EdgeUtils pour démontrer ce processus.
+Après la publication sur [!DNL Edge], le score est effectué par une requête POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML ** en temps réel utilise EdgeUtils pour démontrer ce processus.
 
 >[!NOTE]
 >Un petit temps de traitement est nécessaire avant les débuts de notation.
@@ -414,15 +414,15 @@ En utilisant le même schéma que celui utilisé dans la formation, des données
 
 ### Score par rapport au point de terminaison Edge
 
-Utilisez la cellule suivante dans le modèle ML ** en temps réel pour obtenir un score par rapport à votre service Edge.
+Utilisez la cellule suivante dans le modèle ML ** en temps réel pour obtenir un score par rapport à votre [!DNL Edge] service.
 
 ![Score par rapport au bord](../images/rtml/scoring-edge.png)
 
-Une fois le score terminé, l’URL d’Edge, la charge utile et la sortie notée de l’Edge sont renvoyées.
+Une fois le score terminé, l’ [!DNL Edge] URL, la charge utile et la sortie notée de la [!DNL Edge] page sont renvoyées.
 
-## Liste de vos applications déployées à partir du Edge
+## Liste de vos applications déployées à partir du [!DNL Edge]
 
-Pour générer une liste de vos applications actuellement déployées sur le périphérique, exécutez la cellule de code suivante. Cette cellule ne peut pas être modifiée ni supprimée.
+Pour générer une liste de vos applications actuellement déployées sur le serveur, [!DNL Edge]exécutez la cellule de code suivante. Cette cellule ne peut pas être modifiée ni supprimée.
 
 ```python
 services = edge_utils.list_deployed_services()
@@ -443,10 +443,10 @@ La réponse renvoyée est un tableau de vos services déployés.
 ]
 ```
 
-## Suppression d’un ID d’application ou de service déployé sur le serveur Edge (facultatif)
+## Supprimer un ID d’application ou de service déployé du [!DNL Edge] (facultatif)
 
 >[!CAUTION]
->Cette cellule est utilisée pour supprimer votre application Edge déployée. N&#39;utilisez pas la cellule suivante, sauf si vous devez supprimer une application Edge déployée.
+>Cette cellule est utilisée pour supprimer votre application Edge déployée. N’utilisez pas la cellule suivante, sauf si vous devez supprimer une [!DNL Edge] application déployée.
 
 ```python
 if edge_utils.delete_from_edge(service_id=service_id):
