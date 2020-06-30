@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur d’Enregistrement Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0ed2ed3b08f262100746f255a78c248a1748eb5e
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '337'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Connecteur d’Enregistrement Google Cloud
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs de cloud tels que AWS, Google Cloud Platform et Azure, ce qui vous permet d’importer vos données à partir de ces systèmes.
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]vous permet d’importer vos données à partir de ces systèmes.
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données dans Platform sans avoir à télécharger, mettre en forme ou télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. Plateforme vous permet d’importer des données de l’Enregistrement Google Cloud par lots.
+Les sources d’enregistrement Cloud peuvent importer vos propres données [!DNL Platform] sans avoir à les télécharger, les mettre en forme ou les télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir de [!DNL Google Cloud Storage] lots.
 
-## Configuration requise pour la connexion de votre compte d’Enregistrement Google Cloud
+## Configuration requise pour la connexion de votre [!DNL Google Cloud Storage] compte
 
-Pour vous connecter à la plate-forme, vous devez d’abord activer l’interopérabilité pour votre compte d’Enregistrement Google Cloud. Pour accéder au paramètre d’interopérabilité, ouvrez la plate-forme Google Cloud et sélectionnez **[!UICONTROL Paramètres]** dans l’option **[!UICONTROL Enregistrement]** du panneau de navigation.
+Pour vous connecter à [!DNL Platform], vous devez d&#39;abord activer l&#39;interopérabilité pour votre [!DNL Google Cloud Storage] compte. Pour accéder au paramètre d’interopérabilité, ouvrez [!DNL Google Cloud Platform] et sélectionnez **[!UICONTROL Paramètres]** dans l’option **[!UICONTROL Enregistrement]** du panneau de navigation.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-La page **[!UICONTROL Paramètres]** s’affiche. Vous trouverez ici des informations concernant votre ID de projet Google et des détails sur votre compte d’Enregistrement Google Cloud. Pour accéder aux paramètres d&#39;interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l&#39;en-tête supérieur.
+La page **[!UICONTROL Paramètres]** s’affiche. A partir de là, vous pouvez voir des informations concernant l&#39;ID de votre [!DNL Google] projet et des détails sur votre [!DNL Google Cloud Storage] compte. Pour accéder aux paramètres d&#39;interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l&#39;en-tête supérieur.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -34,13 +34,13 @@ Pour générer un nouvel ID de clé d’accès et une clé d’accès secret pou
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Vous pouvez utiliser votre identifiant de clé d’accès nouvellement généré et votre clé d’accès secret pour connecter votre compte d’Enregistrement Google Cloud à la plate-forme.
+Vous pouvez utiliser votre identifiant de clé d’accès nouvellement généré et votre clé d’accès secret pour connecter votre [!DNL Google Cloud Storage] compte à [!DNL Platform].
 
-La documentation ci-dessous fournit des informations sur la connexion de l’Enregistrement Google Cloud à la plate-forme à l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google Cloud Storage] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Connexion de l’Enregistrement Google Cloud à la plate-forme
+## Se connecter [!DNL Google Cloud Storage] à [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la connexion de l’Enregistrement Google Cloud à la plate-forme à l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google Cloud Storage] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
 ### Utilisation des API
 
