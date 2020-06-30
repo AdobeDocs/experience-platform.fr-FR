@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Formation et évaluation d’un modèle (IU)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
+source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '975'
 ht-degree: 2%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 2%
 
 # Formation et évaluation d’un modèle (IU)
 
-Dans l’espace de travail Data Science d’Adobe Experience Platform, un modèle d’apprentissage automatique est créé en incorporant une recette existante adaptée à l’intention du modèle. Le modèle est ensuite formé et évalué afin d&#39;optimiser son efficacité et son efficacité d&#39;exploitation en affinant ses Hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques avec une seule Recette.
+Dans Adobe Experience Platform Data Science Workspace, un modèle d&#39;apprentissage automatique est créé en incorporant une recette existante qui convient à l&#39;intention du modèle. Le modèle est ensuite formé et évalué afin d&#39;optimiser son efficacité et son efficacité d&#39;exploitation en affinant ses Hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques avec une seule Recette.
 
 Ce didacticiel décrit les étapes de création, de formation et d&#39;évaluation d&#39;un modèle.
 
 ## Prise en main
 
-Pour terminer ce didacticiel, vous devez avoir accès à Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+Pour terminer ce didacticiel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform]votre entreprise, contactez votre administrateur système avant de continuer.
 
 Ce didacticiel nécessite une recette existante. Si vous n&#39;avez pas de recette, suivez le didacticiel [Importer une recette empaquetée dans l&#39;interface utilisateur](./import-packaged-recipe-ui.md) avant de continuer.
 
@@ -45,7 +45,7 @@ Ce didacticiel nécessite une recette existante. Si vous n&#39;avez pas de recet
 1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour liste tous les modèles existants. Recherchez et cliquez sur le nom du modèle à former.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Toutes les sessions de formation existantes avec leur statut actuel sont répertoriées. Pour les modèles créés à l’aide de l’interface utilisateur de l’espace de travail Data Science, une session de formation est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
+2. Toutes les sessions de formation existantes avec leur statut actuel sont répertoriées. Pour les modèles créés à l’aide de l’interface [!DNL Data Science Workspace] utilisateur, une série de formations est automatiquement générée et exécutée à l’aide des configurations par défaut et du jeu de données de formation d’entrée.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Créez une nouvelle formation en cliquant sur **[!UICONTROL Train]** près de l&#39;angle supérieur droit de la page d&#39;aperçu du modèle.
@@ -80,7 +80,7 @@ Ce didacticiel nécessite une recette existante. Si vous n&#39;avez pas de recet
 
 ## Étapes suivantes
 
-Ce didacticiel vous a guidé tout au long de la création, de la formation et de l’évaluation d’un modèle dans Data Science Workspace. Une fois que vous êtes arrivé à un modèle optimisé, vous pouvez utiliser le modèle formé pour générer des informations en suivant la section [Score a Model du didacticiel sur l’interface utilisateur](./score-model-ui.md) .
+Ce didacticiel vous a guidé tout au long de la création, de la formation et de l&#39;évaluation d&#39;un modèle dans [!DNL Data Science Workspace]. Une fois que vous êtes arrivé à un modèle optimisé, vous pouvez utiliser le modèle formé pour générer des informations en suivant la section [Score a Model du didacticiel sur l’interface utilisateur](./score-model-ui.md) .
 
 ## Référence {#reference}
 
