@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Actions marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 08d02e7323f75c450e7a250835f26a569685cdd1
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '536'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Actions marketing
 
-Une action marketing, dans le contexte de la gouvernance des données de la plateforme Adobe Experience Platform, est une action entreprise par un utilisateur de données Experience Platform, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+Une action marketing, dans le cadre de la gouvernance des données d’Adobe Experience Platform, est une action entreprise par un utilisateur de [!DNL Experience Platform] données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
 Pour utiliser les actions marketing dans l’API, vous devez utiliser le `/marketingActions` point de terminaison.
 
@@ -142,7 +142,7 @@ L’objet response contient les détails de l’action marketing, y compris le c
 
 ## Créer ou mettre à jour une action marketing
 
-L’API Service de stratégie vous permet de définir vos propres actions marketing, ainsi que de mettre à jour les actions existantes. La création et la mise à jour sont toutes deux effectuées à l’aide d’une opération PUT sur le nom de l’action marketing.
+L’ [!DNL Policy Service] API vous permet de définir vos propres actions marketing, ainsi que de mettre à jour les actions existantes. La création et la mise à jour sont toutes deux effectuées à l’aide d’une opération PUT sur le nom de l’action marketing.
 
 **Format d’API**
 
@@ -195,7 +195,7 @@ Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le cor
 
 ## Suppression d’une action marketing
 
-Il est possible de supprimer des actions marketing en envoyant une requête DELETE à l&#39;action marketing que vous souhaitez supprimer. `{marketingActionName}`
+Il est possible de supprimer des actions marketing en envoyant une demande de DELETE à l’action `{marketingActionName}` de marketing que vous souhaitez supprimer.
 
 >[!NOTE] Vous ne pouvez pas supprimer les actions marketing référencées par des stratégies de sortie. Si vous essayez de le faire, une erreur 400 (mauvaise requête) s’affichera, ainsi qu’un message d’erreur qui comprend le `id` (ou plusieurs ID) d’une ou plusieurs stratégies contenant une référence à l’action marketing que vous tentez de supprimer.
 
