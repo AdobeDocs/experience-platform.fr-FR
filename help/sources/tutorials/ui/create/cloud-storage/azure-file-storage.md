@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement de fichiers Azure dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: ced839f64bea48703c530c83d8592f3842c17e53
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 0%
+source-wordcount: '485'
+ht-degree: 1%
 
 ---
 
 
-# Création d&#39;un connecteur source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur
+# Création d’un connecteur [!DNL Azure File Storage] source dans l’interface utilisateur
 
 >[!NOTE]
->Le connecteur d&#39;Enregistrement de fichiers Azure est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>Le [!DNL Azure File Storage] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;interface utilisateur de Platform.
+Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur [!DNL Azure File Storage] source à l’aide de l’ [!DNL Platform] interface utilisateur.
 
 ## Prise en main
 
 Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -32,19 +32,19 @@ Si vous disposez déjà d&#39;une connexion à l&#39;Enregistrement de fichiers,
 
 ### Collecte des informations d’identification requises
 
-Pour authentifier votre connecteur source d&#39;Enregistrement de fichiers Azure, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour authentifier votre connecteur [!DNL Azure File Storage] source, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Point de terminaison de l&#39;instance d&#39;Enregistrement de fichiers Azure à laquelle vous accédez. |
-| `userId` | Utilisateur disposant d&#39;un accès suffisant au point de terminaison de l&#39;Enregistrement de fichiers Azure. |
-| `password` | Clé d&#39;accès d&#39;Enregistrement de fichier Azure. |
+| `host` | Point de terminaison de l’ [!DNL Azure File Storage] instance à laquelle vous accédez. |
+| `userId` | Utilisateur disposant d’un accès suffisant au point de [!DNL Azure File Storage] terminaison. |
+| `password` | Clé [!DNL Azure File Storage] d’accès. |
 
 Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows)d&#39;Enregistrement de fichier Azure.
 
-## Connectez votre compte Azure File Enregistrement
+## Connecter votre [!DNL Azure File Storage] compte
 
-Une fois que vous avez rassemblé les informations d&#39;identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte d&#39;Enregistrement de fichiers Azure à connecter à Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau [!DNL Azure File Storage] compte auquel vous connecter [!DNL Platform].
 
 Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
 
@@ -64,10 +64,10 @@ Si vous utilisez de nouvelles informations d’identification, sélectionnez **[
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte d&#39;Enregistrement de fichiers Azure avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le [!DNL Azure File Storage] compte auquel vous voulez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/azure-file-storage/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre compte Azure File Enregistrement. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/batch/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre [!DNL Azure File Storage] compte. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/batch/cloud-storage.md).
