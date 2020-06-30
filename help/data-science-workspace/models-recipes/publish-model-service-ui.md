@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 7dc5075d3101b4780af92897c0381e73a9c5aef0
+source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Si vous préférez publier un modèle à l’aide des API d’apprentissage auto
 
 ## Score à l’aide d’un service {#access-a-service}
 
-1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la Galerie *de* services. Recherchez le service que vous souhaitez utiliser et cliquez sur **[!UICONTROL Score]**.
+1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la Galerie *[!UICONTROL de]* services. Recherchez le service que vous souhaitez utiliser et cliquez sur **[!UICONTROL Score]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Sélectionnez un jeu de données d’entrée approprié pour l’exécution de score, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -52,4 +52,4 @@ Si vous préférez publier un modèle à l’aide des API d’apprentissage auto
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce didacticiel, vous avez publié avec succès un modèle en tant que service accessible et marqué des données à l’aide du nouveau service par l’intermédiaire de la Galerie *de* services. Passez au didacticiel suivant pour découvrir comment [planifier des sessions de formation et de notation automatisées sur un service](./schedule-models-ui.md).
+En suivant ce didacticiel, vous avez publié avec succès un modèle en tant que service accessible et marqué des données à l’aide du nouveau service par l’intermédiaire de la Galerie *[!UICONTROL de]* services. Passez au didacticiel suivant pour découvrir comment [planifier des sessions de formation et de notation automatisées sur un service](./schedule-models-ui.md).
