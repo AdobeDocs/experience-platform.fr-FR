@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Modèle de domaine de prise de décision d’Offre
 topic: overview
 translation-type: tm+mt
-source-git-commit: fdaef24a23c1c1da064ca33e8bed522e506fead5
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '2621'
+source-wordcount: '2614'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Offre Prise de décision Présentation du modèle de domaine
 
-La prise de décision par Offre est un cas d’utilisation du service de prise de décision dans lequel vous formalisez et gérez de manière centralisée les règles et prédictions utilisées pour engager les clients avec des offres. La décision d’Offre est considérée comme un type de décision _**de**_ contenu. Dans ce cas d&#39;utilisation, les options _**de**_ décision sont appelées _**offres**_ et se caractérisent par le contenu qui leur est joint. Pour une présentation du modèle d&#39;objet utilisé par le service de prise de décision, reportez-vous au modèle [de domaine du service de](experience-model.md)prise de décision.
+La prise de décision par Offre est un exemple d’utilisation dans lequel vous pouvez formaliser et gérer de manière centralisée les règles et prédictions utilisées pour attirer les clients avec des offres. [!DNL Decisioning Service] La décision d’Offre est considérée comme un type de décision _**de**_ contenu. Dans ce cas d&#39;utilisation, les options _**de**_ décision sont appelées _**offres**_ et se caractérisent par le contenu qui leur est joint. Pour une présentation du modèle d&#39;objet utilisé par le [!DNL Decisioning Service]service, veuillez vous reporter au modèle [de domaine du service de](experience-model.md)prise de décision.
 
 L&#39;objectif est de présenter à l&#39;utilisateur final une &quot;meilleure Offre&quot; dans n&#39;importe quel canal en fonction des critères de ciblage, des contraintes de coût et de fréquence, ainsi que des interactions préalables entre canaux, y compris les Offres antérieures proposées.
 
@@ -63,7 +63,7 @@ Les offres générales, également appelées offres personnalisées, sont les op
 
 Les emplacements définissent les contraintes de contenu et sont utilisés avec une activité pour spécifier l’emplacement dans lequel la meilleure expérience suivante est livrée. Cela réduit davantage le nombre d&#39;options qui peuvent être envisagées et constitue une autre contrainte imposée par l&#39;activité. Il s&#39;agit de la contrainte de placement. Seules les options dont le contenu répond à une contrainte de placement, telles que les offres, seront prises en compte. Cette évaluation est effectuée dans les premières étapes de la stratégie de décision. Lorsque les objets d’option modifient les contraintes de placement de chaque activité sont réévalués et l’option peut être prise en compte ou en ressortir pour une ou plusieurs activités.
 
-Il n&#39;est pas de la responsabilité du service de prise de décision de formaliser les détails complexes des dépendances de contenu. Au lieu de cela, chaque client identifie la liste des placements sur tous les canaux et leur donne des identifiants et des noms uniques. En référençant un emplacement particulier, le concepteur affirme que le contenu donné s’adaptera à l’emplacement.
+Il n&#39;est pas de la responsabilité du [!DNL Decisioning Service] gouvernement de formaliser les détails complexes des dépendances de contenu. Au lieu de cela, chaque client identifie la liste des placements sur tous les canaux et leur donne des identifiants et des noms uniques. En référençant un emplacement particulier, le concepteur affirme que le contenu donné s’adaptera à l’emplacement.
 
 Lorsque le contenu est développé, le spécialiste du marketing d’offre et le concepteur de contenu s’entendent simplement (doivent) sur un &quot;contrat implicite&quot; qui se trouve derrière le nom &quot;Page d&#39;accueil Hero Image&quot; ou &quot;Script d’ouverture d’appel de service&quot;. Le premier peut être convenu comme une image de 600 px de largeur et de 350 px de hauteur et le second peut restreindre le contenu au texte dans deux variantes de langue qui n&#39;est pas plus de 50 mots en trois ou quatre phrases avec une structure sémantique. Placement pour ne pas stocker tout le sens du contrat caché.
 
@@ -101,7 +101,7 @@ Lorsqu&#39;une décision est demandée, le client peut demander des propositions
 
 Les contraintes de duplication ne sont actuellement pas écrites dans le référentiel des objets métier. Au lieu de cela, la déduplication est la stratégie par défaut au moment de l’exécution. Un paramètre de requête peut remplacer le comportement par défaut pour supprimer l’étape de déduplication.
 
-### Contraintes de Profil - Règles d&#39;éligibilité
+### [!DNL Profile] contraintes - Règles d&#39;éligibilité
 
 Jusqu&#39;à présent, les contraintes dont il a été question ont été applicables indépendamment de la personne pour laquelle l&#39;offre a été choisie. La prise de décision d’expérience prend également en charge un cas d’utilisation dans lequel les propositions de personnalisation sont basées sur les événements d’enregistrement et de séries chronologiques d’un client. Les règles sont évaluées par profil, afin de déterminer si une offre est admissible ou doit être supprimée pour cet utilisateur. Pour ce faire, une règle d&#39;éligibilité peut être associée à chaque offre. Outre les événements d’profil et d’expérience d’un utilisateur final, la règle d&#39;éligibilité tiendra compte des données contextuelles en temps réel. Ces données sont fournies par le service de diffusion et peuvent prendre la forme de données qui ne sont pas liées à un profil, comme les niveaux d&#39;inventaire, les conditions météorologiques, les horaires de vol.
 
