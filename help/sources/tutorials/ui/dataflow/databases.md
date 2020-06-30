@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 415b59fc3fa20c09372549e92571c1b41006e540
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1043'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 
-Un flux de données est une tâche planifiée qui récupère et ingère des données d&#39;une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base de données.
+Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base de données.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-- [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+- [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    - [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
    - [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Profil](../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
@@ -40,7 +40,7 @@ Sélectionnez la base de données à utiliser, puis cliquez sur **[!UICONTROL Su
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape *Mappage* s’affiche, fournissant une interface interactive permettant de mapper les données source à un jeu de données de plateforme.
+L’étape *Mappage* s’affiche, fournissant une interface interactive permettant de mapper les données source à un jeu de données Platform.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -101,7 +101,7 @@ L’étape de détail *[!UICONTROL du]* flux de données s’affiche, où vous d
 L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 - *Connexion*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
-- *Affectez des champs* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- *Attribuer des champs* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
 - *Planification*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
@@ -114,7 +114,7 @@ Une fois que votre flux de données a été créé, vous pouvez surveiller les d
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données d&#39;une base de données externe et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données d&#39;une base de données externe et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par les services Platform en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
 
 - [Présentation du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -131,10 +131,10 @@ Dans l’espace de travail *[!UICONTROL Sources]* , sélectionnez l’onglet **[
 
 ![](../../../images/tutorials/dataflow/databases/list-of-dataflows.png)
 
-La colonne *Propriétés* s’affiche sur le côté droit de l’écran, avec notamment un bouton de bascule **[!UICONTROL Activé]** . Sélectionnez la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
+La colonne *[!UICONTROL Propriétés]* s’affiche sur le côté droit de l’écran, avec notamment un bouton de bascule **[!UICONTROL Activé]** . Sélectionnez la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
 
 ![](../../../images/tutorials/dataflow/databases/disable.png)
 
-### Activer les données entrantes pour la population de Profils
+### Activer les données entrantes pour [!DNL Profile] la population
 
-Les données entrantes de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos données de Profil client en temps réel. Pour plus d’informations sur le renseignement de vos données de Profil client réel, voir le didacticiel sur la population [de](../profile.md)Profils.
+Les données entrantes provenant de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos [!DNL Real-time Customer Profile] données. Pour plus d&#39;informations sur le remplissage de vos [!DNL Real-time Customer Profile] données, consultez le didacticiel sur la population [](../profile.md)Profil.
