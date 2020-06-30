@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Service de Requête sur ordinateur portable Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '764'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Service de Requête sur ordinateur portable Jupyter
 
-[!DNL Adobe Experience Platform] vous permet d’utiliser le langage SQL (Structured Requête Language) dans Data Science Workspace en intégrant Requête Service dans JupyterLab en tant que fonctionnalité standard.
+[!DNL Adobe Experience Platform] vous permet d&#39;utiliser le langage SQL (Structured Requête Language) dans [!DNL Data Science Workspace] en intégrant [!DNL Query Service] en tant que fonction [!DNL JupyterLab] standard.
 
 Ce didacticiel présente des exemples de requêtes SQL pour des cas d&#39;utilisation courants afin d&#39;explorer, de transformer et d&#39;analyser [!DNL Adobe Analytics] des données.
 
@@ -22,19 +22,19 @@ Ce didacticiel présente des exemples de requêtes SQL pour des cas d&#39;utilis
 
 Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
 
-- Accès à [!DNL Adobe Experience Platform]. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer
+- Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer
 
 - Un [!DNL Adobe Analytics] jeu de données
 
 - Une compréhension pratique des concepts clés suivants utilisés dans ce tutoriel :
-   - [Modèle de données d’expérience (XDM) et système XDM](../../xdm/home.md)
-   - [Requête Service](../../query-service/home.md)
-   - [Syntaxe SQL Requête Service](../../query-service/sql/overview.md)
-   - [!DNL Adobe Analytics]
+   - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
+   - [!DNL Query Service](../../query-service/home.md)
+   - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
+   - [Adobe Analytics]
 
-## Accès à JupyterLab et au service de Requête {#access-jupyterlab-and-query-service}
+## Accès [!DNL JupyterLab] et [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Dans [Experience Platform](https://platform.adobe.com), accédez à **[!UICONTROL Notebooks]** à partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
+1. Dans [!DNL Experience Platform](https://platform.adobe.com), accédez à **[!UICONTROL Ordinateurs portables]** à partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
@@ -52,7 +52,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
 4. Recherchez un [!DNL Adobe Analytics] jeu de données à explorer et cliquez avec le bouton droit sur la liste, cliquez sur Données de **[!UICONTROL Requête dans le bloc-notes]** pour générer des requêtes SQL dans le bloc-notes vide.
 
-5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de bloc-notes et le service de Requête.
+5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre l&#39;instance de votre bloc-notes et la [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
@@ -85,13 +85,14 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    - `target_year` : Année spécifique à partir de laquelle proviennent les données de cible.
    - `target_month` : Mois spécifique d’où provient la cible.
    - `target_day` : Jour spécifique à partir duquel proviennent les données de la cible.
+
    >[!NOTE] Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables pour que les modifications soient appliquées.
 
 ## Requête de vos données {#query-your-data}
 
 Entrez les requêtes SQL suivantes dans des cellules de bloc-notes individuelles. Exécutez une requête en cliquant sur sa cellule, puis en cliquant sur le bouton **[!UICONTROL Lecture]** . Les résultats de la requête ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et Requête Service peut se rompre. Dans ce cas, redémarrez JupyterLab en cliquant sur le bouton **[!UICONTROL Power]** situé dans le coin supérieur droit.
+Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et [!DNL Query Service] peut s&#39;interrompre. Dans ce cas, redémarrez [!DNL JupyterLab] en cliquant sur le bouton **[!UICONTROL Alimentation]** situé dans le coin supérieur droit.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
@@ -119,7 +120,7 @@ ORDER  BY Hour;
 
 Dans la requête ci-dessus, la cible `_acp_year` de la `WHERE` clause est définie sur la valeur de `target_year`. Incluez des variables dans les requêtes SQL en les contenant entre accolades (`{}`).
 
-La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats de la Requête seront stockés dans cette variable sous la forme d&#39;une base de données Pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l&#39;aide d&#39;un paquet Python souhaité. Exécutez le code Python suivant dans une nouvelle cellule pour générer un graphique à barres :
+La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats de la Requête seront stockés dans cette variable sous la forme d&#39;une base de données Pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l’aide d’un [!DNL Python] package souhaité. Exécutez le code suivant [!DNL Python] dans une nouvelle cellule pour générer un graphique à barres :
 
 ```python
 trace = go.Bar(
@@ -209,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Exécutez le code Python suivant pour générer un histogramme pour le nombre de événements par session de visite :
+Exécutez le [!DNL Python] code suivant pour générer un histogramme pour le nombre de événements par session de visite :
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -283,4 +284,4 @@ LIMIT  10;
 
 ## Étapes suivantes <!-- omit in toc -->
 
-Ce didacticiel a montré quelques exemples d’utilisation de Requête Service dans des cahiers Jupyter. Suivez le didacticiel [Analyser vos données à l’aide de Jupyter Notebooks](./analyze-your-data.md) pour voir comment des opérations similaires sont effectuées à l’aide du SDK d’accès aux données.
+Ce tutoriel a montré quelques exemples d&#39;utilisation de cas pour l&#39;utilisation [!DNL Query Service] dans des [!DNL Jupyter] cahiers. Suivez le didacticiel [Analyser vos données à l’aide de Jupyter Notebooks](./analyze-your-data.md) pour voir comment des opérations similaires sont effectuées à l’aide du SDK d’accès aux données.
