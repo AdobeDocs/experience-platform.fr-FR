@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2997243622a7483ae23e21487128cea6badecb80
+source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '940'
 ht-degree: 2%
 
 ---
@@ -493,6 +493,6 @@ Dans la réponse ci-dessous, vous pouvez voir que la liste de `duleLabels` donn�
 }
 ```
 
-## Évaluation des stratégies pour le Profil client en temps réel
+## Évaluation des politiques [!DNL Real-time Customer Profile]
 
-L’API Service de stratégie peut également être utilisée pour vérifier les violations de stratégie impliquant l’utilisation de segments de Profil client en temps réel. Pour plus d’informations, consultez le tutoriel sur l’[application des stratégies d’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
+L’ [!DNL Policy Service] API peut également être utilisée pour vérifier les violations de stratégie impliquant l’utilisation de [!DNL Real-time Customer Profile] segments. Pour plus d’informations, consultez le tutoriel sur l’[application des stratégies d’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
