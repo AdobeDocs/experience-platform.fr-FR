@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de dépannage d’Adobe Experience Platform Identity Service
+title: Guide de dépannage de Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2225'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,13 @@ ht-degree: 1%
 
 # Guide de dépannage d’Identity Service
 
-Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant les API de plateforme en général, consultez le guide [de dépannage de l’API](../landing/troubleshooting.md)Adobe Experience Platform.
+Ce document fournit des réponses aux questions fréquentes sur l’Adobe Experience Platform [!DNL Identity Service]ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou dépannage concernant [!DNL Platform] les API en général, consultez le guide [de dépannage de l’API d’](../landing/troubleshooting.md)Adobe Experience Platform.
 
-Les données qui identifient un client unique sont souvent fragmentées entre les divers périphériques et systèmes qu’ils utilisent pour interagir avec votre marque. **Le service** d’identité rassemble ces identités fragmentées, ce qui facilite une compréhension complète du comportement des clients afin que vous puissiez fournir des expériences numériques impactées en temps réel. Pour plus d&#39;informations, consultez la présentation [du service](./home.md)d&#39;identité.
+Les données qui identifient un client unique sont souvent fragmentées entre les divers périphériques et systèmes qu’ils utilisent pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui vous permet de comprendre parfaitement le comportement des clients et de proposer des expériences numériques impactées en temps réel. Pour plus d&#39;informations, consultez la présentation [du service](./home.md)d&#39;identité.
 
 ## FAQ
 
-Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur Identity Service.
+Vous trouverez ci-dessous une liste de réponses aux questions fréquemment posées sur [!DNL Identity Service].
 
 ## Qu&#39;est-ce que les données d&#39;identité ?
 
@@ -32,15 +32,15 @@ L’étiquetage de certains champs de données en tant qu’identités dans vos 
 
 ## Quelles sont les identités connues et anonymes ?
 
-Une identité **** connue désigne une valeur d&#39;identité qui peut être utilisée seule ou avec d&#39;autres informations pour identifier, contacter ou localiser une personne. Les adresses électroniques, les numéros de téléphone et les identifiants CRM sont des exemples d’identités connues.
+Une identité connue désigne une valeur d&#39;identité qui peut être utilisée seule ou avec d&#39;autres informations pour identifier, contacter ou localiser une personne. Les adresses électroniques, les numéros de téléphone et les identifiants CRM sont des exemples d’identités connues.
 
-Une identité **** anonyme fait référence à une valeur d&#39;identité qui ne peut pas être utilisée seule ou avec d&#39;autres informations pour identifier, contacter ou localiser une personne (par exemple un ID de cookie).
+Une identité anonyme désigne une valeur d&#39;identité qui ne peut pas être utilisée seule ou avec d&#39;autres informations pour identifier, contacter ou localiser une personne (par exemple un identifiant de cookie).
 
 ## Qu&#39;est-ce qu&#39;un graphique d&#39;identité privée ?
 
 Un graphique d&#39;identité privé est une carte privée des relations entre les identités recoupées et liées, visible uniquement pour votre entreprise.
 
-Lorsque plusieurs identités sont incluses dans des données ingérées à partir d’un point de terminaison de diffusion en continu ou envoyées à un jeu de données activé pour Identity Service, elles sont liées dans le graphique d’identité privée. Identity Service utilise ce graphique pour rassembler les identités d&#39;un consommateur ou d&#39;une entité donné, ce qui permet l&#39;assemblage d&#39;identité et la fusion de profils.
+Lorsque plusieurs identités sont incluses dans les données ingérées à partir d’un point de terminaison de diffusion en continu ou envoyées à un jeu de données activé pour [!DNL Identity Service], elles sont liées dans le graphique d’identité privée. [!DNL Identity Service] utilise ce graphique pour obtenir des identités pour un consommateur ou une entité donné, ce qui permet d’assembler des identités et de fusionner des profils.
 
 ## Comment créer plusieurs champs d&#39;identité dans un schéma XDM ?
 
@@ -72,15 +72,15 @@ Les champs d&#39;identité doivent être associés à un espace de nommage d&#39
 
 Pour obtenir des instructions détaillées sur la définition d&#39;un espace de nommage lors de la création d&#39;un descripteur d&#39;identité à l&#39;aide de l&#39;API, reportez-vous à la section relative à la [création d&#39;un descripteur](../xdm/tutorials/create-schema-ui.md) dans le guide du développeur du registre des Schémas. Pour marquer un champ de schéma comme une identité dans l’interface utilisateur, suivez les étapes du didacticiel [de l’éditeur de](../xdm/tutorials/create-schema-api.md)Schémas.
 
-## Quels sont les espaces de nommage d’identité standard fournis par Experience Platform ?
+## Quels sont les espaces de nommage d&#39;identité standard fournis par l&#39;Experience Platform ?
 
-Les espaces de nommage standard suivants peuvent être utilisés par toutes les organisations au sein de la plate-forme d’expérience :
+Les espaces de nommage standard suivants sont fournis à toutes les organisations au sein de l&#39;Experience Platform :
 
 | Nom d’affichage | ID | Code | Description |
 | ------------ | --- | --- | ----------- |
 | CORE | 0 | CORE | nom hérité : &quot;Adobe AudienceManager&quot; |
 | ECID | 4 | ECID | alias : &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot; |
-| Courriel | 6 | Courriel |  |
+| Email | 6 | Email |  |
 | E-mail (SHA256, avec un format réduit) | 11 | Emails  | espace de nommage standard pour les messages électroniques préhachés. Les valeurs fournies dans cet espace de nommage sont converties en minuscules avant le hachage avec SHA-256. |
 | Téléphone | 7 | Téléphone |  |
 | Windows AID | 8 | WAID |  |
@@ -105,9 +105,9 @@ Les identités sont référencées dans les appels d’API par leur identité co
 
 Identity Service crée un hachage cryptographique à sens unique et puissant des informations d’identification personnelle avant la persistance des valeurs. Les données d’identité des espaces de nommage &quot;Téléphone&quot; et &quot;Adresse électronique&quot; sont automatiquement hachées à l’aide de SHA-256, les valeurs &quot;Courriel&quot; étant automatiquement converties en minuscules avant le hachage.
 
-## Dois-je chiffrer toutes les informations d’identification personnelle avant de les envoyer à la plate-forme ?
+## Dois-je chiffrer toutes les informations d’identification personnelle avant de les envoyer à Platform ?
 
-Vous n’avez pas besoin de chiffrer manuellement les données d’identification personnelle avant de les importer dans Platform. En appliquant le libellé `I1` d’utilisation des données à tous les champs de données applicables, Platform convertit automatiquement ces champs en valeurs d’ID hachées lors de l’assimilation.
+Il n’est pas nécessaire de chiffrer manuellement les données d’identification personnelle avant de les importer dans Platform. En appliquant le libellé `I1` d’utilisation des données à tous les champs de données applicables, Platform convertit automatiquement ces champs en valeurs d’ID hachées lors de l’assimilation.
 
 Pour savoir comment appliquer et gérer des étiquettes d’utilisation des données, consultez le didacticiel [sur les étiquettes d’utilisation des](../data-governance/labels/user-guide.md)données.
 
@@ -133,11 +133,11 @@ Internal solutions|Preferred|Common
 
 ## Résolution des problèmes
 
-La section suivante fournit des suggestions de dépannage pour des codes d&#39;erreur spécifiques et le comportement inattendu que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;API Identity Service.
+La section suivante fournit des suggestions de dépannage pour des codes d’erreur spécifiques et le comportement inattendu que vous pouvez rencontrer lors de l’utilisation de l’ [!DNL Identity Service] API.
 
-## Messages d’erreur du service d’identité
+## [!DNL Identity Service] messages d&#39;erreur
 
-Voici une liste de messages d&#39;erreur que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;API Identity Service.
+Voici une liste de messages d&#39;erreur que vous pouvez rencontrer lors de l&#39;utilisation de l&#39; [!DNL Identity Service] API.
 
 ### Paramètre de requête requis manquant
 
@@ -169,7 +169,7 @@ Vérifiez que vous incluez correctement le paramètre indiqué dans le chemin d�
 }
 ```
 
-Identity Service purge les données datant de plus de 180 jours. Ce message d’erreur s’affiche lorsque vous tentez d’accéder à des données antérieures à cette date.
+[!DNL Identity Service] purge les données datant de plus de 180 jours. Ce message d’erreur s’affiche lorsque vous tentez d’accéder à des données antérieures à cette date.
 
 ### Il existe une limite de 1 000 XID dans un seul appel.
 
@@ -206,7 +206,7 @@ Ce message d’erreur s’affiche lorsque vous tentez de récupérer des informa
 }
 ```
 
-Ce message d’erreur s’affiche lorsqu’un paramètre de `graph-type` requête reçoit une valeur non valide dans le chemin d’accès à la requête. Consultez la section sur les graphiques [](./home.md) d&#39;identité dans l&#39;aperçu du service d&#39;identité pour savoir quels types de graphiques sont pris en charge.
+Ce message d’erreur s’affiche lorsqu’un paramètre de `graph-type` requête reçoit une valeur non valide dans le chemin d’accès à la requête. Consultez la section sur les graphiques [](./home.md) d&#39;identité dans l&#39; [!DNL Identity Service] aperçu pour savoir quels types de graphiques sont pris en charge.
 
 ### Le jeton de service n&#39;a pas d&#39;étendue valide
 
@@ -218,7 +218,7 @@ Ce message d’erreur s’affiche lorsqu’un paramètre de `graph-type` requêt
 }
 ```
 
-Ce message d&#39;erreur s&#39;affiche lorsque votre organisation IMS n&#39;a pas reçu les autorisations appropriées pour Identity Service. Contactez votre administrateur système pour résoudre ce problème.
+Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Le jeton de service de passerelle n&#39;est pas valide
 
@@ -230,7 +230,7 @@ Ce message d&#39;erreur s&#39;affiche lorsque votre organisation IMS n&#39;a pas
 }
 ```
 
-Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les Jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de plateforme. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès.
+Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les Jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] les API. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès.
 
 ### Jeton de service d&#39;autorisation non valide
 
@@ -242,7 +242,7 @@ Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les 
 }
 ```
 
-Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les Jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API de plateforme. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès.
+Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les Jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser [!DNL Platform] les API. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès.
 
 ### Le jeton utilisateur ne dispose pas d&#39;un contexte de produit valide
 
@@ -254,7 +254,7 @@ Dans le cas de cette erreur, votre jeton d&#39;accès n&#39;est pas valide. Les 
 }
 ```
 
-Ce message d’erreur s’affiche lorsque votre jeton d&#39;accès n’a pas été généré à partir d’une intégration de la plateforme d’expérience. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès pour une intégration à la plate-forme d’expérience.
+Ce message d’erreur s’affiche lorsque votre jeton d&#39;accès n’a pas été généré à partir d’une [!DNL Experience Platform] intégration. Consultez le didacticiel [sur l’](../tutorials/authentication.md) authentification pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès pour une [!DNL Experience Platform] intégration.
 
 ### Erreur interne lors de l’obtention du XID natif à partir de l’identité et du code d’espace de nommage
 
@@ -266,9 +266,9 @@ Ce message d’erreur s’affiche lorsque votre jeton d&#39;accès n’a pas ét
 }
 ```
 
-Lorsque Identity Service conserve une identité, l&#39;ID de l&#39;identité et l&#39;ID d&#39;espace de nommage associé se voient attribuer un identifiant unique appelé XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche du XID pour une valeur et un espace de nommage d’ID donnés.
+Lorsque [!DNL Identity Service] persiste une identité, l’ID de l’identité et l’ID d’espace de nommage associé se voient attribuer un identifiant unique appelé XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche du XID pour une valeur et un espace de nommage d’ID donnés.
 
-### L&#39;organisation IMS n&#39;est pas configurée pour l&#39;utilisation d&#39;Identity Service
+### L&#39;organisation IMS n&#39;est pas configurée pour [!DNL Identity Service] une utilisation
 
 ```json
 {
@@ -278,7 +278,7 @@ Lorsque Identity Service conserve une identité, l&#39;ID de l&#39;identité et 
 }
 ```
 
-Ce message d&#39;erreur s&#39;affiche lorsque votre organisation IMS n&#39;a pas reçu les autorisations appropriées pour Identity Service. Contactez votre administrateur système pour résoudre ce problème.
+Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Erreur du serveur interne
 
@@ -290,13 +290,13 @@ Ce message d&#39;erreur s&#39;affiche lorsque votre organisation IMS n&#39;a pas
 }
 ```
 
-Cette erreur s’affiche lorsqu’une exception inattendue se produit lors de l’exécution d’un appel de service Plateforme. La meilleure pratique consiste à programme vos appels automatisés afin de relancer leurs requêtes quelques fois à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
+Cette erreur s’affiche lorsqu’une exception inattendue se produit dans l’exécution d’un appel de [!DNL Platform] service. La meilleure pratique consiste à programme vos appels automatisés afin de relancer leurs requêtes quelques fois à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
 
 ## Codes d&#39;erreur d&#39;importation par lot
 
-Identity Service ingère les données d&#39;identité des données d&#39;enregistrement et de série chronologique qui sont téléchargées sur la plate-forme à l&#39;aide de l&#39;Ingestion par lots. Comme l&#39;assimilation par lot est un processus asynchrone, vous devez vue les détails d&#39;un lot à des erreurs de vue. Les erreurs s’accumulent au fur et à mesure que le lot avance jusqu’à ce que le lot soit terminé.
+[!DNL Identity Service] ingère des données d&#39;identité à partir des données d&#39;enregistrement et de séries chronologiques qui sont téléchargées à l&#39; [!DNL Platform] aide de l&#39;importation par lots. L&#39;assimilation par lot étant un processus asynchrone, vous devez vue les détails d&#39;un lot à des erreurs de vue. Les erreurs s’accumulent au fur et à mesure que le lot avance jusqu’à ce que le lot soit terminé.
 
-Voici une liste de messages d&#39;erreur relatifs à Identity Service que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;API [d&#39;administration des](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)données.
+Voici une liste de messages d&#39;erreur relatifs à [!DNL Identity Service] votre utilisation de l&#39;API [d&#39;importation de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)données.
 
 ### schéma XDM inconnu
 
@@ -308,7 +308,7 @@ Voici une liste de messages d&#39;erreur relatifs à Identity Service que vous p
 }
 ```
 
-Identity Service ne consomme que les identités des données d&#39;enregistrement ou de série chronologique conformes aux classes Profil ou ExperienceEvent, respectivement. Toute tentative d&#39;assimilation de données pour Identity Service qui n&#39;adhère à aucune classe déclenchera cette erreur.
+[!DNL Identity Service] ne consomme que les identités pour les données d’enregistrement ou de série chronologique conformes aux [!DNL Profile] classes ou [!DNL ExperienceEvent] aux classes, respectivement. Toute tentative d&#39;assimilation de données pour [!DNL Identity Service] lesquelles aucune classe n&#39;adhère à l&#39;une ou l&#39;autre classe déclenchera cette erreur.
 
 ### Il y avait 0 identité valide dans les 100 premières lignes du lot traité
 
@@ -332,7 +332,7 @@ Cette erreur s’affiche lorsque les 100 premières lignes d’un lot ne présen
 }
 ```
 
-Identity Service ne lie les identités que lorsque des enregistrements uniques présentent plusieurs valeurs d&#39;identité. Ce message d&#39;erreur survient une fois pour chaque lot assimilé et affiche le nombre d&#39;enregistrements dans lesquels une seule identité a été trouvée et n&#39;a pas entraîné de modification du graphique d&#39;identité.
+[!DNL Identity Service] ne lie que les identités lorsque des enregistrements uniques présentent plusieurs valeurs d’identité. Ce message d&#39;erreur survient une fois pour chaque lot assimilé et affiche le nombre d&#39;enregistrements dans lesquels une seule identité a été trouvée et n&#39;a pas entraîné de modification du graphique d&#39;identité.
 
 ### Le code d&#39;Espace de nommage n&#39;est pas enregistré pour cette organisation IMS
 
@@ -356,7 +356,7 @@ Cette erreur s&#39;affiche lorsqu&#39;un enregistrement assimilé présente une 
 }
 ```
 
-Lors de l’importation de données par lot, ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour Identity Service. Contactez votre administrateur système pour résoudre ce problème.
+Lors de l’importation de données par lot, ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu les autorisations appropriées pour [!DNL Identity Service]l’importation. Contactez votre administrateur système pour résoudre ce problème.
 
 ### Erreur interne
 
