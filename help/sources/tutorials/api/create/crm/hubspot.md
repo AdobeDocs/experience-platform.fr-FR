@@ -4,37 +4,37 @@ solution: Experience Platform
 title: Création d’un connecteur HubSpot à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7aa6f85308bacb275bd6f3234d03530a621c1c02
+source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '640'
 ht-degree: 1%
 
 ---
 
 
-# Création d’un connecteur HubSpot à l’aide de l’API du service de flux
+# Création d’un [!DNL HubSpot] connecteur à l’aide de l’ [!DNL Flow Service] API
 
-Le service de flux permet de collecter et de centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API du service de flux pour vous guider tout au long des étapes nécessaires à la connexion de la plate-forme d’expérience à HubSpot.
+Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de la connexion [!DNL Experience Platform] à [!DNL HubSpot].
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-* [Sources](../../../../home.md): Experience Platform permet d’importer des données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de la plate-forme.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à HubSpot à l’aide de l’API du service de flux.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL HubSpot] l’aide de l’ [!DNL Flow Service] API.
 
 ### Collecte des informations d’identification requises
 
-Pour que le service de flux puisse se connecter à HubSpot, vous devez fournir les propriétés de connexion suivantes :
+Pour [!DNL Flow Service] se connecter à [!DNL HubSpot], vous devez fournir les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `clientId` | ID client associé à votre application HubSpot. |
-| `clientSecret` | Le secret client associé à votre application HubSpot. |
+| `clientId` | ID client associé à votre [!DNL HubSpot] application. |
+| `clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
 | `accessToken` | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | `refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 
@@ -42,17 +42,17 @@ Pour plus d&#39;informations sur la prise en main, reportez-vous à ce document 
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au service de flux, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à la [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -62,11 +62,11 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 ## Rechercher les spécifications de connexion
 
-Pour créer une connexion HubSpot, un ensemble de spécifications de connexion HubSpot doit exister dans le service de flux. La première étape de la connexion de Platform à HubSpot consiste à récupérer ces spécifications.
+Pour créer une [!DNL HubSpot] connexion, un ensemble de spécifications de [!DNL HubSpot] connexion doit exister dans [!DNL Flow Service]. La première étape pour se connecter [!DNL Platform] à [!DNL HubSpot] est de récupérer ces spécifications.
 
 **Format d’API**
 
-Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. L’envoi d’une requête GET au point de `/connectionSpecs` terminaison renverra les spécifications de connexion pour toutes les sources disponibles. Vous pouvez également inclure la requête `property=name=="hubspot"` pour obtenir des informations spécifiques à HubSpot.
+Chaque source disponible possède son propre ensemble de spécifications de connexion unique pour décrire les propriétés du connecteur, telles que les exigences d&#39;authentification. L’envoi d’une requête GET au point de `/connectionSpecs` terminaison renverra les spécifications de connexion pour toutes les sources disponibles. Vous pouvez également inclure la requête `property=name=="hubspot"` pour obtenir des informations spécifiques pour [!DNL HubSpot].
 
 ```http
 GET /connectionSpecs
@@ -75,7 +75,7 @@ GET /connectionSpecs?property=name=="hubspot"
 
 **Requête**
 
-La requête suivante récupère les spécifications de connexion pour HubSpot.
+La requête suivante récupère les spécifications de connexion pour [!DNL HubSpot].
 
 ```shell
 curl -X GET \
@@ -88,7 +88,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la spécification de connexion pour HubSpot, y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion pour l’API.
+Une réponse réussie renvoie la spécification de connexion pour [!DNL HubSpot], y compris son identifiant unique (`id`). Cet identifiant est requis à l’étape suivante pour créer une connexion pour l’API.
 
 ```json
 {
@@ -142,7 +142,7 @@ Une réponse réussie renvoie la spécification de connexion pour HubSpot, y com
 
 ## Création d’une connexion pour l’API
 
-Une connexion pour l’API spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion pour l&#39;API est requise par compte HubSpot, car elle peut être utilisée pour créer plusieurs connecteurs source pour importer des données différentes.
+Une connexion pour l’API spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion pour l’API est requise par [!DNL HubSpot] compte car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
 
 **Format d’API**
 
@@ -181,8 +181,8 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.clientId` | ID client associé à votre application HubSpot. |
-| `auth.params.clientSecret` | Le secret client associé à votre application HubSpot. |
+| `auth.params.clientId` | ID client associé à votre [!DNL HubSpot] application. |
+| `auth.params.clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
 | `auth.params.accessToken` | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 
@@ -197,4 +197,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée 
 }
 ```
 
-En suivant ce didacticiel, vous avez créé une connexion HubSpot à l’aide de l’API du service de flux et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet identifiant de connexion dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de gestion de la relation client à l’aide de l’API](../../explore/crm.md)de service de flux.
+En suivant ce didacticiel, vous avez créé une [!DNL HubSpot] connexion à l’aide de l’ [!DNL Flow Service] API et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet identifiant de connexion dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de gestion de la relation client à l’aide de l’API](../../explore/crm.md)de service de flux.
