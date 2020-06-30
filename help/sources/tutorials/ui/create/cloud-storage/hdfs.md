@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Création d’un connecteur source Apache HDFS dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 855f543a1cef394d121502f03471a60b97eae256
+source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '483'
 ht-degree: 1%
 
 ---
 
 
-# Création d’un connecteur source Apache HDFS dans l’interface utilisateur
+# Création d’un connecteur source [!DNL Apache] HDFS dans l’interface utilisateur
 
 >[!NOTE]
->Le connecteur Apache HDFS est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>Le connecteur [!DNL Apache] HDFS est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans [!DNL Adobe Experience Platform] permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source Apache Hadoop Distributed File System (ci-après appelé &quot;HDFS&quot;) à l’aide de l’interface [!DNL Platform] utilisateur.
+Les connecteurs source dans [!DNL Adobe Experience Platform] permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Apache Hadoop Distributed File System] (ci-après appelé &quot;HDFS&quot;) à l&#39;aide de l&#39; [!DNL Platform] interface utilisateur.
 
 ## Prise en main
 
