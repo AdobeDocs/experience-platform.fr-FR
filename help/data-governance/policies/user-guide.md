@@ -4,30 +4,30 @@ solution: Experience Platform
 title: Guide de l’utilisateur des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: c4554e3fbc0dd527606b81e2767cb5777b6e81e7
+source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 1%
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
 
 # Guide de l’utilisateur des stratégies d’utilisation des données
 
-La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Stratégies_ de l’interface utilisateur Experience Platform.
+La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Policies_ de l’ [!DNL Experience Platform] interface utilisateur.
 
 >[!IMPORTANT] Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
 ## Conditions préalables
 
-Ce guide nécessite une bonne compréhension des concepts Experience Platform suivants :
+Ce guide nécessite une compréhension pratique des [!DNL Experience Platform] concepts suivants :
 
-- [Gouvernance des données](../home.md)
+- [!DNL Data Governance](../home.md)
 - [Stratégies d’utilisation des données](./overview.md)
 
 ## Stratégies d’utilisation des données de Vue {#view-policies}
 
-Dans l’interface utilisateur de l’Experience Platform, cliquez sur **[!UICONTROL Stratégies]** pour ouvrir l’espace de travail *[!UICONTROL Stratégies]* . Dans l’onglet **[!UICONTROL Parcourir]** , vous pouvez voir une liste des stratégies disponibles, y compris leurs étiquettes associées, leurs actions marketing et leur état.
+Dans l’ [!DNL Experience Platform] interface utilisateur, cliquez sur **[!UICONTROL Stratégies]** pour ouvrir l’espace de travail *[!UICONTROL Stratégies]* . Dans l’onglet **[!UICONTROL Parcourir]** , vous pouvez voir une liste des stratégies disponibles, y compris leurs étiquettes associées, leurs actions marketing et leur état.
 
 ![](../images/policies/browse-policies.png)
 
@@ -37,7 +37,7 @@ Cliquez sur une stratégie répertoriée pour en vue la description et le type. 
 
 ## Création d’une stratégie d’utilisation des données personnalisée {#create-policy}
 
-Pour créer une stratégie d’utilisation des données personnalisée, cliquez sur **[!UICONTROL Créer une stratégie]** dans le coin supérieur droit de l’onglet **[!UICONTROL Parcourir]** de l’espace de travail *Stratégies* .
+Pour créer une stratégie d’utilisation des données personnalisée, cliquez sur **[!UICONTROL Créer une stratégie]** dans le coin supérieur droit de l’onglet **[!UICONTROL Parcourir]** de l’espace de travail *[!UICONTROL Stratégies]* .
 
 ![](../images/policies/create-policy-button.png)
 
@@ -107,8 +107,8 @@ Si l’action marketing n’est utilisée par aucune stratégie d’utilisation 
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu de la gestion des stratégies d’utilisation des données dans l’interface utilisateur Experience Platform. Pour savoir comment gérer les stratégies à l’aide de l’API DULE Policy, consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur la manière d’appliquer des stratégies d’utilisation des données, voir l’aperçu [de l’application des](../enforcement/overview.md)stratégies.
+Ce document fournit un aperçu de la gestion des stratégies d’utilisation des données dans [!DNL Experience Platform] l’interface utilisateur. Pour savoir comment gérer les stratégies à l’aide de l’API DULE Policy, consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur la manière d’appliquer des stratégies d’utilisation des données, voir l’aperçu [de l’application des](../enforcement/overview.md)stratégies.
 
-La vidéo suivante montre comment utiliser les stratégies d’utilisation dans l’interface utilisateur de l’Experience Platform :
+La vidéo suivante montre comment utiliser les stratégies d’utilisation dans l’ [!DNL Experience Platform] interface utilisateur :
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
