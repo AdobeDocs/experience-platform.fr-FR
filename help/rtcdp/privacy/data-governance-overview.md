@@ -4,10 +4,10 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 490154c23b0ae764ac30b7e93d42b33d09b8a5d6
+source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 71%
+source-wordcount: '1085'
+ht-degree: 72%
 
 ---
 
@@ -47,7 +47,10 @@ Les politiques d’utilisation des données doivent être définies et activées
 
 Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation de l’Experience Platform.
 
-## Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
+## (Version bêta) Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
+
+>[!IMPORTANT]
+>Cette fonctionnalité est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. Elle peut être activée sur demande. La documentation et les fonctionnalités peuvent changer.
 
 Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation des segments d’audience vers des destinations dans la plateforme des données clients en temps réel, la gouvernance des données applique automatiquement les politiques d’utilisation en cas de violation.
 
