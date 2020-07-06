@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Présentation du profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: e34b0b92a8fdf0986b10753d6c983b66dde42503
+source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1795'
 ht-degree: 2%
 
 ---
@@ -54,7 +54,7 @@ L’une des principales caractéristiques du Profil client en temps réel est la
 
 Lorsque vous rassemblez des données provenant de plusieurs sources et les combinez afin d’obtenir une vue complète de chacun de vos clients, les stratégies de fusion sont les règles que Platform utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour plus d’informations sur l’utilisation des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le guide [des points de terminaison des stratégies de](api/merge-policies.md)fusion. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur de l’Experience Platform, consultez le guide [d’utilisation des stratégies de](ui/merge-policies.md)fusion.
 
-## (Alpha) Configurer des attributs calculés
+### (Alpha) Configurer des attributs calculés
 
 >[!IMPORTANT]
 >La fonctionnalité d&#39;attribut calculée décrite dans ce document est en alpha. La documentation et les fonctionnalités peuvent changer.
@@ -80,7 +80,7 @@ Platform peut être configuré pour envoyer vos données d&#39;enregistrement et
 >[!Note] :
 >Les données collectées par le biais des solutions Adobe, notamment Analytics Cloud, Marketing Cloud et Advertising Cloud, sont acheminées vers l’Experience Platform et ingérées dans le Profil.
 
-### Mesures d’assimilation en flux continu Profil
+### Mesures d&#39;assimilation de Profil
 
 Observability Insights vous permet d’exposer les mesures clés dans l’Adobe Experience Platform. Outre les statistiques d’utilisation de Platform et les indicateurs de performances de diverses fonctionnalités de Platform, il existe des mesures spécifiques liées aux Profils qui vous permettent de mieux comprendre les taux de requêtes entrantes, les taux d’assimilation réussis, les tailles d’enregistrements assimilés, etc. Pour en savoir plus, lisez tout d’abord l’aperçu [des statistiques d’](../observability/home.md)observabilité et pour obtenir une liste complète des mesures de Profil, consultez la documentation sur les mesures [](../observability/metrics.md)disponibles.
 
