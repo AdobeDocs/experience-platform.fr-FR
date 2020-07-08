@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Data Science Workspace
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2569'
 ht-degree: 0%
@@ -123,7 +123,9 @@ Les chercheurs en données peuvent tirer parti des nouvelles technologies et des
 
 Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produits en Admin Console, qui lient les utilisateurs avec des autorisations et des sandbox. See the [access control overview](../access-control/home.md) for more information.
 
->[!IMPORTANT] Pour pouvoir utiliser [!DNL Data Science Workspace], l’ [!UICONTROL autorisation &quot;Gérer l’espace de travail Data Science&quot;] doit être activée.
+>[!IMPORTANT]
+>
+>Pour pouvoir utiliser [!DNL Data Science Workspace], l’ [!UICONTROL autorisation &quot;Gérer l’espace de travail Data Science&quot;] doit être activée.
 
 Le tableau suivant décrit les effets de l’activation ou de la désactivation de cette autorisation :
 
