@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Didacticiels sur l’espace de travail Data Science
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 0%
@@ -60,6 +60,8 @@ Pour en savoir plus, suivez les fichiers source du [package dans un didacticiel]
 ## Importer une recette
 
 >[!NOTE]
+>
+>
 >Ce didacticiel nécessite que vous disposiez d&#39;une URL de fichier source Docker. Consultez les fichiers source du [package dans un didacticiel](../data-science-workspace/models-recipes/package-source-files-recipe.md) de recette si vous n&#39;avez pas d&#39;URL de fichier source Docker.
 
 Les didacticiels sur les recettes d&#39;importation fournissent des informations sur la configuration et l&#39;importation d&#39;une recette assemblée. D&#39;ici la fin de ce didacticiel, vous pouvez créer, former et évaluer un modèle dans l&#39;espace de travail Adobe Experience Platform Data Science.
