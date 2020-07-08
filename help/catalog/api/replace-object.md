@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Remplacement d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a753c6460bfe89e2b78fb3e087e9ba7397206dec
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Vous pouvez remplacer le contenu d’un objet Catalog à l’aide d’une requête PUT, dans laquelle la ressource entière est remplacée par la charge utile de la requête.
 
->[!NOTE] Si vous devez uniquement mettre à jour quelques champs spécifiques dans un objet Catalog, il peut s’avérer plus efficace d’utiliser une requête PATCH.
+>[!NOTE]
+>
+>Si vous devez uniquement mettre à jour quelques champs spécifiques dans un objet Catalog, il peut s’avérer plus efficace d’utiliser une requête PATCH.
 
 **Format d’API**
 
