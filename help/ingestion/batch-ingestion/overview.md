@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de l’importation par lots d’Adobe Experience Platform
+title: Présentation de l'importation par lots d'Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Présentation de l&#39;importation par lot
 
-L’API d’importation par lot vous permet d’assimiler des données dans Adobe Experience Platform sous forme de fichiers par lot. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
+L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données à l&#39;Adobe Experience Platform sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 
 La référence [de l&#39;API d&#39;](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) administration de données fournit des informations supplémentaires sur ces appels d&#39;API.
 
@@ -24,7 +24,7 @@ Le diagramme suivant décrit le processus d&#39;assimilation par lot :
 
 ## Utilisation de l’API
 
-L’API d’importation de données vous permet d’assimiler des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à assimiler en une seule unité) dans la plate-forme d’expérience en trois étapes de base :
+L&#39;API d&#39;importation de données vous permet d&#39;assimiler des données sous forme de lots (une unité de données composée d&#39;un ou plusieurs fichiers à assimiler en une seule unité) dans l&#39;Experience Platform en trois étapes de base :
 
 1. Créez un lot.
 2. Téléchargez des fichiers vers un jeu de données spécifié qui correspond au schéma XDM des données.
@@ -47,21 +47,23 @@ Pour télécharger un fichier de plus de 512 Mo, le fichier doit être divisé e
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -126,7 +128,9 @@ Après avoir créé un nouveau lot pour le transfert, les fichiers peuvent être
 
 Vous pouvez télécharger des fichiers à l’aide de l’API **de téléchargement de** petits fichiers. Toutefois, si vos fichiers sont trop volumineux et que la limite de passerelle est dépassée (délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes, par exemple), vous pouvez passer à l’API **de téléchargement de fichiers** volumineux. Cette API télécharge le fichier en blocs et collecte les données ensemble à l’aide de l’appel API **de téléchargement de fichier** volumineux.
 
->[!NOTE] Les exemples ci-dessous utilisent le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) . Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](./api-overview.md)assimilation par lot.
+>[!NOTE]
+>
+>Les exemples ci-dessous utilisent le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) . Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](./api-overview.md)assimilation par lot.
 
 ### Téléchargement de petits fichiers
 
@@ -387,7 +391,7 @@ Le `"status"` champ indique l&#39;état actuel du lot demandé. Les lots peuvent
 | Abandonné | Une opération d&#39;abandon a été **explicitement** appelée (via l&#39;API de réception par lot) pour le lot spécifié. Une fois le lot **chargé** , il ne peut plus être abandonné. |
 | Actif | Le lot a été promu avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec **Success**. |
 | Supprimé | Les données du lot ont été complètement supprimées. |
-| En échec | Etat de terminal résultant d’une configuration incorrecte et/ou de données incorrectes. Les données d&#39;un lot en panne **ne s&#39;affichent pas** . Cet état peut être utilisé de manière interchangeable avec **Échec**. |
+| Échec | Etat de terminal résultant d’une configuration incorrecte et/ou de données incorrectes. Les données d&#39;un lot en panne **ne s&#39;affichent pas** . Cet état peut être utilisé de manière interchangeable avec **Échec**. |
 | Inactif | La promotion du lot a réussi, mais a été annulée ou a expiré. Le lot n&#39;est plus disponible pour la consommation en aval. |
 | Chargé | Les données du lot sont terminées et le lot est prêt pour la promotion. |
 | Chargement | Les données de ce lot sont en cours de transfert et le lot **n&#39;est pas** actuellement prêt à être promu. |
