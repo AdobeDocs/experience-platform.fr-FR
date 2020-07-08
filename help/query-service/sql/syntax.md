@@ -4,7 +4,7 @@ solution: Experience Platform
 title: syntaxe SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: f5bc9beb59e83b0411d98d901d5055122a124d07
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 1%
@@ -300,7 +300,7 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 Cette commande affiche le plan d&#39;exécution généré par le planificateur PostgreSQL pour l&#39;instruction fournie. Le plan d&#39;exécution montre comment les tables référencées par l&#39;instruction seront analysées — par analyse séquentielle simple, analyse d&#39;index, etc. — et si plusieurs tables sont référencées, quels algorithmes de jointure sont utilisés pour rassembler les lignes requises de chaque table d&#39;entrée.
 
-La partie la plus critique de l&#39;affichage est l&#39;estimation du coût d&#39;exécution des instructions, qui est l&#39;estimation du planificateur quant au temps nécessaire à l&#39;exécution de la déclaration (mesuré en unités de coût arbitraires, mais habituellement en moyennes récupérations de pages de disque). En fait, deux nombres sont affichés : le coût de début avant la première ligne peut être renvoyé et le coût total pour renvoyer toutes les lignes. Pour la plupart des requêtes, c&#39;est le coût total qui importe, mais dans les contextes tels qu&#39;une sous-requête dans EXISTS, le planificateur choisit le coût de début le plus faible au lieu du coût total le plus faible (parce que l&#39;exécuteur s&#39;arrête après avoir obtenu une ligne, de toute façon). En outre, si vous limitez le nombre de lignes à renvoyer avec une `LIMIT` clause, le planificateur effectue une interpolation appropriée entre les coûts du point de terminaison pour estimer quel plan est vraiment le moins cher.
+La partie la plus critique de l&#39;affichage est l&#39;estimation du coût d&#39;exécution des instructions, qui est l&#39;estimation du planificateur quant au temps nécessaire à l&#39;exécution de la déclaration (mesuré en unités de coût arbitraires, mais habituellement moyennes récupérations de pages de disque). En fait, deux nombres sont affichés : le coût de début avant la première ligne peut être renvoyé et le coût total pour renvoyer toutes les lignes. Pour la plupart des requêtes, c&#39;est le coût total qui importe, mais dans les contextes tels qu&#39;une sous-requête dans EXISTS, le planificateur choisit le coût de début le plus faible au lieu du coût total le plus faible (parce que l&#39;exécuteur s&#39;arrête après avoir obtenu une ligne, de toute façon). En outre, si vous limitez le nombre de lignes à renvoyer avec une `LIMIT` clause, le planificateur effectue une interpolation appropriée entre les coûts du point de terminaison pour estimer quel plan est vraiment le moins cher.
 
 L&#39; `ANALYZE` option entraîne l&#39;exécution de l&#39;instruction, et non pas seulement la planification. Ensuite, des statistiques d&#39;exécution réelles sont ajoutées à l&#39;affichage, y compris le temps total passé en revue dans chaque noeud de plan (en millisecondes) et le nombre total de lignes renvoyées. Cela est utile pour voir si les estimations du planificateur sont proches de la réalité.
 
@@ -320,7 +320,9 @@ where option can be one of:
 - `FORMAT`: Spécifiez le format de sortie, qui peut être TEXT, XML, JSON ou YAML. La sortie non textuelle contient les mêmes informations que le format de sortie textuelle, mais est plus facile à analyser pour les programmes. Ce paramètre est défini par défaut sur `TEXT`.
 - `statement`: Toute `SELECT`instruction, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`,  ou  dont vous souhaitez afficher le plan d’exécution.`CREATE TABLE AS``CREATE MATERIALIZED VIEW AS`
 
->[!IMPORTANT] Gardez à l’esprit que l’instruction est réellement exécutée lorsque l’ `ANALYZE` option est utilisée. Bien que `EXPLAIN` ignore toute sortie qu&#39;un `SELECT` utilisateur renvoie, d&#39;autres effets secondaires de l&#39;instruction se produisent comme d&#39;habitude.
+>[!IMPORTANT]
+>
+>Gardez à l’esprit que l’instruction est réellement exécutée lorsque l’ `ANALYZE` option est utilisée. Bien que `EXPLAIN` ignore toute sortie qu&#39;un `SELECT` utilisateur renvoie, d&#39;autres effets secondaires de l&#39;instruction se produisent comme d&#39;habitude.
 
 #### Exemple
 
