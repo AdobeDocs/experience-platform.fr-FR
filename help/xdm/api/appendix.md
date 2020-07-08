@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Annexe destinée aux développeurs du registre des Schémas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7c87cc86bfc5017ec5c712d05e39be5c14a7147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1296'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Ce document fournit des informations supplémentaires sur l&#39;utilisation de l
 
 Le modèle de données d’expérience (XDM) est une spécification publiquement documentée, pilotée par Adobe pour améliorer l’interopérabilité, l’expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions XDM formelles dans un projet [open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites en Notation standard XDM, en utilisant JSON-LD (Notation d’objet JavaScript pour les données liées) et le Schéma JSON comme grammaire pour la définition de schémas XDM.
 
-Lorsque vous consultez des définitions XDM formelles dans le référentiel public, vous pouvez constater que XDM standard diffère de ce que vous voyez dans Adobe Experience Platform. Ce que vous voyez dans la plate-forme d’expérience s’appelle le mode de compatibilité, et il fournit une mise en correspondance simple entre XDM standard et la façon dont il est utilisé dans la plate-forme.
+Lorsque vous consultez des définitions XDM formelles dans le référentiel public, vous pouvez constater que XDM standard diffère de ce que vous voyez dans l&#39;Adobe Experience Platform. Ce que vous voyez en Experience Platform s&#39;appelle le Mode de compatibilité, et il fournit une mise en correspondance simple entre le XDM standard et la façon dont il est utilisé dans Platform.
 
 ### Fonctionnement du mode de compatibilité
 
@@ -49,21 +49,23 @@ Vous trouverez ci-dessous une comparaison côte à côte montrant les champs li�
 
 ### Pourquoi le mode de compatibilité est-il nécessaire ?
 
-Adobe Experience Platform est conçu pour fonctionner avec plusieurs solutions et services, chacun avec ses propres défis et limitations techniques (par exemple, la manière dont certaines technologies gèrent des caractères spéciaux). Afin de surmonter ces limitations, le mode de compatibilité a été développé.
+L&#39;Adobe Experience Platform est conçu pour fonctionner avec plusieurs solutions et services, chacun avec ses propres défis techniques et limites (par exemple, comment certaines technologies gèrent des caractères spéciaux). Afin de surmonter ces limitations, le mode de compatibilité a été développé.
 
 La plupart des services Experience Platform, y compris Catalog, Data Lake et le Profil client en temps réel, utilisent le mode de compatibilité plutôt que le mode XDM standard. L&#39;API Schéma Registry utilise également le mode de compatibilité, et les exemples de ce document sont tous affichés à l&#39;aide du mode de compatibilité.
 
-Il est intéressant de savoir qu’un mappage a lieu entre XDM standard et la façon dont il est opérationnel dans Experience Platform, mais il ne devrait pas affecter votre utilisation des services de la plate-forme.
+Il est intéressant de savoir qu&#39;un mappage a lieu entre XDM standard et la façon dont il est mis en oeuvre en Experience Platform, mais il ne devrait pas affecter votre utilisation des services Platform.
 
 Le projet open source est à votre disposition, mais lorsqu&#39;il s&#39;agit d&#39;interagir avec des ressources via le Registre des Schémas, les exemples d&#39;API de ce document fournissent les meilleures pratiques que vous devez connaître et suivre.
 
 ## Définition des types de champs XDM dans l&#39;API {#field-types}
 
-Les schémas XDM sont définis à l’aide des normes de Schéma JSON et des types de champs de base, avec des contraintes supplémentaires pour les noms de champs appliqués par Experience Platform. XDM vous permet de définir d&#39;autres types de champs en utilisant des formats et des contraintes facultatives. Les types de champ XDM sont exposés par l&#39;attribut de niveau champ `meta:xdmType`.
+Les schémas XDM sont définis à l’aide des normes de Schéma JSON et des types de champs de base, avec des contraintes supplémentaires pour les noms de champs appliqués par l’Experience Platform. XDM vous permet de définir d&#39;autres types de champs en utilisant des formats et des contraintes facultatives. Les types de champ XDM sont exposés par l&#39;attribut de niveau champ `meta:xdmType`.
 
->[!NOTE] `meta:xdmType` est une valeur générée par le système. Par conséquent, vous n’êtes pas tenu d’ajouter cette propriété au fichier JSON pour votre champ. Il est recommandé d’utiliser des types de Schéma JSON (chaînes et entiers, par exemple) avec les contraintes min/max appropriées, telles que définies dans le tableau ci-dessous.
+>[!NOTE]
+>
+>`meta:xdmType` est une valeur générée par le système. Par conséquent, vous n’êtes pas tenu d’ajouter cette propriété au fichier JSON pour votre champ. Il est recommandé d’utiliser des types de Schéma JSON (chaînes et entiers, par exemple) avec les contraintes min/max appropriées, telles que définies dans le tableau ci-dessous.
 
-Le tableau suivant décrit la mise en forme appropriée pour définir les types de champs scalaires et les types de champs plus spécifiques à l’aide des propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la documentation [du Schéma](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
+Le tableau suivant décrit la mise en forme appropriée pour définir des types de champs scalaires et des types de champs plus spécifiques à l’aide de propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la documentation [du Schéma](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
 
 Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre requête d’API.
 
