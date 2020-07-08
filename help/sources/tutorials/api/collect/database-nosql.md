@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 84ea3e45a3db749359f3ce4a0ea25429eee8bb66
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1522'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -323,7 +323,9 @@ curl -X POST \
 | `params.dataSetId` | ID du jeu de données de cible. |
 | `connectionSpec.id` | ID de spécification de connexion de votre base de données tierce. |
 
->[!NOTE] Lors de la création d&#39;une connexion de cible, veillez à utiliser la valeur de connexion de base du jeu de données pour la connexion de base `id` plutôt que la connexion de base de votre connecteur source tiers.
+>[!NOTE]
+>
+>Lors de la création d&#39;une connexion de cible, veillez à utiliser la valeur de connexion de base du jeu de données pour la connexion de base `id` plutôt que la connexion de base de votre connecteur source tiers.
 
 **Réponse**
 
