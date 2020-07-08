@@ -4,10 +4,10 @@ solution: Experience Platform
 title: espaces de nommage Listes disponibles
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -35,7 +35,9 @@ curl -X GET \
 
 La réponse comprend un tableau d’objets, chaque objet représentant un espace de nommage disponible. Les Espaces de nommage dont la valeur &quot;[!UICONTROL personnalisée]&quot; est &quot;[!UICONTROL false]&quot; sont des espaces de nommage standard, tandis que ceux dont la valeur &quot;[!UICONTROL personnalisée]&quot; est &quot;[!UICONTROL true&quot; sont des espaces de nommage créés par votre entreprise.]
 
->[!NOTE] Cette réponse a été tronquée pour l&#39;espace.
+>[!NOTE]
+>
+>Cette réponse a été tronquée pour l&#39;espace.
 
 ```json
 [
