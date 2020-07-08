@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Se connecter avec RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Se connecter avec RStudio
 
-Ce document décrit les étapes nécessaires pour connecter R Studio à Adobe Experience Platform Requête Service.
+Ce document traverse les étapes pour connecter R Studio à Adobe Experience Platform Requête Service.
 
 Après avoir installé RStudio, sur l&#39;écran *Console* qui s&#39;affiche, vous devrez d&#39;abord préparer votre script R pour utiliser PostgreSQL.
 
@@ -43,7 +43,9 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` et `{PORT_NUMBER}` | Point de terminaison hôte et son port pour Requête Service. |
 | `{USERNAME}` et `{PASSWORD}` | Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur prend la forme de `ORG_ID@AdobeOrg`. |
 
->[!NOTE] Pour plus d&#39;informations sur la recherche de votre nom de base de données, de votre hôte, de votre port et de vos informations de connexion, consultez la page [d&#39;identification de la plate-forme](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à la plateforme, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>[!NOTE]
+>
+>Pour plus d’informations sur la recherche de votre nom de base de données, de votre hôte, de votre port et de vos informations d’identification de connexion, consultez la page [d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
 
 ## Étapes suivantes
 
