@@ -4,42 +4,44 @@ solution: Experience Platform
 title: Validation de l’assimilation en flux continu
 topic: overview
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '842'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
 
 # Validation de l’assimilation en flux continu
 
-L’assimilation en flux continu vous permet de transférer vos données vers Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’assimilation en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.
+L’assimilation en flux continu vous permet de transférer vos données vers l’Adobe Experience Platform à l’aide de points de terminaison en flux continu en temps réel. Les API d’assimilation en flux continu prennent en charge deux modes de validation : synchrone et asynchrone.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
-- [Ingestion](../streaming-ingestion/overview.md)en flux continu : L’une des méthodes par lesquelles les données peuvent être envoyées à la plate-forme d’expérience.
+- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+- [Ingestion](../streaming-ingestion/overview.md)en flux continu : L&#39;une des méthodes par lesquelles les données peuvent être envoyées à l&#39;Experience Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience, y compris celles appartenant au Registre des Schémas, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources en Experience Platform, y compris celles appartenant au Registre des Schémas, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -164,7 +166,9 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID} \
 | --------- | ----------- |
 | `{JSON_PAYLOAD}` | Corps JSON des données que vous souhaitez importer. |
 
->[!NOTE] Aucun paramètre de requête supplémentaire n’est requis, car la validation asynchrone est activée par défaut.
+>[!NOTE]
+>
+>Aucun paramètre de requête supplémentaire n’est requis, car la validation asynchrone est activée par défaut.
 
 **Réponse**
 
