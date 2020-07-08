@@ -1,34 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Champ Mapping de ciblage
+title: Champ de mapping de ciblage
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '427'
-ht-degree: 0%
+ht-degree: 99%
 
 ---
 
 
 # Champs de Mapping de ciblage
 
-Adobe Experience Platform vous permet d’assimiler des données de Cible Adobe par le biais du connecteur source de la Cible. Lors de l’utilisation du connecteur, toutes les données des champs de Cible doivent être mises en correspondance avec les champs du modèle de données d’ [expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
+Adobe Experience Platform vous permet d’ingérer des données Adobe Target par le biais du connecteur source cible. Lors de l’utilisation du connecteur, toutes les données des champs cibles doivent être mappées avec les champs de [modèle de données d’expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
 
-Le tableau suivant décrit les champs d’un schéma de Événement d’expérience (champ *ExpérienceXDM) et les champs de Cible correspondants auxquels ils doivent être associés (champ* Demande de ** Cible). Des notes supplémentaires pour certains mappages sont également fournies.
+Le tableau suivant décrit les champs d’un schéma d’événement d’expérience (*champ XDM ExperienceEvent*) et les champs cibles correspondants auxquels ils doivent être mappés (*champ de requête cible*). Des notes supplémentaires pour certains mappages sont également fournies.
 
->[!NOTE] Veuillez faire défiler la page vers la gauche/vers la droite pour vue du contenu complet du tableau.
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
-| Champ XDM ExperienceEvent | Champ Demande de Cible | Notes |
+| Champ XDM ExperienceEvent | Champ de requête cible | Notes |
 | ------------------------- | -------------------- | ----- |
-| **`id`** | Un identifiant de demande unique |
-| **`dataSource`** |  | Configuré sur &quot;1&quot; pour tous les clients. |
-| `dataSource._id` | Valeur générée par le système qui ne peut pas être transmise avec la requête. | ID unique de cette source de données. Cela serait fourni par la personne ou le système qui a créé la source de données. |
-| `dataSource.code` | Valeur générée par le système qui ne peut pas être transmise avec la requête. | raccourci vers le @id complet. Au moins un des codes ou @id peut être utilisé. Il arrive que ce code soit appelé code d’intégration de la source de données. |
-| `dataSource.tags` | Valeur générée par le système qui ne peut pas être transmise avec la requête. | Les balises sont utilisées pour indiquer comment les alias représentés par une source de données donnée doivent être interprétés par les applications utilisant ces alias.<br><br>Exemples :<br><ul><li>`isAVID`: Sources de données représentant les identifiants des visiteurs Analytics.</li><li>`isCRSKey`: Sources de données représentant des alias qui doivent être utilisés comme clés dans CRS.</li></ul>Les balises sont définies lors de la création de la source de données, mais elles sont également incluses dans les messages de pipeline lors du référencement d’une source de données donnée. |
-| **`timestamp`** | Horodatage Événement |
-| **`channel`** | `context.channel` | Fonctionne uniquement avec la diffusion de vue. Les options sont &quot;web&quot; et &quot;mobile&quot;, &quot;web&quot; étant la valeur par défaut. |
+| **`id`** | Un identifiant de requête unique |
+| **`dataSource`** |  | Configuré sur « 1 » pour tous les clients. |
+| `dataSource._id` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | L’identifiant unique de cette source de données. Fourni par la personne ou le système qui a créé la source de données. |
+| `dataSource.code` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Un raccourci vers la valeur @id complète. Vous pouvez utiliser au moins un code ou une valeur @id. Parfois, ce code est appelé code d’intégration de la source de données. |
+| `dataSource.tags` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Les balises servent à indiquer la façon dont les alias représentés par une source de données spécifique doivent être interprétés par les applications utilisant ces alias.<br><br>Exemples :<br><ul><li>`isAVID` : sources de données représentant les identifiants de visiteurs Analytics.</li><li>`isCRSKey` : sources de données représentant des alias qui doivent être utilisés comme clés dans CRS.</li></ul>Les balises sont définies lors de la création de la source de données, mais elles sont également incluses dans les messages de pipeline lors du référencement d’une source de données spécifique. |
+| **`timestamp`** | Date et heure d’événement |
+| **`channel`** | `context.channel` | Fonctionne uniquement avec la diffusion de l’affichage. « web » et « mobile » sont les options disponibles, « web » étant la valeur par défaut. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
 | `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
@@ -41,7 +43,7 @@ Le tableau suivant décrit les champs d’un schéma de Événement d’expérie
 | `environment.viewportHeight` | `mboxRequest.screenHeight` |
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
-| `environment.carrier` | Le nom de l’opérateur de téléphonie mobile a été résolu en fonction de l’adresse IP de la demande. |
+| `environment.carrier` | Le nom de l’opérateur de téléphonie mobile résolu en fonction de l’adresse IP de la requête. |
 | `environment.ipV4` | `mboxRequest.ipAddress` (si au format V4) |
 | `environment.ipV6` | `mboxRequest.ipAddress` (si au format V6) |
 | **`experience`** |
@@ -49,17 +51,17 @@ Le tableau suivant décrit les champs d’un schéma de Événement d’expérie
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Mappage interne des Cibles pour les environnements définis par le client (tels que dev, qa ou prod). |
-| `experience.target.supplementalDataID` | Identifiant utilisé pour associer des événements de Cible à des événements Analytics |
+| `experience.target.environmentID` | Mappage interne de la cible pour les environnements définis par le client (de développement, de contrôle qualité ou de production, par exemple). |
+| `experience.target.supplementalDataID` | Identifiant utilisé pour rassembler les événements cibles et les événements Analytics |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
-| `experience.target.activities` | Liste (tableau) des activités pour lesquelles le visiteur a été qualifié |
-| `experience.target.activities[i].activityID` | ID d’une activité donnée pour laquelle le visiteur s’est qualifié |
-| `experience.target.activities[i].version` | La version de toute activité donnée pour laquelle le visiteur s’est qualifié |
-| `experience.target.activities[i].activityEvents` | Inclut les détails des événements d’activité que l’utilisateur a atteints avec ce événement. |
+| `experience.target.activities` | Liste (tableau) des activités pour lesquelles le visiteur a rempli les critères |
+| `experience.target.activities[i].activityID` | L’identifiant d’une activité pour laquelle le visiteur a rempli les critères |
+| `experience.target.activities[i].version` | La version d’une activité pour laquelle le visiteur a rempli les critères |
+| `experience.target.activities[i].activityEvents` | Inclut les détails des événements d’activité auxquels l’utilisateur a accédé grâce à cet événement. |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
-| `device.type` | L’une des propriétés suivantes de `deviceAtlas` (ou NULL) : <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
+| `device.type` | L’une des propriétés suivantes de `deviceAtlas` (ou valeur nulle) : <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
 | `device.typeID` | (chaîne vide) |
 | `device.manufacturer` | `deviceAtlas.manufacturer` |
 | `device.model` | `deviceAtlas.model` |
@@ -69,13 +71,13 @@ Le tableau suivant décrit les champs d’un schéma de Événement d’expérie
 | `device.colorDepth` | `deviceAtlas.displayColorDepth` |
 | **`placeContext`** |
 | `placeContext.geo.id` | UUID aléatoire (obligatoire) |
-| `placeContext.geo.city` | Le nom de la ville a été résolu en fonction de l’adresse IP de la demande. |
-| `placeContext.geo.countryCode` | Code de pays résolu en fonction de l’adresse IP de la demande. |
-| `placeContext.geo.dmaId` | Code de zone de marché désignée résolu en fonction de l’adresse IP de la demande. |
-| `placeContext.geo.postalCode` | Le code postal a été résolu en fonction de l’adresse IP de la requête. |
-| `placeContext.geo.stateProvince` | Etat ou province résolu en fonction de l’adresse IP de la demande. |
+| `placeContext.geo.city` | Le nom de la ville résolu en fonction de l’adresse IP de la requête. |
+| `placeContext.geo.countryCode` | Le code pays résolu en fonction de l’adresse IP de la requête. |
+| `placeContext.geo.dmaId` | Le code régional du marché désigné résolu en fonction de l’adresse IP de la requête. |
+| `placeContext.geo.postalCode` | Le code postal résolu en fonction de l’adresse IP de la requête. |
+| `placeContext.geo.stateProvince` | La province ou l’État résolu en fonction de l’adresse IP de la requête. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Défini uniquement si les détails de la commande sont présents dans la demande. |
+| **`commerce`** |  | Défini uniquement si les informations sur la commande sont présentes dans la requête. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |
