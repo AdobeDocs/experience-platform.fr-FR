@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formation et évaluation d’un modèle (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 1%
@@ -26,8 +26,8 @@ Suivez ce [didacticiel](../../tutorials/authentication.md) pour obtenir l’auto
 Dans le didacticiel, vous devez maintenant avoir les valeurs suivantes :
 
 - `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
-- `{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.
+- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+- `{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.
 
 - Lien vers une image de Docker d&#39;un service intelligent
 
@@ -37,7 +37,9 @@ Nous allons utiliser les API pour créer une exécution d’expérience pour la 
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
->[!NOTE] Les termes &quot;Moteur&quot;, &quot;Instance&quot;, &quot;MLService&quot;, &quot;Expérience&quot; et &quot;Modèle&quot; sont appelés termes différents dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant fera correspondre les différences.
+>[!NOTE]
+>
+>Les termes &quot;Moteur&quot;, &quot;Instance&quot;, &quot;MLService&quot;, &quot;Expérience&quot; et &quot;Modèle&quot; sont appelés termes différents dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant fera correspondre les différences.
 > 
 > | Terme de l’interface utilisateur | Terme de l’API |
 > --- | ---
@@ -65,8 +67,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{JSON_PAYLOAD}`: La configuration de notre instance MLInstance. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
 
 ```JSON
@@ -120,7 +122,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] Dans le `{JSON_PAYLOAD}`tableau, nous définissons les paramètres utilisés pour la formation et le score dans la `tasks` baie. L&#39;ID `{ENGINE_ID}` est celui du moteur que vous souhaitez utiliser et le `tag` champ est un paramètre facultatif utilisé pour identifier l&#39;instance.
+>[!NOTE]
+>
+>Dans le `{JSON_PAYLOAD}`tableau, nous définissons les paramètres utilisés pour la formation et le score dans la `tasks` baie. L&#39;ID `{ENGINE_ID}` est celui du moteur que vous souhaitez utiliser et le `tag` champ est un paramètre facultatif utilisé pour identifier l&#39;instance.
 
 La réponse contiendra le `{INSTANCE_ID}` qui représente l&#39;instance MLInstance créée. Il est possible de créer plusieurs instances MLInstances de modèles avec des configurations différentes.
 
@@ -174,9 +178,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{JSON_PAYLOAD}`: Objet d’expérience créé. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
 
 ```JSON
@@ -230,9 +234,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{JSON_PAYLOAD}`: Données à publier. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
 
 ```JSON
@@ -318,9 +322,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: ID correspondant à l’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre expérience.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{JSON_PAYLOAD}`: Pour créer une session de formation, vous devez inclure les éléments suivants dans le corps :
 
 ```JSON
@@ -389,8 +393,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: ID représentant l’expérience.\
 `{EXPERIMENT_RUN_ID}`: ID représentant l’exécution de l’expérience.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.
 
 **Réponse**
 
@@ -452,7 +456,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: ID correspondant à l’exécution d’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre exécution d’expérience.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
 
 La réponse représente le modèle formé qui a été créé.
 
@@ -486,7 +490,7 @@ La réponse représente le modèle formé qui a été créé.
 
 ### Arrêter et supprimer une expérience planifiée
 
-Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander une requête DELETE à la variable `{EXPERIMENT_ID}`
+Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander à un DELETE de répondre à la demande de la variable `{EXPERIMENT_ID}`
 
 **Requête**
 
@@ -499,9 +503,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  ID correspondant à l’expérience.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
 
->[!NOTE] L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
+>[!NOTE]
+>
+>L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
 
 Voici la réponse vous informant que l&#39;expérience a bien été supprimée.
 
