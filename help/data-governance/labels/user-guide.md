@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des étiquettes d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 0%
@@ -26,7 +26,9 @@ La section suivante décrit la procédure à suivre pour créer un nouveau jeu d
 
 ### Créer un jeu de données
 
->[!NOTE] Dans cet exemple, un jeu de données est créé à l’aide d’un schéma de modèle de données d’expérience (XDM) préconfiguré. Pour plus d&#39;informations sur les schémas XDM, consultez la présentation [et les](../../xdm/home.md) bases de la composition [des schémas de](../../xdm/schema/composition.md)XDM System.
+>[!NOTE]
+>
+>Dans cet exemple, un jeu de données est créé à l’aide d’un schéma de modèle de données d’expérience (XDM) préconfiguré. Pour plus d&#39;informations sur les schémas XDM, consultez la présentation [et les](../../xdm/home.md) bases de la composition [des schémas de](../../xdm/schema/composition.md)XDM System.
 
 Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l’espace de travail _[!UICONTROL DataSet]_.
 
