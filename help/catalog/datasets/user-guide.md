@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: 7d3f64db787aebe46179c0e08ad01878b0ad2877
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 1%
@@ -14,22 +14,22 @@ ht-degree: 1%
 
 # Guide de l’utilisateur des jeux de données
 
-Ce guide d’utilisateur fournit des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur d’Adobe Experience Platform.
+Ce guide d&#39;utilisation fournit des instructions sur l&#39;exécution d&#39;actions courantes lors de l&#39;utilisation de jeux de données dans l&#39;interface utilisateur d&#39;Adobe Experience Platform.
 
 ## Prise en main
 
-Ce guide d’utilisation nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce guide d&#39;utilisation nécessite une bonne compréhension des composants suivants de l&#39;Adobe Experience Platform :
 
-* [Jeu de données](overview.md): concept d’enregistrement et de gestion pour la persistance des données dans la plateforme d’expérience.
-* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+* [Jeu de données](overview.md): enregistrement et concept de gestion pour la persistance des données dans l’Experience Platform.
+* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
-   * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’éditeur de Schéma dans l’interface utilisateur de la plate-forme.
+   * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’éditeur de Schéma dans l’interface utilisateur Platform.
 * [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [Gouvernance](../../data-governance/home.md)des données : Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
 
 ## Jeu de données de Vue
 
-Dans l’interface utilisateur de la plate-forme d’expérience, cliquez sur **Jeu de données** dans le volet de navigation de gauche pour ouvrir le tableau de bord *Jeu de données* . Le tableau de bord liste tous les jeux de données disponibles pour votre organisation. Les détails s&#39;affichent pour chaque jeu de données répertorié, y compris son nom, le schéma auquel le jeu de données adhère et l&#39;état de l&#39;exécution d&#39;assimilation la plus récente.
+Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Datasets** dans le volet de navigation de gauche pour ouvrir le tableau de bord *Datasets* . Le tableau de bord liste tous les jeux de données disponibles pour votre organisation. Les détails s&#39;affichent pour chaque jeu de données répertorié, y compris son nom, le schéma auquel le jeu de données adhère et l&#39;état de l&#39;exécution d&#39;assimilation la plus récente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -48,7 +48,7 @@ Dans la fenêtre prévisualisation, la vue hiérarchique du schéma du jeu de do
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Pour des méthodes plus robustes d’accès à vos données, Experience Platform fournit des services en aval tels que Requête Service et JupyterLab pour explorer et analyser les données. Pour plus d’informations, voir les documents suivants :
+Pour des méthodes plus robustes d&#39;accès à vos données, Experience Platform fournit des services en aval tels que Requête Service et JupyterLab pour explorer et analyser les données. Pour plus d’informations, voir les documents suivants :
 
 * [Présentation du service Requête](../../query-service/home.md)
 * [Guide de l&#39;utilisateur de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -88,9 +88,11 @@ The *Configure* step appears. Fournissez un nom et une description facultative a
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-L’étape *Ajouter données* s’affiche. Téléchargez le fichier CSV en le faisant glisser vers le centre de l’écran ou en cliquant sur **Parcourir** pour explorer le répertoire de vos fichiers. La taille du fichier peut atteindre dix gigaoctets. Une fois le fichier CSV téléchargé, cliquez sur **Enregistrer** pour créer le jeu de données.
+L’étape *Ajouter les données* s’affiche. Téléchargez le fichier CSV en le faisant glisser vers le centre de l’écran ou en cliquant sur **Parcourir** pour explorer le répertoire de vos fichiers. La taille du fichier peut atteindre dix gigaoctets. Une fois le fichier CSV téléchargé, cliquez sur **Enregistrer** pour créer le jeu de données.
 
->[!NOTE] Les noms de colonnes CSV doivent être débuts de caractères alphanumériques et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.
+>[!NOTE]
+>
+>Les noms de colonnes CSV doivent être débuts de caractères alphanumériques et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
@@ -111,13 +113,15 @@ Si un jeu de données contient déjà des données et est ensuite activé pour l
 
 ## Gérer et appliquer la gouvernance des données sur un jeu de données
 
-L’étiquetage et l’application de l’utilisation des données (DULE) est le mécanisme de gouvernance des données de base pour la plateforme d’expérience. Les étiquettes DOUBLE vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données ou consultez le guide [d’utilisation des libellés d’utilisation des](../../data-governance/labels/overview.md) données pour savoir comment appliquer des libellés aux jeux de données.
+L’étiquetage et l’application de l’utilisation des données (DULE) est le mécanisme de gouvernance des données de base de l’Experience Platform. Les étiquettes DOUBLE vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données ou consultez le guide [d’utilisation des libellés d’utilisation des](../../data-governance/labels/overview.md) données pour savoir comment appliquer des libellés aux jeux de données.
 
 ## Suppression d’un jeu de données
 
 Vous pouvez supprimer un jeu de données en accédant d&#39;abord à son écran d&#39;activité *des* jeux de données. Cliquez ensuite sur **Supprimer le jeu** de données pour le supprimer.
 
->[!NOTE] Les jeux de données créés et utilisés par les applications et services Adobe (tels qu’Adobe Analytics, Adobe Audience Manager ou le service de prise de décision) ne peuvent pas être supprimés.
+>[!NOTE]
+>
+>Les jeux de données créés et utilisés par les applications et services Adobe (tels que Adobe Analytics, Adobe Audience Manager ou le service de prise de décision) ne peuvent pas être supprimés.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -131,7 +135,7 @@ Si un jeu de données est activé pour le Profil, sa suppression via l&#39;inter
 
 ## Analyse de l&#39;assimilation des données
 
-Dans l’interface utilisateur de la plate-forme d’expérience, cliquez sur **Surveillance** dans le volet de navigation de gauche. Le tableau de bord de *surveillance* vous permet de vue des états des données entrantes, que ce soit par lot ou par assimilation. Pour vue les états de lots individuels, cliquez sur *Batch end-end* ou *Streaming end-to-end*. Le tableau de bord liste toutes les exécutions d’assimilation par lot ou en flux continu, y compris celles qui ont réussi, échoué ou sont toujours en cours d’exécution. Chaque liste fournit des détails sur le lot, y compris l&#39;ID du lot, le nom du jeu de données de la cible et le nombre d&#39;enregistrements ingérés. Si le jeu de données de cible est activé pour le Profil, le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
+Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Surveillance** dans le volet de navigation de gauche. Le tableau de bord de *surveillance* vous permet de vue des états des données entrantes, que ce soit par lot ou par assimilation. Pour vue les états de lots individuels, cliquez sur *Batch end-end* ou *Streaming end-to-end*. Le tableau de bord liste toutes les exécutions d’assimilation par lot ou en flux continu, y compris celles qui ont réussi, échoué ou sont toujours en cours d’exécution. Chaque liste fournit des détails sur le lot, y compris l&#39;ID du lot, le nom du jeu de données de la cible et le nombre d&#39;enregistrements ingérés. Si le jeu de données de cible est activé pour le Profil, le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -145,7 +149,7 @@ Si vous souhaitez supprimer le lot, vous pouvez le faire en cliquant sur **Suppr
 
 ## Étapes suivantes
 
-Ce guide d’utilisateur fournit des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de la plateforme d’expérience. Pour obtenir des instructions sur l’exécution de workflows de plateforme communs impliquant des jeux de données, reportez-vous aux didacticiels suivants :
+Ce guide d’utilisateur fournit des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de l’Experience Platform. Pour obtenir des instructions sur l’exécution de workflows Platform communs impliquant des jeux de données, reportez-vous aux didacticiels suivants :
 
 * [Création d’un jeu de données à l’aide d’API](create.md)
 * [Données du jeu de données de Requête à l’aide de l’API d’accès aux données](../../data-access/home.md)
