@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1328'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -44,7 +44,9 @@ Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbo
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -149,7 +151,7 @@ Les estimations durent généralement entre 10 et 15 secondes, en commençant pa
 
 ### Création d’une tâche de prévisualisation
 
-Vous pouvez créer une tâche de prévisualisation en adressant une requête POST au point de `/preview` terminaison.
+You can create a new preview job by making a POST request to the `/preview` endpoint.
 
 **Format d’API**
 
