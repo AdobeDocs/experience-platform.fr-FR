@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Objets Liste
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -45,7 +45,9 @@ curl -X GET \
 
 Une réponse positive renvoie une liste d’objets Catalog sous la forme de paires clé-valeur, filtrée par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet Catalog en question, qui peut ensuite être utilisé dans un autre appel à la [vue de cet objet](look-up-object.md) spécifique pour plus de détails.
 
->[!NOTE] Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
+>[!NOTE]
+>
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
 
 ```json
 {
