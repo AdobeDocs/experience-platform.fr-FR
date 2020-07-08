@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur de l’API d’attribution
 topic: User guide
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -20,13 +20,13 @@ Ce document sert de guide pour l’interaction avec l’API d’attribution dans
 
 ## Création d’une instance
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents Adobe disponibles. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
 La page du service AI d’attribution s’affiche. Cette page liste les instances de service d’attribution AI et affiche des informations à leur sujet, notamment le nom de l’instance, les événements de conversion, la fréquence d’exécution de l’instance et l’état de la dernière mise à jour. Cliquez sur **Créer une instance** pour commencer.
 
-![Créer une instance](./images/user-guide/landing_page.png)
+![Création d’une instance](./images/user-guide/landing_page.png)
 
 Ensuite, la page de configuration de l’API d’attribution s’affiche, dans laquelle vous pouvez fournir des informations de base et spécifier un jeu de données pour l’instance.
 
@@ -60,7 +60,9 @@ Pour définir un événement de conversion, vous devez attribuer un nom au évé
 
 Une fois qu’un événement est sélectionné, une nouvelle liste déroulante s’affiche à droite. La deuxième liste déroulante sert à donner un contexte plus détaillé à votre événement par le biais d’opérations. Pour ce événement de conversion, l’opération par défaut *existe* .
 
->[!NOTE] Une chaîne sous votre nom *de* conversion est mise à jour au fur et à mesure que vous définissez votre événement.
+>[!NOTE]
+>
+>Une chaîne sous votre nom *de* conversion est mise à jour au fur et à mesure que vous définissez votre événement.
 
 ![aucune liste déroulante](./images/user-guide/conversion_event_1.png)
 
@@ -98,7 +100,9 @@ Pour ce point de contact, sélectionnez **égal**.
 
 Une fois qu’un opérateur pour un point de contact est sélectionné, *la saisie de la valeur* de champ est rendue disponible. Les valeurs de la liste déroulante *Saisir la valeur* de champ sont renseignées en fonction de l’opérateur et de la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’est pas renseignée dans la liste déroulante, vous pouvez la saisir manuellement. Cliquez sur la liste déroulante et sélectionnez **CLIQUEZ**.
 
->[!NOTE] Les opérateurs &quot;existe&quot; et &quot;n’existe pas&quot; ne sont pas associés à des valeurs de champ.
+>[!NOTE]
+>
+>Les opérateurs &quot;existe&quot; et &quot;n’existe pas&quot; ne sont pas associés à des valeurs de champ.
 
 ![liste déroulante des points de contact](./images/user-guide/touchpoint_dropdown.png)
 
@@ -112,7 +116,9 @@ Cliquez sur le groupe **** Ajouter pour créer d’autres champs distincts de l�
 
 ![présentation du point de contact](./images/user-guide/add_group_touchpoint.png)
 
->[!NOTE] Utilisez la chaîne située sous le nom ** du point de contact pour obtenir un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
+>[!NOTE]
+>
+>Utilisez la chaîne située sous le nom ** du point de contact pour obtenir un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -140,7 +146,9 @@ Cliquez sur la liste déroulante sous Fréquence *de* score pour sélectionner u
 
 Pour modifier l’heure de la journée à laquelle vous souhaitez que le score se produise, cliquez sur l’icône de l’horloge. Dans la nouvelle incrustation qui s’affiche, entrez l’heure de la journée à laquelle vous souhaitez que le score ait lieu. Cliquez en dehors de l’incrustation pour la fermer.
 
->[!NOTE] Chaque processus de notation peut prendre jusqu’à 24 heures.
+>[!NOTE]
+>
+>Chaque processus de notation peut prendre jusqu’à 24 heures.
 
 ![icône horloge](./images/user-guide/time_of_day.png)
 
@@ -158,7 +166,9 @@ Sélectionnez ensuite un opérateur.
 
 Enfin, tapez le code du pays dans la liste déroulante *Saisir la valeur* de champ.
 
->[!NOTE] Les codes de pays comportent deux caractères. Une liste complète est disponible ici [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Les codes de pays comportent deux caractères. Une liste complète est disponible ici [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![région](./images/user-guide/region-based.png)
 
@@ -166,7 +176,9 @@ Enfin, tapez le code du pays dans la liste déroulante *Saisir la valeur* de cha
 
 Pour vous assurer d&#39;obtenir le modèle le plus précis possible, il est important de former votre modèle à des données historiques qui représentent votre activité. Par défaut, le modèle est formé à l&#39;aide de 2 trimestres (6 mois) de données. Sélectionnez la liste déroulante pour modifier la valeur par défaut. Vous pouvez choisir de vous entraîner avec un à quatre quarts de données (3 à 12 mois).
 
->[!NOTE] Une fenêtre de formation plus courte est plus sensible aux tendances récentes, tandis qu&#39;une fenêtre de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
+>[!NOTE]
+>
+>Une fenêtre de formation plus courte est plus sensible aux tendances récentes, tandis qu&#39;une fenêtre de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
 
 ![fenêtre de formation](./images/user-guide/training_window.png)
 
