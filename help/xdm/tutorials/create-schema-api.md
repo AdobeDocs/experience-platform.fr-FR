@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API de registre de Schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2418'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -256,7 +256,9 @@ La réponse affiche le mixin nouvellement ajouté dans la `meta:extends` baie et
 
 Vous pouvez maintenant ajouter un autre mixin standard en répétant les étapes à l’aide d’un autre mixin.
 
->[!TIP] Il vaut la peine de passer en revue tous les mixins disponibles pour vous familiariser avec les champs inclus dans chacun d&#39;eux. Vous pouvez liste (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;locataire&quot;, en renvoyant uniquement les mixins dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe de Profil individuel XDM, de sorte que le Profil individuel XDM `$id` est utilisé :
+>[!TIP]
+>
+>Il vaut la peine de passer en revue tous les mixins disponibles pour vous familiariser avec les champs inclus dans chacun d&#39;eux. Vous pouvez liste (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;locataire&quot;, en renvoyant uniquement les mixins dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe de Profil individuel XDM, de sorte que le Profil individuel XDM `$id` est utilisé :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -991,7 +993,9 @@ curl -X POST \
       }'
 ```
 
->[!NOTE] Vous pouvez liste les valeurs &quot;xdm:espace de nommage&quot; disponibles ou en créer de nouvelles, à l’aide de l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identity Service. La valeur de &quot;xdm:property&quot; peut être &quot;xdm:code&quot; ou &quot;xdm:id&quot;, selon le &quot;xdm:espace de nommage&quot; utilisé.
+>[!NOTE]
+>
+>Vous pouvez liste les valeurs &quot;xdm:espace de nommage&quot; disponibles ou en créer de nouvelles, à l’aide de l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)Identity Service. La valeur de &quot;xdm:property&quot; peut être &quot;xdm:code&quot; ou &quot;xdm:id&quot;, selon le &quot;xdm:espace de nommage&quot; utilisé.
 
 **Réponse**
 
