@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Définir une relation entre deux schémas à l'aide de l'API de registre de Schéma
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 7e867ee12578f599c0c596decff126420a9aca01
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Définir une relation entre deux schémas à l&#39;aide de l&#39;API de registre de Schéma
 
 
-La capacité de comprendre les relations entre vos clients et leurs interactions avec votre marque sur différents canaux est un élément important d’Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas de modèle de données d’expérience (XDM) vous permet d’obtenir des informations complexes sur vos données client.
+La capacité de comprendre les relations entre vos clients et leurs interactions avec votre marque sur différents canaux est un élément important de l&#39;Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas de modèle de données d’expérience (XDM) vous permet d’obtenir des informations complexes sur vos données client.
 
 Ce document fournit un didacticiel pour la définition d&#39;une relation de type &quot;un à un&quot; entre deux schémas définis par votre organisation à l&#39;aide de l&#39;API [de registre des](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schémas.
 
@@ -23,10 +23,10 @@ Ce document fournit un didacticiel pour la définition d&#39;une relation de typ
 
 Ce didacticiel nécessite une bonne compréhension du modèle de données d’expérience (XDM) et du système XDM. Avant de commencer ce didacticiel, consultez la documentation suivante :
 
-* [Système XDM dans la plate-forme](../home.md)d’expérience : Présentation de XDM et de son implémentation dans la plateforme d’expérience.
+* [Système XDM en Experience Platform](../home.md): Présentation de XDM et de son implémentation en Experience Platform.
    * [Principes de base de la composition](../schema/composition.md)des schémas : Présentation des blocs de construction des schémas XDM.
 * [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API de registre de Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
 
@@ -56,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] L’en-tête Accepter `application/vnd.adobe.xed-id+json` renvoie uniquement les titres, les ID et les versions des schémas résultants.
+>[!NOTE]
+>
+>L’en-tête Accepter `application/vnd.adobe.xed-id+json` renvoie uniquement les titres, les ID et les versions des schémas résultants.
 
 **Réponse**
 
@@ -104,7 +106,9 @@ Enregistrez les `$id` valeurs des deux schémas pour lesquels vous souhaitez dé
 
 Dans le registre des Schémas, les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables SQL : un champ de l’schéma source fait référence à un champ d’un schéma de destination. Lors de la définition d’une relation, chaque schéma doit disposer d’un champ dédié à utiliser comme référence à l’autre schéma.
 
->[!IMPORTANT] Si les schémas doivent être activés pour une utilisation dans le Profil [client en temps](../../profile/home.md)réel, le champ de référence du schéma de destination doit être son identité **** principale. Ce didacticiel vous explique plus en détail ce point.
+>[!IMPORTANT]
+>
+>Si les schémas doivent être activés pour une utilisation dans le Profil [client en temps](../../profile/home.md)réel, le champ de référence du schéma de destination doit être son identité **** principale. Ce didacticiel vous explique plus en détail ce point.
 
 Si l’un des schémas n’a pas de champ à cet effet, vous devrez peut-être créer un mixin avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit avoir la `type` valeur &quot;string&quot;.
 
@@ -112,7 +116,7 @@ Pour les besoins de ce didacticiel, le schéma de destination &quot;Hôtels&quot
 
 ### Créer un nouveau mixin
 
-Pour ajouter un nouveau champ à un schéma, il doit d’abord être défini dans un mixin. Vous pouvez créer un nouveau mixin en envoyant une requête POST au point de `/tenant/mixins` terminaison.
+Pour ajouter un nouveau champ à un schéma, il doit d’abord être défini dans un mixin. You can create a new mixin by making a POST request to the `/tenant/mixins` endpoint.
 
 **Format d’API**
 
@@ -326,7 +330,9 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
 
 ## Définition des champs d&#39;identité principaux pour les deux schémas
 
->[!NOTE] Cette étape n’est requise que pour les schémas qui seront activés pour une utilisation dans le Profil [client en temps](../../profile/home.md)réel. Si vous ne souhaitez pas que l&#39;un ou l&#39;autre schéma participe à une union, ou si vos schémas disposent déjà d&#39;identités primaires définies, vous pouvez passer à l&#39;étape suivante de [création d&#39;un descripteur](#create-descriptor) d&#39;identité de référence pour le schéma de destination.
+>[!NOTE]
+>
+>Cette étape n’est requise que pour les schémas qui seront activés pour une utilisation dans le Profil [client en temps](../../profile/home.md)réel. Si vous ne souhaitez pas que l&#39;un ou l&#39;autre schéma participe à une union, ou si vos schémas disposent déjà d&#39;identités primaires définies, vous pouvez passer à l&#39;étape suivante de [création d&#39;un descripteur](#create-descriptor) d&#39;identité de référence pour le schéma de destination.
 
 Pour que les schémas puissent être activés dans le Profil client en temps réel, une identité principale doit être définie. En outre, le schéma de destination d&#39;une relation doit utiliser son identité principale comme champ de référence.
 
@@ -446,7 +452,7 @@ Une réponse réussie renvoie les détails du nouveau descripteur de référence
 
 ## Créer un descripteur de relation {#create-descriptor}
 
-Les descripteurs de relation établissent une relation individuelle entre un schéma source et un schéma de destination. Vous pouvez créer un nouveau descripteur de relation en envoyant une requête POST au point de `/tenant/descriptors` terminaison.
+Les descripteurs de relation établissent une relation individuelle entre un schéma source et un schéma de destination. You can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
 
 **Format d’API**
 
