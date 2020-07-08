@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Appliquer la conformité à l’utilisation des données pour les segments d’audience
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 97ba7aeb8a67735bd65af372fbcba5e71aee6aae
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1372'
 ht-degree: 2%
@@ -18,36 +18,38 @@ Ce didacticiel décrit les étapes à suivre pour appliquer la conformité à l�
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants d’Adobe Experience Platform :
+Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
 
-- [Profil](../../profile/home.md)client en temps réel : Le Profil client en temps réel est un magasin d’entités de recherche générique qui est utilisé pour gérer les données du modèle de données d’expérience (XDM) dans la plate-forme. Le Profil fusionne les données dans divers actifs de données d’entreprise et permet d’y accéder dans une présentation unifiée.
+- [Profil](../../profile/home.md)client en temps réel : Le Profil client en temps réel est un magasin d’entités de recherche générique qui est utilisé pour gérer les données du modèle de données d’expérience (XDM) dans Platform. Le Profil fusionne les données dans divers actifs de données d’entreprise et permet d’y accéder dans une présentation unifiée.
    - [Fusionner les stratégies](../../profile/api/merge-policies.md): Règles utilisées par le Profil client en temps réel pour déterminer quelles données peuvent être fusionnées dans une vue unifiée dans certaines conditions. Les stratégies de fusion peuvent être configurées à des fins de gouvernance des données.
 - [Segmentation](../home.md): Le Profil client en temps réel divise un grand groupe d’individus contenus dans le magasin de profils en groupes plus petits qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
 - [Gouvernance](../../data-governance/home.md)des données : La gouvernance des données fournit l’infrastructure pour l’étiquetage et l’application des données (DULE), en utilisant les composants suivants :
    - [Étiquettes](../../data-governance/labels/user-guide.md)d&#39;utilisation des données : Étiquettes utilisées pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
    - [Stratégies](../../data-governance/policies/overview.md)d’utilisation des données : Configurations indiquant les actions marketing autorisées sur les données classées par étiquette d’utilisation particulière.
    - [Application des](../../data-governance/enforcement/overview.md)politiques : Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégies.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -181,7 +183,9 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 
 ## Evaluer les jeux de données en cas de violation de stratégie
 
->[!NOTE]  Cette étape suppose que vous disposez d’au moins une stratégie d’utilisation des données active qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certaines étiquettes. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, suivez le didacticiel [de création de](../../data-governance/policies/create.md) stratégies pour en créer un avant de poursuivre cette étape.
+>[!NOTE]
+>
+> Cette étape suppose que vous disposez d’au moins une stratégie d’utilisation des données active qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certaines étiquettes. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, suivez le didacticiel [de création de](../../data-governance/policies/create.md) stratégies pour en créer un avant de poursuivre cette étape.
 
 Une fois que vous avez obtenu les ID des jeux de données source de la stratégie de fusion, vous pouvez utiliser l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la stratégie d&#39;utilisation des données.
 
@@ -379,4 +383,4 @@ Pour plus d’informations, voir la section sur l’ [exportation d’un segment
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez recherché les étiquettes d’utilisation des données associées à un segment d’audience et les avez testées pour détecter les violations de stratégie par rapport à des actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans la plateforme d’expérience, voir la présentation [de la gouvernance des](../../data-governance/home.md)données.
+En suivant ce didacticiel, vous avez recherché les étiquettes d’utilisation des données associées à un segment d’audience et les avez testées pour détecter les violations de stratégie par rapport à des actions marketing spécifiques. Pour plus d’informations sur la gouvernance des données dans l’Experience Platform, voir la présentation [de la gouvernance des](../../data-governance/home.md)données.
