@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mettre à jour une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0d3bee939226d9ef4ac1672b71e0d240f32c5dcf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '379'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,9 +18,11 @@ Vous pouvez modifier ou mettre à jour des ressources dans le conteneur locatair
 
 Pour plus d’informations sur le correctif JSON, y compris les opérations disponibles, voir la documentation [officielle sur le correctif](http://jsonpatch.com/)JSON.
 
->[!NOTE] Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez le document sur le [remplacement d&#39;une ressource à l&#39;aide d&#39;une opération](replace-resource.md)PUT.
+>[!NOTE]
+>
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez le document sur le [remplacement d&#39;une ressource à l&#39;aide d&#39;une opération](replace-resource.md)PUT.
 
-## Ajouter de mixins à un schéma
+## Ajouter des mixins à un schéma
 
 L&#39;une des opérations PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un schéma XDM, comme le montre l&#39;exemple ci-dessous.
 
