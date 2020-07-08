@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Annexe du guide du développeur Catalog Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 409d98818888f2758258441ea2d993ced48caf9a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '908'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -108,7 +108,9 @@ La requête suivante crée un nouveau jeu de données, puis crée des vues conne
 
 Par exemple, si vous souhaitez référencer une valeur renvoyée par une sous-requête précédente, vous pouvez créer une référence au format suivant : `<<{REQUEST_ID}.{ATTRIBUTE_NAME}>>` (où `{REQUEST_ID}` est l’identifiant fourni par l’utilisateur pour la sous-requête, comme illustré ci-dessous). Vous pouvez référencer n’importe quel attribut disponible dans le corps de l’objet de réponse d’une sous-requête précédente à l’aide de ces modèles.
 
->[!NOTE] Lorsqu’une sous-requête exécutée renvoie uniquement la référence à un objet (comme c’est le cas par défaut pour la plupart des requêtes POST et PUT dans l’API Catalog), cette référence est mise en alias par rapport à la valeur `id` et peut être utilisée comme `<<{OBJECT_ID}.id>>`valeur.
+>[!NOTE]
+>
+>Lorsqu’une sous-requête exécutée renvoie uniquement la référence à un objet (comme c’est le cas par défaut pour la plupart des requêtes POST et PUT dans l’API Catalog), cette référence est mise en alias par rapport à la valeur `id` et peut être utilisée comme `<<{OBJECT_ID}.id>>`valeur.
 
 ```shell
 curl -X POST \
@@ -144,7 +146,7 @@ curl -X POST \
 | --- | --- |
 | `id` | ID fourni par l’utilisateur et attaché à l’objet de réponse afin que vous puissiez faire correspondre des requêtes à des réponses. Le catalogue ne stocke pas cette valeur et la renvoie simplement dans la réponse à des fins de référence. |
 | `resource` | Chemin d’accès à la ressource relatif à la racine de l’API Catalogue. Le protocole et le domaine ne doivent pas faire partie de cette valeur et doivent être précédés de &quot;/&quot;. <br/><br/> Lorsque vous utilisez PATCH ou DELETE comme sous-requête `method`, incluez l’ID d’objet dans le chemin d’accès à la ressource. À ne pas confondre avec l’utilisateur `id`, le chemin de ressource utilise l’ID de l’objet Catalog lui-même (par exemple, `resource: "/dataSets/1234567890"`). |
-| `method` | Nom de la méthode (GET, PUT, POST, PATCH ou DELETE) lié à l’action en cours dans la demande. |
+| `method` | Nom de la méthode (GET, PUT, POST, PATCH ou DELETE) associé à l’action en cours dans la demande. |
 | `body` | document JSON qui serait normalement transmis en tant que charge utile dans une demande POST, PUT ou PATCH. Cette propriété n’est pas requise pour les requêtes GET ou DELETE. |
 
 **Réponse**
@@ -180,7 +182,7 @@ Le catalogue fournit plusieurs conventions d’en-tête pour vous aider à prés
 
 Il est recommandé d’utiliser le contrôle de version d’objet pour éviter le type de corruption de données qui se produit lorsqu’un objet est enregistré par plusieurs utilisateurs presque simultanément.
 
-Lors de la mise à jour d’un objet, il est recommandé d’effectuer d’abord un appel d’API à la vue (GET) pour l’objet à mettre à jour. Contenu dans la réponse (et tout appel où la réponse contient un seul objet) est un `E-Tag` en-tête contenant la version de l’objet. L’ajout de la version d’objet en tant qu’en-tête de requête nommé `If-Match` dans vos appels de mise à jour (PUT ou PATCH) entraîne la réussite de la mise à jour uniquement si la version est toujours identique, ce qui permet d’éviter les collisions de données.
+Lors de la mise à jour d’un objet, il est recommandé d’effectuer d’abord un appel d’API à la vue (GET) pour l’objet à mettre à jour. Contenu dans la réponse (et tout appel où la réponse contient un seul objet) est un `E-Tag` en-tête contenant la version de l’objet. Si vous Ajoutez la version d’objet en tant qu’en-tête de requête nommé `If-Match` dans vos appels de mise à jour (PUT ou PATCH), la mise à jour ne réussira que si la version est toujours identique, ce qui évitera les collisions de données.
 
 Si les versions ne correspondent pas (l&#39;objet a été modifié par un autre processus depuis que vous l&#39;avez récupéré), vous recevrez l&#39;état HTTP 412 (Échec de la précondition) indiquant que l&#39;accès à la ressource de cible a été refusé.
 
