@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Unions
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7f61cee8fb5160d0f393f8392b4ce2462d602981
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '806'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -34,7 +34,7 @@ Le `timeSeriesEvents` tableau est une liste de événements de séries chronolog
 
 ### Mappage d’appartenance aux segments
 
-Le `segmentMembership` mappage stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation, le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont assimilés à Platform, ce qui permet l’intégration à d’autres solutions telles qu’Adobe Audience Manager.
+Le `segmentMembership` mappage stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation, le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont ingérés dans Platform, ce qui permet l’intégration à d’autres solutions telles que l’Adobe Audience Manager.
 
 Pour plus d’informations, consultez le didacticiel sur la [création de segments à l’aide d’API](../../segmentation/tutorials/create-a-segment.md) .
 
@@ -42,7 +42,9 @@ Pour plus d’informations, consultez le didacticiel sur la [création de segmen
 
 Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la balise &quot;union&quot; doit être ajoutée à l’ `meta:immutableTags` attribut du schéma. Pour ce faire, PATCH demande de mettre à jour le schéma et d&#39;ajouter le `meta:immutableTags` tableau avec la valeur &quot;union&quot;.
 
->[!NOTE] Les balises immuables sont des balises destinées à être définies, mais jamais supprimées.
+>[!NOTE]
+>
+>Les balises immuables sont des balises destinées à être définies, mais jamais supprimées.
 
 **Format d’API**
 
@@ -164,7 +166,9 @@ Une réponse réussie renvoie l’état HTTP 200 (OK) et un `results` tableau da
 
 Vous pouvez vue à une union spécifique en exécutant une requête GET qui inclut le `$id` et, selon l’en-tête Accepter, certains ou tous les détails de l’union.
 
->[!NOTE] Les recherches d’Unions sont disponibles à l’aide du point de terminaison `/unions` et `/schemas` afin de les activer pour une utilisation dans les exportations de Profil dans un jeu de données.
+>[!NOTE]
+>
+>Les recherches d’Unions sont disponibles à l’aide du point de terminaison `/unions` et `/schemas` afin de les activer pour une utilisation dans les exportations de Profil dans un jeu de données.
 
 **Format d’API**
 
