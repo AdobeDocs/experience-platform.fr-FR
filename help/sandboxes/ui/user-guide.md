@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur de Sandbox
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Guide de l’utilisateur de Sandbox
 
-Ce document décrit la procédure à suivre pour effectuer diverses opérations liées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
+Ce document décrit la marche à suivre pour effectuer diverses opérations liées aux sandbox dans l’interface utilisateur de l’Adobe Experience Platform.
 
 ## sandbox de Vue
 
-Dans l’interface utilisateur de la plateforme d’expérience, cliquez sur **Sandbox** dans le volet de navigation de gauche pour ouvrir le tableau de bord _Sandbox_ . Le tableau de bord liste tous les sandbox disponibles pour votre organisation, y compris le type de sandbox (production ou développement) et l’état (actif, création, suppression ou échec).
+Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Sandbox** dans le volet de navigation de gauche pour ouvrir le tableau de bord _Sandbox_ . Le tableau de bord liste tous les sandbox disponibles pour votre organisation, y compris le type de sandbox (production ou développement) et l’état (actif, création, suppression ou échec).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -44,11 +44,13 @@ Pour créer un sandbox dans l’interface utilisateur, cliquez sur **Sandbox** d
 
 La boîte de dialogue _Créer un sandbox_ s’affiche, vous invitant à fournir un titre et un nom d’affichage pour le sandbox. Le titre **** d&#39;affichage est conçu pour être lisible par l&#39;homme et doit être suffisamment descriptif pour être facilement identifiable. Le **nom** de sandbox est un identifiant en minuscules utilisé dans les appels d’API. Il doit donc être unique et concis.
 
-Lorsque vous avez terminé, cliquez sur **Créer**.
+When finished, click **Create**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
->[!NOTE] Etant donné que vous êtes limité à la création de types de sandbox hors production, l’option de **type** est verrouillée sur &quot;Non-production&quot; et ne peut pas être manipulée.
+>[!NOTE]
+>
+>Etant donné que vous êtes limité à la création de types de sandbox hors production, l’option de **type** est verrouillée sur &quot;Non-production&quot; et ne peut pas être manipulée.
 
 Une fois que vous avez terminé de créer le sandbox, actualisez la page et le nouveau sandbox apparaît dans le tableau de bord _Sandbox_ avec l’état &quot;Création&quot;. Les nouveaux sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi leur état devient &quot;Actif&quot;.
 
@@ -56,7 +58,9 @@ Une fois que vous avez terminé de créer le sandbox, actualisez la page et le n
 
 ## Réinitialisation d’un sandbox
 
->[!NOTE] Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de réinitialiser les sandbox de production.
+>[!NOTE]
+>
+>Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de réinitialiser les sandbox de production.
 
 La réinitialisation d’un sandbox hors production supprime toutes les ressources associées à ce sandbox (schémas, jeux de données, etc.), tout en conservant le nom du sandbox et les autorisations associées. Ce sandbox &quot;propre&quot; reste disponible sous le même nom pour les utilisateurs qui y ont accès.
 
@@ -74,7 +78,9 @@ Un message de confirmation s’affiche et l’état du sandbox passe à &quot;R�
 
 ## Suppression d’un sandbox
 
->[!NOTE] Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de supprimer les sandbox de production.
+>[!NOTE]
+>
+>Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de supprimer les sandbox de production.
 
 La suppression d’un sandbox hors production supprime définitivement toutes les ressources associées à ce sandbox, y compris les autorisations.
 
@@ -90,4 +96,4 @@ Un message de confirmation s’affiche et le sandbox est supprimé de l’espace
 
 ## Étapes suivantes
 
-Ce document montre comment gérer les sandbox dans l’interface utilisateur de la plateforme d’expérience. Pour plus d’informations sur la gestion des sandbox à l’aide de l’API Sandbox, voir le guide [du développeur](../api/getting-started.md)sandbox.
+Ce document montre comment gérer les sandbox dans l’interface utilisateur Experience Platform. Pour plus d’informations sur la gestion des sandbox à l’aide de l’API Sandbox, voir le guide [du développeur](../api/getting-started.md)sandbox.
