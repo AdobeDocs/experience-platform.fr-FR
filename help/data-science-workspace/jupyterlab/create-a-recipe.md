@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'une recette à l'aide de cahiers Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 0%
@@ -30,6 +30,8 @@ La création d&#39;une recette à partir de zéro peut se faire à l&#39;intéri
 Le bloc-notes [!UICONTROL Recipe Builder] vous permet d&#39;exécuter des sessions de formation et de notation dans le bloc-notes. Vous disposez ainsi de la souplesse nécessaire pour modifier leurs `train()` méthodes et leurs `score()` méthodes entre les expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et du score, vous pouvez créer une recette à utiliser pour [!DNL Data Science Workspace] utiliser le bloc-notes afin de créer une fonctionnalité de recettes intégrée au bloc-notes du Générateur de recettes.
 
 >[!NOTE]
+>
+>
 >Le bloc-notes Recipe Builder prend en charge l&#39;utilisation de tous les formats de fichier, mais actuellement, la fonctionnalité Create Recipe ne prend en charge que [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe-builder.png)
@@ -46,7 +48,9 @@ Pour apporter des modifications aux fichiers de recette, accédez à la cellule 
 
 Début apportant les modifications nécessaires à la cellule et, une fois terminé, exécutez simplement la cellule. La `%%writefile filename.py` commande écrira le contenu de la cellule dans le `filename.py`. Vous devrez exécuter manuellement la cellule pour chaque fichier avec des modifications.
 
->[!NOTE] Vous devez exécuter les cellules manuellement, le cas échéant.
+>[!NOTE]
+>
+>Vous devez exécuter les cellules manuellement, le cas échéant.
 
 ## Commencez avec le bloc-notes du Générateur de recettes
 
@@ -73,6 +77,8 @@ data_access_sdk_python
 ```
 
 >[!NOTE]
+>
+>
 >Les bibliothèques ou les versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques ci-dessus.
 
 ### Fichiers de configuration {#configuration-files}
@@ -115,6 +121,8 @@ Cette étape utilise la base de données [](https://pandas.pydata.org/pandas-doc
 - [Sources externes](#external-sources)
 
 >[!NOTE]
+>
+>
 >Dans le bloc-notes du créateur de recettes, les données sont chargées via le chargeur de `platform_sdk` données.
 
 ### [!DNL Platform] SDK {#platform-sdk}
@@ -144,6 +152,8 @@ Vos données se trouvent désormais dans l’objet dataframe et peuvent être an
 ### À partir du SDK d’accès aux données (obsolète)
 
 >[!CAUTION]
+>
+>
 > `data_access_sdk_python` n’est plus recommandé. Consultez [Convertir le code d’accès aux données en Platform SDK](../authoring/platform-sdk.md) pour obtenir un guide sur l’utilisation du `platform_sdk` chargeur de données.
 
 Les utilisateurs peuvent charger des données à l’aide du SDK d’accès aux données. La bibliothèque peut être importée en haut de la page en incluant la ligne :
@@ -162,6 +172,8 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
+>
+>
 >Comme mentionné dans la section [Fichier de](#configuration-files)configuration, les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
@@ -291,7 +303,9 @@ Le `pipeline.py` fichier inclut la logique de formation et de notation.
 
 La formation a pour but de créer un modèle à l’aide de fonctions et d’étiquettes dans votre jeu de données de formation.
 
->[!NOTE]\
+>[!NOTE]
+>
+> 
 >_Les fonctionnalités_ se rapportent à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les _étiquettes_.
 
 La `train()` fonction doit inclure le modèle d&#39;entraînement et renvoyer le modèle formé. Vous trouverez quelques exemples de différents modèles dans la documentation [du guide d&#39;utilisation](https://scikit-learn.org/stable/user_guide.html)scikit-learn.
