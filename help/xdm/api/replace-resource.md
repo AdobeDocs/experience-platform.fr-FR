@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Remplacer une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 67826f838951b3202a6a04321c28daa8ee883d20
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '207'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,9 @@ Le Registre de Schéma vous permet de remplacer une ressource entière par une o
 
 Cette méthode est particulièrement utile si vous souhaitez mettre à jour un grand nombre d&#39;informations dans la ressource en même temps.
 
->[!NOTE] Si vous souhaitez seulement mettre à jour une partie d&#39;une ressource au lieu de la remplacer entièrement, consultez le document sur la [mise à jour d&#39;une ressource à l&#39;aide d&#39;une opération](update-resource.md)PATCH.
+>[!NOTE]
+>
+>Si vous souhaitez seulement mettre à jour une partie d&#39;une ressource au lieu de la remplacer entièrement, consultez le document sur la [mise à jour d&#39;une ressource à l&#39;aide d&#39;une opération](update-resource.md)PATCH.
 
 **Format d’API**
 
