@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Utilisation de l’exécution du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1985'
 ht-degree: 0%
@@ -43,7 +43,9 @@ Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../tutorials/authentication.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../tutorials/authentication.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -53,7 +55,9 @@ Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécess
 
 - x-request-id : `{UUID}`
 
->[!NOTE] `UUID` est une chaîne au format UUID unique au niveau mondial et ne doit pas être réutilisée pour différents appels d’API.
+>[!NOTE]
+>
+>`UUID` est une chaîne au format UUID unique au niveau mondial et ne doit pas être réutilisée pour différents appels d’API.
 
 [!DNL Decisioning Service] est contrôlée par un certain nombre d’objets commerciaux qui sont liés les uns aux autres. Tous les objets d’entreprise sont stockés dans le référentiel d’objets [!DNL Platform’s] métier, le référentiel d’objets XDM Core. L&#39;une des principales fonctionnalités de ce référentiel est que les API sont orthogonales par rapport au type d&#39;objet métier. Au lieu d&#39;utiliser une API POST, GET, PUT, PATCH ou DELETE qui indique le type de ressource dans son point de terminaison API, il n&#39;y a que 6 points de terminaison génériques, mais ils acceptent ou retournent un paramètre qui indique le type de l&#39;objet lorsque cette désambiguïfication est nécessaire. Le schéma doit être enregistré dans le référentiel, mais au-delà, le référentiel est utilisable pour un ensemble ouvert de types d&#39;objet.
 
