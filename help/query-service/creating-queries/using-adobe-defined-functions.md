@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions définies par Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: 41fdee979db32b97a5935a02e9ffcde3308b6d54
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 6%
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Utilisation de fonctions définies par Adobe
 
-L’un des principaux facteurs d’différenciation d’Adobe est qu’il comprend les données d’expérience et ce que les clients doivent pouvoir faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui facilitent votre travail.
+L&#39;un des principaux facteurs de différenciation de Adobe est qu&#39;ils comprennent les données d&#39;expérience et ce que les clients doivent pouvoir faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui facilitent votre travail.
 
 Ce document couvre les fonctions définies par Adobe (ADF) pour prendre en charge trois activités Analytics clés :
 - [Sessionisation](#sessionization)
@@ -23,7 +23,7 @@ Ce document couvre les fonctions définies par Adobe (ADF) pour prendre en charg
 
 ## Sessionisation
 
-Il `SESS_TIMEOUT()` reproduit les regroupements de visites trouvés avec Adobe Analytics. Il effectue un regroupement temporel similaire, mais avec des paramètres personnalisables.
+Le `SESS_TIMEOUT()` reproduit les regroupements de visites trouvés avec Adobe Analytics. Il effectue un regroupement temporel similaire, mais avec des paramètres personnalisables.
 
 **Syntaxe :**
 
@@ -95,7 +95,9 @@ Les adaptateurs ADF d’attribution trouvés dans Requête Service permettent de
 
 Cet exemple porte sur l’attribution Dernière touche, mais Adobe offre également l’attribution Première touche.
 
->[!NOTE] D’autres options avec délais d’expiration et expiration basée sur le événement seront disponibles dans les versions futures de Requête Service.
+>[!NOTE]
+>
+>D’autres options avec délais d’expiration et expiration basée sur le événement seront disponibles dans les versions futures de Requête Service.
 
 **Syntaxe :**
 
