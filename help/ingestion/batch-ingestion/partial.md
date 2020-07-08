@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de l’assimilation partielle par lot d’Adobe Experience Platform
+title: Présentation de l'assimilation partielle par lot des Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: d560e8dd07e9590376728ae6575766cc382325a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '795'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,40 +15,44 @@ ht-degree: 2%
 
 # Récupération partielle par lot (bêta)
 
-L&#39;assimilation partielle par lot permet d&#39;assimiler des données contenant des erreurs, jusqu&#39;à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes dans Adobe Experience Platform, tandis que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
+L&#39;assimilation partielle par lot permet d&#39;assimiler des données contenant des erreurs, jusqu&#39;à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes à l’Adobe Experience Platform pendant que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
 
 Ce document fournit un didacticiel pour la gestion de l&#39;assimilation partielle des lots.
 
 En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partielle.
 
->[!IMPORTANT] Cette fonctionnalité n&#39;existe qu&#39;à l&#39;aide de l&#39;API. Veuillez contacter votre équipe pour accéder à cette fonction.
+>[!IMPORTANT]
+>
+>Cette fonctionnalité n&#39;existe qu&#39;à l&#39;aide de l&#39;API. Veuillez contacter votre équipe pour accéder à cette fonction.
 
 ## Prise en main
 
-Ce didacticiel nécessite une connaissance approfondie des différents services Adobe Experience Platform impliqués dans l’assimilation partielle de lots. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce didacticiel nécessite une connaissance pratique des divers services d&#39;Adobe Experience Platform impliqués dans l&#39;assimilation partielle de lots. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [Importation](./overview.md)par lot : Méthode par laquelle la plate-forme ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [Importation](./overview.md)par lot : Méthode par laquelle Platform ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plateforme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir passer des appels aux API Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 ## Activation d’un jeu de données pour l’assimilation par lots partielle dans l’API
 
@@ -78,7 +82,9 @@ Dans le jeu de données, vous devrez ajouter la balise décrite ci-dessus.
 
 <!-- ## Enable a dataset for partial batch ingestion in the UI
 
->[!NOTE] This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>[!NOTE]
+>
+>This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
 
 To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
 
