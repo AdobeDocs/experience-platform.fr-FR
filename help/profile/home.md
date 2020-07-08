@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Présentation du profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 4d853dfee931789ca1badd410ce0b4b73c8c2803
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 2%
@@ -129,6 +129,8 @@ L&#39;Experience Platform a une série de directives à suivre pour utiliser eff
 --->
 
 >[!NOTE]
+>
+>
 >Une entité non-personne fait référence à toute classe XDM qui **ne fait pas** partie du Profil.
 
 ## Étapes suivantes et ressources supplémentaires
