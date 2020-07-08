@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’utilisateur des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Policies_ de l’ [!DNL Experience Platform] interface utilisateur.
 
->[!IMPORTANT] Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
+>[!IMPORTANT]
+>
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
 ## Conditions préalables
 
@@ -51,7 +53,9 @@ Ensuite, sélectionnez les étiquettes d’utilisation des données sur lesquell
 
 L’étape *[!UICONTROL Sélectionner les actions]* marketing s’affiche. Sélectionnez les actions marketing appropriées dans la liste fournie, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
->[!NOTE] Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle &quot;OU&quot;. En d’autres termes, la stratégie s’applique si _l’une_ des actions marketing sélectionnées est exécutée.
+>[!NOTE]
+>
+>Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle &quot;OU&quot;. En d’autres termes, la stratégie s’applique si _l’une_ des actions marketing sélectionnées est exécutée.
 
 ![](../images/policies/add-marketing-actions.png)
 
@@ -93,7 +97,9 @@ L’action nouvellement créée s’affiche dans l’onglet Actions ** marketing
 
 ## Modification ou suppression d’une action marketing {#edit-delete-marketing-action}
 
->[!NOTE] Seules les actions marketing personnalisées définies par votre organisation peuvent être modifiées. Les actions marketing définies par Adobe ne peuvent pas être modifiées ni supprimées.
+>[!NOTE]
+>
+>Seules les actions marketing personnalisées définies par votre organisation peuvent être modifiées. Les actions marketing définies par Adobe ne peuvent pas être modifiées ni supprimées.
 
 Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par Adobe et votre propre organisation. Sélectionnez une action marketing personnalisée dans la liste, puis utilisez les champs fournis dans la section de droite pour modifier les détails de l’action marketing.
 
@@ -101,7 +107,9 @@ Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’ongl
 
 Si l’action marketing n’est utilisée par aucune stratégie d’utilisation existante, vous pouvez la supprimer en cliquant sur **[!UICONTROL Supprimer l’action]** marketing.
 
->[!NOTE] Si vous tentez de supprimer une action marketing utilisée par une stratégie existante, un message d’erreur s’affiche, indiquant que la tentative de suppression a échoué.
+>[!NOTE]
+>
+>Si vous tentez de supprimer une action marketing utilisée par une stratégie existante, un message d’erreur s’affiche, indiquant que la tentative de suppression a échoué.
 
 ![](../images/policies/delete-marketing-action.png)
 
