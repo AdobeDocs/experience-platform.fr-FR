@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Tâches du système de Profil - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 2%
+source-wordcount: '1503'
+ht-degree: 3%
 
 ---
 
 
-# Tâches du système de Profil (supprimer des requêtes)
+# Point de terminaison des tâches du système de Profil (supprimer des requêtes)
 
 L’Adobe Experience Platform vous permet d’assimiler des données provenant de plusieurs sources et de créer des profils solides pour chaque client. Les données ingérées dans Platform sont stockées dans le lac Data ainsi que dans la banque de données du Profil client en temps réel. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, il est nécessaire d’utiliser l’API Profil client en temps réel pour créer une tâche système de Profil, également appelée &quot;demande de suppression&quot;, qui peut également être modifiée, surveillée ou supprimée si nécessaire.
 
@@ -21,7 +21,7 @@ L’Adobe Experience Platform vous permet d’assimiler des données provenant d
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Vue de suppression de requêtes
 
