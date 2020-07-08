@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Guide de développement de l’API Real-time Customer Profile
 topic: guide
 translation-type: tm+mt
-source-git-commit: fd6516d1c1d3792b41de65d0f44d78af1124ccc7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '666'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
-# Guide du développeur de l’API de Profil client en temps réel
+# Guide de développement de l’API Real-time Customer Profile
 
 Le Profil client en temps réel vous permet de voir une vue holistique de chacun de vos clients individuels dans l’Adobe Experience Platform. Profil vous permet de consolider des données clients disparates provenant de plusieurs canaux, tels que des données en ligne, hors ligne, de gestion de la relation client et tierces, en une vue unifiée offrant un compte interactif horodaté de chaque interaction client.
 
@@ -23,6 +23,8 @@ Pour vue de tous les points de terminaison et opérations CRUD disponibles, repo
 ## (Alpha) Attributs calculés
 
 >[!IMPORTANT]
+>
+>
 >La fonctionnalité d’attribut calculé est en alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent être modifiées.
 
 Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements. Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires. Vous pouvez créer, vue, modifier et supprimer des attributs calculés à l’aide du point de `config/computedAttributes` terminaison. Pour savoir comment utiliser ce point de terminaison, consultez le guide [des attributs](computed-attributes.md)calculés.
