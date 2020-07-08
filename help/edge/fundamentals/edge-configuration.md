@@ -4,10 +4,10 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '882'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -23,6 +23,8 @@ Les ID de configuration Edge peuvent être créés en Adobe [!DNL Launch] à l�
 ![navigation dans l&#39;outil de configuration des bords](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
+>
+>
 >
 >L’outil de configuration des arêtes est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Launch] ou non comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations de développement dans [!DNL Launch]. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la [!DNL Launch] documentation.
 
@@ -78,6 +80,8 @@ Pour configurer l’Adobe Target, vous devez fournir un code client. Les autres 
 
 >[!NOTE]
 >
+>
+>
 >L&#39;organisation associée au code client doit correspondre à l&#39;organisation dans laquelle l&#39;ID de configuration est créé.
 
 ##### [!UICONTROL Code client]
@@ -86,7 +90,7 @@ ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à
 
 ##### [!UICONTROL Jeton de propriété]
 
-La Cible permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentation de la Cible.
+La Cible permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentation de la Cible.
 
 Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > Propriétés [UICONTROL.]
 
@@ -94,7 +98,7 @@ Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL c
 
 [Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) d’Adobe Target vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-Adobe recommande de définir cette option différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements  d’Adobe Target, vous pouvez les utiliser.
+Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements  d’Adobe Target, vous pouvez les utiliser.
 
 #### Adobe Audience Manager
 
