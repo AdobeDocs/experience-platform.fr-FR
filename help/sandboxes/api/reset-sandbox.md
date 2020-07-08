@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Réinitialisation d’un sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -62,4 +62,6 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu�
 }
 ```
 
->[!NOTE] Une fois qu&#39;un sandbox est réinitialisé, il faut environ 15 minutes pour être approvisionné par le système. Une fois l’approvisionnement effectué, le sandbox `state` devient &quot;actif&quot; ou &quot;échec&quot;.
+>[!NOTE]
+>
+>Une fois qu&#39;un sandbox est réinitialisé, il faut environ 15 minutes pour être approvisionné par le système. Une fois l’approvisionnement effectué, le sandbox `state` devient &quot;actif&quot; ou &quot;échec&quot;.
