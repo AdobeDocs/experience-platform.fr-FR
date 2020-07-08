@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gérer les autorisations pour un profil de produits
 topic: user guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 2%
@@ -28,11 +28,13 @@ La page *Modifier les autorisations* fournit un espace de travail pour ajouter e
 
 ![modification-permissions-catégorie](../images/change-permissions-category.png)
 
-Pour ajouter une autorisation, cliquez sur l’icône **plus (+)** en regard du nom de l’autorisation. Vous pouvez également cliquer sur **Ajouter tous** pour ajouter toutes les autorisations sous la catégorie active au profil. Les autorisations ajoutées s’affichent sous Éléments *d’autorisation* inclus.
+Pour ajouter une autorisation, cliquez sur l’icône **plus (+)** en regard du nom de l’autorisation. Vous pouvez également cliquer sur **Ajouter tout** pour ajouter toutes les autorisations sous la catégorie active au profil. Les autorisations Ajoutées s’affichent sous Éléments *d’autorisation* inclus.
 
 ![add-permissions](../images/add-permissions.png)
 
->[!NOTE] La liste Éléments *d’autorisations* inclus affiche uniquement les autorisations ajoutées de la catégorie actuellement sélectionnée.
+>[!NOTE]
+>
+>La liste Éléments *d’autorisations* inclus affiche uniquement les autorisations ajoutées de la catégorie actuellement sélectionnée.
 
 Pour supprimer une autorisation, cliquez sur l’icône **X** en regard du nom de l’autorisation ou sélectionnez **Supprimer tout** pour supprimer toutes les autorisations sous la catégorie active. Les autorisations supprimées réapparaissent sous Éléments *d&#39;autorisation* disponibles.
 
