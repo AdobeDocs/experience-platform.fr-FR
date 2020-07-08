@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment d’audience
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Création d’un jeu de données pour l’exportation d’un segment d’audience
 
-Adobe Experience Platform vous permet de segmenter facilement les profils clients en audiences basées sur des attributs spécifiques. Une fois les segments créés, vous pouvez exporter cette audience dans un jeu de données où elle est accessible et où vous pouvez agir. Pour que l&#39;exportation soit réussie, le jeu de données doit être correctement configuré.
+L’Adobe Experience Platform vous permet de segmenter facilement les profils clients en audiences basées sur des attributs spécifiques. Une fois les segments créés, vous pouvez exporter cette audience dans un jeu de données où elle est accessible et où vous pouvez agir. Pour que l&#39;exportation soit réussie, le jeu de données doit être correctement configuré.
 
-Ce didacticiel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment d’audience à l’aide de l’interface utilisateur de la plateforme d’expérience.
+Ce didacticiel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment d’audience à l’aide de l’interface utilisateur de l’Experience Platform.
 
-Ce didacticiel est directement lié aux étapes décrites dans le didacticiel pour [évaluer les résultats](./evaluate-a-segment.md)des segments et y accéder. Le didacticiel d’évaluation d’un segment décrit les étapes à suivre pour créer un jeu de données à l’aide de l’API Catalogue, tandis que ce didacticiel décrit les étapes à suivre pour créer un jeu de données à l’aide de l’interface utilisateur de la plate-forme d’expérience.
+Ce didacticiel est directement lié aux étapes décrites dans le didacticiel pour [évaluer les résultats](./evaluate-a-segment.md)des segments et y accéder. Le didacticiel d’évaluation d’un segment décrit les étapes à suivre pour créer un jeu de données à l’aide de l’API Catalogue, tandis que ce didacticiel décrit les étapes à suivre pour créer un jeu de données à l’aide de l’interface utilisateur de l’Experience Platform.
 
 ## Prise en main
 
@@ -26,16 +26,18 @@ Pour exporter un segment, le jeu de données doit être basé sur le Schéma d�
 
 Pour vue des schémas d’union dans l’interface utilisateur, cliquez sur **Profils** dans le volet de navigation de gauche, puis cliquez sur l’onglet schéma ** d’Union comme illustré ci-dessous.
 
-![Onglet schéma d’Union dans l’interface utilisateur de la plateforme d’expérience](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Onglet schéma d’Union dans l’interface utilisateur de l’Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
 
 
 ## Espace de travail Datasets
 
-L’espace de travail des jeux de données dans l’interface utilisateur de la plateforme d’expérience vous permet de vue et de gérer tous les jeux de données créés par votre organisation IMS, ainsi que de créer de nouveaux jeux.
+L&#39;espace de travail des jeux de données dans l&#39;interface utilisateur de l&#39;Experience Platform vous permet de vue et de gérer tous les jeux de données créés par votre organisation IMS, ainsi que de créer de nouveaux jeux.
 
 Pour vue à l’espace de travail des jeux de données, cliquez sur **Jeu de données** dans le volet de navigation de gauche, puis cliquez sur l’onglet *Parcourir* . The datasets workspace contains a list of datasets, including columns showing *Name*, *Created* (date and time), *Source*, *Schema*, and *Last Batch Status*, as well as the date and time the dataset was *Last Updated*. Selon la largeur de chaque colonne, il peut être nécessaire de faire défiler la page vers la gauche ou vers la droite pour afficher toutes les colonnes.
 
->[!NOTE] Cliquez sur l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de ne vue que les jeux de données activés pour le Profil client en temps réel.
+>[!NOTE]
+>
+>Cliquez sur l’icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de ne vue que les jeux de données activés pour le Profil client en temps réel.
 
 ![Vue de tous les jeux de données](../images/tutorials/segment-export-dataset/datasets-workspace.png)
 
