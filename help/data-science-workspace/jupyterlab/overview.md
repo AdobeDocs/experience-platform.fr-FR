@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l'utilisateur de JupyterLab
 topic: Overview
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3647'
 ht-degree: 12%
@@ -33,7 +33,9 @@ La liste suivante décrit certaines des fonctionnalités propres à JupyterLab s
 | **Bibliothèques de développement** | Dans [!DNL Experience Platform], [!DNL JupyterLab] fournit des bibliothèques préinstallées pour [!DNL Python], R et PySpark. Consultez l’ [annexe](#supported-libraries) pour obtenir une liste complète des bibliothèques prises en charge. |
 | **Contrôleur de bibliothèque** | Lorsque les bibliothèques pré-installées manquent à vos besoins, d&#39;autres bibliothèques peuvent être installées pour Python et R, et sont temporairement stockées dans des conteneurs isolés pour maintenir l&#39;intégrité de [!DNL Platform] vos données et les protéger. Consultez la section [Noisettes](#kernels) pour plus de détails. |
 
->[!NOTE] Les bibliothèques supplémentaires ne sont disponibles que pour la session au cours de laquelle elles ont été installées. Vous devez réinstaller les bibliothèques supplémentaires dont vous avez besoin lors du démarrage de nouvelles sessions.
+>[!NOTE]
+>
+>Les bibliothèques supplémentaires ne sont disponibles que pour la session au cours de laquelle elles ont été installées. Vous devez réinstaller les bibliothèques supplémentaires dont vous avez besoin lors du démarrage de nouvelles sessions.
 
 ## Intégration à d’autres [!DNL Platform] services {#service-integration}
 
@@ -44,7 +46,9 @@ La normalisation et l&#39;interopérabilité sont les concepts clés qui sous-te
 * **[!DNL Sensei ML Framework]:**Développement de modèles avec la possibilité de former et de marquer des données, ainsi que la création de recettes d&#39;un simple clic.
 * **[!DNL Experience Data Model (XDM)]:**La normalisation et l&#39;interopérabilité sont des concepts clés de l&#39;Adobe Experience Platform.[Le modèle de données d’expérience (XDM)](https://www.adobe.com/go/xdm-home-en), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
->[!NOTE] Certaines intégrations de [!DNL Platform] service sur [!DNL JupyterLab] sont limitées à des noyaux spécifiques. Consultez la section sur les [noyaux](#kernels) pour plus de détails.
+>[!NOTE]
+>
+>Certaines intégrations de [!DNL Platform] service sur [!DNL JupyterLab] sont limitées à des noyaux spécifiques. Consultez la section sur les [noyaux](#kernels) pour plus de détails.
 
 ## Fonctions clés et opérations communes
 
@@ -154,7 +158,7 @@ Le *lanceur* personnalisé fournit des modèles de blocs-notes utiles pour les n
 | Créateur de recettes | Modèle de bloc-notes pour la création d&#39;une recette dans [!DNL JupyterLab]. Il est prérempli de code et de commentaires qui montrent et décrivent le processus de création de la recette. Pour obtenir une présentation détaillée, reportez-vous au didacticiel <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">de recette du</a> bloc-notes. |
 | [!DNL Query Service] | Un cahier de notes prérempli montrant l&#39;utilisation de [!DNL Query Service] directement dans [!DNL JupyterLab] les exemples de workflows fournis qui analysent les données à l&#39;échelle. |
 | Événements XDM | Un bloc-notes prérempli présentant l’exploration des données sur les données du Événement d’expérience post-valeur, axé sur les fonctionnalités communes à l’ensemble de la structure de données. |
-| Requêtes XDM | Un bloc-notes prérempli présentant des exemples de requêtes commerciales sur les données du Événement d’expérience. |
+| Requêtes XDM | Un cahier de notes prérempli présentant des exemples de requêtes commerciales sur les données du Événement d’expérience. |
 | Agrégation | Un bloc-notes prérempli présentant des échantillons de workflows pour agrégat de grandes quantités de données en petits blocs gérables. |
 | Mise en grappe | Un bloc-notes prérempli présentant le processus de modélisation d’apprentissage automatique de bout en bout à l’aide d’algorithmes de mise en grappe. |
 
@@ -318,7 +322,7 @@ Les données de schéma ad hoc ont été prétraitées à l’aide de la command
 
 ### Lecture à partir d&#39;un jeu de données dans [!DNL Python]/R
 
-[!DNL Python] et les portables R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire les données avec et sans pagination est illustré ci-dessous.
+[!DNL Python] et les portables R vous permettent de paginer les données lors de l&#39;accès aux jeux de données. L&#39;exemple de code pour lire des données avec et sans pagination est illustré ci-dessous.
 
 [//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
 
@@ -598,6 +602,8 @@ timedf.show()
 ```
 
 >[!TIP]
+>
+>
 >Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant extrait `val userToken` de l’exemple ci-dessus et le déclare en ligne `option` comme alternative :
 > 
 ```scala
