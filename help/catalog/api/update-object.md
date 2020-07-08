@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mettre à jour un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 4361032b419622d7decc02194d38885b114749e4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '316'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -19,7 +19,9 @@ Vous pouvez mettre à jour une partie d’un objet Catalog en incluant son ID da
 * Utilisation des champs
 * Utilisation de la notation de correctif JSON
 
->[!NOTE] Les opérations PATCH sur un objet ne peuvent pas modifier ses champs extensibles, qui représentent des objets interconnectés.  Les modifications apportées aux objets interconnectés doivent être effectuées directement.
+>[!NOTE]
+>
+>Les opérations PATCH sur un objet ne peuvent pas modifier ses champs extensibles, qui représentent des objets interconnectés.  Les modifications apportées aux objets interconnectés doivent être effectuées directement.
 
 ## Mise à jour à l’aide de champs
 
