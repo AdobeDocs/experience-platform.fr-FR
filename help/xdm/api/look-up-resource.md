@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Rechercher une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 71c73a3899ccdd1c024a811b36c411915a3b14be
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -50,7 +50,9 @@ Les demandes de recherche de ressources doivent `version` être incluses dans l�
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, aucun titre ou description. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, descripteurs inclus. |
 
->[!NOTE] Si vous fournissez la `major` version uniquement (1, 2, 3, etc), le registre renverra automatiquement la dernière `minor` version (.1, .2, .3, etc).
+>[!NOTE]
+>
+>Si vous fournissez la `major` version uniquement (1, 2, 3, etc), le registre renverra automatiquement la dernière `minor` version (.1, .2, .3, etc).
 
 **Réponse**
 
