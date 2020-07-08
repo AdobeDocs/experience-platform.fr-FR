@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Authentification et accès aux API des Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 280456e68f54f49ce4a0134e226af89ad1f849a4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '877'
 ht-degree: 3%
@@ -69,7 +69,9 @@ Tout comme le processus d’ajout d’un développeur, l’administrateur doit v
 
 ## Générer des informations d’identification d’accès dans Adobe Developer Console
 
->[!NOTE] Si vous suivez ce document du guide [du développeur](../privacy-service/api/getting-started.md)Privacy Service, vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques au Privacy Service.
+>[!NOTE]
+>
+>Si vous suivez ce document du guide [du développeur](../privacy-service/api/getting-started.md)Privacy Service, vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques au Privacy Service.
 
 A l’aide de Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
