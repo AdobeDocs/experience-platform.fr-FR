@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définir une relation entre deux schémas à l’aide de l’éditeur de Schéma de Schéma
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: f8c34d84e30ae14c3936c2e32ee84a2fcd3abdc3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 # Définir une relation entre deux schémas à l’aide de l’éditeur de Schéma
 
-La capacité de comprendre les relations entre vos clients et leurs interactions avec votre marque sur différents canaux est un élément important d’Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas de modèle de données d’expérience (XDM) vous permet d’obtenir des informations complexes sur vos données client.
+La capacité de comprendre les relations entre vos clients et leurs interactions avec votre marque sur différents canaux est un élément important de l&#39;Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas de modèle de données d’expérience (XDM) vous permet d’obtenir des informations complexes sur vos données client.
 
-Ce document fournit un didacticiel pour la définition d’une relation de type &quot;un à un&quot; entre deux schémas définis par votre organisation à l’aide de l’éditeur de Schémas dans l’interface utilisateur de la plateforme d’expérience. Pour connaître les étapes de définition des relations de schéma à l&#39;aide de l&#39;API, consultez le didacticiel sur la [définition d&#39;une relation à l&#39;aide de l&#39;API](relationship-api.md)de registre des Schémas.
+Ce document fournit un didacticiel pour la définition d’une relation de type &quot;un à un&quot; entre deux schémas définis par votre organisation à l’aide de l’éditeur de Schémas dans l’interface utilisateur de l’Experience Platform. Pour connaître les étapes de définition des relations de schéma à l&#39;aide de l&#39;API, consultez le didacticiel sur la [définition d&#39;une relation à l&#39;aide de l&#39;API](relationship-api.md)de registre des Schémas.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension de XDM System et de l’éditeur de Schéma dans l’interface utilisateur de la plate-forme d’expérience. Avant de commencer ce didacticiel, consultez la documentation suivante :
+Ce didacticiel nécessite une bonne compréhension de XDM System et de l’éditeur de Schéma dans l’interface utilisateur de l’Experience Platform. Avant de commencer ce didacticiel, consultez la documentation suivante :
 
-* [Système XDM dans la plate-forme](../home.md)d’expérience : Présentation de XDM et de son implémentation dans la plateforme d’expérience.
+* [Système XDM en Experience Platform](../home.md): Présentation de XDM et de son implémentation en Experience Platform.
 * [Principes de base de la composition](../schema/composition.md)des schémas : Présentation des blocs de construction des schémas XDM.
 * [Créez un schéma à l’aide de l’éditeur](create-schema-ui.md)de Schéma : Didacticiel sur les bases de l’utilisation de l’éditeur de Schéma.
 
@@ -48,7 +48,9 @@ Le schéma de destination &quot;Hôtels&quot; contient les champs qui décrivent
 
 ## Créer un mixin de relation
 
->[!NOTE] Cette étape n’est requise que si votre schéma source ne dispose pas d’un champ de type chaîne dédié à utiliser comme référence à un autre schéma. Si ce champ est déjà défini dans votre schéma source, passez à l’étape suivante de [définition d’un champ](#relationship-field)de relation.
+>[!NOTE]
+>
+>Cette étape n’est requise que si votre schéma source ne dispose pas d’un champ de type chaîne dédié à utiliser comme référence à un autre schéma. Si ce champ est déjà défini dans votre schéma source, passez à l’étape suivante de [définition d’un champ](#relationship-field)de relation.
 
 Pour définir une relation entre deux schémas, le schéma source doit disposer d&#39;un champ dédié à utiliser comme référence au schéma de destination. Vous pouvez ajouter ce champ au schéma source en créant un nouveau mixin.
 
@@ -56,11 +58,11 @@ Début en cliquant sur **Ajouter** dans la section _Mélanges_ .
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-La boîte de dialogue _Ajouter Mixin_ s’affiche. A partir de là, cliquez sur **Créer un nouveau mixin**. Dans les champs de texte qui s’affichent, saisissez le nom d’affichage et la description du nouveau mixin. Cliquez sur **Ajouter Mixin** une fois terminé.
+La boîte de dialogue _Ajouter le mixin_ s’affiche. A partir de là, cliquez sur **Créer un nouveau mixin**. Dans les champs de texte qui s’affichent, saisissez le nom d’affichage et la description du nouveau mixin. Cliquez sur **Ajouter le mixin** une fois terminé.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-Le canevas réapparaît avec &quot;Relation de fidélité&quot; apparaissant dans la section _Mélanges_ . Cliquez sur le nom du mixin, puis sur Champ **** Ajouter en regard du champ racine &quot;Membres de la fidélité&quot;.
+Le canevas réapparaît avec &quot;Relation de fidélité&quot; apparaissant dans la section _Mélanges_ . Cliquez sur le nom du mixin, puis sur **Ajouter le champ** en regard du champ racine &quot;Membres de la fidélité&quot;.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -68,7 +70,7 @@ Un nouveau champ apparaît dans le canevas sous l&#39;espace de nommage &quot;\_
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
-Lorsque vous avez terminé, cliquez sur **Appliquer**.
+When finished, click **Apply**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
