@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions Spark SQL
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a23ee02a9e801531a38b5ff70ef07497aa21b174
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '4903'
 ht-degree: 6%
@@ -18,7 +18,9 @@ Les assistants Spark SQL fournissent des fonctions Spark SQL intégrées pour é
 
 Référence : [Documentation de la fonction Spark SQL](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
->[!NOTE] Certaines fonctions de la documentation externe ne sont pas prises en charge.
+>[!NOTE]
+>
+>Certaines fonctions de la documentation externe ne sont pas prises en charge.
 
 ## Catégories
 
@@ -58,7 +60,7 @@ Exemple :
  6
 ```
 
-#### Add (Ajouter)
+#### Add
 
 `expr1 + expr2`: Renvoie `expr1`+`expr2`.
 
@@ -576,7 +578,9 @@ Exemples :
  0.8446490682263027
 ```
 
->[!NOTE] Cette fonction est généralement non déterministe.
+>[!NOTE]
+>
+>Cette fonction est généralement non déterministe.
 
 #### randn
 
@@ -593,7 +597,9 @@ Exemples :
  1.1164209726833079
 ```
 
->[!NOTE] Cette fonction est généralement non déterministe.
+>[!NOTE]
+>
+>Cette fonction est généralement non déterministe.
 
 #### rint
 
@@ -1090,7 +1096,7 @@ Exemples :
 
 Depuis : 1.5.0
 
-#### day
+####  jour
 
 `day(date)`: Renvoie le jour du mois de la date/de l’horodatage.
 
@@ -1207,7 +1213,7 @@ Exemple :
 
 Depuis : 1.5.0
 
-#### month
+####  mois
 
 `month(date)` Renvoie le composant de mois de la date/de l’horodatage.
 
@@ -1406,7 +1412,7 @@ Exemples :
  NULL
 ```
 
-#### année
+####  an
 
 `year(date)`: Renvoie le composant Year de la date/de l’horodatage.
 
@@ -1738,7 +1744,9 @@ Exemples :
 ```
 
 Depuis : 1.5.0
->[!NOTE] la logique rse pour les baies est disponible depuis la version 2.4.0.
+>[!NOTE]
+>
+>la logique rse pour les baies est disponible depuis la version 2.4.0.
 
 #### mélanger
 
@@ -1754,7 +1762,9 @@ Exemples :
 ```
 
 Depuis : 2.4.0
->[!NOTE] n’est pas déterministe.
+>[!NOTE]
+>
+>n’est pas déterministe.
 
 #### tranche
 
@@ -2389,7 +2399,9 @@ Exemple :
  46707d92-02f4-4817-8116-a4c3b23e6266
 ```
 
->[!NOTE] Fonction non déterministe.
+>[!NOTE]
+>
+>Fonction non déterministe.
 
 ### Évaluation des données
 
@@ -2425,7 +2437,9 @@ Exemples :
  [1,2,3,4,5,6]
 ```
 
->[!NOTE] `concat` est disponible depuis la version 2.4.0.
+>[!NOTE]
+>
+>`concat` est disponible depuis la version 2.4.0.
 
 #### concat_ws
 
@@ -2789,7 +2803,7 @@ Exemple :
 
 Les types pris en charge sont les suivants : octet, short, integer, long, date, horodatage.
 
-Les `start` expressions et `stop` les  doivent se résoudre de la même manière. Si `start` et `stop` les expressions se réfèrent au type &quot;date&quot; ou &quot;horodatage&quot;, l&#39; `step` expression doit se résoudre au type &quot;intervalle&quot; ; dans le cas contraire, il est résolu de la même façon que les `start` et `stop` les expressions.
+Les `start` et `stop` les expressions doivent se résoudre de la même manière. Si `start` et `stop` les expressions se réfèrent au type &quot;date&quot; ou &quot;horodatage&quot;, l&#39; `step` expression doit se résoudre au type &quot;intervalle&quot; ; dans le cas contraire, il est résolu de la même façon que les `start` et `stop` les expressions.
 
 Arguments :
 - `start`: Une expression. début de la plage.
