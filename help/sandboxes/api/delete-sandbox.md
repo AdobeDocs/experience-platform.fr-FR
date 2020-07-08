@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Suppression d’un sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
 
 # Suppression d’un sandbox
 
-Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut les sandbox `name` dans le chemin de la requête.
+Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le sandbox `name` dans le chemin de la requête.
 
->[!NOTE] L’exécution de cet appel d’API met à jour la propriété `status` du sandbox en &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>[!NOTE]
+>
+>L’exécution de cet appel d’API met à jour la propriété `status` du sandbox en &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
 **Format d’API**
 
