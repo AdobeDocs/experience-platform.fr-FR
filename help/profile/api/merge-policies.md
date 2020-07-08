@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '2052'
-ht-degree: 3%
+source-wordcount: '2053'
+ht-degree: 4%
 
 ---
 
 
-# Stratégies de fusion
+# Point de terminaison de la fusion de stratégies
 
 L&#39;Adobe Experience Platform vous permet de rassembler des données provenant de plusieurs sources et de les combiner afin de voir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
@@ -324,7 +324,7 @@ Consultez la section [composants des stratégies](#components-of-merge-policies)
 
 ### Liste de plusieurs stratégies de fusion par critère
 
-Vous pouvez liste plusieurs stratégies de fusion au sein de votre organisation IMS en émettant une requête GET au point de `/config/mergePolicies` terminaison et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre récupérera toutes les stratégies de fusion disponibles pour votre entreprise.
+Vous pouvez liste plusieurs stratégies de fusion au sein de votre organisation IMS en émettant une requête GET au point de `/config/mergePolicies` terminaison et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre récupérera toutes les stratégies de fusion disponibles pour votre entreprise.
 
 **Format d’API**
 
