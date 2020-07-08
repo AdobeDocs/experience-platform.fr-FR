@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tâches de segmentation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0554d931718bb6a8dd7d4f971daf3652a19a2a8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 3%
+ht-degree: 21%
 
 ---
 
@@ -20,13 +20,13 @@ Ce guide fournit des informations pour vous aider à mieux comprendre les tâche
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
+Les points de terminaison d’API utilisés dans ce guide font partie de l’API Segmentation. Avant de poursuivre, consultez le [guide de développement de la segmentation](./getting-started.md).
 
-En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+La [section de prise en main](./getting-started.md#getting-started) du guide de développement de la segmentation inclut notamment des liens vers des sujets associés, un guide de lecture d’exemples d’appels API dans le document et des informations importantes sur les en-têtes requis pour réussir les appels destinés à une API Experience Platform.
 
 ## Récupération d’une liste de travaux de segment
 
-Vous pouvez récupérer une liste de toutes les tâches de segment pour votre organisation IMS en faisant une demande GET au point de `/segment/jobs` terminaison.
+You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
 
 **Format d’API**
 
@@ -35,9 +35,9 @@ GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}`: (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
+- `{QUERY_PARAMETERS}` : (*facultatif*) paramètres ajoutés au chemin de requête configurant les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
 
-**Paramètres de Requête**
+**Paramètres de requête**
 
 Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les tâches de segments. Tous ces paramètres sont facultatifs. Un appel à ce point de terminaison sans paramètre récupérera toutes les tâches de segment disponibles pour votre organisation.
 
@@ -63,7 +63,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 Une réponse réussie renvoie l’état HTTP 200 avec une liste de travaux de segment pour l’organisation IMS spécifiée en tant que JSON. La réponse suivante renvoie une liste de toutes les tâches de segmentation réussies pour l&#39;organisation IMS.
 
->[!NOTE] La réponse suivante a été tronquée pour l’espace et n’affichera que la première tâche renvoyée.
+>[!NOTE]
+>
+>La réponse suivante a été tronquée pour l’espace et n’affichera que la première tâche renvoyée.
 
 ```json
 {
@@ -157,7 +159,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste de travaux de se
 
 ## Créer une tâche de segment
 
-Vous pouvez créer une tâche de segment en exécutant une requête POST sur le point de `/segment/jobs` terminaison.
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
 
 **Format d’API**
 
@@ -240,7 +242,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche 
 
 ## Récupération d’une tâche de segment spécifique
 
-Vous pouvez récupérer des informations détaillées sur une tâche de segment spécifique en faisant une requête GET au point de `/segment/jobs` terminaison et en indiquant la `id` valeur de la tâche de segment dans le chemin de requête.
+You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the segment job&#39;s `id` value in the request path.
 
 **Format d’API**
 
@@ -250,7 +252,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segment à récupérer. |
+| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to retrieve. |
 
 **Requête**
 
@@ -361,7 +363,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 Une réponse réussie renvoie l’état HTTP 207 avec les tâches de segment demandées.
 
->[!NOTE] La réponse suivante a été tronquée pour l’espace, affichant uniquement des détails partiels de chaque tâche de segment. La réponse complète liste les détails complets des tâches de segmentation demandées.
+>[!NOTE]
+>
+>La réponse suivante a été tronquée pour l’espace, affichant uniquement des détails partiels de chaque tâche de segment. La réponse complète liste les détails complets des tâches de segmentation demandées.
 
 ```json
 {
@@ -424,7 +428,7 @@ Une réponse réussie renvoie l’état HTTP 207 avec les tâches de segment dem
 
 ## Annuler ou supprimer une tâche de segment spécifique
 
-Vous pouvez demander de supprimer une tâche de segment spécifiée en faisant une requête DELETE au point de `/segment/jobs` terminaison et en fournissant la `id` valeur de la tâche de segment dans le chemin de requête.
+You can request to delete a specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the segment job&#39;s `id` value in the request path.
 
 **Format d’API**
 
@@ -434,7 +438,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segment à supprimer. |
+| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to delete. |
 
 **Requête**
 
@@ -459,4 +463,4 @@ Une réponse réussie renvoie l’état HTTP 204 avec les informations suivantes
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les tâches de segmentation. Pour plus d’informations sur la segmentation, consultez la présentation [de la](../home.md)segmentation.
+Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les tâches de segmentation. Pour plus d’informations sur la segmentation, consultez la [présentation de Segmentation Service](../home.md).
