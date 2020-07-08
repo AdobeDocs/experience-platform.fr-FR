@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du développeur de Catalog Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: eec5b07427aa9daa44d23f09cfaf1b38f8e811f3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
@@ -14,37 +14,39 @@ ht-degree: 0%
 
 # Guide du développeur de Catalog Service
 
-Catalog Service est le système d’enregistrement de l’emplacement et du lignage des données dans Adobe Experience Platform. Le catalogue agit en tant que magasin de métadonnées ou &quot;catalogue&quot; où vous pouvez trouver des informations sur vos données dans la plate-forme d’expérience, sans avoir à accéder aux données proprement dites. See the [Catalog overview](../home.md) for more information.
+Le service de catalogue est le système d’enregistrement de l’emplacement et du lignage des données dans l’Adobe Experience Platform. Le catalogue agit comme un magasin de métadonnées ou un &quot;catalogue&quot; où vous pouvez trouver des informations sur vos données dans l’Experience Platform, sans avoir à accéder aux données proprement dites. See the [Catalog overview](../home.md) for more information.
 
 Ce guide du développeur décrit les étapes à suivre pour vous aider à début à l’aide de l’API Catalogue. Le guide fournit ensuite des exemples d’appels d’API pour effectuer des opérations clés à l’aide du catalogue.
 
 ## Conditions préalables
 
-Le catalogue effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations dans la plate-forme d’expérience. Ce guide du développeur nécessite une bonne compréhension des différents services de la plateforme d’expérience impliqués dans la création et la gestion de ces ressources :
+Le catalogue suit les métadonnées de plusieurs types de ressources et d’opérations dans l’Experience Platform. Ce guide du développeur nécessite une bonne compréhension des différents services Experience Platform impliqués dans la création et la gestion de ces ressources :
 
-* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : Expérience Platform ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
-* [Prise en charge](../../ingestion/streaming-ingestion/overview.md)en flux continu : Expérience Platform ingère et stocke en temps réel les données des périphériques client et serveur.
+* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : Comment l’Experience Platform ingère et stocke les données des fichiers de données, tels que CSV et Parquet.
+* [Prise en charge](../../ingestion/streaming-ingestion/overview.md)en flux continu : Comment l’Experience Platform ingère et stocke les données des périphériques client et serveur en temps réel.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître ou connaître pour pouvoir invoquer l’API du service de catalogue.
 
 ## Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ## Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
