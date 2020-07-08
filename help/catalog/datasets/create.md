@@ -4,45 +4,47 @@ solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: a6a1ecd9ce49c0a55e14b0d5479ca7315e332904
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1263'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
 # Création d’un jeu de données à l’aide d’API
 
-Ce document décrit les étapes générales de création d’un jeu de données à l’aide des API de la plateforme Adobe Experience Platform et de remplissage du jeu de données à l’aide d’un fichier.
+Ce document décrit les étapes générales de création d&#39;un jeu de données à l&#39;aide des API d&#39;Adobe Experience Platform et de remplissage du jeu de données à l&#39;aide d&#39;un fichier.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des composants suivants d’Adobe Experience Platform :
+Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
 
 * [Importation](../../ingestion/batch-ingestion/overview.md)par lot : Experience Platform vous permet d’assimiler des données sous forme de fichiers de commandes.
-* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API de plate-forme.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API Platform.
 
 ### Lecture des exemples d’appels d’API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 * Autorisation : Porteur `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 * x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -210,7 +212,9 @@ curl -X POST \
 }'
 ```
 
->[!NOTE] Ce tutoriel utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Un exemple utilisant le format de fichier JSON se trouve dans le guide du développeur d&#39; [assimilation par lot](../../ingestion/batch-ingestion/api-overview.md)
+>[!NOTE]
+>
+>Ce tutoriel utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Un exemple utilisant le format de fichier JSON se trouve dans le guide du développeur d&#39; [assimilation par lot](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 
@@ -292,7 +296,9 @@ Une réponse réussie renvoie HTTP Status 201 (Créé) et un objet de réponse c
 
 Après avoir créé un nouveau lot pour le transfert, vous pouvez désormais télécharger des fichiers vers le jeu de données spécifique. Il est important de se souvenir que lorsque vous avez défini le jeu de données, vous avez indiqué le format de fichier comme parquet. Par conséquent, les fichiers que vous téléchargez doivent être dans ce format.
 
->[!NOTE] Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux que celui-ci, il doit être divisé en blocs de 512 Mo au maximum, pour être téléchargé un par un. Vous pouvez télécharger chaque fichier dans le même lot en répétant cette étape pour chaque fichier, en utilisant le même ID de lot. Le nombre de fichiers que vous pouvez télécharger dans le cadre d’un lot n’est pas limité.
+>[!NOTE]
+>
+>Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux que celui-ci, il doit être divisé en blocs de 512 Mo au maximum, pour être téléchargé un par un. Vous pouvez télécharger chaque fichier dans le même lot en répétant cette étape pour chaque fichier, en utilisant le même ID de lot. Le nombre de fichiers que vous pouvez télécharger dans le cadre d’un lot n’est pas limité.
 
 **Format d’API**
 
@@ -449,7 +455,9 @@ Une réponse négative renvoie un objet avec la valeur de `"failed"` dans son `"
 }
 ```
 
->[!NOTE] Un intervalle d’interrogation recommandé est de deux minutes.
+>[!NOTE]
+>
+>Un intervalle d’interrogation recommandé est de deux minutes.
 
 ## Lire les données du jeu de données
 
@@ -467,4 +475,4 @@ Pour plus d&#39;informations sur la mise à jour des schémas, consultez le Guid
 
 Une fois le schéma mis à jour, vous pouvez suivre à nouveau les étapes de ce didacticiel pour assimiler de nouvelles données conformes au schéma révisé.
 
-Il est important de se rappeler que l&#39;évolution du schéma est purement additive, ce qui signifie qu&#39;on ne peut pas introduire une modification de rupture à un schéma une fois qu&#39;il a été enregistré dans le registre et utilisé pour l&#39;ingestion de données. Pour en savoir plus sur les meilleures pratiques de composition de schéma à utiliser avec Adobe Experience Platform, consultez le guide sur les [bases de la composition](../../xdm/schema/composition.md)de schéma.
+Il est important de se rappeler que l&#39;évolution du schéma est purement additive, ce qui signifie qu&#39;on ne peut pas introduire une modification de rupture à un schéma une fois qu&#39;il a été enregistré dans le registre et utilisé pour l&#39;ingestion de données. Pour en savoir plus sur les meilleures pratiques pour composer un schéma à utiliser avec l&#39;Adobe Experience Platform, consultez le guide sur les [bases de la composition](../../xdm/schema/composition.md)des schémas.
