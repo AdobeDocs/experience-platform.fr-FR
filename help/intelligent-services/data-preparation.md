@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Préparation des données en vue de leur utilisation dans les services intelligents
 topic: Intelligent Services
 translation-type: tm+mt
-source-git-commit: 9905f0248fe88bac5194560318cf8eced32ba93c
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 1%
@@ -82,7 +82,9 @@ Ce champ représente la date et l&#39;heure auxquelles le événement s&#39;est 
 
 #### xdm:canal {#channel}
 
->[!NOTE] Ce champ est obligatoire uniquement lors de l’utilisation de l’API d’attribution.
+>[!NOTE]
+>
+>Ce champ est obligatoire uniquement lors de l’utilisation de l’API d’attribution.
 
 Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ contient des informations sur le type de canal, le type de support et le type d’emplacement.
 
@@ -245,9 +247,11 @@ Si vous avez un [!DNL Adobe Experience Platform] abonnement et souhaitez mapper 
 
 ### Utilisation de l’Adobe Experience Platform
 
->[!NOTE] Les étapes ci-dessous nécessitent un abonnement à l&#39;Experience Platform. Si vous n’avez pas accès à Platform, passez directement à la section [Étapes](#next-steps) suivantes.
+>[!NOTE]
+>
+>Les étapes ci-dessous nécessitent un abonnement à l&#39;Experience Platform. Si vous n’avez pas accès à Platform, passez directement à la section [Étapes](#next-steps) suivantes.
 
-Cette section décrit le processus de mappage et d’assimilation de données dans un Experience Platform pour une utilisation dans les services intelligents, y compris les liens vers des didacticiels pour obtenir des étapes détaillées.
+Cette section décrit le processus de mappage et d&#39;assimilation de données dans un Experience Platform pour une utilisation dans les services intelligents, y compris les liens vers des didacticiels pour obtenir des étapes détaillées.
 
 #### Créer un schéma et un jeu de données CEE
 
@@ -256,7 +260,9 @@ Lorsque vous êtes prêt à début pour préparer vos données pour l&#39;assimi
 * [Création d’un schéma dans l’interface utilisateur](../xdm/tutorials/create-schema-ui.md)
 * [Création d’un schéma dans l’API](../xdm/tutorials/create-schema-api.md)
 
->[!IMPORTANT] Les didacticiels ci-dessus suivent un processus générique de création d’un schéma. Lorsque vous choisissez une classe pour le schéma, vous devez utiliser la classe **** XDM ExperienceEvent. Une fois cette classe choisie, vous pouvez ajouter le mixin CEE au schéma.
+>[!IMPORTANT]
+>
+>Les didacticiels ci-dessus suivent un processus générique de création d’un schéma. Lorsque vous choisissez une classe pour le schéma, vous devez utiliser la classe **** XDM ExperienceEvent. Une fois cette classe choisie, vous pouvez ajouter le mixin CEE au schéma.
 
 Après avoir ajouté le mixin CEE au schéma, vous pouvez ajouter d’autres mixins en fonction des champs supplémentaires de vos données.
 
@@ -271,7 +277,9 @@ Une fois le jeu de données créé, vous pouvez le trouver dans l’interface ut
 
 #### Ajouter une balise d&#39;espace de nommage d&#39;identité principale au jeu de données
 
->[!NOTE] Les prochaines versions d&#39;Intelligent Services intégreront le service [d&#39;identité des](../identity-service/home.md) Adobes Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
+>[!NOTE]
+>
+>Les prochaines versions d&#39;Intelligent Services intégreront le service [d&#39;identité des](../identity-service/home.md) Adobes Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
 
 Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
 
@@ -329,7 +337,9 @@ curl -X PATCH \
       }'
 ```
 
->[!NOTE] Pour plus d&#39;informations sur l&#39;utilisation des espaces de nommage d&#39;identité dans Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
+>[!NOTE]
+>
+>Pour plus d&#39;informations sur l&#39;utilisation des espaces de nommage d&#39;identité dans Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
 
 **Réponse**
 
@@ -343,7 +353,7 @@ Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de d
 
 #### Mapper et assimiler des données {#ingest}
 
-Après avoir créé un schéma et un jeu de données CEE, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans Platform. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
+Après avoir créé un schéma CEE et un jeu de données, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans Platform. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
 
 Si vos données sont stockées dans une application tierce prise en charge, vous pouvez également choisir de créer un connecteur [](../sources/home.md) source pour intégrer les données de vos événements marketing dans Platform en temps réel.
 
