@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Descripteurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c3d23ce0081932e61f50d426ac6d98ab7f4dfa3b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1499'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
 # Descripteurs
 
-Les Schémas définissent une vue statique des entités de données, mais ne fournissent pas de détails spécifiques sur la manière dont les données basées sur ces schémas (jeux de données, par exemple) peuvent se relier les unes aux autres. Adobe Experience Platform vous permet de décrire ces relations et d’autres métadonnées interprétatives relatives à un schéma à l’aide de descripteurs.
+Les Schémas définissent une vue statique des entités de données, mais ne fournissent pas de détails spécifiques sur la manière dont les données basées sur ces schémas (jeux de données, par exemple) peuvent se relier les unes aux autres. L’Adobe Experience Platform vous permet de décrire ces relations et d’autres métadonnées interprétatives sur un schéma à l’aide de descripteurs.
 
 Les descripteurs de Schéma sont des métadonnées au niveau du client, ce qui signifie qu&#39;ils sont propres à votre organisation IMS et que toutes les opérations de descripteurs ont lieu dans le conteneur du client.
 
@@ -22,7 +22,9 @@ Un ou plusieurs descripteurs de schéma peuvent être appliqués à chaque sché
 
 Ce document fournit des exemples d&#39;appels d&#39;API pour les descripteurs, ainsi qu&#39;une liste complète des descripteurs disponibles et des champs requis pour définir chaque type.
 
->[!NOTE] Les descripteurs nécessitent des en-têtes Accept uniques qui remplacent `xed` par `xdm`, mais qui, autrement, ressemblent beaucoup aux en-têtes Accept utilisés ailleurs dans le registre des Schémas. Les en-têtes Accepter appropriés ont été inclus dans les exemples d’appels ci-dessous, mais soyez prudent pour vous assurer que les en-têtes appropriés sont utilisés.
+>[!NOTE]
+>
+>Les descripteurs nécessitent des en-têtes Accept uniques qui remplacent `xed` par `xdm`, mais qui, autrement, ressemblent beaucoup aux en-têtes Accept utilisés ailleurs dans le registre des Schémas. Les en-têtes Accepter appropriés ont été inclus dans les exemples d’appels ci-dessous, mais soyez prudent pour vous assurer que les en-têtes appropriés sont utilisés.
 
 ## descripteurs de Liste
 
@@ -141,7 +143,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité sur un champ &quot;adresse électronique&quot; dans un exemple de schéma. Cela indique à la plate-forme d’expérience d’utiliser l’adresse électronique comme identifiant afin de mieux rassembler les informations sur l’individu.
+La requête suivante définit un descripteur d’identité sur un champ &quot;adresse électronique&quot; dans un exemple de schéma. Cela indique à l’Experience Platform d’utiliser l’adresse électronique comme identifiant pour réunir les informations sur l’individu.
 
 ```SHELL
 curl -X POST \
@@ -236,7 +238,7 @@ L’exécution d’une demande de recherche (GET) à la vue du descripteur indiq
 
 ## Supprimer le descripteur
 
-Il peut arriver que vous deviez supprimer un descripteur que vous avez défini dans le Registre des Schémas. Pour ce faire, vous devez faire une requête DELETE référençant le descripteur `@id` que vous souhaitez supprimer.
+Il peut arriver que vous deviez supprimer un descripteur que vous avez défini dans le Registre des Schémas. Pour ce faire, il vous suffit de faire une demande de DELETE référençant le descripteur `@id` que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -277,7 +279,7 @@ Les sections suivantes présentent un aperçu des types de descripteurs disponib
 
 #### Descripteur d&#39;identité
 
-Un descripteur d’identité signale que la &quot;sourceProperty&quot; de la &quot;sourceSchema&quot; est un champ d’identité tel que décrit par le service [d’identité de la plateforme d’](../../identity-service/home.md)expérience Adobe.
+Un descripteur d&#39;identité signale que la &quot;sourceProperty&quot; de la &quot;sourceSchema&quot; est un champ d&#39;identité tel que décrit par [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -334,7 +336,7 @@ Les descripteurs de nom conviviaux permettent à l’utilisateur de modifier les
 | `xdm:sourceProperty` | Chemin d’accès à la propriété spécifique qui sera l’identité. Le chemin doit commencer par un &quot;/&quot; et ne pas se terminer par un. N’incluez pas de &quot;propriétés&quot; dans le chemin d’accès (par exemple, utilisez &quot;/personalEmail/address&quot; au lieu de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit dans la casse de titre. |
 | `xdm:description` | Une description facultative peut être ajoutée avec le titre. |
-| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’interface utilisateur de la plate-forme d’expérience. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement via une requête [](./update-resource.md)PATCH. |
+| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’interface utilisateur de l’Experience Platform. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement via une requête [](./update-resource.md)PATCH. |
 
 #### Descripteur de relation
 
