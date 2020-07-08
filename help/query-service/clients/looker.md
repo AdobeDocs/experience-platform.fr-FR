@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Se connecter avec Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -34,9 +34,11 @@ A partir de là, vous pouvez remplir les détails des paramètres de connexion.
 - **Base de données :** Base de données qui sera utilisée.
 - **Nom d&#39;utilisateur et mot de passe :** Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur se présente sous la forme `ORG_ID@AdobeOrg`.
 
->[!NOTE] Pour plus d&#39;informations sur la recherche de votre hôte et de votre port, du nom de la base de données et des informations d&#39;identification de connexion, consultez la page d&#39; [informations d&#39;identification de la plate-forme](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à la plateforme, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>[!NOTE]
+>
+>Pour plus d’informations sur la recherche de votre hôte et de votre port, du nom de la base de données et des informations d’identification de connexion, consultez la page [d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
 
-Après avoir saisi les détails de votre connexion, cliquez sur **Tester ces paramètres** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion est vraiment réussie, cliquez sur **Ajouter Connection** pour créer votre connexion.
+Après avoir saisi les détails de votre connexion, cliquez sur **Tester ces paramètres** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion a réussi, cliquez sur **Ajouter la connexion** pour créer votre connexion.
 
 ![](../images/clients/looker/click-test-connection.png)
 
