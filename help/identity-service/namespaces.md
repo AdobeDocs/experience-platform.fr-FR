@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 1%
@@ -72,7 +72,9 @@ Les Espaces de nommage que vous définissez sont privés à votre organisation e
 
 Comme pour les espaces de nommage standard, vous pouvez cliquer sur un espace de nommage personnalisé dans l’onglet *[!UICONTROL Parcourir]* pour en vue les détails. Toutefois, avec un espace de nommage personnalisé, vous pouvez également modifier son nom d’affichage et sa description dans la zone de détails.
 
->[!NOTE] Une fois un espace de nommage créé, il ne peut plus être supprimé et son &quot;symbole d’identité&quot; (ou &quot;code&quot; dans l’API) et son &quot;type&quot; ne peuvent plus être modifiés.
+>[!NOTE]
+>
+>Une fois un espace de nommage créé, il ne peut plus être supprimé et son &quot;symbole d’identité&quot; (ou &quot;code&quot; dans l’API) et son &quot;type&quot; ne peuvent plus être modifiés.
 
 ## Espaces de nommage des données d&#39;identité
 
