@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Suppression d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Vous pouvez supprimer un objet Catalog en indiquant son identifiant dans le chemin d’une requête de DELETE.
 
->[!WARNING] Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut entraîner des modifications irréversibles ailleurs dans l’Experience Platform.
+>[!WARNING]
+>
+>Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut entraîner des modifications irréversibles ailleurs dans l’Experience Platform.
 
 **Format d’API**
 
@@ -56,4 +58,6 @@ Une réponse réussie renvoie l&#39;état HTTP 200 (OK) et un tableau contenant 
 ]
 ```
 
->[!NOTE] Si aucun objet Catalog ne correspond à l’ID fourni dans votre requête, vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponses sera vide.
+>[!NOTE]
+>
+>Si aucun objet Catalog ne correspond à l’ID fourni dans votre requête, vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponses sera vide.
