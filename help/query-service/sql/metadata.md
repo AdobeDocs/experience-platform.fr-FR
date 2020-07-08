@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Commandes de métadonnées
 topic: metadata
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Pour les métadonnées de votre jeu de données, les commandes PSQL suivantes sont actuellement prises en charge pour l’interrogation :
 
->[!NOTE] Les commandes répertoriées ci-dessous sont sensibles à la casse.
+>[!NOTE]
+>
+>Les commandes répertoriées ci-dessous sont sensibles à la casse.
 
 | La commande | Description |
 |------- | ------------|
@@ -41,5 +43,5 @@ Pour les métadonnées de votre jeu de données, les commandes PSQL suivantes so
 
 Toutes les commandes avec lesquelles ce début `\d` peut être combiné. Par exemple, vous pouvez publier `\dtsn` pour afficher une liste de tous les tableaux, séquences et schémas. `\d` affiche toutes les tables, vues, vues matérialisées et séquences visibles.
 
-Pour plus d&#39;informations sur les commandes listées ci-dessus, veuillez consulter la documentation à [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Cependant, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par Experience Platform.
+Pour plus d&#39;informations sur les commandes listées ci-dessus, veuillez consulter la documentation à [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Cependant, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par l&#39;Experience Platform.
 
