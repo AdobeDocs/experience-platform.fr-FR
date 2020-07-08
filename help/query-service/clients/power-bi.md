@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connexion à Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -46,7 +46,9 @@ Après avoir exécuté ces étapes préparatoires, vous pouvez connecter Power B
 
 - *(Facultatif mais recommandé lorsque &quot;all&quot; est déclaré pour la base de données)* Saisissez une instruction SQL.
 
->[!NOTE] Si une instruction SQL n&#39;est pas fournie, Power BI prévisualisation toutes les tables de la base de données. Pour les données hiérarchiques, une instruction SQL personnalisée doit être utilisée. Si le schéma de table est plat, il fonctionnera avec ou sans instruction SQL personnalisée. Les types composés ne sont pas encore pris en charge par Power BI - pour obtenir des types primitifs à partir de types composés, vous devrez écrire des instructions SQL pour les dériver.
+>[!NOTE]
+>
+>Si une instruction SQL n&#39;est pas fournie, Power BI prévisualisation toutes les tables de la base de données. Pour les données hiérarchiques, une instruction SQL personnalisée doit être utilisée. Si le schéma de table est plat, il fonctionnera avec ou sans instruction SQL personnalisée. Les types composés ne sont pas encore pris en charge par Power BI - pour obtenir des types primitifs à partir de types composés, vous devrez écrire des instructions SQL pour les dériver.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
