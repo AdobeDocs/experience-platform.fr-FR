@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Services
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 2%
@@ -213,7 +213,9 @@ Une réponse réussie renvoie une charge utile contenant les détails du service
 
 Vous pouvez mettre à jour un service MLService existant en remplaçant ses propriétés par une requête PUT qui inclut l&#39;ID de service MLService de cible dans le chemin d&#39;accès à la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer le service MLService par ID](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>[!TIP]
+>
+>Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer le service MLService par ID](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
 **Format d’API**
 
