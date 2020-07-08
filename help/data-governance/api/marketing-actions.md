@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Actions marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '536'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -154,7 +154,9 @@ PUT /marketingActions/custom/{marketingActionName}
 
 Dans la requête qui suit, notez que la charge utile `name` de la requête est la même que celle `{marketingActionName}` de l’appel API. Contrairement à une stratégie générée par le système et en lecture seule, la création d’une action marketing requiert que vous fournissiez le nom `id` prévu __ de l’action marketing au moment de sa création.
 
->[!NOTE] Si vous ne fournissez pas le `{marketingActionName}` contenu de l’appel, une erreur 405 (méthode non autorisée) se produira, car vous n’êtes pas autorisé à exécuter directement un PUT sur le `/marketingActions/custom` point de terminaison. En outre, si la charge `name` dans la charge ne correspond pas à la `{marketingActionName}` charge dans le chemin, vous recevrez une erreur 400 (mauvaise demande).
+>[!NOTE]
+>
+>Si vous ne fournissez pas le `{marketingActionName}` contenu de l’appel, une erreur 405 (méthode non autorisée) se produira, car vous n’êtes pas autorisé à exécuter directement un PUT sur le `/marketingActions/custom` point de terminaison. En outre, si la charge `name` dans la charge ne correspond pas à la `{marketingActionName}` charge dans le chemin, vous recevrez une erreur 400 (mauvaise demande).
 
 ```SHELL
 curl -X PUT \
@@ -197,7 +199,9 @@ Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le cor
 
 Il est possible de supprimer des actions marketing en envoyant une demande de DELETE à l’action `{marketingActionName}` de marketing que vous souhaitez supprimer.
 
->[!NOTE] Vous ne pouvez pas supprimer les actions marketing référencées par des stratégies de sortie. Si vous essayez de le faire, une erreur 400 (mauvaise requête) s’affichera, ainsi qu’un message d’erreur qui comprend le `id` (ou plusieurs ID) d’une ou plusieurs stratégies contenant une référence à l’action marketing que vous tentez de supprimer.
+>[!NOTE]
+>
+>Vous ne pouvez pas supprimer les actions marketing référencées par des stratégies de sortie. Si vous essayez de le faire, une erreur 400 (mauvaise requête) s’affichera, ainsi qu’un message d’erreur qui comprend le `id` (ou plusieurs ID) d’une ou plusieurs stratégies contenant une référence à l’action marketing que vous tentez de supprimer.
 
 **Format d’API**
 
