@@ -4,25 +4,25 @@ solution: Experience Platform
 title: Création d’un schéma ad hoc
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 956d1e5b4a994c9ea52d818f3dd6d3ff88cb16b6
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '742'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
 # Création d’un schéma ad hoc
 
-Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espacement des noms n’est utilisé que par un seul jeu de données. On parle alors de schéma &quot;ad hoc&quot;. Les schémas ad hoc sont utilisés dans divers workflows d’assimilation de données pour la plate-forme d’expérience, y compris l’assimilation de fichiers CSV et la création de certains types de connexions source.
+Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espacement des noms n’est utilisé que par un seul jeu de données. On parle alors de schéma &quot;ad hoc&quot;. Les schémas ad hoc sont utilisés dans divers workflows d’assimilation de données pour l’Experience Platform, y compris l’assimilation de fichiers CSV et la création de certains types de connexions source.
 
-Ce document fournit des étapes générales pour la création d&#39;un schéma ad hoc à l&#39;aide de l&#39;API [de registre de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. Il est destiné à être utilisé conjointement avec d’autres didacticiels de la plateforme d’expérience qui nécessitent la création d’un schéma ad hoc dans le cadre de leur processus. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc en fonction de son cas d’utilisation spécifique.
+Ce document fournit des étapes générales pour la création d&#39;un schéma ad hoc à l&#39;aide de l&#39;API [de registre de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. Il est destiné à être utilisé conjointement avec d’autres didacticiels Experience Platform qui nécessitent la création d’un schéma ad hoc dans le cadre de leur processus. Chacun de ces documents fournit des informations détaillées sur la manière de configurer correctement un schéma ad hoc en fonction de son cas d’utilisation spécifique.
 
 ## Prise en main
 
 Ce didacticiel nécessite une bonne compréhension du système de modèle de données d’expérience (XDM). Avant de commencer ce didacticiel, consultez la documentation XDM suivante :
 
-- [Présentation](../home.md)du système XDM : Présentation générale de XDM et de son implémentation dans la plateforme d’expérience.
+- [Présentation](../home.md)du système XDM : Présentation générale de XDM et de son implémentation en Experience Platform.
 - [Principes de base de la composition](../schema/composition.md)des schémas : Présentation des composants de base des schémas XDM.
 
 Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API de registre de Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
@@ -41,7 +41,9 @@ POST /tenant/classes
 
 La requête suivante crée une nouvelle classe XDM, configurée par les attributs fournis dans la charge utile. En fournissant une `$ref` propriété définie sur `https://ns.adobe.com/xdm/data/adhoc` dans le `allOf` tableau, cette classe hérite du `adhoc` comportement. La requête définit également un `_adhoc` objet, qui contient les champs personnalisés de la classe.
 
->[!NOTE] Les champs personnalisés définis sous `_adhoc` varient selon le cas d’utilisation du schéma ad hoc. Reportez-vous au processus spécifique du didacticiel approprié pour les champs personnalisés requis en fonction du cas d&#39;utilisation.
+>[!NOTE]
+>
+>Les champs personnalisés définis sous `_adhoc` varient selon le cas d’utilisation du schéma ad hoc. Reportez-vous au processus spécifique du didacticiel approprié pour les champs personnalisés requis en fonction du cas d&#39;utilisation.
 
 ```shell
 curl -X POST \
@@ -219,7 +221,9 @@ Une réponse positive renvoie les détails du schéma nouvellement créé, y com
 
 ## Vue du schéma ad hoc complet
 
->[!NOTE] Cette étape est facultative. Si vous ne souhaitez pas examiner la structure des champs de votre schéma ad hoc, vous pouvez passer à la section [étapes](#next-steps) suivantes à la fin de ce didacticiel.
+>[!NOTE]
+>
+>Cette étape est facultative. Si vous ne souhaitez pas examiner la structure des champs de votre schéma ad hoc, vous pouvez passer à la section [étapes](#next-steps) suivantes à la fin de ce didacticiel.
 
 Une fois le schéma ad hoc créé, vous pouvez effectuer une demande de recherche (GET) pour vue du schéma sous sa forme étendue. Pour ce faire, vous devez utiliser l’en-tête Accepter approprié dans la demande GET, comme indiqué ci-dessous.
 
