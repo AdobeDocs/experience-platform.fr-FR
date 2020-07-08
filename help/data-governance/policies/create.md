@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 3%
@@ -217,7 +217,9 @@ Cette expression est appelée expression **de** stratégie et est un objet conte
 }
 ```
 
->[!NOTE] Seuls les opérateurs OR et AND sont pris en charge.
+>[!NOTE]
+>
+>Seuls les opérateurs OR et AND sont pris en charge.
 
 Une fois que vous avez configuré votre expression de stratégie, vous pouvez créer une nouvelle stratégie DULE en envoyant une demande POST au point de `/policies/custom` terminaison.
 
@@ -322,7 +324,9 @@ Enregistrez l’ID URI de la nouvelle stratégie DULE, tel qu’il est utilisé 
 
 ## Activer la stratégie DULE
 
->[!NOTE] Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie DULE en `DRAFT` état, veuillez noter que, par défaut, une stratégie doit avoir son statut défini sur `ENABLED` pour pouvoir participer à l&#39;évaluation. Consultez le didacticiel sur l’ [application des stratégies](../enforcement/api-enforcement.md) DULE pour en savoir plus sur la manière de faire des exceptions pour les stratégies `DRAFT` d’état.
+>[!NOTE]
+>
+>Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie DULE en `DRAFT` état, veuillez noter que, par défaut, une stratégie doit avoir son statut défini sur `ENABLED` pour pouvoir participer à l&#39;évaluation. Consultez le didacticiel sur l’ [application des stratégies](../enforcement/api-enforcement.md) DULE pour en savoir plus sur la manière de faire des exceptions pour les stratégies `DRAFT` d’état.
 
 Par défaut, les stratégies DULE dont la `status` propriété est définie pour `DRAFT` ne pas participer à l’évaluation. Vous pouvez activer votre stratégie pour évaluation en envoyant une requête PATCH au point de `/policies/custom/` terminaison et en fournissant l’identifiant unique de la stratégie à la fin du chemin de la demande.
 
