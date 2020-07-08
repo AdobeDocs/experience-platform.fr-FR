@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ressources de Liste
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b4d8a6f8006d55c7aac19d705c6880fec915c147
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 2%
@@ -16,7 +16,9 @@ ht-degree: 2%
 
 Vous pouvez vue une liste de toutes les ressources de registre de Schéma d&#39;un certain type (classes, mixins, schémas, types de données ou descripteurs) dans un conteneur en exécutant une seule requête GET.
 
->[!NOTE] Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres de requête pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
+>[!NOTE]
+>
+>Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres de requête pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
 
 **Format d’API**
 
@@ -78,7 +80,9 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 Le Registre des Schémas prend en charge l&#39;utilisation de paramètres de requête pour la page et filtrer les résultats lors de la liste des ressources.
 
->[!NOTE] Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (`&`).
+>[!NOTE]
+>
+>Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (`&`).
 
 ### Pagination {#paging}
 
@@ -103,6 +107,8 @@ Vous pouvez filtrer les résultats en utilisant le `property` paramètre, qui es
 | `<=` | Filtres selon si la propriété est inférieure ou égale à la valeur fournie. | `property=version<=5` |
 | `>=` | Filtres selon si la propriété est supérieure ou égale à la valeur fournie. | `property=version>=5` |
 | `~` | Filtres selon si la propriété correspond à une expression régulière fournie. | `property=title~test$` |
-| (Aucun) | Le fait de spécifier uniquement le nom de la propriété renvoie uniquement les entrées où la propriété existe. | `property=title` |
+| (None) | Le fait de spécifier uniquement le nom de la propriété renvoie uniquement les entrées où la propriété existe. | `property=title` |
 
->[!TIP] Vous pouvez utiliser le `property` paramètre pour filtrer les mixins selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les mixins compatibles avec la classe de Profil XDM Individuel.
+>[!TIP]
+>
+>Vous pouvez utiliser le `property` paramètre pour filtrer les mixins selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les mixins compatibles avec la classe de Profil XDM Individuel.
