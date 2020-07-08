@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un espace de nommage personnalisé
 topic: API guide
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -18,7 +18,9 @@ A l&#39;aide de l&#39; [!DNL Identity Namespace] API, vous pouvez créer un espa
 
 Pour obtenir des recommandations sur la création d’espaces de nommage personnalisés, consultez [la documentation](../troubleshooting-guide.md)FAQ sur Identity Service.
 
->[!NOTE] Les Espaces de nommage sont un qualificatif pour les identités. Ainsi, une fois un espace de nommage créé, il ne peut plus être supprimé.
+>[!NOTE]
+>
+>Les Espaces de nommage sont un qualificatif pour les identités. Ainsi, une fois un espace de nommage créé, il ne peut plus être supprimé.
 
 **Format d’API**
 
