@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mise à jour d’un sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 974e93b1c24493734848151b9be00758f6a84578
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 4%
 
 Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en exécutant une requête PATCH qui inclut le sandbox dans le chemin de la requête et la propriété à mettre à jour dans la charge utile de la requête. `name`
 
->[!NOTE] Actuellement, seule la `title` propriété d’un sandbox peut être mise à jour.
+>[!NOTE]
+>
+>Actuellement, seule la `title` propriété d’un sandbox peut être mise à jour.
 
 **Format d’API**
 
