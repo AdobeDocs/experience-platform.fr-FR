@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Score d’un modèle (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 1%
@@ -34,9 +34,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{JSON_PAYLOAD}`: Objet d&#39;exécution d&#39;expérience à envoyer. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
 
 ```JSON
@@ -122,9 +122,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.\
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d’API spécifique se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
 `{EXPERIMENT_ID}`: ID correspondant à l’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre expérience.\
 `{JSON_PAYLOAD}`: Données à publier. L’exemple que nous utilisons dans notre didacticiel est le suivant :
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 `{EXPERIMENT_ID}`:  ID correspondant à l&#39;expérience sous laquelle l&#39;exécution est exécutée.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
 
 Comme il existe plusieurs exécutions d’expériences pour une expérience spécifique, la réponse renvoyée comporte un tableau d’ID d’exécution.
 
@@ -217,7 +217,7 @@ Comme il existe plusieurs exécutions d’expériences pour une expérience spé
 
 ### Arrêter et supprimer une expérience planifiée
 
-Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander une requête DELETE à la variable `{EXPERIMENT_ID}`
+Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander à un DELETE de répondre à la demande de la variable `{EXPERIMENT_ID}`
 
 **Requête**
 
@@ -230,9 +230,11 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`:  ID correspondant à l’expérience.\
 `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration unique à Adobe Experience Platform.
+`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
 
->[!NOTE] L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
+>[!NOTE]
+>
+>L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
 
 Voici la réponse vous informant que l&#39;expérience a bien été supprimée.
 
