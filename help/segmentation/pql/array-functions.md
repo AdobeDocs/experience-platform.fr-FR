@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions de tableau, de liste et de définition
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 5%
@@ -38,7 +38,9 @@ person.birthMonth in [3, 6, 9]
 
 La `notIn` fonction permet de déterminer si un élément n&#39;est pas membre d&#39;une baie ou d&#39;une liste.
 
->[!NOTE] La fonction `notIn` assure *également* qu’aucune valeur n’est égale à null. Par conséquent, les résultats ne sont pas une négation exacte de la `in` fonction.
+>[!NOTE]
+>
+>La fonction `notIn` assure *également* qu’aucune valeur n’est égale à null. Par conséquent, les résultats ne sont pas une négation exacte de la `in` fonction.
 
 **Format**
 
