@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Traitement des demandes de confidentialité dans le Profil client en temps réel
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc296670db91640e75fd7a47b874a46eaf57ecde
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Traitement des demandes de confidentialité dans le Profil client en temps réel
 
-Le service de confidentialité d’Adobe Experience Platform traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles, conformément aux règles de confidentialité telles que le Règlement général sur la protection des données (RGPD) et la Loi sur la protection des données des consommateurs de Californie (CCPA).
+L’Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux règlements sur la protection des données personnelles tels que le Règlement général sur la protection des données (RGPD) et la Loi sur la protection des renseignements personnels des consommateurs (LPCPC) de Californie.
 
 Ce document couvre les concepts essentiels liés au traitement des demandes de confidentialité pour le Profil client en temps réel.
 
 ## Prise en main
 
-Avant de lire ce guide, il est recommandé de bien comprendre les services Experience Platform suivants :
+Il est recommandé de bien comprendre les services d’Experience Platform suivants avant de lire ce guide :
 
 * [Privacy Service](home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou les supprimer.
 * [Service](../identity-service/home.md)d&#39;identité : Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
@@ -28,17 +28,19 @@ Avant de lire ce guide, il est recommandé de bien comprendre les services Exper
 
 ## Comprendre les espaces de nommage d&#39;identité {#namespaces}
 
-Adobe Experience Platform Identity Service relie les données d’identité des clients entre les systèmes et les périphériques. Identity Service utilise des espaces de nommage **** d&#39;identité pour fournir un contexte aux valeurs d&#39;identité en les rattachant à leur système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Adresse électronique&quot;) ou associer l’identité à une application spécifique, telle qu’un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou un Adobe Cible ID (&quot;TNTID&quot;).
+Adobe Experience Platform Identity Service relie les données d&#39;identité des clients entre les systèmes et les périphériques. Identity Service utilise des espaces de nommage **** d&#39;identité pour fournir un contexte aux valeurs d&#39;identité en les rattachant à leur système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Email&quot;) ou associer l’identité à une application spécifique, telle qu’un Advertising Cloud ID (&quot;AdCloud&quot;) ou un ID d’Adobe Target (&quot;TNTID&quot;).
 
 Identity Service conserve un stock d&#39;espaces de nommage d&#39;identité définis globalement (standard) et définis par l&#39;utilisateur (personnalisés). Les espaces de nommage standard sont disponibles pour toutes les organisations (par exemple, &quot;Courriel&quot; et &quot;ECID&quot;), tandis que votre organisation peut également créer des espaces de nommage personnalisés en fonction de ses besoins particuliers.
 
-Pour plus d’informations sur les espaces de nommage d’identité dans la plate-forme d’expérience, voir la présentation [de l’espace de nommage](../identity-service/namespaces.md)d’identité.
+Pour plus d&#39;informations sur les espaces de nommage d&#39;identité dans l&#39;Experience Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
 
 ## Envoi de requêtes {#submit}
 
->[!NOTE] Cette section explique comment créer des requêtes de confidentialité pour le stockage de données de Profil. Il est vivement recommandé de consulter l’API [de](../privacy-service/api/getting-started.md) Privacy Service ou la documentation de l’interface utilisateur [de](../privacy-service/ui/overview.md) Privacy Service pour connaître les étapes complètes de l’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité d’utilisateur envoyées dans les charges de demande.
+>[!NOTE]
+>
+>Cette section explique comment créer des requêtes de confidentialité pour le stockage de données de Profil. Il est vivement recommandé de consulter la documentation relative à l’API [](../privacy-service/api/getting-started.md) Privacy Service ou à l’interface utilisateur [](../privacy-service/ui/overview.md) Privacy Service pour connaître les étapes complètes d’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité de l’utilisateur envoyées dans les charges utiles de demande.
 
-La section suivante décrit comment effectuer des demandes de confidentialité pour le Profil client en temps réel et Data Lake à l’aide de l’API ou de l’interface utilisateur de Privacy Service.
+La section suivante décrit comment effectuer des demandes de confidentialité pour le Profil client en temps réel et Data Lake à l’aide de l’API ou de l’interface utilisateur du Privacy Service.
 
 ### Utilisation de l’API
 
@@ -97,12 +99,12 @@ Lors de la création de demandes d&#39;emploi dans l&#39;interface utilisateur, 
 
 ## Supprimer le traitement de demande
 
-Lorsqu’Experience Platform reçoit une demande de suppression de Privacy Service, Platform envoie une confirmation à Privacy Service que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les dossiers sont ensuite retirés du magasin Data Lake ou du magasin de Profils dans les sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service de plateforme.
+Lorsque l’Experience Platform reçoit une demande de suppression du Privacy Service, Platform envoie une confirmation au Privacy Service que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les dossiers sont ensuite retirés du magasin Data Lake ou du magasin de Profils dans les sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service Platform.
 
-Dans les prochaines versions, Platform enverra une confirmation à Privacy Service après la suppression physique des données.
+Dans les prochaines versions, Platform enverra une confirmation au Privacy Service après la suppression physique des données.
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez été initié aux concepts importants liés au traitement des demandes de confidentialité dans Experience Platform. Il est recommandé de continuer à lire la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d&#39;identité et créer des tâches de confidentialité.
+En lisant ce document, vous avez été familiarisé avec les concepts importants liés au traitement des demandes de confidentialité en Experience Platform. Il est recommandé de continuer à lire la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d&#39;identité et créer des tâches de confidentialité.
 
-Pour plus d&#39;informations sur le traitement des demandes de confidentialité pour les ressources de la plateforme non utilisées par le Profil, consultez le document sur le traitement des demandes de [confidentialité dans Data Lake](../catalog/privacy.md).
+Pour plus d&#39;informations sur le traitement des demandes de confidentialité pour les ressources Platform non utilisées par le Profil, consultez le document sur le traitement des demandes de [confidentialité dans Data Lake](../catalog/privacy.md).
