@@ -4,17 +4,19 @@ solution: Experience Platform
 title: Liste des sandbox actifs pour l’utilisateur actuel
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 982764ae7807e40cbca5ca60c70bf363a271e3c2
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
 # Liste des sandbox actifs pour l’utilisateur actuel
 
->[!NOTE] Contrairement aux autres points de terminaison fournis dans l’API Sandbox, ce point de terminaison est disponible pour tous les utilisateurs, y compris ceux qui ne disposent pas d’autorisations d’accès à l’administration Sandbox.
+>[!NOTE]
+>
+>Contrairement aux autres points de terminaison fournis dans l’API Sandbox, ce point de terminaison est disponible pour tous les utilisateurs, y compris ceux qui ne disposent pas d’autorisations d’accès à l’administration Sandbox.
 
 Vous pouvez liste les sandbox actifs pour l’utilisateur actuel en envoyant une requête GET au point de terminaison racine (`/`).
 
