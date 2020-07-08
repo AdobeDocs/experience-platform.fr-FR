@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Accès aux scores dans l’API d’attribution
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: 01a500959802aa8c02bdaa8f024a9849ec23be51
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 2%
+ht-degree: 52%
 
 ---
 
@@ -18,23 +18,23 @@ Ce document sert de guide pour le téléchargement de scores pour Attribution AI
 
 ## Prise en main
 
-Attribution AI vous permet de télécharger des partitions au format parquet. Ce didacticiel nécessite que vous ayez lu et terminé la section des scores AI d’attribution en téléchargement dans le guide de [prise en main](./getting-started.md) .
+Attribution AI vous permet de télécharger des partitions au format parquet. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
-De plus, pour accéder aux scores de l’API d’attribution, vous devez disposer d’une instance de service avec un état d’exécution réussi. Pour créer une instance de service, consultez le guide [d’utilisation de l’API](./user-guide.md)d’attribution. Si vous avez récemment créé une instance de service et qu’elle continue à s’entraîner et à marquer des points, veuillez lui accorder 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores de l’API d’attribution, vous devez disposer d’une instance de service avec un état d’exécution réussi. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
-## Find your dataset ID {#dataset-id}
+## Chercher l’identifiant de votre jeu de données {#dataset-id}
 
-Dans votre instance de service pour obtenir des informations sur l’API d’attribution, cliquez sur la liste déroulante Actions ** supplémentaires dans le volet de navigation supérieur droit, puis sélectionnez scores **** d’accès.
+Within your service instance for Attribution AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
 
-![Autres actions](./images/download-scores/more-actions.png)
+![actions supplémentaires](./images/download-scores/more-actions.png)
 
-Une nouvelle boîte de dialogue s’affiche, contenant un lien vers la documentation des scores de téléchargement et l’ID du jeu de données de votre instance actuelle. Copiez l’ID du jeu de données dans le Presse-papiers et passez à l’étape suivante.
+Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation des scores de téléchargement et l’identifiant du jeu de données de votre instance actuelle. Copiez l’identifiant du jeu de données dans votre presse-papiers et passez à l’étape suivante.
 
-![ID de jeu de données](../customer-ai/images/download-scores/access-scores.png)
+![Identifiant du jeu de données](../customer-ai/images/download-scores/access-scores.png)
 
-## Récupérer votre identifiant de lot {#retrieve-your-batch-id}
+## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’ID de votre jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer d&#39;autres lots, augmentez le nombre du paramètre de `limit` requête à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données du catalogue à l’aide de paramètres](../../catalog/api/filter-data.md)de requête.
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer d&#39;autres lots, augmentez le nombre du paramètre de `limit` requête à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -44,7 +44,7 @@ GET /batches?&dataSet={DATASET_ID}&createdClient=acp_foundation_push&status=succ
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | ID du jeu de données disponible dans la boîte de dialogue &quot;Accéder aux scores&quot;. |
+| `{DATASET_ID}` | Identifiant du jeu de données disponible dans la boîte de dialogue « Accéder aux scores ». |
 
 **Requête**
 
@@ -58,7 +58,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un objet d’identifiant de lot. Dans cet exemple, la valeur Key de l’objet renvoyé est the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’ID de lot à utiliser dans l’appel d’API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur Key de l’objet renvoyé est the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 >[!NOTE]
 > L’ `tags` objet a été reformé pour être lisible dans la réponse suivante.
@@ -110,9 +110,9 @@ Une réponse réussie renvoie une charge utile contenant un objet d’identifian
 }
 ```
 
-## Récupérez le prochain appel d’API avec votre identifiant de lot. {#retrieve-the-next-api-call-with-your-batch-id}
+## Récupération de l’appel API suivant avec l’identifiant de lot {#retrieve-the-next-api-call-with-your-batch-id}
 
-Une fois que vous disposez de votre identifiant de lot, vous pouvez faire une nouvelle demande GET à `/batches`. La requête renvoie un lien utilisé comme requête d’API suivante.
+Une fois que vous disposez de l’identifiant de lot, vous pouvez adresser une nouvelle requête GET à `/batches`. La requête renvoie un lien utilisé pour la requête d’API suivante.
 
 **Format d’API**
 
@@ -122,11 +122,11 @@ GET batches/{BATCH_ID}/files
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID de lot récupéré à l’étape précédente [récupère votre ID](#retrieve-your-batch-id)de lot. |
+| `{BATCH_ID}` | L’identifiant de lot récupéré à l’étape précédente, [récupération de votre identifiant de lot](#retrieve-your-batch-id). |
 
 **Requête**
 
-En utilisant votre propre ID de lot, effectuez la requête suivante.
+En utilisant votre propre identifiant de lot, effectuez la requête suivante.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAASFQ054FNBKYV6TIQ/files' \
@@ -138,7 +138,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/01E5QSWCAA
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant un `_links` objet. L’ `_links` objet contient un appel `href` d’API dont la valeur est un nouvel appel d’API. Copiez cette valeur pour passer à l’étape suivante.
+Une réponse réussie renvoie un payload contenant un objet `_links`. L’objet `_links` contient une valeur `href` ayant un nouvel appel API comme valeur. Copiez cette valeur pour passer à l’étape suivante.
 
 ```json
 {
@@ -164,9 +164,9 @@ Une réponse réussie renvoie une charge utile contenant un `_links` objet. L’
 }
 ```
 
-## Récupérer vos fichiers {#retrieving-your-files}
+## Récupération de vos fichiers {#retrieving-your-files}
 
-En utilisant la `href` valeur obtenue à l’étape précédente comme appel d’API, effectuez une nouvelle demande GET pour récupérer votre répertoire de fichiers.
+À l’aide de la valeur `href` obtenue à l’étape précédente comme appel API, effectuez une nouvelle requête GET pour récupérer votre répertoire de fichiers.
 
 **Format d’API**
 
@@ -176,7 +176,7 @@ GET files/{DATASETFILE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L&#39;ID dataSetFile est renvoyé dans la `href` valeur de l&#39;étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. Il est également accessible dans le `data` tableau sous le type d&#39;objet `dataSetFileId`. |
+| `{DATASETFILE_ID}` | L’identifiant dataSetFile est renvoyé dans la valeur `href` de l’[étape précédente](#retrieve-the-next-api-call-with-your-batch-id). Il est aussi accessible dans le tableau `data`, sous le type d’objet `dataSetFileId`. |
 
 **Requête**
 
@@ -190,7 +190,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/01E5QSWCAASF
 
 **Réponse**
 
-La réponse contient un tableau de données qui peut comporter une entrée unique ou une liste de fichiers appartenant à ce répertoire. L&#39;exemple ci-dessous contient une liste de fichiers et a été condensé pour en faciliter la lecture. Dans ce scénario, vous devez suivre l’URL de chaque fichier pour accéder au fichier.
+La réponse contient un tableau de données qui peut comporter une entrée unique ou une liste de fichiers liés à ce répertoire. L’exemple ci-dessous contient une liste de fichiers et a été condensé pour en faciliter la lecture. Dans ce scénario, vous devez suivre l’URL de chaque fichier pour y accéder.
 
 ```json
 {
@@ -214,16 +214,18 @@ La réponse contient un tableau de données qui peut comporter une entrée uniqu
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `_links.self.href` | URL de demande GET utilisée pour télécharger un fichier dans votre répertoire. |
+| `_links.self.href` | L’URL de la requête GET utilisée pour télécharger un fichier dans votre répertoire. |
 
 
-Copiez la `href` valeur de tout objet de fichier dans le `data` tableau, puis passez à l&#39;étape suivante.
+Copiez la valeur `href` de chaque objet de fichier du tableau `data`, puis passez à l’étape suivante.
 
 ## Télécharger vos données de fichier
 
-Pour télécharger vos données de fichier, faites une requête GET à la `"href"` valeur que vous avez copiée à l’étape précédente [récupérant vos fichiers](#retrieving-your-files).
+Pour télécharger vos données de fichier, envoyez une requête GET vers la valeur `"href"` que vous avez copiée à l’étape précédente [récupération de vos fichiers](#retrieving-your-files).
 
->[!NOTE] Si vous effectuez cette requête directement en ligne de commande, vous pouvez être invité à ajouter une sortie après les en-têtes de la requête. L&#39;exemple de demande suivant utilise `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>Si vous entrez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de la requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
 
 **Format d’API**
 
@@ -233,7 +235,7 @@ GET files/{DATASETFILE_ID}?path={FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASETFILE_ID}` | L&#39;ID dataSetFile est renvoyé dans la `href` valeur d&#39;une étape [](#retrieve-the-next-api-call-with-your-batch-id)précédente. |
+| `{DATASETFILE_ID}` | L’identifiant dataSetFile est renvoyé dans la valeur `href` d’une [étape précédente](#retrieve-the-next-api-call-with-your-batch-id). |
 | `{FILE_NAME}` | Nom du fichier. |
 
 **Requête**
@@ -247,7 +249,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/01E5QSWC
   -O 'file.parquet'
 ```
 
->[!TIP] Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la demande GET.
+>[!TIP]
+>
+>Assurez-vous de vous trouver dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la requête GET.
 
 **Réponse**
 
@@ -257,21 +261,25 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger les scores d’IA d’attribution. Vous pouvez maintenant continuer à parcourir les autres services [et guides](../home.md) intelligents qui sont proposés.
+Ce document décrit les étapes requises pour télécharger les scores d’IA d’attribution. Vous pouvez maintenant continuer à parcourir les autres [services intelligents](../home.md) et guides proposés.
 
 ## Accès aux scores à l’aide du Snowflake
 
->[!IMPORTANT] Veuillez contacter attributionai-support@adobe.com pour plus de détails sur l&#39;accès aux scores en utilisant le Snowflake.
+>[!IMPORTANT]
+>
+>Veuillez contacter attributionai-support@adobe.com pour plus de détails sur l&#39;accès aux scores en utilisant le Snowflake.
 
-Vous pouvez accéder aux scores d’IA d’attribution agrégés par l’intermédiaire du Snowflake. Actuellement, vous devez envoyer un courrier électronique au service d’assistance d’Adobe à l’adresse attributionai-support@adobe.com pour configurer et recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
+Vous pouvez accéder aux scores d’IA d’attribution agrégés par l’intermédiaire du Snowflake. Actuellement, vous devez envoyer un courrier électronique à l’assistance Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour le Snowflake.
 
-Une fois votre demande traitée par l’assistance d’Adobe, vous recevez une URL pour le compte de lecteur au Snowflake et les informations d’identification correspondantes ci-dessous :
+Une fois que le support Adobe a traité votre demande, vous recevez une URL pour le compte de lecteur au Snowflake et les informations d’identification correspondantes ci-dessous :
 
 - URL du Snowflake
 - Nom d’utilisateur
 - Mot de passe
 
->[!NOTE] Le compte reader permet d&#39;interroger les données à l&#39;aide de clients SQL, de feuilles de calcul et de solutions BI qui prennent en charge le connecteur JDBC.
+>[!NOTE]
+>
+>Le compte reader permet d&#39;interroger les données à l&#39;aide de clients SQL, de feuilles de calcul et de solutions BI qui prennent en charge le connecteur JDBC.
 
 Une fois que vous disposez de vos informations d’identification et de votre URL, vous pouvez requête les tables de modèles, regroupées par date de point de contact ou date de conversion.
 
