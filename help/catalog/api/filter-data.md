@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Filtrage des données du catalogue à l’aide des paramètres de requête
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5699022d1f18773c81a0a36d4593393764cb771a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2060'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -205,7 +205,7 @@ Il existe quelques limites à prendre en compte lors de l’utilisation de balis
 * Les seuls objets de catalogue qui prennent actuellement en charge les balises sont les jeux de données, les lots et les connexions.
 * Les noms de balise sont propres à votre organisation IMS.
 * Les processus Adobe peuvent utiliser des balises pour certains comportements. Les noms de ces balises sont précédés du préfixe &quot;adobe&quot; comme standard. Par conséquent, vous devez éviter cette convention lors de la déclaration des noms de balises.
-* Les noms de balise suivants sont réservés à l’utilisation sur la plate-forme d’expérience et ne peuvent donc pas être déclarés en tant que nom de balise pour votre organisation :
+* Les noms de balise suivants sont réservés à l’utilisation dans l’ensemble de l’Experience Platform et ne peuvent donc pas être déclarés comme nom de balise pour votre organisation :
    * `unifiedProfile`: Ce nom de balise est réservé pour que les jeux de données soient assimilés par le Profil [client](../../profile/home.md)en temps réel.
    * `unifiedIdentity`: Ce nom de balise est réservé pour que les jeux de données soient assimilés par [Identity Service](../../identity-service/home.md).
 
@@ -579,7 +579,7 @@ La valeur du `property` paramètre prend en charge différents types d’express
 
 | Symbole(s) | Description | Exemple |
 | --- | --- | --- |
-| (Aucun) | La mention du nom de la propriété sans opérateur renvoie uniquement les objets où la propriété existe, quelle que soit sa valeur. | `property=name` |
+| (None) | La mention du nom de la propriété sans opérateur renvoie uniquement les objets où la propriété existe, quelle que soit sa valeur. | `property=name` |
 | ! | La préfixation d’un &quot;`!`&quot; à la valeur d’un `property` paramètre renvoie uniquement les objets dans lesquels la propriété **n’existe pas** . | `property=!name` |
 | ~ | Renvoie uniquement les objets dont les valeurs de propriété (chaîne) correspondent à une expression régulière fournie après le symbole tilde (`~`). | `property=name~^example` |
 | == | Renvoie uniquement les objets dont les valeurs de propriété correspondent exactement à la chaîne fournie après le symbole doublon-equals (`==`). | `property=name==exampleName` |
@@ -589,7 +589,9 @@ La valeur du `property` paramètre prend en charge différents types d’express
 | > | Renvoie uniquement les objets dont les valeurs de propriété sont supérieures (mais non égales) à un montant indiqué. | `property=version>1.0.0` |
 | >= | Renvoie uniquement les objets dont les valeurs de propriété sont supérieures (ou égales à) à un montant indiqué. | `property=version>=1.0.0` |
 
->[!NOTE] La `name` propriété prend en charge l’utilisation d’un caractère générique `*`, sous la forme d’une chaîne de recherche complète ou d’une partie de celle-ci. Les caractères génériques correspondent à des caractères vides, de sorte que la chaîne de recherche `te*st` corresponde à la valeur &quot;test&quot;. Les astérisques sont évités en les doublant (`**`). Un doublon-astérisque dans une chaîne de recherche représente un astérisque unique comme chaîne littérale.
+>[!NOTE]
+>
+>La `name` propriété prend en charge l’utilisation d’un caractère générique `*`, sous la forme d’une chaîne de recherche complète ou d’une partie de celle-ci. Les caractères génériques correspondent à des caractères vides, de sorte que la chaîne de recherche `te*st` corresponde à la valeur &quot;test&quot;. Les astérisques sont évités en les doublant (`**`). Un doublon-astérisque dans une chaîne de recherche représente un astérisque unique comme chaîne littérale.
 
 **Requête**
 
