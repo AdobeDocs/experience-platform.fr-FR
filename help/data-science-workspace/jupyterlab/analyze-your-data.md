@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyse de vos données à l'aide de portables
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
 ht-degree: 0%
@@ -50,7 +50,9 @@ La recette Ventes au détail est un exemple autonome qui utilise le même jeu de
 
 ### Données d’accès
 
->[!NOTE] La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) Platform. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
+>[!NOTE]
+>
+>La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) Platform. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
 
 Nous allons passer en revue l&#39;accès aux données en interne [!DNL Adobe Experience Platform] et en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la [!DNL Python] bibliothèque pandas.
 
@@ -86,7 +88,9 @@ Puisque le jeu de données est le même, nous voulons remplacer les données de 
 
 Désormais, nous pouvons cliquer avec le bouton droit sur le `Retail-Training-<your-alias>` jeu de données et sélectionner l&#39;option &quot;Explorer les données dans le bloc-notes&quot; dans la liste déroulante. Une entrée de code exécutable apparaît dans votre bloc-notes.
 
->[!TIP] reportez-vous au [!DNL Platform SDK](../authoring/platform-sdk.md) guide pour convertir votre code.
+>[!TIP]
+>
+>reportez-vous au [!DNL Platform SDK](../authoring/platform-sdk.md) guide pour convertir votre code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
