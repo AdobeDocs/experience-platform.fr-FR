@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Analyse de l'assimilation des données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9cbc22a34613aeb58a2c5090b10978ae4428dbdb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Analyse de l&#39;assimilation des données
 
-L’assimilation de données vous permet d’assimiler vos données à Adobe Experience Platform. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer vos données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’assimiler vos données à la plate-forme à l’aide de points de terminaison de flux continu en temps réel.
+L&#39;assimilation de données vous permet d&#39;assimiler vos données à l&#39;Adobe Experience Platform. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer vos données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’assimiler vos données à Platform à l’aide de points de terminaison en flux continu en temps réel.
 
-Ce guide d’utilisateur décrit la procédure à suivre pour surveiller vos données dans l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous disposiez d’un Adobe ID et d’un accès à Adobe Experience Platform.
+Ce guide d’utilisation décrit la procédure à suivre pour surveiller vos données dans l’interface utilisateur de l’Adobe Experience Platform. Ce guide vous demande de disposer d&#39;un Adobe ID et d&#39;un accès à l&#39;Adobe Experience Platform.
 
 ## Surveiller l&#39;assimilation des données de bout en bout en flux continu
 
-Dans l’interface utilisateur [de la plateforme](https://platform.adobe.com)d’expérience, cliquez sur **Surveillance** dans le menu de navigation de gauche, puis cliquez sur **Diffusion en continu de bout en bout**.
+Dans l’interface utilisateur [de l’](https://platform.adobe.com)Experience Platform, cliquez sur **Surveillance** dans le menu de navigation de gauche, puis cliquez sur **Diffusion en continu de bout en bout**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance *en flux continu de bout en bout* s’affiche. Cet espace de travail fournit un graphique qui affiche le taux de événements en flux continu reçus par Plateforme, un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par Profil [client en temps](../../profile/home.md)réel, ainsi qu’une liste détaillée des données entrantes.
+La page de surveillance *en flux continu de bout en bout* s’affiche. Cet espace de travail fournit un graphique qui affiche le taux de événements en flux continu reçus par Platform, un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par le Profil [client en temps](../../profile/home.md)réel, ainsi qu’une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -34,7 +34,9 @@ Par défaut, le graphique supérieur montre le taux d&#39;ingestion au cours des
 
 Le graphique du bas montre le taux de événements en flux continu traités avec succès par Profil au cours des sept derniers jours. Cette plage de dates peut être ajustée pour afficher diverses périodes en cliquant sur le bouton en surbrillance.
 
-> [!NOTE] Pour que les données s’affichent sur ce graphique, elles doivent être **explicitement** activées pour le Profil. Pour savoir comment activer la diffusion en continu des données pour le Profil, consultez le guide [d’utilisation](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)des jeux de données.
+>[!NOTE]
+>
+>Pour que les données s’affichent sur ce graphique, elles doivent être **explicitement** activées pour le Profil. Pour savoir comment activer la diffusion en continu des données pour le Profil, consultez le guide [d’utilisation](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)des jeux de données.
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -58,7 +60,7 @@ En outre, les enregistrements en échec fournissent des détails sur les erreurs
 
 ## Surveiller l&#39;assimilation des données de bout en bout par lot
 
-Dans l’interface utilisateur [de la plateforme](https://platform.adobe.com)d’expérience, cliquez sur **Surveillance** dans le menu de navigation de gauche.
+Dans l’interface utilisateur [de l’](https://platform.adobe.com)Experience Platform, cliquez sur **Surveillance** dans le menu de navigation de gauche.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
