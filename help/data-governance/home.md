@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gouvernance des données Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 3%
@@ -64,7 +64,9 @@ La structure DULE comprend des étiquettes d’utilisation de données prédéfi
 * **Étiquettes de données &quot;I&quot; d&#39;identité :** Étiqueter et classer les données qui peuvent identifier ou contacter une personne spécifique.
 * **Étiquettes de données sensibles &quot;S&quot; :** Étiqueter et classer les données liées à des données sensibles telles que les données géographiques.
 
->[!NOTE] Consultez le guide sur les étiquettes [d’utilisation des données](labels/reference.md) prises en charge pour obtenir une liste complète des étiquettes disponibles, ainsi que des définitions pour chaque type d’étiquette.
+>[!NOTE]
+>
+>Consultez le guide sur les étiquettes [d’utilisation des données](labels/reference.md) prises en charge pour obtenir une liste complète des étiquettes disponibles, ainsi que des définitions pour chaque type d’étiquette.
 
 Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Il est recommandé d’étiqueter les données dès leur assimilation [!DNL Experience Platform]ou dès que les données sont disponibles dans [!DNL Platform].
 
@@ -78,7 +80,9 @@ Un exemple d’action marketing peut être le désir d’exporter un jeu de donn
 
 Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent créer des stratégies à l’aide de l’API DULE Policy Service ou de l’interface [!DNL Experience Platform] utilisateur.
 
->[!IMPORTANT] Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
+>[!IMPORTANT]
+>
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
 
 Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, voir l’aperçu [des](./policies/overview.md)stratégies.
 
