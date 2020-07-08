@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identity Service d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1530'
 ht-degree: 5%
@@ -94,11 +94,13 @@ En fonction de votre stratégie de collecte de données d’entreprise, les cham
 
 Bien que [!DNL Experience Platform] les offres présentent divers espaces de nommage standard, vous devrez peut-être créer d’autres espaces de nommage pour classer correctement vos identités. Pour plus d&#39;informations, reportez-vous à la section relative à l&#39; [affichage et à la création d&#39;espaces de nommage pour votre organisation](./namespaces.md) dans la présentation de l&#39;espace de nommage d&#39;identité.
 
->[!NOTE] Les espaces de nommage d&#39;identité sont un qualificatif pour les identités. Par conséquent, une fois un espace de nommage créé, il ne peut plus être supprimé.
+>[!NOTE]
+>
+>Les espaces de nommage d&#39;identité sont un qualificatif pour les identités. Par conséquent, une fois un espace de nommage créé, il ne peut plus être supprimé.
 
 ### Inclure les données d&#39;identité dans [!DNL Experience Data Model] (XDM)
 
-En tant que cadre normalisé d&#39; [!DNL Platform] organisation des données client, [!DNL Experience Data Model] (XDM) permet de partager et de comprendre les données entre les [!DNL Experience Platform] services et les autres services interagissant avec [!DNL Platform]. Pour plus d&#39;informations, consultez la présentation [du système](../xdm/home.md)XDM.
+En tant que cadre normalisé d&#39; [!DNL Platform] organisation des données client, [!DNL Experience Data Model] (XDM) permet de partager et de comprendre les données entre [!DNL Experience Platform] et d&#39;autres services interagissant avec [!DNL Platform]. Pour plus d&#39;informations, consultez la présentation [du système](../xdm/home.md)XDM.
 
 Les schémas d&#39;enregistrement et de série chronologique permettent d&#39;inclure des données d&#39;identité. Au fur et à mesure que les données sont ingérées, le graphique d&#39;identité crée de nouvelles relations entre les fragments de données provenant de différents espaces de nommage s&#39;ils se révèlent partager des données d&#39;identité communes.
 
@@ -109,7 +111,9 @@ Tout champ de type `string` dans les schémas qui implémentent des classes XDM 
 Les champs d’identité permettent également la liaison d’identités s’ils partagent des données d’identification personnelle communes.
 Par exemple, en étiquetant les champs de numéro de téléphone comme champs d’identité, [!DNL Identity Service] affiche automatiquement les relations avec les autres personnes qui utilisent le même numéro de téléphone.
 
->[!NOTE] L’espace de nommage des identités résultantes est fourni au moment où le champ est libellé.
+>[!NOTE]
+>
+>L’espace de nommage des identités résultantes est fourni au moment où le champ est libellé.
 
 ### Configuration d’un jeu de données pour [!DNL Identity Service]
 
