@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide du développeur Requête Service
 topic: scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '947'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commence
 
 ### Récupération d’une liste de requêtes planifiées
 
-Vous pouvez récupérer une liste de toutes les requêtes planifiées pour votre organisation IMS en adressant une demande GET au point de `/schedules` terminaison.
+You can retrieve a list of all scheduled queries for your IMS Organization by making a GET request to the `/schedules` endpoint.
 
 **Format d’API**
 
@@ -31,15 +31,15 @@ GET /schedules?{QUERY_PARAMETERS}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parameters added to the request path which configure the results returned in the response. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
 
-**Paramètres de Requête**
+**Paramètres de requête**
 
 Voici une liste des paramètres de requête disponibles pour répertorier les requêtes planifiées. Tous ces paramètres sont facultatifs. L&#39;appel à ce point de terminaison sans paramètre récupère toutes les requêtes planifiées disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L&#39;ajout d&#39;un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l&#39;ordre décroissant. |
+| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. Ajouter un `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
 | `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `created`, `templateId`et `userId`. La liste des opérateurs pris en charge est `>` (supérieure à), `<` (inférieure à) et `==` (égale à). Par exemple, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes planifiées où l’ID utilisateur est spécifié. |
@@ -124,7 +124,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste de requêtes pla
 
 ### Créer une nouvelle requête planifiée
 
-Vous pouvez créer une requête planifiée en adressant une requête POST au point de `/schedules` terminaison.
+You can create a new scheduled query by making a POST request to the `/schedules` endpoint.
 
 **Format d’API**
 
@@ -217,7 +217,9 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
 
 ### Demander les détails d&#39;une requête planifiée spécifiée
 
@@ -231,7 +233,7 @@ GET /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
 **Requête**
 
@@ -298,7 +300,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de la requêt
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête](#delete-a-specified-scheduled-query)planifiée que vous avez créée.
 
 ### Mettre à jour les détails d’une requête planifiée spécifiée
 
@@ -318,7 +322,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
 
 **Requête**
@@ -370,7 +374,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
 **Requête**
 
@@ -411,9 +415,11 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec le message suiv
 
 ### Supprimer une requête planifiée spécifiée
 
-Vous pouvez supprimer une requête planifiée spécifiée en adressant une requête DELETE au point de `/schedules` terminaison et en indiquant l’identifiant de la requête planifiée que vous souhaitez supprimer dans le chemin de requête.
+Vous pouvez supprimer une requête planifiée spécifiée en adressant une requête de DELETE au point de `/schedules` terminaison et en indiquant l’identifiant de la requête planifiée que vous souhaitez supprimer dans le chemin de la requête.
 
->[!NOTE] La planification **doit** être désactivée avant d&#39;être supprimée.
+>[!NOTE]
+>
+>La planification **doit** être désactivée avant d&#39;être supprimée.
 
 **Format d’API**
 
@@ -423,7 +429,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
 
 **Requête**
 
