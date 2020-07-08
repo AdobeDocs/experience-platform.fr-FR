@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Rechercher plusieurs objets
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f3e9da9ab3d02006c07c59b17751c971a95d49bc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 Si vous souhaitez vue plusieurs objets spécifiques, plutôt que d’effectuer une requête par objet, Catalog fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une seule requête GET pour renvoyer plusieurs objets spécifiques en incluant une liste d’ID séparée par des virgules.
 
->[!NOTE] Même lorsque vous demandez des objets de catalogue spécifiques, il est recommandé de n’envoyer que les propriétés dont vous avez besoin que `properties` le paramètre de requête.
+>[!NOTE]
+>
+>Même lorsque vous demandez des objets de catalogue spécifiques, il est recommandé de n’envoyer que les propriétés dont vous avez besoin que `properties` le paramètre de requête.
 
 **Format d’API**
 
@@ -45,7 +47,9 @@ curl -X GET \
 
 Une réponse réussie renvoie une liste des jeux de données spécifiés, contenant uniquement les propriétés demandées (`name`, `description`et `files`) pour chacun d’eux.
 
->[!NOTE] Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
+>[!NOTE]
+>
+>Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
 
 ```json
 {
