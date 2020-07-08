@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Activer les données source entrantes pour renseigner les profils client
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 0%
@@ -61,7 +61,9 @@ Maintenant que le schéma est activé pour [!DNL Profile], revenez à l&#39;écr
 
 Avec le schéma et le jeu de données activés pour [!DNL Profile], les données ingérées dans ce jeu de données renseigneront également les profils client.
 
->[!NOTE] Les données existantes dans un jeu de données récemment activé ne sont pas utilisées par [!DNL Profile]
+>[!NOTE]
+>
+>Les données existantes dans un jeu de données récemment activé ne sont pas utilisées par [!DNL Profile]
 
 ## Étapes suivantes
 
