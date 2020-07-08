@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modèles
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 33f8c424c208bb61319b49e7ecb30e3144ef108a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 4%
@@ -220,7 +220,9 @@ Une réponse réussie renvoie une charge utile contenant les détails de votre m
 
 Vous pouvez mettre à jour un modèle existant en remplaçant ses propriétés par une requête PUT qui inclut l’ID du modèle de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>[!TIP]
+>
+>Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
 **Format d’API**
 
