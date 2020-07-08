@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notes de mise à jour des Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 580cce74ab7da9547417a9e74e88b5ddab52171f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 5%
@@ -16,7 +16,9 @@ ht-degree: 5%
 
 Ce document contient des informations sur les nouvelles fonctionnalités de l’Adobe Experience Platform Privacy Service, ainsi que sur les améliorations et les correctifs de bogues significatifs.
 
->[!NOTE] Les dernières notes de mise à jour des autres services Experience Platform sont disponibles [ici](../release-notes/latest/latest.md).
+>[!NOTE]
+>
+>Les dernières notes de mise à jour des autres services Experience Platform sont disponibles [ici](../release-notes/latest/latest.md).
 
 ## 8 avril 2020
 
@@ -63,7 +65,7 @@ Ce document contient des informations sur les nouvelles fonctionnalités de l’
 * Meilleure gestion des exceptions internes.
 * Amélioration des performances en introduisant la mise en cache pour les appels internes courants avec un faible taux de changement des données.
 
-### Corrections de bogues
+### Correctifs
 
 * Informations de journalisation manquantes Ajoutées pour les requêtes filtrées pour le `GET /` point de terminaison dans l&#39;API du Privacy Service.
 
@@ -88,6 +90,6 @@ Ce document contient des informations sur les nouvelles fonctionnalités de l’
 * Impose le `include` champ dans chaque envoi POST.
 * Impose le `include` champ lors du transfert de JSON.
 
-### Corrections de bogues
+### Correctifs
 
 * Correction d’un problème en raison duquel les clients ne pouvaient pas charger l’interface utilisateur du Privacy Service.
