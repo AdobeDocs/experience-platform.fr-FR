@@ -4,46 +4,48 @@ solution: Experience Platform
 title: Guide du développeur de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bbca6d8f4ab7a684e8bfb1d39b538d937a99244f
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '494'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 
 # Guide du développeur de Segmentation Service
 
-La segmentation vous permet de créer des segments et de générer des audiences dans Adobe Experience Platform à partir de vos données de Profil client en temps réel.
+La segmentation vous permet de créer des segments et de générer des audiences en Adobe Experience Platform à partir de vos données de Profil client en temps réel.
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués dans l’utilisation de la segmentation.
+Ce guide nécessite une bonne compréhension des différents services d&#39;Adobe Experience Platform impliqués dans l&#39;utilisation de la segmentation.
 
 - [Segmentation](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel la plate-forme d’expérience organise les données d’expérience client.
+- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 - [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour utiliser correctement la segmentation à l’aide de l’API.
 
 ### Lecture des exemples d’appels d’API
 
-La documentation de l’API du service de segmentation fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+La documentation de l’API du service de segmentation fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### En-têtes requis
 
-La documentation de l’API exige également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels vers les points de terminaison de la plate-forme. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+La documentation de l’API exige également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels vers les points de terminaison Platform. Le didacticiel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans les appels d&#39;API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : `Bearer {ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur l’utilisation de sandbox dans Experience Platform, voir la documentation [d’aperçu des](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur l’utilisation des sandbox dans l’Experience Platform, voir la documentation [d’aperçu des](../../sandboxes/home.md)sandbox.
 
 <!-- ## Estimates
 
@@ -93,4 +95,4 @@ La recherche de segments permet de rechercher et d’indexer des champs configur
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’API de segmentation, sélectionnez l’un des sous-guides pour savoir comment utiliser des points de terminaison spécifiques à la segmentation. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de la plate-forme, consultez le guide [d’utilisateur](../ui/overview.md)Segmentation.
+Pour commencer à lancer des appels à l’aide de l’API de segmentation, sélectionnez l’un des sous-guides pour savoir comment utiliser des points de terminaison spécifiques à la segmentation. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de Platform, consultez le guide [de l’utilisateur](../ui/overview.md)Segmentation.
