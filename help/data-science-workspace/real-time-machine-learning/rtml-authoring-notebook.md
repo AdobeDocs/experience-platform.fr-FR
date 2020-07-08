@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l'utilisateur du portable d'apprentissage automatique en temps réel
 topic: Training and scoring a ML model
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 0%
@@ -274,6 +274,8 @@ Ensuite, modifiez la valeur de la `model_path` chaîne dans le bloc-notes ML *en
 Cette section décrit la création d&#39;un DSL. Vous allez créer les noeuds qui incluent tout prétraitement des données avec le noeud ONNX. Ensuite, un graphique DSL est créé à l&#39;aide de noeuds et de bords. Les arêtes connectent les noeuds au format de tuple (node_1, node_2). Le graphique ne doit pas avoir de cycles.
 
 >[!IMPORTANT]
+>
+>
 >L’utilisation du noeud ONNX est obligatoire. Sans le noeud ONNX, l&#39;application échoue.
 
 ### Création de noeuds
