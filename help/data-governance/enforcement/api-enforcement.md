@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '875'
 ht-degree: 3%
@@ -16,7 +16,9 @@ ht-degree: 3%
 
 Une fois que vous avez créé des étiquettes d’utilisation de données pour vos données et créé des stratégies d’utilisation pour des actions marketing à l’égard de ces étiquettes, vous pouvez utiliser l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou un groupe arbitraire d’étiquettes constitue une violation de stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 
->[!NOTE] Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser `DRAFT` les stratégies à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` dans le chemin d’accès à la demande.
+>[!NOTE]
+>
+>Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser `DRAFT` les stratégies à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` dans le chemin d’accès à la demande.
 
 Ce document décrit la procédure à suivre pour utiliser l’ [!DNL Policy Service] API afin de rechercher les violations de stratégie dans différents scénarios.
 
@@ -51,7 +53,9 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 La requête suivante teste l’action `exportToThirdParty` marketing par rapport aux étiquettes `C1` et `C3`. Dans la mesure où la stratégie d’utilisation des données que vous avez créée précédemment dans ce didacticiel définit l’ `C1` étiquette comme l’une des `deny` conditions de son expression de stratégie, l’action marketing doit déclencher une violation de stratégie.
 
->[!NOTE] Les libellés d’utilisation des données respectent la casse. Les violations de stratégie ne se produisent que lorsque les étiquettes définies dans leurs expressions de stratégie correspondent exactement. Dans cet exemple, une `C1` étiquette déclencherait une violation, contrairement à une `c1` étiquette.
+>[!NOTE]
+>
+>Les libellés d’utilisation des données respectent la casse. Les violations de stratégie ne se produisent que lorsque les étiquettes définies dans leurs expressions de stratégie correspondent exactement. Dans cet exemple, une `C1` étiquette déclencherait une violation, contrairement à une `c1` étiquette.
 
 ```shell
 curl -X GET \
