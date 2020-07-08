@@ -4,9 +4,9 @@ solution: Experience Platform
 title: compresser les fichiers source dans une recette ;
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1097'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/python/reta
 
 Notez que lors de l&#39;exécution du script de connexion, vous devez fournir l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -152,7 +152,7 @@ Navigate to the directory `experience-platform-dsw-reference/recipes/pyspark/ret
 
 Notez que lors de l&#39;exécution du script de connexion, vous devez fournir l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
@@ -169,7 +169,7 @@ Début en clonant le référentiel [!DNL GitHub] sur votre système local avec l
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala/retail` dans lequel vous trouverez les scripts `login.sh` et `build.sh`. Ces scripts sont utilisés pour se connecter au Docker et créer l&#39;image du Docker. Si vos informations d&#39;identification [du](#docker-based-model-authoring) Docker sont prêtes, entrez les commandes suivantes dans le terminal dans l&#39;ordre :
+Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala` dans lequel vous trouverez les scripts `login.sh` et `build.sh`. Ces scripts sont utilisés pour se connecter au Docker et créer l&#39;image du Docker. Si vos informations d&#39;identification [du](#docker-based-model-authoring) Docker sont prêtes, entrez les commandes suivantes dans le terminal dans l&#39;ordre :
 
 ```BASH
 # for logging in to Docker
@@ -179,9 +179,12 @@ Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala
 ./build.sh
 ```
 
+>[!TIP]
+>Si vous recevez une erreur d&#39;autorisation lors de la tentative de connexion au Docker à l&#39;aide du `login.sh` script, essayez d&#39;utiliser la commande `bash login.sh`.
+
 Lors de l&#39;exécution du script de connexion, vous devez indiquer l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l&#39;hôte Docker et une balise de version pour la création.
 
-Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de la console. Pour cet exemple spécifique, il se présente comme suit :
+Une fois le script de création terminé, vous recevez une URL de fichier source Docker dans la sortie de console. Pour cet exemple spécifique, il se présente comme suit :
 
 ```BASH
 # URL format: 
