@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: b5a425714b6d69ca241c8ad81eff779b993633a5
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2683'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -67,9 +67,11 @@ L&#39;onglet **[!UICONTROL Événements]** vous permet de créer une audience ba
 
 Outre la possibilité de rechercher des [!DNL ExperienceEvent] éléments, vous pouvez également rechercher des Types d&#39;événement. Les Types d&#39;événement utilisent la même logique de codage que [!DNL ExperienceEvents]les , sans que vous ayez à rechercher dans la [!DNL XDM ExperienceEvent] classe le événement approprié. Par exemple, l’utilisation de la barre de recherche pour rechercher &quot;panier&quot; renvoie les Types d&#39;événement &quot;[!UICONTROL AddCart]&quot; et &quot;[!UICONTROL RemoveCart]&quot;, deux actions de panier très couramment utilisées lors de la création de définitions de segment.
 
-Vous pouvez rechercher n’importe quel type de composant en entrant son nom dans la barre de recherche, qui utilise la syntaxe [de recherche de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Les résultats de la recherche commencent à être renseignés à mesure que des mots entiers sont saisis. Par exemple, pour créer une règle basée sur le champ XDM `ExperienceEvent.commerce.productViews`, début de saisir &quot;vues de produit&quot; dans le champ de recherche. Une fois le mot &quot;produit&quot; saisi, les résultats de la recherche commencent à apparaître. Chaque résultat inclut la hiérarchie d’objets à laquelle il appartient.
+Vous pouvez rechercher n’importe quel type de composant en entrant son nom dans la barre de recherche, qui utilise la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Les résultats de la recherche commencent à être renseignés à mesure que des mots entiers sont saisis. Par exemple, pour créer une règle basée sur le champ XDM `ExperienceEvent.commerce.productViews`, début de saisir &quot;vues de produit&quot; dans le champ de recherche. Une fois le mot &quot;produit&quot; saisi, les résultats de la recherche commencent à apparaître. Chaque résultat inclut la hiérarchie d’objets à laquelle il appartient.
 
->[!NOTE] Les champs de schéma personnalisés définis par votre organisation peuvent prendre jusqu’à 24 heures pour apparaître et devenir disponibles pour une utilisation dans les règles de création.
+>[!NOTE]
+>
+>Les champs de schéma personnalisés définis par votre organisation peuvent prendre jusqu’à 24 heures pour apparaître et devenir disponibles pour une utilisation dans les règles de création.
 
 Vous pouvez ensuite facilement faire glisser [!DNL ExperienceEvents] et déposer des [!UICONTROL Types d&#39;événement] dans votre définition de segment.
 
@@ -89,7 +91,7 @@ Vous pouvez placer le pointeur de la souris sur le ⓘ en regard d’une audienc
 
 ![](../images/segment-builder/audience-folder-structure.png)
 
-Vous pouvez également rechercher des [!UICONTROL Audiences] à l&#39;aide de la barre de recherche, qui utilise la syntaxe [de recherche de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Dans l’onglet *[!UICONTROL Audiences]* , la sélection d’un dossier de niveau supérieur entraîne l’affichage de la barre de recherche, ce qui vous permet d’effectuer des recherches dans ce dossier. Les résultats de la recherche ne commencent à être renseignés qu&#39;une fois des mots entiers saisis. Par exemple, pour trouver une [!UICONTROL Audience] nommée `Online Shoppers`, début de saisie &quot;En ligne&quot; dans la barre de recherche. Une fois le mot &quot;Online&quot; saisi dans son intégralité, les résultats de la recherche contenant le mot &quot;Online&quot; apparaissent.
+Vous pouvez également rechercher des [!UICONTROL Audiences] à l&#39;aide de la barre de recherche, qui utilise la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Dans l’onglet *[!UICONTROL Audiences]* , la sélection d’un dossier de niveau supérieur entraîne l’affichage de la barre de recherche, ce qui vous permet d’effectuer des recherches dans ce dossier. Les résultats de la recherche ne commencent à être renseignés qu&#39;une fois des mots entiers saisis. Par exemple, pour trouver une [!UICONTROL Audience] nommée `Online Shoppers`, début de saisie &quot;En ligne&quot; dans la barre de recherche. Une fois le mot &quot;Online&quot; saisi dans son intégralité, les résultats de la recherche contenant le mot &quot;Online&quot; apparaissent.
 
 ## Canevas du créateur de règles {#rule-builder-canvas}
 
@@ -105,7 +107,9 @@ Vous pouvez faire glisser une audience de l’onglet *[!UICONTROL Audience]* sur
 
 Pour [!DNL Platform] les audiences créées à l’aide du créateur [!UICONTROL de]segments, vous avez la possibilité de convertir l’audience en l’ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les dernières modifications apportées à votre définition de segment avant de la convertir en logique de règle.
 
->[!NOTE] Lors de l’ajout d’une audience provenant d’une source externe, seul l’appartenance à l’audience est référencée. Vous ne pouvez pas convertir l’audience en règles. Par conséquent, les règles utilisées pour créer l’audience d’origine ne peuvent pas être modifiées dans la nouvelle définition de segment.
+>[!NOTE]
+>
+>Lors de l’ajout d’une audience provenant d’une source externe, seul l’appartenance à l’audience est référencée. Vous ne pouvez pas convertir l’audience en règles. Par conséquent, les règles utilisées pour créer l’audience d’origine ne peuvent pas être modifiées dans la nouvelle définition de segment.
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
@@ -137,7 +141,9 @@ Un conteneur enfant peut également être extrait et ajouté en ligne au contene
 
 Une fois que vous avez cliqué sur **[!UICONTROL Annuler le renvoi à la ligne du conteneur]** , le conteneur enfant est supprimé et les critères apparaissent en ligne.
 
->[!NOTE] Lorsque vous décompressez des conteneurs, veillez à ce que la logique continue de respecter la définition de segment souhaitée.
+>[!NOTE]
+>
+>Lorsque vous décompressez des conteneurs, veillez à ce que la logique continue de respecter la définition de segment souhaitée.
 
 ![](../images/segment-builder/unwrapped-container-inline.png)
 
@@ -161,7 +167,9 @@ Au fur et à mesure que vous créez votre définition de segment, vous pouvez vu
 
 ![](../images/segment-builder/segment-properties.png)
 
->[!NOTE] Les estimations des Audiences sont générées à l’aide d’une taille d’échantillon des données d’échantillon de cette journée. S&#39;il y a moins d&#39;un million d&#39;entités dans votre magasin de profils, l&#39;ensemble complet de données est utilisé ; entre 1 et 20 millions d&#39;entités, 1 million d&#39;entités sont utilisées ; et pour plus de 20 millions d&#39;entités, 5 % du total des entités sont utilisées. Vous trouverez plus d’informations sur la génération d’estimations de segments dans la section [Génération d’](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimations du didacticiel sur la création de segments.
+>[!NOTE]
+>
+>Les estimations des Audiences sont générées à l’aide d’une taille d’échantillon des données d’échantillon de cette journée. S&#39;il y a moins d&#39;un million d&#39;entités dans votre magasin de profils, l&#39;ensemble complet de données est utilisé ; entre 1 et 20 millions d&#39;entités, 1 million d&#39;entités sont utilisées ; et pour plus de 20 millions d&#39;entités, 5 % du total des entités sont utilisées. Vous trouverez plus d’informations sur la génération d’estimations de segments dans la section [Génération d’](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) estimations du didacticiel sur la création de segments.
 
 ## Activer la segmentation planifiée {#enable-scheduled-segmentation}
 
@@ -171,15 +179,19 @@ L’évaluation à la demande implique l’utilisation de l’API pour effectuer
 
 Vous pouvez activer les définitions de segment pour l’évaluation planifiée à l’aide de l’interface utilisateur ou de l’API. Dans l’interface utilisateur, revenez à l’onglet *[!UICONTROL Parcourir]* dans **[!UICONTROL Segments]** et basculez sur **[!UICONTROL Évaluer tous les segments]**. De ce fait, tous les segments seront évalués en fonction du planning défini par votre organisation.
 
->[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre entreprise dispose de plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE]
+>
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre entreprise dispose de plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 Actuellement, les calendriers ne peuvent être créés qu&#39;à l&#39;aide de l&#39;API. Pour obtenir des instructions détaillées sur la création, la modification et l&#39;utilisation des planifications à l&#39;aide de l&#39;API, suivez le didacticiel d&#39;évaluation et d&#39;accès aux résultats des segments, en particulier la section sur l&#39;évaluation [planifiée à l&#39;aide de l&#39;API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
 ![](../images/segment-builder/scheduled-segmentation.png)
 
-## Segmentation en flux continu {#streaming-segmentation}
+## Segmentation par flux {#streaming-segmentation}
 
->[!NOTE] Pour que la segmentation en flux continu fonctionne, le client doit activer la segmentation planifiée pour l’entreprise. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section précédente de ce guide](#enable-scheduled-segmentation)d’utilisateur.
+>[!NOTE]
+>
+>Pour que la segmentation en flux continu fonctionne, le client doit activer la segmentation planifiée pour l’entreprise. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [la section précédente de ce guide](#enable-scheduled-segmentation)d’utilisateur.
 
 Une requête sera automatiquement évaluée avec la segmentation en flux continu si elle répond à l’un des critères suivants :
 
@@ -223,7 +235,9 @@ Pour plus d’informations sur l’évaluation du dernier segment, cliquez sur l
 
 ## Violations de stratégie de DUM
 
->[!NOTE] Les violations de stratégie DULE ne s&#39;appliquent que si vous créez un segment qui a été affecté à une destination.
+>[!NOTE]
+>
+>Les violations de stratégie DULE ne s&#39;appliquent que si vous créez un segment qui a été affecté à une destination.
 
 Une fois que vous avez créé votre segment, celui-ci est analysé par [!DNL Data Governance] afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour plus d&#39;informations sur les violations de DULE et de stratégie, reportez-vous à la présentation [des étiquettes d&#39;utilisation des](../../data-governance/labels/overview.md)données.
 
