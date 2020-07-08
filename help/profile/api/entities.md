@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Entités - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
-source-wordcount: '1690'
-ht-degree: 1%
+source-wordcount: '1689'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ L’Adobe Experience Platform vous permet d’accéder aux données du Profil cl
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Accès aux données du profil par identité
 
@@ -890,7 +890,7 @@ En suivant ce guide, vous avez réussi à accéder aux champs de données du Pro
 
 La section suivante fournit des informations supplémentaires sur l’accès aux données de Profil à l’aide de l’API.
 
-### Paramètres de Requête {#query-parameters}
+### Paramètres de requête {#query-parameters}
 
 Les paramètres suivants sont utilisés dans le chemin d’accès des requêtes GET au point de `/access/entities` terminaison. Ils permettent d&#39;identifier l&#39;entité de profil à laquelle vous souhaitez accéder et de filtrer les données renvoyées dans la réponse. Les paramètres requis sont marqués, tandis que les autres sont facultatifs.
 
