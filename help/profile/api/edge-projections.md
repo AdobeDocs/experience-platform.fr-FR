@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Projections Edge - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '1919'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -18,7 +18,7 @@ Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 >[!NOTE]
 >Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un `Content-Type` en-tête. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
@@ -107,7 +107,7 @@ La réponse comprend un `projectionDestinations` tableau avec les détails de ch
 
 Pour plus d&#39;informations sur les attributs d&#39;une destination individuelle, consultez la section sur la [création d&#39;une destination](#create-a-destination) qui suit.
 
-### Créer une destination {#create-a-destination}
+### Create a destination {#create-a-destination}
 
 Si la destination dont vous avez besoin n&#39;existe pas déjà, vous pouvez créer une destination de projection en envoyant une requête POST au point de `/config/destinations` terminaison.
 
