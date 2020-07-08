@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide du SDK Platform
 topic: SDK authoring
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 5%
@@ -78,7 +78,9 @@ Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’un
 - [Filtrage des données par colonne](#filter-by-selected-columns)
 - [Obtention des résultats triés](#get-sorted-results)
 
->[!NOTE] L’organisation IMS est définie dans le `client_context`.
+>[!NOTE]
+>
+>L’organisation IMS est définie dans le `client_context`.
 
 ### Python
 
@@ -192,7 +194,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## Écriture de base des données {#basic-writing-of-data}
 
->[!NOTE] L’organisation IMS est définie dans le `client_context`.
+>[!NOTE]
+>
+>L’organisation IMS est définie dans le `client_context`.
 
 Pour écrire des données en Python et R, utilisez l&#39;un des exemples suivants :
 
