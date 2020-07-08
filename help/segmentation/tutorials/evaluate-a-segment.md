@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Évaluer un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 822f43b139b68b96b02f9a5fe0549736b2524ab7
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2841'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -37,7 +37,9 @@ Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbo
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes POST, PUT et PATCH nécessitent un en-tête supplémentaire :
 
@@ -55,7 +57,9 @@ Si vous n’avez pas encore terminé la procédure [Créer un segment à l’aid
 
 Grâce à une évaluation planifiée, votre organisation IMS peut créer un calendrier récurrent pour exécuter automatiquement les tâches d’exportation.
 
->[!NOTE] L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel au sein d’un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
+>[!NOTE]
+>
+>L’évaluation planifiée peut être activée pour les sandbox avec un maximum de cinq (5) stratégies de fusion pour un Profil XDM individuel. Si votre entreprise dispose de plus de cinq stratégies de fusion pour un Profil XDM individuel dans un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Créer un calendrier
 
@@ -457,7 +461,7 @@ Si vous connaissez le profil spécifique auquel vous souhaitez accéder, vous po
 
 ## Exportation d’un segment {#export}
 
-Une fois la tâche de segmentation terminée (la valeur de l’ `status` attribut est &quot;SUCCEEDED&quot;), vous pouvez exporter votre audience dans un jeu de données où elle est accessible et où vous pouvez agir.
+Une fois la tâche de segmentation terminée (la valeur de l’attribut `status` est « SUCCEEDED »), vous pouvez exporter votre audience vers un jeu de données permettant son accès et son utilisation.
 
 Pour exporter votre audience, procédez comme suit :
 
