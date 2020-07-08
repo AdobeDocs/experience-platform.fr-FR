@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Moteurs
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 3%
@@ -44,6 +44,8 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Une réponse réussie renvoie une charge utile contenant les détails de votre registre Docker, y compris l&#39;URL (`host`) du Docker, le nom d&#39;utilisateur (`username`) et le mot de passe (`password`).
 
 >[!NOTE]
+>
+>
 >Votre mot de passe Docker change chaque fois que vous `{ACCESS_TOKEN}` êtes mis à jour.
 
 ```json
@@ -383,7 +385,9 @@ Une réponse réussie renvoie une charge utile contenant les détails du moteur 
 
 Vous pouvez modifier et mettre à jour un moteur existant en remplaçant ses propriétés par une requête PUT qui inclut l’ID du moteur de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!NOTE] Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour [récupérer le moteur par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>[!NOTE]
+>
+>Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour [récupérer le moteur par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
 L&#39;exemple d&#39;appel d&#39;API suivant met à jour le nom et la description d&#39;un moteur lorsque ces propriétés sont initialement définies :
 
