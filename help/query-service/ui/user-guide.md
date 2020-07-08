@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l’éditeur de Requête d’Adobe Experience Platform Requête Service
+title: Guide de l'éditeur de Requête Adobe Experience Platform Requête Service
 topic: query editor
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 # Guide de l’utilisateur de l’éditeur de Requêtes
 
-Requête Editor est un outil interactif fourni par Adobe Experience Platform Requête Service, qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de la plateforme d’expérience. Requête Editor prend en charge les requêtes de développement pour l’analyse et l’exploration des données et vous permet d’exécuter des requêtes interactives à des fins de développement ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
+Requête Editor est un outil interactif fourni par Adobe Experience Platform Requête Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur Experience Platform. Requête Editor prend en charge les requêtes de développement pour l’analyse et l’exploration des données. Il permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans l’Experience Platform.
 
-Pour plus d&#39;informations sur les concepts et les fonctionnalités de Requête Service, consultez la présentation [de][query-service-overview]Requête Service. Pour en savoir plus sur la manière de naviguer dans l’interface utilisateur de Requête Service sur la plate-forme, consultez la présentation [de l’interface utilisateur de][query-service-ui]Requête Service.
+Pour plus d&#39;informations sur les concepts et les fonctionnalités de Requête Service, consultez la présentation [de][query-service-overview]Requête Service. Pour en savoir plus sur la navigation dans l’interface utilisateur de Requête Service sur Platform, consultez la présentation [de l’interface utilisateur de][query-service-ui]Requête Service.
 
 ## Prise en main
 
@@ -38,7 +38,7 @@ L’éditeur de Requêtes vous permet d’écrire, d’exécuter et d’enregist
 
 ### Accès à l’éditeur de Requêtes
 
-Dans l’interface utilisateur de la plateforme d’expérience, cliquez sur **Requêtes** dans le menu de navigation de gauche pour ouvrir l’espace de travail Requête Service. Cliquez ensuite sur **Créer une Requête** en haut à droite de l’écran pour afficher les requêtes d’écriture de début. Ce lien est disponible à partir de n’importe quelle page de l’espace de travail Requête Service.
+Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Requêtes** dans le menu de navigation de gauche pour ouvrir l’espace de travail Requête Service. Cliquez ensuite sur **Créer une Requête** en haut à droite de l’écran pour afficher les requêtes d’écriture de début. Ce lien est disponible à partir de n’importe quelle page de l’espace de travail Requête Service.
 
 ![Image](../images/queries/query-editor-overview/create-query.png)
 
@@ -80,7 +80,7 @@ Lorsque vous consultez une requête dans l’éditeur de Requêtes, le panneau D
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l&#39;interface utilisateur, de supprimer ou de nommer la requête affichée et de vue du code SQL dans un format facile à copier sur l&#39;onglet Requête ** SQL. Ce panneau présente également des métadonnées utiles, telles que la dernière modification de la requête et la personne qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **Output Dataset**. La boîte de dialogue *Output Dataset* (Jeu de données de sortie) s’affiche. Saisissez un nom et une description, puis cliquez sur **Exécuter la Requête**. Le nouveau jeu de données s’affiche dans l’onglet *Datasets* de l’interface utilisateur de Requête Service sur la plate-forme.
+Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l&#39;interface utilisateur, de supprimer ou de nommer la requête affichée et de vue du code SQL dans un format facile à copier sur l&#39;onglet Requête ** SQL. Ce panneau présente également des métadonnées utiles, telles que la dernière modification de la requête et la personne qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **Output Dataset**. La boîte de dialogue *Output Dataset* (Jeu de données de sortie) s’affiche. Saisissez un nom et une description, puis cliquez sur **Exécuter la Requête**. Le nouveau jeu de données s’affiche dans l’onglet *Datasets* de l’interface utilisateur de Requête Service sur Platform.
 
 ### Enregistrement des requêtes
 
@@ -92,7 +92,9 @@ Toutes les requêtes exécutées à partir de l&#39;éditeur de Requêtes sont c
 
 Pour plus d’informations, consultez la présentation [de l’interface utilisateur de][query-service-ui] Requête Service.
 
->[!NOTE] Les Requêtes qui ne sont pas exécutées ne sont pas enregistrées par le journal. Pour que la requête soit disponible dans Requête Service, elle doit être exécutée ou enregistrée dans l’éditeur de Requêtes.
+>[!NOTE]
+>
+>Les Requêtes qui ne sont pas exécutées ne sont pas enregistrées par le journal. Pour que la requête soit disponible dans Requête Service, elle doit être exécutée ou enregistrée dans l’éditeur de Requêtes.
 
 ## Exécution de requêtes à l’aide de l’éditeur de Requêtes
 
@@ -104,7 +106,9 @@ La console fournit des informations sur l’état et le fonctionnement de Requê
 
 ![Image](../images/queries/query-editor-overview/console.png)
 
->[!NOTE] La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Il n’affiche pas les erreurs de validation de requête avant l’exécution d’une requête.
+>[!NOTE]
+>
+>La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Il n’affiche pas les erreurs de validation de requête avant l’exécution d’une requête.
 
 ### Résultats de la Requête
 
@@ -114,7 +118,7 @@ Une fois la requête terminée, les résultats s’affichent dans l’onglet *R�
 
 ## Étapes suivantes
 
-Maintenant que vous savez quelles fonctionnalités sont disponibles dans l’éditeur de Requêtes et comment naviguer dans l’application, vous pouvez début de créer vos propres requêtes directement dans Platform. Pour plus d&#39;informations sur l&#39;exécution de requêtes SQL par rapport à des jeux de données dans Data Lake, consultez le guide sur l&#39; [exécution de requêtes][query-service-running-queries]. Pour obtenir des exemples de requêtes SQL pour l’utilisation des données Adobe Analytics et Adobe Cible, reportez-vous à l’ [exemple de référence][query-service-sample-queries]de requêtes.
+Maintenant que vous savez quelles fonctions sont disponibles dans l’éditeur de Requêtes et comment naviguer dans l’application, vous pouvez début de créer vos propres requêtes directement dans Platform. Pour plus d&#39;informations sur l&#39;exécution de requêtes SQL par rapport à des jeux de données dans Data Lake, consultez le guide sur l&#39; [exécution de requêtes][query-service-running-queries]. Pour obtenir des exemples de requêtes SQL pour l&#39;utilisation des données Analytics et des Adobes Target d&#39;Adobe, reportez-vous à la référence [des][query-service-sample-queries]exemples de requêtes.
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
