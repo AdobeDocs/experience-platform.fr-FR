@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Générer des jeux de données à partir des résultats de la requête
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # Générer des jeux de données à partir des résultats de la requête
 
-La puissance réelle de Requête Service est révélée lorsque des requêtes sont utilisées pour générer des jeux de données dans le lac de données à utiliser comme entrée dans plus de requêtes ou dans d’autres services tels que Data Science Workspace, le Profil client en temps réel ou Analyse Workspace.
+La puissance réelle de Requête Service est révélée lorsque des requêtes sont utilisées pour générer des jeux de données dans le lac de données à utiliser comme entrée dans plus de requêtes ou dans d&#39;autres services tels que Data Science Workspace, le Profil client en temps réel ou l&#39;Analysis Workspace.
 
 Requête Service permet la création de jeux de données à partir de l’interface utilisateur. Procédez comme suit :
 
 1. Écrivez votre requête à l’aide d’un client connecté et validez la sortie.
-2. Connectez-vous à l’interface utilisateur de la plateforme et accédez à Requêtes.
+2. Connectez-vous à l’interface utilisateur de Platform et accédez à Requêtes.
 3. Recherchez votre requête dans la liste et placez le pointeur de la souris sur la ligne.
 4. Cliquez sur **Créer un jeu de données**. ![Image](../images/queries/create-datasets/click-create-dataset.png)
 5. Entrez un nom de jeu de données, précédé de votre ID LDAP (il n&#39;est pas nécessaire d&#39;être unique ou SQL-safe ; le système génère un &quot;nom de table&quot; basé sur le nom donné ici).
@@ -28,7 +28,9 @@ Requête Service permet la création de jeux de données à partir de l’interf
 
 Une fois un jeu de données créé, il est accessible comme tout autre jeu de données dans le lac de données et utilisé pour divers cas d&#39;utilisation.
 
->[!NOTE] Dans une mise en oeuvre en direct, vous devez appliquer des étiquettes de gouvernance des données après la création du jeu de données.
+>[!NOTE]
+>
+>Dans une mise en oeuvre en direct, vous devez appliquer des étiquettes de gouvernance des données après la création du jeu de données.
 
 ## Générer des jeux de données avec un schéma de modèle de données d’expérience prédéfini
 
