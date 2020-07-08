@@ -4,7 +4,7 @@ solution: Experience Platform
 title: MLInstances
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 0197c2f5e304f2fc194289b064cc37c91bb658c8
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 4%
@@ -273,7 +273,9 @@ Une réponse réussie renvoie les détails de l&#39;instance de liste.
 
 Vous pouvez mettre à jour une instance MLInstance existante en remplaçant ses propriétés par une requête PUT qui inclut l&#39;ID de l&#39;instance MLInstance de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’instance MLInstance par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>[!TIP]
+>
+>Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’instance MLInstance par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
 L’exemple d’appel d’API suivant met à jour les paramètres d’identification et de notation d’une instance MLInstance lors de l’utilisation initiale de ces propriétés :
 
