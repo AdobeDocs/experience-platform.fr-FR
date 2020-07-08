@@ -4,43 +4,43 @@ solution: Experience Platform
 title: Champ de mappage Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: 53fb7ea201ed9361584d24c8bd2ad10edd9f3975
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '148'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
 
-# Champs de mappage Audience Manager
+# Champs de mappage des Audiences Manager
 
-Les tableaux ci-dessous contiennent les mappages entre les champs des données d’Adobe Audience Manager (données en temps réel, intégrées et de Profil) et les champs XDM correspondants.
+Les tableaux ci-dessous contiennent les mappages entre les champs des données Adobe Audience Manager (données en temps réel, intégrées et de profil) et les champs XDM correspondants.
 
-Pour plus d&#39;informations sur chaque champ XDM, consultez le dictionnaire [de champ](../../../../xdm/schema/field-dictionary.md) XDM.
+Pour plus d’informations sur chaque champ XDM, consultez le [dictionnaire des champs XDM](../../../../xdm/schema/field-dictionary.md).
 
 ## Données en temps réel
 
-Type : Données en temps réel
+Type : données en temps réel
 
 | Champ de données en temps réel | Champ XDM |
 | --- | --- |
 | `requestIds[]` | `ExperienceEvent.identityMap["ECID"]` |
-| `requestIds[]` | `ExperienceEvent.endUserIds` - *Uniquement pour les espaces de nommage présents dans endUserIds et uniquement la première valeur.* |
+| `requestIds[]` | `ExperienceEvent.endUserIds` - *Uniquement pour les espaces de noms présents dans endUserIds et uniquement la première valeur.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
-| `primaryDeviceId` | ExperienceEvent.endUserIds - *Uniquement pour les espaces de nommage présents dans endUserIds et uniquement la première valeur.* |
+| `primaryDeviceId` | ExperienceEvent.endUserIds - *Uniquement pour les espaces de noms présents dans endUserIds et uniquement la première valeur.* |
 | `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |
-| `deviceMetadata` | `ExperienceEvent.device` <ul><li>primaryHardwareType → type</li><li>fabricant → fabricant</li><li>marketingName → modèle</li><li>modelNumber → modèle</li></ul> |
-| `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvince</li><li>d_city → ville</li><li>d_postal → code postal</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
+| `deviceMetadata` | `ExperienceEvent.device` <ul><li>primaryHardwareType → type</li><li>manufacturer → manufacturer</li><li>marketingName → model</li><li>modelNumber → model</li></ul> |
+| `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvince</li><li>d_city → city</li><li>d_postal → postalCode</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
-| `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → nom os </li><li>d_os_version → os_version</li></ul> |
+| `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
 | `Signals` | ExperienceEvent.signals |
 
 ## Données entrantes **(obsolètes)**
 
-Type : ExperienceEvent
+Type : ExperienceEvent
 
 | Champ entrant | Champ XDM |
 | --- | --- |
@@ -50,13 +50,15 @@ Type : ExperienceEvent
 | `b_time` | `ExperienceEvent.timeStamp` |
 | `overwrite` | `overwriteTraits` |
 
->[!NOTE] Les champs entrants doivent être abandonnés dans une prochaine version.
+>[!NOTE]
+>
+>Il est prévu que les champs entrants seront obsolètes dans une prochaine version.
 
-## Données du Profil
+## Données de profil
 
-Type : Profil XDM
+Type : profil
 
-| Champ Profil | Champ XDM |
+| Champ de profil | Champ XDM |
 | --- | --- |
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
