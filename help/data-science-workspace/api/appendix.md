@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Annexe
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -27,7 +27,9 @@ L’ [!DNL Sensei Machine Learning] API prend en charge les paramètres de requ�
 | `orderby` | Indique les propriétés à utiliser pour le tri dans l’ordre de priorité. Insérez un tiret (**-**) avant le nom d’une propriété pour effectuer un tri dans l’ordre décroissant, sinon les résultats sont triés dans l’ordre croissant. | `orderby=created` |
 | `property` | Indique l’expression de comparaison qu’un objet doit satisfaire pour être renvoyé. | `property=deleted==false` |
 
->[!NOTE] Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (**&amp;**).
+>[!NOTE]
+>
+>Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (**&amp;**).
 
 ## Configurations Python CPU et GPU {#cpu-gpu-config}
 
@@ -66,7 +68,9 @@ Voici un exemple de configuration qui spécifie l’utilisation d’un processeu
 ]
 ```
 
->[!NOTE] Les valeurs de `cpus` et `gpus` ne désignent pas le nombre d&#39;UC ou de GPU, mais plutôt le nombre de machines physiques. Ces valeurs sont autorisées `"1"` et génèrent une exception dans le cas contraire.
+>[!NOTE]
+>
+>Les valeurs de `cpus` et `gpus` ne désignent pas le nombre d&#39;UC ou de GPU, mais plutôt le nombre de machines physiques. Ces valeurs sont autorisées `"1"` et génèrent une exception dans le cas contraire.
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 
