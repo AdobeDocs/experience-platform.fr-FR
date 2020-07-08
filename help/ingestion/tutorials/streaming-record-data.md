@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Diffusion en continu des données d’enregistrement
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1107'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
-# Diffusion en continu des données d’enregistrement vers Adobe Experience Platform
+# Diffuser les données d&#39;enregistrement à l&#39;Adobe Experience Platform
 
-Ce didacticiel vous aidera à commencer à utiliser les API d’assimilation en flux continu, qui font partie des API Adobe Experience Platform Data Ingestion Service.
+Ce didacticiel vous aidera à commencer à utiliser les API d&#39;assimilation en flux continu, qui font partie des API Adobe Experience Platform Data Ingestion Service.
 
 ## Prise en main
 
-Ce didacticiel nécessite une connaissance pratique de divers services Adobe Experience Platform. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce didacticiel nécessite une connaissance pratique de divers services d&#39;Adobe Experience Platform. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la Plateforme organise les données d&#39;expérience.
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d&#39;expérience.
 - [Profil](../../profile/home.md)client en temps réel : Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de plusieurs sources.
 - [Guide](../../xdm/api/getting-started.md)du développeur du registre des Schémas : Un guide complet qui couvre chacun des points de terminaison disponibles de l&#39;API de registre de Schéma et comment leur envoyer des appels. Ce didacticiel vous explique comment connaître votre `{TENANT_ID}`identité, qui apparaît dans les appels, et comment créer des schémas, qui est utilisé pour créer un jeu de données à assimiler.
 
@@ -30,21 +30,23 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur [comment lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage d’Experience Platform.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d’API de plateforme nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -94,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Nom à utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous créez. |
-| `meta:immutableTags` | Dans cet exemple, la `union` balise est utilisée pour conserver vos données dans le Profil [client](../../profile/home.md)en temps réel. |
+| `meta:immutableTags` | Dans cet exemple, la `union` balise est utilisée pour conserver vos données dans le Profil [client en temps](../../profile/home.md)réel. |
 
 **Réponse**
 
@@ -185,7 +187,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | Le `$id` que vous avez précédemment reçu lorsque vous avez composé le schéma. Il devrait ressembler à ceci : `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] &#x200B; &#x200B; codes d&#39;Espace de nommage **d&#39;identité**
+>[!NOTE]
+>
+>&#x200B; &#x200B; codes d&#39;Espace de nommage **d&#39;identité**
 >
 > Assurez-vous que les codes sont valides - l&#39;exemple ci-dessus utilise &quot;courriel&quot;, qui est un espace de nommage d&#39;identité standard. Vous trouverez d&#39;autres espaces de nommage d&#39;identité standard couramment utilisés dans la FAQ [du service](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform)d&#39;identité.
 >
@@ -215,7 +219,9 @@ Une réponse réussie renvoie l’état HTTP 201 avec des informations sur le no
 
 Une fois votre schéma créé, vous devez créer un jeu de données pour assimiler les données d&#39;enregistrement.
 
->[!NOTE] Ce jeu de données sera activé pour le Profil **client en temps** réel et le service **** d&#39;identité.
+>[!NOTE]
+>
+>Ce jeu de données sera activé pour le Profil **client en temps** réel et le service **** d&#39;identité.
 
 **Format d’API**
 
@@ -258,7 +264,7 @@ Une réponse réussie renvoie l&#39;état HTTP 201 et un tableau contenant l&#39
 
 ## Envoi de données d’enregistrement à la connexion de flux continu
 
-Une fois le jeu de données et la connexion en flux continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour intégrer des données d’enregistrement dans la plate-forme.
+Une fois le jeu de données et la connexion en flux continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour intégrer des données d’enregistrement dans Platform.
 
 **Format d’API**
 
@@ -273,7 +279,9 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Requête**
 
->[!NOTE] L’appel d’API suivant **ne nécessite aucun** en-tête d’authentification.
+>[!NOTE]
+>
+>L’appel d’API suivant **ne nécessite aucun** en-tête d’authentification.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -345,7 +353,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails du Profil nou
 
 Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser l&#39;API [d&#39;accès au](../../profile/api/entities.md) Profil pour récupérer les données d&#39;enregistrement.
 
->[!NOTE] Si l’ID de stratégie de fusion n’est pas défini et le schéma.</span>name ou relatedSchema</span>.name est défini `_xdm.context.profile`, Profil Access récupère **toutes les** identités associées.
+>[!NOTE]
+>
+>Si l’ID de stratégie de fusion n’est pas défini et le schéma.</span>name ou relatedSchema</span>.name est défini `_xdm.context.profile`, Profil Access récupère **toutes les** identités associées.
 
 **Format d’API**
 
@@ -424,7 +434,7 @@ Une réponse réussie renvoie l&#39;état HTTP 200 avec les détails des entité
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez maintenant comment importer des données d’enregistrement dans la plate-forme à l’aide de connexions de flux continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez début à surveiller vos données imbriquées via l’interface utilisateur de la plate-forme. Pour plus d&#39;informations, veuillez lire le guide d&#39;assimilation [des données de](../quality/monitor-data-flows.md) surveillance.
+En lisant ce document, vous comprenez maintenant comment ingérer des données d&#39;enregistrement dans Platform à l&#39;aide de connexions en flux continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez début à surveiller vos données assimilées via l’interface utilisateur de Platform. Pour plus d&#39;informations, veuillez lire le guide d&#39;assimilation [des données de](../quality/monitor-data-flows.md) surveillance.
 
 Pour plus d&#39;informations sur l&#39;assimilation en flux continu en général, veuillez lire l&#39;aperçu [de l&#39;assimilation en](../streaming-ingestion/overview.md)flux continu.
 
