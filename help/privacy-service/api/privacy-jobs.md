@@ -4,30 +4,34 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a3178ab54a7ab5eacd6c5f605b8bd894779f9e85
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1669'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
 
 # Tâches de confidentialité
 
-Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du `/jobs` point de terminaison dans l’API de Privacy Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
+Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du point de `/jobs` terminaison dans l’API du Privacy Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
 
 ## Création d’une tâche de confidentialité {#create-job}
 
 Avant de créer une nouvelle demande de travail, vous devez d&#39;abord collecter des informations d&#39;identification sur les personnes dont vous voulez accéder aux données, les supprimer ou les opt-out de vente. Une fois que vous disposez des données requises, elles doivent être fournies dans la charge utile d’une requête POST au point de terminaison racine.
 
->[!NOTE] Les applications Adobe Experience Cloud compatibles utilisent des valeurs différentes pour identifier les personnes concernées. Consultez le guide sur les applications [](../experience-cloud-apps.md) Privacy Service et Experience Cloud pour en savoir plus sur les identifiants requis pour vos applications.
+>[!NOTE]
+>
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs différentes pour identifier les personnes concernées. Consultez le guide sur les applications [](../experience-cloud-apps.md) Privacy Service et Experience Cloud pour en savoir plus sur les identifiants requis pour vos applications.
 
-L’API Privacy Service prend en charge deux types de demandes d’emploi pour les données personnelles :
+L’API du Privacy Service prend en charge deux types de demandes de travaux pour les données personnelles :
 
 * [Accès et/ou suppression](#access-delete): Accéder (lire) ou supprimer des données personnelles.
 * [Opt-out de vente](#opt-out): Marquer que les données personnelles ne doivent pas être vendues.
 
->[!IMPORTANT] Bien que les demandes d’accès et de suppression puissent être combinées en un seul appel d’API, les demandes d’exclusion doivent être effectuées séparément.
+>[!IMPORTANT]
+>
+>Bien que les demandes d’accès et de suppression puissent être combinées en un seul appel d’API, les demandes d’exclusion doivent être effectuées séparément.
 
 ### Créer une tâche d’accès/de suppression {#access-delete}
 
@@ -107,7 +111,7 @@ curl -X POST \
 | `include` **(Obligatoire)** | Tableau de produits Adobe à inclure dans votre traitement. Si cette valeur est manquante ou est vide, la demande est rejetée. Incluez uniquement les produits avec lesquels votre entreprise est intégrée. Pour plus d’informations, consultez la section relative aux valeurs [de produit](appendix.md) acceptées dans l’annexe. |
 | `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité des demandes de traitement. Les valeurs acceptées sont `normal` et `low`. Si `priority` est omis, le comportement par défaut est `normal`. |
-| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
+| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe doit gérer les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
 | `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
@@ -240,7 +244,7 @@ curl -X POST \
 | `include` **(Obligatoire)** | Tableau de produits Adobe à inclure dans votre traitement. Si cette valeur est manquante ou est vide, la demande est rejetée. Incluez uniquement les produits avec lesquels votre entreprise est intégrée. Pour plus d’informations, consultez la section relative aux valeurs [de produit](appendix.md) acceptées dans l’annexe. |
 | `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
 | `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité des demandes de traitement. Les valeurs acceptées sont `normal` et `low`. Si `priority` est omis, le comportement par défaut est `normal`. |
-| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
+| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe doit gérer les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
 | `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
@@ -288,7 +292,9 @@ Une fois que vous avez soumis la demande de travail avec succès, vous pouvez pa
 
 En utilisant l’une des `jobId` valeurs renvoyées à l’étape précédente, vous pouvez récupérer des informations sur cette tâche, telles que son état de traitement actuel.
 
->[!IMPORTANT] Les données relatives aux tâches précédemment créées ne peuvent être récupérées que dans les 30 jours suivant la date de fin de la tâche.
+>[!IMPORTANT]
+>
+>Les données relatives aux tâches précédemment créées ne peuvent être récupérées que dans les 30 jours suivant la date de fin de la tâche.
 
 **Format d’API**
 
@@ -383,7 +389,9 @@ Le tableau suivant liste les différents statuts de travail possibles et leur si
 | 3 | Envoyé | L&#39;emploi est soumis à chaque demande applicable. |
 | 4 | Erreur | Une erreur s&#39;est produite dans le traitement de la tâche. Des informations plus précises peuvent être obtenues en récupérant les détails de la tâche. |
 
->[!NOTE] Une tâche envoyée peut rester dans un état de traitement si elle a une tâche enfant à charge qui est toujours en cours de traitement.
+>[!NOTE]
+>
+>Une tâche envoyée peut rester dans un état de traitement si elle a une tâche enfant à charge qui est toujours en cours de traitement.
 
 ## Liste de toutes les tâches
 
@@ -403,7 +411,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | Paramètre | Description |
 | --- | --- |
 | `{REGULATION}` | Type de réglementation à requête. Les valeurs acceptées sont `gdpr`, `ccpa`et `pdpa_tha`. |
-| `{PAGE}` | Page de données à afficher, à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0` |
+| `{PAGE}` | Page de données à afficher, à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Nombre de résultats à afficher sur chaque page. La valeur par défaut est `1` et la valeur maximale est `100`. Si le nombre maximal est dépassé, l’API renvoie une erreur de code 400. |
 
 **Requête**
@@ -428,4 +436,4 @@ Pour récupérer l&#39;ensemble de résultats suivant dans une réponse paginée
 
 ## Étapes suivantes
 
-Vous savez maintenant comment créer et contrôler des tâches de confidentialité à l’aide de l’API Privacy Service. Pour plus d’informations sur la façon d’exécuter les mêmes tâches à l’aide de l’interface utilisateur, voir la présentation [de l’interface utilisateur de](../ui/overview.md)Privacy Service.
+Vous savez maintenant comment créer et surveiller des tâches de confidentialité à l’aide de l’API du Privacy Service. Pour plus d’informations sur la façon d’exécuter les mêmes tâches à l’aide de l’interface utilisateur, voir la présentation [de l’interface utilisateur](../ui/overview.md)Privacy Service.
