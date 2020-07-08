@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Traitement des demandes de confidentialité dans Data Lake
 topic: overview
 translation-type: tm+mt
-source-git-commit: 327be13cbaaa40e4d0409cbb49a051b7067759bf
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -39,7 +39,9 @@ Pour plus d&#39;informations sur les espaces de nommage d&#39;identité dans l&#
 
 Lors de la création de demandes de confidentialité pour Data Lake, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur **d’** identité dans leur schéma XDM associé.
 
->[!NOTE] Les jeux de données basés sur des schémas qui ne prennent pas en charge les métadonnées des descripteurs d’identité (tels que les jeux de données ad hoc) ne peuvent pas actuellement être traités dans les demandes de confidentialité.
+>[!NOTE]
+>
+>Les jeux de données basés sur des schémas qui ne prennent pas en charge les métadonnées des descripteurs d’identité (tels que les jeux de données ad hoc) ne peuvent pas actuellement être traités dans les demandes de confidentialité.
 
 Cette section décrit les étapes à suivre pour ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données existant. Si vous disposez déjà d’un jeu de données avec un descripteur d’identité, vous pouvez passer à la section [](#nested-maps)suivante.
 
@@ -60,7 +62,9 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 
 ### Using the API {#identity-api}
 
->[!NOTE] Cette section suppose que vous connaissez la valeur d&#39;ID URI unique du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à l’aide de l’API du service de catalogue. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [](./api/look-up-object.md) rechercher des objets Catalogue pour trouver votre jeu de données. L&#39;ID de schéma se trouve sous `schemaRef.id`
+>[!NOTE]
+>
+>Cette section suppose que vous connaissez la valeur d&#39;ID URI unique du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à l’aide de l’API du service de catalogue. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [](./api/look-up-object.md) rechercher des objets Catalogue pour trouver votre jeu de données. L&#39;ID de schéma se trouve sous `schemaRef.id`
 >
 > Cette section comprend des appels à l&#39;API de registre du Schéma. Pour obtenir des informations importantes sur l’utilisation de l’API, y compris la connaissance de votre concept `{TENANT_ID}` et du concept de conteneur, consultez la section [prise en main](../xdm/api/getting-started.md) du guide du développeur.
 
@@ -126,7 +130,9 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et les détails du des
 
 ## Envoi de requêtes {#submit}
 
->[!NOTE] Cette section traite de la façon de formater les demandes de protection de la vie privée pour le lac Data. Il est vivement recommandé de consulter la documentation relative à l’interface utilisateur [](../privacy-service/ui/overview.md) Privacy Service ou à l’API [](../privacy-service/api/getting-started.md) Privacy Service pour connaître les étapes complètes d’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité de l’utilisateur envoyées dans les charges de demande.
+>[!NOTE]
+>
+>Cette section traite de la façon de formater les demandes de protection de la vie privée pour le lac Data. Il est vivement recommandé de consulter la documentation relative à l’interface utilisateur [](../privacy-service/ui/overview.md) Privacy Service ou à l’API [](../privacy-service/api/getting-started.md) Privacy Service pour connaître les étapes complètes d’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité de l’utilisateur envoyées dans les charges de demande.
 
 La section suivante décrit comment effectuer des demandes de confidentialité pour Data Lake à l’aide de l’interface utilisateur ou de l’API du Privacy Service.
 
