@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: b0ef50e25c27aba121bb01c602867953eb2a5f7e
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '2386'
 ht-degree: 4%
@@ -40,13 +40,15 @@ Pour savoir comment créer et utiliser des segments dans le créateur de segment
 
 Pour plus d’informations sur la création de définitions de segment à l’aide de l’API, voir le didacticiel sur la [création de segments d’audience à l’aide de l’API](./tutorials/create-a-segment.md).
 
->[!NOTE] Dans le événement d’une extension d’un schéma, tous les téléchargements futurs doivent mettre à jour les champs nouvellement ajoutés en conséquence. Pour plus d’informations sur la personnalisation du modèle de données d’expérience (XDM), consultez le didacticiel [de l’éditeur de](../xdm/tutorials/create-schema-ui.md)Schéma.
+>[!NOTE]
+>
+>Dans le événement d’une extension d’un schéma, tous les téléchargements futurs doivent mettre à jour les champs nouvellement ajoutés en conséquence. Pour plus d’informations sur la personnalisation du modèle de données d’expérience (XDM), consultez le didacticiel [de l’éditeur de](../xdm/tutorials/create-schema-ui.md)Schéma.
 
 ## Évaluer les segments
 
-### Segmentation en flux continu
+### Segmentation par flux
 
-La segmentation en flux continu est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données entrantes sur le Profil client en temps réel. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui garantit que votre audience de cible reste pertinente.
+Segmentation par flux est un processus continu de sélection des données qui met à jour vos segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données entrantes sur le Profil client en temps réel. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui garantit que votre audience de cible reste pertinente.
 
 Pour en savoir plus sur la segmentation en flux continu, consultez la documentation [sur la segmentation en](./api/streaming-segmentation.md)flux continu.
 
@@ -70,14 +72,18 @@ La composition de vos segments (via l’API ou le créateur de segments) nécess
 
 Lors de la création d’un segment, vous devez fournir un nom de segment. Le nom du segment permet d’identifier un segment particulier dans la collection créée par le service de segmentation. Les noms de segment doivent donc être descriptifs, concis et uniques.
 
->[!NOTE] Lors de la planification d’un segment, n’oubliez pas que les segments peuvent être référencés à partir de n’importe quel autre segment et combinés avec celui-ci. Lors de la sélection d’un nom, pensez à la possibilité que votre segment contienne des portions réutilisables.
+>[!NOTE]
+>
+>Lors de la planification d’un segment, n’oubliez pas que les segments peuvent être référencés à partir de n’importe quel autre segment et combinés avec celui-ci. Lors de la sélection d’un nom, pensez à la possibilité que votre segment contienne des portions réutilisables.
 
 ### Stratégies de fusion
 
 Les stratégies de fusion sont des règles utilisées par le Profil pour déterminer comment les données seront hiérarchisées et combinées en une vue unifiée dans certaines conditions.
 Si aucune stratégie de fusion n’est définie, la stratégie de fusion Platform par défaut est utilisée. Si vous préférez utiliser une stratégie de fusion propre à votre organisation, vous pouvez créer la vôtre et la marquer comme valeur par défaut de votre organisation.
 
->[!NOTE] L&#39;estimation des tailles d&#39;audiences est basée sur la stratégie de fusion de profils par défaut de l&#39;entreprise.
+>[!NOTE]
+>
+>L&#39;estimation des tailles d&#39;audiences est basée sur la stratégie de fusion de profils par défaut de l&#39;entreprise.
 
 ### Autres métadonnées de segment
 
@@ -138,7 +144,9 @@ Les ressources de l&#39;architecte de données incluent l&#39;accès aux donnée
 
 **La solution**
 
->[!NOTE] Dans cet exemple, nous supposerons que l&#39;architecte de données a déjà établi un Espace de nommage d&#39;identification.
+>[!NOTE]
+>
+>Dans cet exemple, nous supposerons que l&#39;architecte de données a déjà établi un Espace de nommage d&#39;identification.
 
 A l’aide de l’API, l’architecte de données associe la clé du schéma ExperienceEvent à la classe &quot;products&quot;. Cela permet à l’architecte de données d’utiliser les champs supplémentaires de la classe &quot;products&quot; comme s’ils étaient natifs du schéma ExperienceEvent. En guise de dernière étape du travail de configuration, l’architecte de données doit importer les données appropriées dans le Profil client en temps réel. Pour ce faire, vous devez activer le jeu de données &quot;products&quot; en vue de l’utiliser avec le Profil. Une fois la configuration terminée, l’architecte de données ou le spécialiste du marketing peuvent créer le segment de cible dans le créateur de segments.
 
@@ -165,7 +173,7 @@ Adding this specific data to the segment itself allows execution engines to pers
 
 ### Cas d’utilisation
 
-Pour illustrer la valeur de cette fonction de segmentation avancée, considérez trois cas d’utilisation standard qui illustrent les défis qui se posaient dans les applications marketing avant l’amélioration de la charge utile de segment :
+Pour illustrer la valeur de cette fonctionnalité de segmentation avancée, considérez trois cas d’utilisation standard qui illustrent les défis qui se posaient dans les applications marketing avant l’amélioration de la charge utile de segment :
 - Personnalisation du courrier électronique
 - Reciblage des courriels
 - Reciblage publicitaire
@@ -246,7 +254,7 @@ Outre celles mentionnées ci-dessus, la liste des types de données pris en char
 - Date
 - Date-heure
 - Tableau
-- Objet
+- objet
 - Carte
 - Événements
 
