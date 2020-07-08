@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l’utilisateur de Privacy Service
+title: Guide de l’utilisateur Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 9fc95dd9194dca0fada603643c3de949764b2f17
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -12,19 +12,19 @@ ht-degree: 0%
 ---
 
 
-# Guide de l’utilisateur de Privacy Service
+# Guide de l’utilisateur Privacy Service
 
-Ce document fournit des étapes pour la création et la gestion des demandes de confidentialité à l’aide de l’interface utilisateur de Privacy Service.
+Ce document fournit des étapes pour la création et la gestion des demandes de confidentialité à l’aide de l’interface utilisateur du Privacy Service.
 
-## Parcourir le tableau de bord de l’interface utilisateur de Privacy Service
+## Parcourir le tableau de bord de l’interface utilisateur du Privacy Service
 
-Le tableau de bord de l’interface utilisateur de Privacy Service fournit deux widgets qui vous permettent de vue de l’état de vos tâches de confidentialité : **Rapport** d’état et Demandes **de** travaux. Le tableau de bord affiche également le règlement actuellement sélectionné pour les tâches affichées.
+Le tableau de bord de l’interface utilisateur du Privacy Service fournit deux widgets qui vous permettent de vue de l’état de vos tâches de confidentialité : **Rapport** d’état et Demandes **de** travaux. Le tableau de bord affiche également le règlement actuellement sélectionné pour les tâches affichées.
 
 ![tableau de bord de l’interface utilisateur](../images/user-guide/dashboard.png)
 
 ### Type de règlement
 
-Privacy Service prend en charge les demandes d’emploi pour trois types de réglementation :
+Le Privacy Service prend en charge les demandes d&#39;emploi pour trois types de réglementation :
 
 * Règlement général sur la protection des données (RGPD) de l&#39;Union européenne
 * La Loi sur la protection des renseignements personnels des consommateurs de Californie (CCPA)
@@ -54,13 +54,17 @@ Pour vue d’autres détails sur un point de données donné, cliquez sur le poi
 
 ![Filtre appliqué à partir du widget](../images/user-guide/apply-filter.png)
 
->[!NOTE] Lorsqu’un filtre a été appliqué au widget Demandes de travaux, vous pouvez supprimer le filtre en cliquant sur le **X** sur la pilule de filtre. Demandes de tâche revient ensuite à la liste de suivi par défaut.
+>[!NOTE]
+>
+>Lorsqu’un filtre a été appliqué au widget Demandes de travaux, vous pouvez supprimer le filtre en cliquant sur le **X** sur la pilule de filtre. Demandes de tâche revient ensuite à la liste de suivi par défaut.
 
 ### Demandes de travaux
 
 Le widget Demandes de travaux liste toutes les demandes de travaux disponibles dans votre organisation, y compris des détails tels que le type de demande, l’état actuel, la date d’échéance et le courrier électronique du demandeur.
 
->[!NOTE] Les données relatives aux tâches précédemment créées ne sont accessibles que pendant 30 jours après la date d’achèvement.
+>[!NOTE]
+>
+>Les données relatives aux tâches précédemment créées ne sont accessibles que pendant 30 jours après la date d’achèvement.
 
 Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche située sous le titre Demandes de travaux. La liste filtres automatiquement au fur et à mesure que vous tapez, affichant les requêtes qui contiennent des valeurs correspondant aux termes recherchés. Vous pouvez également utiliser le menu déroulant **Demandé sur** pour sélectionner une période pour les tâches répertoriées.
 
@@ -78,9 +82,11 @@ Pour télécharger l’ensemble des données de travail au format CSV, cliquez s
 
 ## Créer une demande de travail de confidentialité
 
->[!NOTE] Pour créer une demande de travail de confidentialité, vous devez fournir des informations d&#39;identité aux clients spécifiques dont les données doivent être consultées ou supprimées. Veuillez consulter le document sur les données d&#39; [identité pour les demandes](../identity-data.md) de confidentialité avant de poursuivre avec cette section.
+>[!NOTE]
+>
+>Pour créer une demande de travail de confidentialité, vous devez fournir des informations d&#39;identité aux clients spécifiques dont les données doivent être consultées ou supprimées. Veuillez consulter le document sur les données d&#39; [identité pour les demandes](../identity-data.md) de confidentialité avant de poursuivre avec cette section.
 
-L’interface utilisateur de Privacy Service propose deux méthodes pour créer des demandes de travail :
+L’interface utilisateur du Privacy Service propose deux méthodes pour créer des demandes de travaux :
 
 * [Utilisation du Créateur de requêtes](#request-builder)
 * [Téléchargement d’un fichier JSON](#json)
@@ -103,7 +109,7 @@ Sélectionnez le type **de** tâche de la demande (&quot;Supprimer&quot; ou &quo
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Sous Type *d’* Espace de nommage, sélectionnez le type d’espace de nommage approprié pour les ID de client envoyés à Privacy Service.
+Sous Type *d’* Espace de nommage, sélectionnez le type d’espace de nommage approprié pour les ID de client envoyés au Privacy Service.
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -115,7 +121,7 @@ Lors de l’utilisation du type d’espace de nommage _personnalisé_ , vous dev
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Lorsque vous avez terminé, cliquez sur **Créer**.
+When finished, click **Create**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -141,10 +147,10 @@ Si vous n’avez pas de fichier JSON à télécharger, cliquez sur **Télécharg
 
 Recherchez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le téléchargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
 
-Lorsque vous avez terminé, cliquez sur **Créer**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Demandes de _travaux_ avec leur état de traitement actuel.
+When finished, click **Create**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Demandes de _travaux_ avec leur état de traitement actuel.
 
 ### Étapes suivantes
 
-En lisant ce document, vous avez appris à utiliser l’interface utilisateur de Privacy Service pour créer une tâche de confidentialité, vue des détails d’une tâche et contrôler son état de traitement, et télécharger les résultats une fois qu’elle est terminée.
+En lisant ce document, vous avez appris à utiliser l’interface utilisateur du Privacy Service pour créer une tâche de confidentialité, à vue les détails d’une tâche et à surveiller son état de traitement, et à télécharger les résultats une fois qu’elle est terminée.
 
-Pour obtenir des instructions sur la façon d’effectuer ces opérations par programmation à l’aide de l’API Privacy Service, consultez le guide [du](../api/getting-started.md)développeur.
+Pour obtenir des instructions sur la façon d&#39;effectuer ces opérations par programmation à l&#39;aide de l&#39;API du Privacy Service, consultez le guide [du](../api/getting-started.md)développeur.
