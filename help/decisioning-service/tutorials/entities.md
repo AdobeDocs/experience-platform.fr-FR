@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des entités du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 0%
@@ -48,7 +48,9 @@ Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
->[!NOTE] Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>[!NOTE]
+>
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
 Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
 
@@ -102,7 +104,9 @@ Lorsque l&#39;administrateur a autorisé l&#39;accès aux conteneurs pour les ut
 
 Le contexte des [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`en cours.
 
->[!NOTE] Le contexte [!DNL Platform Decisioning Containers] va bientôt changer `acp`. Le filtrage est facultatif, mais les filtres ne `dma_offers` nécessiteront que des modifications dans une prochaine version. Pour se préparer à ce changement, les clients ne doivent utiliser aucun filtres ou appliquer les deux contextes de produits comme filtre.
+>[!NOTE]
+>
+>Le contexte [!DNL Platform Decisioning Containers] va bientôt changer `acp`. Le filtrage est facultatif, mais les filtres ne `dma_offers` nécessiteront que des modifications dans une prochaine version. Pour se préparer à ce changement, les clients ne doivent utiliser aucun filtres ou appliquer les deux contextes de produits comme filtre.
 
 **Requête**
 
@@ -233,7 +237,9 @@ curl -X GET {ENDPOINT_PATH}/{CONTAINER_ID}/instances/{INSTANCE_ID} \
   -H 'x-request-id: {NEW_UUID}'  
 ```
 
->[!NOTE] Bien que `instanceId` soit donné comme paramètre de chemin, les applications doivent, chaque fois que possible, ne pas construire le chemin elles-mêmes et suivre à la place les liens vers les instances contenues dans les opérations de liste et de recherche. Voir les sections ‎ 6.4.4 et ‎ 6.4.6 pour plus de détails.
+>[!NOTE]
+>
+>Bien que `instanceId` soit donné en tant que paramètre de chemin, les applications doivent, chaque fois que possible, ne pas construire le chemin elles-mêmes et suivre à la place les liens vers les instances contenues dans les opérations de liste et de recherche. Voir les sections ‎ 6.4.4 et ‎ 6.4.6 pour plus de détails.
 
 **Réponse**
 
@@ -288,7 +294,7 @@ L’API du référentiel répondra avec l’état 304 Non modifié lorsque la de
 
 ### Instances de Liste pour un schéma - Tri et pagination
 
-Les clients ne pourront pas suivre les instances qu’ils créent et, par conséquent, y accéder par leur instanceId physique. L’utilisation de l’API d’instance de lecture constitue l’exception. Les clients ignorent également les instances que d’autres clients ont créées.
+Les clients ne pourront pas garder le suivi des instances qu’ils créent et, par conséquent, y accéder par leur instanceId physique. L’utilisation de l’API d’instance de lecture constitue l’exception. Les clients ignorent également les instances que d’autres clients ont créées.
 
 Un modèle d’accès plus typique consistera à parcourir le jeu de toutes les instances.
 
@@ -326,7 +332,9 @@ La réponse dépend de la `{schemaId}` valeur spécifiée. Par exemple, pour &qu
 }
 ```
 
->[!NOTE] Le résultat contient les instances pour le schéma donné ou la première page de cette liste. Notez que les instances peuvent être conformes à plusieurs schémas et peuvent donc apparaître dans plusieurs listes.
+>[!NOTE]
+>
+>Le résultat contient les instances pour le schéma donné ou la première page de cette liste. Notez que les instances peuvent être conformes à plusieurs schémas et peuvent donc apparaître dans plusieurs listes.
 
 Les ressources de page sont transitoires et sont en lecture seule ; elles ne peuvent pas être mises à jour ou supprimées. Le modèle de pagination permet un accès aléatoire à des sous-ensembles de listes volumineuses sur une longue période sans conserver d’état par client.
 
@@ -347,8 +355,7 @@ La pagination est contrôlée par les paramètres suivants :
 Le filtrage des résultats des listes est possible et se produit indépendamment du mécanisme de pagination. Les Filtres ignorent simplement les instances dans l’ordre des listes ou demandent explicitement de n’inclure que celles qui répondent à une condition donnée. Un client peut demander que l’expression de propriété soit utilisée comme filtre ou spécifier une liste d’URI à utiliser comme valeurs de la clé primaire des instances.
 
 - **`property`**: Contient un chemin de nom de propriété suivi d’un opérateur de comparaison suivi d’une valeur. <br/>
-La liste des instances renvoyées contient celles pour lesquelles l’expression est évaluée comme vraie. Par exemple, en supposant que l’instance possède une propriété de charge utile 
-`status` et les valeurs possibles sont `draft`, `approved`, `archived` puis `deleted` le paramètre de requête `property=_instance.status==approved` ne renvoie que les instances pour lesquelles l’état est approuvé. <br/>
+La liste des instances renvoyées contient celles pour lesquelles l’expression est évaluée comme vraie. Par exemple, en supposant que l’instance possède une propriété de charge utile `status` et que les valeurs possibles soient `draft`, `approved``archived` , puis le paramètre de requête `deleted` `property=_instance.status==approved` renvoie uniquement les instances pour lesquelles l’état est approuvé. <br/>
 <br/>
 La propriété à comparer à la valeur donnée est identifiée comme un chemin d’accès. Les composants de chemin d'accès individuels sont séparés par ".", par exemple : `_instance.xdm:prop1.xdm:prop1_1.xdm:prop1_1_1`<br/>
 
@@ -571,7 +578,9 @@ Lors de l’utilisation des API avec le type de contenu `application/vnd.adobe.p
 }
 ```
 
->[!NOTE] Pour des raisons de concision, dans tous les fragments JSON, seules les propriétés d’instance sont illustrées et uniquement lorsqu’elles sont requises, les propriétés d’enveloppe et la section _links s’affichent.
+>[!NOTE]
+>
+>Pour des raisons de concision, dans tous les fragments JSON, seules les propriétés d’instance sont illustrées et uniquement lorsqu’elles sont requises, les propriétés d’enveloppe et la section _links s’affichent.
 
 ### Propriétés d’offre générales
 
