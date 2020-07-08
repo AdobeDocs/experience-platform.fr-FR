@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide du développeur Requête Service
 topic: query templates
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '643'
-ht-degree: 3%
+ht-degree: 8%
 
 ---
 
@@ -20,7 +20,7 @@ Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commence
 
 ### Récupération d’une liste de modèles de requête
 
-Vous pouvez récupérer une liste de tous les modèles de requête pour votre organisation IMS en adressant une demande GET au point de `/query-templates` terminaison.
+You can retrieve a list of all query templates for your IMS Organization by making a GET request to the `/query-templates` endpoint.
 
 **Format d’API**
 
@@ -31,15 +31,15 @@ GET /query-templates?{QUERY_PARAMETERS}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{QUERY_PARAMETERS}` | (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parameters added to the request path which configure the results returned in the response. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
 
-**Paramètres de Requête**
+**Paramètres de requête**
 
 Voici une liste des paramètres de requête disponibles pour répertorier les modèles de requête. Tous ces paramètres sont facultatifs. L&#39;appel à ce point de terminaison sans paramètre récupère tous les modèles de requête disponibles pour votre entreprise.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L&#39;ajout d&#39;un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l&#39;ordre décroissant. |
+| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. Ajouter un `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
 | `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `name` et `userId`. Le seul opérateur pris en charge est `==` (égal à). Par exemple, `name==my_template` renvoie tous les modèles de requête portant le nom `my_template`. |
@@ -105,11 +105,13 @@ Une réponse réussie renvoie l&#39;état HTTP 200 avec une liste de modèles de
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
 
 ### Création d’un modèle de requête
 
-Vous pouvez créer un modèle de requête en envoyant une requête POST au point de `/query-templates` terminaison.
+You can create a query template by making a POST request to the `/query-templates` endpoint.
 
 **Format d’API**
 
@@ -166,7 +168,9 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
 
 ### Récupération d’un modèle de requête spécifié
 
@@ -180,7 +184,7 @@ GET /query-templates/{TEMPLATE_ID}
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `{TEMPLATE_ID}` | Valeur `id` du modèle de requête que vous souhaitez récupérer. |
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
 **Requête**
 
@@ -222,7 +226,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails du modèle de
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
 
 ### Mettre à jour un modèle de requête spécifié
 
@@ -236,11 +242,13 @@ PUT /query-templates/{TEMPLATE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Valeur `id` du modèle de requête que vous souhaitez récupérer. |
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
 **Requête**
 
->[!NOTE] La requête PUT nécessite que le champ sql et le champ name soient remplis et remplace **** le contenu actuel de ce modèle de requête.
+>[!NOTE]
+>
+>La requête PUT nécessite que le champ sql et le champ name soient remplis et remplace **** le contenu actuel de ce modèle de requête.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -290,11 +298,13 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les information
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle](#delete-a-specified-query-template)de requête.
 
 ### Suppression d’un modèle de requête spécifié
 
-Vous pouvez supprimer un modèle de requête spécifique en adressant une requête DELETE au modèle de requête `/query-templates/{TEMPLATE_ID}` et en indiquant l’identifiant dans le chemin d’accès à la requête.
+Vous pouvez supprimer un modèle de requête spécifique en adressant une requête de DELETE au modèle `/query-templates/{TEMPLATE_ID}` et en indiquant l’identifiant du modèle de requête dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -304,7 +314,7 @@ DELETE /query-templates/{TEMPLATE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{TEMPLATE_ID}` | Valeur `id` du modèle de requête que vous souhaitez récupérer. |
+| `{TEMPLATE_ID}` | The `id` value of the query template you want to retrieve. |
 
 **Requête**
 
