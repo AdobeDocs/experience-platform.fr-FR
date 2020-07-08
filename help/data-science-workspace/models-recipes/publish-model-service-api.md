@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -338,7 +338,9 @@ Une réponse réussie renvoie les détails du service ML.
 }
 ```
 
->[!NOTE] La récupération de différents services ML peut renvoyer une réponse avec plus ou moins de paires clé-valeur. La réponse ci-dessus est une représentation d&#39;un service [ML avec une formation planifiée et des exécutions](#ml-service-with-scheduled-experiments-for-training-and-scoring)d&#39;expériences de score.
+>[!NOTE]
+>
+>La récupération de différents services ML peut renvoyer une réponse avec plus ou moins de paires clé-valeur. La réponse ci-dessus est une représentation d&#39;un service [ML avec une formation planifiée et des exécutions](#ml-service-with-scheduled-experiments-for-training-and-scoring)d&#39;expériences de score.
 
 
 ## Planification de la formation ou de la notation
@@ -388,7 +390,9 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
       }'
 ```
 
->[!WARNING] N’essayez pas de modifier les `startTime` tâches de formation et de notation planifiées existantes. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à replanifier les tâches de formation et de notation.
+>[!WARNING]
+>
+>N’essayez pas de modifier les `startTime` tâches de formation et de notation planifiées existantes. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à replanifier les tâches de formation et de notation.
 
 **Réponse**
 
