@@ -4,7 +4,7 @@ solution: Experience Platform
 title: déduplication de données
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 1%
@@ -29,7 +29,9 @@ Ce document présente des exemples de requêtes sous-sélectionnés et complets 
 
 Dans le cas des événements d’expérience de duplicata, vous souhaiterez probablement ignorer la totalité de la ligne.
 
->[!CAUTION] De nombreux DataSets dans la plateforme d’expérience, y compris ceux produits par le connecteur de données Adobe Analytics, ont déjà appliqué une déduplication au niveau d’ExperienceEvent. Par conséquent, la réapplication de ce niveau de déduplication est inutile et ralentira votre requête. Il est important de comprendre la source de vos DataSets et de savoir si la déduplication au niveau d’ExperienceEvent a déjà été appliquée. Pour les DataSets en flux continu (par exemple, ceux d’Adobe Cible), vous devez appliquer une déduplication au niveau d’ExperienceEvent car ces sources de données ont une sémantique &quot;au moins une fois&quot;.
+>[!CAUTION]
+>
+>De nombreux DataSets en Experience Platform, y compris ceux produits par le Analytics Data Connector, utilisent déjà une déduplication au niveau d’ExperienceEvent. Par conséquent, la réapplication de ce niveau de déduplication est inutile et ralentira votre requête. Il est important de comprendre la source de vos DataSets et de savoir si la déduplication au niveau d’ExperienceEvent a déjà été appliquée. Pour les DataSets en flux continu (par exemple, ceux d’Adobe Target), vous devez appliquer une déduplication au niveau d’ExperienceEvent car ces sources de données ont une sémantique &quot;au moins une fois&quot;.
 
 **Portée :** Global
 
