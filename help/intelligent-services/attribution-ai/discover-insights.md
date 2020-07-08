@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Découverte des informations dans l'API d'attribution
 topic: Attribution AI insights
 translation-type: tm+mt
-source-git-commit: 0ea96de956adb5a6c5286433a547772118c43aee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1164'
-ht-degree: 1%
+ht-degree: 10%
 
 ---
 
@@ -20,59 +20,63 @@ Ce document sert de guide pour l’interaction avec les informations d’instanc
 
 ## Prise en main
 
-Pour utiliser des informations sur l’API d’attribution, vous devez disposer d’une instance de service dont l’état d’exécution est correct. Pour créer une instance de service, consultez le guide [de l’interface utilisateur de l’API](./user-guide.md)d’attribution. Si vous avez récemment créé une instance de service et qu’elle continue à s’entraîner et à marquer des points, veuillez lui accorder 24 heures pour qu’elle se termine.
+Pour utiliser des informations sur l’API d’attribution, vous devez disposer d’une instance de service dont l’état d’exécution est correct. To create a new service instance visit the [Attribution AI user interface guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Présentation des instances de service
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* s’affiche et affiche les services intelligents Adobe disponibles. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **Open**.
 
 ![Accès à votre instance](./images/insights/open_Attribution_ai.png)
 
 La page du service AI d’attribution s’affiche. Cette page liste les instances de service d’attribution AI et affiche des informations à leur sujet, notamment le nom de l’instance, les événements de conversion, la fréquence d’exécution de l’instance et l’état de la dernière mise à jour. Cliquez sur le nom d’une instance de service pour commencer.
 
->[!NOTE] Seules les instances de service ayant terminé des exécutions de notation réussies peuvent être sélectionnées.
+>[!NOTE]
+>
+>Seules les instances de service ayant terminé des exécutions de notation réussies peuvent être sélectionnées.
 
-![Créer une instance](./images/insights/select-service-instance.png)
+![Création d’une instance](./images/insights/select-service-instance.png)
 
 Ensuite, la page d’informations de cette instance de service s’affiche, dans laquelle des visualisations et un certain nombre de filtres vous sont fournis pour interagir avec vos données. Les visualisations et les filtres sont expliqués plus en détail dans ce guide.
 
 ![page de configuration](./images/insights/landing-page.png)
 
-### Détails de l’instance de service
+### Détails des instances de service
 
 Pour vue des détails supplémentaires pour une instance de service, cliquez sur **Afficher plus** en haut à droite.
 
 ![afficher plus](./images/insights/show-more.png)
 
-Une liste détaillée s’affiche. Pour plus d&#39;informations sur l&#39;une des propriétés répertoriées, consultez le guide [d&#39;utilisation de l&#39;API](./user-guide.md)Attribution.
+Une liste détaillée s’affiche. For more information on any of the properties listed, please visit the [Attribution AI user guide](./user-guide.md).
 
 ![afficher les détails](./images/insights/advanced-details.png)
 
 ### Modification d’une instance
 
-Pour modifier une instance, cliquez sur *Modifier* dans le volet de navigation supérieur droit.
+Pour modifier une instance, cliquez sur *Modifier* dans la navigation en haut à droite.
 ![cliquez sur le bouton Modifier](./images/insights/edit-button.png)
 
-La boîte de dialogue Modifier s’affiche, vous permettant de modifier la description et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur *Modifier* dans le coin inférieur droit.
+La boîte de dialogue Modifier s’affiche, vous permettant de modifier la description et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur *Modifier* dans le coin en bas à droite.
 
 ![modifier la fenêtre contextuelle](./images/insights/edit-popover.png)
 
-### Autres actions {#more-actions}
+### Actions supplémentaires {#more-actions}
 
-Le bouton Actions ** Plus se trouve dans le volet de navigation supérieur droit en regard de *Modifier*. Cliquez sur **Autres actions** pour ouvrir une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
+Le bouton *Actions supplémentaires* se trouve dans la navigation en haut à droite, en regard de *Modifier*. Cliquer sur **Actions supplémentaires** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
 
-- **Supprimer**: Supprime l’instance.
+- **Supprimer** : supprime l’instance.
 - **Télécharger des données** récapitulatives : Télécharge un fichier CSV contenant les données de résumé.
 - **Scores** d&#39;accès : Le fait de cliquer sur les scores ** Access vous redirige vers les scores d’ [accès pour le didacticiel](./download-scores.md)Attribution AI.
 - **Historique** de l&#39;exécution des Vues : Une fenêtre contextuelle contenant une liste de toutes les exécutions de notation associées à l’instance de service s’affiche.
 
-![Autres actions](./images/insights/more-actions.png)
+![actions supplémentaires](./images/insights/more-actions.png)
 
 ## Filtrage de vos données
 
 Les statistiques d’IA d’attribution vous permettent de filtrer vos données et de mettre automatiquement à jour les visuels de l’interface utilisateur en fonction de vos filtres sélectionnés.
 
->[!NOTE] Par défaut, chaque filtre est défini sur &quot;Tous&quot;, à l’exception du filtre du modèle *d’* attribution qui est défini sur &quot;Conversions attribuées incrémentielles et influencées&quot;.
+>[!NOTE]
+>
+>Par défaut, chaque filtre est défini sur &quot;Tous&quot;, à l’exception du filtre du modèle *d’* attribution qui est défini sur &quot;Conversions attribuées incrémentielles et influencées&quot;.
 
 ### événement de conversion
 
@@ -98,23 +102,27 @@ Le filtre *Produit* vous permet de sélectionner un produit qui a été initiale
 
 Le filtre *Géographie* renseigne les codes de pays en fonction de modèles régionaux. Selon vos données, ce filtre peut être présent ou non.
 
->[!NOTE] Les codes de pays comportent deux caractères. Une liste complète est disponible ici [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>[!NOTE]
+>
+>Les codes de pays comportent deux caractères. Une liste complète est disponible ici [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Région
 
 
 
->[!NOTE] Ce filtre n’est présent que si vous avez effectué la modélisation [](./user-guide.md#region-based-modeling-optional) par région à l’étape facultative dans le guide de l’interface utilisateur de l’API d’attribution lors de la création de votre instance de service.
+>[!NOTE]
+>
+>Ce filtre n’est présent que si vous avez effectué la modélisation [](./user-guide.md#region-based-modeling-optional) par région à l’étape facultative dans le guide de l’interface utilisateur de l’API d’attribution lors de la création de votre instance de service.
 
 Ce filtre vous permet de sélectionner les régions que vous avez configurées dans le processus de création d’instances.
 
-### Canal
+### Channel
 
 Cliquez sur le filtre de *Canal* pour afficher une liste déroulante contenant tous les canaux marketing disponibles. Vous pouvez sélectionner plusieurs canaux pour les comparer.
 
-![Canal](./images/insights/channel.png)
+![Channel](./images/insights/channel.png)
 
-### Date range (Plage de dates)
+### Date Range
 
 Cliquez sur l’icône de calendrier pour ouvrir la fenêtre contextuelle de la période. Les dates de événement de conversion de début et de fin déterminent la quantité de données renseignées dans l’interface utilisateur. Vous pouvez choisir de limiter ou d’élargir la plage de dates afin de cibler ou d’augmenter la quantité de données renseignées.
 
