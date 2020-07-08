@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide du développeur de l’API de Profil client en temps réel
+title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d464a6b4abd843f5f8545bc3aa8000f379a86c6d
+source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
 workflow-type: tm+mt
 source-wordcount: '2431'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -25,7 +25,7 @@ Ce guide vous aidera à mieux comprendre les attributs calculés dans l’Adobe 
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l’API [Profil client en temps](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)réel. Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Présentation des attributs calculés
 
@@ -483,6 +483,8 @@ Une mise à jour réussie renvoie l’état HTTP 204 (aucun contenu) et un corps
 Il est également possible de supprimer un attribut calculé à l’aide de l’API. Pour ce faire, vous devez envoyer une requête de DELETE au point de `/config/computedAttributes` terminaison et inclure l’ID de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!Note] :
+>
+>
 >Soyez prudent lors de la suppression d&#39;un attribut calculé, car il peut être utilisé dans plusieurs schémas et l&#39;opération du DELETE ne peut pas être annulée.
 
 **Format d’API**
