@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Expériences
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: 76f68fea1bea970bab4c25061527b7ebae33faf3
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 4%
@@ -20,7 +20,9 @@ Le développement et la formation de modèles se déroulent au niveau Expérienc
 
 Vous pouvez créer une expérience en exécutant une requête POST tout en fournissant un nom et un ID d&#39;instance MLInstance valide dans la charge utile de la requête.
 
->[!NOTE] Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel d’API explicite ne crée pas et n’exécute pas automatiquement une session de formation.
+>[!NOTE]
+>
+>Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel d’API explicite ne crée pas et n’exécute pas automatiquement une session de formation.
 
 **Format d’API**
 
@@ -242,7 +244,9 @@ Une réponse réussie renvoie une charge utile contenant les détails de l&#39;e
 
 Vous pouvez récupérer une liste d’exécutions de formation ou de notation appartenant à une expérience particulière en exécutant une seule demande GET et en fournissant un ID d’expérience valide. Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste complète des paramètres de requête disponibles, voir la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
 
->[!NOTE] Lors de la combinaison de plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (&amp;).
+>[!NOTE]
+>
+>Lors de la combinaison de plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (&amp;).
 
 **Format d’API**
 
@@ -301,7 +305,9 @@ Une réponse réussie renvoie une charge utile contenant une liste d&#39;exécut
 
 Vous pouvez mettre à jour une expérience existante en remplaçant ses propriétés par une requête PUT qui inclut l’ID de l’expérience de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
 
->[!TIP] Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’expérience par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>[!TIP]
+>
+>Afin d’assurer le succès de cette requête PUT, il est conseillé d’effectuer d’abord une requête GET pour [récupérer l’expérience par ID](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
 
 L’exemple d’appel d’API suivant met à jour le nom d’une expérience alors que ces propriétés étaient au départ les suivantes :
 
