@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Identités des grappes de Listes
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -70,7 +70,9 @@ curl -X GET \
 
 Utilisez `POST` comme équivalent par lot de la `GET` méthode décrite ci-dessus pour renvoyer les identités dans les grappes de plusieurs identités.
 
->[!NOTE] La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
+>[!NOTE]
+>
+>La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
 
 **Format d’API**
 
@@ -234,7 +236,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] La réponse comporte toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent à la même grappe ou qu’une ou plusieurs d’entre elles soient associées ou non.
+>[!NOTE]
+>
+>La réponse comporte toujours une entrée pour chaque XID fourni dans la requête, que les XID d’une requête appartiennent à la même grappe ou qu’une ou plusieurs d’entre elles soient associées ou non.
 
 ## Étapes suivantes
 
