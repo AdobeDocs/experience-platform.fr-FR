@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Vue de politiques efficaces
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -40,7 +40,9 @@ curl -X POST \
   ]'
 ```
 
->[!NOTE] Pour obtenir une liste complète des autorisations et des types de ressources qui peuvent être fournis dans le tableau de charge utile, reportez-vous à la section de l&#39;annexe sur les autorisations [acceptées et les types](#accepted-permissions-and-resource-types)de ressources.
+>[!NOTE]
+>
+>Pour obtenir une liste complète des autorisations et des types de ressources qui peuvent être fournis dans le tableau de charge utile, reportez-vous à la section de l&#39;annexe sur les autorisations [acceptées et les types](#accepted-permissions-and-resource-types)de ressources.
 
 **Réponse**
 
@@ -63,7 +65,7 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce document décrit comment appeler l&#39;API Contrôle d&#39;accès pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus d’informations sur le contrôle d&#39;accès pour la plateforme d’expérience, voir la présentation [du](../home.md)contrôle d&#39;accès.
+Ce document décrit comment appeler l&#39;API Contrôle d&#39;accès pour renvoyer des informations sur les autorisations actives et les stratégies associées pour les types de ressources. Pour plus d&#39;informations sur le contrôle d&#39;accès pour les Experience Platform, consultez la présentation [du](../home.md)contrôle d&#39;accès.
 
 ## Annexe
 
