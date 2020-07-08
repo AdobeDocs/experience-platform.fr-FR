@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’éditeur de schéma.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: b3fa5a17c3a5c2406d368d165da63f2f8c01154d
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3409'
 ht-degree: 0%
@@ -84,7 +84,9 @@ La trame réapparaît. La section *Classe* contient désormais la classe que vou
 
 Les champs apparaissent au format &quot;fieldName&quot;. | Type de données&quot;. Les étapes de définition des champs de schéma dans l’interface utilisateur sont décrites plus loin dans ce didacticiel.
 
->[!NOTE] Vous pouvez [modifier la classe d&#39;un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma n&#39;ait été enregistré, mais cela doit se faire avec une extrême prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
+>[!NOTE]
+>
+>Vous pouvez [modifier la classe d&#39;un schéma](#change-class) à tout moment au cours du processus de composition initial avant que le schéma n&#39;ait été enregistré, mais cela doit se faire avec une extrême prudence. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et les champs que vous avez ajoutés.
 
 ## Ajouter un mixin {#mixin}
 
@@ -108,7 +110,9 @@ Le canevas de schéma réapparaît. La section *Mélanges* liste désormais le m
 
 Ce mixin fournit plusieurs champs sous le nom de niveau supérieur &quot;personne&quot; avec le type de données &quot;Personne&quot;. Ce groupe de champs décrit des informations sur un individu, notamment son nom, sa date de naissance et son sexe.
 
->[!NOTE] N&#39;oubliez pas que les champs peuvent utiliser des types scalaires (tels que chaîne, entier, tableau ou date) comme type de données, ainsi que tout &quot;type de données&quot; (un groupe de champs représentant un concept commun) dans le registre des Schémas.
+>[!NOTE]
+>
+>N&#39;oubliez pas que les champs peuvent utiliser des types scalaires (tels que chaîne, entier, tableau ou date) comme type de données, ainsi que tout &quot;type de données&quot; (un groupe de champs représentant un concept commun) dans le registre des Schémas.
 
 Notez que le champ &quot;nom&quot; possède un type de données &quot;Nom de la personne&quot;, ce qui signifie qu’il décrit également un concept commun et qu’il contient des sous-champs liés au nom, tels que le prénom, le nom et le nom complet.
 
@@ -152,7 +156,7 @@ Pour commencer, cliquez sur le nom du mixin dans la section *Mélanges* . Une fo
 
 Cliquez sur **Ajouter le champ** en regard de &quot;Membres fidèles&quot; pour créer un nouveau noeud dans la structure. Ce noeud (appelé &quot;_locataireId&quot; dans cet exemple) représente l’ID de client de votre organisation IMS, précédé d’un trait de soulignement. La présence de l’ID de client indique que les champs que vous ajoutez sont contenus dans l’espace de nommage de votre organisation.
 
-En d&#39;autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans le Registre des Schémas dans une zone spécifique accessible uniquement à votre organisation IMS. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage afin d’éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
+En d&#39;autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans le Registre des Schémas dans une zone spécifique accessible uniquement à votre organisation IMS. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage pour éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
 
 À l’intérieur de ce noeud avec espacement de noms se trouve un &quot;nouveau champ&quot;. C&#39;est le début du mixin &quot;Détails de fidélité&quot;.
 
@@ -247,7 +251,9 @@ Désormais, toutes les données saisies dans le champ &quot;loyaltyId&quot; sero
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
->[!NOTE] Une fois qu’un champ de schéma a été défini comme identité principale, vous recevrez un message d’erreur si vous tentez par la suite de définir un autre champ dans le schéma comme principal. Chaque schéma ne peut contenir qu&#39;un seul champ d&#39;identité principal.
+>[!NOTE]
+>
+>Une fois qu’un champ de schéma a été défini comme identité principale, vous recevrez un message d’erreur si vous tentez par la suite de définir un autre champ dans le schéma comme principal. Chaque schéma ne peut contenir qu&#39;un seul champ d&#39;identité principal.
 
 Pour en savoir plus sur l&#39;utilisation des identités, consultez la documentation [Identity Service](../../identity-service/home.md) .
 
@@ -279,7 +285,9 @@ Cliquez sur **Profil** et une fenêtre contextuelle s’affiche, vous demandant 
 
 ![](../images/tutorials/create-schema/enable_unified_profile.png)
 
->[!NOTE] Une fois qu’un schéma a été activé pour le Profil client en temps réel et enregistré, il ne peut pas être désactivé.
+>[!NOTE]
+>
+>Une fois qu’un schéma a été activé pour le Profil client en temps réel et enregistré, il ne peut plus être désactivé.
 
 ## Étapes suivantes
 
@@ -303,13 +311,17 @@ Vous pouvez ensuite attribuer à votre nouvelle classe un nom **** d’affichage
 
 ![Détails de la nouvelle classe](../images/tutorials/create-schema/create_new_class.png)
 
->[!NOTE] Lors de la création d&#39;un schéma qui implémente une classe définie par votre organisation, n&#39;oubliez pas que les mixins sont disponibles pour une utilisation uniquement avec des classes compatibles. La classe que vous avez définie étant nouvelle, aucun mixin compatible n’est répertorié dans la boîte de dialogue *Ajouter le mixin* . Vous devez sélectionner **Créer un nouveau mixin** et définir un mixin à utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, le mixin que vous avez défini sera répertorié et disponible pour utilisation.
+>[!NOTE]
+>
+>Lors de la création d&#39;un schéma qui implémente une classe définie par votre organisation, n&#39;oubliez pas que les mixins sont disponibles pour une utilisation uniquement avec des classes compatibles. La classe que vous avez définie étant nouvelle, aucun mixin compatible n’est répertorié dans la boîte de dialogue *Ajouter le mixin* . Vous devez sélectionner **Créer un nouveau mixin** et définir un mixin à utiliser avec cette classe. La prochaine fois que vous composez un schéma qui implémente la nouvelle classe, le mixin que vous avez défini sera répertorié et disponible pour utilisation.
 
 ### Modification de la classe d’un schéma {#change-class}
 
 A tout moment au cours du processus initial de composition du schéma, avant l&#39;enregistrement du schéma, vous pouvez modifier la classe sur laquelle le schéma est basé.
 
->[!WARNING] Veuillez faire attention avant de changer de classe. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et supprime tous les champs que vous avez ajoutés à ce point.
+>[!WARNING]
+>
+>Veuillez faire attention avant de changer de classe. Les mixins ne sont compatibles qu&#39;avec certaines classes. Par conséquent, modifier la classe réinitialise le canevas et supprime tous les champs que vous avez ajoutés à ce point.
 
 Pour modifier la classe, cliquez sur **Attribuer** en regard de *la classe* dans la section *Composition* de l’éditeur.
 
