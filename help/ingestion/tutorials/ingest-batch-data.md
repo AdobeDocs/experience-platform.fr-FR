@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Envoi de données dans Adobe Experience Platform
+title: Envoi de données dans un Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 79466c78fd78c0f99f198b11a9117c946736f47a
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 3%
@@ -12,13 +12,13 @@ ht-degree: 3%
 ---
 
 
-# Envoi de données dans Adobe Experience Platform
+# Envoi de données dans un Adobe Experience Platform
 
-Adobe Experience Platform vous permet d’importer facilement des données dans la plate-forme sous forme de fichiers de commandes. Parmi les exemples de données à ingérer, citons les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu de modèle de données d’expérience (XDM) dans le registre des Schémas.
+Adobe Experience Platform vous permet d&#39;importer facilement des données dans Platform sous forme de fichiers de commandes. Parmi les exemples de données à ingérer, citons les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu de modèle de données d’expérience (XDM) dans le registre des Schémas.
 
 ## Prise en main
 
-Pour terminer ce didacticiel, vous devez avoir accès à Experience Platform. Si vous n’avez pas accès à une organisation IMS dans Experience Platform, contactez votre administrateur système avant de continuer.
+Pour terminer ce didacticiel, vous devez avoir accès à un Experience Platform. Si vous n&#39;avez pas accès à une organisation IMS en Experience Platform, contactez votre administrateur système avant de continuer.
 
 Si vous préférez ingérer des données à l&#39;aide des API d&#39;assimilation des données, lisez d&#39;abord le guide [du développeur d&#39;](../batch-ingestion/api-overview.md)assimilation par lots.
 
@@ -28,7 +28,9 @@ L’espace de travail des jeux de données dans Experience Platform vous permet 
 
 Affichez l’espace de travail des jeux de données en cliquant sur **Jeux de données** dans le volet de navigation de gauche. The Datasets workspace contains a list of datasets, including columns showing _Name_, _Created_ (date and time), _Source_, _Schema_, and _Last Batch Status_, as well as the date and time the dataset was _Last Updated_.
 
->[!NOTE] Cliquez sur l&#39;icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de ne vue que les jeux de données activés pour le Profil.
+>[!NOTE]
+>
+>Cliquez sur l&#39;icône de filtre en regard de la barre de recherche pour utiliser les fonctionnalités de filtrage afin de ne vue que les jeux de données activés pour le Profil.
 
 ![Vue de tous les jeux de données](../images/tutorials/ingest-batch-data/datasets_workspace.png)
 
@@ -70,13 +72,13 @@ Un jeu de données vide a maintenant été créé et vous avez été renvoyé à
 
 L&#39;onglet **Informations** , situé à droite de l&#39;espace de travail Jeux de données, contient des informations relatives à votre nouveau jeu de données, telles que l&#39;ID _du jeu de données, le_ nom _, la__description, le nom de la table, le Schéma, le  de diffusion en continu et le Source._________ L’onglet Infos contient également des informations sur le moment où le jeu de données a été _créé_ et sa date de _dernière modification_ .
 
-L’onglet Infos contient également une bascule _Profil_ utilisée pour activer votre jeu de données en vue de l’utiliser avec le Profil client en temps réel. L’utilisation de cette bascule et le Profil client en temps réel seront expliqués plus en détail dans la section qui suit.
+L’onglet Infos contient également une bascule _Profil_ utilisée pour activer votre jeu de données en vue de l’utiliser avec le Profil client en temps réel. L’utilisation de cette bascule, ainsi que le Profil client en temps réel, seront expliqués plus en détail dans la section qui suit.
 
 ![activité des jeux de données](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
 ## Activation du jeu de données pour le Profil client en temps réel
 
-Les jeux de données sont utilisés pour ingérer des données dans la plate-forme d’expérience. Ces données sont en fin de compte utilisées pour identifier des personnes et rassembler des informations provenant de sources multiples. Cette combinaison d&#39;informations s&#39;appelle un Profil client en temps réel. Pour que la Plateforme sache quelles informations doivent être incluses dans le Profil en temps réel, les jeux de données peuvent être marqués pour inclusion à l’aide de la bascule **Profil** .
+Les jeux de données sont utilisés pour ingérer des données dans l&#39;Experience Platform, et ces données sont en fin de compte utilisées pour identifier les individus et rassembler des informations provenant de sources multiples. Cette combinaison d&#39;informations s&#39;appelle un Profil client en temps réel. Pour que Platform sache quelles informations doivent être incluses dans le Profil en temps réel, les jeux de données peuvent être marqués pour inclusion à l’aide de la bascule **Profil** .
 
 Par défaut, cette bascule est désactivée. Si vous choisissez de basculer sur le Profil, toutes les données saisies dans le jeu de données seront utilisées pour identifier un individu et assembler son Profil en temps réel.
 
@@ -94,27 +96,29 @@ Cliquez sur **Activer** et la bascule devient bleue, indiquant qu’elle est act
 
 ![Activé pour le Profil](../images/tutorials/ingest-batch-data/dataset_enabled.png)
 
-## Ajouter données au jeu de données
+## Ajouter les données au jeu de données
 
-Les données peuvent être ajoutées à un jeu de données de différentes manières. Vous pouvez choisir d&#39;utiliser des API d&#39;importation de données ou un partenaire ETL tel que Unifi ou Informatica. Pour ce didacticiel, les données seront ajoutées au jeu de données à l’aide de l’onglet Données **** Ajouter dans l’interface utilisateur.
+Les données peuvent être ajoutées à un jeu de données de différentes manières. Vous pouvez choisir d&#39;utiliser des API d&#39;importation de données ou un partenaire ETL tel que Unifi ou Informatica. Pour ce didacticiel, les données seront ajoutées au jeu de données à l’aide de l’onglet **Ajouter les données** dans l’interface utilisateur.
 
-Pour commencer à ajouter des données au jeu de données, cliquez sur l&#39;onglet Données **** Ajouter. Vous pouvez désormais faire glisser et déposer des fichiers ou rechercher sur votre ordinateur les fichiers à ajouter.
+Pour commencer à ajouter des données au jeu de données, cliquez sur l&#39;onglet **Ajouter les données** . Vous pouvez désormais faire glisser et déposer des fichiers ou rechercher sur votre ordinateur les fichiers à ajouter.
 
->[!NOTE] Platform prend en charge deux types de fichiers pour l’assimilation de données : parquet ou JSON. Vous pouvez ajouter jusqu’à cinq fichiers à la fois, la taille maximale de chaque fichier étant de 10 Go.
+>[!NOTE]
+>
+>Platform prend en charge deux types de fichiers pour l’assimilation de données : parquet ou JSON. Vous pouvez ajouter jusqu’à cinq fichiers à la fois, la taille maximale de chaque fichier étant de 10 Go.
 
-![Onglet Données Ajouter](../images/tutorials/ingest-batch-data/add_data.png)
+![Ajouter les données, onglet](../images/tutorials/ingest-batch-data/add_data.png)
 
 ## Téléchargement d’un fichier
 
-Une fois que vous faites glisser et déposez (ou parcourez et sélectionnez) un fichier parquet ou JSON que vous souhaitez télécharger, Plateforme commence immédiatement à traiter le fichier et une boîte de dialogue de **téléchargement** s’affiche sur l’onglet Données **** Ajouter qui indique la progression du transfert du fichier.
+Une fois que vous faites glisser et déposez (ou parcourez et sélectionnez) un fichier de parquet ou JSON que vous souhaitez télécharger, Platform commence immédiatement à traiter le fichier et une boîte de dialogue de **téléchargement** s’affiche sur l’onglet **Ajouter les données** qui indique la progression du téléchargement de votre fichier.
 
 ![Boîte de dialogue de téléchargement](../images/tutorials/ingest-batch-data/uploading.png)
 
 ## Mesures de jeux de données
 
-Une fois le téléchargement du fichier terminé, l’onglet Activité **des** jeux de données ne montre plus qu’aucun lot n’a été ajouté. L’onglet Activité des ensembles de données affiche désormais les mesures des ensembles de données. Toutes les mesures affichent &quot;0&quot; à ce stade, car le lot n’a pas encore été chargé.
+Une fois le transfert du fichier terminé, l’onglet Activité **des** jeux de données ne montre plus qu’aucun lot n’a été ajouté. L’onglet Activité des ensembles de données affiche désormais les mesures des ensembles de données. Toutes les mesures affichent &quot;0&quot; à ce stade, car le lot n’a pas encore été chargé.
 
-Au bas de l&#39;onglet se trouve une liste présentant l&#39;ID __ de lot des données qui viennent d&#39;être ingérées via le [&quot;Ajouter données à un jeu de données&quot;](#add-data-to-dataset) . Sont également incluses les informations relatives au lot, notamment la date _d&#39;importation_ , le nombre d&#39; _enregistrements insérés_ et le _statut_ actuel du lot.
+Au bas de l&#39;onglet se trouve une liste présentant l&#39;ID __ de lot des données qui viennent d&#39;être ingérées via le [&quot;Ajouter les données au jeu de données&quot;](#add-data-to-dataset) . Sont également incluses les informations relatives au lot, notamment la date _d&#39;importation_ , le nombre d&#39; _enregistrements insérés_ et le _statut_ actuel du lot.
 
 ![Mesures de jeux de données](../images/tutorials/ingest-batch-data/batch_loading.png)
 
@@ -138,6 +142,6 @@ Cliquez sur Jeu **de données de** Prévisualisation pour ouvrir une boîte de d
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé un jeu de données et assimilé des données avec succès dans la plateforme d’expérience, vous pouvez répéter ces étapes pour créer un nouveau jeu de données ou assimiler davantage de données dans le jeu existant.
+Maintenant que vous avez créé un jeu de données et que vous avez bien assimilé des données à un Experience Platform, vous pouvez répéter ces étapes pour créer un nouveau jeu de données ou assimiler davantage de données dans le jeu existant.
 
 Pour en savoir plus sur l&#39;assimilation par lots, veuillez lire l&#39;aperçu [](../batch-ingestion/overview.md)de l&#39;assimilation par lots.
