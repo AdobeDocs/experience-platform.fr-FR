@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connexion à Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Connexion à Aqua Data Studio
 
-Ce document décrit les étapes nécessaires pour connecter Aqua Data Studio à Adobe Experience Platform Requête Service.
+Ce document passe en revue les étapes permettant de connecter Aqua Data Studio au service de Requête des Adobes Experience Platform.
 
 Après avoir installé Aqua Data Studio, vous devez d’abord enregistrer le serveur. Dans le menu principal, cliquez sur **Serveur**, puis sur **Enregistrer le serveur**.
 
@@ -27,7 +27,9 @@ La boîte de dialogue *Enregistrer le serveur* s&#39;affiche. Sous l&#39;onglet 
 - **Hôte et port**: Point de terminaison hôte et son port pour Requête Service.
 - **Base de données :** Base de données qui sera utilisée.
 
->[!NOTE] Pour plus d&#39;informations sur la recherche de vos informations d&#39;identification de connexion, de votre hôte, de votre port et de votre nom de base de données, consultez la page d&#39; [informations d&#39;identification sur la plate-forme](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à la plateforme, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>[!NOTE]
+>
+>Pour plus d’informations sur la recherche de vos informations d’identification de connexion, de votre hôte, de votre port et du nom de la base de données, consultez la page d’ [informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
