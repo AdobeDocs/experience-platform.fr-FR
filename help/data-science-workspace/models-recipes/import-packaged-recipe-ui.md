@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importer une recette emballée (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -35,7 +35,9 @@ Le processus d&#39;importation d&#39;une recette de package comprend les étapes
 
 Chaque instance de recette dans [!DNL Data Science Workspace] est accompagnée d&#39;un ensemble de configurations qui adaptent l&#39;instance de recette à un cas d&#39;utilisation particulier. Les fichiers de configuration définissent les comportements de formation et de notation par défaut d&#39;un modèle créé à l&#39;aide de cette instance de recette.
 
->[!NOTE] Les fichiers de configuration sont spécifiques à la recette et à la casse.
+>[!NOTE]
+>
+>Les fichiers de configuration sont spécifiques à la recette et à la casse.
 
 Vous trouverez ci-dessous un exemple de fichier de configuration présentant les comportements de formation et de notation par défaut pour la recette Ventes au détail.
 
