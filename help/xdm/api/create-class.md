@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Créer une classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 60911e32fd9235be2a258e60818011a42cd5ceba
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '485'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -16,9 +16,11 @@ ht-degree: 0%
 
 Le bloc de construction principal d&#39;un schéma est une classe. La classe contient le jeu minimum de champs à définir pour capturer les données de base d&#39;un schéma. Par exemple, si vous concevez un schéma pour les voitures et les camions, ils utiliseraient très probablement une classe appelée Véhicule qui décrivait les propriétés communes de base de tous les véhicules.
 
-Il existe plusieurs classes standard fournies par Adobe et d’autres partenaires Experience Platform, mais vous pouvez également définir vos propres classes et les enregistrer dans le registre des Schémas. Vous pouvez ensuite composer un schéma qui implémente la classe que vous avez créée et définir des mixins compatibles avec votre nouvelle classe définie.
+Il existe plusieurs classes standard fournies par Adobe et d&#39;autres partenaires Experience Platform, mais vous pouvez également définir vos propres classes et les enregistrer dans le registre des Schémas. Vous pouvez ensuite composer un schéma qui implémente la classe que vous avez créée et définir des mixins compatibles avec votre nouvelle classe définie.
 
->[!NOTE] Lors de la composition d&#39;un schéma basé sur une classe que vous définissez, vous ne pourrez pas utiliser de mixins standard. Chaque mixin définit les classes avec lesquelles ils sont compatibles dans leur `meta:intendedToExtend` attribut. Une fois que vous commencez à définir des mixins compatibles avec votre nouvelle classe (en utilisant la `$id` de votre nouvelle classe dans le `meta:intendedToExtend` champ du mixin), vous pourrez réutiliser ces mixins chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations, consultez les sections sur la [création de mixins](create-mixin.md) et la [création de schémas](create-schema.md) .
+>[!NOTE]
+>
+>Lors de la composition d&#39;un schéma basé sur une classe que vous définissez, vous ne pourrez pas utiliser de mixins standard. Chaque mixin définit les classes avec lesquelles ils sont compatibles dans leur `meta:intendedToExtend` attribut. Une fois que vous commencez à définir des mixins compatibles avec votre nouvelle classe (en utilisant la `$id` de votre nouvelle classe dans le `meta:intendedToExtend` champ du mixin), vous pourrez réutiliser ces mixins chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations, consultez les sections sur la [création de mixins](create-mixin.md) et la [création de schémas](create-schema.md) .
 
 **Format d’API**
 
