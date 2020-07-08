@@ -4,7 +4,7 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: c4e5e8ccac1af976c890adb1c9f0ff7f7b5ed9b4
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 72%
@@ -34,7 +34,9 @@ Pour plus d’informations sur l’utilisation des libellés d’utilisation des
 
 Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des cas d’utilisation marketing (également appelés actions marketing) pour cette destination. Un cas d’utilisation marketing pour une destination indique l’intention des données qui seront exportées vers cette destination.
 
->[!NOTE] Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir la présentation [des stratégies d’utilisation des](../../data-governance/policies/overview.md) données dans la documentation de l’Experience Platform.
+>[!NOTE]
+>
+>Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir la présentation [des stratégies d’utilisation des](../../data-governance/policies/overview.md) données dans la documentation de l’Experience Platform.
 
 La définition de cas d’utilisation marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des cas d’utilisation marketing appropriés à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
@@ -63,7 +65,9 @@ Lorsqu’un segment est activé pour la première fois, DULE Policy Service vér
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
 
->[!NOTE] Si des étiquettes d’utilisation de données n’ont été appliquées qu’à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu de données), l’application de ces étiquettes de niveau champ sur l’activation se fait uniquement dans les conditions suivantes :
+>[!NOTE]
+>
+>Si des étiquettes d’utilisation de données n’ont été appliquées qu’à certains champs d’un jeu de données (plutôt qu’à l’ensemble du jeu de données), l’application de ces étiquettes de niveau champ sur l’activation se fait uniquement dans les conditions suivantes :
 >* Les champs sont utilisés dans la définition de segment.
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination de la cible.
 
