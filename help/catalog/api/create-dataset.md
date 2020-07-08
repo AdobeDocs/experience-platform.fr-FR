@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un jeu de données
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6d24637dc6cc282f98288b6416e4a3b7cebe42ea
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 1%
 
 Pour créer un jeu de données à l’aide de l’API Catalogue, vous devez connaître la `$id` valeur du schéma XDM (Experience Data Model) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’ID de schéma, vous pouvez créer un jeu de données en envoyant une requête POST au point de `/datasets` terminaison dans l’API Catalogue.
 
->[!NOTE] Ce document traite uniquement de la création d&#39;un objet de jeu de données dans le catalogue. Pour obtenir des instructions complètes sur la création, le remplissage et le contrôle d&#39;un jeu de données, consultez le [didacticiel](../datasets/create.md)suivant.
+>[!NOTE]
+>
+>Ce document traite uniquement de la création d&#39;un objet de jeu de données dans le catalogue. Pour obtenir des instructions complètes sur la création, le remplissage et le contrôle d&#39;un jeu de données, consultez le [didacticiel](../datasets/create.md)suivant.
 
 **Format d’API**
 
@@ -55,7 +57,9 @@ curl -X POST \
 | `name` | Nom du jeu de données à créer. |
 | `schemaRef.id` | Valeur URI `$id` du schéma XDM sur lequel le jeu de données sera basé. |
 
->[!NOTE] Cet exemple utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour sa `containerFormat` propriété. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](../../ingestion/batch-ingestion/api-overview.md)assimilation par lot.
+>[!NOTE]
+>
+>Cet exemple utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour sa `containerFormat` propriété. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](../../ingestion/batch-ingestion/api-overview.md)assimilation par lot.
 
 **Réponse**
 
