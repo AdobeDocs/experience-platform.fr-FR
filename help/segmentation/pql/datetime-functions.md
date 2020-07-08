@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions de date et d’heure
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 4%
@@ -147,7 +147,9 @@ La `occurs` fonction peut être écrite dans l’un des formats suivants :
 | `{DIRECTION}` | Préposition décrivant à quel moment comparer la date. Peut être l’un des mots suivants : `before`, `after`, `from`. |
 | `{TIME}` | Il peut s’agir d’un littéral d’horodatage (`today`, `now`, `yesterday`, `tomorrow`), d’une unité de temps relative (l’une des unités `this`, `last`ou `next` suivie d’une unité de temps) ou d’un attribut d’horodatage. |
 
->[!NOTE] L&#39;utilisation du mot `on` est facultative. Il est là pour améliorer la lisibilité de certaines combinaisons, par exemple `timestamp occurs on date(2019,12,31)`.
+>[!NOTE]
+>
+>L&#39;utilisation du mot `on` est facultative. Il est là pour améliorer la lisibilité de certaines combinaisons, par exemple `timestamp occurs on date(2019,12,31)`.
 
 **Exemple**
 
