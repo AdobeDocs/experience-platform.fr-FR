@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de dépannage de Data Science Workspace
 topic: Troubleshooting
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -18,7 +18,9 @@ Ce document fournit des réponses aux questions fréquentes sur l&#39;Adobe Expe
 
 ## [!DNL JupyterLab] L&#39;environnement ne se charge pas dans [!DNL Google Chrome]
 
->[!IMPORTANT] Ce problème a été résolu, mais il peut toujours être présent dans le navigateur Google Chrome 80.x. Assurez-vous que votre navigateur Chrome est à jour.
+>[!IMPORTANT]
+>
+>Ce problème a été résolu, mais il peut toujours être présent dans le navigateur Google Chrome 80.x. Assurez-vous que votre navigateur Chrome est à jour.
 
 Avec la version 80.x du [!DNL Google Chrome] navigateur, tous les cookies tiers sont bloqués par défaut. Cette stratégie peut empêcher [!DNL JupyterLab] le chargement dans l’Adobe Experience Platform.
 
@@ -38,7 +40,9 @@ Enfin, basculez &quot;Bloquer les cookies tiers&quot; sur &quot;Désactivé&quot
 
 ![chrome avancé](./images/faq/toggle-off.png)
 
->[!NOTE] Vous pouvez également désactiver les cookies tiers et ajouter [*.]ds.adobe.net vers la liste autorisée.
+>[!NOTE]
+>
+>Vous pouvez également désactiver les cookies tiers et ajouter [*.]ds.adobe.net vers la liste autorisée.
 
 Accédez à &quot;chrome://flags/&quot; dans la barre d&#39;adresse. Recherchez et désactivez l’indicateur intitulé *&quot;Même site par défaut&quot;* en utilisant le menu déroulant à droite.
 
