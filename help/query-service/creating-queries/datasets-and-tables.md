@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jeu de données vs tables et schémas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
@@ -14,8 +14,10 @@ ht-degree: 1%
 
 # Jeu de données vs tables et schémas
 
-Vérifiez la liste des jeux de données disponibles dans l’interface utilisateur [d’](https://platform.adobe.com/datasets)Adobe Experience Platform, en veillant à respecter les noms des jeux de données.
->[!NOTE] Certains noms de jeux de données comportent des espaces et pourraient autrement ne pas être sûrs pour SQL.
+Vérifiez la liste des jeux de données disponibles dans l’interface utilisateur [de l’](https://platform.adobe.com/datasets)Adobe Experience Platform, en veillant à respecter les noms des jeux de données.
+>[!NOTE]
+>
+>Certains noms de jeux de données comportent des espaces et pourraient autrement ne pas être sûrs pour SQL.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
@@ -28,7 +30,7 @@ Ouvrez la ligne de commande PSQL et utilisez les détails de la connexion à par
 
 ![](../images/clients/psql/connect-bi.png)
 
-Pour vue des tables disponibles sur la plateforme avec SQL, vous pouvez utiliser soit `\d` , soit `SHOW TABLES;`.
+Pour vue des tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d` ou `SHOW TABLES;`.
 
 
 `\d` affiche la vue PostgreSQL standard
@@ -42,7 +44,7 @@ Pour vue des tables disponibles sur la plateforme avec SQL, vous pouvez utiliser
 (2 rows)
 ```
 
-`SHOW TABLES;` est une commande personnalisée qui fournit une vue plus détaillée et présente le tableau, ainsi que le nom du jeu de données figurant dans l’interface utilisateur de la plate-forme.
+`SHOW TABLES;` est une commande personnalisée qui fournit une vue plus détaillée et présente le tableau, ainsi que le nom du jeu de données dans l’interface utilisateur de Platform.
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -54,7 +56,9 @@ Pour vue des tables disponibles sur la plateforme avec SQL, vous pouvez utiliser
 
 Pour vue au schéma racine d&#39;une table, utilisez la `\d table_name` commande.
 
->[!NOTE] Le schéma présenté montre les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du schéma de dataset.
+>[!NOTE]
+>
+>Le schéma présenté montre les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du schéma de dataset.
 
 `\d luma_midvalues`
 
