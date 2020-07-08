@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Création d’un sandbox
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
 
 # Création d’un sandbox
 
-Vous pouvez créer un nouveau sandbox en envoyant une requête POST au point de `/sandboxes` terminaison.
+You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
 
 **Format d’API**
 
@@ -44,7 +44,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Identifiant qui sera utilisé pour accéder au sandbox dans les futures requêtes. Cette valeur doit être unique et la meilleure pratique consiste à la rendre aussi descriptive que possible. Ne peut pas contenir d&#39;espaces ni de majuscules. |
-| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur de la plate-forme. |
+| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
 | `type` | Type de sandbox à créer. Actuellement, seuls les sandbox de type &quot;développement&quot; peuvent être créés par une organisation. |
 
 **Réponse**
@@ -61,4 +61,6 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant qu’il
 }
 ```
 
->[!NOTE] Les sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi ils `state` deviendront &quot;actifs&quot; ou &quot;échoués&quot;.
+>[!NOTE]
+>
+>Les sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi ils `state` deviendront &quot;actifs&quot; ou &quot;échoués&quot;.
