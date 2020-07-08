@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des stratégies d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 1%
@@ -27,11 +27,15 @@ Ce document fournit un aperçu général des stratégies d’utilisation des don
 
 Un exemple d’action marketing peut être le désir d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données (tels que les informations d’identification personnelle) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant une étiquette &quot;I&quot; (données d’identité), vous recevrez une réponse de la part de l’utilisateur vous indiquant qu’une stratégie d’utilisation des données a été enfreinte. [!DNL Policy Service]
 
->[!NOTE] Les actions marketing ne limitent pas l’utilisation des données. Ils doivent être inclus dans les stratégies d’utilisation des données activées pour que ces actions soient évaluées en cas de violation des stratégies.
+>[!NOTE]
+>
+>Les actions marketing ne limitent pas l’utilisation des données. Ils doivent être inclus dans les stratégies d’utilisation des données activées pour que ces actions soient évaluées en cas de violation des stratégies.
 
 Lorsque des données sont utilisées dans le service de votre entreprise, les actions marketing appropriées doivent être indiquées afin que toute violation de stratégie puisse être identifiée. Vous pouvez ensuite utiliser l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour vérifier les violations de stratégie dans votre intégration.
 
->[!NOTE] Si vous utilisez la Platform de données client en temps réel, vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Pour plus d’informations, consultez le document sur la gouvernance des [données dans le CDP](../../rtcdp/privacy/data-governance-overview.md) en temps réel.
+>[!NOTE]
+>
+>Si vous utilisez la Platform de données client en temps réel, vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Pour plus d’informations, consultez le document sur la gouvernance des [données dans le CDP](../../rtcdp/privacy/data-governance-overview.md) en temps réel.
 
 Consultez l’annexe du présent document pour obtenir une liste d’actions [marketing définies](#core-actions)par Adobedisponibles. Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’API DULE Policy Service ou de l’interface utilisateur de l’Experience Platform. Vous trouverez plus d’informations sur l’utilisation des actions et stratégies marketing dans la section suivante.
 
@@ -47,7 +51,9 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent utiliser l’API DULE Policy Service ou l’interface utilisateur Experience Platform pour gérer et évaluer les stratégies liées aux actions marketing effectuées sur les données contenant des étiquettes d’utilisation des données. Vous pouvez créer et mettre à jour des stratégies, déterminer l’état d’une stratégie et travailler avec des actions marketing pour évaluer si une action spécifique viole une stratégie d’utilisation des données.
 
->[!IMPORTANT] Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
+>[!IMPORTANT]
+>
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
 Pour obtenir des instructions détaillées sur l’utilisation des actions marketing et des stratégies d’utilisation des données dans l’API, consultez le didacticiel sur la [création et l’évaluation des stratégies](create.md)d’utilisation des données. Pour plus d&#39;informations sur les opérations clés fournies par l&#39;API de Service de stratégie, consultez le guide [de développement](../api/getting-started.md)Policy Service.
 
@@ -65,7 +71,9 @@ La section suivante fournit des informations supplémentaires sur les stratégie
 
 Le tableau ci-dessous décrit les principales actions marketing fournies de manière prête par Adobe.
 
->[!NOTE] Les principales actions marketing doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
+>[!NOTE]
+>
+>Les principales actions marketing doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
 
 | Action marketing | Description |
 | --- | --- |
