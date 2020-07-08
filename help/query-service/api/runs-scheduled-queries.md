@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide du développeur Requête Service
 topic: runs for scheduled queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '659'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -31,16 +31,16 @@ GET /schedules/{SCHEDULE_ID}/runs?{QUERY_PARAMETERS}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Valeur `id` de la requête planifiée que vous souhaitez récupérer. |
-| `{QUERY_PARAMETERS}` | (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
+| `{SCHEDULE_ID}` | The `id` value of the scheduled query you want to retrieve. |
+| `{QUERY_PARAMETERS}` | (*Optional*) Parameters added to the request path which configure the results returned in the response. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous. |
 
-**Paramètres de Requête**
+**Paramètres de requête**
 
 Voici une liste des paramètres de requête disponibles pour les exécutions de liste pour une requête planifiée spécifiée. Tous ces paramètres sont facultatifs. L’exécution d’un appel à ce point de terminaison sans paramètres récupérera toutes les exécutions disponibles pour la requête planifiée spécifiée.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. L&#39;ajout d&#39;un élément `-` avant création (`orderby=-created`) triera les éléments par création dans l&#39;ordre décroissant. |
+| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. Ajouter un `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
 | `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `created`, `state`et `externalTrigger`. La liste des opérateurs pris en charge est `>` (supérieure à), `<` (inférieure à) et `==` (égale à), et `!=` (différente de). Par exemple, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` renvoie toutes les exécutions qui ont été créées manuellement, qui ont réussi et qui ont été créées après le 20 avril 2019. |
@@ -147,7 +147,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste d’exécutions 
 }
 ```
 
->[!NOTE] Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour une requête](#immediately-stop-a-run-for-a-specific-scheduled-query)planifiée spécifiée.
+>[!NOTE]
+>
+>Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour une requête](#immediately-stop-a-run-for-a-specific-scheduled-query)planifiée spécifiée.
 
 ### Déclencher immédiatement une exécution pour une requête planifiée spécifique
 
