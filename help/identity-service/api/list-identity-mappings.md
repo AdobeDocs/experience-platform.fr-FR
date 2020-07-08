@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mappages d'identité des Listes
 topic: API guide
 translation-type: tm+mt
-source-git-commit: df85ea955b7a308e6be1e2149fcdfb4224facc53
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -65,7 +65,9 @@ curl -X GET \
 
 Utilisez la `POST` méthode en tant qu’équivalent par lot de la `GET` méthode décrite ci-dessus pour récupérer les mappages pour plusieurs identités.
 
->[!NOTE] La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
+>[!NOTE]
+>
+>La demande ne doit pas comporter plus de 1 000 identités. Les demandes dépassant 1000 identités se traduiront par un code d&#39;état de 400.
 
 **Format d’API**
 
