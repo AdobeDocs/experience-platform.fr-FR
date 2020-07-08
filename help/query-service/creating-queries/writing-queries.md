@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Ecriture de requêtes
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 1%
@@ -20,7 +20,7 @@ Pour plus d&#39;informations sur la syntaxe SQL utilisée dans Requête Service,
 
 ## Modèles d’exécution de Requête
 
-Adobe Experience Platform Requête Service comporte deux modèles d’exécution de requête : interactif et non interactif. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de veille stratégique, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un processus de traitement des données.
+Adobe Experience Platform Requête Service dispose de deux modèles d’exécution des requêtes : interactif et non interactif. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de veille stratégique, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un processus de traitement des données.
 
 ### Exécution de requête interactive
 
@@ -34,13 +34,15 @@ L’exécution de requête interactive présente les limites suivantes :
 | Nombre maximal de lignes renvoyées | 50,000 |
 | Nombre maximal de requêtes simultanées | 5 |
 
->[!NOTE] Pour remplacer la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai de requête de 10 minutes s’applique toujours.
+>[!NOTE]
+>
+>Pour remplacer la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai de requête de 10 minutes s’applique toujours.
 
-Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats en tant que jeu de données dans la plateforme d’expérience, la requête doit utiliser la `CREATE TABLE AS SELECT` syntaxe.
+Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous la forme d’un jeu de données en Experience Platform, la requête doit utiliser la `CREATE TABLE AS SELECT` syntaxe.
 
 ### Exécution de requêtes non interactives
 
-Les Requêtes envoyées via l’API Requête Service sont exécutées de manière non interactive. L’exécution non interactive signifie que Requête Service reçoit l’appel d’API et exécute la requête dans l’ordre dans lequel elle est reçue. Les requêtes non interactives entraînent toujours la génération d’un nouveau jeu de données dans la plateforme d’expérience pour recevoir les résultats ou l’insertion de nouvelles lignes dans un jeu de données existant.
+Les Requêtes envoyées via l’API Requête Service sont exécutées de manière non interactive. L’exécution non interactive signifie que Requête Service reçoit l’appel d’API et exécute la requête dans l’ordre dans lequel elle est reçue. Les requêtes non interactives entraînent toujours la génération d&#39;un nouveau jeu de données dans l&#39;Experience Platform pour recevoir les résultats, ou l&#39;insertion de nouvelles lignes dans un jeu de données existant.
 
 ## Accès à un champ spécifique dans un objet
 
@@ -70,7 +72,9 @@ LIMIT 1
 | -------- | ----------- |
 | `{ANALYTICS_TABLE_NAME}` | Nom de votre tableau d’analyses. |
 
->[!NOTE] Puisque chaque type de notation renvoie les mêmes résultats, celui que vous choisissez d’utiliser est à votre convenance.
+>[!NOTE]
+>
+>Puisque chaque type de notation renvoie les mêmes résultats, celui que vous choisissez d’utiliser est à votre convenance.
 
 Les deux exemples de requêtes ci-dessus renvoient un objet aplati, plutôt qu’une seule valeur :
 
@@ -150,7 +154,9 @@ FROM
 )
 ```
 
->[!NOTE] Les guillemets de Doublon **ne peuvent pas** être utilisés avec l’accès au champ de notation par point.
+>[!NOTE]
+>
+>Les guillemets de Doublon **ne peuvent pas** être utilisés avec l’accès au champ de notation par point.
 
 ### Guillemets arrière
 
