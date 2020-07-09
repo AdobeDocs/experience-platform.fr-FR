@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Présentation de l'assimilation partielle par lot des Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 3%
+source-wordcount: '1243'
+ht-degree: 1%
 
 ---
 
 
 
-# Récupération partielle par lot (bêta)
+# Récupération partielle par lot
 
 L&#39;assimilation partielle par lot permet d&#39;assimiler des données contenant des erreurs, jusqu&#39;à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes à l’Adobe Experience Platform pendant que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
 
@@ -21,102 +21,117 @@ Ce document fournit un didacticiel pour la gestion de l&#39;assimilation partiel
 
 En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partielle.
 
->[!IMPORTANT]
->
->Cette fonctionnalité n&#39;existe qu&#39;à l&#39;aide de l&#39;API. Veuillez contacter votre équipe pour accéder à cette fonction.
-
 ## Prise en main
 
 Ce didacticiel nécessite une connaissance pratique des divers services d&#39;Adobe Experience Platform impliqués dans l&#39;assimilation partielle de lots. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
 
-- [Importation](./overview.md)par lot : Méthode par laquelle Platform ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
+- [Importation](./overview.md)par lot : Méthode qui [!DNL Platform] ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
 - [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir passer des appels aux API Platform.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer [!DNL Platform] les API.
 
 ### Lecture des exemples d’appels d’API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
 
 ### Rassembler les valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
 
 - Autorisation : Porteur `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
 
-## Activation d’un jeu de données pour l’assimilation par lots partielle dans l’API
+## Activation d’un lot pour l’assimilation partielle de lots dans l’API {#enable-api}
 
-<!-- >[!NOTE] This section describes enabling a dataset for partial batch ingestion using the API. For instructions on using the UI, please read the [enable a dataset for partial batch ingestion in the UI](#enable-a-dataset-for-partial-batch-ingestion-in-the-ui) step. -->
+>[!NOTE]
+>
+>Cette section décrit l&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;API. Pour obtenir des instructions sur l&#39;utilisation de l&#39;interface utilisateur, lisez l&#39; [étape d&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots dans l&#39;interface utilisateur](#enable-ui) .
 
-Vous pouvez créer un nouveau jeu de données ou modifier un jeu de données existant avec l&#39;assimilation partielle activée.
+Vous pouvez créer un nouveau lot avec l&#39;assimilation partielle activée.
 
-Pour créer un nouveau jeu de données, suivez les étapes du didacticiel [](../../catalog/api/create-dataset.md)Création d’un jeu de données. Une fois que vous avez atteint l’étape *Créer un jeu de données* , ajoutez le champ suivant dans le corps de la requête :
+Pour créer un nouveau lot, suivez les étapes décrites dans le guide [du développeur d&#39;assimilation](./api-overview.md)par lot. Une fois que vous avez atteint l’étape *Créer un lot* , ajoutez le champ suivant dans le corps de la demande :
 
 ```json
 {
     ...
-    "tags" : {
-        "partialBatchIngestion":["errorThresholdPercentage:5"]
-    },
+    "enableErrorDiagnostics": true,
+    "partialIngestionPercentage": 5
     ...
 }
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
-| `errorThresholdPercentage` | Le pourcentage d&#39;erreurs acceptables avant l&#39;ensemble du lot échoue. |
+| `enableErrorDiagnostics` | Indicateur qui permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur votre lot. |
+| `partialIngestionPercentage` | Le pourcentage d&#39;erreurs acceptables avant l&#39;ensemble du lot échoue. Ainsi, dans cet exemple, un maximum de 5 % du lot peut être une erreur, avant qu’il ne soit endommagé. |
 
-De même, pour modifier un jeu de données existant, suivez les étapes du guide [de développement](../../catalog/api/update-object.md)Catalogue.
 
-Dans le jeu de données, vous devrez ajouter la balise décrite ci-dessus.
-
-<!-- ## Enable a dataset for partial batch ingestion in the UI
+## Activation d’un lot pour l’assimilation partielle de lots dans l’interface utilisateur {#enable-ui}
 
 >[!NOTE]
 >
->This section describes enabling a dataset for partial batch ingestion using the UI. If you have already enabled a dataset for partial batch ingestion using the API, you can skip ahead to the next section.
+>Cette section décrit l&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;interface utilisateur. Si vous avez déjà activé un lot pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;API, vous pouvez passer à la section suivante.
 
-To enable a dataset for partial ingestion through the Platform UI, click **Datasets** in the left navigation. You can either [create a new dataset](#create-a-new-dataset-with-partial-batch-ingestion-enabled) or [modify an existing dataset](#modify-an-existing-dataset-to-enable-partial-batch-ingestion).
+Pour activer un lot pour l’assimilation partielle via l’ [!DNL Platform] interface utilisateur, vous pouvez créer un nouveau lot par le biais des connexions source, créer un nouveau lot dans un jeu de données existant ou créer un nouveau lot par le biais du flux[!UICONTROL &quot;]Mapper le fichier CSV au fichier XDM&quot;.
 
-### Create a new dataset with partial batch ingestion enabled
+### Créer une connexion source {#new-source}
 
-To create a new dataset, follow the steps in the [dataset user guide](../../catalog/datasets/user-guide.md). Once you reach the *Configure dataset* step, take note of the *Partial Ingestion* and *Error Diagnostics* fields.
+Pour créer une connexion à la source, suivez les étapes répertoriées dans l&#39;aperçu [des](../../sources/home.md)sources. Une fois que vous avez atteint l’étape de détail ** Flux de données, notez les champs de diagnostic *[!UICONTROL d’assimilation]* *[!UICONTROL partielle et d’]* erreur.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
 
-The *Error Diagnostics* toggle only appears when the *Partial Ingestion* toggle is off. This feature allows Platform to generate detailed error messages about your ingested batches. If the *Partial Ingestion* toggle is turned on, enhanced error diagnostics are automatically enforced.
+La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
 
-![](../images/batch-ingestion/partial-ingestion/configure-dataset-partial-ingestion-focus.png)
+![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%.
+Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
 
-### Modify an existing dataset to enable partial batch ingestion
+### Utiliser un jeu de données existant {#existing-dataset}
 
-To modify an existing dataset, select the dataset you want to modify. The sidebar on the right populates with information about the dataset. 
+Pour utiliser un jeu de données existant, début en sélectionnant un jeu de données. La barre latérale sur la droite contient des informations sur le jeu de données.
 
-![](../images/batch-ingestion/partial-ingestion/modify-dataset-focus.png)
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-The *Partial ingestion* toggle allows you to enable or disable the use of partial batch ingestion.
+La bascule d&#39;assimilation [!UICONTROL **] partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
 
-The *Error threshold* allows you to set the percentage of acceptable errors before the entire batch will fail. By default, this value is set to 5%. -->
+La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
 
-## Récupérer les erreurs d&#39;assimilation partielle des lots
+![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
+
+Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
+
+Désormais, vous pouvez transférer des données à l’aide du bouton **Ajouter les données** et elles seront ingérées à l’aide de l’assimilation partielle.
+
+### Utilisation du flux &quot;[!UICONTROL Mapper le fichier CSV au schéma]XDM&quot; {#map-flow}
+
+Pour utiliser le flux &quot;[!UICONTROL Mapper un fichier CSV au schéma]XDM&quot;, suivez les étapes répertoriées dans le didacticiel [](../tutorials/map-a-csv-file.md)Mapper un fichier CSV. Une fois que vous avez atteint l’étape de données *de* Ajoute, prenez note des champs de diagnostic *[!UICONTROL d’assimilation]* *[!UICONTROL partielle et d’]* erreur.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
+
+La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+
+La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
+
+![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
+
+Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
+
+## Récupérer les erreurs d&#39;assimilation partielle des lots {#retrieve-errors}
 
 Si les lots contiennent des échecs, vous devrez récupérer les informations d&#39;erreur sur ces échecs afin de pouvoir réingérer les données.
 
-### Vérifier l&#39;état
+### Vérifier l&#39;état {#check-status}
 
 Pour vérifier l&#39;état du lot assimilé, vous devez indiquer l&#39;identifiant du lot dans le chemin d&#39;une requête GET.
 
@@ -149,6 +164,9 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
     "af838510-2233-11ea-acf0-f3edfcded2d2": {
         "status": "success",
         "tags": {
+            ...
+            "acp_enableErrorDiagnostics": true,
+            "acp_partialIngestionPercent": 5
             ...
         },
         "relatedObjects": [
@@ -183,7 +201,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 
 Si le lot comporte une erreur et que les diagnostics d&#39;erreur sont activés, l&#39;état est &quot;réussite&quot; et contient plus d&#39;informations sur l&#39;erreur fournie dans un fichier d&#39;erreur téléchargeable.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce didacticiel explique comment créer ou modifier un jeu de données pour activer l&#39;assimilation par lots partielle. Pour plus d&#39;informations sur l&#39;assimilation de lots, consultez le guide [de développement sur l&#39;assimilation de](./api-overview.md)lots.
 
