@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’éditeur de schéma.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d55dc9776968099901325c58506c5e322449368e
 workflow-type: tm+mt
-source-wordcount: '3409'
+source-wordcount: '3462'
 ht-degree: 0%
 
 ---
@@ -287,15 +287,27 @@ Cliquez sur **Profil** et une fenêtre contextuelle s’affiche, vous demandant 
 
 >[!NOTE]
 >
->Une fois qu’un schéma a été activé pour le Profil client en temps réel et enregistré, il ne peut plus être désactivé.
+>Une fois qu’un schéma a été activé pour le Profil client en temps réel et enregistré, il ne peut pas être désactivé.
 
-## Étapes suivantes
+## Étapes suivantes et ressources supplémentaires
 
 Maintenant que vous avez fini de composer un schéma &quot;Membres fidèles&quot;, vous pouvez voir le schéma complet dans la section *Structure* de l&#39;éditeur. Cliquez sur **Enregistrer** et le schéma sera enregistré dans la bibliothèque de Schémas, ce qui le rendra accessible par le registre des Schémas.
 
 Votre nouveau schéma peut désormais être utilisé pour importer des données dans Platform. N&#39;oubliez pas qu&#39;une fois que le schéma a été utilisé pour ingérer des données, seuls des changements additifs peuvent être apportés. Pour plus d’informations sur le contrôle des versions de schéma, consultez les [bases de la composition](../schema/composition.md) des schémas.
 
 Le schéma &quot;Membres de la fidélité&quot; est également disponible pour être affiché et géré à l’aide de l’API de registre du Schéma. Pour commencer à travailler avec l&#39;API, début en lisant le guide [du développeur de l&#39;API de registre de](../api/getting-started.md)Schéma.
+
+>[!WARNING]
+>
+>L’ [!DNL Platform] interface utilisateur illustrée dans les vidéos suivantes est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
+
+La vidéo suivante montre comment créer un schéma simple dans l’ [!DNL Platform] interface utilisateur.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+
+La vidéo ci-dessous est destinée à vous aider à mieux comprendre comment travailler avec des mixins et des classes.
+
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Annexe
 
