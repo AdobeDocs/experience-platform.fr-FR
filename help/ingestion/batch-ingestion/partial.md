@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l'assimilation partielle par lot des Adobes Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 83bb1ade8dbd9b1a166eb627d5d5d5eda987fa19
+source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 1%
@@ -103,7 +103,7 @@ Pour utiliser un jeu de données existant, début en sélectionnant un jeu de do
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-La bascule d&#39;assimilation [!UICONTROL **] partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
 
 La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
 
