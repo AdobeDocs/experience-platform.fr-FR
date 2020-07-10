@@ -4,20 +4,20 @@ seo-title: 'début rapide du SDK Web Adobe Experience Platform '
 description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: f401780aa6b11f230506bfca1a747839fc6ae389
+source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 14%
+source-wordcount: '537'
+ht-degree: 15%
 
 ---
 
 
 # Bienvenue
 
-Ce guide vous guide tout au long des différentes manières de configurer le SDK Web d’Adobe Experience Platform. Pour pouvoir utiliser cette fonctionnalité, vous devez être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
+Ce guide vous guide tout au long des différentes manières de configurer le SDK Adobe Experience Platform Web. Pour pouvoir utiliser cette fonctionnalité, vous devez être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME mais vous en avez besoin avant de passer en production
-- Vous pouvez accéder à la plateforme de données Adobe Experience Platform.  Si vous n’avez pas acheté Platform, nous vous fournirons la Experience Platform Data Services Foundation pour une utilisation limitée avec le SDK, sans frais supplémentaires.
+- Avoir le droit d&#39;Adobe Experience Platform Data Platform.  Si vous n’avez pas acheté Platform, nous vous fournirons la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur
 
 ## Création d’un ID de configuration
@@ -26,14 +26,18 @@ Vous pouvez créer un ID de configuration à l’aide de l’outil [de configura
 
 >[!NOTE]
 >
->Votre organisation doit se trouver sur la liste autorisée de la fonction. Veuillez contacter votre CSM pour être mis sur la liste autorisée.
+>Votre organisation doit être sur la liste autorisée de la fonction. Veuillez contacter votre CSM pour être mis sur la liste autorisée.
 
 ## Préparation d’un Schéma
 
-Le réseau Edge de plate-forme d’expérience prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
+L&#39;Experience Platform Edge Network prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
 
 - [Création d’un schéma](../../xdm/tutorials/create-schema-ui.md)
 - Ajoutez le mixin du SDK Web d’Adobe Experience Platform au schéma créé.
+
+La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos données de SDK Web.
+
+>[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
 ## Installation du SDK
 
@@ -92,7 +96,7 @@ Pour plus d’informations sur le suivi des événements, voir [Suivi des évén
 
 Une fois les données circulées, vous pouvez effectuer les opérations suivantes :
 
-- [Construisez votre schéma](https://docs.adobe.com/content/help/en/experience-platform/xdm/schema/composition.html)
+- [Construisez votre schéma](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/schema/composition.html)
 - [En savoir plus sur le débogage](../fundamentals/debugging.md)
 - Découvrez comment [personnaliser l’expérience](../fundamentals/rendering-personalization-content.md)
 - Découvrez comment envoyer des données à plusieurs solutions
