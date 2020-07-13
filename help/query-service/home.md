@@ -1,37 +1,51 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Requête Service
+title: Adobe Experience Platform Query Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 45da024d45b5eebdfc393ee14890e24aed6021ce
+source-git-commit: cfd767a05ad4c1dd43ac2bdde1966f9c89f5d219
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 0%
+source-wordcount: '709'
+ht-degree: 81%
 
 ---
 
 
-# Présentation du service Requête
+# Présentation de Query Service
 
-Adobe Experience Platform ingère des données provenant de sources très diverses. Pour les spécialistes du marketing, l’un des principaux défis consiste à comprendre ces données afin d’obtenir des informations sur leurs clients. Adobe Experience Platform Requête Service facilite cette tâche en vous permettant d’utiliser des données de requête SQL standard dans Platform. Requête Service vous permet de joindre n’importe quel jeu de données dans Data Lake et de capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans le rapports, l’apprentissage automatique ou pour l’assimilation dans le Profil client en temps réel. Ce document présente un aperçu du rôle de Requête Service dans Experience Platform.
+Adobe Experience Platform ingère des données à partir de sources diverses. Le grand défi qui attend les spécialistes du marketing : comprendre ces données afin de découvrir des informations sur leurs clients. Adobe Experience Platform Query Service vous facilite la tâche en vous permettant d’utiliser le langage SQL standard pour interroger des données dans Platform. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête sous forme d’un nouveau jeu de données à utiliser dans un compte rendu des performances, dans le cadre de l’apprentissage automatique ou pour être ingéré dans Real-time Customer Profile. Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 
-## Utilisation de Requête Service
+Requête Service permet aux marques de relier le parcours client en ligne à hors ligne et de comprendre l’attribution entre canaux multiples. La vidéo suivante montre comment une entreprise peut tirer parti de Requête Service pour traiter les cas d&#39;utilisation clés et comment fonctionne Requête Service.
 
-Requête Service fournit une interface utilisateur et une API RESTful à partir de laquelle vous pouvez créer des requêtes SQL pour mieux analyser vos données. L&#39;interface utilisateur vous permet d&#39;écrire et d&#39;exécuter des requêtes, des vues de requêtes précédemment exécutées et des requêtes d&#39;accès enregistrées par les utilisateurs de votre organisation IMS. L’interface utilisateur est destinée à être utilisée comme sandbox pour tester vos requêtes avant de les exécuter sur votre jeu de données plus large. Pour plus d’informations sur l’utilisation du service interactif dans Platform, consultez le guide [de l’interface utilisateur de](ui/overview.md)Requête Service. L’API RESTful offre une expérience similaire, vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour une utilisation et une répétition futures, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus d&#39;informations sur l&#39;utilisation de l&#39;API Requête Service, consultez le guide [du développeur](api/getting-started.md)Requête Service.
+>[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
-## Services de Requête et de plate-forme d’expérience
+## Utilisation de Query Service
 
-Requête Service interagit et peut être utilisé conjointement avec plusieurs services Experience Platform. Afin de tirer le meilleur parti des fonctionnalités de Requête Service, il est recommandé de se familiariser avec ces services et de savoir comment ils interagissent avec Requête Service.
+Query Service fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant qu’environnement de test pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus d’informations sur l’utilisation du service interactif dans Platform, consultez le [guide de l’interface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus d’informations sur l’utilisation de l’API de Query Service, reportez-vous au [guide de développement de Query Service](api/getting-started.md).
 
-### Espace de travail Data Science
+## Query Service et services Experience Platform
 
-Adobe Experience Platform Data Science Workspace utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux chercheurs en données de créer des recettes basées sur des données de série chronologique et d&#39;enregistrement sur les clients et leurs activités, ce qui facilite les prédictions telles que la propension à acheter et les offres recommandées que l&#39;individu est susceptible d&#39;apprécier et d&#39;utiliser. Vous pouvez utiliser SQL dans Data Science Workspace en intégrant Requête Service dans JupyterLab, ce qui vous permet d’explorer, de transformer et d’analyser les données Adobe Analytics. Pour plus d’informations sur Data Science Workspace et sur le guide d’intégration de Requête Service, consultez l’aperçu de Data Science Workspace. Pour en savoir plus sur les interactions entre Data Science Workspace et Requête Service, consultez le Guide d’intégration de Data Science Workspace.
+Query Service interagit et peut être utilisé conjointement avec plusieurs services d’Experience Platform. Afin de tirer le meilleur parti des capacités de Query Service, il est recommandé de se familiariser avec ces services et de connaître leurs interactions avec Query Service.
 
-### Service de segmentation
+### Data Science Workspace
 
-Adobe Experience Platform Segmentation Service permet aux utilisateurs de diviser leurs clients en groupes plus petits qui partagent des caractéristiques similaires. Ces segments peuvent ensuite être évalués afin de fournir une meilleure analyse sur vos données de Profil client en temps réel. Requête Service peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ces données de segment dans Data Lake. Pour plus d&#39;informations sur la segmentation, consultez l&#39;aperçu du service de segmentation et le guide PQL (Profil Requête Language).
+Adobe Experience Platform Data Science Workspace utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux scientifiques de données de créer des recettes basées sur des données d’enregistrement et de séries temporelles concernant les clients et leur activité, ce qui facilite les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et de saisir. Vous pouvez utiliser SQL dans Data Science Workspace en intégrant Query Service à JupyterLab, ce qui vous permettra d’explorer, de transformer et d’analyser les données d’Adobe Analytics. Pour plus d’informations sur Data Science Workspace, consultez la présentation de Data Science Workspace et le guide d’intégration de Query Service pour plus d’informations sur les interactions entre Data Science Workspace et Query Service.
 
-## Étapes suivantes
+### Segmentation Service
 
-En lisant ce document, vous avez été initié à Requête Service et à son fonctionnement dans le cadre plus large de Experience Platform. Pour plus d&#39;informations sur l&#39;interaction avec divers points de terminaison dans l&#39;API Requête Service, consultez le guide [du développeur](api/getting-started.md)Requête Service. Pour plus d&#39;informations sur l&#39;utilisation du service interactif dans Platform, veuillez lire le guide [de l&#39;interface utilisateur de](ui/overview.md)Requête Service. Pour obtenir une liste complète sur la connexion de clients externes à Requête Service, veuillez lire l&#39;aperçu [des clients de](clients/overview.md)Requête Service.
+Adobe Experience Platform Segmentation Service permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces segments peuvent ensuite être évalués afin de fournir une meilleure analyse de vos données Real-time Customer Profile. Query Service peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ce segment de données au sein du lac de données. Pour plus d’informations sur la segmentation, reportez-vous à la présentation de Segmentation Service et au guide PQL (Langage de requête de profil) pour plus d’informations sur l’analyse des segments.
+
+### Cas d’utilisation de Looker BI
+
+Avec l&#39;Adobe Experience Platform, vous pouvez ingérer, stocker, structurer et extraire tous les jeux de données stockés — y compris les données comportementales, CRM et de point de vente. En utilisant [!DNL Experience Platform's Query Service]ces jeux de données, vous pouvez requête sur ces jeux de données et répondre à des questions spécifiques sur l’entreprise, puis début générant des informations d’impact. La vidéo suivante montre l&#39;utilité de la création de tableaux de bord dans les outils de Business Intelligence (BI) à l&#39;aide de [!DNL Query Service].
+
+>[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
+
+## Étapes suivantes et ressources supplémentaires
+
+Ce document vous a initié à Query Service et à son fonctionnement dans le cadre plus vaste d’Experience Platform. Pour plus d’informations sur les interactions avec divers points de terminaison dans l’API de Query Service, consultez le [guide de développement de Query Service](api/getting-started.md). Pour plus d’informations sur l’utilisation du service interactif dans Platform, reportez-vous au [guide de l’interface utilisateur de Query Service](ui/overview.md). Pour une liste exhaustive portant sur la connexion des clients externes à Query Service, reportez-vous à la [présentation des clients de Query Service](clients/overview.md).
+
+Pour mieux vous préparer à exécuter des requêtes, regardez la vidéo suivante. Cette vidéo présente des conseils et les meilleures pratiques d’exécution des requêtes dans l’interface de l’éditeur de requêtes, les clients PSQL, les solutions Business Intelligence (BI) et l’API HTTP.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
