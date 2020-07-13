@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 2%
+source-wordcount: '631'
+ht-degree: 16%
 
 ---
 
 
-# Création d’un connecteur source [!DNL Azure Blob] ou [!DNL Amazon] S3 dans l’interface utilisateur
+# Create an [!DNL Azure Blob] or [!DNL Amazon] S3 source connector in the UI
 
 Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Azure Blob] (ci-après dénommé &quot;Blob&quot;) ou [!DNL Amazon] S3 (ci-après dénommé &quot;S3&quot;) à l’aide de l’interface [!DNL Platform] utilisateur.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-   - [Principes de base de la composition](../../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
+- [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+   - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 Si vous disposez déjà d’une connexion de base Blob ou S3, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/batch/cloud-storage.md).
 
@@ -80,6 +80,6 @@ Pour connecter un compte existant, sélectionnez le compte [!DNL Blob] ou le com
 
 ![existant](../../../../images/tutorials/create/blob/existing.png)
 
-## Étapes suivantes
+## Étapes suivantes et ressources supplémentaires
 
 En suivant ce didacticiel, vous avez établi une connexion à votre compte [!DNL Blob] ou S3. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données de votre enregistrement cloud dans Platform](../../dataflow/batch/cloud-storage.md).
