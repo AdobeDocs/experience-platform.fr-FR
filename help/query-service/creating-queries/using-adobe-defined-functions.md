@@ -4,34 +4,34 @@ solution: Experience Platform
 title: Fonctions définies par Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '292'
+ht-degree: 85%
 
 ---
 
 
 # Utilisation de fonctions définies par Adobe
 
-L&#39;un des principaux facteurs de différenciation de Adobe est qu&#39;ils comprennent les données d&#39;expérience et ce que les clients doivent pouvoir faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui facilitent votre travail.
+L’un des facteurs de différenciation les plus importants d’Adobe est la compréhension des données d’expérience et de ce que les clients doivent être capables de faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui rendent votre travail plus facile.
 
-Ce document couvre les fonctions définies par Adobe (ADF) pour prendre en charge trois activités Analytics clés :
+Ce document couvre les fonctions définies par Adobe (ADF) dans la prise en charge de trois activités Analytics clés :
 - [Sessionisation](#sessionization)
 - [Attribution](#attribution)
 - [Cheminement](#pathing)
 
 ## Sessionisation
 
-Le `SESS_TIMEOUT()` reproduit les regroupements de visites trouvés avec Adobe Analytics. Il effectue un regroupement temporel similaire, mais avec des paramètres personnalisables.
+Le `SESS_TIMEOUT()` reproduit les regroupements de visites découverts dans Adobe Analytics. Il réalise un regroupement en fonction du temps similaire, mais avec des paramètres personnalisables.
 
 **Syntaxe :**
 
 `SESS_TIMEOUT(timestamp, timeout_in_seconds) OVER ([partition] [order] [frame])`
 
-**Retours :**
+**Renvoie :**
 
-Structure avec champs `(timestamp_diff, num, is_new, depth)`
+Structure avec des champs `(timestamp_diff, num, is_new, depth)`
 
 ### Explorez le niveau de ligne `SESS_TIMEOUT()` et la sortie
 
@@ -56,7 +56,7 @@ LIMIT 100;
 
 ![Image](../images/queries/adobe-functions/sess-timeout.png)
 
-### Créer un rapport de tendances avec des visiteurs, des sessions et des vues de page
+### Créer un nouveau rapport de tendance avec les visiteurs, les sessions et les pages vues
 
 ```sql
 SELECT
@@ -87,25 +87,25 @@ LIMIT 31;
 
 ## Attribution
 
-L’attribution est la manière dont vous affectez des mesures ou des conversions telles que les recettes, les commandes ou les abonnements à vos efforts marketing.
+L’attribution est la manière dont vous allouez des mesures ou des conversions comme le chiffre d’affaires, les commandes ou les inscriptions à vos efforts marketing.
 
-Dans Adobe Analytics, les paramètres d’attribution sont configurés à l’aide de variables telles que les eVars et sont générés à mesure que les données sont ingérées.
+Dans Adobe Analytics, les paramètres d’attribution sont configurés à l’aide de variables comme eVars et sont générés à mesure que les données sont ingérées.
 
-Les adaptateurs ADF d’attribution trouvés dans Requête Service permettent de définir et de générer ces allocations au moment de la requête.
+Les ADF d’attribution apparaissant dans Query Service permettent à ces attributions d’être définies et générées au moment de la requête.
 
-Cet exemple porte sur l’attribution Dernière touche, mais Adobe offre également l’attribution Première touche.
+Cet exemple se concentre sur l’attribution Dernière touche, mais Adobe propose également une attribution Première touche.
 
 >[!NOTE]
 >
->D’autres options avec délais d’expiration et expiration basée sur le événement seront disponibles dans les versions futures de Requête Service.
+>D’autres options dont l’expiration sera basée sur les expirations et sur des événements seront disponibles dans les versions ultérieures de Query Service.
 
 **Syntaxe :**
 
 `ATTRIBUTION_LAST_TOUCH(timestamp, [channel_name], column) OVER ([partition] [order] [frame])`
 
-**Retours :**
+**Renvoie :**
 
-Structure avec champ `(value)`
+Structure avec un champ `(value)`
 
 ### Explorez l’attribution au niveau de la ligne.
 
@@ -126,7 +126,7 @@ LIMIT 50;
 
 ![Image](../images/queries/adobe-functions/row-level-attribution.png)
 
-### Créer une ventilation des commandes par niveau de membre précédent (eVar10)
+### Créer une ventilation des commandes par niveau de dernier membre (eVar10)
 
 ```sql
 SELECT
@@ -152,7 +152,7 @@ LIMIT 25;
 
 ## Cheminement
 
-Le cheminement permet de comprendre comment les clients naviguent sur votre site. Les `NEXT()` et `PREVIOUS()` ADF rendent cela possible.
+Le cheminement permet de comprendre la manière dont les clients naviguent sur votre site. Les ADF `NEXT()` et `PREVIOUS()` rendent ceci possible.
 
 **Syntaxe :**
 
@@ -161,11 +161,11 @@ NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
 
-**Retours :**
+**Renvoie :**
 
-Structure avec champ `(value)`
+Structure avec un champ `(value)`
 
-### Sélectionner la page active et la page suivante
+### Sélectionner la page actuelle et la page suivante
 
 ```sql
 SELECT 
@@ -184,7 +184,7 @@ LIMIT 10;
 
 ![Image](../images/queries/adobe-functions/select-current-page.png)
 
-### Créer un rapport de ventilation pour les cinq premiers noms de page à l&#39;entrée de la session
+### Créer un rapport de ventilation pour les cinq premiers noms de page sur l’entrée de la session
 
 ```sql
   SELECT 
@@ -240,4 +240,10 @@ LIMIT 10;
 ```
 
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Ressources supplémentaires
+
+La vidéo suivante montre comment exécuter des requêtes dans l&#39;interface d&#39;Adobe Experience Platform et dans un client PSQL. En outre, la vidéo utilise également des exemples impliquant des propriétés individuelles dans un objet XDM, utilisant des fonctions définies par Adobe et utilisant CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
