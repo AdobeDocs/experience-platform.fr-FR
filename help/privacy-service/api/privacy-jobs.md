@@ -4,38 +4,79 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: df36d88de8ac117206d8d744cfcdd7804fcec61e
 workflow-type: tm+mt
-source-wordcount: '1669'
-ht-degree: 3%
+source-wordcount: '1807'
+ht-degree: 82%
 
 ---
 
 
 # Tâches de confidentialité
 
-Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du point de `/jobs` terminaison dans l’API du Privacy Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels d’API. Plus précisément, il couvre l’utilisation du point de `/job` terminaison dans l’API du Privacy Service. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+
+## Liste de toutes les tâches {#list}
+
+You can view a list of all available privacy jobs within your organization by making a GET request to the `/jobs` endpoint.
+
+**Format d’API**
+
+This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. La réponse est paginée, ce qui vous permet d’utiliser d’autres paramètres de requête (`page` et `size`) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
+
+```http
+GET /jobs?regulation={REGULATION}
+GET /jobs?regulation={REGULATION}&page={PAGE}
+GET /jobs?regulation={REGULATION}&size={SIZE}
+GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont `gdpr`, `ccpa` et `pdpa_tha`. |
+| `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
+| `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
+
+**Requête**
+
+La requête suivante récupère une liste paginée de toutes les tâches d’une organisation IMS, en commençant à la troisième page avec un format de page de 50.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie une liste des tâches dont chaque tâche contient des détails comme son `jobId`. Dans cet exemple, la réponse contiendrait une liste de 50 tâches commençant sur la troisième page des résultats.
+
+### Accès aux pages suivantes
+
+Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous devez effectuer un autre appel API vers le même point de terminaison tout en augmentant le paramètre de requête `page` de 1.
 
 ## Création d’une tâche de confidentialité {#create-job}
 
-Avant de créer une nouvelle demande de travail, vous devez d&#39;abord collecter des informations d&#39;identification sur les personnes dont vous voulez accéder aux données, les supprimer ou les opt-out de vente. Une fois que vous disposez des données requises, elles doivent être fournies dans la charge utile d’une requête POST au point de terminaison racine.
+Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, supprimer ou exclure de la vente. Once you have the required data, it must be provided in the payload of a POST request to the `/jobs` endpoint.
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs différentes pour identifier les personnes concernées. Consultez le guide sur les applications [](../experience-cloud-apps.md) Privacy Service et Experience Cloud pour en savoir plus sur les identifiants requis pour vos applications.
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications, consultez le guide sur [les applications Privacy Service et Experience Cloud](../experience-cloud-apps.md). Pour obtenir des instructions plus générales sur la détermination des identifiants à envoyer au Privacy Service, consultez le document sur les données d’ [identité dans les demandes](../identity-data.md)de confidentialité.
 
-L’API du Privacy Service prend en charge deux types de demandes de travaux pour les données personnelles :
+L’API Privacy Service prend en charge deux types de requêtes de tâche pour les données personnelles :
 
-* [Accès et/ou suppression](#access-delete): Accéder (lire) ou supprimer des données personnelles.
-* [Opt-out de vente](#opt-out): Marquer que les données personnelles ne doivent pas être vendues.
+* [Accès et/ou suppression](#access-delete) : accédez (lisez) ou supprimez les données personnelles.
+* [Exclusion de la vente](#opt-out) : marquez les données personnelles comme ne pouvant pas être vendues.
 
 >[!IMPORTANT]
 >
->Bien que les demandes d’accès et de suppression puissent être combinées en un seul appel d’API, les demandes d’exclusion doivent être effectuées séparément.
+>Bien qu’il soit possible d’associer les requêtes d’accès et de suppression dans un appel API unique, les demandes d’exclusion doivent être effectuées séparément.
 
-### Créer une tâche d’accès/de suppression {#access-delete}
+### Création d’une tâche d’accès ou de suppression {#access-delete}
 
-Cette section explique comment effectuer une demande d’accès/de suppression de travail à l’aide de l’API.
+Cette section explique comment effectuer une requête de tâche d’accès ou de suppression à l’aide de l’API.
 
 **Format d’API**
 
@@ -45,7 +86,7 @@ POST /jobs
 
 **Requête**
 
-La demande suivante crée une nouvelle demande de travail, configurée par les attributs fournis dans la charge utile, comme décrit ci-dessous.
+La requête suivante crée une nouvelle requête de tâche configurée par les attributs fournis dans le payload comme décrit ci-dessous.
 
 ```shell
 curl -X POST \
@@ -106,17 +147,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `companyContexts` **(Obligatoire)** | Tableau contenant des informations d&#39;authentification pour votre organisation. Chaque identifiant répertorié comprend les attributs suivants : <ul><li>`namespace`: espace de nommage d’un identifiant.</li><li>`value`: Valeur de l’identifiant.</li></ul>Il est **nécessaire** qu’un des identifiants utilise `imsOrgId` comme son `namespace`nom, avec son `value` identifiant unique pour votre organisation IMS. <br/><br/>D’autres identifiants peuvent être des qualificatifs de société spécifiques au produit (par exemple `Campaign`), qui identifient une intégration à une application Adobe appartenant à votre organisation. Les valeurs potentielles sont les noms de compte, les codes client, les ID de client ou d’autres identifiants d’application. |
-| `users` **(Obligatoire)** | Tableau contenant une collection d&#39;au moins un utilisateur dont vous souhaitez accéder ou supprimer les informations. Un maximum de 1 000 identifiants d’utilisateur peuvent être fournis dans une seule requête. Chaque objet utilisateur contient les informations suivantes : <ul><li>`key`: Identificateur d’un utilisateur utilisé pour définir les ID de tâche distincts dans les données de réponse. Il est recommandé de choisir une chaîne unique et facilement identifiable pour cette valeur afin qu’elle puisse être facilement référencée ou consultée ultérieurement.</li><li>`action`: Tableau qui liste les actions souhaitées pour exécuter les données de l&#39;utilisateur. En fonction des actions que vous souhaitez entreprendre, ce tableau doit inclure `access`, `delete`ou les deux.</li><li>`userIDs`: Ensemble d’identités pour l’utilisateur. Le nombre d’identités qu’un utilisateur peut posséder est limité à neuf. Chaque identité se compose d&#39;un `namespace`, d&#39;un `value`et d&#39;un qualificatif d&#39;espace de nommage (`type`). Consultez l’ [annexe](appendix.md) pour plus de détails sur ces propriétés requises.</li></ul> Pour une explication plus détaillée de `users` et `userIDs`, consultez le guide [de](../troubleshooting-guide.md#user-ids)dépannage. |
-| `include` **(Obligatoire)** | Tableau de produits Adobe à inclure dans votre traitement. Si cette valeur est manquante ou est vide, la demande est rejetée. Incluez uniquement les produits avec lesquels votre entreprise est intégrée. Pour plus d’informations, consultez la section relative aux valeurs [de produit](appendix.md) acceptées dans l’annexe. |
-| `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
-| `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité des demandes de traitement. Les valeurs acceptées sont `normal` et `low`. Si `priority` est omis, le comportement par défaut est `normal`. |
-| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe doit gérer les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `companyContexts` **(Obligatoire)** | Un tableau contenant des informations d’authentification pour votre organisation. Chaque identifiant répertorié inclut les attributs suivants : <ul><li>`namespace` : l’espace de noms d’un identifiant.</li><li>`value` : la valeur de l’identifiant.</li></ul>Il est **obligatoire** que l’un des identifiants utilise `imsOrgId` en tant que `namespace` avec son `value` contenant l’identifiant unique pour votre organisation IMS. <br/><br/>Les identifiants supplémentaires peuvent être des qualificateurs d’entreprise spécifiques aux produits (par exemple, `Campaign`) qui identifient une intégration avec une application Adobe appartenant à votre organisation. Les valeurs potentielles incluent des noms de compte, des codes client, des identifiants du client ou d’autres identifiants d’application. |
+| `users` **(Obligatoire)** | Un tableau contenant une collection d’au moins un utilisateur pour lequel vous souhaitez accéder aux informations ou les supprimer. Vous pouvez fournir un maximum de 1 000 identifiants d’utilisateur dans une seule requête. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir facilement la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données de l’utilisateur. En fonction des actions que vous souhaitez entreprendre, ce tableau peut inclure `access`, `delete` ou les deux.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité se compose d’un `namespace`, d’un `value`et d’un qualificateur d’espace de noms (`type`). Consultez l’[annexe](appendix.md) pour en savoir plus sur les propriétés requises.</li></ul> Consultez le [guide de dépannage](../troubleshooting-guide.md#user-ids) pour une explication plus détaillée de `users` et de `userIDs`. |
+| `include` **(Obligatoire)** | Un tableau de produits Adobe à inclure dans votre traitement. Si cette valeur manque ou est vide, la requête sera rejetée. N’incluez que les produits pour lesquels votre organisation possède une intégration. Pour plus d’informations, consultez la section [Valeurs de produits acceptés](appendix.md) de l’annexe. |
+| `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par Analytics). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
+| `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
+| `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
+| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des trois valeurs suivantes : <ul><li>rgpd</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
 
-Une réponse positive renvoie les détails des tâches nouvellement créées.
+Une réponse réussie renvoie les détails des tâches créées.
 
 ```json
 {
@@ -162,13 +203,13 @@ Une réponse positive renvoie les détails des tâches nouvellement créées.
 
 | Propriété | Description |
 | --- | --- |
-| `jobId` | ID généré par le système en lecture seule pour une tâche. Cette valeur est utilisée à l’étape suivante de la recherche d’une tâche spécifique. |
+| `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée à l’étape suivante pour rechercher une tâche spécifique. |
 
-Une fois que vous avez soumis la demande de travail avec succès, vous pouvez passer à l’étape suivante de [vérification de l’état](#check-status)de la tâche.
+Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de [vérification de l’état de la tâche](#check-status).
 
-### Créer une tâche d’exclusion de la vente {#opt-out}
+### Création d’une tâche d’exclusion de la vente {#opt-out}
 
-Cette section explique comment effectuer une demande de travail d’exclusion de la vente à l’aide de l’API.
+Cette section explique comment effectuer une requête de tâche d’exclusion de la vente à l’aide de l’API.
 
 **Format d’API**
 
@@ -178,7 +219,7 @@ POST /jobs
 
 **Requête**
 
-La demande suivante crée une nouvelle demande de travail, configurée par les attributs fournis dans la charge utile, comme décrit ci-dessous.
+La requête suivante crée une nouvelle requête de tâche configurée par les attributs fournis dans le payload comme décrit ci-dessous.
 
 ```shell
 curl -X POST \
@@ -239,17 +280,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `companyContexts` **(Obligatoire)** | Tableau contenant des informations d&#39;authentification pour votre organisation. Chaque identifiant répertorié comprend les attributs suivants : <ul><li>`namespace`: espace de nommage d’un identifiant.</li><li>`value`: Valeur de l’identifiant.</li></ul>Il est **nécessaire** qu’un des identifiants utilise `imsOrgId` comme son `namespace`nom, avec son `value` identifiant unique pour votre organisation IMS. <br/><br/>D’autres identifiants peuvent être des qualificatifs de société spécifiques au produit (par exemple `Campaign`), qui identifient une intégration à une application Adobe appartenant à votre organisation. Les valeurs potentielles sont les noms de compte, les codes client, les ID de client ou d’autres identifiants d’application. |
-| `users` **(Obligatoire)** | Tableau contenant une collection d&#39;au moins un utilisateur dont vous souhaitez accéder ou supprimer les informations. Un maximum de 1 000 identifiants d’utilisateur peuvent être fournis dans une seule requête. Chaque objet utilisateur contient les informations suivantes : <ul><li>`key`: Identificateur d’un utilisateur utilisé pour définir les ID de tâche distincts dans les données de réponse. Il est recommandé de choisir une chaîne unique et facilement identifiable pour cette valeur afin qu’elle puisse être facilement référencée ou consultée ultérieurement.</li><li>`action`: Tableau qui liste les actions souhaitées pour exécuter les données. Pour les demandes d&#39;exclusion de la vente, le tableau ne doit contenir que la valeur `opt-out-of-sale`.</li><li>`userIDs`: Ensemble d’identités pour l’utilisateur. Le nombre d’identités qu’un utilisateur peut posséder est limité à neuf. Chaque identité se compose d&#39;un `namespace`, d&#39;un `value`et d&#39;un qualificatif d&#39;espace de nommage (`type`). Consultez l’ [annexe](appendix.md) pour plus de détails sur ces propriétés requises.</li></ul> Pour une explication plus détaillée de `users` et `userIDs`, consultez le guide [de](../troubleshooting-guide.md#user-ids)dépannage. |
-| `include` **(Obligatoire)** | Tableau de produits Adobe à inclure dans votre traitement. Si cette valeur est manquante ou est vide, la demande est rejetée. Incluez uniquement les produits avec lesquels votre entreprise est intégrée. Pour plus d’informations, consultez la section relative aux valeurs [de produit](appendix.md) acceptées dans l’annexe. |
-| `expandIDs` | Propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation pour le traitement des ID dans les applications (actuellement uniquement prise en charge par Analytics). If omitted, this value defaults to `false`. |
-| `priority` | Propriété facultative utilisée par Adobe Analytics qui définit la priorité des demandes de traitement. Les valeurs acceptées sont `normal` et `low`. Si `priority` est omis, le comportement par défaut est `normal`. |
-| `analyticsDeleteMethod` | Propriété facultative qui spécifie comment Adobe doit gérer les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize`: Toutes les données référencées par la collection donnée d’ID d’utilisateur sont rendues anonymes. Si `analyticsDeleteMethod` cette option est omise, il s’agit du comportement par défaut.</li><li>`purge`: Toutes les données sont complètement supprimées.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la demande. Doit être l’une des trois valeurs suivantes : <ul><li>gdpr</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `companyContexts` **(Obligatoire)** | Un tableau contenant des informations d’authentification pour votre organisation. Chaque identifiant répertorié inclut les attributs suivants : <ul><li>`namespace` : l’espace de noms d’un identifiant.</li><li>`value` : la valeur de l’identifiant.</li></ul>Il est **obligatoire** que l’un des identifiants utilise `imsOrgId` en tant que `namespace` avec son `value` contenant l’identifiant unique pour votre organisation IMS. <br/><br/>Les identifiants supplémentaires peuvent être des qualificateurs d’entreprise spécifiques aux produits (par exemple, `Campaign`) qui identifient une intégration avec une application Adobe appartenant à votre organisation. Les valeurs potentielles incluent des noms de compte, des codes client, des identifiants du client ou d’autres identifiants d’application. |
+| `users` **(Obligatoire)** | Un tableau contenant une collection d’au moins un utilisateur pour lequel vous souhaitez accéder aux informations ou les supprimer. Vous pouvez fournir un maximum de 1 000 identifiants d’utilisateur dans une seule requête. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir facilement la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données. Pour les demandes d’exclusion de la vente, le tableau ne doit contenir que la valeur `opt-out-of-sale`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité se compose d’un `namespace`, d’un `value`et d’un qualificateur d’espace de noms (`type`). Consultez l’[annexe](appendix.md) pour en savoir plus sur les propriétés requises.</li></ul> Consultez le [guide de dépannage](../troubleshooting-guide.md#user-ids) pour une explication plus détaillée de `users` et de `userIDs`. |
+| `include` **(Obligatoire)** | Un tableau de produits Adobe à inclure dans votre traitement. Si cette valeur manque ou est vide, la requête sera rejetée. N’incluez que les produits pour lesquels votre organisation possède une intégration. Pour plus d’informations, consultez la section [Valeurs de produits acceptés](appendix.md) de l’annexe. |
+| `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par Analytics). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
+| `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
+| `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
+| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des trois valeurs suivantes : <ul><li>rgpd</li><li>ccpa</li><li>pdpa_tha</li></ul> |
 
 **Réponse**
 
-Une réponse positive renvoie les détails des tâches nouvellement créées.
+Une réponse réussie renvoie les détails des tâches créées.
 
 ```json
 {
@@ -284,17 +325,17 @@ Une réponse positive renvoie les détails des tâches nouvellement créées.
 
 | Propriété | Description |
 | --- | --- |
-| `jobId` | ID généré par le système en lecture seule pour une tâche. Cette valeur est utilisée pour rechercher une tâche spécifique à l’étape suivante. |
+| `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée pour effectuer une recherche sur une tâche spécifique à l’étape suivante. |
 
-Une fois que vous avez soumis la demande de travail avec succès, vous pouvez passer à l’étape suivante de vérification de l’état de la tâche.
+Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de vérification de l’état de la tâche.
 
-## Vérifier l&#39;état d&#39;une tâche {#check-status}
+## Vérification de l’état d’une tâche {#check-status}
 
-En utilisant l’une des `jobId` valeurs renvoyées à l’étape précédente, vous pouvez récupérer des informations sur cette tâche, telles que son état de traitement actuel.
+Vous pouvez récupérer des informations sur une tâche spécifique, comme son état de traitement actuel, en incluant celle-ci `jobId` dans le chemin d’une requête GET au point de `/jobs` terminaison.
 
 >[!IMPORTANT]
 >
->Les données relatives aux tâches précédemment créées ne peuvent être récupérées que dans les 30 jours suivant la date de fin de la tâche.
+>Les données relatives aux tâches créées précédemment en sont disponibles à la récupération que pendant les 30 jours à compter de la date d’achèvement de la tâche.
 
 **Format d’API**
 
@@ -304,11 +345,11 @@ GET /jobs/{JOB_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{JOB_ID}` | ID de la tâche à rechercher, renvoyé sous `jobId` dans la réponse de l’étape [](#create-job)précédente. |
+| `{JOB_ID}` | ID de la tâche que vous souhaitez rechercher. Cet ID est renvoyé sous `jobId` les réponses réussies de l’API pour [créer une tâche](#create-job) et [répertorier toutes les tâches](#list). |
 
 **Requête**
 
-La requête suivante récupère les détails de la tâche dont `jobId` le chemin d&#39;accès est fourni.
+La requête suivante récupère les détails de la tâche dont `jobId` est fourni dans le chemin d’accès de requête.
 
 ```shell
 curl -X GET \
@@ -324,12 +365,12 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 
 ```json
 {
-    "jobId": "527ef92d-6cd9-45cc-9bf1-477cfa1e2ca2",
+    "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076b0842b6",
     "requestId": "15700479082313109RX-899",
     "userKey": "David Smith",
     "action": "access",
-    "status": "error",
-    "submittedBy": "02b38adf-6573-401e-b4cc-6b08dbc0e61c@techacct.adobe.com",
+    "status": "complete",
+    "submittedBy": "{ACCOUNT_ID}",
     "createdDate": "10/02/2019 08:25 PM GMT",
     "lastModifiedDate": "10/02/2019 08:25 PM GMT",
     "userIds": [
@@ -354,8 +395,21 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Finished successfully."
+            }
+        },
+        {
+            "product": "Profile",
+            "retryCount": 0,
+            "processedDate": "10/02/2019 08:25 PM GMT",
+            "productStatusResponse": {
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6000-200",
+                "responseMsgDetail": "Success dataSetIds = [5dbb87aad37beb18a96feb61], Failed dataSetIds = []"
             }
         },
         {
@@ -363,8 +417,14 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
             "retryCount": 0,
             "processedDate": "10/02/2019 08:25 PM GMT",
             "productStatusResponse": {
-                "status": "submitted",
-                "message": "processing"
+                "status": "complete",
+                "message": "Success",
+                "responseMsgCode": "PRVCY-6054-200",
+                "responseMsgDetail": "PARTIALLY COMPLETED- Data not found for some requests, check results for more info.",
+                "results": {
+                  "processed": ["1123A4D5690B32A"],
+                  "ignored": ["dsmith@acme.com"]
+                }
             }
         }
     ],
@@ -375,65 +435,29 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 
 | Propriété | Description |
 | --- | --- |
-| `productStatusResponse` | Statut actuel de la tâche. Le tableau ci-dessous fournit des détails sur chaque état possible. |
-| `downloadURL` | Si le statut de la tâche est `complete`défini, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Ce fichier peut être téléchargé pendant 60 jours après la fin de la tâche. |
+| `productStatusResponse` | Chaque objet du tableau contient des informations sur l&#39;état actuel de la tâche par rapport à une `productResponses` [!DNL Experience Cloud] application spécifique. |
+| `productStatusResponse.status` | catégorie d’état actuelle de la tâche. Le tableau ci-dessous présente une liste des catégories [d’état](#status-categories) disponibles et leur signification correspondante. |
+| `productStatusResponse.message` | Statut spécifique de la tâche, correspondant à la catégorie d’état. |
+| `productStatusResponse.responseMsgCode` | Code standard pour les messages de réponse aux produits reçus par le Privacy Service. Les détails du message sont fournis sous `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | Une explication plus détaillée de l&#39;état de la tâche. Les messages pour des états similaires peuvent varier d’un produit à l’autre. |
+| `productStatusResponse.results` | Pour certains états, certains produits peuvent renvoyer un `results` objet qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
+| `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 
-### Réponses d’état de la tâche
+### catégories d&#39;état de la tâche {#status-categories}
 
-Le tableau suivant liste les différents statuts de travail possibles et leur signification correspondante :
+Le tableau suivant liste les différentes catégories possibles de statut professionnel et leur signification correspondante :
 
-| Code de statut | Message d&#39;état | Signification |
-| ----------- | -------------- | -------- |
-| 1 | Complete | La tâche est terminée et (si nécessaire) des fichiers sont téléchargés à partir de chaque application. |
-| 2 | Le traitement | Les demandes ont reconnu la tâche et sont en cours de traitement. |
-| 3 | Envoyé | L&#39;emploi est soumis à chaque demande applicable. |
-| 4 | Erreur | Une erreur s&#39;est produite dans le traitement de la tâche. Des informations plus précises peuvent être obtenues en récupérant les détails de la tâche. |
+| catégorie d&#39;état | Signification |
+| -------------- | -------- |
+| Terminée | La tâche est terminée et les fichiers (si nécessaire) sont chargés depuis toutes les applications. |
+| En cours de traitement | Les applications ont reconnu la tâche et sont actuellement en train de la traiter. |
+| Envoyée | La tâche est envoyée vers chaque application nécessaire. |
+| Erreur | Une erreur s’est produite lors du traitement de la tâche. Vous pouvez obtenir de plus amples informations en récupérant les détails individuels de la tâche. |
 
 >[!NOTE]
 >
->Une tâche envoyée peut rester dans un état de traitement si elle a une tâche enfant à charge qui est toujours en cours de traitement.
-
-## Liste de toutes les tâches
-
-Vous pouvez vue une liste de toutes les demandes de travaux disponibles au sein de votre organisation en envoyant une demande GET au point de terminaison racine (`/`).
-
-**Format d’API**
-
-Ce format de requête utilise un paramètre de `regulation` requête sur le point de terminaison racine (`/`), de sorte qu’il commence par un point d’interrogation (`?`) comme illustré ci-dessous. La réponse est paginée, ce qui vous permet d&#39;utiliser d&#39;autres paramètres de requête (`page` et `size`) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
-
-```http
-GET /jobs?regulation={REGULATION}
-GET /jobs?regulation={REGULATION}&page={PAGE}
-GET /jobs?regulation={REGULATION}&size={SIZE}
-GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
-```
-
-| Paramètre | Description |
-| --- | --- |
-| `{REGULATION}` | Type de réglementation à requête. Les valeurs acceptées sont `gdpr`, `ccpa`et `pdpa_tha`. |
-| `{PAGE}` | Page de données à afficher, à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
-| `{SIZE}` | Nombre de résultats à afficher sur chaque page. La valeur par défaut est `1` et la valeur maximale est `100`. Si le nombre maximal est dépassé, l’API renvoie une erreur de code 400. |
-
-**Requête**
-
-La requête suivante récupère une liste paginée de toutes les tâches d’une organisation IMS, à partir de la troisième page avec un format de page de 50.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/privacy/jobs?regulation=gdpr&page=2&size=50 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
-```
-
-**Réponse**
-
-Une réponse positive renvoie une liste de tâches, chaque tâche contenant des détails tels que son `jobId`nom. Dans cet exemple, la réponse contiendrait une liste de 50 tâches, en commençant par la troisième page de résultats.
-
-### Accès aux pages suivantes
-
-Pour récupérer l&#39;ensemble de résultats suivant dans une réponse paginée, vous devez effectuer un autre appel d&#39;API vers le même point de terminaison tout en augmentant le paramètre de `page` requête de 1.
+>Une tâche envoyée peut rester à l’état en cours de traitement si celle-ci possède une tâche enfant dépendante toujours en cours de traitement.
 
 ## Étapes suivantes
 
-Vous savez maintenant comment créer et surveiller des tâches de confidentialité à l’aide de l’API du Privacy Service. Pour plus d’informations sur la façon d’exécuter les mêmes tâches à l’aide de l’interface utilisateur, voir la présentation [de l’interface utilisateur](../ui/overview.md)Privacy Service.
+Vous savez désormais comment créer et surveiller des tâches de confidentialité à l’aide de l’API Privacy Service. Pour plus d’informations sur la manière de réaliser les mêmes tâches à l’aide de l’interface utilisateur, consultez la [présentation de l’interface utilisateur Privacy Service](../ui/overview.md).
