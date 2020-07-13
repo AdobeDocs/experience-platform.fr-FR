@@ -1,124 +1,130 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l'éditeur de Requête Adobe Experience Platform Requête Service
+title: Guide sur Query Editor d’Adobe Experience Platform Query Service
 topic: query editor
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 1%
+source-wordcount: '1106'
+ht-degree: 95%
 
 ---
 
 
-# Guide de l’utilisateur de l’éditeur de Requêtes
+# Guide d’utilisation de Query Editor
 
-Requête Editor est un outil interactif fourni par Adobe Experience Platform Requête Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur Experience Platform. Requête Editor prend en charge les requêtes de développement pour l’analyse et l’exploration des données. Il permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans l’Experience Platform.
+Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 
-Pour plus d&#39;informations sur les concepts et les fonctionnalités de Requête Service, consultez la présentation [de][query-service-overview]Requête Service. Pour en savoir plus sur la navigation dans l’interface utilisateur de Requête Service sur Platform, consultez la présentation [de l’interface utilisateur de][query-service-ui]Requête Service.
+Pour plus d’informations sur les concepts et les fonctionnalités de Query Service, consultez la [Présentation de Query Service][query-service-overview]. Pour en savoir plus sur la navigation dans l’interface utilisateur de Query Service sur Platform, consultez la [Présentation de l’interface utilisateur de Query Service][query-service-ui].
 
 ## Prise en main
 
-L&#39;éditeur de Requêtes permet une exécution flexible des requêtes en se connectant à Requête Service, et les requêtes ne s&#39;exécuteront que lorsque cette connexion est active.
+En se connectant à Query Service, Query Editor permet une exécution flexible des requêtes, possible uniquement tant que cette connexion est active.
 
-### Connexion au service de Requête
+### Connexion à Query Service
 
-L’éditeur de Requête prend quelques secondes pour initialiser et se connecter à Requête Service à son ouverture. La console vous indique quand elle est connectée, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne se connecte, l’exécution est retardée jusqu’à ce que la connexion soit terminée.
+Query Editor ne prend que quelques secondes pour l’initialisation et, une fois ouvert, se connecte à Query Service. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
 
 ![Image](../images/queries/query-editor-overview/initializing-connection.png)
 
-### Exécution des requêtes à partir de l’éditeur de Requêtes
+### Exécution des requêtes depuis Query Editor
 
-Les Requêtes exécutées à partir de l’éditeur de Requêtes s’exécutent de manière interactive. Cela signifie que si vous fermez le navigateur ou que vous quittez le navigateur, la requête est annulée. Cela est également vrai pour les requêtes créées pour générer des jeux de données à partir de sorties de requête.
+Dans Query Editor, les requêtes sont exécutées de manière interactive. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
 
-## Création de Requêtes à l’aide de l’éditeur de Requête
+## Création de requête à l’aide de Query Editor
 
-L’éditeur de Requêtes vous permet d’écrire, d’exécuter et d’enregistrer des requêtes pour les données d’expérience client. Toutes les requêtes exécutées dans l’éditeur de Requêtes, ou enregistrées, sont accessibles à tous les utilisateurs de votre organisation qui ont accès à Requête Service.
+Avec Query Editor, vous pouvez écrire, exécuter et enregistrer des requêtes de données d’expérience client. Toutes les requêtes enregistrées ou exécutées dans Query Editor sont accessibles à tous les utilisateurs de votre organisation bénéficiant d’un accès à Query Service.
 
-### Accès à l’éditeur de Requêtes
+### Accès à Query Editor
 
-Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Requêtes** dans le menu de navigation de gauche pour ouvrir l’espace de travail Requête Service. Cliquez ensuite sur **Créer une Requête** en haut à droite de l’écran pour afficher les requêtes d’écriture de début. Ce lien est disponible à partir de n’importe quelle page de l’espace de travail Requête Service.
+Pour ouvrir l’espace de travail Query Service, cliquez sur **Requêtes** dans le menu de navigation à gauche de l’interface utilisateur d’Experience Platform. Cliquez ensuite sur **Créer une requête** dans la partie supérieure droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible depuis n’importe quelle page de l’espace de travail Query Service.
 
 ![Image](../images/queries/query-editor-overview/create-query.png)
 
-### Ecriture de requêtes
+### Rédaction de requêtes
 
-Requête Editor est organisé pour rendre les requêtes d&#39;écriture aussi faciles que possible. La capture d’écran ci-dessous montre comment l’éditeur s’affiche dans l’interface utilisateur, le bouton **Lecture** et le champ d’entrée SQL étant mis en surbrillance.
+Query Editor est organisé de façon à rendre l’écriture de requête aussi facile que possible. La capture d’écran ci-dessous présente l’affichage de l’éditeur dans l’interface utilisateur. Le bouton **Lire** et le champ d’entrée SQL sont mis en surbrillance.
 
 ![Image](../images/queries/query-editor-overview/editor.png)
 
-Pour réduire le temps de développement, il est recommandé de développer des requêtes avec des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête génère la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie.
+Pour réduire le temps de développement, nous vous recommandons de développer vos requêtes en fixant des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
 
-### Création d’outils dans l’éditeur de Requêtes
+### Outils d’écriture dans Query Editor
 
-- **Mise en surbrillance automatique de la syntaxe :** Facilite la lecture et l&#39;organisation de SQL.
+- **Mise en surbrillance automatique de la syntaxe :** facilite la lecture et l’organisation SQL.
 
 ![Image](../images/queries/query-editor-overview/syntax-highlight.png)
 
-- **Remplissage automatique du mot clé SQL :** Début de saisie de votre requête, utilisez les touches fléchées pour accéder au terme souhaité et appuyez sur **Entrée**.
+- **Saisie automatique de mot-clé SQL :** commencez à saisir votre requête, puis utiliser les touches fléchées pour accéder au terme souhaité et appuyez sur **Entrée**.
 
 ![Image](../images/queries/query-editor-overview/syntax-auto.png)
 
-- **Remplissage automatique du tableau et du champ :** Début de saisie du nom de la table à `SELECT` partir de laquelle vous voulez accéder, puis d&#39;utilisation des touches fléchées pour accéder à la table que vous recherchez, puis appuyez sur **Entrée**. Une fois qu’un tableau est sélectionné, la saisie semi-automatique reconnaît les champs de ce tableau.
+- **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois le tableau sélectionné, la saisie automatique reconnaît les champs de ce tableau.
 
 ![Image](../images/queries/query-editor-overview/tables-auto.png)
 
 ### Détection des erreurs
 
-L’éditeur de Requêtes valide automatiquement une requête au fur et à mesure que vous l’écrivez, en fournissant une validation SQL générique et une validation d’exécution spécifique. Si un trait de soulignement rouge apparaît sous la requête (comme illustré dans l’image ci-dessous), il représente une erreur dans la requête.
+Query Editor valide automatiquement la requête au fur et à mesure que vous l’écrivez grâce à une validation SQL générique et une validation d’exécution spécifique. Si un trait de soulignement rouge apparaît sous la requête (comme illustré dans l’image ci-dessous), il indique une erreur dans la requête.
 
 ![Image](../images/queries/query-editor-overview/syntax-error-highlight.png)
 
-Lorsque des erreurs sont détectées, vous pouvez vue les messages d&#39;erreur spécifiques en passant la souris sur le code SQL.
+Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erreur spécifiques en survolant le code SQL avec la souris.
 
 ![Image](../images/queries/query-editor-overview/linting-error.png)
 
-### Détails de la Requête
+### Détails de la requête
 
-Lorsque vous consultez une requête dans l’éditeur de Requêtes, le panneau Détails *de la* Requête fournit des outils pour gérer la requête sélectionnée.
+Lorsque vous affichez une requête dans Query Editor, le panneau *Détails de la requête* vous fournit des outils pour gérer la requête sélectionnée.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l&#39;interface utilisateur, de supprimer ou de nommer la requête affichée et de vue du code SQL dans un format facile à copier sur l&#39;onglet Requête ** SQL. Ce panneau présente également des métadonnées utiles, telles que la dernière modification de la requête et la personne qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **Output Dataset**. La boîte de dialogue *Output Dataset* (Jeu de données de sortie) s’affiche. Saisissez un nom et une description, puis cliquez sur **Exécuter la Requête**. Le nouveau jeu de données s’affiche dans l’onglet *Datasets* de l’interface utilisateur de Requête Service sur Platform.
+Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet *Requête SQL*. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **Jeu de données de sortie**. La boîte de dialogue *Jeu de données de sortie* s’affiche. Saisissez un nom et une description, puis cliquez sur **Exécuter la requête**. Le nouveau jeu de données s’affiche dans l’onglet *Jeux de données* de l’interface utilisateur de Query Service dans Platform.
 
 ### Enregistrement des requêtes
 
-L’éditeur de Requêtes fournit une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y travailler ultérieurement. Pour enregistrer une requête, cliquez sur **Enregistrer** dans le coin supérieur droit de l’éditeur de Requêtes. Avant de pouvoir enregistrer une requête, un nom doit être fourni pour la requête à l’aide du panneau Détails *de la* Requête.
+Query Editor dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, cliquez sur **Enregistrer** dans le coin supérieur droit de Query Editor. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau *Détails*.
 
-### Comment trouver les requêtes précédentes
+### Accès aux requêtes précédentes
 
-Toutes les requêtes exécutées à partir de l&#39;éditeur de Requêtes sont capturées dans le tableau Journal. Vous pouvez utiliser la fonctionnalité de recherche de l&#39;onglet *Journal* pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet *Parcourir* .
+Toutes les requêtes exécutées depuis Query Editor sont capturées dans le tableau Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet *Journal* pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet *Parcourir*.
 
-Pour plus d’informations, consultez la présentation [de l’interface utilisateur de][query-service-ui] Requête Service.
+Pour plus d’informations, reportez-vous à la [Présentation de l’interface utilisateur de Query Service][query-service-ui].
 
 >[!NOTE]
 >
->Les Requêtes qui ne sont pas exécutées ne sont pas enregistrées par le journal. Pour que la requête soit disponible dans Requête Service, elle doit être exécutée ou enregistrée dans l’éditeur de Requêtes.
+>Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans Query Service, elle doit être exécutée ou enregistrée dans Query Editor.
 
-## Exécution de requêtes à l’aide de l’éditeur de Requêtes
+## Exécution de requête à l’aide de Query Editor
 
-Pour exécuter une requête dans l’éditeur de Requêtes, vous pouvez entrer SQL dans l’éditeur ou charger une requête précédente à partir de l’onglet *Journal* ou *Parcourir* , puis cliquer sur **Lecture**. L’état d’exécution de la requête s’affiche dans l’onglet *Console* ci-dessous et les données de sortie s’affichent dans l’onglet *Résultats* .
+Pour exécuter une requête dans Query Editor, vous pouvez saisir du langage SQL dans l’éditeur ou charger une requête précédente depuis l’onglet *Journal* ou l’onglet *Parcourir*, puis cliquer sur **Lire**. L’état de l’exécution de la requête s’affiche dans l’onglet *Console* ci-dessous et les données de sortie s’affichent dans l’onglet *Résultats*.
 
 ### Console
 
-La console fournit des informations sur l’état et le fonctionnement de Requête Service. La console affiche l&#39;état de la connexion à Requête Service, les opérations de requête en cours d&#39;exécution et les messages d&#39;erreur qui en résultent.
+La console fournit des informations sur l’état et le fonctionnement de Query Service. La console affiche l’état de la connexion à Query Service, les opérations des requêtes en cours d’exécution et tout message d’erreur résultant de ces requêtes.
 
 ![Image](../images/queries/query-editor-overview/console.png)
 
 >[!NOTE]
 >
->La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Il n’affiche pas les erreurs de validation de requête avant l’exécution d’une requête.
+>La console affiche uniquement les erreurs résultant de l’exécution d’une requête. Elle n’affiche pas les erreurs de validation de requête avant l’exécution de la requête.
 
-### Résultats de la Requête
+### Résultats de requête
 
-Une fois la requête terminée, les résultats s’affichent dans l’onglet *Résultats* , en regard de l’onglet *Console* . Cette vue affiche la sortie tabulaire de votre requête, affichant jusqu’à 100 lignes. Cette vue vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées et exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le didacticiel [sur la][query-service-create-datasets] génération de jeux de données pour savoir comment générer un jeu de données à partir des résultats de la requête dans l&#39;éditeur de Requêtes.
+Une fois la requête terminée, les résultats s’affichent dans l’onglet *Résultats*, en regard de l’onglet *Console*. Cet affichage indique la sortie tabulaire de votre requête (jusqu’à 100 lignes). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données][query-service-create-datasets] pour apprendre à générer un jeu de données à partir des résultats de requête dans Query Editor.
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
+## Vidéo sur l’exécution de requêtes avec Requête Service
+
+La vidéo suivante montre comment exécuter des requêtes dans l&#39;interface d&#39;Adobe Experience Platform et dans un client PSQL. En outre, l&#39;utilisation de propriétés individuelles dans un objet XDM, l&#39;utilisation de fonctions définies par Adobe et l&#39;utilisation de CREATE TABLE AS SELECT (CTAS) sont démontrées.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+
 ## Étapes suivantes
 
-Maintenant que vous savez quelles fonctions sont disponibles dans l’éditeur de Requêtes et comment naviguer dans l’application, vous pouvez début de créer vos propres requêtes directement dans Platform. Pour plus d&#39;informations sur l&#39;exécution de requêtes SQL par rapport à des jeux de données dans Data Lake, consultez le guide sur l&#39; [exécution de requêtes][query-service-running-queries]. Pour obtenir des exemples de requêtes SQL pour l&#39;utilisation des données Analytics et des Adobes Target d&#39;Adobe, reportez-vous à la référence [des][query-service-sample-queries]exemples de requêtes.
+Maintenant que vous connaissez les fonctionnalités disponibles dans Query Editor et que vous savez naviguer dans l’application, vous pouvez commencer à créer vos requêtes directement dans Platform. Pour plus d’informations sur l’exécution de requêtes SQL par rapport à des jeux de données de lac de données, consultez le guide sur l’[exécution de requêtes][query-service-running-queries]. Pour obtenir un exemple de requête SQL avec des données d’Adobe Analytics et d’Adobe Target, consultez la [référence d’exemples de requête][query-service-sample-queries].
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
