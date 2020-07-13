@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur Privacy Service
-description: Utilisez l’API RESTful pour gérer les données personnelles de vos sujets de données dans les applications Adobe Experience Cloud.
+title: Guide de développement de Privacy Service
+description: Utilisez l’API RESTful pour gérer les données personnelles des propriétaires de données dans les applications Adobe Experience Cloud
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6f93191defad6a79a3f6623da3492ab405787b5c
+source-git-commit: b45fdfff70ce4ba857f23e7116812a07825871bc
 workflow-type: tm+mt
 source-wordcount: '793'
-ht-degree: 2%
+ht-degree: 42%
 
 ---
 
 
-# Guide du développeur Privacy Service
+# Guide de développement de Privacy Service
 
-Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur qui vous permettent de gérer (d’accéder et de supprimer) les données personnelles de vos personnes de données (clients) dans les applications Adobe Experience Cloud. Privacy Service fournit également un mécanisme central d&#39;audit et de consignation qui vous permet d&#39;accéder à l&#39;état et aux résultats des travaux impliquant des demandes Experience Cloud.
+Privacy Service d’Adobe Experience Platform fournit une API RESTful et une interface utilisateur permettant de gérer les données personnelles (d’y accéder et de les supprimer) des propriétaires de données (clients) dans les applications Adobe Experience Cloud. Privacy Service fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications Experience Cloud.
 
-Ce guide explique comment utiliser l’API du Privacy Service. Pour plus d’informations sur l’utilisation de l’interface utilisateur, reportez-vous à la présentation [de l’interface utilisateur](../ui/overview.md)Privacy Service. Pour obtenir une liste complète de tous les points de terminaison disponibles dans l’API du Privacy Service, consultez la référence [de l’](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html)API.
+Ce guide explique comment utiliser l’API Privacy Service. Pour plus d’informations sur l’utilisation de l’interface utilisateur, consultez la [présentation de l’interface utilisateur de Privacy Service](../ui/overview.md). Pour obtenir la liste complète de tous les points de terminaison disponibles dans l’API Privacy Service, consultez [Référence d’API](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
 
-## Prise en main
+## Prise en main {#getting-started}
 
-Ce guide nécessite une bonne compréhension des fonctionnalités d’Experience Platform suivantes :
+Ce guide nécessite une bonne compréhension des fonctionnalités d’Experience Platform suivantes :
 
-* [Privacy Service](../home.md): Fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les requêtes d’accès et de suppression de vos sujets de données (clients) dans les applications Adobe Experience Cloud.
+* [Privacy Service](../home.md) : fournit une API RESTful et une interface utilisateur permettant de gérer l’accès et de supprimer les requêtes des propriétaires des données (les clients) dans les applications Adobe Experience Cloud.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer l’API du Privacy Service.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à l’API Privacy Service.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md) d’API dans le guide de dépannage de l’Experience Platform.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
 
-## Rassembler les valeurs des en-têtes requis
+## Collecte des valeurs des en-têtes requis
 
 Pour appeler l’API du Privacy Service, vous devez d’abord rassembler vos informations d’identification d’accès pour les utiliser dans les en-têtes requis :
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
 Cela implique d&#39;obtenir des autorisations de développeur pour un Experience Platform dans Adobe Admin Console, puis de générer les informations d&#39;identification dans Adobe Developer Console.
@@ -59,7 +59,7 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 #### Configuration ponctuelle
 
-Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
 
 Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation _[!UICONTROL du]_projet.
 
@@ -69,7 +69,7 @@ L’écran _[!UICONTROL Ajouter une API]_s’affiche. Sélectionnez API****Priva
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-L’écran _[!UICONTROL Configurer l’API]_s’affiche. Sélectionnez l’option**[!UICONTROL  Générer une paire ]**de clés, puis cliquez sur**[!UICONTROL  Générer une paire de clés ]**dans le coin inférieur droit.
+The _[!UICONTROL Configure API]_screen appears. Sélectionnez l’option**[!UICONTROL  Générer une paire ]**de clés, puis cliquez sur**[!UICONTROL  Générer une paire de clés ]**dans le coin inférieur droit.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
@@ -98,4 +98,4 @@ Un nouveau jeton d&#39;accès est généré et un bouton permettant de copier le
 
 ## Étapes suivantes
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API du Privacy Service. Le document sur les tâches [de](privacy-jobs.md) confidentialité passe en revue les différents appels d’API que vous pouvez effectuer à l’aide de l’API du Privacy Service. Chaque exemple d’appel comprend le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API Privacy Service. Le document sur les [tâches liées à la confidentialité](privacy-jobs.md) décrit les différents appels API que vous pouvez lancer à l’aide de l’API Privacy Service. Chaque appel d’exemple inclut le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
