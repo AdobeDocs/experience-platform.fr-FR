@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un connecteur source Adobe Analytics dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
 workflow-type: tm+mt
-source-wordcount: '726'
-ht-degree: 5%
+source-wordcount: '769'
+ht-degree: 15%
 
 ---
 
@@ -18,11 +18,11 @@ Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Ad
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Système](../../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-* [Profil](../../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+* [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Environnements de test](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Créer une connexion source avec Adobe Analytics
 
@@ -52,7 +52,7 @@ Dans la liste des suites de rapports disponibles, sélectionnez celle que vous s
 
 ### Nommer votre flux de données
 
-L’étape détaillée *du flux de* jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[UICONTROL ! Suivant]** lorsque terminé.
+L&#39;étape détaillée *du flux de* jeux de données s&#39;affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[UICONTROL ! Suivant]** lorsque terminé.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -89,17 +89,26 @@ Vous pouvez vue les étiquettes héritées d’un flux de données à partir de 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-Le panneau *Modifier les étiquettes* de gouvernance s’affiche. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
+The *Edit governance labels* panel appears. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
 
 Pour plus d’informations sur la manière d’étiqueter les données en provenance d’Analytics, consultez le guide [des étiquettes d’utilisation des](../../../../../data-governance/labels/user-guide.md)données.
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
-## Étapes suivantes
+## Étapes suivantes et ressources supplémentaires
 
 Une fois la connexion créée, un schéma de cible et un flux de jeux de données sont automatiquement créés pour contenir les données entrantes. En outre, un remplissage de données se produit et ingère jusqu’à 13 mois de données historiques. Une fois l’assimilation initiale terminée, les données Analytics sont utilisées par les services Platform en aval, tels que le Profil client en temps réel et le service de segmentation. Pour plus d’informations, voir les documents suivants :
 
 * [Présentation du profil client en temps réel](../../../../../profile/home.md)
 * [Présentation du service de segmentation](../../../../../segmentation/home.md)
 * [Présentation de Data Science Workspace](../../../../../data-science-workspace/home.md)
-* [Présentation du service Requête](../../../../../query-service/home.md)
+* [Présentation de Query Service](../../../../../query-service/home.md)
+
+La vidéo suivante est destinée à vous aider à comprendre comment ingérer des données à l’aide du connecteur source Analytics Adobe :
+
+>[!WARNING]
+>
+> L’ [!DNL Platform] interface utilisateur affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
