@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de lot d’enregistrement cloud dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1226'
 ht-degree: 7%
 
 ---
@@ -123,9 +123,9 @@ Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!U
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/review.png)
 
-## Surveiller votre flux de données
+## Surveiller et supprimer votre flux de données
 
-Une fois le flux de données de votre enregistrement cloud créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d’informations sur la surveillance des jeux de données, voir le didacticiel sur la [surveillance des flux de données](../../../../../ingestion/quality/monitor-data-flows.md)en flux continu.
+Une fois le flux de données de votre enregistrement cloud créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d&#39;informations sur la surveillance et la suppression des flux de données, consultez le didacticiel sur la [surveillance des flux de données](../../../../../ingestion/quality/monitor-data-flows.md).
 
 ## Étapes suivantes
 
