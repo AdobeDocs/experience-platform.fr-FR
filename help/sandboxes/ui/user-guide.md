@@ -1,99 +1,103 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l’utilisateur de Sandbox
+title: Guide d’utilisation des environnements de test
 topic: user guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 0%
+source-wordcount: '527'
+ht-degree: 97%
 
 ---
 
 
-# Guide de l’utilisateur de Sandbox
+# Guide d’utilisation des environnements de test
 
-Ce document décrit la marche à suivre pour effectuer diverses opérations liées aux sandbox dans l’interface utilisateur de l’Adobe Experience Platform.
+Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux environnements de test dans l’interface utilisateur d’Adobe Experience Platform.
 
-## sandbox de Vue
+## Affichage des environnements de test
 
-Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Sandbox** dans le volet de navigation de gauche pour ouvrir le tableau de bord _Sandbox_ . Le tableau de bord liste tous les sandbox disponibles pour votre organisation, y compris le type de sandbox (production ou développement) et l’état (actif, création, suppression ou échec).
+Dans l’interface utilisateur d’Experience Platform, cliquez sur **Environnements de test** dans le panneau de navigation de gauche pour ouvrir le tableau de bord _Environnements de test_. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris le type d’environnement de test (production ou développement) et l’état (actif, en cours de création, supprimé ou en échec).
 
 ![](../images/ui/sandboxes-tab.png)
 
-## Basculer entre les sandbox
+## Basculer entre des environnements de test
 
-Le **sélecteur** de sandbox situé en haut à gauche de l’écran affiche le sandbox actif.
+La commande **sélecteur d’environnements de test** située en haut à gauche de l’écran affiche l’environnement de test actuellement actif.
 
 ![](../images/ui/sandbox-selector.png)
 
-Pour passer d’un sandbox à un autre, cliquez sur le sandbox et sélectionnez le sandbox de votre choix dans la liste déroulante.
+Pour passer d’un environnement de test à l’autre, cliquez sur le sélecteur d’environnements de test et sélectionnez l’environnement de test souhaité depuis la liste déroulante.
 
 ![](../images/ui/switch-sandbox.png)
 
-Une fois qu’un sandbox est sélectionné, l’écran s’actualise avec le sandbox sélectionné, qui est désormais présenté dans le sélecteur de sandbox.
+Après avoir sélectionné un environnement de test, l’écran actualise l’environnement de test sélectionné depuis le sélecteur d’environnements de test.
 
 ![](../images/ui/sandbox-switched.png)
 
-## Création d’un sandbox
+## Création d’un nouvel environnement de test
 
-Pour créer un sandbox dans l’interface utilisateur, cliquez sur **Sandbox** dans le volet de navigation de gauche, puis cliquez sur **Créer un sandbox**.
+Utilisez la vidéo suivante pour obtenir un aperçu rapide de la façon d&#39;utiliser [!DNL Sandboxes] dans [!DNL Experience Platform].
+
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+
+Pour créer un nouvel environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le volet de navigation de gauche, puis cliquez sur **Créer un environnement de test**.
 
 ![](../images/ui/create-sandbox-button.png)
 
-La boîte de dialogue _Créer un sandbox_ s’affiche, vous invitant à fournir un titre et un nom d’affichage pour le sandbox. Le titre **** d&#39;affichage est conçu pour être lisible par l&#39;homme et doit être suffisamment descriptif pour être facilement identifiable. Le **nom** de sandbox est un identifiant en minuscules utilisé dans les appels d’API. Il doit donc être unique et concis.
+La boîte de dialogue _Créer un environnement de test_ s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. Le **nom** de l’environnement de test est un identifiant entièrement en minuscules à utiliser dans les appels API qui se doit donc d’être unique et concis.
 
-When finished, click **Create**.
+Lorsque vous avez terminé, cliquez sur **Créer**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Etant donné que vous êtes limité à la création de types de sandbox hors production, l’option de **type** est verrouillée sur &quot;Non-production&quot; et ne peut pas être manipulée.
+>Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **type** est verrouillée sur « hors production » et ne peut pas être modifiée.
 
-Une fois que vous avez terminé de créer le sandbox, actualisez la page et le nouveau sandbox apparaît dans le tableau de bord _Sandbox_ avec l’état &quot;Création&quot;. Les nouveaux sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi leur état devient &quot;Actif&quot;.
+Lorsque vous avez terminé de créer l’environnement de test, actualisez la page pour que le nouvel environnement de test apparaisse dans le tableau de bord _Environnements de test_ avec l’état « En cours de création ». Il faut environ 15 minutes pour que le système approvisionne les nouveaux environnements de test, auquel cas leur état passera à « Actif ».
 
 ![](../images/ui/sandbox-created.png)
 
-## Réinitialisation d’un sandbox
+## Réinitialisation d’un environnement de test
 
 >[!NOTE]
 >
->Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de réinitialiser les sandbox de production.
+>Cette fonctionnalité est disponible uniquement pour les environnements de test hors production. Il n’est pas possible de réinitialiser les environnements de test de production.
 
-La réinitialisation d’un sandbox hors production supprime toutes les ressources associées à ce sandbox (schémas, jeux de données, etc.), tout en conservant le nom du sandbox et les autorisations associées. Ce sandbox &quot;propre&quot; reste disponible sous le même nom pour les utilisateurs qui y ont accès.
+La réinitialisation d’un environnement de test hors production supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associés de l’environnement de test. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
-Pour réinitialiser un sandbox dans l’interface utilisateur, cliquez sur **Sandbox** dans le volet de navigation de gauche, puis cliquez sur le sandbox à réinitialiser. Dans la boîte de dialogue qui s’affiche à droite de l’écran, cliquez sur **Réinitialiser le sandbox**.
+Pour réinitialiser un environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez réinitialiser. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **Réinitialiser un environnement de test**.
 
 ![](../images/ui/reset-sandbox-button.png)
 
-Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Click **Reset** to continue.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **Réinitialiser** pour continuer.
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
-Un message de confirmation s’affiche et l’état du sandbox passe à &quot;Réinitialisation&quot;. Une fois qu’il a été configuré par le système, son état est mis à jour sur &quot;Actif&quot; ou &quot;Échec&quot;.
+Un message de confirmation apparaît et l’état de l’environnement de test passe à « En cours de réinitialisation ». Une fois qu’il a été approvisionné par le système, son état est mis à jour vers « Actif » ou « En échec ».
 
 ![](../images/ui/sandbox-resetting.png)
 
-## Suppression d’un sandbox
+## Suppression d’un environnement de test
 
 >[!NOTE]
 >
->Cette fonctionnalité est uniquement disponible pour les sandbox hors production. Impossible de supprimer les sandbox de production.
+>Cette fonctionnalité est disponible uniquement pour les environnements de test hors production. Il n’est pas possible de supprimer les environnements de test de production.
 
-La suppression d’un sandbox hors production supprime définitivement toutes les ressources associées à ce sandbox, y compris les autorisations.
+La suppression d’un environnement de test hors production supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
 
-Pour supprimer un sandbox dans l’interface utilisateur, cliquez sur **Sandbox** dans le volet de navigation de gauche, puis cliquez sur le sandbox à supprimer. Dans la boîte de dialogue qui s’affiche sur le côté droit de l’écran, cliquez sur **Supprimer le sandbox**.
+Pour supprimer un environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez supprimer. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **Supprimer l’environnement de test**.
 
 ![](../images/ui/delete-sandbox-button.png)
 
-Une boîte de dialogue s’affiche, vous invitant à confirmer votre choix. Click **Delete** to continue.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **Supprimer** pour continuer.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Un message de confirmation s’affiche et le sandbox est supprimé de l’espace de travail _Sandbox_ .
+Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail _Environnements de test_.
 
 ## Étapes suivantes
 
-Ce document montre comment gérer les sandbox dans l’interface utilisateur Experience Platform. Pour plus d’informations sur la gestion des sandbox à l’aide de l’API Sandbox, voir le guide [du développeur](../api/getting-started.md)sandbox.
+Ce document vous a montré comment gérer les environnements de test dans l’interface utilisateur d’Experience Platform. Pour plus d’informations sur la gestion des environnements de test à l’aide de l’API Sandbox, consultez le [guide de développement des environnements de test](../api/getting-started.md).
