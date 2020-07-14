@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de paiement dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: d3c725c4760acb3857a67d0d30b24732c963a030
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 1%
+source-wordcount: '1071'
+ht-degree: 8%
 
 ---
 
@@ -18,12 +18,12 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-   - [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
+- [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+   - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Profil](../../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Real-time Customer Profile](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 En outre, ce didacticiel nécessite que vous ayez déjà créé un compte de paiement. Vous trouverez une liste de didacticiels pour la création de différents connecteurs de paiement dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../home.md)source.
 
@@ -44,13 +44,13 @@ L’étape *[!UICONTROL Mappage]* s’affiche, fournissant une interface interac
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
-### Utiliser un jeu de données existant
+### Utilisation d’un jeu de données existant
 
 Pour importer des données dans un jeu de données existant, sélectionnez **[!UICONTROL Utiliser un jeu de données]** existant, puis cliquez sur l’icône Jeu de données.
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/payments/existing-dataset.png)
 
-La boîte de dialogue *[!UICONTROL Sélectionner un jeu de données]* s&#39;affiche. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
+The *[!UICONTROL Select dataset]* dialog appears. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/payments/select-dataset.png)
 
@@ -64,7 +64,7 @@ Lorsque vous avez terminé, cliquez sur l’icône schéma.
 
 ![create-new-dataset](../../../images/tutorials/dataflow/payments/new-dataset.png)
 
-La boîte de dialogue *[!UICONTROL Sélectionner un schéma]* s&#39;affiche. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminé]**.
+The *[!UICONTROL Select schema]* dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminé]**.
 
 ![sélection-schéma](../../../images/tutorials/dataflow/payments/select-schema.png)
 
@@ -95,25 +95,25 @@ Indiquez les valeurs de la planification et cliquez sur **[!UICONTROL Suivant]**
 
 ## Nommer votre flux de données
 
-L’étape détaillée *[!UICONTROL du flux de]* jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[!UICONTROL Suivant]** lorsque vous avez terminé.
+L’étape détaillée *[!UICONTROL du flux de]* jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Select **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/payments/dataset-flow-details.png)
 
-## Vérifier le flux de vos jeux de données
+## Vérifier votre flux de données
 
 L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 - *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
-- *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- *[!UICONTROL Affectez des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
 - *[!UICONTROL Planification]*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
 ![examiner](../../../images/tutorials/dataflow/payments/review.png)
 
-## Surveiller le flux de vos jeux de données
+## Surveiller et supprimer votre flux de données
 
-Une fois le flux de votre jeu de données créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d&#39;informations sur la façon de surveiller vos flux de jeux de données, consultez le didacticiel sur les flux de [comptes et de jeux de données](../monitor.md).
+Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d&#39;informations sur la surveillance et la suppression de votre flux de données, consultez le didacticiel sur la [surveillance et la suppression des flux de données](../monitor.md).
 
 ## Étapes suivantes
 
@@ -128,7 +128,7 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 ### Désactivation d’un flux de jeu de données
 
-Lorsqu&#39;un flux de dataset est créé, il devient immédiatement actif et ingère les données selon le calendrier qui lui a été donné. Vous pouvez désactiver un flux de jeux de données actif à tout moment en suivant les instructions ci-dessous.
+Lorsqu&#39;un flux de jeu de données est créé, il devient immédiatement actif et ingère les données selon le calendrier qui lui a été donné. Vous pouvez désactiver un flux de jeux de données actif à tout moment en suivant les instructions ci-dessous.
 
 Dans l&#39;écran Flux *[!UICONTROL de]* jeux de données, sélectionnez le nom du flux de jeux de données que vous souhaitez désactiver.
 
