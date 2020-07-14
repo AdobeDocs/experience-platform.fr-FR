@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur CRM dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1024'
 ht-degree: 8%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 8%
 
 # Configuration d’un flux de données pour un connecteur CRM dans l’interface utilisateur
 
-Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un [!DNL Platform] jeu de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base de gestion de la relation client.
+Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un [!DNL Platform] jeu de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur CRM.
 
 ## Prise en main
 
@@ -103,23 +103,9 @@ Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!U
 
 ![examiner](../../../images/tutorials/dataflow/crm/review.png)
 
-## Surveiller votre flux de données
+## Surveiller et supprimer votre flux de données
 
-Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Suivez les étapes ci-dessous pour accéder au moniteur de jeux de données d’un flux de données.
-
-Dans l’espace de travail _Sources_ , sélectionnez la source de gestion de la relation client que vous souhaitez vue sous la catégorie *[!UICONTROL CRM]* . Sélectionnez *[!UICONTROL Connect Source]* pour lancer l’interface d’authentification. Pour vue d’un flux de données existant, sélectionnez Compte ** existant et sélectionnez le compte auquel vous souhaitez accéder.
-
-![monitor](../../../images/tutorials/dataflow/crm/monitor.png)
-
-L&#39;écran activité ** source s&#39;affiche. A partir de là, cliquez sur le nom d&#39;un jeu de données dont vous souhaitez surveiller l&#39;activité.
-
-![select-dataflow-dataset](../../../images/tutorials/dataflow/crm/select-dataflow-dataset.png)
-
-L’écran activité *[!UICONTROL des]* jeux de données s’affiche. Cette page affiche le taux de messages consommés sous forme de graphique.
-
-![dataset-activité](../../../images/tutorials/dataflow/crm/dataset-activity.png)
-
-Pour plus d&#39;informations sur la surveillance des jeux de données et l&#39;assimilation, consultez le didacticiel sur la [surveillance des flux de données](../../../../ingestion/quality/monitor-data-flows.md)en flux continu.
+Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d&#39;informations sur la surveillance et la suppression de votre flux de données, consultez le didacticiel sur la [surveillance et la suppression des flux de données](../monitor.md).
 
 ## Étapes suivantes
 
