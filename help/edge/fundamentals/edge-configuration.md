@@ -4,9 +4,9 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Les ID de configuration Edge peuvent être créés en Adobe [!DNL Launch] à l�
 >
 >L’outil de configuration des arêtes est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Launch] ou non comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations de développement dans [!DNL Launch]. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la [!DNL Launch] documentation.
 
-Vous pouvez créer une configuration de bord en cliquant sur **[UICONTROL New Edge Configuration]** dans la partie supérieure droite de l&#39;écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement.
+Vous pouvez créer une configuration de bord en cliquant sur **[!UICONTROL Nouvelle configuration]** de bord dans la zone supérieure droite de l’écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement.
 
 ### Paramètres d’Environnement par défaut
 
@@ -54,7 +54,7 @@ Contrôle si le SDK effectue ou non des synchronisations d’identité avec des 
 
 Les synchronisations d’identifiants peuvent être regroupées en conteneurs pour permettre l’exécution de différentes synchronisations d’identifiants à des moments différents. Cela contrôle quel conteneur d’ID synchronisé est exécuté pour un ID de configuration donné.
 
-#### Adobe Experience Platform
+#### Adobe Experience Platform
 
 Les paramètres répertoriés ici vous permettent d&#39;envoyer des données à l&#39;Adobe Experience Platform. Vous ne devez activer cette section que si vous avez acheté l’Adobe Experience Platform.
 
