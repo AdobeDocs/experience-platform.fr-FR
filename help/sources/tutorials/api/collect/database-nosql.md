@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: a5b5e1f9a1465a3ec252bac9ba376abc8f2781b1
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 3%
+source-wordcount: '1652'
+ht-degree: 14%
 
 ---
 
 
 # Collecte de données à partir d’une base de données tierce via des connecteurs et des API source
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données tierce et les intégrer dans [!DNL Platform] des connecteurs et API source.
 
@@ -24,34 +24,34 @@ Ce didacticiel nécessite une connexion valide à une base de données tierce, a
 
 Ce didacticiel nécessite également une bonne compréhension des composants suivants de l’Adobe Experience Platform :
 
-* [Système](../../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-   * [Principes de base de la composition](../../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
-   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des Schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`nom, le concept de &quot;conteneurs&quot; et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accepter et à ses valeurs possibles).
-* [Service](../../../../catalog/home.md)de catalogue : Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données à l’intérieur [!DNL Experience Platform].
+* [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des Schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+* [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
 * [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données ou à un système NoSQL à l’aide de l’API Flow Service.
+The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
+Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type : `application/json`
+* Content-Type: `application/json`
 
 ## Création d’une classe et d’un schéma XDM ad hoc
 
@@ -63,7 +63,19 @@ Continuez à suivre les étapes décrites dans le guide du développeur jusqu’
 
 ## Création d’une connexion source {#source}
 
-Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’une connexion de base, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+
+Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
+
+Utilisez les valeurs d’énumération suivantes pour les connecteurs **basés sur des** fichiers :
+
+| Data.format | Valeur maximale |
+| ----------- | ---------- |
+| Fichiers délimités | `delimited` |
+| Fichiers JSON | `json` |
+| Fichiers de parquet | `parquet` |
+
+Pour tous les connecteurs **basés sur des** tables, utilisez la valeur enum : `tabular`.
 
 **Format d’API**
 
@@ -82,32 +94,32 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Source Connection for database or NoSQL",
-        "baseConnectionId": "54c22133-3a01-4d3b-8221-333a01bd3b03",
-        "description": "Source Connection for database or NoSQL to ingest test1.Mytable",
+        "name": "Database Source Connector",
+        "baseConnectionId": "d5cbb5bc-44cc-41a2-8bb5-bc44ccf1a2fb",
+        "description": "A test source connector for a third-party database",
         "data": {
-            "format": "parquet_xdm",
+            "format": "tabular",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c8c2b32d6f6a53d5ffc7212c37b3a9369282404a7bd551e8",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/21b30fa2c00a2a8d7c3010272dffa16d3cc9eec504aa6c7",
                 "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
-            "path": "test1.Mytable"
+            "path": "ADMIN.E2E"
         },
         "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
             "version": "1.0"
         }
-}'
+    }'
 ```
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID d’une connexion à la base de données. |
+| `baseConnectionId` | ID de connexion de la source de base de données tierce. |
 | `data.schema.id` | Le schéma `$id` XDM ad hoc. |
 | `params.path` | Chemin d’accès du fichier source. |
-| `connectionSpec.id` | ID de spécification de connexion d&#39;une base de données ou d&#39;un système NoSQL. |
+| `connectionSpec.id` | ID de spécification de connexion de la source de base de données tierce. Consultez l’ [annexe](#appendix) pour une liste d’ID de spécification de base de données. |
 
 **Réponse**
 
@@ -115,8 +127,8 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 
 ```json
 {
-    "id": "beefc650-f2dc-45e2-afc6-50f2dcc5e2b8",
-    "etag": "\"1600f153-0000-0200-0000-5e4710880000\""
+    "id": "2f7356d9-a866-47ea-b356-d9a86687ea7a",
+    "etag": "\"c8006055-0000-0200-0000-5ecd79520000\""
 }
 ```
 
@@ -124,7 +136,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 
 Dans les étapes précédentes, un schéma XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues. Ce schéma XDM de cible étend également la [!DNL XDM Individual Profile] classe.
 
-Un schéma XDM de cible peut être créé en exécutant une requête POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le didacticiel [de l’éditeur de](../../../../xdm/tutorials/create-schema-ui.md) Schémas fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de Schéma.
+Un schéma XDM de cible peut être créé en exécutant une requête POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **Format d’API**
 
@@ -146,8 +158,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for database or NoSQL",
-        "description": "Target schema for database or NoSQL",
+        "title": "Database Source Connector Target Schema",
+        "description": "Target schema for a third-party database",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -159,22 +171,26 @@ curl -X POST \
                 "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
             }
         ],
+        "meta:containerId": "tenant",
+        "meta:resourceType": "schemas",
+        "meta:xdmType": "object",
+        "meta:class": "https://ns.adobe.com/xdm/context/profile"
     }'
 ```
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis dans les étapes suivantes pour créer un jeu de données de cible, un mappage et un flux de données.
+A successful response returns details of the newly created schema including its unique identifier (`$id`). Cet identifiant est requis dans les étapes suivantes pour créer un jeu de données de cible, un mappage et un flux de données.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
-    "meta:altId": "_{TENANT}.schemas.a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+    "meta:altId": "_{TENANT_ID}.schemas.c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for database or NoSQL",
+    "title": "Target schema for an Oracle connector 5/26/20",
     "type": "object",
-    "description": "Target schema for database or NoSQL",
+    "description": "Target schema for Database",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,26 +221,26 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/xdm/context/profile",
-        "https://ns.adobe.com/xdm/common/extensible"
+        "https://ns.adobe.com/xdm/context/profile"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1581716110281,
-        "repo:lastModifiedDate": 1581716110281,
+        "repo:createdDate": 1590523478581,
+        "repo:lastModifiedDate": 1590523478581,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "6360f2175b40462ff25ec8735dc93a7e3af6a8faadd80a1cc500a59721e1a424"
+        "eTag": "34fdf36fc3029999a07270c4e7719d8a627f7e93e2fbc13888b3c11fb08983c0",
+        "meta:globalLibVersion": "1.10.2.1"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "{TENANT_ID}"
+    "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
 
-## Création d’un jeu de données de cible
+## Création d’un jeu de données cible
 
 Un jeu de données de cible peut être créé en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’ID du schéma de cible dans la charge utile.
 
@@ -245,9 +261,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Dataset for database or NoSQL",
+        "name": "Target dataset for a third-party database source connector",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -259,25 +275,17 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
 
 ```json
 [
-    "@/dataSets/5e47161fa49bb818ad7f47bd"
+    "@/dataSets/5ecd766e4bab17191b78e892"
 ]
 ```
 
-## Créer une connexion de base de jeux de données
-
-Pour importer des données externes dans [!DNL Platform]un jeu de données, une connexion [!DNL Experience Platform] de base de données doit d&#39;abord être acquise.
-
-Pour créer une connexion de base de jeux de données, suivez les étapes décrites dans le didacticiel [de connexion de base de](../create-dataset-base-connection.md)jeux de données.
-
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`), puis utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion de cible.
-
 ## Création d’une connexion à une cible
 
-Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez maintenant des identifiants uniques pour une connexion de base de jeux de données, un schéma de cible et un jeu de données de cible. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -296,21 +304,19 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "baseConnectionId": "d6c3988d-14ef-4000-8398-8d14ef000021",
-        "name": "Target Connection for database or NoSQL",
-        "description": "Target Connection for database or NoSQL",
+        "name": "Target Connection for a third-party database source connector",
+        "description": "Target Connection for a third-party database source connector",
         "data": {
-            "format": "parquet_xdm",
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5e47161fa49bb818ad7f47bd"
+            "dataSetId": "5ecd766e4bab17191b78e892"
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
     }'
@@ -318,14 +324,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `baseConnectionId` | ID de la connexion de base de votre jeu de données. |
 | `data.schema.id` | Le schéma `$id` XDM de la cible. |
-| `params.dataSetId` | ID du jeu de données de cible. |
-| `connectionSpec.id` | ID de spécification de connexion de votre base de données tierce. |
-
->[!NOTE]
->
->Lors de la création d&#39;une connexion de cible, veillez à utiliser la valeur de connexion de base du jeu de données pour la connexion de base `id` plutôt que la connexion de base de votre connecteur source tiers.
+| `params.dataSetId` | ID du jeu de données de cible rassemblé à l’étape précédente. |
+| `connectionSpec.id` | ID de spécification de connexion fixe pour le lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -333,8 +334,8 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle con
 
 ```json
 {
-    "id": "4f3845b6-87d9-4702-b845-b687d9270297",
-    "etag": "\"2a007aa8-0000-0200-0000-5e597aaf0000\""
+    "id": "e66fdb22-06df-48ac-afdb-2206dff8ac10",
+    "etag": "\"7e03773a-0000-0200-0000-5ecd768d0000\""
 }
 ```
 
@@ -360,29 +361,29 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/a9d63c5e3fab2687e064577959d0b91e274823f91f2f578e",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name",
-                "sourceAttribute": "Name",
+                "destinationXdmPath": "person.name.fullName",
+                "sourceAttribute": "NAME",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
                 "version": 0
             },
             {
-                "destinationXdmPath": "mobilePhone.number",
-                "sourceAttribute": "Phone",
+                "destinationXdmPath": "_repo.createDate",
+                "sourceAttribute": "DOB",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
                 "version": 0
             },
             {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "ID",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -402,75 +403,18 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 
 ```json
 {
-    "id": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
-    "version": 1,
-    "createdDate": 1568047685000,
-    "modifiedDate": 1568047703000,
-    "inputSchemaRef": {
-        "id": null,
-        "contentType": null
-    },
-    "outputSchemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/efea012ad5deefcdf51afd23ceb3583f",
-        "contentType": "1.0"
-    },
-    "mappings": [
-        {
-            "id": "7bbea5c0f0ef498aa20aa2e2e5c22290",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "Id",
-            "destination": "_id",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "Id",
-            "destinationXdmPath": "_id"
-        },
-        {
-            "id": "def7fd7db2244f618d072e8315f59c05",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "FirstName",
-            "destination": "person.name.firstName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "FirstName",
-            "destinationXdmPath": "person.name.firstName"
-        },
-        {
-            "id": "e974986b28c74ed8837570f421d0b2f4",
-            "version": 0,
-            "createdDate": 1568047685000,
-            "modifiedDate": 1568047685000,
-            "sourceType": "text/x.schema-path",
-            "source": "LastName",
-            "destination": "person.name.lastName",
-            "identity": false,
-            "primaryIdentity": false,
-            "matchScore": 0.0,
-            "sourceAttribute": "LastName",
-            "destinationXdmPath": "person.name.lastName"
-        }
-    ],
-    "status": "PUBLISHED",
-    "xdmVersion": "1.0",
-    "schemaRef": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828",
-        "contentType": "1.0"
-    },
-    "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/2574494fdb01fa14c25b52d717ccb828"
+    "id": "d9d94124417d4df48ea3d00e28eb4327",
+    "version": 0,
+    "createdDate": 1590523552440,
+    "modifiedDate": 1590523552440,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
 ## Récupérer les spécifications de flux de données {#specs}
 
-Un flux de données est responsable de la collecte de données provenant de sources et de leur intégration dans [!DNL Platform]les sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’ [!DNL Flow Service] API. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une base de données externe ou d&#39;un système NoSQL.
+Un flux de données est responsable de la collecte de données provenant de sources et de leur intégration dans [!DNL Platform]les sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’ [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une base de données externe ou d&#39;un système NoSQL.
 
 **Format d’API**
 
@@ -623,6 +567,8 @@ La dernière étape de la collecte des données consiste à créer un flux de do
 
 Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
+Pour planifier une assimilation, vous devez d&#39;abord définir la valeur du temps de début en secondes. Ensuite, vous devez définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur d&#39;intervalle désigne la période entre deux ingérations consécutives et la création d&#39;une assimilation ponctuelle ne nécessite pas la définition d&#39;un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+
 **Format d’API**
 
 ```http
@@ -639,31 +585,38 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between database or NoSQL Platform",
-        "description": "Inbound data to Platform",
+        "name": "Dataflow for a third-party database and Platform,
+        "description": "collecting ADMIN.E2E",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "beefc650-f2dc-45e2-afc6-50f2dcc5e2b8"
+            "89cf81c9-47b4-463a-8f81-c947b4863afb"
         ],
         "targetConnectionIds": [
-            "4f3845b6-87d9-4702-b845-b687d9270297"
+            "e66fdb22-06df-48ac-afdb-2206dff8ac10"
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": "date-time"
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea",
+                    "mappingId": "d9d94124417d4df48ea3d00e28eb4327",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1567411548",
+            "startTime": "1590523836",
             "frequency":"minute",
-            "interval":"30"
+            "interval":"15",
+            "backfill": "true"
         }
     }'
 ```
@@ -673,15 +626,20 @@ curl -X POST \
 | `flowSpec.id` | ID de spécification de flux de données associé à votre base de données. |
 | `sourceConnectionIds` | ID de connexion source associé à votre base de données. |
 | `targetConnectionIds` | ID de connexion de cible associé à votre base de données. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 | `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
+| `scheduleParams.startTime` | Heure début du flux de données en secondes. |
+| `scheduleParams.frequency` | Les valeurs de fréquence sélectionnables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L&#39;intervalle n&#39;est pas requis lorsque la fréquence est définie comme `once` et doit être supérieure ou égale à `15` pour d&#39;autres valeurs de fréquence. |
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouvellement créé.
+A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
-    "id": "8256cfb4-17e6-432c-a469-6aedafb16cd5"
+    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
+    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
 
