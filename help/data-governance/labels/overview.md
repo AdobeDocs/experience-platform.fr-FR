@@ -1,30 +1,32 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation des étiquettes d’utilisation des données
+title: Présentation des libellés d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: f4b3148db3b4a17d071c1c8ad2aff8dd64ddd0b7
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 0%
+source-wordcount: '494'
+ht-degree: 31%
 
 ---
 
 
-# Présentation des étiquettes d’utilisation des données
+# Présentation des libellés d’utilisation des données
 
-L&#39;étiquetage et l&#39;application de l&#39;utilisation des données (DULE) est le mécanisme de base de la gouvernance des données d&#39;Adobe Experience Platform. Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d&#39;utilisation des données associées.
+Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. Les fonctionnalités de DULE vous permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées.
 
-Ce document présente un aperçu des étiquettes d’utilisation des données (également appelées étiquettes DULE) dans [!DNL Experience Platform]. Avant de lire ce guide, veuillez consulter l&#39;aperçu [de la gouvernance des](../home.md) données pour une introduction plus robuste au cadre DULE.
+Ce document donne un aperçu des libellés d’utilisation des données (également appelés libellés DULE) dans [!DNL Experience Platform]. Avant de lire ce guide, consultez la [présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée du cadre DULE.
 
-## Présentation des étiquettes d’utilisation des données
+## Comprendre les libellés d’utilisation des données
 
-Les étiquettes d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Les meilleures pratiques encouragent l’étiquetage des données dès leur assimilation [!DNL Experience Platform]ou dès que les données deviennent disponibles pour utilisation dans [!DNL Platform].
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform].
 
-Les étiquettes d’utilisation des données appliquées au niveau du jeu de données sont propagées à tous les champs du jeu de données. Les étiquettes peuvent également être appliquées directement à des champs individuels (en-têtes de colonne) dans un jeu de données, sans propagation.
+Les libellés d’utilisation des données appliqués au niveau du jeu de données sont propagés à tous les champs du jeu de données. Vous pouvez également appliquer les libellés directement sur des champs individuels (en-têtes de colonne) d’un jeu de données, sans propagation.
 
-Pour plus d’informations sur les étiquettes d’utilisation des données disponibles dans [!DNL Experience Platform] et sur les stratégies d’utilisation qu’elles représentent, voir le guide sur les étiquettes [d’utilisation des données](reference.md)prises en charge.
+[!DNL Platform] fournit plusieurs étiquettes d’utilisation de données &quot;de base&quot; prêtes à l’emploi, qui couvrent une grande variété de restrictions courantes applicables à la gouvernance des données. Pour plus d’informations sur ces étiquettes et les stratégies d’utilisation qu’elles représentent, voir le guide sur les étiquettes [d’utilisation des données de](reference.md)base.
+
+Outre les étiquettes fournies par Adobe, vous pouvez également définir vos propres étiquettes personnalisées. Pour savoir comment procéder dans l’interface utilisateur, voir le guide [d’utilisation des étiquettes d’utilisation des](./user-guide.md)données. Pour savoir comment effectuer cette opération à l’aide d’appels d’API, consultez le guide [sur les étiquettes d’utilisation des](./api.md)données.
 
 ## Héritage d’étiquette pour les segments d’audience
 
@@ -34,14 +36,13 @@ Outre l’héritage d’étiquettes au niveau des jeux de données, les segments
 
 Pour plus d&#39;informations sur le fonctionnement de l&#39;application automatique dans le CDP en temps réel, consultez l&#39;aperçu [de la gouvernance des données CDP en temps réel](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
-<!-- (Add after DEC mapping reference is added to AAM docs to link out to)
-### Inheritance from Adobe Audience Manager Data Export Controls
+### Héritage des contrôles d&#39;exportation des données d&#39;Adobe Audience Manager
 
-Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by Experience Platform Data Governance.
+L’Experience Platform peut partager des segments avec l’Adobe Audience Manager. Tous les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont traduits en étiquettes équivalentes et en actions marketing reconnues par la gouvernance des données Experience Platform.
 
-For a reference on how specific Data Export Controls map to data usage labels in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
--->
+Pour une référence sur la façon dont des contrôles d’exportation de données spécifiques correspondent à des étiquettes d’utilisation des données dans Platform, consultez la documentation [sur l’](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
+
 
 ## Étapes suivantes
 
-Maintenant que vous avez introduit des étiquettes d’utilisation des données, vous pouvez continuer à lire le guide [d’](user-guide.md) utilisateur pour savoir comment gérer les étiquettes dans l’ [!DNL Experience Platform] interface utilisateur. Pour connaître les étapes de gestion des étiquettes à l’aide des API, voir la section appropriée du guide [du développeur](../../catalog/api/labels.md)Catalog Service.
+Now that you have been introduced data usage labels, you can continue to the read the [user guide](user-guide.md) to learn how to manage labels in the [!DNL Experience Platform] UI. Pour savoir comment gérer les libellés à l’aide des API, consultez le guide [API des libellés d’](./api.md)utilisation.
