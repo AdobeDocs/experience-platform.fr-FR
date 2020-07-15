@@ -4,29 +4,233 @@ solution: Experience Platform
 title: 'Gérer les étiquettes d’utilisation des données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 3%
+source-wordcount: '995'
+ht-degree: 8%
 
 ---
 
 
 # Gérer les étiquettes d’utilisation des données à l’aide d’API
 
-L’API Service de dataset vous permet de gérer par programmation les étiquettes d’utilisation des jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’API Catalog Service qui gère les métadonnées des jeux de données.
+Ce document décrit la procédure à suivre pour gérer les étiquettes d’utilisation des données à l’aide de l’API Service de stratégie et de l’API Service de dataset.
 
-Ce document décrit la procédure à suivre pour gérer les libellés d’utilisation des données au niveau du jeu de données et des champs à l’aide de l’API Service de dataset.
+L’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Policy Service fournit plusieurs points de terminaison qui vous permettent de créer et de gérer des étiquettes d’utilisation des données pour votre entreprise.
+
+L’API Service de dataset vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’API de service de catalogue qui gère les métadonnées des jeux de données.
 
 ## Prise en main
 
 Avant de lire ce guide, suivez les étapes décrites dans la section [](../../catalog/api/getting-started.md) Prise en main du guide du développeur de catalogue afin de rassembler les informations d’identification requises pour appeler [!DNL Platform] les API.
 
-Pour appeler les points de terminaison décrits dans les sections ci-dessous, vous devez disposer de la `id` valeur unique d&#39;un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
+Pour invoquer les points de terminaison du service de jeux de données décrits dans ce document, vous devez disposer de la `id` valeur unique d&#39;un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
 
-## Rechercher des étiquettes pour un jeu de données {#lookup}
+## Liste de toutes les étiquettes {#list-labels}
 
-Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en faisant une demande GET.
+A l’aide de l’ [!DNL Policy Service] API, vous pouvez liste toutes les `core` étiquettes ou `custom` les étiquettes en faisant une demande GET à `/labels/core` ou `/labels/custom`, respectivement.
+
+**Format d’API**
+
+```http
+GET /labels/core
+GET /labels/custom
+```
+
+**Requête**
+
+La requête suivante liste tous les libellés personnalisés créés dans votre organisation.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie une liste d&#39;étiquettes personnalisées récupérées du système. L’exemple de demande ci-dessus ayant été envoyé à `/labels/custom`, la réponse ci-dessous affiche uniquement les étiquettes personnalisées.
+
+```json
+{
+    "_page": {
+        "count": 2
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom?{?limit,start,property}",
+            "templated": true
+        }
+    },
+    "children": [
+        {
+            "name": "L1",
+            "category": "Custom",
+            "friendlyName": "Banking Information",
+            "description": "Data containing banking information for a customer.",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594396718731,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594396718731,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L1"
+                }
+            }
+        },
+        {
+            "name": "L2",
+            "category": "Custom",
+            "friendlyName": "Purchase History Data",
+            "description": "Data containing information on past transactions",
+            "imsOrg": "{IMS_ORG}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "created": 1594397415663,
+            "createdClient": "{CLIENT_ID}",
+            "createdUser": "{USER_ID}",
+            "updated": 1594397728708,
+            "updatedClient": "{CLIENT_ID}",
+            "updatedUser": "{USER_ID}",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+                }
+            }
+        }
+    ]
+}
+```
+
+## Rechercher une étiquette {#look-up-label}
+
+Vous pouvez rechercher une étiquette spécifique en incluant la `name` propriété de cette étiquette dans le chemin d’une requête GET à l’API du service de stratégie.
+
+**Format d’API**
+
+```http
+GET /labels/core/{LABEL_NAME}
+GET /labels/custom/{LABEL_NAME}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{LABEL_NAME}` | The `name` property of the custom label you want to look up. |
+
+**Requête**
+
+La requête suivante récupère le libellé personnalisé `L2`, comme indiqué dans le chemin d’accès.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L2' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Réponse**
+
+Une réponse réussie renvoie les détails de l’étiquette personnalisée.
+
+```json
+{
+    "name": "L2",
+    "category": "Custom",
+    "friendlyName": "Purchase History Data",
+    "description": "Data containing information on past transactions",
+    "imsOrg": "{IMS_ORG}",
+    "sandboxName": "{SANDBOX_NAME}",
+    "created": 1594397415663,
+    "createdClient": "{CLIENT_ID}",
+    "createdUser": "{USER_ID}",
+    "updated": 1594397728708,
+    "updatedClient": "{CLIENT_ID}",
+    "updatedUser": "{USER_ID}",
+    "_links": {
+        "self": {
+            "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L2"
+        }
+    }
+}
+```
+
+## Création ou mise à jour d’une étiquette personnalisée {#create-update-label}
+
+Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à l’API de service de stratégie.
+
+**Format d’API**
+
+```http
+PUT /labels/custom/{LABEL_NAME}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{LABEL_NAME}` | Propriété `name` d’une étiquette personnalisée. Si aucune étiquette personnalisée portant ce nom n’existe, une nouvelle étiquette est créée. S&#39;il en existe un, cette étiquette sera mise à jour. |
+
+**Requête**
+
+La demande suivante crée une nouvelle étiquette `L3`, qui vise à décrire des données contenant des informations relatives aux plans de paiement sélectionnés par les clients.
+
+```shell
+curl -X PUT \
+  'https://platform.adobe.io/data/foundation/dulepolicy/labels/custom/L3' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name": "L3",
+        "category": "Custom",
+        "friendlyName": "Payment Plan",
+        "description": "Data containing information on selected payment plans."
+      }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `name` | Identifiant de chaîne unique pour l’étiquette. Cette valeur est utilisée à des fins de recherche et d’application de l’étiquette aux jeux de données et aux champs. Il est donc recommandé qu’elle soit courte et concise. |
+| `category` | catégorie de l&#39;étiquette. Bien que vous puissiez créer vos propres catégories pour les étiquettes personnalisées, il est vivement recommandé de les utiliser `Custom` si vous souhaitez qu’elles apparaissent dans l’interface utilisateur. |
+| `friendlyName` | Nom convivial de l’étiquette, utilisé à des fins d’affichage. |
+| `description` | (Facultatif) Description de l’étiquette afin de fournir un contexte plus poussé. |
+
+**Réponse**
+
+Une réponse réussie renvoie les détails d&#39;une étiquette personnalisée, avec le code HTTP 200 (OK) si une étiquette existante a été mise à jour, ou 201 (Créée) si une nouvelle étiquette a été créée.
+
+```json
+{
+  "name": "L3",
+  "category": "Custom",
+  "friendlyName": "Payment Plan",
+  "description": "Data containing information on selected payment plans.",
+  "imsOrg": "{IMS_ORG}",
+  "sandboxName": "{SANDBOX_NAME}",
+  "created": 1529696681413,
+  "createdClient": "{CLIENT_ID}",
+  "createdUser": "{USER_ID}",
+  "updated": 1529697651972,
+  "updatedClient": "{CLIENT_ID}",
+  "updatedUser": "{USER_ID}",
+  "_links": {
+    "self": {
+      "href": "https://platform.adobe.io:443/data/foundation/dulepolicy/labels/custom/L3"
+    }
+  }
+}
+```
+
+## Rechercher des étiquettes pour un jeu de données {#look-up-dataset-labels}
+
+Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en adressant une demande GET à l’API du service de datasets.
 
 **Format d’API**
 
@@ -77,9 +281,9 @@ Une réponse positive renvoie les étiquettes d’utilisation des données qui o
 | `labels` | liste des étiquettes d’utilisation des données qui ont été appliquées au jeu de données. |
 | `optionalLabels` | liste de champs individuels au sein du jeu de données auxquels des étiquettes d’utilisation de données sont appliquées. |
 
-## Appliquer des étiquettes à un jeu de données
+## Appliquer des étiquettes à un jeu de données {#apply-dataset-labels}
 
-Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête POST ou PUT. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
+Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête POST ou PUT à l’API Service de dataset. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
 
 **Format d’API**
 
@@ -105,18 +309,18 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-  "labels": [ "C1", "C2", "C3", "I1", "I2" ],
-  "optionalLabels": [
-    {
-      "option": {
-        "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
-        "contentType": "application/vnd.adobe.xed-full+json;version=1",
-        "schemaPath": "/properties/repositoryCreatedBy"
-      },
-      "labels": [ "S1", "S2" ]
-    }
-  ]
-}'
+        "labels": [ "C1", "C2", "C3", "I1", "I2" ],
+        "optionalLabels": [
+          {
+            "option": {
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c6b1b09bc3f2ad2627c1ecc719826836",
+              "contentType": "application/vnd.adobe.xed-full+json;version=1",
+              "schemaPath": "/properties/repositoryCreatedBy"
+            },
+            "labels": [ "S1", "S2" ]
+          }
+        ]
+      }'
 ```
 
 | Propriété | Description |
@@ -144,9 +348,9 @@ Une réponse réussie renvoie les étiquettes qui ont été ajoutées au jeu de 
 }
 ```
 
-## Suppression d’étiquettes d’un jeu de données
+## Suppression d’étiquettes d’un jeu de données {#remove-dataset-labels}
 
-Vous pouvez supprimer les étiquettes appliquées à un jeu de données en exécutant une requête DELETE.
+Vous pouvez supprimer les étiquettes appliquées à un jeu de données en envoyant une requête de DELETE à l’API Service de dataset.
 
 **Format d’API**
 
@@ -171,12 +375,14 @@ curl -X DELETE \
 
 **Réponse**
 
-Réponse réussie : état HTTP 200 (OK), indiquant que les étiquettes ont été supprimées. Vous pouvez [rechercher les étiquettes](#lookup) existantes pour le jeu de données dans un appel distinct pour le confirmer.
+Réponse réussie : état HTTP 200 (OK), indiquant que les étiquettes ont été supprimées. Vous pouvez [rechercher les étiquettes](#look-up-dataset-labels) existantes pour le jeu de données dans un appel distinct pour le confirmer.
 
 ## Étapes suivantes
 
-Maintenant que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et des champs, vous pouvez commencer à assimiler des données dans la plate-forme d’expérience. Pour en savoir plus, début en lisant la documentation [sur l&#39;assimilation des](../../ingestion/home.md)données.
+En lisant ce document, vous avez appris à gérer les étiquettes d’utilisation des données à l’aide d’API.
 
-Vous pouvez également désormais définir des stratégies d’utilisation des données en fonction des étiquettes que vous avez appliquées. Pour plus d’informations, voir la présentation [des stratégies d’utilisation des](../policies/overview.md)données.
+Une fois que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et des champs, vous pouvez commencer à assimiler des données dans l’Experience Platform. Pour en savoir plus, commencez par lire la [documentation sur l’ingestion de données](../../ingestion/home.md).
+
+Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
 
 Pour plus d&#39;informations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez l&#39;aperçu [des jeux de](../../catalog/datasets/overview.md)données.
