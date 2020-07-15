@@ -4,10 +4,10 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1085'
-ht-degree: 72%
+source-wordcount: '1056'
+ht-degree: 71%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 72%
 
 La plateforme des données clients en temps réel rassemble les données de plusieurs systèmes d’entreprise, ce qui permet aux marketeurs de mieux identifier leurs clients, de les comprendre et d’interagir avec eux. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que la plateforme des données clients en temps réel est conforme aux politiques d’utilisation lors de la gestion de vos données.
 
-La gouvernance des données dans Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle essentiel dans la plateforme des données clients en temps réel, ce qui vous permet de définir des politiques d’utilisation, de classer vos données en fonction de ces politiques et de rechercher les violations de politiques lors de l’exécution de certaines actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle essentiel dans la plateforme des données clients en temps réel, ce qui vous permet de définir des politiques d’utilisation, de classer vos données en fonction de ces politiques et de rechercher les violations de politiques lors de l’exécution de certaines actions marketing.
 
 La plateforme des données clients en temps réel repose sur Adobe Experience Platform. La plupart des fonctionnalités de gouvernance des données sont donc abordées dans la documentation d’Experience Platform. Ce document est destiné à compléter la [présentation de la gouvernance des données](../../data-governance/home.md) pour Experience Platform et décrit les fonctionnalités de gouvernance disponibles dans la plateforme des données clients en temps réel. Les sujets suivants sont abordés :
 
@@ -24,7 +24,7 @@ La plateforme des données clients en temps réel repose sur Adobe Experience 
 * [Gestion des politiques d’utilisation des données](#policies)
 * [Application de la conformité de l’utilisation des données](#enforce-data-usage-compliance)
 
-## Application des libellés d’utilisation aux données {#labels}
+## Application des libellés d’utilisation aux données  {#labels}
 
 La gouvernance des données vous permet d’appliquer des libellés d’utilisation aux données, soit au niveau du jeu de données, soit au niveau du champ du jeu de données. Les libellés d’utilisation des données vous permettent de classer les données en fonction des politiques d’utilisation qui s’appliquent à celles-ci.
 
@@ -43,16 +43,13 @@ La définition de cas d’utilisation marketing sur les destinations vous permet
 Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des cas d’utilisation marketing s’affiche à différents moments du processus de configuration. Consultez la documentation [de](../destinations/destinations-overview.md) destination pour connaître les étapes de configuration de votre destination particulière.
 
 
-## Gestion des politiques d’utilisation des données {#policies}
+## Gestion des politiques d’utilisation des données  {#policies}
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme des données clients en temps réel. Pour plus d’informations, consultez la section « Politiques d’utilisation des données » dans la [présentation de la gouvernance des données](../../data-governance/home.md) d’Experience Platform.
 
 Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation de l’Experience Platform.
 
-## (Version bêta) Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
-
->[!IMPORTANT]
->Cette fonctionnalité est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. Elle peut être activée sur demande. La documentation et les fonctionnalités peuvent changer.
+## Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
 
 Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation des segments d’audience vers des destinations dans la plateforme des données clients en temps réel, la gouvernance des données applique automatiquement les politiques d’utilisation en cas de violation.
 
@@ -72,7 +69,7 @@ Lorsqu’un segment est activé pour la première fois, DULE Policy Service vér
 >* Les champs sont configurés en tant qu’attributs prévisionnels pour la destination de la cible.
 
 
-### Messages de violation de politique {#enforcement}
+### Messages de violation de politique  {#enforcement}
 
 Si une violation de politique se produit lors de la tentative d’activation d’un segment (ou de la [modification d’un segment déjà activé](#policy-enforcement-for-activated-segments)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Sélectionnez une violation de politique dans la colonne de gauche de la fenêtre contextuelle pour afficher les détails de celle-ci.
 
@@ -86,7 +83,7 @@ Cliquez sur **Liaison des données** pour effectuer le suivi des destinations, d
 
 Une fois qu’une violation a été déclenchée, le bouton **Enregistrer** est désactivé pour l’activation jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
 
-### Application des politiques pour les segments activés {#policy-enforcement-for-activated-segments}
+### Application des politiques pour les segments activés  {#policy-enforcement-for-activated-segments}
 
 L’application de la politique s’applique toujours aux segments une fois qu’ils ont été activés, ce qui limite toute modification apportée à un segment ou à sa destination qui entraînerait une violation de la politique. En raison des nombreux composants impliqués dans l’activation des segments vers les destinations, l’une des actions suivantes peut potentiellement déclencher une violation :
 
