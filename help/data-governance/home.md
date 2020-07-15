@@ -1,84 +1,84 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Gouvernance des données Adobe Experience Platform
+title: Gouvernance des données d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
 workflow-type: tm+mt
-source-wordcount: '1448'
-ht-degree: 3%
+source-wordcount: '1434'
+ht-degree: 84%
 
 ---
 
 
 # Présentation de la gouvernance des données
 
-L&#39;une des principales fonctionnalités de l&#39;Adobe Experience Platform consiste à rassembler les données issues de plusieurs systèmes d&#39;entreprise afin de mieux permettre aux spécialistes du marketing d&#39;identifier, de comprendre et d&#39;impliquer les clients. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données dans [!DNL Platform] le cadre de la stratégie d’utilisation des données sont conformes à ces dernières.
+L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
 
-La gouvernance des données dans Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé à [!DNL Experience Platform] différents niveaux, notamment le catalogage, la lignée de données, l’étiquetage de l’utilisation des données, les stratégies d’utilisation des données et le contrôle de l’utilisation des données pour les actions marketing.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
-## Rôles de gouvernance des données
+## Rôles de la gouvernance des données
 
-En tant que concept, la gouvernance des données n&#39;est ni automatique, ni ne se fait dans le vide. Ce qui a commencé comme un rôle pour un individu, généralement reconnu comme un gestionnaire **de** données, s&#39;est considérablement développé avec l&#39;expansion de l&#39;écosystème de gouvernance des données. Aujourd&#39;hui, la gouvernance des données nécessite une gestion et un contrôle continus afin d&#39;être efficace et repose sur des gestionnaires de données disposant d&#39;outils avec lesquels les données peuvent être correctement étiquetées, des stratégies d&#39;utilisation peuvent être créées et la conformité à ces stratégies peut être mise en oeuvre.
+En tant que concept, la gouvernance des données n’est pas automatique, mais ne vient pas non plus de nulle part. Ce qui a débuté comme étant le rôle d’une personne, portant généralement le titre de **gestionnaire de données**, a évolué considérablement à mesure que l’écosystème de gouvernance des données s’est élargi. Aujourd’hui, la gouvernance des données nécessite une gestion et une surveillance continue pour réussir et compte sur des gestionnaires de données qui possèdent des outils permettant d’étiqueter correctement les données, d’appliquer des politiques d’utilisation et de s’assurer que ces politiques sont conformes.
 
-Bien que la gouvernance des données doive relever de la responsabilité de chaque individu de l&#39;organisation, voici quelques-uns des rôles essentiels du cycle de gouvernance des données :
+Bien que la gouvernance des données doive être la responsabilité de chacun des membres de l’organisation, voici quelques-uns des rôles essentiels qui régissent les cycles de gouvernance des données :
 
-![Rôles de gouvernance des données](./images/overview/roles.png)
+![Rôles de la gouvernance des données](./images/overview/roles.png)
 
-### Responsable de données
+### Gestionnaire de données
 
-Les gestionnaires de données sont au coeur de la gouvernance des données. Ce rôle est chargé d&#39;interpréter les règlements, les restrictions contractuelles et les politiques, et de les appliquer directement aux données. Informé par leur compréhension de ces règlements, restrictions et politiques, le rôle d&#39;un gestionnaire de données comprend :
+Les gestionnaires de données sont au cœur de la gouvernance des données. Ce rôle consiste à interpréter les réglementations, les restrictions et les politiques contractuelles et à les appliquer directement aux données. Grâce à sa compréhension de ces réglementations, restrictions et politiques, le rôle d’un gestionnaire de données inclut notamment :
 
-* Vérification des données, des jeux de données et des exemples de données pour appliquer et gérer l’étiquetage d’utilisation des métadonnées.
-* Création de stratégies de données et application de ces stratégies aux jeux de données et aux champs.
-* Communication des stratégies de données à l’entreprise.
+* la vérification des données, des jeux de données et des exemples de données pour appliquer et gérer l’étiquetage d’utilisation des métadonnées ;
+* la création des stratégies de données et l’application de ces stratégies aux jeux de données et aux champs ;
+* la communication des stratégies de données à l’organisation.
 
-### Marketer
+### Professionnel du marketing
 
-Les marketeurs sont le point final de la gouvernance des données. Ils demandent des données à l&#39;infrastructure de gouvernance des données créée par les gestionnaires de données, les scientifiques et les ingénieurs. Les spécialistes du marketing comprennent un certain nombre de spécialités différentes sous l’égide marketing, dont les suivantes :
+Les professionnels du marketing sont le point de terminaison de la gouvernance des données. Ils ont besoin des données des infrastructures de gouvernance des données créées par des gestionnaires, des analystes et des ingénieurs des données. Les professionnels du marketing englobent plusieurs spécialistes différents au sein du secteur marketing, notamment les suivants :
 
-* Les analystes marketing demandent des données pour permettre la compréhension des clients, en tant qu’individus et dans des groupes (également appelés segments).
-* Les spécialistes du marketing et les concepteurs d’expérience utilisent les données pour concevoir de nouvelles expériences client.
+* Les analystes marketing demandent des données pour permettre la compréhension des clients, aussi bien en tant que personnes que groupes (également connus sous le nom de segments).
+* Les spécialistes du marketing et les concepteurs dans Experience utilisent des données pour concevoir de nouvelles expériences client.
 
 
-## Structure DULE
+## Cadre DULE
 
-L’étiquetage et l’application de l’utilisation des données (DULE) constituent le cadre de base de la gouvernance des [!DNL Experience Platform] données. DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d&#39;utilisation des données. Une fois les étiquettes de données appliquées et les stratégies d’utilisation des données mises en place, les actions marketing peuvent être évaluées afin de garantir une utilisation correcte des données.
+Data Usage Labeling and Enforcement (DULE) is the core framework for [!DNL Experience Platform] Data Governance. DULE simplifie et rationalise le processus de catégorisation des données et de création des stratégies d’utilisation des données. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
 
-Le cadre de DULE comporte trois éléments clés : Étiquettes, politiques et application de la loi.
+Trois éléments principaux entrent dans le cadre DULE : les libellés, les stratégies et l’application.
 
-1. **Étiquettes :** Classer les données qui reflètent les considérations liées à la vie privée et les conditions contractuelles pour les rendre conformes aux règlements et aux politiques de l&#39;organisation.
-1. **Stratégies :** Décrivez le ou les types d’actions marketing autorisées ou non sur des données spécifiques.
-1. **Application :** Utilise le cadre de stratégie pour conseiller et appliquer les stratégies selon différents modèles d’accès aux données.
+1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
+1. **Stratégies :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
+1. **Application :** utilise le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
 
-## Étiquettes d’utilisation des données
+## Libellés d’utilisation des données
 
-La gouvernance des données permet aux responsables de la gestion des données d’appliquer des étiquettes d’utilisation au niveau du jeu de données et du champ afin de classer les données en fonction du type de stratégies appliquées.
+La gouvernance des données permet aux gestionnaires de données d’appliquer des libellés au niveau du jeu de données et du champ pour catégoriser les données en fonction du type de politiques qui s’applique.
 
 La structure DULE comprend des étiquettes d’utilisation de données prédéfinies qui peuvent être utilisées pour classer les données de trois manières :
 
-![Catégories d’étiquettes d’utilisation des données](./images/overview/label-categories.png)
+![Catégorie des libellés d’utilisation des données](./images/overview/label-categories.png)
 
-* **Étiquettes de données du contrat &quot;C&quot; :** Étiqueter et classer les données qui ont des obligations contractuelles ou qui sont liées aux stratégies de gouvernance des données client.
-* **Étiquettes de données &quot;I&quot; d&#39;identité :** Étiqueter et classer les données qui peuvent identifier ou contacter une personne spécifique.
-* **Étiquettes de données sensibles &quot;S&quot; :** Étiqueter et classer les données liées à des données sensibles telles que les données géographiques.
+* **Étiquettes de données Contrat « C » :** étiquetez et catégorisez les données soumises à des obligations contractuelles ou associées à des politiques de gouvernance des données clients.
+* **Étiquettes de données Identité « I » :** étiquetez et catégorisez des données pouvant identifier ou contacter une personne en particulier.
+* **Étiquettes de données Sensibles « S » :** étiquetez et catégorisez les données associées aux données sensibles, telles que les données géographiques.
 
 >[!NOTE]
 >
->Consultez le guide sur les étiquettes [d’utilisation des données](labels/reference.md) prises en charge pour obtenir une liste complète des étiquettes disponibles, ainsi que des définitions pour chaque type d’étiquette.
+>Consultez le guide sur les [libellés d’utilisation des données pris en charge](labels/reference.md) pour obtenir la liste complète des libellés disponibles ainsi que des définitions de chaque type de libellé.
 
-Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Il est recommandé d’étiqueter les données dès leur assimilation [!DNL Experience Platform]ou dès que les données sont disponibles dans [!DNL Platform].
+Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
 
 Pour plus d’informations, voir la présentation des étiquettes [d’utilisation des](./labels/overview.md) données.
 
 ## Stratégies d’utilisation des données
 
-Pour que les étiquettes d’utilisation des données prennent efficacement en charge la conformité des données, des stratégies d’utilisation des données doivent être mises en oeuvre. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-Un exemple d’action marketing peut être le désir d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données, tels que les informations d’identification personnelle (informations d’identification personnelle), ne peuvent pas être exportés et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au jeu de données, vous recevrez une réponse du service de stratégie vous indiquant qu’une stratégie d’utilisation des données a été enfreinte.
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. S’il existe une stratégie en place indiquant que des types de données spécifiques, comme des informations d’identification personnelle, ne peuvent pas être exportées et qu’une étiquette « I » (données d’identité) a été appliquée au jeu de données, vous recevrez une réponse de Policy Service vous indiquant qu’une stratégie d’utilisation des données a été enfreinte.
 
-Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent créer des stratégies à l’aide de l’API DULE Policy Service ou de l’interface [!DNL Experience Platform] utilisateur.
+Once data usage labels have been applied, data stewards can create policies using the DULE Policy Service API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -88,45 +88,44 @@ Pour plus d’informations sur les stratégies d’utilisation des données et l
 
 ## Versions ultérieures
 
-La gouvernance des données prend actuellement en charge l’étiquetage DULE à deux niveaux (jeu de données et champ). La gouvernance des données prend également en charge la création et la gestion de stratégies d’utilisation des données et d’actions marketing via l’API DULE Policy Service.
+La gouvernance des données prend actuellement en charge l’étiquetage DULE à deux niveaux (des jeux de données et des champs). La gouvernance des données prend également en charge la création et la gestion des stratégies d’utilisation des données et des actions marketing via l’API DULE Policy Service.
 
-Les versions suivantes offrent les fonctionnalités suivantes :
+Les versions à venir proposeront les fonctionnalités suivantes :
 
-* Libellés d’utilisation des données personnalisées : Créez de nouvelles étiquettes et définitions en fonction des besoins de votre entreprise.
-* Application des politiques : Utilisez le cadre de stratégie pour conseiller et appliquer des stratégies selon différents modèles d’accès aux données.
-* Audit : Surveiller les activités d&#39;accès aux données et identifier et signaler les problèmes de conformité.
+* Application de stratégies : utilisez le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
+* Audit : surveillez les activités d’accès aux données et identifiez et signalez les problèmes de conformité.
 
 ## Étapes suivantes
 
-Ce document a fourni une introduction de haut niveau à la gouvernance des données et au cadre DULE. Vous pouvez maintenant continuer à ajouter des étiquettes d’utilisation des [données au guide](labels/user-guide.md) d’utilisation et au début d’utilisation en ajoutant des étiquettes d’utilisation à vos données d’expérience.
+Ce document a fourni une présentation générale de la gouvernance des données et du cadre DULE. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
 
 ## Annexe
 
-La section suivante fournit des informations supplémentaires sur la gouvernance des données.
+La section suivante fournit des informations supplémentaires concernant la gouvernance des données.
 
 ### Terminologie de la gouvernance des données
 
-Le tableau suivant décrit les termes clés liés à la gouvernance des données et au cadre de DULE.
+Le tableau suivant les termes clés associés à la gouvernance des données et au cadre DULE.
 
 | Terme | Définition |
 |---|---|
-| **Libellés de contrat** | Les étiquettes de contrat &quot;C&quot; sont utilisées pour classer les données qui ont des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre entreprise. |
-| **Données intersites** | Les données intersites sont la combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site. |
-| **Gouvernance des données** | La gouvernance des données englobe les stratégies et les technologies utilisées pour s&#39;assurer que les données sont conformes aux règlements et aux politiques de l&#39;entreprise en matière d&#39;utilisation des données. |
-| **Responsable de données** | Le responsable de l&#39;intendance des données est la personne responsable de la gestion, de la surveillance et de l&#39;application des ressources de données d&#39;une organisation. Un gestionnaire de données veille également à ce que les politiques de gouvernance des données soient préservées et maintenues pour être conformes aux règlements et aux politiques organisationnelles du gouvernement. |
-| **Étiquettes d’utilisation des données** | Les étiquettes d’utilisation des données permettent aux utilisateurs de classer les données en catégories qui reflètent les considérations liées à la vie privée et les conditions contractuelles afin de se conformer aux réglementations et aux politiques de l’entreprise. |
-| **Étiquettes de jeux de données** | Les étiquettes peuvent être ajoutées à un jeu de données. Tous les champs d’un jeu de données héritent des étiquettes du jeu de données. |
-| **DULE** | DULE est l’acronyme de &quot;Data Usage Labeling and Enforcement&quot; (Étiquetage et application de l’utilisation des données). Un élément clé de la gouvernance des données, DULE est un ensemble de fonctionnalités qui permet d&#39;étiqueter et d&#39;appliquer des politiques d&#39;accès aux données pour répondre aux besoins de gouvernance au sein d&#39;une organisation. |
-| **Libellés de champ** | Les libellés de champ sont des libellés de gouvernance des données hérités d’un jeu de données ou appliqués directement à un champ.  Les étiquettes de gouvernance des données appliquées à un champ ne sont pas héritées jusqu’à un jeu de données. |
-| **Géofence** | Une géofence est une limite géographique virtuelle, définie par un GPS ou la technologie RFID, qui permet au logiciel de déclencher une réponse lorsqu&#39;un dispositif portable entre dans une zone particulière ou en sort. |
-| **Libellés d’identité** | Les étiquettes &quot;I&quot; d’identité sont utilisées pour classer les données qui peuvent identifier ou contacter une personne spécifique. |
-| **Ciblage axé sur l’intérêt** | Le ciblage basé sur l’intérêt, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies : les données collectées sur site servent à faire des inférences sur l’intérêt des utilisateurs, sont utilisées dans un autre contexte, tel que sur un autre site ou une autre application (hors site) et servent à sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences. |
-| **Action marketing** | Une action marketing, dans le cadre de la gouvernance des données, est une action entreprise par un utilisateur de [!DNL Experience Platform] données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données. |
-| **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing autorisées ou non pour des données spécifiques. |
-| **Étiquettes sensibles** | Les étiquettes &quot;S&quot; sensibles sont utilisées pour classer les données que vous, et votre entreprise, considérez comme sensibles. |
+| **Étiquettes Contrat** | Les étiquettes Contrat « C » sont utilisées pour catégoriser des données qui possèdent des obligations contractuelles ou qui sont liées aux politiques de gouvernance des données de votre organisation. |
+| **Données intersites** | Les données intersites sont une combinaison de données de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site. |
+| **Gouvernance des données** | La gouvernance des données englobe les stratégies et les technologies utilisées pour s’assurer que les données sont conformes aux réglementations et aux politiques d’entreprise en matière d’utilisation des données. |
+| **Gestionnaire de données** | Le gestionnaire de données est la personne responsable de la gestion, de la supervision et de l’application des ressources de données d’une organisation. Un gestionnaire de données assure également la protection et la conservation des politiques de gouvernance des données afin qu’elles soient conformes aux réglementations gouvernementales et aux politiques de l’organisation. |
+| **Libellés d’utilisation des données** | Les libellés d’utilisation des données permettent aux utilisateurs de catégoriser les données en fonction des considérations liées à la confidentialité et des conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques d’entreprise. |
+| **Libellés de jeux de données** | Les libellés peuvent être ajoutés à un jeu de données. Tous les champs d’un jeu de données héritent des libellés du jeu de données. |
+| **DULE** | DULE est l’acronyme de « Data Usage Labeling and Enforcement ». En tant qu’élément clé de la gouvernance des données, DULE est un ensemble de fonctionnalités qui permet de libeller l’utilisation des données et d’appliquer des politiques d’accès aux données à des fins de gouvernance au sein d’une organisation. |
+| **Libellés de champ** | Les libellés de champ sont des libellés de gouvernance des données qui sont soit hérités d’un jeu de données soit appliqués directement à un champ.  Les libellés de gouvernance des données appliquées à un champ ne sont pas hérités d’un jeu de données. |
+| **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
+| **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
+| **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également connu sous le nom de personnalisation, se produit si les trois conditions suivantes sont rassemblées : les données collectées sur site sont utilisées pour établir des inférences sur les intérêts d’un utilisateur, elles sont utilisées dans un autre contexte, par exemple sur un autre site ou sur une autre application (hors site) ou elles sont utilisées pour sélectionner le contenu ou les publicités diffusées en fonction de ces inférences. |
+| **Action marketing** | A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies |
+| **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
+| **Étiquettes Sensibles** | Les étiquettes Sensibles « S » sont utilisées pour catégoriser les données que vous et votre entreprise considérez comme sensibles. |
 
 ## Ressources supplémentaires
 
-La vidéo suivante vise à vous aider à comprendre la gouvernance des données et présente les principaux aspects de la structure d&#39;étiquetage et d&#39;application de l&#39;utilisation des données (DULE).
+La vidéo suivante est destinée à vous aider à comprendre la gouvernance des données et souligne les aspects clés du cadre DULE (Data Usage Labeling and Enforcement).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
