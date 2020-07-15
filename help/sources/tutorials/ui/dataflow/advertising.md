@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: dcfbd42f3bba494b708dce2e7a6b4b12bf9035e1
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 8%
+source-wordcount: '1205'
+ht-degree: 7%
 
 ---
 
@@ -70,7 +70,7 @@ The *[!UICONTROL Select schema]* dialog appears. Sélectionnez le schéma à app
 
 Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utiliser les fonctions de mappage pour transformer les données source afin de dériver des valeurs calculées ou calculées. Pour plus d’informations sur les fonctions de mappage et de mappage de données, consultez le didacticiel sur le [mappage des données CSV aux champs](../../../../ingestion/tutorials/map-a-csv-file.md)de schéma XDM.
 
-L’écran *[!UICONTROL Mappage]* vous permet également de définir la colonne ** Delta. Lorsque le flux de jeux de données est créé, vous pouvez définir n’importe quel champ d’horodatage comme base pour déterminer les enregistrements à importer dans les ingérations incrémentielles planifiées.
+L’écran *[!UICONTROL Mappage]* vous permet également de définir la colonne ** Delta. Lors de la création du flux de données, vous pouvez définir n’importe quel champ d’horodatage comme base pour déterminer les enregistrements à assimiler lors d’assimilations incrémentielles planifiées.
 
 Une fois les données source mises en correspondance, cliquez sur **[!UICONTROL Suivant]**.
 
@@ -82,29 +82,42 @@ L&#39;étape *[!UICONTROL Planification]* s&#39;affiche, ce qui vous permet de c
 
 | Champ | Description |
 | --- | --- |
-| Fréquence | Les fréquences sélectionnées sont les suivantes : Minute, Heure, Jour et Semaine. |
+| Fréquence | Les fréquences sélectionnées sont les suivantes : Une fois, Minute, Heure, Jour et Semaine. |
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
-| Début | Horodatage UTC pour lequel la toute première importation aura lieu. |
-| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *[!UICONTROL renvoi]* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *[!UICONTROL renvoi]* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et la période de *[!UICONTROL Début*] seront ingérés. Les fichiers chargés avant l&#39;heure *[!UICONTROL de]* Début ne seront pas ingérés. |
+| Début | Horodatage UTC indiquant à quel moment la première assimilation est prévue |
+| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *renvoi* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *renvoi* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai *de* Début seront ingérés. Les fichiers chargés avant l&#39;heure *de* Début ne seront pas ingérés. |
+| Colonne Delta | Option avec un ensemble filtré de champs de schéma source de type, de date ou d’heure. Ce champ permet de différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
-Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Si vous souhaitez effectuer une seule assimilation via ce flux de travail, vous pouvez le faire en configurant la **[!UICONTROL fréquence]** sur &quot;Jour&quot; et en appliquant un nombre très élevé pour l’ **[!UICONTROL intervalle]**, tel que 10000 ou un nombre similaire.
+Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Début en sélectionnant la fréquence d&#39;ingestion. Ensuite, définissez l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
 
-Indiquez les valeurs de la planification et cliquez sur **[!UICONTROL Suivant]**.
+Pour définir l’heure de début d’assimilation, ajustez la date et l’heure affichées dans la zone début d’heure. Vous pouvez également sélectionner l’icône de calendrier pour modifier la valeur de début. L&#39;heure de Début doit être supérieure ou égale à l&#39;heure UTC actuelle.
 
-![scheduling](../../../images/tutorials/dataflow/advertising/schedule.png)
+Sélectionnez **[!UICONTROL Charger les données incrémentielles par]** pour affecter la colonne delta. Ce champ fait la distinction entre les données nouvelles et existantes.
+
+![schedule-interval](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configuration d’un flux de données d’assimilation unique
+
+Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**.
+
+>[!TIP] **[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
+
+![planifier une fois](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Nommer votre flux de données
 
-L&#39;étape détaillée *[!UICONTROL du flux de]* jeux de données s&#39;affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Select **[!UICONTROL Next]** when finished.
+L’étape de détails *[!UICONTROL du flux de]* données s’affiche, où vous devez fournir un nom et une description facultative du flux de données. Select **[!UICONTROL Next]** when finished.
 
 ![dataset-flow-details](../../../images/tutorials/dataflow/advertising/dataset-flow-detail.png)
 
-## Vérifier le flux de vos jeux de données
+## Vérifier votre flux de données
 
 L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
 - *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
-- *[!UICONTROL Affectez des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
 - *[!UICONTROL Planification]*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
@@ -117,7 +130,7 @@ Une fois que votre flux de données a été créé, vous pouvez surveiller les d
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à créer un flux de jeux de données afin d’importer des données d’un système d’automatisation du marketing et d’obtenir des informations sur la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données d’un système d’automatisation marketing et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
 
 - [Présentation du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
@@ -126,11 +139,11 @@ En suivant ce didacticiel, vous avez réussi à créer un flux de jeux de donné
 
 Les sections suivantes fournissent des informations supplémentaires sur l’utilisation des connecteurs source.
 
-### Désactivation d’un flux de jeu de données
+### Désactivation d’un flux de données
 
-Lorsqu&#39;un flux de jeu de données est créé, il devient immédiatement actif et ingère les données selon le calendrier qui lui a été donné. Vous pouvez désactiver un flux de jeux de données actif à tout moment en suivant les instructions ci-dessous.
+Lorsqu’un flux de données est créé, il devient immédiatement actif et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données actif à tout moment en suivant les instructions ci-dessous.
 
-Dans l&#39;écran Flux *[!UICONTROL de]* jeux de données, sélectionnez le nom du flux de jeux de données que vous souhaitez désactiver.
+Dans l’écran *[!UICONTROL Flux de données]* , sélectionnez le nom du flux de données que vous souhaitez désactiver.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
