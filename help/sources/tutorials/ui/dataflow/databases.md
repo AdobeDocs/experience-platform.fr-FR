@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: c3d85485d0c4a910e7ba777858e2f6cf7185ef54
+source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 8%
+source-wordcount: '1151'
+ht-degree: 7%
 
 ---
 
@@ -78,17 +78,29 @@ L&#39;étape *[!UICONTROL Planification]* s&#39;affiche, ce qui vous permet de c
 
 | Champ | Description |
 | --- | --- |
-| Fréquence | Les fréquences sélectionnées sont les suivantes : Minute, Heure, Jour et Semaine. |
+| Fréquence | Les fréquences sélectionnées sont les suivantes : Une fois, Minute, Heure, Jour et Semaine. |
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
-| Début | Horodatage UTC pour lequel la toute première importation aura lieu. La valeur de temps du début doit être définie en secondes. |
+| Début | Horodatage UTC indiquant à quel moment la première assimilation est prévue |
 | Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *renvoi* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *renvoi* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai *de* Début seront ingérés. Les fichiers chargés avant l&#39;heure *de* Début ne seront pas ingérés. |
 | Colonne Delta | Option avec un ensemble filtré de champs de schéma source de type, de date ou d’heure. Ce champ permet de différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
-Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Si vous souhaitez effectuer une seule assimilation via ce flux de travail, vous pouvez le faire en configurant la **[!UICONTROL fréquence]** sur &quot;Jour&quot; et en appliquant un nombre très élevé pour l’ **[!UICONTROL intervalle]**, tel que 10000 ou un nombre similaire.
+Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Début en sélectionnant la fréquence d&#39;ingestion. Ensuite, définissez l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
 
-Indiquez les valeurs de la planification et sélectionnez **[!UICONTROL Suivant]**.
+Pour définir l’heure de début d’assimilation, ajustez la date et l’heure affichées dans la zone début d’heure. Vous pouvez également sélectionner l’icône de calendrier pour modifier la valeur de début. L&#39;heure de Début doit être supérieure ou égale à l&#39;heure UTC actuelle.
 
-![](../../../images/tutorials/dataflow/databases/schedule.png)
+Sélectionnez **[!UICONTROL Charger les données incrémentielles par]** pour affecter la colonne delta. Ce champ fait la distinction entre les données nouvelles et existantes.
+
+![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+
+### Configuration d’un flux de données d’assimilation unique
+
+Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**.
+
+>[!TIP] **[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
+
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
+
+Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Nommer votre flux de données
 
