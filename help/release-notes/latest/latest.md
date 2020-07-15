@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 1e420d26f89150999f356f9cf5af94d434076c2b
+source-git-commit: 2bbd62fc53d304ff05250688733f1b18dfd18007
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '328'
 ht-degree: 45%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 45%
 Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
 
 <!-- - [Data Governance](#governance) -->
-- [Real-time Customer Profile](#profile)
+<!-- - [Real-time Customer Profile](#profile) -->
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
