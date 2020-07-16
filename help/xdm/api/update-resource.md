@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Mettre à jour une ressource
+title: Mise à jour d’une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 3%
+source-wordcount: '373'
+ht-degree: 91%
 
 ---
 
 
-# Mettre à jour une ressource
+# Mise à jour d’une ressource
 
-Vous pouvez modifier ou mettre à jour des ressources dans le conteneur locataire à l’aide d’une requête PATCH. Le registre des Schémas prend en charge toutes les opérations de correctif JSON standard, y compris l’ajout, la suppression et le remplacement.
+Vous pouvez modifier ou mettre à jour des ressources dans le conteneur client à l’aide d’une requête PATCH. The [!DNL Schema Registry] supports all standard JSON Patch operations, including add, remove, and replace.
 
-Pour plus d’informations sur le correctif JSON, y compris les opérations disponibles, voir la documentation [officielle sur le correctif](http://jsonpatch.com/)JSON.
+Pour plus d’informations sur JSON Patch, notamment les opérations disponibles, consultez la [documentation JSON Patch](http://jsonpatch.com/) officielle.
 
 >[!NOTE]
 >
->Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez le document sur le [remplacement d&#39;une ressource à l&#39;aide d&#39;une opération](replace-resource.md)PUT.
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, consultez le document [Remplacement d’une ressource à l’aide d’une opération PUT](replace-resource.md).
 
-## Ajouter des mixins à un schéma
+## Ajout de mixins à un schéma
 
-L&#39;une des opérations PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un schéma XDM, comme le montre l&#39;exemple ci-dessous.
+L’une des opérations PATCH les plus courantes implique l’ajout de mixins définis précédemment à un schéma XDM comme présenté dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -34,14 +34,14 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
-| `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Les types valides sont `datatypes`, `mixins`, `schemas` et `classes`. |
+| `{RESOURCE_ID}` | URI `$id` encodé par l’URL ou le `meta:altId` de la ressource. |
 
 **Requête**
 
-A l’aide d’une opération PATCH, vous pouvez mettre à jour un schéma afin d’inclure des champs définis dans un mixin créé précédemment. Pour ce faire, vous devez exécuter une requête PATCH au schéma à l’aide de son `meta:altId` URI ou de son `$id` URI codé en URL.
+À l’aide d’une opération PATCH, vous pouvez mettre à jour un schéma pour y inclure des champs définis dans un mixin créé précédemment. Pour ce faire, vous devez effectuer une requête PATCH sur le schéma en utilisant son `meta:altId` ou l’URI `$id` encodé en URL.
 
-Le corps de la requête comprend l&#39;opération (`op`) que vous souhaitez effectuer, où (`path`) vous souhaitez effectuer l&#39;opération et les informations (`value`) que vous souhaitez inclure dans l&#39;opération. Dans cet exemple, la `$id` valeur du mixin est ajoutée aux champs `meta:extends` et `allOf` du schéma de cible.
+Le corps de la requête inclut l’opération (`op`) que vous souhaitez réaliser, l’emplacement (`path`) sur lequel vous souhaitez réaliser l’opération et les informations (`value`) que vous souhaitez inclure dans l’opération. Dans cet exemple, la valeur `$id` du mixin est ajoutée aux champs `meta:extends` et `allOf` du schéma cible.
 
 ```SHELL
 curl -X PATCH\
@@ -59,7 +59,7 @@ curl -X PATCH\
 
 **Réponse**
 
-La réponse montre que les deux opérations ont été exécutées avec succès. Le mixin `$id` a été ajouté à la `meta:extends` baie et une référence (`$ref`) au mixin `$id` apparaît maintenant dans la `allOf` baie.
+La réponse montre que les deux opérations ont été réalisées avec succès. Le mixin `$id` a été ajouté au tableau `meta:extends` et une référence (`$ref`) au mixin `$id` apparaît désormais dans le tableau `allOf`.
 
 ```JSON
 {
@@ -98,9 +98,9 @@ La réponse montre que les deux opérations ont été exécutées avec succès. 
 }
 ```
 
-## Mettre à jour des champs individuels pour une ressource
+## Mise à jour des champs individuels pour une ressource
 
-Vous pouvez également envoyer des requêtes PATCH qui apportent plusieurs modifications à des champs individuels au sein d&#39;une ressource de registre de Schéma.
+Vous pouvez également envoyer des requêtes PATCH qui apportent plusieurs changements sur des champs individuels au sein d’une ressource du registre des schémas.
 
 **Format d’API**
 
@@ -110,12 +110,12 @@ PATCH /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
-| `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Les types valides sont `datatypes`, `mixins`, `schemas` et `classes`. |
+| `{RESOURCE_ID}` | URI `$id` encodé par l’URL ou le `meta:altId` de la ressource. |
 
 **Requête**
 
-L’organisme de demande comprend l’opération (`op`), l’emplacement (`path`) et les informations (`value`) nécessaires pour mettre à jour le mixin. Cette demande met à jour le mixin Détails de la propriété afin de supprimer le champ &quot;propertyCity&quot; et d’ajouter un nouveau champ &quot;propertyAddress&quot; qui référence un type de données standard contenant des informations d’adresse. Il ajoute également un nouveau champ &quot;emailAddress&quot; qui fait référence à un type de données standard avec des informations de messagerie.
+Le corps de la requête inclut l’opération (`op`), l’emplacement (`path`), et les informations (`value`) nécessaires pour mettre à jour le mixin. Cette requête met à jour le mixin Détails de propriété pour supprimer le champ « propertyCity » et ajouter un nouveau champ « propertyAddress » qui fait référence à un type de données standard contenant les informations sur l’adresse. Il ajoute également un nouveau champ « emailAddress » qui fait référence à un type de données standard contenant les informations de l’e-mail.
 
 ```SHELL
 curl -X PATCH \
@@ -146,7 +146,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie montre que les opérations ont été menées à bien car les nouveaux champs sont présents et que le champ &quot;propertyCity&quot; a été supprimé.
+Une réponse réussie montre que les opérations ont été terminées avec succès, car les nouveaux champs sont présents et le champ « propertyCity » a été supprimé.
 
 ```JSON
 {
