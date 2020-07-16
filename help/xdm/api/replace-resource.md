@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Remplacer une ressource
+title: Remplacement d’une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 2%
+source-wordcount: '203'
+ht-degree: 89%
 
 ---
 
 
-# Remplacer une ressource
+# Remplacement d’une ressource
 
-Le Registre de Schéma vous permet de remplacer une ressource entière par une opération PUT. Cette opération réécrit essentiellement la ressource. Par conséquent, l&#39;organisme de demande doit inclure tous les champs requis lors de la création d&#39;une ressource à l&#39;aide d&#39;une requête POST.
+The [!DNL Schema Registry] allows you to replace an entire resource through a PUT operation. Cette opération réécrivant la ressource, le corps de requête doit inclure tous les champs qui seraient requis pour créer une ressource à l’aide d’une requête POST.
 
-Cette méthode est particulièrement utile si vous souhaitez mettre à jour un grand nombre d&#39;informations dans la ressource en même temps.
+Cette méthode est particulièrement utile si vous souhaitez mettre à jour simultanément un grand nombre d’informations dans la ressource.
 
 >[!NOTE]
 >
->Si vous souhaitez seulement mettre à jour une partie d&#39;une ressource au lieu de la remplacer entièrement, consultez le document sur la [mise à jour d&#39;une ressource à l&#39;aide d&#39;une opération](update-resource.md)PATCH.
+>Si vous ne souhaitez mettre à jour qu’une partie d’une ressource au lieu de la remplacer entièrement, consultez le document sur la [mise à jour d’une ressource à l’aide d’une opération PATCH](update-resource.md).
 
 **Format d’API**
 
-Une requête PUT ne peut être exécutée que sur les ressources que vous définissez dans le conteneur client.
+Une requête PUT ne peut être exécutée que sur les ressources définies dans le conteneur client.
 
 ```http
 PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID} 
@@ -32,12 +32,12 @@ PUT /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à mettre à jour à partir de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
-| `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be updated from the [!DNL Schema Library]. Les types valides sont `datatypes`, `mixins`, `schemas` et `classes`. |
+| `{RESOURCE_ID}` | URI `$id` encodé par l’URL ou le `meta:altId` de la ressource. |
 
 **Requête**
 
-Cet exemple de demande remplace le type de données Construction de propriétés qui a été créé dans un exemple précédent. Le corps de la requête ressemble à celui de la requête POST utilisée pour créer le type de données, sauf qu’il contient désormais un ensemble de champs mis à jour et que de nouvelles valeurs remplacent ce qui était précédemment défini.
+Cet exemple de requête remplace le type de données Property Construction créé dans un exemple précédent. Le corps de la requête ressemble à la requête POST utilisée pour créer le type de données, sauf qu’il contient désormais un jeu de champs mis à jour avec de nouvelles valeurs remplaçant ce qui a été défini précédemment.
 
 ```SHELL
 curl -X PUT \
@@ -89,7 +89,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse positive renvoie les détails du type de données, en indiquant les champs et valeurs mis à jour, comme indiqué dans la requête.
+Une réponse réussie renvoie les détails du type de données, en indiquant les champs et les valeurs mis à jour, comme indiqué dans la requête.
 
 ```JSON
 {
