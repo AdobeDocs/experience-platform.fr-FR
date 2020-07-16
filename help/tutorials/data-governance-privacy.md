@@ -1,39 +1,39 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Didacticiels sur la gouvernance des données et la confidentialité
+title: Tutoriels sur la gouvernance et la confidentialité des données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 0%
+source-wordcount: '470'
+ht-degree: 57%
 
 ---
 
 
-# Didacticiels sur la gouvernance des données et la confidentialité
+# [!DNL Data Governance] et [!DNL Privacy] didacticiels
 
-L’étiquetage et l’application de l’utilisation des données (DULE) constituent le mécanisme de base de la gouvernance des données de la plate-forme Adobe Experience. Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d&#39;utilisation des données associées. Avant de commencer à utiliser les étiquettes, consultez la présentation [de la gouvernance des](../data-governance/home.md) données pour une présentation plus robuste de la structure DULE dans Platform.
+[!DNL Data Usage Labeling and Enforcement] (DULE) est le mécanisme central de l&#39;Adobe Experience Platform [!DNL Data Governanc]e. Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d&#39;utilisation des données associées. Avant de commencer avec les libellés, consultez la [présentation de la gouvernance des données](../data-governance/home.md) pour une introduction plus détaillée de la structure DULE dans [!DNL Platform].
 
-Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur qui vous permettent de coordonner les demandes de confidentialité et de conformité entre les différentes solutions. Pour en savoir plus, veuillez commencer par lire la présentation [du Service de](../privacy-service/home.md)protection des renseignements personnels.
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. Pour en savoir plus, commencez par lire la [présentation de Privacy Service](../privacy-service/home.md).
 
-## Ajouter étiquettes d’utilisation des données
+## Ajout de libellés d’utilisation des données
 
-Les étiquettes d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Les étiquettes peuvent être appliquées à tout moment, ce qui vous permet de gérer les données avec souplesse. Les meilleures pratiques encouragent l’étiquetage des données dès qu’elles sont incorporées dans la plate-forme d’expérience ou dès que les données deviennent disponibles pour une utilisation dans la plate-forme. Les étiquettes d’utilisation des données appliquées au niveau du jeu de données sont propagées à tous les champs du jeu de données. Les étiquettes peuvent également être appliquées directement à des champs individuels (en-têtes de colonne) dans un jeu de données, sans propagation. Pour savoir comment appliquer des étiquettes d&#39;utilisation de données à vos données, consultez la présentation [des étiquettes d&#39;utilisation de](../data-governance/labels/overview.md)données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. Les libellés d’utilisation des données appliqués au niveau du jeu de données sont propagés à tous les champs du jeu de données. Vous pouvez également appliquer les libellés directement sur des champs individuels (en-têtes de colonne) d’un jeu de données, sans propagation. Pour apprendre à appliquer des libellés d’utilisation des données à vos données, consultez la [présentation des libellés d’utilisation des données](../data-governance/labels/overview.md).
 
 ## Création de stratégies d’utilisation des données
 
-L&#39;API DULE Policy Service vous permet de créer et de gérer des stratégies DULE afin de déterminer les actions marketing à entreprendre par rapport aux données contenant certains libellés DULE. Pour commencer, lisez la présentation [des stratégies d’utilisation des](../data-governance/policies/overview.md)données.
+The DULE [!DNL Policy Service] API allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels. Pour commencer, lisez la [présentation des stratégies d’utilisation des données](../data-governance/policies/overview.md).
 
-## Appliquer les stratégies d’utilisation des données
+## Application des stratégies d’utilisation des données
 
-Une fois que vous avez créé des étiquettes d’application et d’étiquetage d’utilisation des données (DULE) pour vos données et créé des stratégies DULE pour les actions marketing sur ces étiquettes, vous pouvez utiliser l’API DULE Policy Service pour évaluer si une action marketing effectuée sur un jeu de données, ou un groupe arbitraire d’étiquettes DULE, constitue une violation de stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API. Pour commencer, consultez l’aperçu [de l’application des](../data-governance/enforcement/overview.md)stratégies.
+Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API. Pour commencer, consultez la [présentation de l’application des stratégies](../data-governance/enforcement/overview.md).
 
-## Appliquer la conformité à l’utilisation des données pour un segment d’audience
+## Application de la conformité de l’utilisation des données pour un segment ciblé
 
-Les segments qui sont activés pour une utilisation dans le Profil client en temps réel contiennent un identifiant de stratégie de fusion dans leur définition de segment. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui contiennent à leur tour les étiquettes d’utilisation des données applicables. Pour connaître les étapes spécifiques à l&#39;application de la conformité à l&#39;utilisation des données pour un segment d&#39;audience, suivez le tutoriel d&#39;application de la conformité à l&#39;utilisation des [données pour les segments](../segmentation/tutorials/governance.md).
+Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables. Pour connaître les étapes spécifiques à l’application de la conformité de l’utilisation des données pour un segment ciblé, suivez le [tutoriel sur l’application de la conformité de l’utilisation des données pour les segments](../segmentation/tutorials/governance.md).
 
-## Commencer avec Privacy Service
+## Get started with [!DNL Privacy Service]
 
-Privacy Service fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les données personnelles de vos sujets de données (clients) dans les applications Adobe Experience Cloud. Privacy Service fournit également un mécanisme central d’audit et de consignation qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications Experience Cloud. Pour obtenir des instructions sur la création et le suivi des tâches de Privacy Service, suivez les étapes fournies dans le guide [de développement](../privacy-service/api/getting-started.md) Privacy Service ou le guide [d’utilisateur](../privacy-service/ui/overview.md)Privacy Service.
+[!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les données personnelles de vos titulaires de données (clients) dans les applications Adobe Experience Cloud. [!DNL Privacy Service] fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications [!DNL Experience Cloud] For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
