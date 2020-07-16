@@ -1,40 +1,40 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Didacticiels sur le Profil client en temps réel
+title: Tutoriels sur Real-time Customer Profile
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 6%
+source-wordcount: '450'
+ht-degree: 47%
 
 ---
 
 
-# Configuration du service d’Profil et d’identité client en temps réel
+# Configurer [!DNL Real-time Customer Profile] et [!DNL Identity Service]
 
-Pour configurer le Profil client en temps réel pour votre entreprise, vous devez exécuter plusieurs workflows distincts. Ce document décrit les étapes à suivre et fournit des liens vers des didacticiels permettant d’exécuter chaque processus individuel. Pour en savoir plus sur le Profil client en temps réel, lisez tout d’abord l’aperçu [du](../profile/home.md)Profil.
+In order to configure [!DNL Real-time Customer Profile] for your organization, you are required to complete multiple separate workflows. Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément. To learn more about [!DNL Real-time Customer Profile], begin by reading the [Profile overview](../profile/home.md).
 
-## Activer le schéma pour le Profil et l&#39;identité
+## Enable schema for [!DNL Profile] and [!DNL Identity]
 
-Avant que les données puissent être ingérées dans Adobe Experience Platform et utilisées dans la création de Profils clients en temps réel, un schéma doit être créé pour fournir la structure des données qui seront ingérées et ce schéma doit être activé pour une utilisation dans Profil et Adobe Experience Platform Identity Service. Pour obtenir des instructions détaillées sur la création d&#39;un schéma activé pour Profil et Identity Service, reportez-vous aux didacticiels de [création d&#39;un schéma à l&#39;aide de l&#39;API](../xdm/tutorials/create-schema-api.md) de registre de Schéma ou de [création d&#39;un schéma à l&#39;aide de l&#39;interface utilisateur](../xdm/tutorials/create-schema-ui.md)du Schéma Builder.
+Before data can be ingested into Adobe Experience Platform and used in the creation of [!DNL Real-time Customer Profiles], a schema must be created to provide the structure for the data that will be ingested and that schema must be enabled for use in [!DNL Profile] and Adobe Experience Platform [!DNL Identity Service]. For step-by-step instructions on creating a schema that is enabled for both [!DNL Profile] and [!DNL Identity Service], please refer to the tutorials for [creating a schema using the Schema Registry API](../xdm/tutorials/create-schema-api.md) or [creating a schema using the Schema Builder UI](../xdm/tutorials/create-schema-ui.md).
 
-## Configuration d’un jeu de données pour le Profil et l’identité
+## Configure a dataset for [!DNL Profile] and [!DNL Identity]
 
-Pour commencer à ingérer des données dans le Profil, vous devez disposer d’un jeu de données correctement configuré pour une utilisation avec le Profil client en temps réel et le service d’identité. Pour commencer, suivez le didacticiel [](../profile/tutorials/dataset-configuration.md)Configuration d’un jeu de données pour le Profil et l’identité.
+To begin ingesting data into [!DNL Profile], you must have a dataset that has been properly configured for use with [!DNL Real-time Customer Profile] and [!DNL Identity Service]. Pour commencer, suivez le [tutoriel consacré à la configuration d’un jeu de données pour Profile et Identity Service](../profile/tutorials/dataset-configuration.md).
 
 ## Configuration des stratégies de fusion
 
-Adobe Experience Platform vous permet de rassembler des données à partir de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Pour utiliser des stratégies de fusion dans l’interface utilisateur de la plate-forme, consultez le guide [d’utilisation des stratégies de](../profile/ui/merge-policies.md)fusion. Pour utiliser des stratégies de fusion à l’aide de l’API Profil client en temps réel, consultez le guide [du développeur des stratégies de](../profile/api/merge-policies.md)fusion.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. To work with merge policies in the [!DNL Platform] UI, visit the [merge policies user guide](../profile/ui/merge-policies.md). Pour utiliser des stratégies de fusion à l’aide de l’API Real-time Customer Profile, consultez le [guide de développement sur les stratégies de fusion](../profile/api/merge-policies.md).
 
-## Configurer des projections de bord
+## Configuration des projections de périphérie
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l’on appelle les arêtes. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Pour plus d’informations et pour commencer à travailler avec les arêtes, consultez le [sous-guide API Profil client en temps réel sur les projections](../profile/api/edge-projections.md)des arêtes.
+Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. For more information and to begin working with edges, refer to the [!DNL Real-time Customer Profile] API [sub-guide on edge projections](../profile/api/edge-projections.md).
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré le Profil client en temps réel pour votre organisation, vous pouvez commencer à ajouter des données à des profils clients individuels et à créer des segments d’audience en fonction d’attributs de client spécifiques. Pour commencer, consultez les didacticiels suivants :
+Once you have configured [!DNL Real-time Customer Profile] for your organization, you can begin adding data to individual customer profiles and creating audience segments based on specific customer attributes. Pour commencer, consultez les tutoriels suivants :
 
-* [Ajouter de données au Profil client en temps réel](../profile/tutorials/add-profile-data.md)
+* [Ajout de données à Real-time Customer Profile](../profile/tutorials/add-profile-data.md)
 * [Création d’un segment](../segmentation/tutorials/create-a-segment.md)
