@@ -1,88 +1,88 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: FAQ CCPA
+title: FAQ relative à la CCPA
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '807'
-ht-degree: 0%
+source-wordcount: '787'
+ht-degree: 80%
 
 ---
 
 
-# FAQ CCPA
+# FAQ relative à la CCPA
 
-Ce document répond aux questions les plus fréquentes sur la loi California Consumer Protection Act (CCPA) et son implémentation dans Adobe Experience Cloud.
+This document provides answers to frequently asked questions about the [!DNL California Consumer Protection Act] (CCPA) and its implementation in Adobe Experience Cloud.
 
-## Qu&#39;est-ce que l&#39;ACFPC ?
+## Qu’est-ce que la CCPA ?
 
-La California Consumer Privacy Act (CCPA) est la nouvelle loi californienne sur la protection des renseignements personnels qui accorde à ses résidents de nouveaux droits sur leurs renseignements personnels et impose des responsabilités en matière de protection des données à certaines entités qui font des affaires en Californie.
+The [!DNL California Consumer Privacy Act] (CCPA) is California’s new privacy law that provides its residents with new rights regarding their personal information, and imposes data protection responsibilities on certain entities who conduct business in California.
 
 >[!NOTE]
 >
->Bien que techniquement efficace en janvier 2020, l&#39;ACCP est encore en voie d&#39;être affinée par les législateurs. En outre, d&#39;importants détails de mise en oeuvre et d&#39;autres directives figurent dans des règles qui n&#39;ont pas encore été rédigées par l&#39;autorité de réglementation californienne.
+>Bien qu’elle soit techniquement entrée en vigueur en janvier 2020, la CCPA est encore peaufinée par les législateurs. En outre, d’importants détails concernant sa mise en œuvre et d’autres indications seront précisés dans des règles qui n’ont pas encore été écrites par l’autorité de régulation californienne.
 
-Bien que l’ACCP partage certains concepts énoncés dans le Règlement général sur la protection des données (RGPD) de l’Union européenne, tels que le droit d’une personne d’accéder à des renseignements personnels et de les supprimer, il existe plusieurs façons fondamentales pour l’ACCP de s’écarter du RGPD. Par exemple, l&#39;ACFPC accorde aux consommateurs un droit d&#39;exclusion de certaines activités de partage de données qui sont admissibles à la &quot;vente&quot; de renseignements personnels à un tiers, plutôt que d&#39;exiger un consentement préalable.
+Bien que la CCPA partage certains concepts énoncés dans le Règlement général sur la protection des données (RGPD) de l’Union Européenne, comme le droit d’accès et d’effacement des données à caractère personnel d’un individu, la CCPA diffère du RGPD sur plusieurs points majeurs. Par exemple, la CCPA accorde aux clients un droit d’opposition concernant certains échanges de données considérés comme étant de la « vente » d’informations personnelles à un tiers, plutôt que d’exiger un consentement préalable.
 
-## Quelle est la définition des renseignements personnels en vertu de la LPCA ?
+## Que signifie la notion d’informations personnelles dans le cadre de la CCPA ?
 
-Les renseignements personnels sont des renseignements &quot;qui identifient, se rapportent, décrivent, peuvent être associés à un consommateur ou à un ménage, ou qui pourraient raisonnablement être liés, directement ou indirectement, avec lui&quot;.
+Les informations personnelles sont des renseignements « qui identifient, se rapportent à, décrivent, peuvent être associés à ou pourraient raisonnablement être liés, directement ou indirectement, à un client ou à un ménage ».
 
-## Quels types d’informations personnelles ou d’identifiants utilisés dans Adobe Experience Cloud sont soumis à ces nouvelles exigences ?
+## Quels types d’informations personnelles ou d’identifiants utilisés dans Adobe Experience Cloud sont soumis à ces nouvelles exigences ?
 
-Les identifiants suivants sont couramment utilisés dans les applications Experience Cloud et pourraient être assujettis aux exigences de l&#39;ACFPC :
+The following identifiers are commonly used in [!DNL Experience Cloud] applications and could be subject to CCPA requirements:
 
 - Nom
-- Postal address
+- Adresse postale
 - Identifiant personnel unique
-- Identificateur en ligne
+- Identifiant en ligne
 - Adresse IP
 - Adresse électronique
 - Nom du compte
 
-Les renseignements personnels peuvent aussi inclure Internet ou d&#39;autres renseignements sur l&#39;activité de réseau électronique. Cela comprend, entre autres :
+Les informations personnelles peuvent aussi inclure les renseignements liés à l’activité sur Internet ou sur d’autres réseaux électroniques. Cela inclut, entre autres :
 
-- Historique de navigation
-- Historique des recherches
-- Informations relatives à l’interaction d’un consommateur avec un site Web, une application ou une publicité
+- L’historique de navigation
+- L’historique des recherches
+- Les informations relatives à l’interaction d’un client avec un site web, une application ou une publicité
 
-Même si l’ACFPC couvre un vaste ensemble de renseignements personnels, les clauses contractuelles types de Adobe stipulent que les renseignements personnels sensibles (tels que le numéro d’identification unique, les renseignements sur le permis de conduire, les renseignements sur les comptes financiers et les données biométriques) sont généralement interdits d’importation et d’utilisation dans les applications Experience Cloud.
+Even though CCPA covers a wide set of personal information, Adobe’s standard contract terms dictate that sensitive personal information (such as SSN, driver’s license information, financial account information, and biometric data) is generally prohibited from import and use in [!DNL Experience Cloud] applications.
 
-## Comment les différents rôles et responsabilités de l&#39;ACCP s&#39;appliquent-ils à l&#39;Experience Cloud ?
+## Comment les différents rôles et responsabilités de la CCPA s’appliquent-ils à [!DNL Experience Cloud]?
 
-Selon la définition de l&#39;ACPCS, les rôles suivants s&#39;appliquent à Adobe et à ses clients :
+Selon la définition de la CCPA, s’appliquent à Adobe et à ses clients les rôles suivants :
 
-- Les clients Adobe (la partie demandant la collecte et l&#39;utilisation de renseignements personnels auprès des résidents de Californie) seraient considérés comme des **entreprises**.
-- Adobe, dans son rôle de fournisseur de services, serait considéré comme un **Prestataire**.
+- Les clients Adobe (la partie demandant la collecte et l’utilisation d’informations personnelles auprès des résidents de Californie) seraient considérés comme une **Entreprise**.
+- Adobe, qui fournit le service, serait considéré comme un **Fournisseur de services**.
 
-Compte tenu de cette relation et du langage contractuel Adobe, les divulgations à Adobe ne seraient probablement pas considérées comme une &quot;vente&quot; pour laquelle les entreprises devraient fournir un avis et l&#39;offre et une exclusion.
+Compte tenu de cette relation et du langage contractuel d’Adobe, les divulgations à Adobe ne seraient probablement pas considérées comme une « vente » pour laquelle les entreprises auraient besoin de produire un avertissement et de proposer un droit d’opposition.
 
-Toutefois, les services Adobe peuvent être utilisés pour permettre certains échanges de données et transferts à des tiers. Ces transferts de tiers pourraient être considérés comme une &quot;vente&quot; et nécessiter légalement la divulgation et l&#39;exclusion.  Les clients devraient collaborer avec leur conseiller juridique pour évaluer des cas d&#39;utilisation spécifiques afin d&#39;évaluer les exigences applicables.
+Cependant, les services Adobe peuvent être utilisés pour activer certains partages et transferts de données vers des tiers. Ces transferts vers des tiers pourraient être considérés comme une « vente » et nécessiter légalement un avertissement et un droit d’opposition.  Les clients doivent se rapprocher de leur service juridique pour examiner des cas d’utilisation spécifiques afin d’évaluer les exigences applicables.
 
-## Combien de jours une entreprise doit-elle répondre à une demande du consommateur pour accéder ou supprimer des renseignements personnels ?
+## Combien de jours une entreprise a-t-elle pour répondre à la demande d’un client souhaitant consulter ou supprimer des informations personnelles ?
 
-En supposant que l&#39;entreprise ait recueilli des renseignements personnels et qu&#39;elle puisse s&#39;authentifier ou vérifier l&#39;identité d&#39;un consommateur californien particulier, l&#39;ACCP permet que les demandes des consommateurs soient satisfaites dans les 45 jours (à quelques exceptions près).
+En supposant que l’entreprise ait recueilli des informations personnelles et qu’elle puisse authentifier ou vérifier l’identité d’un client californien particulier, la CCPA permet un délai de 45 jours pour satisfaire aux demandes des clients (sauf quelques exceptions).
 
-## Quel est le rôle de l&#39;Adobe dans le cadre de l&#39;ACCP ?
+## Quel est le rôle d’Adobe dans le cadre de la CCPA ?
 
-En tant que Prestataire, Adobe recueille et traite des renseignements personnels pour le compte de l&#39;Entreprise et est contractuellement tenu d&#39;utiliser ces renseignements uniquement aux fins précises énoncées dans l&#39;entente.
+En tant que Fournisseur de services, Adobe collecte et traite des informations personnelles pour le compte de l’Entreprise. Il est contractuellement tenu d’utiliser ces informations uniquement aux finalités spécifiques définies dans le contrat.
 
-Compte tenu de cette relation et du langage contractuel de l’Adobe, les divulgations à Adobe relèvent des dispositions de la loi pour les Prestataires, et ne seraient probablement pas considérées comme une &quot;vente&quot; pour laquelle les entreprises devraient fournir un avis et l’offre et une exclusion.
+Compte tenu de cette relation et du langage contractuel d’Adobe, les divulgations à Adobe sont régies par les dispositions de la loi concernant les Fournisseurs de services et ne seraient probablement pas considérées comme une « vente » pour laquelle les entreprises doivent avertir leurs clients et leur proposer un droit d’opposition.
 
-Les services Adobe peuvent être utilisés pour permettre certains échanges de données et transferts à des tiers. Ces transferts de tiers pourraient être considérés comme une &quot;vente&quot; et nécessiter légalement la divulgation et l&#39;exclusion.  Les clients devraient collaborer avec leur conseiller juridique pour évaluer des cas d&#39;utilisation spécifiques afin d&#39;évaluer les exigences applicables.
+Les services Adobe peuvent être utilisés pour activer certains partages et transferts de données vers des tiers. Ces transferts vers des tiers pourraient être considérés comme une « vente » et nécessiter légalement un avertissement et un droit d’opposition.  Les clients doivent se rapprocher de leur service juridique pour examiner des cas d’utilisation spécifiques afin d’évaluer les exigences applicables.
 
-## Comment puis-je appuyer les exigences de protection de la vie privée des consommateurs en vertu de l&#39;ACFPC si je conserve certains types de données qui sont couvertes par ces exigences ?
+## Comment puis-je remplir les exigences en matière de protection de la vie privée des clients que détermine la CCPA si je conserve certains types de données couverts par ces exigences ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs de CA, l&#39;Adobe Experience Platform Privacy Service vous permet de soumettre des demandes de confidentialité de consommateur à des applications Experience Cloud compatibles. See the [Privacy Service overview](../home.md) for more information. Pour plus d&#39;informations sur la façon dont vos applications Experience Cloud particulières peuvent respecter les demandes de confidentialité, consultez le guide sur les applications [](../experience-cloud-apps.md)Privacy Service et Experience Cloud.
+Once you have taken the necessary steps to authenticate CA consumers, Adobe Experience Platform [!DNL Privacy Service] allows you to submit consumer privacy requests to compatible [!DNL Experience Cloud] applications. Pour plus d’informations, consultez la [Présentation de Privacy Service](../home.md). For information on how your particular [!DNL Experience Cloud] applications can honor privacy requests, please refer to the guide on [Privacy Service and Experience Cloud applications](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->L&#39;autorité de réglementation de la Californie continue de fournir des indications supplémentaires sur les types de données admissibles aux demandes de protection des renseignements personnels des consommateurs.
+>L’autorité de régulation californienne donnera prochainement des indications supplémentaires sur les types de données concernés par les demandes de protection de la vie privée des clients.
 
-## L&#39;Adobe offre-t-elle d&#39;autres outils qui pourraient être utiles pour répondre aux exigences de l&#39;ACCP ?
+## Adobe propose-t-il d’autres outils pouvant être utiles pour répondre aux exigences de la CCPA ?
 
-Les applications Adobe Experience Cloud offrent des fonctions de data Management et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des sociétés. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d&#39;accès basés sur les rôles, l’obscurcissement d’IP et les capacités de hachage.
+Les applications Adobe Experience Cloud fournissent des fonctionnalités de gestion et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des entreprises. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d’accès basés sur les rôles, l’obscurcissement de l’adresse IP et les fonctions de hachage.
 
-Adobe a reçu diverses certifications de ses pratiques de confidentialité et de sécurité, comme une certification ISO 27001 et une validation TrustArc GDPR.
+Adobe a reçu diverses certifications pour ses pratiques en matière de confidentialité et de sécurité, telles qu’une certification ISO 27001 et une validation RGPD de TrustArc.
