@@ -1,34 +1,34 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Annexe destinée aux développeurs du registre des Schémas
+title: Annexe de développement du registre des schémas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 6%
+source-wordcount: '1265'
+ht-degree: 87%
 
 ---
 
 
 # Annexe
 
-Ce document fournit des informations supplémentaires sur l&#39;utilisation de l&#39;API de registre de Schémas.
+This document provides supplemental information related to working with the [!DNL Schema Registry] API.
 
 ## Mode de compatibilité
 
-Le modèle de données d’expérience (XDM) est une spécification publiquement documentée, pilotée par Adobe pour améliorer l’interopérabilité, l’expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions XDM formelles dans un projet [open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites en Notation standard XDM, en utilisant JSON-LD (Notation d’objet JavaScript pour les données liées) et le Schéma JSON comme grammaire pour la définition de schémas XDM.
+[!DNL Experience Data Model] (XDM) est une spécification documentée publiquement, menée par Adobe pour améliorer l&#39;interopérabilité, l&#39;expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions formelles XDM dans un [projet open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites dans la notation standard XDM, et utilisent JSON-LD (JavaScript Object Notation for Linked Data) et le schéma JSON comme grammaire de définition des schémas XDM.
 
-Lorsque vous consultez des définitions XDM formelles dans le référentiel public, vous pouvez constater que XDM standard diffère de ce que vous voyez dans l&#39;Adobe Experience Platform. Ce que vous voyez en Experience Platform s&#39;appelle le Mode de compatibilité, et il fournit une mise en correspondance simple entre le XDM standard et la façon dont il est utilisé dans Platform.
+Lorsque vous examinez les définitions XDM formelles dans le référentiel public, vous pouvez voir que le XDM standard est différent de ce que vous voyez dans Adobe Experience Platform. What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Platform].
 
 ### Fonctionnement du mode de compatibilité
 
-Le mode de compatibilité permet au modèle JSON-LD XDM de fonctionner avec l’infrastructure de données existante en modifiant les valeurs dans XDM standard tout en conservant la sémantique la même. Il utilise une structure JSON imbriquée, affichant les schémas sous forme d’arborescence.
+Le mode de compatibilité permet au modèle XDM JSON-LD de fonctionner avec une infrastructure de données existante en modifiant les valeurs du XDM standard tout en conservant la même sémantique. Il utilise une structure JSON imbriquée en affichant les schémas dans un format de type arbre.
 
-La principale différence que vous remarquerez entre XDM standard et le mode de compatibilité est la suppression du préfixe &quot;xdm:&quot; pour les noms de champs.
+La principale différence que vous noterez entre le XDM standard et le mode de compatibilité est la suppression du préfixe « xdm: » devant les noms des champs.
 
-Vous trouverez ci-dessous une comparaison côte à côte montrant les champs liés à l’anniversaire (avec la suppression des attributs &quot;description&quot;) en mode XDM standard et en mode de compatibilité. Notez que les champs Mode de compatibilité incluent une référence au champ XDM et à son type de données dans les attributs &quot;meta:xdmField&quot; et &quot;meta:xdmType&quot;.
+Le tableau ci-dessous contient une comparaison côte à côte affichant les champs associés à la date de naissance (dont les attributs « description » ont été supprimés) aux formats XDM standard et Mode de compatibilité. Notez que les champs Mode de compatibilité incluent une référence au champ XDM et à son type de données dans les attributs « meta:xdmField » et « meta:xdmType ».
 
 <table>
   <th>XDM standard</th>
@@ -36,48 +36,86 @@ Vous trouverez ci-dessous une comparaison côte à côte montrant les champs li�
   <tr>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "xdm:bornDate": { "title" : "Date de naissance", "type" : "string", "format" : "date", }, "xdm:bornDayAndMonth" : { "title" : "Date de naissance", "type" : "string", "pattern" : "[0-1][0-9]-[0-9][0-9]", }, "xdm:bornYear" : { "title" : "Année de naissance", "type" : "integer", "minimum" : 1, "maximum" : 32767 }
+        {
+          "xdm:birthDate": {
+              "title": "Birth Date",
+              "type": "string",
+              "format": "date",
+          },
+          "xdm:birthDayAndMonth": {
+              "title": "Birth Date",
+              "type": "string",
+              "pattern": "[0-1][0-9]-[0-9][0-9]",
+          },
+          "xdm:birthYear": {
+              "title": "Birth year",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32767
+        }
       </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
-        { "bornDate" : { "title" : "Date de naissance", "type" : "string", "format" : "date", "meta:xdmField" : "xdm:bornDate", "meta:xdmType" : "date" }, "bornDayAndMonth": { "title" : "Date de naissance", "type" : "string", "pattern" : "[0-1][0-9]-[0-9][0-9]", "meta:xdmField" : "xdm:bornDayAndMonth", "meta:xdmType" : "string" }, "bornYear" : { "title" : "Année de naissance", "type" : "integer", "minimum" : 1, "maximum" : 32767, "meta:xdmField" : "xdm:bornYear", "meta:xdmType" : "short" }
+        {
+          "birthDate": {
+              "title": "Birth Date",
+              "type": "string",
+              "format": "date",
+              "meta:xdmField": "xdm:birthDate",
+              "meta:xdmType": "date"
+          },
+          "birthDayAndMonth": {
+              "title": "Birth Date",
+              "type": "string",
+              "pattern": "[0-1][0-9]-[0-9][0-9]",
+              "meta:xdmField": "xdm:birthDayAndMonth",
+              "meta:xdmType": "string"
+          },
+          "birthYear": {
+              "title": "Birth year",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 32767,
+              "meta:xdmField": "xdm:birthYear",
+              "meta:xdmType": "short"
+        }
       </pre>
   </td>
   </tr>
 </table>
 
-### Pourquoi le mode de compatibilité est-il nécessaire ?
+### Pourquoi le mode de compatibilité est-il nécessaire ?
 
-L&#39;Adobe Experience Platform est conçu pour fonctionner avec plusieurs solutions et services, chacun avec ses propres défis techniques et limites (par exemple, comment certaines technologies gèrent des caractères spéciaux). Afin de surmonter ces limitations, le mode de compatibilité a été développé.
+Adobe Experience Platform est conçu de manière à fonctionner avec plusieurs solutions et services possédant chacun leurs propres défis et limitations techniques (par exemple, la manière dont certaines technologies traitent les caractères spéciaux). Le mode de compatibilité a été développé dans le but de surpasser ces limites.
 
-La plupart des services Experience Platform, y compris Catalog, Data Lake et le Profil client en temps réel, utilisent le mode de compatibilité plutôt que le mode XDM standard. L&#39;API Schéma Registry utilise également le mode de compatibilité, et les exemples de ce document sont tous affichés à l&#39;aide du mode de compatibilité.
+La plupart des [!DNL Experience Platform] services, y compris [!DNL Catalog]les services, [!DNL Data Lake]et [!DNL Real-time Customer Profile] , sont utilisés [!DNL Compatibility Mode] à la place de XDM standard. L’ [!DNL Schema Registry] API utilise également [!DNL Compatibility Mode]et les exemples de ce document s’affichent tous à l’aide [!DNL Compatibility Mode].
 
-Il est intéressant de savoir qu&#39;un mappage a lieu entre XDM standard et la façon dont il est mis en oeuvre en Experience Platform, mais il ne devrait pas affecter votre utilisation des services Platform.
+It is worthwhile to know that a mapping takes place between standard XDM and the way it is operationalized in [!DNL Experience Platform], but it should not affect your use of [!DNL Platform] services.
 
-Le projet open source est à votre disposition, mais lorsqu&#39;il s&#39;agit d&#39;interagir avec des ressources via le Registre des Schémas, les exemples d&#39;API de ce document fournissent les meilleures pratiques que vous devez connaître et suivre.
+The open source project is available to you, but when it comes to interacting with resources through the [!DNL Schema Registry], the API examples in this document provide the best practices you should know and follow.
 
-## Définition des types de champs XDM dans l&#39;API {#field-types}
+## Définition des types de champ XDM dans l’API {#field-types}
 
-Les schémas XDM sont définis à l’aide des normes de Schéma JSON et des types de champs de base, avec des contraintes supplémentaires pour les noms de champs appliqués par l’Experience Platform. XDM vous permet de définir d&#39;autres types de champs en utilisant des formats et des contraintes facultatives. Les types de champ XDM sont exposés par l&#39;attribut de niveau champ `meta:xdmType`.
+Les schémas XDM sont définis à l’aide des normes du schéma JSON et les types de champ de base avec des contraintes supplémentaires pour les noms de champ qui sont appliqués par [!DNL Experience Platform]. XDM vous permet de définir des types de champ supplémentaires par l’utilisation de formats et de contraintes facultatives. Les types de champ XDM sont exposés par l’attribut field-level, `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` est une valeur générée par le système. Par conséquent, vous n’êtes pas tenu d’ajouter cette propriété au fichier JSON pour votre champ. Il est recommandé d’utiliser des types de Schéma JSON (chaînes et entiers, par exemple) avec les contraintes min/max appropriées, telles que définies dans le tableau ci-dessous.
+>`meta:xdmType` est une valeur générée par le système, vous n’êtes donc pas obligé d’ajouter cette propriété au JSON de votre champ. Il est recommandé d’utiliser les types de schémas JSON (comme la chaîne et l’entier) avec les contraintes min/max appropriées définies dans le tableau ci-dessous.
 
-Le tableau suivant décrit la mise en forme appropriée pour définir des types de champs scalaires et des types de champs plus spécifiques à l’aide de propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la documentation [du Schéma](https://json-schema.org/understanding-json-schema/reference/type.html)JSON.
+Le tableau suivant souligne la mise en forme appropriée pour définir les types de champs scalaires et les types de champs plus spécifiques à l’aide de propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre requête d’API.
+Pour commencer, trouvez le type de champ souhaité et utilisez le code d’échantillon fourni pour créer votre requête API.
 
 <table>
   <tr>
-    <th>Type<br/>souhaité (meta:xdmType)</th>
-    <th>JSON<br/>(Schéma JSON)</th>
+    <th>Type souhaité<br/>(meta:xdmType)</th>
+    <th>JSON<br/>(schéma JSON)</th>
     <th>Exemple de code</th>
   </tr>
   <tr>
     <td>chaîne</td>
-    <td>type : Propriétés<br/><br/><strong>stringOptional :</strong><br/>
+    <td>type : chaîne<br/><br/><strong>Propriétés facultatives :</strong><br/>
       <ul>
         <li>pattern</li>
         <li>minLength</li>
@@ -86,172 +124,262 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "string", "pattern" : "^[A-Z]{2}$", "maxLength": 2 }
+        "sampleField": {
+            "type": "string",
+            "pattern": "^[A-Z]{2}$",
+            "maxLength": 2
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>uri<br/>(xdmType:string)</td>
-    <td>type : Format<br/>de chaîne : uri</td>
+    <td>type : chaîne<br/>format : uri</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "string", "format" : "uri" }
+        "sampleField": {
+          "type": "string",
+          "format": "uri"
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>enum<br/>(xdmType: string)</td>
-    <td>type :<br/><br/><strong>stringOptional, propriété :</strong><br/>
+    <td>type : chaîne<br/><br/><strong>Propriété facultative :</strong><br/>
       <ul>
-        <li>default</li>
+        <li>par défaut</li>
       </ul>
     </td>
-    <td>Spécifiez des libellés d’option destinés aux clients à l’aide de "meta:enum" :
+    <td>Précisez les étiquettes d’option côté client à l’aide de « meta:enum » :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "string", "enum" : [ "value1", "value2", "value3" ], "meta:enum" : { "value1": "Value 1", "value2" : "Value 2", "value3" : "Value 3" }, "default": "value1" }
+        "sampleField": {
+          "type": "string",
+          "enum": [
+              "value1",
+              "value2",
+              "value3"
+          ],
+          "meta:enum": {
+              "value1": "Value 1",
+              "value2": "Value 2",
+              "value3": "Value 3"
+          },
+          "default": "value1"
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>nombre</td>
-    <td>type :<br/>nombre minimum : ±2,23 × 10^308<br/>maximum : ±1,80 × 10^308</td>
+    <td>type : nombre<br/>minimum : ±2,23×10^308<br/>maximum : ±1,80×10^308</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "number" }
+        "sampleField": {
+          "type": "number"
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>long</td>
-    <td>type :<br/>nombre maximal : 2^53+1<br>minimum : -2^53+1</td>
+    <td>type : entier<br/>maximum : 2^53+1<br>minimum : -2^53+1</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "integer", "minimum" : -9007199254740992, "maximum" : 9007199254740992 }
+        "sampleField": {
+          "type": "integer",
+          "minimum": -9007199254740992,
+          "maximum": 9007199254740992
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>int</td>
-    <td>type :<br/>maximal : 2^31<br>minimum : -2^31</td>
+    <td>type : entier<br/>maximum : 2^31<br>minimum : -2^31</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "integer", "minimum" : -2147483648, "maximum" : 2147483648 }
+        "sampleField": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483648
+        }
       </pre>
     </td>
   </tr>
   <tr>
-    <td>short</td>
-    <td>type :<br/>nombre maximal : 2^15<br>minimum : -2^15</td>
+    <td>court</td>
+    <td>type : entier<br/>maximum : 2^15<br>minimum : -2^15</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "integer", "minimum" : -32768, "maximum" : 32768 }
+        "sampleField": {
+          "type": "integer",
+          "minimum": -32768,
+          "maximum": 32768
+        }
       </pre>
     </td>
   </tr>
   <tr>
-    <td>byte</td>
-    <td>type :<br/>nombre maximal : 2^7<br>minimum : -2^7</td>
+    <td>octet</td>
+    <td>type : entier<br/>maximum : 2^7<br>minimum : -2^7</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "integer", "minimum" : -128, "maximum" : 128 }
+        "sampleField": {
+          "type": "entier",
+          "minimum": -128,
+          "maximum": 128
+          }
       </pre>
     </td>
   </tr>
   <tr>
     <td>booléen</td>
-    <td><br/>type : boolean<br/>{true, false}Propriété<br/><br/><strong>facultative :</strong><br/>
+    <td><br/>type : booléen<br/>{true, false}<br/><br/><strong>Propriété facultative :</strong><br/>
       <ul>
-        <li>default</li>
+        <li>par défaut</li>
       </ul>
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "boolean", "default" : false }
+        "sampleField": {
+          "type": "boolean",
+          "default": false
+        }
       </pre>
     </td>
   </tr>
   <tr>
     <td>date</td>
-    <td>type : Format<br/>de chaîne : date</td>
+    <td>type : chaîne<br/>format : date</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "string", "format" : "date", "exemples" : ["2004-10-23"] }
+        "sampleField": {
+          "type": "string",
+          "format": "date",
+          "examples": ["2004-10-23"]
+        }
       </pre>
-      Date définie par la <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, où "date complète" = date-année complète "-" date-mois "-" date-mday (AAAA-MM-JJ)
+      Date définie par le <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, où "full-date" = date-fullyear "-" date-month "-" date-mday (YYYY-MM-DD)
     </td>
   </tr>
   <tr>
-    <td>date-heure</td>
-    <td>type : Format<br/>de chaîne : date-heure</td>
+    <td>date-time</td>
+    <td>type : chaîne<br/>format : date-time</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "string", "format" : "date-heure", "exemples" : ["2004-10-23T12:00:00-06:00"] }
+        "sampleField": {
+          "type": "string",
+          "format": "date-time",
+          "examples": ["2004-10-23T12:00:00-06:00"]
+        }
       </pre>
-      Date-Heure telle que définie par la <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, où "date-time" = "T" à temps plein à date complète:<br/>(AAAA-MM-JJ'T'HH:MM:SS.SSSSX)
+      Date-Time définie par le <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, où "date-time" = full-date "T" full-time:<br/>(YYYY-MM-DD'T'HH:MM:SS.SSSSX)
     </td>
   </tr>
   <tr>
     <td>tableau</td>
-    <td>type : tableau</td>
-    <td>items.type peut être défini à l’aide de n’importe quel type scalaire :
+    <td>type : tableau</td>
+    <td>Vous pouvez définir les items.type en utilisant n’importe quel type scalaire :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "array", "items" : { "type" : "string" } }
+        "sampleField": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       </pre>
-      Tableau d'objets définis par un autre schéma :<br/>
+      Tableau d’objets défini par un autre schéma :<br/>
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "array", "items" : { "$ref": "id" } }
+        "sampleField": {
+          "type": "array",
+          "items": {
+            "$ref": "id"
+          }
+        }
       </pre>
-      Où "id" correspond à {id} du schéma de référence.
+      où « id » désigne l’{id} du schéma de référence.
     </td>
   </tr>
   <tr>
     <td>objet</td>
-    <td>type : objet</td>
-    <td>du média.{field}.type peut être défini à l'aide de n'importe quel type scalaire :
+    <td>type : propriétés</td>
+    <td>d’objets.{field}.type en utilisant n’importe quel type scalaire :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "object", "properties" : { "field1" : { "type" : "string" }, "field2" : { "type" : "number" } } }
+        "sampleField": {
+          "type": "object",
+          "properties": {
+            "field1": {
+              "type": "string"
+            },
+            "field2": {
+              "type": "number"
+            }
+          }
+        }
       </pre>
-      Champ de type "objet" défini par un schéma de référence :
+      Le champ de type « objet » défini par un schéma de référence :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "object", "$ref" : "id" }
+        "sampleField": {
+          "type": "object",
+          "$ref": "id"
+        }
       </pre>
-      Où "id" correspond à {id} du schéma de référence.
+      où « id » désigne l’{id} du schéma de référence.
     </td>
   </tr>
   <tr>
     <td>map</td>
-    <td>type :<br/><br/><strong>objectNote :</strong><br/>L'utilisation du type de données "map" est réservée à l'utilisation du schéma du secteur industriel et du fournisseur et n'est pas disponible pour l'utilisation dans les champs définis par le client. Elle est utilisée dans les schémas standard lorsque les données sont représentées sous la forme de clés qui correspondent à une valeur ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.</td>
-    <td>Un 'map' NE DOIT PAS définir de propriétés. Il DOIT définir un schéma "additionalProperties" unique pour décrire le type de valeurs contenues dans la "map". Un "mappage" dans XDM ne peut contenir qu'un seul type de données. Les valeurs peuvent être n'importe quelle définition de schéma XDM valide, y compris un tableau ou un objet, ou comme référence à un autre schéma (via $ref).<br/><br/>Champ de correspondance avec des valeurs de type "string" :
+    <td>type : objet<br/><br/><strong>Remarque :</strong><br/>l’utilisation du type de données « map » est réservée à une utilisation par des schémas du secteur et des fournisseurs et n’est pas disponible à l’utilisation pour des champs définis par des clients. Ce type de données est utilisé dans des schémas standards lorsque les données sont représentées sous la forme de clés qui correspondent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme valeur de données.</td>
+    <td>Une « map » NE DOIT PAS définir de propriétés. Il DOIT définir un seul schéma "[!UICONTROL additionalProperties]" pour décrire le type de valeurs contenues dans la 'map'. Dans XDM, une « map » ne peut contenir qu’un seul type de données. Les valeurs peuvent être tout type de définitions de schéma XDM, y compris un tableau ou un objet, ou sous la forme d’une référence à un autre schéma (via $ref).<br/><br/>Faire correspond le champ avec des valeurs de type « champ » :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "object", "additionalProperties":{ "type": "string" } }
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "type": "string"
+          }
+        }
       </pre>
-    Mapper un champ dont les valeurs sont un tableau de chaînes :
+    Faire correspondre le champ avec des valeurs sous la forme d’un tableau de chaînes :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "object", "additionalProperties":{ "type": "array", "items" : { "type" : "string" } } }
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
       </pre>
-    Champ de mappage qui référence un autre schéma :
+    Faire correspondre un champ qui fait référence à un autre schéma :
       <pre class="JSON language-JSON hljs">
-        "sampleField" : { "type" : "object", "additionalProperties":{ "$ref": "id" } }
+        "sampleField": {
+          "type": "object",
+          "additionalProperties":{
+            "$ref": "id"
+          }
+        }
       </pre>
-      Où "id" correspond à {id} du schéma de référence.
+      où « id » désigne l’{id} du schéma de référence.
     </td>
   </tr>
 </table>
 
 
-## Mappage de types XDM à d’autres formats
+## Faire correspondre les types XDM à d’autres formats
 
-Le tableau ci-dessous décrit le mappage entre &quot;meta:xdmType&quot; et d’autres formats de sérialisation.
+Le tableau ci-dessous décrit le mappage entre « meta:xdmType » et d’autres formats de sérialisation.
 
-| Type<br>XDM (meta:xdmType) | JSON<br>(Schéma JSON) | Parquet<br>(type/annotation) | Spark SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aérospike | Protocole 2 |
+| Type XDM<br>(meta:xdmType) | JSON<br>(schéma JSON) | Parquet<br>(type/annotation) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| chaîne | type:string | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Chaîne | System.String | Chaîne | chaîne | Chaîne | chaîne |
-| nombre | type:number | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Nombre | double | Double | double |
-| long | type:<br>integermaximum:2^53+1<br>minimum:-2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nombre | long | Entier | int64 |
-| int | type:<br>integermaximum:2^31<br>minimum:-2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nombre | int | Entier | int32 |
-| short | type:<br>integermaximum:2^15<br>minimum:-2^15 | INT32/INT_16 | ShortType | java.lang.Short | Court | System.Int16 | Nombre | int | Entier | int32 |
-| byte | type:<br>integermaximum:2^7<br>minimum:-2^7 | INT32/INT_8 | ByteType | java.lang.Short | Octet | System.SByte | Nombre | int | Entier | int32 |
-| booléen | type:boolean | BOOLÉEN | BooleanType | java.lang.Boolean | Booléen | System.Boolean | Booléen | bool | Entier | Entier | bool |
-| date | type:format<br>de chaîne:date<br>(RFC 3339, section 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Chaîne | date | Entier<br>(unix millis) | int64<br>(unix millis) |
-| date-heure | type:format<br>de chaîne:date-time<br>(RFC 3339, section 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Chaîne | timestamp | Entier<br>(unix millis) | int64<br>(unix millis) |
-| map | objet | MAP groupe<br><br>annoté &lt;<span>key_type</span>> DOIT être de type STRING<br><br>&lt;<span>value_type</span>> type de valeurs de mappage | MapType<br><br>&quot;keyType&quot; DOIT être StringType<br><br>&quot;valueType&quot; est un type de valeurs de mappage. | java.util.Map | Carte | --- | objet | objet | map | map&lt;<span>key_type, value_type</span>> |
+| string | type : chaîne | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Chaîne | System.String | Chaîne | string | Chaîne | string |
+| nombre | type : nombre | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Nombre | double | Double | double |
+| long | type : entier<br>maximum : 2^53+1<br>minimum : -2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nombre | long | Entier | int64 |
+| int | type : entier<br>maximum : 2^31<br>minimum : -2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nombre | int | Entier | int32 |
+| court | type : entier<br>maximum : 2^15<br>minimum : -2^15 | INT32/INT_16 | ShortType | java.lang.Short | Court | System.Int16 | Nombre | int | Entier | int32 |
+| byte | type : entier<br>maximum : 2^7<br>minimum : -2^7 | INT32/INT_8 | ByteType | java.lang.Short | Octet | System.SByte | Nombre | int | Entier | int32 |
+| boolean | type : booléen | BOOLEAN | BooleanType | java.lang.Boolean | Booléen | System.Boolean | Booléen | bool | Entier | Entier | bool |
+| date | type : chaîne<br>format : date<br>(RFC 3339, section 5.6) | INT32/DATE | DateType | java.util.Date | java.util.Date | System.DateTime | Chaîne | date | Entier<br>(unix millis) | int64<br>(unix millis) |
+| date-time | type : chaîne<br>format : date-time<br>(RFC 3339, section 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Chaîne | timestamp | Entier<br>(unix millis) | int64<br>(unix millis) |
+| map | objet | Groupe annoté MAP<br><br>&lt;<span>key_type</span>> DOIT être STRING<br><br>&lt;<span>value_type</span>> type de valeurs de correspondance | MapType<br><br>&quot;keyType&quot; DOIT être StringType<br><br>&quot;valueType&quot; est le type de valeurs de correspondance. | java.util.Map | Map | --- | objet | objet | map | map&lt;<span>key_type, value_type</span>> |
