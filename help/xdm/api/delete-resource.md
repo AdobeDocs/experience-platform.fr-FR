@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Supprimer une ressource
+title: Suppression d’une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d9ab2b1226b051be43f8fc0dd222bc075caed6f0
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 7%
+source-wordcount: '133'
+ht-degree: 63%
 
 ---
 
 
-# Supprimer une ressource
+# Suppression d’une ressource
 
-Il peut parfois être nécessaire de supprimer (SUPPRIMER) une ressource du registre des Schémas. Seules les ressources que vous créez dans le conteneur client peuvent être supprimées. Pour ce faire, vous devez exécuter une requête DELETE à l&#39;aide `$id` de la ressource que vous souhaitez supprimer.
+It may occasionally be necessary to remove (DELETE) a resource from the [!DNL Schema Registry]. Seules les ressources créées dans le conteneur de client peuvent être supprimées. Pour ce faire, exécutez une requête DELETE à l’aide du `$id` de la ressource que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -24,12 +24,12 @@ DELETE /tenant/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{RESOURCE_TYPE}` | Type de ressource à supprimer de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
-| `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
+| `{RESOURCE_TYPE}` | The type of resource to be deleted from the [!DNL Schema Library]. Les types valides sont `datatypes`, `mixins`, `schemas` et `classes`. |
+| `{RESOURCE_ID}` | URI `$id` encodé par l’URL ou le `meta:altId` de la ressource. |
 
 **Requête**
 
-Les requêtes DELETE ne nécessitent pas d’en-têtes Accepter.
+Les requêtes DELETE ne nécessitent pas d’en-têtes Accept.
 
 ```SHELL
 curl -X DELETE \
@@ -42,6 +42,6 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 204 (Aucun contenu) et un corps vide.
+Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d&#39;envoyer une requête GET à la ressource. Vous devez inclure un en-tête Accepter dans la requête, mais vous devez recevoir l&#39;état HTTP 404 (Non trouvé) car la ressource a été supprimée du Registre du Schéma.
+Vous pouvez confirmer la suppression en tentant d’envoyer une requête de recherche (GET) à la ressource. You will need to include an Accept header in the request, but should receive an HTTP status 404 (Not Found) because the resource has been removed from the [!DNL Schema Registry].
