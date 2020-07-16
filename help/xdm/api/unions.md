@@ -4,47 +4,47 @@ solution: Experience Platform
 title: Unions
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 2%
+source-wordcount: '788'
+ht-degree: 88%
 
 ---
 
 
 # Unions
 
-Les Unions (ou vues d’union) sont des schémas générés par le système et en lecture seule qui agrégat les champs de tous les schémas qui partagent la même classe (XDM ExperienceEvent ou XDM Individuel Profil) et sont activés pour le Profil [client en temps](../../profile/home.md)réel.
+Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [!DNL Real-time Customer Profile](../../profile/home.md).
 
-Ce document aborde les concepts essentiels pour travailler avec des unions dans l&#39;API de registre de Schéma, y compris les exemples d&#39;appels à diverses opérations. Pour des informations plus générales sur les unions dans XDM, voir la section sur les unions dans les [bases de la composition](../schema/composition.md#union)des schémas.
+Ce document couvre les concepts essentiels pour travailler avec les unions dans l’API Schema Registry, y compris des exemples d’appels pour diverses opérations. Pour plus d’informations générales sur les unions dans XDM, consultez la section sur les unions dans le [Principe de base de la composition des schémas](../schema/composition.md#union).
 
-## Mélanges Union
+## Mixins d’union
 
-Le registre des Schémas comprend automatiquement trois mixins dans le schéma des unions : `identityMap`, `timeSeriesEvents`et `segmentMembership`.
+The [!DNL Schema Registry] automatically includes three mixins within the union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
 
-### Carte d’identité
+### Mappage d’identités
 
-Un schéma d’union `identityMap` est une représentation des identités connues au sein des schémas d’enregistrement associés à l’union. La carte d&#39;identité sépare les identités en différentes matrices de clés par espace de nommage. Chaque identité répertoriée est elle-même un objet contenant une `id` valeur unique.
+Un schéma d’union `identityMap` est une représentation des identités connues dans les schémas d’enregistrement associés de l’union. Le mappage d’identités sépare les identités en différents tableaux saisis par espace de noms. Chaque identité répertoriée est elle-même un objet contenant une valeur unique `id`.
 
-See the [Identity Service documentation](../../identity-service/home.md) for more information.
+Pour plus d’informations, voir la [documentation d’Identity Service](../../identity-service/home.md).
 
-### événements de séries chronologiques
+### Événements de série temporelle
 
-Le `timeSeriesEvents` tableau est une liste de événements de séries chronologiques qui se rapportent aux schémas d&#39;enregistrement associés à l&#39;union. Lorsque les données de Profil sont exportées vers des jeux de données, ce tableau est inclus pour chaque enregistrement. Cela s’avère utile pour divers cas d’utilisation, tels que l’apprentissage automatique, où les modèles ont besoin d’un historique de comportement complet du profil en plus de ses attributs d’enregistrement.
+Le tableau `timeSeriesEvents` est une liste d’événements de série temporelle liés aux schémas d’enregistrement associés à l’union. When [!DNL Profile] data is exported to datasets, this array is included for each record. Ceci est utile pour divers cas d’utilisation, tels que l’apprentissage automatique où les modèles ont besoin de l’historique complet du comportement d’un profil en plus de ses attributs d’enregistrement.
 
-### Mappage d’appartenance aux segments
+### Mappage de l’adhésion aux segments
 
-Le `segmentMembership` mappage stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’API [de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)segmentation, le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont ingérés dans Platform, ce qui permet l’intégration à d’autres solutions telles que l’Adobe Audience Manager.
+Le mappage `segmentMembership` stocke les résultats des évaluations de segments. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), le mappage est mis à jour. `segmentMembership` stocke également tous les segments d’audience pré-évalués qui sont ingérés dans Platform, permettant l’intégration avec d’autres solutions comme Adobe Audience Manager.
 
-Pour plus d’informations, consultez le didacticiel sur la [création de segments à l’aide d’API](../../segmentation/tutorials/create-a-segment.md) .
+Pour plus d’informations, consultez le tutoriel sur la [création de segments à l’aide des API](../../segmentation/tutorials/create-a-segment.md).
 
-## Activation d’un schéma pour l’adhésion à l’union
+## Activation d’un segment pour un abonnement à l’union
 
-Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la balise &quot;union&quot; doit être ajoutée à l’ `meta:immutableTags` attribut du schéma. Pour ce faire, PATCH demande de mettre à jour le schéma et d&#39;ajouter le `meta:immutableTags` tableau avec la valeur &quot;union&quot;.
+Pour qu’un schéma soit inclus dans l’union fusionnée, la balise « union » doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, vous devez effectuer une requête PATCH pour mettre à jour le schéma et ajouter le tableau `meta:immutableTags` avec une valeur « union ».
 
 >[!NOTE]
 >
->Les balises immuables sont des balises destinées à être définies, mais jamais supprimées.
+>Les balises immuables sont des balises destinées à être configurées, mais jamais supprimées.
 
 **Format d’API**
 
@@ -54,7 +54,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | URI `$id` codé URL ou `meta:altId` du schéma que vous souhaitez activer pour une utilisation dans le Profil. |
+| `{SCHEMA_ID}` | URI encodé URL `$id` ou `meta:altId` du schéma que vous souhaitez activer pour une utilisation dans [!DNL Profile]. |
 
 **Requête**
 
@@ -73,7 +73,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais un `meta:immutableTags` tableau contenant la valeur de chaîne &quot;union&quot;.
+Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais un tableau `meta:immutableTags` contenant la valeur de chaîne « union ».
 
 ```JSON
 {
@@ -115,11 +115,11 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
 }
 ```
 
-## unions Listes
+## Liste d’unions
 
-Lorsque vous définissez la balise &quot;union&quot; sur un schéma, le registre des Schémas crée et conserve automatiquement une union pour la classe sur laquelle le schéma est basé. Le nom `$id` de l&#39;union est similaire à celui `$id` d&#39;une classe, la seule différence étant que deux traits de soulignement et le mot &quot;union&quot; (`"__union"`) sont ajoutés.
+When you set the &quot;union&quot; tag on a schema, the [!DNL Schema Registry] automatically creates and maintains a union for the class upon which the schema is based. La valeur `$id` pour l’union est similaire à la norme `$id` d’une classe, la seule différence étant l’ajout de deux tirets bas et du mot « union » (`"__union"`).
 
-Pour vue d’une liste d’unions disponibles, vous pouvez exécuter une requête GET sur le `/unions` point de terminaison.
+Pour afficher une liste des unions disponibles, vous pouvez effectuer une requête GET auprès du point de terminaison `/unions`.
 
 **Format d’API**
 
@@ -141,7 +141,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 (OK) et un `results` tableau dans le corps de la réponse. Si des unions ont été définies, les `title`, `$id`, `meta:altId``version` et pour chaque union sont fournis en tant qu&#39;objets dans le tableau. Si aucune union n&#39;a été définie, l&#39;état HTTP 200 (OK) est toujours renvoyé, mais la `results` baie sera vide.
+Une réponse réussie renvoie un état HTTP 200 (OK) et un tableau `results` dans le corps de la réponse. Si des unions ont été définies, les valeurs `title`, `$id`, `meta:altId` et `version` pour chaque union sont fournies comme des objets dans le tableau. Si aucune union n’a été définie, un état HTTP 200 (OK) est toujours renvoyé, mais le tableau `results` est vide.
 
 ```JSON
 {
@@ -162,13 +162,13 @@ Une réponse réussie renvoie l’état HTTP 200 (OK) et un `results` tableau da
 }
 ```
 
-## Rechercher une union spécifique
+## Recherche d’une union spécifique
 
-Vous pouvez vue à une union spécifique en exécutant une requête GET qui inclut le `$id` et, selon l’en-tête Accepter, certains ou tous les détails de l’union.
+Vous pouvez voir une union spécifique en exécutant une requête GET qui inclut l’`$id` et, selon l’en-tête Accept, certains ou tous les détails de l’union.
 
 >[!NOTE]
 >
->Les recherches d’Unions sont disponibles à l’aide du point de terminaison `/unions` et `/schemas` afin de les activer pour une utilisation dans les exportations de Profil dans un jeu de données.
+>Les recherches d’unions sont disponibles à l’aide des points de terminaison `/unions` et `/schemas`[!DNL Profile] afin de les activer pour les utiliser dans les exportations de dans un jeu de données.
 
 **Format d’API**
 
@@ -179,7 +179,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{UNION_ID}` | URI codée `$id` URL de l’union à rechercher. Les URI des schémas d’union sont ajoutés avec &quot;__union&quot;. |
+| `{UNION_ID}` | URI encodé URL `$id` de l’union que vous souhaitez rechercher. Les URI pour les schémas d’unions sont suivis de « __union ». |
 
 **Requête**
 
@@ -193,20 +193,20 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed+json; version=1'
 ```
 
-Les demandes de recherche d’Union doivent `version` être incluses dans l’en-tête Accepter.
+Les requêtes de recherche d’unions requièrent que `version` soit inclus dans l’en-tête Accept.
 
-Les en-têtes Accepter suivants sont disponibles pour les recherches de schéma d’union :
+Les en-têtes Accept suivants sont disponibles pour les recherches de schémas d’unions :
 
-| Accepter | Description |
+| Accept | Description |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw avec `$ref` et `allOf`. Inclut des titres et des descriptions. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` attributs et `allOf` résolus. Inclut des titres et des descriptions. |
+| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw avec `$ref` et `allOf`. Contient des titres et des descriptions. |
+| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
 
 **Réponse**
 
-Une réponse réussie renvoie la vue d&#39;union de tous les schémas qui implémentent la classe dont `$id` le chemin d&#39;accès à la requête contient la classe.
+Une réponse réussie renvoie la vue d’union de tous les schémas qui implémentent la classe dont le `$id` a été fourni dans le chemin de la requête.
 
-Le format de réponse dépend de l’en-tête Accepter envoyé dans la requête. Testez différents en-têtes Accepter pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
+Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête. Testez différents en-têtes Accept pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
 
 ```JSON
 {
@@ -247,11 +247,11 @@ Le format de réponse dépend de l’en-tête Accepter envoyé dans la requête.
 }
 ```
 
-## schémas de Liste dans une union
+## Liste des schémas dans une union
 
-Pour déterminer quels schémas font partie d&#39;une union spécifique, vous pouvez exécuter une requête GET à l&#39;aide des paramètres de requête pour filtrer les schémas dans le conteneur locataire.
+Afin de voir quels schémas font partie d’une union spécifique, vous pouvez effectuer une requête GET en utilisant des paramètres de requête afin de filtrer les schémas dans le conteneur client.
 
-En utilisant le paramètre `property` requête, vous pouvez configurer la réponse pour qu&#39;elle renvoie uniquement des schémas contenant un `meta:immutableTags` champ et un `meta:class` égal à la classe dont vous accédez à l&#39;union.
+En utilisant le paramètre de requête `property`, vous pouvez configurer la réponse afin de renvoyer uniquement les schémas contenant un champ `meta:immutableTags` et un `meta:class` égal à la classe de l’union à laquelle vous accédez.
 
 **Format d’API**
 
@@ -261,11 +261,11 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Paramètre | Description |
 | --- | --- |
-| `{CLASS_ID}` | La `$id` classe dont vous souhaitez accéder à l&#39;union. |
+| `{CLASS_ID}` | Le `$id` de classe de l’union à laquelle vous souhaitez accéder. |
 
 **Requête**
 
-La requête suivante recherche tous les schémas qui font partie de l&#39;union de classe de Profil XDM.
+The following request looks up all schemas that are part of the [!DNL XDM Individual Profile] class union.
 
 ```SHELL
 curl -X GET \
@@ -279,7 +279,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste filtrée de schémas, contenant uniquement ceux qui satisfont aux deux exigences. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est supposée. Le format de la réponse dépend de l’en-tête Accepter envoyé dans la requête.
+Une réponse réussie renvoie une liste filtrée de schémas, contenant uniquement ceux qui répondent aux deux exigences. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est présumée. Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête.
 
 ```JSON
 {
