@@ -1,47 +1,47 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Données d’identité pour les demandes de confidentialité
+title: Données d’identité pour les demandes d’accès à des informations personnelles
 topic: overview
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 43%
 
 ---
 
 
-# Données d’identité pour les demandes de confidentialité
+# Données d’identité pour les demandes d’accès à des informations personnelles
 
-Pour qu’Adobe Experience Platform Privacy Service puisse traiter les demandes de clients concernant leurs données privées (y compris les demandes d’accès, de suppression ou d’exclusion), il doit être doté d’identifiants uniques qui lient un client spécifique à ses données privées stockées dans vos applications Adobe Experience Cloud. Privacy Service utilise ensuite ces identifiants pour rassembler toutes les données stockées sous l’identité du client dans Experience Cloud et les traiter selon la demande du client.
+In order for Adobe Experience Platform [!DNL Privacy Service] to process customer requests for their private data (including access, delete, or opt-out-of-sale requests), it must be provided with unique identifiers that link a specific customer to their stored private data in your Adobe Experience Cloud enabled applications. [!DNL Privacy Service] utilise ensuite ces identifiants pour rassembler toutes les données stockées sous l’identité du client dans et les traite selon la requête du client.[!DNL Experience Cloud]
 
-Ce document fournit des instructions générales sur la manière de configurer vos opérations de données et d’exploiter les technologies Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes de confidentialité des clients.
+Ce document fournit des instructions générales expliquant comment configurer vos opérations de données et tirer parti des technologies Adobe pour récupérer efficacement les informations d’identité appropriées pour les demandes d’accès à des informations personnelles des clients.
 
-## Identités et espaces de nommage
+## Identités et espaces de noms
 
-Lorsqu’un client peut interagir avec votre marque via plusieurs canaux différents, il peut s’avérer difficile de concilier les identifiants disparates qui sont enregistrés à partir de ces nombreuses interactions. Cela peut à son tour rendre difficile de déterminer quelles données appartiennent à une personne particulière dans vos applications Experience Cloud.
+Lorsqu’un client peut interagir avec votre marque via plusieurs canaux, il peut s’avérer difficile de rapprocher les différents identifiants enregistrés à partir de ces nombreuses interactions. This in turn can make it difficult to determine which data belongs to a particular person in your [!DNL Experience Cloud] applications.
 
-Par exemple, lors du traitement des demandes de données client dans Privacy Service, une identité peut représenter une valeur de cookie définie sous un domaine contrôlé par Adobe, une valeur de cookie sous un domaine tiers et partagée avec Adobe, ou un identifiant personnalisé que vous définissez explicitement dans votre organisation IMS.
+For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your IMS Organization.
 
-Il est donc nécessaire que chaque identité envoyée au Service de la protection des renseignements personnels soit accompagnée d&#39;un **espace de nommage** qui fournit un contexte en liant la valeur d&#39;identité à son système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Adresse électronique&quot;) ou associer l’identité à une application spécifique, telle qu’un Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou un Adobe Cible ID (&quot;TNTID&quot;).
+It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a **namespace** that provides context by relating the identity value to its system of origin. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-Adobe Experience Platform Identity Service conserve un stock d’espaces de nommage d’identité définis globalement et définis par les utilisateurs. Pour plus d&#39;informations sur les espaces de nommage, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité. Pour une liste des espaces de nommage et des qualificatifs d’espace de nommage standard couramment utilisés dans Privacy Service, consultez la section [de l’](api/appendix.md) annexe du guide du développeur.
+Adobe Experience Platform Identity Service conserve un stock d’espaces de nom d’identité définis globalement et par l’utilisateur. Pour des informations plus détaillées sur les espaces de noms, consultez la [présentation des espaces de noms d’identité](../identity-service/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the developer guide.
 
-## ECID et service d’inclusion
+## ECID et service d’accord préalable
 
-Adobe Experience Cloud Identity Service sert de cadre d’identification commun à Experience Cloud et affecte un identifiant unique et persistant à chaque visiteur de site. L’ECID (Experience Cloud ID) effectue le suivi de l’activité d’un client au moyen d’un cookie propriétaire, peut identifier de manière unique un périphérique dans plusieurs applications et vous permet d’identifier le même visiteur de site et ses données dans différentes applications Experience Cloud. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/fr-FR/id-service/using/intro/overview.html) for more information.
+Adobe Experience Cloud [!DNL Identity Service] serves as a common identification framework for [!DNL Experience Cloud], and assigns a unique, persistent ID to each site visitor. The [!DNL Experience Cloud] ID (ECID) tracks a customer&#39;s activity through the use of a first-party cookie, can uniquely identify a device across multiple applications, and allows you to identify the same site visitor and their data in different [!DNL Experience Cloud] applications. Pour plus d’informations, consultez la [présentation d’Identity Service d’Experience Cloud](https://docs.adobe.com/content/help/fr-FR/id-service/using/intro/overview.html).
 
-Le service d’inclusion, une extension d’Experience Cloud Identity Service, vous permet de configurer des protocoles sur votre application pour permettre aux visiteurs de déterminer si vous pouvez définir un cookie sur le périphérique ou le navigateur du visiteur. Pour plus d’informations sur le service d’inscription, y compris sur la configuration du service pour votre application, consultez la documentation [du service d’](https://docs.adobe.com/content/help/fr-FR/id-service/using/implementation/opt-in-service/optin-overview.html)inscription.
+Opt-in Service, an extension of [!DNL Experience Cloud Identity Service], allows you set up protocols on your application to let visitors determine whether you can set a cookie on the visitor&#39;s device or browser. Pour des informations plus détaillées sur le service d’accord préalable, y compris sur la configuration du service pour votre application, consultez la [documentation du service d’accord préalable](https://docs.adobe.com/content/help/fr-FR/id-service/using/implementation/opt-in-service/optin-overview.html).
 
-Une fois que des ECID ont été attribués aux visiteurs de votre site, vous pouvez utiliser la bibliothèque JavaScript de traitement des données personnelles d’Adobe pour récupérer ces identifiants en vue de les utiliser dans des demandes de confidentialité, comme décrit dans la section suivante.
+Once your site visitors have been assigned ECIDs, you can utilize the Adobe [!DNL Privacy JavaScript Library] to retrieve those IDs for use in privacy requests, as described in the next section.
 
-## Bibliothèque JS de confidentialité
+## [!DNL Privacy JS Library]
 
-La bibliothèque JavaScript d’Adobe Privacy fournit plusieurs fonctions qui vous permettent de récupérer et de supprimer les identités de client stockées dans le navigateur. La bibliothèque peut être configurée pour récupérer les informations d’identité de plusieurs applications Adobe, dont ECID. Grâce aux rappels ou aux promesses, vous pouvez programmer la gestion des identifiants récupérés avec succès et les envoyer à l’API Privacy Service.
+The [!DNL Adobe Privacy JavaScript Library] provides several functions that allow you to retrieve and remove customer identities that are stored in the browser. La bibliothèque peut être configurée pour récupérer les informations d’identité de plusieurs applications Adobe, dont ECID. Through the use of callbacks or promises, you can programmatically handle successfully retrieved IDs and send them to the [!DNL Privacy Service] API.
 
-Pour plus d’informations sur la bibliothèque JS de confidentialité, y compris des exemples de code pour plusieurs cas d’utilisation courants, consultez la présentation [de la bibliothèque JS de](js-library.md)confidentialité.
+For more information about [!DNL Privacy JS Library], including code samples for several common use cases, please refer to the [Privacy JS Library overview](js-library.md).
 
 ## Étapes suivantes
 
-Ce document donne un bref aperçu des concepts centraux impliqués dans la récupération des données d&#39;identité des clients pour les utiliser dans les demandes de confidentialité. Il est recommandé de consulter les liens de documentation fournis dans chaque section pour obtenir des informations plus détaillées sur ces concepts et services. Pour savoir comment envoyer des identifiants récupérés à Privacy Service pour créer des demandes d’accès, de suppression ou d’exclusion de la vente, consultez le guide [de développement](api/getting-started.md)Privacy Service.
+Ce document offre une brève présentation des principaux concepts impliqués dans la récupération des données d’identité client afin de pouvoir les utiliser dans les demandes d’accès à des informations personnelles. Il est recommandé de consulter les liens de documentation fournis dans chaque section pour obtenir des informations plus détaillées sur ces concepts et services. For steps on how to send retrieved IDs to [!DNL Privacy Service] for creating access, delete, or opt-out-of-sale requests, see the [Privacy Service developer guide](api/getting-started.md).
