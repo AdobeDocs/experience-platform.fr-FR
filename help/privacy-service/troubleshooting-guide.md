@@ -4,27 +4,27 @@ solution: Experience Platform
 title: FAQ sur Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5921f89ce551a4bdec4c5038d579cebd0451f5f2
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 0%
+source-wordcount: '856'
+ht-degree: 48%
 
 ---
 
 
-# Guide de dépannage de Privacy Service
+# [!DNL Privacy Service] guide de dépannage
 
-Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour aider les sociétés à gérer les demandes de confidentialité des données client. Grâce à Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données personnelles ou privées sur vos clients, ce qui vous permet de vous conformer automatiquement aux réglementations en matière de confidentialité en vigueur au sein de l’organisation et de la législation.
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
-Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes de l’API.
+Ce document fournit des réponses aux questions les plus fréquentes sur [!DNL Privacy Service]l’API, ainsi que des informations sur les erreurs fréquemment rencontrées dans l’API.
 
-## Lors de l’exécution de demandes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un ID utilisateur ? {#user-ids}
+## Lors de la création de requêtes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un identifiant utilisateur ? {#user-ids}
 
-Pour effectuer une nouvelle tâche de confidentialité dans l’API, la charge utile JSON de la requête doit contenir un tableau qui liste des informations spécifiques pour chaque utilisateur auquel la requête de confidentialité s’applique. `users` Chaque élément du `users` tableau est un objet qui représente un utilisateur particulier, identifié par sa `key` valeur.
+Pour effectuer une nouvelle tâche de confidentialité dans l’API, le payload JSON de la requête doit contenir un tableau `users` contenant des informations spécifiques pour chaque utilisateur concerné par la requête de confidentialité. Chaque élément du tableau `users` est un objet qui représente un utilisateur spécifique identifié par sa valeur `key`.
 
-En retour, chaque objet utilisateur (ou `key`) contient son propre `userIDs` tableau. Ce tableau liste des valeurs d&#39;ID spécifiques **pour cet utilisateur** particulier.
+De même, chaque objet utilisateur (ou `key`) contient son propre tableau `userIDs`. Ce tableau indique les valeurs d’identifiant spécifiques **pour cet utilisateur**.
 
-Consider the following example `users` array:
+Consultez l’exemple de tableau `users` suivant :
 
 ```json
 "users": [
@@ -59,54 +59,54 @@ Consider the following example `users` array:
 ]
 ```
 
-Le tableau contient deux objets, représentant des utilisateurs individuels identifiés par leurs `key` valeurs (&quot;DavidSmith&quot; et &quot;user12345&quot;). &quot;DavidSmith&quot; ne possède qu’un seul identifiant (son adresse électronique), tandis que &quot;user12345&quot; en a deux (son adresse électronique et son ECID).
+Le tableau contient deux objets représentant des utilisateurs individuels identifiés par leurs valeurs `key` (« DavidSmith » et « user12345 »). « DavidSmith » n’a qu’un identifiant (son adresse électronique), tandis que « user12345 » en a deux (son adresse électronique et son ECID).
 
-Pour plus d&#39;informations sur la fourniture d&#39;informations d&#39;identité des utilisateurs, consultez le guide sur les données d&#39; [identité pour les demandes](identity-data.md)de confidentialité.
+Pour plus d’informations sur la fourniture des informations d’identité des utilisateurs, consultez le guide sur les [données d’identité pour les demandes d’accès à des informations personnelles](identity-data.md).
 
 
-## Puis-je utiliser Privacy Service pour nettoyer les données qui ont été envoyées accidentellement à Platform ?
+## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
 
-Adobe ne prend pas en charge l’utilisation de Privacy Service pour effacer les données qui ont été envoyées accidentellement à un produit. Privacy Service est conçu pour vous aider à remplir vos obligations en ce qui concerne l&#39;accès aux données ou la suppression des demandes d&#39;accès ou de suppression des personnes concernées (ou des consommateurs). Ces demandes sont sensibles au temps et sont complétées en fonction de la loi sur la protection des renseignements personnels. La présentation de demandes qui ne sont pas des demandes d&#39;accès aux données ou aux consommateurs ou de suppression a des répercussions sur tous les clients du Service de la protection des renseignements personnels et sur la capacité du Service de la protection des renseignements personnels de prendre en charge les délais légaux appropriés.
+Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Ces requêtes sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
 
-Veuillez contacter votre gestionnaire de compte (MDP) pour coordonner et fournir un niveau d&#39;effort pour supprimer tout problème d&#39;informations d&#39;identification personnelle ou de données.
+Veuillez contacter votre gestionnaire de compte (CDM) pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
 
-## Comment puis-je obtenir des informations sur l&#39;état de ma demande de confidentialité ou de mon travail ?
+## Comment puis-je obtenir des informations sur l’état d’une requête ou d’une tâche de confidentialité ?
 
-Vous pouvez récupérer des détails sur une tâche particulière à l’aide de l’API ou de l’interface utilisateur de Privacy Service.
-
-### Utilisation de l’API
-
-Pour récupérer l’état d’une tâche particulière à l’aide de l’API Privacy Service, envoyez une requête au point de terminaison racine (`GET /`), en utilisant l’ID de la tâche dans le chemin de la requête. Pour en savoir plus, consultez la section sur la [vérification de l’état d’un travail](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide du développeur de Privacy Service.
-
-### Utilisation de l’interface utilisateur
-
-Toutes les demandes de travaux actives sont répertoriées dans le widget Demandes **de** travaux du tableau de bord d’interface utilisateur de Privacy Service. L’état de chaque demande de travail s’affiche sous la colonne **État** . Pour plus d’informations sur l’affichage des demandes de travail dans l’interface utilisateur, consultez le guide [d’utilisation de](ui/user-guide.md)Privacy Service.
-
-## Comment télécharger les résultats de mes tâches de confidentialité terminées ?
-
-L’API et l’interface utilisateur de Privacy Service offrent toutes deux des méthodes pour télécharger les résultats des tâches terminées au format ZIP.
+You can retrieve details about a particular job by using the [!DNL Privacy Service] API or user interface.
 
 ### Utilisation de l’API
 
-Faites une requête au point de terminaison racine (`GET /`) de l’API de Privacy Service, en utilisant l’identifiant de la tâche dont vous souhaitez télécharger les résultats dans le chemin d’accès à la requête. Si l’état de la tâche est terminé, l’API inclut un `downloadURL` attribut dans le corps de la réponse. Cet attribut contient une URL que vous pouvez coller dans la barre d’adresse de votre navigateur pour télécharger le fichier ZIP.
-
-Pour plus d’informations, voir la section relative à la [recherche d’un emploi par son identifiant](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide du développeur Privacy Service.
+To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job&#39;s ID in the request path. Pour plus d’informations, consultez la section relative à la [vérification de l’état d’une tâche](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de [!DNL Privacy Service]
 
 ### Utilisation de l’interface utilisateur
 
-Dans le tableau de bord d’interface utilisateur de Privacy Service, recherchez la tâche que vous souhaitez télécharger à partir du widget Demandes de **travaux** . Cliquez sur l’ID de la tâche pour ouvrir la page Détails _de la_ tâche. A partir de là, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le guide [d’utilisation de](ui/user-guide.md) Privacy Service pour obtenir des instructions plus détaillées.
+Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UICONTROL Requêtes de tâche]** accessible depuis le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] L’état de chaque requête de tâche est affiché sous la colonne **[!UICONTROL État]**. Pour plus d’informations sur l’affichage des requêtes de tâche dans l’interface utilisateur, consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md).
+
+## Comment télécharger les résultats de tâches de confidentialité terminées ?
+
+The [!DNL Privacy Service] API and user interface both provide methods for downloading the results of completed jobs in ZIP format.
+
+### Utilisation de l’API
+
+Envoyez une requête au point de terminaison racine (`GET /`) de l’API en indiquant l’identifiant de la tâche dont vous souhaitez télécharger les résultats dans le chemin d’accès de la requête. [!DNL Privacy Service] Si l’état de la tâche est terminé, l’API inclut un attribut `downloadURL` dans le corps de la réponse. Cet attribut contient une URL que vous pouvez coller dans la barre d’adresse de votre navigateur pour télécharger le fichier ZIP.
+
+Pour plus d’informations, reportez-vous à la section relative à la [recherche d’une tâche par son identifiant](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de [!DNL Privacy Service]
+
+### Utilisation de l’interface utilisateur
+
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Cliquez sur l’identifiant de la tâche pour ouvrir la page _Détails de la tâche_. Ensuite, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
 
 ## Messages d’erreur courants
 
-Le tableau suivant présente quelques erreurs courantes dans le Service de la protection des renseignements personnels, avec des descriptions pour aider à résoudre leurs problèmes respectifs.
+Le tableau ci-dessous présente quelques erreurs courantes dans [!DNL Privacy Service]le fichier, avec des descriptions pour aider à résoudre leurs problèmes respectifs.
 
 | Message d’erreur | Description |
 | --- | --- |
 | ID utilisateur introuvable. | Certains des ID utilisateur fournis dans la demande sont introuvables et ont été ignorés. Assurez-vous d’utiliser les espaces de nommage et les valeurs d’ID corrects dans la charge utile de la demande. Consultez le document sur la [fourniture de données](./identity-data.md) d&#39;identité pour une explication plus détaillée. |
-| Espace de nommage non valide | Un espace de nommage d&#39;identité fourni pour un ID d&#39;utilisateur n&#39;était pas valide. Consultez la section sur les espaces de nommage [d&#39;identité](./api/appendix.md#standard-namespaces) standard dans l&#39;annexe du guide du développeur du service de protection des renseignements personnels pour obtenir une liste des espaces de nommage acceptés. Si vous utilisez un espace de nommage personnalisé, veillez à définir la `type` propriété de l’identifiant sur &quot;personnalisé&quot;. |
+| Espace de nommage non valide | Un espace de nommage d&#39;identité fourni pour un ID d&#39;utilisateur n&#39;était pas valide. Consultez la section relative aux espaces de nommage [d&#39;identité](./api/appendix.md#standard-namespaces) standard dans l&#39;annexe du guide de [!DNL Privacy Service] développement pour une liste d&#39;espaces de nommage acceptés. Si vous utilisez un espace de nommage personnalisé, veillez à définir la `type` propriété de l’identifiant sur &quot;personnalisé&quot;. |
 | Partiellement terminé | La tâche s&#39;est terminée correctement, mais certaines données n&#39;étaient pas applicables à la demande donnée et ont été ignorées. |
 | Les données ne sont pas au format requis. | Une ou plusieurs valeurs de données pour l’application spécifiée étaient incorrectement formatées. Pour plus d’informations, consultez les détails de la tâche. |
-| L&#39;organisation IMS n&#39;a pas été configurée. | Ce message se produit lorsque votre organisation IMS n’a pas été configurée pour Privacy Service. Contactez votre administrateur pour plus d’informations. |
-| L’accès et les autorisations sont requis. | L’accès et les autorisations sont nécessaires pour utiliser Privacy Service. Contactez votre administrateur pour obtenir un accès. |
+| L&#39;organisation IMS n&#39;a pas été configurée. | Ce message se produit lorsque votre organisation IMS n’a pas été configurée pour [!DNL Privacy Service]. Contactez votre administrateur pour plus d’informations. |
+| L’accès et les autorisations sont requis. | L&#39;accès et les autorisations sont requis pour l&#39;utilisation [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du transfert et de l&#39;archivage des données d&#39;accès. | Lorsque cette erreur se produit, rechargez les données d’accès et réessayez. |
 | La charge de travail a été dépassée pour la limite de taux de document actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi et réessayez. |
