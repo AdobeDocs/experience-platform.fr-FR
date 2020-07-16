@@ -1,29 +1,29 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Didacticiels sur l’espace de travail Data Science
+title: Tutoriels Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '1252'
-ht-degree: 0%
+source-wordcount: '1171'
+ht-degree: 17%
 
 ---
 
 
-# Didacticiels sur l’espace de travail Data Science
+# [!DNL Data Science Workspace] didacticiels
 
-Adobe Experience Platform Data Science Workspace utilise l&#39;apprentissage automatique et l&#39;intelligence artificielle pour créer des informations à partir de vos données. Intégré dans l’Adobe Experience Platform, Data Science Workspace vous permet de faire des prédictions à l’aide de vos contenus et de vos ressources de données dans les solutions Adobe. Les chercheurs en données de tous les niveaux de compétence disposent d&#39;outils sophistiqués et faciles à utiliser qui permettent le développement rapide, la formation et l&#39;affinement des recettes d&#39;apprentissage automatique - tous les avantages de la technologie de l&#39;IA, sans la complexité.
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions. Les analystes de données de tout niveau de compétence disposent d’outils sophistiqués et faciles à utiliser qui aident au développement, à la formation et au réglage rapide de recettes d’apprentissage automatique pour vous faire bénéficier de tous les avantages de la technologie IA sans sa complexité.
 
-Pour en savoir plus, lisez tout d’abord l’aperçu [de](../data-science-workspace/home.md)Data Science Workspace.
+Pour en savoir plus, commencez par lire la [présentation de Data Science Workspace](../data-science-workspace/home.md).
 
-## API d&#39;apprentissage automatique Sensei
+## [!DNL Sensei Machine Learning] API
 
-L&#39;API d&#39;apprentissage automatique Sensei fournit un mécanisme permettant aux chercheurs de données d&#39;organiser et de gérer les services d&#39;apprentissage automatique, de l&#39;intégration d&#39;algorithmes à l&#39;expérimentation en passant par le déploiement de services.
+The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 **Les guides suivants à l’intention des développeurs d’API sont disponibles :**
-- [Moteurs](../data-science-workspace/api/engines.md) - Découvrez comment rechercher votre registre Docker, créer un moteur, créer un moteur de pipeline de fonctionnalités, récupérer les informations d&#39;un moteur, mettre à jour un moteur et supprimer un moteur.
+- [Moteurs](../data-science-workspace/api/engines.md) - Découvrez comment rechercher votre [!DNL Docker] registre, créer un moteur, créer un moteur de pipeline de fonctionnalités, récupérer les informations d&#39;un moteur, mettre à jour un moteur et supprimer un moteur.
 - [MLInstances (recettes)](../data-science-workspace/api/mlinstances.md) - Découvrez comment créer une instance MLInstance, récupérer les informations d&#39;une instance MLInstance, mettre à jour une instance MLInstance et supprimer une instance MLInstance.
 - [Expériences](../data-science-workspace/api/experiments.md) - Découvrez comment créer une expérience, récupérer une expérience ou une expérience exécute des informations, mettre à jour une expérience et supprimer une expérience.
 - [Modèles](../data-science-workspace/api/models.md) - Découvrez comment enregistrer votre propre modèle, récupérer les informations d&#39;un modèle, mettre à jour un modèle, supprimer un modèle, créer un nouveau transcodage pour un modèle et récupérer les détails d&#39;un modèle transcodé.
@@ -32,28 +32,28 @@ L&#39;API d&#39;apprentissage automatique Sensei fournit un mécanisme permettan
 
 Pour en savoir plus et obtenir les valeurs requises pour effectuer des opérations CRUD avec l&#39;API d&#39;apprentissage automatique Sensei, consultez le guide [de](../data-science-workspace/api/getting-started.md)prise en main.
 
-## Utilisation des portables JupyterLab
+## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] est une interface utilisateur web pour [!DNL Project Jupyter] et est étroitement intégrée à l’Adobe Experience Platform. Il fournit un environnement de développement interactif pour que les chercheurs en données puissent travailler avec des ordinateurs portables, du code et des données Jupyter. Ce document présente un aperçu de [!DNL JupyterLab] et de ses fonctionnalités, ainsi que des instructions pour effectuer des actions communes.
+[!DNL JupyterLab] est une interface utilisateur web pour [!DNL Project Jupyter] et est étroitement intégré à Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **Ce guide vous aidera à :**
 - Accédez à l&#39; [!DNL JupyterLab] interface et comprenez-la.
 - Comprendre les cellules de code et les noyaux disponibles dans [!DNL JupyterLab].
-- Comprendre la configuration du GPU et du serveur de mémoire dans Python/R.
+- Comprendre la configuration du GPU et du serveur de mémoire dans [!DNL Python]/R.
 - Lecture et requête [!DNL Platform] des données à l’aide de portables.
 - Comprenez les limites de données des ordinateurs portables.
 
 Pour en savoir plus, consultez le guide [d&#39;utilisation de](../data-science-workspace/jupyterlab/overview.md)JupyterLab.
 
-## Fichiers source de package pour la création de recettes Docker
+## compresser les fichiers source pour la création de [!DNL Docker] recettes ;
 
-Une image Docker vous permet de créer un package d&#39;application avec toutes les pièces dont elle a besoin. Cela inclut les bibliothèques et autres dépendances dans un seul package. L&#39;image Docker construite est envoyée au Registre du Conteneur Azure à l&#39;aide des informations d&#39;identification qui vous ont été fournies pendant le processus de création de la recette.
+Une [!DNL Docker] image vous permet de créer un package d’application avec toutes les parties nécessaires. Cela inclut les bibliothèques et autres dépendances dans un seul package. L&#39;image générée est transmise à l&#39; [!DNL Docker] [!DNL Azure Container Registry] utilisateur à l&#39;aide des informations d&#39;identification fournies lors du processus de création de la recette.
 
 **Ce didacticiel vous aidera à :**
 - Téléchargez les conditions préalables requises pour la création de recettes.
-- Comprendre la création de modèles basée sur Docker.
-- Créez une image Docker pour Python, R, PySpark ou Scala (Spark).
-- Procurez-vous une URL de fichier source Docker.
+- Comprendre la création de modèles [!DNL Docker] basés sur le modèle.
+- Créez une [!DNL Docker] image pour [!DNL Python], R, PySpark ou Scala ([!DNL Spark]).
+- Obtenez une URL de fichier [!DNL Docker] source.
 
 Pour en savoir plus, suivez les fichiers source du [package dans un didacticiel](../data-science-workspace/models-recipes/package-source-files-recipe.md)de recette.
 
@@ -62,19 +62,19 @@ Pour en savoir plus, suivez les fichiers source du [package dans un didacticiel]
 >[!NOTE]
 >
 >
->Ce didacticiel nécessite que vous disposiez d&#39;une URL de fichier source Docker. Consultez les fichiers source du [package dans un didacticiel](../data-science-workspace/models-recipes/package-source-files-recipe.md) de recette si vous n&#39;avez pas d&#39;URL de fichier source Docker.
+>Ce didacticiel nécessite que vous disposiez d’une URL de fichier [!DNL Docker] source. Consultez les fichiers source du [package dans un didacticiel](../data-science-workspace/models-recipes/package-source-files-recipe.md) de recette si vous ne disposez pas d’une URL de fichier [!DNL Docker] source.
 
-Les didacticiels sur les recettes d&#39;importation fournissent des informations sur la configuration et l&#39;importation d&#39;une recette assemblée. D&#39;ici la fin de ce didacticiel, vous pouvez créer, former et évaluer un modèle dans l&#39;espace de travail Adobe Experience Platform Data Science.
+Les didacticiels sur les recettes d&#39;importation fournissent des informations sur la configuration et l&#39;importation d&#39;une recette assemblée. By the end of this tutorial, you can create, train, and evaluate a Model in Adobe Experience Platform [!DNL Data Science Workspace].
 
 **Ce didacticiel vous aidera à :**
 - Créez un ensemble de configurations pour une recette.
-- Importez une recette basée sur un Docker pour Python, R, PySpark ou Scala (Spark).
+- Importez une recette [!DNL Docker] basée sur [!DNL Python], R, PySpark ou Scala ([!DNL Spark]).
 
 Pour en savoir plus, suivez le didacticiel [sur l&#39;](../data-science-workspace/models-recipes/import-packaged-recipe-ui.md) interface utilisateur de la recette préemballée ou le didacticiel [](../data-science-workspace/models-recipes/import-packaged-recipe-api.md)API.
 
 ## Formation et évaluation d’un modèle
 
-Dans Adobe Experience Platform Data Science Workspace, un modèle d&#39;apprentissage automatique est créé en incorporant une recette existante qui convient à l&#39;intention du modèle. Le modèle est ensuite formé et évalué afin d&#39;optimiser son efficacité et son efficacité d&#39;exploitation en affinant ses Hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques avec une seule Recette.
+In Adobe Experience Platform [!DNL Data Science Workspace], a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model&#39;s intent. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 
 **Ce didacticiel vous aidera à :**
 - Créez un modèle.
@@ -85,7 +85,7 @@ Pour commencer, suivez la formation et l’évaluation d’un didacticiel [d’]
 
 ## Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
 
-Le cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils dans l&#39;espace de travail des sciences des données d&#39;Adobe Experience Platform pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
+The Model Insights Framework provides the data scientist with tools in Adobe Experience Platform [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 
 **Ce didacticiel vous aidera à :**
 - Configurez le code de recette.
@@ -96,31 +96,31 @@ Pour commencer, suivez le didacticiel sur l&#39; [optimisation d&#39;un modèle]
 
 ## Score d’un modèle
 
-Le score dans l&#39;espace de travail des données d&#39;Adobe Experience Platform peut être obtenu en alimentant les données d&#39;entrée dans un modèle existant. Les résultats de score sont ensuite stockés et visibles dans un jeu de données de sortie spécifié en tant que nouveau lot.
+Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 
 **Ce didacticiel vous aidera à :**
-- Créez une nouvelle série de scores.
+- Création d’une opération de notation.
 - Vue de vos résultats de score.
 
-Pour commencer, suivez le didacticiel [sur l’](../data-science-workspace/models-recipes/score-model-api.md) API du modèle ou le didacticiel [](../data-science-workspace/models-recipes/score-model-ui.md)IU.
+To get started, follow the score a model [API tutorial](../data-science-workspace/models-recipes/score-model-api.md) or the [UI tutorial](../data-science-workspace/models-recipes/score-model-ui.md).
 
 ## Publication d’un modèle en tant que service
 
-Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle en tant que service, ce qui permet aux utilisateurs de votre organisation IMS de noter des données sans avoir à créer leurs propres modèles. Vous pouvez le faire à l’aide de l’interface [!DNL Platform] utilisateur ou de l’API d’apprentissage automatique Sensei.
+Adobe Experience Platform [!DNL Data Science Workspace] allows you to publish your Model as a service, enabling users within your IMS Organization to score data without the need for creating their own Models. This can be done using the [!DNL Platform] user interface or the [!DNL Sensei Machine Learning] API.
 
 **Ce didacticiel vous aidera à :**
 - Publiez un modèle en tant que service.
-- Score des données à l’aide d’un service via la Galerie de [!DNL Platform] services.
+- Score des données à l’aide d’un service via la Galerie [!DNL Platform] de services.
 
-Pour commencer, suivez le didacticiel [Publier un modèle en tant que](../data-science-workspace/models-recipes/publish-model-service-api.md) API de service ou le didacticiel [](../data-science-workspace/models-recipes/publish-model-service-ui.md)IU.
+Pour commencer, suivez le [tutoriel API](../data-science-workspace/models-recipes/publish-model-service-api.md) ou le [tutoriel UI](../data-science-workspace/models-recipes/publish-model-service-ui.md) pour publier un modèle en tant que service.
 
 ## Planification de la formation et de la notation pour un modèle
 
-Adobe Experience Platform Data Science Workspace vous permet de configurer des exécutions planifiées de notation et de formation sur un service d’apprentissage automatique. L&#39;automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l&#39;efficacité d&#39;un service dans le temps en respectant les schémas de vos données.
+Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning service. L&#39;automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l&#39;efficacité d&#39;un service dans le temps en respectant les schémas de vos données.
 
 **Ce didacticiel vous aidera à :**
-- Configuration d’un score planifié
-- Configuration de la formation planifiée
+- Configuration d’une notation planifiée
+- Configuration d’une formation planifiée
 
 Pour commencer, suivez le didacticiel [de](../data-science-workspace/models-recipes/schedule-models-ui.md)planification d’un modèle d’interface utilisateur.
 
@@ -129,7 +129,7 @@ Pour commencer, suivez le didacticiel [de](../data-science-workspace/models-reci
 >[!NOTE]
 >Actuellement, les pipelines de fonctionnalités ne sont disponibles que par API.
 
-L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctions personnalisées pour effectuer l&#39;ingénierie de fonctions à l&#39;échelle via le cadre d&#39;exécution Sensei Machine Learning Framework.
+L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisées pour effectuer l&#39;ingénierie de fonctionnalités à l&#39;échelle du [!DNL Sensei Machine Learning Framework Runtime].
 
 **Ce guide vous aidera à :**
 - Mettez en oeuvre les classes de pipeline de fonctionnalités.
@@ -137,14 +137,14 @@ L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines
 
 Pour en savoir plus, consultez le didacticiel consacré à la [création d’un pipeline](../data-science-workspace/authoring/feature-pipeline.md)de fonctionnalités.
 
-## Création d’une application d’apprentissage automatique en temps réel (alpha)
+## Création d’une [!DNL Real-Time Machine Learning] application (alpha)
 
-La combinaison d’un calcul transparent sur le Hub et sur le Hub [!DNL Edge] réduit considérablement la latence traditionnellement impliquée dans l’activation d’expériences hyper-personnalisées à la fois pertinentes et réactives. Par conséquent, l&#39;apprentissage automatique en temps réel fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page Web personnalisée, l’apparition d’une offre et les remises pour réduire le taux de fréquentation tout en augmentant les conversions sur un site Web de stockage.
+La combinaison d’un calcul transparent sur le Hub et sur le Hub [!DNL Edge] réduit considérablement la latence traditionnellement impliquée dans l’activation d’expériences hyper-personnalisées à la fois pertinentes et réactives. Par conséquent, [!DNL Real-time Machine Learning] fournit des inférences avec une latence incroyablement faible pour la prise de décision synchrone. Par exemple, le rendu du contenu d’une page Web personnalisée, l’apparition d’une offre et les remises pour réduire le taux de fréquentation tout en augmentant les conversions sur un site Web de stockage.
 
 **Ce guide vous aidera à :**
-- Comprendre l&#39;architecture d&#39;apprentissage automatique en temps réel.
-- Comprendre le processus d’apprentissage automatique en temps réel.
-- Comprendre la fonctionnalité actuelle de l&#39;apprentissage automatique en temps réel.
-- Fournissez les étapes suivantes pour créer votre propre modèle d&#39;apprentissage automatique en temps réel.
+- Comprendre l&#39; [!DNL Real-time Machine Learning] architecture.
+- Comprendre le [!DNL Real-time Machine Learning] processus.
+- Comprendre la fonctionnalité actuelle pour [!DNL Real-time Machine Learning].
+- Fournissez les étapes suivantes pour créer les vôtres [!DNL Real-time Machine Learning model].
 
 Pour en savoir plus, consultez la présentation [de l&#39;apprentissage automatique en temps](../data-science-workspace/real-time-machine-learning/home.md)réel.
