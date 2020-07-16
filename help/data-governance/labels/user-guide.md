@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide d’utilisation des libellés d’utilisation des données
 topic: labels
 translation-type: tm+mt
-source-git-commit: b36f67fd7d597d5d6a8cd514d95908ae26189c83
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 84%
+source-wordcount: '1109'
+ht-degree: 83%
 
 ---
 
@@ -28,7 +28,7 @@ La section suivante décrit les étapes à suivre pour créer un jeu de données
 
 >[!NOTE]
 >
->Dans cet exemple, un jeu de données est créé à l’aide d’un schéma de modèle de données d’expérience (XDM) préconfiguré. Pour plus d’informations sur les schémas XDM, consultez la [présentation du système XDM](../../xdm/home.md) et les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
+>In this example, a dataset is created using a pre-configured [!DNL Experience Data Model] (XDM) schema. Pour plus d’informations sur les schémas XDM, consultez la [présentation du système XDM](../../xdm/home.md) et les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
 
 Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l’espace de travail _[!UICONTROL Jeux de données]_.
 
