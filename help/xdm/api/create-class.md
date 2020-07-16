@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Créer une classe
+title: Création d’une classe
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 1%
+source-wordcount: '477'
+ht-degree: 89%
 
 ---
 
 
-# Créer une classe
+# Création d’une classe
 
-Le bloc de construction principal d&#39;un schéma est une classe. La classe contient le jeu minimum de champs à définir pour capturer les données de base d&#39;un schéma. Par exemple, si vous concevez un schéma pour les voitures et les camions, ils utiliseraient très probablement une classe appelée Véhicule qui décrivait les propriétés communes de base de tous les véhicules.
+Une classe est le bloc de création principal d’un schéma. La classe contient l’ensemble de champs minimum devant être défini afin de capturer les données principales d’un schéma. Par exemple, si vous concevez un schéma pour des voitures et des camions, il est fort probable que vous utilisiez une classe intitulée Véhicule pour décrire les propriétés courantes de base de tous les véhicules.
 
-Il existe plusieurs classes standard fournies par Adobe et d&#39;autres partenaires Experience Platform, mais vous pouvez également définir vos propres classes et les enregistrer dans le registre des Schémas. Vous pouvez ensuite composer un schéma qui implémente la classe que vous avez créée et définir des mixins compatibles avec votre nouvelle classe définie.
+There are several standard classes provided by Adobe and other [!DNL Experience Platform] partners, but you may also define your own classes and save them to the [!DNL Schema Registry]. Vous pouvez ensuite composer un schéma qui met en œuvre la classe que vous avez créée et définir des mixins compatibles avec la classe que vous venez de définir.
 
 >[!NOTE]
 >
->Lors de la composition d&#39;un schéma basé sur une classe que vous définissez, vous ne pourrez pas utiliser de mixins standard. Chaque mixin définit les classes avec lesquelles ils sont compatibles dans leur `meta:intendedToExtend` attribut. Une fois que vous commencez à définir des mixins compatibles avec votre nouvelle classe (en utilisant la `$id` de votre nouvelle classe dans le `meta:intendedToExtend` champ du mixin), vous pourrez réutiliser ces mixins chaque fois que vous définissez un schéma qui implémente la classe que vous avez définie. Pour plus d’informations, consultez les sections sur la [création de mixins](create-mixin.md) et la [création de schémas](create-schema.md) .
+>Lorsque vous composez un schéma basé sur une classe que vous avez définie, vous ne pourrez pas utiliser les mixins standard. Chaque mixin définit les classes avec lesquelles il est compatible dans l’attribut `meta:intendedToExtend`. Lorsque vous commencez à définir des mixins compatibles avec votre nouvelle classe (en utilisant le `$id` de votre nouvelle classe dans le champ `meta:intendedToExtend` du mixin), vous pourrez réutiliser ces mixins chaque fois que vous définissez un schéma qui met en œuvre la classe que vous avez définie. Pour plus d’informations, reportez-vous aux sections relatives à la [création de mixins](create-mixin.md) et à la [création de schémas](create-schema.md).
 
 **Format d’API**
 
@@ -30,9 +30,9 @@ POST /tenant/classes
 
 **Requête**
 
-La demande de création (POST) d&#39;une classe doit inclure un `allOf` attribut contenant une ou deux valeurs `$ref` : `https://ns.adobe.com/xdm/data/record` ou `https://ns.adobe.com/xdm/data/time-series`. Ces valeurs représentent le comportement sur lequel la classe est basée (enregistrement ou série chronologique, respectivement). Pour plus d&#39;informations sur les différences entre les données d&#39;enregistrement et les données de série chronologique, consultez la section sur les types de comportement dans les [bases de la composition](../schema/composition.md)du schéma.
+La requête de création (POST) d’une classe doit inclure un attribut `allOf` contenant un `$ref` d’une de ces deux valeurs : `https://ns.adobe.com/xdm/data/record` ou `https://ns.adobe.com/xdm/data/time-series`. Ces valeurs représentent le comportement sur lequel la classe est basée (enregistrement ou série temporelle, respectivement). Pour plus d’informations sur les différences entre les données d’enregistrement et les données de série temporelle, consultez la section sur les types de comportements dans les [principes de base de la composition des schémas](../schema/composition.md).
 
-Lorsque vous définissez une classe, vous pouvez également inclure des mixins ou des champs personnalisés dans la définition de classe. Les mixins et champs ajoutés seraient alors inclus dans tous les schémas qui implémentent la classe. L’exemple de demande suivant définit une classe appelée &quot;Propriété&quot;, qui capture des informations concernant les différentes propriétés détenues et exploitées par une société. Il inclut un `propertyId` champ à inclure chaque fois que la classe est utilisée.
+Lorsque vous définissez une classe, vous pouvez également inclure des mixins ou des champs personnalisés au sein de la définition de la classe. De cette manière, les mixins et les champs ajoutés seront inclus dans tous les schémas qui mettent en œuvre la classe. L’exemple de requête suivant définit une classe intitulée « Propriété » qui capture les informations concernant différentes propriétés détenues et exploitées par une société. Elle inclut un champ `propertyId` à ajouter chaque fois que la classe est utilisée.
 
 ```SHELL
 curl -X POST \
@@ -83,12 +83,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `_{TENANT_ID}` | L’ `TENANT_ID` espace de nommage de votre organisation. Toutes les ressources créées par votre organisation doivent inclure cette propriété pour éviter les collisions avec d&#39;autres ressources dans le registre des Schémas. |
-| `allOf` | liste de ressources dont les propriétés doivent être héritées par la nouvelle classe. L&#39;un des `$ref` objets du tableau définit le comportement de la classe. Dans cet exemple, la classe hérite du comportement &quot;record&quot;. |
+| `_{TENANT_ID}` | L’espace de noms `TENANT_ID` pour votre organisation. All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
+| `allOf` | Une liste des ressources dont les propriétés doivent être héritées par la nouvelle classe. L’un des objets `$ref` au sein du tableau définit le comportement de la classe. Dans cet exemple, la classe hérite du comportement « enregistrement ». |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile contenant les détails de la nouvelle classe, y compris la classe `$id`, `meta:altId`et `version`. Ces trois valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
+Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenant les détails de la classe que vous venez de créer, notamment `$id`, `meta:altId` et `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -152,4 +152,4 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile co
 }
 ```
 
-L’exécution d’une demande GET pour liste à toutes les classes du conteneur locataire inclurait désormais la classe Property. Vous pouvez également effectuer une requête de recherche (GET) à l’aide de l’ `$id` URI codée URL pour vue directement la nouvelle classe. Veillez à inclure le `version` dans l’en-tête Accepter lors de l’exécution d’une demande de recherche.
+L’exécution d’une requête GET pour lister toutes les classes dans le conteneur client inclurait désormais la classe Propriété. Vous pouvez également effectuer une requête de recherche (GET) à l’aide de l’URI `$id` encodé URL afin de visualiser directement la nouvelle classe. Veillez à inclure la clé `version` dans l’en-tête Accept lorsque vous réalisez une requête de recherche.
