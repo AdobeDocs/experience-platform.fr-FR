@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Consentement
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '220'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Consentement
 
-Certaines réglementations exigeaient un consentement explicite de la part du client avant que ses données personnelles puissent être collectées. Le `/consent` point de terminaison de l’API du Privacy Service vous permet de traiter les demandes de consentement des clients et de les intégrer à votre processus de confidentialité.
+Certaines réglementations exigeaient un consentement explicite de la part du client avant que ses données personnelles puissent être collectées. Le `/consent` point de terminaison de l’ [!DNL Privacy Service] API vous permet de traiter les demandes de consentement des clients et de les intégrer à votre processus de confidentialité.
 
 Avant d&#39;utiliser ce guide, reportez-vous à la section [prise en main](./getting-started.md) pour obtenir des informations sur les en-têtes d&#39;authentification requis présentés dans l&#39;exemple d&#39;appel d&#39;API ci-dessous.
 
@@ -68,8 +68,8 @@ curl -X POST \
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur la manière de déterminer les valeurs d&#39;identité du client à envoyer au Privacy Service, consultez le guide sur la [fourniture de données](../identity-data.md)d&#39;identité.
+>Pour plus d&#39;informations sur la manière de déterminer les valeurs d&#39;identité du client à envoyer à [!DNL Privacy Service], consultez le guide sur la [fourniture de données](../identity-data.md)d&#39;identité.
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 202 (Accepté) sans charge utile, ce qui indique que la demande a été acceptée par le Privacy Service et qu’elle est en cours de traitement.
+Une réponse réussie renvoie l’état HTTP 202 (Accepté) sans charge utile, ce qui indique que la demande a été acceptée par [!DNL Privacy Service] et qu’elle est en cours de traitement.
