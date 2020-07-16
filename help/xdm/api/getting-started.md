@@ -1,65 +1,65 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur d'API du registre de Schémas
+title: Guide de développement de l’API Schema Registry
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '1246'
-ht-degree: 0%
+source-wordcount: '1195'
+ht-degree: 70%
 
 ---
 
 
-# Guide du développeur d&#39;API du registre de Schémas
+# [!DNL Schema Registry] Guide du développeur d’API
 
-Le registre des Schémas est utilisé pour accéder à la bibliothèque de Schémas dans l’Adobe Experience Platform, fournissant une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
+The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
-L&#39;API Schéma Registry vous permet d&#39;effectuer des opérations CRUD de base afin de vue et de gérer tous les schémas et ressources connexes disponibles dans l&#39;Adobe Experience Platform. Cela inclut les applications définies par Adobe, les partenaires Experience Platform et les fournisseurs dont vous utilisez les applications. Vous pouvez également utiliser des appels d’API pour créer de nouveaux schémas et ressources pour votre organisation, ainsi que pour la vue et la modification de ressources que vous avez déjà définies.
+Grâce à l’API Schema Registry, vous pouvez réaliser des opérations CRUD de base afin d’afficher et de gérer tous les schémas et toutes les ressources associées disponibles pour vous au sein d’Adobe Experience Platform. This includes those defined by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. Vous pouvez également utiliser des appels API pour créer de nouveaux schémas et ressources pour votre organisation, ainsi qu’afficher et modifier les ressources que vous avez déjà définies.
 
-Ce guide du développeur décrit les étapes à suivre pour vous aider à début à l&#39;aide de l&#39;API de registre de Schéma. Le guide fournit ensuite des exemples d&#39;appels d&#39;API pour effectuer des opérations clés à l&#39;aide du Registre de Schéma.
+This developer guide provides steps to help you start using the [!DNL Schema Registry] API. The guide then provides sample API calls for performing key operations using the [!DNL Schema Registry].
 
 ## Conditions préalables
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Système](../home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-   * [Principes de base de la composition](../schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM.
-* [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [!DNL Experience Data Model (XDM) System](../home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+   * [Bases de la composition du schéma](../schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
+* [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer l&#39;API de registre du Schéma.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Schema Registry] API.
 
-## Lecture des exemples d’appels d’API
+## Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-## Rassembler les valeurs des en-têtes requis
+## Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources en Experience Platform, y compris celles appartenant au Registre des Schémas, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes de recherche (GET) envoyées au Registre du Schéma nécessitent un en-tête Accept supplémentaire, dont la valeur détermine le format des informations renvoyées par l’API. Voir la section d’en-tête [](#accept) Accepter ci-dessous pour plus d’informations.
+All lookup (GET) requests to the [!DNL Schema Registry] require an additional Accept header, whose value determines the format of information returned by the API. Voir la section [En-tête Accept](#accept) ci-dessous pour plus d’informations.
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-* Content-Type : application/json
+* Content-Type: application/json
 
-## Connaître votre ID_TENANT {#know-your-tenant_id}
+## Connaître votre TENANT_ID {#know-your-tenant_id}
 
-Dans ce guide, vous verrez des références à un `TENANT_ID`. Cet identifiant permet de s’assurer que les ressources que vous créez sont correctement espacées dans l’espace de noms et contenues dans votre organisation IMS. Si vous ne connaissez pas votre ID, vous pouvez y accéder en exécutant la demande GET suivante :
+Tout au long de ce guide, vous trouverez des références à un `TENANT_ID`. Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. Si vous ne connaissez pas votre identifiant, vous pouvez y accéder en réalisant la requête GET suivante :
 
 **Format d’API**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse positive renvoie des informations concernant l&#39;utilisation du Registre de Schéma par votre organisation. Ceci inclut un `tenantId` attribut, dont la valeur est votre `TENANT_ID`attribut.
+A successful response returns information regarding your organization&#39;s use of the [!DNL Schema Registry]. Cela inclut un attribut `tenantId`, dont la valeur est votre `TENANT_ID`.
 
 ```JSON
 {
@@ -157,63 +157,63 @@ Une réponse positive renvoie des informations concernant l&#39;utilisation du R
  }
 ```
 
-* `tenantId`: La `TENANT_ID` valeur de votre organisation IMS.
+* `tenantId` : la valeur `TENANT_ID` de votre organisation IMS.
 
 ## Comprendre le `CONTAINER_ID` {#container}
 
-Les appels à l&#39;API de registre de Schéma nécessitent l&#39;utilisation d&#39;un `CONTAINER_ID`. Il existe deux conteneurs pour lesquels des appels d&#39;API peuvent être effectués : le conteneur **** global et le conteneur **** locataire.
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. Il existe deux conteneurs sur lesquels vous pouvez passer des appels API : le **conteneur mondial** et le **conteneur client**.
 
-### conteneur mondial
+### Conteneur mondial
 
-Le conteneur global contient toutes les classes, mixins, types de données et schémas standard fournis par les partenaires Adobe et Experience Platform. Vous ne pouvez exécuter que des requêtes de liste et de recherche (GET) sur le conteneur global.
+The global container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. Vous pouvez uniquement exécuter les requêtes liste et recherche (GET) sur le conteneur mondial.
 
-### conteneur locataire
+### Conteneur client
 
-A ne pas confondre avec votre unique `TENANT_ID`, le conteneur locataire contient toutes les classes, mixins, types de données, schémas et descripteurs définis par une organisation IMS. Elles sont propres à chaque organisation, ce qui signifie qu&#39;elles ne sont ni visibles ni gérables par d&#39;autres organismes du SGI. Vous pouvez effectuer toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) par rapport aux ressources que vous créez dans le conteneur client.
+À ne pas confondre avec votre `TENANT_ID` unique, le conteneur client contient l’ensemble des classes, des mixins, des types de données, des schémas et des descripteurs définis par une organisation IMS. Ils sont spécifiques à chaque organisation, ce qui signifie qu’ils ne sont pas visibles ou gérables par d’autres organisations IMS. Vous pouvez réaliser toutes les opérations CRUD (GET, POST, PUT, PATCH, DELETE) sur des ressources que vous avez créées dans le conteneur client.
 
-Lorsque vous créez une classe, un mixin, un schéma ou un type de données dans le conteneur du client, il est enregistré dans le registre du Schéma et un `$id` URI comprenant votre `TENANT_ID`URI lui est affecté. Elle `$id` est utilisée dans toute l’API pour référencer des ressources spécifiques. Des exemples de `$id` valeurs sont fournis dans la section suivante.
+When you create a class, mixin, schema or data type in the tenant container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. Cet `$id` est utilisé sur l’ensemble de l’API pour faire référence à des ressources spécifiques. Des exemples de valeurs `$id` sont fournis à la section suivante.
 
-## Identification du Schéma {#schema-identification}
+## Identification du schéma {#schema-identification}
 
-Les Schémas sont identifiés avec un `$id` attribut sous la forme d’un URI, tel que :
+Les schémas sont identifiés avec un attribut `$id` sous la forme d’un URI, comme :
 * `https://ns.adobe.com/xdm/context/profile`
 * `https://ns.adobe.com/{TENANT_ID}/schemas/7442343-abs2343-21232421`
 
-Pour rendre l’URI plus compatible REST, les schémas disposent également d’un encodage en notation dot de l’URI dans une propriété appelée `meta:altId`:
+Pour rendre l’URI plus REST-friendly, les schémas possèdent également un encodage de notation à point de l’URI dans une propriété intitulée `meta:altId` :
 * `_xdm.context.profile`
 * `_{TENANT_ID}.schemas.7442343-abs2343-21232421`
 
-Les appels à l’API de registre de Schéma prennent en charge soit l’ `$id` URI codé en URL, soit le `meta:altId` (format de notation par point). Il est recommandé d’utiliser l’ `$id` URI codé en URL lors d’un appel REST à l’API, comme suit :
+Les appels vers l’API Schema Registry soutiendront soit l’URI `$id` encodé par l’URL ou le `meta:altId` (format de notation à point). La bonne pratique est d’utiliser l’URI `$id` encodé par l’URL lorsque vous passez un appel REST à l’API, comme :
 * `https%3A%2F%2Fns.adobe.com%2Fxdm%2Fcontext%2Fprofile`
 * `https%3A%2F%2Fns.adobe.com%2F{TENANT_ID}%2Fschemas%2F7442343-abs2343-21232421`
 
-## Accepter l’en-tête {#accept}
+## En-tête Accept {#accept}
 
-Lors des opérations de liste et de recherche (GET) dans l&#39;API de registre de Schéma, un en-tête Accepter est nécessaire pour déterminer le format des données renvoyées par l&#39;API. Lors de la recherche de ressources spécifiques, un numéro de version doit également être inclus dans l’en-tête Accepter.
+When performing list and lookup (GET) operations in the [!DNL Schema Registry] API, an Accept header is required to determine the format of the data returned by the API. Lorsque vous recherchez des ressources spécifiques, un numéro de version doit également être inclus dans l’en-tête Accept.
 
-Le tableau suivant liste des valeurs d’en-tête Accepter compatibles, y compris celles avec des numéros de version, ainsi que des descriptions de ce que l’API retournera lorsqu’elles seront utilisées.
+Le tableau suivant répertorie les valeurs de l’en-tête Accept compatibles, incluant celles dont les numéros de version, ainsi que les descriptions de ce que l’API renverra lorsqu’elles sont utilisées.
 
-| Accepter | Description |
+| Accept | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed-id+json` | Renvoie une liste d’ID uniquement. Il est le plus souvent utilisé pour répertorier les ressources. |
-| `application/vnd.adobe.xed+json` | Renvoie une liste de schéma JSON complet avec l’original `$ref` et `allOf` inclus. Il est utilisé pour renvoyer une liste de ressources complètes. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | XDM brut avec `$ref` et `allOf`. Comporte des titres et des descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` attributs et `allOf` résolus. Comporte des titres et des descriptions. |
+| `application/vnd.adobe.xed-id+json` | Renvoie uniquement une liste d’identifiants. Il s’agit de l’en-tête le plus souvent utilisé pour répertorier des ressources. |
+| `application/vnd.adobe.xed+json` | Renvoie une liste de schémas JSON complets qui incluent le `$ref` et le `allOf` d’origine. Cet en-tête est utilisé pour renvoyer une liste de ressources complètes. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | XDM brut avec `$ref` et `allOf`. Contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Contient des titres et des descriptions. |
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | XDM brut avec `$ref` et `allOf`. Aucun titre ni description. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributs et `allOf` résolus. Aucun titre ni description. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributs et `allOf` résolus. Les descripteurs sont inclus. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Aucun titre ni description. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | Attributs `$ref` et `allOf` résolus. Les descripteurs sont inclus. |
 
 >[!NOTE]
 >
->Si vous fournissez la `major` version seulement (par ex. 1, 2, 3), le registre retournera la dernière `minor` version (par ex. .1, .2, .3) automatiquement.
+> Si vous ne fournissez que la version `major` (par exemple, 1, 2, 3), le registre renverra automatiquement la dernière version `minor`.
 
-## Contraintes de terrain XDM et bonnes pratiques
+## Contraintes de champ XDM et bonnes pratiques
 
-Les champs d’un schéma sont répertoriés dans son `properties` objet. Chaque champ est lui-même un objet, contenant des attributs pour décrire et contraindre les données que le champ peut contenir.
+Les champs d’un schéma sont répertoriés dans son objet `properties`. Chaque champ est lui-même un objet et contient des attributs pour décrire et contraindre les données que le champ peut contenir.
 
-Vous trouverez plus d&#39;informations sur la définition des types de champs dans l&#39;API dans l&#39; [annexe](appendix.md) de ce guide, y compris des exemples de code et des contraintes facultatives pour les types de données les plus utilisés.
+Vous trouverez plus d’informations sur la définition des types de champ dans l’API dans l’[annexe](appendix.md) de ce guide, notamment des exemples de code et des contraintes optionnelles pour les types de données les plus couramment utilisés.
 
-L’exemple de champ suivant illustre un champ XDM correctement formaté, avec des détails supplémentaires sur les contraintes d’affectation de nom et les bonnes pratiques fournies ci-dessous. Ces pratiques peuvent également être appliquées lors de la définition d’autres ressources qui contiennent des attributs similaires.
+Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de plus amples détails sur les contraintes de dénomination et les bonnes pratiques fournies ci-dessous. Ces pratiques peuvent également s’appliquer lorsque vous définissez les autres ressources pouvant contenir des attributs similaires.
 
 ```JSON
 "fieldName": {
@@ -227,19 +227,19 @@ L’exemple de champ suivant illustre un champ XDM correctement formaté, avec d
 }
 ```
 
-* Le nom d’un objet de champ peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais **peut ne pas** s’début avec un trait de soulignement.
-   * **Correct :** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
-   * **Incorrect :** `_fieldName`
-* camelCase est préférable pour le nom de l’objet field. Exemple: `fieldName`
-* Le champ doit inclure un `title`, écrit en cas de titre. Exemple: `Field Name`
-* Le champ nécessite un `type`champ.
-   * La définition de certains types peut nécessiter une option `format`.
-   * Lorsqu&#39;une mise en forme spécifique des données est requise, `examples` vous pouvez l&#39;ajouter sous forme de tableau.
-   * Le type de champ peut également être défini à l&#39;aide de n&#39;importe quel type de données du registre. Pour plus d&#39;informations, consultez la section sur la [création d&#39;un type](create-data-type.md) de données dans ce guide.
-* La section `description` explique le champ et les informations pertinentes concernant les données de champ. Il devrait être rédigé en phrases complètes et en langage clair, de sorte que quiconque accède au schéma puisse comprendre l&#39;intention du terrain.
+* Le nom d’un objet de champ peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais **ne peut pas** commencer par un trait de soulignement.
+   * **Correct :** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
+   * **Incorrect :** `_fieldName`
+* Le Camel case est préférable pour le nom du champ objet. Exemple : `fieldName`
+* Le champ doit inclure un `title`, écrit en Casse Titre. Exemple : `Field Name`
+* Le champ nécessite un `type`.
+   * La définition de certains types peut nécessiter un `format` facultatif.
+   * Lorsqu’une mise en forme spécifique des données est requise, vous pouvez ajouter des `examples` sous la forme d’un tableau.
+   * Il est également possible de définir le type de champ à l’aide d’un type de données dans le registre. Pour plus d’informations, consultez la section [Création d’un type de donnée](create-data-type.md) de ce guide.
+* Le `description` explique le champ et des informations pertinentes concernant les données du champ. Il doit être écrit en phrases complètes dans une langue claire afin que toute personne accédant au schéma puisse comprendre l’intention du champ.
 
-Consultez l’ [annexe](appendix.md) pour plus d’informations sur la définition des types de champ dans l’API.
+Consultez l’[annexe](appendix.md) pour plus d’informations sur la manière de définir des types de champ dans l’API.
 
 ## Étapes suivantes
 
-Ce document couvrait les connaissances préalables requises pour effectuer des appels à l&#39;API de registre du Schéma, y compris les informations d&#39;identification d&#39;authentification requises. Vous pouvez maintenant passer aux exemples d’appels fournis dans ce guide du développeur et suivre leurs instructions. Pour une présentation détaillée de la façon de créer un schéma dans l&#39;API, consultez le [didacticiel](../tutorials/create-schema-api.md)suivant.
+This document covered the prerequisite knowledge required to make calls to the [!DNL Schema Registry] API, including required authentication credentials. Vous pouvez désormais procéder aux appels d’échantillon fournis dans ce guide de développement à suivre avec leurs instructions. Pour obtenir des instructions complètes étape par étape sur la manière dont faire un schéma dans l’API, reportez-vous au [tutoriel](../tutorials/create-schema-api.md) suivant.
