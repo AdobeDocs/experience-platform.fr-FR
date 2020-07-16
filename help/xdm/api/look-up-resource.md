@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Rechercher une ressource
+title: Recherche d’une ressource
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 3%
+source-wordcount: '174'
+ht-degree: 95%
 
 ---
 
 
-# Rechercher une ressource
+# Recherche d’une ressource
 
-Vous pouvez rechercher des ressources spécifiques en exécutant une requête GET qui inclut l’ `$id` (URI encodé en URL) de la ressource dans le chemin de la requête.
+Vous pouvez rechercher une ressource spécifique en effectuant une requête GET qui comprend l’identifiant `$id` (URI encodé URL) de la ressource dans le chemin de la requête.
 
 **Format d’API**
 
@@ -24,9 +24,9 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}/{RESOURCE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | conteneur où se trouvent les ressources (&quot;global&quot; ou &quot;locataire&quot;). |
-| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de Schémas. Les types valides sont `datatypes`, `mixins`, `schemas`et `classes`. |
-| `{RESOURCE_ID}` | URI codé en URL `$id` ou `meta:altId` de la ressource. |
+| `{CONTAINER_ID}` | Le conteneur où se trouvent les ressources (« global » ou « client »). |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Les types valides sont `datatypes`, `mixins`, `schemas` et `classes`. |
+| `{RESOURCE_ID}` | URI `$id` encodé par l’URL ou le `meta:altId` de la ressource. |
 
 **Requête**
 
@@ -40,23 +40,23 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Les demandes de recherche de ressources doivent `version` être incluses dans l’en-tête Accepter. Les en-têtes Accepter suivants sont disponibles pour les recherches :
+Les requêtes de recherche de ressource doivent inclure une `version` dans l’en-tête Accept. Vous pouvez utiliser les en-têtes Accept suivants pour les recherches :
 
-| Accepter | Description |
+| Accept | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, a des titres et descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, a des titres et des descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, sans titres ni descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, aucun titre ou description. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolu, descripteurs inclus. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, contient des titres et des descriptions. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Brut avec `$ref` et `allOf`, ne contient aucun titre ni aucune description. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, ne contient aucun titre ni aucune description. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` et `allOf` résolus, contient des descripteurs. |
 
 >[!NOTE]
 >
->Si vous fournissez la `major` version uniquement (1, 2, 3, etc), le registre renverra automatiquement la dernière `minor` version (.1, .2, .3, etc).
+> Si vous ne fournissez que la version `major` (par exemple, 1, 2, 3, etc.), le registre renverra automatiquement la dernière version `minor`.
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la ressource. Les champs renvoyés dépendent de l’en-tête Accepter envoyé dans la requête. Testez différents en-têtes Accepter pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
+Une réponse réussie renvoie les détails de la ressource. Les champs renvoyés dépendent de l’en-tête Accept envoyé dans la requête. Testez différents en-têtes Accept pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
 
 ```JSON
 {
