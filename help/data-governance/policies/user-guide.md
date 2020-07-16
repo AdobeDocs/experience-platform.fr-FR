@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l’utilisateur des stratégies d’utilisation des données
+title: Guide d’utilisation des stratégies de données
 topic: policies
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 0%
+source-wordcount: '725'
+ht-degree: 39%
 
 ---
 
 
-# Guide de l’utilisateur des stratégies d’utilisation des données
+# Guide d’utilisation des stratégies de données
 
-La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail _Policies_ de l’ [!DNL Experience Platform] interface utilisateur.
+Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
 >Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
-## Conditions préalables
+## Conditions préalables 
 
-Ce guide nécessite une compréhension pratique des [!DNL Experience Platform] concepts suivants :
+This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
 - [!DNL Data Governance](../home.md)
 - [Stratégies d’utilisation des données](./overview.md)
 
-## Stratégies d’utilisation des données de Vue {#view-policies}
+## Affichage des stratégies d’utilisation des données {#view-policies}
 
-Dans l’ [!DNL Experience Platform] interface utilisateur, cliquez sur **[!UICONTROL Stratégies]** pour ouvrir l’espace de travail *[!UICONTROL Stratégies]* . Dans l’onglet **[!UICONTROL Parcourir]** , vous pouvez voir une liste des stratégies disponibles, y compris leurs étiquettes associées, leurs actions marketing et leur état.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez voir une liste des stratégies disponibles, y compris leurs libellés associés, les actions marketing et les états.
 
 ![](../images/policies/browse-policies.png)
 
-Cliquez sur une stratégie répertoriée pour en vue la description et le type. Si une stratégie personnalisée est sélectionnée, d’autres contrôles s’affichent pour modifier, supprimer ou [activer/désactiver la stratégie](#enable).
+Cliquez sur une stratégie répertoriée pour afficher sa description et son type. Si une stratégie personnalisée est sélectionnée, d’autres contrôles s’affichent pour la modifier, la supprimer ou [activer/désactiver la stratégie](#enable).
 
 ![](../images/policies/policy-details.png)
 
 ## Création d’une stratégie d’utilisation des données personnalisée {#create-policy}
 
-Pour créer une stratégie d’utilisation des données personnalisée, cliquez sur **[!UICONTROL Créer une stratégie]** dans le coin supérieur droit de l’onglet **[!UICONTROL Parcourir]** de l’espace de travail *[!UICONTROL Stratégies]* .
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-Le processus de *[!UICONTROL création de stratégie]* s’affiche. Début en fournissant un nom et une description pour la nouvelle stratégie.
+Le workflow de *[!UICONTROL création de stratégies]* s’affiche. Commencez par fournir un nom et une description à la nouvelle stratégie.
 
 ![](../images/policies/create-policy-description.png)
 
-Ensuite, sélectionnez les étiquettes d’utilisation des données sur lesquelles la stratégie sera basée. Lors de la sélection de plusieurs étiquettes, vous avez la possibilité de choisir si les données doivent contenir toutes les étiquettes ou une seule pour que la stratégie s’applique. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
+Ensuite, sélectionnez les libellés d’utilisation des données sur lesquels la stratégie sera basée. Lors de la sélection de plusieurs libellés, vous avez la possibilité de choisir si les données doivent contenir tous les libellés ou un seul pour que la stratégie s’applique. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../images/policies/add-labels.png)
 
-L’étape *[!UICONTROL Sélectionner les actions]* marketing s’affiche. Sélectionnez les actions marketing appropriées dans la liste fournie, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+L’étape *[!UICONTROL Sélectionner les actions marketing]* s’affiche. Sélectionnez les actions marketing appropriées dans la liste fournie, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 >[!NOTE]
 >
->Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle &quot;OU&quot;. En d’autres termes, la stratégie s’applique si _l’une_ des actions marketing sélectionnées est exécutée.
+> Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle « OU ». En d’autres termes, la stratégie s’applique si _l’une_ des actions marketing sélectionnées est exécutée.
 
 ![](../images/policies/add-marketing-actions.png)
 
-L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier les détails de la nouvelle stratégie avant de la créer. Une fois que vous êtes satisfait, cliquez sur **[!UICONTROL Terminer]** pour créer la stratégie.
+L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de consulter les détails de la nouvelle stratégie avant de la créer. Une fois que vous êtes satisfait, cliquez sur **[!UICONTROL Terminer]** pour créer la stratégie.
 
 ![](../images/policies/policy-review.png)
 
-L’onglet *[!UICONTROL Parcourir]* réapparaît, qui liste désormais la nouvelle stratégie à l’état &quot;Version préliminaire&quot;. Pour activer la stratégie, consultez la section suivante.
+L’onglet *[!UICONTROL Parcourir]* réapparaît et affiche désormais la nouvelle stratégie avec l’état « Version préliminaire ». Pour activer la stratégie, consultez la section suivante.
 
 ![](../images/policies/created-policy.png)
 
@@ -71,7 +71,7 @@ L’onglet *[!UICONTROL Parcourir]* réapparaît, qui liste désormais la nouvel
 
 Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
-Vous pouvez activer ou désactiver des stratégies à partir de l’onglet *[!UICONTROL Parcourir]* de l’espace de travail *[!UICONTROL Stratégies]* . Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous *[!UICONTROL Etat]*, sélectionnez le bouton bascule pour activer ou désactiver la stratégie.
+You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous *[!UICONTROL État]*, sélectionnez le bouton d’activation/désactivation pour activer ou désactiver la stratégie.
 
 ![](../images/policies/enable-policy.png)
 
@@ -81,7 +81,7 @@ Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’ongl
 
 ![](../images/policies/marketing-actions.png)
 
-## Création d’une action marketing {#create-marketing-action}
+## Create a marketing action {#create-marketing-action}
 
 Pour créer une action marketing personnalisée, cliquez sur **[!UICONTROL Créer une action]** marketing dans le coin supérieur droit de l’onglet Actions **** marketing de l’espace de travail *[!UICONTROL Stratégies]* .
 
@@ -115,7 +115,7 @@ Si l’action marketing n’est utilisée par aucune stratégie d’utilisation 
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu de la gestion des stratégies d’utilisation des données dans [!DNL Experience Platform] l’interface utilisateur. Pour savoir comment gérer les stratégies à l’aide de l’API DULE Policy, consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur la manière d’appliquer des stratégies d’utilisation des données, voir l’aperçu [de l’application des](../enforcement/overview.md)stratégies.
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la [présentation de l’application des stratégies](../enforcement/overview.md).
 
 La vidéo suivante montre comment utiliser les stratégies d’utilisation dans l’ [!DNL Experience Platform] interface utilisateur :
 
