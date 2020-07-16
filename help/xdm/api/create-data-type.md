@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Création d’un type de données
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b0d8c8ee4df11d601d8feb122c70a9cd5d7d5b77
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 0%
+source-wordcount: '200'
+ht-degree: 95%
 
 ---
 
 
 # Création d’un type de données
 
-Lorsqu’il existe des structures de données communes que votre entreprise souhaite utiliser de plusieurs manières, vous pouvez définir un type de données. Les types de données permettent l&#39;utilisation cohérente de structures à champs multiples, avec plus de flexibilité que les mixins, car ils peuvent être inclus n&#39;importe où dans un schéma en les ajoutant comme `type` d&#39;un champ.
+Lorsque votre organisation souhaite utiliser des structures de données communes de plusieurs manières, vous pouvez définir un type de données. Les types de données permettent l’utilisation cohérente de structures à champs multiples avec plus de souplesse que les mixins, car ils peuvent être inclus n’importe où dans un schéma en les ajoutant en tant que `type` d’un champ.
 
 En d’autres termes, les types de données vous permettent de définir une hiérarchie d’objets une seule fois et d’y faire référence dans un champ de la même manière que tout autre type scalaire.
 
@@ -26,7 +26,7 @@ POST /tenant/datatypes
 
 **Requête**
 
-La définition d’un type de données ne nécessite pas de champs `meta:extends` ou `meta:intendedToExtend` de champs, et les champs ne doivent pas non plus être imbriqués pour éviter les collisions.
+La définition d’un type de données ne nécessite aucun champ `meta:extends` ou `meta:intendedToExtend`, et il n’est plus nécessaire d’imbriquer les champs pour éviter les collisions.
 
 ```SHELL
 curl -X POST \
@@ -67,7 +67,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile contenant les détails du type de données nouvellement créé, y compris le `$id`, `meta:altId`et `version`. Ces trois valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
+Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un payload contenant les détails du type de données nouvellement créé, y compris `$id`, `meta:altId` et `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -116,4 +116,4 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile co
 }
 ```
 
-L’exécution d’une requête GET pour liste de tous les types de données dans le conteneur locataire inclurait désormais le type de données Construction immobilière. Vous pouvez également effectuer une demande de recherche (GET) à l’aide de l’ `$id` URI codée URL pour vue directement le nouveau type de données. Veillez à inclure le `version` paramètre dans l’en-tête Accepter pour une demande de recherche.
+L’exécution d’une requête GET pour répertorier tous les types de données dans le conteneur client inclurait désormais le type de données Conception de propriétés. Vous pouvez également effectuer une requête de recherche (GET) à l’aide de l’URI `$id` encodé URL afin de visualiser directement le nouveau type de données. Veillez à inclure `version` dans l’en-tête Accept pour une requête de recherche.
