@@ -1,48 +1,48 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Didacticiels sur l’importation de données
+title: Tutoriels sur l’ingestion de données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0eecd802fc8d0ace3a445f3f188a7f095b97d0c8
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 0%
+source-wordcount: '480'
+ht-degree: 50%
 
 ---
 
 
-# Incorporation de données dans la plateforme d’expérience
+# Ingest data into [!DNL Experience Platform]
 
-Adobe Experience Platform rassemble les données provenant de plusieurs sources afin d’aider les spécialistes du marketing à mieux comprendre le comportement de leurs clients. L’importation de données de la plateforme Adobe Experience Platform représente les multiples méthodes par lesquelles la plateforme ingère des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans Data Lake pour être utilisées par les services Plateforme en aval. L&#39;importation de données comprend l&#39;assimilation par lots, l&#39;assimilation en flux continu et l&#39;assimilation à l&#39;aide des connecteurs source. Pour en savoir plus, lisez l&#39;aperçu [de l&#39;](../ingestion/home.md) importation de données ou passez directement à la documentation [](../sources/home.md)Sources.
+Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les professionnels du marketing à mieux comprendre le comportement de leurs clients. Adobe [!DNL Experience Platform Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform services]. [!DNL Data Ingestion] comprend l’ingestion par lots, l’ingestion par flux et l’ingestion à l’aide de connecteurs de sources. Pour en savoir plus, lisez la [présentation de Data Ingestion](../ingestion/home.md) ou accédez directement à la [documentation sur les sources](../sources/home.md).
 
-## Création d’un connecteur source dans l’interface utilisateur et l’API
+## Création d’un connecteur de sources dans l’interface utilisateur et l’API
 
-Les connecteurs de source vous permettent d’assimiler des données provenant de plusieurs sources, où elles peuvent ensuite être étiquetées, structurées et améliorées à l’aide des services de plate-forme. Pour commencer à créer un connecteur source, consultez l’aperçu [des](../sources/home.md)sources.
+Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using [!DNL Platform services]. Pour commencer à créer un connecteur source, consultez l’aperçu [des](../sources/home.md)sources.
 
-## Incorporer les données de lot
+## Ingestion de données par lots
 
-Adobe Experience Platform vous permet d’importer facilement des données dans la plate-forme sous forme de fichiers de commandes. Parmi les exemples de données à ingérer, citons les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu de modèle de données d’expérience (XDM) dans le registre des Schémas. Pour commencer, consultez le didacticiel [sur les données d’](../ingestion/tutorials/ingest-batch-data.md)assimilation dans la plate-forme.
+Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry. Pour commencer, consultez le [tutoriel relatif à l’ingestion de données dans Platform](../ingestion/tutorials/ingest-batch-data.md).
 
-## Mappage d’un fichier CSV à un Schéma XDM
+## Mappage d’un fichier CSV à un schéma XDM
 
-Pour importer des données CSV dans Adobe Experience Platform, les données doivent être mises en correspondance avec un schéma de modèle de données d’expérience (XDM). Pour savoir comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de la plate-forme d’expérience, suivez le [mappage d’un fichier CSV à un didacticiel](../ingestion/tutorials/map-a-csv-file.md)de schéma XDM.
+In order to ingest CSV data into Adobe Experience Platform, the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. For steps showing how to map a CSV file to an XDM schema using the [!DNL Experience Platform] user interface, follow the [map a CSV file to an XDM schema tutorial](../ingestion/tutorials/map-a-csv-file.md).
 
-## Création d’une connexion en flux continu
+## Création d’une connexion en continu
 
-Pour début des données en flux continu sur la plateforme d’expérience, vous devez d’abord demander un point de terminaison HTTP. Vous avez la possibilité de configurer ce point de terminaison pour appliquer un comportement authentifié. Pour ce faire, vous pouvez utiliser l’interface utilisateur de la plate-forme ou les API de plate-forme d’expérience. Pour en savoir plus, suivez les didacticiels de [création d’une connexion en flux continu à l’aide de l’interface utilisateur](../ingestion/tutorials/create-streaming-connection-ui.md) ou de [création d’une connexion en flux continu à l’aide des API](../ingestion/tutorials/create-streaming-connection.md).
+Pour début des données en flux continu à [!DNL Experience Platform], vous devez d’abord demander un point de terminaison HTTP. Vous avez la possibilité de configurer ce point de terminaison pour appliquer un comportement authentifié. This can be done using the [!DNL Platform] user interface or [!DNL Experience Platform] APIs. Pour en savoir plus, suivez les tutoriels relatifs à la [création d’une connexion en continu à l’aide de l’interface utilisateur](../ingestion/tutorials/create-streaming-connection-ui.md) ou à la [création d’une connexion en continu à l’aide des API](../ingestion/tutorials/create-streaming-connection.md).
 
-## Créer une connexion de flux continu authentifiée
+## Création d’une connexion en continu authentifiée
 
-La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le Profil et l’identité des clients en temps réel, de différencier les enregistrements provenant de sources approuvées des enregistrements provenant de sources non approuvées. Pour commencer, suivez le didacticiel pour [créer une connexion](../ingestion/tutorials/create-authenticated-streaming-connection.md)de flux continu authentifiée.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Pour commencer, suivez le tutoriel relatif à la [création d’une connexion en continu authentifiée](../ingestion/tutorials/create-authenticated-streaming-connection.md).
 
-## Données d’enregistrement et de série chronologique du flux
+## Diffusion de données d’enregistrement et de série temporelle en continu
 
-Avec un jeu de données et des connexions filantes en place, vous pouvez diffuser des données d&#39;enregistrement ou de série chronologique dans la plate-forme. Pour commencer la diffusion en flux continu des données d’enregistrement, suivez le didacticiel [sur les données d’enregistrement de](../ingestion/tutorials/streaming-record-data.md)flux dans la plate-forme. Pour commencer la diffusion en flux continu des données de série chronologique, suivez les données de série chronologique de [flux dans la plate-forme](../ingestion/tutorials/streaming-time-series-data.md).
+Avec un jeu de données et des connexions en continu en place, vous pouvez diffuser des données d’enregistrement et de série temporelle en continu dans [!DNL Platform]. Pour commencer la diffusion en continu de données d’enregistrement, suivez le [tutoriel relatif à la diffusion en continu de données d’enregistrement dans Platform](../ingestion/tutorials/streaming-record-data.md). Pour commencer la diffusion en continu de données de série temporelle, suivez le [tutoriel relatif à la diffusion en continu de données de série temporelle dans Platform](../ingestion/tutorials/streaming-time-series-data.md).
 
-## Diffusion en continu de plusieurs messages dans une seule requête HTTP
+## Diffusion de plusieurs messages en continu dans une même requête HTTP
 
-Lors de la diffusion de données en flux continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut s’avérer coûteux. Par exemple, au lieu de créer 200 requêtes HTTP avec des charges de 1 Ko, il est beaucoup plus efficace de créer 1 requête HTTP avec 200 messages de 1 Ko chacun, avec une charge utile unique de 200 Ko. Lorsqu’il est utilisé correctement, le regroupement de plusieurs messages au sein d’une même requête constitue un excellent moyen d’optimiser les données envoyées à la plateforme d’expérience. Pour savoir comment envoyer plusieurs messages à Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu, suivez le didacticiel [sur l’](../ingestion/tutorials/streaming-multiple-messages.md)envoi de plusieurs messages.
+Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsque cette fonctionnalité est utilisée correctement, regrouper plusieurs messages au sein d’une requête unique est une excellente manière d’optimiser les données envoyées vers [!DNL Experience Platform]. To learn how to send multiple messages to [!DNL Experience Platform] within a single HTTP request using streaming ingestion, follow the [sending multiple messages tutorial](../ingestion/tutorials/streaming-multiple-messages.md).
 
 
 
