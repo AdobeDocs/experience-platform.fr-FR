@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
+title: Application des stratégies d’utilisation des données à l’aide de l’API Policy Service
 topic: enforcement
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 3%
+source-wordcount: '869'
+ht-degree: 87%
 
 ---
 
 
-# Appliquer les stratégies d’utilisation des données à l’aide de l’API Policy Service
+# Enforce data usage policies using the [!DNL Policy Service] API
 
-Une fois que vous avez créé des étiquettes d’utilisation de données pour vos données et créé des stratégies d’utilisation pour des actions marketing à l’égard de ces étiquettes, vous pouvez utiliser l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou un groupe arbitraire d’étiquettes constitue une violation de stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 
 >[!NOTE]
 >
->Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser `DRAFT` les stratégies à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` dans le chemin d’accès à la demande.
+>Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser les stratégies `DRAFT` à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` au chemin d’accès de la requête.
 
-Ce document décrit la procédure à suivre pour utiliser l’ [!DNL Policy Service] API afin de rechercher les violations de stratégie dans différents scénarios.
+This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des concepts clés suivants liés à l&#39;application des politiques DULE :
+Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans l’application des stratégies DULE :
 
-* [Gouvernance](../home.md)des données : Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
-   * [Étiquettes](../labels/overview.md)d&#39;utilisation des données : Les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), en spécifiant les restrictions d’utilisation de ces données.
-   * [Stratégies](../policies/overview.md)d’utilisation des données : Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing qui sont autorisées ou restreintes pour certains jeux de libellés DULE.
+* [Gouvernance des données](../home.md)[!DNL Platform] : cadre selon lequel applique la conformité d’utilisation des données.
+   * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), spécifiant les restrictions d’utilisation de ces données.
+   * [Stratégies d’utilisation des données](../policies/overview.md) : les stratégies d’utilisation des données sont des règles décrivant les types d’actions marketing autorisées ou non pour certains ensembles de libellés DULE.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Avant de commencer ce didacticiel, veuillez consulter le guide [du](../api/getting-started.md) développeur pour obtenir des informations importantes que vous devez connaître afin de réussir à appeler l&#39; [!DNL Policy Service] API DULE, y compris les en-têtes requis et comment lire des exemples d&#39;appels d&#39;API.
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API DULE , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
 
-## Évaluer à l’aide de libellés DULE et d’une action marketing
+## Évaluation à l’aide de libellés DULE et d’une action marketing
 
-Vous pouvez évaluer une stratégie en testant une action marketing par rapport à un ensemble de libellés DULE qui seraient éventuellement présents dans un jeu de données. Pour ce faire, vous utilisez le paramètre de `duleLabels` requête, où les étiquettes DOUBLE sont fournies sous la forme d’une liste de valeurs séparées par des virgules, comme illustré dans l’exemple ci-dessous.
+Vous pouvez évaluer une stratégie en testant une action marketing en fonction d’un ensemble de libellés DULE éventuellement présents dans un jeu de données. Pour cela, vous devez utiliser des paramètres de requête `duleLabels` où les libellés DULE sont fournis sous la forme d’une liste de valeurs séparées par des virgules, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -46,16 +46,16 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l&#39;action marketing associée à la stratégie DULE que vous évaluez. |
-| `{LABEL_1}` | Libellé d’utilisation des données pour tester l’action marketing. Au moins une étiquette doit être fournie. Lorsque vous fournissez plusieurs étiquettes, elles doivent être séparées par des virgules. |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing associée à la stratégie DULE que vous évaluez. |
+| `{LABEL_1}` | Libellé d’utilisation des données permettant de tester l’action marketing. Au moins un libellé doit être fourni. Lorsque vous fournissez plusieurs libellés, ceux-ci doivent être séparés par des virgules. |
 
 **Requête**
 
-La requête suivante teste l’action `exportToThirdParty` marketing par rapport aux étiquettes `C1` et `C3`. Dans la mesure où la stratégie d’utilisation des données que vous avez créée précédemment dans ce didacticiel définit l’ `C1` étiquette comme l’une des `deny` conditions de son expression de stratégie, l’action marketing doit déclencher une violation de stratégie.
+La requête suivante teste l’action marketing `exportToThirdParty` par rapport aux libellés `C1` et `C3`. Puisque la stratégie d’utilisation des données que vous avez créée précédemment dans ce tutoriel définit le libellé `C1` comme l’une des conditions `deny` de sa stratégie, l’action marketing doit signaler une violation de la stratégie.
 
 >[!NOTE]
 >
->Les libellés d’utilisation des données respectent la casse. Les violations de stratégie ne se produisent que lorsque les étiquettes définies dans leurs expressions de stratégie correspondent exactement. Dans cet exemple, une `C1` étiquette déclencherait une violation, contrairement à une `c1` étiquette.
+>Les libellés d’utilisation des données sont sensibles à la casse. Les violations de stratégie ne surviennent qu’en cas de correspondance exacte avec les libellés définis dans leurs expressions de stratégie. Dans cet exemple, un libellé `C1` déclenche une violation, mais pas un libellé `c1`.
 
 ```shell
 curl -X GET \
@@ -68,7 +68,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse positive renvoie l’URL de l’action marketing, les étiquettes DULE sur lesquelles elle a été testée et une liste de toute stratégie DULE qui a été violée suite au test de l’action par rapport à ces étiquettes. Dans cet exemple, la stratégie &quot;Exporter les données vers des tiers&quot; s&#39;affiche dans la `violatedPolicies` baie, ce qui indique que l&#39;action marketing a déclenché la violation de stratégie attendue.
+Une réponse réussie renvoie l’URL de l’action marketing, les libellés DULE en fonction desquels ont été réalisés les tests et une liste de toute stratégie DULE violée en résultat du test de l’action en fonction de ces libellés. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
 
 ```json
 {
@@ -128,11 +128,11 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes D
 
 | Propriété | Description |
 | --- | --- |
-| `violatedPolicies` | Tableau répertoriant toutes les stratégies DULE qui ont été violées en testant l&#39;action marketing (spécifiée dans `marketingActionRef`) par rapport à la stratégie fournie `duleLabels`. |
+| `violatedPolicies` | Un tableau répertoriant toutes les stratégies DULE violées lors du test de l’action marketing (spécifiée dans `marketingActionRef`) en fonction des `duleLabels` fournies. |
 
-## Évaluer à l’aide de jeux de données
+## Évaluation à l’aide de jeux de données
 
-Vous pouvez évaluer une stratégie DULE en testant une action marketing par rapport à un ou plusieurs jeux de données à partir desquels les étiquettes DULE peuvent être collectées. Pour ce faire, vous devez adresser une demande de post-traitement `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` et fournir des ID de jeu de données au sein du corps de la demande, comme indiqué dans l’exemple ci-dessous.
+Vous pouvez évaluer une stratégie DULE en testant une action marketing en fonction d’un ou de plusieurs jeux de données à partir desquels il est possible de collecter les libellés DULE. Pour ce faire, vous devez envoyer une requête POST à `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` et fournir des identifiants de jeux de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -143,11 +143,11 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Paramètre | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Nom de l&#39;action marketing associée à la stratégie DULE que vous évaluez. |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing associée à la stratégie DULE que vous évaluez. |
 
 **Requête**
 
-La requête suivante teste l’action `exportToThirdParty` marketing par rapport à trois jeux de données différents. Les jeux de données sont référencés par type et par ID dans un tableau fourni dans la charge utile.
+La requête suivante teste l’action marketing `exportToThirdParty` en fonction de trois jeux de données différents. Les jeux de données sont référencés par type et par identifiant dans un tableau fourni dans le payload.
 
 ```shell
 curl -X POST \
@@ -175,12 +175,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `entityType` | Chaque élément du tableau de charge utile doit indiquer le type d&#39;entité défini. Dans ce cas d’utilisation, la valeur sera toujours &quot;dataSet&quot;. |
-| `entityId` | Chaque élément du tableau de charge doit fournir l’identifiant unique d’un jeu de données. |
+| `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
+| `entityId` | Chaque élément du tableau de payload doit fournir l’identifiant unique d’un jeu de données. |
 
 **Réponse**
 
-Une réponse positive renvoie l’URL de l’action marketing, les étiquettes DULE collectées à partir des jeux de données fournis et une liste de toute stratégie DULE qui a été violée suite au test de l’action par rapport à ces étiquettes. Dans cet exemple, la stratégie &quot;Exporter les données vers des tiers&quot; s&#39;affiche dans la `violatedPolicies` baie, ce qui indique que l&#39;action marketing a déclenché la violation de stratégie attendue.
+Une réponse réussie renvoie l’URL de l’action marketing, les libellés DULE collectés à partir des jeux de données fournis et une liste de toute stratégie DULE violée suite au test de l’action en fonction de ces libellés. Dans cet exemple, la stratégie « Export Data to Third Party » s’affiche dans le tableau `violatedPolicies`, indiquant que l’action marketing a déclenché la violation de stratégie attendue.
 
 ```json
 {
@@ -361,12 +361,12 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes D
 
 | Propriété | Description |
 | --- | --- |
-| `duleLabels` | liste d’étiquettes DULE extraites des jeux de données fournis dans la charge utile de la demande. |
-| `discoveredLabels` | liste des jeux de données fournis dans la charge utile de la demande, avec les étiquettes DULE au niveau du jeu de données et au niveau du champ qui se trouvaient dans chacun d’eux. |
-| `violatedPolicies` | Tableau répertoriant toutes les stratégies DULE qui ont été violées en testant l&#39;action marketing (spécifiée dans `marketingActionRef`) par rapport à la stratégie fournie `duleLabels`. |
+| `duleLabels` | Liste des libellés DULE extraits des jeux de données fournis dans le payload de la requête. |
+| `discoveredLabels` | Liste des jeux de données fournis dans le payload de la requête affichant les libellés DULE au niveau du jeu de données et au niveau du champ trouvées dans chaque jeu. |
+| `violatedPolicies` | Un tableau répertoriant toutes les stratégies DULE violées lors du test de l’action marketing (spécifiée dans `marketingActionRef`) en fonction des `duleLabels` fournies. |
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez réussi à rechercher des violations de stratégie lors de l&#39;exécution d&#39;une action marketing sur un jeu de données ou un ensemble de libellés DULE. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience afin d’appliquer de manière appropriée les violations de stratégie lorsqu’elles se produisent.
+La lecture de ce document vous a permis de comprendre comment identifier les violations de stratégie lors de l’exécution d’une action marketing sur un jeu de données ou sur un ensemble de libellés DULE. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de stratégie lorsque celles-ci se produisent.
 
-Pour savoir comment appliquer des stratégies d’utilisation des données pour les segments d’audience dans [!DNL Real-time Customer Profile], consultez le [didacticiel](../../segmentation/tutorials/governance.md)suivant.
+For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
