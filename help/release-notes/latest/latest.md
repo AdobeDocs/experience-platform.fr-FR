@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: July 15, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: e864073c27ba20ce32c962c469aed52608f199ac
+source-git-commit: 9fbd30adcb29c8925f02745be924477eb4e3fe2a
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '681'
 ht-degree: 33%
 
 ---
@@ -73,7 +73,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur interac
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge des API et de l’interface utilisateur pour la suppression de flux de données | Les flux de données qui ont été créés avec des erreurs ou qui sont devenus inutiles peuvent désormais être supprimés via les API ou à l’aide de l’interface utilisateur. |
+| Prise en charge de l’interface utilisateur pour la suppression de flux de données | Les flux de données qui ont été créés avec des erreurs ou qui sont devenus inutiles peuvent désormais être supprimés via l’interface utilisateur. |
 | Prise en charge des API et de l’interface utilisateur pour l’assimilation unique | L’assimilation ponctuelle des flux de données, où seule la date du début est fournie et qu’aucune assimilation ultérieure n’est planifiée, peut désormais être exécutée via les API ou à l’aide de l’interface utilisateur. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
