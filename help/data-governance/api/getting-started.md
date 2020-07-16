@@ -1,86 +1,86 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur de l'API DULE Policy Service
+title: Guide de développement de l’API DULE Policy Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 0%
+source-wordcount: '655'
+ht-degree: 54%
 
 ---
 
 
-# Guide du développeur d&#39; [!DNL Policy Service] API DULE
+# DULE [!DNL Policy Service] API developer guide
 
-L&#39;étiquetage et l&#39;application de l&#39;utilisation des données (DULE) est le mécanisme de base de la gouvernance des données d&#39;Adobe Experience Platform. Le service de stratégie DULE fournit une API RESTful qui vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises par rapport aux données qui ont été étiquetées avec certains libellés d’utilisation des données.
+Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. The DULE [!DNL Policy Service] provides a RESTful API that allows you to create and manage data usage policies to determine what marketing actions can be taken against data that has been labeled with certain data usage labels.
 
-Ce document fournit des instructions sur l’exécution des opérations clés disponibles dans l’API Policy Service. Si vous ne l&#39;avez pas encore fait, veuillez commencer par examiner l&#39;aperçu [de la gouvernance des](../home.md) données afin de vous familiariser avec le cadre de DULE. Pour obtenir des instructions détaillées sur la création et l&#39;application de stratégies DULE, consultez le didacticiel [sur les stratégies](../policies/create.md)DULE.
+This document provides instructions for performing the key operations available in the [!DNL Policy Service] API. Si vous ne l’avez pas encore fait, commencez par examiner la [présentation de la gouvernance des données](../home.md) pour vous familiariser avec le cadre DULE. Pour obtenir des instructions étape par étape sur la création et l’application des stratégies DULE, consultez le [tutoriel sur la stratégie DULE](../policies/create.md).
 
-Ce document présente les concepts de base que vous devez connaître avant de tenter d’appeler l’API de service de stratégie.
+This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.
 
 ## Getting started with DULE [!DNL Policy Service]
 
-Avant de commencer à travailler avec le [!DNL Policy Service], les données sur [!DNL Experience Platform] doivent avoir des étiquettes DULE appropriées appliquées. Vous trouverez des instructions détaillées complètes pour appliquer des étiquettes d’utilisation de données aux jeux de données et aux champs dans le guide [d’utilisation des étiquettes](../labels/user-guide.md)DULE.
+Before beginning to work with the [!DNL Policy Service], data on [!DNL Experience Platform] must have appropriate DULE labels applied. Vous trouverez des instructions étape par étape complètes pour appliquer des libellés d’utilisation des données aux jeux de données et aux champs dans le [guide d’utilisation des libellés DULE](../labels/user-guide.md).
 
 ## Conditions préalables
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Gouvernance](../home.md)des données : Cadre selon lequel [!DNL Experience Platform] applique la conformité à l’utilisation des données.
-   * [Étiquettes](../labels/overview.md)DULE : Les libellés d’utilisation des données sont appliqués aux champs de données du modèle de données d’expérience (XDM), en spécifiant les restrictions d’accès à ces données.
-* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-* [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [!DNL Data Governance](../home.md): Cadre selon lequel [!DNL Experience Platform] applique la conformité à l’utilisation des données.
+   * [Étiquettes](../labels/overview.md)DULE : Les libellés d’utilisation des données sont appliqués aux champs de données [!DNL Experience Data Model] (XDM), en spécifiant les restrictions d’accès à ces données.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-## Lecture des exemples d’appels d’API
+## Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-## Rassembler les valeurs des en-têtes requis
+## Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Data Governance], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Data Governance], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-* Content-Type : application/json
+* Content-Type: application/json
 
-## Ressources de base et personnalisées
+## Ressources de base ou personnalisées
 
-Dans l’ [!DNL Policy Service] API, toutes les stratégies et actions marketing sont référencées comme `core` ressources ou `custom` ressources.
+Within the [!DNL Policy Service] API, all policies and marketing actions are referred to as either `core` or `custom` resources.
 
-Les `core` ressources sont celles définies et entretenues par Adobe, alors que `custom` les ressources sont créées et entretenues par des clients individuels et sont donc uniques et visibles uniquement par l&#39;organisme IMS qui les a créées. Ainsi, les opérations d&#39;énumération et de recherche (`GET`) sont les seules opérations autorisées sur `core` les ressources, tandis que les opérations d&#39;énumération, de recherche et de mise à jour (`POST`, `PUT`, `PATCH`et `DELETE`) sont disponibles pour les `custom` ressources.
+Les ressources `core` sont définies et gérées par Adobe, alors que les ressources `custom` sont créées et gérées par des clients individuels. Elles sont donc uniques et visibles seulement par l’organisation IMS qui les a créées. Les opérations de liste et de recherche (`GET`) sont donc les seules opérations autorisées sur les ressources `core`, alors que les opérations de liste, de recherche et de mise à jour (`POST`, `PUT`, `PATCH` et `DELETE`) sont disponibles pour les ressources `custom`.
 
-## Statut de la stratégie
+## État des stratégies
 
-Les stratégies d’utilisation des données peuvent avoir l’un des trois états possibles : `DRAFT`, `ENABLED`ou `DISABLED`.
+Les stratégies d’utilisation des données peuvent avoir l’un des trois états suivants : `DRAFT`, `ENABLED` ou `DISABLED`.
 
-Par défaut, seules les stratégies &quot;ACTIVÉES&quot; participent à l’évaluation des stratégies.
+Par défaut, seules les stratégies « ENABLED » participent à l’évaluation des stratégies.
 
-Les stratégies &quot;BROUILLON&quot; peuvent également être prises en compte dans l’évaluation des stratégies, mais uniquement en définissant le paramètre de requête `?includeDraft=true`. On trouvera de plus amples renseignements sur l&#39;évaluation des politiques dans la section du document sur l&#39;application [des](../enforcement/overview.md) politiques à la fin de ce document.
+Les stratégies « DRAFT » peuvent aussi être prises en compte dans l’évaluation des stratégies, mais uniquement en définissant le paramètre de requête `?includeDraft=true`. Vous trouverez de plus amples renseignements sur l’évaluation des stratégies dans la section consacrée à l’[application des stratégies](../enforcement/overview.md) à la fin de ce document.
 
-## Noms des actions marketing {#marketing-actions}
+## Noms d’actions marketing {#marketing-actions}
 
-Les noms d’action marketing sont des identifiants uniques pour les actions marketing. Chaque action `core` marketing porte un nom unique qui s’applique à toutes les organisations IMS. Ces noms sont définis et conservés par Adobe. En attendant, toutes les actions marketing définies par le client (`custom` ressources) sont uniques au sein de votre organisation et ne sont ni visibles ni partagées avec d&#39;autres organisations IMS.
+Les noms d’actions marketing sont des identifiants uniques d’actions marketing. Chaque action marketing `core` a un nom unique s’appliquant à toutes les organisations IMS. Ces noms sont définis et gérés par Adobe. En attendant, toutes les actions marketing définies par le client (ressources `custom`) sont uniques au sein de votre organisation spécifique et ne sont ni visibles par d’autres organisations IMS ni partagées avec elles.
 
-Les étapes permettant d’utiliser les actions marketing dans l’ [!DNL Policy Service] API sont décrites dans la section Actions [](#marketing-actions) marketing de la suite de ce document.
+Steps for working with marketing actions in the [!DNL Policy Service] API are outlined in the [Marketing Actions](#marketing-actions) section later in this document.
 
 ## Étapes suivantes
 
-Maintenant que vous disposez des connaissances et des informations d’identification requises, vous pouvez continuer à lire les exemples d’appels d’API fournis dans ce guide du développeur :
+Maintenant que vous disposez des informations d’identification et des connaissances préalables requises, vous pouvez continuer à lire les exemples d’appels API fournis dans ce guide de développement :
 
 * [Actions marketing](marketing-actions.md)
 * [Stratégies](policies.md)
