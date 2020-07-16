@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Actions marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 90%
 
 ---
 
 
 # Actions marketing
 
-Une action marketing, dans le cadre de la gouvernance des données d’Adobe Experience Platform, est une action entreprise par un utilisateur de [!DNL Experience Platform] données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-Pour utiliser les actions marketing dans l’API, vous devez utiliser le `/marketingActions` point de terminaison.
+Pour pouvoir travailler avec les actions marketing dans l’API, vous devez utiliser le point de terminaison `/marketingActions`.
 
-## Liste de toutes les actions marketing
+## Répertorier toutes les actions marketing
 
-Pour vue d’une liste de toutes les actions marketing, une requête GET peut être envoyée à `/marketingActions/core` ou `/marketingActions/custom` qui renvoie toutes les stratégies pour le conteneur spécifié.
+Pour afficher une liste de toutes les actions marketing, vous pouvez envoyer une requête GET à `/marketingActions/core` ou `/marketingActions/custom`, qui renvoie toutes les stratégies pour le conteneur spécifié.
 
 **Format d’API**
 
@@ -31,7 +31,7 @@ GET /marketingActions/custom
 
 **Requête**
 
-La requête suivante renvoie une liste de toutes les actions marketing personnalisées définies par l&#39;organisation IMS.
+La requête suivante renverra une liste de toutes les actions marketing définies par l’organisation IMS.
 
 ```SHELL
 curl -X GET \
@@ -44,7 +44,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet response fournit le nombre total d’actions marketing dans le conteneur (`count`) et la `children` baie contient les détails de chaque action marketing, y compris les `name` et les `href` actions marketing. Ce chemin (`_links.self.href`) est utilisé pour terminer la `marketingActionsRefs` baie lors de la [création d&#39;une stratégie](policies.md#create-policy)d&#39;utilisation des données.
+L’objet de réponse indique le nombre total d’actions marketing dans le conteneur (`count`) et le tableau `children` contient les détails de chaque action marketing, notamment le `name` et un `href` pour l’action marketing. Ce chemin d’accès (`_links.self.href`) est utilisé pour compléter le tableau `marketingActionsRefs` lors de la [création d’une stratégie d’utilisation des données](policies.md#create-policy).
 
 ```JSON
 {
@@ -95,9 +95,9 @@ L’objet response fournit le nombre total d’actions marketing dans le contene
 }
 ```
 
-## Rechercher une action marketing spécifique
+## Recherche d’une action marketing spécifique
 
-Vous pouvez également effectuer une demande de recherche (GET) pour vue les détails d’une action marketing spécifique. Cette opération est effectuée à l’aide `name` de l’action marketing. Si le nom est inconnu, il peut être trouvé à l&#39;aide de la demande d&#39;inscription (GET) présentée précédemment.
+Vous pouvez également effectuer une requête de recherche (GET) pour afficher les détails d’une action marketing spécifique. Cette opération s’effectue à l’aide du `name` de l’action marketing. Si vous n’en connaissez pas le nom, vous pouvez trouver celui-ci à l’aide de la requête de liste (GET) affichée précédemment.
 
 **Format d’API**
 
@@ -119,7 +119,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet response contient les détails de l’action marketing, y compris le chemin (`_links.self.href`) nécessaire pour référencer l’action marketing lors de la définition d’une stratégie d’utilisation des données (`marketingActionsRefs`).
+L’objet de réponse contient les détails de l’action marketing, y compris le chemin d’accès (`_links.self.href`) nécessaire pour référencer l’action marketing lorsque vous définissez une stratégie d’utilisation des données (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -140,9 +140,9 @@ L’objet response contient les détails de l’action marketing, y compris le c
 }
 ```
 
-## Créer ou mettre à jour une action marketing
+## Création ou mise à jour d’une action marketing
 
-L’ [!DNL Policy Service] API vous permet de définir vos propres actions marketing, ainsi que de mettre à jour les actions existantes. La création et la mise à jour sont toutes deux effectuées à l’aide d’une opération PUT sur le nom de l’action marketing.
+The [!DNL Policy Service] API allows you to define your own marketing actions, as well as update existing ones. La création et la mise à jour sont toutes deux effectuées à l’aide d’une opération PUT au nom de l’action marketing.
 
 **Format d’API**
 
@@ -152,11 +152,11 @@ PUT /marketingActions/custom/{marketingActionName}
 
 **Requête**
 
-Dans la requête qui suit, notez que la charge utile `name` de la requête est la même que celle `{marketingActionName}` de l’appel API. Contrairement à une stratégie générée par le système et en lecture seule, la création d’une action marketing requiert que vous fournissiez le nom `id` prévu __ de l’action marketing au moment de sa création.
+Dans la requête qui suit, notez que le `name` du payload de la requête est le même que le `{marketingActionName}` dans l’appel API. Contrairement à l’`id` d’une stratégie qui est en lecture seule et généré par le système, la création d’une action marketing nécessite que vous fournissiez le nom _attendu_ de l’action marketing à sa création.
 
 >[!NOTE]
 >
->Si vous ne fournissez pas le `{marketingActionName}` contenu de l’appel, une erreur 405 (méthode non autorisée) se produira, car vous n’êtes pas autorisé à exécuter directement un PUT sur le `/marketingActions/custom` point de terminaison. En outre, si la charge `name` dans la charge ne correspond pas à la `{marketingActionName}` charge dans le chemin, vous recevrez une erreur 400 (mauvaise demande).
+> L’impossibilité à fournir le `{marketingActionName}` dans l’appel entraînera une erreur 405 (Method Not Allowed), car vous n’êtes pas autorisé à effectuer directement une requête PUT sur le point de terminaison `/marketingActions/custom`. En outre, si le `name` dans le payload ne correspond pas au `{marketingActionName}` dans le chemin d’accès, vous recevrez une erreur 400 (Bad Request).
 
 ```SHELL
 curl -X PUT \
@@ -174,7 +174,7 @@ curl -X PUT \
 
 **Réponse**
 
-Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le corps de la réponse contiendra les détails de l’action marketing nouvellement créée. Le `name` contenu de la réponse doit correspondre à ce qui a été envoyé dans la demande.
+Si la création est réussie, vous recevez un état HTTP 201 (Created) et le corps de la réponse contient les détails de l’action marketing que vous venez de créer. Le `name` de la réponse doit correspondre à celui envoyé dans la requête.
 
 ```JSON
 {
@@ -197,11 +197,11 @@ Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le cor
 
 ## Suppression d’une action marketing
 
-Il est possible de supprimer des actions marketing en envoyant une demande de DELETE à l’action `{marketingActionName}` de marketing que vous souhaitez supprimer.
+Il est possible de supprimer des actions marketing en envoyant une requête DELETE sur le `{marketingActionName}` de l’action marketing que vous souhaitez supprimer.
 
 >[!NOTE]
 >
->Vous ne pouvez pas supprimer les actions marketing référencées par des stratégies de sortie. Si vous essayez de le faire, une erreur 400 (mauvaise requête) s’affichera, ainsi qu’un message d’erreur qui comprend le `id` (ou plusieurs ID) d’une ou plusieurs stratégies contenant une référence à l’action marketing que vous tentez de supprimer.
+>Vous ne pouvez pas supprimer des actions marketing auxquelles des stratégies existantes font référence. Si vous tentez de le faire, vous recevrez une erreur 400 (Bad Request) ainsi qu’un message d’erreur incluant l’`id` (ou plusieurs identifiants) d’une stratégie (ou stratégies) contenant une référence à l’action marketing que vous essayez de supprimer.
 
 **Format d’API**
 
@@ -222,6 +222,6 @@ curl -X DELETE \
 
 **Réponse**
 
-Si l’action marketing a été correctement supprimée, le corps de la réponse est vide avec un état HTTP 200 (OK).
+Si l’action marketing a bien été supprimée, le corps de la réponse sera vide avec un état HTTP 200 (OK).
 
-Vous pouvez confirmer la suppression en tentant de rechercher (GET) l’action marketing. Vous devez recevoir un état HTTP 404 (introuvable) accompagné d’un message d’erreur &quot;Non trouvé&quot;, car l’action marketing a été supprimée.
+Vous pouvez confirmer la suppression de l’action en la recherchant à l’aide de GET. Vous devriez recevoir un état HTTP 404 (Not Found), ainsi qu’un message d’erreur indiquant que l’action marketing est introuvable, puisqu’elle a été supprimée.
