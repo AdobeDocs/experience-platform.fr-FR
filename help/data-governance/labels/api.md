@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Gérer les étiquettes d’utilisation des données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b51a13e2eab967099c84d1cca2233e2ace554e01
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '967'
 ht-degree: 8%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 8%
 
 # Gérer les étiquettes d’utilisation des données à l’aide d’API
 
-Ce document décrit la procédure à suivre pour gérer les étiquettes d’utilisation des données à l’aide de l’API Service de stratégie et de l’API Service de dataset.
+Ce document décrit la procédure à suivre pour gérer les étiquettes d’utilisation des données à l’aide de l’ [!DNL Policy Service] API et de l’ [!DNL Dataset Service] API.
 
-L’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Policy Service fournit plusieurs points de terminaison qui vous permettent de créer et de gérer des étiquettes d’utilisation des données pour votre entreprise.
+Le [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fournit plusieurs points de terminaison qui vous permettent de créer et de gérer des étiquettes d’utilisation des données pour votre entreprise.
 
-L’API Service de dataset vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’API de service de catalogue qui gère les métadonnées des jeux de données.
+L’ [!DNL Dataset Service] API vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
 
 ## Prise en main
 
 Avant de lire ce guide, suivez les étapes décrites dans la section [](../../catalog/api/getting-started.md) Prise en main du guide du développeur de catalogue afin de rassembler les informations d’identification requises pour appeler [!DNL Platform] les API.
 
-Pour invoquer les points de terminaison du service de jeux de données décrits dans ce document, vous devez disposer de la `id` valeur unique d&#39;un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
+Pour effectuer des appels vers les [!DNL Dataset Service] points de terminaison décrits dans ce document, vous devez disposer de la valeur unique `id` pour un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
 
 ## Liste de toutes les étiquettes {#list-labels}
 
@@ -110,7 +110,7 @@ Une réponse réussie renvoie une liste d&#39;étiquettes personnalisées récup
 
 ## Rechercher une étiquette {#look-up-label}
 
-Vous pouvez rechercher une étiquette spécifique en incluant la `name` propriété de cette étiquette dans le chemin d’une requête GET à l’API du service de stratégie.
+Vous pouvez rechercher une étiquette spécifique en incluant la `name` propriété de cette étiquette dans le chemin d’une requête GET à l’ [!DNL Policy Service] API.
 
 **Format d’API**
 
@@ -164,7 +164,7 @@ Une réponse réussie renvoie les détails de l’étiquette personnalisée.
 
 ## Création ou mise à jour d’une étiquette personnalisée {#create-update-label}
 
-Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à l’API de service de stratégie.
+Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à l’ [!DNL Policy Service] API.
 
 **Format d’API**
 
@@ -230,7 +230,7 @@ Une réponse réussie renvoie les détails d&#39;une étiquette personnalisée, 
 
 ## Rechercher des étiquettes pour un jeu de données {#look-up-dataset-labels}
 
-Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en adressant une demande GET à l’API du service de datasets.
+Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en adressant une requête GET à l’ [!DNL Dataset Service] API.
 
 **Format d’API**
 
@@ -283,7 +283,7 @@ Une réponse positive renvoie les étiquettes d’utilisation des données qui o
 
 ## Appliquer des étiquettes à un jeu de données {#apply-dataset-labels}
 
-Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête POST ou PUT à l’API Service de dataset. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
+Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête POST ou PUT à l’ [!DNL Dataset Service] API. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
 
 **Format d’API**
 
@@ -326,7 +326,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `labels` | liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs du modèle de données d’expérience (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/look-up-resource.md"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/look-up-resource.md"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
@@ -350,7 +350,7 @@ Une réponse réussie renvoie les étiquettes qui ont été ajoutées au jeu de 
 
 ## Suppression d’étiquettes d’un jeu de données {#remove-dataset-labels}
 
-Vous pouvez supprimer les étiquettes appliquées à un jeu de données en envoyant une requête de DELETE à l’API Service de dataset.
+Vous pouvez supprimer les étiquettes appliquées à un jeu de données en adressant une requête de DELETE à l’ [!DNL Dataset Service] API.
 
 **Format d’API**
 
@@ -381,7 +381,7 @@ Réponse réussie : état HTTP 200 (OK), indiquant que les étiquettes ont été
 
 En lisant ce document, vous avez appris à gérer les étiquettes d’utilisation des données à l’aide d’API.
 
-Une fois que vous avez ajouté des étiquettes d’utilisation des données au niveau du jeu de données et des champs, vous pouvez commencer à assimiler des données dans l’Experience Platform. Pour en savoir plus, commencez par lire la [documentation sur l’ingestion de données](../../ingestion/home.md).
+Once you have added data usage labels at the dataset- and field-level, you can begin to ingest data into [!DNL Experience Platform]. Pour en savoir plus, commencez par lire la [documentation sur l’ingestion de données](../../ingestion/home.md).
 
 Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
 
