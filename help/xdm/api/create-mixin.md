@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Création d’un mixin
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b2ceac3de73ac622dc885eb388e46e93551f43a8
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 0%
+source-wordcount: '303'
+ht-degree: 92%
 
 ---
 
 
 # Création d’un mixin
 
-Les mixins sont un ensemble de champs utilisés pour décrire un concept particulier, tel que &quot;adresse&quot; ou &quot;préférences de profil&quot;. De nombreux mixins standard sont disponibles ou vous pouvez définir les vôtres lorsque vous souhaitez capturer des informations propres à votre entreprise. Chaque mixin contient un `meta:intendedToExtend` champ qui liste les classes avec lesquelles le mixin est compatible.
+Les mixins sont un jeu de champs utilisé pour décrire un concept particulier comme « adresse » ou « préférences du profil ». De nombreux mixins standard sont disponibles. Vous pouvez également définir vos propres mixins si vous souhaitez capturer des informations uniques à votre organisation. Chaque mixin contient un champ `meta:intendedToExtend` qui répertorie les classes avec lesquelles le mixin est compatible.
 
-Il peut s&#39;avérer utile de consulter tous les mixins disponibles pour se familiariser avec les champs inclus dans chacun d&#39;eux. Vous pouvez liste (GET) tous les mixins compatibles avec une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;locataire&quot;, en renvoyant uniquement les mixins dont le champ &quot;meta:intentToExtend&quot; correspond à la classe que vous utilisez. Les exemples ci-dessous renvoient tous les mixins qui peuvent être utilisés avec la classe de Profil XDM Individuel :
+Il vous sera peut être utile de passer en revue tous les mixins disponibles afin de mieux connaître les champs inclus dans chacun d’entre eux. Vous pouvez répertorier (GET) tous les mixins compatibles avec une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « client », en ne renvoyant que les mixins dont le champ « meta:intendedToExtend » correspond à la classe que vous utilisez. The examples below will return all mixins that can be used with the [!DNL XDM Individual Profile] class:
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
-L’exemple de demande d’API ci-dessous crée un nouveau mixin dans le conteneur client.
+L’exemple de requête d’API ci-dessous crée un nouveau mixin dans le conteneur client.
 
 **Format d’API**
 
@@ -33,7 +33,7 @@ POST /tenant/mixins
 
 **Requête**
 
-Lors de la définition d’un nouveau mixin, il doit inclure un `meta:intendedToExtend` attribut, répertoriant les classes `$id` avec lesquelles le mixin est compatible. Dans cet exemple, le mixin est compatible avec la classe Property que vous avez définie précédemment. Les champs personnalisés doivent être imbriqués sous `_{TENANT_ID}` (comme illustré dans l&#39;exemple) pour éviter toute collision avec d&#39;autres mixins ou champs des schémas de classe. Notez que le `propertyConstruction` champ est une référence au type de données créé lors de l’appel précédent.
+Si vous définissez un nouveau mixin, celui-ci doit inclure un attribut `meta:intendedToExtend`, répertoriant le `$id` des classes avec lesquelles le mixin est compatible. Dans cet exemple, le mixin est compatible avec la classe Propriété que vous avez définie précédemment. Les champs personnalisés doivent être imbriqués dans `_{TENANT_ID}` (comme affiché dans l’exemple) pour éviter toute collision avec d’autres mixins ou champs des schémas de classe. Notez que le champ `propertyConstruction` est une référence au type de données créé lors de l’appel précédent.
 
 ```SHELL
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile contenant les détails du mixin nouvellement créé, y compris le `$id`, `meta:altId`et `version`. Ces valeurs sont en lecture seule et sont affectées par le Registre du Schéma.
+Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui contient les détails du mixin que vous venez de créer, notamment `$id`, `meta:altId` et `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -186,4 +186,4 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et une charge utile co
 }
 ```
 
-L’exécution d’une requête GET pour liste de tous les mixins du conteneur locataire inclurait désormais le mixin Détails du véhicule, ou vous pouvez effectuer une requête GET (lookup) à l’aide de l’ `$id` URI codé en URL pour vue directement le nouveau mixin. N’oubliez pas d’inclure le dans l’en-tête Accepter `version` pour toutes les requêtes de recherche.
+L’exécution d’une requête GET pour répertorier tous les mixins du conteneur client inclurait désormais le mixin Détails du véhicule. Vous pouvez également réaliser une requête de recherche (GET) à l’aide de l’URI `$id` encodé en URL pour afficher directement le nouveau mixin. N’oubliez pas d’inclure la `version` dans l’en-tête Accept pour toutes les requêtes de recherche.
