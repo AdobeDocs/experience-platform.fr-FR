@@ -4,9 +4,9 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 013e6abb0922e39bd6b9da6a66bba9a1bcefdd25
+source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,7 @@ ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à
 
 La Cible permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentation de la Cible.
 
-Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > Propriétés [UICONTROL.]
+Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > [!UICONTROL Propriétés.]
 
 ##### [!UICONTROL ID d’Environnement Cible]
 
