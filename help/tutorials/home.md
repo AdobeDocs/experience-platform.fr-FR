@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Requête Service
+title: Adobe Experience Platform Query Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5503440aec5afd48cafdfa765fd3521f6ea4c68
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 0%
+source-wordcount: '148'
+ht-degree: 75%
 
 ---
 
 
-# Présentation des didacticiels sur les Adobes Experience Platform
+# Présentation des tutoriels d’Adobe Experience Platform
 
 >[!NOTE]
->Les didacticiels sur les Adobes Experience Platform ont récemment été modifiés. Pour trouver un didacticiel, sélectionnez la [!DNL Platform] zone appropriée dans la barre de navigation de gauche. Veuillez prendre quelques instants pour mettre à jour les signets existants.
+>Nous avons récemment déplacé les tutoriels d’Adobe Experience Platform. To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. Prenez quelques instants pour mettre à jour les signets existants.
 
-L’Adobe Experience Platform est la première plateforme de gestion de l’expérience client conçue spécialement pour vous. Grâce à ses profils clients en temps réel, à son intelligence continue et à son architecture ouverte et extensible, il rend la diffusion d’expériences personnalisées à grande échelle une réalité. Commencez avec Platform rapidement et facilement en suivant avec des didacticiels détaillés, allant de la préparation de vos données à l&#39;assimilation à des algorithmes d&#39;apprentissage automatique élaborés.
+Adobe Experience Platform est la première plateforme de gestion de l’expérience client personnalisable. Grâce à ses profils clients en temps réel, à son intelligence continue et à son architecture ouverte et extensible, elle propose des expériences personnalisées à grande échelle. Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms.
 
-Ces didacticiels ont été conçus pour compléter les informations contenues dans la documentation [de l&#39;](../landing/documentation/overview.md)Experience Platform, de sorte que, pour de meilleurs résultats, les documents restent disponibles tout en complétant les didacticiels. En outre, si vous rencontrez des erreurs lors de l’utilisation des didacticiels, veillez à consulter le guide [de dépannage des](../landing/troubleshooting.md) Adobes Experience Platform ou les guides de fonctionnalités individuels pour obtenir de l’aide.
+Ces tutoriels ont été conçus pour compléter les informations contenues dans la [documentation d’Experience Platform](../landing/documentation/overview.md). Pour obtenir de meilleurs résultats, gardez les documents à portée de main pendant que vous suivez les tutoriels. Par ailleurs, si vous rencontrez des erreurs au cours des tutoriels, consulter le [guide de dépannage d’Adobe Experience Platform](../landing/troubleshooting.md) ou les guides des différentes fonctionnalités pour obtenir de l’aide.
