@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: schémas ad hoc
+title: Schémas ad hoc
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 118c6ca5c2b82429e1f636ab25a46f58c05e42d9
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '79'
-ht-degree: 0%
+source-wordcount: '76'
+ht-degree: 68%
 
 ---
 
 
-# schémas ad hoc
+# Schémas ad hoc
 
-Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espacement des noms n’est utilisé que par un seul jeu de données. On parle alors de schéma &quot;ad hoc&quot;. Les schémas ad hoc sont utilisés dans plusieurs workflows d’assimilation de données, y compris l’assimilation de fichiers CSV et la création de certains types de connecteurs source. Pour plus d’informations sur les schémas ad hoc, y compris sur la procédure à suivre pour en créer un, consultez le didacticiel [sur les schémas](../tutorials/ad-hoc.md)ad hoc.
+In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans plusieurs workflows d’assimilation de données, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connecteurs source. Pour plus d’informations sur les schémas ad hoc, y compris sur les étapes à suivre pour en créer un, consultez le [tutoriel sur les schémas ad hoc](../tutorials/ad-hoc.md).
