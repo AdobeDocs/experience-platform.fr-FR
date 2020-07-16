@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: espaces de nommage et qualificatifs d'identité acceptés
+title: Qualificateurs et espaces de noms d’identité acceptés
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 9%
+source-wordcount: '464'
+ht-degree: 87%
 
 ---
 
 
 # Annexe
 
-## espaces de nommage d&#39;identité standard {#standard-namespaces}
+## Espaces de noms d’identité standard {#standard-namespaces}
 
-Toutes les identités envoyées au Privacy Service doivent être fournies sous un espace de nommage d&#39;identité spécifique. Les espaces de nommage d&#39;identité sont un composant du service [d&#39;identité des](../../identity-service/home.md) Adobes Experience Platform qui indique le contexte auquel se rapporte une identité.
+All identities that are sent to [!DNL Privacy Service] must be provided under a specific identity namespace. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
-Le tableau suivant présente plusieurs types d&#39;identité prédéfinis couramment utilisés, rendus disponibles par l&#39;Experience Platform, ainsi que les `namespace` valeurs associées :
+The following table outlines several commonly used, pre-defined identity types made available by [!DNL Experience Platform], along with their associated `namespace` values:
 
-| Type d&#39;identité | `namespace` | `namespaceId` |
+| Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| Email | Email | 6 |
+| E-mail | E-mail | 6 |
 | Téléphone | Téléphone | 7 |
-| ID Advertising Cloud Adobe | AdCloud | 411 |
+| Identifiant Adobe Advertising Cloud | AdCloud | 411 |
 | UUID Adobe Audience Manager | CORE | 0 |
-| Identifiant Adobe Experience Cloud | ECID | 4 |
-| ID Adobe Target | TNTID | 9 |
-| ID Apple pour les annonceurs | IDFA | 20915 |
-| Identifiant de publicité Google | GAID | 20914 |
-| Windows AID | WAID | 8 |
+| Adobe Experience Cloud ID | ECID | 4 |
+| Identifiant Adobe Target | TNTID | 9 |
+| [!DNL Apple] Identifiant pour les annonceurs | IDFA | 20915 |
+| [!DNL Google] Identifiant de publicité | GAID | 20914 |
+| [!DNL Windows] AIDE | WAID | 8 |
 
 >[!NOTE]
 >
->Chaque type d&#39;identité possède également une valeur `namespaceId` entière, qui peut être utilisée à la place de la `namespace` chaîne lors de la définition de la propriété `type` de l&#39;identité sur &quot;namespaceId&quot;. Pour plus d&#39;informations, consultez la section relative aux qualificatifs [d&#39;](#namespace-qualifiers) espace de nommage.
+> Chaque type d’identité possède également une valeur entière `namespaceId`, qui peut être utilisée à la place de la chaîne `namespace` lorsque la propriété `type` de l’identité est « namespaceId ». Pour plus d’informations, consultez la section sur les [qualificateurs d’espace de noms](#namespace-qualifiers).
 
-Vous pouvez récupérer une liste d’espaces de nommage d’identité utilisée par votre organisation en adressant une demande GET au point de `idnamespace/identities` terminaison dans l’API Identity Service. Pour plus d&#39;informations, consultez le guide [du développeur](../../identity-service/api/getting-started.md) Identity Service.
+Vous pouvez récupérer une liste des espaces de noms d’identité utilisés par votre organisation en exécutant une requête GET sur le point de terminaison `idnamespace/identities` dans l’API [!DNL Identity Service] Pour plus d’informations, consultez le [guide de développement d’Identity Service](../../identity-service/api/getting-started.md).
 
-## Qualificateurs d&#39;Espace de nommage
+## Qualificateurs d’espace de noms
 
-Lors de la spécification d’une `namespace` valeur dans l’API du Privacy Service, un qualificateur **d’** espace de nommage doit être inclus dans un `type` paramètre correspondant. Le tableau suivant présente les différents qualificatifs d&#39;espace de nommage acceptés.
+Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans l’API , un **qualificateur d’espace de noms** doit être inclus dans un paramètre `type` correspondant. Le tableau suivant présente les différents qualificateurs d’espace de noms acceptés.
 
 | Qualificateur | Définition |
 | --------- | ---------- |
-| standard | L’un des espaces de nommage standard est défini globalement, et non lié à un jeu de données d’entreprise individuel (par exemple, courriel, numéro de téléphone, etc.). L’ID d’Espace de nommage est fourni. |
-| custom | espace de nommage unique créé dans le contexte d’une organisation et non partagé dans l’Experience Cloud. La valeur représente le nom convivial (champ &quot;nom&quot;) à rechercher. L’ID d’Espace de nommage est fourni. |
-| integrationCode | Code d’intégration - similaire à &quot;personnalisé&quot;, mais spécifiquement défini comme code d’intégration d’une source de données à rechercher. L’ID d’Espace de nommage est fourni. |
-| namespaceId | Indique que la valeur correspond à l’identifiant réel de l’espace de nommage qui a été créé ou mappé via le service d’espace de nommage. |
-| non enregistré | Chaîne de forme libre qui n’est pas définie dans le service d’espace de nommage et qui est prise &quot;en l’état&quot;. Toute application qui gère ce type d’espace de nommage vérifie ces  et les gère si nécessaire en fonction du contexte de société et de l’ensemble de données. Aucun ID d’espace de nommage n’est fourni. |
-| analytics | espace de nommage personnalisé qui est mappé en interne dans Analytics et non dans le service d’espace de nommage. Elle est transmise directement, comme spécifié par la requête d’origine, sans ID d’espace de nommage. |
-| cible | espace de nommage personnalisé compris en interne par la Cible et non dans le service d’espace de nommage. Elle est transmise directement, comme spécifié par la requête d’origine, sans ID d’espace de nommage. |
+| standard | Un des espaces de noms standard définis globalement, non lié à un jeu de données d’une organisation individuelle (par exemple, e-mail, numéro de téléphone, etc.). L’identifiant d’espace de noms est fourni. |
+| custom | Espace de noms unique créé dans le contexte d’une organisation et non partagé dans [!DNL Experience Cloud]. La valeur représente le nom convivial (champ « nom ») à rechercher. L’identifiant d’espace de noms est fourni. |
+| integrationCode | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
+| namespaceId | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
+| unregistered | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
+| analytics | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| target | A custom namespace understood internally by [!DNL Target], not in the namespace service. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 
 ## Valeurs de produit acceptées
 
-Le tableau suivant décrit les valeurs acceptées pour la spécification d’un produit Adobe dans l’ `include` attribut d’une demande de création d’emploi.
+Le tableau suivant indique les valeurs acceptées pour la spécification d’un produit Adobe dans l’attribut `include` d’une requête de création de tâche.
 
-| Produit | Valeur à utiliser dans l’ `include` attribut |
+| Produit | Valeur à utiliser dans l’attribut `include` |
 --- | ---
-| Adobe Advertising Cloud | &quot;AdCloud&quot; |
-| Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
-| Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Authentification Primetime Adobe | &quot;primetimeAuthentication&quot; |
-| Adobe Target | &quot;Target&quot; |
-| Service d&#39;enregistrement des clients | &quot;CRS&quot; |
-| Profil client en temps réel | &quot;ProfileService&quot; |
+| Adobe Advertizing Cloud | « AdCloud » |
+| Adobe Analytics | « Analytics » |
+| Adobe Audience Manager | « AudienceManager » |
+| Adobe Campaign | « Campaign » |
+| Adobe Experience Platform | « aepDataLake » |
+| Adobe Primetime Authentication | « primetimeAuthentication » |
+| Adobe Target | « Target » |
+| Customer Record Service | « CRS » |
+| Real-time Customer Profile | « ProfileService » |
