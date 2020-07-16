@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ressources de Liste
+title: Liste des ressources
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 2%
+source-wordcount: '508'
+ht-degree: 32%
 
 ---
 
 
-# Ressources de Liste
+# Liste des ressources
 
-Vous pouvez vue une liste de toutes les ressources de registre de Schéma d&#39;un certain type (classes, mixins, schémas, types de données ou descripteurs) dans un conteneur en exécutant une seule requête GET.
+Vous pouvez vue une liste de toutes les ressources d’un certain type (classes, mixins, schémas, types de données ou descripteurs) au sein d’un conteneur en exécutant une seule requête GET. [!DNL Schema Registry]
 
 >[!NOTE]
 >
->Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres de requête pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
+>Lors de la mise en vente de ressources, le résultat [!DNL Schema Registry] limite à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres [de](#paging)pagination. Il est également recommandé d’utiliser des paramètres de requête pour [filtrer les résultats](#filtering) et réduire le nombre de ressources renvoyées.
 
 **Format d’API**
 
@@ -29,9 +29,9 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | conteneur où se trouvent les ressources (&quot;global&quot; ou &quot;locataire&quot;). |
-| `{RESOURCE_TYPE}` | Type de ressource à récupérer de la bibliothèque de Schémas. Les types valides sont `classes`, `mixins`, `schemas`, `datatypes`et `descriptors`. |
-| `{QUERY_PARAMS`} | Paramètres de requête facultatifs pour filtrer les résultats en fonction. Pour plus d&#39;informations, consultez la section sur les paramètres [de](#query) requête. |
+| `{CONTAINER_ID}` | Le conteneur où se trouvent les ressources (« global » ou « client »). |
+| `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
+| `{QUERY_PARAMS`} | Paramètres de requête facultatifs pour filtrer les résultats en fonction. See the section on [query parameters](#query) for more information. |
 
 **Requête**
 
@@ -45,17 +45,17 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Le format de réponse dépend de l’en-tête Accepter envoyé dans la requête. Les en-têtes Accepter suivants sont disponibles pour répertorier les ressources :
+Le format de la réponse dépend de l’en-tête Accept envoyé dans la requête. Vous pouvez utiliser les en-têtes Accept suivants pour répertorier des ressources :
 
-| Accepter l’en-tête | Description |
+| En-tête Accept | Description |
 | ------- | ------------ |
 | application/vnd.adobe.xed-id+json | Renvoie un bref résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour la liste des ressources. (Limite : 300) |
-| application/vnd.adobe.xed+json | Renvoie le schéma JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
+| application/vnd.adobe.xed+json | Renvoie la totalité du schéma JSON de chaque ressource, en incluant le `$ref` et l’`allOf` d’origine. (Limite : 300) |
 | application/vnd.adobe.xdm-v2+json | Lors de l’utilisation du point de `/descriptors` terminaison, cet en-tête Accepter doit être utilisé pour utiliser les capacités de pagination. |
 
 **Réponse**
 
-La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json` Accepter. Par conséquent, la réponse inclut uniquement les `title`attributs, `$id`, `meta:altId`et `version` pour chaque ressource. La substitution `full` dans l&#39;en-tête Accepter renvoie tous les attributs de chaque ressource. Sélectionnez l’en-tête Accepter approprié en fonction des informations que vous souhaitez obtenir dans votre réponse.
+La requête ci-dessus utilisait l’en-tête Accept `application/vnd.adobe.xed-id+json`, c’est pourquoi la réponse n’inclut que les attributs `title`, `$id`, `meta:altId` et `version` de chaque ressource. Substituer `full` dans l’en-tête Accept renvoie tous les attributs de chaque ressource. Sélectionnez l’en-tête Accept approprié en fonction des informations dont vous avez besoin dans votre réponse.
 
 ```JSON
 {
@@ -78,11 +78,11 @@ La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json`
 
 ## Utilisation des paramètres de requête {#query}
 
-Le Registre des Schémas prend en charge l&#39;utilisation de paramètres de requête pour la page et filtrer les résultats lors de la liste des ressources.
+Le [!DNL Schema Registry] prend en charge l&#39;utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la mise en vente des ressources.
 
 >[!NOTE]
 >
->Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (`&`).
+>Lorsque vous combinez plusieurs paramètres de requête, ceux-ci doivent être séparés par des esperluettes (`&`).
 
 ### Pagination {#paging}
 
@@ -91,8 +91,8 @@ Les paramètres de requête les plus courants pour la pagination sont les suivan
 | Paramètre | Description |
 | --- | --- |
 | `start` | Indiquez où doivent commencer les résultats répertoriés. Cette valeur peut être obtenue à partir de l’ `_page.next` attribut d’une réponse de liste et utilisée pour accéder à la page de résultats suivante. Si la `_page.next` valeur est nulle, aucune page supplémentaire n’est disponible. |
-| `limit` | Limiter le nombre de ressources renvoyées. Exemple : `limit=5` retournera une liste de cinq ressources. |
-| `orderby` | Triez les résultats selon une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). Ajouter un titre `-` avant (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
+| `limit` | Limite le nombre de ressources renvoyé. Exemple : `limit=5` renverra une liste de cinq ressources. |
+| `orderby` | Trie les résultats en fonction d’une propriété spécifique. Exemple : `orderby=title` triera les résultats par titre dans l’ordre croissant (A-Z). L’ajout d’un `-` devant le titre (`orderby=-title`) triera les éléments par titre dans l’ordre décroissant (Z-A). |
 
 ### Filtrage {#filtering}
 
@@ -107,8 +107,8 @@ Vous pouvez filtrer les résultats en utilisant le `property` paramètre, qui es
 | `<=` | Filtres selon si la propriété est inférieure ou égale à la valeur fournie. | `property=version<=5` |
 | `>=` | Filtres selon si la propriété est supérieure ou égale à la valeur fournie. | `property=version>=5` |
 | `~` | Filtres selon si la propriété correspond à une expression régulière fournie. | `property=title~test$` |
-| (None) | Le fait de spécifier uniquement le nom de la propriété renvoie uniquement les entrées où la propriété existe. | `property=title` |
+| (Aucun) | Le fait de spécifier uniquement le nom de la propriété renvoie uniquement les entrées où la propriété existe. | `property=title` |
 
 >[!TIP]
 >
->Vous pouvez utiliser le `property` paramètre pour filtrer les mixins selon leur classe compatible. Par exemple, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` renvoie uniquement les mixins compatibles avec la classe de Profil XDM Individuel.
+>Vous pouvez utiliser le `property` paramètre pour filtrer les mixins selon leur classe compatible. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
