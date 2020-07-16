@@ -4,29 +4,29 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 2%
+source-wordcount: '938'
+ht-degree: 95%
 
 ---
 
 
-# Évaluation des politiques
+# Évaluation des stratégies
 
-Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Service de stratégie pour déterminer si des stratégies sont violées par certaines actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient violées en tentant l’action marketing sur les données spécifiées contenant des étiquettes d’utilisation des données.
+Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 
-Par défaut, **seules les stratégies dont l’état est défini sur &quot;ACTIVÉ&quot; participent à l’évaluation**, mais vous pouvez utiliser le paramètre de requête `?includeDraft=true` pour inclure des stratégies &quot;BROUILLON&quot; dans l’évaluation.
+Par défaut, **seules les stratégies dont l’état est défini sur « ENABLED » participent à l’évaluation**. Toutefois, vous pouvez utiliser le paramètre de requête `?includeDraft=true` pour inclure dans l’évaluation les stratégies dont l’état est défini sur « DRAFT ».
 
-Les demandes d&#39;évaluation peuvent être présentées de trois façons :
+Les requêtes d’évaluation peuvent être effectuées de trois façons :
 
-1. Compte tenu d’un ensemble d’étiquettes d’utilisation des données et d’une action marketing, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’un ou de plusieurs jeux de données et d’une action marketing, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’un ou de plusieurs jeux de données et d’un ou de plusieurs champs de chacun de ces jeux de données, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’un ensemble de libellés d’utilisation des données et d’une action marketing, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’un ou plusieurs jeux de données et d’une action marketing, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’un ou plusieurs jeux de données et d’un sous-ensemble comprenant un ou plusieurs champs dans chaque jeu de données, l’action enfreint-elle des stratégies ?
 
-## Evaluer les stratégies à l’aide de libellés d’utilisation des données et d’une action marketing
+## Évaluation des stratégies à l’aide de libellés d’utilisation des données et d’une action marketing
 
-Pour évaluer les violations de stratégie en fonction de la présence d’étiquettes d’utilisation de données, vous devez spécifier l’ensemble d’étiquettes qui seront présentes sur les données pendant la demande. Pour ce faire, vous utilisez des paramètres de requête, où les étiquettes d’utilisation des données sont fournies sous la forme d’une liste de valeurs séparées par des virgules, comme indiqué dans l’exemple suivant.
+Pour évaluer les violations de stratégie en fonction de la présence de libellés d’utilisation des données, vous devez spécifier l’ensemble de libellés présents sur les données pendant la requête. Pour cela, vous devez utiliser des paramètres de requête où les libellés d’utilisation des données sont fournis sous la forme d’une liste de valeurs séparées par des virgules, comme illustré dans l’exemple suivant.
 
 **Format d’API**
 
@@ -37,9 +37,9 @@ GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value
 
 **Requête**
 
-L’exemple de demande ci-dessous évalue une action marketing par rapport aux étiquettes C1 et C3. Lors de l’évaluation des stratégies à l’aide de libellés d’utilisation des données, gardez à l’esprit les points suivants :
-* **Les libellés d’utilisation des données respectent la casse.** La requête illustrée ci-dessus renvoie une stratégie violée, alors qu&#39;elle utilise des libellés minuscules (ex. `"c1,c3"`, `"C1,c3"`, `"c1,C3"`) ne le fait pas.
-* **Tenez compte des opérateurs`AND`et`OR`dans vos expressions de stratégie.** Dans cet exemple, si l’étiquette (`C1` ou `C3`) s’était présentée seule dans la demande, l’action marketing n’aurait pas enfreint cette stratégie. Il faut les deux étiquettes (`C1 AND C3`) pour renvoyer la stratégie violée. Assurez-vous que vous évaluez soigneusement les politiques et que vous définissez les expressions de politiques avec la même attention.
+L’exemple de requête ci-dessous évalue une action marketing en fonction des libellés C1 et C3. Lors de l’évaluation des stratégies à l’aide de libellés d’utilisation des données, considérez les points suivants :
+* **Les libellés d’utilisation des données sont sensibles à la casse.** La requête illustrée ci-dessus renvoie une stratégie enfreinte, contrairement à une même requête utilisant des libellés en minuscules (par exemple, `"c1,c3"`, `"C1,c3"` ou `"c1,C3"`).
+* **Tenez compte des opérateurs`AND`et`OR`dans l’expression des stratégies.** Dans cet exemple, si un des libellés (`C1` ou `C3`) était apparu seul dans la requête, l’action marketing n’aurait pas enfreint cette stratégie. Les deux libellés (`C1 AND C3`) sont nécessaires pour renvoyer la stratégie enfreinte. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
 
 ```SHELL
 curl -X GET \
@@ -52,7 +52,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet response comprend un `duleLabels` tableau qui doit correspondre aux étiquettes envoyées dans la requête. Si l&#39;exécution de l&#39;action marketing spécifiée par rapport aux étiquettes d&#39;utilisation des données enfreint une stratégie, la `violatedPolicies` baie contiendra les détails de la (ou des stratégies) stratégie(s) concernée(s). Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` s&#39;affiche vide (`[]`).
+L’objet de la réponse comprend un tableau `duleLabels` qui doit correspondre aux libellés envoyés dans la requête. Si l’exécution de l’action marketing spécifiée enfreint une stratégie à cause des libellés d’utilisation des données, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
 
 ```JSON
 {
@@ -110,9 +110,9 @@ L’objet response comprend un `duleLabels` tableau qui doit correspondre aux é
 }
 ```
 
-## Evaluer les stratégies à l’aide de jeux de données et d’une action marketing
+## Évaluation des stratégies à l’aide de jeux de données et d’une action marketing
 
-Vous pouvez également évaluer les violations de stratégie en spécifiant l’ID d’un ou de plusieurs jeux de données à partir desquels les étiquettes d’utilisation des données peuvent être collectées. Pour ce faire, vous devez exécuter une requête POST sur le point de terminaison principal ou personnalisé d’une action marketing et spécifier les ID des jeux de données dans le corps de la requête, comme illustré ci-dessous. `/constraints`
+Vous pouvez également évaluer les violations de stratégie en spécifiant l’identifiant d’un ou plusieurs jeux de données où collecter les libellés d’utilisation des données. Pour cela, vous devez effectuer une requête POST au point de terminaison `/constraints` principal ou personnalisé pour une action marketing, et spécifier les identifiants des jeux de données dans le corps de la requête, comme illustré ci-dessous.
 
 **Format d’API**
 
@@ -123,7 +123,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **Requête**
 
-Le corps de la requête contient un tableau avec un objet pour chaque ID de jeu de données. Puisque vous envoyez un corps de requête, le message &quot;Content-Type: l’en-tête de requête application/json&quot; est obligatoire, comme illustré dans l’exemple suivant.
+Le corps de la requête contient un tableau avec un objet pour chaque identifiant de jeu de données. Puisque vous envoyez un corps de requête, l’en-tête de requête « Content-Type: application/json » est obligatoire, comme illustré dans l’exemple suivant.
 
 ```SHELL
 curl -X POST \
@@ -151,11 +151,11 @@ curl -X POST \
 
 **Réponse**
 
-L&#39;objet response comprend un `duleLabels` tableau qui contient une liste consolidée de toutes les étiquettes trouvées dans les jeux de données spécifiés. Cette liste comprend des étiquettes au niveau des jeux de données et des champs sur tous les champs du jeu de données.
+L’objet de la réponse comprend un tableau `duleLabels` qui contient une liste consolidée de tous les libellés trouvés dans les jeux de données spécifiés. Cette liste inclut des libellés de jeu de données et de champ pour tous les champs du jeu de données.
 
-La réponse comprend également un `discoveredLabels` tableau contenant des objets pour chaque jeu de données, qui indique `datasetLabels` les étiquettes de niveau jeu de données et champ. Chaque étiquette de niveau champ affiche le chemin d’accès au champ spécifique avec cette étiquette.
+La réponse comprend également un tableau `discoveredLabels` contenant des objets pour chaque jeu de données, divisant les `datasetLabels` entre les libellés de jeu de données et les libellés de champ. Chaque libellé de champ indique le chemin d’accès au champ spécifique portant ce libellé.
 
-Si l&#39;action marketing spécifiée enfreint une stratégie impliquant les `duleLabels` jeux de données, la `violatedPolicies` baie contient les détails de la (ou des stratégies) stratégie(s) concernée(s). Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` s&#39;affiche vide (`[]`).
+Si l’action marketing spécifiée enfreint une stratégie impliquant les `duleLabels` des jeux de données, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
 
 ```JSON
 {
@@ -326,14 +326,14 @@ Si l&#39;action marketing spécifiée enfreint une stratégie impliquant les `du
 }
 ```
 
-## Evaluer des stratégies à l’aide de jeux de données, de champs et d’une action marketing
+## Évaluation des stratégies à l’aide de jeux de données, de champs et d’une action marketing
 
-Outre la fourniture d’un ou de plusieurs ID de jeu de données, un sous-ensemble de champs de chaque jeu de données peut également être spécifié, ce qui indique que seuls les libellés d’utilisation des données de ces champs doivent être évalués. Comme pour la requête POST impliquant uniquement des jeux de données, cette requête ajoute des champs spécifiques pour chaque jeu de données au corps de la requête.
+Outre l’utilisation d’un ou plusieurs identifiants de jeu de données, vous pouvez également spécifier un sous-ensemble de champs issus de chaque jeu de données en indiquant que seuls les libellés d’utilisation des données de ces champs doivent être évalués. Tout comme la requête POST impliquant uniquement les jeux de données, cette requête ajoute au corps de la requête des champs spécifiques pour chaque jeu de données.
 
-Lors de l’évaluation des stratégies à l’aide des champs de jeu de données, gardez à l’esprit les points suivants :
+Lors de l’évaluation des stratégies à l’aide de champs de jeu de données, considérez les points suivants :
 
-* **Les noms de champ respectent la casse.** Lorsque vous fournissez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple, `firstName` vs `firstname`).
-* **Héritage de l’étiquette du jeu de données.** les étiquettes d’utilisation des données peuvent être appliquées à plusieurs niveaux et sont héritées vers le bas. Si vos évaluations de stratégie ne retournent pas la manière dont vous le pensiez, veillez à vérifier les étiquettes héritées des jeux de données dans les champs en plus de celles appliquées au niveau du champ.
+* **Les noms de champ sont sensibles à la casse.** Lorsque vous spécifiez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple, `firstName` vs `firstname`).
+* **Les libellés de jeu de données sont hérités.** Les libellés d’utilisation des données peuvent être appliqués à plusieurs niveaux et font l’objet d’un héritage descendant. Si vos évaluations de stratégie ne renvoient pas les résultats attendus, vérifiez les libellés des jeux de données hérités par les champs en plus de ceux appliqués au niveau des champs.
 
 **Format d’API**
 
@@ -344,7 +344,7 @@ POST /marketingActions/custom/{marketingActionName}/constraints
 
 **Requête**
 
-Le corps de la requête contient un tableau avec un objet pour chaque ID de jeu de données et le sous-ensemble de champs dans ce jeu de données qui doit être utilisé pour l&#39;évaluation. Puisque vous envoyez un corps de requête, le message &quot;Content-Type: l’en-tête de requête application/json&quot; est obligatoire, comme illustré dans l’exemple suivant.
+Le corps de la requête contient un tableau avec un objet pour chaque identifiant de jeu de données et le sous-ensemble de champs issu du jeu de données à utiliser pour l’évaluation. Puisque vous envoyez un corps de requête, l’en-tête de requête « Content-Type: application/json » est obligatoire, comme illustré dans l’exemple suivant.
 
 ```SHELL
 curl -X POST \
@@ -389,11 +389,11 @@ curl -X POST \
 
 **Réponse**
 
-L’objet response comprend un `duleLabels` tableau qui contient la liste consolidée des libellés trouvés dans les champs spécifiés. N’oubliez pas que cela inclut également des étiquettes de jeux de données, car elles sont héritées jusqu’aux champs.
+L’objet de la réponse comprend un tableau `duleLabels` qui contient la liste consolidée des libellés figurant dans les champs spécifiés. N’oubliez pas que cela inclut également les libellés des jeux de données, car ils sont hérités par les champs.
 
-Si une stratégie est violée en exécutant l&#39;action marketing spécifiée sur les données des champs fournis, la `violatedPolicies` baie contient les détails de la (ou des stratégies) stratégie(s) concernée(s). Si aucune stratégie n&#39;est violée, le tableau `violatedPolicies` s&#39;affiche vide (`[]`).
+Si une stratégie est enfreinte par l’exécution de l’action marketing spécifiée sur les données des champs fournis, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
 
-Dans la réponse ci-dessous, vous pouvez voir que la liste de `duleLabels` données est désormais plus courte, tout comme celle `discoveredLabels` de chaque jeu de données, car elle inclut uniquement les champs spécifiés dans le corps de la requête. Vous remarquerez également que la stratégie précédemment violée, &quot;Ciblage des publicités ou du contenu&quot;, exigeait les deux `C4 AND C6` étiquettes. Elle n’est donc plus violée et la `violatedPolicies` baie apparaît vide.
+Dans la réponse ci-dessous, vous pouvez constater que la liste de `duleLabels` est désormais plus courte, tout comme les `discoveredLabels` de chaque jeu de données, car ils ne comprennent que les champs spécifiés dans le corps de la requête. Vous remarquerez également que la stratégie précédemment enfreinte, « Targeting Ads or Content », exigeait les deux libellés `C4 AND C6`. Elle n’est donc plus enfreinte et le tableau `violatedPolicies` apparaît vide.
 
 ```JSON
 {
@@ -495,4 +495,4 @@ Dans la réponse ci-dessous, vous pouvez voir que la liste de `duleLabels` donn�
 
 ## Évaluation des politiques [!DNL Real-time Customer Profile]
 
-L’ [!DNL Policy Service] API peut également être utilisée pour vérifier les violations de stratégie impliquant l’utilisation de [!DNL Real-time Customer Profile] segments. Pour plus d’informations, consultez le tutoriel sur l’[application des stratégies d’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
+The [!DNL Policy Service] API can also be used to check for policy violations involving the use of [!DNL Real-time Customer Profile] segments. Pour plus d’informations, consultez le tutoriel sur l’[application de la conformité à l’utilisation des données pour les segments d’audience](../../segmentation/tutorials/governance.md).
