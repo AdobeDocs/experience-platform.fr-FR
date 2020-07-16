@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Didacticiels de prise de décision
+title: Tutoriels de prise de décision
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: ee08f43400fa72abce95ed52aff879f954f4b4d6
+source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 0%
+source-wordcount: '118'
+ht-degree: 27%
 
 ---
 
 
-# Commencer avec le service de prise de décision
+# Get started with [!DNL Decisioning Service]
 
-Le service de prise de décision permet de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. Grâce au service de prise de décision, vous pouvez déterminer la meilleure option parmi un ensemble de choix disponibles. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience Web, des scripts de conversation et des actions à entreprendre. Pour en savoir plus, consultez la présentation [du service de](../decisioning-service/home.md)prise de décision.
+[!DNL Decisioning Service] permet de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. Using [!DNL Decisioning Service], you can determine the best option from a set of available choices. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience web, des scripts de conversation et des actions à prendre. Pour en savoir plus, consultez la [présentation du service de prise de décision](../decisioning-service/home.md).
 
-## Utilisation de l’exécution du service de prise de décision
+## Utilisation de l’ [!DNL Decisioning Service] exécution
 
-Découvrez comment utiliser les services d’exécution de Decisioning Service à l’aide des API Adobe Experience Platform en suivant le didacticiel [d’exécution](../decisioning-service/tutorials/runtime.md)Work with Decisioning Service.
+Learn how to work with the runtime services of [!DNL Decisioning Service] using Adobe Experience Platform APIs by following the [work with Decisioning Service runtime tutorial](../decisioning-service/tutorials/runtime.md).
 
-## Gérer les entités du service de prise de décision
+## Gérer les [!DNL Decisioning Service] entités
 
-Pour consulter un didacticiel qui explique comment travailler avec les entités commerciales de Decisioning Service à l’aide des API Adobe Experience Platform, consultez le didacticiel [](../decisioning-service/tutorials/entities.md)Gérer les objets et règles de prise de décision.
+For a tutorial showing how to work with the business entities of [!DNL Decisioning Service] using Adobe Experience Platform APIs, visit the [manage Decisioning objects and rules tutorial](../decisioning-service/tutorials/entities.md).
