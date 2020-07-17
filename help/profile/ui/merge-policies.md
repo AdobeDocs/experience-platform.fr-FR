@@ -1,104 +1,104 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Guide de l’utilisateur des stratégies de fusion
+title: Guide d’utilisation des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: 3669d740b22b650d4079d83026f122ffee42b9a0
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 3%
+source-wordcount: '1104'
+ht-degree: 84%
 
 ---
 
 
-# Guide de l’utilisateur des stratégies de fusion
+# Guide d’utilisation des stratégies de fusion
 
-Adobe Experience Platform vous permet de rassembler des données à partir de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
 
-A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
+À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide fournit des instructions détaillées sur l’utilisation des stratégies de fusion à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 
-Si vous préférez utiliser des stratégies de fusion à l’aide de l’API Profil client en temps réel, suivez les instructions du didacticiel [sur l’API des stratégies de](../api/merge-policies.md)fusion.
+If you would prefer to work with merge policies using the [!DNL Real-time Customer Profile] API, please follow the instructions outlined in the [merge policies API tutorial](../api/merge-policies.md).
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension des différents services Experience Platform impliqués dans les stratégies de fusion. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+This guide requires a working understanding of the various [!DNL Experience Platform] services involved with merge policies. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-* [Profil](../home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Service](../../identity-service/home.md)d&#39;identité : Permet le Profil client en temps réel en rapprochant les identités des sources de données disparates qui sont incorporées dans la plate-forme.
-* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+* [!DNL Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [!DNL Identity Service](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier des identités provenant de sources de données disparates et qui sont incorporées [!DNL Platform]dans.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
-## Stratégies de fusion de Vues
+## Affichage des stratégies de fusion
 
-Dans l’interface utilisateur de la plateforme d’expérience, vous pouvez commencer à utiliser des stratégies de fusion et voir la liste des stratégies de fusion existantes de votre entreprise en cliquant sur **Profil** dans le rail de gauche, puis en sélectionnant l’onglet **Fusionner les stratégies** .
+Within the [!DNL Experience Platform] user interface, you can begin to work with merge policies and see a list of your organization&#39;s existing merge policies by clicking **[!UICONTROL Profile]** in the left-rail and then selecting the **[!UICONTROL Merge policies]** tab.
 
-![Fusionner le landing page de stratégies](../images/merge-policies/landing.png)
+![Page d’entrée des stratégies de fusion](../images/merge-policies/landing.png)
 
-Les détails de chaque stratégie de fusion disponible pour votre organisation sont visibles sur le landing page, y compris le nom *de la* stratégie, la stratégie *de fusion* par défaut et le *Schéma*.
+Les détails de chaque stratégie de fusion disponibles pour votre organisation sont visibles sur la page d’entrée, notamment le *[!UICONTROL nom de la stratégie]*, la *[!UICONTROL stratégie de fusion par défaut]*, et le *[!UICONTROL schéma]*.
 
-Pour sélectionner les détails visibles ou ajouter d&#39;autres colonnes à l&#39;affichage, sélectionnez l&#39;icône de sélection de colonnes sur la droite et cliquez sur le nom d&#39;une colonne pour l&#39;ajouter ou la supprimer de la vue.
+Pour sélectionner les détails visibles ou ajouter des colonnes supplémentaires à l’affichage, sélectionnez l’icône de sélection des colonnes sur la droite et cliquez sur le nom d’une colonne pour l’ajouter ou la supprimer de l’affichage.
 
 ![](../images/merge-policies/adjust-view.png)
 
 ## Création d’une stratégie de fusion
 
-Pour créer une nouvelle stratégie de fusion, cliquez sur **Créer une stratégie** de fusion près de l’angle supérieur droit de l’onglet **Fusionner les stratégies** .
+Pour créer une nouvelle stratégie de fusion, cliquez sur **[!UICONTROL Créer une stratégie de fusion]** près du coin supérieur droit de l’onglet **[!UICONTROL Stratégies de fusion]**.
 
-![Fusionner le landing page de stratégies](../images/merge-policies/create-new.png)
+![Page d’entrée des stratégies de fusion](../images/merge-policies/create-new.png)
 
-L’écran **Créer une stratégie** de fusion s’affiche, ce qui vous permet de fournir des informations importantes pour votre nouvelle stratégie de fusion.
+L’écran **[!UICONTROL Créer une stratégie de fusion]** apparaît et vous permet de fournir des informations importantes pour votre nouvelle stratégie de fusion.
 
 ![](../images/merge-policies/create.png)
 
-* **Nom**: Le nom de votre stratégie de fusion doit être descriptif mais concis.
-* **Schéma**: schéma associé à la stratégie de fusion. Cette option spécifie le schéma XDM pour lequel cette stratégie de fusion est créée. Les entreprises peuvent créer plusieurs stratégies de fusion par schéma.
-* **Correspondance** d&#39;ID : Ce champ définit comment déterminer les identités associées d’un client. Il existe deux valeurs possibles :
-   * **Aucun**: N&#39;effectuez aucune assemblage d&#39;identité.
-   * **Graphique** privé : Effectuez des assemblages d’identité en fonction de votre graphique d’identité privé.
-* **Fusion** d&#39;attribut : Un fragment de profil est l&#39;information de profil d&#39;une seule identité sur la liste des identités qui existent pour un client individuel. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit de valeurs de propriétés de profil et la priorité doit être spécifiée. L’utilisation de la fusion ** d’attributs vous permet de spécifier les valeurs de profil de jeux de données à classer par priorité en cas de conflit de fusion. Il existe deux valeurs possibles :
-   * **Horodatage ordonné**: En cas de conflit, donner la priorité au profil mis à jour le plus récemment.
-   * **Ordre de priorité** des jeux de données : Donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données connexes et leur ordre de priorité. Pour plus d&#39;informations, consultez les détails sur la priorité [des jeux de](#dataset-precedence) données ci-dessous.
-* **Stratégie** de fusion par défaut : Bouton bascule qui vous permet de choisir si cette stratégie de fusion sera la stratégie par défaut de votre entreprise. Si le sélecteur est activé et que la nouvelle stratégie est enregistrée, votre précédente stratégie par défaut est automatiquement mise à jour pour ne plus être la stratégie par défaut.
+* **[!UICONTROL Nom]** : le nom de votre stratégie de fusion devrait être descriptif, mais concis.
+* **[!UICONTROL Schéma]** : le schéma associé à la stratégie de fusion. Ceci spécifie le schéma XDM pour lequel cette stratégie de fusion est créée. Les organisations peuvent créer plusieurs stratégies de fusion par schéma.
+* **[!UICONTROL Combinaison d’identités]** : ce champ définit la manière de déterminer les identités liées d’un client. Deux valeurs sont possibles :
+   * **[!UICONTROL Aucun]** : ne réalise pas de combinaison d’identités.
+   * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
+* **[!UICONTROL Fusion d’attributs]** : un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un client individuel. Lorsque le type de graphique d’identités utilisé génère plusieurs identités, il existe un risque de conflit des valeurs de propriété du profil et un ordre de priorité doit être établi. L’utilisation de la *fusion d’attributs* vous permet de préciser les valeurs de profil du jeu de données à prioriser en cas de conflit de fusion. Deux valeurs sont possibles :
+   * **[!UICONTROL Classé par date et heure]** : en cas de conflit, vous donnez la priorité au profil mis à jour le plus récemment.
+   * **[!UICONTROL Priorité du jeu de données]** : donne la priorité aux fragments de profil en fonction de leur jeu de données d’origine. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. Consultez les détails de la [priorité du jeu de données](#dataset-precedence) ci-dessous pour plus d’informations.
+* **[!UICONTROL Stratégie de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette stratégie de fusion ou non comme stratégie par défaut pour votre organisation. Si le sélecteur est activé et que la nouvelle stratégie est enregistrée, votre stratégie précédente par défaut est mise à jour automatiquement et n’est plus la stratégie par défaut.
 
-### Ordre de priorité des jeux de données {#dataset-precedence}
+### Priorité du jeu de données {#dataset-precedence}
 
-Lors de la sélection d’une valeur de fusion ** Attribut, vous pouvez sélectionner la priorité ** Jeu de données qui vous permet de donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés.
+Lors de la sélection d’une valeur de *[!UICONTROL fusion d’attributs]*, vous pouvez sélectionner la *[!UICONTROL priorité du jeu de données]*, ce qui vous permettra de prioriser des fragments de profil en fonction du jeu de données dont ils proviennent.
 
-Par exemple, si votre entreprise avait des informations présentes dans un jeu de données qui sont préférées ou approuvées par rapport aux données d’un autre jeu de données, vous pouvez les utiliser.
+Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
 
-Lors de la sélection de la priorité ** Jeu de données, un panneau distinct s&#39;ouvre, vous demandant de sélectionner dans les jeux de données ** disponibles (ou d&#39;utiliser la case à cocher pour sélectionner tous les jeux de données) ceux qui seront inclus. Vous pouvez ensuite faire glisser ces jeux de données dans le panneau Jeu de données ** sélectionnés et les faire glisser dans l’ordre de priorité approprié. Le jeu de données le plus élevé aura la priorité la plus élevée, puis le deuxième jeu de données sera le deuxième plus élevé, et ainsi de suite.
+Lorsque vous sélectionnez une *[!UICONTROL priorité de jeu de données]*, un panneau séparé s’ouvre vous demandant de sélectionner parmi les *[!UICONTROL jeux de données disponibles]* (vous pouvez également utiliser la case à cocher pour tous les sélectionner) les jeux de données qui seront inclus. Vous pouvez ensuite faire glisser et déposer ces jeux de données dans le panneau *[!UICONTROL Jeux de données sélectionnés]* et les faire glisser dans l’ordre de priorité correct. Le jeu de données supérieur se verra accorder la priorité la plus élevée, puis le deuxième jeu de données sera placé en deuxième position et ainsi de suite.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
-Une fois que vous avez terminé de créer la stratégie de fusion, cliquez sur **Enregistrer** pour revenir à l’onglet *Fusionner les stratégies* dans lequel votre nouvelle stratégie de fusion apparaît désormais dans la liste des stratégies.
+Lorsque vous avez terminé de créer la stratégie de fusion, cliquez sur **[!UICONTROL Enregistrer]** pour revenir à l’onglet *[!UICONTROL Stratégies de fusion]* où votre nouvelle stratégie de fusion apparaît désormais dans la liste de stratégies.
 
 ## Modification d’une stratégie de fusion
 
-Vous pouvez modifier une stratégie de fusion existante dans l&#39;onglet *Fusionner les stratégies* en cliquant sur le nom *de la* stratégie de fusion pour la stratégie de fusion que vous souhaitez modifier.
+Vous pouvez modifier une stratégie de fusion existante depuis l’onglet *[!UICONTROL Stratégies de fusion]* en cliquant sur le *[!UICONTROL Nom de la stratégie]* de la stratégie de fusion que vous souhaitez modifier.
 
-![Fusionner le landing page de stratégies](../images/merge-policies/select-edit.png)
+![Page d’entrée des stratégies de fusion](../images/merge-policies/select-edit.png)
 
-Lorsque l’écran *Modifier la stratégie* de fusion s’affiche, vous pouvez apporter des modifications au *nom*, au *Schéma*, au type d’assemblage d’ *ID et au type Attribute mergeType dede fusion, ainsi qu’indiquer si cette stratégie sera l’ de fusion par défaut de votre organisation.*****
+Lorsque l’écran *[!UICONTROL Modifier la stratégie de fusion]* apparaît, vous pouvez apporter des modifications au *[!UICONTROL nom]*, au *[!UICONTROL schéma]*, au type de *[!UICONTROL combinaison d’identités]* et au type de *[!UICONTROL fusion d’attributs]* ainsi que sélectionner cette stratégie ou non comme *[!UICONTROL Stratégie de fusion par défaut]* pour votre organisation.
 
->[!Note] :
->Vous ne pouvez pas modifier l’ID de stratégie de fusion, affiché en haut de l’écran de modification. Il s’agit d’un identifiant généré par le système en lecture seule qui ne peut pas être modifié.
+>[!NRemarque]
+>Vous ne pouvez pas modifier l’identifiant de stratégie de fusion qui apparaît en haut de l’écran de modification. Il s’agit d’un identifiant en lecture seule généré par le système qui ne peut pas être modifié.
 
 ![](../images/merge-policies/edit-screen.png)
 
-Une fois les modifications nécessaires effectuées, cliquez sur **Enregistrer** pour revenir à l’onglet Stratégies *de* fusion dans lequel les informations de stratégie de fusion mises à jour sont désormais visibles.
+Lorsque vous avez apporté les modifications nécessaires, cliquez sur **[!UICONTROL Enregistrer]** pour revenir à l’onglet *[!UICONTROL Stratégies de fusion]* dans lequel les informations de la stratégie de fusion mise à jour seront désormais disponibles.
 
 ![](../images/merge-policies/edited.png)
 
-## Violations de la stratégie de gouvernance des données
+## Violations de la politique de gouvernance des données
 
-Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la stratégie de fusion enfreint l’une des stratégies d’utilisation des données définies par votre organisation. Les stratégies d’utilisation des données font partie de la gouvernance des données de la plate-forme Adobe Experience et sont des règles qui décrivent les types d’actions marketing que vous pouvez exécuter sur des données de plateforme spécifiques ou dont vous êtes limité à l’exécution. Par exemple, si une stratégie de fusion a été utilisée pour créer un segment qui s’est activé sur une destination tierce et si votre entreprise disposait d’une stratégie d’utilisation des données empêchant l’exportation de données spécifiques vers des tiers, vous recevriez une notification de &quot;violation de la stratégie de gouvernance des données détectée&quot; lorsque vous tentiez d’enregistrer votre stratégie de fusion.
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Data usage policies are part of Adobe Experience Platform [!DNL Data Governance] and are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on specific [!DNL Platform] data. Par exemple, si vous avez utilisé une stratégie de fusion pour créer un segment activé dans une destination tierce et que votre organisation dispose d’une stratégie d’utilisation des données empêchant l’exportation de données spécifiques à des tiers, vous recevrez une notification « Violations de la politique de gouvernance des données détectée » lorsque vous tenterez d’enregistrer votre stratégie de fusion.
 
-Cette notification comprend une liste de stratégies d’utilisation des données qui ont été violées et vous permet de vue des détails de la violation en sélectionnant une stratégie dans la liste. Lors de la sélection d’une stratégie violée, l’onglet lignage *de* données fournit la *raison de la violation* et les activations ** affectées, chacune fournissant plus de détails sur la manière dont la stratégie d’utilisation des données a été violée.
+Cette notification inclut une liste des stratégies d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une stratégie depuis la liste. Si vous avez sélectionné une stratégie ayant fait l’objet d’une infraction, l’onglet *Liaison des données* fournit un *motif de violation* et les *activations concernées*, chacun fournissant plus de détails sur la manière dont la stratégie d’utilisation des données a été enfreinte.
 
-Pour en savoir plus sur la manière dont la gouvernance des données est effectuée dans Adobe Experience Platform, lisez tout d’abord l’aperçu [de la gouvernance des](../../data-governance/home.md)données.
+Pour en savoir plus sur la manière dont la gouvernance des données est réalisée au sein d’Adobe Experience Platform, veuillez commencer par lire la [présentation de la gouvernance des données](../../data-governance/home.md).
 
 ![](../images/merge-policies/policy-violation.png)
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de profil. Pour plus d’informations sur la création et l’utilisation de segments à l’aide de la plate-forme d’expérience, voir la présentation [de la](../../segmentation/home.md) segmentation.
+Maintenant que vous avez créé et configuré les stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir des données de votre profil. See the [Segmentation overview](../../segmentation/home.md) for more information on how to create and work with segments using [!DNL Experience Platform].
