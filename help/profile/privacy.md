@@ -1,55 +1,55 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Traitement des demandes de confidentialité dans le Profil client en temps réel
+title: Traitement de la demande d’accès à des informations personnelles dans Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 0%
+source-wordcount: '593'
+ht-degree: 55%
 
 ---
 
 
-# Traitement des demandes de confidentialité dans le Profil client en temps réel
+# Privacy request processing in [!DNL Real-time Customer Profile]
 
-L’Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux règlements sur la protection des données personnelles tels que le Règlement général sur la protection des données (RGPD) et la Loi sur la protection des renseignements personnels des consommateurs (LPCPC) de Californie.
+Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
 
-Ce document couvre les concepts essentiels liés au traitement des demandes de confidentialité pour le Profil client en temps réel.
+This document covers essential concepts related to processing privacy requests for [!DNL Real-time Customer Profile].
 
 ## Prise en main
 
-Il est recommandé de bien comprendre les services d’Experience Platform suivants avant de lire ce guide :
+It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [Privacy Service](home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou les supprimer.
-* [Service](../identity-service/home.md)d&#39;identité : Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
-* [Profil](../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [!DNL Privacy Service](home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [!DNL Identity Service](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-## Comprendre les espaces de nommage d&#39;identité {#namespaces}
+## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform Identity Service relie les données d&#39;identité des clients entre les systèmes et les périphériques. Identity Service utilise des espaces de nommage **** d&#39;identité pour fournir un contexte aux valeurs d&#39;identité en les rattachant à leur système d&#39;origine. Un espace de nommage peut représenter un concept générique tel qu’une adresse électronique (&quot;Email&quot;) ou associer l’identité à une application spécifique, telle qu’un Advertising Cloud ID (&quot;AdCloud&quot;) ou un ID d’Adobe Target (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-Identity Service conserve un stock d&#39;espaces de nommage d&#39;identité définis globalement (standard) et définis par l&#39;utilisateur (personnalisés). Les espaces de nommage standard sont disponibles pour toutes les organisations (par exemple, &quot;Courriel&quot; et &quot;ECID&quot;), tandis que votre organisation peut également créer des espaces de nommage personnalisés en fonction de ses besoins particuliers.
+Identity Service conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
-Pour plus d&#39;informations sur les espaces de nommage d&#39;identité dans l&#39;Experience Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
+For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
 
 ## Envoi de requêtes {#submit}
 
 >[!NOTE]
 >
->Cette section explique comment créer des requêtes de confidentialité pour le stockage de données de Profil. Il est vivement recommandé de consulter la documentation relative à l’API [](../privacy-service/api/getting-started.md) Privacy Service ou à l’interface utilisateur [](../privacy-service/ui/overview.md) Privacy Service pour connaître les étapes complètes d’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité de l’utilisateur envoyées dans les charges utiles de demande.
+>This section covers how to create privacy requests for the [!DNL Profile] data store. Il est vivement recommandé de consulter l’[API Privacy Service](../privacy-service/api/getting-started.md) ou la documentation de l’[interface utilisateur de Privacy Service](../privacy-service/ui/overview.md) pour obtenir des instructions complètes sur la manière d’envoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données d’identité utilisateur envoyées dans les payloads de requête.
 
-La section suivante décrit comment effectuer des demandes de confidentialité pour le Profil client en temps réel et Data Lake à l’aide de l’API ou de l’interface utilisateur du Privacy Service.
+The following section outlines how to make privacy requests for [!DNL Real-time Customer Profile] and the [!DNL Data Lake] using the [!DNL Privacy Service] API or UI.
 
 ### Utilisation de l’API
 
-Lors de la création de demandes de travaux dans l’API, les demandes `userIDs` fournies doivent utiliser un code spécifique `namespace` et `type` selon le magasin de données auquel elles s’appliquent. Les identifiants de la boutique de Profils doivent utiliser &quot;standard&quot; ou &quot;personnalisé&quot; pour leur `type` valeur et un espace de nommage [d&#39;](#namespaces) identité valide reconnu par Identity Service pour leur `namespace` valeur.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. IDs for the [!DNL Profile] store must use either &quot;standard&quot; or &quot;custom&quot; for their `type` value, and a valid [identity namespace](#namespaces) recognized by [!DNL Identity Service] for their `namespace` value.
 
 
-En outre, le `include` tableau de la charge utile de la demande doit inclure les valeurs de produit des différents entrepôts de données auxquels la demande est envoyée. Lorsque vous effectuez des demandes à Data Lake, la baie doit inclure la valeur &quot;ProfileService&quot;.
+En outre, le tableau `include` du payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. When making requests to the [!DNL Data Lake], the array must include the value &quot;ProfileService&quot;.
 
-La demande suivante crée une nouvelle tâche de confidentialité pour le Profil client en temps réel, à l’aide de l’espace de nommage d’identité &quot;E-mail&quot; standard. Il inclut également la valeur du produit pour le Profil dans la `include` baie :
+The following request creates a new privacy job for both [!DNL Real-time Customer Profile], using the standard &quot;Email&quot; identity namespace. It also includes the product value for [!DNL Profile] in the `include` array:
 
 ```shell
 curl -X POST \
@@ -93,18 +93,18 @@ curl -X POST \
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de demandes d&#39;emploi dans l&#39;interface utilisateur, veillez à sélectionner **AEP Data Lake** et/ou **Profil** sous _Produits_ afin de traiter les tâches pour les données stockées dans Data Lake ou dans le Profil client en temps réel, respectivement.
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
-## Supprimer le traitement de demande
+## Traitement des demandes de suppression
 
-Lorsque l’Experience Platform reçoit une demande de suppression du Privacy Service, Platform envoie une confirmation au Privacy Service que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les dossiers sont ensuite retirés du magasin Data Lake ou du magasin de Profils dans les sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service Platform.
+When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] or [!DNL Profile] store within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
 
-Dans les prochaines versions, Platform enverra une confirmation au Privacy Service après la suppression physique des données.
+In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez été familiarisé avec les concepts importants liés au traitement des demandes de confidentialité en Experience Platform. Il est recommandé de continuer à lire la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d&#39;identité et créer des tâches de confidentialité.
+En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Experience Platform]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
 
-Pour plus d&#39;informations sur le traitement des demandes de confidentialité pour les ressources Platform non utilisées par le Profil, consultez le document sur le traitement des demandes de [confidentialité dans Data Lake](../catalog/privacy.md).
+For information on processing privacy requests for [!DNL Platform] resources not used by [!DNL Profile], see the document on [privacy request processing in the Data Lake](../catalog/privacy.md).
