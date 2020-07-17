@@ -1,59 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Exportation de tâches
+title: Guide de point de terminaison des tâches d’exportation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 16ebff522c5b08e4c100f5d2f972ef4db64656a7
+source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 4%
+source-wordcount: '1469'
+ht-degree: 39%
 
 ---
 
 
-# Exportation de tâches
+# Guide de point de terminaison des tâches d’exportation
 
-intro
-
-- Récupération d’une liste de tâches d’exportation
-- Créer une tâche d’exportation
-- Récupération d’une tâche d’exportation spécifique
-- Annuler ou supprimer une tâche d’exportation spécifique
+Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le `/export/jobs` point de terminaison dans l’API de segmentation des Adobes Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](./getting-started.md)segmentation.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-En particulier, la section [Prise en main de la](./getting-started.md#getting-started) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans le document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API de plateforme d’expérience.
+## Récupération d’une liste de tâches d’exportation {#retrieve-list}
 
-## Récupération d’une liste de tâches d’exportation
-
-Vous pouvez récupérer une liste de toutes les tâches d’exportation pour votre organisation IMS en adressant une demande GET au point de `/export/jobs` terminaison.
+Vous pouvez récupérer une liste de toutes les tâches d’exportation pour votre organisation IMS en effectuant une requête GET sur le point de terminaison `/export/jobs`.
 
 **Format d’API**
 
+Le `/export/jobs` point de terminaison prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+
 ```http
 GET /export/jobs
-GET /export/jobs?{QUERY_PARAMETERS}
+GET /export/jobs?limit={LIMIT}
+GET /export/jobs?offset={OFFSET}
+GET /export/jobs?status={STATUS}
 ```
-
-- `{QUERY_PARAMETERS}`: (*Facultatif*) Paramètres ajoutés au chemin de requête qui configurent les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus, séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
-
-**Paramètres de Requête**
-
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les tâches d’exportation. Tous ces paramètres sont facultatifs. Effectuer un appel vers ce point de terminaison sans paramètres récupérera toutes les tâches d’exportation disponibles pour votre entreprise.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `limit` | Indique le nombre de tâches d’exportation renvoyées. |
-| `offset` | Indique le décalage des pages de résultats. |
-| `status` | Filtres les résultats en fonction de l’état. Les valeurs prises en charge sont `NEW`, `SUCCEEDED`et `FAILED`. |
+| `{LIMIT}` | Indique le nombre de tâches d’exportation renvoyées. |
+| `{OFFSET}` | Indique le décalage des pages de résultats. |
+| `{STATUS}` | Filtre les résultats selon l’état. Les valeurs prises en charge sont &quot;NEW&quot;, &quot;SUCCEEDED&quot; et &quot;FAILED&quot;. |
 
 **Requête**
 
+La demande suivante récupère les deux dernières tâches d&#39;exportation au sein de votre organisation IMS.
+
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -62,111 +55,158 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?status=SUCCEEDED
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une liste de tâches d’exportation pour l’organisation IMS spécifiée en tant que JSON. La réponse suivante renvoie une liste de toutes les tâches d&#39;exportation réussies pour l&#39;organisation IMS.
+La réponse suivante renvoie l’état HTTP 200 avec une liste de travaux d’exportation terminés avec succès, en fonction du paramètre de requête fourni dans le chemin d’accès à la demande.
 
 ```json
 {
-  "records": [
-    {
-      "id": 100,
-      "jobType": "BATCH",
-      "destination": {
-        "datasetId": "5b7c86968f7b6501e21ba9df",
-        "segmentPerBatch": false,
-        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-        "batches": {
-          "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-          "segmentNs": "ups",
-          "status": [
-            "realized"
-          ],
-          "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-        }
-      },
-      "fields": "identities.id,personalEmail.address",
-      "schema": {
-        "name": "_xdm.context.profile"
-      },
-      "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-      "status": "SUCCEEDED",
-      "filter": {
-        "segments": [
-          {
-            "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-            "segmentNs": "ups",
-            "status": [
-              "realized"
-            ]
-          }
-        ],
-        "segmentQualificationTime": {
-          "startTime": "2018-01-01T00:00:00Z",
-          "endTime": "2018-02-01T00:00:00Z"
-        },
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-        "emptyProfiles": true
-      },
-      "additionalFields": {
-        "eventList": {
-          "fields": "string",
-          "filter": {
-            "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-          }
-        }
-      },
-      "mergePolicy": {
-        "id": "timestampOrdered-none-mp",
-        "version": 1
-      },
-      "profileInstanceId": "ups",
-      "errors": [
+    "records": [
         {
-          "code": "0100000003",
-          "msg": "Error in Export Job",
-          "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-        }
-      ],
-      "metrics": {
-        "totalTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
+            "id": 100,
+            "jobType": "BATCH",
+            "destination": {
+                "datasetId": "5b7c86968f7b6501e21ba9df",
+                "segmentPerBatch": false,
+                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
+            },
+            "fields": "identities.id,personalEmail.address",
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "status": "SUCCEEDED",
+            "filter": {
+                "segments": [
+                    {
+                        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                        "segmentNs": "ups",
+                        "status": [
+                            "realized"
+                        ]
+                    }
+                ]
+            },
+            "mergePolicy": {
+                "id": "timestampOrdered-none-mp",
+                "version": 1
+            },
+            "profileInstanceId": "ups",
+            "errors": [
+                {
+                    "code": "0100000003",
+                    "msg": "Error in Export Job",
+                    "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
+                }
+            ],
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 123456789000,
+                    "endTimeInMs": 123456799000,
+                    "totalTimeInMs": 10000
+                },
+                "profileExportTime": {
+                    "startTimeInMs": 123456789000,
+                    "endTimeInMs": 123456799000,
+                    "totalTimeInMs": 10000
+                },
+                "totalExportedProfileCounter": 20,
+                "exportedProfileByNamespaceCounter": {
+                    "namespace1": 10,
+                    "namespace2": 5
+                }
+            },
+            "computeGatewayJobId": {
+                "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"
+            },
+            "creationTime": 1538615973895,
+            "updateTime": 1538616233239,
+            "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
         },
-        "profileExportTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
-        },
-        "aCPDatasetWriteTime": {
-          "startTimeInMs": 123456789000,
-          "endTimeInMs": 123456799000,
-          "totalTimeInMs": 10000
+        {
+            "profileInstanceId": "test_xdm_latest_profile_20_e2e_1538573005395",
+            "errors": [
+                {
+                    "code": "0090000009",
+                    "msg": "Error writing profiles to output path 'adl://va7devprofilesnapshot.azuredatalakestore.net/snapshot/722'",
+                    "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger" 
+                },
+                {
+                    "code": "unknown",
+                    "msg": "Job aborted.",
+                    "callStack": "org.apache.spark.SparkException: Job aborted."
+                }
+            ],
+            "jobType": "BATCH",
+            "filter": {
+                "segments": [
+                    {
+                        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                        "segmentNs": "AAM",
+                        "status": ["realized", "existing"]
+                    }
+                ]
+            },
+            "id": 722,
+            "schema": {
+                "name": "_xdm.context.profile"
+            },
+            "mergePolicy": {
+                "id": "7972e3d6-96ea-4ece-9627-cbfd62709c5d",
+                "version": 1
+            },
+            "status": "FAILED",
+            "requestId": "KbOAsV7HXmdg262lc4yZZhoml27UWXPZ",
+            "computeGatewayJobId": {
+                "exportJob": "15971e0f-317c-4390-9038-1a0498eb356f"
+            },
+            "metrics": {
+                "totalTime": {
+                    "startTimeInMs": 1538573416687,
+                    "endTimeInMs": 1538573922551,
+                    "totalTimeInMs": 505864
+                },
+                "profileExportTime": {
+                    "startTimeInMs": 1538573872211,
+                    "endTimeInMs": 1538573918809,
+                    "totalTimeInMs": 46598
+                }
+            },
+            "destination": {
+                "datasetId": "5bb4c46757920712f924a3eb",
+                "segmentPerBatch": false,
+                "batchId": "IWEQ6920712f9475762D"
+            },
+            "updateTime": 1538573922551,
+            "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
+            "creationTime": 1538573416687
         }
-      },
-      "computeGatewayJobId": {
-        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-        "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-      },
-      "creationTime": 1538615973895,
-      "updateTime": 1538616233239,
-      "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    ],
+    "page":{
+        "sortField": "createdTime",
+        "sort": "desc",
+        "pageOffset": "1540974701302_96",
+        "pageSize": 2
+    },
+    "link":{
+        "next": "/export/jobs/?limit=2&offset=1538573416687_722"
     }
-  ],
-  "page": {
-    "sortField": "createdTime",
-    "sort": "desc",
-    "pageOffset": "1540974701302_96",
-    "pageSize": 10
-  },
-  "link": {
-    "next": "string"
-  }
 }
 ```
 
-## Créer une tâche d’exportation
+| Propriété | Description |
+| -------- | ----------- |
+| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. La valeur &quot;false&quot; signifie que tous les ID de segment sont exportés dans un seul ID de lot. La valeur &quot;true&quot; signifie qu’un ID de segment est exporté dans un ID de lot. **Remarque :** La définition de la valeur sur true peut affecter les performances d’exportation par lot.</li></ul> |
+| `fields` | Une liste des champs exportés, séparés par des virgules. |
+| `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
+| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment vers lequel les profils seront exportés.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;.</li></ul> |
+| `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |
+| `metrics.totalTime` | Champ indiquant la durée totale d’exécution de la tâche d’exportation. |
+| `metrics.profileExportTime` | Champ indiquant le temps nécessaire à l’exportation des profils. |
+| `page` | Informations sur la pagination des tâches d’exportation demandées. |
+| `link.next` | Lien vers la page suivante des tâches d’exportation. |
 
-Vous pouvez créer une tâche d’exportation en adressant une demande POST au point de `/export/jobs` terminaison.
+## Création d’une tâche d’exportation {#create}
+
+Vous pouvez créer une tâche d’exportation en effectuant une requête POST sur le point de terminaison `/export/jobs`.
 
 **Format d’API**
 
@@ -175,6 +215,8 @@ POST /export/jobs
 ```
 
 **Requête**
+
+La demande suivante crée une tâche d’exportation, configurée par les paramètres fournis dans la charge utile.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -185,153 +227,155 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-  "fields": "identities.id,personalEmail.address",
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
-        ]
-      }
-    ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
+    "fields": "identities.id,personalEmail.address",
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
+    "filter": {
+        "segments": [
+            {
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
+                "status": [
+                    "realized"
+                ]
+            }
+        ],
+        "segmentQualificationTime": {
+            "startTime": "2018-01-01T00:00:00Z",
+            "endTime": "2018-02-01T00:00:00Z"
+        },
+        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+        "emptyProfiles": true
+    },
+    "additionalFields": {
+        "eventList": {
+            "fields": "string",
+            "filter": {
+                "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+                "toIngestTimestamp": "2020-01-01T00:00:00Z"
+            }
+        }
+    },
+    "destination":{
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false
+    },
+    "schema":{
+        "name": "_xdm.context.profile"
     }
-  },
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df"
-  },
-  "schema": {
-    "name": "_xdm.context.profile"
-  }
- }'
+}'
 ```
 
-| Paramètre | Description |
-| --------- | ----------- |
-| `fields` | Facultative. liste des champs exportés, séparés par des virgules. Si rien n’est indiqué, tous les champs seront exportés. |
-| `mergePolicy` | Facultative. Si elle n’est pas fournie, l’exportation applique la même stratégie de fusion que le segment donné. |
-| `filter` | Facultative. Si rien n’est indiqué, toutes les données seront exportées. |
-| `filter.segments` | Facultative. filtres de segment pour la tâche d’exportation. |
-| `filter.segmentQualificationTime` | Facultative. Filtre pour l’heure de qualification du segment. Le début et/ou l&#39;heure de fin peuvent être fournis. |
-| `filter.fromIngestTimestamp` | Facultative. Horodatage au format RFC-3339. |
-| `destination.datasetId` | Obligatoire. Valeur `id` du jeu de données vers lequel les données sont exportées. |
-| `segments.segmentId` | Obligatoire. Valeur `id` du segment en cours d’exportation. |
-| `segments.sgementNs` | Facultative. Le `namespace` segment donné. |
-
-
+| Propriété | Description |
+| -------- | ----------- |
+| `fields` | Une liste des champs exportés, séparés par des virgules. Si rien n’est indiqué, tous les champs seront exportés. |
+| `mergePolicy` | Indique la stratégie de fusion qui gouverne les données exportées. Ajoutez ce paramètre lorsque plusieurs segments sont exportés. Si elle n’est pas fournie, l’exportation applique la même stratégie de fusion que le segment donné. |
+| `filter` | Objet qui spécifie les segments qui seront inclus dans la tâche d’exportation par ID, heure de qualification ou heure d’assimilation, selon les sous-propriétés répertoriées ci-dessous. Si rien n’est indiqué, toutes les données seront exportées. |
+| `filter.segments` | Indique les segments à exporter. Si vous omettez cette valeur, toutes les données de l’ensemble des profils seront exportées. Accepte un tableau d’objets de segment, chacun contenant les champs suivants :<ul><li>`segmentId` : **(obligatoire en cas d’utilisation de`segments`)** identifiant du segment pour les profils à exporter.</li><li>`segmentNs` : *(facultatif)* espace de noms du segment pour le `segmentID` donné.</li><li>`status` : *(facultatif)* tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `"realized"`, `"existing"` et `"exited"`.</li></ul> |
+| `filter.segmentQualificationTime` | Filtrer en fonction de l’heure de qualification du segment. L’heure de début et/ou l’heure de fin peuvent être fournies. |
+| `filter.segmentQualificationTime.startTime` | début de qualification des segments pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de début pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.segmentQualificationTime.endTime` | Heure de fin de qualification de segment pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de fin pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.fromIngestTimestamp ` | Limite les profils exportés à inclure uniquement ceux qui ont été mis à jour après cet horodatage. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). <ul><li>`fromIngestTimestamp` pour les **profils**, le cas échéant : inclut tous les profils fusionnés dans lesquels la date et l’heure mises à jour et fusionnées sont supérieures à la date et l’heure données. Prend en charge l’opérande `greater_than`.</li><li>`fromIngestTimestamp` pour les **événements** : tous les événements ingérés après cette date et cette heure seront exportés en fonction du résultat du profil obtenu. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li> |
+| `filter.emptyProfiles` | Valeur booléenne indiquant si un filtre doit être appliqué aux profils vides. Les Profils peuvent contenir des enregistrements de profil, des enregistrements ExperienceEvent ou les deux. Les Profils sans enregistrement de profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. To export all profiles in the profile store, including the &quot;emptyProfiles&quot;, set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `additionalFields.eventList` | Contrôle les champs de événement de séries chronologiques exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`fields` : contrôlent les champs à exporter.</li><li>`filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`filter.fromIngestTimestamp`: Filtres les événements de série chronologique à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li><li>`filter.toIngestTimestamp`: Filtres l’horodatage à ceux qui ont été ingérés avant l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
+| `destination` | **(Obligatoire)** Informations relatives aux données exportées :<ul><li>`datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`segmentPerBatch`: *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur &quot;false&quot;. La valeur &quot;false&quot; exporte tous les ID de segment dans un seul ID de lot. La valeur &quot;true&quot; exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur sur &quot;true&quot; peut affecter les performances d’exportation par lot.</li></ul> |
+| `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche d’exportation que vous venez de créer.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche d’exportation que vous venez de créer.
 
 ```json
 {
-  "id": 100,
-  "jobType": "BATCH",
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df",
-    "segmentPerBatch": false,
-    "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-    "batches": {
-      "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-      "segmentNs": "ups",
-      "status": [
-        "realized"
-      ],
-      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-    }
-  },
-  "fields": "identities.id,personalEmail.address",
-  "schema": {
-    "name": "_xdm.context.profile"
-  },
-  "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-  "status": "SUCCEEDED",
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
-        ]
-      }
-    ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
+    "id": 100,
+    "jobType": "BATCH",
+    "destination": {
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false,
+        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
-    }
-  },
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "profileInstanceId": "ups",
-  "errors": [
-    {
-      "code": "0100000003",
-      "msg": "Error in Export Job",
-      "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-    }
-  ],
-  "metrics": {
-    "totalTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "fields": "identities.id,personalEmail.address",
+    "schema": {
+        "name": "_xdm.context.profile"
     },
-    "profileExportTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "imsOrgId": "{IMS_ORG}",
+    "status": "NEW",
+    "filter": {
+        "segments": [
+            {
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
+                "status": [
+                    "realized"
+                ]
+            }
+        ],
+        "segmentQualificationTime": {
+            "startTime": "2018-01-01T00:00:00Z",
+            "endTime": "2018-02-01T00:00:00Z"
+        },
+        "fromIngestTimestamp": "2018-01-01T00:00:00Z",
+        "emptyProfiles": true
     },
-    "aCPDatasetWriteTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    }
-  },
-  "computeGatewayJobId": {
-    "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-    "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-  },
-  "creationTime": 1538615973895,
-  "updateTime": 1538616233239,
-  "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    "additionalFields": {
+        "eventList": {
+            "fields": "_id, _experience",
+            "filter": {
+                "fromIngestTimestamp": "2018-01-01T00:00:00Z"
+            }
+        }
+    },
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
+    },
+    "profileInstanceId": "ups",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
+        }
+    },
+    "computeGatewayJobId": {
+        "exportJob": ""    
+    },
+    "creationTime": 1538615973895,
+    "updateTime": 1538616233239,
+    "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 
-## Récupération d’une tâche d’exportation spécifique
+| Propriété | Description |
+| -------- | ----------- |
+| `id` | Valeur générée par le système en lecture seule identifiant la tâche d’exportation qui vient d’être créée. |
 
-Vous pouvez récupérer des informations détaillées sur une tâche d’exportation spécifique en envoyant une requête GET au point de `/export/jobs` terminaison et en indiquant la `id` valeur de la tâche d’exportation dans le chemin de la requête.
+Sinon, si `destination.segmentPerBatch` la valeur était définie sur `true`, l’ `destination` objet ci-dessus aurait un `batches` tableau, comme illustré ci-dessous :
+
+```json
+    "destination": {
+        "dataSetId" : "{DATASET_ID}",
+        "segmentPerBatch": true,
+        "batches" : [
+            {
+                "segmentId": "segment1",
+                "segmentNs": "ups",
+                "status": ["realized"],
+                "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+            },
+            {
+                "segmentId": "segment2",
+                "segmentNs": "AdCloud",
+                "status": "exited",
+                "batchId": "df4gssdfb93a09f7e37fa53ad52"
+            }
+        ]
+    }
+```
+
+## Récupération d’une tâche d’exportation spécifique {#get}
+
+You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
 
 **Format d’API**
 
@@ -339,12 +383,14 @@ Vous pouvez récupérer des informations détaillées sur une tâche d’exporta
 GET /export/jobs/{EXPORT_JOB_ID}
 ```
 
-- `{EXPORT_JOB_ID}`: Valeur `id` de la tâche d’exportation que vous souhaitez récupérer.
+| Paramètre | Description |
+| --------- | ----------- |
+| `{EXPORT_JOB_ID}` | L’`id` de la tâche d’exportation à laquelle vous souhaitez accéder. |
 
 **Requête**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -353,98 +399,79 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} 
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur la tâche d’exportation spécifiée.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche d’exportation spécifiée.
 
 ```json
 {
-  "id": 100,
-  "jobType": "BATCH",
-  "destination": {
-    "datasetId": "5b7c86968f7b6501e21ba9df",
-    "segmentPerBatch": false,
-    "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52",
-    "batches": {
-      "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-      "segmentNs": "ups",
-      "status": [
-        "realized"
-      ],
-      "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
-    }
-  },
-  "fields": "identities.id,personalEmail.address",
-  "schema": {
-    "name": "_xdm.context.profile"
-  },
-  "imsOrgId": "1BD6382559DF0C130A49422D@AdobeOrg",
-  "status": "SUCCEEDED",
-  "filter": {
-    "segments": [
-      {
-        "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
-        "segmentNs": "ups",
-        "status": [
-          "realized"
+    "id": 11037,
+    "jobType": "BATCH",
+    "destination": {
+        "datasetId": "5b7c86968f7b6501e21ba9df",
+        "segmentPerBatch": false,
+        "batchId": "da5cfb4de32c4b93a09f7e37fa53ad52"
+    },
+    "fields": "identities.id,personalEmail.address",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "imsOrgId": "{IMS_ORG}",
+    "status": "SUCCEEDED",
+    "filter": {
+        "segments": [
+            {
+                "segmentId": "52c26d0d-45f2-47a2-ab30-ed06abc981ff",
+                "segmentNs": "ups",
+                "status":[
+                    "realized"
+                ]
+            }
         ]
-      }
-    ],
-    "segmentQualificationTime": {
-      "startTime": "2018-01-01T00:00:00Z",
-      "endTime": "2018-02-01T00:00:00Z"
     },
-    "fromIngestTimestamp": "2018-01-01T00:00:00Z",
-    "emptyProfiles": true
-  },
-  "additionalFields": {
-    "eventList": {
-      "fields": "string",
-      "filter": {
-        "fromIngestTimestamp": "2018-01-01T00:00:00Z"
-      }
-    }
-  },
-  "mergePolicy": {
-    "id": "timestampOrdered-none-mp",
-    "version": 1
-  },
-  "profileInstanceId": "ups",
-  "errors": [
-    {
-      "code": "0100000003",
-      "msg": "Error in Export Job",
-      "callStack": "com.adobe.aep.unifiedprofile.common.logging.Logger"
-    }
-  ],
-  "metrics": {
-    "totalTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "mergePolicy": {
+        "id": "timestampOrdered-none-mp",
+        "version": 1
     },
-    "profileExportTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
+    "profileInstanceId": "ups",
+    "metrics": {
+        "totalTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "profileExportTime": {
+            "startTimeInMs": 123456789000,
+            "endTimeInMs": 123456799000,
+            "totalTimeInMs": 10000
+        },
+        "totalExportedProfileCounter": 20,
+        "exportedProfileByNamespaceCounter": {
+            "namespace1": 10,
+            "namespace2": 5
+        }
     },
-    "aCPDatasetWriteTime": {
-      "startTimeInMs": 123456789000,
-      "endTimeInMs": 123456799000,
-      "totalTimeInMs": 10000
-    }
-  },
-  "computeGatewayJobId": {
-    "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94",
-    "pushJob": "feaeca05-d137-4605-aa4e-21d19d801fc6"
-  },
-  "creationTime": 1538615973895,
-  "updateTime": 1538616233239,
-  "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
+    "computeGatewayJobId": {
+        "exportJob": "f3058161-7349-4ca9-807d-212cee2c2e94"
+    },
+    "creationTime": 1538615973895,
+    "updateTime": 1538616233239,
+    "requestId": "d995479c-8a08-4240-903b-af469c67be1f"
 }
 ```
 
-## Annuler ou supprimer une tâche d’exportation spécifique
+| Propriété | Description |
+| -------- | ----------- |
+| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. A value of `false` means all the segment IDs were into a single batch ID. Une valeur de `true` signifie qu’un ID de segment est exporté dans un ID de lot.</li></ul> |
+| `fields` | Une liste des champs exportés, séparés par des virgules. |
+| `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
+| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment pour les profils à exporter.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;.</li></ul> |
+| `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |
+| `metrics.totalTime` | Champ indiquant la durée totale d’exécution de la tâche d’exportation. |
+| `metrics.profileExportTime` | Champ indiquant le temps nécessaire à l’exportation des profils. |
+| `totalExportedProfileCounter` | Nombre total de profils exportés sur tous les lots. |
 
-Vous pouvez demander la suppression d’une tâche d’exportation spécifiée en faisant une requête DELETE au point de `/export/jobs` terminaison et en indiquant la `id` valeur de la tâche d’exportation dans le chemin de la demande.
+## Annulation ou suppression d’une tâche d’exportation spécifique {#delete}
+
+You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
 
 **Format d’API**
 
@@ -452,7 +479,9 @@ Vous pouvez demander la suppression d’une tâche d’exportation spécifiée e
 DELETE /export/jobs/{EXPORT_JOB_ID}
 ```
 
-- `{EXPORT_JOB_ID}`: Valeur `id` de la tâche d’exportation à supprimer.
+| Paramètre | Description |
+| --------- | ----------- |
+| `{EXPORT_JOB_ID}` | The `id` of the export job you want to delete. |
 
 **Requête**
 
@@ -466,7 +495,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec le message suivant :
+Une réponse réussie renvoie un état HTTP 204 avec le message suivant.
 
 ```json
 {
@@ -476,3 +505,5 @@ Une réponse réussie renvoie l’état HTTP 200 avec le message suivant :
 ```
 
 ## Étapes suivantes
+
+Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les tâches d’exportation.
