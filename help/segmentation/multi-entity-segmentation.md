@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segmentation d’entités multiples
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7110be2654e55ea411580f8c9e2e92bb52badab5
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 93%
+source-wordcount: '396'
+ht-degree: 65%
 
 ---
 
@@ -34,14 +34,14 @@ La définition des relations avec la structure de vos schémas de modèle de don
 
 Ce processus peut être réalisé soit à l’aide de l’API Schema Registry, soit à l’aide de l’éditeur de schémas. Vous trouverez un guide détaillé sur l’utilisation de l’API pour définir une relation entre deux schémas dans [le tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’API](../xdm/tutorials/relationship-api.md). Vous trouverez un guide détaillé sur l’utilisation de l’éditeur de schémas pour définir une relation entre deux schémas dans [le tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas](../xdm/tutorials/relationship-ui.md).
 
-## Création de segments à l’aide de relations XDM
+## Comment créer des segments qui utilisent des relations XDM
 
-Une fois que vous avez défini vos relations XDM, vous pouvez utiliser les API Real-time Customer Profile pour créer un segment.
+Une fois que vous avez défini vos relations XDM, vous pouvez utiliser l’API du service de segmentation pour créer un segment.
 
-Ce processus peut être réalisé à l’aide de l’API Real-time Customer Profile ou du créateur de segments. Pour obtenir un guide détaillé sur l’utilisation de l’API pour créer un segment, consultez [le tutoriel sur la création d’un segment à l’aide de l’API Real-time Customer Profile](./tutorials/create-a-segment.md). Pour obtenir un guide détaillé sur l’utilisation du créateur de segments pour créer un segment, consultez [le guide d’utilisation du créateur de segments](./ui/overview.md).
+Ce processus peut être effectué à l’aide de l’API de segmentation ou de l’interface utilisateur du créateur de segments. For a detailed guide on using the API to build a segment, please read [the tutorial on creating a segment using the Segmentation API](./tutorials/create-a-segment.md). Pour obtenir un guide détaillé sur l’utilisation du créateur de segments pour créer un segment, consultez [le guide d’utilisation du créateur de segments](./ui/overview.md).
 
 ## Évaluation et accès aux segments pour les segments d’entités multiples
 
-Après avoir créé un segment, vous pouvez évaluer les résultats du segment et y accéder à l’aide des API Real-time Customer Profile. L’évaluation d’un segment d’entités multiples est très similaire à celle d’un segment standard.
+After creating a segment, you can evaluate and access the segment results using the [!DNL Segmentation Service] API. L’évaluation d’un segment d’entités multiples est très similaire à celle d’un segment standard.
 
-Ce processus ne peut être réalisé qu’en utilisant l’API Real-time Customer Profile. Vous trouverez un guide détaillé sur l’utilisation de l’API pour évaluer les segments et y accéder dans [le tutoriel sur l’évaluation et l’accès aux segments](./tutorials/evaluate-a-segment.md).
+This process can only be done using the [!DNL Segmentation Service] API. For a detailed guide on using the API to evaluate and access segments, please read the tutorial on [evaluating and accessing segments](./tutorials/evaluate-a-segment.md).
