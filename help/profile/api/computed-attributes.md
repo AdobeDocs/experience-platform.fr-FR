@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2431'
-ht-degree: 2%
+source-wordcount: '2404'
+ht-degree: 83%
 
 ---
 
@@ -15,102 +15,102 @@ ht-degree: 2%
 # (Alpha) Point de terminaison des attributs calculés
 
 >[!IMPORTANT]
->La fonctionnalité d&#39;attribut calculée décrite dans ce document est actuellement en alpha et n&#39;est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>La fonctionnalité d’attribut calculé décrite dans ce document est actuellement en version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements.
+Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agréger des valeurs sur tous les enregistrements et tous les événements.
 
-Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil ou dans un événement. Ces calculs vous permettent de répondre facilement aux questions relatives à des éléments tels que la valeur d’achat sur toute la durée de vie, le délai entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que les informations sont nécessaires.
+Chaque attribut calculé contient une expression, ou « règle », qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil ou dans un événement. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires.
 
-Ce guide vous aidera à mieux comprendre les attributs calculés dans l’Adobe Experience Platform et inclut des exemples d’appels d’API pour effectuer des opérations CRUD de base à l’aide du `/config/computedAttributes` point de terminaison.
+Ce guide vous aidera à mieux comprendre les attributs calculés dans Adobe Experience Platform et comprend des exemples d’appels API pour effectuer des opérations de création, de lecture, de mise à jour et de suppression de base à l’aide du point de terminaison `/config/computedAttributes`.
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
-## Présentation des attributs calculés
+## Comprendre les attributs calculés
 
-L’Adobe Experience Platform vous permet d’importer et de fusionner facilement des données provenant de plusieurs sources afin de générer des Profils client en temps réel. Chaque profil contient des informations importantes relatives à une personne, telles que ses coordonnées, ses préférences et son historique d&#39;achat, ce qui lui permet d&#39;obtenir une vue de 360 degrés du client.
+Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Chaque profil contient des informations importantes liées à une personne, comme ses coordonnées de contact, ses préférences et son historique d’achat, vous offrant une vision à 360 degrés du client.
 
-Certaines informations collectées dans le profil sont facilement comprises lors de la lecture directe des champs de données (par exemple, &quot;prénom&quot;), tandis que d’autres données nécessitent plusieurs calculs ou l’utilisation d’autres champs et valeurs pour générer les informations (par exemple, &quot;total des achats sur toute la durée de vie&quot;). Pour faciliter la compréhension de ces données d’un seul coup d’oeil, Platform vous permet de créer des attributs **** calculés qui effectuent automatiquement ces références et calculs, renvoyant la valeur dans le champ approprié.
+Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). To make this data easier to understand at a glance, [!DNL Platform] allows you to create **[!UICONTROL computed attributes]** that automatically perform these references and calculations, returning the value in the appropriate field.
 
-Les attributs calculés incluent la création d’une expression, ou &quot;règle&quot;, qui fonctionne sur les données entrantes et stocke la valeur résultante dans un attribut ou un événement de profil. Les Expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de spécifier qu’une règle évalue les événements entrants uniquement, un événement et des données de profil entrants ou un événement, des données de profil et des événements historiques entrants.
+Les attributs calculés incluent la création d’une expression ou « règle » qui agit sur les données entrantes et conserve la valeur obtenue dans un attribut de profil ou dans un événement. Les expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de préciser qu’une règle n’évalue que les événements entrants, un événement entrant et les données du profil ou un événement entrant, les données du profil et les événements historiques.
 
 ### Cas d’utilisation
 
-Les cas d’utilisation des attributs calculés peuvent aller de calculs simples à des références très complexes. Voici quelques exemples d’utilisation des attributs calculés :
+Les cas d’utilisation des attributs calculés peuvent aller de calculs simples à des références très complexes. Voici quelques exemples de cas d’utilisation des attributs calculés :
 
-1. **Pourcentages :** Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total de courriers électroniques envoyés à un individu et le diviser par le nombre de courriers électroniques ouverts par ce dernier. Si vous examinez le champ d’attribut calculé qui en résulte, le pourcentage du nombre total de courriers électroniques ouverts par l’utilisateur est rapidement affiché.
-1. **Utilisation de l&#39;application :** Un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures d’une application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction de événements d’ouverture individuels, vous pouvez fournir des offres ou des messages spéciaux aux utilisateurs lors de leur 100e ouverture, ce qui encourage un engagement plus profond envers votre marque.
-1. **Valeurs de durée de vie :** Il peut s’avérer très difficile de rassembler des totaux d’exécution, tels qu’une valeur d’achat à vie pour un client. Cela nécessite la mise à jour du total historique chaque fois qu’un nouveau événement d’achat se produit. Un attribut calculé vous permet de le faire beaucoup plus facilement en conservant la valeur de durée de vie dans un seul champ qui est mis à jour automatiquement après chaque événement d&#39;achat réussi lié au client.
+1. **[!UICONTROL Pourcentages]:**Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
+1. **[!UICONTROL Utilisation]de l&#39;application :**Un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures d’une application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
+1. **[!UICONTROL Valeurs]de durée de vie :**Il peut s’avérer très difficile de rassembler des totaux d’exécution, tels qu’une valeur d’achat à vie pour un client. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
 
-## Configurer un attribut calculé
+## Configuration d’un attribut calculé
 
-Pour configurer un attribut calculé, vous devez d’abord identifier le champ qui contiendra la valeur de l’attribut calculé. Ce champ peut être créé à l’aide d’un mixin pour ajouter le champ à un schéma existant ou en sélectionnant un champ que vous avez déjà défini dans un schéma.
+Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Vous pouvez créer ce champ à l’aide d’un mixin qui ajoutera le champ à un schéma existant ou en sélectionnant un champ que vous avez déjà défini dans un schéma.
 
 >[!NOTE]
->Les attributs calculés ne peuvent pas être ajoutés aux champs des mixins définis par Adobe. Le champ doit se trouver dans l’ `tenant` espace de nommage, ce qui signifie qu’il doit s’agir d’un champ que vous définissez et ajoutez à un schéma.
+>Il n’est pas possible d’ajouter des attributs calculés à des champs au sein de mixins définis par Adobe. Le champ doit se trouver dans l’espace de noms `tenant`, ce qui signifie qu’il doit s’agir d’un champ que vous définissez et ajoutez à un schéma.
 
-Pour définir avec succès un champ d&#39;attribut calculé, le schéma doit être activé pour le Profil et apparaître dans le schéma d&#39;union pour la classe sur laquelle le schéma est basé. Pour plus d&#39;informations sur les schémas et unions activés pour le Profil, veuillez consulter la section du guide du développeur du registre des Schémas sur l&#39; [activation d&#39;un schéma pour le Profil et l&#39;affichage de schémas](../../xdm/api/getting-started.md)d&#39;union. Il est également recommandé d&#39;examiner la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation de base sur la composition des schémas.
+In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). Nous vous recommandons également de consulter la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation des principes de base de la composition des schémas.
 
-Le flux de travaux de ce didacticiel utilise un schéma compatible Profil et suit les étapes de définition d’un nouveau mixin contenant le champ d’attribut calculé et s’assurant qu’il s’agit de l’espace de nommage correct. Si un champ se trouve déjà dans l’espace de nommage correct dans un schéma compatible Profil, vous pouvez passer directement à l’étape de [création d’un attribut](#create-a-computed-attribute)calculé.
+The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. Si vous disposez déjà d’un champ qui se trouve dans l’espace de noms correct dans un schéma activé dans Profile, vous pouvez passer directement à l’étape de [création d’un attribut calculé](#create-a-computed-attribute).
 
-### Vue d’un schéma
+### Affichage d’un schéma
 
-Les étapes qui suivent utilisent l’interface utilisateur de l’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. Si vous préférez utiliser l&#39;API Schéma Registry, reportez-vous au guide [du développeur](../../xdm/api/getting-started.md) Schéma Registry pour savoir comment créer un mixin, ajouter un mixin à un schéma et activer un schéma à utiliser avec le Profil client en temps réel.
+Les étapes qui suivent utilisent l’interface utilisateur d’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
-Dans l’interface utilisateur, cliquez sur **Schémas** dans le rail de gauche et utilisez la barre de recherche de l’onglet *Parcourir* pour trouver rapidement le schéma à mettre à jour.
+Dans l’interface utilisateur, cliquez sur **[!UICONTROL Schémas]** dans le rail de gauche et utilisez la barre de recherche dans l’onglet *[!UICONTROL Parcourir]* pour trouver rapidement le schéma que vous souhaitez mettre à jour.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Une fois le schéma localisé, cliquez sur son nom pour ouvrir l’éditeur de Schéma dans lequel vous pouvez apporter des modifications au schéma.
+Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
 ### Création d’un mixin
 
-Pour créer un nouveau mixin, cliquez sur **Ajouter** en regard de *mixins* dans la section *Composition* située à gauche de l’éditeur. Cette opération ouvre la boîte de dialogue **Ajouter le mixin** où vous pouvez voir les mixins existants. Cliquez sur le bouton radio pour **Créer un nouveau mixin** afin de définir votre nouveau mixin.
+Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Ajouter]** en regard de *Mixins* dans la section *[!UICONTROL Composition]* située à gauche de l’éditeur. Cela ouvre la boîte de dialogue **[!UICONTROL Ajouter un mixin]** dans laquelle les mixins existants s’affichent. Cliquez sur le bouton radio **[!UICONTROL Créer un nouveau mixin]** qui vous permet de définir votre nouveau mixin.
 
-Donnez un nom et une description au mixin, puis cliquez sur **Ajouter le mixin** une fois terminé.
+Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajouter un mixin]** lorsque vous avez terminé.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
-### Ajouter un champ d’attribut calculé au schéma
+### Ajout d’un champ attribut calculé au schéma
 
-Votre nouveau mixin doit maintenant apparaître dans la section *Mélanges* sous *Composition*. Cliquez sur le nom du mixin et plusieurs boutons de champs **de** Ajoute s&#39;affichent dans la section *Structure* de l&#39;éditeur.
+Votre nouveau mixin devrait maintenant apparaître dans la section *[!UICONTROL Mixins]* en dessous de *[!UICONTROL Composition]*. Cliquez sur le nom du mixin, ce qui fera apparaître plusieurs boutons **[!UICONTROL Ajouter un champ]** dans la section *[!UICONTROL Structure]* de l’éditeur.
 
-Sélectionnez **Ajouter le champ** en regard du nom du schéma pour ajouter un champ de niveau supérieur ou vous pouvez ajouter le champ n’importe où dans le schéma de votre choix.
+Sélectionnez **[!UICONTROL Ajouter un champ]** en regard du nom du schéma afin d’ajouter un champ de niveau supérieur. Vous pouvez également ajouter le champ n’importe où dans le schéma que vous préférez.
 
-Après avoir cliqué sur **Ajouter un champ** , un nouvel objet s’ouvre, nommé en fonction de votre ID de client, indiquant que le champ se trouve dans l’espace de nommage approprié. Dans cet objet, un champ ** Nouveau s’affiche. Ceci si le champ dans lequel vous allez définir l&#39;attribut calculé.
+Après avoir cliqué sur **[!UICONTROL Ajouter un champ]**, un nouvel objet portant l’identifiant du client s’ouvre et affiche que ce champ se trouve dans le bon espace de noms. Dans cet objet, un *[!UICONTROL Nouveau champ]* apparaît. Il s’agit du champ dans lequel vous définirez l’attribut calculé.
 
 ![](../images/computed-attributes/New-field.png)
 
-### Configurer le champ
+### Configuration du champ
 
-A l’aide de la section Propriétés *des* champs située sur le côté droit de l’éditeur, fournissez les informations nécessaires pour votre nouveau champ, y compris son nom, son nom d’affichage et son type.
+À l’aide de la section *[!UICONTROL Propriétés du champ]* située sur le côté droit de l’éditeur, renseignez les informations nécessaires pour votre nouveau champ, notamment son nom, son nom d’affichage et son type.
 
 >[!NOTE]
->Le type du champ doit être identique à celui de la valeur d’attribut calculée. Par exemple, si la valeur d’attribut calculée est une chaîne, le champ défini dans le schéma doit être une chaîne.
+>Le type de champ doit être identique à celui de la valeur de l’attribut calculé. Par exemple, si la valeur de l’attribut calculé est une chaîne, le champ défini dans le schéma doit être une chaîne.
 
-Lorsque vous avez terminé, cliquez sur **Appliquer** et le nom du champ, ainsi que son type, s’affichent dans la section *Structure* de l’éditeur.
+Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le nom du champ, ainsi que son type, s’afficheront dans la section *[!UICONTROL Structure]* de l’éditeur.
 
 ![](../images/computed-attributes/Apply.png)
 
-### Activer le schéma pour le Profil
+### Enable schema for [!DNL Profile]
 
-Avant de continuer, assurez-vous que le schéma a été activé pour le Profil. Cliquez sur le nom du schéma dans la section *Structure* de l’éditeur afin que l’onglet Propriétés *du* Schéma s’affiche. Si le curseur **Profil** est bleu, le schéma a été activé pour le Profil.
+Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section *[!UICONTROL Structure]* de l’éditeur pour faire apparaître l’onglet *[!UICONTROL Propriétés du schéma]*. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
 
 >[!NOTE]
->L&#39;activation d&#39;un schéma pour le Profil ne peut pas être annulée. Par conséquent, si vous cliquez sur le curseur une fois qu&#39;il a été activé, vous n&#39;avez pas à risquer de le désactiver.
+>Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
 
 ![](../images/computed-attributes/Profile.png)
 
-Vous pouvez maintenant cliquer sur **Enregistrer** pour enregistrer le schéma mis à jour et continuer avec le reste du didacticiel à l’aide de l’API.
+Vous pouvez cliquer à présent sur **[!UICONTROL Enregistrer]** pour enregistrer le schéma mis à jour et poursuivre avec le reste du tutoriel d’utilisation de l’API.
 
 ### Création d’un attribut calculé {#create-a-computed-attribute}
 
-Avec votre champ d&#39;attribut calculé identifié et la confirmation que le schéma est activé pour le Profil, vous pouvez maintenant configurer un attribut calculé.
+With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute.
 
-Commencez par envoyer une requête POST au point de `/config/computedAttributes` terminaison avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
+Commencez par effectuer une requête POST sur le point de terminaison `/config/computedAttributes` avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
 
 **Format d’API**
 
@@ -147,16 +147,16 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `name` | Nom du champ d’attribut calculé, sous forme de chaîne. |
-| `path` | Chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’ `properties` attribut du schéma et ne doit PAS inclure le nom du champ dans le chemin d’accès. Lors de l’écriture du chemin, omettez les multiples niveaux d’ `properties` attributs. |
-| `{TENANT_ID}` | Si vous ne connaissez pas votre ID de locataire, reportez-vous aux étapes de recherche de votre ID de locataire dans le guide [du développeur du registre des](../../xdm/api/getting-started.md#know-your-tenant_id)Schémas. |
-| `description` | Description de l’attribut calculé. Cela s&#39;avère particulièrement utile une fois que plusieurs attributs calculés ont été définis, car cela aidera d&#39;autres personnes de votre organisation IMS à déterminer l&#39;attribut calculé approprié à utiliser. |
-| `expression.value` | expression PQL (Profil Requête Language) valide. Pour plus d&#39;informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la présentation [de](../../segmentation/pql/overview.md)PQL. |
-| `schema.name` | Classe sur laquelle repose le schéma contenant le champ d&#39;attribut calculé. Exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
+| `name` | Le nom du champ attribut calculé, sous forme de chaîne. |
+| `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
+| `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
+| `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
+| `expression.value` | expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
+| `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 
 **Réponse**
 
-Un attribut calculé créé avec succès renvoie HTTP Status 200 (OK) et un corps de réponse contenant les détails de l&#39;attribut calculé nouvellement créé. Ces détails incluent un attribut système unique, en lecture seule, qui peut être utilisé `id` pour référencer l&#39;attribut calculé lors d&#39;autres opérations d&#39;API.
+Un attribut calculé créé avec succès renvoie un état HTTP 200 (OK) et un corps de réponse contenant les détails de l’attribut calculé que vous venez de créer. Ces détails incluent un `id` unique, en lecture seule, généré par le système que vous pouvez utiliser pour faire référence à l’attribut calculé pendant les autres opérations API.
 
 ```json
 {
@@ -204,26 +204,26 @@ Un attribut calculé créé avec succès renvoie HTTP Status 200 (OK) et un corp
 
 | Propriété | Description |
 |---|---|
-| `id` | Identifiant unique généré par le système, en lecture seule, qui peut être utilisé pour référencer l’attribut calculé lors d’autres opérations d’API. |
-| `imsOrgId` | L’organisation IMS associée à l’attribut calculé doit correspondre à la valeur envoyée dans la demande. |
-| `sandbox` | L&#39;objet sandbox contient les détails du sandbox dans lequel l&#39;attribut calculé a été configuré. Ces informations proviennent de l’en-tête sandbox envoyé dans la requête. Pour plus d&#39;informations, consultez la présentation [des](../../sandboxes/home.md)sandbox. |
-| `positionPath` | Tableau contenant la déconstruction `path` au champ qui a été envoyé dans la demande. |
-| `returnSchema.meta:xdmType` | Type du champ dans lequel l&#39;attribut calculé sera stocké. |
-| `definedOn` | Tableau présentant les schémas d&#39;union sur lesquels l&#39;attribut calculé a été défini. Contient un objet par schéma d&#39;union, ce qui signifie qu&#39;il peut y avoir plusieurs objets dans la baie si l&#39;attribut calculé a été ajouté à plusieurs schémas en fonction de différentes classes. |
-| `active` | Valeur booléenne indiquant si l’attribut calculé est actuellement actif ou non. By default the value is `true`. |
-| `type` | Le type de ressource créée, dans ce cas &quot;ComputedAttribute&quot; est la valeur par défaut. |
-| `createEpoch` et `updateEpoch` | Heure à laquelle l&#39;attribut calculé a été créé et mis à jour en dernier, respectivement. |
+| `id` | Un identifiant unique, en lecture seule, généré par le système que vous pouvez utiliser pour faire référence à l’attribut calculé pendant les autres opérations API. |
+| `imsOrgId` | L’organisation IMS associée à l’attribut calculé doit correspondre à la valeur envoyée dans la requête. |
+| `sandbox` | L’objet Environnement de test contient des détails sur l’environnement de test sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête de l’environnement de test envoyé dans la requête. Pour plus d’informations, consultez la [présentation des environnements de test](../../sandboxes/home.md). |
+| `positionPath` | Un tableau contenant le `path` déconstruit vers le champ envoyé dans la requête. |
+| `returnSchema.meta:xdmType` | Le type du champ dans lequel l’attribut calculé sera stocké. |
+| `definedOn` | Un tableau affichant les schémas d’union sur lesquels l’attribut calculé a été défini. Contient un objet par schéma d’union, ce qui signifie qu’il peut y avoir plusieurs objets dans le tableau si l’attribut calculé a été ajouté à plusieurs schémas selon différentes classes. |
+| `active` | Une valeur booléenne affichant si l’attribut calculé est actuellement actif ou non. Par défaut, la valeur est `true`. |
+| `type` | Le type de ressource créé, dans la case « ComputedAttribute » est la valeur par défaut. |
+| `createEpoch` et `updateEpoch` | L’heure à laquelle l’attribut calculé a été respectivement créé et mis à jour pour la dernière fois. |
 
 
 ## Accès aux attributs calculés
 
-Lorsque vous utilisez des attributs calculés à l’aide de l’API, vous disposez de deux options pour accéder aux attributs calculés définis par votre organisation. La première consiste à liste tous les attributs calculés, la seconde à vue un attribut calculé spécifique par son `id`unique.
+Lorsque vous travaillez avec des attributs calculés en utilisant l’API, vous avez deux options pour accéder aux attributs calculés définis par votre organisation. La première consiste à répertorier tous les attributs calculés, la seconde à afficher un attribut calculé spécifique selon son `id` unique.
 
-Les étapes permettant de répertorier tous les attributs calculés et d’afficher un attribut calculé spécifique sont décrites dans les sections suivantes.
+Les étapes permettant de répertorier tous les attributs calculés et d’afficher un attribut calculé spécifique sont soulignées dans les sections qui suivent.
 
-### Attributs calculés de Liste {#list-computed-attributes}
+### Liste des attributs calculés {#list-computed-attributes}
 
-Votre organisation IMS peut créer plusieurs attributs calculés et exécuter une requête GET sur le `/config/computedAttributes` point de terminaison vous permet de liste tous les attributs calculés existants pour votre organisation.
+Votre organisation IMS peut créer plusieurs attributs calculés et réaliser une requête GET sur le point de terminaison `/config/computedAttributes` vous permet de répertorier tous les attributs calculés existant pour votre organisation.
 
 **Format d’API**
 
@@ -244,9 +244,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie inclut un `_page` attribut qui fournit le nombre total d’attributs calculés (`totalCount`) et le nombre d’attributs calculés sur la page (`pageSize`).
+Une réponse réussie inclut un attribut `_page` qui fournit le nombre total d’attributs calculés (`totalCount`) et le nombre d’attributs calculés sur la page (`pageSize`).
 
-La réponse comprend également un `children` tableau composé d&#39;un ou plusieurs objets, chacun contenant les détails d&#39;un attribut calculé. Si votre organisation n&#39;a pas d&#39;attributs calculés, le et `totalCount` sera 0 (zéro) et la `pageSize` `children` baie sera vide.
+La réponse inclut également un tableau `children` composé d’un ou de plusieurs objets qui contiennent chacun les détails d’un attribut calculé. Si votre organisation ne dispose pas d’attribut calculé, le `totalCount` et `pageSize` seront de 0 (zéro) et le tableau `children` sera vide.
 
 ```json
 {
@@ -353,15 +353,15 @@ La réponse comprend également un `children` tableau composé d&#39;un ou plusi
 
 | Propriété | Description |
 |---|---|
-| `_page.totalCount` | Nombre total d&#39;attributs calculés définis par votre organisation IMS. |
-| `_page.pageSize` | Nombre d’attributs calculés renvoyés sur cette page de résultats. Si `pageSize` est égal à `totalCount`, cela signifie qu’il n’y a qu’une seule page de résultats et que tous les attributs calculés ont été renvoyés. S’ils ne sont pas égaux, d’autres pages de résultats sont accessibles. See `_links.next` for details. |
-| `children` | Tableau composé d’un ou de plusieurs objets, chacun contenant les détails d’un attribut calculé unique. Si aucun attribut calculé n&#39;a été défini, le `children` tableau est vide. |
-| `id` | Valeur générée par le système, en lecture seule et unique, affectée automatiquement à un attribut calculé lors de sa création. Pour plus d&#39;informations sur les composants d&#39;un objet d&#39;attribut calculé, consultez la section sur la [création d&#39;un attribut](#create-a-computed-attribute) calculé plus tôt dans ce didacticiel. |
-| `_links.next` | Si une seule page d’attributs calculés est renvoyée, `_links.next` il s’agit d’un objet vide, comme illustré dans l’exemple de réponse ci-dessus. Si votre entreprise dispose de nombreux attributs calculés, ils sont renvoyés sur plusieurs pages auxquelles vous pouvez accéder en faisant une demande GET à la `_links.next` valeur. |
+| `_page.totalCount` | Le nombre total d’attributs calculés définis par votre organisation IMS. |
+| `_page.pageSize` | Le nombre d’attributs calculés renvoyés sur cette page de résultats. Si `pageSize` est égal à `totalCount`, cela signifie qu’il n’y a qu’une seule page de résultats et que tous les attributs calculés ont été renvoyés. Si ces valeurs ne sont pas égales, cela signifie que vous pouvez accéder à des pages de résultats supplémentaires. Consultez `_links.next` pour plus d’informations. |
+| `children` | Un tableau composé d’un ou plusieurs objets, contenant chacun les détails d’un attribut calculé unique. Si aucun attribut calculé n’a été défini, le tableau `children` est vide. |
+| `id` | Une valeur unique, en lecture seule, générée par le système attribuée automatiquement à un attribut calculé à sa création. Pour plus d’informations sur les composants d’un objet attribut calculé, veuillez consulter la section [Création d’un attribut calculé](#create-a-computed-attribute) qui apparaît plus tôt dans ce tutoriel. |
+| `_links.next` | Si une page unique d’attributs calculés est renvoyée, `_links.next` est un objet vide, comme illustré dans l’exemple de réponse ci-dessus. Si votre organisation dispose de nombreux attributs calculés, ils seront renvoyés sur plusieurs pages auxquelles vous pourrez accéder en effectuant une requête GET sur la valeur `_links.next`. |
 
-### Vue d’un attribut calculé {#view-a-computed-attribute}
+### Affichage d’un attribut calculé {#view-a-computed-attribute}
 
-Vous pouvez également vue un attribut calculé spécifique en exécutant une requête GET sur le point de `/config/computedAttributes` terminaison et en incluant l’ID d’attribut calculé dans le chemin de requête.
+Vous pouvez également afficher un attribut calculé spécifique en effectuant une requête GET sur le point de terminaison `/config/computedAttributes` et en incluant l’identifiant d’attribut calculé dans le chemin d’accès.
 
 **Format d’API**
 
@@ -371,7 +371,7 @@ GET /config/computedAttributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{ATTRIBUTE_ID}` | ID de l’attribut calculé que vous souhaitez vue. |
+| `{ATTRIBUTE_ID}` | L’identifiant de l’attribut calculé que vous souhaitez afficher. |
 
 **Requête**
 
@@ -430,9 +430,9 @@ curl -X GET \
 }
 ```
 
-## Mettre à jour un attribut calculé
+## Mise à jour d’un attribut calculé
 
-Si vous devez mettre à jour un attribut calculé existant, vous pouvez effectuer cette opération en envoyant une requête PATCH au point de `/config/computedAttributes` terminaison et en incluant l’ID de l’attribut calculé que vous souhaitez mettre à jour dans le chemin de requête.
+Si vous estimez que vous avez besoin de mettre à jour un attribut calculé, vous pouvez effectuer une requête PATCH sur le point de terminaison `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -442,11 +442,11 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{ATTRIBUTE_ID}` | ID de l’attribut calculé que vous souhaitez mettre à jour. |
+| `{ATTRIBUTE_ID}` | L’identifiant de l’attribut calculé que vous souhaitez mettre à jour. |
 
 **Requête**
 
-Cette requête utilise la mise en forme [des correctifs](http://jsonpatch.com/) JSON pour mettre à jour la &quot;valeur&quot; du champ &quot;expression&quot;.
+Cette requête utilise le [format du correctif JSON](http://jsonpatch.com/) pour mettre à jour la « valeur » du champ « expression ».
 
 ```shell
 curl -X PATCH \
@@ -472,20 +472,20 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | expression PQL (Profil Requête Language) valide. Pour plus d&#39;informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la présentation [de](../../segmentation/pql/overview.md)PQL. |
+| `{NEW_EXPRESSION_VALUE}` | expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
 
 **Réponse**
 
-Une mise à jour réussie renvoie l’état HTTP 204 (aucun contenu) et un corps de réponse vide. Si vous souhaitez confirmer que la mise à jour a réussi, vous pouvez exécuter une requête GET pour vue l’attribut calculé par son identifiant.
+Une mise à jour réussie renvoie un état HTTP 204 (No Content) et un corps de réponse vide. Si vous souhaitez confirmer que la mise à jour a réussi, vous pouvez réaliser une requête GET pour afficher l’attribut complété en fonction de son identifiant.
 
 ## Suppression d’un attribut calculé
 
-Il est également possible de supprimer un attribut calculé à l’aide de l’API. Pour ce faire, vous devez envoyer une requête de DELETE au point de `/config/computedAttributes` terminaison et inclure l’ID de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Il est également possible de supprimer un attribut calculé à l’aide de l’API. Vous pouvez effectuer ceci à l’aide d’une requête DELETE sur le point de terminaison `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
->[!Note] :
+>[!NRemarque]
 >
 >
->Soyez prudent lors de la suppression d&#39;un attribut calculé, car il peut être utilisé dans plusieurs schémas et l&#39;opération du DELETE ne peut pas être annulée.
+>Soyez prudent lorsque vous supprimez un attribut calculé, car celui-ci peut être utilisé sur plusieurs schémas. Par ailleurs, l’opération DELETE ne peut pas être annulée.
 
 **Format d’API**
 
@@ -495,7 +495,7 @@ DELETE /config/computedAttributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{ATTRIBUTE_ID}` | ID de l&#39;attribut calculé que vous souhaitez supprimer. |
+| `{ATTRIBUTE_ID}` | L’identifiant de l’attribut calculé que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -510,8 +510,8 @@ curl -X DELETE \
 
 **Réponse**
 
-Une requête de suppression réussie renvoie HTTP Status 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez exécuter une requête GET pour rechercher l’attribut calculé selon son identifiant. Si l&#39;attribut a été supprimé, vous recevrez une erreur HTTP Status 404 (Not Found).
+Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez effectuer une requête GET pour rechercher l’attribut calculé à l’aide de son identifiant. Si l’attribut a été supprimé, vous recevrez un état HTTP 404 (Not Found).
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les bases des attributs calculés, vous êtes prêt à commencer à les définir pour votre entreprise.
+Maintenant que vous avez appris les bases des attributs calculés, vous êtes prêt à commencer à les définir pour votre organisation.
