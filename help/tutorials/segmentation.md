@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tutoriels de segmentation
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 55%
+source-wordcount: '540'
+ht-degree: 52%
 
 ---
 
@@ -26,7 +26,7 @@ Une fois que vous avez développé, testé et enregistré votre définition de s
 
 ## Exportation des données de segment
 
-Exporting segments containing [!DNL Profile] data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. Vous pouvez trouver les étapes de génération d’une tâche d’exportation dans le [tutoriel de l’API d’exportation](../segmentation/tutorials/export-data.md).
+Exporting segments containing [!DNL Profile] data requires first [creating a dataset into which the data will be exported](../segmentation/tutorials/create-dataset-export-segment.md), then initiating a new export job. Vous trouverez les étapes de création d’une tâche d’exportation dans le didacticiel sur l’ [évaluation d’un segment](../segmentation/tutorials/evaluate-a-segment.md).
 
 ## Configuration des stratégies de fusion
 
