@@ -4,32 +4,32 @@ solution: Adobe Experience Platform
 title: Projections Edge - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1919'
-ht-degree: 3%
+source-wordcount: '1900'
+ht-degree: 86%
 
 ---
 
 
 # Configurations de projection Edge et points de terminaison de destination
 
-Afin d’offrir des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, les données appropriées doivent être facilement disponibles et mises à jour en continu au fur et à mesure des changements. L&#39;Adobe Experience Platform permet cet accès en temps réel aux données grâce à ce que l&#39;on appelle les contours. Un bord est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles que l’Adobe Target et l’Adobe Campaign utilisent des bords afin de fournir des expériences personnalisées aux clients en temps réel. Les données sont acheminées vers un bord par une projection, avec une destination de projection qui définit le bord auquel les données seront envoyées et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur le bord. Ce guide fournit des instructions détaillées sur l’utilisation de l’API Profil client en temps réel pour travailler avec les projections de périmètre, y compris les destinations et les configurations.
+Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 >[!NOTE]
->Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un `Content-Type` en-tête. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
+>Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
 
-## Destinations des projections
+## Destinations de projection
 
-Une projection peut être acheminée vers un ou plusieurs arêtes en spécifiant les emplacements où les données doivent être envoyées. Chaque destination de projection créée possède un identifiant unique qui est ensuite utilisé pour créer la configuration de projection.
+Vous pouvez acheminer une projection vers une ou plusieurs périphéries en précisant les emplacements vers lesquels les données doivent être envoyées. Chaque destination de projection créée possède un identifiant unique qui est ensuite utilisé pour créer la configuration de projection.
 
 ### Liste de toutes les destinations
 
-Vous pouvez liste les destinations de périphérie qui ont déjà été créées pour votre organisation en envoyant une demande GET au point de `/config/destinations` terminaison.
+Vous pouvez lister les destinations de périphérie déjà créées pour votre organisation en effectuant une requête GET sur le point de terminaison `/config/destinations`.
 
 **Format d’API**
 
@@ -50,10 +50,10 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un `projectionDestinations` tableau avec les détails de chaque destination affichés sous la forme d&#39;un objet individuel dans le tableau. Si aucune projection n&#39;a été configurée, le tableau `projectionDestinations` renvoie vide.
+La réponse inclut un tableau `projectionDestinations` qui contient les détails de chaque destination affichés sous la forme d’un objet individuel du tableau. Si aucune projection n’a été définie, le tableau `projectionDestinations` est vide.
 
 >[!NOTE]
->Cette réponse a été raccourcie pour l&#39;espace et ne montre que deux destinations.
+>Cette réponse a été raccourcie pour des raisons de place et n’affiche que deux destinations.
 
 ```json
 {
@@ -102,14 +102,14 @@ La réponse comprend un `projectionDestinations` tableau avec les détails de ch
 
 | Propriété | Description |
 |---|---|
-| `_links.self.href` | Au niveau supérieur, correspond au chemin utilisé pour effectuer la demande GET. Dans chaque objet de destination individuel, ce chemin peut être utilisé dans une requête GET pour rechercher directement les détails d&#39;une destination spécifique. |
-| `id` | Dans chaque objet de destination, le `"id"` indique l’identifiant unique généré par le système et en lecture seule pour la destination. Cet identifiant est utilisé lors du référencement d&#39;une destination spécifique et lors de la création de configurations de projection. |
+| `_links.self.href` | Au niveau supérieur, correspond au chemin d’accès utilisé pour effectuer la requête GET. Au sein de chaque objet de destination, ce chemin d’accès peut être utilisé dans une requête GET pour rechercher directement les détails d’une destination spécifique. |
+| `id` | Au sein de chaque objet de destination, l’`"id"` affiche l’identifiant unique généré par le système et en lecture seule de la destination. Cet identifiant est utilisé lorsque vous faites référence à une destination spécifique et que vous créez des configurations de projection. |
 
-Pour plus d&#39;informations sur les attributs d&#39;une destination individuelle, consultez la section sur la [création d&#39;une destination](#create-a-destination) qui suit.
+Pour plus d’informations concernant les attributs d’une destination individuelle, veuillez consulter la section de [création d’une destination](#create-a-destination) qui suit.
 
-### Create a destination {#create-a-destination}
+### Création d’une destination {#create-a-destination}
 
-Si la destination dont vous avez besoin n&#39;existe pas déjà, vous pouvez créer une destination de projection en envoyant une requête POST au point de `/config/destinations` terminaison.
+Si la destination dont vous avez besoin n’existe pas déjà, vous pouvez créer une nouvelle destination de projection en effectuant une requête POST sur le point de terminaison `/config/destinations`.
 
 **Format d’API**
 
@@ -119,10 +119,10 @@ POST /config/destinations
 
 **Requête**
 
-La requête suivante crée une nouvelle destination de bord.
+La requête suivante crée une nouvelle destination de périphérie.
 
 >[!NOTE]
->La requête POST pour créer une destination requiert un en-tête spécifique, comme illustré ci-dessous. `Content-Type` L’utilisation d’un en-tête incorrect génère une erreur HTTP Status 415 (Type de support non pris en charge). `Content-Type`
+>La requête POST pour créer une destination nécessite un en-tête `Content-Type` spécifique, comme indiqué ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
@@ -144,14 +144,14 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `type` **(Obligatoire)** | Type de destination à créer. La seule valeur acceptée, &quot;EDGE&quot;, crée une destination de bord. |
-| `dataCenters` **(Obligatoire)** | Tableau de chaînes qui liste les arêtes vers lesquelles les projections doivent être routées. Peut contenir une ou plusieurs des valeurs suivantes : &quot;OR1&quot; - États-Unis occidentaux, &quot;VA5&quot; - États-Unis orientaux, &quot;NLD1&quot; - EMEA. |
-| `ttl` **(Obligatoire)** | Spécifie l&#39;expiration de projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600. |
-| `replicationPolicy` **(Obligatoire)** | Définit le comportement de la réplication des données du hub aux bords.  Valeurs prises en charge : PROACTIVE, RÉACTIVE. Valeur par défaut : RÉACTIF. |
+| `type` **(Obligatoire)** | Type de destination à créer. La seule valeur acceptée, « EDGE », crée une destination de périphérie. |
+| `dataCenters` **(Obligatoire)** | Tableau de chaînes qui liste les arêtes vers lesquelles les projections doivent être routées. Peut contenir une ou plusieurs des valeurs suivantes : « OR1 » - États-Unis de l’Ouest, « VA5 » - États-Unis de l’Est, « NLD1 » - EMEA. |
+| `ttl` **(Obligatoire)** | Spécifie l&#39;expiration de projection. Plage de valeurs acceptée : 600 à 604800. Valeur par défaut : 3600. |
+| `replicationPolicy` **(Obligatoire)** | Définit le comportement de la réplication des données du hub aux bords.  Valeurs prises en charge : PROCATIVE, RÉACTIVE. Valeur par défaut : RÉACTIVE. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la destination de bord nouvellement créée, y compris l&#39;identifiant unique généré par le système en lecture seule (`id`).
+Une réponse réussie renvoie les détails de la destination de périphérie que vous venez de créer, y compris l’identifiant unique généré par le système et en lecture seule (`id`).
 
 ```json
 {
@@ -171,13 +171,13 @@ Une réponse réussie renvoie les détails de la destination de bord nouvellemen
 
 | Propriété | Description |
 |---|---|
-| `self.href` | Ce chemin est utilisé pour rechercher (GET) directement la destination et peut également être utilisé pour mettre à jour (PUT) ou supprimer (DELETE) la destination. |
-| `id` | ID unique généré par le système en lecture seule pour la destination. Cet ID est utilisé pour référencer directement la destination et lors de la création de configurations de projection. |
-| `version` | Cette valeur en lecture seule affiche la version actuelle de la destination. Lorsqu’une destination est mise à jour, le numéro de version est incrémenté automatiquement. |
+| `self.href` | Ce chemin d’accès est utilisé pour rechercher (GET) la destination directement et peut également être utilisé pour mettre à jour (PUT) ou supprimer (DELETE) la destination. |
+| `id` | L’identifiant unique généré par le système et en lecture seule de la destination. Cet identifiant est utilisé pour faire référence directement à la destination et lors de la création de configurations de projection. |
+| `version` | Cette valeur en lecture seule de la version actuelle de la destination. Lorsqu’une destination est mise à jour, le numéro de version s’incrémente automatiquement. |
 
-### Vue d’une destination
+### Affichage d’une destination
 
-Si vous connaissez l&#39;identifiant unique d&#39;une destination de projection, vous pouvez exécuter une demande de recherche pour en vue les détails. Pour ce faire, vous devez envoyer une requête GET au point de `/config/destinations` terminaison et inclure l’ID de la destination dans le chemin d’accès à la requête.
+Si vous connaissez l’identifiant unique d’une destination de projection, vous pouvez réaliser une requête de recherche pour en afficher les détails. Vous pouvez effectuer ceci à l’aide d’une requête GET sur le point de terminaison `/config/destinations` et inclure l’identifiant de la destination dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -187,11 +187,11 @@ GET /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | ID unique de la destination de projection que vous souhaitez vue. |
+| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez afficher. |
 
 **Requête**
 
-La requête suivante effectue une recherche (GET) pour vue de la destination de l’identifiant fourni dans le chemin de la requête.
+La requête suivante effectue une recherche (GET) pour afficher la destination de l’identifiant fourni dans le chemin d’accès de la requête.
 
 ```shell
 curl -X GET \
@@ -204,7 +204,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet response affiche les détails de la destination de projection. L’ `id` attribut doit correspondre à l’ID de la destination de projection fournie dans la demande.
+L’objet de réponse affiche les détails de la destination de projection. L’attribut `id` doit correspondre à l’identifiant de la destination de projection fourni dans la requête.
 
 ```json
 {
@@ -222,12 +222,12 @@ L’objet response affiche les détails de la destination de projection. L’ `i
 }
 ```
 
-### Mettre à jour une destination
+### Mise à jour d’une destination
 
-Une destination existante peut être mise à jour en envoyant une requête PUT au point de `/config/destinations` terminaison et en incluant l’ID de la destination à mettre à jour dans le chemin de la requête. Cette opération consiste essentiellement à _réécrire_ la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
+Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point de terminaison `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à _réécrire_ la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
 
 >[!CAUTION]
->La réponse de l’API à la demande de mise à jour est immédiate, mais les modifications apportées aux projections sont appliquées de manière asynchrone. En d&#39;autres termes, il y a une différence de temps entre le moment où la définition de destination est mise à jour et celui où elle est appliquée.
+>La réponse de l’API à la demande de mise à jour est immédiate, c’est pourquoi les modifications sont appliquées de manière asynchrone aux projections. En d’autres termes, il y a une différence de temps entre le moment où la mise à jour de la définition de la destination est effectuée et le moment où elle est appliquée.
 
 **Format d’API**
 
@@ -237,14 +237,14 @@ PUT /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | ID unique de la destination de projection que vous souhaitez mettre à jour. |
+| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour la destination existante pour inclure un second emplacement (`dataCenters`).
+La requête suivante met à jour la destination existante pour y inclure un second emplacement (`dataCenters`).
 
 >[!IMPORTANT]
->La requête PUT requiert un `Content-Type` en-tête spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête incorrect génère une erreur HTTP Status 415 (Type de support non pris en charge). `Content-Type`
+>La requête PUT nécessite un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X PUT \
@@ -267,11 +267,11 @@ curl -X PUT \
 
 | Propriété | Description |
 |---|---|
-| `currentVersion` | Version actuelle de la destination existante. Valeur de l’ `version` attribut lors de l’exécution d’une demande de recherche pour la destination. |
+| `currentVersion` | La version actuelle de la destination existante. La valeur de l’attribut `version` lorsque vous réalisez une requête de recherche pour la destination. |
 
 **Réponse**
 
-La réponse comprend les détails mis à jour pour la destination, y compris son identifiant et la nouvelle `version` de la destination.
+La réponse inclut les détails mis à jour pour la destination, y compris son identifiant et la nouvelle `version` de la destination.
 
 ```json
 {
@@ -292,10 +292,10 @@ La réponse comprend les détails mis à jour pour la destination, y compris son
 
 ### Suppression d’une destination
 
-Si votre organisation ne requiert plus de destination de projection, elle peut être supprimée en adressant une requête de DELETE au point de `/config/destinations` terminaison et en incluant l&#39;ID de la destination que vous souhaitez supprimer dans le chemin de la demande.
+Si votre organisation n’a plus besoin d’une destination de projection, celle-ci peut-être supprimée en exécutant une requête DELETE au point de terminaison `/config/destinations` et en incluant l’identifiant de la destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!CAUTION]
->La réponse de l’API à la demande de suppression est immédiate, mais les modifications réelles apportées aux données sur les bords se produisent de manière asynchrone. En d&#39;autres termes, les données du profil seront supprimées de toutes les arêtes (les `dataCenters` données spécifiées dans la destination de la projection), mais le processus prendra du temps.
+>La réponse de l’API à la demande de suppression est immédiate, c’est pourquoi les modifications actuelles sur les données en périphérie se produisent de manière asynchrone. En d’autres termes, les données de profil seront retirées de toutes les périphéries (les `dataCenters` précisés dans la destination de projection), mais terminer le processus prendra du temps.
 
 **Format d’API**
 
@@ -305,7 +305,7 @@ DELETE /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | ID unique de la destination de projection que vous souhaitez supprimer. |
+| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez supprimer. |
 
 
 **Requête**
@@ -321,15 +321,15 @@ curl -X DELETE \
 
 **Réponse**
 
-La demande de suppression renvoie l’état HTTP 204 (Aucun contenu) et un corps de réponse vide. Vous pouvez confirmer que la suppression a réussi en exécutant une demande de recherche pour la destination par son identifiant. La recherche doit renvoyer l&#39;état HTTP 404 (introuvable).
+La requête de suppression renvoie un état HTTP 204 (Pas de contenu) et un corps de réponse vide. Vous pouvez confirmer la réussite de la suppression en effectuant une requête de recherche pour la destination en utilisant son identifiant. La recherche doit renvoyer un état HTTP 404 (Not Found).
 
 ## Configurations de projection
 
-Les configurations de projection fournissent des informations sur les données qui doivent être disponibles sur chaque bord. Plutôt que de projeter un schéma XDM (Experience Data Model) complet sur le bord, une projection ne fournit que des données spécifiques, ou champs, du schéma. Votre entreprise peut définir plusieurs configurations de projection pour chaque schéma XDM.
+Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Rather than projecting a complete [!DNL Experience Data Model] (XDM) schema to the edge, a projection provides only specific data, or fields, from the schema. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
 
 ### Liste de toutes les configurations de projection
 
-Vous pouvez liste toutes les configurations de projection qui ont été créées pour votre organisation en envoyant une requête GET au point de `/config/projections` terminaison. Vous pouvez également ajouter des paramètres facultatifs au chemin de requête pour accéder aux configurations de projection pour un schéma particulier ou rechercher une projection individuelle par son nom.
+Vous pouvez lister toutes les configurations de projection créées pour votre organisation en effectuant une requête GET sur le point de terminaison `/config/projections`. Vous pouvez également ajouter des paramètres facultatifs au chemin d’accès de la requête pour accéder à des configurations de projection pour un schéma particulier ou rechercher une projection individuelle en fonction de son nom.
 
 **Format d’API**
 
@@ -341,15 +341,15 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 | Paramètre | Description |
 |---|---|
-| `{SCHEMA_NAME}` | Nom de la classe de schéma associée à la configuration de projection à laquelle vous souhaitez accéder. |
-| `{PROJECTION_NAME}` | Nom de la configuration de projection à laquelle vous souhaitez accéder. |
+| `{SCHEMA_NAME}` | Le nom de la classe schéma associée à la configuration de projection à laquelle vous souhaitez accéder. |
+| `{PROJECTION_NAME}` | Le nom de la configuration de projection auquel vous souhaitez accéder. |
 
 >[!NOTE]
->`schemaName` est requis lors de l&#39;utilisation du `name` paramètre, car un nom de configuration de projection n&#39;est unique que dans le contexte d&#39;une classe de schéma.
+>`schemaName` est requis lorsque vous utilisez le paramètre `name`, comme nom de configuration de projection unique dans le contexte d’une classe schéma.
 
 **Requête**
 
-La demande suivante liste toutes les configurations de projection associées à la classe de schéma de modèle de données d’expérience, Profil XDM individuel. Pour plus d&#39;informations sur XDM et son rôle dans Platform, veuillez commencer par lire la présentation [du système](../../xdm/home.md)XDM.
+La requête suivante liste toutes les configurations de projection associées à la classe de [!DNL Experience Data Model] schéma [!DNL XDM Individual Profile]. For more information on XDM and its role within [!DNL Platform], please begin by reading the [XDM System overview](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -362,7 +362,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de configurations de projection dans l&#39;attribut `_embedded` racine, contenu dans le `projectionConfigs` tableau. Si aucune configuration de projection n&#39;a été effectuée pour votre organisation, la `projectionConfigs` baie sera vide.
+Une réponse réussie renvoie une liste des configurations de projection dans l’attribut racine `_embedded`, contenu dans le tableau `projectionConfigs`. Si aucune configuration de projection n’a été définie pour votre organisation, le tableau `projectionConfigs` sera vide.
 
 ```json
 {
@@ -412,9 +412,9 @@ Une réponse réussie renvoie une liste de configurations de projection dans l&#
 }
 ```
 
-### Créer une configuration de projection
+### Création de configuration de projection
 
-Vous pouvez créer (POST) une nouvelle configuration de projection qui dictera les champs XDM disponibles sur les bords.
+Vous pouvez créer (POST) une nouvelle configuration de projection qui définira les champs XDM disponibles en périphérie.
 
 **Format d’API**
 
@@ -424,12 +424,12 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 | Paramètre | Description |
 |---|---|
-| `{SCHEMA_NAME}` | Nom de la classe de schéma associée à la configuration de projection à laquelle vous souhaitez accéder. |
+| `{SCHEMA_NAME}` | Le nom de la classe schéma associée à la configuration de projection à laquelle vous souhaitez accéder. |
 
 **Requête**
 
 >[!NOTE]
->La demande POST pour créer une configuration requiert un en-tête spécifique, comme illustré ci-dessous. `Content-Type` L’utilisation d’un en-tête incorrect génère une erreur HTTP Status 415 (Type de support non pris en charge). `Content-Type`
+>The POST request to create a configuration requires a specific `Content-Type` header, as shown below. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
@@ -448,13 +448,13 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `selector` | Chaîne contenant une liste de propriétés dans le schéma à répliquer sur les bords. Les bonnes pratiques relatives à l’utilisation des sélecteurs sont disponibles dans la section [Sélecteurs](#selectors) de ce document. |
-| `name` | Nom descriptif de la nouvelle configuration de projection. |
-| `destinationId` | Identifiant de la destination de bord vers laquelle les données seront projetées. |
+| `selector` | Chaîne contenant une liste des propriétés du schéma à répercuter sur les périphéries. Les bonnes pratiques de travail avec les sélecteurs sont disponibles dans la section [Sélecteurs](#selectors) de ce document. |
+| `name` | Un nom explicite pour la nouvelle configuration de projection. |
+| `destinationId` | L’identifiant de la destination de périphérique vers lequel les données seront projetées. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la configuration de projection nouvellement créée.
+Une réponse réussie renvoie les détails de la configuration de projection que vous venez de créer.
 
 ```json
 {
@@ -492,34 +492,34 @@ Une réponse réussie renvoie les détails de la configuration de projection nou
 }
 ```
 
-## Selectors {#selectors}
+## Sélecteurs {#selectors}
 
-Un sélecteur est une liste de noms de champs XDM séparés par des virgules. Dans une configuration de projection, le sélecteur désigne les propriétés à inclure dans les projections. Le format de la valeur du `selector` paramètre est approximativement basé sur la syntaxe XPath. La syntaxe prise en charge est résumée ci-dessous, avec des exemples supplémentaires fournis à titre de référence.
+Un sélecteur est une liste de noms de champ XDM séparés par des virgules. Dans une configuration de projection, le sélecteur désigne les propriétés à inclure dans les projections. Le format de la valeur de paramètre `selector` est vaguement défini sur une syntaxe XPath. La syntaxe prise en charge est résumée ci-dessous avec des exemples supplémentaires fournis pour référence.
 
 ### Syntaxe prise en charge
 
 * Utilisez des virgules pour sélectionner plusieurs champs. N’utilisez pas d’espaces.
-* Utilisez la notation par point pour sélectionner les champs imbriqués.
-   * Par exemple, pour sélectionner un champ nommé `field` qui est imbriqué dans un champ nommé `foo`, utilisez le sélecteur `foo.field`.
-* Lors de l’inclusion d’un champ contenant des sous-champs, tous les sous-champs sont également projetés par défaut. Vous pouvez toutefois filtrer les sous-champs renvoyés à l’aide de parenthèses `"( )"`.
-   * Par exemple, `addresses(type,city.country)` renvoie uniquement le type d&#39;adresse et le pays dans lequel la ville d&#39;adresse est située pour chaque élément de `addresses` tableau.
-   * L&#39;exemple ci-dessus est équivalent à `addresses.type,addresses.city.country`.
+* Utilisez la notation par point pour sélectionner des champs imbriqués.
+   * Par exemple, pour sélectionner un champ intitulé `field` imbriqué dans un champ intitulé `foo`, utilisez le sélecteur `foo.field`.
+* Lorsque vous incluez un champ qui contient des sous-champs, tous les sous-champs sont également projetés par défaut. Toutefois, vous pouvez filtrer les sous-champs renvoyés à l’aide de parenthèses `"( )"`.
+   * Par exemple, `addresses(type,city.country)` renvoie uniquement le type d’adresse et le pays dans lequel la ville de l’adresse est située pour chaque élément du tableau `addresses`.
+   * L’exemple ci-dessus équivaut à `addresses.type,addresses.city.country`.
 
 >[!NOTE]
->La notation par points et la notation entre parenthèses sont prises en charge pour référencer les sous-champs. Cependant, il est recommandé d’utiliser la notation par point car elle est plus concise et fournit une meilleure illustration de la hiérarchie des champs.
+>La notation par points et la notation entre parenthèses sont toutes les deux prises en charge pour référencer les sous-champs. Toutefois, la bonne pratique consiste à utiliser la notation par point, car celle-ci est plus concise et fournit une meilleure illustration de la hiérarchie des champs.
 
-* Chaque champ d’un sélecteur est spécifié par rapport à la racine de la réponse.
-   * Si les données sont un ensemble de ressources, la projection inclura un ensemble de ressources.
-   * Si les données sont une ressource unique, la projection inclut les champs relatifs à cette ressource.
-   * Si le champ sélectionné est (ou fait partie d&#39;un tableau), la projection inclut la partie sélectionnée de tous les éléments du tableau.
+* Chaque champ d’un sélecteur est associé spécifiquement à la racine de la réponse.
+   * Si les données sont une collection de ressources, la projection inclura un tableau des ressources.
+   * Si les données sont une ressource unique, la projection inclura des champs associés à cette ressource.
+   * Si le champ que vous avez sélectionné est un tableau (ou en fait partie), la projection inclura la partie sélectionnée de tous les éléments du tableau.
 
-### Exemples du paramètre de sélecteur
+### Exemples de paramètres du sélecteur
 
-Les exemples suivants montrent des exemples `selector` de paramètres, suivis des valeurs structurées qu’ils représentent.
+Les exemples suivants affichent des paramètres d’exemple `selector`, suivis par les valeurs structurées qu’elles représentent.
 
 **person.lastName**
 
-Renvoie le `lastName` sous-champ de l&#39; `person` objet dans la ressource demandée.
+Renvoie le sous-champ `lastName` de l’objet `person` de la ressource demandée.
 
 ```json
 {
@@ -529,9 +529,9 @@ Renvoie le `lastName` sous-champ de l&#39; `person` objet dans la ressource dema
 }
 ```
 
-**adresses**
+**addresses**
 
-Renvoie tous les éléments du `addresses` tableau, y compris tous les champs de chaque élément, mais aucun autre champ.
+Renvoie tous les éléments du tableau `addresses`, y compris tous les champs de chaque élément, mais pas les autres champs.
 
 ```json
 {
@@ -556,9 +556,9 @@ Renvoie tous les éléments du `addresses` tableau, y compris tous les champs de
 }
 ```
 
-**person.lastName,adresses**
+**person.lastName,addresses**
 
-Renvoie le `person.lastName` champ et tous les éléments du `addresses` tableau.
+Renvoie le champ `person.lastName` et tous les éléments du tableau `addresses`.
 
 ```json
 {
@@ -586,9 +586,9 @@ Renvoie le `person.lastName` champ et tous les éléments du `addresses` tableau
 }
 ```
 
-**address.city**
+**addresses.city**
 
-Renvoie uniquement le champ de ville pour tous les éléments du tableau d&#39;adresses.
+Renvoie uniquement le champ city pour tous les éléments du tableau addresses.
 
 ```json
 {
@@ -610,11 +610,11 @@ Renvoie uniquement le champ de ville pour tous les éléments du tableau d&#39;a
 ```
 
 >[!NOTE]
->Lorsqu’un champ imbriqué est renvoyé, la projection inclut les objets parents encadrés. Les champs parents n’incluent aucun autre champ enfant, sauf s’ils sont également sélectionnés explicitement.
+>Lorsqu’un champ imbriqué est renvoyé, la projection inclut les objets parents imbriqués. Les champs parents n’incluent pas d’autres champs enfants sauf s’ils sont également sélectionnés de manière explicite.
 
-**address(type,city)**
+**addresses(type,city)**
 
-Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément du `addresses` tableau. Tous les autres sous-champs contenus dans chaque `addresses` élément sont exclus du filtre.
+Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément du tableau `addresses`. Tous les autres sous-champs contenus dans chaque élément `addresses` sont exclus du filtre.
 
 ```json
 {
@@ -639,4 +639,4 @@ Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément
 
 ## Étapes suivantes
 
-Ce guide vous montre les étapes nécessaires à la configuration des projections et des destinations, y compris la manière de formater correctement le `selector` paramètre. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
+This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
