@@ -1,51 +1,49 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur de Segmentation Service
+title: Guide de développement de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 1%
+source-wordcount: '462'
+ht-degree: 46%
 
 ---
 
 
-# Guide du développeur de Segmentation Service
+# Getting started with [!DNL Segmentation Service] {#getting-started}
 
-La segmentation vous permet de créer des segments et de générer des audiences en Adobe Experience Platform à partir de vos données de Profil client en temps réel.
+Le service de segmentation des Adobes Experience Platform vous permet de créer des segments et de générer des audiences dans l’Adobe Experience Platform à partir de vos [!DNL Real-time Customer Profile] données.
 
-## Prise en main
+The developer guide requires a working understanding of the various Experience Platform services involved with using [!DNL Segmentation Service].
 
-Ce guide nécessite une bonne compréhension des différents services d&#39;Adobe Experience Platform impliqués dans l&#39;utilisation de la segmentation.
+- [!DNL Segmentation](../home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+- [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Environnements de test](../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-- [Segmentation](../home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-- [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour utiliser correctement la segmentation à l’aide de l’API.
+## Lecture d’exemples d’appels API
 
-### Lecture des exemples d’appels d’API
+The [!DNL Segmentation Service] API documentation provides example API calls to demonstrate how to format your requests. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
-La documentation de l’API du service de segmentation fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+## En-têtes requis
 
-### En-têtes requis
+La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour lancer des appels vers des points de terminaison Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
 
-La documentation de l’API exige également que vous ayez suivi le didacticiel [d’](../../tutorials/authentication.md) authentification afin d’effectuer des appels vers les points de terminaison Platform. Le didacticiel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans les appels d&#39;API Experience Platform, comme indiqué ci-dessous :
-
-- Autorisation : `Bearer {ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: `Bearer {ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox in which the operation will take place:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’utilisation des sandbox dans l’Experience Platform, voir la documentation [d’aperçu des](../../sandboxes/home.md)sandbox.
+>For more information on working with sandboxes in [!DNL Experience Platform], see the [sandboxes overview documentation](../../sandboxes/home.md).
 
 <!-- ## Estimates
 
@@ -81,13 +79,13 @@ For more information on using this endpoint, please read the [schedules develope
 
 Les définitions de segment définissent les profils qui feront partie des segments d’audience. Vous pouvez utiliser le `/segment/definitions` point de terminaison pour récupérer une liste de définitions de segment, créer une définition de segment, récupérer les détails d’une définition de segment spécifique, supprimer une définition de segment spécifique ou remplacer les détails d’une définition de segment spécifique.
 
-Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le guide [du développeur des définitions de](./segment-definitions.md)segment.
+For more information on using this endpoint, please read the [segment definitions developer guide](./segment-definitions.md).
 
 ## Tâches de segmentation
 
-Les tâches de segmentation traitent les définitions de segment précédemment établies pour générer un segment d’audience. Vous pouvez utiliser le `/segment/jobs` point de terminaison pour récupérer une liste de tâches de segment, créer une tâche de segment, récupérer les détails d’une tâche de segment spécifique ou supprimer une tâche de segment spécifique.
+Les tâches de segmentation traitent les définitions de segmentation préalablement établies pour générer un segment d’audience. Vous pouvez utiliser le point de terminaison `/segment/jobs` pour obtenir une liste des tâches de segmentation, créer une tâche de segments, récupérer les détails d’une tâche de segmentation spécifique ou la supprimer.
 
-Pour plus d’informations sur l’utilisation de ce point de terminaison, consultez le guide [des développeurs d’emplois de](./segment-jobs.md)segment.
+Pour plus d’informations sur l’utilisation de ce point de terminaison, consultez le [guide de développement de tâches de segmentation](./segment-jobs.md).
 
 ## Recherche de segments
 
@@ -95,4 +93,4 @@ La recherche de segments permet de rechercher et d’indexer des champs configur
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’API de segmentation, sélectionnez l’un des sous-guides pour savoir comment utiliser des points de terminaison spécifiques à la segmentation. Pour en savoir plus sur l’utilisation des segments à l’aide de l’interface utilisateur de Platform, consultez le guide [de l’utilisateur](../ui/overview.md)Segmentation.
+Pour passer des appels à l’aide de l’ [!DNL Segmentation Service] API, sélectionnez l’un des guides de point de terminaison disponibles à l’aide du volet de navigation de gauche ou dans l’aperçu du guide du [développeur.](./overview.md)
