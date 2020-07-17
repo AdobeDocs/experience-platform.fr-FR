@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 solution: Adobe Experience Platform
-title: Ajouter les données au Profil client en temps réel
+title: Ajout de données à Real-time Customer Profile
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 93aae0e394e1ea9b6089d01c585a94871863818e
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 0%
+source-wordcount: '355'
+ht-degree: 56%
 
 ---
 
 
-# Ajouter les données au Profil client en temps réel
+# Add data to [!DNL Real-time Customer Profile]
 
-Ce didacticiel décrit les étapes nécessaires pour ajouter des données au Profil client en temps réel.
+This tutorial outlines the steps necessary to add data to [!DNL Real-time Customer Profile].
 
-## Activation d’un schéma pour le Profil client en temps réel
+## Enable a schema for [!DNL Real-time Customer Profile]
 
-Les données ingérées dans l’Experience Platform pour être utilisées par le Profil client en temps réel doivent être conformes à un schéma de modèle de données d’expérience (XDM) activé pour le Profil. Pour qu&#39;un schéma soit activé pour le Profil, il doit implémenter soit le Profil individuel XDM, soit la classe XDM ExperienceEvent.
+Les données ingérées [!DNL Experience Platform] pour être utilisées par [!DNL Real-time Customer Profile] doivent être conformes à un schéma [!DNL Experience Data Model] (XDM) activé pour [!DNL Profile]. In order for a schema to be enabled for Profile, it must implement either the [!DNL XDM Individual Profile] or [!DNL XDM ExperienceEvent] class.
 
-Vous pouvez activer un schéma à utiliser dans le Profil client en temps réel à l’aide de l’API de registre de Schéma ou de l’interface utilisateur de l’éditeur de Schémas. Pour commencer, suivez les didacticiels de [création d’un schéma à l’aide d’API](../../xdm/tutorials/create-schema-api.md) ou de [création d’un schéma à l’aide de l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md)de l’éditeur de Schémas.
+You can enable a schema for use in [!DNL Real-time Customer Profile] using the [!DNL Schema Registry] API or the [!DNL Schema Editor] user interface. Pour commencer, suivez les tutoriels de [Création d’un schéma à l’aide d’une API](../../xdm/tutorials/create-schema-api.md) ou de [création d’un schéma à l’aide de l’interface utilisateur de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).
 
-## Ajouter des données à l’aide de l’assimilation par lot
+## Ajouter des données à l’aide de l’ingestion par lots
 
-Toutes les données téléchargées vers Platform à l’aide de l’assimilation par lot sont téléchargées dans des jeux de données individuels. Avant que ces données puissent être utilisées par le Profil client en temps réel, le jeu de données en question doit être spécifiquement configuré. Pour obtenir des instructions complètes, consultez le didacticiel sur la [configuration d&#39;un jeu de données pour le Profil et le service](dataset-configuration.md)d&#39;identité.
+All data uploaded to [!DNL Platform] using batch ingestion is uploaded to individual datasets. Before this data can be used by [!DNL Real-time Customer Profile], the dataset in question has to be specifically configured. Pour obtenir des instructions complètes, reportez-vous au tutoriel sur la [Configuration d’un jeu de données pour Profile et Identity Service](dataset-configuration.md).
 
-Une fois que le jeu de données a été configuré, vous pouvez y début l&#39;assimilation de données. Pour obtenir des instructions détaillées sur la façon de télécharger des fichiers dans différents formats, consultez le guide [du développeur d’assimilation](../../ingestion/batch-ingestion/api-overview.md) par lot.
+Une fois que le jeu de données a été configuré, vous pouvez commencer l’ingestion de données. Pour obtenir des instructions détaillées sur la manière de charger des fichiers dans différents formats, reportez-vous au [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
-## Ajouter des données à l’aide de l’assimilation en flux continu
+## Ajouter des données à l’aide de l’ingestion par flux
 
-Les données imbriquées dans un flux qui sont conformes à un schéma XDM compatible avec le Profil ajoutent ou remplacent automatiquement l’enregistrement approprié dans le Profil client en temps réel. Si plusieurs identités sont fournies dans l&#39;enregistrement ou si des données de série chronologique sont utilisées, ces identités sont mises en correspondance dans le graphique d&#39;identité sans configuration supplémentaire. Pour en savoir plus, consultez le guide [du développeur d’assimilation](../../ingestion/tutorials/streaming-record-data.md) en flux continu.
+Any stream-ingested data that is compliant with a [!DNL Profile]-enabled XDM schema will automatically add or overwrite the appropriate record in [!DNL Real-time Customer Profile]. Si plusieurs identités sont fournies dans l’enregistrement ou si des données de série temporelle sont utilisées, ces identités sont mises en correspondance dans le graphique d’identités sans configuration supplémentaire. Pour en savoir plus, consultez le [guide de développement de l’ingestion par flux](../../ingestion/tutorials/streaming-record-data.md).
 
-## Confirmer la réussite du téléchargement
+## Confirmer la réussite du chargement
 
-Lors du premier chargement de données dans un nouveau jeu de données, ou dans le cadre d’un processus impliquant une nouvelle ETL ou une nouvelle source de données, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été correctement téléchargées.
+Lors du premier chargement de données dans un nouveau jeu de données ou dans le cadre d’un processus impliquant une nouvelle source de données ou ETL, il est recommandé de vérifier soigneusement les données afin de s’assurer qu’elles ont été correctement chargées.
 
-A l’aide de l’API d’accès au Profil client en temps réel, vous pouvez récupérer des données de lot lors de leur chargement dans un jeu de données. Si vous ne parvenez pas à récupérer l&#39;une des entités attendues, il se peut que votre jeu de données ne soit pas activé pour le Profil. Après avoir confirmé que votre jeu de données a été activé, veillez à ce que le format et les identifiants de vos données source répondent à vos attentes.
+Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. Si vous ne parvenez pas à récupérer les entités attendues, il se peut que votre jeu de données ne soit pas activé pour [!DNL Profile]. Une fois que vous avez confirmé que votre jeu de données a été activé, assurez-vous que le format et les identifiants des données sources répondent à vos attentes.
 
-Pour obtenir des instructions détaillées sur l&#39;accès aux entités à l&#39;aide de l&#39;API Profil client en temps réel, consultez le guide [des points de terminaison](../api/entities.md)entités, également appelé &quot;API d&#39;accès au Profil&quot;.
+For detailed instructions on how to access entities using the [!DNL Real-time Customer Profile] API, please refer to the [entities endpoint guide](../api/entities.md), also known as the &quot;[!DNL Profile Access] API&quot;.
