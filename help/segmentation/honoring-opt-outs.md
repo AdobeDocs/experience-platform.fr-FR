@@ -1,91 +1,89 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Respect des exclusions
+title: Respect du droit d’opposition
 topic: overview
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 0%
+source-wordcount: '954'
+ht-degree: 69%
 
 ---
 
 
-# Respect des demandes d’exclusion dans les segments
+# Respect des demandes d’opposition dans les segments
 
-Experience Platform permet à vos clients d’envoyer des demandes d’exclusion concernant l’utilisation et l’enregistrement de leurs données dans le Profil client en temps réel. Ces demandes d&#39;exclusion font partie de la California Consumer Privacy Act (CCPA), qui donne aux résidents de Californie le droit d&#39;accéder et de supprimer leurs données personnelles et de savoir si leurs données personnelles sont vendues ou divulguées (et à qui).
+[!DNL Experience Platform] permet à vos clients d’envoyer des demandes d’exclusion concernant l’utilisation et l’enregistrement de leurs données dans [!DNL Real-time Customer Profile]. These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
 
-Une fois qu’un client s’est désabonné, il est important que votre entreprise respecte ces exclusions lors de la génération d’audiences pour les activités marketing. Ce document décrit des détails importants concernant le traitement des demandes d’exclusion.
+Lorsqu’un client fait valoir son droit d’opposition, il est important que votre organisation respecte ce droit lorsqu’elle génère des audiences à des fins marketing. Ce document décrit des détails importants concernant le respect des demandes d’opposition.
 
 ## Prise en main
 
-Le respect des demandes d’exclusion nécessite une bonne compréhension des différents services Adobe Experience Platform impliqués. Avant de traiter les demandes d’exclusion, consultez la documentation relative aux services suivants :
+Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Avant de travailler sur les demandes d’opposition, consultez la documentation des services suivants :
 
-- [Profil](../profile/home.md)client en temps réel : Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [Adobe Experience Platform Segmentation Service](./home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
-- [Modèle de données d’expérience (XDM)](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [Service](../privacy-service/home.md)de confidentialité d’Adobe Experience Platform : Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données client dans Platform. Ces règlements comprennent :
-   - California Consumer Privacy Act (CCPA) : Droits à la confidentialité des données pour les résidents de Californie, y compris le droit d&#39;accéder et de supprimer des données personnelles et de savoir si des données personnelles sont vendues ou divulguées (et à qui).
-   - Règlement général sur la protection des données : Droits à la vie privée des données pour les membres de l&#39;Union européenne, y compris le &quot;droit à l&#39;accès&quot; et le &quot;droit à l&#39;oubli&quot;.
+- [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein [!DNL Platform]de.
 
-## Mélins d’exclusion
+## Mixins d’exclusion
 
-Afin d’honorer les demandes d’exclusion de l’ACCP, l’un des schémas qui fait partie du schéma d’union doit contenir les champs d’exclusion du modèle de données d’expérience (XDM) nécessaires. Deux mixins peuvent être utilisés pour ajouter des champs d’exclusion à un schéma. Chacun d’eux est traité plus en détail dans les sections suivantes :
+In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. Deux mixins sont mis à votre disposition pour ajouter des champs d’opposition à un schéma. Ces deux mixins sont présentés en détail dans les sections qui suivent :
 
-- [Confidentialité](#profile-privacy)du Profil : Utilisé pour capturer différents types d’exclusion (généraux ou ventes/partage).
-- [Détails](#profile-preferences-details)des préférences de Profil : Utilisé pour capturer des demandes d’exclusion pour des canaux XDM spécifiques.
+- [Confidentialité du profil](#profile-privacy) : utilisé pour capturer différents types d’opposition (générale ou ventes/partage).
+- [Détails des préférences du profil](#profile-preferences-details) : utilisé pour capturer des demandes d’opposition pour des canaux XDM spécifiques.
 
-Pour obtenir des instructions détaillées sur la façon d’ajouter un mixin à un schéma, reportez-vous à la section &quot;Ajouter un mixin&quot; de la documentation XDM suivante :
-- [Didacticiel](../xdm/api/getting-started.md)sur l’API de registre de Schéma.: Création d’un schéma à l’aide de l’API de registre du Schéma.
-- [Didacticiel](../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Création d’un schéma à l’aide de l’interface utilisateur de la plateforme.
+Pour obtenir des instructions détaillées sur la manière dont ajouter un mixin au schéma, reportez-vous à la section « Ajout d’un mixin » dans la documentation XDM suivante :
+- [Tutoriel sur l’API Schema Registry](../xdm/api/getting-started.md): création d’un schéma à l’aide de l’API Schema Registry.
+- [Tutoriel de l’éditeur de schéma](../xdm/tutorials/create-schema-ui.md) : création d’un schéma à l’aide de l’interface utilisateur de Platform.
 
-Voici un exemple d’image présentant les mixins d’exclusion ajoutés à un schéma dans l’interface utilisateur :
+Voici un exemple d’image montant les mixins d’opposition ajoutés à un schéma dans l’interface utilisateur :
 
 ![](images/opt-outs/opt-out-mixins-user-interface.png)
 
-La structure de chaque mixin, ainsi qu&#39;une description des champs qu&#39;ils contribuent au schéma, sont décrits plus en détail dans les sections suivantes.
+La structure de chaque mixin, ainsi qu’une description des champs auxquels ils contribuent au schéma, est présentée plus en détail dans les sections suivantes.
 
-### Confidentialité du Profil
+### [!DNL Profile Privacy]
 
-Le mixin Confidentialité Profil vous permet de capturer deux types de demandes d’exclusion CCPA de la part de clients :
+The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
 
-1. Exclusion générale
-2. Exclusion de vente/partage
+1. Opposition générale
+2. Opposition de vente/partage
 
 ![](images/opt-outs/profile-privacy.png)
 
-Le mixin Confidentialité des Profils contient les champs suivants :
+Le [!DNL Profile Privacy] mixin contient les champs suivants :
 
-- Exclusions de confidentialité (`privacyOptOuts`) : Tableau contenant une liste d’objets d’exclusion.
-- Type d’exclusion (`optOutType`) : Type d’exclusion. Ce champ est un enum avec deux valeurs possibles :
-   - Exclusion générale (`general_opt_out`)
-   - Exclusion du partage des ventes (`sales_sharing_opt_out`)
-- Valeur d’exclusion (`optOutValue`) : État actif de l’exclusion, également appelé valeur du signal d’exclusion, en fonction du type d’exclusion spécifié. Ce champ est un enum avec quatre valeurs possibles :
-   - Non fourni (`not_provided`) : Aucune demande d’exclusion n’a été fournie.
-   - Vérification en attente (`pending`) : La demande d’exclusion est en attente de vérification.
-   - Exclusion (`out`) : Le client s&#39;est désabonné.
-   - Inscription (`in`) : Le client a opté pour.
-- Horodatage d’exclusion (`timestamp`) : Horodatage du signal d’exclusion reçu.
+- Oppositions de confidentialité (`privacyOptOuts`) : un tableau contenant une liste d’objets d’opposition.
+- Type d’opposition (`optOutType`) : le type d’opposition. Ce champ est une énumération de deux valeurs possibles :
+   - Opposition générale (`general_opt_out`)
+   - Opposition du partage des ventes (`sales_sharing_opt_out`)
+- Valeur d’opposition (`optOutValue`) : l’état actif de l’opposition, également connu comme étant la valeur du signal d’opposition et basé sur le type d’opposition spécifié. Ce champ est une énumération de quatre valeurs possibles :
+   - Non fourni (`not_provided`) : aucune demande d’opposition n’a été fournie.
+   - En attente de vérification (`pending`) : la demande d’opposition est en attente de vérification.
+   - Opposition (`out`) : le client a demandé son opposition.
+   - Accord préalable (`in`) : le client a donné son accord préalable.
+- Date et heure de l’opposition (`timestamp`) : date et heure du signal d’opposition reçu.
 
-Pour vue la structure complète du mixin Confidentialité du Profil, veuillez vous référer au référentiel [GitHub public](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) XDM ou à la prévisualisation du mixin à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### Détails des préférences de Profil
+### Détails sur les préférences de profil
 
-Le mixin Détails des préférences de Profil fournit plusieurs champs qui représentent les préférences des profils clients (par exemple, format d&#39;un email, langue préférée et fuseau horaire). L’un des champs inclus dans ce mixin, OptInOut (`optInOut`), permet de définir des valeurs d’exclusion pour des canaux individuels.
+Le mixin Détails sur les préférences de profil contient plusieurs champs qui représentent les préférences des profils client (comme le format d’e-mail, la langue souhaitée et le fuseau horaire). L’un des champs inclus dans ce mixin, OptInOut (`optInOut`), permet de définir des valeurs d’opposition pour chaque canal individuel.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Le mixin Détails des préférences de Profil contient les champs suivants relatifs aux exclusions :
+Le mixin Détails sur les préférences de profil contient les champs suivants liés aux oppositions :
 
-- OptInOut (`optInOut`) : Objet dans lequel chaque clé représente un URI valide et connu pour un canal de communication et l’état actif de l’exclusion pour chaque canal. Chaque canal peut avoir l’une des quatre valeurs possibles :
-   - Non fourni (`not_provided`) : Aucune demande d’exclusion n’a été fournie pour ce canal.
-   - Vérification en attente (`pending`) : La demande d’exclusion pour ce canal est en attente de vérification.
-   - Exclusion (`out`) : Le client s&#39;est retiré de ce canal.
-   - Inscription (`in`) : Le client a opté pour ce canal.
-- Exclusion globale (`globalOptout`) : Valeur booléenne qui, lorsqu’elle est définie sur true, définit un remplacement d’exclusion global pour le profil. La valeur par défaut de ce champ est false.
+- OptInOut (`optInOut`) : un objet sur lequel chaque clé représente un URI valide et connu pour un canal de communication et l’état actif d’opposition pour chaque canal. Chaque canal peut avoir l’une des quatre valeurs possibles :
+   - Non fourni (`not_provided`) : aucune demande d’opposition n’a été fournie pour ce canal.
+   - En attente de vérification (`pending`) : la demande d’opposition pour ce canal est en attente de vérification.
+   - Opposition (`out`) : le client a fait valoir son droit d’opposition pour ce canal.
+   - Accord préalable (`in`) : le client a donné son accord préalable pour ce canal.
+- Opposition globale (`globalOptout`) : une valeur booléenne, qui, lorsqu’elle est définie sur « true », envoie un remplacement d’opposition global pour ce profil. La valeur par défaut de champ est « false ».
 
-L’exemple JSON ci-dessous illustre comment l’objet OptInOut peut capturer plusieurs signaux d’exclusion pour différents canaux de communication :
+L’exemple JSON ci-dessous souligne la manière dont l’objet OptInOut peut capturer plusieurs signaux d’opposition pour des canaux de communication différents :
 
 ```json
 {
@@ -101,27 +99,27 @@ L’exemple JSON ci-dessous illustre comment l’objet OptInOut peut capturer pl
 }
 ```
 
-Pour vue la structure complète du mixin Détails des préférences de Profil, veuillez visiter le référentiel [GitHub public](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) XDM ou prévisualisation du mixin à l&#39;aide de l&#39;interface utilisateur de la plate-forme.
+Pour consulter la structure complète du mixin Détails sur les préférences du profil, reportez-vous au [référentiel XDM GitHub public](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) ou prévisualisez le mixin à l’aide de l’interface utilisateur de [!DNL Platform]
 
-## Gestion des exclusions dans la segmentation
+## Gestion des oppositions dans la segmentation
 
-Afin de s’assurer que les profils marqués avec des indicateurs d’exclusion CCPA ne sont pas inclus dans les segments, des champs spéciaux doivent être ajoutés aux segments existants ou inclus lors de la création de segments.
+Afin de vous assurer que les profils marqués des indicateurs d’opposition CCPA ne sont pas inclus dans les segments, des champs spéciaux doivent être ajoutés aux segments existants ou inclus lors de la création du segment.
 
-Les sections ci-dessous montrent comment ajouter les champs appropriés pour les deux types d’indicateurs d’exclusion :
-1. Exclusion générale
-2. Exclusion de vente/partage
+Les sections ci-dessous montrent comment ajouter les champs appropriés aux deux types d’indicateurs d’opposition :
+1. Opposition générale
+2. Opposition de vente/partage
 
-### Exclusion générale
+### Opposition générale
 
-La segmentation respecte automatiquement tous les profils contenant l’indicateur &quot;Exclusion générale&quot;, ce qui signifie que ces profils ne seront pas inclus par défaut dans les audiences ou les exportations. Toutefois, il est recommandé d’ajouter les champs appropriés pour s’assurer que les profils désactivés ne sont pas inclus dans les audiences et les activités marketing.
+[!DNL Segmentation] honore automatiquement tous les profils contenant l&#39;indicateur &quot;Exclusiongénérale&quot;, ce qui signifie que ces profils ne seront pas inclus par défaut dans les audiences ou exportations. Toutefois, il est recommandé d’ajouter les champs appropriés pour vous assurer que les profils d’opposition ne sont pas inclus dans les audiences et les activités marketing.
 
-Pour ce faire, vous pouvez utiliser l’interface utilisateur du créateur de segments en ajoutant des attributs d’exclusion **de la** confidentialité. Dans ce cas, le segment est défini pour inclure uniquement les personnes qui ont opté pour l’exclusion (ce qui signifie qu’elles n’ont pas d’indicateur général d’exclusion sur leur profil. Pour ce faire, il faut déclarer que le &quot;Type d’exclusion&quot; est égal à &quot;Exclusion générale&quot; et que la &quot;Valeur d’exclusion&quot; est égale à &quot;Exclusion&quot;.
+This can be done using the user interface by adding **[!UICONTROL Privacy Opt-Outs]** attributes. Dans ce cas, le segment est défini pour inclure uniquement ceux qui ont opté pour (ce qui signifie qu’ils n’ont pas d’indicateur général d’exclusion sur leur profil. This is done by declaring that the &quot;[!UICONTROL Opt-Out Type]&quot; equals &quot;[!UICONTROL General Opt-Out]&quot; and the &quot;[!UICONTROL Opt-Out Value]&quot; equals &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-general-opt-out.png)
 
-### Exclusion de vente/partage
+### Opposition de vente/partage
 
-Si un indicateur d’exclusion de vente/partage est défini sur leur profil pour un utilisateur, ce profil ne doit plus être utilisé pour la création de segments ou les activités marketing. Pour s&#39;assurer que cet indicateur est respecté, le &quot;Type d&#39;exclusion&quot; doit être égal à &quot;Exclusion du partage des ventes&quot; et la &quot;Valeur d&#39;exclusion&quot; doit être égale à &quot;Exclusion&quot;.
+Si un utilisateur possède un indicateur Opposition de vente/partage sur son profil, ce profil ne doit plus être utilisé pour toute création de segments ou d’activités marketing. To ensure this flag is honored, the &quot;[!UICONTROL Opt-Out Type]&quot; must equal &quot;[!UICONTROL Sales Sharing Opt-Out]&quot; and the &quot;[!UICONTROL Opt-Out Value]&quot; must equal &quot;[!UICONTROL Opt-in]&quot;.
 
 ![](images/opt-outs/segment-sales-sharing-opt-out.png)
 
@@ -131,6 +129,6 @@ In some instances, such as building a segment of people who have opted out, it m
 
 ## Étapes suivantes
 
-Pour plus d’informations sur la segmentation, y compris l’utilisation de définitions et d’audiences de segment via l’API et l’interface utilisateur, veuillez commencer par lire la présentation [de la](./home.md)segmentation.
+Pour plus d’informations sur la segmentation et notamment sur la manière dont travailler avec les définitions de segment et les audiences dans l’API et l’interface utilisateur, veuillez commencer par lire la [présentation de la segmentation](./home.md).
 
-Pour en savoir plus sur la confidentialité des données au sein de Platform, y compris sur la façon dont Privacy Service aide à faciliter la conformité automatisée aux réglementations légales et organisationnelles en matière de confidentialité, consultez la documentation [](../privacy-service/home.md)Privacy Service.
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
