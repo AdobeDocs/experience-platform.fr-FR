@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 1c9b50f8f71e917b86c34b061df7e2da6fe475a2
+source-git-commit: f44e42a4faa3b10f147dbaf929048054ce0bec42
 workflow-type: tm+mt
-source-wordcount: '2766'
-ht-degree: 59%
+source-wordcount: '2750'
+ht-degree: 58%
 
 ---
 
 
-# [!UICONTROL Guide d’utilisation du créateur de segments]
+# [!DNL Segment Builder] guide de l&#39;utilisateur
 
 [!DNL Adobe Experience Platform Segmentation Service] fournit une API RESTful et une interface utilisateur pour créer des définitions de segment à partir de [!DNL Real-time Customer Profile] données.
 
@@ -41,9 +41,9 @@ Cliquez sur **[!UICONTROL Créer un segment]** dans le coin supérieur droit pou
 
 ![](../images/segment-builder/segment-browse.png)
 
-## [!UICONTROL Espace de travail du créateur de segments]
+## [!DNL Segment Builder] espace de travail
 
-[!UICONTROL Le créateur] de segments fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] les éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
+[!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] des éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
 ![](../images/segment-builder/segment-builder.png)
 
@@ -51,7 +51,7 @@ Cliquez sur **[!UICONTROL Créer un segment]** dans le coin supérieur droit pou
 
 Les blocs de création de base des définitions de segment sont les **[!UICONTROL Attributs]** et les **[!UICONTROL Événements]**. En outre, les attributs et les événements contenus dans les **[!UICONTROL Audiences]** existantes peuvent également être utilisés comme éléments de nouvelles définitions.
 
-Vous pouvez voir ces blocs de création dans la section *Champs* sur le côté gauche de l’espace de travail du créateur de segments.  Les *[!UICONTROL champs]* contiennent un onglet pour chacun des blocs de création principaux : **[!UICONTROL Attributs]**, **[!UICONTROL Événements]** et **[!UICONTROL Audiences]**.
+You can see these building blocks in the *[!UICONTROL Fields]* section on the left side of the [!DNL Segment Builder] workspace. Les *[!UICONTROL champs]* contiennent un onglet pour chacun des blocs de création principaux : **[!UICONTROL Attributs]**, **[!UICONTROL Événements]** et **[!UICONTROL Audiences]**.
 
 ![](../images/segment-builder/segment-fields.png)
 
@@ -95,7 +95,7 @@ You can also search for [!UICONTROL Audiences] using the search bar, which utili
 
 ## Canevas du créateur de règles {#rule-builder-canvas}
 
-Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide du *[!UICONTROL canevas du créateur de règles]*[!UICONTROL , situé au centre du créateur de segments].
+Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. These rules are created using the *[!UICONTROL rule builder canvas]*, located in the center of [!DNL Segment Builder].
 
 Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet *[!UICONTROL Champs]* et déposez-la sur le canevas du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
 
@@ -105,7 +105,7 @@ Pour ajouter une nouvelle règle à votre définition de segment, faites glisser
 
 Vous pouvez faire glisser une audience depuis l’onglet *[!UICONTROL Audience]* sur le canevas du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans la nouvelle règle de segmentation.
 
-For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les dernières modifications apportées à votre définition de segment avant de la convertir en logique de règle.
+For [!DNL Platform] audiences created using [!DNL Segment Builder], you are given the option to convert the audience into the set of rules that were used in the segment definition for that audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les dernières modifications apportées à votre définition de segment avant de la convertir en logique de règle.
 
 >[!NOTE]
 >
@@ -113,11 +113,11 @@ For [!DNL Platform] audiences created using [!UICONTROL Segment Builder], you ar
 
 ![](../images/segment-builder/add-audience-to-segment.png)
 
-Si des conflits surviennent lors de la conversion d’audiences en règles, le créateur [!UICONTROL de] segments tentera de préserver au mieux les options existantes.
+Si des conflits surviennent lors de la conversion d’audiences en règles, [!DNL Segment Builder] tentera de préserver les options existantes au mieux de ses capacités.
 
 ### vue de code
 
-Vous pouvez également vue une version basée sur un code d’une règle créée dans le créateur [!UICONTROL de]segments. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner vue **[!UICONTROL de]** code pour voir votre segment comme étant PQL.
+Vous pouvez également vue une version basée sur un code d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner vue **[!UICONTROL de]** code pour voir votre segment comme étant PQL.
 
 ![](../images/segment-builder/code-view.png)
 
