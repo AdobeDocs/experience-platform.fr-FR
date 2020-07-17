@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gouvernance des données d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 53225525feb1878aae58939338c1a94f98ec1607
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1342'
 ht-degree: 71%
 
 ---
@@ -85,15 +85,6 @@ Once data usage labels have been applied, data stewards can create policies usin
 >Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
 
 Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, voir l’aperçu [des](./policies/overview.md)stratégies.
-
-## Versions ultérieures
-
-[!DNL Data Governance] prend actuellement en charge l’étiquetage DULE à deux niveaux (jeu de données et champ). [!DNL Data Governance] prend également en charge la création et la gestion de stratégies d’utilisation des données et d’actions marketing via l’ [!DNL Policy Service] API DULE.
-
-Les versions à venir proposeront les fonctionnalités suivantes :
-
-* Application de stratégies : utilisez le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
-* Audit : surveillez les activités d’accès aux données et identifiez et signalez les problèmes de conformité.
 
 ## Étapes suivantes
 
