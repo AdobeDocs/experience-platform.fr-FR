@@ -1,30 +1,28 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guide du développeur d’API de segmentation
+title: Guide des points de terminaison de la recherche de segments
 topic: guide
 translation-type: tm+mt
-source-git-commit: f489e9f9dfc9c7e94f76a6825e7ca24c41ee8a66
+source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 2%
+source-wordcount: '1141'
+ht-degree: 47%
 
 ---
 
 
-# Recherche de segment
+# Guide des points de terminaison de la recherche de segments
 
-La recherche de segments permet de rechercher et d’indexer des champs configurables contenus dans diverses sources de données et de les renvoyer en temps quasi réel.
+La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel.
 
 Ce guide fournit des informations qui vous aideront à mieux comprendre la recherche de segments et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
 
 ## Prise en main
 
-Les points de terminaison API utilisés dans ce guide font partie de l’API de segmentation. Avant de continuer, consultez le guide [du développeur de](getting-started.md)segmentation.
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-En particulier, la section [Prise en main de la](getting-started.md) sectiondu guide du développeur de segmentation contient des liens vers des rubriques connexes, un guide de lecture des exemples d’appels d’API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à l’API de plateforme d’expérience.
-
-Outre les en-têtes requis décrits dans la section Prise en main, toutes les requêtes de l’API de recherche de segment nécessitent l’en-tête supplémentaire suivant :
+Outre les en-têtes requis décrits dans la section Prise en main, toutes les requêtes envoyées au point de terminaison Recherche de segment nécessitent l’en-tête supplémentaire suivant :
 
 - x-ups-search-version : &quot;1.0&quot;
 
@@ -42,7 +40,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Paramètres | Description |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHÉMA} représente la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n&#39;est spécifié, tous les enregistrements associés `schema.name` seront renvoyés. On trouvera une explication plus détaillée dans l&#39; [annexe](#appendix) du présent document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 
 **Requête**
 
@@ -59,7 +57,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les informations suivantes.
+Une réponse réussie renvoie un état HTTP 200 avec les informations suivantes.
 
 ```json
 {
@@ -103,7 +101,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHÉMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {ESPACE DE NOMMAGE} contient l&#39;espace de nommage dans lequel vous souhaitez effectuer une recherche. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n&#39;est spécifié, tous les enregistrements associés `schema.name` seront renvoyés. On trouvera une explication plus détaillée dans l&#39; [annexe](#appendix) du présent document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
 | `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche au dossier désigné, spécifié avec {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facultatif)* Où {LIMIT} représente le nombre de résultats de recherche à renvoyer. La valeur par défaut est 50. |
 | `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de page est début à **0**. |
@@ -223,11 +221,11 @@ Une réponse réussie renvoie l&#39;état HTTP 200 avec des informations structu
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment fonctionne la recherche de segments. Pour plus d’informations sur la segmentation, consultez la présentation [de la](../home.md)segmentation.
+Après avoir lu ce guide, vous comprenez mieux comment fonctionne la recherche de segments.
 
 ## Annexe {#appendix}
 
-Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou Platform, vous utiliseriez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
+Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou Platform, utilisez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Pour les meilleures pratiques, l’expression de recherche doit être encodée au format HTML, comme l’exemple ci-dessus.
 
@@ -252,16 +250,16 @@ Le tableau suivant liste les détails du fonctionnement des requêtes de recherc
 
 | Exemple d&#39;expression de recherche | Description |
 | ------------------------- | ----------- |
-| foo | Recherchez n&#39;importe quel mot. Cela renverra des résultats si le mot &quot;foo&quot; se trouve dans l’un des champs recherchés. |
-| foo AND bar | Recherche booléenne. Cela retournera des résultats si **** les mots &quot;foo&quot; et &quot;bar&quot; se trouvent dans l’un des champs recherchés. |
-| barre d’état OU | Recherche booléenne. Cela retournera des résultats si **** le mot &quot;foo&quot; ou le mot &quot;bar&quot; se trouvent dans l’un des champs disponibles pour la recherche. |
-| barre FOI NOT | Recherche booléenne. Cela retournera des résultats si le mot &quot;foo&quot; est trouvé mais que le mot &quot;bar&quot; ne se trouve dans aucun des champs recherchés. |
-| name: foo AND bar | Recherche booléenne. Cela retournera des résultats si **les deux** mots &quot;foo&quot; et &quot;bar&quot; se trouvent dans le champ &quot;name&quot;. |
-| run* | Recherche de caractères génériques. L’utilisation d’un astérisque (*) correspond à 0 caractère ou plus, ce qui signifie qu’il renvoie des résultats si le contenu de l’un des champs recherchés contient un mot qui début avec &quot;run&quot;. Par exemple, les résultats seront renvoyés si les mots &quot;run&quot;, &quot;running&quot;, &quot;runner&quot; ou &quot;runt&quot; apparaissent. |
-| cam ? | Recherche de caractères génériques. Utilisation d’un point d’interrogation (?) ne correspond qu’à un seul caractère, ce qui signifie qu’il renvoie des résultats si le contenu de l’un des champs recherchés est début avec &quot;cam&quot; et une lettre supplémentaire. Par exemple, les résultats seront renvoyés si les mots &quot;camp&quot; ou &quot;cams&quot; apparaissent, mais pas si les mots &quot;caméra&quot; ou &quot;feu de camp&quot; apparaissent. |
-| &quot;parapluie bleu&quot; | Recherche d&#39;expression. Cela retournera des résultats si le contenu de l&#39;un des champs recherchés contient l&#39;expression complète &quot;parapluie bleu&quot;. |
-| bleu\~ | Une recherche floue. Vous pouvez éventuellement placer un nombre compris entre 0 et 2 après le tilde (~) pour spécifier la distance de modification. Par exemple, &quot;blue\~1&quot; renvoie &quot;blue&quot;, &quot;blues&quot; ou &quot;colle&quot;. La recherche floue ne peut **être appliquée qu** &#39;aux termes, et non aux expressions. Cependant, vous pouvez ajouter des tildes à la fin de chaque mot d’une phrase. Par exemple, &quot;camping\~ à\~ l\~ été\~&quot; correspond à &quot;camping en été&quot;. |
-| &quot;aéroport de l&#39;hôtel&quot;\~5 | Recherche de proximité. Ce type de recherche permet de rechercher des termes proches les uns des autres dans un document. Par exemple, l&#39;expression `"hotel airport"~5` trouvera les termes &quot;hôtel&quot; et &quot;aéroport&quot; à moins de 5 mots l&#39;un de l&#39;autre dans un document. |
-| `/a[0-9]+b$/` | Recherche d’expressions régulière. Ce type de recherche trouve une correspondance basée sur le contenu entre les barres obliques &quot;/&quot;, comme indiqué dans la classe RegExp. Par exemple, pour rechercher des documents contenant &quot;motel&quot; ou &quot;hotel&quot;, spécifiez `/[mh]otel/`. Les recherches d’expressions régulières sont comparées à des mots simples. |
+| foo | Recherche de n’importe quel mot. Cela renverra des résultats si le mot « foo » se trouve dans l’un des champs pouvant faire l’objet d’une recherche. |
+| foo AND bar | Recherche booléenne. Cela renverra des résultats si les mots « foo » **et** « bar » se trouvent dans l’un des champs pouvant faire l’objet d’une recherche. |
+| foo OR bar | Recherche booléenne. Cela renverra des résultats si le mot « foo » **ou** le mot « bar » se trouve dans l’un des champs pouvant faire l’objet d’une recherche. |
+| foo NOT bar | Recherche booléenne. Cela renverra des résultats si le mot « foo » dans l’un des champs pouvant faire l’objet d’une recherche, mais que le mot « bar » ne se trouve dans aucun des champs pouvant faire l’objet d’une recherche. |
+| name: foo AND bar | Recherche booléenne. Cela renverra des résultats si les mots « foo » et « bar » se trouvent **tous les deux** dans le champ « name ». |
+| run* | Recherche par caractères génériques. L’utilisation d’un astérisque (*) correspond à 0 caractère ou plus, ce qui signifie que cela renverra des résultats si le contenu de l’un des champs pouvant faire l’objet d’une recherche contient un mot commençant par « run ». Par exemple, des résultats sont renvoyés si les mots « run », « running », « runner » ou « runt » apparaissent. |
+| cam? | Recherche par caractères génériques. Utilisation d’un point d’interrogation (?) Correspond à un seul caractère, ce qui signifie que cela renverra des résultats si le contenu de l’un des champs pouvant faire l’objet d’une recherche commence par « cam » et une lettre supplémentaire. Par exemple, cela pourra renvoyer « camp » ou « cams », mais pas « camera » ou « campfire ». |
+| &quot;blue umbrella&quot; | Recherche d’expression. Cela renverra des résultats si le contenu de l’un des champs pouvant faire l’objet d’une recherche contient l’expression complète « blue umbrella ». |
+| blue\~ | Recherche approximative. Vous pouvez éventuellement placer un nombre compris entre 0 et 2 après le signe tilde (~) pour spécifier la distance de modification. Par exemple, « blue\~1 » renvoie « blue », « blues » ou « glue ». La recherche approximative peut **uniquement** être appliquée aux termes, et non aux expressions. Vous pouvez toutefois ajouter des tildes à la fin de chaque mot d’une phrase. Par exemple, « camping\~ in\~ the\~ summer\~ » correspondrait à « camping in the summer ». |
+| &quot;hotel airport&quot;\~5 | Recherche de proximité. Ce type de recherche permet de rechercher des termes proches les uns des autres dans un document. Par exemple, l’expression `"hotel airport"~5` trouvera les termes « hotel » et « airport » à moins de 5 mots l’un de l’autre dans un document. |
+| `/a[0-9]+b$/` | Recherche avec expressions régulières. Ce type de recherche trouve une correspondance basée sur le contenu entre les barres obliques « / », comme indiqué dans la classe RegExp. Par exemple, pour rechercher des documents contenant « motel » ou « hotel », spécifiez `/[mh]otel/`. Les recherches avec expressions régulières sont comparées à des mots uniques. |
 
-Pour obtenir une documentation plus détaillée sur la syntaxe de la requête, veuillez lire la documentation [sur la syntaxe de la requête](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene.
+Pour obtenir une documentation plus détaillée sur la syntaxe des requêtes, veuillez lire la [documentation sur la syntaxe Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax).
