@@ -4,31 +4,31 @@ solution: Adobe Experience Platform
 title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: d1656635b6d082ce99f1df4e175d8dd69a63a43a
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 4%
+source-wordcount: '2035'
+ht-degree: 85%
 
 ---
 
 
 # Point de terminaison de la fusion de stratégies
 
-L&#39;Adobe Experience Platform vous permet de rassembler des données provenant de plusieurs sources et de les combiner afin de voir une vue complète de chacun de vos clients. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée. A l’aide des API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre entreprise. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
+Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le [guide d’utilisation des stratégies de fusion](../ui/merge-policies.md).
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas de la manière spécifique dont vous avez besoin. Toute API accédant aux données du Profil requiert une stratégie de fusion, bien qu’une stratégie par défaut soit utilisée si elle n’est pas explicitement fournie. Platform fournit une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour un schéma spécifique et la marquer comme la stratégie par défaut de votre organisation. Chaque organisation peut avoir plusieurs stratégies de fusion par schéma, mais chaque schéma ne peut avoir qu&#39;une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion par défaut est utilisé lorsque le nom du schéma est fourni et qu’une stratégie de fusion est requise mais pas fournie. Lorsque vous définissez une stratégie de fusion comme stratégie par défaut, toute stratégie de fusion existante précédemment définie comme stratégie par défaut sera automatiquement mise à jour afin de ne plus être utilisée comme stratégie par défaut.
+Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas comme vous en avez besoin. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] fournit une stratégie de fusion par défaut. Vous pouvez aussi créer une stratégie de fusion pour un schéma spécifique et la marquer comme stratégie par défaut pour votre organisation. Chaque organisation peut avoir plusieurs stratégies de fusion par schéma, mais chaque schéma de ne peut avoir qu’une seule stratégie de fusion par défaut. Toute stratégie de fusion définie comme stratégie par défaut sera utilisée lorsque le nom du schéma est fourni et qu’une stratégie de fusion est requise, mais pas fournie. Lorsque vous définissez une stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut cessera d’être utilisée par défaut.
 
-### Objet de stratégie de fusion complète
+### Objet de stratégie de fusion complet
 
-L’objet de stratégie de fusion complet représente un ensemble de préférences contrôlant les aspects des fragments de profil fusionnés.
+L’objet de stratégie de fusion complet est un ensemble de préférences contrôlant les aspects de la fusion de fragments de profil.
 
-**Fusionner l’objet de stratégie**
+**Objet de stratégie de fusion**
 
 ```json
     {
@@ -53,13 +53,13 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
 | Propriété | Description |
 |---|---|
 | `id` | Le système a généré un identifiant unique attribué au moment de la création. |
-| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les vues de liste. |
-| `imsOrgId` | ID d&#39;organisation auquel appartient cette stratégie de fusion |
-| `identityGraph` | [Objet de graphique](#identity-graph) d&#39;identité indiquant le graphique d&#39;identité à partir duquel les identités liées seront obtenues. Les fragments de Profil trouvés pour toutes les identités associées seront fusionnés. |
-| `attributeMerge` | [Objet de fusion](#attribute-merge) d’attributs indiquant la manière dont la stratégie de fusion attribuera la priorité aux valeurs d’attribut de profil en cas de conflit de données. |
-| `schema` | Objet [schéma](#schema) sur lequel la stratégie de fusion peut être utilisée. |
-| `default` | Valeur booléenne indiquant si cette stratégie de fusion est la stratégie par défaut du schéma spécifié. |
-| `version` | Platform a conservé la version de la stratégie de fusion. Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
+| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
+| `imsOrgId` | Identifiant d’organisation auquel appartient cette stratégie de fusion. |
+| `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
+| `attributeMerge` | Objet de [fusion d’attributs](#attribute-merge) indiquant la manière dont la stratégie de fusion établit la priorité des valeurs d’attributs dans le cas de conflits de données. |
+| `schema` | Objet du [schéma](#schema) sur lequel la stratégie de fusion peut être utilisée. |
+| `default` | Valeur booléenne indiquant si cette stratégie de fusion est la valeur par défaut du schéma spécifié. |
+| `version` | [!DNL Platform]Version de la stratégie de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
 | `updateEpoch` | Date de la dernière mise à jour de la stratégie de fusion. |
 
 **Exemple de stratégie de fusion**
@@ -84,11 +84,11 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
     }
 ```
 
-### Graphique d&#39;identité {#identity-graph}
+### Graphique d’identités {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d&#39;identité utilisés globalement et pour chaque organisation sur Experience Platform. L’ `identityGraph` attribut de la stratégie de fusion définit comment déterminer les identités associées pour un utilisateur.
+[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d&#39;identité utilisés dans le monde entier et pour chaque organisation [!DNL Experience Platform]. L’attribut `identityGraph` de la stratégie de fusion définit la manière de déterminer les identités associées pour un utilisateur.
 
-**identityGraph, objet**
+**Objet identityGraph**
 
 ```json
     "identityGraph": {
@@ -96,10 +96,10 @@ L’objet de stratégie de fusion complet représente un ensemble de préférenc
     }
 ```
 
-Où `{IDENTITY_GRAPH_TYPE}` se trouve l’une des situations suivantes :
+Où `{IDENTITY_GRAPH_TYPE}` peut prendre une de ces valeurs :
 
-* **&quot;none&quot; :** N&#39;effectuez aucune assemblage d&#39;identité.
-* **&quot;pdg&quot; :** Effectuez des assemblages d’identité en fonction de votre graphique d’identité privé.
+* **&quot;none&quot; :** ne réalise aucune combinaison d’identités.
+* **&quot;pdg&quot; :** effectue des combinaisons d’identités en se basant sur votre graphique d’identités privé.
 
 **Exemple`identityGraph`**
 
@@ -111,9 +111,9 @@ Où `{IDENTITY_GRAPH_TYPE}` se trouve l’une des situations suivantes :
 
 ### Fusion d’attributs {#attribute-merge}
 
-Un fragment de profil est l’information de profil d’une seule identité sur la liste des identités qui existent pour un utilisateur particulier. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit de valeurs pour les propriétés du profil et la priorité doit être spécifiée. Grâce à `attributeMerge`cette option, vous pouvez spécifier les valeurs de profil de jeux de données à classer par priorité dans le événement d’un conflit de fusion.
+Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d’identités utilisé génère plusieurs identités, il existe un risque de conflit de valeurs pour les propriétés de profil et un ordre de priorité doit être établi. Avec `attributeMerge`, vous pouvez spécifier à quel jeu de données de valeurs de profil donner la priorité dans le d’un conflit de fusion.
 
-**attributeMerge, objet**
+**Objet attributeMerge**
 
 ```json
     "attributeMerge": {
@@ -121,13 +121,13 @@ Un fragment de profil est l’information de profil d’une seule identité sur 
     }
 ```
 
-Où `{ATTRIBUTE_MERGE_TYPE}` se trouve l’une des situations suivantes :
+Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
-* **&quot;timestampOrdered&quot;**: (par défaut) Donner la priorité au profil mis à jour en dernier cas de conflit. Avec ce type de fusion, l’ `data` attribut n’est pas obligatoire.
-* **&quot;dataSetPrecedence&quot;** : Donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d&#39;un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’ `order` attribut est obligatoire, car il liste les jeux de données dans l’ordre de priorité.
-   * **&quot;order&quot;**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données non inclus dans la liste ne seront pas fusionnés. En d&#39;autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le `order` tableau liste les ID des jeux de données par ordre de priorité.
+* **&quot;timestampOrdered&quot;** : (valeur par défaut) donne la priorité au mis à jour en dernier en cas de conflit. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
+* **&quot;dataSetPrecedence&quot;** : donne la priorité aux fragments de profil en fonction de leur jeu de données d’origine. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
+   * **&quot;order&quot;** : lors de l’utilisation de &quot;dataSetPrecedence&quot;, un tableau `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
-**Exemple d’objet attributeMerge utilisant le type dataSetPrecedence**
+**Exemple : objet attributeMerge utilisant le type dataSetPrecedence**
 
 ```json
     "attributeMerge": {
@@ -141,7 +141,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` se trouve l’une des situations suivantes :
     }
 ```
 
-**Exemple d’objet attributeMerge utilisant le type timestampOrdered**
+**Exemple : objet attributeMerge utilisant le type timestampOrdered**
 
 ```json
     "attributeMerge": {
@@ -151,9 +151,9 @@ Où `{ATTRIBUTE_MERGE_TYPE}` se trouve l’une des situations suivantes :
 
 ### Schéma {#schema}
 
-L’objet schéma spécifie le schéma XDM pour lequel cette stratégie de fusion est créée.
+L’objet de schéma spécifie le schéma XDM pour lequel cette stratégie de fusion est créée.
 
-**`schema`objet **
+**`schema`Objet **
 
 ```json
     "schema": {
@@ -171,13 +171,13 @@ Où la valeur de `name` est le nom de la classe XDM sur laquelle repose le sché
     }
 ```
 
-## Stratégies de fusion d’accès {#access-merge-policies}
+## Accès aux stratégies de fusion {#access-merge-policies}
 
-Grâce à l’API Profil client en temps réel, le `/config/mergePolicies` point de terminaison vous permet d’effectuer une demande de recherche pour vue d’une stratégie de fusion spécifique à l’aide de son identifiant ou d’accéder à toutes les stratégies de fusion de votre organisation IMS, filtrées selon des critères spécifiques. Vous pouvez également utiliser le `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leur ID. Les étapes d&#39;exécution de chacun de ces appels sont décrites dans les sections suivantes.
+Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. Vous pouvez également utiliser le `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leur ID. Les étapes d&#39;exécution de chacun de ces appels sont décrites dans les sections suivantes.
 
-### Accès à une stratégie de fusion unique par ID
+### Accès à une stratégie de fusion unique par identifiant
 
-Vous pouvez accéder à une stratégie de fusion unique à l’aide de son identifiant en exécutant une requête GET sur le point de `/config/mergePolicies` terminaison et en incluant la stratégie `mergePolicyId` dans le chemin d’accès à la requête.
+Vous pouvez accéder à une stratégie de fusion unique à l’aide de son identifiant en exécutant une requête GET sur le point de terminaison `/config/mergePolicies` et en incluant le paramètre `mergePolicyId` dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -223,7 +223,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 }
 ```
 
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion au début de ce document pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion.
+Pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies) au début de ce document.
 
 ### Récupérer plusieurs stratégies de fusion à l’aide de leur ID
 
@@ -320,11 +320,11 @@ Une réponse réussie renvoie HTTP Status 207 (Multi-Status) et les détails des
 }
 ```
 
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion au début de ce document pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion.
+Pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies) au début de ce document.
 
-### Liste de plusieurs stratégies de fusion par critère
+### Répertorier plusieurs stratégies de fusion par critère
 
-Vous pouvez liste plusieurs stratégies de fusion au sein de votre organisation IMS en émettant une requête GET au point de `/config/mergePolicies` terminaison et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre récupérera toutes les stratégies de fusion disponibles pour votre entreprise.
+Vous pouvez répertorier plusieurs stratégies de fusion au sein de votre organisation IMS en envoyant une requête GET au point de terminaison `/config/mergePolicies` et en utilisant des paramètres de requête facultatifs pour filtrer, classer et paginer la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;). Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les stratégies de fusion disponibles pour votre organisation.
 
 **Format d’API**
 
@@ -334,21 +334,21 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 
 | Paramètre | Description |
 |---|---|
-| `default` | Valeur booléenne qui filtres les résultats selon que les stratégies de fusion sont ou non la valeur par défaut d&#39;une classe de schéma. |
-| `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. Valeur par défaut : 20 |
-| `orderBy` | Indique le champ par lequel classer les résultats comme dans `orderBy=name` ou `orderBy=+name` trier par nom dans l’ordre croissant ou `orderBy=-name`dans l’ordre décroissant. Si cette valeur est omise, le tri par défaut est effectué dans `name` l’ordre croissant. |
+| `default` | Valeur booléenne filtrant les résultats selon que les stratégies de fusion sont ou non la valeur par défaut d’une classe de schémas. |
+| `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. Valeur par défaut : 20 |
+| `orderBy` | Spécifie le champ de référence pour classer les résultats comme dans `orderBy=name` ou `orderBy=+name` pour un tri par nom dans l’ordre croissant ou `orderBy=-name` pour un tri dans l’ordre décroissant. Si vous omettez cette valeur, le tri par défaut de `name` s’effectue dans l’ordre croissant. |
 | `schema.name` | Nom du schéma pour lequel récupérer les stratégies de fusion disponibles. |
-| `identityGraph.type` | Filtres les résultats par type de graphique d&#39;identité. Les valeurs possibles sont &quot;none&quot; et &quot;pdg&quot; (graphique privé). |
-| `attributeMerge.type` | Filtres les résultats selon le type de fusion d&#39;attribut utilisé. Les valeurs possibles sont &quot;timestampOrdered&quot; et &quot;dataSetPrecedence&quot;. |
-| `start` | Décalage de page : spécifiez l&#39;ID de début pour les données à récupérer. Valeur par défaut : 0 |
+| `identityGraph.type` | Filtre les résultats par type de graphique d’identités. Les valeurs possibles sont &quot;none&quot; et &quot;pdg&quot; (graphique privé). |
+| `attributeMerge.type` | Filtre les résultats par type de fusion d’attributs utilisé. Les valeurs possibles sont &quot;timestampOrdered&quot; et &quot;dataSetPrecedence&quot;. |
+| `start` | Décalage de page : spécifiez l’identifiant de début pour les données à récupérer. Valeur par défaut : 0 |
 | `version` | Indiquez cette valeur si vous souhaitez utiliser une version spécifique de la stratégie de fusion. Par défaut, la dernière version sera utilisée. |
 
-Pour plus d&#39;informations sur `schema.name`, `identityGraph.type`et `attributeMerge.type`, consultez la section [composants des stratégies](#components-of-merge-policies) de fusion fournie plus haut dans ce guide.
+Pour plus d’informations sur `schema.name`, `identityGraph.type` et `attributeMerge.type`, référez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies) au début de ce document.
 
 
 **Requête**
 
-Les listes de requête suivantes fusionnent toutes les stratégies pour un schéma donné :
+La requête suivante répertorie toutes les stratégies de fusion pour un schéma donné :
 
 ```shell
 curl -X GET \
@@ -361,7 +361,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste paginée de stratégies de fusion qui répond aux critères spécifiés par les paramètres de requête envoyés dans la demande.
+Une réponse réussie renvoie une liste paginée de stratégies de fusion qui répond aux critères spécifiés par les paramètres envoyés dans la requête.
 
 ```json
 {
@@ -431,11 +431,11 @@ Une réponse réussie renvoie une liste paginée de stratégies de fusion qui r�
 
 | Propriété | Description |
 |---|---|
-| `_links.next.href` | Adresse URI de la page de résultats suivante. Utilisez cet URI comme paramètre de requête pour un autre appel d’API vers le même point de terminaison pour vue de la page. S’il n’existe pas de page suivante, cette valeur sera une chaîne vide. |
+| `_links.next.href` | Adresse URI de la page de résultats suivante. Utilisez cet URI comme paramètre de requête pour un autre appel API vers le même point de terminaison pour afficher la page. S’il n’y a pas de page suivante, cette valeur est une chaîne vide. |
 
 ## Création d’une stratégie de fusion
 
-Vous pouvez créer une nouvelle stratégie de fusion pour votre organisation en envoyant une requête POST au point de `/config/mergePolicies` terminaison.
+Vous pouvez créer une stratégie de fusion pour votre organisation en exécutant une requête POST sur le point de terminaison `/config/mergePolicies`.
 
 **Format d’API**
 
@@ -443,7 +443,8 @@ Vous pouvez créer une nouvelle stratégie de fusion pour votre organisation en 
 POST /config/mergePolicies
 ```
 
-**Requête** La requête suivante crée une nouvelle stratégie de fusion, qui est configurée par les valeurs d’attribut fournies dans la charge utile :
+**Requête**
+La requête suivante crée une nouvelle stratégie de fusion, configurée par les valeurs d’attribut fournies dans le payload :
 
 ```shell
 curl -X POST \
@@ -474,17 +475,17 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les vues de liste. |
-| `identityGraph.type` | Type de graphique d&#39;identité à partir duquel obtenir les identités associées à fusionner. Valeurs possibles : &quot;none&quot; ou &quot;pdg&quot; (graphique privé). |
+| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
+| `identityGraph.type` | Type de graphique d’identités à partir duquel obtenir les identités connexes à fusionner. Valeurs possibles : &quot;none&quot; ou &quot;pdg&quot; (graphique privé). |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la stratégie de fusion. |
-| `default` | Indique si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
+| `default` | Spécifie si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
 
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion pour plus d’informations.
+Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la nouvelle stratégie de fusion créée.
+Une réponse réussie renvoie les détails de la stratégie de fusion créée.
 
 ```json
 {
@@ -516,15 +517,15 @@ Une réponse réussie renvoie les détails de la nouvelle stratégie de fusion c
 }
 ```
 
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion au début de ce document pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion.
+Pour en savoir plus sur chacun des éléments qui constituent une stratégie de fusion, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies) au début de ce document.
 
-## Mettre à jour une stratégie de fusion {#update}
+## Mise à jour d’une stratégie de fusion {#update}
 
-Vous pouvez modifier une stratégie de fusion existante en modifiant des attributs individuels (PATCH) ou en remplaçant la stratégie de fusion complète par de nouveaux attributs (PUT). Les exemples de chacun sont présentés ci-dessous.
+Vous pouvez modifier une stratégie de fusion existante en changeant les attributs individuels (PATCH) ou en remplaçant la stratégie de fusion complète par de nouveaux attributs (PUT). Vous en trouverez des exemples ci-dessous.
 
-### Modifier des champs de stratégie de fusion individuels
+### Modification des champs de stratégie de fusion individuels
 
-Vous pouvez modifier des champs individuels pour une stratégie de fusion en adressant une requête PATCH au point de `/config/mergePolicies/{mergePolicyId}` terminaison :
+Vous pouvez modifier des champs individuels pour une stratégie de fusion en exécutant une requête PATCH au point de terminaison `/config/mergePolicies/{mergePolicyId}` :
 
 **Format d’API**
 
@@ -538,7 +539,7 @@ PATCH /config/mergePolicies/{mergePolicyId}
 
 **Requête**
 
-La requête suivante met à jour une stratégie de fusion spécifiée en remplaçant la valeur de sa `default` propriété par `true`:
+La requête suivante met à jour une stratégie de fusion spécifiée en définissant la valeur de sa propriété `default` sur `true` :
 
 ```shell
 curl -X PATCH \
@@ -557,104 +558,11 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `op` | Indique l’opération à effectuer. Des exemples d’autres opérations PATCH se trouvent dans la documentation du correctif [JSON.](http://jsonpatch.com) |
-| `path` | Chemin d’accès du champ à mettre à jour. Les valeurs acceptées sont les suivantes : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot; |
-| `value` | Valeur à laquelle le champ spécifié doit être défini. |
+| `op` | Spécifie l’opération à effectuer. Vous trouverez des exemples d’autres opérations PATCH dans la documentation [JSON Patch](http://jsonpatch.com). |
+| `path` | Chemin du champ à mettre à jour. Les valeurs acceptées sont les suivantes : &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;. |
+| `value` | Valeur sur laquelle le champ spécifié doit être défini. |
 
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion pour plus d’informations.
-
-
-**Réponse**
-
-Une réponse réussie renvoie les détails de la nouvelle stratégie de fusion mise à jour.
-
-```json
-{
-    "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
-    "name": "Loyalty members ordered by ID",
-    "imsOrgId": "{IMS_ORG}",
-    "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "version": 1,
-    "identityGraph": {
-        "type": "none"
-    },
-    "attributeMerge": {
-        "type": "dataSetPrecedence",
-        "order": [
-            "5b76f86b85d0e00000be5c8b",
-            "5b76f8d787a6af01e2ceda18"
-        ]
-    },
-    "default": true,
-    "updateEpoch": 1551898378
-}
-```
-
-### Remplacer une stratégie de fusion
-
-Une autre manière de modifier une stratégie de fusion consiste à utiliser une requête PUT, qui remplace la stratégie de fusion complète.
-
-**Format d’API**
-
-```http
-PUT /config/mergePolicies/{mergePolicyId}
-```
-
-| Paramètre | Description |
-|---|---|
-| `{mergePolicyId}` | Identifiant de la stratégie de fusion à remplacer. |
-
-**Requête**
-
-La requête suivante remplace la stratégie de fusion spécifiée, en remplaçant ses valeurs d’attribut par celles fournies dans la charge utile. Puisque cette requête remplace complètement une stratégie de fusion existante, vous devez fournir tous les champs requis lors de la définition initiale de la stratégie de fusion. Cependant, cette fois, vous fournissez des valeurs mises à jour pour les champs que vous souhaitez modifier.
-
-```shell
-curl -X PUT \
-  https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "name": "Loyalty members ordered by ID",
-        "imsOrgId": "{IMS_ORG}",
-        "schema": {
-            "name": "_xdm.context.profile"
-        },
-        "version": 1,
-        "identityGraph": {
-            "type": "none"
-        },
-        "attributeMerge": {
-            "type": "dataSetPrecedence",
-            "order": [
-                "5b76f86b85d0e00000be5c8b",
-                "5b76f8d787a6af01e2ceda18"
-            ]
-        },
-        "default": true,
-        "updateEpoch": 1551898378
-    }'
-```
-
-| Propriété | Description |
-|---|---|
-| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les vues de liste. |
-| `identityGraph` | Graphique d&#39;identité à partir duquel obtenir les identités associées à fusionner. |
-| `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
-| `schema` | Classe de schéma XDM associée à la stratégie de fusion. |
-| `default` | Indique si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
-
-Consultez la section [composants des stratégies](#components-of-merge-policies) de fusion pour plus d’informations.
+Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
 
 
 **Réponse**
@@ -691,9 +599,102 @@ Une réponse réussie renvoie les détails de la stratégie de fusion mise à jo
 }
 ```
 
-## Supprimer une stratégie de fusion
+### Remplacement d’une stratégie de fusion
 
-Vous pouvez supprimer une stratégie de fusion en adressant une requête de DELETE au point de `/config/mergePolicies` terminaison et en incluant l’ID de la stratégie de fusion que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Une façon de modifier une stratégie de fusion consiste à utiliser une requête PUT, qui remplace entièrement la stratégie de fusion.
+
+**Format d’API**
+
+```http
+PUT /config/mergePolicies/{mergePolicyId}
+```
+
+| Paramètre | Description |
+|---|---|
+| `{mergePolicyId}` | Identifiant de la stratégie de fusion à remplacer. |
+
+**Requête**
+
+La requête suivante remplace la stratégie de fusion spécifiée, en changeant ses valeurs d’attribut par celles fournies dans le payload. Puisque cette requête remplace complètement une stratégie de fusion existante, vous devez fournir tous les champs requis lors de la définition initiale de la stratégie de fusion. Toutefois, cette fois, vous fournissez des valeurs mises à jour pour les champs que vous souhaitez modifier.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/core/ups/config/mergePolicies/e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "name": "Loyalty members ordered by ID",
+        "imsOrgId": "{IMS_ORG}",
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "version": 1,
+        "identityGraph": {
+            "type": "none"
+        },
+        "attributeMerge": {
+            "type": "dataSetPrecedence",
+            "order": [
+                "5b76f86b85d0e00000be5c8b",
+                "5b76f8d787a6af01e2ceda18"
+            ]
+        },
+        "default": true,
+        "updateEpoch": 1551898378
+    }'
+```
+
+| Propriété | Description |
+|---|---|
+| `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
+| `identityGraph` | Graphique d’identités à partir duquel obtenir les identités connexes à fusionner. |
+| `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
+| `schema` | Classe de schéma XDM associée à la stratégie de fusion. |
+| `default` | Spécifie si cette stratégie de fusion est la stratégie par défaut pour le schéma. |
+
+Pour plus d’informations, reportez-vous à la section [Composants des stratégies de fusion](#components-of-merge-policies).
+
+
+**Réponse**
+
+Une réponse réussie renvoie les détails de la stratégie de fusion mise à jour.
+
+```json
+{
+    "id": "e5bc94de-cd14-4cdf-a2bc-88b6e8cbfac2",
+    "name": "Loyalty members ordered by ID",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "version": 1,
+    "identityGraph": {
+        "type": "none"
+    },
+    "attributeMerge": {
+        "type": "dataSetPrecedence",
+        "order": [
+            "5b76f86b85d0e00000be5c8b",
+            "5b76f8d787a6af01e2ceda18"
+        ]
+    },
+    "default": true,
+    "updateEpoch": 1551898378
+}
+```
+
+## Suppression d’une stratégie de fusion
+
+Vous pouvez supprimer une stratégie de fusion en exécutant une requête DELETE au point de terminaison `/config/mergePolicies` et en incluant l’identifiant de la stratégie de fusion que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -720,11 +721,11 @@ curl -X DELETE \
 
 **Réponse**
 
-Une requête de suppression réussie renvoie HTTP Status 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez exécuter une requête GET pour vue à la stratégie de fusion à l’aide de son identifiant. Si la stratégie de fusion a été supprimée, vous recevrez une erreur HTTP Status 404 (Not Trouvé).
+Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps de réponse vide. Pour confirmer que la suppression a réussi, vous pouvez exécuter une requête GET pour afficher la stratégie de fusion à l’aide de son identifiant. Si la stratégie de fusion a été supprimée, vous recevrez un état HTTP 404 (Introuvable).
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation IMS, vous pouvez les utiliser pour créer des segments d’audience à partir de vos données de Profil client en temps réel. Consultez la documentation [du Service de segmentation des](../../segmentation/home.md) Adobes Experience Platform pour commencer à définir et à utiliser des segments.
+Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
 
 
 
