@@ -4,50 +4,46 @@ solution: Experience Platform
 title: Tâches de segmentation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 21%
+source-wordcount: '994'
+ht-degree: 38%
 
 ---
 
 
-# Guide du développeur de tâches de segmentation
+# Guide du point de terminaison des tâches de segment
 
-Une tâche de segment est un processus asynchrone qui crée un segment d’audience. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont le Profil client en temps réel fusionne des attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
 
-Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
+Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de l’API Segmentation. Avant de poursuivre, consultez le [guide de développement de la segmentation](./getting-started.md).
+The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 
-La [section de prise en main](./getting-started.md#getting-started) du guide de développement de la segmentation inclut notamment des liens vers des sujets associés, un guide de lecture d’exemples d’appels API dans le document et des informations importantes sur les en-têtes requis pour réussir les appels destinés à une API Experience Platform.
+## Obtention d’une liste de tâches de segmentation {#retrieve-list}
 
-## Récupération d’une liste de travaux de segment
-
-You can retrieve a list of all segment jobs for your IMS Organization by making a GET request to the `/segment/jobs` endpoint.
+Vous pouvez récupérer une liste de toutes les tâches de segmentation pour votre organisation IMS en exécutant une requête GET sur le point de terminaison `/segment/jobs`.
 
 **Format d’API**
+
+Le `/segment/jobs` point de terminaison prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /segment/jobs
 GET /segment/jobs?{QUERY_PARAMETERS}
 ```
 
-- `{QUERY_PARAMETERS}` : (*facultatif*) paramètres ajoutés au chemin de requête configurant les résultats renvoyés dans la réponse. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`). Les paramètres disponibles sont répertoriés ci-dessous.
-
 **Paramètres de requête**
 
-Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les tâches de segments. Tous ces paramètres sont facultatifs. Un appel à ce point de terminaison sans paramètre récupérera toutes les tâches de segment disponibles pour votre organisation.
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `start` | Spécifie le décalage de début pour les tâches de segment renvoyées. |
-| `limit` | Indique le nombre de tâches de segmentation renvoyées par page. |
-| `status` | Filtres les résultats en fonction de l’état. Les valeurs prises en charge sont NEW, QUEUED, TRAITEMENT, SUCCÈS, FAILED, ANNULATION, ANNULATION |
-| `sort` | Commande les tâches de segment renvoyées. Est écrit au format `[attributeName]:[desc|asc]`. |
-| `property` | Filtres les tâches de segmentation et obtient des correspondances exactes pour le filtre donné. Il peut être écrit dans l’un des formats suivants : <ul><li>`[jsonObjectPath]==[value]` - filtrage sur la clé d&#39;objet</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrage dans la baie</li></ul> |
+| Paramètre | Description | Exemple |
+| --------- | ----------- | ------- |
+| `start` | Spécifie le décalage de départ pour les tâches de segmentation renvoyées. | `start=1` |
+| `limit` | Spécifie le nombre de tâches de segmentation renvoyées par page. | `limit=20` |
+| `status` | Filtre les résultats selon l’état. Les valeurs prises en charge sont : NEW (nouveau), QUEUED (file d’attente), PROCESSING (traitement en cours), SUCCEEDED (réussite), FAILED (échec), CANCELLING (annulation en cours), CANCELLED (annulé). | `status=NEW` |
+| `sort` | Commande les tâches de segmentation renvoyées. Codé au format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `property` | Filtre les tâches de segmentation et obtient des correspondances exactes pour le filtre donné. Peut être codé dans l’un des formats suivants : <ul><li>`[jsonObjectPath]==[value]` : filtrage sur la clé d’objet</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` : filtrage dans le tableau</li></ul> | `property=segments~segmentId==workInUS` |
 
 **Requête**
 
@@ -61,11 +57,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une liste de travaux de segment pour l’organisation IMS spécifiée en tant que JSON. La réponse suivante renvoie une liste de toutes les tâches de segmentation réussies pour l&#39;organisation IMS.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation IMS spécifiée comme JSON. La réponse suivante renvoie une liste de toutes les tâches de segmentation réussies pour l’organisation IMS.
 
 >[!NOTE]
 >
->La réponse suivante a été tronquée pour l’espace et n’affichera que la première tâche renvoyée.
+>La réponse suivante a été tronquée pour l’espace et affiche uniquement la première tâche renvoyée.
 
 ```json
 {
@@ -157,9 +153,18 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste de travaux de se
 }
 ```
 
-## Créer une tâche de segment
+| Propriété | Description |
+| -------- | ----------- |
+| `id` | Identifiant généré par le système en lecture seule pour la tâche de segment. |
+| `status` | Statut actuel de la tâche de segment. Les valeurs potentielles de l’état sont &quot;NOUVEAU&quot;, &quot;TRAITEMENT&quot;, &quot;ANNULATION&quot;, &quot;ANNULÉ&quot;, &quot;ÉCHEC&quot; et &quot;SUCCÈS&quot;. |
+| `segments` | Objet contenant des informations sur les définitions de segment renvoyées dans la tâche de segment. |
+| `segments.segment.id` | ID de la définition de segment. |
+| `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrit dans PQL. |
+| `metrics` | Objet contenant des informations de diagnostic sur la tâche de segment. |
 
-You can create a new segment job by making a POST request to the `/segment/jobs` endpoint.
+## Création d’une tâche de segmentation {#create}
+
+Vous pouvez créer une tâche de segment en adressant une requête POST au point de `/segment/jobs` terminaison et en incluant dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
 
 **Format d’API**
 
@@ -181,13 +186,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
   {
     "segmentId": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
   }
-]
- '
+]'
 ```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `segmentId` | ID de la définition de segment pour laquelle vous souhaitez créer une tâche de segment. Vous trouverez plus d’informations sur les définitions de segment dans le guide [des points de terminaison de la définition de](./segment-definitions.md)segment. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche de segment que vous venez de créer.
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche de segmentation que vous venez de créer.
 
 ```json
 {
@@ -240,9 +248,17 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails de la tâche 
 }
 ```
 
-## Récupération d’une tâche de segment spécifique
+| Propriété | Description |
+| -------- | ----------- |
+| `id` | Identificateur en lecture seule généré par le système pour la tâche de segment nouvellement créée. |
+| `status` | Statut actuel de la tâche de segment. La tâche de segment venant d’être créée, l’état sera toujours &quot;NOUVEAU&quot;. |
+| `segments` | Objet contenant des informations sur les définitions de segment pour lesquelles ce travail de segment est en cours d’exécution. |
+| `segments.segment.id` | ID de la définition de segment que vous avez fournie. |
+| `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrit dans PQL. |
 
-You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the segment job&#39;s `id` value in the request path.
+## Récupération d’une tâche de segmentation spécifique {#get}
+
+You can retrieve detailed information about a specific segment job by making a GET request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to retrieve in the request path.
 
 **Format d’API**
 
@@ -252,7 +268,7 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to retrieve. |
+| `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segmentation que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -266,7 +282,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur la tâche de segment spécifiée.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.
 
 ```json
 {
@@ -328,9 +344,18 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-## Récupération en masse des tâches de segment
+| Propriété | Description |
+| -------- | ----------- |
+| `id` | Identifiant généré par le système en lecture seule pour la tâche de segment. |
+| `status` | Statut actuel de la tâche de segment. Les valeurs potentielles de l’état sont &quot;NOUVEAU&quot;, &quot;TRAITEMENT&quot;, &quot;ANNULATION&quot;, &quot;ANNULÉ&quot;, &quot;ÉCHEC&quot; et &quot;SUCCÈS&quot;. |
+| `segments` | Objet contenant des informations sur les définitions de segment renvoyées dans la tâche de segment. |
+| `segments.segment.id` | ID de la définition de segment. |
+| `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrit dans PQL. |
+| `metrics` | Objet contenant des informations de diagnostic sur la tâche de segment. |
 
-Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segment spécifiées en envoyant une requête POST au point de `/segment/jobs/bulk-get` terminaison et en fournissant les `id` valeurs des tâches de segment dans le corps de la requête.
+## Récupération en masse des tâches de segment {#bulk-get}
+
+Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segment en envoyant une requête POST au point de `/segment/jobs/bulk-get` terminaison et en fournissant les `id` valeurs des tâches de segment dans le corps de la requête.
 
 **Format d’API**
 
@@ -426,9 +451,21 @@ Une réponse réussie renvoie l’état HTTP 207 avec les tâches de segment dem
 }
 ```
 
-## Annuler ou supprimer une tâche de segment spécifique
+| Propriété | Description |
+| -------- | ----------- |
+| `id` | Identifiant généré par le système en lecture seule pour la tâche de segment. |
+| `status` | Statut actuel de la tâche de segment. Les valeurs potentielles de l’état sont &quot;NOUVEAU&quot;, &quot;TRAITEMENT&quot;, &quot;ANNULATION&quot;, &quot;ANNULÉ&quot;, &quot;ÉCHEC&quot; et &quot;SUCCÈS&quot;. |
+| `segments` | Objet contenant des informations sur les définitions de segment renvoyées dans la tâche de segment. |
+| `segments.segment.id` | ID de la définition de segment. |
+| `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrit dans PQL. |
 
-You can request to delete a specified segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the segment job&#39;s `id` value in the request path.
+## Annulation ou suppression d’une tâche de segmentation spécifique {#delete}
+
+You can delete a specific segment job by making a DELETE request to the `/segment/jobs` endpoint and providing the ID of the segment job you wish to delete in the request path.
+
+>[!NOTE]
+>
+>La réponse de l’API à la demande de suppression est immédiate. Cependant, la suppression réelle de la tâche de segment est asynchrone. En d’autres termes, il existe une différence de temps entre le moment où la demande de suppression est effectuée pour la tâche de segment et celui où elle est appliquée.
 
 **Format d’API**
 
@@ -438,7 +475,7 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 | Propriété | Description |
 | -------- | ----------- | 
-| `{SEGMENT_JOB_ID}` | The `id` value of the segment job you want to delete. |
+| `{SEGMENT_JOB_ID}` | Valeur `id` de la tâche de segmentation que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -452,7 +489,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 204 avec les informations suivantes.
+Une réponse réussie renvoie un état HTTP 204 avec les informations suivantes.
 
 ```json
 {
@@ -463,4 +500,4 @@ Une réponse réussie renvoie l’état HTTP 204 avec les informations suivantes
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les tâches de segmentation. Pour plus d’informations sur la segmentation, consultez la [présentation de Segmentation Service](../home.md).
+Après avoir lu ce guide, vous comprenez mieux le fonctionnement des tâches de segmentation.
