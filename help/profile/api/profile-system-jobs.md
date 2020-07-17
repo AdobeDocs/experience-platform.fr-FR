@@ -4,24 +4,24 @@ solution: Adobe Experience Platform
 title: Tâches du système de Profil - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: c0b059d6654a98b74be5bc6a55f360c4dc2f216b
+source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 78%
+source-wordcount: '1420'
+ht-degree: 66%
 
 ---
 
 
 # Point de terminaison des tâches du système de Profil (supprimer des requêtes)
 
-Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans Platform sont stockées dans le lac de données, ainsi que dans la banque de données de Real-time Customer Profile. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, il est nécessaire d’utiliser l’API Real-time Customer Profile afin de créer une tâche de système Profile, également appelée « requête de suppression », qui peut également être modifiée, surveillée ou supprimée si nécessaire.
+Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
->Si vous essayez de supprimer des jeux de données ou des lots du lac de données, veuillez consulter les instructions dans la [présentation du service de catalogue](../../catalog/home.md).
+>If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Affichage des requêtes de suppression
 
@@ -103,10 +103,10 @@ L’exécution d’une nouvelle requête de suppression se fait par le biais d�
 
 ### Suppression d’un jeu de données
 
-Pour supprimer un jeu de données, l’identifiant du jeu de données doit être inclus dans le corps de la requête POST. Cette action supprimera TOUTES les données d’un jeu de données. Experience Platform vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
+Pour supprimer un jeu de données, l’identifiant du jeu de données doit être inclus dans le corps de la requête POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
 
 >[!CAUTION]
-> Lorsque vous tentez de supprimer un jeu de données activé pour Profile à l’aide de l’interface utilisateur d’Experience Platform, le jeu de données est désactivé pour l’ingestion, mais il ne sera pas supprimé tant qu’une requête de suppression n’aura pas été créée à l’aide de l’API. Pour plus d’informations, reportez-vous à l’[annexe](#appendix) du présent document.
+> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. Pour plus d’informations, reportez-vous à l’[annexe](#appendix) du présent document.
 
 **Format d’API**
 
@@ -161,7 +161,7 @@ Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de
 >[!NOTE]
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l&#39;impact des lots erronés pour les jeux de données basés sur des schémas d&#39;enregistrement consiste à réassimiler le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
-Pour plus d’informations sur le comportement des enregistrements et des séries temporelles, consultez la [section sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans la présentation du système XDM.
+For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
 
 **Format d’API**
 
@@ -277,7 +277,7 @@ Once the delete request status is `"COMPLETED"` you can confirm that the data ha
 
 ## Suppression d’une requête de suppression
 
-Experience Platform vous permet de supprimer une requête, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou est restée bloquée en cours de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point de terminaison `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
+[!DNL Experience Platform] vous permet de supprimer une requête, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou est restée bloquée en cours de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point de terminaison `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
 
 **Format d’API**
 
@@ -306,19 +306,19 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les étapes de suppression des jeux de données et des lots du magasin de Profils dans l’Experience Platform, vous pouvez supprimer en toute sécurité les données qui ont été ajoutées par erreur ou dont votre organisation n’a plus besoin. N’oubliez pas qu’une requête de suppression ne peut pas être annulée. Vous devez donc supprimer uniquement les données dont vous êtes sûr que vous n’avez pas besoin et dont vous n’aurez plus jamais besoin.
+Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. N’oubliez pas qu’une requête de suppression ne peut pas être annulée. Vous devez donc supprimer uniquement les données dont vous êtes sûr que vous n’avez pas besoin et dont vous n’aurez plus jamais besoin.
 
 ## Annexe {#appendix}
 
-Les informations suivantes complètent le fait de supprimer un jeu de données de la banque de données Profile.
+The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
 
-### Suppression d’un jeu de données à l’aide de l’interface utilisateur Experience Platform
+### Deleting a dataset using the [!DNL Experience Platform] UI
 
-Lors de l’utilisation de l’interface utilisateur Experience Platform pour supprimer un jeu de données activé pour Profile, une boîte de dialogue s’ouvre. Vous êtes invité à supprimer ce jeu de données du lac des données d’Experience Platform. Utilisez l’API des tâches de système de profils pour supprimer ce jeu de données du service Profile.
+When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, &quot;Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? Utilisez l&#39;API &quot;p[!DNL rofile systems jobs]&quot; pour supprimer ce jeu de données du [!DNL Profile Service].&quot;
 
-Le fait de cliquer sur **Supprimer** dans l’interface utilisateur désactive le jeu de données à des fins d’ingestion, mais NE supprime PAS automatiquement le jeu de données dans le serveur principal. Pour supprimer définitivement le jeu de données, une requête de suppression doit être créée manuellement en suivant les étapes décrites dans ce guide pour [créer une requête de suppression](#create-a-delete-request).
+Le fait de cliquer sur **[!UICONTROL Supprimer]** dans l’interface utilisateur désactive le jeu de données à des fins d’ingestion, mais NE supprime PAS automatiquement le jeu de données dans le serveur principal. Pour supprimer définitivement le jeu de données, une requête de suppression doit être créée manuellement en suivant les étapes décrites dans ce guide pour [créer une requête de suppression](#create-a-delete-request).
 
-L’illustration suivante montre l’avertissement reçu lors d’une tentative de suppression d’un jeu de données activé par Profile à l’aide de l’interface utilisateur.
+The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
 
 ![](../images/delete-profile-dataset.png)
 
