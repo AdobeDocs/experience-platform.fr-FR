@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
 solution: Adobe Experience Platform
-title: Guide des points de terminaison de la recherche de segments
+title: Point de terminaison de la recherche de segments
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1139'
 ht-degree: 47%
 
 ---
 
 
-# Guide des points de terminaison de la recherche de segments
+# Point de terminaison de la recherche de segments
 
 La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel.
 
