@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de point de terminaison des tâches d’exportation
+title: Exporter le point de terminaison des tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3e39333207ef6c94b6d792be33a4605f185ff5ab
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1469'
-ht-degree: 39%
+source-wordcount: '1497'
+ht-degree: 38%
 
 ---
 
 
-# Guide de point de terminaison des tâches d’exportation
+# Exporter le point de terminaison des tâches
 
 Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le `/export/jobs` point de terminaison dans l’API de segmentation des Adobes Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
+
+>[!NOTE]
+>
+>Ce guide porte sur l&#39;utilisation des tâches d&#39;exportation dans le [!DNL Segmentation API]secteur. Pour plus d’informations sur la gestion des tâches d’exportation pour [!DNL Real-time Customer Profile] les données, voir le guide sur les tâches d’ [exportation dans l’API de Profil.](../../profile/api/export-jobs.md)
 
 ## Prise en main
 
