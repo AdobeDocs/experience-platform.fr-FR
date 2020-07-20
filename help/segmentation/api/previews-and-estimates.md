@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide des Prévisualisations et des points de terminaison des estimations
+title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '750'
 ht-degree: 28%
 
 ---
 
 
-# Guide des Prévisualisations et des points de terminaison des estimations
+# Prévisualisations et estimations des points de terminaison
 
 As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.** **Les estimations** fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur.
 
