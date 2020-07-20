@@ -4,19 +4,19 @@ seo-title: Variables mappées automatiquement dans Analytics avec le SDK Web d�
 description: Découvrez quelles variables sont automatiquement mappées dans Analytics avec le SDK Web d’Adobe Experience Platform
 seo-description: Découvrez quelles variables sont automatiquement mappées dans Analytics avec le SDK Web d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: a7c8830c5c8152b1f21373a506b2fff97d43c40a
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 58%
+source-wordcount: '543'
+ht-degree: 55%
 
 ---
 
 
-# Variables mappées automatiquement dans Analytics
+# Variables mappées automatiquement dans [!DNL Analytics]
 
-Vous trouverez ci-dessous une liste de variables que le réseau Edge d’Adobe Experience Platform mappe automatiquement dans Analytics.
+Below is a list of variables that the Adobe Experience Platform [!DNL Edge Network] automatically maps into [!DNL Analytics].
 
-| Chemin d’accès au champ XDM | Chaîne de requête Analytics / En-tête HTTP | Description |
+| Chemin d’accès au champ XDM | [!DNL Analytics Query String] / En-tête HTTP | Description |
 | ---------- | ------------------------- | -------- |
 | `commerce.order.purchaseID` | `pi` | Mappage du paramètre de requête PURCHASEID AppMeasurement. |
 | `commerce.order.currencyCode` | `cc` | Mappage du paramètre de requête CURRENCY AppMeasurement. |
