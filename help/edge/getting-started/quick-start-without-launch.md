@@ -4,25 +4,25 @@ seo-title: 'début rapide du SDK Web Adobe Experience Platform '
 description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: 9b8bddf39301cdc39bfa5370ef98d99434fc64f8
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 15%
+source-wordcount: '515'
+ht-degree: 11%
 
 ---
 
 
 # Bienvenue
 
-Ce guide vous guide tout au long des différentes manières de configurer le SDK Adobe Experience Platform Web. Pour pouvoir utiliser cette fonctionnalité, vous devez être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
+Ce guide vous guide dans les différentes manières de configurer l&#39;Adobe Experience Platform [!DNL Web SDK]. Pour pouvoir utiliser cette fonctionnalité, vous devez être sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
 
-- Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME mais vous en avez besoin avant de passer en production
-- Avoir le droit d&#39;Adobe Experience Platform Data Platform.  Si vous n’avez pas acheté Platform, nous vous fournirons la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
+- Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. If you already have a CNAME for [!DNL Analytics], you should use that one. Les tests en cours de développement fonctionnent sans CNAME mais vous en avez besoin avant de passer en production
+- Be entitled to Adobe Experience Platform [!DNL Data Platform].  Si vous n’avez pas acheté Platform, nous vous fournirons un service [!DNL Experience Platform Data Services Foundation] d’utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur
 
 ## Création d’un ID de configuration
 
-Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) Edge dans Adobe Launch, même si vous n’utilisez pas les fonctionnalités de gestion des balises. Cela vous permet de permettre au réseau Edge d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
+Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) Edge dans Adobe Launch, même si vous n’utilisez pas les fonctionnalités de gestion des balises. Cela vous permet de permettre à la [!DNL Edge Network] d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
 
 >[!NOTE]
 >
@@ -30,12 +30,12 @@ Vous pouvez créer un ID de configuration à l’aide de l’outil [de configura
 
 ## Préparation d’un Schéma
 
-L&#39;Experience Platform Edge Network prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
+Le [!DNL Experience Platform Edge Network] prend les données comme XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit la manière dont les données [!DNL Edge Network] doivent être formatées. Pour envoyer des données, vous devez définir votre schéma.
 
 - [Création d’un schéma](../../xdm/tutorials/create-schema-ui.md)
-- Ajoutez le mixin du SDK Web d’Adobe Experience Platform au schéma créé.
+- Add the Adobe Experience Platform [!DNL Web SDK] mixin to the schema you created
 
-La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos données de SDK Web.
+La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos [!DNL Web SDK] données.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
