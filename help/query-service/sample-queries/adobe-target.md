@@ -4,40 +4,41 @@ solution: Experience Platform
 title: Exemples de requêtes
 topic: queries
 translation-type: tm+mt
-source-git-commit: 33282b1c8ab1129344bd4d7054e86fed75e7b899
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 2%
+source-wordcount: '227'
+ht-degree: 82%
 
 ---
 
 
-# Exemples de requêtes pour les données de Cible Adobe
+# Exemples de requêtes pour les données d’Adobe Target
 
-Les données d’Adobe Cible sont transformées en schéma XDM du Événement d’expérience et assimilées à la plateforme d’expérience en tant que jeux de données. Il existe de nombreux cas d’utilisation de Requête Service avec ces données et les exemples de requêtes suivants doivent fonctionner avec vos jeux de données de Cible Adobe.
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
->Dans les exemples suivants, vous devrez modifier le code SQL pour remplir les paramètres attendus pour vos requêtes en fonction du jeu de données, des variables ou de la période que vous souhaitez évaluer. Fournissez des paramètres où vous le voyez `{ }` dans le SQL.
+>Dans les exemples suivants, vous devrez modifier le code SQL pour remplir les paramètres attendus pour vos requêtes en fonction du jeu de données, des variables ou de la période que vous souhaitez évaluer. Spécifiez les paramètres partout où vous voyez `{ }` dans le SQL.
 
-## Nom du jeu de données standard pour la source de données de Cible sur la plateforme :
+## Nom de jeu de données standard pour la source de données cible sur [!DNL Platform]:
 
-Événements d’expérience Adobe Cible (nom convivial) <br>`adobe_target_experience_events` (nom à utiliser dans la requête)
+Événements d’expérience Adobe Target (nom convivial) <br>
+`adobe_target_experience_events` (nom à utiliser dans la requête)
 
-## Mappage de champs XDM partiel de haut niveau
+## Mappage de champs XDM partiels de haut niveau
 
-L&#39;utilisation de `[ ]` indique un tableau
+L’utilisation de `[ ]` signale un tableau
 
 | Nom | Champ XDM | Notes |
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` |  |
-| Code d’activité | `_experience.target.activities.activityID` |  |
-| ID d’expérience | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
-| ID de segment | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
-| Portée du Événement | `_experience.target.activities[].activityEvents[].eventScope` | Effectue le suivi des nouveaux Visiteurs et des visites |
-| ID d’étape | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | ID d’étape personnalisé pour Campaign |
-| Prix total | `commerce.order.priceTotal` |  |
+| Identifiant d’activité | `_experience.target.activities.activityID` |  |
+| Identifiant d’expérience | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` |  |
+| Identifiant de segment | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` |  |
+| Portée d’événement | `_experience.target.activities[].activityEvents[].eventScope` | Suivi des nouveaux visiteurs et des nouvelles visites |
+| Identifiant d’étape | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Identifiant d’étape personnalisée pour Campaign |
+| Total prix | `commerce.order.priceTotal` |  |
 
-## Nombre d&#39;activités horaires pour un jour donné
+## Décomptes horaires d’activité pour un jour spécifique
 
 ```sql
 SELECT
@@ -61,7 +62,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## Détails horaires d’une activité spécifique pour une journée donnée
+## Détails horaires d’une activité spécifique pour un jour spécifique
 
 ```sql
 SELECT
@@ -80,7 +81,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-## Identifiants d’expérience pour une activité spécifique pour une journée donnée
+## Identifiants Experience d’une activité précise pour un jour spécifique
 
 ```sql
 SELECT
@@ -113,7 +114,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## Renvoyer une liste de plages de Événement (visiteur, visite, impression) par instances par ID d’Activité pour un jour donné
+## Renvoie une liste de portées d’événement (visiteurs, visite, impression), par instances, par identifiant d’activité pour un jour spécifique
 
 ```sql
 SELECT
@@ -145,7 +146,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## Nombre de retours de visiteurs, de visites, d’impressions par activité pour un jour donné
+## Renvoie le nombre de visiteurs, de visites et d’impressions par activité pour un jour spécifique
 
 ```sql
 SELECT
@@ -171,7 +172,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## visiteurs de retour, visites, impressions pour l’ID d’expérience, l’identifiant de segment et EventScope pour un jour donné
+## Renvoie les visiteurs, les visites, les impressions pour un identifiant Experience, l’identifiant de segment et la portée d’événement pour un jour spécifique
 
 ```sql
 SELECT
@@ -218,7 +219,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-## Renvoyer les noms de mbox et le nombre d’enregistrements pour un jour donné
+## Renvoie les noms mbox et le nombre d’enregistrements pour un jour spécifique
 
 ```sql
 SELECT
