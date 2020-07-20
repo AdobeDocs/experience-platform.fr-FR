@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Plannings
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 842f31aac2bdbf7e9f79e4ae7d4c36be1dc92392
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 47%
 
 ---
 
 
-# Guide du point de terminaison des calendriers
+# Point de terminaison des calendriers
 
 Les calendriers sont un outil qui permet d&#39;exécuter automatiquement des tâches de segmentation par lots une fois par jour. Vous pouvez utiliser le `/config/schedules` point de terminaison pour récupérer une liste de planifications, créer une nouvelle planification, récupérer les détails d&#39;une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
 
