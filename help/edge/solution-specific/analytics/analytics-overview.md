@@ -4,17 +4,17 @@ seo-title: Envoi de données à Adobe Analytics avec le SDK Web d’Adobe Experi
 description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 890004b54cb4daf08f188147ed5c97d56e4055fb
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 100%
+source-wordcount: '202'
+ht-degree: 90%
 
 ---
 
 
 # Envoi de données à Adobe Analytics
 
-Le SDK Web d’Adobe Experience Platform peut envoyer des données à Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
+The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. Cela fonctionne en convertissant `xdm` dans un format utilisable par Adobe Analytics.
 
 ## Configuration
 
@@ -22,7 +22,7 @@ Adobe Analytics récupère automatiquement les données que vous envoyez si une 
 
 ## Données mappées automatiquement
 
-Adobe Experience Platform Edge Network mappe automatiquement de nombreuses variables XDM. La liste complète des variables mappées automatiquement se trouve [ici](../analytics/automatically-mapped-vars.md).
+The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables automatically. La liste complète des variables mappées automatiquement se trouve [ici](../analytics/automatically-mapped-vars.md).
 
 ## Données mappées manuellement
 
