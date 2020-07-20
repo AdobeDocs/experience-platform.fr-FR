@@ -4,17 +4,17 @@ seo-title: 'SDK Web d’Adobe Experience Platform : démarrage rapide avec La
 description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: 9d58693646f472e84f04a64c4ad66f61dc5d3eba
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 23%
+source-wordcount: '543'
+ht-degree: 24%
 
 ---
 
 
 # Bienvenue
 
-Ce guide décrit les différentes étapes de la configuration du SDK Web Adobe Experience Platform dans Adobe Launch. Vous devez disposer d’autorisations et être sur la liste autorisée pour utiliser cette fonctionnalité. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM. De plus, pour utiliser cette fonctionnalité, vous devez :
+Ce guide décrit les différentes étapes de la configuration de l&#39;Adobe Experience Platform [!DNL Web SDK] dans Adobe Launch. Vous devez disposer d’autorisations et être sur la liste autorisée pour utiliser cette fonctionnalité. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM. De plus, pour utiliser cette fonctionnalité, vous devez :
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Adobe Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionneront sans CNAME, mais vous en aurez besoin avant de passer en production
 - Vous devez utiliser la dernière version du service d’identifiant visiteur
@@ -29,13 +29,13 @@ Vous pouvez créer un ID de configuration à l’aide de l’outil [de configura
 
 ## Préparation d’un Schéma
 
-L&#39;Experience Platform Edge Network prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma. Veillez à effectuer les opérations suivantes :
+Le [!DNL Experience Platform Edge Network] prend les données comme XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit la manière dont les données [!DNL Edge Network] doivent être formatées. Pour envoyer des données, vous devez définir votre schéma. Veillez à effectuer les opérations suivantes :
 
 1. [Création d’un schéma](../../xdm/tutorials/create-schema-ui.md)
-2. Ajoutez le mixeur d’événements AEP Web SDK ExperienceEvent au schéma que vous avez créé.
+2. Ajoutez le [!DNL Web SDK ExperienceEvent] mixin AEP au schéma que vous avez créé.
 3. Créez un jeu de données à partir du schéma que vous avez créé.
 
-La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos données de SDK Web.
+La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos [!DNL Web SDK] données.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
 
@@ -47,13 +47,13 @@ Pour plus d’informations sur les différentes options de configuration, voir [
 
 ## Créer une base d’éléments de données sur votre Schéma
 
-Dans Adobe Launch, créez un élément de données qui référence le schéma en modifiant l’extension en SDK Web AEP et en définissant le type sur Objet XDM. Cela chargera votre schéma et vous permettra de mapper les éléments de données dans différentes parties du schéma.
+Dans Adobe Launch, créez un élément de données qui référence le schéma en modifiant l’extension en AEP [!DNL Web SDK] et en définissant le type sur Objet XDM. Cela chargera votre schéma et vous permettra de mapper les éléments de données dans différentes parties du schéma.
 
 ![Elément Date de lancement](../../assets/edge_data_element.png)
 
 ## Envoi d’un événement
 
-Une fois l’extension installée, début envoie des événements en ajoutant une action &quot;sendEvent&quot; depuis l’extension AEP Web SDK à une règle. Veillez à ajouter l’élément de données que vous venez de créer au événement en tant que données XDM. Nous vous recommandons d&#39;envoyer au moins un événement chaque fois qu&#39;une page est chargée.
+Une fois l&#39;extension installée, début envoie des événements en ajoutant une action &quot;sendEvent&quot; de l&#39; [!DNL Web SDK] extension AEP à une règle. Veillez à ajouter l’élément de données que vous venez de créer au événement en tant que données XDM. Nous vous recommandons d&#39;envoyer au moins un événement chaque fois qu&#39;une page est chargée.
 
 Pour plus d’informations sur le suivi des événements, voir [Suivi des événements](../fundamentals/tracking-events.md).
 
