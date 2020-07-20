@@ -4,10 +4,10 @@ seo-title: Prise en charge des préférences de consentement du SDK Web d’Adob
 description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: c86ae6d887f52d8bb4b78dadc06060791c7a02c0
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '518'
-ht-degree: 99%
+source-wordcount: '516'
+ht-degree: 96%
 
 ---
 
@@ -79,7 +79,7 @@ L’utilisateur ayant choisi de ne pas donner son consentement, les promesses qu
 
 >[!NOTE]
 >
->Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  Cela s’applique uniquement au SDK Web d’Adobe Experience Platform et NON aux autres bibliothèques JavaScript d’Adobe.
+>Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## Persistance des préférences de consentement
 
