@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Définitions de segment
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '1042'
+source-wordcount: '1041'
 ht-degree: 52%
 
 ---
 
 
-# Guide des points de terminaison des définitions de segment
+# Point de terminaison des définitions de segment
 
 Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
