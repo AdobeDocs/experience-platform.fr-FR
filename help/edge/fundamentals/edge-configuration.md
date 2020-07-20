@@ -4,9 +4,9 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 2d47a00c91000c68c7331f88015264259a4e6323
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '870'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Configuration du bord
 
-La configuration du Adobe Experience Platform Web SDK est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu&#39;une requête est envoyée à l&#39;Adobe Experience Platform Edge Network, elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+La configuration de l’Adobe Experience Platform [!DNL Web SDK] est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à l’Adobe Experience Platform [!DNL Edge Network], elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
 ## Création d’un identifiant de configuration Edge
 
@@ -90,7 +90,7 @@ ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à
 
 ##### [!UICONTROL Jeton de propriété]
 
-La Cible permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la documentation de la Cible.
+[!DNL Target] permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la [!DNL Target] documentation.
 
 Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > [!UICONTROL Propriétés.]
 
@@ -108,11 +108,11 @@ Pour envoyer des données à l&#39;Adobe Audience Manager, il suffit d&#39;activ
 
 ##### [!UICONTROL Destinations des cookies activées]
 
-Permet au SDK de partager des informations sur les segments par le biais des destinations [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) cookies à partir d’Audience Manager.
+Permet au SDK de partager des informations sur les segments par le biais des destinations [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) cookies à partir de [!DNL Audience Manager].
 
 ##### [!UICONTROL Destinations d’URL activées]
 
-Permet au SDK de partager des informations de segment par le biais des destinations [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Ils sont configurés en Audience Manager.
+Permet au SDK de partager des informations de segment par le biais des destinations [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Ceux-ci sont configurés dans [!DNL Audience Manager].
 
 #### Adobe Analytics
 
