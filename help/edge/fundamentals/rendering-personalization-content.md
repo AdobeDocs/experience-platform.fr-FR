@@ -4,9 +4,9 @@ seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience P
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '229'
 ht-degree: 24%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # Présentation des options de personnalisation
 
-Le Adobe Experience Platform Web SDK prend en charge l’interrogation des solutions de personnalisation à Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
+L’Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendu automatique du contenu
 
@@ -92,7 +92,7 @@ Cela renverra une liste de décisions en tant qu’objet JSON pour chaque décis
 
 >[!TIP]
 >
-> Si vous utilisez des étendues de Cible pour devenir des mBoxes sur le serveur, seules elles sont des requêtes à la fois et non pas individuellement. La mbox globale est toujours envoyée.
+> Si vous utilisez [!DNL Target] des étendues, vous obtenez des mBoxes sur le serveur, mais ce sont toutes des requêtes en même temps et non pas individuellement. La mbox globale est toujours envoyée.
 
 ### Récupérer le contenu automatique
 
