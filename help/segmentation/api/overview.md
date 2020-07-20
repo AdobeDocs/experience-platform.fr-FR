@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Guide du développeur de Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: 41a5d816f9dc6e7c26141ff5e9173b1b5631d75e
+source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 6%
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des segments et de générer des audiences dans [!DNL Adobe Experience Platform] à partir de vos [!DNL Real-time Customer Profile] données.
 
-L’ [!DNL Segmentation Service] API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document d’aperçu fournit des introductions de haut niveau à chacun de ces points de terminaison et des liens vers les guides de points de terminaison qui leur sont associés pour plus de détails. Avant de lire les guides des points de terminaison individuels, consultez le guide [de](getting-started.md) prise en main pour obtenir des informations importantes sur les en-têtes requis, la lecture d’exemples d’appels d’API, etc.
+L’ [!DNL Segmentation Service] API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document d’aperçu fournit des introductions de haut niveau à chacun de ces points de terminaison et des liens vers les guides de points de terminaison qui leur sont associés pour plus de détails. Avant de lire les guides des points de terminaison individuels, consultez le guide [de](./getting-started.md) prise en main pour obtenir des informations importantes sur les en-têtes requis, la lecture d’exemples d’appels d’API, etc.
 
 Pour vue de tous les points de terminaison et opérations CRUD disponibles, reportez-vous à la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)Segmentation Service.
 
