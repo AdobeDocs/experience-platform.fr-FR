@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Tâches de segmentation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2327ce9a87647fb2416093d4a27eb7d4dc4aa4d7
+source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '993'
 ht-degree: 38%
 
 ---
 
 
-# Guide du point de terminaison des tâches de segment
+# Point de terminaison des tâches de segment
 
 Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
 
