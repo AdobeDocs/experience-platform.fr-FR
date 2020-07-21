@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Fonctions de date et d’heure
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 4%
+source-wordcount: '468'
+ht-degree: 96%
 
 ---
 
 
 # Fonctions de date et d’heure
 
-Les fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs dans le langage de Requête de Profil (PQL). Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+Date and time functions are used to perform date and time operations on values within [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
-## Mois en cours
+## Current month
 
-La `currentMonth` fonction renvoie le mois en cours sous la forme d’un entier.
+La fonction `currentMonth` renvoie le mois en cours sous la forme d’un entier.
 
 **Format**
 
@@ -34,9 +34,9 @@ La requête PQL suivante vérifie si le mois de naissance de la personne est le 
 person.birthMonth = currentMonth()
 ```
 
-## Obtenir le mois
+## Get month
 
-La `getMonth` fonction renvoie le mois, sous la forme d’un entier, en fonction d’un horodatage donné.
+La fonction `getMonth` renvoie le mois, sous la forme d’un entier, en fonction d’un horodatage donné.
 
 **Format**
 
@@ -46,15 +46,15 @@ La `getMonth` fonction renvoie le mois, sous la forme d’un entier, en fonction
 
 **Exemple**
 
-La requête PQL suivante vérifie si le mois de naissance de la personne est en juin.
+La requête PQL suivante vérifie si le mois de naissance de la personne est le mois de juin.
 
 ```sql
 person.birthdate.getMonth() = 6
 ```
 
-## Année en cours
+## Current year
 
-La `currentYear` fonction renvoie l’année en cours sous la forme d’un entier.
+La fonction `currentYear` renvoie l’année en cours sous la forme d’un entier.
 
 **Format**
 
@@ -64,15 +64,15 @@ currentYear()
 
 **Exemple**
 
-La requête PQL suivante vérifie si le produit a été vendu au cours de l’année en cours.
+La requête PQL suivante vérifie si le produit a été vendu lors de l’année en cours.
 
 ```sql
 product.saleYear = currentYear()
 ```
 
-## Obtenir l&#39;année
+## Get year
 
-La `getYear` fonction renvoie l’année, sous la forme d’un entier, en fonction d’un horodatage donné.
+La fonction `getYear` renvoie l’année, sous la forme d’un entier, en fonction d’un horodatage donné.
 
 **Format**
 
@@ -82,15 +82,15 @@ La `getYear` fonction renvoie l’année, sous la forme d’un entier, en foncti
 
 **Exemple**
 
-La requête suivante de la LPQ vérifie si l&#39;année de naissance de la personne tombe en 1991, 1992, 1993, 1994 ou 1995.
+La requête PQL suivante vérifie si l’année de naissance de la personne est 1991, 1992, 1993, 1994 ou 1995.
 
 ```sql
 person.birthday.getYear() in [1991, 1992, 1993, 1994, 1995]
 ```
 
-## Jour actuel du mois
+## Current day of month
 
-La `currentDayOfMonth` fonction renvoie le jour du mois en cours sous la forme d’un entier.
+La fonction `currentDayOfMonth` renvoie le jour du mois en cours sous la forme d’un entier.
 
 **Format**
 
@@ -100,15 +100,15 @@ currentDayOfMonth()
 
 **Exemple**
 
-La requête PQL suivante vérifie si le jour de naissance de la personne correspond au jour du mois en cours.
+La requête PQL suivante vérifie si le jour de naissance de la personne est le jour du mois en cours.
 
 ```sql
 person.birthDay = currentDayOfMonth()
 ```
 
-## Obtenir le jour du mois
+## Get day of month
 
-La `getDayOfMonth` fonction renvoie le jour, sous la forme d’un entier, en fonction d’un horodatage donné.
+La fonction `getDayOfMonth` renvoie le jour, sous la forme d’un entier, en fonction d’un horodatage donné.
 
 **Format**
 
@@ -118,19 +118,19 @@ La `getDayOfMonth` fonction renvoie le jour, sous la forme d’un entier, en fon
 
 **Exemple**
 
-La requête PQL suivante vérifie si l’article a été vendu au cours des 15 premiers jours du mois.
+La requête PQL suivante vérifie si l’article a été vendu au cours des 15 premiers jours du mois.
 
 ```sql
 product.sale.getDayOfMonth() <= 15
 ```
 
-## Se produit
+## Occurs
 
-La `occurs` fonction compare la fonction d’horodatage donnée à une période fixe.
+La fonction `occurs` compare la fonction d’horodatage donnée à une période fixe.
 
 **Format**
 
-La `occurs` fonction peut être écrite dans l’un des formats suivants :
+La fonction `occurs` peut être rédigée dans l’un des formats suivants :
 
 ```sql
 {TIMESTAMP} occurs {COMPARISON} {INTEGER} {TIME_UNIT} {DIRECTION} {TIME}
@@ -141,49 +141,49 @@ La `occurs` fonction peut être écrite dans l’un des formats suivants :
 
 | Argument | Description |
 | --------- | ----------- |
-| `{COMPARISON}` | Opérateur de comparaison. Il peut s’agir de l’un des opérateurs suivants : `>`, `>=`, `<`, `<=`, `=`, `!=`. Vous trouverez plus d&#39;informations sur les fonctions de comparaison dans le document [des fonctions de](./comparison-functions.md)comparaison. |
+| `{COMPARISON}` | Opérateur de comparaison. Peut être l’un des opérateurs suivants : `>`, `>=`, `<`, `<=`, `=`, `!=`. Pour plus d’informations sur les fonctions de comparaison, consultez le [document sur les fonctions de comparaison](./comparison-functions.md). |
 | `{INTEGER}` | Entier non négatif. |
-| `{TIME_UNIT}` | Unité de temps. Peut être l’un des mots suivants : `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, , , , , , .`decade(s)``century``centuries``millennium``millennia` |
-| `{DIRECTION}` | Préposition décrivant à quel moment comparer la date. Peut être l’un des mots suivants : `before`, `after`, `from`. |
-| `{TIME}` | Il peut s’agir d’un littéral d’horodatage (`today`, `now`, `yesterday`, `tomorrow`), d’une unité de temps relative (l’une des unités `this`, `last`ou `next` suivie d’une unité de temps) ou d’un attribut d’horodatage. |
+| `{TIME_UNIT}` | Unité de temps. Peut être l’un des mots suivants : `millisecond(s)`, `second(s)`, `minute(s)`, `hour(s)`, `day(s)`, `week(s)`, `month(s)`, `year(s)`, `decade(s)`, `century`, `centuries`, `millennium`, `millennia`. |
+| `{DIRECTION}` | Préposition décrivant à quel moment comparer la date. Peut être l’un des mots suivants : `before`, `after`, `from`. |
+| `{TIME}` | Il peut s’agir d’un littéral d’horodatage (`today`, `now`, `yesterday`, `tomorrow`), d’une unité de temps relative (`this`, `last` ou `next` suivi d’une unité de temps) ou d’un attribut d’horodatage. |
 
 >[!NOTE]
 >
->L&#39;utilisation du mot `on` est facultative. Il est là pour améliorer la lisibilité de certaines combinaisons, par exemple `timestamp occurs on date(2019,12,31)`.
+>L’utilisation du mot `on` est facultative. Il sert à améliorer la lisibilité de certaines combinaisons, comme `timestamp occurs on date(2019,12,31)`.
 
 **Exemple**
 
-La requête PQL suivante vérifie si l&#39;article a été vendu la semaine dernière.
+La requête PQL suivante vérifie si l’article a été vendu la semaine précédente.
 
 ```sql
 product.saleDate occurs last week
 ```
 
-La requête PQL suivante vérifie si un article a été vendu entre le 8 janvier 2015 et le 1er juillet 2017.
+La requête PQL suivante vérifie si l’article a été vendu entre le 8 janvier 2015 et le 1er juillet 2017.
 
 ```sql
 product.saleDate occurs between date(2015, 1, 8) and date(2017, 7, 1)
 ```
 
-## Maintenant
+## Now
 
-`now` est un mot réservé qui représente l’horodatage de l’exécution de PQL.
+`now` est un mot réservé qui représente l’horodatage de l’exécution PQL.
 
 **Exemple**
 
-La requête PQL suivante vérifie si un article a été vendu exactement trois heures auparavant.
+La requête PQL suivante vérifie si un article a été vendu il y a exactement trois heures.
 
 ```sql
 product.saleDate occurs = 3 hours before now
 ```
 
-## Aujourd&#39;hui
+## Today
 
-`today` est un mot réservé qui représente l’horodatage du début du jour de l’exécution de PQL.
+`today` est un mot réservé qui représente l’horodatage du début du jour de l’exécution PQL.
 
 **Exemple**
 
-La requête PQL suivante vérifie si l&#39;anniversaire d&#39;une personne était il y a trois jours.
+La requête PQL suivante vérifie si l’anniversaire d’une personne était il y a trois jours.
 
 ```sql
 person.birthday occurs = 3 days before today
@@ -191,4 +191,4 @@ person.birthday occurs = 3 days before today
 
 ## Étapes suivantes
 
-Maintenant que vous avez pris connaissance des fonctions de date et d’heure, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous en savez plus sur les fonctions de date et d’heure, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
