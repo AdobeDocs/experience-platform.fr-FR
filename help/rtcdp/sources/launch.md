@@ -4,10 +4,10 @@ seo-title: Mise en œuvre des balises de site web avec Adobe Launch
 description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 seo-description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b8eda33a88b81dff5f3b45a131a5585a062519c2
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '481'
+ht-degree: 83%
 
 ---
 
@@ -18,7 +18,7 @@ Ce tutoriel explique comment mettre en œuvre les balises de votre site web pour
 
 ## Conditions préalables
 
-* Le schéma et le jeu de données nécessaires sont créés dans Platform.
+* Le schéma et le jeu de données nécessaires sont créés dans [!DNL Platform].
 * La configuration requise a été déployée dans Experience Edge et possède l’ID de configuration et le domaine Edge correspondants.
 * Le CMS de l’entreprise a déjà été configuré pour fournir un objet JavaScript sur chaque page avec les données à envoyer à Platform.
 
@@ -26,15 +26,15 @@ Ce tutoriel explique comment mettre en œuvre les balises de votre site web pour
 
 Ce tutoriel décrit les étapes suivantes :
 
-1. Installer l’extension Adobe Experience Platform Web SDK
-1. Créer une règle pour indiquer à Launch les données à envoyer
+1. Install the Adobe Experience Platform [!DNL Web SDK] extension.
+1. Create a rule to tell [!DNL Launch] what data to send.
 1. Regrouper l’extension et la règle dans une bibliothèque
 
-## Installer l’extension Adobe Experience Platform Web SDK
+## Install the Adobe Experience Platform [!DNL Web SDK] extension
 
-Tout d’abord, installez l’extension Adobe Experience Platform Web SDK.
+First, install the Adobe Experience Platform [!DNL Web SDK] extension.
 
-1. Dans Launch, ouvrez l’onglet **[!UICONTROL Extensions]**.
+1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
 
    ![image](assets/launch-overview.png)
 
@@ -43,7 +43,7 @@ L’écran de configuration s’ouvre.
 
    ![image](assets/launch-extension-install.png)
 
-   Pour plus d’informations, consultez [Extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation de Launch.
+   Pour plus d’informations, consultez [Extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html) dans la documentation de [!DNL Launch]
 
 1. Configurez l’extension.
 
@@ -54,17 +54,17 @@ L’écran de configuration s’ouvre.
 
 1. Cliquez sur **[!UICONTROL Enregistrer]** et passez à l’étape suivante.
 
-## Créer une règle pour indiquer à Launch les données à envoyer
+## Create a rule to tell [!DNL Launch] what data to send
 
-Ensuite, créez une règle pour indiquer à Launch les données à envoyer à Adobe Experience Platform et le moment auquel vous souhaitez les envoyer.
+Next, create a rule to let [!DNL Launch] know what data you want to send to Adobe Experience Platform and when you want to send it.
 
-1. Sous l’onglet **[!UICONTROL Règles]**, configurez un événement qui se déclenche sur chaque nouvelle page du site web au chargement de la bibliothèque de Launch.
+1. Sous l’onglet **[!UICONTROL Règles]**, configurez un événement qui se déclenche sur chaque nouvelle page du site web au chargement de la bibliothèque de [!DNL Launch]
 
    ![image](assets/launch-make-a-rule.png)
 
 1. Ajoutez une action.
 
-   Pour configurer l’action, indiquez à Launch où trouver la couche de données. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page web. Indiquez le chemin d’accès JavaScript vers l’objet de données.
+   To configure the action, tell [!DNL Launch] where to find your data layer. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page web. Indiquez le chemin d’accès JavaScript vers l’objet de données.
 
    ![image](assets/launch-add-aep-action.png)
 
@@ -72,7 +72,7 @@ Ensuite, créez une règle pour indiquer à Launch les données à envoyer à Ad
 
 1. Cliquez sur **[!UICONTROL Conserver les modifications]**.
 
-Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html) dans la documentation de Launch.
+Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html) dans la documentation de [!DNL Launch]
 
 ## Regrouper l’extension et la règle dans une bibliothèque
 
@@ -84,4 +84,4 @@ Une fois les tests terminés, faites la promotion de la bibliothèque dans le wo
 
 ![image](assets/launch-promote-library.png)
 
-Pour plus d’informations, consultez [Bibliothèques](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) dans la documentation de Launch.
+Pour plus d’informations, consultez [Bibliothèques](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) dans la documentation de [!DNL Launch]
