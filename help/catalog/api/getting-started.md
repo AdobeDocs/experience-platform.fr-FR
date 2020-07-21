@@ -1,69 +1,69 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur de Catalog Service
+title: Guide de développement du service de catalogue
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 0%
+source-wordcount: '558'
+ht-degree: 39%
 
 ---
 
 
-# Guide du développeur de Catalog Service
+# [!DNL Catalog Service] guide du développeur
 
-Le service de catalogue est le système d’enregistrement de l’emplacement et du lignage des données dans l’Adobe Experience Platform. Le catalogue agit comme un magasin de métadonnées ou un &quot;catalogue&quot; où vous pouvez trouver des informations sur vos données dans l’Experience Platform, sans avoir à accéder aux données proprement dites. See the [Catalog overview](../home.md) for more information.
+[!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et le lignage des données dans l’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données [!DNL Experience Platform], sans avoir à accéder aux données proprement dites. Pour plus d’informations, consultez la [Présentation du catalogue](../home.md).
 
-Ce guide du développeur décrit les étapes à suivre pour vous aider à début à l’aide de l’API Catalogue. Le guide fournit ensuite des exemples d’appels d’API pour effectuer des opérations clés à l’aide du catalogue.
+This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
-## Conditions préalables
+## Conditions préalables 
 
-Le catalogue suit les métadonnées de plusieurs types de ressources et d’opérations dans l’Experience Platform. Ce guide du développeur nécessite une bonne compréhension des différents services Experience Platform impliqués dans la création et la gestion de ces ressources :
+[!DNL Catalog] effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations au sein de [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
-* [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
-* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : Comment l’Experience Platform ingère et stocke les données des fichiers de données, tels que CSV et Parquet.
-* [Prise en charge](../../ingestion/streaming-ingestion/overview.md)en flux continu : Comment l’Experience Platform ingère et stocke les données des périphériques client et serveur en temps réel.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
+* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données en temps réel dans à partir de périphériques côté client et côté serveur.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître ou connaître pour pouvoir invoquer l’API du service de catalogue.
+The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
 
-## Lecture des exemples d’appels d’API
+## Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-## Rassembler les valeurs des en-têtes requis
+## Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-* Content-Type : application/json
+* Content-Type: application/json
 
-## Recommandations relatives aux appels d’API de catalogue
+## Best practices for [!DNL Catalog] API calls
 
-Lors de l’exécution de requêtes GET sur l’API Catalog, il est recommandé d’inclure des paramètres de requête dans vos requêtes afin de renvoyer uniquement les objets et les propriétés dont vous avez besoin. Les requêtes non filtrées peuvent entraîner une charge utile de réponse dépassant 3 Go, ce qui peut ralentir les performances globales.
+When performing GET requests to the [!DNL Catalog] API, best practice is to include query parameters in your requests in order to return only the objects and properties that you need. Les requêtes non filtrées peuvent entraîner des payloads de réponse supérieurs à 3 Go, ce qui peut ralentir les performances globales.
 
-Vous pouvez vue d’objets spécifiques en incluant leur identifiant dans le chemin d’accès à la requête ou utiliser des paramètres de requête tels que `properties` et `limit` pour filtrer les réponses. Les Filtres peuvent être transmis en tant qu’en-têtes et en tant que paramètres de requête, les paramètres transmis en tant que paramètres de requête étant prioritaires. Pour plus d’informations, voir le document sur le [filtrage des données](filter-data.md) du catalogue.
+Vous pouvez afficher des objets spécifiques en incluant leurs identifiants dans le chemin d’accès à la requête ou utiliser des paramètres de requête tels que `properties` et `limit` pour filtrer les réponses. Les filtres peuvent être transmis sous forme d’en-têtes et de paramètres de requête, les filtres transmis sous forme de paramètres de requête prévalant sur les autres. Pour plus d’informations, consultez le document sur le [filtrage des données du catalogue](filter-data.md).
 
-Comme certaines requêtes peuvent imposer une charge importante à l’API, des limites globales ont été mises en oeuvre sur les requêtes de catalogue afin de mieux prendre en charge les meilleures pratiques.
+Since some queries can put a heavy load on the API, global limits have been implemented on [!DNL Catalog] queries to further support best practices.
 
 ## Étapes suivantes
 
-Ce document couvrait les connaissances préalables requises pour effectuer des appels à l’API du catalogue. Vous pouvez maintenant passer aux exemples d’appels fournis dans ce guide du développeur et suivre leurs instructions.
+This document covered the prerequisite knowledge required to make calls to the [!DNL Catalog] API. Vous pouvez désormais procéder aux appels d’échantillon fournis dans ce guide de développement à suivre avec leurs instructions.
 
-La plupart des exemples de ce guide utilisent le `/dataSets` point de terminaison, mais les principes peuvent être appliqués à d’autres points de terminaison dans le catalogue (tels que `/batches` et `/accounts`). Consultez la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) Catalog Service pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point de terminaison.
+Most of the examples in this guide use the `/dataSets` endpoint, but the principles can be applied to other endpoints within [!DNL Catalog] (such as `/batches` and `/accounts`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point de terminaison.
 
-Pour un flux de travail détaillé qui montre comment l’API Catalog est impliquée dans l’assimilation de données, consultez le didacticiel sur la [création d’un jeu de données](../datasets/create.md).
+For a step-by-step workflow that demonstrates how the [!DNL Catalog] API is involved with data ingestion, see the tutorial on [creating a dataset](../datasets/create.md).
