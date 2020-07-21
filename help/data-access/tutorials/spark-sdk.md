@@ -4,32 +4,32 @@ solution: Experience Platform
 title: SDK Secure Spark Data Access
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '516'
 ht-degree: 1%
 
 ---
 
 
-# SDK Secure Spark Data Access
+# SDK sécurisé [!DNL Spark Data Access]
 
-Secure Spark [!DNL Data Access] SDK est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données à partir d&#39;Adobe Experience Platform.
+Secure [!DNL Spark] SDK [!DNL Data Access] est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données à partir d&#39;Adobe Experience Platform.
 
 ## Prise en main
 
-Vous devez avoir suivi le didacticiel d’ [authentification](../../tutorials/authentication.md) pour pouvoir accéder aux valeurs permettant d’invoquer le [!DNL Data Access] SDK Spark sécurisé :
+Vous devez avoir suivi le didacticiel [d’authentification](../../tutorials/authentication.md) pour pouvoir accéder aux valeurs permettant d’invoquer le [!DNL Spark] [!DNL Data Access] SDK sécurisé :
 
 - `{ACCESS_TOKEN}`
 - `{API_KEY}`
 - `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. L’utilisation du SDK Spark requiert le nom et l’ID du sandbox dans lesquels l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. L’utilisation du [!DNL Spark] SDK nécessite le nom et l’ID du sandbox dans lesquels l’opération aura lieu :
 
 - `{SANDBOX_NAME}`
 - `{SANDBOX_ID}`
 
-Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 ## Configuration des Environnements
 
@@ -83,7 +83,7 @@ spark.sql.extensions = com.adobe.platform.query.QSSparkSessionExtensions
 
 Le [!DNL Spark] SDK prend en charge deux modes de lecture : interactif et par lot.
 
-Le mode interactif crée une connexion JDBC (Java Database Connectivity) [!DNL Query Service] et obtient des résultats par le biais d’un JDBC normal `ResultSet` qui est automatiquement traduit en `DataFrame`un. Ce mode fonctionne de la même manière que la méthode Spark intégrée `spark.read.jdbc()`. Ce mode est destiné uniquement aux petits jeux de données et nécessite uniquement un jeton utilisateur pour l’authentification.
+Le mode interactif crée une connexion JDBC (Java Database Connectivity) [!DNL Query Service] et obtient des résultats par le biais d’un JDBC normal `ResultSet` qui est automatiquement traduit en `DataFrame`un. Ce mode fonctionne de la même manière que la [!DNL Spark] méthode intégrée `spark.read.jdbc()`. Ce mode est destiné uniquement aux petits jeux de données et nécessite uniquement un jeton utilisateur pour l’authentification.
 
 Le mode par lot utilise [!DNL Query Service]la commande COPY pour générer des jeux de résultats Parquet dans un emplacement partagé. Ces fichiers de Parquet peuvent ensuite être traités plus en détail. Ce mode requiert à la fois un jeton utilisateur et un jeton de service avec la `acp.foundation.catalog.credentials` portée.
 
