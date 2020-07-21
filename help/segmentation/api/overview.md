@@ -4,15 +4,15 @@ solution: Adobe Experience Platform
 title: Guide du développeur de Adobe Experience Platform Segmentation Service
 topic: guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '467'
 ht-degree: 6%
 
 ---
 
 
-# Guide du développeur de l’API Adobe Experience Platform Segmentation Service
+# Guide du développeur d&#39; [!DNL Segmentation Service] API Adobe Experience Platform
 
 [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des segments et de générer des audiences dans [!DNL Adobe Experience Platform] à partir de vos [!DNL Real-time Customer Profile] données.
 
