@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Fonctions arithmétiques
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 5%
+source-wordcount: '230'
+ht-degree: 94%
 
 ---
 
 
 # Fonctions arithmétiques
 
-Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs dans le langage PQL (Profil Requête Language). Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
-## Add (Ajouter)
+## Addition
 
-La fonction `+` (addition) est utilisée pour rechercher la somme de deux expressions d&#39;argument.
+La fonction `+` (addition) est utilisée pour trouver la somme de deux expressions d’argument.
 
 **Format**
 
@@ -28,15 +28,15 @@ La fonction `+` (addition) est utilisée pour rechercher la somme de deux expres
 
 **Exemple**
 
-La requête PQL suivante résume le prix de deux produits différents.
+La requête PQL suivante additionne le prix de deux produits différents.
 
 ```sql
 product1.price + product2.price
 ```
 
-## Multiplier
+## Multiplication
 
-La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d&#39;argument.
+La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d’argument.
 
 **Format**
 
@@ -46,15 +46,15 @@ La fonction `*` (multiplication) est utilisée pour trouver le produit de deux e
 
 **Exemple**
 
-La requête suivante de la LPQ recherche le produit de l&#39;inventaire et le prix d&#39;un produit pour déterminer la valeur brute du produit.
+La requête PQL suivante trouve le produit de l’inventaire et du prix d’un produit pour obtenir la valeur brute du produit.
 
 ```sql
 product.inventory * product.price
 ```
 
-## Soustraire
+## Soustraction
 
-La fonction `-` (soustraction) permet de trouver la différence entre deux expressions d&#39;argument.
+La fonction `-` (soustraction) permet de trouver la différence entre deux expressions d’argument.
 
 **Format**
 
@@ -64,15 +64,15 @@ La fonction `-` (soustraction) permet de trouver la différence entre deux expre
 
 **Exemple**
 
-La requête PQL suivante identifie la différence de prix entre deux produits différents.
+La requête PQL suivante trouve la différence de prix entre deux produits différents.
 
 ```sql
 product1.price - product2.price
 ```
 
-## Diviser
+## Division
 
-La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d&#39;argument.
+La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d’argument.
 
 **Format**
 
@@ -82,7 +82,7 @@ La fonction `/` (division) est utilisée pour trouver le quotient de deux expres
 
 **Exemple**
 
-La requête suivante de PQL recherche le quotient entre le total des produits vendus et le total des sommes gagnées pour déterminer le coût moyen par article.
+La requête PQL suivante trouve le quotient entre le total des produits vendus et le total des revenus obtenus pour déterminer le coût moyen par article.
 
 ```sql
 totalProduct.price / totalProduct.sold
@@ -90,7 +90,7 @@ totalProduct.price / totalProduct.sold
 
 ## Reste
 
-La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d&#39;argument.
+La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d’argument.
 
 **Format**
 
@@ -100,7 +100,7 @@ La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la div
 
 **Exemple**
 
-La requête PQL suivante vérifie si l&#39;âge de la personne est divisible de cinq ans.
+La requête PQL suivante vérifie si l’âge de la personne est divisible par cinq.
 
 ```sql
 person.age % 5 = 0
@@ -108,4 +108,4 @@ person.age % 5 = 0
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les fonctions arithmétiques, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous en savez plus sur les fonctions arithmétiques, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
