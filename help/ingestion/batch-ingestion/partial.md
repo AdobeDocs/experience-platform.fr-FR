@@ -1,64 +1,64 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de l'assimilation partielle par lot des Adobes Experience Platform
+title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 0be45675e4a2e3308cb77a8bbe3189f09c2b6fd8
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1243'
-ht-degree: 1%
+source-wordcount: '1237'
+ht-degree: 55%
 
 ---
 
 
 
-# Récupération partielle par lot
+# Ingestion par lots partielle
 
-L&#39;assimilation partielle par lot permet d&#39;assimiler des données contenant des erreurs, jusqu&#39;à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent intégrer toutes leurs données correctes à l’Adobe Experience Platform pendant que toutes leurs données incorrectes sont mises en lots séparément, ainsi que les raisons pour lesquelles elles ne sont pas valides.
+L’ingestion par lots partielle permet d’ingérer des données contenant des erreurs jusqu’à un certain seuil. Grâce à cette fonctionnalité, les utilisateurs peuvent ingérer toutes leurs données correctes dans Adobe Experience Platform, alors que toutes leurs données incorrectes sont traitées par lots séparément, avec des détails sur les raisons de leur non-validité.
 
-Ce document fournit un didacticiel pour la gestion de l&#39;assimilation partielle des lots.
+Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 
-En outre, l&#39; [annexe](#appendix) de ce didacticiel fournit une référence pour les types d&#39;erreur d&#39;assimilation par lot partielle.
+En outre, l’[annexe](#appendix) de ce tutoriel contient une référence pour les types d’erreurs d’ingestion par lots partielle.
 
 ## Prise en main
 
-Ce didacticiel nécessite une connaissance pratique des divers services d&#39;Adobe Experience Platform impliqués dans l&#39;assimilation partielle de lots. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce tutoriel nécessite une connaissance pratique des différents services Adobe Experience Platform impliqués dans l’ingestion par lots partielle. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Importation](./overview.md)par lot : Méthode qui [!DNL Platform] ingère et stocke des données à partir de fichiers de données, tels que CSV et Parquet.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [Ingestion par lots](./overview.md)[!DNL Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer [!DNL Platform] les API.
+The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform] sont isolées à des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
-
->[!NOTE]
->
->Pour plus d’informations sur les sandbox dans [!DNL Platform], voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
-
-## Activation d’un lot pour l’assimilation partielle de lots dans l’API {#enable-api}
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Cette section décrit l&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;API. Pour obtenir des instructions sur l&#39;utilisation de l&#39;interface utilisateur, lisez l&#39; [étape d&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots dans l&#39;interface utilisateur](#enable-ui) .
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+
+## Enable a batch for partial batch ingestion in the API {#enable-api}
+
+>[!NOTE]
+>
+>Cette section décrit l&#39;activation d&#39;un lot pour l&#39;assimilation partielle de lots à l&#39;aide de l&#39;API. For instructions on using the UI, please read the [enable a batch for partial batch ingestion in the UI](#enable-ui) step.
 
 Vous pouvez créer un nouveau lot avec l&#39;assimilation partielle activée.
 
-Pour créer un nouveau lot, suivez les étapes décrites dans le guide [du développeur d&#39;assimilation](./api-overview.md)par lot. Une fois que vous avez atteint l’étape *Créer un lot* , ajoutez le champ suivant dans le corps de la demande :
+Pour créer un nouveau lot, suivez les étapes décrites dans le guide [du développeur d&#39;assimilation](./api-overview.md)par lot. Once you reach the *Create batch* step, add the following field within the request body:
 
 ```json
 {
@@ -72,10 +72,10 @@ Pour créer un nouveau lot, suivez les étapes décrites dans le guide [du déve
 | Propriété | Description |
 | -------- | ----------- |
 | `enableErrorDiagnostics` | Indicateur qui permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur votre lot. |
-| `partialIngestionPercentage` | Le pourcentage d&#39;erreurs acceptables avant l&#39;ensemble du lot échoue. Ainsi, dans cet exemple, un maximum de 5 % du lot peut être une erreur, avant qu’il ne soit endommagé. |
+| `partialIngestionPercentage` | Pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Ainsi, dans cet exemple, un maximum de 5 % du lot peut être une erreur, avant qu’il ne soit endommagé. |
 
 
-## Activation d’un lot pour l’assimilation partielle de lots dans l’interface utilisateur {#enable-ui}
+## Enable a batch for partial batch ingestion in the UI {#enable-ui}
 
 >[!NOTE]
 >
@@ -85,55 +85,55 @@ Pour activer un lot pour l’assimilation partielle via l’ [!DNL Platform] int
 
 ### Créer une connexion source {#new-source}
 
-Pour créer une connexion à la source, suivez les étapes répertoriées dans l&#39;aperçu [des](../../sources/home.md)sources. Une fois que vous avez atteint l’étape de détail ** Flux de données, notez les champs de diagnostic *[!UICONTROL d’assimilation]* *[!UICONTROL partielle et d’]* erreur.
+Pour créer une connexion à la source, suivez les étapes répertoriées dans l&#39;aperçu [des](../../sources/home.md)sources. Once you reach the *[!UICONTROL Dataflow detail]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+Le bouton *[!UICONTROL Ingestion partielle]* vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
+Le *[!UICONTROL seuil d’erreur]* vous permet de définir le pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
-### Utiliser un jeu de données existant {#existing-dataset}
+### Utilisation d’un jeu de données existant {#existing-dataset}
 
-Pour utiliser un jeu de données existant, début en sélectionnant un jeu de données. La barre latérale sur la droite contient des informations sur le jeu de données.
+Pour utiliser un jeu de données existant, début en sélectionnant un jeu de données. La barre latérale droite contient des informations sur le jeu de données.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+Le bouton *[!UICONTROL Ingestion partielle]* vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
+Le *[!UICONTROL seuil d’erreur]* vous permet de définir le pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
 Désormais, vous pouvez transférer des données à l’aide du bouton **Ajouter les données** et elles seront ingérées à l’aide de l’assimilation partielle.
 
 ### Utilisation du flux &quot;[!UICONTROL Mapper le fichier CSV au schéma]XDM&quot; {#map-flow}
 
-Pour utiliser le flux &quot;[!UICONTROL Mapper un fichier CSV au schéma]XDM&quot;, suivez les étapes répertoriées dans le didacticiel [](../tutorials/map-a-csv-file.md)Mapper un fichier CSV. Une fois que vous avez atteint l’étape de données *de* Ajoute, prenez note des champs de diagnostic *[!UICONTROL d’assimilation]* *[!UICONTROL partielle et d’]* erreur.
+Pour utiliser le flux &quot;[!UICONTROL Mapper un fichier CSV au schéma]XDM&quot;, suivez les étapes répertoriées dans le didacticiel [](../tutorials/map-a-csv-file.md)Mapper un fichier CSV. Once you reach the *[!UICONTROL Add data]* step, take note of the *[!UICONTROL Partial ingestion]* and *[!UICONTROL Error diagnostics]* fields.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-La bascule d&#39;assimilation ** partielle vous permet d&#39;activer ou de désactiver l&#39;utilisation de l&#39;assimilation partielle par lot.
+Le bouton *[!UICONTROL Ingestion partielle]* vous permet d’activer ou de désactiver l’utilisation de l’ingestion par lots partielle.
 
-La bascule des diagnostics *[!UICONTROL d&#39;]* erreur n&#39;apparaît que lorsque la bascule d&#39;assimilation ** partielle est désactivée. Cette fonctionnalité permet [!DNL Platform] de générer des messages d&#39;erreur détaillés sur vos lots assimilés. Si la bascule d&#39;assimilation ** partielle est activée, les diagnostics d&#39;erreur améliorés sont automatiquement appliqués.
+The *[!UICONTROL Error diagnostics]* toggle only appears when the *[!UICONTROL Partial ingestion]* toggle is off. This feature allows [!DNL Platform] to generate detailed error messages about your ingested batches. If the *[!UICONTROL Partial ingestion]* toggle is turned on, enhanced error diagnostics are automatically enforced.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Le seuil ** d&#39;erreur vous permet de définir le pourcentage d&#39;erreurs acceptables avant que le lot entier n&#39;échoue. Par défaut, cette valeur est définie sur 5 %.
+Le *[!UICONTROL seuil d’erreur]* vous permet de définir le pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
 
-## Récupérer les erreurs d&#39;assimilation partielle des lots {#retrieve-errors}
+## Récupération des erreurs d’ingestion par lots partielle {#retrieve-errors}
 
-Si les lots contiennent des échecs, vous devrez récupérer les informations d&#39;erreur sur ces échecs afin de pouvoir réingérer les données.
+Si les lots contiennent des défaillances, vous devrez récupérer les informations d’erreur les concernant afin de pouvoir ingérer à nouveau les données.
 
-### Vérifier l&#39;état {#check-status}
+### Vérification de l’état {#check-status}
 
-Pour vérifier l&#39;état du lot assimilé, vous devez indiquer l&#39;identifiant du lot dans le chemin d&#39;une requête GET.
+Pour vérifier l’état du lot ingéré, vous devez indiquer l’identifiant du lot dans le chemin d’une requête GET.
 
 **Format d’API**
 
@@ -143,7 +143,7 @@ GET /catalog/batches/{BATCH_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot dont vous souhaitez vérifier l&#39;état. |
+| `{BATCH_ID}` | Valeur `id` du lot dont vous voulez vérifier l’état. |
 
 **Requête**
 
@@ -157,7 +157,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/{BATCH_ID}
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur l’état du lot.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur l’état du lot.
 
 ```json
 {
@@ -199,32 +199,32 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 }
 ```
 
-Si le lot comporte une erreur et que les diagnostics d&#39;erreur sont activés, l&#39;état est &quot;réussite&quot; et contient plus d&#39;informations sur l&#39;erreur fournie dans un fichier d&#39;erreur téléchargeable.
+Si le lot comporte une erreur et que les diagnostics d’erreur sont activés, l’état indiquera « succès » et davantage d’informations sur l’erreur seront fournies dans un fichier d’erreur téléchargeable.
 
 ## Étapes suivantes {#next-steps}
 
-Ce didacticiel explique comment créer ou modifier un jeu de données pour activer l&#39;assimilation par lots partielle. Pour plus d&#39;informations sur l&#39;assimilation de lots, consultez le guide [de développement sur l&#39;assimilation de](./api-overview.md)lots.
+Ce tutoriel explique comment créer ou modifier un jeu de données pour activer l’ingestion par lots partielle. Pour plus d’informations sur l’ingestion par lots, consultez le [guide de développement de l’ingestion par lots](./api-overview.md).
 
-## Types d&#39;erreur d&#39;assimilation par lots partiels {#appendix}
+## Types d’erreurs d’ingestion par lots partielle {#appendix}
 
-L&#39;assimilation partielle par lot comporte quatre types d&#39;erreur différents lors de l&#39;assimilation de données.
+L’ingestion par lots partielle présente quatre types d’erreurs différents lors de l’ingestion de données.
 
 - [Fichiers illisibles](#unreadable)
-- [schémas ou en-têtes non valides](#schemas-headers)
+- [Schémas ou en-têtes non valides](#schemas-headers)
 - [Lignes non analysables](#unparsable)
 - [Conversion XDM non valide](#conversion)
 
 ### Fichiers illisibles {#unreadable}
 
-Si le lot ingéré contient des fichiers illisibles, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [](../quality/retrieve-failed-batches.md)Récupération des lots en échec.
+Si le lot ingéré contient des fichiers illisibles, les erreurs du lot seront jointes à celui-ci. Vous trouverez plus d’informations sur la récupération du lot rejeté dans le [guide sur la récupération des lots rejetés](../quality/retrieve-failed-batches.md).
 
-### schémas ou en-têtes non valides {#schemas-headers}
+### Schémas ou en-têtes non valides {#schemas-headers}
 
-Si le lot assimilé comporte un schéma non valide ou des en-têtes non valides, les erreurs du lot sont jointes au lot lui-même. Pour plus d&#39;informations sur la récupération du lot en échec, consultez le guide [](../quality/retrieve-failed-batches.md)Récupération des lots en échec.
+Si le lot ingéré comporte un schéma ou des en-têtes non valides, les erreurs du lot seront jointes à celui-ci. Vous trouverez plus d’informations sur la récupération du lot rejeté dans le [guide sur la récupération des lots rejetés](../quality/retrieve-failed-batches.md).
 
 ### Lignes non analysables {#unparsable}
 
-Si le lot ingéré contient des lignes non analysables, les erreurs du lot sont stockées dans un fichier accessible à l&#39;aide du point de terminaison décrit ci-dessous.
+Si le lot ingéré comporte des lignes non analysables, les erreurs du lot seront stockées dans un fichier accessible à l’aide du point de terminaison décrit ci-dessous.
 
 **Format d’API**
 
@@ -234,7 +234,7 @@ GET /export/batches/{BATCH_ID}/failed?path=parse_errors
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d&#39;erreur. |
+| `{BATCH_ID}` | Valeur `id` du lot dans lequel vous récupérez les informations d’erreur. |
 
 **Requête**
 
@@ -248,7 +248,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails des lignes non analysables.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des lignes non analysables.
 
 ```json
 {
@@ -263,7 +263,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec les détails des lignes no
 
 ### Conversion XDM non valide {#conversion}
 
-Si le lot assimilé a des conversions XDM non valides, les erreurs du lot sont stockées dans un fichier accessible à l&#39;aide du point de terminaison suivant.
+Si le lot ingéré comporte des conversions XDM non valides, les erreurs du lot seront stockées dans un fichier accessible à l’aide du point de terminaison suivant.
 
 **Format d’API**
 
@@ -273,7 +273,7 @@ GET /export/batches/{BATCH_ID}/failed?path=conversion_errors
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | Valeur `id` du lot à partir duquel vous récupérez les informations d&#39;erreur. |
+| `{BATCH_ID}` | Valeur `id` du lot dans lequel vous récupérez les informations d’erreur. |
 
 **Requête**
 
@@ -287,7 +287,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec les détails des échecs de conversion XDM.
+Une réponse réussie renvoie un état HTTP 200 avec les détails des échecs de la conversion XDM.
 
 ```json
 {
