@@ -4,68 +4,68 @@ seo-title: Destination Google Ad Manager
 description: 'Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles. '
 seo-description: 'Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles. '
 translation-type: tm+mt
-source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 34%
+source-wordcount: '610'
+ht-degree: 53%
 
 ---
 
 
-# Destination Google Ad Manager
+# [!DNL Google Ad Manager Destination]
 
 ## Présentation
 
-Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.
+[!DNL Google Ad Manager], anciennement appelé for Publishers ou , est une plateforme de service publicitaire de qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.[!DNL DoubleClick][!DNL DoubleClick AdX][!DNL Google]
 
 ## Spécifications de la destination
 
-Notez les détails suivants spécifiques aux destinations Google Ad Manager :
+Note the following details that are specific to [!DNL Google Ad Manager] destinations:
 
-* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md) suivantes aux destinations Google Ad Manager : **ID de cookie Google, IDFA, GAID, ID de Roku, ID Microsoft, ID** Amazon Fire TV.
-* Les audiences activées sont créées par programmation dans la plateforme Google.
-* La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Reportez-vous au décompte des audiences dans Google pour valider l’intégration et comprendre la taille du ciblage des audiences.
+* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md)[!DNL Google Ad Manager] suivantes vers les destinations  : **identifiant de cookie Google, IDFA, GAID, identifiants Roku, identifiants Microsoft, identifiants Amazon Fire TV**.
+* Activated audiences are created programmatically in the [!DNL Google] platform.
+* La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec Google Ad Manager et que vous n’avez pas activé la fonctionnalité [de synchronisation des](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) identifiants dans le service d’identification des Experience Cloud dans le passé (avec Audience Manager ou d’autres applications), contactez le service de conseil ou d’assistance clientèle de Adobe pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’identifiants que vous avez configurées sont transférées au CDP Adobe Real-time.
+>If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/fr-FR/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Adobe Real-time CDP.
 
-## Conditions préalables
+## Conditions préalables 
 
 ### Liste autorisée
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première destination Google Ad Manager dans Adobe Real-time CDP. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été effectué par Google avant de créer une destination.
+>La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ad Manager] destination dans Adobe Real-time CDP. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Avant de créer la destination Google Ad Manager dans Adobe Real-time CDP, vous devez contacter Google pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
+Avant de créer la destination dans le CDP en temps réel en Adobe, vous devez contacter [!DNL Google Ad Manager] [!DNL Google] pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] and provide the following information:
 
-* **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
-* **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
-* **ID** réseau : Il s’agit de votre compte auprès de Google Ad Manager
-* **ID** de lien d&#39;Audience : Il s’agit de votre compte auprès de Google Ad Manager
-* Votre type de compte. **DFP par un acheteur** Google **ou** AdX.
+* **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
+* **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
+* **Identifiant réseau** : il s’agit de votre compte avec [!DNL Google Ad Manager]
+* **Identifiant du lien d’audience** : il s’agit de votre compte avec [!DNL Google Ad Manager]
+* Votre type de compte. **DFP de Google** ou **AdX buyer**.
 
-## Créer une destination
+## Création d’une destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ad Manager, and select **[!UICONTROL Create destination]**.
-   ![Connexion à la destination de Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
+1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Google Ad Manager], and select **[!UICONTROL Create destination]**.
+   ![Connexion à la destination Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination.png)
 
-2. À l’étape **Configuration** du processus de création de destination, renseignez les informations [!UICONTROL de] base de la destination. <br>
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
 
-   ![Informations de base Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
+   ![Informations de base de Google Ad Manager](/help/rtcdp/destinations/assets/google-1-destination-setup-step.png)
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Type de compte]** : sélectionnez une option, en fonction de votre compte avec Google :
-   * Utilisation `DFP by Google` pour DoubleClick pour les éditeurs
-   * Utilisez `AdX buyer` pour Google AdX.
-* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec Google. Il peut s’agir de votre ID réseau ou de votre ID de lien d’Audience. En règle générale, il s’agit d’un identifiant à huit chiffres.
+   * Utilisez `DFP by Google` pour for Publishers[!DNL DoubleClick]
+   * Use `AdX buyer` for [!DNL Google AdX]
+* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google]. Il peut s’agir de votre identifiant réseau ou de votre identifiant du lien d’audience. En règle générale, il s’agit d’un identifiant à huit chiffres.
 * **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données.
 
 > [!NOTE]
 >
-> Lors de la configuration d’une destination Google Ad Manager, demandez à votre gestionnaire de compte Google ou à votre représentant Adobe de déterminer le type de compte qui vous appartient.
+> When setting up a [!DNL Google Ad Manager] destination please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
-## Activer les segments dans Google Ad Manager
+## Activate segments to [!DNL Google Ad Manager]
 
-For instructions on how to activate segments to Google Ad Manager, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
