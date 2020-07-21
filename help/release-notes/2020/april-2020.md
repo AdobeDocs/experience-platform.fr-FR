@@ -1,142 +1,142 @@
 ---
-title: 'Notes de mise à jour d’Adobe Experience Platform '
-description: Notes de mise à jour de la plateforme d’expérience 8 avril 2020
+title: Notes de mise à jour d’Adobe Experience Platform
+description: Notes de mise à jour d’Experience Platform, 8 avril 2020
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: e5fa12b92f7006f2c5c428b25f81dade57733498
+source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 5%
+source-wordcount: '975'
+ht-degree: 61%
 
 ---
 
 
-# Notes de mise à jour d’Adobe Experience Platform
+# Notes de mise à jour d’Adobe Experience Platform
 
 **Date de publication : 8 avril 2020**
 
-Nouvelles fonctionnalités d’Adobe Experience Platform :
-* [Services intelligents](#intelligent)
+Nouvelles fonctionnalités d’Adobe Experience Platform :
+* [!DNL Intelligent Services](#intelligent)
 
-Mises à jour des fonctionnalités existantes :
-* [Modèle de données d’expérience (XDM)](#xdm)
-* [Gouvernance des données](#governance)
-* [Destinations](#destinations)
-* [Service confidentialité](#privacy)
-* [Sources](#sources)
+Mises à jour des fonctionnalités existantes :
+* [!DNL Experience Data Model (XDM)](#xdm)
+* [!DNL Data Governance](#governance)
+* [!DNL Destinations](#destinations)
+* [!DNL Privacy Service](#privacy)
+* [!DNL Sources](#sources)
 
-## Services intelligents {#intelligent}
+## [!DNL Intelligent Services] {#intelligent}
 
-Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’une société en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’une expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer des prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
+[!DNL Intelligent Services] permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
 
 **Fonctionnalités clés**
 
-| Fonction | Description |
+| Fonctionnalité | Description |
 |---|---|
-| AI client | L’IA du client permet aux spécialistes du marketing de générer des prévisions client au niveau individuel avec des explications. Grâce à des facteurs influents, l’IA du client peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. En outre, les spécialistes du marketing peuvent tirer parti des prédictions et des connaissances d’IA du client pour personnaliser les expériences client en fournissant les offres et les messages les plus appropriés. |
-| Attribution AI | Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à l’API d’attribution, les spécialistes du marketing peuvent mesurer et optimiser les dépenses marketing et publicitaires en comprenant l’impact de chaque interaction client individuelle sur chaque phase du parcours des clients. |
+| [!DNL Customer AI] | [!DNL Customer AI] permet aux professionnels du marketing de générer des prédictions client au niveau individuel avec des explications. With the help of influential factors, [!DNL Customer AI] can tell you what a customer is likely to do and why. Additionally, marketers can benefit from [!DNL Customer AI] predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys. |
 
 **Problèmes connus**
 
-* Aucun problème connu actuellement.
+* Aucun problème connu pour le moment.
 
-Pour plus d&#39;informations sur les services intelligents et sur ce qu&#39;ils ont à faire pour l&#39;offre, consultez l&#39;aperçu [des services](../../intelligent-services/home.md)intelligents.
+For more information on [!DNL Intelligent Services] and what it has to offer, see the [Intelligent Services overview](../../intelligent-services/home.md).
 
-## Système de modèle de données d’expérience (XDM) {#xdm}
+## [!DNL Experience Data Model] Système (XDM) {#xdm}
 
-La normalisation et l’interopérabilité sont des concepts clés de la plate-forme d’expérience. Le modèle de données d’expérience (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Il fournit des structures et des définitions communes à toute application pour communiquer avec les services d’Adobe Experience Platform. En respectant les normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune offrant des informations d’une manière plus rapide et plus intégrée. Vous pouvez obtenir des informations précieuses sur les actions client, définir des audiences client par le biais de segments et utiliser les attributs client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
 **Nouvelles fonctionnalités**
 
-| Fonction | Description |
+| Fonctionnalité | Description |
 | --- | --- |
-| Informations d&#39;affichage de remplacement automatiques | Le Registre des Schémas applique automatiquement les valeurs de titre et de description personnalisées configurées dans le `alternateDisplayInfo` descripteur. |
-| Restrictions des champs de l’échelle | Le Registre des Schémas n’autorise pas plus de 6 000 champs scalaires dans un seul schéma. |
-| Révision des performances | Le Registre des Schémas a été remanié pour mieux répondre aux exigences de la Plate-forme d&#39;expérience. |
+| Informations d’affichage de remplacement automatique | The [!DNL Schema Registry] automatically applies the customized title and description values configured in the `alternateDisplayInfo` descriptor. |
+| Restrictions des champs scalaires | The [!DNL Schema Registry] does not allow more than 6000 scalar fields in a single schema. |
+| Révision des performances | Le [!DNL Schema Registry] programme a été remanié pour répondre aux exigences d&#39; [!DNL Experience Platform] un meilleur rendement. |
 
 **Corrections de bogues**
 
-* Mise à jour de XDM en XED converti afin de prendre en charge un format XED plus propre pour les champs URI imbriqués dans XDM standard.
+* XDM mis à jour converti en XED pour prendre en charge un format XED plus propre pour les champs URI imbriqués dans XDM standard.
 
 **Problèmes connus**
 
 * Connu
 
-## Gouvernance des données {#governance}
+## [!DNL Data Governance] {#governance}
 
-Adobe Experience Platform Data Governance est une série de stratégies et de technologies utilisées pour gérer les données client et assurer la conformité aux réglementations, restrictions et règles applicables à l’utilisation des données. Il joue un rôle clé dans la plate-forme d’expérience à divers niveaux, notamment le catalogage, le lignage des données, l’étiquetage de l’utilisation des données, les stratégies d’accès aux données et le contrôle d&#39;accès sur les données pour les actions marketing.
+Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
-La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, obligations contractuelles et stratégies d’entreprise qui s’appliquent à vos données client. À partir de là, les données peuvent être classifiées en appliquant les étiquettes d&#39;utilisation appropriées et leur utilisation peut être contrôlée par la définition de stratégies d&#39;utilisation des données.
+La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des politiques d’entreprise qui s’appliquent aux données clients. À partir de là, les données peuvent être classifiées en appliquant les libellés d’utilisation des données appropriés, et leur utilisation peut être contrôlée via la définition des stratégies d’utilisation des données.
 
-La structure DULE simplifie et rationalise le processus de catégorisation des données et de création de stratégies d’utilisation des données par le biais de l’interface utilisateur de la plateforme d’expérience et de l’API DULE Policy Service.
+The DULE framework simplifies and streamlines the process of categorizing data and creating data usage policies through the [!DNL Experience Platform] user interface and DULE [!DNL Policy Service] API.
 
 **Nouvelles fonctionnalités**
 
-| Fonction | Description |
+| Fonctionnalité | Description |
 | -----------| ---------- |
-| Gérer les stratégies d’utilisation des données dans l’interface utilisateur | Les stratégies d’utilisation des données peuvent désormais être gérées dans l’espace de travail _Stratégies_ de l’interface utilisateur de la plate-forme d’expérience. Pour plus d’informations, consultez le guide [de l’utilisateur](../../data-governance/policies/user-guide.md) de la stratégie. |
+| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Data usage policies can now be managed within the _Policies_ workspace in the [!DNL Experience Platform] UI. Pour plus d’informations, voir le [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md). |
 
 **Problèmes connus**
 
 * Aucun.
 
-Pour plus d&#39;informations, consultez la présentation [de la gouvernance des](../../data-governance/home.md)données.
+Pour plus d’informations, consultez la section [Présentation de la gouvernance des données](../../data-governance/home.md).
 
 
 ## Destinations {#destinations}
 
-Dans [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), les destinations sont des intégrations préétablies avec les plateformes de destination qui activent les données pour ces partenaires de manière transparente.
+Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
 
 **Nouvelles destinations**
 
-Le CDP en temps réel d’Adobe prend désormais en charge l’activation des données à plus de cinquante extensions de lancement d’Experience Cloud, ce qui permet d’effectuer des analyses, de personnaliser et d’autres cas d’utilisation. Voir ci-dessous pour plus de détails :
+Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. Voir ci-dessous pour plus de détails :
 
 | Documentation | Description |
 |--- | ---|
-| [Types et catégories de destination](/help/rtcdp/destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface CDP en temps réel d’Adobe et recommande le moment où utiliser chacune de ces destinations. |
-| [Extensions de lancement de plateforme d’expérience](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | Cette page décrit les extensions de lancement, les cas d’utilisation des listes et les liens vers la documentation de chaque extension de lancement dans Adobe Real-time CDP. |
+| [Types et catégories de destination](/help/rtcdp/destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface de la plateforme de données clients en temps réel en temps réel d’Adobe et recommande le moment auquel utiliser chacune de ces destinations. |
+| [Extensions d’Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP. |
 
-Pour plus d&#39;informations, consultez la présentation [des](/help/rtcdp/destinations/destinations-overview.md)Destinations.
+Pour plus d’informations, reportez-vous à la [présentation des destinations](/help/rtcdp/destinations/destinations-overview.md).
 
-## Service confidentialité {#privacy}
+## [!DNL Privacy Service] {#privacy}
 
-Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d&#39;accéder à vos données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform Privacy Service fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec Privacy Service, vous pouvez envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui vous permet de respecter automatiquement les règles de confidentialité légales et organisationnelles.
+Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
 
 **Nouvelles fonctionnalités**
 
-| Fonction | Description |
+| Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge de PDPA | Les demandes de confidentialité peuvent maintenant être créées et suivies en vertu de la Loi sur la protection des données personnelles (PDPA) en Thaïlande. Lorsque vous effectuez des demandes de confidentialité dans l&#39;API, le `regulation` tableau accepte la valeur &quot;pdpa_tha&quot;. |
-| Types d’Espace de nommage dans l’interface utilisateur | Vous pouvez désormais spécifier différents types d’espace de nommage dans le Créateur de requêtes de l’interface utilisateur de Privacy Service. Consultez le guide [](../../privacy-service/ui/user-guide.md) d’utilisation pour plus d’informations. |
-| Ancienne obsolescence des points de terminaison | L’ancien point de terminaison API (`data/privacy/gdpr`) a été abandonné. |
+| Respect de la loi PDPA | Désormais, les demandes d’accès à des informations personnelles peuvent être créées et suivies en vertu de la loi sur la protection des données à caractère personnel (PDPA) en Thaïlande. Lors de l’envoi de demandes d’accès à des informations personnelles dans l’API, le tableau `regulation` accepte la valeur « pdpa_tha ». |
+| Types d’espaces de noms dans l’interface utilisateur | You can now specify different namespace types in the Request Builder in the [!DNL Privacy Service] UI. Pour plus d’informations, voir le [guide d’utilisation](../../privacy-service/ui/user-guide.md). |
+| Abandon de l’ancien point de terminaison | L’ancien point de terminaison de l’API (`data/privacy/gdpr`) a été abandonné. |
 
 Problèmes connus
 
-* None (Aucun)
+* Aucun
 
-Pour plus d&#39;informations sur Privacy Service, veuillez début en lisant la présentation [](../../privacy-service/home.md)Privacy Service.
+For more information about [!DNL Privacy Service], please start by reading the [Privacy Service overview](../../privacy-service/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform peut assimiler des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de plate-forme. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications Adobe, des enregistrements basés sur le cloud, des logiciels tiers et votre système de gestion de la relation client.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour divers fournisseurs de données. Ces connexions source vous permettent d’authentifier et de vous connecter à des systèmes d’enregistrement externes et à des services de gestion de la relation client, de définir les heures d’exécution d’assimilation et de gérer le débit d’assimilation des données.
+[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Nouvelles fonctionnalités**
 
-| Fonction | Description |
+| Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge des API et de l’interface utilisateur pour les bases de données | Nouveaux connecteurs source pour Apache Spark (sur HDInsights), Azure Synapse Analytics, Azure Table Enregistrement, Hive (sur HDInsights) et Phoenix. |
-| Prise en charge des API et de l’interface utilisateur pour les applications basées sur les paiements | Nouveaux connecteurs source pour PayPal. |
-| Prise en charge des API et de l’interface utilisateur pour les applications basées sur des protocoles | Nouveaux connecteurs source pour Generic OData. |
+| Prise en charge des API et de l’interface utilisateur pour les bases de données | Nouveaux connecteurs source pour [!DNL Apache Spark] (sur HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (sur HDInsights) et [!DNL Phoenix]. |
+| Prise en charge des API et de l’interface utilisateur pour les applications basées sur les paiements | Nouveaux connecteurs source pour [!DNL PayPal]. |
+| Prise en charge des API et de l’interface utilisateur pour les applications basées sur les protocoles | Nouveaux connecteurs source pour [!DNL Generic OData]. |
 
 **Problèmes connus**
 
-* None (Aucun)
+* Aucun
 
-Pour en savoir plus sur les sources, consultez l’aperçu [des](../../sources/home.md)sources.
+Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
