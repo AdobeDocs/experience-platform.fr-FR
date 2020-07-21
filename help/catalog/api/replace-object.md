@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Remplacement d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '138'
+ht-degree: 63%
 
 ---
 
 
 # Remplacement d’un objet
 
-Vous pouvez remplacer le contenu d’un objet Catalog à l’aide d’une requête PUT, dans laquelle la ressource entière est remplacée par la charge utile de la requête.
+You can overwrite the contents of a [!DNL Catalog] object using a PUT request, wherein the entire resource is replaced with the request payload.
 
 >[!NOTE]
 >
->Si vous devez uniquement mettre à jour quelques champs spécifiques dans un objet Catalog, il peut s’avérer plus efficace d’utiliser une requête PATCH.
+>If you only need to update a few specific fields within a [!DNL Catalog] object, using a PATCH request may be more efficient.
 
 **Format d’API**
 
@@ -28,12 +28,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à remplacer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identifiant de l’objet spécifique à mettre à jour. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante remplace un jeu de données par les valeurs fournies dans la charge utile.
+La requête suivante remplace un jeu de données avec les valeurs fournies dans le payload.
 
 ```shell
 curl -X PUT \
@@ -58,7 +58,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;identifiant de l&#39;objet remplacé. Cet identifiant doit correspondre à celui envoyé dans la demande PUT. L’exécution d’une requête GET pour cet objet montre maintenant que ses détails ont été remplacés par ceux fournis dans la charge utile de la requête PUT précédente.
+Une réponse réussie renvoie un tableau contenant l’identifiant de l’objet remplacé. Cet identifiant doit correspondre à celui envoyé dans la requête PUT. L’exécution d’une requête GET pour cet objet affiche désormais que ses détails ont été remplacés par ceux fournis dans le payload de la requête PUT précédente.
 
 ```json
 [
