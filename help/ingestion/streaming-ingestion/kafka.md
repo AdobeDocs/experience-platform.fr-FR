@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Connecteur Kafka
 topic: overview
 translation-type: tm+mt
-source-git-commit: f80b2e1d787d1f8d9fe8ac306422aa7744a69cd3
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 0%
+source-wordcount: '146'
+ht-degree: 36%
 
 ---
 
 
-# Connecteur Kafka pour Adobe Experience Platform
+# [!DNL Kafka]Connecteur pour Adobe Experience Platform
 
-Le connecteur de flux pour Adobe Experience Platform est basé sur Apache Kafka Connect. Cette bibliothèque peut être utilisée pour diffuser en temps réel les événements JSON des rubriques Kafka de votre centre de données vers la plateforme Experience Platform.
+The stream connector for Adobe Experience Platform is based on [!DNL Apache Kafka Connect]. This library can be used to stream JSON events from [!DNL Kafka] topics in your data center directly to [!DNL Experience Platform] in real-time.
 
-Le connecteur de flux est un connecteur d’évier (à sens unique), qui fournit des données des rubriques Kafka à un point de terminaison enregistré sur la plate-forme d’expérience. Pour utiliser ce connecteur, vous devez télécharger la bibliothèque, l’ajouter à votre déploiement Kafka existant et configurer les rubriques Kafka sur l’URL HTTP Adobe Streaming. Le code supplémentaire **n’est pas** requis. Le connecteur prend en charge les fonctionnalités suivantes :
+The stream connector is a sink (one-way) connector, delivering data from [!DNL Kafka] topics to a registered endpoint on [!DNL Experience Platform]. To use this connector, you must download the library, add it to your existing [!DNL Kafka] deployment, and configure the [!DNL Kafka] topic(s) to the Adobe Streaming HTTP URL. **Aucun** code supplémentaire n’est requis. Le connecteur est compatible avec les fonctionnalités suivantes :
 
-- Collecte authentifiée de données
-- Correspondance de messages pour réduire les appels réseau et augmenter le débit
+- Collecte de données authentifiée
+- Messages par lots pour réduire les appels réseau et augmenter le débit
 
-Pour plus d&#39;informations sur le connecteur Kafka, y compris des instructions sur la façon de configurer le connecteur, veuillez lire le guide de [prise en main](https://github.com/adobe/experience-platform-streaming-connect). Pour un flux de travaux plus détaillé, veuillez lire le guide [du](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md)développeur.
+For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). Pour un workflow plus détaillé, veuillez consulter le [guide de développement](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
