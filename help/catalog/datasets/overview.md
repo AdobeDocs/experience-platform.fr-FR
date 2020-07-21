@@ -4,67 +4,67 @@ solution: Experience Platform
 title: Présentation des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: dcdd94a3a13a13b4104e57b74ecf613bc316b0af
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 0%
+source-wordcount: '711'
+ht-degree: 46%
 
 ---
 
 
 # Présentation des jeux de données
 
-Toutes les données qui ont été correctement ingérées dans Adobe Experience Platform sont conservées dans Data Lake en tant que jeux de données. Un jeu de données est un concept d&#39;enregistrement et de gestion pour une collection de données, généralement un tableau, qui contient un schéma (colonnes) et des champs (lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données qu’ils stockent.
+All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
 
-Ce document fournit un aperçu général des jeux de données dans la plateforme d’expérience.
+Ce document présente de manière générale les jeux de données dans [!DNL Experience Platform].
 
 ## Création de jeux de données et suivi des métadonnées
 
-Catalog Service est le système d’enregistrement de l’emplacement et du lignage des données dans la plate-forme d’expérience. Il est utilisé pour créer et gérer des jeux de données. Le catalogue suit les métadonnées de chaque jeu de données, ce qui inclut une référence au schéma de modèle de données d’expérience (XDM) auquel le jeu de données est conforme (expliqué dans la section suivante) et le nombre d’enregistrements ingérés dans ce jeu de données.
+[!DNL Catalog Service] est le système d’enregistrement de l’emplacement et du lignage des données [!DNL Experience Platform]et est utilisé pour créer et gérer des jeux de données. [!DNL Catalog] suit les métadonnées de chaque jeu de données, ce qui inclut une référence au schéma [!DNL Experience Data Model] (XDM) auquel le jeu de données est conforme (expliqué dans la section suivante) et le nombre d&#39;enregistrements assimilés à ce jeu de données.
 
-See the [Catalog Service overview](../home.md) for more information.
+Pour plus d’informations, consultez la [présentation du service de catalogue](../home.md).
 
-## Imposer des contraintes aux données des jeux de données
+## Application de contraintes aix données des jeux de données
 
-Le modèle de données d’expérience (XDM) est le cadre normalisé selon lequel la plate-forme organise les données d’expérience client. Toutes les données ingérées dans Platform doivent être conformes à un schéma XDM prédéfini avant de pouvoir être conservées dans Data Lake en tant que jeu de données.
+[!DNL Experience Data Model] (XDM) est le cadre normalisé qui [!DNL Platform] organise les données d’expérience client. All data that is ingested into [!DNL Platform] must conform to a pre-defined XDM schema before it can be persisted in the [!DNL Data Lake] as a dataset.
 
-Tous les jeux de données contiennent une référence au schéma XDM qui limite le format et la structure des données qu’ils peuvent stocker. Si vous tentez de transférer des données vers un jeu de données non conforme au schéma XDM du jeu de données, l&#39;assimilation échouera.
+Tous les jeux de données contiennent une référence au schéma XDM qui limite le format et la structure des données qui peuvent être stockées. Toute tentative de chargement de données vers un jeu de données non conforme à son schéma XDM entraînera l’échec de l’ingestion.
 
-Pour plus d&#39;informations sur XDM, consultez la présentation [du système](../../xdm/home.md)XDM.
+Pour plus d’informations sur XDM, consultez la [présentation du système XDM](../../xdm/home.md).
 
-## Incorporation de données dans des jeux de données
+## Ingestion de données par les jeux de données
 
-L’importation de données de la plate-forme Adobe Experience représente les multiples méthodes par lesquelles la plate-forme ingère des données provenant de diverses sources. Quelle que soit la méthode d’assimilation, toutes les données correctement assimilées sont converties en fichiers de commandes. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à assimiler en une seule unité. Ces fichiers de commandes sont ensuite ajoutés aux jeux de données dédiés et conservés dans Data Lake.
+Adobe Experience Platform Data Ingestion represents the multiple methods by which [!DNL Platform] ingests data from various sources. Quelle que soit la méthode d’ingestion, toutes les données ingérées sont converties en fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. These batch files are then added to dedicated datasets and persisted within the [!DNL Data Lake].
 
-See the [Data Ingestion overview](../../ingestion/home.md) for more information.
+Pour plus d’informations, consultez la [présentation de Data Ingestion](../../ingestion/home.md).
 
-## Application de libellés d’utilisation à des jeux de données
+## Application de libellés d’utilisation aux jeux de données
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données client afin de garantir la conformité aux réglementations, restrictions et stratégies applicables à l’utilisation des données. L’utilisation de l’étiquette et de l’application de l’utilisation des données (DULE) en tant que cadre de base vous permet d’appliquer des étiquettes d’utilisation afin de classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Using Data Usage Labeling and Enforcement (DULE) as its core framework, [!DNL Data Governance] allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
 
-Les étiquettes d’utilisation des données peuvent être appliquées à des jeux de données entiers ou à des champs de jeux de données individuels. Les étiquettes ajoutées au niveau du jeu de données sont héritées de tous les champs de ce jeu de données.
+Les libellés d’utilisation des données peuvent être appliqués à des jeux de données entiers ou à des champs de jeu de données individuels. Les libellés ajoutés au niveau du jeu de données sont hérités par tous les champs du jeu de données.
 
-Pour plus d’informations sur le service, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données. Pour savoir comment utiliser les libellés d’utilisation dans [!DNL Platform], consultez les guides suivants :
+Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les libellés d’utilisation dans [!DNL Platform], consultez les guides suivants :
 
 * [Gestion des libellés dans l’interface utilisateur](../../data-governance/labels/user-guide.md)
 * [Gestion des libellés dans l’API](../../data-governance/labels/api.md)
 
-## Jeu de données dans les services de plateformes en aval
+## Datasets in downstream [!DNL Platform] services
 
-Une fois que les jeux de données ont été utilisés pour stocker des données imbriquées, ces jeux de données sont ensuite utilisés par les services Plateforme en aval pour mettre à jour les profils client, obtenir des informations grâce à l’apprentissage automatique, etc.
+Once datasets have been used to store ingested data, those datasets are then used by downstream [!DNL Platform] services to update customer profiles, gain insights through machine learning, and more.
 
-Voici une liste de services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour plus d&#39;informations.
+Voici une liste des services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour en savoir plus.
 
-* [API](../../data-access/home.md)d&#39;accès aux données : Permet d’accéder au contenu des fichiers stockés dans des jeux de données et de le télécharger.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Associe les identités entre les périphériques et les systèmes, en liant les jeux de données en fonction des champs d&#39;identité définis par les schémas XDM auxquels ils se conforment.
-* [Profil](../../profile/home.md)client en temps réel : Utilise Identity Service pour créer des profils clients détaillés à partir de vos jeux de données en temps réel. Le client en temps réel extrait les données de Data Lake et conserve les profils clients dans sa propre banque de données distincte.
-* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Permet de créer des segments et de générer des audiences à partir des données de Profil client en temps réel. Ces audiences peuvent ensuite être exportées vers leurs propres ensembles de données dans le lac Data.
-* [Espace de travail](../../data-science-workspace/home.md)des données de la plateforme Adobe Experience Platform : Utilise l&#39;apprentissage automatique et l&#39;intelligence artificielle pour découvrir des informations dans des jeux de données volumineux.
-* [Adobe Experience Platform Requête Service](../../query-service/home.md): Permet d’utiliser des données SQL standard pour la requête dans la plateforme Experience Platform, de joindre des jeux de données dans Data Lake et de capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans rapports, Data Science Workspace ou le Profil client en temps réel.
-* [Service](../../decisioning-service/home.md)de prise de décision Adobe Experience Platform : Exploite le Profil client en temps réel pour déterminer le choix le plus probable qu&#39;un client fera à partir d&#39;un ensemble d&#39;options, en fonction des données comportementales que le Profil extrait des jeux de données activés.
+* [!DNL Data Access API](../../data-access/home.md): Permet d’accéder au contenu des fichiers stockés dans des jeux de données et de le télécharger.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
+* [!DNL Real-time Customer Profile](../../profile/home.md): Exploite [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] extrait les données [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
+* [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données These audiences can then be exported to their own datasets within the [!DNL Data Lake].
+* [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
+* [Adobe Experience Platform Requête Service](../../query-service/home.md): Vous permet d&#39;utiliser SQL standard pour requête des données dans [!DNL Experience Platform], de joindre des jeux de données dans les jeux de données [!DNL Data Lake] et de capturer les résultats des requêtes sous la forme d&#39;un nouveau jeu de données à utiliser dans le rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
+* [Service de prise de décision d’Adobe Experience Platform](../../decisioning-service/home.md)[!DNL Real-time Customer Profile] : exploite pour déterminer le choix le plus probable du client à partir d’un ensemble d’options, en fonction des données comportementales que extrait des jeux de données activés.[!DNL Profile]
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez été familiarisé avec les principales utilisations des jeux de données dans la plate-forme d’expérience, ainsi qu’avec les divers services de plateformes qui utilisent les jeux de données. Pour plus d&#39;informations sur les nombreuses manières d&#39;utiliser les jeux de données dans Platform, veuillez consulter la documentation du service liée dans cette présentation.
+By reading this document, you have been introduced to the core uses of datasets in [!DNL Experience Platform], as well as the various [!DNL Platform] services that utilize datasets. For more details on the many ways datasets are used in [!DNL Platform], please review the service documentation linked throughout this overview.
 
-Pour savoir comment interagir avec des jeux de données dans l’interface utilisateur de la plate-forme d’expérience, voir le guide [d’utilisation](user-guide.md)des jeux de données.
+For steps on how to interact with datasets within the [!DNL Experience Platform] UI, see the [datasets user guide](user-guide.md).
