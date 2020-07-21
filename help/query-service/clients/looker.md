@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Se connecter avec Looker
+title: Connexion à Looker
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 0%
+source-wordcount: '202'
+ht-degree: 76%
 
 ---
 
 
-# Se connecter avec Looker
+# Connect with [!DNL Looker]
 
-Pour connecter Looker à Adobe Requête Service sur Adobe Experience Platform, procédez comme suit :
+To connect [!DNL Looker] with [!DNL Query Service] on Adobe Experience Platform, please follow the steps below:
 
-Après vous être connecté à Looker, cliquez sur **Admin**, puis sur **Connexions**.
+After logging into [!DNL Looker], click on **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.
 
 ![](../images/clients/looker/click-admin-connections.png)
 
@@ -24,24 +24,24 @@ Sur cette page, cliquez sur **Nouvelle connexion**.
 
 ![](../images/clients/looker/click-new-connection.png)
 
-A partir de là, vous pouvez remplir les détails des paramètres de connexion.
+À partir de là, vous pouvez remplir les détails des paramètres de connexion.
 
 ![](../images/clients/looker/new-connection.png)
 
-- **Nom :** Nom de votre connexion.
-- **Dialecte :** Dialecte utilisé pour la base de données SQL. Requête Service utilise **PostgreSQL**.
-- **Hôte et port :** Point de terminaison hôte et son port pour Requête Service.
-- **Base de données :** Base de données qui sera utilisée.
-- **Nom d&#39;utilisateur et mot de passe :** Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur se présente sous la forme `ORG_ID@AdobeOrg`.
+- **Nom** : le nom de la connexion.
+- **Dialecte** : le dialecte utilisé pour la base de données SQL. [!DNL Query Service] utilise **[!DNL PostgreSQL]**.
+- **Hôte et port** : le point de terminaison hôte et son port pour [!DNL Query Service].
+- **Base de données** : la base de données qui sera utilisée.
+- **Identifiant de connexion et mot de passe** : les informations de connexion qui seront utilisées. Le nom d’utilisateur se présente sous la forme `ORG_ID@AdobeOrg`.
 
 >[!NOTE]
 >
->Pour plus d’informations sur la recherche de votre hôte et de votre port, du nom de la base de données et des informations d’identification de connexion, consultez la page [d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>Pour plus d’informations sur la manière de trouver l’hôte et le port, le nom de la base de données ainsi que les informations de connexion, consultez la [page des informations d’identification de Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
-Après avoir saisi les détails de votre connexion, cliquez sur **Tester ces paramètres** pour vous assurer que vos informations d’identification fonctionnent correctement. Si tel est le cas, un message indiquant que vous pouvez vous connecter s’affiche ci-dessous. Si votre connexion a réussi, cliquez sur **Ajouter la connexion** pour créer votre connexion.
+Après avoir saisi vos informations de connexion, cliquez sur **[!UICONTROL Tester ces paramètres]** pour vous assurer qu’elles fonctionnent correctement. Si c’est le cas, un message indiquant que vous pouvez vous connecter s’affiche en dessous. Si la connexion est établie, cliquez sur **[!UICONTROL Ajouter connexion]** pour créer votre connexion.
 
 ![](../images/clients/looker/click-test-connection.png)
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à Requête Service, vous pouvez utiliser Looker pour écrire des requêtes. Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide [des requêtes](../creating-queries/creating-queries.md)en cours d&#39;exécution.
+Now that you&#39;ve connected with [!DNL Query Service], you can use [!DNL Looker] to write queries. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../creating-queries/creating-queries.md).
