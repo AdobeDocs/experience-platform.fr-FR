@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Objets Liste
+title: Liste des objets
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 2%
+source-wordcount: '197'
+ht-degree: 51%
 
 ---
 
 
-# Objets Liste
+# Liste des objets
 
-Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique par le biais d’un appel d’API unique, la meilleure pratique étant d’inclure des filtres qui limitent la taille de la réponse.
+Vous pouvez récupérer une liste de tous les objets disponibles d’un type spécifique à l’aide d’un seul appel API. Une bonne pratique consiste à inclure des filtres qui limitent la taille de la réponse.
 
 **Format d’API**
 
@@ -25,12 +25,12 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à répertorier. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{FILTER}` | Paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données](filter-data.md) du catalogue. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be listed. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données de Catalog](filter-data.md). |
 
 **Requête**
 
-L’exemple de requête ci-dessous récupère une liste de jeux de données, un `limit` filtre réduisant la réponse à cinq résultats et un `properties` filtre limitant les propriétés affichées pour chaque jeu de données.
+L’exemple de requête ci-dessous récupère une liste de jeux de données, avec un filtre `limit` réduisant la réponse à cinq résultats et un filtre `properties` limitant les propriétés affichées pour chaque jeu de données.
 
 ```shell
 curl -X GET \
@@ -43,11 +43,11 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse positive renvoie une liste d’objets Catalog sous la forme de paires clé-valeur, filtrée par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet Catalog en question, qui peut ensuite être utilisé dans un autre appel à la [vue de cet objet](look-up-object.md) spécifique pour plus de détails.
+A successful response returns a list of [!DNL Catalog] objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the [!DNL Catalog] object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la `properties` requête, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans les sections &quot;Exemple de jeu de données 3&quot; et &quot;Exemple de jeu de données 4&quot; ci-dessous.
+>If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
 
 ```json
 {
