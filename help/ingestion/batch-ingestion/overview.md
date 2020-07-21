@@ -1,77 +1,77 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de l'importation par lots d'Adobes Experience Platform
+title: Présentation de l’ingestion par lots d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 2%
+source-wordcount: '1144'
+ht-degree: 82%
 
 ---
 
 
-# Présentation de l&#39;importation par lot
+# [!DNL Batch Ingestion] aperçu
 
-L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données à l&#39;Adobe Experience Platform sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil d’un fichier plat dans un système de gestion de la relation client (par exemple un fichier de parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
+The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
-La référence [de l&#39;API d&#39;](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) administration de données fournit des informations supplémentaires sur ces appels d&#39;API.
+La [référence de l’API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fournit des informations supplémentaires sur ces appels d’API.
 
-Le diagramme suivant décrit le processus d&#39;assimilation par lot :
+Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
 ## Utilisation de l’API
 
-L&#39;API d&#39;importation de données vous permet d&#39;assimiler des données sous forme de lots (une unité de données composée d&#39;un ou plusieurs fichiers à assimiler en une seule unité) dans l&#39;Experience Platform en trois étapes de base :
+The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
 
-1. Créez un lot.
-2. Téléchargez des fichiers vers un jeu de données spécifié qui correspond au schéma XDM des données.
+1. Création d’un nouveau filtre.
+2. Chargez des fichiers vers un jeu de données spécifique qui correspond au schéma XDM des données.
 3. Signale la fin du lot.
 
 
-### Prérequis pour l&#39;importation de données
+### [!DNL Data Ingestion] conditions préalables
 
-- Les données à télécharger doivent être au format Parquet ou JSON.
-- Jeu de données créé dans les services [de](../../catalog/home.md)catalogue.
-- Le contenu du fichier parquet doit correspondre à un sous-ensemble du schéma du jeu de données dans lequel il est chargé.
-- Ayez votre Jeton d&#39;accès unique après l’authentification.
+- Les données à charger doivent être au format Parquet ou JSON.
+- Jeu de données créé dans le [!DNL Catalog services](../../catalog/home.md).
+- Le contenu du fichier parquet doit correspondre à un sous-ensemble du schéma du jeu de données en cours de chargement.
+- Obtenez votre jeton d’accès unique après l’authentification.
 
-### Meilleures pratiques d’assimilation par lot
+### Bonnes pratiques d’ingestion par lots
 
-- La taille de lot recommandée est comprise entre 256 Mo et 100 Go.
-- Chaque lot doit contenir au plus 1 500 fichiers.
+- La taille du lot recommandée est comprise entre 256 Mo et 100 Go.
+- Chaque lot doit contenir au maximum 1 500 fichiers.
 
-Pour télécharger un fichier de plus de 512 Mo, le fichier doit être divisé en petits morceaux. Les instructions pour télécharger un fichier volumineux sont disponibles [ici](#large-file-upload---create-file).
+Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits blocs. Vous trouverez des instructions pour charger un fichier volumineux [ici](#large-file-upload---create-file).
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-- Content-Type : application/json
+- Content-Type: application/json
 
 ### Création d’un lot
 
-Avant de pouvoir ajouter des données à un jeu de données, celles-ci doivent être liées à un lot, qui sera ensuite transféré dans un jeu de données spécifié.
+Avant de pouvoir ajouter des données à un jeu de données, elles doivent être liées à un lot, qui sera ensuite chargé dans un jeu de données spécifié.
 
 ```http
 POST /batches
@@ -93,9 +93,9 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `datasetId` | ID du jeu de données dans lequel télécharger les fichiers. |
+| `datasetId` | Identifiant du jeu de données dans lequel charger les fichiers. |
 
-**Réponses**
+**Réponse**
 
 ```JSON
 {
@@ -119,22 +119,22 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | ID du lot qui vient d’être créé (utilisé dans les demandes ultérieures). |
-| `relatedObjects.id` | ID du jeu de données dans lequel télécharger les fichiers. |
+| `id` | Identifiant du lot qui vient d’être créé (utilisé dans les demandes ultérieures). |
+| `relatedObjects.id` | Identifiant du jeu de données dans lequel charger les fichiers. |
 
-## Téléchargement de fichier
+## Chargement des fichiers
 
-Après avoir créé un nouveau lot pour le transfert, les fichiers peuvent être téléchargés vers un jeu de données spécifique.
+Une fois le nouveau lot créé avec succès pour le chargement, les fichiers peuvent désormais être chargés dans le jeu de données spécifique.
 
-Vous pouvez télécharger des fichiers à l’aide de l’API **de téléchargement de** petits fichiers. Toutefois, si vos fichiers sont trop volumineux et que la limite de passerelle est dépassée (délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes, par exemple), vous pouvez passer à l’API **de téléchargement de fichiers** volumineux. Cette API télécharge le fichier en blocs et collecte les données ensemble à l’aide de l’appel API **de téléchargement de fichier** volumineux.
+Vous pouvez charger des fichiers à l’aide de **l’API Small File Upload**. Toutefois, si vos fichiers sont trop volumineux et que la limite de la passerelle est dépassée (par exemple, délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes), vous pouvez passer à **l’API Large File Upload**. Cette API charge le fichier par blocs et assemble les données à l’aide de l’appel à l’**API Large File Upload Complete**.
 
 >[!NOTE]
 >
->Les exemples ci-dessous utilisent le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) . Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](./api-overview.md)assimilation par lot.
+>Les exemples ci-dessous utilisent le format de fichier [parquet](https://parquet.apache.org/documentation/latest/). Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](./api-overview.md).
 
-### Téléchargement de petits fichiers
+### Chargement de petits fichiers
 
-Une fois un lot créé, les données peuvent être transférées vers un jeu de données préexistant.  Le fichier en cours de téléchargement doit correspondre à son schéma XDM référencé.
+Une fois un lot créé, les données peuvent être chargées vers un jeu de données préexistant.  Le fichier en cours de chargement doit correspondre à son schéma XDM référencé.
 
 ```http
 PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -142,8 +142,8 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot. |
-| `{DATASET_ID}` | ID du jeu de données à télécharger. |
+| `{BATCH_ID}` | Identifiant du lot. |
+| `{DATASET_ID}` | Identifiant du jeu de données dans lequel charger les fichiers. |
 | `{FILE_NAME}` | Nom du fichier tel qu’il sera affiché dans le jeu de données. |
 
 **Requête**
@@ -160,17 +160,17 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès et nom de fichier du fichier à télécharger dans le jeu de données. |
+| `{FILE_PATH_AND_NAME}` | Chemin et nom du fichier à charger dans le jeu de données. |
 
-**Réponses**
+**Réponse**
 
 ```JSON
 #Status 200 OK, with empty response body
 ```
 
-### Téléchargement de fichiers volumineux - créer un fichier
+### Chargement de fichiers volumineux - création d’un fichier
 
-Pour télécharger un fichier volumineux, le fichier doit être divisé en petits morceaux et téléchargé un par un.
+Pour charger un fichier volumineux, le fichier doit être divisé en petits blocs qui seront chargés un par un.
 
 ```http
 POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initialize
@@ -178,8 +178,8 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}?action=initiali
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot. |
-| `{DATASET_ID}` | ID du jeu de données qui imprime les fichiers. |
+| `{BATCH_ID}` | Identifiant du lot. |
+| `{DATASET_ID}` | Identifiant du jeu de données qui ingère les fichiers. |
 | `{FILE_NAME}` | Nom du fichier tel qu’il sera affiché dans le jeu de données. |
 
 **Requête**
@@ -192,15 +192,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-api-key: {API_KEY}"
 ```
 
-**Réponses**
+**Réponse**
 
 ```JSON
 #Status 201 CREATED, with empty response body
 ```
 
-### Téléchargement de fichiers volumineux - transfert des parties suivantes
+### Chargement de fichiers volumineux - chargement des parties suivantes
 
-Une fois le fichier créé, tous les blocs suivants peuvent être téléchargés en exécutant des requêtes PATCH répétées, une pour chaque section du fichier.
+Une fois le fichier créé, tous les blocs suivants peuvent être chargés en exécutant des requêtes PATCH répétées, une pour chaque section du fichier.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
@@ -208,8 +208,8 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot. |
-| `{DATASET_ID}` | ID du jeu de données dans lequel télécharger les fichiers. |
+| `{BATCH_ID}` | Identifiant du lot. |
+| `{DATASET_ID}` | Identifiant du jeu de données dans lequel charger les fichiers. |
 | `{FILE_NAME}` | Nom du fichier tel qu’il sera affiché dans le jeu de données. |
 
 **Requête**
@@ -227,17 +227,17 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès et nom de fichier du fichier à télécharger dans le jeu de données. |
+| `{FILE_PATH_AND_NAME}` | Chemin et nom du fichier à charger dans le jeu de données. |
 
-**Réponses**
+**Réponse**
 
 ```JSON
 #Status 200 OK, with empty response
 ```
 
-## Fin du lot de signaux
+## Signalement de la fin du lot
 
-Une fois que tous les fichiers ont été téléchargés dans le lot, celui-ci peut être signalé comme étant terminé. Ce faisant, les entrées **DataSetFile** du catalogue sont créées pour les fichiers terminés et associées au lot généré ci-dessus. Le lot de catalogue est ensuite marqué comme ayant réussi, ce qui déclenche des flux en aval pour assimiler les données disponibles.
+Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]**DataSetFile** de pour les fichiers terminés et les associe au lot généré ci-dessus. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Requête**
 
@@ -247,7 +247,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot à télécharger dans le jeu de données. |
+| `{BATCH_ID}` | Identifiant du lot à charger dans le jeu de données. |
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
@@ -257,15 +257,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-api-key : {API_KEY}"
 ```
 
-**Réponses**
+**Réponse**
 
 ```JSON
 #Status 200 OK, with empty response
 ```
 
-## Vérifier l&#39;état du lot
+## Vérifier l’état du lot
 
-En attendant que les fichiers soient téléchargés dans le lot, vous pouvez vérifier l&#39;état du lot pour voir sa progression.
+En attendant que les fichiers soient chargés dans le lot, vous pouvez vérifier l’état du lot pour voir sa progression.
 
 **Format d’API**
 
@@ -275,7 +275,7 @@ GET /batch/{BATCH_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot en cours de vérification. |
+| `{BATCH_ID}` | Identifiant du lot en cours d’analyse. |
 
 **Requête**
 
@@ -287,7 +287,7 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
   -H "x-api-key: {API_KEY}"
 ```
 
-**Réponses**
+**Réponse**
 
 ```JSON
 {
@@ -379,23 +379,23 @@ curl GET "https://platform.adobe.io/data/foundation/catalog/batch/{BATCH_ID}" \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{USER_ID}` | ID de l’utilisateur qui a créé ou mis à jour le lot. |
+| `{USER_ID}` | Identifiant de l’utilisateur qui a créé ou mis à jour le lot. |
 
-Le `"status"` champ indique l&#39;état actuel du lot demandé. Les lots peuvent avoir l’un des états suivants :
+Le champ `"status"` indique l’état actuel du lot demandé. Les lots peuvent avoir l’un des états suivants :
 
-## Etat d’assimilation par lot
+## États de l’ingestion par lot
 
 | État | Description |
 | ------ | ----------- |
-| Abandonné | Le lot n&#39;est pas terminé dans la période prévue. |
-| Abandonné | Une opération d&#39;abandon a été **explicitement** appelée (via l&#39;API de réception par lot) pour le lot spécifié. Une fois le lot **chargé** , il ne peut plus être abandonné. |
-| Actif | Le lot a été promu avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec **Success**. |
-| Supprimé | Les données du lot ont été complètement supprimées. |
-| Échec | Etat de terminal résultant d’une configuration incorrecte et/ou de données incorrectes. Les données d&#39;un lot en panne **ne s&#39;affichent pas** . Cet état peut être utilisé de manière interchangeable avec **Échec**. |
-| Inactif | La promotion du lot a réussi, mais a été annulée ou a expiré. Le lot n&#39;est plus disponible pour la consommation en aval. |
-| Chargé | Les données du lot sont terminées et le lot est prêt pour la promotion. |
-| Chargement | Les données de ce lot sont en cours de transfert et le lot **n&#39;est pas** actuellement prêt à être promu. |
-| Nouvelle tentative | Les données de ce lot sont en cours de traitement. Cependant, en raison d&#39;une erreur système ou transitoire, le lot a échoué. Par conséquent, ce lot est de nouveau essayé. |
-| Mis en scène | La phase d&#39;évaluation du processus de promotion d&#39;un lot est terminée et la tâche d&#39;assimilation a été exécutée. |
+| Abandonné | Le lot ne s’est pas terminé dans le délai prévu. |
+| Interrompu | Une opération pour interrompre l’opération a été **explicitement** appelée (via l’API Batch Ingest) pour le lot spécifié. Une fois le lot **chargé**, il ne peut plus être interrompu. |
+| Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec **Succès**. |
+| Supprimé | Les données du lot ont été entièrement supprimées. |
+| Échoué | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Cet état peut être utilisé de manière interchangeable avec **Échec**. |
+| Inactif | La conversion du lot a réussi, mais a été annulée ou a expiré. Le lot n’est plus disponible pour la consommation en aval. |
+| Chargé | Les données du lot sont transférées et le lot est prêt pour la promotion. |
+| Chargement | Les données de ce lot sont en cours de chargement et le lot **n’est actuellement pas** prêt à être converti. |
+| Nouvelle tentative | Les données de ce lot sont en cours de traitement. Cependant, en raison d’une erreur système ou transitoire, le lot a échoué. Par conséquent, une nouvelle tentative pour ce lot est en cours. |
+| Évalué | La phase d’évaluation du processus de promotion d’un lot est terminée et la tâche d’ingestion a été exécutée. |
 | Évaluation | Les données du lot sont en cours de traitement. |
-| Bloqué | Les données du lot sont en cours de traitement. Cependant, la promotion par lot est bloquée après un certain nombre de Reprises. |
+| Bloqué | Les données du lot sont en cours de traitement. Toutefois, la promotion par lot est bloquée après un certain nombre de tentatives. |
