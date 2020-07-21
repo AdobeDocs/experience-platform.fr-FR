@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide pour Real-time Customer Profile
 translation-type: tm+mt
-source-git-commit: 57ef7df4b9323b58a90660d515ade61a3974779f
+source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 66%
+ht-degree: 64%
 
 ---
 
@@ -31,6 +31,6 @@ ht-degree: 66%
    * [Configurer un jeu de données pour [!DNL Profile] et [!DNL Identity]](tutorials/dataset-configuration.md)
    * [Plus de tutoriels](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
-* [Guide de dépannage](troubleshooting.md)
+* [[!DNL Profile] guide de dépannage](troubleshooting.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
 * [[!DNL Platform] notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
