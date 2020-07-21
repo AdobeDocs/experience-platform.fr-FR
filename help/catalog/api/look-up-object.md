@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Rechercher un objet
+title: Recherche d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 4%
+source-wordcount: '132'
+ht-degree: 78%
 
 ---
 
 
-# Rechercher un objet
+# Recherche d’un objet
 
-Si vous connaissez l&#39;identifiant unique d&#39;un objet Catalog spécifique, vous pouvez exécuter une requête GET pour vue les détails de cet objet.
+If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object&#39;s details.
 
 >[!NOTE]
 >
->Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtrer par propriétés](filter-data.md) et de ne renvoyer que les propriétés qui vous intéressent.
+>Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtrer par propriétés](filter-data.md) et de renvoyer uniquement les propriétés qui vous intéressent.
 
 **Format d’API**
 
@@ -29,12 +29,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identificateur de l&#39;objet spécifique que vous souhaitez récupérer. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | L’identifiant de l’objet spécifique que vous souhaitez récupérer. |
 
 **Requête**
 
-La requête suivante récupère un jeu de données par son identifiant, en renvoyant ses `name`, `description`, `state`, `tags`et `files` propriétés.
+La requête suivante récupère un jeu de données à l’aide de son identifiant, renvoyant ses propriétés `name`, `description`, `state`, `tags` et `files`.
 
 ```shell
 curl -X GET \
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie le jeu de données spécifié avec uniquement le jeu demandé `properties` dans le corps.
+Une réponse réussie renvoie le jeu de données spécifié contenant uniquement les `properties` demandées dans le corps.
 
 ```json
 {
@@ -67,4 +67,4 @@ Une réponse réussie renvoie le jeu de données spécifié avec uniquement le j
 
 >[!NOTE]
 >
->Les propriétés dont les valeurs comportent un préfixe `@` représentent des objets interconnectés. Consultez la section de l’annexe sur l’ [affichage des objets](appendix.md#view-interrelated-objects) interconnectés pour savoir comment vue les détails de ces objets.
+>Les propriétés dont les valeurs comportent le préfixe `@` représentent des objets interconnectés. Consultez la section de l’annexe sur [l’affichage des objets interconnectés](appendix.md#view-interrelated-objects) pour savoir comment afficher les détails de ces objets.
