@@ -1,156 +1,156 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de l’utilisateur des jeux de données
+title: Guide d’utilisation des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 1%
+source-wordcount: '1135'
+ht-degree: 76%
 
 ---
 
 
-# Guide de l’utilisateur des jeux de données
+# Guide d’utilisation des jeux de données
 
-Ce guide d&#39;utilisation fournit des instructions sur l&#39;exécution d&#39;actions courantes lors de l&#39;utilisation de jeux de données dans l&#39;interface utilisateur d&#39;Adobe Experience Platform.
+Ce guide d’utilisation fournit des instructions permettant d’exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur d’Adobe Experience Platform.
 
 ## Prise en main
 
-Ce guide d&#39;utilisation nécessite une bonne compréhension des composants suivants de l&#39;Adobe Experience Platform :
+Ce guide d’utilisation nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Jeu de données](overview.md): enregistrement et concept de gestion pour la persistance des données dans l’Experience Platform.
-* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-   * [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
-   * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’éditeur de Schéma dans l’interface utilisateur Platform.
-* [Profil](../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [Gouvernance](../../data-governance/home.md)des données : Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
+* [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+   * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
+   * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de Schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de la [!DNL Schema Editor] section dans l’ [!DNL Platform] interface utilisateur.
+* [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [!DNL Data Governance](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
 
-## Jeu de données de Vue
+## Affichage des jeux de données
 
-Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Datasets** dans le volet de navigation de gauche pour ouvrir le tableau de bord *Datasets* . Le tableau de bord liste tous les jeux de données disponibles pour votre organisation. Les détails s&#39;affichent pour chaque jeu de données répertorié, y compris son nom, le schéma auquel le jeu de données adhère et l&#39;état de l&#39;exécution d&#39;assimilation la plus récente.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the *[!UICONTROL Datasets]* dashboard. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
-Cliquez sur le nom d&#39;un jeu de données pour accéder à son écran d&#39;activité *des* jeux de données et voir les détails du jeu de données que vous avez sélectionné. L&#39;onglet activité comprend un graphique qui présente le taux de messages consommés ainsi qu&#39;une liste de lots réussis et d&#39;échecs.
+Cliquez sur le nom d’un jeu de données pour accéder à l’écran *[!UICONTROL Activité du jeu de données]* et consulter les détails du jeu de données que vous avez sélectionné. L’onglet activité contient un graphique qui permet de visualiser le taux de messages consommé ainsi qu’une liste des lots réussis et en échec.
 
 ![](../images/datasets/user-guide/dataset_activity_1.png)
 ![](../images/datasets/user-guide/dataset_activity_2.png)
 
 ## Prévisualisation d’un jeu de données
 
-Dans l’écran activité *des* jeux de données, cliquez sur Jeu de données **de** Prévisualisation situé dans le coin supérieur droit de l’écran pour prévisualisation jusqu’à 100 lignes de données. Si le jeu de données est vide, le lien de la prévisualisation est désactivé et indique plutôt que **la Prévisualisation n&#39;est pas disponible**.
+À l’écran *[!UICONTROL Activité du jeu de données]*, cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit de votre écran pour prévisualiser jusqu’à 100 lignes de données. Si le jeu de données est vide, le lien de prévisualisation sera désactivé et indiquera à la place **[!UICONTROL Prévisualisation non disponible]**.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
-Dans la fenêtre prévisualisation, la vue hiérarchique du schéma du jeu de données s’affiche à droite.
+Dans la fenêtre de prévisualisation, l’affichage hiérarchique du schéma pour le jeu de données s’affiche sur la droite.
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-Pour des méthodes plus robustes d&#39;accès à vos données, Experience Platform fournit des services en aval tels que Requête Service et JupyterLab pour explorer et analyser les données. Pour plus d’informations, voir les documents suivants :
+For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. Consultez les documents suivants pour plus d’informations :
 
-* [Présentation du service Requête](../../query-service/home.md)
-* [Guide de l&#39;utilisateur de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
+* [Présentation de Query Service](../../query-service/home.md)
+* [Guide d’utilisation de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
 
 ## Création d’un jeu de données {#create}
 
-Pour créer un nouveau jeu de données, début en cliquant sur **Créer un jeu de données** dans le tableau de bord *Jeu de données* .
+Pour créer un nouveau jeu de données, commencez par cliquer sur **[!UICONTROL Créer un jeu de données]** dans le tableau de bord *[!UICONTROL Jeux de données]*.
 
 ![](../images/datasets/user-guide/click_to_create.png)
 
-Dans l’écran suivant, vous trouverez les deux options suivantes pour la création d’un nouveau jeu de données :
+Sur l’écran suivant, les deux options de création d’un nouveau jeu de données suivantes vous sont proposées :
 
-* [Créer un jeu de données à partir d&#39;un schéma](#create-a-dataset-with-an-existing-schema)
-* [Création d’un jeu de données à partir d’un fichier CSV](#create-a-dataset-with-a-csv-file)
+* [Créer un jeu de données à partir d’un schéma](#create-a-dataset-with-an-existing-schema)
+* [Créer un jeu de données à partir d’un fichier CSV](#create-a-dataset-with-a-csv-file)
 
-### Créer un jeu de données avec un schéma existant
+### Création d’un jeu de données à partir d’un schéma existant
 
-Dans l’écran *Créer un jeu de données* , cliquez sur **Créer un jeu de données à partir du schéma** pour créer un nouveau jeu de données vide.
+Sur l’écran *[!UICONTROL Créer un jeu de données]*, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour créer un nouveau jeu de données vide.
 
 ![](../images/datasets/user-guide/create_dataset_schema.png)
 
-L&#39;étape *Sélectionner un schéma* s&#39;affiche. Parcourez la liste des schémas et sélectionnez le schéma auquel le jeu de données doit adhérer avant de cliquer sur **Suivant**.
+L’étape *[!UICONTROL Sélectionner un schéma]* apparaît. Parcourez la liste des schémas et sélectionnez le schéma auquel le jeu de données doit s’adapter avant de cliquer sur **[!UICONTROL Suivant]**.
 
 ![](../images/datasets/user-guide/select_schema.png)
 
-L&#39;étape *Configurer le jeu de données* s&#39;affiche. Indiquez un nom et une description facultative au jeu de données, puis cliquez sur **Terminer** pour créer le jeu de données.
+L’étape *[!UICONTROL Configurer le jeu de données]* apparaît. Ajoutez un nom et une description facultative au jeu de données, puis cliquez sur **[!UICONTROL Terminer]** pour créer le jeu de données.
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Création d’un jeu de données avec un fichier CSV
+### Création d’un jeu de données à partir d’un fichier CSV
 
-Lorsqu’un jeu de données est créé à l’aide d’un fichier CSV, un schéma ad hoc est créé pour fournir au jeu de données une structure correspondant au fichier CSV fourni. Dans l’écran *Créer un jeu de données* , cliquez sur la case à cocher &quot; **Créer un jeu de données à partir d’un fichier** CSV&quot;.
+Lorsque vous créez un jeu de données à l’aide d’un fichier CSV, un schéma ad hoc est créé pour fournir une structure au jeu de données qui correspond au fichier CSV fourni. Sur l’écran *[!UICONTROL Créer un jeu de données]*, cliquez sur la case intitulée **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]**.
 
 ![](../images/datasets/user-guide/create_dataset_csv.png)
 
-The *Configure* step appears. Fournissez un nom et une description facultative au jeu de données, puis cliquez sur **Suivant**.
+L’étape *[!UICONTROL Configurer]* apparaît. Ajoutez un nom et une description facultative au jeu de données, puis cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../images/datasets/user-guide/configure_dataset_csv.png)
 
-L’étape *Ajouter les données* s’affiche. Téléchargez le fichier CSV en le faisant glisser vers le centre de l’écran ou en cliquant sur **Parcourir** pour explorer le répertoire de vos fichiers. La taille du fichier peut atteindre dix gigaoctets. Une fois le fichier CSV téléchargé, cliquez sur **Enregistrer** pour créer le jeu de données.
+L’étape *[!UICONTROL Ajouter les données]* apparaît. Chargez le fichier CSV soit en le faisant glisser et en le déposant au centre de votre écran, soit en cliquant sur **[!UICONTROL Parcourir]** pour explorer votre répertoire de fichiers. La taille du fichier peut aller jusqu’à 10 gigaoctets. Une fois le fichier CSV chargé, cliquez sur **[!UICONTROL Enregistrer]** pour créer le jeu de données.
 
 >[!NOTE]
 >
->Les noms de colonnes CSV doivent être débuts de caractères alphanumériques et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.
+>Les noms de colonne CSV doivent commencer par des caractères alphanumériques et ne peuvent contenir que des lettres, des chiffres et des traits de soulignement.
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
 ## Activation d’un jeu de données pour Real-time Customer Profile
 
-Chaque jeu de données peut enrichir les profils clients avec ses données imbriquées. Pour ce faire, le schéma auquel adhère le jeu de données doit être compatible avec le Profil client en temps réel. Un schéma compatible satisfait aux exigences suivantes :
+Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible avec [!DNL Real-time Customer Profile]. Un schéma compatible répond aux critères suivants :
 
-* Le schéma comporte au moins un attribut spécifié comme propriété d&#39;identité.
-* Le schéma possède une propriété d&#39;identité définie en tant qu&#39;identité principale.
+* Le schéma comporte au moins un attribut défini comme propriété d’identité.
+* Le schéma comporte au moins une propriété d’identité définie comme identité principale.
 
-Pour plus d’informations sur l’activation d’un schéma pour le Profil, consultez le guide [d’utilisation de l’éditeur de](../../xdm/tutorials/create-schema-ui.md)Schémas.
+For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
 
-Pour activer un jeu de données pour le Profil, accédez à l&#39;écran activité *du jeu de* données, puis cliquez sur l&#39;icône de **Profil** située dans la colonne *Propriétés* . Une fois activées, les données qui sont incorporées dans le jeu de données sont également utilisées pour renseigner les profils du client.
+Pour activer un jeu de données dans Profile, accédez à son écran *[!UICONTROL Activité du jeu de données]* et cliquez sur le bouton de basculement **[!UICONTROL Profil]** au sein de la colonne *[!UICONTROL Propriétés]*. Une fois activées, les données ingérées dans le jeu de données seront également utilisées pour générer les profils clients.
 
 ![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
-Si un jeu de données contient déjà des données et est ensuite activé pour le Profil, les données existantes ne sont pas utilisées par le Profil. Une fois qu’un jeu de données est activé pour le Profil, il est recommandé de réassimiler toutes les données existantes afin qu’elles soient renseignées dans les profils client.
+If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have them populate customer profiles.
 
-## Gérer et appliquer la gouvernance des données sur un jeu de données
+## Gestion et application de la gouvernance des données sur un jeu de données
 
-L’étiquetage et l’application de l’utilisation des données (DULE) est le mécanisme de gouvernance des données de base de l’Experience Platform. Les étiquettes DOUBLE vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez l’aperçu [de la gouvernance des](../../data-governance/home.md) données ou consultez le guide [d’utilisation des libellés d’utilisation des](../../data-governance/labels/overview.md) données pour savoir comment appliquer des libellés aux jeux de données.
+Data Usage Labeling and Enforcement (DULE) is the core data governance mechanism for [!DNL Experience Platform]. Les libellés DULE vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
 
 ## Suppression d’un jeu de données
 
-Vous pouvez supprimer un jeu de données en accédant d&#39;abord à son écran d&#39;activité *des* jeux de données. Cliquez ensuite sur **Supprimer le jeu** de données pour le supprimer.
+Vous pouvez supprimer un jeu de données en accédant d’abord à son écran *[!UICONTROL Activité du jeu de données]*. Cliquez ensuite sur **[!UICONTROL Supprimer un jeu de données]** pour le supprimer.
 
 >[!NOTE]
 >
->Les jeux de données créés et utilisés par les applications et services Adobe (tels que Adobe Analytics, Adobe Audience Manager ou le service de prise de décision) ne peuvent pas être supprimés.
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Decisioning Service]) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
-Une zone de confirmation s’affiche. Cliquez sur **Supprimer** pour confirmer la suppression du jeu de données.
+Une boîte de confirmation s’affiche alors. Cliquez sur **[!UICONTROL Supprimer]** pour confirmer la suppression du jeu de données.
 
 ![](../images/datasets/user-guide/confirm_delete.png)
 
-## Suppression d’un jeu de données compatible avec les Profils
+## Suppression d’un jeu de données activé par Profile
 
-Si un jeu de données est activé pour le Profil, sa suppression via l&#39;interface utilisateur désactive le jeu de données pour l&#39;assimilation, mais ne supprime pas automatiquement le jeu de données dans le serveur principal. Pour supprimer complètement le jeu de données, y compris les données d&#39;profil et d&#39;identité qu&#39;il contient, une demande de suppression supplémentaire doit être effectuée. Pour savoir comment supprimer correctement les données du magasin de Profils, consultez le [sous-guide API Profil client en temps réel sur les tâches du système de profil, également appelé &quot;requêtes de suppression&quot;](../../profile/api/profile-system-jobs.md).
+If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. Pour supprimer complètement le jeu de données ainsi que les données de profil et d’identité qu’il fournit, vous devez effectuer une requête de suppression supplémentaire. For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as &quot;delete requests&quot;](../../profile/api/profile-system-jobs.md).
 
-## Analyse de l&#39;assimilation des données
+## Surveillance de l’ingestion des données
 
-Dans l’interface utilisateur de l’Experience Platform, cliquez sur **Surveillance** dans le volet de navigation de gauche. Le tableau de bord de *surveillance* vous permet de vue des états des données entrantes, que ce soit par lot ou par assimilation. Pour vue les états de lots individuels, cliquez sur *Batch end-end* ou *Streaming end-to-end*. Le tableau de bord liste toutes les exécutions d’assimilation par lot ou en flux continu, y compris celles qui ont réussi, échoué ou sont toujours en cours d’exécution. Chaque liste fournit des détails sur le lot, y compris l&#39;ID du lot, le nom du jeu de données de la cible et le nombre d&#39;enregistrements ingérés. Si le jeu de données de cible est activé pour le Profil, le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. Le tableau de bord *[!UICONTROL Surveillance]* vous permet de consulter les états des données entrantes soit depuis le lot soit depuis l’ingestion par flux. Pour afficher les états de lots individuels, cliquez sur *[!UICONTROL Lot de bout en bout]* ou sur *[!UICONTROL Diffusion en continu de bout en bout]*. Le tableau de bord répertorie toutes les exécutions de lot ou d’ingestion par flux, notamment celles réussies, en échec ou toujours en cours. Chaque liste fournit des détails sur le lot, notamment l’identifiant de lot, le nom du jeu de données cibles et le nombre d’enregistrements ingérés. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
-Vous pouvez cliquer sur un ID **de** lot individuel pour accéder au tableau de bord d&#39;aperçu *du* lot et afficher les détails du lot, y compris les journaux d&#39;erreurs en cas d&#39;échec de l&#39;assimilation du lot.
+Vous pouvez cliquer sur un **[!UICONTROL identifiant de lot]** individuel pour accéder au tableau de bord *[!UICONTROL Présentation du lot]* et afficher les détails pour le lot et notamment les journaux d’erreurs dans le cas de l’échec de l’ingestion du lot.
 
 ![](../images/datasets/user-guide/batch_overview.png)
 
-Si vous souhaitez supprimer le lot, vous pouvez le faire en cliquant sur **Supprimer le lot** situé en haut à droite du tableau de bord. Ce faisant, il supprimera également ses enregistrements du jeu de données auquel le lot a été initialement assimilé.
+Si vous souhaitez supprimer le lot, vous pouvez le faire en cliquant sur **[!UICONTROL Supprimer le lot]** situé près du coin supérieur droit du tableau de bord. Cette opération supprimera également les enregistrements du jeu de données pour lequel le lot a été ingéré à l’origine.
 
 ![](../images/datasets/user-guide/delete_batch.png)
 
 ## Étapes suivantes
 
-Ce guide d’utilisateur fournit des instructions sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de l’Experience Platform. Pour obtenir des instructions sur l’exécution de workflows Platform communs impliquant des jeux de données, reportez-vous aux didacticiels suivants :
+This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
 
 * [Création d’un jeu de données à l’aide d’API](create.md)
-* [Données du jeu de données de Requête à l’aide de l’API d’accès aux données](../../data-access/home.md)
-* [Configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../../profile/tutorials/dataset-configuration.md)
+* [Interrogation des données d’un jeu de données à l’aide de l’API Data Access](../../data-access/home.md)
+* [Configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../../profile/tutorials/dataset-configuration.md)
