@@ -4,63 +4,63 @@ solution: Experience Platform
 title: Présentation du service de catalogue
 topic: overview
 translation-type: tm+mt
-source-git-commit: 1fce86193bc1660d0f16408ed1b9217368549f6c
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 0%
+source-wordcount: '732'
+ht-degree: 46%
 
 ---
 
 
-# Présentation du service de catalogue
+# [!DNL Catalog Service] aperçu
 
-Catalog Service est le système d’enregistrement de l’emplacement et du lignage des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans Data Lake sous forme de fichiers et de répertoires, Catalog contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+[!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et le lignage des données dans l’Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-En d’autres termes, le catalogue agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données dans la plate-forme d’expérience. Vous pouvez utiliser Catalog pour répondre aux questions suivantes :
+Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
-* Où se trouvent mes données ?
-* À quel stade de traitement ces données sont-elles traitées ?
-* Quels systèmes ou processus ont agi sur mes données ?
-* Combien de données ont été traitées avec succès ?
-* Quelles erreurs se sont produites pendant le traitement ?
+* Où se trouvent mes données ?
+* À quel stade de traitement ces données sont-elles arrivées ?
+* Par quels systèmes ou processus mes données sont-elles passées ?
+* Quelle quantité de données a été traitée avec succès ?
+* Quelles erreurs se sont produites pendant le traitement ?
 
-Le catalogue fournit une API RESTful qui vous permet de gérer par programmation les métadonnées de la plate-forme à l’aide des opérations CRUD de base. Consultez le guide [du développeur de](api/getting-started.md) catalogue pour plus d’informations.
+[!DNL Catalog] fournit une API RESTful qui vous permet de gérer par programmation [!DNL Platform] les métadonnées à l’aide des opérations CRUD de base. Pour plus d’informations, consultez le [guide de développement du catalogue](api/getting-started.md).
 
-## Services de catalogue et de plate-forme d’expérience
+## [!DNL Catalog] et [!DNL Experience Platform] services
 
-Les ressources suivies par le service Catalog sont utilisées par plusieurs services Experience Platform. Afin de tirer le meilleur parti des fonctionnalités du catalogue, il est recommandé de se familiariser avec ces services et de connaître leur interaction avec le catalogue.
+Les ressources qui [!DNL Catalog Service] suivent sont utilisées par plusieurs [!DNL Experience Platform] services. In order to make the most of [!DNL Catalog's] capabilities, it is recommended that you become familiar with these services and how they interact with [!DNL Catalog].
 
-### Système de modèle de données d’expérience (XDM)
+### [!DNL Experience Data Model] Système (XDM)
 
-Le système de modèle de données d’expérience (XDM) est le cadre normalisé par lequel la plate-forme organise les données d’expérience client. Experience Platform tire parti des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
+[!DNL Experience Data Model] (XDM) Le système est le cadre normalisé qui [!DNL Platform] organise les données d’expérience client. [!DNL Experience Platform] tire parti des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
 
-Lorsque des données sont ingérées dans la plate-forme, la structure de ces données est mappée à un schéma XDM et stockée dans Data Lake dans le cadre d’un jeu de **données**. Les métadonnées de chaque jeu de données sont suivies par Catalog Service, qui inclut une référence au schéma XDM auquel le jeu de données est conforme.
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
 
-Pour plus d&#39;informations sur XDM System, consultez l&#39;aperçu [du système](../xdm/home.md)XDM.
+Pour obtenir des informations générales sur le système XDM, consultez la [présentation du système XDM](../xdm/home.md).
 
-### Incorporation de données
+### [!DNL Data Ingestion]
 
-Experience Platform ingère des données provenant de plusieurs sources et conserve les enregistrements en tant que jeux de données dans Data Lake. Le catalogue suit les métadonnées de ces jeux de données, quelle que soit leur source ou leur méthode d’assimilation.
+[!DNL Experience Platform] ingère des données provenant de plusieurs sources et conserve les enregistrements en tant que jeux de données dans le [!DNL Data Lake]. [!DNL Catalog] suit les métadonnées de ces jeux de données, quelle que soit leur source ou leur méthode d’assimilation.
 
-Lors de l’utilisation de la méthode d’assimilation par lot, Catalog effectue également le suivi de métadonnées supplémentaires pour les fichiers **par lot** . Les lots sont des unités de données composées d’un ou de plusieurs fichiers à assimiler en une seule unité. Le catalogue suit les métadonnées de ces fichiers de commandes, ainsi que les jeux de données dans lesquels ils sont conservés après l’assimilation. Les métadonnées de lot incluent des informations sur le nombre d’enregistrements correctement assimilés, ainsi que sur les enregistrements ayant échoué et les messages d’erreur associés.
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. [!DNL Catalog] effectue le suivi des métadonnées de ces fichiers de commandes, ainsi que des jeux de données dans lesquels ils sont conservés après l’assimilation. Les métadonnées de lot contiennent des informations sur le nombre d’enregistrements correctement ingérés, ainsi que sur les enregistrements ayant échoué et les messages d’erreur associés.
 
-See the [data ingestion overview](../ingestion/home.md) for more information.
+Pour plus d’informations, consultez la [Présentation de l’ingestion de données](../ingestion/home.md).
 
-## Objets catalogue
+## [!DNL Catalog] objets
 
-Comme indiqué dans la section précédente, le catalogue effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations qui sont utilisées par d’autres services de plate-forme. Catalog gère son propre magasin d’&quot;objets&quot; qui encapsule ces métadonnées. Les objets de catalogue sont des représentations interrogeables des données de la plate-forme qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.
+As outlined in the previous section, [!DNL Catalog] tracks metadata for several kinds of resources and operations that are used by other [!DNL Platform] services. [!DNL Catalog] conserve son propre magasin d’&quot;objets&quot; qui encapsule ces métadonnées. [!DNL Catalog]Les objets sont des représentations interrogeables des données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.[!DNL Platform]
 
-Le tableau suivant décrit les différents types d’objet pris en charge par Catalog :
+The following table outlines the different object types supported by [!DNL Catalog]:
 
-| Objet | Point de terminaison API | Définition |
+| Objet | Point de terminaison de l’API | Définition |
 |---|---|---|
-| Compte | `/accounts` | Lors de la création de connexions source, les informations d’identification d’authentification doivent être fournies. Un compte représente un ensemble d’informations d’identification d’authentification utilisées pour créer une connexion d’un type spécifique. Chaque connexion possède un ensemble de paramètres uniques qui sont conservés par Catalog et sécurisés dans un coffre de clés Azure. |
-| Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à assimiler en une seule unité. Un objet batch du catalogue décrit les mesures d&#39;assimilation du lot (telles que le nombre d&#39;enregistrements traités ou la taille sur le disque) et peut également inclure des liens vers des jeux de données, des vues et d&#39;autres ressources qui ont été affectées par l&#39;opération de traitement par lot. |
-| Connexion | `/connections` | Une connexion est une instance unique d&#39;un connecteur source, propre à votre organisation et configurée à l&#39;aide des informations d&#39;identification d&#39;authentification appropriées pour le type de connecteur. |
-| Connecteur | `/connectors` | Les connecteurs définissent la manière dont les connexions sources doivent collecter les données d’autres applications Adobe (telles que Adobe Analytics et Adobe Audience Manager), les sources d’enregistrement de cloud tierces (telles que Azure Blob, Amazon S3, les serveurs FTP et les serveurs SFTP) et les systèmes de gestion de la relation client tiers (tels que Microsoft Dynamics et Salesforce). |
-| Jeu de données | `/dataSets` | Un jeu de données est un concept d&#39;enregistrement et de gestion utilisé pour la collecte de données (généralement un tableau) qui contient un schéma (colonnes) et des champs (lignes). See the [datasets overview](./datasets/overview.md) for more information. |
-| Fichier de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur la plate-forme. En tant qu’enregistrements de fichiers littéraux, vous pouvez trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a assimilé le fichier. |
+| Compte | `/accounts` | Lors de la création de connexions source, les informations d’authentification doivent être renseignées. Un compte représente un ensemble d’informations d’authentification utilisées pour créer une connexion d’un type spécifique. Each connection has a set of unique parameters that are persisted by [!DNL Catalog] and secured in an [!DNL Azure Key Vault]. |
+| Lot | `/batches` | Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. A batch object in [!DNL Catalog] outlines the batch&#39;s ingestion metrics (such as the number of records processed or size on disk) and may also include links to datasets, views, and other resources that were affected by the batch operation. |
+| Connexion | `/connections` | Une connexion est une instance unique d’un connecteur source, propre à votre organisation et configurée à l’aide des informations d’authentification adéquates au type de connecteur. |
+| Connecteur | `/connectors` | Connectors define how source connections are to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon S3], FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]). |
+| Jeu de données | `/dataSets` | Un jeu de données est une structure de stockage et de gestion utilisée pour la collecte de données (généralement sous la forme d’un tableau) qui contient un schéma (des colonnes) et des champs (des lignes). See the [datasets overview](./datasets/overview.md) for more information. |
+| Fichier de jeu de données | `/datasetFiles` | Les fichiers de jeux de données représentent des blocs de données qui ont été enregistrés sur [!DNL Platform]. Étant des enregistrements de fichiers littéraux, vous pouvez y trouver la taille du fichier, le nombre d’enregistrements qu’il contient, ainsi qu’une référence au lot qui a ingéré le fichier. |
 
 ## Étapes suivantes
 
-Ce document présente le service de catalogue et son fonctionnement dans le cadre plus large de la plate-forme d’expérience. Consultez le guide [du développeur de](api/getting-started.md) catalogue pour savoir comment interagir avec les différents points de terminaison de cette API de catalogue. Il est recommandé de se reporter également au guide sur le [filtrage des données](api/filter-data.md) du catalogue afin de suivre les meilleures pratiques de limitation des données renvoyées dans les réponses de l’API.
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. Pour savoir comment interagir avec les différents points de terminaison de cette API , consultez le [guide de développement du catalogue](api/getting-started.md). [!DNL Catalog] Il vous est également recommandé de consulter le guide sur le [filtrage des données du catalogue](api/filter-data.md) afin de suivre les bonnes pratiques de limitation des données renvoyées dans les réponses de l’API.
