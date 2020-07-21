@@ -1,61 +1,61 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Créer une connexion de flux continu authentifiée
+title: Créer une connexion en continu authentifiée
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 3%
+source-wordcount: '624'
+ht-degree: 74%
 
 ---
 
 
-# Création d’une connexion de flux continu authentifiée
+# Création d’une connexion en continu authentifiée
 
-La collecte de données authentifiées permet aux services d’Adobe Experience Platform, tels que le Profil et l’identité du client en temps réel, de différencier les enregistrements provenant de sources approuvées des enregistrements provenant de sources non approuvées. Les clients qui souhaitent envoyer des informations d’identification personnelle peuvent le faire en envoyant des jetons d&#39;accès dans le cadre de la demande POST.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
 
 ## Prise en main
 
-L’enregistrement de la connexion en flux continu est requis pour début des données en flux continu à l’Adobe Experience Platform. Lors de l’enregistrement d’une connexion de diffusion en continu, vous devez fournir certains détails clés, tels que la source des données de diffusion en continu.
+L’enregistrement d’une connexion en continu est requis pour commencer la diffusion des données en continu vers Adobe Experience Platform. Lors de l’enregistrement d’une connexion en continu, vous devez fournir des détails clés, tels que la source des données en continu.
 
-Après avoir enregistré une connexion de diffusion en continu, vous, en tant que producteur de données, disposez d’une URL unique qui peut être utilisée pour diffuser des données vers Platform.
+Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que producteur des données, une URL unique que vous pourrez utiliser pour diffuser en continu des données vers [!DNL Platform].
 
-Ce tutoriel nécessite également une connaissance pratique de divers services d&#39;Adobe Experience Platform. Avant de commencer ce didacticiel, consultez la documentation relative aux services suivants :
+Ce tutoriel nécessite également une connaissance pratique de divers services Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d&#39;expérience.
-- [Profil](../../profile/home.md)client en temps réel : Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de plusieurs sources.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API d’assimilation en flux continu.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API d’ingestion par flux.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-- Content-Type : application/json
+- Content-Type: application/json
 
 ## Création d’une connexion
 
-Une connexion spécifie la source et contient les informations requises pour rendre le flux compatible avec les API de diffusion en continu.
+Une connexion spécifie la source et contient les informations requises pour rendre le flux compatible avec les API d’ingestion par flux.
 
 **Format d’API**
 
@@ -67,7 +67,7 @@ POST /flowservice/connections
 
 >[!NOTE]
 >
->Les valeurs des éléments répertoriés `providerId` et du `connectionSpec` doit **** être utilisées comme indiqué dans l’exemple, car elles correspondent à ce qui indique à l’API que vous créez une connexion de diffusion en continu pour l’assimilation en flux continu.
+>Les valeurs des variables répertoriées `providerId` et `connectionSpec` **doivent** être utilisées comme illustré dans l’exemple, car elles correspondent à ce qui indique à l’API que vous créez une connexion en continu pour l’ingestion par flux.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 201 avec les détails de la connexion nouvellement créée.
+Une réponse réussie renvoie un état HTTP 201 avec des informations sur la nouvelle connexion.
 
 ```json
 {
@@ -109,12 +109,12 @@ Une réponse réussie renvoie l’état HTTP 201 avec les détails de la connexi
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Le nom `id` de votre nouvelle connexion. On parle ici de `{CONNECTION_ID}`. |
-| `etag` | Identificateur attribué à la connexion, spécifiant la révision de la connexion. |
+| `id` | L’`id` de votre nouvelle connexion. On parlera ici de `{CONNECTION_ID}`. |
+| `etag` | Identifiant attribué à la connexion, spécifiant la révision de la connexion. |
 
-## Obtenir l&#39;URL de collecte de données
+## Obtenir l’URL de collecte de données
 
-Une fois la connexion créée, vous pouvez désormais récupérer l’URL de collecte de données.
+Une fois la connexion créée, vous pouvez alors récupérer l’URL de collecte de données.
 
 **Format d’API**
 
@@ -124,7 +124,7 @@ GET /flowservice/connections/{CONNECTION_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Valeur `id` de la connexion que vous avez créée précédemment. |
+| `{CONNECTION_ID}` | La valeur `id` de la connexion que vous avez créée précédemment. |
 
 **Requête**
 
@@ -138,7 +138,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL de collecte de données est automatiquement créée avec la connexion et peut être récupérée à l’aide de la `inletUrl` valeur.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL de collecte de données est automatiquement créée avec la connexion et peut être récupérée à l’aide de la valeur `inletUrl`.
 
 ```json
 {
@@ -177,17 +177,17 @@ Une réponse réussie renvoie l&#39;état HTTP 200 avec des informations détail
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé une connexion de flux continu authentifiée, vous pouvez diffuser des séries chronologiques ou enregistrer des données, ce qui vous permet d’importer des données dans Platform. Pour savoir comment diffuser des données de série chronologique vers Platform, consultez le didacticiel [sur les données de série chronologique](./streaming-time-series-data.md)en flux continu. Pour savoir comment diffuser des données d’enregistrement vers Platform, consultez le didacticiel [sur les données d’enregistrement](./streaming-record-data.md)en flux continu.
+Maintenant que vous avez créé une connexion en continu authentifiée, vous pouvez diffuser des séries temporelles ou enregistrer des données, ce qui vous permet d’ingérer des données dans [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
 
 ## Annexe
 
-Cette section fournit des informations supplémentaires sur les connexions en flux continu authentifiées.
+Cette section fournit des informations supplémentaires sur les connexions en continu authentifiées.
 
-### Envoi de messages à une connexion de flux continu authentifiée
+### Envoi de messages à une connexion en continu authentifiée
 
-Si l’authentification est activée pour une connexion en flux continu, le client doit ajouter l’ `Authorization` en-tête à sa requête.
+Si l’authentification est activée pour une connexion en continu, le client doit ajouter l’en-tête `Authorization` à sa requête.
 
-Si l&#39;en-tête n&#39;est pas présent ou si un jeton d&#39;accès non valide/expiré est envoyé, une réponse HTTP 401 Non autorisée est renvoyée, avec une réponse similaire à celle ci-dessous : `Authorization`
+Si l’en-tête `Authorization` n’est pas présent ou si un jeton d’accès non valide/arrivé à expiration est envoyé, une réponse HTTP 401 Non autorisé est renvoyée, avec une réponse similaire à celle-ci :
 
 **Réponse**
 
