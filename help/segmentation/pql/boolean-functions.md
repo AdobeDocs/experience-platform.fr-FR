@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Fonctions booléennes
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 6%
+source-wordcount: '223'
+ht-degree: 94%
 
 ---
 
 
 # Fonctions booléennes
 
-Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans le langage PQL (Profil Requête Language).  Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
-## Et
+## And
 
-La `and` fonction est utilisée pour créer une conjonction logique.
+La fonction `and` sert à créer une conjonction logique.
 
 **Format**
 
@@ -28,15 +28,15 @@ La `and` fonction est utilisée pour créer une conjonction logique.
 
 **Exemple**
 
-La requête suivante de la LPQ remettra à toutes les personnes ayant le pays d&#39;origine le Canada et l&#39;année de naissance de 1985.
+La requête suivante PQL renverra toutes les personnes ayant pour pays d’origine le Canada et pour année de naissance 1985.
 
 ```sql
 homeAddress.countryISO = "CA" and person.birthYear = 1985
 ```
 
-## OU
+## Or
 
-La `or` fonction est utilisée pour créer une disjonction logique.
+La fonction `or` est utilisée pour créer une disjonction logique.
 
 **Format**
 
@@ -46,13 +46,13 @@ La `or` fonction est utilisée pour créer une disjonction logique.
 
 **Exemple**
 
-La requête suivante de la LPQ remettra à toutes les personnes ayant le pays d&#39;origine le Canada ou l&#39;année de naissance de 1985.
+La requête suivante PQL renverra toutes les personnes ayant pour pays d’origine le Canada ou pour année de naissance 1985.
 
 ```sql
 homeAddress.countryISO = "CA" or person.birthYear = 1985
 ```
 
-## Pas
+## Not
 
 La fonction `not` (ou `!`) est utilisée pour créer une négation logique.
 
@@ -65,15 +65,15 @@ not ({QUERY})
 
 **Exemple**
 
-La requête suivante de la LPQ rendra au Canada toutes les personnes qui n&#39;ont pas leur pays d&#39;origine.
+La requête suivante PQL renverra toutes les personnes qui n’ont pas pour pays d’origine le Canada.
 
 ```sql
 not (homeAddress.countryISO = "CA")
 ```
 
-## Si la variable
+## If
 
-La `if` fonction est utilisée pour résoudre une expression selon si une condition spécifiée est vraie.
+La fonction `if` est utilisée pour résoudre une expression selon qu’une condition spécifiée est vraie ou non.
 
 **Format**
 
@@ -83,13 +83,13 @@ if ({TEST_EXPRESSION}, {TRUE_EXPRESSION}, {FALSE_EXPRESSION})
 
 | Argument | Description |
 | --------- | ----------- |
-| `{TEST_EXPRESSION}` | expression booléenne qui est en cours de test. |
-| `{TRUE_EXPRESSION}` | expression dont la valeur sera utilisée si `{TEST_EXPRESSION}` la valeur est true. |
-| `{FALSE_EXPRESSION}` | expression dont la valeur sera utilisée si elle `{TEST_EXPRESSION}` est fausse. |
+| `{TEST_EXPRESSION}` | L’expression booléenne en cours de test. |
+| `{TRUE_EXPRESSION}` | L’expression dont la valeur sera utilisée si `{TEST_EXPRESSION}` est vraie. |
+| `{FALSE_EXPRESSION}` | L’expression dont la valeur sera utilisée si `{TEST_EXPRESSION}` est fausse. |
 
 **Exemple**
 
-La requête suivante de la LPQ établira la valeur comme `1` si le pays d&#39;origine est le Canada et `2` si le pays d&#39;origine n&#39;est pas le Canada.
+La requête PQL suivante définit la valeur sur `1` si le pays d’origine est le Canada et sur `2` si le pays d’origine n’est pas le Canada.
 
 ```sql
 if (homeAddress.countryISO = "CA", 1, 2)
@@ -97,4 +97,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les fonctions booléennes, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous en savez plus sur les fonctions booléennes, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
