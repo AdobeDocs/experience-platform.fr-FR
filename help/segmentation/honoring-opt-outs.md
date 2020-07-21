@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Respect du droit d’opposition
 topic: overview
 translation-type: tm+mt
-source-git-commit: f156679601c2ed0bb933a66a56661c29c1b9c778
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 69%
+source-wordcount: '945'
+ht-degree: 66%
 
 ---
 
@@ -68,13 +68,13 @@ Le [!DNL Profile Privacy] mixin contient les champs suivants :
 
 To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
 
-### Détails sur les préférences de profil
+### [!DNL Profile Preferences Details]
 
-Le mixin Détails sur les préférences de profil contient plusieurs champs qui représentent les préférences des profils client (comme le format d’e-mail, la langue souhaitée et le fuseau horaire). L’un des champs inclus dans ce mixin, OptInOut (`optInOut`), permet de définir des valeurs d’opposition pour chaque canal individuel.
+The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). L’un des champs inclus dans ce mixin, OptInOut (`optInOut`), permet de définir des valeurs d’opposition pour chaque canal individuel.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Le mixin Détails sur les préférences de profil contient les champs suivants liés aux oppositions :
+Le [!DNL Profile Preferences Details] mixin contient les champs suivants relatifs aux exclusions :
 
 - OptInOut (`optInOut`) : un objet sur lequel chaque clé représente un URI valide et connu pour un canal de communication et l’état actif d’opposition pour chaque canal. Chaque canal peut avoir l’une des quatre valeurs possibles :
    - Non fourni (`not_provided`) : aucune demande d’opposition n’a été fournie pour ce canal.
