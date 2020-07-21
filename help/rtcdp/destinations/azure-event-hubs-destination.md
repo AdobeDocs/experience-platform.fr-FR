@@ -4,21 +4,21 @@ seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: e93bfc028d5e23c3add55677c4003ca549a902c6
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 6%
+source-wordcount: '467'
+ht-degree: 7%
 
 ---
 
 
-# (bêta) Destination des centres de Événement Azure
+# (bêta) [!DNL Azure Event Hubs] destination
 
 >[!IMPORTANT]
 >
 >La [!DNL Azure Event Hubs] destination en Adobe Real-time CDP est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
 [!DNL Azure Event Hubs] est une plate-forme de diffusion de données massives et un service d’assimilation de événements. Il peut recevoir et traiter des millions de événements par seconde. Les données envoyées à un hub de événement peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou de cartes de traitement par lot/d’enregistrement.
 
@@ -32,9 +32,9 @@ Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure 
 
 ## Cas d’utilisation {#use-cases}
 
-En utilisant des destinations de diffusion en continu telles que les centres de Événement Azure, vous pouvez facilement alimenter des événements de segmentation à forte valeur ajoutée et des attributs de profil associés dans vos systèmes de choix.
+En utilisant des destinations de diffusion en flux continu, telles que [!DNL Azure Event Hubs], vous pouvez facilement intégrer des événements de segmentation à forte valeur ajoutée et des attributs de profil associés dans vos systèmes de choix.
 
-Par exemple, une prospect a téléchargé un livre blanc qui les classe dans un segment &quot;forte propension à la conversion&quot;. En mappant le segment dans lequel la prospect arrive à la destination des centres de Événement Azure, vous recevriez ce événement dans les centres de Événement Azure. Vous pouvez y appliquer une approche par soi-même et décrire la logique d&#39;entreprise en plus du événement, comme vous pensez qu&#39;elle fonctionne le mieux avec vos systèmes informatiques d&#39;entreprise.
+Par exemple, une prospect a téléchargé un livre blanc qui les classe dans un segment &quot;forte propension à la conversion&quot;. En mappant le segment dans lequel la prospect arrive à la [!DNL Azure Event Hubs] destination, vous recevrez ce événement dans [!DNL Azure Event Hubs]. Vous pouvez y appliquer une approche par soi-même et décrire la logique d&#39;entreprise en plus du événement, comme vous pensez qu&#39;elle fonctionne le mieux avec vos systèmes informatiques d&#39;entreprise.
 
 ## Connexion à la destination {#connect-destination}
 
@@ -64,7 +64,7 @@ Pour obtenir des informations sur le processus d’activation des segments, voir
 
 ## Données exportées {#exported-data}
 
-Vos données d’Experience Platform exportées s’affichent [!DNL Azure Event Hubs] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
+Vos données [!DNL Experience Platform] exportées s’affichent [!DNL Azure Event Hubs] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
 
 ```
 {
