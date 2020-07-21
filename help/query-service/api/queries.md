@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur Requête Service
+title: Guide de développement de Query Service
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 9%
+source-wordcount: '645'
+ht-degree: 100%
 
 ---
 
 
 # Requêtes
 
-## Exemples d’appels d’API
+## Exemples d’appels API
 
-Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du `/queries` point de terminaison dans l’API Requête Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
+Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison `/queries` dans l’API [!DNL Query Service] Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-### Récupérer une liste de requêtes
+### Récupération d’une liste de requêtes
 
-You can retrieve a list of all queries for your IMS Organization by making a GET request to the `/queries` endpoint.
+Vous pouvez obtenir une liste de toutes les requêtes de votre organisation IMS en effectuant une requête GET vers le point de terminaison `/queries`.
 
 **Format d’API**
 
@@ -33,20 +33,20 @@ GET /queries?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
-Voici une liste des paramètres de requête disponibles pour la liste des requêtes. Tous ces paramètres sont facultatifs. L&#39;appel à ce point de terminaison sans paramètre récupère toutes les requêtes disponibles pour votre organisation.
+Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour répertorier les requêtes. Tous ces paramètres sont facultatifs. En effectuant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les requêtes disponibles pour votre organisation.
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Indique le champ selon lequel les résultats doivent être commandés. Les champs pris en charge sont `created` et `updated`. Par exemple, `orderby=created` triera les résultats par ordre croissant. Ajouter un `-` avant création (`orderby=-created`) triera les éléments par création dans l’ordre décroissant. |
-| `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Default value: 20*) |
-| `start` | Décale la liste de réponse à l’aide d’une numérotation à base zéro. Par exemple, `start=2` renvoie une liste commençant à partir de la troisième requête répertoriée. (*Default value: 0*) |
-| `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être une séquence d’échappement HTML. Les virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs pris en charge sont `created`, `updated`, `state`et `id`. La liste des opérateurs pris en charge est `>` (supérieure à), `<` (inférieure à), `>=` (supérieure ou égale à), `<=` (inférieure ou égale à), `==` (égale à), `!=` (non égale à) et `~` (contient). Par exemple, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes avec l’ID spécifié. |
-| `excludeSoftDeleted` | Indique s’il convient d’inclure une requête qui a été supprimée de manière souple. Par exemple, `excludeSoftDeleted=false` inclura **** des requêtes supprimées à l’écran. (*Boolean, valeur par défaut : true*) |
-| `excludeHidden` | Indique si les requêtes pilotées par des utilisateurs non-utilisateurs doivent être affichées. La définition de cette valeur sur false **inclut** les requêtes non pilotées par l’utilisateur, telles que les définitions CURSOR, FETCH ou les requêtes de métadonnées. (*Boolean, valeur par défaut : true*) |
+| `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
+| `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
+| `start` | Décale la liste de réponses à l’aide d’une numérotation à partir de zéro. Par exemple, `start=2` renvoie une liste commençant par la troisième requête répertoriée. (*Valeur par défaut : 0*) |
+| `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `updated`, `state` et `id` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `>=` (supérieur ou égal à), `<=` (inférieur ou égal à), `==` (égal à), `!=` (différent de) et `~` (contient). Par exemple, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes avec l’identifiant spécifié. |
+| `excludeSoftDeleted` | Indique s’il faut inclure une requête ayant été supprimée de manière réversible. Par exemple, `excludeSoftDeleted=false` inclut **des** requêtes supprimées de manière réversible. (*booléenne, valeur par défaut : true*) |
+| `excludeHidden` | Indique si les requêtes formulées par l’utilisateur doivent être affichées. Si cette valeur est définie sur false, cela **inclut** les requêtes qui ne sont pas formulées par l’utilisateur telles que les définitions CURSOR, FETCH ou les requêtes de métadonnées. (*booléenne, valeur par défaut : true*) |
 
 **Requête**
 
-La requête suivante récupère la dernière requête créée pour votre organisation IMS.
+La requête suivante renvoie la dernière requête créée pour votre organisation IMS.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec une liste de requêtes pour l’organisation IMS spécifiée en tant que JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation IMS.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour l’organisation IMS spécifiée sous JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation IMS.
 
 ```json
 {
@@ -119,7 +119,7 @@ Une réponse réussie renvoie l’état HTTP 200 avec une liste de requêtes pou
 
 ### Création d’une requête
 
-You can create a new query by making a POST request to the `/queries` endpoint.
+Vous pouvez créer une requête en effectuant une requête POST vers le point de terminaison `/queries`.
 
 **Format d’API**
 
@@ -129,7 +129,7 @@ POST /queries
 
 **Requête**
 
-La requête suivante crée une nouvelle requête, configurée par les valeurs fournies dans la charge utile :
+La requête suivante crée une requête configurée en fonction des valeurs fournies dans le payload :
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -149,13 +149,13 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | Propriété | Description |
 | -------- | ----------- |
 | `dbName` | Nom de la base de données pour laquelle vous créez une requête SQL. |
-| `sql` | requête SQL que vous souhaitez créer. |
-| `name` | Nom de votre requête SQL. |
-| `description` | Description de votre requête SQL. |
+| `sql` | La requête SQL que vous souhaitez créer. |
+| `name` | Nom de la requête SQL. |
+| `description` | Description de la requête SQL. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de votre nouvelle requête créée. Une fois la requête activée et exécutée correctement, elle `state` passe de `SUBMITTED` à `SUCCESS`.
+Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de la requête que vous venez de créer. Une fois que la requête est activée et s’exécute correctement, le `state` passe de `SUBMITTED` à `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec les détails de
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête](#cancel-a-query)créée.
+>Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
 
-### Récupération d’une requête par ID
+### Récupération d’une requête par identifiant
 
-You can retrieve detailed information about a specific query by making a GET request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
+Vous pouvez obtenir des informations détaillées sur une requête spécifique en effectuant une requête GET vers le point de terminaison `/queries` et en indiquant la valeur `id` de la requête dans le chemin d’accès à la requête.
 
 **Format d’API**
 
@@ -212,7 +212,7 @@ GET /queries/{QUERY_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | The `id` value of the query you want to retrieve. |
+| `{QUERY_ID}` | La valeur `id` de la requête que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -226,7 +226,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec des informations détaillées sur la requête spécifiée.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la requête spécifiée.
 
 ```json
 {
@@ -269,11 +269,11 @@ Une réponse réussie renvoie l’état HTTP 200 avec des informations détaill�
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête](#cancel-a-query)créée.
+>Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
 
-### Annuler une requête
+### Annulation d’une requête
 
-You can request to delete a specified query by making a PATCH request to the `/queries` endpoint and providing the query&#39;s `id` value in the request path.
+Vous pouvez demander la suppression d’une requête spécifiée en effectuant une requête PATCH vers le point de terminaison `/queries` et en fournissant la valeur `id` de la requête dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -283,12 +283,12 @@ PATCH /queries/{QUERY_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | Valeur `id` de la requête à annuler. |
+| `{QUERY_ID}` | La valeur `id` de la requête que vous souhaitez annuler. |
 
 
 **Requête**
 
-Cette requête d’API utilise la syntaxe de correctif JSON pour sa charge utile. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le document de base de l’API.
+Cette requête API utilise la syntaxe du correctif JSON pour son payload. Pour plus d’informations sur le fonctionnement du correctif JSON, consultez le document principes de base des API.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
@@ -308,7 +308,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 202 (Accepté) avec le message suivant :
+Une réponse réussie renvoie un état HTTP 202 (Accepted) avec le message suivant :
 
 ```json
 {
