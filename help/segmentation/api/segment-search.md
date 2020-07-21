@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Point de terminaison de la recherche de segments
 topic: guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1138'
 ht-degree: 47%
 
 ---
@@ -225,7 +225,7 @@ Après avoir lu ce guide, vous comprenez mieux comment fonctionne la recherche d
 
 ## Annexe {#appendix}
 
-Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou Platform, utilisez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
+Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou [!DNL Platform], vous utiliseriez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Pour les meilleures pratiques, l’expression de recherche doit être encodée au format HTML, comme l’exemple ci-dessus.
 
