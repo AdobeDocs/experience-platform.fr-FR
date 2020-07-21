@@ -1,51 +1,51 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Diffusion en flux continu de plusieurs messages dans une seule requête HTTP
+title: Diffusion de plusieurs messages en flux continu dans une requête HTTP unique
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cd251c0816a7e653596b6c3faaceb0cebad367ea
+source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
 workflow-type: tm+mt
 source-wordcount: '1504'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Envoi de plusieurs messages dans une seule requête HTTP
+# Envoi de plusieurs messages dans une requête HTTP unique
 
-Lors de la diffusion de données en flux continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut s’avérer coûteux. Par exemple, au lieu de créer 200 requêtes HTTP avec des charges de 1 Ko, il est beaucoup plus efficace de créer 1 requête HTTP avec 200 messages de 1 Ko chacun, avec une charge utile unique de 200 Ko. Lorsqu’il est utilisé correctement, le regroupement de plusieurs messages au sein d’une même requête constitue un excellent moyen d’optimiser les données envoyées à la plateforme d’expérience.
+Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsque cette fonctionnalité est utilisée correctement, regrouper plusieurs messages au sein d’une requête unique est une excellente manière d’optimiser les données envoyées vers Experience Platform.
 
-Ce document fournit un didacticiel pour l’envoi de plusieurs messages à la plateforme Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu.
+Ce document fournit un tutoriel permettant d’envoyer plusieurs messages vers Experience Platform au sein d’une requête HTTP unique à l’aide de l’ingestion par flux.
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension de la gestion des données de la plateforme Adobe Experience Platform. Avant de commencer ce didacticiel, consultez la documentation suivante :
+Ce tutoriel nécessite une compréhension professionnelle d’Adobe Experience Platform Data Ingestion. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
-- [Présentation](../home.md)de l&#39;importation de données : Couvre les concepts de base de la plateforme d’expérience Ingestion des données, y compris les méthodes d’assimilation et les connecteurs de données.
-- [Présentation](../streaming-ingestion/overview.md)de l&#39;assimilation en flux continu : Flux de travaux et blocs de création d’assimilation de flux continu, tels que les connexions en flux continu, les jeux de données, le Profil individuel XDM et XDM ExperienceEvent.
+- [Présentation de Data Ingestion](../home.md) : couvre les concepts clés d’Experience Platform Data Ingestion, notamment les méthodes d’ingestion et les connecteurs de données.
+- [Présentation de l’ingestion par flux](../streaming-ingestion/overview.md) : le workflow et les blocs de création de l’ingestion par flux comme les connexions en continu, les jeux de données, XDM Individual Profile et XDM ExperienceEvent.
 
-Ce didacticiel nécessite également que vous ayez suivi le didacticiel [Authentication to Adobe Experience Platform](../../tutorials/authentication.md) (Authentification vers la plate-formeAdobe Experience) pour pouvoir invoquer les API de plateforme. Le didacticiel d&#39;authentification fournit la valeur de l&#39;en-tête d&#39;autorisation requise par tous les appels d&#39;API dans ce didacticiel. L’en-tête s’affiche dans les exemples d’appels comme suit :
+Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience Platform](../../tutorials/authentication.md) afin de passer avec succès des appels aux API Platform. Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
 
-Toutes les requêtes POST nécessitent un en-tête supplémentaire :
+Toutes les requêtes POST nécessitent un en-tête supplémentaire :
 
-- Content-Type : application/json
+- Content-Type: application/json
 
-## Création d’une connexion en flux continu
+## Création d’une connexion en continu
 
-Vous devez d’abord créer une connexion de diffusion en continu avant de pouvoir début des données de diffusion en continu sur la plateforme d’expérience. Lisez le guide de [création d’une connexion](./create-streaming-connection.md) en flux continu pour savoir comment créer une connexion en flux continu.
+Vous devez d’abord créer une connexion en continu avant de pouvoir commencer à diffuser des données vers Experience Platform. Lisez le guide [Création d’une connexion en continu](./create-streaming-connection.md) pour savoir comment créer une connexion en continu.
 
-Après l’enregistrement d’une connexion de diffusion en continu, vous, en tant que producteur de données, disposez d’une URL unique qui peut être utilisée pour diffuser des données vers la plate-forme.
+Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que producteur des données, une URL unique que vous pourrez utiliser pour diffuser en continu des données vers Platform.
 
 ## Diffusion en continu vers un jeu de données
 
-L&#39;exemple suivant montre comment envoyer plusieurs messages à un jeu de données spécifique dans une seule requête HTTP. Insérez l’ID de jeu de données dans l’en-tête du message pour que ce message soit directement assimilé à celui-ci.
+L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’ID d’un jeu de données existant à l’aide de l’interface utilisateur de la plate-forme ou à l’aide d’une opération de liste dans l’API. L’ID de jeu de données se trouve sur la plate-forme [](https://platform.adobe.com) d’expérience en accédant à l’onglet **Datasets** , en cliquant sur le jeu de données pour lequel vous souhaitez obtenir l’ID et en copiant la chaîne dans le champ ID **de jeu de données de l’onglet** **Info.** Pour plus d’informations sur la manière de récupérer des jeux de données à l’aide de l’API, consultez la présentation [du service de](../../catalog/home.md) catalogue.
+Vous pouvez récupérer l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur de Platform ou à l’aide d’une opération de liste dans l’API. Vous trouverez l’identifiant du jeu de données sur [Experience Platform](https://platform.adobe.com) en accédant à l’onglet **Jeux de données**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’identifiant et en copiant la chaîne depuis le champ **Identifiant du jeu de données** de l’onglet **Infos**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
-Au lieu d&#39;utiliser un jeu de données existant, vous pouvez en créer un nouveau. Pour plus d&#39;informations sur la création d&#39;un jeu de données à l&#39;aide d&#39;API [, consultez le didacticiel de](../../catalog/api/create-dataset.md) création d&#39;un jeu de données à l&#39;aide d&#39;API.
+Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
 **Format d’API**
 
@@ -55,7 +55,7 @@ POST /collection/batch/{CONNECTION_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | ID de la connexion de flux continu créée. |
+| `{CONNECTION_ID}` | L’identifiant de la connexion en continu créée. |
 
 **Requête**
 
@@ -71,9 +71,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -133,9 +130,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -194,7 +188,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 207 (multi-état). L’examen du corps de la réponse fournit plus de détails sur la réussite ou l’échec de chaque méthode exécutée dans la requête. Une réponse est renvoyée pour chaque élément du tableau des messages de requête. Vous trouverez ci-dessous un exemple de réponse positive sans échec de message :
+Une réponse réussie renvoie un état HTTP 207 (état multiple). En examinant le corps de la réponse, vous pouvez récupérer davantage d’informations sur la réussite ou l’échec de chaque méthode exécutée dans la requête. Une réponse est renvoyée pour chaque élément du tableau de messages de requête. Vous trouverez ci-dessous un exemple de réponse réussie sans échecs de message :
 
 ```json
 {
@@ -212,22 +206,22 @@ Une réponse réussie renvoie un état HTTP 207 (multi-état). L’examen du cor
 }
 ```
 
-Pour plus d&#39;informations sur les codes d&#39;état, consultez le tableau des codes [de](#response-codes) réponse dans l&#39;annexe de ce didacticiel.
+Pour plus d’informations sur les codes d’état, consultez le tableau [Codes de réponse](#response-codes) dans l’annexe de ce tutoriel.
 
-## Identifier les messages qui ont échoué
+## Identification des messages en échec
 
-Par rapport à l’envoi d’une requête avec un seul message, lors de l’envoi d’une requête HTTP avec plusieurs messages, d’autres facteurs peuvent être pris en compte, tels que : comment identifier le moment où l&#39;envoi des données a échoué, quels messages spécifiques n&#39;ont pas pu être envoyés et comment ils peuvent être récupérés, et ce qui arrive aux données qui réussissent lorsque d&#39;autres messages dans la même requête échouent.
+Par rapport à l’envoi d’une requête avec un message unique, il y a plusieurs facteurs supplémentaires à prendre en compte lorsque vous envoyez une requête HTTP contenant plusieurs messages, notamment : la manière dont identifier le moment où l’envoi des données a échoué, les messages spécifiques n’ayant pas été envoyés et la manière dont vous pouvez les récupérer, et ce qu’il advient des données qui réussissent alors que d’autres messages de la même requête échouent.
 
-Avant de poursuivre l&#39;utilisation de ce didacticiel, il est recommandé de consulter d&#39;abord le guide de [récupération des lots](../quality/retrieve-failed-batches.md) ayant échoué.
+Avant de poursuivre ce tutoriel, nous vous recommandons de consulter dans un premier temps le guide [Récupération des lots rejetés](../quality/retrieve-failed-batches.md).
 
-### Envoyer la charge utile de demande avec des messages valides et non valides
+### Envoi du payload de la requête avec des messages valides et invalides
 
-L&#39;exemple suivant montre ce qui se produit lorsque le lot inclut des messages valides et non valides.
+L’exemple suivant montre ce qui se produit lorsque le lot contient des messages valides et invalides.
 
-La charge utile de requête est un tableau d’objets JSON représentant le événement dans le schéma XDM. Notez que les conditions suivantes doivent être remplies pour que la validation du message soit réussie :
-- Le `imsOrgId` champ de l’en-tête de message doit correspondre à la définition d’entrée. Si la charge utile de la demande n’inclut pas de `imsOrgId` champ, le service principal de collecte de données (DCCS) ajoute automatiquement le champ.
-- L’en-tête du message doit faire référence à un schéma XDM existant créé dans l’interface utilisateur de la plate-forme.
-- Le `datasetId` champ doit référencer un jeu de données existant dans Platform et son schéma doit correspondre au schéma fourni dans l’objet `header` dans chaque message inclus dans le corps de la requête.
+Le payload de la requête est un tableau d’objets JSON représentant l’événement dans le schéma XDM. Notez que vous devez remplir les conditions suivantes pour valider le message avec succès :
+- Le champ `imsOrgId` de l’en-tête du message doit correspondre à la définition de l’inlet. Si le payload de la requête ne contient pas de champ `imsOrgId`, le Core Service de collecte de données (DCCS) l’ajoutera automatiquement.
+- L’en-tête du message doit faire référence à un schéma XDM existant créé sur l’interface utilisateur de Platform.
+- Le champ `datasetId` doit faire référence à un jeu de données existant dans Platform, et son schéma doit correspondre au schéma fournit dans l’objet `header` de chaque message inclus dans le corps de la requête.
 
 **Format d’API**
 
@@ -237,7 +231,7 @@ POST /collection/batch/{CONNECTION_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | ID de l&#39;entrée de données créée. |
+| `{CONNECTION_ID}` | L’identifiant de l’inlet de données créé. |
 
 **Requête**
 
@@ -253,9 +247,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -315,9 +306,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       }
@@ -329,9 +317,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "invalidIMSOrg@AdobeOrg",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -391,9 +376,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "contentType": "application/vnd.adobe.xed-full+json;{SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -443,9 +425,6 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
           "name": "_xdm.context.experienceevent"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-          "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}",
         "createdAt": 1526283801869
       },
@@ -481,7 +460,7 @@ curl -X POST https://dcs.adobedc.net/collection/batch/{CONNECTION_ID} \
 
 **Réponse**
 
-La charge utile de réponse inclut un état pour chaque message, ainsi qu’un GUID dans le `xactionId` qui peut être utilisé pour le suivi.
+Le payload de réponse inclut un état pour chaque message avec un GUID dans le `xactionId` pouvant être utilisé pour le traçage.
 
 ```JSON
 {
@@ -508,11 +487,11 @@ La charge utile de réponse inclut un état pour chaque message, ainsi qu’un G
 }
 ```
 
-L’exemple de réponse ci-dessus affiche des messages d’erreur pour la requête précédente. En comparant cette réponse à la réponse valide précédente, vous pouvez constater que la demande a abouti à un succès partiel, avec un message correctement ingéré et trois messages qui ont abouti à un échec. Notez que les deux réponses renvoient un code d’état &quot;207&quot;. Pour plus d&#39;informations sur les codes d&#39;état, consultez le tableau des codes [de](#response-codes) réponse dans l&#39;annexe de ce didacticiel.
+L’exemple de réponse ci-dessus affiche les messages d’erreur de la requête précédente. En comparant cette réponse à la réponse valide précédente, vous pouvez observer que la requête a entraîné une réussite partielle, un message ayant été ingéré avec succès et trois messages ayant entraîné un échec. Notez que les deux types de réponses renvoient un code d’état « 207 ». Pour plus d’informations sur les codes d’état, consultez le tableau [Codes de réponse](#response-codes) dans l’annexe de ce tutoriel.
 
-Le premier message a été envoyé avec succès à Plateforme et n&#39;est pas affecté par les résultats des autres messages. Par conséquent, lorsque vous tentez de renvoyer les messages ayant échoué, vous n’avez pas besoin de réinclure ce message.
+Le premier message a été envoyé avec succès vers Platform et n’est pas concerné par les résultats des autres messages. Par conséquent, lorsque vous tentez d’envoyer à nouveau les messages échoués, vous n’avez pas besoin d’inclure à nouveau ce message.
 
-Le second message a échoué car il manquait de corps de message. La demande de collection attend des éléments de message qu’ils comportent des sections d’en-tête et de contenu valides. L’ajout du code suivant après l’en-tête du deuxième message corrige la demande, ce qui permet au deuxième message de réussir la validation :
+Le deuxième message a échoué parce qu’il manquait un corps de message. Pour que la requête de collecte soit valide, des éléments de message possédant un en-tête et des sections corps valides sont nécessaires. L’ajout du code suivant après l’en-tête du deuxième message réparera la requête, permettant au deuxième message de passer la validation :
 
 ```JSON
       "body": {
@@ -529,44 +508,44 @@ Le second message a échoué car il manquait de corps de message. La demande de 
     },
 ```
 
-Le troisième message a échoué en raison d&#39;un ID d&#39;organisation IMS non valide utilisé dans l&#39;en-tête. L’organisation IMS doit correspondre à {CONNECTION_ID} à laquelle vous essayez de publier du contenu. Pour déterminer l&#39;ID d&#39;organisation IMS correspondant à la connexion de flux continu que vous utilisez, vous pouvez exécuter une `GET inlet` requête à l&#39;aide de l&#39;API [d&#39;importation de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)données. Voir [récupération d’une connexion](./create-streaming-connection.md#get-data-collection-url) de flux continu pour obtenir un exemple de récupération des connexions de flux continu précédemment créées.
+Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation IMS invalide dans l’en-tête. L’organisation IMS doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. Pour déterminer l’identifiant d’organisation IMS correspondant à la connexion en continu que vous utilisez, vous pouvez effectuer une requête `GET inlet` à l’aide de l’[API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
 
-Le quatrième message a échoué car il ne suivait pas le schéma XDM attendu. Les `xdmSchema` éléments inclus dans l’en-tête et le corps de la requête ne correspondent pas au schéma XDM du `{DATASET_ID}`. La correction du schéma dans l’en-tête et le corps du message lui permet de transmettre la validation DCCS et d’être envoyé avec succès à la plateforme. Le corps du message doit également être mis à jour pour correspondre au schéma XDM du `{DATASET_ID}` pour qu’il puisse transmettre la validation en flux continu sur la plate-forme. Pour plus d&#39;informations sur ce qui arrive aux messages qui arrivent à être diffusés sur Plate-forme, consultez la section [Confirmer les messages assimilés](#confirm-messages-ingested) de ce didacticiel.
+Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. Corriger le schéma dans l’en-tête et le corps du message lui permettra de passer la validation DCCS et d’être envoyé avec succès vers Platform. Vous devez également mettre à jour le corps du message de manière à ce qu’il corresponde au schéma XDM de `{DATASET_ID}` pour passer la validation en continu sur Platform. Pour plus d’informations sur ce qui arrive aux messages diffusés en continu vers Platform, consultez la section [Confirmation des messages ingérés](#confirm-messages-ingested) de ce tutoriel.
 
-### Récupérer les messages ayant échoué à partir de la plate-forme
+### Récupération des messages en échec depuis Platform
 
-Les messages en échec sont identifiés par un code d&#39;état d&#39;erreur dans le tableau de réponses.
-Les messages non valides sont collectés et stockés dans un lot &quot;erreur&quot; dans le jeu de données spécifié par `{DATASET_ID}`.
+Les messages en échec sont identifiés par un code d’état d’erreur dans le tableau de réponse.
+Les messages invalides sont collectés et stockés dans un lot « erreur » au sein du jeu de données spécifié par `{DATASET_ID}`.
 
-Pour plus d&#39;informations sur la récupération des messages de lots [ayant échoué, consultez le guide de](../quality/retrieve-failed-batches.md) récupération des lots ayant échoué.
+Pour plus d’informations sur la récupération des messages par lots en échec, lisez le guide [Récupération des messages en échec](../quality/retrieve-failed-batches.md).
 
-## Confirmer les messages ingérés
+## Confirmation des messages ingérés
 
-Les messages qui réussissent la validation DCCS sont diffusés en continu sur la plateforme. Sur Plate-forme, les messages de lot sont testés par validation en flux continu avant d&#39;être ingérés dans le lac de données. L&#39;état des lots, qu&#39;ils réussissent ou non, s&#39;affiche dans le jeu de données spécifié par `{DATASET_ID}`.
+Les messages ayant passé la validation DCCS sont diffusés en continu vers Platform. Sur Platform, les messages par lots sont testés par la validation en continu avant d’être ingérés dans le lac de données. L’état des lots, qu’ils soient réussis ou non apparaissent au sein du jeu de données spécifié par `{DATASET_ID}`.
 
-Vous pouvez vue l’état des messages par lot qui sont diffusés sur la plateforme à l’aide de l’interface utilisateur [de la plateforme](https://platform.adobe.com) d’expérience en accédant à l’onglet **Datasets** , en cliquant sur le jeu de données auquel vous diffusez en continu et en cochant l’onglet Activité **du jeu de** données.
+Vous pouvez afficher l’état de messages par lots qui diffusent avec succès vers Platform à l’aide de l’[interface utilisateur Experience Platform](https://platform.adobe.com) en vous rendant dans l’onglet **Jeux de données**, en cliquant sur le jeu de données sur lequel vous diffusez, et en vérifiant l’onglet **Activité du jeu de données**.
 
-Les messages par lots qui passent la validation en flux continu sur la plateforme sont assimilés dans le lac de données. Les messages sont alors disponibles pour analyse ou exportation.
+Les messages par lots qui passent la validation en continu sur Platform sont ingérés dans le lac de données. Les messages sont ensuite disponibles à des fins d’analyse ou d’exportation.
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment envoyer plusieurs messages dans une seule requête et vérifier quand les messages sont correctement assimilés dans le jeu de données de cible, vous pouvez début de diffuser vos propres données vers Platform. Pour un aperçu de la façon de requête et de récupérer les données assimilées à partir de la plateforme, voir le guide d&#39;accès [aux](../../data-access/tutorials/dataset-data.md) données.
+Maintenant que vous savez comment envoyer plusieurs messages en une seule requête et vérifier quand les messages ont été ingérés avec succès dans le jeu de données cibles, vous pouvez commencer à diffuser vos propres données vers Platform. Pour un aperçu de la manière dont interroger et récupérer les données ingérées de Platform, consultez le guide [Accès aux données](../../data-access/tutorials/dataset-data.md).
 
 ## Annexe
 
-Cette section contient des informations supplémentaires pour le didacticiel.
+Cette section contient des informations supplémentaires pour le tutoriel.
 
-### Codes de réponse :
+### Codes de réponse
 
-Le tableau suivant affiche les codes d’état renvoyés par les messages de réponse réussis et non réussis.
+Le tableau suivant affiche les codes d’état renvoyés par les messages de réponse en réussite et en échec.
 
-| Code d&#39;état | Description |
+| Code d’état | Description |
 | :---: | --- |
-| 207 | Bien que &#39;207&#39; soit utilisé comme code d&#39;état global de la réponse, le destinataire doit consulter le contenu de l&#39;organisme de réponse à plusieurs états pour plus d&#39;informations sur la réussite ou l&#39;échec de l&#39;exécution de la méthode. Le code de réponse est utilisé en cas de succès, de succès partiel et également en cas d’échec. |
-| 400 | Il y a eu un problème avec la demande. Consultez le corps de la réponse pour obtenir un message d’erreur plus spécifique (par exemple, les champs obligatoires manquaient pour la charge du message ou le format xdm du message était inconnu). |
-| 401 | Non autorisé : en-tête d&#39;autorisation valide manquante pour la demande. Ceci est renvoyé uniquement pour les entrées pour lesquelles l’authentification est activée. |
-| 403 | Non autorisé :  Le jeton d&#39;autorisation fourni n&#39;est pas valide ou a expiré. Ceci est renvoyé uniquement pour les entrées pour lesquelles l’authentification est activée. |
-| 413 | Charge utile trop importante - envoyée lorsque la demande de charge totale est supérieure à 1 Mo. |
-| 429 | Trop de requêtes dans une durée spécifiée. |
-| 500 | Erreur lors du traitement de la charge utile. Consultez le corps de la réponse pour obtenir un message d’erreur plus spécifique (par exemple, schéma de charge utile de message non spécifié, ou ne correspond pas à la définition XDM dans Platform). |
-| 503 | Le service n&#39;est pas disponible actuellement. Les clients doivent réessayer au moins 3 fois en utilisant une stratégie de sauvegarde exponentielle. |
+| 207 | Bien que « 207 » soit utilisé comme code de réponse général, le destinataire doit consulter les contenus du corps de réponse sur plusieurs états pour des informations supplémentaires sur la réussite ou l’échec de l’exécution de la méthode. Le code de réponse est utilisé en cas de réussite, de réussite partielle, mais aussi dans les situations d’échec. |
+| 400 | Un problème s’est produit avec la requête. Consultez le corps de la réponse pour obtenir un message plus spécifique à l’erreur (par exemple, des champs obligatoires manquaient dans le payload du message ou le message était à un format xdm inconnu). |
+| 401 | Non autorisé : un en-tête d’autorisation valide manque dans la requête. Ce message n’est renvoyé que pour les inlets dont l’authentification est activée. |
+| 403 | Non autorisé : le jeton d’autorisation fourni est non valide ou a expiré. Ce message n’est renvoyé que pour les inlets dont l’authentification est activée. |
+| 413 | Payload trop grand : apparaît lorsque la requête de payload totale est supérieure à 1 Mo. |
+| 429 | Trop de requêtes au cours d’une période précise. |
+| 500 | Erreur lors du traitement du payload. Consultez le corps de réponse pour un message d’erreur plus spécifique (par exemple, le schéma de payload du message n’était pas indiqué ou ne correspondait pas à la définition XDM dans Platform). |
+| 503 | Le service n’est pas disponible pour le moment. Nous conseillons aux clients de réessayer au moins 3 fois en utilisant une stratégie de backoff exponentiel. |
