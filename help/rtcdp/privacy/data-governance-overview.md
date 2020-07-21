@@ -4,21 +4,21 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 7f6612f7dd649d68aa7ebe5b971b72d7b433b1e3
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 71%
+source-wordcount: '1022'
+ht-degree: 54%
 
 ---
 
 
-# Gouvernance des données sur la plateforme des données clients en temps réel
+# [!DNL Data Governance] dans CDP en temps réel
 
-La plateforme des données clients en temps réel rassemble les données de plusieurs systèmes d’entreprise, ce qui permet aux marketeurs de mieux identifier leurs clients, de les comprendre et d’interagir avec eux. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que la plateforme des données clients en temps réel est conforme aux politiques d’utilisation lors de la gestion de vos données.
+[!DNL Real-time Customer Data Platform] (CDP en temps réel) rassemble les données de plusieurs systèmes d’entreprise, ce qui permet aux spécialistes du marketing de mieux identifier, comprendre et impliquer leurs clients. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que la plateforme des données clients en temps réel est conforme aux politiques d’utilisation lors de la gestion de vos données.
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle essentiel dans la plateforme des données clients en temps réel, ce qui vous permet de définir des politiques d’utilisation, de classer vos données en fonction de ces politiques et de rechercher les violations de politiques lors de l’exécution de certaines actions marketing.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. Elle joue un rôle essentiel dans la plateforme des données clients en temps réel, ce qui vous permet de définir des politiques d’utilisation, de classer vos données en fonction de ces politiques et de rechercher les violations de politiques lors de l’exécution de certaines actions marketing.
 
-La plateforme des données clients en temps réel repose sur Adobe Experience Platform. La plupart des fonctionnalités de gouvernance des données sont donc abordées dans la documentation d’Experience Platform. Ce document est destiné à compléter la [présentation de la gouvernance des données](../../data-governance/home.md) pour Experience Platform et décrit les fonctionnalités de gouvernance disponibles dans la plateforme des données clients en temps réel. Les sujets suivants sont abordés :
+Real-time CDP is built on top of Adobe Experience Platform, and therefore the majority of [!DNL Data Governance] capabilities are covered in the [!DNL Experience Platform] documentation. Ce document est destiné à compléter la [présentation de la gouvernance des données](../../data-governance/home.md) pour et décrit les fonctionnalités de gouvernance disponibles dans la plateforme des données clients en temps réel. [!DNL Experience Platform] Les sujets suivants sont abordés :
 
 * [Application des libellés d’utilisation aux données](#labels)
 * [Gestion des politiques d’utilisation des données](#policies)
@@ -26,7 +26,7 @@ La plateforme des données clients en temps réel repose sur Adobe Experience 
 
 ## Application des libellés d’utilisation aux données  {#labels}
 
-La gouvernance des données vous permet d’appliquer des libellés d’utilisation aux données, soit au niveau du jeu de données, soit au niveau du champ du jeu de données. Les libellés d’utilisation des données vous permettent de classer les données en fonction des politiques d’utilisation qui s’appliquent à celles-ci.
+[!DNL Data Governance] vous permet d’appliquer des étiquettes d’utilisation à vos données, soit au niveau du jeu de données, soit au niveau du champ de jeu de données. Les libellés d’utilisation des données vous permettent de classer les données en fonction des politiques d’utilisation qui s’appliquent à celles-ci.
 
 Pour plus d’informations sur l’utilisation des libellés d’utilisation des données, consultez le [Guide de l’utilisateur des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour Adobe Experience Platform.
 
@@ -36,7 +36,7 @@ Vous pouvez définir des restrictions d’utilisation des données sur une desti
 
 >[!NOTE]
 >
->Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir la présentation [des stratégies d’utilisation des](../../data-governance/policies/overview.md) données dans la documentation de l’Experience Platform.
+>Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir la présentation [des stratégies](../../data-governance/policies/overview.md) d’utilisation des données dans la [!DNL Experience Platform] documentation.
 
 La définition de cas d’utilisation marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des cas d’utilisation marketing appropriés à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
@@ -45,19 +45,19 @@ Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la
 
 ## Gestion des politiques d’utilisation des données  {#policies}
 
-Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme des données clients en temps réel. Pour plus d’informations, consultez la section « Politiques d’utilisation des données » dans la [présentation de la gouvernance des données](../../data-governance/home.md) d’Experience Platform.
+Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme des données clients en temps réel. See the &quot;Data usage policies&quot; section in the [!DNL Experience Platform] [Data Governance overview](../../data-governance/home.md) for more information.
 
-Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation de l’Experience Platform.
+Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation [!DNL Experience Platform] .
 
 ## Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
 
-Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. Lors de l’activation des segments d’audience vers des destinations dans la plateforme des données clients en temps réel, la gouvernance des données applique automatiquement les politiques d’utilisation en cas de violation.
+Une fois que les données sont étiquetées et que les stratégies d’utilisation sont définies, vous pouvez appliquer les stratégies d’utilisation des données. When activating audience segments to destinations in Real-time CDP, [!DNL Data Governance] automatically enforces usage policies should any violations occur.
 
 Le diagramme suivant illustre la procédure d’intégration des politiques dans le flux de données de l’activation des segments :
 
 ![](assets/enforcement-flow.png)
 
-Lorsqu’un segment est activé pour la première fois, DULE Policy Service vérifie les violations de politique en fonction des facteurs suivants :
+When a segment is first activated, DULE [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
@@ -75,13 +75,13 @@ Si une violation de politique se produit lors de la tentative d’activation d�
 
 ![](assets/violation-popover.png)
 
-L’onglet *Détails* de la fenêtre contextuelle indique l’action qui a déclenché la violation, la raison pour laquelle la violation s’est produite et fournit des suggestions pour résoudre le problème.
+L’onglet *[!UICONTROL Détails]* de la fenêtre contextuelle indique l’action qui a déclenché la violation, la raison pour laquelle la violation s’est produite et fournit des suggestions pour résoudre le problème.
 
-Cliquez sur **Liaison des données** pour effectuer le suivi des destinations, des segments, des politiques de fusion ou des jeux de données dont le ou les libellés de données ont déclenché la violation.
+Cliquez sur **[!UICONTROL Liaison des données]** pour effectuer le suivi des destinations, des segments, des politiques de fusion ou des jeux de données dont le ou les libellés de données ont déclenché la violation.
 
 ![](assets/data-lineage.png)
 
-Une fois qu’une violation a été déclenchée, le bouton **Enregistrer** est désactivé pour l’activation jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
+Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Enregistrer]** est désactivé pour l’activation jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
 
 ### Application des politiques pour les segments activés  {#policy-enforcement-for-activated-segments}
 
@@ -96,8 +96,8 @@ Si l’une des actions ci-dessus déclenche une violation, l’enregistrement de
 
 ## Étapes suivantes
 
-Maintenant que vous avez découvert les principales fonctionnalités de gouvernance des données sur la plateforme des données clients en temps réel et la méthode utilisée par Experience Platform pour les activer, reportez-vous à la [documentation sur la gouvernance des données sur Adobe Experience Platform](../../data-governance/home.md). Cette documentation présente les principaux concepts de la gouvernance des données, ainsi que les processus détaillés de gestion des libellés et des politiques d’utilisation des données.
+Now that you have been introduced to the key [!DNL Data Governance] features on Real-time CDP and how [!DNL Experience Platform] enables them, please continue to the [documentation for Data Governance on Adobe Experience Platform](../../data-governance/home.md). The documentation provides overviews of essential [!DNL Data Governance] concepts, as well as step-by-step workflows for managing data usage labels and policies.
 
-La vidéo suivante présente un aperçu de la gouvernance des données dans le CDP en temps réel, y compris l&#39;utilisation de cas d&#39;utilisation marketing sur les destinations et des exemples de workflows pour différents scénarios :
+La vidéo suivante présente une vue d’ensemble du protocole CDP en temps réel, y compris l’utilisation de cas d’utilisation marketing sur les destinations et des exemples de workflows pour différents scénarios : [!DNL Data Governance]
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?quality=12&learn=on)
