@@ -4,37 +4,37 @@ solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: cfd767a05ad4c1dd43ac2bdde1966f9c89f5d219
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 81%
+source-wordcount: '613'
+ht-degree: 28%
 
 ---
 
 
-# Présentation de Query Service
+# [!DNL Query Service] aperçu
 
-Adobe Experience Platform ingère des données à partir de sources diverses. Le grand défi qui attend les spécialistes du marketing : comprendre ces données afin de découvrir des informations sur leurs clients. Adobe Experience Platform Query Service vous facilite la tâche en vous permettant d’utiliser le langage SQL standard pour interroger des données dans Platform. Grâce à Query Service, vous pouvez joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête sous forme d’un nouveau jeu de données à utiliser dans un compte rendu des performances, dans le cadre de l’apprentissage automatique ou pour être ingéré dans Real-time Customer Profile. Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
+Adobe Experience Platform ingère des données à partir de sources diverses. Le grand défi qui attend les spécialistes du marketing : comprendre ces données afin de découvrir des informations sur leurs clients. Adobe Experience Platform [!DNL Query Service] facilitates that by allowing you to use standard SQL to query data in [!DNL Platform]. Using [!DNL Query Service], you can join any dataset in the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-time Customer Profile]. This document provides an overview of the role of [!DNL Query Service] within [!DNL Experience Platform].
 
-Requête Service permet aux marques de relier le parcours client en ligne à hors ligne et de comprendre l’attribution entre canaux multiples. La vidéo suivante montre comment une entreprise peut tirer parti de Requête Service pour traiter les cas d&#39;utilisation clés et comment fonctionne Requête Service.
+[!DNL Query Service] permet aux marques de relier le parcours client en ligne au parcours client hors ligne et de comprendre l’attribution omni-canal. La vidéo suivante montre comment une entreprise peut tirer parti [!DNL Query Service] d&#39;une expérience pour traiter des cas d&#39;utilisation clés et comment [!DNL Query Service] fonctionne.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
-## Utilisation de Query Service
+## Utilisation de [!DNL Query Service]
 
-Query Service fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant qu’environnement de test pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus d’informations sur l’utilisation du service interactif dans Platform, consultez le [guide de l’interface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus d’informations sur l’utilisation de l’API de Query Service, reportez-vous au [guide de développement de Query Service](api/getting-started.md).
+[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrés par des utilisateurs au sein de votre organisation IMS. L’interface utilisateur est conçue pour être utilisée en tant qu’environnement de test pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. More information on using the interactive service within [!DNL Platform] can be found in the [Query Service user interface guide](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. More information on using the [!DNL Query Service] API can be found in the [Query Service developer guide](api/getting-started.md).
 
-## Query Service et services Experience Platform
+## [!DNL Query Service] et [!DNL Experience Platform] services
 
-Query Service interagit et peut être utilisé conjointement avec plusieurs services d’Experience Platform. Afin de tirer le meilleur parti des capacités de Query Service, il est recommandé de se familiariser avec ces services et de connaître leurs interactions avec Query Service.
+[!DNL Query Service] interagit et peut être utilisé conjointement avec plusieurs [!DNL Experience Platform] services. In order to make the most out of [!DNL Query Service's] capabilities, it is recommended that you become familiar with these services and how they interact with [!DNL Query Service].
 
-### Data Science Workspace
+### [!DNL Data Science Workspace]
 
-Adobe Experience Platform Data Science Workspace utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux scientifiques de données de créer des recettes basées sur des données d’enregistrement et de séries temporelles concernant les clients et leur activité, ce qui facilite les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et de saisir. Vous pouvez utiliser SQL dans Data Science Workspace en intégrant Query Service à JupyterLab, ce qui vous permettra d’explorer, de transformer et d’analyser les données d’Adobe Analytics. Pour plus d’informations sur Data Science Workspace, consultez la présentation de Data Science Workspace et le guide d’intégration de Query Service pour plus d’informations sur les interactions entre Data Science Workspace et Query Service.
+Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] permet aux scientifiques de données de créer des recettes basées sur des données d’enregistrement et de séries temporelles concernant les clients et leur activité, ce qui facilite les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et de saisir. You can use SQL within [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab], allowing you to explore, transform, and analyze Adobe Analytics data. Please read the [!DNL Data Science Workspace] overview for more information about [!DNL Data Science Workspace], and the [!DNL Query Service] integration guide for more information about how [!DNL Data Science Workspace] interacts with [!DNL Query Service].
 
-### Segmentation Service
+### [!DNL Segmentation Service]
 
-Adobe Experience Platform Segmentation Service permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces segments peuvent ensuite être évalués afin de fournir une meilleure analyse de vos données Real-time Customer Profile. Query Service peut être utilisé pour fournir cette analyse en exécutant des requêtes sur ce segment de données au sein du lac de données. Pour plus d’informations sur la segmentation, reportez-vous à la présentation de Segmentation Service et au guide PQL (Langage de requête de profil) pour plus d’informations sur l’analyse des segments.
+Adobe Experience Platform [!DNL Segmentation Service] allows users to divide their customers into smaller groups that share similar traits. These segments can subsequently be evaluated to provide better analysis on your [!DNL Real-time Customer Profile] data. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur les données de ce segment dans le [!DNL Data Lake]. Please read the [!DNL Segmentation Service] overview for more information about segmentation, and the [!DNL Profile Query Language] (PQL) guide for more information on how to analyze segments.
 
 ### Cas d’utilisation de Looker BI
 
@@ -44,7 +44,7 @@ Avec l&#39;Adobe Experience Platform, vous pouvez ingérer, stocker, structurer 
 
 ## Étapes suivantes et ressources supplémentaires
 
-Ce document vous a initié à Query Service et à son fonctionnement dans le cadre plus vaste d’Experience Platform. Pour plus d’informations sur les interactions avec divers points de terminaison dans l’API de Query Service, consultez le [guide de développement de Query Service](api/getting-started.md). Pour plus d’informations sur l’utilisation du service interactif dans Platform, reportez-vous au [guide de l’interface utilisateur de Query Service](ui/overview.md). Pour une liste exhaustive portant sur la connexion des clients externes à Query Service, reportez-vous à la [présentation des clients de Query Service](clients/overview.md).
+By reading this document, you have been introduced to [!DNL Query Service] and how it functions within the greater scope of [!DNL Experience Platform]. For more information on interacting with various endpoints within the [!DNL Query Service] API, please read the [Query Service developer guide](api/getting-started.md). For more information on using the interactive service within [!DNL Platform], please read the [Query Service user interface guide](ui/overview.md). For a comprehensive list on connecting external clients with [!DNL Query Service], please read the [Query Service clients overview](clients/overview.md).
 
 Pour mieux vous préparer à exécuter des requêtes, regardez la vidéo suivante. Cette vidéo présente des conseils et les meilleures pratiques d’exécution des requêtes dans l’interface de l’éditeur de requêtes, les clients PSQL, les solutions Business Intelligence (BI) et l’API HTTP.
 
