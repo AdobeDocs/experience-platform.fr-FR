@@ -1,54 +1,54 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connexion à Power BI
+title: Connexion de Power BI
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 0%
+source-wordcount: '333'
+ht-degree: 67%
 
 ---
 
 
-# Connexion avec Power BI (PC)
+# Se connecter avec [!DNL Power BI] (PC)
 
-Les utilisateurs de PC peuvent installer Power BI à partir de [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
+PC users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/fr-fr/desktop/).
 
-## Configuration de la barre d&#39;alimentation
+## Set up [!DNL Power BI]
 
-Une fois Power BI installé, vous devez configurer les composants nécessaires pour prendre en charge le connecteur PostgreSQL. Procédez comme suit :
+After you have [!DNL Power BI] installed, you need to set up the necessary components to support the PostgreSQL connector. Procédez de la façon suivante :
 
-- Trouvez et installez `npgsql`, un package de pilotes .NET pour PostgreSQL qui est la méthode officielle de connexion de PowerBI.
+- Trouvez et installez `npgsql`, un package de pilotes .NET pour PostgreSQL qui constitue la méthode officielle pour connecter PowerBI.
 
-- Sélectionnez v4.0.10 (les nouvelles versions entraînent actuellement une erreur).
+- Sélectionnez v4.0.10 (les versions plus récentes génèrent actuellement une erreur).
 
-- Sous &quot;Installation GAC Npgsql&quot; dans l&#39;écran Configuration personnalisée, sélectionnez **Sera installé sur le disque** dur local. Si vous n&#39;installez pas le GAC, Power BI échouera ultérieurement.
+- Sous « Installation du GAC Npgsql » de l’écran de configuration personnalisée, sélectionnez **[!UICONTROL Sera installé sur le disque dur local]**. Si vous n’installez pas le GAC, Power BI échouera ultérieurement.
 
 - Redémarrez Windows.
 
-- Recherchez la version d&#39;évaluation de PowerBI Desktop.
+- Find the [!DNL PowerBI] Desktop evaluation version.
 
-## Connexion de Power BI au service de Requête
+## Se connecter [!DNL Power BI] à [!DNL Query Service]
 
-Après avoir exécuté ces étapes préparatoires, vous pouvez connecter Power BI à Requête Service :
+After performing those preparatory steps, you can connect [!DNL Power BI] to [!DNL Query Service]:
 
-- Ouvrez Power BI.
+- Ouvrir [!DNL Power BI].
 
-- Cliquez sur **Obtenir des données** dans le ruban du menu supérieur.
+- Cliquez sur **[!UICONTROL Obtenir des données]** dans le ruban du menu supérieur.
 
-- Sélectionnez **PostgreSQL database**, puis cliquez sur **Connect**.
+- Choisissez **[!UICONTROL Base de données PostgreSQL]**, puis cliquez sur **[!UICONTROL Connecter]**.
 
-- Saisissez les valeurs du serveur et de la base de données. **Serveur** est l&#39;hôte trouvé sous les détails de la connexion. Pour la production, ajoutez le port `:80` à la fin de la chaîne Host. **La base de données** peut être &quot;all&quot; ou un nom de table de jeu de données. (Essayez l&#39;un des jeux de données dérivés du CTAS.)
+- Saisissez les valeurs du serveur et de la base de données. Le **[!UICONTROL serveur]** est l’hôte trouvé sous les détails de connexion. Pour la production, ajoutez le port `:80` à la fin de la chaîne d’hôte. La **[!UICONTROL base de données]** peut être « all » ou un nom de table de jeu de données. (Essayez l’un des jeux de données dérivés de CTAS.)
 
-- Cliquez sur Options **** avancées, puis désactivez la case à cocher **inclure des colonnes** de relations. Ne cochez pas la case **Naviguer à l’aide de la hiérarchie** complète.
+- Cliquez sur **[!UICONTROL Options avancées]**, puis décochez la case **[!UICONTROL Inclure les colonnes de relations]**. Ne cochez pas la case **[!UICONTROL Naviguer avec la hiérarchie complète]**.
 
-- *(Facultatif mais recommandé lorsque &quot;all&quot; est déclaré pour la base de données)* Saisissez une instruction SQL.
+- *(Facultatif mais recommandé lorsque « all » est déclaré comme base de données)* Saisissez une instruction SQL.
 
 >[!NOTE]
 >
->Si une instruction SQL n&#39;est pas fournie, Power BI prévisualisation toutes les tables de la base de données. Pour les données hiérarchiques, une instruction SQL personnalisée doit être utilisée. Si le schéma de table est plat, il fonctionnera avec ou sans instruction SQL personnalisée. Les types composés ne sont pas encore pris en charge par Power BI - pour obtenir des types primitifs à partir de types composés, vous devrez écrire des instructions SQL pour les dériver.
+>If a SQL statement is not provided, then [!DNL Power BI] will preview all of the tables in database. Pour les données hiérarchiques, vous devez utiliser une instruction SQL personnalisée. Si le schéma de table est plat, il fonctionne avec ou sans instruction SQL personnalisée. Compound types are yet not supported by [!DNL Power BI] - to get primitive types from compound types, you will need to write SQL statements to derive them.
 
 ```sql
 SELECT web.webPageDetails.name AS Page_Name, 
@@ -60,8 +60,8 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- Sélectionnez le mode **DirectQuery** ou **Importer** . En mode **Importation** , les données seront importées dans Power BI. En mode **DirectQuery** , toutes les requêtes seront envoyées à Requête Service pour exécution.
+- Sélectionnez le mode **[!UICONTROL DirectQuery]** ou le mode **[!UICONTROL Importer]**. En mode **[!UICONTROL Importer]**, les données sont importées dans [!DNL Power BI]. En mode **[!UICONTROL DirectQuery]**, toutes les requêtes sont envoyées à pour exécution.[!DNL Query Service]
 
-- Cliquez sur **OK**. Désormais, Power BI se connecte au service de Requête et produit une prévisualisation s&#39;il n&#39;y a aucune erreur. Un problème connu se produit lorsque la Prévisualisation restitue des colonnes numériques. Passez à l’étape suivante.
+- Cliquez sur **[!UICONTROL OK]**. Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. Il existe un problème connu avec les colonnes numériques de rendu de prévisualisation. Passez à l’étape suivante.
 
-- Cliquez sur **Charger** pour importer le jeu de données dans Power BI.
+- Click **[!UICONTROL Load]** to bring the dataset into [!DNL Power BI].
