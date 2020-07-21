@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Ingestion de données dans Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1284'
-ht-degree: 72%
+source-wordcount: '1277'
+ht-degree: 70%
 
 ---
 
@@ -26,7 +26,7 @@ Si vous préférez ingérer des données à l’aide des API Data Ingestion, lis
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le _nom_, la date et l’heure de _création_, la _source_, le _schéma_ et l’_état du dernier lot_, ainsi que la date et l’heure de la _dernière mise à jour_ du jeu de données.
+Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le _[!UICONTROL nom]_, la date et l’heure de_[!UICONTROL  création]_, la _[!UICONTROL source]_, le_[!UICONTROL  schéma]_ et l’_[!UICONTROL état du dernier lot]_, ainsi que la date et l’heure de la_[!UICONTROL  dernière mise à jour]_ du jeu de données.
 
 >[!NOTE]
 >
@@ -70,9 +70,9 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’_identifiant du jeu de données_, le _nom_, la _description_, le _nom du tableau_, le _schéma_, le _Streaming_ et la _Source_. L’onglet Informations contient également la date de _création_ du jeu de données et celle de sa _dernière modification_.
+Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’_[!UICONTROL identifiant du jeu de données]_, le_[!UICONTROL  nom]_, la _[!UICONTROL description]_, le_[!UICONTROL  nom du tableau]_, le _[!UICONTROL schéma]_, le_[!UICONTROL  Streaming]_ et la _[!UICONTROL Source]_. L’onglet Informations contient également la date de_[!UICONTROL  création]_ du jeu de données et celle de sa _[!UICONTROL dernière modification]_.
 
-L’onglet Informations contient également un bouton activer/désactiver de _Profile_ qui permet d’activer votre jeu de données pour l’utiliser avec [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
+L’onglet Informations contient également un bouton activer/désactiver de _[!UICONTROL Profile]_qui permet d’activer votre jeu de données pour l’utiliser avec[!DNL Real-time Customer Profile]. Use of this toggle, and[!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
 ![Activité du jeu de données](../images/tutorials/ingest-batch-data/dataset_activity.png)
 
@@ -88,7 +88,7 @@ To enable the dataset for [!DNL Real-time Customer Profile], click the **[!UICON
 
 ![Bascule des profils](../images/tutorials/ingest-batch-data/enable_dataset_unified_profile.png)
 
-Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour Real-time Customer Profile.
+Une boîte de dialogue s’affiche vous demandant de confirmer que vous souhaitez activer le jeu de données pour [!DNL Real-time Customer Profile].
 
 ![Boîte de dialogue d’activation de Profile](../images/tutorials/ingest-batch-data/confirm_dataset_enable.png)
 
@@ -98,7 +98,7 @@ Cliquez sur **[!UICONTROL Activer]** et le bouton activer/désactiver devient bl
 
 ## Ajout de données à un jeu de données
 
-Les données peuvent être ajoutées à un jeu de données de différentes manières. Vous pouvez choisir d’utiliser des API Data Ingestion ou un partenaire ETL, tel qu’Unifi ou Informatica. Dans ce tutoriel, les données seront ajoutées au jeu de données à l’aide de l’onglet **[!UICONTROL Ajouter des données]** dans l’interface utilisateur.
+Les données peuvent être ajoutées à un jeu de données de différentes manières. You could choose to use [!DNL Data Ingestion] APIs or an ETL partner such as [!DNL Unifi] or [!DNL Informatica]. Dans ce tutoriel, les données seront ajoutées au jeu de données à l’aide de l’onglet **[!UICONTROL Ajouter des données]** dans l’interface utilisateur.
 
 Pour commencer à ajouter des données au jeu de données, cliquez sur l’onglet **[!UICONTROL Ajouter des données]**. Vous pouvez désormais faire glisser et déposer des fichiers ou rechercher sur votre ordinateur les fichiers à ajouter.
 
@@ -116,19 +116,19 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 ## Mesures de jeux de données
 
-Une fois le chargement du fichier terminé, l’onglet **[!UICONTROL Activité du jeu de données]** n’indique plus qu’« aucun lot n’a été ajouté ». L’onglet Activité de jeu de données affiche désormais les mesures des jeux de données. Toutes les mesures indiqueront « 0 » à cette étape, car le lot n’a pas encore été chargé.
+Une fois le chargement du fichier terminé, l’onglet **[!UICONTROL Activité du jeu de données]** n’indique plus qu’« aucun lot n’a été ajouté ». Instead, the *[!UICONTROL Dataset Activity]* tab now shows dataset metrics. Toutes les mesures indiqueront « 0 » à cette étape, car le lot n’a pas encore été chargé.
 
-En bas de l’onglet se trouve une liste présentant l’_identifiant du lot_ des données qui venaient d’être ingérées via le processus [« Ajouter des données à un jeu de données »](#add-data-to-dataset). Sont également incluses les informations relatives au lot, notamment la date _d’ingestion_, le nombre d’_enregistrements ingérés_ et l’_état_ actuel du lot.
+En bas de l’onglet se trouve une liste présentant l’_[!UICONTROL identifiant du lot]_des données qui venaient d’être ingérées via le processus[« Ajouter des données à un jeu de données »](#add-data-to-dataset). Sont également incluses les informations relatives au lot, notamment la date_[!UICONTROL  d’ingestion]_, le nombre d’_[!UICONTROL enregistrements ingérés]_et l’_[!UICONTROL &#x200B;état]_ actuel du lot.
 
 ![Mesures de jeux de données](../images/tutorials/ingest-batch-data/batch_loading.png)
 
 ## Détails du lot
 
-Cliquez sur l’_identifiant du lot_ pour afficher un **[!UICONTROL aperçu du lot]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations sur le lot sont mises à jour afin d’afficher le nombre d’ _enregistrements ingérés_ et la _taille du fichier_. L’_état_ passe également à « Succès » ou « Échec ». Si le lot échoue, la section _Code d’erreur_ contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
+Cliquez sur l’_[!UICONTROL identifiant du lot]_pour afficher un**[!UICONTROL  aperçu du lot ]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations sur le lot sont mises à jour afin d’afficher le nombre d’_[!UICONTROL  enregistrements ingérés]_ et la _[!UICONTROL taille du fichier]_. L’_[!UICONTROL &#x200B;état]_ passe également à « Succès » ou « Échec ». Si le lot échoue, la section _[!UICONTROL Code d’erreur]_contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
 
 Pour plus d’informations et pour obtenir des questions fréquentes sur l’ingestion par lots, consultez le [guide de dépannage de l’ingestion par lots](../batch-ingestion/troubleshooting.md).
 
-Pour revenir à l’écran **Activité du jeu de données**, cliquez sur le nom du jeu de données (_Loyalty Details_) dans le chemin de navigation.
+Pour revenir à l’écran **[!UICONTROL Activité du jeu de données]**, cliquez sur le nom du jeu de données (_[!UICONTROL Loyalty Details]_) dans le chemin de navigation.
 
 ![Aperçu du lot](../images/tutorials/ingest-batch-data/batch_overview.png)
 
