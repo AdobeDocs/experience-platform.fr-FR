@@ -1,19 +1,19 @@
 ---
 title: Guide du créateur de segments
-seo-title: Utilisation du créateur de segments du service de segmentation sur la plateforme de données client en temps réel
+seo-title: Utilisation du créateur de segments de Segmentation Service sur la plateforme de données clients en temps réel
 description: Un guide décrivant l’utilisation du créateur de segments.
-seo-description: Un guide de l’utilisateur décrivant l’utilisation du créateur de segments du service de segmentation sur la plateforme de données client en temps réel.
+seo-description: Un guide d’utilisation décrivant l’utilisation du créateur de segments de Segmentation Service sur la plateforme de données clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 84%
+source-wordcount: '100'
+ht-degree: 77%
 
 ---
 
 
 # Guide du créateur de segments
 
-Basée sur Adobe Experience Platform, la plateforme de données client en temps réel peut utiliser l’ensemble des fonctionnalités du créateur de segments qui font partie d’Experience Platform. Dans l’interface utilisateur du créateur de segments, vous pouvez créer des segments, accéder aux segments existants et les modifier.
+Built on top of Adobe Experience Platform, [!DNL Real-time Customer Data Platform] is able to make use of the full Segment Builder capabilities that are a part of [!DNL Experience Platform]. Dans l’interface utilisateur du créateur de segments, vous pouvez créer des segments, accéder aux segments existants et les modifier.
 
-For a more detailed guide on the Segment Builder, please read the [Segment Builder user guide](../../segmentation/ui/overview.md).
+Pour un guide plus détaillé du créateur de segments, consultez le [guide d’utilisation du créateur de segments](../../segmentation/ui/overview.md).
