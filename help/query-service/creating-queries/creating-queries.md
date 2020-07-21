@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Créer une requête
+title: Création de requêtes
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 3%
+source-wordcount: '114'
+ht-degree: 28%
 
 ---
 
 
-# Créer une requête
+# Création de requêtes
 
-Adobe Experience Platform Requête Service permet d’exécuter des requêtes SQL sur des jeux de données dans Data Lake dans Experience Platform. Lorsque vous utilisez SQL pour interagir avec des jeux de données dans Data Lake, il est important de comprendre que Requête Service gère automatiquement certains aspects, comme la création de noms de table SQL-safe pour chaque jeu de données dans le lac de données. Il est également nécessaire de travailler avec des données hiérarchiques dans le lac Data, notamment de découvrir le schéma sur lequel repose un jeu de données et de vous assurer que vous sélectionnez le bon champ dans le modèle hiérarchique.
+Adobe Experience Platform [!DNL Query Service] provides the power to run SQL queries against datasets in the [!DNL Data Lake] within [!DNL Experience Platform]. As you use SQL to interact with datasets in the Data Lake, it is important to understand that [!DNL Query Service] automatically manages certain aspects, such as creating SQL-safe table names for each dataset in the [!DNL Data Lake]. There are also considerations around working with hierarchical data in the [!DNL Data Lake], including discovering the schema upon which a dataset is based and ensuring that you are selecting the correct field within the hierarchical model.
 
-La documentation suivante vous aidera à mieux comprendre les concepts de base dans Requête Service :
+La documentation suivante vous aidera à mieux comprendre les concepts clés de [!DNL Query Service]:
 
-- [Jeu de données vs tables et schéma](./datasets-and-tables.md)
-- [Directives générales pour la rédaction de requêtes](./writing-queries.md)
-- [requêtes ExperienceEvent](./experience-event-queries.md)
-- [Regroupement de jeux de données](./joining-datasets.md)
+- [Jeux de données par rapport aux tableaux et schémas](./datasets-and-tables.md)
+- [Instructions générales sur l’écriture de requêtes](./writing-queries.md)
+- [Requêtes ExperienceEvent](./experience-event-queries.md)
+- [Association de jeux de données](./joining-datasets.md)
 - [Déduplication des données](./deduplication.md)
