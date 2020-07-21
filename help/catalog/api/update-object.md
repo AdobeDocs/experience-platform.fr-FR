@@ -1,27 +1,27 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Mettre à jour un objet
+title: Mise à jour d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 5%
+source-wordcount: '313'
+ht-degree: 89%
 
 ---
 
 
-# Mettre à jour un objet
+# Mise à jour d’un objet
 
-Vous pouvez mettre à jour une partie d’un objet Catalog en incluant son ID dans le chemin d’une requête PATCH. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets de catalogue :
+You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets Catalogue :
 
 * Utilisation des champs
-* Utilisation de la notation de correctif JSON
+* Utilisation de la notation par patch JSON
 
 >[!NOTE]
 >
->Les opérations PATCH sur un objet ne peuvent pas modifier ses champs extensibles, qui représentent des objets interconnectés.  Les modifications apportées aux objets interconnectés doivent être effectuées directement.
+>Les opérations PATCH sur un objet ne peuvent pas modifier ses champs extensibles, qui représentent des objets interconnectés.  Les modifications d’objets interconnectés doivent être effectuées directement.
 
 ## Mise à jour à l’aide de champs
 
@@ -35,12 +35,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identifiant de l’objet spécifique à mettre à jour. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour les `name` champs et `description` champs d’un jeu de données avec les valeurs fournies dans la charge utile. Les champs d’objet qui ne doivent pas être mis à jour peuvent être exclus de la charge utile.
+La requête suivante met à jour les champs `name` et `description` d’un jeu de données avec les valeurs fournies dans le payload. Les champs d’objet qui ne doivent pas être mis à jour peuvent être exclus du payload.
 
 ```shell
 curl -X PATCH \
@@ -58,7 +58,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la demande PATCH. L’exécution d’une requête GET pour ce jeu de données montre désormais que seules les valeurs `name` et `description` ont été mises à jour, tandis que toutes les autres valeurs restent inchangées.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. En exécutant une requête GET pour ce jeu de données, vous voyez maintenant que seules les valeurs `name` et `description` ont été mises à jour, tandis que toutes les autres valeurs restent inchangées.
 
 ```json
 [
@@ -66,9 +66,9 @@ Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de d
 ]
 ```
 
-## Mise à jour à l’aide de la notation de correctif JSON
+## Mise à jour à l’aide de la notation par patch JSON
 
-L’exemple d’appel suivant montre comment mettre à jour un objet à l’aide du correctif JSON, comme indiqué dans la section [RFC-6902](https://tools.ietf.org/html/rfc6902).
+L’exemple d’appel suivant montre comment mettre à jour un objet à l’aide d’un patch JSON, comme indiqué dans [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
 <!-- (Include once API fundamentals guide is published) 
 
@@ -84,12 +84,12 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à mettre à jour. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identifiant de l’objet spécifique à mettre à jour. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be updated. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour les `name` champs et `description` champs d’un jeu de données avec les valeurs fournies dans chaque objet de correctif JSON. Lors de l’utilisation du correctif JSON, vous devez également définir l’en-tête Content-Type sur `application/json-patch+json`.
+La requête suivante met à jour les champs `name` et `description` d’un jeu de données avec les valeurs fournies dans chaque objet de patch JSON. Lors de l’utilisation d’un patch JSON, vous devez aussi définir l’en-tête Content-Type sur `application/json-patch+json`.
 
 ```shell
 curl -X PATCH \
@@ -107,7 +107,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;identifiant de l&#39;objet mis à jour. Cet identifiant doit correspondre à celui envoyé dans la demande PATCH. L’exécution d’une requête GET pour cet objet indique désormais que seules les valeurs `name` et `description` ont été mises à jour alors que toutes les autres valeurs restent inchangées.
+Une réponse réussie renvoie un tableau contenant l’identifiant de l’objet mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. En exécutant une requête GET pour cet objet, vous voyez maintenant que seules les valeurs `name` et `description` ont été mises à jour, tandis que toutes les autres valeurs restent inchangées.
 
 ```json
 [
