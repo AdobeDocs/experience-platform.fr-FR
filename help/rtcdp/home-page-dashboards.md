@@ -4,15 +4,15 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 69692f100389abb3fdb251b9b9258421254a2494
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 97%
+source-wordcount: '634'
+ht-degree: 94%
 
 ---
 
 
-# Présentation des mesures de la plateforme de données client en temps réel
+# [!DNL Real-time Customer Data Platform] présentation des mesures
 
 La page d’accueil de la plateforme de données client (CDP) en temps réel d’Adobe inclut un tableau de bord de mesures et s’affiche lorsque vous vous connectez à la plateforme CDP en temps réel.
 
@@ -43,13 +43,13 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 ### Jeux de données
 
-Le compteur **[!UICONTROL Jeux de données]** indique le nombre de jeux de données du système et la quantité de données de la plateforme. Ce compteur est mis à jour lors de la création d’un jeu de données.
+The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
-Pour plus d&#39;informations sur les jeux de données, consultez l&#39;aperçu [des](../catalog/datasets/overview.md)jeux de données.
+Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
 ### Profils
 
-Le compte **[!UICONTROL Profils]** indique le nombre total de personnes disposant de profils dans le profil client en temps réel. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
@@ -61,7 +61,7 @@ Pour plus d’informations sur les profils, consultez [Une vue unifiée de votre
 
 La section **[!UICONTROL Segments]** indique le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](segmentation/segmentation-overview.md).
+Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
 
 ### Destinations
 
@@ -109,7 +109,7 @@ La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de donn
 
 Cliquez sur un jeu de données pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
 
-Pour plus d&#39;informations sur les jeux de données, consultez l&#39;aperçu [des](../catalog/datasets/overview.md)jeux de données.
+Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
 ### Sources récentes
 
@@ -125,7 +125,7 @@ La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments c
 
 Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
 
-Pour plus d’informations sur les segments, consultez [Présentation du service de segmentation](segmentation/segmentation-overview.md).
+Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
 
 ### Destinations récentes
 
