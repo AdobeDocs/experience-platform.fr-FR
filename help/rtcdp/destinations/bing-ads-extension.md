@@ -1,63 +1,63 @@
 ---
-title: Extension de suivi des Événements universels Bing Ads (UET)
-seo-title: Extension de suivi des Événements universels Bing Ads (UET)
-description: L’extension UET (Universal Événement Tracking) de Bing Ads est une destination publicitaire dans la plate-forme de données client en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, voir la page d’extension dans Adobe Exchange.
+title: Extension Bing Ads Universal Event Tracking (UET)
+seo-title: Extension Bing Ads Universal Event Tracking (UET)
+description: L’extension Bing Ads Universal Event Tracking (UET) est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 4%
+source-wordcount: '550'
+ht-degree: 71%
 
 ---
 
 
-# Extension de suivi des Événements universels Bing Ads (UET) {#bing-ads-extension}
+# [!DNL Bing Ads Universal Event Tracking] (UET) extension {#bing-ads-extension}
 
-## Aperçu {#overview}
+## Présentation {#overview}
 
-Le suivi universel des Événements Bing Ads (UET) pour le lancement de la plateforme d’expérience est un moyen utile de suivre ce qui se passe après qu’un utilisateur a cliqué sur votre publicité de recherche. En utilisant une seule balise UET pour enregistrer ce que font les clients sur votre site Web, vous pouvez exploiter ces données, ce qui vous permet de suivre les conversions ou les audiences de cible à l’aide de listes de remarketing.
+[!DNL Bing Ads Universal Event Tracking] (UET) [!DNL Experience Platform Launch] est un moyen utile de suivre ce qui se passe après que quelqu&#39;un a cliqué sur votre publicité de recherche. Utilisez une simple balise UET pour enregistrer ce que font les consommateurs sur votre site web et exploitez ces données pour suivre les conversions et cibler des audiences à l’aide de listes de remarketing.
 
-Le suivi des Événements universels Bing Ads (UET) est une extension de publicité dans la plate-forme de données client en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, voir la page d’extension d’ [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET) est une extension de publicité dans Adobe Real-time Customer Data Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
-Cette destination est une extension de lancement de plateforme d’expérience. Pour plus d’informations sur le fonctionnement des extensions de lancement dans Adobe CDP en temps réel, voir Présentation [des extensions de lancement de plateformes](/help/rtcdp/destinations/experience-platform-launch-extensions.md)d’expérience.
+Cette destination est une [!DNL Experience Platform Launch] extension. For more information about how [!DNL Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
-![Extension Publicités Bing](assets/bing-extension.png)
-
-
-## Conditions préalables {#prerequisites}
-
-Cette extension est disponible dans le catalogue Destinations pour tous les clients qui ont acheté Adobe Real-time CDP.
-
-Pour utiliser cette extension, vous devez accéder au lancement de la plate-forme d’expérience. Experience Platform Launch est proposé aux clients d’Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contactez l’administrateur de votre organisation pour accéder à Launch et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer des extensions.
-
-## Extension d’installation {#install-extension}
-
-Pour installer l&#39;extension de suivi de Événement universel (UET) Bing Ads :
-
-1. Dans l’interface [CDP en temps réel d’](http://platform.adobe.com/)Adobe, accédez à **[!UICONTROL Destinations > Catalogue]**.
-2. Sélectionnez l&#39;extension dans le catalogue ou utilisez la barre de recherche.
-3. Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **[!UICONTROL Installer l’extension]** dans le rail de droite. Si le contrôle **[!UICONTROL Install Extension]** est grisé, l’autorisation **[!UICONTROL manage_properties]** est manquante. Voir [Conditions préalables](#prerequisites).
-4. Dans la fenêtre **[!UICONTROL Sélectionner la propriété]** de lancement disponible, sélectionnez la propriété de lancement dans laquelle vous souhaitez installer l’extension. Vous avez également la possibilité de créer une propriété dans Lancement. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la section [de la page](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html#properties-page) Propriétés de la documentation sur le lancement.
-5. Le processus vous amène au lancement pour terminer l’installation.
-
-Pour plus d’informations sur les options de configuration de l’extension et la prise en charge de l’installation, voir la page [Bing Ads Universal Événement Tracking (UET) sur Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
-
-Vous pouvez également installer l’extension directement dans l’interface [de lancement de la plateforme](https://launch.adobe.com/)d’expérience. Reportez-vous à [Ajouter une nouvelle extension](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) dans la documentation de lancement.
+![Extension Bing Ads](assets/bing-extension.png)
 
 
-## Utilisation de l&#39;extension {#how-to-use}
+## Conditions préalables  {#prerequisites}
 
-Une fois que vous avez installé l&#39;extension, vous pouvez début la configuration de règles pour celle-ci directement dans Lancement.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Adobe Real-time CDP.
 
-Dans Lancement, vous pouvez configurer des règles pour vos extensions installées afin d’envoyer des données de événement à la destination de l’extension uniquement dans certaines situations. Pour plus d’informations sur la configuration de règles pour vos extensions, voir la documentation [sur les](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html)règles.
+To use this extension, you need access to [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] est proposé aux clients d’Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contact your organization administrator to get access to [!DNL Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+
+## Installation de l’extension {#install-extension}
+
+To install the [!DNL Bing Ads Universal Event Tracking] (UET) extension:
+
+1. Dans l’[interface de la plateforme de données clients en temps réel d’Adobe](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations > Catalogue]**.
+2. Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
+3. Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **[!UICONTROL Installer l’extension]** dans le rail droit. Si la commande **[!UICONTROL Installer l’extension]** est grisée, vous ne disposez pas de l’autorisation **[!UICONTROL manage_properties]**. Voir les [Conditions préalables](#prerequisites).
+4. Dans la fenêtre **[!UICONTROL Sélectionner la propriété disponible]**, sélectionnez la propriété Launch dans laquelle vous souhaitez installer l’extension. [!DNL Launch] Vous pouvez aussi créer une nouvelle propriété dans [!DNL Launch]. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de [!DNL Launch]
+5. The workflow takes you to [!DNL Launch] to complete the installation.
+
+Pour plus d’informations sur les options de configuration de l’extension et sur l’aide à l’installation, consultez la [page Bing Ads Universal Event Tracking (UET) sur Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+
+Vous pouvez aussi installer l’extension directement dans l’[interface d’Experience Platform Launch](https://launch.adobe.com/). Consultez la section [Ajout d’une nouvelle extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) de la documentation de [!DNL Launch]
+
+
+## Utilisation de l’extension {#how-to-use}
+
+Une fois que vous avez installé l’extension, vous pouvez commencer à configurer des règles pour cette extension directement dans [!DNL Launch].
+
+In [!DNL Launch], you can set up rules for your installed extensions to send event data to the extension destination only in certain situations. Pour plus d’informations sur la configuration de règles pour vos extensions, consultez la [documentation des règles](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.html).
 
 ## Configuration, mise à niveau et suppression de l’extension {#configure-upgrade-delete}
 
-Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’interface de lancement.
+You can configure, upgrade, and delete extensions in the [!DNL Launch] interface.
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface utilisateur CDP en temps réel d’Adobe affiche toujours **[!UICONTROL Install]** pour l’extension. Lancez le processus d’installation comme décrit dans [Installer l’extension](#install-extension) pour accéder à Lancer et configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface de la plateforme de données clients en temps réel d’Adobe affiche toujours **[!UICONTROL Install]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installer l’extension](#install-extension) pour accéder à et configurer ou supprimer votre extension.[!DNL Launch]
 
-Pour mettre à niveau votre extension, reportez-vous à la section Mise à niveau [de l’](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/extension-upgrade.html) extension dans la documentation relative au lancement.
+Pour mettre à niveau votre extension, consultez la section [Mise à niveau d’extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/extension-upgrade.html) dans la documentation de [!DNL Launch]
