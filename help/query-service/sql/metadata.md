@@ -4,44 +4,44 @@ solution: Experience Platform
 title: Commandes de métadonnées
 topic: metadata
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '299'
-ht-degree: 0%
+source-wordcount: '297'
+ht-degree: 100%
 
 ---
 
 
 # Commandes de métadonnées
 
-Pour les métadonnées de votre jeu de données, les commandes PSQL suivantes sont actuellement prises en charge pour l’interrogation :
+Pour les métadonnées de votre jeu de données, les commandes PSQL suivantes sont actuellement prises en charge pour l’interrogation :
 
 >[!NOTE]
 >
->Les commandes répertoriées ci-dessous sont sensibles à la casse.
+>Les commandes énumérées ci-dessous sont sensibles à la casse.
 
-| La commande | Description |
+| Commande | Description |
 |------- | ------------|
-| `\conninfo` | Génère des informations sur la connexion à la base de données active. |
-| `\d` | Affiche une liste de toutes les tables visibles, vues, vues matérialisées, séquences et tables étrangères. |
+| `\conninfo` | Génère des informations sur la connexion actuelle à la base de données. |
+| `\d` | Affiche une liste de toutes les tables visibles, des vues, des vues matérialisées, des séquences et des tables étrangères. |
 | `\dE` | Affiche une liste de tables étrangères. |
 | `\df or \df+` | Affiche une liste de fonctions. |
-| `\di` | Affiche une liste d&#39;index. |
+| `\di` | Affiche une liste d’index. |
 | `\dm` | Affiche une liste de vues matérialisées. |
-| `\dn` | Affiche une liste de schémas (espaces de nommage). |
+| `\dn` | Affiche une liste de schémas (espace de noms). |
 | `\ds` | Affiche une liste de séquences. |
 | `\dS` | Affiche une liste de tables définies par PostgreSQL. |
 | `\dt` | Affiche une liste de tableaux. |
 | `\dT` | Affiche une liste de types de données. |
 | `\dv` | Affiche une liste de vues. |
-| `\encoding` | Liste le codage actuel du jeu de caractères client. |
-| `\errverbose` | Répète le message d’erreur le plus récent du serveur avec une précision maximale. |
+| `\encoding` | Répertorie le codage actuel du jeu de caractères client. |
+| `\errverbose` | Répète le message d’erreur du serveur le plus récent avec une précision maximale. |
 | `\l or \list` | Affiche une liste de bases de données dans le serveur. |
-| `\set` | Affiche les noms et les valeurs de toutes les variables SQL actuelles. |
-| `\showtables` | Affiche les informations suivantes : <br>name: Nom auquel la table sera référencée.<br>datasetId : ID du jeu de données stocké.<br>dataset : Nom du jeu de données stocké.<br>description : Description du jeu de données.<br>résolu : Valeur booléenne indiquant si le jeu de données est résolu ou non dans la session en cours. |
-| `\timing` | Active ou désactive l’affichage. L’affichage est en millisecondes. Les intervalles de plus d’une seconde sont affichés au format minutes:secondes, avec des champs d’heures et de jours ajoutés au besoin. |
+| `\set` | Affiche les noms et les valeurs de toutes les variables psql actuelles. |
+| `\showtables` | Affiche les informations suivantes : <br>nom : le nom par lequel la table est désignée.<br>datasetId : identifiant du jeu de données stocké.<br>dataset : nom du jeu de données stocké.<br>description : description du jeu de données.<br>resolved : valeur booléenne indiquant si le jeu de données est résolu ou non dans la session en cours. |
+| `\timing` | Active et désactive l’affichage. L’affichage est en millisecondes. Les intervalles de plus d’une seconde s’affichent au format minutes:seconds, les champs heures et jours étant ajoutés si besoin. |
 
-Toutes les commandes avec lesquelles ce début `\d` peut être combiné. Par exemple, vous pouvez publier `\dtsn` pour afficher une liste de tous les tableaux, séquences et schémas. `\d` affiche toutes les tables, vues, vues matérialisées et séquences visibles.
+Toutes les commandes qui commencent par `\d` peuvent être combinées. Par exemple, vous pouvez émettre `\dtsn` pour afficher une liste de tous les tableaux, les séquences et les schémas. `\d` en elle-même affiche toutes les tables visibles, les vues, les vues matérialisées et les séquences.
 
-Pour plus d&#39;informations sur les commandes listées ci-dessus, veuillez consulter la documentation à [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Cependant, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par l&#39;Experience Platform.
+Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options présentées dans la documentation PostgreSQL ne sont pas prises en charge par [!DNL Experience Platform].
 
