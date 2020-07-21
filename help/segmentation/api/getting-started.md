@@ -4,34 +4,34 @@ solution: Experience Platform
 title: Guide de développement de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: aff81a4f3243ef77cbdfc776220a5de46e360084
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 50%
+source-wordcount: '288'
+ht-degree: 23%
 
 ---
 
 
 # Getting started with [!DNL Segmentation Service] {#getting-started}
 
-Le service de segmentation des Adobes Experience Platform vous permet de créer des segments et de générer des audiences dans l’Adobe Experience Platform à partir de vos [!DNL Real-time Customer Profile] données.
+Adobe Experience Platform [!DNL Segmentation Service] allows you to build segments and generate audiences in Adobe Experience Platform from your [!DNL Real-time Customer Profile] data.
 
-The developer guide requires a working understanding of the various Experience Platform services involved with using [!DNL Segmentation Service].
+The developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with using [!DNL Segmentation Service].
 
-- [!DNL Segmentation](../home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+- [!DNL Segmentation](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
 - [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [Environnements de test](../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
 
 ## Lecture d’exemples d’appels API
 
-The [!DNL Segmentation Service] API documentation provides example API calls to demonstrate how to format your requests. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
+The [!DNL Segmentation Service] API documentation provides example API calls to demonstrate how to format your requests. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## En-têtes requis
 
-La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour lancer des appels vers des points de terminaison Platform. Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans les appels API Experience Platform, comme illustré ci-dessous :
+La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour lancer des appels vers des points de terminaison [!DNL Platform] Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
