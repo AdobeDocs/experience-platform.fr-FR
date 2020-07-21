@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment ciblé
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 79%
+source-wordcount: '733'
+ht-degree: 71%
 
 ---
 
@@ -22,7 +22,7 @@ Ce tutoriel est directement lié aux étapes décrites dans le tutoriel portant 
 
 ## Prise en main
 
-Pour exporter un segment, le jeu de données doit être basé sur le schéma d’union XDM Individual Profile. Un schéma d’union est un schéma en lecture seule généré par le système regroupant les champs de tous les schémas qui partagent la même classe, dans ce cas précis, la classe XDM Individual Profile. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/schema/composition.md#union).
+Pour exporter un segment, le jeu de données doit être basé sur le [!DNL XDM Individual Profile Union Schema]. A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the [!DNL XDM Individual Profile] class. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/schema/composition.md#union).
 
 Pour visualiser les schémas d’union dans l’interface utilisateur, cliquez sur **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
@@ -53,7 +53,7 @@ Sur l’écran *[!UICONTROL Créer un jeu de données]*, cliquez sur **[!UICONTR
 
 ## Sélection du schéma d’union XDM Individual Profile
 
-To select the XDM Individual Profile Union Schema for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the *[!UICONTROL Select Schema]* screen.
+To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the *[!UICONTROL Select Schema]* screen.
 
 Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, puis cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit.
 
@@ -84,6 +84,6 @@ Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cett
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé un jeu de données basé sur le schéma d’union XDM Individual Profile, vous pouvez utiliser l’**[!UICONTROL identifiant du jeu de données]** pour continuer le tutoriel d’[évaluation et d’accès aux résultats de segmentation](./evaluate-a-segment.md).
+Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the **[!UICONTROL Dataset ID]** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
 At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.
