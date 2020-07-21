@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Se connecter avec RStudio
+title: Connexion à RStudio
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 2%
+source-wordcount: '209'
+ht-degree: 67%
 
 ---
 
 
-# Se connecter avec RStudio
+# Connect with [!DNL RStudio]
 
-Ce document traverse les étapes pour connecter R Studio à Adobe Experience Platform Requête Service.
+Ce document décrit les étapes à suivre pour connecter RStudio à Adobe Experience Platform [!DNL Query Service].
 
-Après avoir installé RStudio, sur l&#39;écran *Console* qui s&#39;affiche, vous devrez d&#39;abord préparer votre script R pour utiliser PostgreSQL.
+After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -25,7 +25,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Une fois que vous avez préparé votre script R pour utiliser PostgreSQL, vous pouvez maintenant connecter RStudio à Requête Service en chargeant le pilote PostgreSQL.
+Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -39,19 +39,19 @@ con <- dbConnect(drv,
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{DATABASE_NAME}` | Nom de la base de données qui sera utilisée. |
-| `{HOST_NUMBER` et `{PORT_NUMBER}` | Point de terminaison hôte et son port pour Requête Service. |
-| `{USERNAME}` et `{PASSWORD}` | Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur prend la forme de `ORG_ID@AdobeOrg`. |
+| `{DATABASE_NAME}` | Le nom de la base de données qui sera utilisée. |
+| `{HOST_NUMBER` et `{PORT_NUMBER}` | Le point de terminaison hôte et son port pour Query Service. |
+| `{USERNAME}` et `{PASSWORD}` | Les identifiants de connexion qui seront utilisés. Le nom d’utilisateur prend la forme `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
->Pour plus d’informations sur la recherche de votre nom de base de données, de votre hôte, de votre port et de vos informations d’identification de connexion, consultez la page [d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de la base de données ainsi que les informations d’identification de connexion, consultez la [page des informations d’identification sur Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à Requête Service, vous pouvez écrire des requêtes pour exécuter et modifier des instructions SQL. Par exemple, vous pouvez utiliser `dbGetQuery(con, sql)` pour exécuter des requêtes, où `sql` est la requête SQL à exécuter.
+Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. Par exemple, vous pouvez utiliser `dbGetQuery(con, sql)` pour exécuter des requêtes, où `sql` est la requête SQL que vous souhaitez exécuter.
 
-La requête suivante utilise un jeu de données contenant [ExperienceEvents](../creating-queries/experience-event-queries.md) et crée un histogramme des vues de page d’un site Web, en fonction de la hauteur d’écran du périphérique.
+La requête suivante utilise un jeu de données contenant [ExperienceEvents](../creating-queries/experience-event-queries.md) et crée un histogramme des pages vues d’un site web en fonction de la hauteur d’écran d’un appareil.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -72,7 +72,7 @@ ORDER BY buckets
 LIMIT 1000000")
 ```
 
-Une réponse positive renvoie les résultats de la requête :
+Une réponse réussie renvoie les résultats de la requête :
 
 ```r
 df_pageviews
@@ -86,4 +86,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide [des requêtes](../creating-queries/creating-queries.md)en cours d&#39;exécution.
+Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../creating-queries/creating-queries.md).
