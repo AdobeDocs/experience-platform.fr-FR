@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Création d’un jeu de données
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 2%
+source-wordcount: '197'
+ht-degree: 70%
 
 ---
 
 
 # Création d’un jeu de données
 
-Pour créer un jeu de données à l’aide de l’API Catalogue, vous devez connaître la `$id` valeur du schéma XDM (Experience Data Model) sur lequel le jeu de données sera basé. Une fois que vous disposez de l’ID de schéma, vous pouvez créer un jeu de données en envoyant une requête POST au point de `/datasets` terminaison dans l’API Catalogue.
+In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
 >[!NOTE]
 >
->Ce document traite uniquement de la création d&#39;un objet de jeu de données dans le catalogue. Pour obtenir des instructions complètes sur la création, le remplissage et le contrôle d&#39;un jeu de données, consultez le [didacticiel](../datasets/create.md)suivant.
+>This document only covers how to create a dataset object in [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
 
 **Format d’API**
 
@@ -28,7 +28,7 @@ POST /dataSets
 
 **Requête**
 
-La requête suivante crée un jeu de données qui fait référence à un schéma précédemment défini.
+La requête suivante crée un jeu de données se référant à un schéma précédemment défini.
 
 ```SHELL
 curl -X POST \
@@ -55,15 +55,15 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Nom du jeu de données à créer. |
-| `schemaRef.id` | Valeur URI `$id` du schéma XDM sur lequel le jeu de données sera basé. |
+| `schemaRef.id` | La valeur `$id` de l’URI pour le schéma XDM sur lequel sera basé le jeu de données. |
 
 >[!NOTE]
 >
->Cet exemple utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour sa `containerFormat` propriété. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le guide [du développeur d’](../../ingestion/batch-ingestion/api-overview.md)assimilation par lot.
+> Cet exemple utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour sa propriété `containerFormat`. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
 **Réponse**
 
-Une réponse réussie renvoie le statut HTTP 201 (Créé) et un objet de réponse constitué d&#39;un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API.
+Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de réponse constitué d’un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API.
 
 ```JSON
 [
