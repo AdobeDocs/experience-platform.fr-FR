@@ -4,65 +4,66 @@ seo-title: Destination Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 seo-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: db2084024f7c25cb1f914f9b8da35298691fd95f
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 28%
+source-wordcount: '572'
+ht-degree: 49%
 
 ---
 
 
-# Destination Google Ads
+# [!DNL Google Ads] Destination
 
 ## Présentation
 
-Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
+[!DNL Google Ads], appelé auparavant , est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos et des affichages mobiles in-app.[!DNL Google AdWords][!DNL YouTube]
 
 ## Spécifications de la destination
 
-Notez les détails suivants spécifiques aux destinations de publicités Google :
+Note the following details that are specific to [!DNL Google Ads] destinations:
 
-* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md) suivantes vers les destinations de publicités Google : **ID de cookie Google, IDFA, GAID, ID de Roku, ID Microsoft, ID** Amazon Fire TV.
-* Les audiences activées sont créées par programmation dans la plateforme Google.
-* La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Reportez-vous au décompte des audiences dans Google pour valider l’intégration et comprendre la taille du ciblage des audiences.
+* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md)[!DNL Google Ads] suivantes vers les destinations  : **identifiant de cookie Google, IDFA, GAID, identifiants Roku, identifiants Microsoft, identifiants Amazon Fire TV**.
+* Activated audiences are created programmatically in the [!DNL Google] platform.
+* La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec des publicités Google et que vous n’avez pas activé la fonctionnalité [de synchronisation des](https://docs.adobe.com/content/help/en/id-service/using/id-service-api/methods/idsync.html) identifiants dans le service d’identification des Experience Cloud dans le passé (avec Audience Manager ou d’autres applications), contactez le service de conseil ou d’assistance clientèle Adobe pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’identifiants que vous avez configurées sont transférées au CDP Adobe Real-time.
+>If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://docs.adobe.com/content/help/fr-FR/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. Si vous avez configuré précédemment les intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers la plateforme de données clients en temps réel d’Adobe.
 
 ## Conditions préalables
 
-### Compte Publicités Google existant
+### Compte [!DNL Google Ads] existant
 
-Google a suspendu toute nouvelle intégration de publicités Google avec des fournisseurs tiers. Vous devez disposer d’une intégration existante avec les publicités Google afin de pouvoir exécuter les étapes de liste autorisée de la section suivante et de créer une destination des publicités Google dans le fichier CDP en temps réel Adobe.
+[!DNL Google] a suspendu toute nouvelle [!DNL Google Ads] intégration avec des fournisseurs tiers. You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Adobe Real-time CDP.
 
 ### Liste autorisée
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première destination de publicités Google dans Adobe Real-time CDP. Assurez-vous que le processus de liste autorisée décrit ci-dessous a été effectué par Google avant de créer une destination.
+>La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ads] destination dans Adobe Real-time CDP. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Avant de créer la destination des publicités Google dans le CDP en temps réel d’Adobe, vous devez contacter Google pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
+Avant de créer la destination dans le CDP en temps réel en Adobe, vous devez contacter [!DNL Google Ads] [!DNL Google] pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] and provide the following information:
 
-* **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
-* **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec Google. Contactez le service à la clientèle Adobe ou votre représentant Adobe pour obtenir cet identifiant.
-* Votre type de compte : **AdWords**
-* **Identifiant** Google AdWords : C&#39;est votre identifiant avec Google. Le format d’ID est généralement 123-456-7890.
+* **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
+* **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
+* Votre type de compte : **AdWords**
+* **Identifiant** Google AdWords : C&#39;est votre carte d&#39;identité avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
 
-## Créer une destination
+## Création d’une destination
 
-1. In **[!UICONTROL Connections > Destinations]**, select Google Ads, and select **[!UICONTROL Create destination]**.
-   ![Connecter la destination des publicités Google](/help/rtcdp/destinations/assets/google-2-destination.png)
+1. In **[!UICONTROL Connections > Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Create destination]**.
+   ![Connexion à la destination Google Ads](/help/rtcdp/destinations/assets/google-2-destination.png)
 
-2. À l’étape **Configuration** du processus de création de destination, renseignez les informations [!UICONTROL de] base de la destination. <br>
-   ![Informations de base Publicités Google](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
+2. In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. <br>
+
+   ![Informations de base de Google Ads](/help/rtcdp/destinations/assets/google-2-destination-setup-step.png)
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
-* **[!UICONTROL Type]** de compte : AdWords est la seule option disponible.
-* **[!UICONTROL ID]** du compte : Renseignez votre ID de compte avec des publicités Google. Le format d’ID est généralement 123-456-7890.
+* **[!UICONTROL Type de compte]** : AdWords est la seule option disponible.
+* **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
 * **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données.
 
-## Activer des segments dans des publicités Google
+## Activate segments to [!DNL Google Ads]
 
-For instructions on how to activate segments to Google Ads, see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
 
