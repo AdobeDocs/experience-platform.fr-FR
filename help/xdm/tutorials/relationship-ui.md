@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1445646be8fa3416a34408205eadca0a792290c6
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 60%
@@ -62,7 +62,7 @@ La boîte de dialogue [!UICONTROL _Ajouter un mixin _]s’affiche. À partir de 
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _Mixins_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!UICONTROL Favorite Hotel]&quot; appearing in the _Mixins_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
@@ -74,7 +74,7 @@ Lorsque vous avez terminé, cliquez sur **[!UICONTROL Appliquer]**.
 
 ![](../images/tutorials/relationship/relationship-field-apply.png)
 
-The updated &quot;[!UICONTROL loyaltyRelationship]&quot; field appears in the canvas. Cliquez sur **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
+The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. Cliquez sur **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
