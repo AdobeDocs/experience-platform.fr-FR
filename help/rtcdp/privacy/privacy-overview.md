@@ -4,28 +4,28 @@ seo-title: Confidentialité du profil de données client en temps réel
 description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 translation-type: tm+mt
-source-git-commit: a1161630c8edae107b784f32ee20af225f9f8c46
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 97%
+source-wordcount: '304'
+ht-degree: 61%
 
 ---
 
 
 # Confidentialité dans la plateforme de données client en temps réel
 
-La plateforme de données client (CDP) en temps réel permet aux spécialistes marketing de rassembler des données issues de plusieurs systèmes d’entreprise, ce qui leur permet de mieux identifier, comprendre et interagir avec leurs clients. Adobe considère la confidentialité des données des clients comme un principe de conception fondamental et fournit divers contrôles pour aider les spécialistes marketing à gérer la confidentialité des données de leurs clients.
+[!DNL Real-time Customer Data Platform] (CDP en temps réel) aide les marketeurs à rassembler les données issues de plusieurs systèmes d’entreprise, ce qui leur permet de mieux identifier, comprendre et impliquer leurs clients. Adobe considère la confidentialité des données des clients comme un principe de conception fondamental et fournit divers contrôles pour aider les spécialistes marketing à gérer la confidentialité des données de leurs clients.
 
-La plupart des fonctionnalités de la plateforme CDP en temps réel fonctionnent avec Adobe Experience Platform. Ce document fournit des informations sur les différentes technologies d’amélioration de la confidentialité prises en charge par la plateforme CDP en temps réel ainsi que des liens vers la documentation plus exhaustive d’Experience Platform.
+La plupart des fonctionnalités de la plateforme CDP en temps réel fonctionnent avec Adobe Experience Platform. This document provides information about the various privacy enhancement technologies supported by Real-time CDP, with links to [!DNL Experience Platform] documentation for more information.
 
-## Service confidentialité
+## [!DNL Privacy Service]
 
-Le service confidentialité d’Adobe Experience Platform permet de rationaliser le processus de mise en conformité de vos opérations de données aux règles de confidentialité telles que le règlement général sur la protection des données (RGPD) et la Loi sur la protection de la confidentialité des consommateurs (CCPA) de Californie. Comme la plateforme CDP en temps réel utilise les fonctionnalités d’Experience Platform pour collecter et stocker les données, les demandes d’accès et de suppression dans le cadre du RGPD et de la CCPA doivent être gérées dans Platform. Consultez le document [Présentation du service confidentialité](../../privacy-service/home.md) pour une présentation plus détaillée du service.
+L&#39;Adobe Experience Platform [!DNL Privacy Service] vous permet de simplifier le processus de maintien de vos opérations de données en conformité avec les règlements sur la protection des renseignements personnels, tels que le [!DNL General Data Protection Regulation] (RGMD) et l&#39; [!DNL California Consumer Privacy Act] (APPC). Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. Consultez le document [Présentation du service confidentialité](../../privacy-service/home.md) pour une présentation plus détaillée du service.
 
 Il existe deux manières de soumettre des requêtes individuelles pour consulter ou supprimer des données de propriétaires dans le cadre du RGPD ou de la CCPA :
 
-* Utiliser l’[interface utilisateur du service confidentialité](https://gdprui.cloud.adobe.io/) pour créer et surveiller des requêtes d’accès et de suppression dans un espace de travail visuel. Consultez le [tutoriel sur l’interface utilisateur du service confidentialité](../../privacy-service/ui/overview.md) pour obtenir des instructions étape par étape.
-* Utiliser [l’API du service confidentialité](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) pour gérer les requêtes d’accès et de suppression avec les appels d’API RESTful. Consultez le [tutoriel sur L’API du service confidentialité](../../privacy-service/api/getting-started.md) pour obtenir des instructions étapes par étape.
+* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Consultez le [tutoriel sur l’interface utilisateur du service confidentialité](../../privacy-service/ui/overview.md) pour obtenir des instructions étape par étape.
+* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Consultez le [tutoriel sur L’API du service confidentialité](../../privacy-service/api/getting-started.md) pour obtenir des instructions étapes par étape.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
