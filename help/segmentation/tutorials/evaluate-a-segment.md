@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Évaluation d’un segment
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: c0eacfba2feea66803e63ed55ad9d0a97e9ae47c
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 71%
+source-wordcount: '1519'
+ht-degree: 66%
 
 ---
 
@@ -59,7 +59,7 @@ L’évaluation planifiée permet à votre organisation IMS de créer un plannin
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les environnements de test avec un maximum de cinq (5) stratégies de fusion pour XDM Individual Profile. Si votre organisation compte plus de cinq stratégies de fusion pour XDM Individual Profile dans un seul environnement de test, vous ne pourrez pas procéder à l’évaluation planifiée.
+>L’évaluation planifiée peut être activée pour les environnements de test avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
 
 ### Création d’un planning
 
@@ -157,11 +157,11 @@ Les étapes suivantes sont requises pour exporter votre audience :
 
 Lors de l’exportation d’une audience, un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
 
-Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter un segment, le jeu de données doit être basé sur le schéma d’union XDM Individual Profile (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système regroupant les champs des schémas qui partagent la même classe, dans ce cas précis, la classe XDM Individual Profile. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/api/getting-started.md).
+Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter un segment, le jeu de données doit être basé sur le [!DNL XDM Individual Profile Union Schema] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système regroupant les champs des schémas qui partagent la même classe, dans ce cas précis, la classe XDM Individual Profile. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
 Il existe deux manières de créer le jeu de données nécessaire :
 
-- **À l’aide d’API :** les étapes suivantes de ce tutoriel indiquent comment créer un jeu de données qui référence le schéma d’union XDM Individual Profile à l’aide de l’API Catalog.
+- **Utilisation des API :** Les étapes suivantes de ce didacticiel expliquent comment créer un jeu de données qui référence le [!DNL XDM Individual Profile Union Schema] système à l’aide de l’ [!DNL Catalog] API.
 - **Utilisation de l’interface utilisateur :** Pour utiliser l’interface [!DNL Adobe Experience Platform] utilisateur pour créer un jeu de données faisant référence au schéma d’union, suivez les étapes du didacticiel [](../ui/overview.md) IU, puis revenez à ce didacticiel pour passer à la procédure de [génération de profils](#generate-xdm-profiles-for-audience-members)d’audience.
 
 Si vous disposez déjà d’un jeu de données compatible et que vous connaissez son identifiant, vous pouvez passer directement à l’étape de [génération de profils](#generate-xdm-profiles-for-audience-members).
@@ -228,10 +228,10 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ## Étapes suivantes
 
-Once the export has completed successfully, your data is available within the Data Lake in [!DNL Experience Platform]. Vous pouvez ensuite utiliser l’[API Data Access](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) pour accéder aux données à l’aide du `batchId` associé à l’exportation. Selon la taille du segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
+Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [!DNL Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Selon la taille du segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
 
 For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
 
-Vous pouvez également accéder aux données de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the Data Lake.
+Vous pouvez également accéder aux données de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
 
 For more information on how to query audience data, please review the documentation on [!DNL Query Service](../../query-service/home.md).
