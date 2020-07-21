@@ -1,35 +1,35 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Créer un profil de produits
+title: Création d’un profil de produits
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d961bad816d37ade5367ab25c19594dc1b625153
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 0%
+source-wordcount: '212'
+ht-degree: 93%
 
 ---
 
 
-# Créer un profil de produits
+# Création d’un profil de produits
 
-Pour début de la création d’un profil, accédez à l’onglet Profils ** de produits et cliquez sur **Nouveau Profil**.
+Pour commencer la création d’un profil, accédez à l’onglet *[!UICONTROL Profil de produits]* et cliquez sur **[!UICONTROL Nouveau profil]**.
 
-![bouton nouveau-profil](../images/new-profile-button.png)
+![new-profile-button](../images/new-profile-button.png)
 
-La boîte de dialogue _Créer un nouveau Profil_ s’affiche, vous invitant à saisir un nom **de** Profil et une **description** pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désactivez la case **Identique au nom** du Profil et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous Notifications ** utilisateur, vous pouvez activer ou désactiver la fonction de notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue _[!UICONTROL Créer un nouveau profil]_s’affiche, vous invitant à saisir un**[!UICONTROL  Nom de profil ]**ainsi qu’une**[!UICONTROL  Description ]**pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option**[!UICONTROL  Identique au nom de profil ]**et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous*[!UICONTROL  Notifications utilisateur ]*, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
-Lorsque vous avez terminé, cliquez sur **Suivant**.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
-![nouveau-profil-détails](../images/new-profile-details.png)
+![new-profile-details](../images/new-profile-details.png)
 
-L’écran suivant vous invite à choisir les services de plate-forme à inclure dans le profil. Cliquez sur le bouton bascule en regard d’un service pour le désactiver. Si un service est désactivé, toutes les fonctions associées à ce service ne seront pas disponibles pour les utilisateurs affectés à ce profil de produits. Lorsque vous avez terminé, cliquez sur **Terminé**.
+The next screen prompts you to choose which [!DNL Platform] services to include in the profile. Cliquez sur le bouton près d’un service pour désactiver celui-ci. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Terminé]**.
 
-![nouveaux profils-services](../images/new-profile-services.png)
+![new-profile-services](../images/new-profile-services.png)
 
-Le nouveau profil de produits a été créé avec succès et vous êtes redirigé vers la page [](#edit-permissions)Modifier les autorisations du profil. Pour plus d’informations sur la gestion des profils de produits une fois créés, consultez les sections relatives à la [gestion des autorisations](#manage-permissions-for-a-product-profile) et à la [gestion des utilisateurs](#manage-users-for-a-product-profile) .
+Le nouveau profil de produits a été créé avec succès, et vous êtes redirigé vers la [page de modification des autorisations](#edit-permissions) du profil. Pour plus d’informations sur la gestion des profils de produits après leur création, reportez-vous aux sections relatives à la [gestion des autorisations](#manage-permissions-for-a-product-profile) et à la [gestion des utilisateurs](#manage-users-for-a-product-profile).
 
 ## Étapes suivantes
 
-Une fois un nouveau profil de produits créé, vous pouvez passer à l’étape suivante pour [gérer les autorisations d’un profil de produits.](permissions.md)
+Après avoir créé un nouveau profil de produits, vous pouvez passer à l’étape suivante pour [gérer les autorisations d’un profil de produits](permissions.md)
