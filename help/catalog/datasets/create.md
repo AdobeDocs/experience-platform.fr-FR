@@ -4,65 +4,65 @@ solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '1263'
-ht-degree: 2%
+source-wordcount: '1234'
+ht-degree: 80%
 
 ---
 
 
 # Création d’un jeu de données à l’aide d’API
 
-Ce document décrit les étapes générales de création d&#39;un jeu de données à l&#39;aide des API d&#39;Adobe Experience Platform et de remplissage du jeu de données à l&#39;aide d&#39;un fichier.
+Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 
 ## Prise en main
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : Experience Platform vous permet d’assimiler des données sous forme de fichiers de commandes.
-* [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-* [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : [!DNL Experience Platform] vous permet d’assimiler des données sous forme de fichiers de commandes.
+* [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API Platform.
+The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-* Content-Type : application/json
+* Content-Type: application/json
 
 ## Tutoriel
 
-Pour créer un jeu de données, un schéma doit d&#39;abord être défini. Un schéma est un ensemble de règles permettant de représenter des données. Outre la description de la structure des données, les schémas fournissent des contraintes et des attentes qui peuvent être appliquées et utilisées pour valider les données lorsqu&#39;elles sont déplacées d&#39;un système à l&#39;autre.
+Pour créer un jeu de données, vous devez d’abord définir un schéma. Un schéma est un ensemble de règles permettant de représenter des données. Outre la description de la structure des données, les schémas fournissent des contraintes et des attentes qui peuvent être appliquées et utilisées pour valider les données lorsqu’elles sont déplacées d’un système à l’autre.
 
-Ces définitions standard permettent d’interpréter les données de manière cohérente, quelle que soit l’origine, et éliminent la nécessité de les traduire dans les applications. Pour plus d&#39;informations sur la composition de schémas, consultez le guide sur les [bases de la composition de schémas](../../xdm/schema/composition.md)
+Ces définitions standard permettent d’interpréter les données de manière cohérente, quelle que soit leur origine, et éliminent la nécessité d’une traduction entre les applications. Pour plus d’informations sur la composition de schémas, consultez le guide sur les [principes de base de la composition de schémas](../../xdm/schema/composition.md)
 
-## Rechercher un schéma de jeux de données
+## Recherche d’un schéma du jeu de données
 
-Ce didacticiel commence à l&#39;endroit où se termine le didacticiel [sur l&#39;API de registre de](../../xdm/tutorials/create-schema-api.md) Schémas, en utilisant le schéma Membres de fidélité créé au cours de ce didacticiel.
+Ce tutoriel commence là où le [tutoriel de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) se termine, en utilisant le schéma des membres du programme de fidélité créé pendant ce tutoriel.
 
-Si vous n&#39;avez pas terminé le didacticiel sur le registre des Schémas, veuillez vous y début et continuer avec ce tutoriel de dataset seulement une fois que vous avez composé le schéma nécessaire.
+If you have not completed the [!DNL Schema Registry] tutorial, please start there and continue with this dataset tutorial only once you have composed the necessary schema.
 
-L&#39;appel suivant peut être utilisé pour vue du schéma Membres de fidélité que vous avez créé lors du didacticiel sur l&#39;API de registre de Schémas :
+The following call can be used to view the Loyalty Members schema you created during the [!DNL Schema Registry] API tutorial:
 
 **Format d’API**
 
@@ -84,7 +84,7 @@ curl -X GET \
 
 **Réponse**
 
-Le format de l’objet de réponse dépend de l’en-tête Accepter envoyé dans la requête. Les propriétés individuelles de cette réponse ont été réduites pour l’espace.
+Le format de l’objet de réponse dépend de l’en-tête Accept envoyé dans la requête. Les propriétés individuelles de cette réponse ont été réduites pour gagner de l’espace.
 
 ```JSON
 {
@@ -180,7 +180,7 @@ Le format de l’objet de réponse dépend de l’en-tête Accepter envoyé dans
 
 ## Création d’un jeu de données
 
-Le schéma Membres de fidélité étant en place, vous pouvez désormais créer un jeu de données qui fait référence au schéma.
+Une fois le schéma des membres du programme de fidélité en place, vous pouvez désormais créer un jeu de données qui référence le schéma.
 
 **Format d’API**
 
@@ -214,11 +214,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Ce tutoriel utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Un exemple utilisant le format de fichier JSON se trouve dans le guide du développeur d&#39; [assimilation par lot](../../ingestion/batch-ingestion/api-overview.md)
+>Ce tutoriel utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 
-Une réponse réussie renvoie le statut HTTP 201 (Créé) et un objet de réponse constitué d&#39;un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API.
+Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de réponse constitué d’un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API.
 
 ```JSON
 [
@@ -228,7 +228,7 @@ Une réponse réussie renvoie le statut HTTP 201 (Créé) et un objet de répons
 
 ## Création d’un lot
 
-Avant de pouvoir ajouter des données à un jeu de données, vous devez créer un lot lié au jeu de données. Le lot sera ensuite utilisé pour le transfert.
+Avant d’ajouter des données à un jeu de données, vous devez créer un lot lié au jeu de données. Le lot sert ensuite au transfert.
 
 **Format d’API**
 
@@ -238,7 +238,7 @@ POST /batches
 
 **Requête**
 
-Le corps de la demande comprend un champ &quot;datasetId&quot;, dont la valeur est la valeur `{DATASET_ID}` générée à l’étape précédente.
+Le corps de requête comprend un champ « datasetId », dont la valeur `{DATASET_ID}` est générée à l’étape précédente.
 
 ```SHELL
 curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
@@ -255,7 +255,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Réponse**
 
-Une réponse réussie renvoie HTTP Status 201 (Créé) et un objet de réponse contenant des détails du lot nouvellement créé, y compris sa chaîne générée `id`en lecture seule par le système.
+Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de réponse contenant les détails du lot nouvellement créé, y compris sa chaîne `id` en lecture seule générée par le système.
 
 ```JSON
 {
@@ -292,13 +292,13 @@ Une réponse réussie renvoie HTTP Status 201 (Créé) et un objet de réponse c
 }
 ```
 
-## Téléchargement de fichiers dans un lot
+## Transfert de fichiers dans un lot
 
-Après avoir créé un nouveau lot pour le transfert, vous pouvez désormais télécharger des fichiers vers le jeu de données spécifique. Il est important de se souvenir que lorsque vous avez défini le jeu de données, vous avez indiqué le format de fichier comme parquet. Par conséquent, les fichiers que vous téléchargez doivent être dans ce format.
+Une fois le nouveau lot créé pour le transfert, vous pouvez désormais transférer des fichiers dans le jeu de données spécifique. Il est important que vous vous rappeliez que lorsque vous avez défini le jeu de données, vous avez choisi parquet comme format de fichier. Par conséquent, les fichiers que vous transférez doivent être dans ce format.
 
 >[!NOTE]
 >
->Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux que celui-ci, il doit être divisé en blocs de 512 Mo au maximum, pour être téléchargé un par un. Vous pouvez télécharger chaque fichier dans le même lot en répétant cette étape pour chaque fichier, en utilisant le même ID de lot. Le nombre de fichiers que vous pouvez télécharger dans le cadre d’un lot n’est pas limité.
+>Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux, il doit être divisé en blocs de 512 Mo maximum afin de les transférer un par un. En répétant cette étape, vous pouvez transférer chaque fichier dans le même lot, à l’aide du même identifiant de lot. Le nombre de fichiers que vous pouvez transférer dans le cadre d’un lot n’est pas limité.
 
 **Format d’API**
 
@@ -308,9 +308,9 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{BATCH_ID}` | Le lot `id` auquel vous téléchargez. |
-| `{DATASET_ID}` | Le jeu `id` de données dans lequel le lot sera conservé. |
-| `{FILE_NAME}` | Nom du fichier que vous téléchargez. |
+| `{BATCH_ID}` | L’`id` du lot dans lequel vous effectuez le transfert. |
+| `{DATASET_ID}` | L’`id` du jeu de données dans lequel le lot est conservé. |
+| `{FILE_NAME}` | Le nom du fichier que vous transférez. |
 
 **Requête**
 
@@ -325,11 +325,11 @@ curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc7
 
 **Réponse**
 
-Un fichier téléchargé avec succès renvoie un corps de réponse vide et un état HTTP 200 (OK).
+Un fichier transféré renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
-## Fin du lot de signaux
+## Signalement de la fin du lot
 
-Après avoir téléchargé tous vos fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. La fin de la signature entraîne la création d’ `DataSetFile` entrées de catalogue pour les fichiers téléchargés et leur association au lot généré précédemment. Le lot de catalogue est marqué comme réussi, ce qui déclenche tout flux en aval qui peut alors fonctionner sur les données désormais disponibles.
+Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Signaling completion causes the service to create [!DNL Catalog] `DataSetFile` entries for the uploaded files and associate them with the batch generated previously. The [!DNL Catalog] batch is marked successful, which triggers any downstream flows that can then work on the now available data.
 
 **Format d’API**
 
@@ -339,7 +339,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Paramètre | Description |
 | --- | --- |
-| `{BATCH_ID}` | Le lot `id` du lot que vous marquez comme terminé. |
+| `{BATCH_ID}` | L’`id` du lot que vous marquez comme terminé. |
 
 **Requête**
 
@@ -352,11 +352,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc
 
 **Réponse**
 
-Un lot terminé avec succès renvoie un corps de réponse vide et l&#39;état HTTP 200 (OK).
+Un lot terminé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
-## Analyse de l&#39;ingestion
+## Surveillance de l’ingestion
 
-Selon la taille des données, l’assimilation des lots prend plus ou moins de temps. Vous pouvez contrôler l’état d’un lot en ajoutant un paramètre de `batch` demande contenant l’identifiant du lot à une `GET /batches` demande. L’API sonde le jeu de données pour déterminer l’état du lot depuis l’assimilation jusqu’à ce que la réponse indique `status` la fin (&quot;succès&quot; ou &quot;échec&quot;).
+La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant un paramètre de requête `batch` contenant l’identifiant du lot à une requête `GET /batches`. L’API interroge le jeu de données pour connaître l’état du lot jusqu’à ce que le `status` dans la réponse indique la fin (« succès » ou « échec »).
 
 **Format d’API**
 
@@ -366,7 +366,7 @@ GET /batches?batch={BATCH_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{BATCH_ID}` | Le lot `id` à surveiller. |
+| `{BATCH_ID}` | L’`id` du lot que vous souhaitez surveiller. |
 
 **Requête**
 
@@ -381,7 +381,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse positive renvoie un objet avec son `status` attribut contenant la valeur de `success`:
+Une réponse positive renvoie un objet avec son attribut `status` contenant la valeur de `success` :
 
 ```JSON
 {
@@ -413,7 +413,7 @@ Une réponse positive renvoie un objet avec son `status` attribut contenant la v
 }
 ```
 
-Une réponse négative renvoie un objet avec la valeur de `"failed"` dans son `"status"` attribut et inclut tous les messages d’erreur pertinents :
+Une réponse négative renvoie un objet avec la valeur `"failed"` dans son attribut `"status"` et comprend les messages d’erreur pertinents :
 
 ```JSON
 {
@@ -457,22 +457,22 @@ Une réponse négative renvoie un objet avec la valeur de `"failed"` dans son `"
 
 >[!NOTE]
 >
->Un intervalle d’interrogation recommandé est de deux minutes.
+>L’intervalle d’interrogation recommandé est de deux minutes.
 
-## Lire les données du jeu de données
+## Lecture des données du jeu de données
 
-Avec l’ID de lot, vous pouvez utiliser l’API d’accès aux données pour lire et vérifier tous les fichiers téléchargés dans le lot. La réponse renvoie un tableau contenant une liste d&#39;ID de fichier, chacun faisant référence à un fichier du lot.
+L’identifiant de lot vous permet d’utiliser l’API d’accès aux données pour relire et vérifier tous les fichiers transférés dans le lot. La réponse renvoie un tableau contenant une liste d’identifiants de fichier, chacun référençant un fichier du lot.
 
-Vous pouvez également utiliser l’API d’accès aux données pour renvoyer le nom, la taille en octets et un lien permettant de télécharger le fichier ou le dossier.
+Vous pouvez également utiliser l’API d’accès aux données pour renvoyer le nom, la taille en octets et un lien pour télécharger le fichier ou le dossier.
 
-Le guide [du développeur](../../data-access/home.md)Data Access décrit en détail les étapes à suivre pour travailler avec l&#39;API d&#39;accès aux données.
+Vous trouverez des étapes détaillées pour utiliser l’API d’accès aux données dans le [guide de développement de l’accès aux données](../../data-access/home.md).
 
-## Mettre à jour le schéma du jeu de données
+## Mise à jour du schéma du jeu de données
 
-Vous pouvez ajouter des champs et importer des données supplémentaires dans les jeux de données que vous avez créés. Pour ce faire, vous devez d’abord mettre à jour le schéma en ajoutant des propriétés supplémentaires qui définissent les nouvelles données. Pour ce faire, vous pouvez utiliser les opérations PATCH et/ou PUT pour mettre à jour le schéma existant.
+Vous pouvez ajouter des champs et ingérer des données supplémentaires dans les jeux de données que vous avez créés. Pour ce faire, vous devez d’abord mettre à jour le schéma en ajoutant des propriétés supplémentaires qui définissent les nouvelles données. Vous pouvez effectuer cette opération à l’aide des opérations PATCH et/ou PUT pour mettre à jour le schéma existant.
 
-Pour plus d&#39;informations sur la mise à jour des schémas, consultez le Guide [du développeur de l&#39;API de registre de](../../xdm/api/getting-started.md)Schémas.
+Pour plus d’informations sur la mise à jour des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
-Une fois le schéma mis à jour, vous pouvez suivre à nouveau les étapes de ce didacticiel pour assimiler de nouvelles données conformes au schéma révisé.
+Une fois que vous avez mis à jour le schéma, vous pouvez à nouveau suivre les étapes de ce tutoriel pour ingérer de nouvelles données conformes au schéma révisé.
 
-Il est important de se rappeler que l&#39;évolution du schéma est purement additive, ce qui signifie qu&#39;on ne peut pas introduire une modification de rupture à un schéma une fois qu&#39;il a été enregistré dans le registre et utilisé pour l&#39;ingestion de données. Pour en savoir plus sur les meilleures pratiques pour composer un schéma à utiliser avec l&#39;Adobe Experience Platform, consultez le guide sur les [bases de la composition](../../xdm/schema/composition.md)des schémas.
+Il est important de se rappeler que l’évolution des schémas est purement additive, ce qui signifie que vous ne pouvez pas apporter de modification critique à un schéma une fois qu’il a été enregistré dans le registre et utilisé pour l’ingestion de données. Pour en savoir plus sur les bonnes pratiques de composition de schéma à utiliser avec Adobe Experience Platform, consultez le guide sur les [principes de base de la composition de schémas](../../xdm/schema/composition.md).
