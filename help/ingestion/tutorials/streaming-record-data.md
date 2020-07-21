@@ -4,25 +4,25 @@ solution: Experience Platform
 title: Diffusion en continu des données d’enregistrement
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a371aab5435bac97f714e5cf96a93adf4aa0303
+source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 100%
+source-wordcount: '1059'
+ht-degree: 79%
 
 ---
 
 
 # Diffuser en continu des données d’enregistrement vers Adobe Experience Platform
 
-Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
 ## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience.
-- [Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [Guide de développement du registre des schémas](../../xdm/api/getting-started.md) : guide complet abordant chacun des points de terminaison disponibles de l’API Schema Registry et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
 De plus, pour suivre ce tutoriel, vous devez avoir déjà créé une connexion en continu. Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
 
@@ -30,31 +30,31 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
 - Content-Type: application/json
 
-## Composition d’un schéma basé sur la classe XDM Individual Profile
+## Compose a schema based off of the [!DNL XDM Individual Profile] class
 
-Pour créer un jeu de données, vous devez d’abord créer un schéma mettant en œuvre la classe XDM Individual Profile. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
+To create a dataset, you will first need to create a new schema that implements the [!DNL XDM Individual Profile] class. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
 **Format d’API**
 
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Le nom que vous souhaitez utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous êtes en train de créer. |
-| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [!DNL Real-time Customer Profile](../../profile/home.md). |
 
 **Réponse**
 
@@ -161,7 +161,7 @@ Ajoutez ensuite un [descripteur d’identité](../../xdm/api/descriptors.md) au 
 
 1. L’adresse e-mail de travail deviendra un champ obligatoire. Cela signifie que les messages envoyés sans ce champ ne seront ni validés ni ingérés.
 
-2. Real-time Customer Profile utilisera l’adresse e-mail de travail comme identifiant pour rassembler plus d’informations sur cette personne.
+2. [!DNL Real-time Customer Profile] utilisera l’adresse e-mail de travail comme identifiant pour rassembler plus d’informations sur cette personne.
 
 ### Requête
 
@@ -221,7 +221,7 @@ Une fois que vous avez créé votre schéma, vous devez créer un jeu de donnée
 
 >[!NOTE]
 >
->Ce jeu de données sera activé pour **Real-time Customer Profile** et **Identity Service**.
+>This dataset will be enabled for **[!DNL Real-time Customer Profile]** and **[!DNL Identity Service]**.
 
 **Format d’API**
 
@@ -264,7 +264,7 @@ Une réponse réussie renvoie un état HTTP 201 et un tableau contenant l’ide
 
 ## Ingestion de données d’enregistrement vers la connexion en continu
 
-Une fois le jeu de données et la connexion en continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données d’enregistrement dans Platform.
+Une fois le jeu de données et la connexion en continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données d’enregistrement dans [!DNL Platform].
 
 **Format d’API**
 
@@ -326,7 +326,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails du profil que vous venez de diffuser en continu.
+A successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
 
 ```json
 {
@@ -348,11 +348,11 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du profil que
 
 ## Récupération des données d’enregistrement nouvellement ingérées
 
-Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser l’[API Profile Access](../../profile/api/entities.md) pour récupérer les données d’enregistrement.
+To validate the previously ingested records, you can use the [!DNL Profile Access API](../../profile/api/entities.md) to retrieve the record data.
 
 >[!NOTE]
 >
->Si la stratégie de fusion n’est pas définie et que schema.</span>name ou relatedSchema</span>.name est `_xdm.context.profile`, Profile Access récupère **toutes** les identités associées.
+>Si la stratégie de fusion n’est pas définie et que schema.</span>name ou relatedSchema</span>.name est `_xdm.context.profile`, [!DNL Profile Access] récupère **** toutes les identités liées.
 
 **Format d’API**
 
@@ -431,7 +431,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-La lecture de ce document vous a permis de comprendre comment ingérer des données d’enregistrement dans Platform à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller les données ingérées via l’interface utilisateur de Platform. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-flows.md).
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-flows.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
 
