@@ -4,19 +4,19 @@ seo-title: Utilisation de stratégies de fusion dans la plateforme de données c
 description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 seo-description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 translation-type: tm+mt
-source-git-commit: 50e6b39c1eb0bda4f3b30991515fb1c13fa9ff87
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 85%
+source-wordcount: '162'
+ht-degree: 61%
 
 ---
 
 
 # Stratégies de fusion dans la plateforme CDP en temps réel
 
-Basée sur Adobe Experience Platform, la plateforme de données client en temps réel vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Les stratégies de fusion sont les règles utilisées par Platform pour déterminer quelle est la priorité des données et quelles données seront combinées pour créer cette vue unifiée.
+Built on top of Adobe Experience Platform, [!DNL Real-time Customer Data Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
 
 Il est possible de créer des stratégies de fusion, de gérer des stratégies existantes et de définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Vous pouvez aussi spécifier des préférences concernant les sources de données et déterminer quelles données ont la priorité en cas de conflit lors de la fusion.
 
-You can find step-by-step instructions for working with merge policies using the Adobe Experience Platform user interface by following the [merge policies user guide](../../profile/ui/merge-policies.md).
+Pour obtenir des instructions étape par étape sur l’utilisation de stratégies de fusion avec l’interface utilisateur d’Adobe Experience Platform, suivez le [guide d’utilisation des stratégies de fusion](../../profile/ui/merge-policies.md).
 
