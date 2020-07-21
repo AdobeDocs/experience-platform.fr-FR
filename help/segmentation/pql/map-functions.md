@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Fonctions de mappage
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 6%
+source-wordcount: '146'
+ht-degree: 93%
 
 ---
 
 
 # Fonctions de mappage
 
-Les offres PQL (Profil Requête Language) facilitent l’interaction avec les cartes. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l&#39;interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
 ## Get
 
-La `get` fonction est utilisée pour récupérer la valeur d’un mappage pour une clé donnée.
+La fonction `get` est utilisée pour récupérer la valeur d’une carte pour une clé donnée.
 
 **Format**
 
@@ -28,15 +28,15 @@ La `get` fonction est utilisée pour récupérer la valeur d’un mappage pour u
 
 **Exemple**
 
-La requête PQL suivante obtient la valeur de la carte d’identité de la clé `example@example.com`.
+La requête PQL suivante renvoie la valeur de la carte d’identité pour la clé `example@example.com`.
 
 ```sql
 identityMap.get("example@example.com")
 ```
 
-## Clés
+## Keys
 
-La `keys` fonction est utilisée pour récupérer toutes les clés d’une carte donnée.
+La fonction `keys` est utilisée pour récupérer toutes les clés d’une carte donnée.
 
 **Format**
 
@@ -46,15 +46,15 @@ La `keys` fonction est utilisée pour récupérer toutes les clés d’une carte
 
 **Exemple**
 
-La requête PQL suivante récupère toutes les clés de la carte `identityMap`.
+La requête PQL suivante renvoie toutes les clés pour la carte `identityMap`.
 
 ```sql
 identityMap.keys()
 ```
 
-## Valeurs
+## Values
 
-La `values` fonction est utilisée pour récupérer toutes les valeurs d’une carte donnée.
+La fonction `values` est utilisée pour récupérer toutes les valeurs d’une carte donnée.
 
 **Format**
 
@@ -64,7 +64,7 @@ La `values` fonction est utilisée pour récupérer toutes les valeurs d’une c
 
 **Exemple**
 
-La requête PQL suivante récupère toutes les valeurs de la carte `identityMap`.
+La requête PQL suivante renvoie toutes les valeurs pour la carte `identityMap`.
 
 ```sql
 identityMap.values()
@@ -72,4 +72,4 @@ identityMap.values()
 
 ## Étapes suivantes
 
-Maintenant que vous avez pris connaissance des fonctions de carte, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous en savez plus sur les fonctions de carte, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
