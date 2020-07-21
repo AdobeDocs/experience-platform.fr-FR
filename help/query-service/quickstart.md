@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de démarrage rapide d’Adobe Experience Platform Requête Service
+title: Guide de démarrage rapide d’Adobe Experience Platform Query Service
 topic: quickstart
 translation-type: tm+mt
-source-git-commit: 659955e60531abd505337f1b266b147ce08ddad9
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 0%
+source-wordcount: '120'
+ht-degree: 67%
 
 ---
 
 
 # Guide de démarrage rapide
 
-1. Pour utiliser Requête Service, votre entreprise doit être configurée pour Adobe Experience Platform et votre administrateur doit vous en accorder l’accès.
-2. Si vous n’avez pas encore assimilé vos données à Adobe Experience Platform, c’est là que vous devez vous début. Reportez-vous à la documentation sur l&#39;assimilation des données.
-3. Après avoir assimilé vos données dans Adobe Experience Platform, vous pouvez commencer à utiliser Requête Service à l’aide de l’interface utilisateur [de la](ui/overview.md)plate-forme. Par exemple, vous pouvez utiliser l’éditeur [de](ui/user-guide.md) Requête basé sur un navigateur d’Adobe Experience Platform pour écrire, valider et exécuter des requêtes.
+1. To use [!DNL Query Service], your organization must be provisioned for Adobe Experience Platform, and your administrator needs to grant you access to it.
+2. Si vous n’avez pas encore ingéré vos données dans Adobe Experience Platform, commencez donc par là. Reportez-vous à la documentation sur l’ingestion de données.
+3. After you have ingested your data into Adobe Experience Platform, you can begin working with [!DNL Query Service] using [Platform UI](ui/overview.md). Vous pouvez, par exemple, utiliser [!DNL Query Editor](ui/user-guide.md) à partir du navigateur d’Adobe Experience Platform pour écrire, valider et exécuter des requêtes.
 
 
-Requête Service permet également de connecter des outils externes pour émettre des requêtes. Pour obtenir des instructions sur la connexion d&#39;un outil tel qu&#39;un outil Business Intelligence ou une interface de ligne de commande, consultez [Connexion d&#39;un outil](clients/overview.md).
+[!DNL Query Service] fournit également un moyen de connecter des outils externes pour émettre des requêtes. Pour obtenir des instructions sur la connexion d’un outil tel que Business Intelligence ou une interface de ligne de commande, veuillez lire la section [Connexion d’un outil](clients/overview.md).
 
