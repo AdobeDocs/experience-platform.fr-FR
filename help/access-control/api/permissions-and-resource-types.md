@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Noms de Liste des autorisations et des types de ressources
+title: Liste des noms des autorisations et des types de ressources
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7b354a96d70332cf7a7e9eff322cd3d6ee0fc96a
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 1%
+source-wordcount: '123'
+ht-degree: 100%
 
 ---
 
 
-# Noms de Liste des autorisations et des types de ressources
+# Liste des noms des autorisations et des types de ressources
 
-Vous pouvez liste les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de `/acl/reference` terminaison. Ces noms peuvent ensuite être utilisés dans les appels d’API pour [vue des stratégies](./effective-policies.md) efficaces pour l’utilisateur actuel.
+Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API pour [afficher des stratégies efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
-Une **autorisation** est une stratégie gérée par l’intermédiaire d’Adobe Admin Console et qui correspond à zéro ou plusieurs stratégies de type ressource. Un type **de** ressource est une stratégie qui active des fonctionnalités de lecture, d&#39;écriture et/ou de suppression pour un type spécifique de ressource de plateforme (par exemple, des jeux de données ou des schémas).
+Une **autorisation** est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. Un **type de ressource** est une stratégie activant des fonctionnalités de lecture, d’écriture et/ou de suppression pour un type spécifique de ressources de  (comme des jeux de données ou des schémas).[!DNL Platform]
 
 **Format d’API**
 
@@ -36,7 +36,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un `permissions` objet et un `resource-types` objet, chacun contenant une liste complète de noms pour les autorisations d&#39;accès ou les types de ressources, respectivement.
+Une réponse réussie renvoie un objet `permissions` et un objet `resource-types` contenant chacun une liste complète de noms pour les autorisations d’accès ou les types de ressources, respectivement.
 
 ```json
 {
