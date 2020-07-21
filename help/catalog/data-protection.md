@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Protection des données dans Adobe Experience Platform
 topic: data protection
 translation-type: tm+mt
-source-git-commit: edf7cef0991ceef0465d5c1d750bd1885754f716
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 0%
+source-wordcount: '132'
+ht-degree: 29%
 
 ---
 
 
 # Protection des données dans Adobe Experience Platform
 
-Toutes les données ingérées et utilisées par Adobe Experience Platform sont stockées dans Data Lake, un magasin de données très granulaire contenant toutes les données gérées par Platform, quel que soit l’origine ou le format de fichier. Toutes les données conservées dans Data Lake sont chiffrées, stockées et gérées dans un compte d&#39;Enregistrement Microsoft Azure Data Lake isolé qui est unique à votre organisation.
+All data that is ingested and used by Adobe Experience Platform is stored in the [!DNL Data Lake], a highly granular data store containing all data managed by [!DNL Platform], regardless of origin or file format. All data persisted in the [!DNL Data Lake] is encrypted, stored, and managed in an isolated [!DNL Microsoft Azure Data Lake] Storage account that is unique to your organization.
 
-Le diagramme de flux de processus suivant illustre comment les données sont ingérées, traitées, chiffrées et conservées par la plateforme d’expérience :
+Le diagramme de flux des processus suivant illustre la manière dont les données sont ingérées, traitées, chiffrées et conservées par [!DNL Experience Platform]:
 
 ![](images/data-protection/flow.png)
 
-Pour plus d&#39;informations sur la façon dont les données au repos sont chiffrées dans l&#39;Enregistrement Data Lake, consultez le document sur le chiffrement [des données dans l&#39;Enregistrement](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption)Azure Data Lake. Pour plus d&#39;informations sur la façon dont les données au repos sont chiffrées dans la base de données Cosmos, consultez le document sur le chiffrement [des données dans la base de données](https://docs.microsoft.com/en-us/azure/cosmos-db/database-encryption-at-rest)Azure Cosmos.
+For details on how data at rest is encrypted in [!DNL Data Lake Storage], see the document on [data encryption in Azure Data Lake Storage](https://docs.microsoft.com/fr-fr/azure/data-lake-store/data-lake-store-encryption). For information on how data at rest is encrypted in [!DNL Cosmos DB], see the document on [data encryption in Azure Cosmos DB](https://docs.microsoft.com/fr-fr/azure/cosmos-db/database-encryption-at-rest).
