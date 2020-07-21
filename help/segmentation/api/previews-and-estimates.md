@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '742'
 ht-degree: 28%
 
 ---
@@ -71,7 +71,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | L’expression PQL qui servira à effectuer la requête sur les données. |
 | `predicateType` | Type de prédicat pour l&#39;expression de requête sous `predicateExpression`. Actuellement, la seule valeur acceptée pour cette propriété est `pql/text`. |
-| `predicateModel` | Le nom du schéma du modèle de données d’expérience (XDM) sur lequel reposent les données du profil. |
+| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
 
 **Réponse**
 
@@ -167,7 +167,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide de l&#39;API [d&#39;accès au](../../profile/api/entities.md)Profil. |
+| `results` | liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l’aide du [!DNL Profile Access API](../../profile/api/entities.md). |
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
@@ -226,4 +226,4 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment utiliser les prévisualisations et les estimations. Pour en savoir plus sur les autres points de terminaison de l’API du service de segmentation, consultez la présentation [du guide du développeur de](./overview.md)Segmentation Service.
+Après avoir lu ce guide, vous comprenez mieux comment utiliser les prévisualisations et les estimations. Pour en savoir plus sur les autres points de terminaison [!DNL Segmentation Service] API, consultez la présentation [du guide du développeur](./overview.md)Segmentation Service.
