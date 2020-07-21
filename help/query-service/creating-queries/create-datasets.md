@@ -1,41 +1,41 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Générer des jeux de données à partir des résultats de la requête
+title: Génération des jeux de données à partir de résultats de requête
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 0%
+source-wordcount: '270'
+ht-degree: 56%
 
 ---
 
 
-# Générer des jeux de données à partir des résultats de la requête
+# Génération des jeux de données à partir de résultats de requête
 
-La puissance réelle de Requête Service est révélée lorsque des requêtes sont utilisées pour générer des jeux de données dans le lac de données à utiliser comme entrée dans plus de requêtes ou dans d&#39;autres services tels que Data Science Workspace, le Profil client en temps réel ou l&#39;Analysis Workspace.
+The true power of [!DNL Query Service] is revealed when queries are used to generate datasets in the [!DNL Data Lake] to be used as input into more queries or in other services such as [!DNL Data Science Workspace], [!DNL Real-time Customer Profile], or [!DNL Analysis Workspace].
 
-Requête Service permet la création de jeux de données à partir de l’interface utilisateur. Procédez comme suit :
+[!DNL Query Service] permet la création de jeux de données à partir de l’interface utilisateur. Procédez de la façon suivante :
 
-1. Écrivez votre requête à l’aide d’un client connecté et validez la sortie.
-2. Connectez-vous à l’interface utilisateur de Platform et accédez à Requêtes.
-3. Recherchez votre requête dans la liste et placez le pointeur de la souris sur la ligne.
-4. Cliquez sur **Créer un jeu de données**. ![Image](../images/queries/create-datasets/click-create-dataset.png)
-5. Entrez un nom de jeu de données, précédé de votre ID LDAP (il n&#39;est pas nécessaire d&#39;être unique ou SQL-safe ; le système génère un &quot;nom de table&quot; basé sur le nom donné ici).
-6. Saisissez une description de jeu de données et cliquez sur **Exécuter la Requête**.![Image](../images/queries/create-datasets/run-query.png)
-7. Regardez la requête terminée, puis accédez à la page liste des jeux de données pour voir le jeu de données que vous venez de créer.
+1. Rédigez votre requête à l’aide d’un client connecté et validez la sortie.
+2. Log in to the [!DNL Platform] UI and go to Queries.
+3. Cherchez votre requête dans la liste et survolez la ligne avec la souris.
+4. Cliquez sur **[!UICONTROL Créer un jeu de données]**. ![Image](../images/queries/create-datasets/click-create-dataset.png)
+5. Saisissez un nom de jeu de données, précédé de votre identifiant LDAP (il n’est pas nécessaire qu’il soit unique ou compatible avec SQL ; le système génère un « nom de table » basé sur le nom donné ici).
+6. Saisissez une description de jeu de données, puis cliquez sur **[!UICONTROL Exécuter la requête]**.![Image](../images/queries/create-datasets/run-query.png)
+7. Lorsque l’exécution de la requête est terminée, accédez à la page de liste du jeu de données pour voir le jeu de données que vous venez de créer.
 
-Une fois un jeu de données créé, il est accessible comme tout autre jeu de données dans le lac de données et utilisé pour divers cas d&#39;utilisation.
+After a dataset is created, it can be accessed like any other dataset in the [!DNL Data Lake] and used for a variety of use cases.
 
 >[!NOTE]
 >
->Dans une mise en oeuvre en direct, vous devez appliquer des étiquettes de gouvernance des données après la création du jeu de données.
+>In a live implementation, you must apply [!DNL Data Governance] labels after the dataset is created.
 
-## Générer des jeux de données avec un schéma de modèle de données d’expérience prédéfini
+## Générer des jeux de données avec un [!DNL Experience Data Model] schéma prédéfini
 
-Pour générer un jeu de données avec un schéma XDM (Experience Data Model) prédéfini, vous devez utiliser la syntaxe SQL. Pour plus d&#39;informations sur la syntaxe à utiliser, consultez le guide [Syntaxe](../sql/syntax.md#create-table-as-select)SQL.
+In order to generate a dataset with a pre-defined [!DNL Experience Data Model] (XDM) schema, you will have to use the SQL syntax. Pour plus d’informations sur la syntaxe à utiliser, consultez le [guide de syntaxe SQL](../sql/syntax.md#create-table-as-select).
 
-## Jeu de données de sortie
+## Jeux de données de sortie
 
-Les jeux de données créés à l&#39;aide de cette fonctionnalité sont générés avec un schéma ad hoc qui correspond à la structure des données de sortie telle que définie dans l&#39;instruction SQL. Certains services en aval nécessitent des jeux de données avec des schémas de modèle de données d’expérience (XDM) particuliers. Vérifiez les exigences de formatage des données pour les services en aval avant de rédiger vos requêtes.
+Les jeux de données créés à l’aide de cette fonctionnalité sont générés avec un schéma ad hoc correspondant à la structure des données de sortie telle que définie dans l’instruction SQL. Some downstream services require datasets with particular [!DNL Experience Data Model] (XDM) schemas. Vérifiez les exigences de mise en forme des données pour les services en aval avant de rédiger votre requête.
