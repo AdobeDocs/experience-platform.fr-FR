@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Fonctions définies par Adobe
 topic: queries
 translation-type: tm+mt
-source-git-commit: cc101b1a439408861961c6fcd0899ca7c48bfa04
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 85%
+source-wordcount: '287'
+ht-degree: 75%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 85%
 
 L’un des facteurs de différenciation les plus importants d’Adobe est la compréhension des données d’expérience et de ce que les clients doivent être capables de faire avec ces données. Vous pouvez utiliser cette compréhension pour créer des fonctions d’assistance qui rendent votre travail plus facile.
 
-Ce document couvre les fonctions définies par Adobe (ADF) dans la prise en charge de trois activités Analytics clés :
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [Sessionisation](#sessionization)
 - [Attribution](#attribution)
 - [Cheminement](#pathing)
@@ -91,13 +91,13 @@ L’attribution est la manière dont vous allouez des mesures ou des conversions
 
 Dans Adobe Analytics, les paramètres d’attribution sont configurés à l’aide de variables comme eVars et sont générés à mesure que les données sont ingérées.
 
-Les ADF d’attribution apparaissant dans Query Service permettent à ces attributions d’être définies et générées au moment de la requête.
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
 Cet exemple se concentre sur l’attribution Dernière touche, mais Adobe propose également une attribution Première touche.
 
 >[!NOTE]
 >
->D’autres options dont l’expiration sera basée sur les expirations et sur des événements seront disponibles dans les versions ultérieures de Query Service.
+>D’autres options dont l’expiration sera basée sur les expirations et sur des événements seront disponibles dans les versions ultérieures de [!DNL Query Service].
 
 **Syntaxe :**
 
