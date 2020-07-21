@@ -1,71 +1,71 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur d'Adobe Experience Platform d'ingestion par lots
+title: Guide de développement de l’ingestion par lots d’Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 7%
+source-wordcount: '2552'
+ht-degree: 93%
 
 ---
 
 
-# Guide du développeur d&#39;assimilation de lot
+# Guide de développement de l’ingestion par lots
 
-Ce document fournit un aperçu complet de l&#39;utilisation des API [d&#39;assimilation de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)lots.
+Ce document présente de manière exhaustive l’utilisation des [API d’ingestion par lots](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
-L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’assimilation](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
+L’annexe de ce document fournit des informations sur le [formatage des données à utiliser pour l’ingestion](#data-transformation-for-batch-ingestion), y compris des exemples de fichiers de données CSV et JSON.
 
 ## Prise en main
 
-L’assimilation de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD de base par rapport aux types d’objet pris en charge.
+L’ingestion de données fournit une API RESTful grâce à laquelle vous pouvez effectuer des opérations CRUD sur les types d’objets pris en charge.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devez connaître ou connaître pour pouvoir appeler avec succès l&#39;API d&#39;importation par lot.
+Les sections suivantes fournissent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à l’API Batch Ingestion.
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [Importation](./overview.md)par lot : Vous permet d’assimiler des données à l’Adobe Experience Platform sous forme de fichiers de commandes.
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-- [Sandbox](../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+- [Ingestion par lots](./overview.md) : vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) peuvent nécessiter un `Content-Type` en-tête supplémentaire. Les valeurs acceptées propres à chaque appel sont fournies dans les paramètres d&#39;appel. Les types de contenu suivants sont utilisés dans ce guide :
+Les requêtes contenant un payload (POST, PUT, PATCH) peuvent requérir un en-tête `Content-Type` supplémentaire. Les valeurs acceptées propres à chaque appel sont précisées dans les paramètres d’appel. Les types de contenu suivants sont utilisés dans ce guide :
 
-- Content-Type : application/json
-- Content-Type : application/octet-stream
+- Content-Type: application/json
+- Content-Type: application/octet-stream
 
 ## Types
 
-Lors de l’assimilation de données, il est important de comprendre le fonctionnement des schémas du modèle de données d’expérience (XDM). Pour plus d&#39;informations sur la façon dont les types de champs XDM correspondent à différents formats, veuillez lire le guide [de développement du registre de](../../xdm/api/getting-started.md)Schéma.
+When ingesting data, it is important to understand how [!DNL Experience Data Model] (XDM) schemas work. Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
-Il existe une certaine souplesse lors de l&#39;assimilation des données : si un type ne correspond pas à ce qui se trouve dans le schéma de cible, les données sont converties en type de cible exprimé. Si elle ne le peut pas, le lot échoue avec un `TypeCompatibilityException`.
+L’ingestion de données offre une certaine souplesse : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties dans le type cible précisé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV ne comportent de date ou de type date-heure. Par conséquent, ces valeurs sont exprimées à l’aide de chaînes [au format](https://www.iso.org/iso-8601-date-and-time-format.html) ISO 8061 (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou de l’heure Unix, en millisecondes (153126999. (9000) et sont convertis au moment de l’assimilation au type XDM de cible.
+Par exemple, ni JSON ni CSV ne comportent de date ou de type d’horodatage. Par conséquent, ces valeurs sont exprimées au moyen de [chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (« 2018-07-10T15:05:59.000-08:00 ») ou en heure Unix formatée en millisecondes (1531263959000), et sont ensuite converties en heure d’ingestion vers le type XDM cible.
 
-Le tableau ci-dessous présente les conversions prises en charge lors de l’assimilation de données.
+Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
-| Entrant (ligne) par rapport à Cible (col) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date-Heure | objet | Carte |
+| Entrant (ligne) / Cible (colonne) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date et heure | Objet | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Chaîne | X | X | X | X | X | X | X | X |  |  |
 | Octet | X | X | X | X | X | X |  |  |  |  |
@@ -74,35 +74,35 @@ Le tableau ci-dessous présente les conversions prises en charge lors de l’ass
 | Long | X | X | X | X | X | X | X | X |  |  |
 | Double | X | X | X | X | X | X |  |  |  |  |
 | Date |  |  |  |  |  |  | X |  |  |  |
-| Date-Heure |  |  |  |  |  |  |  | X |  |  |
-| objet |  |  |  |  |  |  |  |  | X | X |
-| Carte |  |  |  |  |  |  |  |  | X | X |
+| Date et heure |  |  |  |  |  |  |  | X |  |  |
+| Objet |  |  |  |  |  |  |  |  | X | X |
+| Map |  |  |  |  |  |  |  |  | X | X |
 
 >[!NOTE]
 >
->Les booléens et les tableaux ne peuvent pas être convertis en d&#39;autres types.
+>Les booléens et les tableaux ne peuvent pas être convertis en d’autres types.
 
-## Contraintes d&#39;importation
+## Contraintes d’ingestion
 
-L&#39;assimilation de données par lots présente certaines contraintes :
-- Nombre maximal de fichiers par lot : 1 500
-- Taille maximale du lot : 100 Go
-- Nombre maximal de propriétés ou de champs par ligne : 1 0000
-- Nombre maximal de lots par minute, par utilisateur : 138
+L’ingestion de données par lots présente certaines contraintes :
+- Nombre maximal de fichiers par lot : 1 500
+- Taille maximale du lot : 100 Go
+- Nombre maximal de propriétés ou de champs par ligne : 10 000
+- Nombre maximal de lots par minute, par utilisateur : 138
 
-## Envoi de fichiers JSON
-
->[!NOTE]
->
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous demandez des erreurs de taille du corps, vous devez passer au téléchargement de fichiers volumineux.
-
-### Créer un lot
-
-Tout d’abord, vous devrez créer un lot, avec JSON comme format d’entrée. Lors de la création du lot, vous devez fournir un ID de jeu de données. Vous devez également vous assurer que tous les fichiers téléchargés dans le cadre du lot sont conformes au schéma XDM lié au jeu de données fourni.
+## Ingestion de fichiers JSON
 
 >[!NOTE]
 >
->Les exemples ci-dessous concernent les fichiers JSON uniligne. Pour ingérer des fichiers JSON multilignes, l’ `isMultiLineJson` indicateur doit être défini. Pour plus d&#39;informations, consultez le guide [de dépannage de l&#39;](./troubleshooting.md)assimilation par lot.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
+
+### Création d’un lot
+
+Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni.
+
+>[!NOTE]
+>
+>Les exemples ci-dessous concernent le format JSON à une seule ligne. Pour ingérer un format JSON à plusieurs lignes, l’indicateur `isMultiLineJson` doit être défini. Pour plus d’informations, reportez-vous au [guide de dépannage de l’ingestion par lots](./troubleshooting.md).
 
 **Format d’API**
 
@@ -129,7 +129,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | ID du jeu de données de référence. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence. |
 
 **Réponse**
 
@@ -155,16 +155,16 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
 
-### Téléchargement de fichiers
+### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` formulaire d’origine pour transférer des fichiers vers le lot. Vous pouvez télécharger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 >[!NOTE]
 >
->Voir la section de l’annexe pour un [exemple de fichier](#data-transformation-for-batch-ingestion)de données JSON correctement formaté.
+>Reportez-vous à l’annexe pour y trouver un [exemple de fichier de données JSON correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -174,15 +174,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier à télécharger. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
 
 **Requête**
 
 >[!NOTE]
 >
->L’API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream.
+>L’API prend en charge le chargement en une seule partie. Assurez-vous que le type de contenu est bien application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -196,7 +196,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous tentez de télécharger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
 
 **Réponse**
 
@@ -204,9 +204,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Traitement par lot complet
+### Terminer le lot
 
-Une fois que vous avez terminé de télécharger toutes les différentes parties du fichier, vous devez signaler que les données ont été entièrement téléchargées et que le lot est prêt pour la promotion.
+Une fois que vous avez terminé de charger toutes les différentes parties du fichier, vous devrez signaler que les données ont été entièrement chargées et que le lot est prêt pour la promotion.
 
 **Format d’API**
 
@@ -216,7 +216,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 
 **Requête**
 
@@ -234,15 +234,15 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Incorporer des fichiers de parquet
+## Ingestion de fichiers Parquet
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de la passerelle ou que vous demandez des erreurs de taille du corps, vous devrez basculer vers le transfert de fichiers volumineux.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
 
-### Créer un lot
+### Création d’un lot
 
-Tout d&#39;abord, vous devrez créer un lot, avec Parquet comme format d&#39;entrée. Lors de la création du lot, vous devez fournir un ID de jeu de données. Vous devez également vous assurer que tous les fichiers téléchargés dans le cadre du lot sont conformes au schéma XDM lié au jeu de données fourni.
+Vous devrez tout d’abord créer un lot, avec Parquet en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni.
 
 **Requête**
 
@@ -263,7 +263,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Paramètre | Description |
 | --------- | ------------ |
-| `{DATASET_ID}` | ID du jeu de données de référence. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence. |
 
 **Réponse**
 
@@ -293,13 +293,13 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
-| `{USER_ID}` | ID de l’utilisateur qui a créé le lot. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
+| `{USER_ID}` | L’identifiant de l’utilisateur qui a créé le lot. |
 
-### Téléchargement de fichiers
+### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` formulaire d’origine pour transférer des fichiers vers le lot. Vous pouvez télécharger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 **Format d’API**
 
@@ -309,15 +309,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier à télécharger. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
 
 **Requête**
 
 >[!CAUTION]
 >
->Cette API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream.
+>Cette API prend en charge le chargement en une seule partie. Assurez-vous que le type de contenu est bien application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -331,7 +331,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous tentez de télécharger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
 
 **Réponse**
 
@@ -339,9 +339,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Traitement par lot complet
+### Terminer le lot
 
-Une fois que vous avez terminé de télécharger toutes les différentes parties du fichier, vous devez signaler que les données ont été entièrement téléchargées et que le lot est prêt pour la promotion.
+Une fois que vous avez terminé de charger toutes les différentes parties du fichier, vous devrez signaler que les données ont été entièrement chargées et que le lot est prêt pour la promotion.
 
 **Format d’API**
 
@@ -351,7 +351,7 @@ POST /batches/{BATCH_ID}?action=complete
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | L&#39;ID du lot que vous souhaitez signaler est prêt pour l&#39;achèvement. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez signaler comme prêt pour être terminé. |
 
 **Requête**
 
@@ -369,15 +369,15 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Incorporer des fichiers de parquet volumineux
+## Ingestion de fichiers Parquet volumineux
 
 >[!NOTE]
 >
->Cette section décrit comment télécharger des fichiers de plus de 256 Mo. Les fichiers volumineux sont téléchargés en blocs, puis assemblés au moyen d’un signal d’API.
+>Cette section explique comment charger des fichiers d’une taille supérieure à 256 Mo. Les fichiers volumineux sont chargés en blocs, puis assemblés au moyen d’un signal API.
 
-### Créer un lot
+### Création d’un lot
 
-Tout d&#39;abord, vous devrez créer un lot, avec Parquet comme format d&#39;entrée. Lors de la création du lot, vous devez fournir un ID de jeu de données. Vous devez également vous assurer que tous les fichiers téléchargés dans le cadre du lot sont conformes au schéma XDM lié au jeu de données fourni.
+Vous devrez tout d’abord créer un lot, avec Parquet en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni.
 
 **Format d’API**
 
@@ -404,7 +404,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | ID du jeu de données de référence. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence. |
 
 **Réponse**
 
@@ -434,13 +434,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
-| `{USER_ID}` | ID de l’utilisateur qui a créé le lot. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
+| `{USER_ID}` | L’identifiant de l’utilisateur qui a créé le lot. |
 
-### Initialiser un fichier volumineux
+### Initialisation d’un fichier volumineux
 
-Après avoir créé le lot, vous devez initialiser le fichier volumineux avant de transférer des blocs dans le lot.
+Après la création du lot, vous devrez initialiser le fichier volumineux avant de charger les blocs dans le lot.
 
 **Format d’API**
 
@@ -450,9 +450,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
-| `{FILE_NAME}` | Nom du fichier sur le point d’être initialisé. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
+| `{FILE_NAME}` | Le nom du fichier sur le point d’être initialisé. |
 
 **Requête**
 
@@ -470,9 +470,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 201 Created
 ```
 
-### Transfert de blocs de fichiers volumineux
+### Chargement des blocs d’un fichier volumineux
 
-Maintenant que le fichier a été créé, tous les blocs suivants peuvent être téléchargés en exécutant des requêtes PATCH répétées, une pour chaque section du fichier.
+Une fois le fichier créé, tous les blocs suivants peuvent être chargés en exécutant des requêtes PATCH répétées, une pour chaque section du fichier.
 
 **Format d’API**
 
@@ -482,15 +482,15 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier à télécharger. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
 
 **Requête**
 
 >[!CAUTION]
 >
->Cette API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream.
+>Cette API prend en charge le chargement en une seule partie. Assurez-vous que le type de contenu est bien application/octet-stream.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
@@ -505,8 +505,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONTENT_RANGE}` | En entiers, début et fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous tentez de télécharger. |
+| `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
 
 
 **Réponse**
@@ -515,9 +515,9 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-### Compléter le fichier volumineux
+### Terminer le fichier volumineux
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` formulaire d’origine pour transférer des fichiers vers le lot. Vous pouvez télécharger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 **Format d’API**
 
@@ -527,9 +527,9 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot dont vous souhaitez signaler la fin. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier dont vous souhaitez signaler la fin. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez signaler comme étant terminé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez signaler comme étant terminé. |
 
 **Requête**
 
@@ -547,9 +547,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 201 Created
 ```
 
-### Traitement par lot complet
+### Terminer le lot
 
-Une fois que vous avez terminé de télécharger toutes les différentes parties du fichier, vous devez signaler que les données ont été entièrement téléchargées et que le lot est prêt pour la promotion.
+Une fois que vous avez terminé de charger toutes les différentes parties du fichier, vous devrez signaler que les données ont été entièrement chargées et que le lot est prêt pour la promotion.
 
 **Format d’API**
 
@@ -559,7 +559,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | L&#39;ID du lot à signaler est terminé. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez signaler comme étant terminé. |
 
 
 **Requête**
@@ -578,17 +578,17 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Incorporation de fichiers CSV
+## Ingestion de fichiers CSV
 
-Pour importer des fichiers CSV, vous devez créer une classe, un schéma et un jeu de données qui prennent en charge le format CSV. Pour obtenir des informations détaillées sur la création de la classe et du schéma nécessaires, suivez les instructions fournies dans le didacticiel [de création de schémas](../../xdm/api/ad-hoc.md)ad hoc.
+Pour ingérer des fichiers CSV, vous devrez créer une classe, un schéma et un jeu de données qui prend en charge le format CSV. Pour obtenir des informations détaillées sur la création de la classe et du schéma nécessaires, suivez les instructions fournies dans le [tutoriel de création de schémas ad hoc](../../xdm/api/ad-hoc.md).
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de la passerelle ou que vous demandez des erreurs de taille du corps, vous devrez basculer vers le transfert de fichiers volumineux.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
 
-### Créer un jeu de données
+### Création d’un jeu de données
 
-Après avoir suivi les instructions ci-dessus pour créer la classe et le schéma nécessaires, vous devez créer un jeu de données qui peut prendre en charge le format CSV.
+Après avoir suivi les instructions ci-dessus pour créer la classe et le schéma nécessaires, vous devrez créer un jeu de données capable de prendre en charge le format CSV.
 
 **Format d’API**
 
@@ -624,10 +624,10 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{TENANT_ID}` | Cet identifiant permet de s’assurer que les ressources que vous créez sont correctement espacées dans l’espace de noms et contenues dans votre organisation IMS. |
-| `{SCHEMA_ID}` | ID du schéma que vous avez créé. |
+| `{TENANT_ID}` | Cet identifiant est utilisé pour assurer que les espaces de noms des ressources que vous créez sont corrects et contenus dans votre organisation IMS. |
+| `{SCHEMA_ID}` | L’identifiant du schéma que vous avez créé. |
 
-Vous trouverez ci-dessous une explication des différentes parties de la section &quot;fileDescription&quot; du corps JSON :
+Vous trouverez ci-dessous une explication des différentes parties de la section « fileDescription » du corps JSON :
 
 ```json
 {
@@ -644,18 +644,18 @@ Vous trouverez ci-dessous une explication des différentes parties de la section
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `format` | Le format du fichier géré, et non le format du fichier d’entrée. |
-| `delimiters` | Caractère à utiliser comme délimiteur. |
-| `quotes` | Caractère à utiliser pour les guillemets. |
-| `escapes` | Caractère à utiliser comme caractère d’échappement. |
-| `header` | Le fichier téléchargé **doit** contenir des en-têtes. Puisque la validation du schéma est effectuée, elle doit être définie sur true. En outre, les en-têtes peuvent **ne pas** contenir d’espaces. Si vous avez des espaces dans l’en-tête, remplacez-les par des traits de soulignement. |
-| `charset` | Champ facultatif. Les autres jeux de caractères pris en charge sont &quot;US-ASCII&quot; et &quot;ISO-8869-1&quot;. Si la valeur est laissée vide, le codage UTF-8 est supposé par défaut. |
+| `format` | Le format du fichier maître et non pas celui du fichier d’entrée. |
+| `delimiters` | Le caractère à utiliser comme délimiteur. |
+| `quotes` | Le caractère à utiliser pour les citations. |
+| `escapes` | Le caractère à utiliser comme caractère d’échappement. |
+| `header` | Le fichier chargé **doit** contenir des en-têtes. La validation du schéma étant effectuée, cette valeur doit être définie sur « true ». En outre, les en-têtes ne doivent contenir **aucune** espace. Si votre en-tête comprend des espaces, remplacez-les par des traits de soulignement. |
+| `charset` | Un champ facultatif. Les jeux de caractères « US-ASCII » et « ISO-8869-1 » sont aussi pris en charge. Si ce paramètre n’est pas renseigné, le codage UTF-8 est sélectionné par défaut. |
 
-Le jeu de données référencé doit comporter le bloc de description de fichier mentionné ci-dessus et doit pointer vers un schéma valide dans le registre. Sinon, le fichier ne sera pas maîtrisé en parquet.
+Le jeu de données référencé doit comporter le bloc de description de fichier mentionné ci-dessus et doit pointer vers un schéma valide dans le registre. Si ce n’est pas le cas, le fichier ne passera pas au format maître Parquet.
 
-### Créer un lot
+### Création d’un lot
 
-Ensuite, vous devrez créer un lot avec le format CSV comme format d’entrée. Lors de la création du lot, vous devez fournir un ID de jeu de données. Vous devez également vous assurer que tous les fichiers téléchargés dans le cadre du lot sont conformes au schéma lié au jeu de données fourni.
+Vous devrez ensuite créer un lot au format d’entrée CSV. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma lié au jeu de données fourni.
 
 **Format d’API**
 
@@ -682,7 +682,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{DATASET_ID}` | ID du jeu de données de référence. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence. |
 
 **Réponse**
 
@@ -712,17 +712,17 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
-| `{USER_ID}` | ID de l’utilisateur qui a créé le lot. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
+| `{USER_ID}` | L’identifiant de l’utilisateur qui a créé le lot. |
 
-### Téléchargement de fichiers
+### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` formulaire d’origine pour transférer des fichiers vers le lot. Vous pouvez télécharger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 >[!NOTE]
 >
->Voir la section de l’annexe pour un [exemple de fichier](#data-transformation-for-batch-ingestion)de données CSV correctement formaté.
+>Reportez-vous à l’annexe pour y trouver un [exemple de fichier de données CSV correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -732,15 +732,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier à télécharger. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
 
 **Requête**
 
 >[!CAUTION]
 >
->Cette API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream.
+>Cette API prend en charge le chargement en une seule partie. Assurez-vous que le type de contenu est bien application/octet-stream.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.csv \
@@ -754,7 +754,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous tentez de télécharger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
 
 
 **Réponse**
@@ -763,9 +763,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Traitement par lot complet
+### Terminer le lot
 
-Une fois que vous avez terminé de télécharger toutes les différentes parties du fichier, vous devez signaler que les données ont été entièrement téléchargées et que le lot est prêt pour la promotion.
+Une fois que vous avez terminé de charger toutes les parties du fichier, vous devrez signaler que les données ont été entièrement chargées et que le lot est prêt pour la promotion.
 
 **Format d’API**
 
@@ -789,9 +789,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Annuler un lot
+## Annulation d’un lot
 
-Pendant le traitement du lot, il peut toujours être annulé. Cependant, une fois qu&#39;un lot est finalisé (par exemple, un état de réussite ou d&#39;échec), le lot ne peut pas être annulé.
+Il est toujours possible d’annuler un lot pendant son traitement. Une fois qu’un lot est finalisé (et que son état passe par exemple à « réussi » ou « échec »), il est impossible de l’annuler.
 
 **Format d’API**
 
@@ -801,7 +801,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot à annuler. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez annuler. |
 
 **Requête**
 
@@ -821,7 +821,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Suppression d’un lot {#delete-a-batch}
 
-Un lot peut être supprimé en exécutant la requête POST suivante avec le paramètre de `action=REVERT` requête à l&#39;ID du lot que vous souhaitez supprimer. Le lot est marqué comme &quot;inactif&quot;, ce qui le rend éligible pour la collecte de déchets. Le lot sera collecté de manière asynchrone, puis marqué comme &quot;supprimé&quot;.
+Vous pouvez supprimer un lot en exécutant la requête POST suivante avec le paramètre de requête `action=REVERT` vers l’identifiant du lot que vous souhaitez supprimer. Le lot est marqué comme « inactif », ce qui le rend éligible pour le nettoyage de la mémoire. Le lot sera collecté de manière asynchrone : il sera alors marqué comme « supprimé ».
 
 **Format d’API**
 
@@ -831,7 +831,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot à supprimer. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -849,13 +849,13 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Réexécution d’un lot
+## Relecture d’un lot
 
-Si vous souhaitez remplacer un lot déjà ingéré, vous pouvez le faire par &quot;relecture par lot&quot;. Cette action équivaut à supprimer l’ancien lot et à en ingérer un nouveau.
+Si vous souhaitez remplacer un lot déjà ingéré, vous pouvez le faire grâce à la fonctionnalité « relecture de lot ». Cette action équivaut à supprimer l’ancien lot et à en ingérer un nouveau pour le remplacer.
 
-### Créer un lot
+### Création d’un lot
 
-Tout d’abord, vous devrez créer un lot, avec JSON comme format d’entrée. Lors de la création du lot, vous devez fournir un ID de jeu de données. Vous devez également vous assurer que tous les fichiers téléchargés dans le cadre du lot sont conformes au schéma XDM lié au jeu de données fourni. De plus, vous devrez fournir les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous rejouez des lots avec des ID `batchIdA` et `batchIdB`.
+Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni. Vous devrez également fournir le ou les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous effectuez la relecture de lots aux identifiants `batchIdA` et `batchIdB`.
 
 **Format d’API**
 
@@ -886,7 +886,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- | 
-| `{DATASET_ID}` | ID du jeu de données de référence. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence. |
 
 **Réponse**
 
@@ -922,14 +922,14 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot nouvellement créé. |
-| `{DATASET_ID}` | ID du jeu de données référencé. |
-| `{USER_ID}` | ID de l’utilisateur qui a créé le lot. |
+| `{BATCH_ID}` | L’identifiant du lot récemment créé. |
+| `{DATASET_ID}` | L’identifiant du jeu de données référencé. |
+| `{USER_ID}` | L’identifiant de l’utilisateur qui a créé le lot. |
 
 
-### Téléchargement de fichiers
+### Chargement de fichiers
 
-Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` formulaire d’origine pour transférer des fichiers vers le lot. Vous pouvez télécharger plusieurs fichiers dans le lot.
+Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` précisé plus haut pour charger des fichiers dans le lot. Vous pouvez charger plusieurs fichiers dans le lot.
 
 **Format d’API**
 
@@ -939,15 +939,15 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot vers lequel vous souhaitez effectuer le transfert. |
-| `{DATASET_ID}` | ID du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Nom du fichier à télécharger. |
+| `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
+| `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
 
 **Requête**
 
 >[!CAUTION]
 >
->Cette API prend en charge le téléchargement en une seule partie. Assurez-vous que le type de contenu est application/octet-stream. N’utilisez pas l’option curl -F, car elle utilise par défaut une requête en plusieurs parties incompatible avec l’API.
+>Cette API prend en charge le chargement en une seule partie. Assurez-vous que le type de contenu est bien application/octet-stream. Évitez d’employer l’option curl -F, car elle utilise par défaut une requête à parties multiples incompatible avec l’API.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.json \
@@ -961,7 +961,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous tentez de télécharger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
 
 **Réponse**
 
@@ -969,9 +969,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 200 OK
 ```
 
-### Traitement par lot complet
+### Terminer le lot
 
-Une fois que vous avez terminé de télécharger toutes les différentes parties du fichier, vous devez signaler que les données ont été entièrement téléchargées et que le lot est prêt pour la promotion.
+Une fois que vous avez terminé de charger toutes les différentes parties du fichier, vous devrez signaler que les données ont été entièrement chargées et que le lot est prêt pour la promotion.
 
 **Format d’API**
 
@@ -981,7 +981,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BATCH_ID}` | ID du lot à terminer. |
+| `{BATCH_ID}` | L’identifiant du lot que vous souhaitez terminer. |
 
 **Requête**
 
@@ -1001,11 +1001,11 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Annexe
 
-### Transformation des données pour l&#39;assimilation par lots
+### Transformation des données pour l’ingestion par lots
 
-Pour importer un fichier de données dans l’Experience Platform, la structure hiérarchique du fichier doit respecter le schéma du modèle de données d’ [expérience (XDM)](../../xdm/home.md) associé au jeu de données dans lequel il est chargé.
+In order to ingest a data file into [!DNL Experience Platform], the hierarchical structure of the file must comply with the [Experience Data Model (XDM)](../../xdm/home.md) schema associated with the dataset being uploaded to.
 
-Vous trouverez des informations sur la mise en correspondance d’un fichier CSV avec un schéma XDM dans les [exemples de document de transformations](../../etl/transformations.md) , ainsi qu’un exemple de fichier de données JSON correctement formaté. Vous trouverez ici des exemples de fichiers fournis dans le document :
+Vous trouverez des informations sur le mappage d’un fichier CSV pour être conforme à un schéma XDM dans le document traitant des [exemples de transformations](../../etl/transformations.md), ainsi qu’un exemple de fichier de données JSON correctement formaté. Les exemples de fichiers fournis dans ce document se trouvent ici :
 
-- [CRM_profils.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
-- [CRM_profils.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
+- [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
+- [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
