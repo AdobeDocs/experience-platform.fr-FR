@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Création d’un jeu de données
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: a25ca22fb8ec9eb95f74e4fd76a7f18e87343085
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '87'
-ht-degree: 4%
+source-wordcount: '86'
+ht-degree: 100%
 
 ---
 
 
 # Création d’un lot
 
-Pour qu&#39;un jeu de données ingère des données, un lot doit lui être associé. En utilisant la `id` valeur d&#39;un jeu de données existant, vous pouvez créer un lot en envoyant une requête POST au point de `/batches` terminaison dans l&#39;API Catalogue.
+Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête POST vers le point de terminaison `/batches` dans l’API [!DNL Catalog]
 
 **Format d’API**
 
@@ -39,11 +39,11 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 | Propriété | Description |
 | --- | --- |
-| `datasetId` | Le jeu `id` de données auquel le lot sera associé. |
+| `datasetId` | L’`id` du jeu de données auquel le lot sera associé. |
 
 **Réponse**
 
-Une réponse réussie renvoie HTTP Status 201 (Créé) et un objet de réponse contenant des détails du lot nouvellement créé, y compris sa chaîne générée `id`en lecture seule par le système.
+Une réponse réussie renvoie un état HTTP 201 (Created) ainsi qu’un objet de réponse contenant les détails du lot nouvellement créé, y compris son `id`, une chaîne en lecture seule générée par le système.
 
 ```JSON
 {
