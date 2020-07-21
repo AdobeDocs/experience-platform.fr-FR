@@ -4,19 +4,19 @@ solution: Experience Platform
 title: Fonctions Spark SQL
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '4903'
-ht-degree: 6%
+source-wordcount: '4900'
+ht-degree: 99%
 
 ---
 
 
-# Fonctions Spark SQL
+# [!DNL Spark] Fonctions SQL
 
-Les assistants Spark SQL fournissent des fonctions Spark SQL intégrées pour étendre les fonctionnalités SQL.
+The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to extend SQL functionality.
 
-Référence : [Documentation de la fonction Spark SQL](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
+Référence : [documentation des fonctions Spark SQL](https://spark.apache.org/docs/2.4.0/api/sql/index.html)
 
 >[!NOTE]
 >
@@ -24,21 +24,21 @@ Référence : [Documentation de la fonction Spark SQL](https://spark.apache.org/
 
 ## Catégories
 
-- [Opérateurs et fonctions mathématiques et statistiques](#math-and-statistical-operators-and-functions)
+- [Fonctions et opérateurs mathématiques et statistiques](#math-and-statistical-operators-and-functions)
 - [Opérateurs logiques](#logical-operators)
-- [Fonctions Date/Heure](#date/time-functions)
-- [Fonctions d&#39;Agrégat](#aggregate-functions)
-- [Tableaux  ](#arrays)
-- [Fonctions de diffusion de type de données](#datatype-casting-functions)
+- [Fonctions de date/heure](#date/time-functions)
+- [Fonctions d’agrégation](#aggregate-functions)
+- [Tableaux](#arrays)
+- [Fonctions de diffusion du type de données](#datatype-casting-functions)
 - [Fonctions de conversion et de formatage](#conversion-and-formatting-functions)
 - [Évaluation des données](#data-evaluation)
 - [Informations actuelles](#current-information)
 
-### Opérateurs et fonctions mathématiques et statistiques
+### Fonctions et opérateurs mathématiques et statistiques
 
 #### Modulo
 
-`expr1 % expr2`: Renvoie le reste après `expr1`/`expr2`.
+`expr1 % expr2` : renvoie le reste après `expr1`/`expr2`.
 
 Exemples :
 
@@ -49,9 +49,9 @@ Exemples :
  0.2
 ```
 
-#### Multiplier
+#### Multiply
 
-`expr1 * expr2`: Renvoie `expr1`*`expr2`.
+`expr1 * expr2` : renvoie `expr1`*`expr2`.
 
 Exemple :
 
@@ -62,7 +62,7 @@ Exemple :
 
 #### Add
 
-`expr1 + expr2`: Renvoie `expr1`+`expr2`.
+`expr1 + expr2` : renvoie `expr1`+`expr2`.
 
 Exemple :
 
@@ -71,9 +71,9 @@ Exemple :
  3
 ```
 
-#### Soustraire
+#### Subtract
 
-`expr1 - expr2`: Renvoie `expr1`-`expr2`.
+`expr1 - expr2` : renvoie `expr1`-`expr2`.
 
 Exemple :
 
@@ -82,9 +82,9 @@ Exemple :
  1
 ```
 
-#### Diviser
+#### Divide
 
-`expr1 / expr2`: Renvoie `expr1`/`expr2`. Il effectue toujours une division à virgule flottante.
+`expr1 / expr2` : renvoie `expr1`/`expr2`. Cette opération effectue toujours une division à virgule flottante.
 
 Exemples :
 
@@ -97,7 +97,7 @@ Exemples :
 
 #### abs
 
-`abs(expr)`: Renvoie la valeur absolue de la valeur numérique.
+`abs(expr)` : renvoie la valeur absolue de la valeur numérique.
 
 Exemple :
 
@@ -108,7 +108,7 @@ Exemple :
 
 #### acos
 
-`acos(expr)`: Renvoie le cosinus inverse (également appelé arc cosine) de `expr`, comme s’il était calculé par `java.lang.Math.acos`.
+`acos(expr)` : renvoie le cosinus inverse (aussi appelé arc cosinus) de `expr`, comme s’il était calculé par `java.lang.Math.acos`.
 
 Exemples :
 
@@ -121,7 +121,7 @@ Exemples :
 
 #### approx_percentile
 
-`approx_percentile(col, percentage [, accuracy])`: Renvoie la valeur approximative du percentile d’une colonne numérique `col` au pourcentage donné. La valeur du pourcentage doit être comprise entre 0,0 et 1,0. Le `accuracy` paramètre (par défaut : 10000) est un littéral numérique positif qui contrôle la précision de l&#39;approximation au coût de la mémoire. Une valeur plus élevée des `accuracy` rendements plus précise, `1.0/accuracy` est l&#39;erreur relative de l&#39;approximation. Lorsqu&#39; `percentage` est un tableau, chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. Dans ce cas, le tableau de percentile approximatif de la colonne `col` au tableau de pourcentage donné est renvoyé.
+`approx_percentile(col, percentage [, accuracy])` : renvoie la valeur approximative du centile d’une colonne numérique `col` au pourcentage donné. La valeur du pourcentage doit être comprise entre 0,0 et 1,0. Le paramètre `accuracy` (par défaut : 10000) est un littéral numérique positif contrôlant la précision d’approximation au prix de la mémoire. Une valeur plus élevée de `accuracy` donne une meilleure précision, `1.0/accuracy` étant l’erreur relative de l’approximation. Lorsque `percentage` est un tableau, chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. Dans ce cas, le tableau du centile approximatif de la colonne `col` au tableau du pourcentage donné est renvoyé.
 
 Exemples :
 
@@ -134,7 +134,7 @@ Exemples :
 
 #### asin
 
-`asin(expr)`: Renvoie le sinus inverse (également appelé arc sinus), le sinus arc de `expr`, comme s’il était calculé par `java.lang.Math.asin`.
+`asin(expr)` : renvoie le sinus inverse (aussi appelé arc sinus), l’arc sinus de `expr`, comme s’il était calculé par `java.lang.Math.asin`.
 
 Exemples :
 
@@ -147,7 +147,7 @@ Exemples :
 
 #### atan
 
-`atan(expr)`: Renvoie la tangente inverse (également appelée tangente arc) de `expr`, comme si elle était calculée par `java.lang.Math.atan`
+`atan(expr)` : renvoie la tangente inverse (aussi appelée arc tangente) de `expr`, comme si elle était calculée par `java.lang.Math.atan`.
 
 Exemple :
 
@@ -158,11 +158,12 @@ Exemple :
 
 #### atan2
 
-`atan2(exprY, exprX)`: Renvoie l’angle en radians entre l’axe X positif d’un plan et le point donné par les coordonnées (`exprX`, `exprY`), comme si calculé par `java.lang.Math.atan2`.
+`atan2(exprY, exprX)` : renvoie l’angle en radians entre l’axe X positif d’un plan et le point défini par les coordonnées (`exprX`, `exprY`), comme s’il était calculé par `java.lang.Math.atan2`.
 
 Arguments :
 
-`exprY`: Coordonnée sur l’axe`exprX`y : Coordonnée sur l’axe X
+`exprY` : coordonnée sur l’axe Y
+`exprX` : coordonnée sur l’axe X
 
 Exemple :
 
@@ -173,11 +174,11 @@ Exemple :
 
 #### avg
 
-`avg(expr)`: Renvoie la moyenne calculée à partir des valeurs d’un groupe.
+`avg(expr)` : renvoie la moyenne calculée à partir des valeurs d’un groupe.
 
-#### cardinalité
+#### cardinality
 
-`cardinality(expr)`: Renvoie la taille d’un tableau ou d’un mappage. La fonction renvoie -1 si son entrée est nulle et `spark.sql.legacy.sizeOfNull` définie sur true (par défaut). Si `spark.sql.legacy.sizeOfNull` est défini sur false, la fonction renvoie null pour une entrée nulle.
+`cardinality(expr)` : renvoie la taille d’un tableau ou d’une carte. La fonction renvoie -1 si son entrée est nulle et `spark.sql.legacy.sizeOfNull` elle est définie sur true (valeur par défaut). Si `spark.sql.legacy.sizeOfNull` est défini sur false, la fonction renvoie null pour une entrée nulle.
 
 Exemples :
 
@@ -192,7 +193,7 @@ Exemples :
 
 #### cbrt
 
-`cbrt(expr)`: Renvoie la racine du cube de `expr`.
+`cbrt(expr)` : renvoie la racine cubique de `expr`.
 
 Exemple :
 
@@ -203,7 +204,7 @@ Exemple :
 
 #### ceil
 
-`ceil(expr)`: Renvoie le plus petit entier non inférieur à `expr`.
+`ceil(expr)` : renvoie le plus petit entier qui n’est pas inférieur à `expr`.
 
 Exemples :
 
@@ -214,9 +215,9 @@ Exemples :
  5
 ```
 
-#### plafond
+#### ceiling
 
-`ceiling(expr)`: Renvoie le plus petit entier non inférieur à `expr`.
+`ceiling(expr)` : renvoie le plus petit entier qui n’est pas inférieur à `expr`.
 
 Exemples :
 
@@ -229,7 +230,7 @@ Exemples :
 
 #### conv
 
-`conv(num, from_base, to_base)`: Convertir `num` de `from_base` à `to_base`
+`conv(num, from_base, to_base)` : convertit `num` de `from_base` à `to_base`
 
 Exemples :
 
@@ -242,11 +243,11 @@ Exemples :
 
 #### corr
 
-`corr(expr1, expr2)`: Renvoie le coefficient Pearson de corrélation entre un ensemble de paires de nombres.
+`corr(expr1, expr2)` : renvoie le coefficient de corrélation de Pearson entre un ensemble de paires de nombres.
 
 #### cos
 
-`cos(expr)`: Renvoie le cosinus de `expr`, comme s’il était calculé par `java.lang.Math.cos`.
+`cos(expr)` : renvoie le cosinus de `expr`, comme s’il était calculé par `java.lang.Math.cos`.
 
 Exemple :
 
@@ -257,10 +258,10 @@ Exemple :
 
 #### cosh
 
-`cosh(expr)`: Renvoie le cosinus hyperbolique de `expr`, comme s’il était calculé par `java.lang.Math.cosh`.
+`cosh(expr)` : renvoie le cosinus hyperbolique de `expr`, comme s’il était calculé par `java.lang.Math.cosh`.
 
 Arguments :
-- `expr`: Angle hyperbolique
+- `expr` : angle hyperbolique
 
 Exemple :
 
@@ -271,10 +272,10 @@ Exemple :
 
 #### cot
 
-`cot(expr)`: Renvoie la cotangente de `expr`, comme si elle était calculée par `1/java.lang.Math.cot`.
+`cot(expr)` : renvoie la cotangente de `expr`, comme si elle était calculée par `1/java.lang.Math.cot`.
 
 Arguments :
-- `expr`: Angle en radians
+- `expr` : angle en radians
 
 Exemple :
 
@@ -283,13 +284,13 @@ Exemple :
  0.6420926159343306
 ```
 
-#### dense_rang
+#### dense_rank
 
-`dense_rank()`: Calcule le rang d’une valeur dans un groupe de valeurs. Le résultat est un plus la valeur de rang précédemment attribuée. Contrairement à la fonction `rank`, `dense_rank` ne produit pas d&#39;espaces dans la séquence de classement.
+`dense_rank()` : calcule le rang d’une valeur dans un groupe de valeurs. Le résultat est de un plus la valeur de rang précédemment attribuée. Contrairement à la fonction `rank`, `dense_rank` ne génère pas d’espacements dans la séquence de classement.
 
 #### e
 
-`e()`: Renvoie le nombre d’Euler, e.
+`e()` : renvoie le nombre d’Euler, e.
 
 Exemple :
 
@@ -300,7 +301,7 @@ Exemple :
 
 #### exp
 
-`exp(expr)`: Renvoie e à la puissance de `expr`.
+`exp(expr)` : renvoie e à la puissance de `expr`.
 
 Exemple :
 
@@ -311,7 +312,7 @@ Exemple :
 
 #### expml
 
-`expm1(expr)`: Renvoie exp(`expr`) - 1.
+`expm1(expr)` : renvoie exp(`expr`) - 1.
 
 Exemple :
 
@@ -320,9 +321,9 @@ Exemple :
  0.0
 ```
 
-#### factuel
+#### factorial
 
-`factorial(expr)`: Renvoie la factorielle de `expr`. `expr` est [0.20]. Sinon, nul.
+`factorial(expr)` : renvoie la factorielle de `expr`. `expr` est [0..20]. Sinon, cette valeur est nulle.
 
 Exemple :
 
@@ -331,9 +332,9 @@ Exemple :
  120
 ```
 
-#### étage
+#### floor
 
-`floor(expr)`: Renvoie l’entier le plus grand n’est pas supérieur à `expr`.
+`floor(expr)` : renvoie le plus grand entier qui n’est pas supérieur à `expr`.
 
 Exemples :
 
@@ -344,9 +345,9 @@ Exemples :
  5
 ```
 
-#### plus grand
+#### greatest
 
-`greatest(expr, ...)`: Renvoie la valeur la plus élevée de tous les paramètres, en ignorant les valeurs nulles.
+`greatest(expr, ...)` : renvoie la valeur la plus élevée de tous les paramètres, en ignorant les valeurs nulles.
 
 Exemple :
 
@@ -357,7 +358,7 @@ Exemple :
 
 #### hypot
 
-`hypot(expr1, expr2)`: Renvoie sqrt(`expr1`<sup>2</sup> + `expr2`<sup>2</sup>).
+`hypot(expr1, expr2)` : renvoie la racine carrée de (`expr1`<sup>2</sup> + `expr2`<sup>2</sup>).
 
 Exemple :
 
@@ -366,14 +367,14 @@ Exemple :
  5.0
 ```
 
-#### kurtose
+#### kurtosis
 
-`kurtosis(expr)`: Renvoie la valeur de kurtosis calculée à partir des valeurs d’un groupe.
+`kurtosis(expr)` : renvoie la valeur de kurtosis calculée à partir des valeurs d’un groupe.
 
 
-#### most
+#### least
 
-`least(expr, ...)`: Renvoie la valeur la moins élevée de tous les paramètres, en ignorant les valeurs nulles.
+`least(expr, ...)` : renvoie la valeur la plus basse de tous les paramètres, en ignorant les valeurs nulles.
 
 Exemple :
 
@@ -384,7 +385,7 @@ Exemple :
 
 #### levenshtein
 
-`levenshtein(str1, str2)`: Renvoie la distance Levenshtein entre les deux chaînes données.
+`levenshtein(str1, str2)` : renvoie la distance de Levenshtein entre deux chaînes données.
 
 Exemples :
 
@@ -395,7 +396,7 @@ Exemples :
 
 #### ln
 
-`ln(expr)`: Renvoie le logarithme népérien (base e) de `expr`.
+`ln(expr)` : renvoie le logarithme naturel (base e) de `expr`.
 
 Exemple :
 
@@ -404,9 +405,9 @@ Exemple :
  0.0
 ```
 
-#### journal
+#### log
 
-`log(base, expr)`: Renvoie le logarithme de `expr` par `base`.
+`log(base, expr)` : renvoie le logarithme de `expr` de `base`.
 
 Exemple :
 
@@ -417,7 +418,7 @@ Exemple :
 
 #### log10
 
-`log10(expr)`: Renvoie le logarithme de `expr` avec la base 10.
+`log10(expr)` : renvoie le logarithme de `expr` de base 10.
 
 Exemple :
 
@@ -428,7 +429,7 @@ Exemple :
 
 #### log1p
 
-`log1p(expr)`: Retours `log(1 + expr)`.
+`log1p(expr)` : renvoie `log(1 + expr)`.
 
 Exemple :
 
@@ -439,7 +440,7 @@ Exemple :
 
 #### log2
 
-`log2(expr)`: Renvoie le logarithme de `expr` avec la base 2.
+`log2(expr)` : renvoie le logarithme de `expr` de base 2.
 
 Exemple :
 
@@ -450,23 +451,23 @@ Exemple :
 
 #### max
 
-`max(expr)`: Renvoie la valeur maximale de `expr`.
+`max(expr)` : renvoie la valeur maximale de `expr`.
 
-#### signifiant
+#### mean
 
-`mean(expr)`: Renvoie la moyenne calculée à partir des valeurs d’un groupe.
+`mean(expr)` : renvoie la moyenne calculée à partir des valeurs d’un groupe.
 
 #### min
 
-`min(expr)`: Renvoie la valeur minimale de `expr`.
+`min(expr)` : renvoie la valeur minimale de `expr`.
 
-#### monotonics_rising_id
+#### monotonically_increasing_id
 
-`monotonically_increasing_id()`: Renvoie des entiers de 64 bits qui augmentent de façon monotonique. L’identifiant généré est garanti pour une augmentation monotone et unique, mais pas consécutif. L&#39;implémentation actuelle place l&#39;ID de partition dans les 31 bits supérieurs, et les 33 bits inférieurs représentent le numéro d&#39;enregistrement dans chaque partition. L&#39;hypothèse est que le bloc de données a moins d&#39;un milliard de partitions, et chaque partition a moins de 8 milliards d&#39;enregistrements. La fonction n’est pas déterministe, car son résultat dépend des ID de partition.
+`monotonically_increasing_id()` : renvoie des entiers 64 bits à augmentation monotone. Il est garanti que l’identifiant généré augmente de manière monotone et est unique, mais pas consécutif. La mise en œuvre actuelle place l’identifiant de partition dans les 31 bits supérieurs, tandis que les 33 bits inférieurs représentent le numéro d’enregistrement dans chaque partition. L’hypothèse est que la trame de données compte moins d’un milliard de partitions et que chaque partition compte moins de 8 milliards d’enregistrements. La fonction n’est pas déterministe, car son résultat dépend des identifiants de partition.
 
-#### négatif
+#### negative
 
-`negative(expr)`: Renvoie la valeur négée de `expr`.
+`negative(expr)` : renvoie la valeur négative de `expr`.
 
 Exemple :
 
@@ -475,19 +476,19 @@ Exemple :
  -1
 ```
 
-#### percent_rang
+#### percent_rank
 
-`percent_rank()`: Calcule le classement en pourcentage d’une valeur dans un groupe de valeurs.
+`percent_rank()` : calcule le classement en pourcentage d’une valeur dans un groupe de valeurs.
 
-#### percentile
+#### Centile
 
-`percentile(col, percentage [, frequency])`: Renvoie le percentile exact de la colonne numérique `col` au pourcentage donné. La valeur de `percentage` doit être comprise entre 0,0 et 1,0. La valeur de `frequency` doit être une intégrale positive.
+`percentile(col, percentage [, frequency])` : renvoie la valeur exacte du centile d’une colonne numérique `col` au pourcentage donné. La valeur de `percentage` doit être comprise entre 0,0 et 1,0. La valeur de `frequency` doit être un entier positif.
 
-`percentile(col, array(percentage1 [, percentage2]...) [, frequency])`: Renvoie le tableau de valeurs exactes en centile de la colonne numérique `col` à des pourcentages donnés. Chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. La valeur de `frequency` doit être une partie intégrale positive.
+`percentile(col, array(percentage1 [, percentage2]...) [, frequency])` : renvoie le tableau de valeurs de centiles exactes de la colonne numérique `col` aux pourcentages donnés. Chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. La valeur de `frequency` doit être un entier positif.
 
 #### percentile_approx
 
-`percentile_approx(col, percentage [, accuracy])`: Renvoie la valeur approximative du percentile d’une colonne numérique `col` au pourcentage donné. La valeur de `percentage` doit être comprise entre 0.0 et 1.0. Le `accuracy` paramètre (par défaut : 10000) est un littéral numérique positif qui contrôle la précision de l&#39;approximation au coût de la mémoire. Une valeur plus élevée des `accuracy` rendements plus précise, `1.0/accuracy` est l&#39;erreur relative de l&#39;approximation. Lorsque `percentage` est un tableau, chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. Dans ce cas, renvoie le tableau de percentile approximatif de la colonne `col` au tableau de pourcentage donné.
+`percentile_approx(col, percentage [, accuracy])` : renvoie la valeur approximative du centile d’une colonne numérique `col` au pourcentage donné. La valeur de `percentage` doit être comprise entre 0,0 et 1,0. Le paramètre `accuracy` (par défaut : 10000) est un littéral numérique positif contrôlant la précision d’approximation au prix de la mémoire. Une valeur plus élevée de `accuracy` donne une meilleure précision, `1.0/accuracy` étant l’erreur relative de l’approximation. Lorsque `percentage` est un tableau, chaque valeur du tableau de pourcentage doit être comprise entre 0,0 et 1,0. Dans ce cas, la fonction renvoie le tableau de centile approximatif de la colonne `col` pour le tableau de pourcentage donné.
 
 Exemples :
 
@@ -500,7 +501,7 @@ Exemples :
 
 #### pi
 
-`pi()`: Renvoie pi.
+`pi()` : renvoie pi.
 
 Exemple :
 
@@ -511,7 +512,7 @@ Exemple :
 
 #### pmod
 
-`pmod(expr1, expr2)`: Renvoie la valeur positive de `expr1` mod `expr2`.
+`pmod(expr1, expr2)` : renvoie la valeur positive de `expr1` mod `expr2`.
 
 Exemples :
 
@@ -522,13 +523,13 @@ Exemples :
  2
 ```
 
-#### positif
+#### positive
 
-`positive(expr)`: Renvoie la valeur positive de `expr`
+`positive(expr)` : renvoie la valeur positive de `expr`.
 
 #### pow
 
-`pow(expr1, expr2)`: Soulève `expr1` le pouvoir de `expr2`.
+`pow(expr1, expr2)` : élève `expr1` à la puissance de `expr2`.
 
 Exemple :
 
@@ -537,9 +538,9 @@ Exemple :
  8.0
 ```
 
-#### puissance
+#### power
 
-`power(expr1, expr2)`: Soulève `expr1` le pouvoir de `expr2`.
+`power(expr1, expr2)` : élève `expr1` à la puissance de `expr2`.
 
 Exemples :
 
@@ -550,11 +551,11 @@ Exemples :
 
 #### radians
 
-`radians(expr)`: Convertit les degrés en radians.
+`radians(expr)` : convertit les degrés en radians.
 
 Arguments :
 
-- `expr`: Angle en degrés
+- `expr` : angle en degrés
 
 Exemple :
 
@@ -565,7 +566,7 @@ Exemple :
 
 #### rand
 
-`rand([seed])`: Renvoie une valeur aléatoire avec des valeurs distribuées de façon uniforme et indépendante (i.i.d.) dans (0, 1).
+`rand([seed])` : renvoie une valeur aléatoire parmi des valeurs indépendantes distribuées de manière identique et uniforme (i.i.d.) dans l’intervalle (0, 1).
 
 Exemples :
 
@@ -580,11 +581,11 @@ Exemples :
 
 >[!NOTE]
 >
->Cette fonction est généralement non déterministe.
+>Cette fonction est non déterministe en général.
 
 #### randn
 
-`randn([seed])`: Renvoie une valeur aléatoire avec des valeurs indépendantes et distribuées de manière identique (i.i.d.) provenant de la distribution normale standard.
+`randn([seed])` : renvoie une valeur aléatoire avec des valeurs indépendantes et distribuées de manière identique (i.i.d.) provenant de la distribution normale standard.
 
 Exemples :
 
@@ -599,11 +600,11 @@ Exemples :
 
 >[!NOTE]
 >
->Cette fonction est généralement non déterministe.
+>Cette fonction est non déterministe en général.
 
 #### rint
 
-`rint(expr)`: Renvoie la valeur de doublon la plus proche en valeur de l’argument et est égale à un entier mathématique.
+`rint(expr)` : renvoie la valeur double la plus proche en valeur de l’argument et égale à un entier mathématique.
 
 Exemples :
 
@@ -614,7 +615,7 @@ Exemples :
 
 #### round
 
-`round(expr, d)`: Renvoie `expr` arrondi aux `d` décimales à l’aide du mode arrondi HALF_UP.
+`round(expr, d)` : renvoie `expr` arrondi au nombre de décimales `d` à l’aide du mode arrondi HALF_UP.
 
 Exemple :
 
@@ -625,7 +626,7 @@ Exemple :
 
 #### sign
 
-`sign(expr)`: Renvoie -1.0, 0.0 ou 1.0 comme `expr` est négatif, 0 ou positif.
+`sign(expr)` : renvoie -1.0, 0.0 ou 1.0 selon que `expr` est négatif, nul ou positif.
 
 Exemple :
 
@@ -634,9 +635,9 @@ Exemple :
  1.0
 ```
 
-#### signe
+#### signum
 
-`signum(expr)`: Renvoie -1.0, 0.0 ou 1.0 comme `expr` est négatif, 0 ou positif.
+`signum(expr)` : renvoie -1.0, 0.0 ou 1.0 selon que `expr` est négatif, nul ou positif.
 
 Exemple :
 
@@ -647,11 +648,11 @@ Exemple :
 
 #### sin
 
-`sin(expr)`: Renvoie le sinus de `expr`, comme s’il était calculé par `java.lang.Math.sin`.
+`sin(expr)` : renvoie le sinus de `expr`, comme s’il était calculé par `java.lang.Math.sin`.
 
 Arguments :
 
-- `expr`: Angle en radians
+- `expr` : angle en radians
 
 Exemple :
 
@@ -662,11 +663,11 @@ Exemple :
 
 #### sinh
 
-`sinh(expr)`: Renvoie le sinus hyperbolique de `expr`, comme s’il était calculé par `java.lang.Math.sinh`.
+`sinh(expr)` : renvoie le sinus hyperbolique de `expr`, comme s’il était calculé par `java.lang.Math.sinh`.
 
 Arguments :
 
-- `expr`: Angle hyperbolique
+- `expr` : angle hyperbolique
 
 Exemple :
 
@@ -677,7 +678,7 @@ Exemple :
 
 #### sqrt
 
-`sqrt(expr)`: Renvoie la racine carrée de `expr`.
+`sqrt(expr)` : renvoie la racine carrée de `expr`.
 
 Exemple :
 
@@ -688,27 +689,27 @@ Exemple :
 
 #### stddev
 
-`stddev(expr)`: Renvoie l’écart type calculé à partir des valeurs d’un groupe.
+`stddev(expr)` : renvoie l’écart-type d’échantillon calculé à partir des valeurs d’un groupe.
 
 #### stddev_pop
 
-`sttdev_pop(expr)`: Renvoie l’écart type de population calculé à partir des valeurs d’un groupe.
+`sttdev_pop(expr)` : renvoie l’écart-type de population calculé à partir des valeurs d’un groupe.
 
 #### stddev_samp
 
-`stddev_samp(expr)`: Renvoie l’écart type calculé à partir des valeurs d’un groupe.
+`stddev_samp(expr)` : renvoie l’écart-type d’échantillon calculé à partir des valeurs d’un groupe.
 
 #### sum
 
-`sum(expr)`: Renvoie la somme calculée à partir des valeurs d’un groupe.
+`sum(expr)` : renvoie la somme calculée à partir des valeurs d’un groupe.
 
 #### tan
 
-`tan(expr)`: Renvoie la tangente de `expr`, comme si elle était calculée par `java.lang.Math.tan`.
+`tan(expr)` : renvoie la tangente de `expr`, comme si elle était calculée par `java.lang.Math.tan`.
 
 Arguments :
 
-- `expr`: Angle en radians
+- `expr` : angle en radians
 
 Exemple :
 
@@ -719,11 +720,11 @@ Exemple :
 
 #### tanh
 
-`tanh(expr)`: Renvoie la tangente hyperbolique de `expr`, comme si elle était calculée par `java.lang.Math.tanh`.
+`tanh(expr)` : renvoie la tangente hyperbolique de `expr`, comme si elle était calculée par `java.lang.Math.tanh`.
 
 Arguments :
 
-- `expr`: Angle hyperbolique
+- `expr` : angle hyperbolique
 
 Exemple :
 
@@ -734,29 +735,29 @@ Exemple :
 
 #### Var_pop
 
-`var_pop(expr)`: Renvoie la variance de population calculée à partir des valeurs d’un groupe.
+`var_pop(expr)` : renvoie la variance de population calculée à partir des valeurs d’un groupe.
 
 #### Var_samp
 
-`var_samp(expr)`: Renvoie la variance d’échantillon calculée à partir des valeurs d’un groupe.
+`var_samp(expr)` : renvoie la variance d’échantillon calculée à partir des valeurs d’un groupe.
 
 #### variance
 
-`variance(expr)`: Renvoie la variance d’échantillon calculée à partir des valeurs d’un groupe.
+`variance(expr)` : renvoie la variance d’échantillon calculée à partir des valeurs d’un groupe.
 
 ### Opérateurs logiques
 
-#### Logique non
+#### Logical not
 
-`! expr`: Logique non.
+`! expr` : logique du « SAUF »
 
-#### Inférieur à
+#### Less than
 
-`expr1 < expr2`: Renvoie true si `expr1` est inférieur à `expr2`.
+`expr1 < expr2` : renvoie true si `expr1` est inférieur à `expr2`.
 
 Arguments :
 
-- `expr1, expr2`: Les deux expressions doivent être du même type ou elles peuvent être casées selon un type commun et doivent être d’un type pouvant être commandé. Par exemple, le type de mappage n’est pas ordonné, il n’est donc pas pris en charge. Pour les types complexes tels que array/struct, les types de données des champs doivent être ordonnés.
+- `expr1, expr2` : les deux expressions doivent être du même type ou diffusées sur un type commun et doivent être d’un type organisable. Par exemple, le type map n’est pas organisable, donc n’est pas pris en charge. Pour les types de données tels que les tableaux/structs, les types de données des champs doivent pouvoir être organisés.
 
 Exemples :
 
@@ -773,13 +774,13 @@ Exemples :
  NULL
 ```
 
-#### Inférieur ou égal à
+#### Less than or equal to
 
-`expr1 <= expr2`: Renvoie true si `expr1` est inférieur ou égal à `expr2`.
+`expr1 <= expr2` : renvoie true si `expr1` est inférieur à ou égal à `expr2`.
 
 Arguments :
 
-- `expr1, expr2`: Les deux expressions doivent être du même type ou peuvent être fondues sur un type commun et doivent être un type pouvant être commandé. Par exemple, le type de mappage n’est pas ordonné, il n’est donc pas pris en charge. Pour les types complexes tels que tableau/struct, les types de données des champs doivent être ordonnés.
+- `expr1, expr2` : les deux expressions doivent être du même type ou diffusées sur un type commun et doivent être d’un type organisable. Par exemple, le type map n’est pas organisable, donc n’est pas pris en charge. Pour les types de données tels que les tableaux/structs, les types de données des champs doivent pouvoir être organisés.
 
 Exemples :
 
@@ -796,13 +797,13 @@ Exemples :
  NULL
 ```
 
-#### Egal à
+#### Equal to
 
-`expr1 = expr2`: Renvoie true si `expr1` est égal `expr2`, ou false dans le cas contraire.
+`expr1 = expr2` : renvoie true si `expr1` est égal à `expr2`, ou false dans le cas contraire.
 
 Arguments :
 
-- `expr1, expr2`: Les deux expressions doivent être du même type ou elles peuvent être castées selon un type commun et doivent être utilisées dans la comparaison de l&#39;égalité. Le type de mappage n&#39;est pas pris en charge. Pour les types complexes tels que array/struct, les types de données des champs doivent être ordonnés.
+- `expr1, expr2` : les deux expressions doivent être du même type ou diffusées sur un type commun et doivent être d’un type utilisable dans une comparaison d’égalité. Le type map n’est pas pris en charge. Pour les types de données tels que les tableaux/structs, les types de données des champs doivent pouvoir être organisés.
 
 Exemples :
 
@@ -817,13 +818,13 @@ Exemples :
  NULL
 ```
 
-#### Supérieur à
+#### Greater than
 
-`expr1 > expr2`: Renvoie true si `expr1` est supérieur à `expr2`.
+`expr1 > expr2` : renvoie true si `expr1` est plus grand que `expr2`.
 
 Arguments :
 
-- `expr1, expr2`: Les deux expressions doivent être du même type ou elles peuvent être casées selon un type commun et doivent être d’un type pouvant être commandé. Par exemple, le type de mappage n’est pas ordonné, il n’est donc pas pris en charge. Pour les types complexes tels que array/struct, les types de données des champs doivent être ordonnés.
+- `expr1, expr2` : les deux expressions doivent être du même type ou diffusées sur un type commun et doivent être d’un type organisable. Par exemple, le type map n’est pas organisable, donc n’est pas pris en charge. Pour les types de données tels que les tableaux/structs, les types de données des champs doivent pouvoir être organisés.
 
 Exemples :
 
@@ -840,13 +841,13 @@ Exemples :
  NULL
 ```
 
-#### Supérieur ou égal à
+#### Greater than or equal to
 
-`expr1 >= expr2`: Renvoie true si `expr1` est supérieur ou égal à `expr2`.
+`expr1 >= expr2` : renvoie true si `expr1` est supérieur à ou égal à `expr2`.
 
 Arguments :
 
-- `expr1, expr2`: Les deux expressions doivent être du même type ou elles peuvent être casées selon un type commun et doivent être d’un type pouvant être commandé. Par exemple, le type de mappage n’est pas ordonné, il n’est donc pas pris en charge. Pour les types complexes tels que array/struct, les types de données des champs doivent être ordonnés.
+- `expr1, expr2` : les deux expressions doivent être du même type ou diffusées sur un type commun et doivent être d’un type organisable. Par exemple, le type map n’est pas organisable, donc n’est pas pris en charge. Pour les types de données tels que les tableaux/structs, les types de données des champs doivent pouvoir être organisés.
 
 Exemples :
 
@@ -863,9 +864,9 @@ Exemples :
  NULL
 ```
 
-#### Exclusif ou exclusif au niveau du bit
+#### Bitwise exclusive or
 
-`expr1 ^ expr2`: Renvoie le résultat de l’opérateur OU exclusif au niveau du bit de `expr1` et `expr2`.
+`expr1 ^ expr2` : renvoie le résultat exclusif au niveau du bit OU `expr1` et `expr2`.
 
 Exemple :
 
@@ -874,13 +875,13 @@ Exemple :
  2
 ```
 
-#### et
+#### and
 
-`expr1 and expr2`: ET logique.
+`expr1 and expr2` : logique du « ET ».
 
-#### array_overview
+#### arrays_overlap
 
-`arrays_overlap(a1, a2)`: Renvoie true si a1 contient au moins un élément non nul présent également dans a2. Si les tableaux n’ont aucun élément commun et qu’ils ne sont pas vides et que l’un d’eux contient un élément null, la valeur null est renvoyée. Sinon, false est renvoyé.
+`arrays_overlap(a1, a2)` : renvoie true si a1 contient au moins un élément non nul également présent dans a2. Si les tableaux n’ont aucun élément commun et qu’ils sont tous deux non vides et que l’un d’eux contient un élément nul, la valeur null est renvoyée. Sinon, la valeur false est renvoyée.
 
 Exemple :
 
@@ -889,11 +890,11 @@ Exemple :
  true
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### assert_true
 
-`assert_true(expr)`: Lance une exception si elle `expr` n’est pas vraie.
+`assert_true(expr)` : lance une exception si `expr` n’est pas vrai.
 
 Exemple :
 
@@ -904,7 +905,7 @@ Exemple :
 
 #### if
 
-`if(expr1, expr2, expr3)`: Si `expr1` renvoie true, renvoie `expr2`; renvoie sinon `expr3`.
+`if(expr1, expr2, expr3)` : si `expr1` est évalué comme true, la fonction renvoie `expr2` ; sinon, elle renvoie `expr3`.
 
 Exemple :
 
@@ -915,7 +916,7 @@ Exemple :
 
 #### ifnull
 
-`ifnull(expr1, expr2)`: Renvoie `expr2` si `expr1` est nul ou `expr1` non.
+`ifnull(expr1, expr2)` : renvoie `expr2` si `expr1` est nul ou `expr1` dans le cas contraire.
 
 Exemple :
 
@@ -926,10 +927,10 @@ Exemple :
 
 #### in
 
-`expr1 in(expr2, expr3, ...)`: Renvoie true si `expr` est égal à n’importe quelle valeur valN.
+`expr1 in(expr2, expr3, ...)` : renvoie true si `expr` est égal à valN.
 
 Arguments :
-- `expr1, expr2, expr3, ...`: Les arguments doivent être du même type.
+- `expr1, expr2, expr3, ...` : les arguments doivent être du même type.
 
 Exemples :
 
@@ -946,7 +947,7 @@ Exemples :
 
 #### isnan
 
-`isnan(expr)`: Renvoie true si `expr` la valeur est NaN ou false dans le cas contraire.
+`isnan(expr)` : renvoie true si `expr` est de type NaN ou false dans le cas contraire.
 
 Exemple :
 
@@ -957,7 +958,7 @@ Exemple :
 
 #### isnotnull
 
-`isnotnull(expr)`: Renvoie true si `expr` n’est pas nul ou false dans le cas contraire.
+`isnotnull(expr)` : renvoie true si `expr` n’est pas nul ou false dans le cas contraire.
 
 Exemples :
 
@@ -968,7 +969,7 @@ Exemples :
 
 #### isnull
 
-`isnull(expr)`: Renvoie true si `expr` est nul ou false dans le cas contraire.
+`isnull(expr)` : renvoie true si `expr` est nul ou false dans le cas contraire.
 
 Exemple :
 
@@ -979,7 +980,7 @@ Exemple :
 
 #### nanvl
 
-`nanvl(expr1, expr2)`: Renvoie `expr1` s’il ne s’agit pas de NaN, ou `expr2` autrement.
+`nanvl(expr1, expr2)` : renvoie `expr1` s’il ne s’agit pas d’une valeur NaN ou `expr2` dans le cas contraire.
 
 Exemple :
 
@@ -990,15 +991,15 @@ Exemple :
 
 #### not
 
-`not expr`: Logique non.
+`not expr` : logique du « SAUF »
 
-#### ou
+#### or
 
-`expr1 or expr2`: Logique ou.
+`expr1 or expr2` : logique du « OU »
 
 #### xpath_boolean
 
-`xpath_boolean(xml, xpath)`: Renvoie true si l&#39;expression XPath est évaluée sur true ou si un noeud correspondant est trouvé.
+`xpath_boolean(xml, xpath)` : renvoie true si l’expression XPath est évaluée comme true ou si un nœud correspondant est trouvé.
 
 Exemple :
 
@@ -1007,11 +1008,11 @@ Exemple :
  true
 ```
 
-### Fonctions Date/Heure
+### Fonctions de date/heure
 
-#### add_month
+#### add_months
 
-`add_months(start_date, num_months)`: Renvoie la date postérieure `num_months` à `start_date`.
+`add_months(start_date, num_months)` : renvoie la date postérieure de `num_months` à `start_date`.
 
 Exemple :
 
@@ -1020,11 +1021,11 @@ Exemple :
  2016-09-30
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### date_add
 
-`date_add(start_date, num_days)`: Renvoie la date postérieure `num_days` à `start_date`.
+`date_add(start_date, num_days)` : renvoie la date postérieure de `num_days` à `start_date`.
 
 Exemple :
 
@@ -1033,11 +1034,11 @@ Exemple :
  2016-07-31
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### date_format
 
-`date_format(timestamp, fmt)`: Convertit `timestamp` en une valeur de chaîne au format spécifié par le format de date `fmt`.
+`date_format(timestamp, fmt)` : convertit `timestamp` en valeur de chaîne au format spécifié par le format de date `fmt`.
 
 Exemple :
 
@@ -1046,11 +1047,11 @@ Exemple :
  2016
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### date_sub
 
-`date_sub(start_date, num_days)`: Renvoie la date antérieure `num_days` à `start_date`.
+`date_sub(start_date, num_days)` : renvoie la date antérieure de `num_days` à `start_date`.
 
 Exemple :
 
@@ -1059,11 +1060,11 @@ Exemple :
  2016-07-29
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### date_trunc
 
-`date_trunc(fmt, ts)`: Renvoie l’horodatage tronqué à l’unité spécifiée par le modèle de format `fmt`. `fmt` doit être l’un des [&quot;ANNÉE&quot;, &quot;AAAA&quot;, &quot;AAAA&quot;, &quot;MON&quot;, &quot;MOIS&quot;, &quot;MM&quot;, &quot;JOUR&quot;, &quot;JJ&quot;, &quot;HEURE&quot;, &quot;MINUTE&quot;, &quot;SECOND&quot;, &quot;SEMAINE&quot;, &quot;TRIMESTRE&quot;.]
+`date_trunc(fmt, ts)` : renvoie l’horodatage (ts) tronqué à l’unité spécifiée par le modèle de format `fmt`. `fmt` doit être l’une des valeurs suivantes : [« YEAR », « YYYY », « YY », « MON », « MONTH », « MM », « DAY », « DD », « HOUR », « MINUTE », « SECOND », « WEEK », « QUARTER »]
 
 Exemples :
 
@@ -1078,11 +1079,11 @@ Exemples :
  2015-03-05 09:00:00
 ```
 
-Depuis : 2.3.0
+Depuis : 2.3.0
 
 #### datediff
 
-`datediff(endDate, startDate)`: Renvoie le nombre de jours compris entre `startDate` et `endDate`.
+`datediff(endDate, startDate)` : renvoie le nombre de jours compris entre `startDate` et `endDate`.
 
 Exemples :
 
@@ -1094,11 +1095,11 @@ Exemples :
  -1
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-####  jour
+#### day
 
-`day(date)`: Renvoie le jour du mois de la date/de l’horodatage.
+`day(date)` : renvoie le jour du mois de la date/l’horodatage.
 
 Exemple :
 
@@ -1107,11 +1108,11 @@ Exemple :
  30
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### jour du mois
+#### dayofmonth
 
-`dayofmonth(date)`: Renvoie le jour du mois de la date/de l’horodatage.
+`dayofmonth(date)` : renvoie le jour du mois de la date/l’horodatage.
 
 Exemple :
 
@@ -1120,11 +1121,11 @@ Exemple :
  30
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### jour de la semaine
+#### dayofweek
 
-`dayofweek(date)`: Renvoie le jour de la semaine pour la date/l’horodatage (1 = dimanche, 2 = lundi, ..., 7 = samedi).
+`dayofweek(date)` : renvoie le jour de la semaine pour la date/l’horodatage (1 = dimanche, 2 = lundi, ..., 7 = samedi).
 
 Exemple :
 
@@ -1133,11 +1134,11 @@ Exemple :
  5
 ```
 
-Depuis : 2.3.0
+Depuis : 2.3.0
 
-#### jour de l&#39;année
+#### dayofyear
 
-`dayofyear(date)`: Renvoie le jour de l’année de la date/de l’horodatage.
+`dayofyear(date)` : renvoie le jour de l’année de la date/l’horodatage.
 
 Exemple :
 
@@ -1146,11 +1147,11 @@ Exemple :
  100
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### from_unixtime
 
-`from_unixtime(unix_time, format)`: Renvoie `unix_time` dans le champ spécifié `format`.
+`from_unixtime(unix_time, format)` : renvoie `unix_time` dans le `format` spécifié.
 
 Exemple :
 
@@ -1159,11 +1160,11 @@ Exemple :
  1970-01-01 00:00:00
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### from_utc_timestamp
 
-`from_utc_timestamp(timestamp, timezone)`: Interprète un horodatage tel que &#39;2017-07-14 02:40:00.0&#39; en tant qu&#39;heure en UTC, et effectue le rendu de cette heure en tant qu&#39;horodatage dans le fuseau horaire donné. Par exemple, &#39;GMT+1&#39; donnerait &#39;2017-07-14 03:40:00.0&#39;.
+`from_utc_timestamp(timestamp, timezone)` : interprète un horodatage comme « 2017-07-14 02:40:00.0 » en heure en UTC et convertit cette heure en horodatage dans le fuseau horaire donné. Par exemple, pour le fuseau « GMT+1 », cela donnerait « 2017-07-14 03:40:00.0 ».
 
 Exemple :
 
@@ -1172,11 +1173,11 @@ Exemple :
  2016-08-31 09:00:00
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### heure
+#### hour
 
-`hour(timestamp)`: Renvoie le composant d’heure de la chaîne/horodatage.
+`hour(timestamp)` : renvoie le composant d’heure de la chaîne/l’horodatage.
 
 Exemple :
 
@@ -1185,11 +1186,11 @@ Exemple :
  12
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### last_day
 
-`last_day(date):` Renvoie le dernier jour du mois auquel la date appartient.
+`last_day(date):` renvoie le dernier jour du mois auquel la date se rapporte.
 
 Exemple :
 
@@ -1198,11 +1199,11 @@ Exemple :
  2009-01-31
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### minute
 
-`minute(timestamp)`: Renvoie le composant minute de la chaîne/horodatage.
+`minute(timestamp)` : renvoie le composant des minutes de la chaîne/l’horodatage.
 
 Exemple :
 
@@ -1211,11 +1212,11 @@ Exemple :
  58
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-####  mois
+#### month
 
-`month(date)` Renvoie le composant de mois de la date/de l’horodatage.
+`month(date)` : renvoie le composant du mois de la date/l’horodatage.
 
 Exemple :
 
@@ -1224,11 +1225,11 @@ Exemple :
  7
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### month_between
+#### months_between
 
-`months_between(timestamp1, timestamp2[, roundOff])`: Si `timestamp1` est postérieure à `timestamp2`, le résultat est positif. Si `timestamp1` et `timestamp2` sont le même jour du mois, ou si les deux sont le dernier jour du mois, l’heure du jour est ignorée. Dans le cas contraire, la différence est calculée sur la base de 31 jours par mois et arrondie à 8 chiffres, sauf si `roundOff=false`le cas échéant.
+`months_between(timestamp1, timestamp2[, roundOff])` : si `timestamp1` est postérieur à `timestamp2`, alors le résultat est positif. Si `timestamp1` et `timestamp2` concernent le même jour du mois ou le dernier jour du mois, l’heure du jour est ignorée. Dans le cas contraire, la différence est calculée sur la base de 31 jours par mois et arrondie à 8 chiffres, sauf si `roundOff=false`.
 
 Exemples :
 
@@ -1239,11 +1240,11 @@ Exemples :
  3.9495967741935485
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### next_day
 
-`next_day(start_date, day_of_week)`: Renvoie la première date postérieure à `start_date` et nommée comme indiqué.
+`next_day(start_date, day_of_week)` : renvoie la première date postérieure à `start_date` et nommée comme indiqué.
 
 Exemple :
 
@@ -1252,11 +1253,11 @@ Exemple :
  2015-01-20
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### trimestre
+#### quarter
 
-`quarter(date)`: Renvoie le trimestre de l’année pour la date, dans la plage 1 à 4.
+`quarter(date)` : renvoie le trimestre de l’année correspondant à la date, dans la plage 1 à 4.
 
 Exemple :
 
@@ -1265,11 +1266,11 @@ Exemple :
  3
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### second
 
-`second(timestamp)`: Renvoie le deuxième composant de la chaîne/horodatage.
+`second(timestamp)` : renvoie le composant des secondes de la chaîne/l’horodatage.
 
 Exemple :
 
@@ -1278,11 +1279,11 @@ Exemple :
  59
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### to_date
 
-`to_date(date_str[, fmt])`: Analyse l’ `date_str` expression avec l’ `fmt` expression à une date. Renvoie la valeur null avec une entrée non valide. Par défaut, les règles de casting sont appliquées à une date si elles `fmt` sont omises.
+`to_date(date_str[, fmt])` : analyse l’expression `date_str` avec l’expression `fmt` d’une date. Renvoie la valeur null avec une entrée non valide. Suit par défaut les règles de diffusion d’une date si la valeur `fmt` est omise.
 
 Exemples :
 
@@ -1293,11 +1294,11 @@ Exemples :
  2016-12-31
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### to_timestamp
 
-`to_timestamp(timestamp[, fmt])`: Analyse l’ `timestamp` expression avec l’ `fmt` expression en horodatage. Renvoie la valeur null avec une entrée non valide. Par défaut, il suit les règles d’attribution d’horodatage si l’horodatage `fmt` est omis.
+`to_timestamp(timestamp[, fmt])` : analyse l’expression `timestamp` avec l’expression `fmt` d’un horodatage. Renvoie la valeur null avec une entrée non valide. Suit par défaut les règles de diffusion d’un horodatage si la valeur `fmt` est omise.
 
 Exemples :
 
@@ -1308,11 +1309,11 @@ Exemples :
  2016-12-31 00:00:00
 ```
 
-Depuis : 2.2.0
+Depuis : 2.2.0
 
 #### to_unix_timestamp
 
-`to_unix_timestamp(expr[, pattern])`: Renvoie l’horodatage UNIX de l’heure donnée.
+`to_unix_timestamp(expr[, pattern])` : renvoie l’horodatage UNIX de l’heure donnée.
 
 Exemple :
 
@@ -1321,11 +1322,11 @@ Exemple :
  1460041200
 ```
 
-Depuis : 1.6.0
+Depuis : 1.6.0
 
 #### to_utc_timestamp
 
-`to_utc_timestamp(timestamp, timezone)`: Interprète un horodatage tel que &#39;2017-07-14 02:40:00.0&#39; comme une heure dans le fuseau horaire donné, et effectue le rendu de cette heure comme un horodatage en UTC. Par exemple, &#39;GMT+1&#39; donnerait &#39;2017-07-14 01:40:00.0&#39;.
+`to_utc_timestamp(timestamp, timezone)` : interprète un horodatage comme « 2017-07-14 02:40:00.0 » en heure dans le fuseau horaire donné et convertit cette heure en horodatage en UTC. Par exemple, pour le fuseau « GMT+1 », cela donnerait « 2017-07-14 01:40:00.0 ».
 
 Exemple :
 
@@ -1334,11 +1335,11 @@ Exemple :
  2016-08-30 15:00:00
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### tronc
+#### trunc
 
-`trunc(date, fmt)`: Renvoie la date avec la partie horaire du jour tronquée à l&#39;unité spécifiée par le modèle de format `fmt`. `fmt` est l’un des [&quot;year&quot;, &quot;yyy&quot;, &quot;yy&quot;, &quot;mon&quot;, &quot;month&quot;, &quot;mm&quot;]
+`trunc(date, fmt)` : renvoie la date avec la partie horaire du jour tronquée à l’unité spécifiée par le modèle de format `fmt`. `fmt` peut prendre l’une des valeurs [« year », « yyyy », « yy », « mon », « month », « mm »]
 
 Exemples :
 
@@ -1349,11 +1350,11 @@ Exemples :
  2015-01-01
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### unix_timestamp
 
-`unix_timestamp([expr[, pattern]])`: Renvoie l’horodatage UNIX de l’heure actuelle ou spécifiée.
+`unix_timestamp([expr[, pattern]])` : renvoie l’horodatage UNIX de l’heure actuelle ou spécifiée.
 
 Exemples :
 
@@ -1364,11 +1365,11 @@ Exemples :
  1460041200
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-#### jour de la semaine
+#### weekday
 
-`weekday(date)`: Renvoie le jour de la semaine pour la date/l’horodatage (0 = Lundi, 1 = Mardi, ..., 6 = Dimanche).
+`weekday(date)` : renvoie le jour de la semaine pour la date/l’horodatage (0 = lundi, 1 = mardi, ..., 6 = dimanche).
 
 Exemple :
 
@@ -1377,11 +1378,11 @@ Exemple :
  3
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### week_of_year
 
-`weekofyear(date)`: Renvoie la semaine de l’année de la date donnée. Une semaine est considérée comme début le lundi et la semaine 1 est la première semaine avec plus de 3 jours.
+`weekofyear(date)` : renvoie la semaine de l’année de la date donnée. On considère qu’une semaine commence le lundi, et la semaine 1 est la première semaine avec plus de 3 jours.
 
 Exemple :
 
@@ -1390,16 +1391,16 @@ Exemple :
  8
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### when
 
-`CASE WHEN expr1 THEN expr2 [WHEN expr3 THEN expr4]* [ELSE expr5] END`: Lorsque `expr1` = true, renvoie `expr2`; else lorsque `expr3` = true, renvoie `expr4`; else renvoie `expr5`.
+`CASE WHEN expr1 THEN expr2 [WHEN expr3 THEN expr4]* [ELSE expr5] END` : si `expr1` = true, la fonction renvoie `expr2` ; si `expr3` = true, la fonction renvoie `expr4` ; sinon elle renvoie `expr5`.
 
 Arguments :
 
-- `expr1`, `expr3`: Les expressions de condition de branche doivent toutes être de type booléen.
-- `expr2`, `expr4`, `expr5`: Les expressions de la valeur de branche et l&#39;expression de la valeur de substitution doivent toutes être du même type ou être convertibles en un type commun.
+- `expr1`, `expr3` : les expressions de condition de branche doivent toutes être de type booléen.
+- `expr2`, `expr4`, `expr5` : les expressions de valeur de branche et l’expression de la valeur else doivent toutes être du même type ou convertibles en un type commun.
 
 Exemples :
 
@@ -1412,9 +1413,9 @@ Exemples :
  NULL
 ```
 
-####  an
+#### year
 
-`year(date)`: Renvoie le composant Year de la date/de l’horodatage.
+`year(date)` : renvoie le composant de l’année de la date/l’horodatage.
 
 Exemple :
 
@@ -1423,19 +1424,19 @@ Exemple :
  2016
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
-### Fonctions d&#39;Agrégat
+### Fonctions d’agrégation
 
 #### approx_count_distinct
 
-`approx_count_distinct(expr[, relativeSD])`: Renvoie la cardinalité estimée par HyperLogLog++. `relativeSD` définit l’erreur d’estimation maximale autorisée.
+`approx_count_distinct(expr[, relativeSD])` : renvoie la cardinalité estimée par HyperLogLog++. `relativeSD` définit l’erreur d’estimation maximale autorisée.
 
-### Tableaux  
+### Tableaux
 
-#### tableau
+#### array
 
-`array(expr, ...)`: Renvoie un tableau avec les éléments donnés.
+`array(expr, ...)` : renvoie un tableau avec les éléments donnés.
 
 Exemple :
 
@@ -1446,7 +1447,7 @@ Exemple :
 
 #### array_contains
 
-`array_contains(array, value)`: Renvoie true si le tableau contient la valeur.
+`array_contains(array, value)` : renvoie true si le tableau contient la valeur.
 
 Exemple :
 
@@ -1455,9 +1456,9 @@ Exemple :
  true
 ```
 
-#### array_different
+#### array_distinct
 
-`array_distinct(array)`: Supprime les valeurs de duplicata du tableau.
+`array_distinct(array)` : supprime les doublons du tableau.
 
 Exemple :
 
@@ -1466,11 +1467,11 @@ Exemple :
  [1,2,3,null]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-#### array_excepté
+#### array_except
 
-`array_except(array1, array2)`: Renvoie un tableau des éléments dans `array1` mais pas dans `array2`, sans duplicata.
+`array_except(array1, array2)` : renvoie un tableau des éléments de `array1`, mais pas de `array2`, sans les doublons.
 
 Exemple :
 
@@ -1479,11 +1480,11 @@ Exemple :
  [2]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_intersect
 
-`array_intersect(array1, array2)`: Renvoie un tableau des éléments situés à l’intersection de `array1` et `array2`, sans duplicata.
+`array_intersect(array1, array2)` : renvoie un tableau des éléments situés à l’intersection de `array1` et de `array2`, sans les doublons.
 
 Exemple :
 
@@ -1492,11 +1493,11 @@ Exemple :
  [1,3]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_join
 
-`array_join(array, delimiter[, nullReplacement])`: Concatène les éléments du tableau donné à l’aide du délimiteur et d’une chaîne facultative pour remplacer les valeurs nulles. Si aucune valeur n’est définie pour `nullReplacement`, toute valeur nulle est filtrée.
+`array_join(array, delimiter[, nullReplacement])` : concatène les éléments du tableau donné à l’aide du délimiteur et d’une chaîne facultative pour remplacer les valeurs nulles. Si aucune valeur n’est définie pour `nullReplacement`, les éventuelles valeurs nulles sont filtrées.
 
 Exemples :
 
@@ -1509,11 +1510,11 @@ Exemples :
  hello , world
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_max
 
-`array_max(array)`: Renvoie la valeur maximale du tableau. Les éléments nuls sont ignorés.
+`array_max(array)` : renvoie la valeur maximale dans le tableau. Les éléments nuls sont ignorés.
 
 Exemple :
 
@@ -1522,11 +1523,11 @@ Exemple :
  20
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_min
 
-`array_min(array)`: Renvoie la valeur minimale du tableau. Les éléments nuls sont ignorés.
+`array_min(array)` : renvoie la valeur minimale dans le tableau. Les éléments nuls sont ignorés.
 
 Exemple :
 
@@ -1535,11 +1536,11 @@ Exemple :
  1
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_position
 
-`array_position(array, element)`: Renvoie l&#39;index (de base 1) du premier élément du tableau aussi long.
+`array_position(array, element)` : renvoie l’index (de base 1) du premier élément du tableau aussi long.
 
 Exemple :
 
@@ -1548,11 +1549,11 @@ Exemple :
  3
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_remove
 
-`array_remove(array, element)`: Supprimez tous les éléments égaux à l&#39;élément du tableau.
+`array_remove(array, element)` : supprime tous les éléments égaux à l’élément du tableau.
 
 Exemple :
 
@@ -1561,11 +1562,11 @@ Exemple :
  [1,2,null]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_repeat
 
-`array_repeat(element, count)`: Renvoie le tableau contenant le nombre d&#39;éléments multiplié.
+`array_repeat(element, count)` : renvoie le tableau contenant le nombre de répétitions des éléments.
 
 Exemple :
 
@@ -1574,11 +1575,11 @@ Exemple :
  ["123","123"]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_sort
 
-`array_sort(array)`: Trie le tableau d&#39;entrée dans l&#39;ordre croissant. Les éléments du tableau d&#39;entrée doivent pouvoir être commandés. Les éléments nuls sont placés à la fin du tableau renvoyé.
+`array_sort(array)` : trie le tableau d’entrée par ordre croissant. Les éléments du tableau d’entrée doivent pouvoir être classés. Les éléments nuls sont placés à la fin du tableau renvoyé.
 
 Exemple :
 
@@ -1587,11 +1588,11 @@ Exemple :
  ["a","b","c","d",null]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_union
 
-`array_union(array1, array2)`: Renvoie un tableau des éléments de l’union de `array1` et `array2`, sans duplicata.
+`array_union(array1, array2)` : renvoie un tableau des éléments inclus dans l’union entre `array1` et `array2`, sans les doublons.
 
 Exemple :
 
@@ -1600,11 +1601,11 @@ Exemple :
  [1,2,3,5]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### array_zip
 
-`arrays_zip(a1, a2, ...)`: Renvoie un tableau fusionné de structures dans lequel le N-th struct contient toutes les valeurs N-th des tableaux d&#39;entrée.
+`arrays_zip(a1, a2, ...)` : renvoie un tableau fusionné de structs dans lequel le struct N contient toutes les valeurs N des tableaux d’entrée.
 
 Exemples :
 
@@ -1615,13 +1616,13 @@ Exemples :
  [{"0":1,"1":2,"2":3},{"0":2,"1":3,"2":4}]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### element_at
 
-`element_at(array, index)`: Renvoie l’élément du tableau à un index donné (de base 1). Si `index < 0`vous le souhaitez, accède aux éléments de la dernière à la première. Renvoie NULL si l&#39;index dépasse la longueur du tableau.
+`element_at(array, index)` : renvoie l’élément du tableau à l’index donné (de base 1). Si `index < 0`, l’accès aux éléments se fait du dernier au premier. Renvoie NULL si l’index dépasse la longueur du tableau.
 
-`element_at(map, key)`: Renvoie la valeur d’une clé donnée ou NULL si la clé n’est pas contenue dans le mappage.
+`element_at(map, key)` : renvoie la valeur d’une clé donnée ou NULL si la clé n’est pas incluse dans la map.
 
 Exemples :
 
@@ -1632,11 +1633,11 @@ Exemples :
  b
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-#### exploser
+#### explode
 
-`explode(expr)`: Sépare les éléments du tableau en plusieurs lignes ou les éléments du mappage `expr` `expr` en plusieurs lignes et colonnes.
+`explode(expr)` : sépare les éléments de l’`expr` de tableau en plusieurs lignes, ou les éléments de l’`expr` de map en plusieurs lignes et colonnes.
 
 Exemples :
 
@@ -1648,7 +1649,7 @@ Exemples :
 
 #### explode_outer
 
-`explode_outer(expr)`: Sépare les éléments du tableau en plusieurs lignes ou les éléments du mappage `expr` `expr` en plusieurs lignes et colonnes.
+`explode_outer(expr)` : sépare les éléments de l’`expr` de tableau en plusieurs lignes, ou les éléments de l’`expr` de map en plusieurs lignes et colonnes.
 
 Exemple :
 
@@ -1660,7 +1661,7 @@ Exemple :
 
 #### find_in_set
 
-`find_in_set(str, str_array)`: Renvoie l’index (de base 1) de la chaîne donnée (`str`) dans la liste délimitée par des virgules (`str_array`). Renvoie 0 si la chaîne est introuvable ou si la chaîne donnée (`str`) contient une virgule.
+`find_in_set(str, str_array)` : renvoie l’index (de base 1) de la chaîne donnée (`str`) dans la liste délimitée par des virgules (`str_array`). Renvoie 0 si la chaîne est introuvable ou si la chaîne donnée (`str`) contient une virgule.
 
 Exemple :
 
@@ -1669,9 +1670,9 @@ Exemple :
  3
 ```
 
-#### aplatir
+#### flatten
 
-`flatten(arrayOfArrays)`: Transforme un tableau de tableaux en un tableau unique.
+`flatten(arrayOfArrays)` : transforme un tableau de tableaux en tableau unique.
 
 Exemple :
 
@@ -1680,11 +1681,11 @@ Exemple :
  [1,2,3,4]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### inline
 
-`inline(expr)`: Éclate un tableau de structures en un tableau.
+`inline(expr)` : morcelle un tableau de structs en un tableau.
 
 Exemple :
 
@@ -1696,7 +1697,7 @@ Exemple :
 
 #### inline_outer
 
-`inline_outer(expr)`: Éclate un tableau de structures en un tableau.
+`inline_outer(expr)` : morcelle un tableau de structs en un tableau.
 
 Exemple :
 
@@ -1706,9 +1707,9 @@ Exemple :
  2  b
 ```
 
-#### explosé
+#### posexplode
 
-`posexplode(expr)`: Sépare les éléments du tableau en plusieurs lignes avec des positions, ou les éléments du mappage `expr` `expr` en plusieurs lignes et colonnes avec des positions.
+`posexplode(expr)` : sépare les éléments de l’`expr` de tableau en plusieurs lignes, ou les éléments de l’`expr` de map en plusieurs lignes et colonnes à positions.
 
 Exemple :
 
@@ -1720,7 +1721,7 @@ Exemple :
 
 #### posexplode_outer
 
-`posexplode_outer(expr)`: Sépare les éléments du tableau en plusieurs lignes avec des positions, ou les éléments du mappage `expr` `expr` en plusieurs lignes et colonnes avec des positions.
+`posexplode_outer(expr)` : sépare les éléments de l’`expr` de tableau en plusieurs lignes, ou les éléments de l’`expr` de map en plusieurs lignes et colonnes à positions.
 
 Exemple :
 
@@ -1730,9 +1731,9 @@ Exemple :
  1  20
 ```
 
-#### inverser
+#### reverse
 
-`reverse(array)`: Renvoie une chaîne inversée ou un tableau dont l’ordre des éléments est inversé.
+`reverse(array)` : renvoie une chaîne inversée ou un tableau avec l’ordre inverse des éléments.
 
 Exemples :
 
@@ -1743,14 +1744,14 @@ Exemples :
  [3,4,1,2]
 ```
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 >[!NOTE]
 >
->la logique rse pour les baies est disponible depuis la version 2.4.0.
+>La logique rse pour les tableaux est disponible depuis la version 2.4.0.
 
-#### mélanger
+#### shuffle
 
-`shuffle(array)`: Renvoie une permutation aléatoire du tableau donné.
+`shuffle(array)` : renvoie une permutation aléatoire du tableau donné.
 
 Exemples :
 
@@ -1761,14 +1762,14 @@ Exemples :
  [20,null,3,1]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 >[!NOTE]
 >
->n’est pas déterministe.
+>La fonction  est non déterministe.
 
-#### tranche
+#### slice
 
-`slice(x, start, length)`: Sous-ensembles tableau x commençant à partir du début d&#39;index (ou commençant à partir de la fin si le début est négatif) avec la longueur spécifiée.
+`slice(x, start, length)` : sous-définit le tableau x à partir du début de l’index (ou à partir de la fin si le début est négatif) avec la longueur spécifiée.
 
 Exemples :
 
@@ -1779,11 +1780,11 @@ Exemples :
  [3,4]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### sort_array
 
-`sort_array(array[, ascendingOrder])`: Trie le tableau d&#39;entrée par ordre croissant ou décroissant selon l&#39;ordre naturel des éléments du tableau. Les éléments nuls sont placés au début du tableau retourné dans l&#39;ordre croissant ou à la fin du tableau retourné dans l&#39;ordre décroissant.
+`sort_array(array[, ascendingOrder])` : trie le tableau d’entrée par ordre croissant ou décroissant selon l’ordre naturel des éléments du tableau. Les éléments nuls sont placés au début du tableau renvoyé par ordre croissant ou à la fin du tableau renvoyé par ordre décroissant.
 
 Exemples :
 
@@ -1794,7 +1795,7 @@ Exemples :
 
 #### zip_with
 
-`zip_with(left, right, func)`: Fusionne les deux tableaux donnés, au niveau de l&#39;élément, en un seul tableau à l&#39;aide de la fonction. Si un tableau est plus court, les valeurs nulles sont ajoutées à la fin pour correspondre à la longueur du tableau plus long, avant d&#39;appliquer la fonction.
+`zip_with(left, right, func)` : fusionne les deux tableaux donnés, au niveau de l’élément, en un tableau unique à l’aide de la fonction. Si un tableau est plus court, les valeurs nulles sont ajoutées à la fin, pour correspondre à la longueur du tableau plus long, avant l’application de la fonction.
 
 Exemples :
 
@@ -1807,25 +1808,25 @@ Exemples :
  ["ad","be","cf"]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-### Fonctions de diffusion de type de données
+### Fonctions de diffusion du type de données
 
 #### bigint
 
-`bigint(expr)`: Place la valeur `expr` au type de données de cible `bigint`.
+`bigint(expr)` : diffuse la valeur `expr` vers le type de données cibles `bigint`.
 
-#### binaire
+#### binary
 
-`binary(expr)`: Place la valeur `expr` au type de données de cible `binary`.
+`binary(expr)` : diffuse la valeur `expr` vers le type de données cibles `binary`.
 
-#### booléen
+#### boolean
 
-`boolean(expr)`: Place la valeur `expr` au type de données de cible `boolean`.
+`boolean(expr)` : diffuse la valeur `expr` vers le type de données cibles `boolean`.
 
 #### cast
 
-`cast(expr AS type)`: Place la valeur `expr` au type de données de cible `type`.
+`cast(expr AS type)` : diffuse la valeur `expr` vers le type de données cibles `type`.
 
 Exemple :
 
@@ -1836,27 +1837,27 @@ Exemple :
 
 #### date
 
-`date(expr)`: Place la valeur `expr` au type de données de cible `date`.
+`date(expr)` : diffuse la valeur `expr` vers le type de données cibles `date`.
 
-#### décimal
+#### decimal
 
-`decimal(expr)`: Place la valeur `expr` au type de données de cible `decimal`.
+`decimal(expr)` : diffuse la valeur `expr` vers le type de données cibles `decimal`.
 
 #### double
 
-`double(expr)`: Place la valeur `expr` au type de données de cible `double`.
+`double(expr)` : diffuse la valeur `expr` vers le type de données cibles `double`.
 
 #### float
 
-`float(expr)`: Place la valeur `expr` au type de données de cible `float`.
+`float(expr)` : diffuse la valeur `expr` vers le type de données cibles `float`.
 
 #### int
 
-`int(expr)`: Place la valeur `expr` au type de données de cible `int`.
+`int(expr)` : diffuse la valeur `expr` vers le type de données cibles `int`.
 
 #### map
 
-`map(key0, value0, key1, value1, ...)`: Crée un mappage avec les paires clé/valeur données.
+`map(key0, value0, key1, value1, ...)` : crée une map avec les paires clé/valeur données.
 
 Exemple :
 
@@ -1865,13 +1866,13 @@ Exemple :
  {1.0:"2",3.0:"4"}
 ```
 
-#### petite
+#### smallint
 
-`smallint(expr)`: Place la valeur `expr` au type de données de cible `smallint`.
+`smallint(expr)` : diffuse la valeur `expr` vers le type de données cibles `smallint`.
 
 #### str_to_map
 
-`str_to_map(text[, pairDelim[, keyValueDelim]])`: Crée un mappage après avoir divisé le texte en paires clé/valeur à l’aide de délimiteurs. Les délimiteurs par défaut sont &#39;,&#39; pour `pairDelim` et &#39;:&#39; pour `keyValueDelim`.
+`str_to_map(text[, pairDelim[, keyValueDelim]])` : crée une map après avoir divisé le texte en paires clé/valeur à l’aide de délimiteurs. Les délimiteurs par défaut sont « , » pour `pairDelim` et « : » pour `keyValueDelim`.
 
 Exemples :
 
@@ -1882,23 +1883,23 @@ Exemples :
  map("a":null)
 ```
 
-#### chaîne
+#### string
 
-`string(expr)`: Place la valeur `expr` au type de données de cible `string`.
+`string(expr)` : diffuse la valeur `expr` vers le type de données cibles `string`.
 
 #### struct
 
-`struct(col1, col2, col3, ...)`: Crée un struct avec les valeurs de champ données.
+`struct(col1, col2, col3, ...)` : crée un struct avec les valeurs de champ données.
 
 #### tinyint
 
-`tinyint(expr)`: Place la valeur `expr` au type de données de cible `tinyint`.
+`tinyint(expr)` : diffuse la valeur `expr` vers le type de données cibles `tinyint`.
 
 ### Fonctions de conversion et de formatage
 
 #### ascii
 
-`ascii(str)`: Renvoie la valeur numérique du premier caractère de `str`.
+`ascii(str)` : renvoie la valeur numérique du premier caractère de `str`.
 
 Exemples :
 
@@ -1911,7 +1912,7 @@ Exemples :
 
 #### base64
 
-`base64(bin)`: Convertit l’argument d’un binaire `bin` en chaîne de base 64.
+`base64(bin)` : convertit l’argument d’un `bin` binaire en chaîne en base 64.
 
 Exemple :
 
@@ -1922,7 +1923,7 @@ Exemple :
 
 #### bin
 
-`bin(expr)`: Renvoie la représentation sous forme de chaîne de la valeur longue `expr` représentée en binaire.
+`bin(expr)` : renvoie la représentation sous la forme de chaîne de la valeur longue `expr` représentée en binaire.
 
 Exemples :
 
@@ -1937,7 +1938,7 @@ Exemples :
 
 #### bit_length
 
-`bit_length(expr)`: Renvoie la longueur en bits des données de chaîne ou le nombre de bits de données binaires.
+`bit_length(expr)` : renvoie la longueur en bits des données de chaîne ou le nombre de bits de données binaires.
 
 Exemple :
 
@@ -1948,7 +1949,7 @@ Exemple :
 
 #### char
 
-`char(expr)`: Renvoie le caractère ASCII dont le binaire est équivalent à `expr`. Si n est supérieur à 256, le résultat est équivalent à `chr(n % 256)`.
+`char(expr)` : renvoie le caractère ASCII dont le binaire équivaut à `expr`. Si n est supérieur à 256, le résultat équivaut à `chr(n % 256)`.
 
 Exemple :
 
@@ -1959,7 +1960,7 @@ Exemple :
 
 #### char_length
 
-`char_length(expr)`: Renvoie la longueur de caractères des données de chaîne ou le nombre d’octets des données binaires. La longueur des données de chaîne comprend les espaces de fin. La longueur des données binaires inclut des zéros binaires.
+`char_length(expr)` : renvoie la longueur en caractères des données de chaîne ou le nombre de bits de données binaires. La longueur des données de chaîne inclut les espaces à la fin. La longueur des données binaires inclut des zéros binaires.
 
 Exemples :
 
@@ -1974,7 +1975,7 @@ Exemples :
 
 #### character_length
 
-`character_length(expr)`: Renvoie la longueur de caractères des données de chaîne ou le nombre d’octets des données binaires. La longueur des données de chaîne comprend les espaces de fin. La longueur des données binaires inclut des zéros binaires.
+`character_length(expr)` : renvoie la longueur en caractères des données de chaîne ou le nombre de bits de données binaires. La longueur des données de chaîne inclut les espaces à la fin. La longueur des données binaires inclut des zéros binaires.
 
 Exemples :
 
@@ -1989,7 +1990,7 @@ Exemples :
 
 #### chr
 
-`chr(expr)`: Renvoie le caractère ASCII dont le binaire équivaut à expr. Si n est supérieur à 256, le résultat équivaut à `chr(n % 256)`
+`chr(expr)` : renvoie le caractère ASCII dont le binaire équivaut à expr. Si n est supérieur à 256, le résultat équivaut à `chr(n % 256)`.
 
 Exemple :
 
@@ -1998,12 +1999,12 @@ Exemple :
  A
 ```
 
-#### degrés
+#### degrees
 
-`degrees(expr)`: Convertit les radians en degrés.
+`degrees(expr)` : convertit les radians en degrés.
 
 Arguments :
-- `expr`: Angle en radians
+- `expr` : angle en radians
 
 Exemple :
 
@@ -2014,7 +2015,7 @@ Exemple :
 
 #### format_number
 
-`format_number(expr1, expr2)`: Formate le nombre `expr1` comme &quot;#,###,###.##&#39;, arrondi aux `expr2` décimales. Si `expr2` la valeur est 0, le résultat n’a pas de point décimal ou de partie fractionnaire. `expr2` accepte également un format spécifié par l’utilisateur. Il est destiné à fonctionner comme MySQL `FORMAT`.
+`format_number(expr1, expr2)` : rédige le nombre `expr1` au format « #,###,###.## » arrondi au nombre de décimales `expr2`. Si `expr2` a une valeur de 0, le résultat ne comporte pas de décimal ni de partie fractionnaire. `expr2` accepte aussi un format spécifié par l’utilisateur. Ce format est destiné à fonctionner comme le `FORMAT` MySQL.
 
 Exemples :
 
@@ -2027,7 +2028,7 @@ Exemples :
 
 #### from_json
 
-`from_json(jsonStr, schema[, options])`: Renvoie une valeur struct avec les valeurs données `jsonStr` et `schema`.
+`from_json(jsonStr, schema[, options])` : renvoie une valeur struct avec les `jsonStr` et `schema` donnés.
 
 Exemples :
 
@@ -2038,11 +2039,11 @@ Exemples :
  {"time":"2015-08-26 00:00:00.0"}
 ```
 
-Depuis : 2.2.0
+Depuis : 2.2.0
 
 #### hash
 
-`hash(expr1, expr2, ...)`: Renvoie une valeur de hachage des arguments.
+`hash(expr1, expr2, ...)` : renvoie une valeur de hachage des arguments.
 
 Exemple :
 
@@ -2053,7 +2054,7 @@ Exemple :
 
 #### hex
 
-`hex(expr)`: Convertit `expr` en hexadécimal.
+`hex(expr)` : convertit `expr` en hexadécimal.
 
 Exemples :
 
@@ -2066,7 +2067,7 @@ Exemples :
 
 #### initcap
 
-`initcap(str)`: Renvoie `str` la première lettre de chaque mot en majuscules. Toutes les autres lettres sont en minuscules. Les mots sont délimités par un espace blanc.
+`initcap(str)` : renvoie `str` avec la première lettre de chaque mot en majuscule. Toutes les autres lettres sont en minuscules. Les mots sont délimités par des espaces blancs.
 
 Exemple :
 
@@ -2077,7 +2078,7 @@ Exemple :
 
 #### lcase
 
-`lcase(str)`: Renvoie `str` avec tous les caractères changés en minuscules.
+`lcase(str)` : renvoie `str` avec tous les caractères modifiés en minuscules.
 
 Exemple :
 
@@ -2088,7 +2089,7 @@ Exemple :
 
 #### lower
 
-`lower(str)`: Renvoie `str` avec tous les caractères changés en minuscules.
+`lower(str)` : renvoie `str` avec tous les caractères modifiés en minuscules.
 
 Exemple :
 
@@ -2097,9 +2098,9 @@ Exemple :
  sparksql
 ```
 
-#### pavé
+#### lpad
 
-`lpad(str, len, pad)`: Renvoie `str`, complété à gauche `pad` avec une longueur de `len`. Si la valeur `str` est supérieure à `len`, la valeur renvoyée est raccourcie en `len` caractères.
+`lpad(str, len, pad)` : renvoie `str` justifié à gauche avec `pad` d’une longueur de `len`. Si `str` est plus long que `len`, la valeur renvoyée est raccourcie au nombre de caractères de `len`.
 
 Exemples :
 
@@ -2112,7 +2113,7 @@ Exemples :
 
 #### map
 
-`map(key0, value0, key1, value1, ...)`: Crée un mappage avec les paires clé/valeur données.
+`map(key0, value0, key1, value1, ...)` : crée une map avec les paires clé/valeur données.
 
 Exemple :
 
@@ -2121,9 +2122,9 @@ Exemple :
  {1.0:"2",3.0:"4"}
 ```
 
-#### map_from_array
+#### map_from_arrays
 
-`map_from_arrays(keys, values)`: Crée un mappage avec une paire de tableaux clés/valeurs donnés. Les éléments des clés ne peuvent pas être nuls.
+`map_from_arrays(keys, values)` : crée une map avec une paire des tableaux clé/valeur donnés. Les éléments des clés ne peuvent pas être nuls.
 
 Exemple :
 
@@ -2132,11 +2133,11 @@ Exemple :
  {1.0:"2",3.0:"4"}
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-#### map_from_entry
+#### map_from_entries
 
-`map_from_entries(arrayOfEntries)`: Renvoie un mappage créé à partir du tableau d’entrées donné.
+`map_from_entries(arrayOfEntries)` : renvoie une map créée à partir du tableau d’entrées donné.
 
 Exemple :
 
@@ -2145,11 +2146,11 @@ Exemple :
  {1:"a",2:"b"}
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### md5
 
-`md5(expr)`: Renvoie une somme de contrôle MD5 128 bits sous la forme d’une chaîne hexadécimale de `expr`.
+`md5(expr)` : renvoie une somme de contrôle MD5 à 128 bits sous la forme d’une chaîne hexadécimale de `expr`.
 
 Exemple :
 
@@ -2158,9 +2159,9 @@ Exemple :
  8cde774d6f7333752ed72cacddb05126
 ```
 
-#### pavé
+#### rpad
 
-`rpad(str, len, pad)`: Renvoie `str`, complété à droite `pad` avec une longueur de `len`. Si la valeur `str` est supérieure à `len`, la valeur renvoyée est raccourcie en `len` caractères.
+`rpad(str, len, pad)` : renvoie `str` justifié à droite avec `pad` d’une longueur de `len`. Si `str` est plus long que `len`, la valeur renvoyée est raccourcie au nombre de caractères de `len`.
 
 Exemples :
 
@@ -2173,13 +2174,13 @@ Exemples :
 
 #### rtrim
 
-`rtrim(str)`: Supprime les caractères d’espace de fin de `str`.
+`rtrim(str)` : supprime les espaces à la fin de `str`.
 
-`rtrim(trimStr, str)`: Supprime de la chaîne de fin, qui contient les caractères de la chaîne de rognage `str`.
+`rtrim(trimStr, str)` : supprime la chaîne de fin, qui contient les caractères de la chaîne de rognage de `str`.
 
 Arguments :
-- `str`: expression de chaîne
-- `trimStr`: Caractères de chaîne de rognage à rogner. La valeur par défaut est un espace unique.
+- `str` : une expression de chaîne
+- `trimStr` : les caractères de chaîne de rognage à rogner. La valeur par défaut est une espace unique.
 
 Exemples :
 
@@ -2192,7 +2193,7 @@ Exemples :
 
 #### sha
 
-`sha(expr)`: Renvoie une valeur de `sha1` hachage sous la forme d’une chaîne hexadécimale du `expr`.
+`sha(expr)` : renvoie une valeur de hachage `sha1` sous la forme d’une chaîne hexadécimale de l’`expr`.
 
 Exemple :
 
@@ -2203,7 +2204,7 @@ Exemple :
 
 #### sha1
 
-`sha1(expr)`: Renvoie une valeur de `sha1` hachage sous la forme d’une chaîne hexadécimale du `expr`.
+`sha1(expr)` : renvoie une valeur de hachage `sha1` sous la forme d’une chaîne hexadécimale de l’`expr`.
 
 Exemple :
 
@@ -2214,7 +2215,7 @@ Exemple :
 
 #### sha2
 
-`sha2(expr, bitLength)`: Renvoie une somme de contrôle de la famille SHA-2 sous la forme d’une chaîne hexadécimale de `expr`. SHA-224, SHA-256, SHA-384 et SHA-512 sont pris en charge. La longueur du bit de 0 équivaut à 256.
+`sha2(expr, bitLength)` : renvoie une somme de contrôle de la famille SHA-2 sous la forme d’une chaîne hexadécimale de l’`expr`. Les formats SHA-224, SHA-256, SHA-384 et SHA-512 sont pris en charge. Une longueur en bit de 0 équivaut à 256.
 
 Exemple :
 
@@ -2223,9 +2224,9 @@ Exemple :
  529bc3b07127ecb7e53a4dcf1991d9152c24537d919178022b2c42657f79a26b
 ```
 
-#### sonex
+#### soundex
 
-`soundex(str)`: Renvoie le code Soundex de la chaîne.
+`soundex(str)` : renvoie le code Soundex de la chaîne.
 
 Exemple :
 
@@ -2234,9 +2235,9 @@ Exemple :
  M460
 ```
 
-#### empiler
+#### stack
 
-`stack(n, expr1, ..., exprk)`: Sépare `expr1`, ..., `exprk` en `n` lignes.
+`stack(n, expr1, ..., exprk)` : sépare `expr1`, ..., `exprk` en `n` lignes.
 
 Exemple :
 
@@ -2248,7 +2249,7 @@ Exemple :
 
 #### substr
 
-`substr(str, pos[, len])`: Renvoie la sous-chaîne de `str` ces débuts à `pos` et est de longueur `len`, ou la tranche de tableau d’octets qui début à `pos` et est de longueur `len`.
+`substr(str, pos[, len])` : renvoie la sous-chaîne de `str`, qui démarre à `pos` et a une longueur de `len`, ou la tranche du tableau d’octet qui démarre à `pos` et a une longueur de `len`.
 
 Exemples :
 
@@ -2261,9 +2262,9 @@ Exemples :
  k
 ```
 
-#### sous-chaîne
+#### substring
 
-`substring(str, pos[, len])`: Renvoie la sous-chaîne de `str` ces débuts à `pos` et est de longueur `len`, ou la tranche de tableau d’octets qui début à `pos` et est de longueur `len`.
+`substring(str, pos[, len])` : renvoie la sous-chaîne de `str`, qui démarre à `pos` et a une longueur de `len`, ou la tranche du tableau d’octet qui démarre à `pos` et a une longueur de `len`.
 
 Exemples :
 
@@ -2278,7 +2279,7 @@ Exemples :
 
 #### to_json
 
-`to_json(expr[, options])`: Renvoie une chaîne JSON avec une valeur struct donnée.
+`to_json(expr[, options])` : renvoie une chaîne JSON avec une valeur struct donnée.
 
 Exemples :
 
@@ -2299,11 +2300,11 @@ Exemples :
  [{"a":1}]
 ```
 
-Depuis : 2.2.0
+Depuis : 2.2.0
 
-#### traduire
+#### translate
 
-`translate(input, from, to)`: Traduit la `input` chaîne en remplaçant les caractères présents dans la `from` chaîne par les caractères correspondants dans la `to` chaîne.
+`translate(input, from, to)` : traduit la chaîne `input` en remplaçant les caractères présents dans la chaîne `from` par les caractères correspondants dans la chaîne `to`.
 
 Exemple :
 
@@ -2314,20 +2315,20 @@ Exemple :
 
 #### trim
 
-`trim(str)`: Supprime les caractères d’espace de début et de fin de `str`.
+`trim(str)` : supprime les espaces au début et à la fin de `str`.
 
-`trim(BOTH trimStr FROM str)`: Supprimez les `trimStr` caractères de début et de fin de `str`.
+`trim(BOTH trimStr FROM str)` : supprime les caractères `trimStr` au début et à la fin de `str`.
 
-`trim(LEADING trimStr FROM str)`: Supprimez les `trimStr` caractères de début de `str`.
+`trim(LEADING trimStr FROM str)` : supprime les caractères `trimStr` au début de `str`.
 
-`trim(TRAILING trimStr FROM str)`: Supprimez les `trimStr` caractères de fin de `str`.
+`trim(TRAILING trimStr FROM str)` : supprime les caractères `trimStr` à la fin de `str`.
 
 Arguments :
-- `str`: expression de chaîne
-- `trimStr`: Caractères de chaîne de rognage à rogner, la valeur par défaut étant un espace unique
-- `BOTH`, `FROM`: Il s&#39;agit de mots-clés pour spécifier le rognage des caractères de chaîne à partir des deux extrémités de la chaîne.
-- `LEADING`, `FROM`: Il s’agit de mots-clés pour spécifier le rognage des caractères de chaîne à partir de la partie gauche de la chaîne.
-- `TRAILING`, `FROM`: Il s’agit de mots-clés pour spécifier le rognage des caractères de chaîne à partir de la fin droite de la chaîne.
+- `str` : une expression de chaîne
+- `trimStr` : les caractères de chaîne de rognage à rogner, la valeur par défaut étant une espace unique.
+- `BOTH`, `FROM` : mots-clés servant à spécifier les caractères de chaîne de rognage aux deux extrémités de la chaîne.
+- `LEADING`, `FROM` : mots-clés servant à spécifier les caractères de chaîne de rognage depuis l’extrémité gauche de la chaîne.
+- `TRAILING`, `FROM` : mots-clés servant à spécifier les caractères de chaîne de rognage depuis l’extrémité droite de la chaîne.
 
 Exemples :
 
@@ -2344,9 +2345,9 @@ Exemples :
  SSparkSQ
 ```
 
-#### guérir
+#### ucase
 
-`ucase(str)`: Renvoie `str` avec tous les caractères changés en majuscules.
+`ucase(str)` : renvoie `str` avec tous les caractères modifiés en majuscules.
 
 Exemple :
 
@@ -2357,7 +2358,7 @@ Exemple :
 
 #### unbase64
 
-`unbase64(str)`: Convertit l’argument d’une chaîne de base 64 `str` en argument binaire.
+`unbase64(str)` : convertit l’argument d’un `str` à chaîne en base 64 en binaire.
 
 Exemple :
 
@@ -2368,7 +2369,7 @@ Exemple :
 
 #### unhex
 
-`unhex(expr)`: Convertit les valeurs hexadécimales `expr` en valeurs binaires.
+`unhex(expr)` : convertit l’`expr` hexadécimal en binaire.
 
 Exemple :
 
@@ -2379,7 +2380,7 @@ Exemple :
 
 #### upper
 
-`upper(str)`: Renvoie `str` avec tous les caractères changés en majuscules.
+`upper(str)` : renvoie `str` avec tous les caractères modifiés en majuscules.
 
 Exemple :
 
@@ -2390,7 +2391,7 @@ Exemple :
 
 #### uuid
 
-`uuid()`: Renvoie une chaîne d’identifiant unique universel (UUID). La valeur est renvoyée sous la forme d’une chaîne de 36 caractères UUID canonique.
+`uuid()` : renvoie une chaîne d’identifiant unique universelle (UUID). La valeur est renvoyée sous la forme d’une chaîne UUID canonique de 36 caractères.
 
 Exemple :
 
@@ -2401,13 +2402,13 @@ Exemple :
 
 >[!NOTE]
 >
->Fonction non déterministe.
+>La fonction  est non déterministe.
 
 ### Évaluation des données
 
 #### coalesce
 
-`coalesce(expr1, expr2, ...)`: Renvoie le premier argument non nul s’il existe. Sinon, nul.
+`coalesce(expr1, expr2, ...)` : renvoie le premier argument non nul s’il existe. Sinon, cette valeur est nulle.
 
 Exemple :
 
@@ -2416,17 +2417,17 @@ Exemple :
  1
 ```
 
-#### collection_liste
+#### collect_list
 
-`collect_list(expr)`: Collecte et renvoie une liste d’éléments non uniques.
+`collect_list(expr)` : collecte et renvoie une liste d’éléments non uniques.
 
-#### collection_set
+#### collect_set
 
-`collect_set(expr)`: Collecte et renvoie un ensemble d’éléments uniques.
+`collect_set(expr)` : collecte et renvoie une liste d’éléments uniques.
 
 #### concat
 
-`concat(col1, col2, ..., colN)`: Renvoie la concaténation de col1, col2, ..., colN.
+`concat(col1, col2, ..., colN)` : renvoie la concaténation de col1, col2, ..., colN.
 
 Exemples :
 
@@ -2439,11 +2440,11 @@ Exemples :
 
 >[!NOTE]
 >
->`concat` est disponible depuis la version 2.4.0.
+>`concat` La logique  pour les tableaux est disponible depuis la version 2.4.0.
 
 #### concat_ws
 
-`concat_ws(sep, [str | array(str)]+)`: Renvoie la concaténation des chaînes séparées par `sep`.
+`concat_ws(sep, [str | array(str)]+)` : renvoie la concaténation des chaînes séparées par `sep`.
 
 Exemple :
 
@@ -2454,15 +2455,15 @@ Exemple :
 
 #### count
 
-`count(*)`: Renvoie le nombre total de lignes récupérées, y compris les lignes contenant la valeur null.
+`count(*)` : renvoie le nombre total de lignes récupérées, y compris les lignes contenant des valeurs nulles.
 
-`count(expr[, expr...])`: Renvoie le nombre de lignes pour lesquelles les expressions fournies sont toutes non nulles.
+`count(expr[, expr...])` : renvoie le nombre de lignes pour lesquelles les expressions fournies sont toutes non nulles.
 
-`count(DISTINCT expr[, expr...])`: Renvoie le nombre de lignes pour lesquelles les expressions fournies sont uniques et non nulles.
+`count(DISTINCT expr[, expr...])` : renvoie le nombre de lignes pour lesquelles les expressions fournies sont uniques et non nulles.
 
 #### crc32
 
-`crc32(expr)`: Renvoie une valeur de contrôle de redondance cyclique de l’ `expr` objet en tant que principal.
+`crc32(expr)` : renvoie une valeur de vérification de redondance cyclique de la `expr` sous la forme de bigint.
 
 Exemple :
 
@@ -2471,9 +2472,9 @@ Exemple :
  1557323817
 ```
 
-#### décoder
+#### decode
 
-`decode(bin, charset)`: Décode le premier argument à l’aide du deuxième jeu de caractères d’argument.
+`decode(bin, charset)` : décode le premier argument à l’aide du deuxième jeu de caractères d’argument.
 
 Exemple :
 
@@ -2484,7 +2485,7 @@ Exemple :
 
 #### elt
 
-`elt(n, input1, input2, ...)`: Renvoie la `n`-ième entrée, par exemple, `input2` lorsque `n` est 2.
+`elt(n, input1, input2, ...)` : renvoie la `n`ème entrée, par exemple `input2` si `n` est égal à 2.
 
 Exemple :
 
@@ -2493,9 +2494,9 @@ Exemple :
  scala
 ```
 
-#### encoder
+#### encode
 
-`encode(str, charset)`: Code le premier argument à l’aide du deuxième jeu de caractères d’argument.
+`encode(str, charset)` : encode le premier argument à l’aide du deuxième jeu de caractères d’argument.
 
 Exemple :
 
@@ -2506,15 +2507,15 @@ Exemple :
 
 #### first
 
-`first(expr[, isIgnoreNull])`: Renvoie la première valeur de `expr` pour un groupe de lignes. Si `isIgnoreNull` est true, renvoie uniquement des valeurs non nulles.
+`first(expr[, isIgnoreNull])` : renvoie la première valeur de `expr` pour un groupe de lignes. Si la valeur de `isIgnoreNull` est true, la fonction renvoie uniquement des valeurs non nulles.
 
 #### first_value
 
-`first_value(expr[, isIgnoreNull])`: Renvoie la première valeur de `expr` pour un groupe de lignes. Si `isIgnoreNull` est true, renvoie uniquement des valeurs non nulles.
+`first_value(expr[, isIgnoreNull])` : renvoie la première valeur de `expr` pour un groupe de lignes. Si la valeur de `isIgnoreNull` est true, la fonction renvoie uniquement des valeurs non nulles.
 
 #### get_json_object
 
-`get_json_object(json_txt, path)`: Extrait un objet json de `path`.
+`get_json_object(json_txt, path)` : extrait un objet json de `path`.
 
 Exemple :
 
@@ -2523,17 +2524,17 @@ Exemple :
  b
 ```
 
-#### regroupement
+#### grouping
 
 <!-- was blank --->
 
-#### grou_id
+#### grouping_id
 
 <!-- was blank --->
 
-#### order
+#### instr
 
-`instr(str, substr)`: Renvoie l’index (de base 1) de la première occurrence de `substr` in `str`.
+`instr(str, substr)` : renvoie l’index (de base 1) de la première occurrence de `substr` dans `str`.
 
 Exemple :
 
@@ -2544,7 +2545,7 @@ Exemple :
 
 #### json_tuple
 
-`json_tuple(jsonStr, p1, p2, ..., pn)`: Renvoie un tuple comme la fonction `get_json_object`, mais il prend plusieurs noms. Tous les paramètres d’entrée et les types de colonnes de sortie sont des chaînes.
+`json_tuple(jsonStr, p1, p2, ..., pn)` : renvoie un tuple comme la fonction `get_json_object`, avec plusieurs noms. Tous les paramètres d’entrée et les types de colonnes de sortie sont des chaînes.
 
 Exemple :
 
@@ -2553,26 +2554,26 @@ Exemple :
  1  2
 ```
 
-#### rapporter
+#### lag
 
-`lag(input[, offset[, default]])`: Renvoie la valeur de `input` la `offset`ème ligne avant la ligne active dans la fenêtre. La valeur par défaut de `offset` est 1 et la valeur par défaut de `default` est nulle. Si la valeur de `input` la `offset`ème ligne est nulle, null est renvoyé. S’il n’existe pas de ligne de décalage de ce type (par exemple, lorsque le décalage est de 1, la première ligne de la fenêtre n’a pas de ligne précédente) et `default` est renvoyée.
+`lag(input[, offset[, default]])` : renvoie la valeur de `input` à la `offset`ème ligne précédant la ligne actuelle dans la fenêtre. La valeur par défaut de `offset` est 1 et la valeur par défaut de `default` est nulle. Si la valeur de `input` à la `offset`ème ligne est nulle, la valeur null est renvoyée. S’il n’y a pas de ligne de décalage de ce type (par exemple, si le décalage est de 1, il n’y a aucune ligne précédant la première ligne de la fenêtre) et la fonction renvoie `default`.
 
 #### last
 
-`last(expr[, isIgnoreNull])`: Renvoie la dernière valeur de `expr` pour un groupe de lignes. Si `isIgnoreNull` est true, renvoie uniquement des valeurs non nulles.
+`last(expr[, isIgnoreNull])` : renvoie la dernière valeur de `expr` pour un groupe de lignes. Si la valeur de `isIgnoreNull` est true, la fonction renvoie uniquement des valeurs non nulles.
 
 #### last_value
 
-`last_value(expr[, isIgnoreNull])`: Renvoie la dernière valeur de `expr` pour un groupe de lignes. Si `isIgnoreNull` est true, renvoie uniquement des valeurs non nulles.
+`last_value(expr[, isIgnoreNull])` : renvoie la dernière valeur de `expr` pour un groupe de lignes. Si la valeur de `isIgnoreNull` est true, la fonction renvoie uniquement des valeurs non nulles.
 
-#### conduire
+#### lead
 
-`lead(input[, offset[, default]])`: Renvoie la valeur de `input` la `offset`ème ligne après la ligne active de la fenêtre. La valeur par défaut de `offset` est 1 et la valeur par défaut de `default` est nulle. Si la valeur de `input` la `offset`ème ligne est nulle, null est renvoyé. S’il n’existe pas de ligne de décalage de ce type (par exemple, lorsque le décalage est de 1, la dernière ligne de la fenêtre ne comporte aucune ligne suivante), et `default` est renvoyée.
+`lead(input[, offset[, default]])` : renvoie la valeur de `input` à la `offset`ème ligne située après la ligne actuelle dans la fenêtre. La valeur par défaut de `offset` est 1 et la valeur par défaut de `default` est nulle. Si la valeur de `input` à la `offset`ème ligne est nulle, la valeur null est renvoyée. S’il n’y a pas de ligne de décalage de ce type (par exemple, si le décalage est de 1, il n’y a aucune ligne suivant la dernière ligne de la fenêtre) et la fonction renvoie `default`.
 
 
 #### left
 
-`left(str, len)`: Renvoie les caractères les plus à gauche `len` (`len` peut être de type chaîne) de la chaîne `str`. Si `len` est inférieur ou égal à 0, le résultat est une chaîne vide.
+`left(str, len)` : renvoie les caractères `len` (`len` peut être un type de chaîne) situés le plus à gauche de la chaîne `str`. Si `len` est inférieur ou égal à 0, le résultat est une chaîne vide.
 
 Exemple :
 
@@ -2582,7 +2583,7 @@ Spa
 
 #### length
 
-`length(expr)`: Renvoie la longueur de caractères des données de chaîne ou le nombre d’octets des données binaires. La longueur des données de chaîne comprend les espaces de fin. La longueur des données binaires inclut des zéros binaires.
+`length(expr)` : renvoie la longueur en caractères des données de chaîne ou le nombre de bits de données binaires. La longueur des données de chaîne inclut les espaces à la fin. La longueur des données binaires inclut des zéros binaires.
 
 Exemples :
 
@@ -2595,9 +2596,9 @@ Exemples :
  10
 ```
 
-#### localiser
+#### locate
 
-`locate(substr, str[, pos])`: Renvoie la position de la première occurrence de `substr` dans la position `str` après `pos`. La valeur donnée `pos` et la valeur renvoyée sont basées sur 1.
+`locate(substr, str[, pos])` : renvoie la position de la première occurrence de `substr` dans `str` après la position `pos`. La valeur `pos` donnée et la valeur renvoyée sont de base 1.
 
 Exemples :
 
@@ -2612,7 +2613,7 @@ Exemples :
 
 #### map_concat
 
-`map_concat(map, ...)`: Renvoie l’union de toutes les cartes données.
+`map_concat(map, ...)` : renvoie l’union de toutes les maps données.
 
 Exemple :
 
@@ -2621,11 +2622,11 @@ Exemple :
  {1:"a",2:"c",3:"d"}
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
 #### map_keys
 
-`map_keys(map)`: Renvoie un tableau non ordonné contenant les clés du mappage.
+`map_keys(map)` : renvoie un tableau non ordonné contenant les clés de la map.
 
 Exemple :
 
@@ -2636,7 +2637,7 @@ Exemple :
 
 #### map_values
 
-`map_values(map)`: Renvoie un tableau non ordonné contenant les valeurs du mappage.
+`map_values(map)` : renvoie un tableau non ordonné contenant les valeurs de la map.
 
 Exemple :
 
@@ -2647,11 +2648,11 @@ Exemple :
 
 #### ntile
 
-`ntile(n)`: Divise les lignes de chaque partition de fenêtre en `n` compartiments compris entre 1 et au plus `n`.
+`ntile(n)` : divise les lignes de chaque partition de fenêtre en buckets `n` allant de 1 à un maximum de `n`.
 
 #### nullif
 
-`nullif(expr1, expr2)`: Renvoie null si `expr1` est égal à `expr2`, ou `expr1` autrement.
+`nullif(expr1, expr2)` : renvoie null si `expr1` est égal à `expr2`, ou `expr1` dans le cas contraire.
 
 Exemple :
 
@@ -2662,7 +2663,7 @@ Exemple :
 
 #### nvl
 
-`nvl(expr1, expr2)`: Renvoie `expr2` si `expr1` est nul ou `expr1` non.
+`nvl(expr1, expr2)` : renvoie `expr2` si `expr1` est nul ou `expr1` dans le cas contraire.
 
 Exemple :
 
@@ -2673,7 +2674,7 @@ Exemple :
 
 #### nvl2
 
-`nvl2(expr1, expr2, expr3)`: Renvoie `expr2` si `expr1` n’est pas nul, ou `expr3` autrement.
+`nvl2(expr1, expr2, expr3)` : renvoie `expr2` si `expr1` n’est pas nul, ou `expr3` dans le cas contraire.
 
 Exemple :
 
@@ -2684,7 +2685,7 @@ Exemple :
 
 #### parse_url
 
-`parse_url(url, partToExtract[, key])`: Extrait un article d’une URL.
+`parse_url(url, partToExtract[, key])` : extrait une partie d’une URL.
 
 Exemples :
 
@@ -2699,7 +2700,7 @@ Exemples :
 
 #### position
 
-`position(substr, str[, pos])`: Renvoie la position de la première occurrence de `substr` dans la position `str` après `pos`. La valeur donnée `pos` et la valeur renvoyée sont basées sur 1.
+`position(substr, str[, pos])` : renvoie la position de la première occurrence de `substr` dans `str` après la position `pos`. La valeur `pos` donnée et la valeur renvoyée sont de base 1.
 
 Exemples :
 
@@ -2712,13 +2713,13 @@ Exemples :
  4
 ```
 
-#### rang
+#### rank
 
-`rank()`: Calcule le rang d’une valeur dans un groupe de valeurs. Le résultat est un plus le nombre de lignes précédant ou égal à la ligne active dans l&#39;ordre de la partition. Les valeurs produisent des espaces dans la séquence.
+`rank()` : calcule le rang d’une valeur dans un groupe de valeurs. Le résultat est égal à 1 plus le nombre de lignes précédentes, ou égal à la ligne actuelle dans l’ordre de la partition. Les valeurs produisent des espaces dans la séquence.
 
 #### regexp_extract
 
-`regexp_extract(str, regexp[, idx])`: Extrait un groupe qui correspond à `regexp`.
+`regexp_extract(str, regexp[, idx])` : extrait un groupe correspondant à `regexp`.
 
 Exemple :
 
@@ -2729,7 +2730,7 @@ Exemple :
 
 #### regex_replace
 
-`regexp_replace(str, regexp, rep)`: Remplace toutes les sous-chaînes de `str` qui correspondent `regexp` à `rep`.
+`regexp_replace(str, regexp, rep)` : remplace toutes les sous-chaînes de `str` correspondant à `regexp` par `rep`.
 
 Exemple :
 
@@ -2740,7 +2741,7 @@ Exemple :
 
 #### repeat
 
-`repeat(str, n)`: Renvoie la chaîne qui répète n fois la valeur donnée.
+`repeat(str, n)` : renvoie la chaîne qui répète la valeur de chaîne donnée n fois.
 
 Exemple :
 
@@ -2751,12 +2752,12 @@ Exemple :
 
 #### replace
 
-`replace(str, search[, replace])`: Remplace toutes les occurrences de `search` par `replace`.
+`replace(str, search[, replace])` : remplace toutes les occurrences de `search` par `replace`.
 
 Arguments :
-- `str`: expression de chaîne
-- `search`: expression de chaîne. Si `search` l’élément n’est pas détecté dans `str`, `str` est renvoyé inchangé.
-- `replace`: expression de chaîne. Si `replace` n’est pas spécifié ou s’il s’agit d’une chaîne vide, rien ne remplace la chaîne supprimée `str`.
+- `str` : une expression de chaîne
+- `search` : une expression de chaîne. Si `search` est introuvable dans `str`, `str` est renvoyé inchangé.
+- `replace` : une expression de chaîne. Si `replace` n’est pas spécifié ou est une chaîne vide, rien ne remplace la chaîne supprimée de `str`.
 
 Exemple :
 
@@ -2765,17 +2766,17 @@ Exemple :
  ABCDEF
 ```
 
-#### cumul
+#### rollup
 
 <!-- was blank -->
 
 #### row_number
 
-`row_number()`: Attribue un numéro séquentiel unique à chaque ligne, en commençant par une, en fonction de l&#39;ordre des lignes dans la partition de la fenêtre.
+`row_number()` : attribue un numéro séquentiel unique à chaque ligne, en commençant par 1, selon l’ordre des lignes dans la partition de fenêtre.
 
-#### schéma_of_json
+#### schema_of_json
 
-`schema_of_json(json[, options])`: Renvoie un schéma au format DDL de la chaîne JSON.
+`schema_of_json(json[, options])` : renvoie le schéma de la chaîne JSON au format DDL.
 
 Exemple :
 
@@ -2784,11 +2785,11 @@ Exemple :
  array<struct<col:int>>
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-#### phrases
+#### sentences
 
-`sentences(str[, lang, country])`: Se divise `str` en un tableau de mots.
+`sentences(str[, lang, country])` : divise `str` en un tableau de mots.
 
 Exemple :
 
@@ -2797,18 +2798,18 @@ Exemple :
  [["Hi","there"],["Good","morning"]]
 ```
 
-#### séquence
+#### sequence
 
-`sequence(start, stop, step)`: Génère un tableau d’éléments du début à l’arrêt (inclus), incrémentés par étape. Le type des éléments renvoyés est identique à celui des expressions d&#39;argument.
+`sequence(start, stop, step)` : génère un tableau d’éléments du début à l’arrêt (inclus), avec une incrémentation par étape. Le type des éléments renvoyés est le même que le type des expressions d’argument.
 
-Les types pris en charge sont les suivants : octet, short, integer, long, date, horodatage.
+Les types pris en charge sont les suivants : octet, court, entier, long, date, horodatage.
 
-Les `start` et `stop` les expressions doivent se résoudre de la même manière. Si `start` et `stop` les expressions se réfèrent au type &quot;date&quot; ou &quot;horodatage&quot;, l&#39; `step` expression doit se résoudre au type &quot;intervalle&quot; ; dans le cas contraire, il est résolu de la même façon que les `start` et `stop` les expressions.
+Les expressions `start` et `stop` doivent se résoudre par le même type. Si les expressions `start` et `stop` se résolvent par le type « date » ou « horodatage », alors l’expression `step` doit se résoudre par le type « intervalle » ; dans le cas contraire, elle se résout par le même type que les expressions `start` et `stop`.
 
 Arguments :
-- `start`: Une expression. début de la plage.
-- `stop`: Une expression. Fin de la plage (incluse).
-- `step`: expression facultative. Étape de la plage. Par défaut, `step` la valeur est 1 si `start` est inférieure ou égale à `stop`, sinon -1. Pour les séquences temporelles, il s&#39;agit respectivement de 1 jour et -1 jour. Si `start` est supérieur à `stop`, le `step` paramètre doit être négatif et inversement.
+- `start` : une expression. Le début de la plage.
+- `stop` : une expression. La fin de la plage (incluse).
+- `step` : une expression facultative. L’étape de la plage. Par défaut, `step` a une valeur de 1 si `start` est inférieur ou égal à `stop`, sinon il a une valeur de -1. Pour les séquences temporelles, les valeurs sont de 1 jour et de -1 jour, respectivement. Si `start` est supérieur à `stop`, `step` doit être négatif, et inversement.
 
 Exemples :
 
@@ -2821,11 +2822,11 @@ Exemples :
  [2018-01-01,2018-02-01,2018-03-01]
 ```
 
-Depuis : 2.4.0
+Depuis : 2.4.0
 
-#### décaler vers la gauche
+#### shiftleft
 
-`shiftleft(base, expr)`: Au sens du bit, décalage gauche.
+`shiftleft(base, expr)` : décalage à gauche au niveau du bit.
 
 Exemple :
 
@@ -2834,9 +2835,9 @@ Exemple :
  4
 ```
 
-#### virer
+#### shiftright
 
-`shiftright(base, expr)`: Décalage droit (signé) au niveau du bit.
+`shiftright(base, expr)` : décalage à droite au niveau du bit (signé).
 
 Exemple :
 
@@ -2845,9 +2846,9 @@ Exemple :
  2
 ```
 
-#### détourné
+#### shiftrightunsigned
 
-`shiftrightunsigned(base, expr)`: Déplacement droit non signé au sens du bit.
+`shiftrightunsigned(base, expr)` : décalage à droite au niveau du bit non signé.
 
 Exemple :
 
@@ -2856,9 +2857,9 @@ Exemple :
  2
 ```
 
-#### taille
+#### size
 
-`size(expr)`: Renvoie la taille d’un tableau ou d’un mappage. La fonction renvoie -1 si son entrée est nulle et `spark.sql.legacy.sizeOfNull` définie sur true. Si `spark.sql.legacy.sizeOfNull` est défini sur false, la fonction renvoie null pour une entrée nulle. Par défaut, le `spark.sql.legacy.sizeOfNull` paramètre est défini sur true.
+`size(expr)` : renvoie la taille d’un tableau ou d’une carte. La fonction renvoie -1 si son entrée est nulle et si `spark.sql.legacy.sizeOfNull` est défini sur true. Si `spark.sql.legacy.sizeOfNull` est défini sur false, la fonction renvoie null pour une entrée nulle. Par défaut, le paramètre `spark.sql.legacy.sizeOfNull` est défini sur true.
 
 Exemples :
 
@@ -2871,9 +2872,9 @@ Exemples :
  -1
 ```
 
-#### espace
+#### space
 
-`space(n)`: Renvoie une chaîne composée d’ `n` espaces.
+`space(n)` : renvoie une chaîne composée de `n` espaces.
 
 Exemple :
 
@@ -2882,9 +2883,9 @@ Exemple :
    1
 ```
 
-#### scinder
+#### split
 
-`split(str, regex)`: Sépare `str` les occurrences qui correspondent `regex`.
+`split(str, regex)` : divise `str` autour d’occurrences correspondant à `regex`.
 
 Exemple :
 
@@ -2893,9 +2894,9 @@ Exemple :
  ["one","two","three",""]
 ```
 
-#### Sous-chaîne_index
+#### substring_index
 
-`substring_index(str, delim, count)`: Renvoie la sous-chaîne de `str` avant `count` les occurrences du délimiteur `delim`. Si `count` la valeur est positive, tout ce qui se trouve à gauche du délimiteur final (comptage à partir de la gauche) est renvoyé. Si `count` est négatif, tout ce qui se trouve à droite du délimiteur final (en comptant par la droite) est renvoyé. La fonction `substring_index` effectue une correspondance sensible à la casse lors de la recherche `delim`.
+`substring_index(str, delim, count)` : renvoie la sous-chaîne de `str` avant les occurrences `count` du délimiteur `delim`. Si `count` est positif, tout ce qui se trouve à gauche du délimiteur final (en partant de la gauche) est renvoyé. Si `count` est négatif, tout ce qui se trouve à droite du délimiteur final (en partant de la droite) est renvoyé. La fonction `substring_index` effectue une correspondance sensible à la casse lors de la recherche de `delim`.
 
 Exemple :
 
@@ -2904,13 +2905,13 @@ Exemple :
  www.apache
 ```
 
-#### fenêtre
+#### window
 
 <!-- was blank -->
 
 #### xpath
 
-`xpath(xml, xpath)`: Renvoie un tableau de chaînes de valeurs dans les noeuds du xml correspondant à l’expression XPath.
+`xpath(xml, xpath)` : renvoie un tableau de chaînes de valeurs dans les nœuds du xml correspondant à l’expression XPath.
 
 Exemple :
 
@@ -2919,9 +2920,9 @@ Exemple :
  ['b1','b2','b3']
 ```
 
-#### xpath_doublon
+#### xpath_double
 
-`xpath_double(xml, xpath)`: Renvoie une valeur de doublon, la valeur zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée mais que la valeur n’est pas numérique.
+`xpath_double(xml, xpath)` : renvoie une valeur double, zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2932,7 +2933,7 @@ Exemple :
 
 #### xpath_float
 
-`xpath_float(xml, xpath)`: Renvoie une valeur en virgule flottante, la valeur zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée mais que la valeur n’est pas numérique.
+`xpath_float(xml, xpath)` : renvoie une valeur en virgule flottante, zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2943,7 +2944,7 @@ Exemple :
 
 #### xpath_int
 
-`xpath_int(xml, xpath)`: Renvoie une valeur entière ou la valeur zéro si aucune correspondance n’est trouvée ou une correspondance est trouvée mais la valeur n’est pas numérique.
+`xpath_int(xml, xpath)` : renvoie une valeur entière, zéro si aucune correspondance n’est trouvée ou si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2954,7 +2955,7 @@ Exemple :
 
 #### xpath_long
 
-`xpath_long(xml, xpath)`: Renvoie une valeur entière longue, ou la valeur zéro si aucune correspondance n’est trouvée, ou une correspondance est trouvée mais la valeur n’est pas numérique.
+`xpath_long(xml, xpath)` : renvoie une valeur entière longue, zéro si aucune correspondance n’est trouvée ou si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2965,7 +2966,7 @@ Exemple :
 
 #### xpath_number
 
-`xpath_number(xml, xpath)`: Renvoie une valeur de doublon, la valeur zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée mais que la valeur n’est pas numérique.
+`xpath_number(xml, xpath)` : renvoie une valeur double, zéro si aucune correspondance n’est trouvée ou NaN si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2976,7 +2977,7 @@ Exemple :
 
 #### xpath_short
 
-`xpath_short(xml, xpath)`: Renvoie une valeur entière courte ou la valeur zéro si aucune correspondance n’est trouvée ou une correspondance est trouvée mais la valeur n’est pas numérique.
+`xpath_short(xml, xpath)` : renvoie une valeur entière courte, zéro si aucune correspondance n’est trouvée ou si une correspondance est trouvée, mais que la valeur est non numérique.
 
 Exemple :
 
@@ -2987,7 +2988,7 @@ Exemple :
 
 #### xpath_string
 
-`xpath_string(xml, xpath)`: Renvoie le contenu textuel du premier noeud xml correspondant à l’expression XPath.
+`xpath_string(xml, xpath)` : renvoie le contenu textuel du premier nœud xml correspondant à l’expression XPath.
 
 Exemple :
 
@@ -3000,7 +3001,7 @@ Exemple :
 
 #### current_database
 
-`current_database()`: Renvoie la base de données active.
+`current_database()` : renvoie la base de données actuelle.
 
 Exemple :
 
@@ -3011,18 +3012,18 @@ Exemple :
 
 #### current_date
 
-`current_date()`: Renvoie la date actuelle au début de l’évaluation de la requête.
+`current_date()` : renvoie la date actuelle au début de l’évaluation de requête.
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### current_timestamp
 
-`current_timestamp()`: Renvoie l’horodatage actuel à l’début de l’évaluation de la requête.
+`current_timestamp()` : renvoie l’horodatage actuel au début de l’évaluation de requête.
 
-Depuis : 1.5.0
+Depuis : 1.5.0
 
 #### now
 
-`now()`: Renvoie l’horodatage actuel à l’début de l’évaluation de la requête.
+`now()` : renvoie l’horodatage actuel au début de l’évaluation de requête.
 
-Depuis : 1.5.0
+Depuis : 1.5.0
