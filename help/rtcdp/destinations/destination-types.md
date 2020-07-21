@@ -1,24 +1,24 @@
 ---
-title: Types et Catégories de destination
-seo-title: Types et Catégories de destination
-description: 'Dans la plate-forme de données client en temps réel d’Adobe, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions lancent des extensions pour transférer des données de événement brutes vers plusieurs types de destinations. '
-seo-description: Dans la plate-forme de données client en temps réel d’Adobe, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions lancent des extensions pour transférer des données de événement brutes vers plusieurs types de destinations.
+title: Types et catégories de destinations
+seo-title: Types et catégories de destinations
+description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. '
+seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: 617cf1934402b9001647d7704fb24d6256069ff3
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '585'
-ht-degree: 7%
+source-wordcount: '580'
+ht-degree: 93%
 
 ---
 
 
-# Types et Catégories de destination
+# Types et catégories de destinations
 
-Lisez cette page pour comprendre les différents types et catégories de destination des plateformes de données clientes en temps réel d’Adobe.
+Lisez cette page pour comprendre les différentes catégories et types de destinations de la plateforme de données clients en temps réel d’Adobe.
 
-## Types de destination
+## Types de destinations
 
-Dans la plate-forme de données client en temps réel d’Adobe, nous faisons la distinction entre deux types de destination : les connexions et les extensions. Il existe deux types de destinations de connexion : destinations d’exportation de Profil et destinations d’exportation de segment.
+Dans la plateforme de données clients en temps réel d’Adobe., nous faisons la distinction entre deux types de destinations : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
 
 ![Types de destinations](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -26,21 +26,21 @@ Dans la plate-forme de données client en temps réel d’Adobe, nous faisons la
 
 ### Connexions
 
-**Exportation** de Profil et **segmentation Exportation** de destinations dans la plateforme de données clientes Adobe en temps réel, capture des données de événement, les combine à d’autres sources de données pour former le profil [client en temps](/help/profile/home.md)réel, appliquer la segmentation et exporter des segments et des profils qualifiés vers les destinations.
+Les destinations d’**[!UICONTROL exportation de profils]** et d’**[!UICONTROL exportation de segments]** dans la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](/help/profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
 
 <br> 
 
 #### Destinations d’exportation de profils
 
-Les destinations d’exportation de profils génèrent un fichier contenant des profils et/ou des attributs. Ces destinations utilisent des données brutes, souvent avec l’adresse électronique comme clé primaire. La destination [de l’enregistrement cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 est un exemple de destination où vous pouvez déposer des fichiers contenant des exportations de profils.
+Les destinations d’exportation de profils génèrent un fichier contenant des profils et/ou des attributs. Ces destinations utilisent des données brutes, souvent avec l’adresse électronique comme clé primaire. La [destination de stockage dans le cloud Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) est un exemple de destination où vous pouvez déposer des fichiers contenant des exportations de profils.
 
 #### Destinations d’exportation de segments
 
-Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils se sont qualifiés vers les plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Les destinations publicitaires, telles que [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md) ou les publicités [](/help/rtcdp/destinations/google-ads-destination.md) Google, sont des exemples de ces types de destinations.
+Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
-#### Destinations d&#39;exportation de Profils et de segments - présentation vidéo
+#### Destinations d’exportation de segments et de profils : présentation vidéo
 
-La vidéo ci-dessous vous montre les particularités des deux types de destinations :
+La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
@@ -48,31 +48,31 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 ### Extensions
 
-Le CDP Adobe en temps réel tire parti de la puissance et de la flexibilité du lancement de la plate-forme d’expérience pour inclure les extensions de lancement dans l’interface CDP Adobe en temps réel.
+La plateforme de données clients en temps réel d’Adobe utilise la puissance et la flexibilité d’Experience Platform Launch pour inclure des extensions Launch dans l’interface de la plateforme de données clients en temps réel d’Adobe.
 
 >[!TIP]
 >
->Pour plus d’informations sur les extensions de lancement de plateformes d’expérience, y compris les cas d’utilisation et la manière de les trouver dans l’interface, voir la présentation [des extensions de](/help/rtcdp/destinations/experience-platform-launch-extensions.md)lancement.
+>Pour plus d’informations sur les extensions Experience Platform Launch, y compris les cas d’utilisation et la manière de les trouver dans l’interface, voir la présentation [des extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md)de lancement.
 
-Les extensions lancent des extensions pour transférer des données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Événement de transfert** . Il s’agit d’un type d’intégration plus simple avec les plateformes de destination, qui transfère uniquement les données de événement brutes. Par exemple, l’extension [de personnalisation de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou la voix de [confirmation de l’extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Client.
+Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](/help/rtcdp/destinations/gainsight-extension.md) ou l’[extension de voix du client Confirmit](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-![Extensions de lancement de plateformes d’expérience par rapport à d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
 <br> 
 
 ### Utilisation des connexions et des extensions
 
-En tant que spécialiste du marketing, vous pouvez utiliser une combinaison de connexions et d’extensions pour répondre à vos cas d’utilisation.
+En tant que professionnel du marketing, vous pouvez utiliser une combinaison de connexions et d’extensions pour répondre à vos cas d’utilisation.
 
-Les connexions sont utiles lorsqu’il est nécessaire d’exploiter un profil client centralisé complet ou un segment de clients pour l’activation. Par exemple, utilisez des connexions si vous joignez des données comportementales d’un système d’analyse aux données de gestion de la relation client téléchargées afin de qualifier un utilisateur pour un segment donné avant de lui envoyer un message personnalisé.
+Les connexions sont utiles lorsqu’il est nécessaire d’utiliser un profil client centralisé complet ou un segment client pour l’activation. Par exemple, utilisez des connexions si vous assemblez les données comportementales d’un système d’analyse et des données de gestion de la relation client chargées, afin de qualifier un utilisateur pour un segment donné avant de lui envoyer un message personnalisé.
 
-Les extensions sont utiles lorsque des données de événement sont utilisées pour déclencher une action ou pour effectuer une segmentation dans un environnement externe. Par exemple, si les données comportementales doivent être transférées vers un système externe sans être jointes à d’autres sources de données dans un fichier pour un utilisateur donné.
+Les extensions s’avèrent utiles lorsque des données d’événement sont utilisées pour déclencher une action ou pour effectuer une segmentation dans un environnement externe. Par exemple, si les données comportementales doivent être transférées vers un système externe sans être jointes à d’autres sources de données dans un fichier pour un utilisateur donné.
 
 <br> 
 
 ## Catégories de destination
 
-Les connexions et extensions du catalogue [de](https://platform.adobe.com/destination/catalog) destinations sont regroupées par catégorie de destination (**publicité**, enregistrement **** Cloud, plateformes **Questionnaire, marketing par courriel, etc.), selon le cas d’utilisation marketing qu’elles vous aident à atteindre.****** Pour plus d&#39;informations sur chacune des catégories, ainsi que sur les destinations incluses dans chaque catégorie, consultez la documentation [du catalogue](/help/rtcdp/destinations/destinations-catalog.md)Destinations.
+Les connexions et les extensions du [catalogue des destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**publicité**, **espace de stockage**, **plateforme d’enquêtes**, **marketing par e-mail**, etc.), selon le cas d’utilisation marketing qu’elles vous aident à résoudre. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md).
 
 ![Catégories de destination](/help/rtcdp/destinations/assets/destination-categories-menu.png)
 
