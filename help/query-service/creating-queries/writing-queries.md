@@ -1,52 +1,52 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Ecriture de requêtes
+title: Rédaction de requêtes
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '667'
-ht-degree: 1%
+source-wordcount: '643'
+ht-degree: 78%
 
 ---
 
 
-# Directives générales pour l&#39;exécution des requêtes dans le Service des Requêtes
+# General guidance for query execution in [!DNL Query Service]
 
-Ce document détaille les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Requête Service.
+Ce document détaille les informations importantes à connaître pour la rédaction de requêtes dans Adobe Experience Platform [!DNL Query Service].
 
-Pour plus d&#39;informations sur la syntaxe SQL utilisée dans Requête Service, consultez la documentation [sur la syntaxe](../sql/syntax.md)SQL.
+For detailed information on the SQL syntax used in [!DNL Query Service], please read the [SQL syntax documentation](../sql/syntax.md).
 
-## Modèles d’exécution de Requête
+## Modèles d’exécution de requêtes
 
-Adobe Experience Platform Requête Service dispose de deux modèles d’exécution des requêtes : interactif et non interactif. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de veille stratégique, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un processus de traitement des données.
+Adobe Experience Platform [!DNL Query Service] has two models of query execution: interactive and non-interactive. L’exécution interactive est utilisée pour le développement de requêtes et la génération de rapports dans les outils de Business Intelligence, tandis que l’exécution non interactive est utilisée pour les tâches plus importantes et les requêtes opérationnelles dans le cadre d’un workflow de traitement des données.
 
 ### Exécution de requête interactive
 
-Les Requêtes peuvent être exécutées de manière interactive en les envoyant via l’interface utilisateur de Requête Service ou [via un client](../clients/overview.md)connecté. Lors de l’exécution de Requête Service par l’intermédiaire d’un client connecté, une session active s’exécute entre le client et Requête Service jusqu’à ce que la requête envoyée soit renvoyée ou expire.
+Queries can be executed interactively by submitting them through the [!DNL Query Service] UI or [through a connected client](../clients/overview.md). When running [!DNL Query Service] through a connected client, an active session runs between the client and [!DNL Query Service] until either the submitted query returns or times out.
 
-L’exécution de requête interactive présente les limites suivantes :
+L’exécution de requête interactive présente les limites suivantes :
 
 | Paramètre | Limite |
 | --------- | ---------- |
-| Délai d’expiration de la Requête | 10 minutes |
-| Nombre maximal de lignes renvoyées | 50,000 |
+| Délai d’expiration de la requête | 10 minutes |
+| Nombre maximal de lignes renvoyées | 50 000 |
 | Nombre maximal de requêtes simultanées | 5 |
 
 >[!NOTE]
 >
->Pour remplacer la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai de requête de 10 minutes s’applique toujours.
+>Pour contourner la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai d’expiration de 10 minutes s’applique toujours.
 
-Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous la forme d’un jeu de données en Experience Platform, la requête doit utiliser la `CREATE TABLE AS SELECT` syntaxe.
+Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. In order to persist the results as a dataset in [!DNL Experience Platform], the query must use the `CREATE TABLE AS SELECT` syntax.
 
-### Exécution de requêtes non interactives
+### Exécution de requête non interactive
 
-Les Requêtes envoyées via l’API Requête Service sont exécutées de manière non interactive. L’exécution non interactive signifie que Requête Service reçoit l’appel d’API et exécute la requête dans l’ordre dans lequel elle est reçue. Les requêtes non interactives entraînent toujours la génération d&#39;un nouveau jeu de données dans l&#39;Experience Platform pour recevoir les résultats, ou l&#39;insertion de nouvelles lignes dans un jeu de données existant.
+Queries submitted through the [!DNL Query Service] API are run non-interactively. Non-interactive execution means that [!DNL Query Service] receives the API call and executes the query in the order it is received. Non-interactive queries always result in either the generation of a new dataset in [!DNL Experience Platform] to receive the results, or the insertion of new rows into an existing dataset.
 
 ## Accès à un champ spécifique dans un objet
 
-Pour accéder à un champ d’un objet dans votre requête, vous pouvez utiliser soit la notation point (`.`), soit la notation crochet (`[]`). L&#39;instruction SQL suivante utilise la notation point pour traverser l&#39; `endUserIds` objet jusqu&#39;à l&#39; `mcid` objet.
+Pour accéder à un champ dans un objet de votre requête, vous pouvez utiliser soit la notation par points (`.`), soit la notation par crochets (`[]`). L’instruction SQL suivante utilise la notation par points pour parcourir l’objet `endUserIds` jusqu’à l’objet `mcid`.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -57,9 +57,9 @@ LIMIT 1
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | Nom de votre tableau d’analyses. |
+| `{ANALYTICS_TABLE_NAME}` | Nom de votre tableau d’analyse. |
 
-L&#39;instruction SQL suivante utilise la notation crochet pour traverser l&#39; `endUserIds` objet vers le bas jusqu&#39;à l&#39; `mcid` objet.
+L’instruction SQL suivante utilise la notation par crochets pour parcourir l’objet `endUserIds` jusqu’à l’objet `mcid`.
 
 ```sql
 SELECT endUserIds['_experience']['mcid']
@@ -70,13 +70,13 @@ LIMIT 1
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{ANALYTICS_TABLE_NAME}` | Nom de votre tableau d’analyses. |
+| `{ANALYTICS_TABLE_NAME}` | Nom de votre tableau d’analyse. |
 
 >[!NOTE]
 >
 >Puisque chaque type de notation renvoie les mêmes résultats, celui que vous choisissez d’utiliser est à votre convenance.
 
-Les deux exemples de requêtes ci-dessus renvoient un objet aplati, plutôt qu’une seule valeur :
+Les deux exemples de requête ci-dessus renvoient un objet aplati, plutôt qu’une seule valeur :
 
 ```console
               endUserIds._experience.mcid   
@@ -85,13 +85,13 @@ Les deux exemples de requêtes ci-dessus renvoient un objet aplati, plutôt qu�
 (1 row)
 ```
 
-L’objet renvoyé `endUserIds._experience.mcid` contient les valeurs correspondantes pour les paramètres suivants :
+L’objet `endUserIds._experience.mcid` renvoyé contient les valeurs correspondantes pour les paramètres suivants :
 
 - `id`
 - `namespace`
 - `primary`
 
-Lorsque la colonne est déclarée uniquement à l’objet, elle renvoie l’objet entier sous la forme d’une chaîne. Pour ne vue que l’identifiant, utilisez :
+Lorsque la colonne est déclarée uniquement à l’objet, elle renvoie l’objet entier sous forme de chaîne. Pour afficher uniquement l’identifiant, utilisez :
 
 ```sql
 SELECT endUserIds._experience.mcid.id
@@ -107,15 +107,15 @@ LIMIT 1
 (1 row)
 ```
 
-## Utilisation de guillemets simples, de guillemets de doublon et de guillemets arrière
+## Utilisation des guillemets simples, des guillemets doubles ou des accents graves
 
-Cette section explique quand utiliser des guillemets simples, des guillemets de doublon et des guillemets arrière dans les requêtes.
+Cette section explique à quel moment utiliser des guillemets simples, des guillemets doubles et des accents graves.
 
 ### Guillemets simples
 
-Le guillemet simple (`'`) est utilisé pour créer des chaînes de texte. Par exemple, il peut être utilisé dans l’ `SELECT` instruction pour renvoyer une valeur de texte statique dans le résultat et dans la `WHERE` clause pour évaluer le contenu d’une colonne.
+Le guillemet simple (`'`) est utilisé pour créer des chaînes de texte. Par exemple, il peut être utilisé dans l’instruction `SELECT` pour renvoyer une valeur de texte statique dans le résultat, et dans la clause `WHERE` pour évaluer le contenu d’une colonne.
 
-La requête suivante déclare une valeur de texte statique (`'datasetA'`) pour une colonne :
+La requête suivante déclare une valeur de texte statique (`'datasetA'`) pour une colonne :
 
 ```sql
 SELECT 
@@ -137,11 +137,11 @@ WHERE web.webPageDetails.name = 'homepage'
 LIMIT 10
 ```
 
-### Guillemets de Doublon
+### Guillemets doubles
 
-Le guillemet doublon (`"`) est utilisé pour déclarer un identifiant avec des espaces.
+Le guillemet double (`"`) est utilisé pour déclarer un identifiant avec des espaces.
 
-La requête suivante utilise des guillemets de doublon pour renvoyer des valeurs de colonnes spécifiées lorsqu’une colonne contient un espace dans son identifiant :
+La requête suivante utilise des guillemets doubles pour renvoyer des valeurs de colonnes spécifiées lorsqu’une colonne contient une espace dans son identifiant :
 
 ```sql
 SELECT
@@ -156,11 +156,11 @@ FROM
 
 >[!NOTE]
 >
->Les guillemets de Doublon **ne peuvent pas** être utilisés avec l’accès au champ de notation par point.
+>Les guillemets doubles **ne peuvent pas** être utilisés avec l’accès au champ avec notation par points.
 
-### Guillemets arrière
+### Accents graves
 
-Le guillemet arrière `` ` `` est utilisé pour enregistrer les noms de colonnes réservés **uniquement** lors de l’utilisation de la syntaxe de notation par point. Par exemple, comme `order` il s’agit d’un mot réservé dans SQL, vous devez utiliser des guillemets arrière pour accéder au champ `commerce.order`:
+L’accent grave `` ` `` permet d’ignorer les noms de colonne réservés **uniquement** avec l’utilisation de la syntaxe de notation par points. Par exemple, comme `order` est un mot réservé dans SQL, vous devez utiliser des accents graves pour accéder au champ `commerce.order` :
 
 ```sql
 SELECT 
@@ -169,7 +169,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-Les guillemets arrière sont également utilisés pour accéder à un champ qui début avec un nombre. Par exemple, pour accéder au champ `30_day_value`, vous devez utiliser la notation de guillemet arrière.
+Les accents graves sont également utilisés pour accéder à un champ qui commence avec un nombre. Par exemple, pour accéder au champ `30_day_value`, vous devez utiliser la notation avec accents graves.
 
 ```SQL
 SELECT
@@ -178,7 +178,7 @@ FROM {ANALYTICS_TABLE_NAME}
 LIMIT 10
 ```
 
-Les guillemets arrière **ne sont pas** nécessaires si vous utilisez la notation entre crochets.
+Les accents graves **ne sont pas** nécessaires si vous utilisez la notation par crochets.
 
 ```sql
  SELECT
@@ -189,4 +189,4 @@ Les guillemets arrière **ne sont pas** nécessaires si vous utilisez la notatio
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez pris connaissance de certaines considérations importantes lors de l&#39;écriture de requêtes à l&#39;aide de Requête Service. Pour plus d&#39;informations sur l&#39;utilisation de la syntaxe SQL pour écrire vos propres requêtes, consultez la documentation [sur la syntaxe](../sql/syntax.md)SQL.
+La lecture de ce document vous a permis de vous initier à certaines considérations importantes lors de la rédaction d’une requête avec [!DNL Query Service]. Pour plus d’informations sur l’utilisation de la syntaxe SQL pour la rédaction de vos propres requêtes, veuillez lire la [documentation sur la syntaxe SQL](../sql/syntax.md).
