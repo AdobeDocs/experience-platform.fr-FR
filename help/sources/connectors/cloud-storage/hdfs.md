@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connecteur HDFS
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,38 @@ ht-degree: 0%
 >Le connecteur Apache HDFS est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]vous permet d’importer vos données à partir de ces systèmes. Les données insérées peuvent être formatées en JSON, en parquet ou délimitées. La prise en charge des fournisseurs d&#39;enregistrement cloud inclut [!DNL Apache] HDFS.
+
+## liste autorisée d&#39;adresse IP
+
+Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
+
+### Région est-américaine
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
+
+### Région de l&#39;Europe occidentale
+
+- `13.69.67.192/28`
+- `13.69.107.112/28`
+- `13.69.112.128/28`
+- `40.74.24.192/26`
+- `40.74.26.0/23`
+- `40.113.176.232/29`
+- `52.236.187.112/28`
+
+### Australie-Est
+
+- `13.70.74.144/28`
+- `20.37.193.0/25`
+- `20.37.193.128/26`
+- `20.37.198.224/29`
+- `40.79.163.80/28`
+- `40.79.171.160/28`
 
 La documentation ci-dessous fournit des informations sur la façon de connecter [!DNL Apache] HDFS à [!DNL Platform] l&#39;aide des API ou de l&#39;interface utilisateur :
 
