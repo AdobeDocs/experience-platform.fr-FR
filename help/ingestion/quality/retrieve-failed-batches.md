@@ -1,57 +1,57 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Récupérer les lots ayant échoué
+title: Récupération des lots en échec
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 2%
+source-wordcount: '598'
+ht-degree: 71%
 
 ---
 
 
-# Récupération de lots ayant échoué à l’aide de l’API
+# Récupération des lots en échec à l’aide de l’API
 
-L’Adobe Experience Platform fournit deux méthodes pour télécharger et ingérer des données. Vous pouvez utiliser l’assimilation par lot, qui permet d’insérer des données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’insérer leurs données à Platform à l’aide de points de terminaison en flux continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real-time.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l&#39;aide des API d&#39;importation de données.
+This tutorial covers steps for retrieving information about a failed batch using [!DNL Data Ingestion] APIs.
 
 ## Prise en main
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [Système](../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-- [Ingestion](../home.md)des données : Méthodes par lesquelles les données peuvent être envoyées à l’Experience Platform.
+- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [!DNL Data Ingestion](../home.md): Méthodes d’envoi des données à [!DNL Experience Platform].
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de dépannage de l’Experience Platform.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources en Experience Platform, y compris celles appartenant au Registre des Schémas, sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête supplémentaire :
+Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
-- Content-Type : `application/json`
+- Content-Type: `application/json`
 
-### Exemple de lot échoué
+### Échantillon de lot en échec
 
-Ce didacticiel utilisera des données d’exemple avec un horodatage mal formaté qui définit la valeur du mois à **00**, comme indiqué ci-dessous :
+Ce tutoriel utilisera des données d’exemple avec un horodatage mal formaté qui définit la valeur du mois sur **00**, comme illustré ci-dessous :
 
 ```json
 {
@@ -76,9 +76,9 @@ Ce didacticiel utilisera des données d’exemple avec un horodatage mal format�
 }
 ```
 
-La charge utile ci-dessus ne sera pas correctement validée par rapport au schéma XDM en raison d’un horodatage incorrect.
+Le payload ci-dessus ne sera pas correctement validé par rapport au schéma XDM en raison de l’horodatage incorrect.
 
-## Récupérer le lot en échec
+## Récupération du lot en échec
 
 **Format d’API**
 
@@ -88,7 +88,7 @@ GET /batches/{BATCH_ID}/failed
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot que vous recherchez. |
+| `{BATCH_ID}` | L’identifiant du lot que vous recherchez. |
 
 **Requête**
 
@@ -133,11 +133,11 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 }
 ```
 
-Avec la réponse ci-dessus, vous pouvez voir quels segments du lot ont réussi et échoué. A partir de cette réponse, vous pouvez voir que le fichier `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contient le lot qui a échoué.
+Grâce à la réponse ci-dessus, vous pouvez voir quels blocs du lot ont réussi et quels blocs ont échoué. À partir de cette réponse, vous pouvez voir que le fichier `part-00000-44c7b669-5e38-43fb-b56c-a0686dabb982-c000.json` contient le lot en échec.
 
 ## Téléchargement du lot en échec
 
-Une fois que vous connaissez le fichier du lot qui a échoué, vous pouvez télécharger le fichier qui a échoué et voir quel est le message d’erreur.
+Une fois que vous connaissez le fichier du lot qui a échoué, vous pouvez télécharger le fichier en échec et consulter le message d’erreur.
 
 **Format d’API**
 
@@ -147,12 +147,12 @@ GET /batches/{BATCH_ID}/failed?path={FAILED_FILE}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot contenant le fichier en échec. |
-| `{FAILED_FILE}` | Nom du fichier dont la mise en forme a échoué. |
+| `{BATCH_ID}` | L’identifiant du lot contenant le fichier en échec. |
+| `{FAILED_FILE}` | Le nom du fichier dont le formatage a échoué. |
 
 **Requête**
 
-La requête suivante vous permet de télécharger le fichier qui contient des erreurs d&#39;assimilation.
+La requête suivante vous permet de télécharger le fichier contenant des erreurs d’ingestion.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/failed?path={FAILED_FILE}' \
@@ -166,7 +166,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
 
 **Réponse**
 
-Comme le lot assimilé précédent avait une date/heure non valide, l&#39;erreur de validation suivante s&#39;affiche.
+La date et l’heure du lot ingéré précédent étant incorrectes, l’erreur de validation suivante s’affichera.
 
 ```json
 {
@@ -184,19 +184,19 @@ Comme le lot assimilé précédent avait une date/heure non valide, l&#39;erreur
 
 ## Étapes suivantes
 
-Après avoir lu ce didacticiel, vous avez appris à récupérer les erreurs des lots en échec. Pour plus d&#39;informations sur l&#39;assimilation de lots, consultez le guide [de développement sur l&#39;assimilation de](../batch-ingestion/overview.md)lots. Pour plus d’informations sur l’assimilation en flux continu, consultez le didacticiel [](../tutorials/create-streaming-connection.md)Création d’une connexion en flux continu.
+Après avoir lu ce tutoriel, vous avez appris à récupérer des erreurs à partir de lots en échec. Pour plus d’informations sur l’ingestion par lot, consultez le [guide de développement de l’ingestion par lots](../batch-ingestion/overview.md). Pour plus d’informations sur l’ingestion par flux, consultez le [tutoriel de création d’une connexion en continu](../tutorials/create-streaming-connection.md).
 
 ## Annexe
 
-Cette section contient des informations sur d&#39;autres types d&#39;erreur d&#39;assimilation qui peuvent se produire.
+Cette section contient des informations sur d’autres types d’erreurs d’ingestion pouvant se produire.
 
 ### XDM mal formaté
 
-Comme pour l’erreur d’horodatage de l’exemple précédent, ces erreurs sont dues à un format XDM incorrect. Ces messages d&#39;erreur varient en fonction de la nature du problème. Par conséquent, aucun exemple d’erreur spécifique ne peut être affiché.
+Comme l’erreur d’horodatage de l’exemple précédent, ces erreurs sont dues à un XDM mal formaté. Ces messages d’erreur varient selon la nature du problème. Par conséquent, aucun exemple d’erreur spécifique ne peut être affiché.
 
-### ID d&#39;organisation IMS manquant ou non valide
+### Identifiant d’organisation IMS absent ou non valide
 
-Cette erreur s’affiche si l’ID d’organisation IMS est absent de la charge utile.
+Cette erreur s’affiche si l’identifiant d’organisation IMS est absent du payload ou n’est pas valide.
 
 ```json
 {
@@ -209,9 +209,9 @@ Cette erreur s’affiche si l’ID d’organisation IMS est absent de la charge 
 }
 ```
 
-### schéma XDM manquant
+### Schéma XDM absent
 
-Cette erreur s’affiche si le `schemaRef` pour le `xdmMeta` est manquant.
+Cette erreur s’affiche si le `schemaRef` pour `xdmMeta` est absent.
 
 ```json
 {
@@ -224,9 +224,9 @@ Cette erreur s’affiche si le `schemaRef` pour le `xdmMeta` est manquant.
 }
 ```
 
-### Nom source manquant
+### Nom de la source absent
 
-Cette erreur s’affiche si l’en-tête `source` de l’en-tête manque `name`.
+Cette erreur s’affiche si le `source` de l’en-tête n’a pas de `name`.
 
 ```json
 {
@@ -240,9 +240,9 @@ Cette erreur s’affiche si l’en-tête `source` de l’en-tête manque `name`.
 }
 ```
 
-### Entité XDM manquante
+### Entité XDM absente
 
-Cette erreur s’affiche s’il n’y a pas de `xdmEntity` présence.
+Cette erreur s’affiche si aucune `xdmEntity` n’est renseignée.
 
 ```json
 {
