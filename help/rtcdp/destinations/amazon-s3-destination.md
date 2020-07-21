@@ -4,30 +4,30 @@ seo-title: Destination Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 seo-description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 translation-type: tm+mt
-source-git-commit: f3c6c27b7ad07ada0df18aabe0e8503253b38342
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 82%
+source-wordcount: '164'
+ht-degree: 51%
 
 ---
 
 
-# Destination Amazon S3
+# [!DNL Amazon S3] destination
 
 ## Présentation
 
-Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
+Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
 ## Connexion à la destination {#connect-destination}
 
-Pour obtenir des instructions pour se connecter aux destinations de stockage dans le cloud, notamment Amazon S3, consultez [Processus de création des destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md).
+See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3].
 
-Pour les destinations Amazon S3, saisissez les informations suivantes dans le processus de création de destinations :
+For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **Clé d’accès Amazon S3 et clé** secrète Amazon S3 : Dans Amazon S3, générez une paire de clés d’accès secrètes pour accorder un accès CDP Adobe en temps réel à votre compte Amazon S3.
+* **[!DNL Amazon S3]clé d&#39;accès et clé[!DNL Amazon S3]**secrète : Dans[!DNL Amazon S3], générez une paire de clés d&#39;accès - accès secret pour accorder un accès au CDP Adobe en temps réel à votre[!DNL Amazon S3]compte.
 
 
 
 >[!IMPORTANT]
 >
->La plateforme de données client en temps réel d’Adobe nécessite les autorisations `write` sur l’objet de compartiment où les fichiers d’exportation seront distribués.
+>La plateforme de données clients en temps réel d’Adobe nécessite les autorisations `write` sur l’objet de compartiment où les fichiers d’exportation seront distribués.
