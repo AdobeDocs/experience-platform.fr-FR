@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecteur d’Enregistrement Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 0%
+source-wordcount: '370'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,39 @@ ht-degree: 0%
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]vous permet d’importer vos données à partir de ces systèmes.
 
-Les sources d’enregistrement Cloud peuvent importer vos propres données [!DNL Platform] sans avoir à les télécharger, les mettre en forme ou les télécharger. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir de [!DNL Google Cloud Storage] lots.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir de [!DNL Google Cloud Storage] lots.
+
+## liste autorisée d&#39;adresse IP
+
+Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
+
+### Région est-américaine
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
+
+### Région de l&#39;Europe occidentale
+
+- `13.69.67.192/28`
+- `13.69.107.112/28`
+- `13.69.112.128/28`
+- `40.74.24.192/26`
+- `40.74.26.0/23`
+- `40.113.176.232/29`
+- `52.236.187.112/28`
+
+### Australie-Est
+
+- `13.70.74.144/28`
+- `20.37.193.0/25`
+- `20.37.193.128/26`
+- `20.37.198.224/29`
+- `40.79.163.80/28`
+- `40.79.171.160/28`
 
 ## Configuration requise pour la connexion de votre [!DNL Google Cloud Storage] compte
 
@@ -24,7 +56,7 @@ Pour vous connecter à [!DNL Platform], vous devez d&#39;abord activer l&#39;int
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
-La page **[!UICONTROL Paramètres]** s’affiche. A partir de là, vous pouvez voir des informations concernant l&#39;ID de votre [!DNL Google] projet et des détails sur votre [!DNL Google Cloud Storage] compte. Pour accéder aux paramètres d&#39;interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l&#39;en-tête supérieur.
+The **[!UICONTROL Settings]** page appears. A partir de là, vous pouvez voir des informations concernant l&#39;ID de votre [!DNL Google] projet et des détails sur votre [!DNL Google Cloud Storage] compte. Pour accéder aux paramètres d&#39;interopérabilité, sélectionnez **[!UICONTROL Interopérabilité]** dans l&#39;en-tête supérieur.
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
@@ -35,8 +67,6 @@ Pour générer un nouvel ID de clé d’accès et une clé d’accès secret pou
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
 Vous pouvez utiliser votre identifiant de clé d’accès nouvellement généré et votre clé d’accès secret pour connecter votre [!DNL Google Cloud Storage] compte à [!DNL Platform].
-
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google Cloud Storage] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
 ## Se connecter [!DNL Google Cloud Storage] à [!DNL Platform]
 
@@ -50,5 +80,5 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source d’Enregistrement Google Cloud dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Création d’un connecteur source Google Cloud Storage dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
