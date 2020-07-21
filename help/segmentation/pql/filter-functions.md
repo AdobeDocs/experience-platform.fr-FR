@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Fonctions de filtrage
+title: Fonctions de filtre
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 92f92f480f29f7d6440f4e90af3225f9a1fcc3d0
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 4%
+source-wordcount: '191'
+ht-degree: 94%
 
 ---
 
 
-# Fonctions de filtrage
+# Fonctions de filtre
 
-Les fonctions de filtre sont utilisées pour filtrer les données dans les tableaux dans le langage PQL (Profil Requête Language). Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
 ## Filtrer
 
-La fonction `[]` (filter) permet d&#39;appliquer des filtres à un tableau et de renvoyer un sous-ensemble du tableau correspondant à la condition spécifiée.
+La fonction `[]` (filtrer) permet d’appliquer des filtres à un tableau et de renvoyer un sous-ensemble du tableau correspondant à la condition spécifiée.
 
 **Format**
 
@@ -28,15 +28,15 @@ La fonction `[]` (filter) permet d&#39;appliquer des filtres à un tableau et de
 
 **Exemple**
 
-La requête PQL suivante récupère tous les événements qui ont au moins un article de produit avec un SKU égal à &quot;PS&quot;.
+La requête PQL suivante récupère tous les événements qui contiennent au moins un produit avec un SKU égal à « PS ».
 
 ```sql
 xEvent[productListItems[SKU="PS"]]
 ```
 
-## Opérateur montant
+## Opérateur « haut »
 
-L’opérateur `^` (supérieur) vous permet de faire référence aux propriétés des niveaux supérieurs des filtres.
+L’opérateur `^` (« haut ») vous permet de faire référence aux propriétés des niveaux supérieurs des filtres.
 
 **Format**
 
@@ -46,14 +46,14 @@ L’opérateur `^` (supérieur) vous permet de faire référence aux propriété
 
 | Argument | Description |
 | -------- | ----------- |
-| `{ARRAY}` | Tableau en cours de filtrage. |
-| `{FILTER_1}` | Couche extérieure du filtrage. |
-| `{FILTER_2}` | Couche interne du filtrage |
-| `^{PROPERTY}` | Propriété qui fait également l’objet d’un filtrage. En raison de la `^`variable, il vérifie une propriété basée sur filter1. |
+| `{ARRAY}` | Le tableau en cours de filtrage. |
+| `{FILTER_1}` | La couche extérieure du filtrage. |
+| `{FILTER_2}` | La couche intérieure du filtrage. |
+| `^{PROPERTY}` | La propriété également en cours de filtrage. En raison du `^`, une propriété est en cours de vérification en fonction du filtre1. |
 
 **Exemple**
 
-La requête PQL suivante récupère tous les événements qui ont au moins un article avec un SKU égal à &quot;PS&quot; **ou qui** ont une personne dont le sexe est féminin.
+La requête PQL suivante récupère tous les événements qui contiennent au moins un produit avec un SKU égal à « PS » **ou** qui contiennent un individu de sexe féminin.
 
 ```sql
 xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
@@ -61,4 +61,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Étapes suivantes
 
-Maintenant que vous avez pris connaissance des fonctions de filtrage, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous connaissez les fonctions de filtre, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
