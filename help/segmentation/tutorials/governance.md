@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Application de la conformité de l’utilisation des données aux segments ciblés
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: cb6a2f91eb6c18835bd9542e5b66af4682227491
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1323'
 ht-degree: 46%
 
 ---
@@ -21,7 +21,7 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
 - [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer les données [!DNL Experience Data Model] (XDM) dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
-   - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les stratégies de fusion peuvent être configurées à des fins de gouvernance des données.
+   - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Merge policies can be configured for [!DNL Data Governance] purposes.
 - [!DNL Segmentation](../home.md)[!DNL Real-time Customer Profile] : manière dont divise un grand groupe d’individus inclus dans la banque de profils en groupes plus petits partageant des caractéristiques et réagissant de la même manière aux stratégies marketing.
 - [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données (DULE), en utilisant les composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
