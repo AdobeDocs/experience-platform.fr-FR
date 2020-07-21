@@ -1,22 +1,22 @@
 ---
 title: Activation de profils et de segments vers une destination
 seo-title: Activation de profils et de segments vers une destination
-description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
-seo-description: Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
+description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
+seo-description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: b1f8cbe245f73e31a8941fc45cefcee595968a70
+source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
-source-wordcount: '1019'
-ht-degree: 46%
+source-wordcount: '1013'
+ht-degree: 57%
 
 ---
 
 
 # Activation de profils et de segments vers une destination
 
-Activez les données de la plateforme des données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
+Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 
-## Conditions préalables {#prerequisites}
+## Conditions préalables  {#prerequisites}
 
 Pour activer des données vers des destinations, vous devez avoir réussi à vous [connecter à une destination](/help/rtcdp/destinations/connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md), parcourez les destinations prises en charge et configurez une ou plusieurs destinations.
 
@@ -27,7 +27,7 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
    ![activate-flow](/help/rtcdp/destinations/assets/activate-flow.png)
 Si un flux d’activation existe déjà pour une destination, vous pouvez voir les segments qui sont actuellement envoyés vers la destination. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite et suivez les étapes ci-dessous pour modifier les informations sur l’activation.
 3. Sélectionnez **[!UICONTROL Activer]**.
-4. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to the destination.
+4. Dans le workflow d’**[!UICONTROL activation de destination]**, sur la page **[!UICONTROL Sélection de segments]**, sélectionnez les segments à envoyer à la destination.
    ![segments-to-destination](/help/rtcdp/destinations/assets/email-select-segments.png)
 5. *Conditionnel*. Cette étape diffère selon le type de destination dans lequel vous activez vos segments. <br> Pour les destinations *de marketing par* courriel et les destinations *d’enregistrement* cloud, sur la page **[!UICONTROL Sélectionner les attributs]** , sélectionnez **[!UICONTROL Ajouter un nouveau champ et sélectionnez les attributs à envoyer à la destination.]**
 Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rtcdp/destinations/email-marketing-destinations.md#identity) issu de votre schéma d’union. Pour plus d’informations sur les attributs obligatoires, consultez Identité dans l’article [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md#identity).
@@ -58,17 +58,17 @@ Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rt
    ![Identifiant de fidélité en tant qu&#39;identité](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans l’Adobe Experience Platform, conformément aux exigences [de hachage des](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques de Facebook. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Adobe Real-time CDP hachera les adresses électroniques pour se conformer aux exigences de Facebook.
+   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans l’Adobe Experience Platform, conformément aux exigences [!DNL Facebook] de hachage des [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Adobe Real-time CDP hachera les adresses électroniques pour se conformer aux [!DNL Facebook] exigences.
 
    ![mappage d’identité après le remplissage de champs](/help/rtcdp/destinations/assets/identity-mapping.png)
 
-6. On the **[!UICONTROL Segment schedule]** page, you can see the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+6. Sur la page **[!UICONTROL Planning de segments]**, vous pouvez voir la date de début de l’envoi des données à la destination, ainsi que la fréquence d’envoi.
 
    >[!IMPORTANT]
    >
-   >Pour les destinations sociales, vous devez sélectionner l’origine de votre audience dans cette étape. Vous ne pouvez passer à l’étape suivante qu’après avoir sélectionné l’une des options de l’image ci-dessous.
+   >Pour les destinations sociales, vous devez sélectionner l’origine de votre audience à cette étape. Vous ne pouvez passer à l’étape suivante qu’après avoir sélectionné l’une des options de l’image ci-dessous.
 
-   ![choisir l&#39;origine de données](/help/rtcdp/destinations/assets/choose-data-origin.png)
+   ![choix de l’origine des données](/help/rtcdp/destinations/assets/choose-data-origin.png)
 
 7. Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre sélection. Sélectionnez **[!UICONTROL Annuler]** pour interrompre le flux, **[!UICONTROL Précédent]** pour modifier vos paramètres ou **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
 
@@ -86,16 +86,16 @@ Si aucune violation de stratégie n&#39;a été détectée, sélectionnez **[!UI
 
 ## Modification de l’activation {#edit-activation}
 
-Suivez les étapes ci-dessous pour modifier les flux d’activation existants dans la plateforme des données clients en temps réel :
+Suivez les étapes ci-dessous pour modifier les flux d’activation existants dans la plateforme de données clients en temps réel :
 
 1. Sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche, cliquez sur l’onglet **[!UICONTROL Parcourir]**, puis sur le nom de la destination.
 2. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite pour modifier les segments à envoyer à la destination.
 
 ## Vérification de la réussite de l’activation du segment {#verify-activation}
 
-### Destinations de marketing par e-mail et destinations de stockage dans le cloud
+### Destinations de marketing par e-mail  et destinations de stockage dans le cloud
 
-Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, la plateforme des données clients en temps réel d’Adobe crée un fichier `.txt` ou `.csv`séparé par des tabulations dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
+Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, la plateforme de données clients en temps réel d’Adobe crée un fichier `.txt` ou `.csv` séparé par des tabulations dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
 `<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
 
 Les fichiers que vous pouvez recevoir pendant trois jours consécutifs peuvent ressembler à ceux-ci :
@@ -112,13 +112,13 @@ La présence de ces fichiers dans votre emplacement de stockage est la confirmat
 
 Vérifiez la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
 
-### Destinations des réseaux sociaux
+### Destinations de réseau social
 
-Pour Facebook, une activation réussie signifie qu’une audience personnalisée Facebook serait créée par programmation dans le Gestionnaire [d’annonces](https://www.facebook.com/adsmanager/manage/)Facebook. L’appartenance à un segment dans l’audience serait ajoutée et supprimée car les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
 >[!TIP]
 >
->L&#39;intégration entre le CDP en temps réel d&#39;Adobe et Facebook prend en charge les renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées à Facebook lorsque vous activez les segments vers la destination.
+>L&#39;intégration entre le CDP en temps réel de Adobe et [!DNL Facebook] prend en charge les renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées [!DNL Facebook] lorsque vous activez les segments vers la destination.
 
 ## Désactivation de l’activation {#disable-activation}
 
