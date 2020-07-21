@@ -1,44 +1,44 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connexion à Aqua Data Studio
+title: Connexion avec Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 74%
 
 ---
 
 
-# Connexion à Aqua Data Studio
+# Connect with [!DNL Aqua Data Studio]
 
-Ce document passe en revue les étapes permettant de connecter Aqua Data Studio au service de Requête des Adobes Experience Platform.
+This document walks through the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
 
-Après avoir installé Aqua Data Studio, vous devez d’abord enregistrer le serveur. Dans le menu principal, cliquez sur **Serveur**, puis sur **Enregistrer le serveur**.
+After installing [!DNL Aqua Data Studio], you must first register the server. Dans le menu principal, cliquez sur **[!UICONTROL Serveur]**, puis sur **[!UICONTROL Enregistrer le serveur]**.
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
-La boîte de dialogue *Enregistrer le serveur* s&#39;affiche. Sous l&#39;onglet *Général* , sélectionnez **PostgreSQL** dans la liste située à gauche. Dans la boîte de dialogue qui s’affiche, fournissez les détails suivants pour les paramètres du serveur.
+La boîte de dialogue *[!UICONTROL Enregistrer le serveur]* s’affiche. Sous l’onglet *[!UICONTROL Général]*, sélectionnez **[!UICONTROL PostgreSQL]** dans la liste de gauche. Dans la boîte de dialogue qui s’affiche, saisissez les détails suivants pour les paramètres du serveur.
 
-- **Nom**: Nom de votre connexion.
-- **Nom de connexion et mot de passe**: Identifiants de connexion qui seront utilisés. Le nom d&#39;utilisateur prend la forme de `ORG_ID@AdobeOrg`.
-- **Hôte et port**: Point de terminaison hôte et son port pour Requête Service.
-- **Base de données :** Base de données qui sera utilisée.
+- **[!UICONTROL Nom]** : le nom de la connexion.
+- **[!UICONTROL Identifiant de connexion et mot de passe]** : Ies informations de connexion qui seront utilisées. Le nom d’utilisateur prend la forme `ORG_ID@AdobeOrg`.
+- **[!UICONTROL Hôte et port]** : le point de terminaison hôte et son port pour [!DNL Query Service].
+- **[!UICONTROL Base de données]:**Base de données qui sera utilisée.
 
 >[!NOTE]
 >
->Pour plus d’informations sur la recherche de vos informations d’identification de connexion, de votre hôte, de votre port et du nom de la base de données, consultez la page d’ [informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour rechercher vos informations d’identification, connectez-vous à Platform, cliquez sur **Requêtes**, puis sur **Informations d’identification**.
+>Pour plus d’informations sur la façon de trouver vos informations de connexion, l’hôte, le port et le nom de la base de données, consultez la [page des informations d’identification de Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-Select the **Driver** tab. Sous *Paramètres*, définissez la valeur sur `?sslmode=require`
+Sélectionnez l’onglet **[!UICONTROL Pilote]**. Sous *[!UICONTROL Paramètres]*, définissez la valeur sur `?sslmode=require`
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-Après avoir saisi les détails de votre connexion, cliquez sur **Tester la connexion** pour vérifier que vos informations d’identification fonctionnent correctement. Si votre connexion réussit, cliquez sur **Enregistrer** pour enregistrer votre serveur. La connexion s’affiche sur le *Tableau de bord* lors d’une inscription réussie, confirmant que vous pouvez désormais vous connecter au serveur et vue ses objets schéma.
+Après avoir saisi les détails de votre connexion, cliquez sur **[!UICONTROL Tester la connexion]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si vous réussissez à vous connecter, cliquez sur **[!UICONTROL Enregistrer]** pour enregistrer votre serveur. La connexion s’affiche sur le *Tableau de bord* une fois l’enregistrement réussi, confirmant que vous pouvez désormais vous connecter au serveur et visualiser ses objets de schéma.
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à Requête Service, vous pouvez utiliser l&#39;Analyseur *de* Requête d&#39;Aqua Data Studio pour exécuter et modifier des instructions SQL. Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide [des requêtes](../creating-queries/creating-queries.md)en cours d&#39;exécution.
+Now that you have connected to [!DNL Query Service], you can use the *[!UICONTROL Query Analyzer]* within [!DNL Aqua Data Studio] to execute and edit SQL statements. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../creating-queries/creating-queries.md).
