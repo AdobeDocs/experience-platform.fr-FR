@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation d’Adobe Experience Platform Data Ingestion
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3f1c3c77a0755a3e305da0fb8a234be0f0ee1863
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '417'
 ht-degree: 52%
 
 ---
@@ -36,7 +36,7 @@ Pour plus d’informations, consultez la [présentation de l’ingestion par flu
 
 [!DNL Experience Platform] vous permet de configurer des connexions source à différents fournisseurs de données. Ces connexions vous permettent de vous authentifier auprès de vos sources données externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as Microsoft Dynamics and Salesforce).
+Source connections can be configured to gather data from other Adobe applications (such as Adobe Analytics and Adobe Audience Manager), third-party cloud storage sources (such as [!DNL Azure Blob], [!DNL Amazon] S3, FTP servers, and SFTP servers), and third-party CRM systems (such as [!DNL Microsoft Dynamics] and [!DNL Salesforce]).
 
 Pour plus d’informations, consultez la [présentation des sources](../sources/home.md).
 
