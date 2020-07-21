@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Jeu de données vs tables et schémas
+title: Jeux de données par rapport aux tableaux et schémas
 topic: queries
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 1%
+source-wordcount: '181'
+ht-degree: 92%
 
 ---
 
 
-# Jeu de données vs tables et schémas
+# Jeux de données par rapport aux tableaux et schémas
 
-Vérifiez la liste des jeux de données disponibles dans l’interface utilisateur [de l’](https://platform.adobe.com/datasets)Adobe Experience Platform, en veillant à respecter les noms des jeux de données.
+Consultez la liste des jeux de données disponibles dans l’[interface utilisateur d’Adobe Experience Platform](https://platform.adobe.com/datasets), en vous assurant d’observer les noms des jeux de données.
 >[!NOTE]
 >
->Certains noms de jeux de données comportent des espaces et pourraient autrement ne pas être sûrs pour SQL.
+>Certains noms de jeux de données possèdent des espaces et peuvent ne pas être compatibles avec SQL dans le cas contraire.
 
 ![](../images/queries/datasets-and-tables/dataset-names.png)
 
 
-Examinez la structure hiérarchique du schéma de jeux de données dans l’interface utilisateur en cliquant sur le nom d’un schéma dans la table de jeux de données.
+Vérifiez la structure hiérarchique du schéma du jeu de données dans l’interface utilisateur en cliquant sur un nom de schéma dans le tableau des jeux de données.
 
 ![](../images/queries/datasets-and-tables/schema-information.png)
 
-Ouvrez la ligne de commande PSQL et utilisez les détails de la connexion à partir d’ici : [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
+Ouvrez la ligne de commande PSQL et utilisez les détails de la connexion que vous trouverez ici : [https://platform.adobe.com/query/configuration](https://platform.adobe.com/query/configuration).
 
 ![](../images/clients/psql/connect-bi.png)
 
-Pour vue des tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d` ou `SHOW TABLES;`.
+To view the available tables on [!DNL Platform] with SQL, you can use either `\d` or `SHOW TABLES;`.
 
 
 `\d` affiche la vue PostgreSQL standard
@@ -44,7 +44,7 @@ Pour vue des tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d`
 (2 rows)
 ```
 
-`SHOW TABLES;` est une commande personnalisée qui fournit une vue plus détaillée et présente le tableau, ainsi que le nom du jeu de données dans l’interface utilisateur de Platform.
+`SHOW TABLES;`[!DNL Platform] est une commande personnalisée qui apporte une vue plus détaillée et présente le tableau ainsi que le nom du jeu de données qui apparaît dans l’interface utilisateur de 
 
 ```
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -54,11 +54,11 @@ Pour vue des tables disponibles sur Platform avec SQL, vous pouvez utiliser `\d`
 (2 rows)
 ```
 
-Pour vue au schéma racine d&#39;une table, utilisez la `\d table_name` commande.
+Pour afficher le schéma racine d’un tableau, utilisez la commande `\d table_name`.
 
 >[!NOTE]
 >
->Le schéma présenté montre les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du schéma de dataset.
+>Le schéma présenté présente les champs racine, dont la plupart sont complexes, référencés par un type d’objet dans l’interface utilisateur du schéma de jeux de données.
 
 `\d luma_midvalues`
 
@@ -83,7 +83,7 @@ Pour vue au schéma racine d&#39;une table, utilisez la `\d table_name` commande
  search            | search                      |           |          | 
 ```
 
-Pour aller plus loin dans le schéma, utilisez des traits de soulignement (`_`) pour déclarer la colonne dans le tableau à décrire. Par exemple : `\d table_name_column`.
+Pour aller plus loin dans le schéma, utilisez des traits de soulignement (`_`) pour déclarer la colonne dans le tableau que vous souhaitez décrire. Par exemple : `\d table_name_column`.
 
 `\d luma_midvalues_web`
 
