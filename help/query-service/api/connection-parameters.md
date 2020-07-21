@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide du développeur Requête Service
+title: Guide de développement de Query Service
 topic: connection parameters
 translation-type: tm+mt
-source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
+source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 1%
+source-wordcount: '122'
+ht-degree: 72%
 
 ---
 
 
 # Paramètres de connexion
 
-## Exemples d’appels d’API
+## Exemples d’appels API
 
-Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l’API Requête Service. Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API Requête Service. Chaque appel comprend le format général de l’API, un exemple de requête indiquant les en-têtes requis et un exemple de réponse.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-### Demander des paramètres de connexion pour le service interactif
+### Demande de paramètres de connexion pour le service interactif
 
-Vous pouvez récupérer vos paramètres de connexion pour utiliser le service [](../creating-queries/writing-queries.md) interactif en faisant une requête GET au `/connection_parameters` point de terminaison. Pour plus d&#39;informations sur les clients qui utilisent les paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les clients [de](../clients/overview.md)Requête Service.
+Vous pouvez récupérer vos paramètres de connexion pour utiliser le [service interactif](../creating-queries/writing-queries.md) en envoyant une requête GET au point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
 
 **Format d’API**
 
@@ -40,7 +40,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/connection_parameter
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 avec vos paramètres de connexion.
+Une réponse réussie renvoie un état HTTP 200 avec vos paramètres de connexion.
 
 ```json
 {
