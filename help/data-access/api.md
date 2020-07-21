@@ -4,36 +4,36 @@ solution: Experience Platform
 title: Guide du développeur d'accès aux données
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: f7714b8bebe37b29290794a48314962e42b24058
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 6%
+source-wordcount: '485'
+ht-degree: 85%
 
 ---
 
 
 # Guide du développeur d&#39;accès aux données
 
-L&#39;API d&#39;accès aux données prend en charge l&#39;Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur la détectabilité et l&#39;accessibilité des jeux de données assimilés dans [!DNL Experience Platform].
+The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 
-![Accès aux données sur l’Experience Platform](images/Data_Access_Experience_Platform.png)
+![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
 
-## Référence de spécification d&#39;API
+## Référence de spécification API
 
-La documentation de référence de l’API Swagger se trouve [ici](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
+Vous trouverez [ici](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) la documentation de référence de l’API Swagger.
 
 ## Terminologie
 
-Description de certains termes couramment utilisés dans ce document.
+Une description de certains des termes utilisés couramment tout au long de ce document.
 
 | Terme | Description |
 | ----- | ------------ |
-| Jeu de données | Collection de données comprenant des schémas et des champs. |
-| Lot | Ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité. |
+| Jeu de données | Un ensemble de données qui inclut des schémas et des champs. |
+| Lot | Un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. |
 
-## Récupération de la liste des fichiers dans un lot
+## Récupération de la liste de fichiers au sein d’un lot
 
-En utilisant un identifiant de lot (batchID), l&#39;API d&#39;accès aux données peut récupérer une liste de fichiers appartenant à ce lot particulier.
+En utilisant un identifiant de lot (batchID), l’API Data Access peut récupérer une liste des fichiers appartenant à un lot spécifique.
 
 **Format d’API**
 
@@ -43,7 +43,7 @@ GET /batches/{BATCH_ID}/files
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{BATCH_ID}` | ID du lot spécifié. |
+| `{BATCH_ID}` | L’identifiant du lot spécifié. |
 
 **Requête**
 
@@ -94,18 +94,18 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-Le `"data"` tableau contient une liste de tous les fichiers du lot spécifié. Chaque fichier renvoyé comporte son propre identifiant (`{FILE_ID}`) unique contenu dans le `"dataSetFileId"` champ. Cet identifiant unique peut ensuite être utilisé pour accéder au fichier ou le télécharger.
+Le tableau `"data"` contient une liste de tous les fichiers au sein d’un lot spécifique. Chaque fichier renvoyé possède son propre identifiant unique (`{FILE_ID}`) contenu dans le champ `"dataSetFileId"`. Vous pouvez ensuite utiliser cet identifiant unique pour accéder au fichier ou le télécharger.
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.dataSetFileId` | ID de fichier pour chaque fichier du lot spécifié. |
-| `data._links.self.href` | URL d’accès au fichier. |
+| `data.dataSetFileId` | L’identifiant de fichier de chaque fichier du lot renseigné. |
+| `data._links.self.href` | L’URL d’accès au fichier. |
 
 ## Accès et téléchargement de fichiers au sein d’un lot
 
-En utilisant un identifiant de fichier (`{FILE_ID}`), l&#39;API d&#39;accès aux données permet d&#39;accéder aux détails spécifiques d&#39;un fichier, notamment son nom, sa taille en octets et un lien à télécharger.
+En utilisant un identifiant de fichier (`{FILE_ID}`), l’API Data Access permet d’accéder aux détails spécifiques d’un fichier, notamment son nom, sa taille et un lien de téléchargement.
 
-La réponse contient un tableau de données. Selon que le fichier pointé par l&#39;ID est un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une entrée unique ou une liste de fichiers appartenant à ce répertoire. Chaque élément de fichier inclut les détails du fichier.
+La réponse contiendra un tableau de données. Selon que le fichier désigné par l’identifiant est un fichier individuel ou un répertoire, le tableau de données renvoyé peut contenir une seule entrée ou une liste de fichiers appartenant à ce répertoire. Chaque élément du fichier inclura les détails du fichier.
 
 **Format d’API**
 
@@ -115,7 +115,7 @@ GET /files/{FILE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID}` | Est égal à `"dataSetFileId"`, l’identifiant du fichier à accéder. |
+| `{FILE_ID}` | Est égal à `"dataSetFileId"`, l’identifiant du fichier auquel vous essayez d’accéder. |
 
 **Requête**
 
@@ -151,9 +151,9 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.name` | Nom du fichier (par exemple, profils.csv). |
+| `data.name` | Nom du fichier (par ex. : profiles.csv). |
 | `data.length` | Taille du fichier (en octets). |
-| `data._links.self.href` | URL de téléchargement du fichier. |
+| `data._links.self.href` | L’URL de téléchargement du fichier. |
 
 **Réponse du répertoire**
 
@@ -194,16 +194,16 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 }
 ```
 
-Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichiers qu’il contient.
+Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichiers se trouvant dans le répertoire.
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.name` | Nom du fichier (par exemple, profils.csv). |
-| `data._links.self.href` | URL de téléchargement du fichier. |
+| `data.name` | Nom du fichier (par ex. : profiles.csv). |
+| `data._links.self.href` | L’URL de téléchargement du fichier. |
 
-## Accès au contenu d’un fichier
+## Accès aux contenus d’un fichier
 
-L’ [!DNL Data Access] API peut également être utilisée pour accéder au contenu d’un fichier. Vous pouvez ensuite l’utiliser pour télécharger le contenu vers une source externe.
+The [!DNL Data Access] API can also be used to access the contents of a file. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
 
 **Format d’API**
 
@@ -213,7 +213,7 @@ GET /files/{dataSetFileId}?path={FILE_NAME}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_NAME}` | Nom du fichier auquel vous tentez d’accéder. |
+| `{FILE_NAME}` | Le nom du fichier auquel vous essayez d’accéder. |
 
 **Requête**
 
@@ -227,8 +227,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{FILE_ID}` | ID du fichier dans un jeu de données. |
-| `{FILE_NAME}` | Nom complet du fichier (par exemple, profils.csv). |
+| `{FILE_ID}` | L’identifiant du fichier au sein d’un jeu de données. |
+| `{FILE_NAME}` | Le nom complet du fichier (par ex. : profiles.csv). |
 
 **Réponse**
 
@@ -238,8 +238,8 @@ Contents of the file
 
 ## Exemples de code supplémentaires
 
-Pour d&#39;autres exemples, reportez-vous au didacticiel [sur l&#39;accès aux](tutorials/dataset-data.md)données.
+Pour consulter d’autres exemples, veuillez vous reporter au [tutoriel d’accès aux données](tutorials/dataset-data.md).
 
-## S&#39;abonner aux événements d&#39;assimilation de données
+## Abonnement aux événements d’ingestion de données
 
-Platform met à disposition des événements spécifiques à forte valeur ajoutée pour l’abonnement via la Console de développement [](https://www.adobe.com/go/devs_console_ui_fr)Adobe. Par exemple, vous pouvez vous abonner à des événements d&#39;assimilation de données pour être averti des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur l&#39; [abonnement aux notifications](../ingestion/quality/subscribe-events.md) d&#39;assimilation de données.
+[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l’abonnement via la console [de développement](https://www.adobe.com/go/devs_console_ui_fr)Adobe. Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur l&#39; [abonnement aux notifications](../ingestion/quality/subscribe-events.md) d&#39;assimilation de données.
