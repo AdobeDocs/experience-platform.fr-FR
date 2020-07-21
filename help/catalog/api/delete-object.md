@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Suppression d’un objet
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 3%
+source-wordcount: '173'
+ht-degree: 61%
 
 ---
 
 
 # Suppression d’un objet
 
-Vous pouvez supprimer un objet Catalog en indiquant son identifiant dans le chemin d’une requête de DELETE.
+You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
 
 >[!WARNING]
 >
->Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut entraîner des modifications irréversibles ailleurs dans l’Experience Platform.
+>Soyez très prudent lorsque vous supprimez des objets, car vous ne pouvez pas revenir en arrière et pouvez produire des modifications avec rupture ailleurs dans [!DNL Experience Platform].
 
 **Format d’API**
 
@@ -32,12 +32,12 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Type d’objet Catalog à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
-| `{OBJECT_ID}` | Identifiant de l’objet spécifique à mettre à jour. |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante supprime un jeu de données dont l&#39;ID est spécifié dans le chemin d&#39;accès à la requête.
+La requête suivante supprime un jeu de données dont l’identifiant est précisé dans le chemin d’accès de requête.
 
 ```shell
 curl -X DELETE \
@@ -50,7 +50,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;état HTTP 200 (OK) et un tableau contenant l&#39;ID du jeu de données supprimé. Cet identifiant doit correspondre à celui envoyé dans la demande du DELETE. L’exécution d’une requête GET sur l’objet supprimé renvoie l’état HTTP 404 (Introuvable), confirmant que le jeu de données a bien été supprimé.
+Une réponse réussie renvoie un état HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données supprimé. Cet identifiant doit correspondre à celui envoyé dans la requête DELETE. Exécuter une requête GET sur l’objet supprimé renvoie un état HTTP 404 (introuvable), confirmant que le jeu de données a été supprimé avec succès.
 
 ```json
 [
@@ -60,4 +60,4 @@ Une réponse réussie renvoie l&#39;état HTTP 200 (OK) et un tableau contenant 
 
 >[!NOTE]
 >
->Si aucun objet Catalog ne correspond à l’ID fourni dans votre requête, vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponses sera vide.
+>If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
