@@ -1,61 +1,61 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: S'abonner aux événements d'assimilation de données
+title: Abonnement aux événements d’ingestion de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 2%
+source-wordcount: '832'
+ht-degree: 38%
 
 ---
 
 
-# Notifications d’assimilation de données
+# Notifications d’ingestion de données
 
-Le processus d’importation de données dans l’Adobe Experience Platform comprend plusieurs étapes. Une fois que vous avez identifié les fichiers de données à ingérer dans Platform, le processus d’assimilation commence et chaque étape se produit consécutivement jusqu’à ce que les données soient correctement ingérées ou échouent. Le processus d&#39;assimilation peut être lancé à l&#39;aide de l&#39;API [d&#39;importation des données d&#39;](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) Adobe Experience Platform ou à l&#39;aide de l&#39;interface utilisateur de l&#39;Experience Platform.
+Le processus d’ingestion de données dans Adobe Experience Platform se compose de plusieurs étapes. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. Il est possible d’initier le processus d’ingestion à l’aide de l’[API Data Ingestion d’Adobe ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) ou de l’interface utilisateur Experience Platform.[!DNL Experience Platform]
 
-Les données chargées dans Platform doivent passer par plusieurs étapes pour atteindre leur destination, Data Lake ou le magasin de données de Profil client en temps réel. Chaque étape implique de traiter les données, de les valider, puis de les stocker avant de les transmettre à l’étape suivante. Selon la quantité de données ingérées, ce processus peut prendre du temps et il est toujours possible que le processus échoue en raison d’erreurs de validation, de sémantique ou de traitement. En événement d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’assimilation doit être redémarré à l’aide des fichiers de données corrigés.
+Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-time Customer Profile] data store. Chaque étape implique le traitement des données, leur validation, puis leur stockage avant de passer à l’étape suivante. En fonction de la quantité de données ingérée, ce processus peut devenir chronophage et il existe toujours une possibilité qu’il échoue en raison d’erreurs de validation, de sémantique ou de traitement. En cas d’échec, les problèmes de données doivent être résolus, puis l’ensemble du processus d’ingestion doit être redémarré en utilisant des fichiers de données corrigés.
 
-Pour vous aider à surveiller le processus d&#39;assimilation, l&#39;Experience Platform vous permet de vous abonner à un ensemble de événements publiés à chaque étape du processus, en vous informant de l&#39;état des données assimilées et de tout échec éventuel.
+To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 
-## événements de notification d&#39;état disponibles
+## Événements de notification d’état disponibles
 
-Vous trouverez ci-dessous une liste de notifications d&#39;état d&#39;assimilation de données à laquelle vous pouvez vous abonner.
+Vous trouverez ci-dessous une liste des notifications d’état d’ingestion de données disponibles auxquels vous pouvez vous abonner.
 
 >[!NOTE]
 >
->Une seule rubrique de événement est fournie pour toutes les notifications d&#39;assimilation de données. Pour distinguer les différents états, il est possible d&#39;utiliser le code du événement.
+>Il n’y a qu’une seule rubrique d’événement fournie pour toutes les notifications d’ingestion de données. Vous pouvez utiliser le code d’événement pour faire la distinction entre les différents états.
 
-| Service Platform | État | Description des événements | Code Événement |
+| Service Platform | État | Description des événements | Code d’événement |
 | ---------------- | ------ | ----------------- | ---------- |
-| Entrée de données | success | Ingestion - Le lot a réussi | ing_load_success |
-| Entrée de données | échec | Ingestion - Échec du lot | ing_load_failure |
-| Profil client en temps réel | success | Service de Profil - Lot de chargement de données terminé | ps_load_success |
-| Profil client en temps réel | échec | Service de Profil - Échec du lot de chargement des données | ps_load_failure |
-| Graphique d&#39;identité | success | Graphique d’identité - Succès du lot de chargement des données | ig_load_success |
-| Graphique d&#39;identité | échec | Graphique d’identité - Échec du lot de chargement des données | ig_load_failure |
+| Entrée de données | success | Ingestion - Réussite du lot | ing_load_success |
+| Entrée de données | failure | Ingestion - Échec du lot | ing_load_failure |
+| Real-time Customer Profile | success | Service de profil - Réussite du lot de chargement de données | ps_load_success |
+| Real-time Customer Profile | failure | Service de profil - Échec du lot de chargement de données | ps_load_failure |
+| Graphique d’identités | success | Graphique d’identités - Réussite du lot de chargement de données | ig_load_success |
+| Graphique d’identités | failure | Graphique d’identités - Échec du lot de chargement de données | ig_load_failure |
 
-## schéma de charge utile de notification
+## Schéma de payload de notification
 
-Le schéma de événement de notification d’ingestion de données est un schéma de modèle de données d’expérience (XDM) contenant des champs et des valeurs qui fournissent des détails sur l’état des données ingérées. Veuillez visiter le repo public XDM GitHub afin de vue du dernier schéma [de charge utile de](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json)notification.
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
 
 ## S’abonner aux notifications d’état d’assimilation de données
 
-Grâce aux Événements [d&#39;E/S](https://www.adobe.io/apis/experienceplatform/events.html)Adobe, vous pouvez vous abonner à plusieurs types de notification à l&#39;aide de hameçons Web. Les sections ci-dessous décrivent les étapes à suivre pour s’abonner aux notifications Platform pour les événements d’assimilation de données à l’aide de Adobe Developer Console.
+Par le biais des [événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events.html), vous pouvez vous abonner à plusieurs types de notification en utilisation des webhooks. Les sections ci-dessous décrivent les étapes à suivre pour s’abonner aux [!DNL Platform] notifications pour les événements d’assimilation de données à l’aide de Adobe Developer Console.
 
 ### Création d’un projet dans Adobe Developer Console
 
-Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
 
-### Ajouter les événements Experience Platform au projet
+### Ajouter [!DNL Experience Platform] des événements au projet
 
-Une fois que vous avez créé un nouveau projet, accédez à l’écran d’aperçu de ce projet. A partir de là, cliquez sur **[!UICONTROL Ajouter le événement]**.
+Une fois que vous avez créé un nouveau projet, accédez à l’écran d’aperçu de ce projet. From here, click **[!UICONTROL Add event]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-La boîte de dialogue _[!UICONTROL Ajouter les événements]_s&#39;affiche. Cliquez sur**[!UICONTROL  Experience Platform ]**pour filtrer la liste des options disponibles, puis cliquez sur Notifications**[!UICONTROL  Platform ]**avant de cliquer sur**[!UICONTROL  Suivant ]**.
+The _[!UICONTROL Add events]_dialog appears. Cliquez sur**[!UICONTROL  Experience Platform ]**pour filtrer la liste des options disponibles, puis cliquez sur Notifications**[!UICONTROL  Platform ]**avant de cliquer sur**[!UICONTROL  Suivant ]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
@@ -91,4 +91,4 @@ La page des détails de l&#39;enregistrement de événement nouvellement créé 
 
 ## Étapes suivantes
 
-Une fois que vous avez enregistré des notifications Platform à votre projet, vous pouvez vue recevoir des événements du tableau de bord du projet. Consultez le guide des Événements [d&#39;E/S](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) Tracing Adobe pour obtenir des instructions détaillées sur la manière de suivre vos événements.
+Une fois que vous avez enregistré [!DNL Platform] des notifications à votre projet, vous pouvez vue recevoir des événements du tableau de bord du projet. Pour obtenir des instructions détaillées sur la manière de suivre vos événements, reportez-vous au guide [Suivi des événements Adobe I/O](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
