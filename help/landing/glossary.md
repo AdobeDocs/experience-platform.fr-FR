@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Documentation du produit Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1ecff21343c8b39070afdb4f486d0961c024235a
 workflow-type: tm+mt
-source-wordcount: '6593'
-ht-degree: 72%
+source-wordcount: '6665'
+ht-degree: 71%
 
 ---
 
@@ -191,6 +191,8 @@ ht-degree: 72%
 **Catégorie de destination :** Une catégorie de destination est un groupe de destinations présentant des caractéristiques similaires. [!DNL Real-time Customer Data Platform]
 
 **Catalogue de destination :** Un catalogue de destination est une liste de destinations disponibles dans le [!DNL Real-time Customer Data Platform].
+
+**Règles d&#39;appel direct :** dans [!DNL Experience Platform Launch], vous pouvez configurer une [!UICONTROL règle] d’appel  direct qui s’exécute lorsqu’elle est appelée directement à partir de la page. Si le chargement de votre page ou votre action sur votre site est très simple, ou s’il est unique et peut exécuter un ensemble spécifique d’instructions à chaque fois (défini [!DNL eVar4] sur X et déclenché [!DNL event2] à chaque fois), vous pouvez alors utiliser une [!UICONTROL règle] d’appel direct. Voir [!DNL Launch] la documentation relative à la création de [!UICONTROL règles] d’appel direct.
 
 **Nom d’affichage :** un nom d’affichage est le nom convivial d’un champ qui apparaît dans l’interface utilisateur.
 
