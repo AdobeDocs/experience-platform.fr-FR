@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Fonctions d'agrégation
+title: Fonctions d’agrégation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 902ba5efbb5f18a2de826fffd023195d804309cc
+source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 6%
+source-wordcount: '208'
+ht-degree: 91%
 
 ---
 
 
-# Fonctions d&#39;agrégation
+# Fonctions d’agrégation
 
-Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux PQL (Profil Requête Language) afin de former une seule valeur de synthèse. Pour plus d&#39;informations sur les autres fonctions PQL, consultez la présentation [du langage](./overview.md)Profil Requête.
+Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
 
-## Décompte
+## Count
 
-La `count` fonction renvoie le nombre d&#39;éléments dans le tableau donné.
+La fonction `count` renvoie le nombre d’éléments dans le tableau donné.
 
 **Format**
 
@@ -28,7 +28,7 @@ La `count` fonction renvoie le nombre d&#39;éléments dans le tableau donné.
 
 **Exemple**
 
-La requête PQL suivante renvoie le nombre de commandes dans le tableau.
+La requête PQL suivante renvoie le nombre de commandes du tableau.
 
 ```sql
 orders.count()
@@ -36,7 +36,7 @@ orders.count()
 
 ## Sum
 
-La `sum` fonction renvoie la somme de toutes les valeurs sélectionnées dans le tableau.
+La fonction `sum` renvoie la somme de toutes les valeurs sélectionnées dans le tableau.
 
 **Format**
 
@@ -46,15 +46,15 @@ La `sum` fonction renvoie la somme de toutes les valeurs sélectionnées dans le
 
 **Exemple**
 
-La requête PQL suivante renvoie la somme de tous les prix de commande.
+La requête PQL suivante renvoie la somme des prix de toutes les commandes.
 
 ```sql
 orders.sum(order.price)
 ```
 
-## Moyenne
+## Average
 
-La `average` fonction renvoie la moyenne arithmétique de toutes les valeurs sélectionnées dans le tableau.
+La fonction `average` renvoie la moyenne arithmétique de toutes les valeurs sélectionnées dans le tableau.
 
 **Format**
 
@@ -72,7 +72,7 @@ orders.average(order.price)
 
 ## Minimum
 
-La `min` fonction renvoie la plus petite des valeurs sélectionnées dans le tableau.
+La fonction `min` renvoie la plus petite de toutes les valeurs sélectionnées dans le tableau.
 
 **Format**
 
@@ -90,7 +90,7 @@ orders.min(order.price)
 
 ## Maximum
 
-La `max` fonction renvoie la plus grande de toutes les valeurs sélectionnées dans le tableau.
+La fonction `max` renvoie la plus grande de toutes les valeurs sélectionnées dans le tableau.
 
 **Format**
 
@@ -108,4 +108,4 @@ orders.max(order.price)
 
 ## Étapes suivantes
 
-Maintenant que vous avez pris connaissance des fonctions d’agrégation, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d&#39;informations sur d&#39;autres fonctions PQL, veuillez lire la présentation [de la langue de la Requête de](./overview.md)Profil.
+Maintenant que vous en savez plus sur les fonctions d’agrégation, vous pouvez les utiliser dans vos requêtes PQL. Pour plus d’informations sur les autres fonctions PQL, consultez la [présentation du langage de requête de profil](./overview.md).
