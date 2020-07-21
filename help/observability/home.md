@@ -1,42 +1,42 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Informations sur l’observabilité de la plate-forme Adobe Experience Platform
+title: Adobe Experience Platform Observability Insights
 topic: overview
 translation-type: tm+mt
-source-git-commit: d349ffab7c0de72d38b5195585c14a4a8f80e37c
+source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 2%
+source-wordcount: '396'
+ht-degree: 73%
 
 ---
 
 
 # Présentation d’Adobe Experience Platform Observability Insights
 
-Observability Insights est une API RESTful qui vous permet d’exposer les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des informations sur les statistiques d&#39;utilisation des plateformes, les contrôles d&#39;intégrité des services de plateformes, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de la plate-forme.
+Observability Insights est une API RESTful qui vous permet d’afficher les mesures d’observabilité clés dans Adobe Experience Platform. These metrics provide insights into [!DNL Platform] usage statistics, health-checks for [!DNL Platform] services, historical trends, and performance indicators for various [!DNL Platform] functionalities.
 
-Ce document illustre un exemple d’appel à l’API Observability Insights. Pour obtenir une liste complète des points de terminaison de l’Observabilité, consultez la référence [de l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)Observability Insights.
+Ce document présente un exemple d’appel à l’API Observability Insights. Pour une liste complète des points de terminaison d’observabilité, consultez la [référence de l’API Observability Insights](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
 
 ## Prise en main
 
-Pour lancer des appels aux API de plateforme, vous devez d’abord suivre le didacticiel [d’](../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API de plateforme d’expérience, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de la plate-forme d’expérience sont isolées dans des sandbox virtuels spécifiques. Toutes les demandes aux API de plateforme requièrent un en-tête qui spécifie le nom du sandbox dans lequel l&#39;opération aura lieu. Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../sandboxes/home.md)sandbox.
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md).
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
 ## Récupération des mesures d’observabilité
 
-Vous pouvez récupérer des mesures d’observabilité en faisant une requête GET au point de `/metrics` terminaison dans l’API Observability Insights.
+Vous pouvez récupérer des mesures d’observabilité en effectuant une requête GET sur le point de terminaison `/metrics` dans l’API Observability Insights.
 
 **Format d’API**
 
-Lors de l’utilisation du point de `/metrics` terminaison, au moins un paramètre de demande de mesure doit être fourni. D’autres paramètres de requête sont facultatifs pour le filtrage des résultats.
+Lors de l’utilisation du point de terminaison `/metrics`, au moins un paramètre de requête de mesure doit être fourni. Les autres paramètres de requête sont facultatifs pour le filtrage des résultats.
 
 ```http
 GET /metrics?metric={METRIC}
@@ -48,9 +48,9 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{METRIC}` | Mesure que vous souhaitez exposer. Lorsque vous combinez plusieurs mesures dans un seul appel, vous devez utiliser une esperluette (`&`) pour séparer des mesures individuelles. Par exemple : `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Identifiant d&#39;une ressource de plateforme particulière dont vous souhaitez exposer les mesures. Cet identifiant peut être facultatif, obligatoire ou non, selon les mesures utilisées. Pour obtenir une liste des mesures disponibles, ainsi que les ID pris en charge (obligatoires et facultatifs) pour chaque mesure, reportez-vous au document de référence sur les mesures [](metrics.md)disponibles. |
-| `{DATE_RANGE}` | Plage de dates des mesures à exposer, au format ISO 8601 (par exemple `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
+| `{METRIC}` | La mesure que vous souhaitez afficher. Lorsque vous combinez plusieurs mesures dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. Par exemple : `metric={METRIC_1}&metric={METRIC_2}`. |
+| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. Cet identifiant peut être facultatif, obligatoire ou non applicable en fonction des mesures utilisées. Pour obtenir une liste des mesures disponibles, ainsi que les identifiants pris en charge (obligatoires et facultatifs) pour chaque mesure, consultez le document de référence sur les [mesures disponibles](metrics.md). |
+| `{DATE_RANGE}` | La période des mesures que vous souhaitez afficher, au format ISO 8601 (par exemple, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Requête**
 
@@ -65,7 +65,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’objets, chacun contenant un horodatage dans les valeurs fournies `dateRange` et correspondantes pour les mesures spécifiées dans le chemin de la requête. Si la ressource `id` d&#39;une plateforme est incluse dans le chemin d&#39;accès à la demande, les résultats s&#39;appliquent uniquement à cette ressource particulière. Si le `id` SGI n&#39;est pas utilisé, les résultats s&#39;appliqueront à toutes les ressources applicables au sein de votre organisation.
+Une réponse réussie renvoie une liste d’objets, dont chacun contient une date et heure dans la `dateRange` fournie et les valeurs correspondantes pour les mesures spécifiées dans le chemin de requête. Si l’identifiant `id` d’une ressource de est inclus dans le chemin de requête, les résultats s’appliqueront uniquement à cette ressource particulière. [!DNL Platform] Si l’identifiant `id` est omis, les résultats s’appliqueront à toutes les ressources applicables au sein de votre organisation IMS.
 
 ```json
 {
@@ -119,4 +119,4 @@ Une réponse réussie renvoie une liste d’objets, chacun contenant un horodata
 
 ## Étapes suivantes
 
-Ce document présente un aperçu de l’API Observability Insights. Consultez le document sur les mesures [](metrics.md) disponibles pour obtenir une liste complète des mesures qui peuvent être utilisées dans l’API.
+Ce document présente l’API Observability Insights. Consultez le document sur les [mesures disponibles](metrics.md) pour obtenir une liste complète des mesures qui peuvent être utilisées dans l’API.
