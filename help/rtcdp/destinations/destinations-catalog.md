@@ -1,20 +1,20 @@
 ---
 title: Catalogue des destinations
 seo-title: Catalogue des destinations
-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes de publicité, les plateformes de questionnaire, les plateformes de marketing par courrier électronique, etc.
-seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations comprennent les solutions Adobe, les plateformes de publicité, les plateformes de questionnaire, les plateformes de marketing par courrier électronique, etc.
+description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
+seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 translation-type: tm+mt
-source-git-commit: 2eddd5bb7b62dcc414ad906647b05ce10c766ac6
+source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 67%
+source-wordcount: '170'
+ht-degree: 91%
 
 ---
 
 
-# Catalogue des destinations
+# [!DNL Destinations Catalog]
 
-Le **catalogue des destinations** offre une liste des plateformes de destination disponibles qui sont prêtes à recevoir des données. Ces plateformes de destination comprennent les solutions Adobe, les plateformes publicitaires, les plateformes de questionnaire, les plateformes de marketing par courrier électronique, les extensions de plateformes d’expérience, etc.
+The **[!DNL Destinations Catalog]** provides a list of available destination platforms that are ready to receive data. Ces plateformes de destination incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, des extensions Experience Platform, et bien plus encore.
 
 Parcourez le catalogue pour déterminer les plateformes de destination les plus adaptées à vos cas d’utilisation en matière de publicité et de personnalisation, puis configurez des flux pour activer les segments vers les destinations.
 
@@ -24,11 +24,11 @@ Vous pouvez activer vos données vers différentes catégories de destination da
 
 * [Solutions Adobe](/help/rtcdp/destinations/adobe-destinations.md)
 * [Destinations publicitaires](/help/rtcdp/destinations/advertising-destinations.md)
-* [Destinations d’Analytics](/help/rtcdp/destinations/analytics-destinations.md)
+* [Destinations d’analyse](/help/rtcdp/destinations/analytics-destinations.md)
 * [Destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations.md)
-* [Plateforme de Data Management](/help/rtcdp/destinations/dmp-destinations.md)
+* [Plateforme de gestion des données](/help/rtcdp/destinations/dmp-destinations.md)
 * [Marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Personnalisation ](/help/rtcdp/destinations/personalization-destinations.md)
-* [Destinations des réseaux sociaux](/help/rtcdp/destinations/social-network-destinations.md)
+* [Personnalisation](/help/rtcdp/destinations/personalization-destinations.md)
+* [Destinations sociales](/help/rtcdp/destinations/social-network-destinations.md)
 * [Questionnaires](/help/rtcdp/destinations/survey-destinations.md)
-* [Voix du client](/help/rtcdp/destinations/voice-of-customer-destinations.md)
+* [Retours des consommateurs](/help/rtcdp/destinations/voice-of-customer-destinations.md)
