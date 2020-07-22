@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '1971'
+source-wordcount: '1974'
 ht-degree: 79%
 
 ---
@@ -215,6 +215,8 @@ Un autre défi classique pour les professionnels du marketing a été de créer 
 - Objet
 - Map
 - Événements
+- audiences externes
+- Segments
 
 Vous trouverez des informations plus détaillées sur ces types de données pris en charge dans le document [des types de données](./data-types.md)pris en charge.
 
