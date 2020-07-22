@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API Schema Registry
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '2322'
 ht-degree: 84%
@@ -1015,7 +1015,7 @@ Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un c
 }
 ```
 
-## Enable schema for use in [!DNL Real-time Customer Profile]
+## Enable schema for use in [!DNL Real-time Customer Profile] {#profile}
 
 En ajoutant la balise « union » à l’attribut `meta:immutableTags`, vous pouvez activer le schéma Loyalty Members pour qu’il soit utilisé par [!DNL Real-time Customer Profile].
 
