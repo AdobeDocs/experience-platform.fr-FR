@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
+source-git-commit: 444185df28026bf2045afcdadf29f9255885dafb
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 26%
+source-wordcount: '820'
+ht-degree: 28%
 
 ---
 
@@ -34,34 +34,13 @@ Les vidéos suivantes décrivent comment [!DNL Experience Platform] créer des e
 
 ## Prise en charge des navigateurs
 
-Le site Web de l’Adobe Experience Platform et les sites Web associés, tels que Adobe Admin Console, sont tous conçus pour fonctionner de manière optimale dans les dernières versions de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
+Le site Web de l’Adobe Experience Platform et les sites Web associés, tels que le Admin Console Adobe, sont tous conçus pour fonctionner de manière optimale dans les **dernières versions** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
 
-<table>
-<tr>
-  <th>Operating system (Système d’exploitation)</th>
-  <th>Navigateurs pris en charge</th>
-  <th></th>
-  <th></th>
-</tr>
-<tr>
-  <td>Mac OS X</td>
-  <td>Dernière version de Google Chrome</td>
-  <td>Dernière version de Safari</td>
-  <td>Dernière version de Firefox</td>
-</tr>
-<tr>
-  <td>Windows 10</td>
-  <td>Dernière version de Google Chrome</td>
-  <td>Dernière version de Microsoft Edge</td>
-  <td>Dernière version de Firefox</td>
-</tr>
-<tr>
-  <td>Windows 7</td>
-  <td>Dernière version de Google Chrome</td>
-  <td> </td>
-  <td>Dernière version de Firefox</td>
-</tr>
-</table>
+| Operating system (Système d’exploitation) | Navigateurs pris en charge |  |  |
+|---|---|---|---|
+| Mac OS X | Google Chrome | Safari | Firefox |
+| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
+| Windows 7 | Google Chrome |  | Firefox&lt; |
 
 Non pris en charge:
 
