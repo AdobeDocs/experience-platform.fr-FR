@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Descripteurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
 workflow-type: tm+mt
 source-wordcount: '1477'
-ht-degree: 84%
+ht-degree: 82%
 
 ---
 
@@ -369,7 +369,7 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 
 #### Descripteur d’identité de référence
 
-Les descripteurs d’identité de référence fournissent un contexte de référence à un champ de schéma, ce qui permet de le lier au champ d’identité principal d’un schéma de destination. Les champs doivent déjà disposer d’un libellé de descripteur d’identité avant qu’un descripteur de référence puisse leur être appliqué.
+Les descripteurs d&#39;identité de référence fournissent un contexte de référence à l&#39;identité principale d&#39;un champ de schéma, ce qui permet de le référencer par des champs d&#39;autres schémas. Les champs doivent déjà disposer d’un libellé de descripteur d’identité avant qu’un descripteur de référence puisse leur être appliqué.
 
 ```json
 {
