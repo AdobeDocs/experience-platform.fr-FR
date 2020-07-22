@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Types de données Adobe Experience Platform Segmentation Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 82%
+source-wordcount: '456'
+ht-degree: 66%
 
 ---
 
@@ -50,15 +50,15 @@ Comme le montre le tableau ci-dessous, les données d’événement sont génér
 | Bouton d’activation/désactivation « Appliquer la règle de temps » | Incorpore des données de date. |
 | Est égal à, n’est pas égal à, commence par, ne commence pas par, se termine par, ne se termine pas par, contient, ne contient pas, existe, n’existe pas | Incorpore des données de chaîne. |
 
-## Segments
-
-Les définitions de segment existantes peuvent également être utilisées en tant que composants d’une nouvelle définition de segment, en ajoutant leurs attributs et règles basées sur des événements au nouveau segment.
-
-## Audiences
+### Partage d&#39;audiences
 
 Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attribut au nouveau segment.
 
-Actuellement, seul Adobe Audience Manager est pris en charge en tant qu’audience. D’autres sources seront activées à l’avenir.
+Actuellement, seul l’Adobe Audience Manager est pris en charge en tant qu’audience externe, les sources supplémentaires étant activées à l’avenir. Pour plus d&#39;informations sur l&#39;utilisation des audiences d&#39;Adobe Audience Manager avec Platform, consultez le guide de partage des [audiences dans la documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)de l&#39;Adobe Audience Manager.
+
+### Partage de segments
+
+Les segments créés dans Platform peuvent être utilisés dans d’autres services [principaux](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 
