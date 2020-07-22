@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 6c90e68bde1fb8474ba23127ecf7b6fd617c7765
+source-git-commit: efde1b9bf65bde1a55084774c845b8d5585272d4
 workflow-type: tm+mt
-source-wordcount: '747'
-ht-degree: 28%
+source-wordcount: '844'
+ht-degree: 26%
 
 ---
 
@@ -31,6 +31,43 @@ Les vidéos suivantes décrivent comment [!DNL Experience Platform] créer des e
 **En coulisses :**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+
+## Prise en charge des navigateurs
+
+Le site Web de l’Adobe Experience Platform et les sites Web associés, tels que Adobe Admin Console, sont tous conçus pour fonctionner de manière optimale dans les dernières versions de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
+
+<table>
+<tr>
+  <th>Operating system (Système d’exploitation)</th>
+  <th>Navigateurs pris en charge</th>
+  <th></th>
+  <th></th>
+</tr>
+<tr>
+  <td>Mac OS X</td>
+  <td>Dernière version de Google Chrome</td>
+  <td>Dernière version de Safari</td>
+  <td>Dernière version de Firefox</td>
+</tr>
+<tr>
+  <td>Windows 10</td>
+  <td>Dernière version de Google Chrome</td>
+  <td>Dernière version de Microsoft Edge</td>
+  <td>Dernière version de Firefox</td>
+</tr>
+<tr>
+  <td>Windows 7</td>
+  <td>Dernière version de Google Chrome</td>
+  <td> </td>
+  <td>Dernière version de Firefox</td>
+</tr>
+</table>
+
+Non pris en charge:
+
+* Internet Explorer 10
+* Windows 8
+* Opera
 
 ## Prise en charge des langues
 
