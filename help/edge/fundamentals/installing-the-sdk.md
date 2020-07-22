@@ -4,10 +4,10 @@ seo-title: Installation du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c5afced244c661b0ec0bcf0109191a2dacf886aa
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 72%
+source-wordcount: '583'
+ht-degree: 70%
 
 ---
 
@@ -71,6 +71,10 @@ Si vous avez déterminé que vous devez polyfiller `window.Promise`, incluez la 
 ```
 
 Cela charge un script qui s’assure que `window.Promise` est une implémentation de promesse valide.
+
+>[!NOTE]
+>
+>Si vous choisissez de charger une autre implémentation Promise, veillez à ce qu’elle prenne en charge `Promise.prototype.finally`.
 
 ## Chargement synchrone du fichier JavaScript {#loading-javascript-synchronously}
 
