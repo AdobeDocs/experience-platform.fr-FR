@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide d’utilisation des environnements de test
 topic: user guide
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 97%
+source-wordcount: '530'
+ht-degree: 80%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document fournit la procédure à suivre pour réaliser différentes opérati
 
 ## Affichage des environnements de test
 
-Dans l’interface utilisateur d’Experience Platform, cliquez sur **Environnements de test** dans le panneau de navigation de gauche pour ouvrir le tableau de bord _Environnements de test_. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris le type d’environnement de test (production ou développement) et l’état (actif, en cours de création, supprimé ou en échec).
+Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Environnements de test]** dans le panneau de navigation de gauche pour ouvrir le tableau de bord _[!UICONTROL Environnements de test]_. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris le type d’environnement de test (production ou développement) et l’état (actif, en cours de création, supprimé ou en échec).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -38,25 +38,25 @@ Après avoir sélectionné un environnement de test, l’écran actualise l’en
 
 ## Création d’un nouvel environnement de test
 
-Utilisez la vidéo suivante pour obtenir un aperçu rapide de la façon d&#39;utiliser [!DNL Sandboxes] dans [!DNL Experience Platform].
+La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans l’Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Pour créer un nouvel environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le volet de navigation de gauche, puis cliquez sur **Créer un environnement de test**.
+Pour créer un nouvel environnement de test dans l’interface utilisateur, cliquez sur **[!UICONTROL Environnements de test]** dans le volet de navigation de gauche, puis cliquez sur **[!UICONTROL Créer un environnement de test]**.
 
 ![](../images/ui/create-sandbox-button.png)
 
-La boîte de dialogue _Créer un environnement de test_ s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. Le **nom** de l’environnement de test est un identifiant entièrement en minuscules à utiliser dans les appels API qui se doit donc d’être unique et concis.
+La boîte de dialogue _[!UICONTROL Créer un environnement de test]_s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage**est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. The sandbox**[!UICONTROL  Name ]**is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
-Lorsque vous avez terminé, cliquez sur **Créer**.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
 ![](../images/ui/create-sandbox-dialog.png)
 
 >[!NOTE]
 >
->Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **type** est verrouillée sur « hors production » et ne peut pas être modifiée.
+>Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **[!UICONTROL type]** est verrouillée sur « hors production » et ne peut pas être modifiée.
 
-Lorsque vous avez terminé de créer l’environnement de test, actualisez la page pour que le nouvel environnement de test apparaisse dans le tableau de bord _Environnements de test_ avec l’état « En cours de création ». Il faut environ 15 minutes pour que le système approvisionne les nouveaux environnements de test, auquel cas leur état passera à « Actif ».
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -68,15 +68,15 @@ Lorsque vous avez terminé de créer l’environnement de test, actualisez la pa
 
 La réinitialisation d’un environnement de test hors production supprime toutes les ressources associées à cet environnement de test (schémas, jeux de données, etc.) tout en conservant le nom et les autorisations associés de l’environnement de test. Cet environnement de test « propre » reste disponible avec le même nom auprès des utilisateurs qui y ont accès.
 
-Pour réinitialiser un environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez réinitialiser. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **Réinitialiser un environnement de test**.
+Pour réinitialiser un environnement de test dans l’interface utilisateur, cliquez sur **[!UICONTROL Environnements de test]** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez réinitialiser. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **[!UICONTROL Réinitialiser un environnement de test]**.
 
 ![](../images/ui/reset-sandbox-button.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **Réinitialiser** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **[!UICONTROL Réinitialiser]** pour continuer.
 
 <img src="../images/ui/reset-are-you-sure.png" width="350"><br>
 
-Un message de confirmation apparaît et l’état de l’environnement de test passe à « En cours de réinitialisation ». Une fois qu’il a été approvisionné par le système, son état est mis à jour vers « Actif » ou « En échec ».
+A confirmation message appears and the sandbox&#39;s state changes to &quot;[!UICONTROL Resetting]&quot;. Once it has been provisioned by the system, its state will update to &quot;[!UICONTROL Active]&quot; or &quot;[!UICONTROL Failed]&quot;.
 
 ![](../images/ui/sandbox-resetting.png)
 
@@ -88,15 +88,15 @@ Un message de confirmation apparaît et l’état de l’environnement de test p
 
 La suppression d’un environnement de test hors production supprime définitivement toutes les ressources associées à cet environnement de test, y compris les autorisations.
 
-Pour supprimer un environnement de test dans l’interface utilisateur, cliquez sur **Environnements de test** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez supprimer. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **Supprimer l’environnement de test**.
+Pour supprimer un environnement de test dans l’interface utilisateur, cliquez sur **[!UICONTROL Environnements de test]** dans le menu de navigation de gauche, puis cliquez sur l’environnement de test que vous souhaitez supprimer. Dans la boîte de dialogue qui apparaît sur le côté droit de l’écran, cliquez sur **[!UICONTROL Supprimer l’environnement de test]**.
 
 ![](../images/ui/delete-sandbox-button.png)
 
-Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **Supprimer** pour continuer.
+Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliquez sur **[!UICONTROL Supprimer]** pour continuer.
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail _Environnements de test_.
+Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail _[!UICONTROL Environnements de test]_.
 
 ## Étapes suivantes
 
