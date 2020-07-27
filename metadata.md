@@ -1,16 +1,16 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
-solution-title: Présentation de la plateforme
-solution-hub-url: https://docs.adobe.com/content/help/en/experience-platform/landing/home.html
+solution-title: Présentation de Platform
+solution-hub-url: https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
 getting-started-title: Documentation
-getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/landing/documentation/overview.html
+getting-started-url: https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/documentation/overview.html
 tutorials-title: Tutoriels
-tutorials-url: https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html
+tutorials-url: https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
 index: true
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: d16d13fdec107d3654ff2ef5c8e18661763470f0
 
 ---
