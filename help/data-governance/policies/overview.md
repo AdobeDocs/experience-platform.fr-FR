@@ -37,7 +37,7 @@ Lorsque des données sont utilisées dans le service de votre entreprise, les ac
 >
 >Si vous utilisez [!DNL Real-time Customer Data Platform], vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Pour plus d’informations, consultez le document sur la gouvernance des [données dans le CDP](../../rtcdp/privacy/data-governance-overview.md) en temps réel.
 
-Consultez l’annexe du présent document pour obtenir une liste d’actions [marketing définies](#core-actions)par Adobedisponibles. Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’ [!DNL Policy Service] API DULE ou de l’interface [!DNL Experience Platform ]utilisateur. Vous trouverez plus d’informations sur l’utilisation des actions et stratégies marketing dans la section suivante.
+Consultez l’annexe du présent document pour obtenir une liste des actions [marketing définies par l’Adobe](#core-actions)disponibles. Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’ [!DNL Policy Service] API DULE ou de l’interface [!DNL Experience Platform ]utilisateur. Vous trouverez plus d’informations sur l’utilisation des actions et stratégies marketing dans la section suivante.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -53,7 +53,7 @@ Une fois les libellés d’utilisation des données appliqués, les responsables
 
 >[!IMPORTANT]
 >
->Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
 Pour obtenir des instructions détaillées sur l’utilisation des actions marketing et des stratégies d’utilisation des données dans l’API, consultez le didacticiel sur la [création et l’évaluation des stratégies](create.md)d’utilisation des données. For more information the key operations provided by the [!DNL Policy Service] API, see the [Policy Service developer guide](../api/getting-started.md).
 
@@ -69,11 +69,11 @@ La section suivante fournit des informations supplémentaires sur les stratégie
 
 ### Actions marketing définies par Adobe {#core-actions}
 
-Le tableau ci-dessous décrit les principales actions marketing fournies de manière prête par Adobe.
+Le tableau ci-dessous décrit les principales actions marketing fournies par Adobe.
 
 >[!NOTE]
 >
->Les principales actions marketing doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
+>Les actions marketing de base doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
 
 | Action marketing | Description |
 | --- | --- |
