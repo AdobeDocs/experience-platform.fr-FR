@@ -1,45 +1,45 @@
 ---
 keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Optimiser un modèle
+title: Optimisation d’un modèle
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1219'
-ht-degree: 0%
+ht-degree: 89%
 
 ---
 
 
-# Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
+# Optimisation d’un modèle utilisation de la structure Model Insights
 
-Le Cadre d&#39;analyse de modèle fournit aux chercheurs en données des outils leur permettant [!DNL Data Science Workspace] de faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le cadre améliorera la vitesse et l&#39;efficacité du processus d&#39;apprentissage automatique et améliorera la facilité d&#39;utilisation pour les chercheurs en données. Pour ce faire, vous fournissez un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux spécialistes des données et aux scientifiques des données citoyens de prendre de meilleures décisions d&#39;optimisation des modèles pour leurs clients finaux.
+The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 
-## Que sont les mesures ?
+## Que sont les mesures ?
 
-Après la mise en oeuvre et la formation d&#39;un modèle, l&#39;étape suivante d&#39;un informaticien consiste à déterminer les performances du modèle. Diverses mesures sont utilisées pour déterminer l’efficacité d’un modèle par rapport à d’autres. Voici quelques exemples de mesures utilisées :
+Après la mise en œuvre et la formation d’un modèle, l’étape suivante pour un analyste de données consiste à déterminer les performances du modèle. Diverses mesures sont utilisées pour comparer l’efficacité d’un modèle par rapport aux autres. Voici quelques exemples de mesures utilisées :
 - Précision de la classification
-- Zone sous la courbe
+- Aire sous la courbe
 - Matrice de confusion
 - Rapport de classification
 
 ## Configuration du code de recette
 
-Actuellement, Model Insights Framework prend en charge les runtimes suivants :
+Actuellement, Model Insights Framework prend en charge les exécutions suivantes :
 - [Scala](#scala)
 - [!DNL Python/Tensorflow](#pythontensorflow)
-- [r](#r)
+- [R](#r)
 
-Vous trouverez un exemple de code pour les recettes dans le référentiel de référence [](https://github.com/adobe/experience-platform-dsw-reference) experience-platform-dsw sous `recipes`. Des fichiers spécifiques de ce référentiel seront référencés tout au long de ce didacticiel.
+Vous trouverez un exemple de code pour les recettes dans le référentiel [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) sous `recipes`. Des fichiers spécifiques de ce référentiel seront référencés dans ce tutoriel.
 
 ### Scala {#scala}
 
-Il existe deux façons d&#39;intégrer des mesures aux recettes. L’une consiste à utiliser les mesures d’évaluation par défaut fournies par le SDK et l’autre consiste à créer des mesures d’évaluation personnalisées.
+Il existe deux façons d’intégrer des mesures aux recettes. L’une consiste à utiliser les mesures d’évaluation par défaut fournies par le SDK, l’autre consiste à créer des mesures d’évaluation personnalisées.
 
 #### Mesures d’évaluation par défaut pour Scala
 
-Les évaluations par défaut sont calculées dans le cadre des algorithmes de classification. Voici quelques valeurs par défaut pour les évaluateurs actuellement implémentés :
+Les évaluations par défaut sont calculées dans le cadre des algorithmes de classification. Voici quelques valeurs par défaut pour les évaluateurs actuellement mis en œuvre :
 
 | Classe d’évaluateur | `evaluation.class` |
 --- | ---
@@ -47,7 +47,7 @@ Les évaluations par défaut sont calculées dans le cadre des algorithmes de cl
 | DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator` |
 | RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator` |
 
-L’évaluateur peut être défini dans la recette du fichier [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) situé dans le `recipe` dossier. L&#39;exemple de code permettant d&#39;activer le `DefaultBinaryClassificationEvaluator` logiciel est illustré ci-dessous :
+L’évaluateur peut être défini dans la recette du fichier [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) du dossier `recipe`. Un exemple de code permettant d’activer le `DefaultBinaryClassificationEvaluator` est illustré ci-dessous :
 
 ```scala
 evaluation.class=com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator
@@ -56,7 +56,7 @@ evaluation.predictionColumn=prediction
 training.evaluate=true
 ```
 
-Une fois qu’une classe d’évaluateur est activée, un certain nombre de mesures sont calculées par défaut pendant la formation. Les mesures par défaut peuvent être déclarées explicitement en ajoutant la ligne suivante à votre `application.properties`rapport.
+Une fois qu’une classe d’évaluateur est activée, un certain nombre de mesures sont calculées par défaut pendant la formation. Les mesures par défaut peuvent être déclarées explicitement en ajoutant la ligne suivante à `application.properties`.
 
 ```scala
 evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
@@ -64,64 +64,64 @@ evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 
 >[!NOTE]
 >
->Si la mesure n&#39;est pas définie, les mesures par défaut sont actives.
+>Si la mesure n’est pas définie, les mesures par défaut seront actives.
 
-Une mesure spécifique peut être activée en modifiant la valeur de `evaluation.metrics.com`. Dans l’exemple suivant, la mesure Note F est activée.
+Une mesure spécifique peut être activée en modifiant la valeur de `evaluation.metrics.com`. Dans l’exemple suivant, la mesure F-Score est activée.
 
 ```scala
 evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 ```
 
-Le tableau suivant indique les mesures par défaut pour chaque classe. Un utilisateur peut également utiliser les valeurs de la `evaluation.metric` colonne pour activer une mesure spécifique.
+Le tableau suivant indique les mesures par défaut pour chaque classe. Un utilisateur peut également utiliser les valeurs de la colonne `evaluation.metric` pour activer une mesure spécifique.
 
 | `evaluator.class` | Mesures par défaut | `evaluation.metric` |
 --- | --- | ---
-| `DefaultBinaryClassificationEvaluator` | -Matrice de précision <br>- <br>de rappel-confusion <br>F-Score <br>-Précision des caractéristiques d&#39;exploitation <br>du récepteur <br>-Zone sous les caractéristiques d&#39;exploitation du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `DefaultMultiClassificationEvaluator` | -Matrice de précision <br>- <br>de rappel-confusion <br>F-Score <br>-Précision des caractéristiques d&#39;exploitation <br>du récepteur <br>-Zone sous les caractéristiques d&#39;exploitation du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
-| `RecommendationsEvaluator` | -Précision moyenne <br>normalisée (MAP) Gain cumulé cumulé <br>moyen Ordre de classement <br>métrique réciproque K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
+| `DefaultBinaryClassificationEvaluator` | -Précision <br>-Rappel <br>-Matrice de confusion <br>-F-Score <br>-Exactitude <br>-Caractéristiques de fonctionnement du récepteur <br>-Aire sous les caractéristiques de fonctionnement du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Précision <br>-Rappel <br>-Matrice de confusion <br>-F-Score <br>-Exactitude <br>-Caractéristiques de fonctionnement du récepteur <br>-Aire sous les caractéristiques de fonctionnement du récepteur | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `RecommendationsEvaluator` | -Précision moyenne (MAP) <br>-Gain cumulatif actualisé normalisé <br>-Rang réciproque moyen <br>-Mesure K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
 
 
 #### Mesures d’évaluation personnalisées pour Scala
 
-L’évaluateur personnalisé peut être fourni en étendant l’interface de `MLEvaluator.scala` dans votre `Evaluator.scala` fichier. Dans l’exemple de fichier [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala) , nous définissons des fonctions personnalisées `split()` et `evaluate()` des fonctions. Notre `split()` fonction divise nos données de manière aléatoire avec un rapport de 8:2 et notre `evaluate()` fonction définit et renvoie 3 mesures : MAPE, MAE et RMSE.
+L’évaluateur personnalisé peut être fourni en étendant l’interface de `MLEvaluator.scala` dans votre fichier `Evaluator.scala`. Dans l’exemple de fichier [Evaluator.scala](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/scala/com/adobe/platform/ml/Evaluator.scala), nous définissons des fonctions `split()` et `evaluate()` personnalisées. Notre fonction `split()` divise nos données de manière aléatoire avec un ratio de 8:2 et notre fonction `evaluate()` définit et renvoie trois mesures : MAPE, MAE et RMSE.
 
 >[!IMPORTANT]
 >
->Pour la `MLMetric` classe, n’utilisez pas `"measures"` pour `valueType` lors de la création d’une autre `MLMetric` mesure que la mesure ne sera pas renseignée dans le tableau des mesures d’évaluation personnalisées.
+>Pour la classe `MLMetric`, n’utilisez pas `"measures"` pour `valueType` lors de la création d’un nouveau `MLMetric`, sinon la mesure ne sera pas renseignée dans le tableau des mesures d’évaluation personnalisées.
 >  
-> Procédez comme suit : `metrics.add(new MLMetric("MAPE", mape, "double"))`\
-> Pas ceci : `metrics.add(new MLMetric("MAPE", mape, "measures"))`
+> À faire : `metrics.add(new MLMetric("MAPE", mape, "double"))`\
+> À ne pas faire : `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-Une fois définie dans la recette, l&#39;étape suivante consiste à l&#39;activer dans les recettes. Cette opération est effectuée dans le fichier [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) du `resources` dossier du projet. Ici, la `evaluation.class` classe est définie sur la `Evaluator` classe définie dans `Evaluator.scala`
+Une fois définie dans la recette, l’étape suivante consiste à l’activer dans les recettes. Cette opération est effectuée dans le fichier [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) du dossier `resources` du projet. Ici, la `evaluation.class` est définie sur la classe `Evaluator` définie dans `Evaluator.scala`
 
 ```properties
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Dans la [!DNL Data Science Workspace]boîte de dialogue, l’utilisateur peut voir les informations de l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
+In the [!DNL Data Science Workspace], the user would be able to see the insights in the &quot;Evaluation Metrics&quot; tab in the experiment page.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-Pour l’instant, il n’existe aucune mesure d’évaluation par défaut pour [!DNL Python] ou [!DNL Tensorflow]. Par conséquent, pour obtenir les mesures d’évaluation pour [!DNL Python] ou [!DNL Tensorflow], vous devez créer une mesure d’évaluation personnalisée. Cela peut être fait en implémentant la `Evaluator` classe.
+As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. Pour ce faire, mettez en œuvre la classe `Evaluator`.
 
 #### Mesures d’évaluation personnalisées pour [!DNL Python]
 
-Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être implémentées pour l’évaluateur : `split()` et `evaluate()`.
+Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être mises en œuvre pour l’évaluateur : `split()` et `evaluate()`.
 
-Par exemple, [!DNL Python]ces méthodes seraient définies dans [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la `Evaluator` classe. Suivez le lien [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple du `Evaluator`.
+For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
 
-La création de mesures d’évaluation dans [!DNL Python] exige que l’utilisateur mette en oeuvre les `evaluate()` et `split()` méthodes.
+Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods.
 
-La `evaluate()` méthode renvoie l’objet metric qui contient un tableau d’objets metric avec les propriétés de `name`, `value`et `valueType`.
+La méthode `evaluate()` renvoie l’objet de mesure qui contient un tableau d’objets de mesure avec les propriétés `name`, `value` et `valueType`.
 
-La `split()` méthode a pour but de saisir des données et de produire une formation et un ensemble de données de test. Dans notre exemple, la `split()` méthode saisit les données à l’aide du `DataSetReader` SDK, puis nettoie les données en supprimant les colonnes non liées. De là, d’autres fonctions sont créées à partir des fonctions brutes existantes dans les données.
+L’objectif de la méthode `split()` est de saisir des données et de produire un jeu de données de formation et de test. Dans notre exemple, la méthode `split()` saisit les données à l’aide du SDK `DataSetReader`, puis nettoie les données en supprimant les colonnes non liées. Ensuite, des fonctionnalités supplémentaires sont créées à partir des fonctionnalités brutes existantes dans les données.
 
-La `split()` méthode doit renvoyer une base de données de formation et de test qui est ensuite utilisée par les `pipeline()` méthodes pour former et tester le modèle ML.
+La méthode `split()` doit renvoyer un cadre de données de formation et de test qui est ensuite utilisé par les méthodes `pipeline()` pour former et tester le modèle ML.
 
 #### Mesures d’évaluation personnalisées pour Tensorflow
 
-Car [!DNL Tensorflow], comme [!DNL Python], les méthodes `evaluate()` et `split()` dans la `Evaluator` classe devront être implémentées. Par exemple, `evaluate()`les mesures doivent être renvoyées pendant `split()` le retour des ensembles de données de train et d&#39;essai.
+For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -139,32 +139,32 @@ class Evaluator(AbstractEvaluator):
        return 'train', 'test'
 ```
 
-### r {#r}
+### R {#r}
 
-À ce jour, il n&#39;existe aucune mesure d&#39;évaluation par défaut pour R. Par conséquent, pour obtenir les mesures d&#39;évaluation pour R, vous devez définir la `applicationEvaluator` classe dans le cadre de la recette.
+Pour le moment, aucune mesure d’évaluation par défaut n’existe pour R. Par conséquent, vous devrez définir la classe `applicationEvaluator` dans le cadre de la recette afin d’obtenir les mesures d’évaluation pour R.
 
 #### Mesures d’évaluation personnalisées pour R
 
-L’objectif principal de cette méthode `applicationEvaluator` est de renvoyer un objet JSON contenant des paires clé-valeur de mesures.
+L’objectif principal de `applicationEvaluator` consiste à renvoyer un objet JSON contenant des paires clé-valeur de mesures.
 
-Ce fichier [applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) peut être utilisé comme exemple. Dans cet exemple, la section `applicationEvaluator` est divisée en trois sections courantes :
-- Charger les données
-- Préparation des données/ingénierie des fonctionnalités
-- Récupérer le modèle enregistré et évaluer
+[applicationEvaluator.R](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/R/applicationEvaluator.R) peut servir d’exemple. Dans cet exemple, `applicationEvaluator` est divisé en trois sections courantes :
+- Chargement des données
+- Préparation des données/conception des fonctionnalités
+- Récupération du modèle enregistré et évaluation
 
-Les données sont tout d’abord chargées dans un jeu de données à partir d’une source, comme défini dans [commerce.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). À partir de là, les données sont nettoyées et conçues pour s&#39;adapter au modèle d&#39;apprentissage automatique. Enfin, le modèle est utilisé pour faire une prédiction en utilisant notre jeu de données et à partir des valeurs prédites et des valeurs réelles, les mesures sont calculées. Dans ce cas, MAPE, MAE et RMSE sont définis et renvoyés dans l’ `metrics` objet.
+Les données sont d’abord chargées dans un jeu de données à partir d’une source, comme défini dans [retail.config.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/R/Retail%20-%20GradientBoosting/retail.config.json). Ensuite, les données sont nettoyées et conçues pour s’adapter au modèle d’apprentissage automatique. Enfin, le modèle est utilisé pour effectuer une prévision à l’aide du jeu de données et des mesures sont calculées à partir des valeurs prédites et des valeurs réelles. Dans ce cas, MAPE, MAE et RMSE sont définis et renvoyés dans l’objet `metrics`.
 
-## Utilisation de mesures prédéfinies et de graphiques de visualisation
+## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-Il [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithmes d’apprentissage automatique de haut niveau courantes ainsi que les mesures d’évaluation et visualisations correspondantes.
+The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
-| Type d&#39;algorithme XML | Mesures d’évaluation | Visualisations |
+| Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 --- | --- | ---
-| Régression | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Courbe d’incrustation des valeurs prédites et réelles |
-| Classification binaire | - Matrice<br>de confusion - Rappel<br>de précision - Précision<br>- Note F (spécifiquement F1, F2)<br>- AUC<br>- ROC | Courbe ROC et matrice de confusion |
-| Classification à plusieurs classes | -Matrice de confusion <br>- Pour chaque classe : <br>- précision du rappel de précision <br>- score F (spécifiquement F1, F2) | Courbe ROC et matrice de confusion |
-| Mise en grappe (avec vérité au sol) | - NMI (note d&#39;information mutuelle normalisée), AMI (note d&#39;information mutuelle ajustée)<br>- RI (indice Rand), ARI (indice Rand ajusté)<br>- score d&#39;homogénéité, score d&#39;exhaustivité et mesure<br>V- FMI (indice Fowlkes-Mallow)<br>- Indice de pureté<br>- Jaccard | Graphique en grappes montrant les grappes et les centroïdes avec des tailles de grappe relatives reflétant les points de données appartenant à une grappe |
-| Mise en grappe (sans vérité au sol) | - Inertia<br>- Coefficient<br>de silhouette- CHI (indice Calinski-Harabaz)<br>- DBI (indice Davies-Bouldin)<br>- Indice Dunn | Graphique en grappes montrant les grappes et les centroïdes avec des tailles de grappe relatives reflétant les points de données appartenant à une grappe |
-| Recommandation | -Précision moyenne <br>normalisée (MAP) Gain cumulé cumulé <br>moyen Ordre de classement <br>métrique réciproque K | À déterminer |
-| Cas d’utilisation de TensorFlow | Analyse de modèle TensorFlow (TFMA) | Comparaison approfondie des modèles de réseau neuronal et de la visualisation |
-| Autre mécanisme de capture d&#39;erreur | Logique de mesure personnalisée (et graphiques d’évaluation correspondants) définie par l’auteur du modèle. Gestion des erreurs gracieuses en cas de non-correspondance de modèle | Tableau avec des paires clé-valeur pour les mesures d’évaluation |
+| Régression | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Courbe de recouvrement des valeurs prédites et réelles |
+| Classification binaire | - Matrice de confusion<br>- Précision-rappel<br>- Exactitude<br>- F-score (en particulier F1 et F2)<br>- AUC<br>- ROC | Courbe ROC et matrice de confusion |
+| Classification multi-classe | -Matrice de confusion <br>- Pour chaque classe : <br>- précision-rappel exactitude <br>- F-score (en particulier F1 et F2) | Courbe ROC et matrice de confusion |
+| Clustering (avec réalité de terrain) | - NMI (note d’information mutuelle normalisée), AMI (note d’information mutuelle ajustée)<br>- RI (indice de Rand), ARI (indice de Rand ajusté)<br>- note d’homogénéité, note d’exhaustivité et V-measure<br>- FMI (indice Fowlkes-Mallows)<br>- Pureté<br>- Indice de Jaccard | Graphique de clusters illustrant les clusters et les centres de gravité dont les tailles de cluster relatives reflètent les points de données appartenant au cluster |
+| Clustering (sans réalité de terrain) | - Inertie<br>- Coefficient de silhouette<br>- CHI (indice de Calinski-Harabaz)<br>- DBI (indice de Davies-Bouldin)<br>- Indice de Dunn | Graphique de clusters illustrant les clusters et les centres de gravité dont les tailles de cluster relatives reflètent les points de données appartenant au cluster |
+| Recommandation | -Précision moyenne (MAP) <br>-Gain cumulatif actualisé normalisé <br>-Rang réciproque moyen <br>-Mesure K | À déterminer |
+| Cas d’utilisation de TensorFlow | TensorFlow Model Analysis (TFMA) | Comparaison/visualisation des modèles de réseaux neuronaux de Deepcompare |
+| Autre/Mécanisme de capture d’erreur | Logique de mesure personnalisée (et graphiques d’évaluation correspondants) définie par l’auteur du modèle. Gestion des erreurs élégante en cas de non-correspondance de modèle | Tableau avec des paires clé-valeur pour les mesures d’évaluation |
