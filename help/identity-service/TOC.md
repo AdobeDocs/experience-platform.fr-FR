@@ -1,30 +1,30 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Identity Service d’Adobe Experience Platform
+user-guide-title: Adobe Experience Platform Identity Service
 translation-type: tm+mt
 source-git-commit: c60f374fddb7c2d0ae35c5a5e085ddc0e2f7b78f
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 16%
+ht-degree: 95%
 
 ---
 
 
-# Identity Service d’Adobe Experience Platform {#identity}
+# Adobe Experience Platform Identity Service {#identity}
 
-- [Présentation du service Identity Service](home.md)
-- [Présentation de l&#39;espace de nommage d&#39;identité](namespaces.md)
-- API du service d&#39;identité {#api}
+- [Présentation d’Identity Service](home.md)
+- [Présentation des espaces de noms d’identité](namespaces.md)
+- API Identity Service {#api}
    - [Prise en main](api/getting-started.md)
-   - [Attribuer une étiquette à un champ en tant qu’identité](api/label-identities.md)
-   - [Identités des grappes de Listes](api/list-cluster-identites.md)
-   - [Historique de la grappe de Listes d&#39;une identité](api/list-cluster-history.md)
-   - [Mappages d&#39;identité des Listes](api/list-identity-mappings.md)
-   - [espaces de nommage Listes disponibles](api/list-namespaces.md)
-   - [Création d’un espace de nommage personnalisé](api/create-custom-namespace.md)
-   - [Liste de l’ID natif pour une identité](api/list-native-id.md)
-- [Présentation de l&#39;ECID](ecid.md)
+   - [Étiquetage d’un champ comme identité](api/label-identities.md)
+   - [Répertorier les identités d’un cluster](api/list-cluster-identites.md)
+   - [Répertorier l’historique des clusters d’une identité](api/list-cluster-history.md)
+   - [Répertorier les mappages d’une identité](api/list-identity-mappings.md)
+   - [Répertorier les espaces de noms disponibles](api/list-namespaces.md)
+   - [Création d’un espace de noms personnalisé](api/create-custom-namespace.md)
+   - [Répertorier l’identifiant natif d’une identité](api/list-native-id.md)
+- [Présentation d’ECID](ecid.md)
 - [Guide de dépannage](troubleshooting-guide.md)
-- [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
-- [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
+- [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
