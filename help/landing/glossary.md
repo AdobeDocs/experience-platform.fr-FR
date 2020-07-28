@@ -30,7 +30,7 @@ ht-degree: 71%
 
 **Adobe Experience Platform :** Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience tout au long du parcours client.
 
-**Connecteurs Adobe :** Les connecteurs Adobe sont des connexions préconfigurées créées par Adobe pour permettre aux données d’entrer et de sortir [!DNL Experience Platform]. Les connecteurs sont [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]et [!DNL Azure Blob].
+**Connecteurs d&#39;Adobe :** Les connecteurs d’Adobe sont des connexions préconfigurées créées par l’Adobe pour permettre aux données d’entrer et de sortir [!DNL Experience Platform]. Les connecteurs sont [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]et [!DNL Azure Blob].
 
 **Adobe Intelligent Services :** Adobe Sensei est le cadre d’intelligence artificielle qui alimente [!DNL Experience Platform]. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
@@ -78,7 +78,7 @@ ht-degree: 71%
 
 **Créer :** Dans [!DNL Experience Platform Launch], une compilation est une bibliothèque déployée. La version est un fichier ou un ensemble de fichiers qui contient toutes les configurations et le code nécessaires pour exécuter la logique commerciale contenue dans cette bibliothèque.
 
-**Outils Business Intelligence :** L&#39;intelligence d&#39;affaires, également appelée outils de &quot;BI&quot;, est principalement intégrée au [!DNL Experience Platform Query Service]système. Les outils de BI sont des types de programmes d’application qui collectent et traitent de grandes quantités de données non structurées à partir de systèmes internes et externes.
+**Outils du Business Intelligence :** L&#39;intelligence d&#39;affaires, également appelée outils de &quot;BI&quot;, est principalement intégrée au [!DNL Experience Platform Query Service]système. Les outils de BI sont des types de programmes d’application qui collectent et traitent de grandes quantités de données non structurées à partir de systèmes internes et externes.
 
 [Haut de page](#adobe-experience-platform-glossary)
 
@@ -86,7 +86,7 @@ ht-degree: 71%
 
 **Capping :** Dans le [!DNL Decisioning Service], le plafonnement est utilisé dans les règles de prise de décision pour définir le nombre de présentations d’une offre. Il existe deux types de limites : le nombre de fois où une offre peut être proposée à l’ensemble des audiences cibles combinées, aussi appelée « limite globale », et le nombre de fois où une offre peut être proposée au même utilisateur final, aussi appelée « limite par profil ».
 
-**Catalogue :** Dans [!DNL Real-time Customer Data Platform], dans les sources et les destinations, un catalogue est une galerie avec des connexions disponibles aux applications Adobe et aux technologies tierces.
+**Catalogue :** Dans [!DNL Real-time Customer Data Platform], dans les sources et les destinations, un catalogue est une galerie avec des connexions disponibles aux applications d&#39;Adobe et aux technologies tierces.
 
 **Classe :** une classe définit le plus petit jeu de champs utilisé pour créer un schéma et constitue le comportement de base qui décrit l’objet métier.
 
@@ -186,7 +186,7 @@ ht-degree: 71%
 
 **Stratégie d’enregistrement delta :** `Delta save strategy` est une option permettant d’ingérer des données tierces via une connexion. Cette option permet à l’utilisateur de spécifier que les lignes de données sources nouvelles ou modifiées sont assimilées à [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
-**Destination :** Dans [!DNL Real-time Customer Data Platform] une destination est un terme général pour tout système, tel qu’une application Adobe, un serveur publicitaire ou un réseau publicitaire où une audience est activée et diffusée.
+**Destination :** Dans [!DNL Real-time Customer Data Platform] une destination est un terme général pour tout système, tel qu’une application d’Adobe, un serveur publicitaire ou un réseau publicitaire où une audience est activée et diffusée.
 
 **Catégorie de destination :** Une catégorie de destination est un groupe de destinations présentant des caractéristiques similaires. [!DNL Real-time Customer Data Platform]
 
@@ -218,7 +218,7 @@ ht-degree: 71%
 
 **Événements :** les événements sont les données de comportement associées à un profil.
 
-**Modèle de données d’expérience (XDM) :** [!DNL Experience Data Model] (XDM) est le concept d’utilisation de schémas standard pour unifier les données en vue de les utiliser avec [!DNL Experience Platform] les applications Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’insights à partir d’énormes quantités de données.
+**Modèle de données d’expérience (XDM) :** [!DNL Experience Data Model] (XDM) est le concept d’utilisation de schémas standard pour unifier les données à utiliser avec [!DNL Experience Platform] les applications Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’insights à partir d’énormes quantités de données.
 
 **Experience Platform Launch :** [!DNL Launch] est un écosystème de gestion des balises et des SDK, intégré aux [!DNL Experience Platform] applications et aux [!DNL Experience Cloud] applications. [!DNL Launch] fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyse, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques client.
 
@@ -284,7 +284,7 @@ ht-degree: 71%
 
 **Symbole d’identité :** un symbole d’identité est l’abréviation d’un espace de noms d’identité, qui peut être utilisé comme référence dans les API.
 
-**Valeur d&#39;identité :** La valeur d&#39;identité est une donnée associée à une identité assignée dans le schéma. Lors de la correspondance de données d’enregistrement entre les profils, la valeur d’identité et l’espace de nommage doivent correspondre.
+**Valeur d&#39;identité :** La valeur d&#39;identité est une donnée associée à une identité assignée dans le schéma. When matching record data across profile fragments both the identity value and the namespace must match.
 
 **Étiquette de données I1 :** l’étiquette de données `I1` sert à classer les données identifiables directement, qui peuvent identifier ou contacter une personne spécifique plutôt qu’un appareil.
 
@@ -386,7 +386,7 @@ ht-degree: 71%
 
 **Profil :** [!DNL Profile] est un modèle de données [!DNL Experience Platform] standard utilisé pour définir les attributs des consommateurs. Un profil peut également être un agrégat de données d’événement et d’attributs liées à une personne ou à un appareil.
 
-**Exportation Profil :** [!DNL Profile] export est l&#39;un des deux types de destinations dans [!DNL Real-time Customer Data Platform]. [!DNL Profile] export génère un fichier contenant des profils et des attributs, utilise des données d’identification personnelle brutes avec le courrier électronique et est utilisé pour l’intégration avec les plateformes de marketing et d’automatisation du courrier électronique.
+**Profile Export:** [!DNL Profile] export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export génère un fichier contenant des profils et des attributs, utilise des données d’identification personnelle brutes avec le courrier électronique et est utilisé pour l’intégration avec les plateformes de marketing et d’automatisation du courrier électronique.
 
 **Fragment de Profil FProfile :** Un fragment de profil est l’information de profil d’une seule identité sur la liste des identités qui existent pour un utilisateur particulier.
 
@@ -408,7 +408,7 @@ ht-degree: 71%
 
 ## R
 
-**Platform de données client en temps réel :** Adobe [!DNL Real-time Customer Data Platform] rassemble des données clients connues et inconnues pour créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel tout au long du parcours client numérique.
+**Platform de données client en temps réel :** L&#39;Adobe [!DNL Real-time Customer Data Platform] rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel tout au long du parcours client numérique.
 
 **Profil client en temps réel :** [!DNL Real-time Customer Profile] est un profil centralisé pour une gestion d’expérience ciblée et personnalisée.
 
@@ -472,7 +472,7 @@ ht-degree: 71%
 
 **Segmentation :** la segmentation consiste à diviser un grand groupe de clients, de prospects ou de consommateurs en groupes plus petits, qui partagent des attributs similaires et réagissent de la même manière aux stratégies marketing.
 
-**Sensei ML Framework :** Sensei ML Framework est un cadre unifié d&#39;apprentissage automatique à travers Adobe qui utilise les données [!DNL Experience Platform] pour donner aux scientifiques des données les moyens de développer des services de renseignement basés sur l&#39;apprentissage automatique d&#39;une manière plus rapide, évolutive et réutilisable.
+**Sensei ML Framework :** Sensei ML Framework est un cadre unifié d&#39;apprentissage automatique à travers l&#39;Adobe qui utilise les données [!DNL Experience Platform] pour donner aux scientifiques des données les moyens de développer des services de renseignement pilotés par l&#39;apprentissage automatique d&#39;une manière plus rapide, évolutive et réutilisable.
 
 **Étiquettes de données Sensible :** les étiquettes Sensible « S » sont utilisées pour classer les données jugées sensibles, par exemple les différents types de données comportementales ou géographiques que vous souhaitez marquer comme sensibles.
 
