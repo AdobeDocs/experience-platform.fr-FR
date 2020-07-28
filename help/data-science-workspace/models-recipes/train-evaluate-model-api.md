@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1191'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -15,44 +15,44 @@ ht-degree: 1%
 # Formation et évaluation d’un modèle (API)
 
 
-Ce didacticiel vous montre comment créer, former et évaluer un modèle à l&#39;aide d&#39;appels d&#39;API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation de l’API.
+Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation sur les API.
 
 ## Conditions préalables
 
-Suivez la procédure [Importer une recette empaquetée à l&#39;aide de l&#39;API](./import-packaged-recipe-api.md) pour créer un moteur, qui est nécessaire pour former et évaluer un modèle à l&#39;aide de l&#39;API.
+Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez ce [didacticiel](../../tutorials/authentication.md) pour obtenir l’autorisation d’effectuer des appels d’API par début.
+Suivez ce [tutoriel](../../tutorials/authentication.md) pour obtenir l’autorisation d’effectuer des appels API.
 
-Dans le didacticiel, vous devez maintenant avoir les valeurs suivantes :
+Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
-- `{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
-- `{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.
+- `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
+- `{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
+- `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
-- Lien vers une image de Docker d&#39;un service intelligent
+- Lien vers une image Docker d’un service intelligent
 
-## Processus des API
+## Workflow API
 
-Nous allons utiliser les API pour créer une exécution d’expérience pour la formation. Pour ce didacticiel, nous nous concentrerons sur les points de terminaison **Moteurs**, **MLInstances** et **Experiments** . Le graphique suivant présente la relation entre les trois et présente également l&#39;idée d&#39;un Run et d&#39;un Model.
+Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points de terminaison **Engines**,**MLInstances** et **Experiments**. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->Les termes &quot;Moteur&quot;, &quot;Instance&quot;, &quot;MLService&quot;, &quot;Expérience&quot; et &quot;Modèle&quot; sont appelés termes différents dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant fera correspondre les différences.
+>Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant fait correspondre les différents termes.
 > 
 > | Terme de l’interface utilisateur | Terme de l’API |
 > --- | ---
-> | Recette | Moteur |
-> | Modèle | Instance MLI |
-> | Cours de formation | Expérience |
+> | Recette | Engine |
+> | Modèle | MLInstance |
+> | Exécutions de formation | Experiment |
 > | Service | MLService |
 
 
 
-### Création d’une instance MLI
+### Création d’une instance MLInstance
 
-La création d&#39;une instance MLInstance peut être effectuée à l&#39;aide de la requête suivante. Vous utiliserez le `{ENGINE_ID}` qui a été renvoyé lors de la création d&#39;un moteur à partir du didacticiel [Importer une recette empaquetée à l&#39;aide du didacticiel API](./import-packaged-recipe-ui.md) .
+Vous pouvez créer une MLInstance à l’aide de la requête suivante. Vous utiliserez le `{ENGINE_ID}` renvoyé lors de la création d’un moteur à partir du tutoriel [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-ui.md).
 
 **Requête**
 
@@ -66,10 +66,10 @@ curl -X POST \
   -d `{JSON_PAYLOAD}`
 ```
 
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{JSON_PAYLOAD}`: La configuration de notre instance MLInstance. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{JSON_PAYLOAD}` : la configuration de notre MLInstance. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
 {
@@ -124,9 +124,9 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dans le `{JSON_PAYLOAD}`tableau, nous définissons les paramètres utilisés pour la formation et le score dans la `tasks` baie. L&#39;ID `{ENGINE_ID}` est celui du moteur que vous souhaitez utiliser et le `tag` champ est un paramètre facultatif utilisé pour identifier l&#39;instance.
+> Dans la `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
 
-La réponse contiendra le `{INSTANCE_ID}` qui représente l&#39;instance MLInstance créée. Il est possible de créer plusieurs instances MLInstances de modèles avec des configurations différentes.
+La réponse contient le `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
 
 **Réponse**
 
@@ -159,12 +159,12 @@ La réponse contiendra le `{INSTANCE_ID}` qui représente l&#39;instance MLInsta
 }
 ```
 
-`{ENGINE_ID}`: Cet identifiant représente le moteur sous lequel l&#39;instance MLInstance est créée.\
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.
+`{ENGINE_ID}` : cet identifiant représente le moteur sous lequel l’instance MLInstance est créée.\
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 ### Création d’une expérience
 
-Une expérience est utilisée par un chercheur en données pour obtenir un modèle hautement performant pendant la formation. Plusieurs expériences incluent la modification de jeux de données, de fonctionnalités, de paramètres d’apprentissage et de matériel. Voici un exemple de création d’une expérience.
+Une expérience est utilisée par un analyste de données pour obtenir un modèle hautement performant pendant la formation. Plusieurs expériences incluent la modification des jeux de données, des fonctionnalités, des paramètres de formation et du matériel. Voici un exemple de création d’une expérience.
 
 **Requête**
 
@@ -178,10 +178,10 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{JSON_PAYLOAD}`: Objet d’expérience créé. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{JSON_PAYLOAD}` : objet d’expérience créé. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
 {
@@ -193,7 +193,7 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 La réponse de la création de l’expérience ressemble à ceci.
 
@@ -213,14 +213,13 @@ La réponse de la création de l’expérience ressemble à ceci.
 }
 ```
 
-`{EXPERIMENT_ID}`: ID représentant l’expérience que vous venez de créer.
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience que vous venez de créer. `{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
-### Créer une expérience planifiée pour la formation
+### Création d’une expérience planifiée pour la formation
 
-Les expériences planifiées sont utilisées de sorte que nous n’ayons pas à créer chaque exécution d’expérience unique au moyen d’un appel d’API. Au lieu de cela, nous fournissons tous les paramètres nécessaires lors de la création de l&#39;expérience et chaque exécution sera créée périodiquement.
+Les expériences planifiées sont utilisées de sorte que nous n’ayons pas besoin de créer chaque exécution d’expérience par le biais d’un appel API. Au lieu de cela, nous fournissons tous les paramètres nécessaires lors de la création de l’expérience et chaque exécution sera créée périodiquement.
 
-Pour indiquer la création d’une expérience planifiée, nous devons ajouter une `template` section dans le corps de la requête. En `template`effet, tous les paramètres nécessaires pour la planification des exécutions sont inclus, par exemple `tasks`, qui indiquent quelle action et `schedule`, qui indiquent le timing des exécutions planifiées.
+Pour indiquer la création d’une expérience planifiée, nous devons ajouter une section `template` dans le corps de la requête. Dans `template`, tous les paramètres nécessaires à la planification des exécutions sont inclus, par exemple `tasks`, qui indique les actions et `schedule`, qui indique le timing des exécutions planifiées.
 
 **Requête**
 
@@ -234,10 +233,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{JSON_PAYLOAD}`: Données à publier. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{JSON_PAYLOAD}` : données à publier. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
 {
@@ -267,7 +266,7 @@ curl -X POST \
 }
 ```
 
-Lors de la création d’une expérience, le corps, `{JSON_PAYLOAD}`doit contenir le `mlInstanceId` ou le `mlInstanceQuery` paramètre. Dans cet exemple, une expérience planifiée appelle une exécution toutes les 20 minutes, définie dans le `cron` paramètre, à partir du `startTime` jusqu’au `endTime`.
+Lorsque nous créons une expérience, le corps, `{JSON_PAYLOAD}`, doit contenir le paramètre `mlInstanceId` ou `mlInstanceQuery`. Dans cet exemple, une expérience planifiée appelle une exécution toutes les 20 minutes, définie dans le paramètre `cron`, à partir de `startTime` jusqu’au `endTime`.
 
 **Réponse**
 
@@ -301,13 +300,13 @@ Lors de la création d’une expérience, le corps, `{JSON_PAYLOAD}`doit conteni
 }
 ```
 
-`{EXPERIMENT_ID}`: ID représentant l’expérience.\
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience.\
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 
 ### Création d’une exécution d’expérience pour la formation
 
-Une entité Expérience créée permet de créer et d&#39;exécuter une session de formation à l&#39;aide de l&#39;appel ci-dessous. Vous aurez besoin de la `{EXPERIMENT_ID}` et indiquez ce que `mode` vous souhaitez déclencher dans le corps de la requête.
+Une fois une entité d’expérience créée, une exécution de formation peut être créée et exécutée en utilisant l’appel ci-dessous. Vous aurez besoin de `{EXPERIMENT_ID}` et devrez indiquer le `mode` que vous souhaitez déclencher dans le corps de la requête.
 
 **Requête**
 
@@ -321,11 +320,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{EXPERIMENT_ID}`: ID correspondant à l’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre expérience.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{JSON_PAYLOAD}`: Pour créer une session de formation, vous devez inclure les éléments suivants dans le corps :
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{JSON_PAYLOAD}` : pour créer une exécution de formation, vous devez inclure les éléments suivants dans le corps :
 
 ```JSON
 {
@@ -333,7 +332,7 @@ curl -X POST \
 }
 ```
 
-Vous pouvez également remplacer les paramètres de configuration en incluant un `tasks` tableau :
+Vous pouvez également remplacer les paramètres de configuration en incluant un tableau `tasks` :
 
 ```JSON
 {
@@ -352,7 +351,7 @@ Vous pouvez également remplacer les paramètres de configuration en incluant un
 }
 ```
 
-Vous recevrez la réponse suivante qui vous fera connaître la configuration `{EXPERIMENT_RUN_ID}` et la configuration sous `tasks`.
+Vous obtiendrez la réponse suivante qui vous indiquera le `{EXPERIMENT_RUN_ID}` et la configuration sous `tasks`.
 
 **Réponse**
 
@@ -373,12 +372,12 @@ Vous recevrez la réponse suivante qui vous fera connaître la configuration `{E
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  ID représentant l’exécution de l’expérience.\
-`{EXPERIMENT_ID}`: ID qui représente l&#39;expérience sous laquelle se trouve l&#39;exécution de l&#39;expérience.
+`{EXPERIMENT_RUN_ID}` : identifiant qui représente l’exécution de l’expérience.\
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience sous laquelle se trouve l’exécution d’expérience.
 
-### Récupérer un état d&#39;exécution d&#39;expérience
+### Récupération de l’état d’une exécution d’expérience
 
-L’état de l’exécution Expérience peut être interrogé avec le `{EXPERIMENT_RUN_ID}`.
+L’état de l’exécution d’expérience peut être interrogé avec le `{EXPERIMENT_RUN_ID}`.
 
 **Requête**
 
@@ -390,15 +389,15 @@ curl -X GET \
   -H 'x-api-key: {API_KEY}'
 ```
 
-`{EXPERIMENT_ID}`: ID représentant l’expérience.\
-`{EXPERIMENT_RUN_ID}`: ID représentant l’exécution de l’expérience.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience.\
+`{EXPERIMENT_RUN_ID}` : identifiant qui représente l’exécution de l’expérience.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 **Réponse**
 
-L’appel GET fournit l’état dans le `state` paramètre, comme indiqué ci-dessous :
+L’appel GET fournit l’état dans le paramètre `state`, comme illustré ci-dessous :
 
 ```JSON
 {
@@ -431,19 +430,19 @@ L’appel GET fournit l’état dans le `state` paramètre, comme indiqué ci-de
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`:  ID représentant l’exécution de l’expérience.\
-`{EXPERIMENT_ID}`: ID qui représente l&#39;expérience sous laquelle se trouve l&#39;exécution de l&#39;expérience.
+`{EXPERIMENT_RUN_ID}` : identifiant qui représente l’exécution de l’expérience.\
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience sous laquelle se trouve l’exécution d’expérience.
 
-Outre l&#39; `DONE` État, d&#39;autres États comprennent :
+Outre l’état `DONE`, les autres états incluent :
 - `PENDING`
 - `RUNNING`
 - `FAILED`
 
-Pour plus d&#39;informations, les journaux détaillés se trouvent sous le `tasklogs` paramètre.
+Pour plus d’informations, les journaux détaillés se trouvent sous le paramètre `tasklogs`.
 
-### Récupérer le modèle formé
+### Récupération du modèle formé
 
-Pour obtenir le modèle de formation créé ci-dessus pendant la formation, nous faisons la demande suivante :
+Pour obtenir le modèle formé créé ci-dessus pendant la formation, nous faisons la demande suivante :
 
 **Requête**
 
@@ -454,9 +453,9 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_RUN_ID}`: ID correspondant à l’exécution d’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre exécution d’expérience.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+`{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’exécution d’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre exécution d’expérience.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 La réponse représente le modèle formé qui a été créé.
 
@@ -484,13 +483,13 @@ La réponse représente le modèle formé qui a été créé.
 }
 ```
 
-`{MODEL_ID}`: ID correspondant au modèle.\
-`{EXPERIMENT_ID}`:  L&#39;ID correspondant à l&#39;expérience que l&#39;exécution d&#39;expérience est sous.\
-`{EXPERIMENT_RUN_ID}`: ID correspondant à l’exécution de l’expérience.
+`{MODEL_ID}` : identifiant qui correspond au modèle.\
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution d’expérience.\
+`{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’expérience d’exécution.
 
-### Arrêter et supprimer une expérience planifiée
+### Arrêt et suppression d’une expérience planifiée
 
-Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander à un DELETE de répondre à la demande de la variable `{EXPERIMENT_ID}`
+Si vous souhaitez arrêter l’exécution d’une expérience planifiée avant son `endTime`, vous pouvez faire une requête DELETE à l’`{EXPERIMENT_ID}`.
 
 **Requête**
 
@@ -501,15 +500,15 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  ID correspondant à l’expérience.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 >[!NOTE]
 >
->L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
+>L’appel API désactive la création de nouvelles exécutions d’expérience. Toutefois, il n’arrête pas les exécutions d’expériences déjà en cours.
 
-Voici la réponse vous informant que l&#39;expérience a bien été supprimée.
+Voici la réponse qui indique que l’expérience a bien été supprimée.
 
 **Réponse**
 
@@ -523,4 +522,4 @@ Voici la réponse vous informant que l&#39;expérience a bien été supprimée.
 
 ## Étapes suivantes
 
-Ce didacticiel explique comment utiliser les API pour créer un moteur, une expérience, des exécutions d’expériences planifiées et des modèles formés. Au cours du [prochain exercice](./score-model-api.md), vous allez faire des prédictions en évaluant un nouveau jeu de données à l’aide du modèle de formation le plus performant.
+Ce tutoriel explique comment utiliser les API pour créer un moteur, une expérience, des exécutions d’expériences planifiées et des modèles formés. Au cours de l’[exercice suivant](./score-model-api.md), vous allez faire des prédictions en évaluant un nouveau jeu de données à l’aide du modèle formé le plus performant.
