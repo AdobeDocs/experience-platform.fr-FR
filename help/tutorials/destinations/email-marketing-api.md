@@ -12,7 +12,7 @@ ht-degree: 79%
 ---
 
 
-# Créer des destinations de marketing par courrier électronique et activer les données dans Adobe [!DNL Real-time Customer Data Platform]
+# Créer des destinations marketing par courriel et activer les données dans l’Adobe [!DNL Real-time Customer Data Platform]
 
 Ce tutoriel explique comment utiliser les appels API pour accéder à vos données Adobe Experience Platform, créer une [destination de marketing par e-mail](../../rtcdp/destinations/email-marketing-destinations.md), créer un flux de données vers votre nouvelle destination et activer les données vers cette dernière.
 
