@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >L&#39;apprentissage automatique en temps réel n&#39;est pas encore disponible pour tous les utilisateurs. Cette fonction est en alpha et est encore en cours de test. Ce document est sujet à changement.
 
-Le guide suivant décrit les étapes nécessaires à la création d&#39;une application d&#39;apprentissage automatique en temps réel. En utilisant le modèle de bloc-notes ML **[!UICONTROL Python fourni en temps]** réel par Adobe, ce guide couvre la formation d&#39;un modèle, la création d&#39;un DSL, la publication d&#39;un DSL sur Edge et le score de la demande. Au fur et à mesure que vous progressez dans la mise en oeuvre de votre modèle d’apprentissage automatique en temps réel, il est prévu que vous modifiez le modèle en fonction des besoins de votre jeu de données.
+Le guide suivant décrit les étapes nécessaires à la création d&#39;une application d&#39;apprentissage automatique en temps réel. À l&#39;aide de l&#39;Adobe fourni pour le modèle de bloc-notes ML **[!UICONTROL Python en temps]** réel, ce guide couvre la formation d&#39;un modèle, la création d&#39;un DSL, la publication d&#39;un DSL sur Edge et la notation de la demande. Au fur et à mesure que vous progressez dans la mise en oeuvre de votre modèle d’apprentissage automatique en temps réel, il est prévu que vous modifiez le modèle en fonction des besoins de votre jeu de données.
 
 ## Créer un bloc-notes d&#39;apprentissage automatique en temps réel
 
@@ -346,7 +346,7 @@ Une fois terminé, un `edge` objet est renvoyé contenant chacun des noeuds et l
 ## Publier sur Edge (Hub)
 
 >[!NOTE]
->L’apprentissage automatique en temps réel est temporairement déployé et géré par le Adobe Expereince Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
+>L&#39;apprentissage automatique en temps réel est temporairement déployé et géré par le Platform Hub d&#39;expérience d&#39;Adobe. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
 
 Maintenant que vous avez créé un graphique DSL, vous pouvez déployer le graphique sur le [!DNL Edge].
 
@@ -397,9 +397,9 @@ Vous recevez le DSL mis à jour.
 
 ![DSL mis à jour](../images/rtml/updated-dsl.png)
 
-## Scores {#scoring}
+## Notation {#scoring}
 
-Après la publication sur [!DNL Edge], le score est effectué par une requête POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML ** en temps réel utilise EdgeUtils pour démontrer ce processus.
+Une fois la publication sur [!DNL Edge], le score est effectué par une demande de POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML ** en temps réel utilise EdgeUtils pour démontrer ce processus.
 
 >[!NOTE]
 >Un petit temps de traitement est nécessaire avant les débuts de notation.
