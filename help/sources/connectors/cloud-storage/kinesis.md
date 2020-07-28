@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connecteur Amazon Kinesis
+title: Connecteur Amazon
 topic: overview
 translation-type: tm+mt
 source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
@@ -63,5 +63,5 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Se connecter [!DNL Amazon Kinesis] à [!DNL Platform] l’aide de l’interface utilisateur
 
-- [Création d’un connecteur source Amazon Kinesis dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Création d’un connecteur source Amazon dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
