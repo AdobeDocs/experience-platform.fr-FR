@@ -57,7 +57,7 @@ Les noeuds standard s&#39;appuient sur les bibliothèques de données open sourc
 
 ### ModelUpload
 
-Le noeud ModelUpload est un noeud Adobe interne qui prend un chemin_modèle et télécharge le modèle depuis le chemin d&#39;accès du modèle local vers la banque de blocs d&#39;apprentissage automatique en temps réel.
+Le noeud ModelUpload est un noeud d&#39;Adobe interne qui prend un chemin_modèle et télécharge le modèle depuis le chemin d&#39;accès du modèle local vers la banque de blocs d&#39;apprentissage automatique en temps réel.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -69,7 +69,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode est un noeud Adobe interne qui utilise un ID de modèle pour extraire le modèle ONNX préentraîné et l&#39;utilise pour marquer les données entrantes.
+ONNXNode est un noeud d&#39;Adobe interne qui utilise un ID de modèle pour extraire le modèle ONNX préentraîné et l&#39;utilise pour marquer les données entrantes.
 
 >[!TIP]
 >Spécifiez les colonnes dans le même ordre que celui dans lequel vous souhaitez que les données soient envoyées au modèle ONNX pour obtenir un score.
@@ -120,7 +120,7 @@ msg6 = model_train.process(msg5)
 
 | Valeur | Description |
 | --- | --- |
-| fonctionnalités | Fonctionnalités d&#39;entrée du modèle (liste de chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| features | Fonctionnalités d&#39;entrée du modèle (liste de chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Nom de la colonne de Cible (chaîne). |
 | mode | Train/test (chaîne). |
 | model_path | Chemin d&#39;accès au modèle d&#39;enregistrement local au format unique. |
@@ -128,7 +128,7 @@ msg6 = model_train.process(msg5)
 | params.model_params | Les hyperparamètres du modèle, consultez la documentation de l’API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
 | node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg du noeud précédent et applique la transformation. Cela dépend du noeud actif utilisé. |
 
-### Partage
+### Split
 
 Utilisez le noeud suivant pour fractionner votre dataframe en train et tester en passant `train_size` ou `test_size`. Cette opération renvoie une base de données avec un index multiple. Vous pouvez accéder aux jeux de données de train et de test à l&#39;aide de l&#39;exemple suivant, `msg5.data.xs(“train”)`.
 
