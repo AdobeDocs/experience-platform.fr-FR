@@ -16,7 +16,7 @@ ht-degree: 88%
 
 ## Présentation {#overview}
 
-[!DNL TMMData's] La plate-forme Foundation for Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder et combiner toutes leurs sources de données essentielles - y compris les données internes/externes et en ligne/hors ligne - afin d&#39;obtenir une analyse croisée et fiable, avec une configuration de campagne automatisée et des importations directes vers Adobe et d&#39;autres outils d&#39;analyse et de BI.
+[!DNL TMMData's] La plate-forme Foundation for Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder et fusionner toutes leurs sources de données essentielles - y compris les données internes/externes et en ligne/hors ligne - pour une analyse intercanal sûre et complète, avec la configuration automatisée des campagnes et les importations directes vers les Adobes et autres outils d&#39;analyse et de BI.
 
 [!DNL TMMData] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
