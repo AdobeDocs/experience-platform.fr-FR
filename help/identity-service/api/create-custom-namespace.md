@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d’un espace de nommage personnalisé
+title: Création d’un espace de noms personnalisé
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 8%
+ht-degree: 76%
 
 ---
 
 
-# Création d’un espace de nommage personnalisé
+# Création d’un espace de noms personnalisé
 
-A l&#39;aide de l&#39; [!DNL Identity Namespace] API, vous pouvez créer un espace de nommage d&#39;identité personnalisé qui sera disponible uniquement pour votre organisation.
+Using the [!DNL Identity Namespace] API, you can create a custom identity namespace that will be available only to your organization.
 
-Pour obtenir des recommandations sur la création d’espaces de nommage personnalisés, consultez [la documentation](../troubleshooting-guide.md)FAQ sur Identity Service.
+Pour obtenir des recommandations sur la création d’espaces de noms personnalisés, reportez-vous à aux [questions fréquentes sur Identity Service](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->Les Espaces de nommage sont un qualificatif pour les identités. Ainsi, une fois un espace de nommage créé, il ne peut plus être supprimé.
+>Les espaces de noms sont des qualificateurs d’identités. Par conséquent, une fois qu’un espace de noms a été créé, il ne peut pas être supprimé.
 
 **Format d’API**
 
@@ -64,4 +64,4 @@ curl -X POST \
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [liste de l&#39;ID natif d&#39;une identité](./list-native-id.md)
+Passez au tutoriel suivant pour [répertorier l’identifiant natif d’une identité](./list-native-id.md).
