@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 1%
+ht-degree: 92%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 1%
 
 Data usage policies are rules your organization adopts that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
 
-Le `/policies` point de terminaison est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
+Le point de terminaison `/policies` est utilisé pour tous les appels API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
 
 ## Liste de toutes les stratégies
 
-Pour vue d’une liste de stratégies, une requête GET peut être envoyée à `/policies/core` ou `/policies/custom` qui renvoie toutes les stratégies pour le conteneur spécifié.
+Pour afficher une liste des stratégies, vous pouvez envoyer une requête GET à `/policies/core` ou `/policies/custom`, qui renvoie toutes les stratégies pour le conteneur spécifié.
 
 **Format d’API**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un &quot;décompte&quot; indiquant le nombre total de stratégies dans le conteneur spécifié, ainsi que les détails de chaque stratégie, y compris sa `id`valeur. Ce `id` champ est utilisé pour exécuter des requêtes de recherche sur des stratégies spécifiques à la vue, ainsi que pour effectuer des opérations de mise à jour et de suppression.
+La réponse comprend un « count » indiquant le nombre total de stratégies au sein du conteneur spécifié, ainsi que les détails de chaque stratégie, y compris son `id`. Le champ `id` permet d’effectuer des requêtes de recherche afin de consulter des stratégies spécifiques, mais aussi d’effectuer des opérations de mise à jour et de suppression.
 
 ```JSON
 {
@@ -135,7 +135,7 @@ La réponse comprend un &quot;décompte&quot; indiquant le nombre total de strat
 
 ## Rechercher une stratégie
 
-Chaque stratégie contient un `id` champ qui peut être utilisé pour demander les détails d’une stratégie spécifique. Si l’ `id` une stratégie est inconnue, elle peut être trouvée à l’aide de la demande d’énumération (GET) pour liste toutes les stratégies dans un conteneur spécifique (`core` ou `custom`), comme indiqué à l’étape précédente.
+Chaque stratégie contient un champ `id` qui peut être utilisé pour demander les détails d’une stratégie spécifique. Si vous ne connaissez pas l’`id` d’une stratégie, vous pouvez le trouver à l’aide de la requête de liste GET, qui permet de répertorier toutes les stratégies d’un conteneur spécifique (`core` ou `custom`), comme indiqué à l’étape précédente.
 
 **Format d’API**
 
@@ -157,7 +157,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse contient les détails de la stratégie, y compris les champs clés tels que `id` (ce champ doit correspondre à celui `id` envoyé dans la demande), `name`, `status`et `description`, ainsi qu’un lien de référence vers l’action marketing sur laquelle la stratégie est basée (`marketingActionRefs`).
+La réponse contient les détails de la stratégie, y compris des champs clés comme `id` (ce champ doit correspondre au champ `id` envoyé dans la requête), `name`, `status` et `description`, ainsi qu’un lien de référence vers l’action marketing sur laquelle la stratégie est basée (`marketingActionRefs`).
 
 ```JSON
 {
@@ -204,9 +204,9 @@ La réponse contient les détails de la stratégie, y compris les champs clés t
 
 ## Création d’une stratégie {#create-policy}
 
-La création d’une stratégie nécessite l’inclusion d’une action marketing avec une expression des étiquettes DULE qui interdisent cette action marketing. Les définitions de stratégie doivent inclure une `deny` propriété, qui est une expression booléenne concernant la présence d&#39;étiquettes DULE.
+La création d’une stratégie nécessite l’inclusion d’une action marketing avec l’expression des étiquettes DULE qui interdisent cette action marketing. Les définitions de stratégie doivent inclure une propriété `deny`, à savoir une expression booléenne concernant la présence d’étiquettes DULE.
 
-Cette expression est appelée un `PolicyExpression` et est un objet contenant _soit_ une étiquette __ soit un opérateur et des opérandes, mais pas les deux. Chaque opérande est à son tour un `PolicyExpression` objet. Par exemple, une politique relative à l’exportation de données vers un tiers peut être interdite si `C1 OR (C3 AND C7)` des étiquettes sont présentes. Cette expression serait spécifiée comme suit :
+Appelée `PolicyExpression`, cette expression est un objet contenant _soit_ une étiquette, _soit_ un opérateur et des opérandes, mais pas les deux. De même, chaque opérande forme également un objet `PolicyExpression`. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence d’étiquettes `C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
 
 ```JSON
 "deny": {
@@ -265,7 +265,7 @@ curl -X POST \
 
 **Réponse**
 
-Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le corps de la réponse contiendra les détails de la nouvelle stratégie, y compris son `id`état. Cette valeur est en lecture seule et est affectée automatiquement lors de la création de la stratégie.
+Si la création est réussie, vous recevez un état HTTP 201 (Created) et le corps de la réponse contient les détails de la nouvelle stratégie, y compris son `id`. Cette valeur est en lecture seule et s’affiche automatiquement lors de la création de la stratégie.
 
 ```JSON
 {
@@ -310,9 +310,9 @@ Si la création est réussie, vous recevrez un état HTTP 201 (créé) et le cor
 }
 ```
 
-## Mettre à jour une stratégie
+## Mise à jour d’une stratégie
 
-Vous devrez peut-être mettre à jour une stratégie d&#39;utilisation des données après sa création. Pour ce faire, une requête PUT est envoyée à la stratégie `id` avec une charge utile qui inclut la forme mise à jour de la stratégie, dans son intégralité. En d&#39;autres termes, la demande de PUT consiste essentiellement à _réécrire_ la stratégie, de sorte que l&#39;organisme doit inclure toutes les informations requises, comme indiqué dans l&#39;exemple ci-dessous.
+Vous devrez peut-être mettre à jour une stratégie d’utilisation des données après sa création. Pour ce faire, vous devez envoyer une requête PUT à l’`id` de la stratégie avec un payload incluant la forme mise à jour de la stratégie dans son intégralité. En d’autres termes, la requête PUT procède essentiellement à une _réécriture_ de la stratégie. Par conséquent, le corps doit inclure toutes les informations requises, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
@@ -322,7 +322,7 @@ PUT /policies/custom/{id}
 
 **Requête**
 
-Dans cet exemple, les conditions d’exportation des données vers un tiers ont changé. Désormais, vous avez besoin de la stratégie que vous avez créée pour refuser cette action marketing si `C1 AND (C3 OR C7)` des étiquettes de données sont présentes. Utilisez l’appel suivant pour mettre à jour la stratégie existante.
+Dans cet exemple, les conditions d’exportation des données vers un tiers ont été modifiées. Vous devez définir la stratégie créée de sorte qu’elle rejette cette action marketing en présence d’étiquettes de données `C1 AND (C3 OR C7)`. Utilisez l’appel suivant pour mettre à jour la stratégie existante.
 
 ```SHELL
 curl -X PUT \
@@ -357,7 +357,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une demande de mise à jour réussie renvoie un état HTTP 200 (OK) et le corps de la réponse affiche la stratégie mise à jour. Le `id` doit correspondre à celui `id` envoyé dans la demande.
+Une requête de mise à jour réussie renvoie un état HTTP 200 (OK) et le corps de la réponse affiche la stratégie mise à jour. L’`id` doit correspondre à l’`id` envoyé dans la requête.
 
 ```JSON
 {
@@ -404,9 +404,9 @@ Une demande de mise à jour réussie renvoie un état HTTP 200 (OK) et le corps 
 
 ## Mise à jour d’une partie d’une stratégie
 
-Une partie spécifique d’une stratégie peut être mise à jour à l’aide d’une demande PATCH. Contrairement aux requêtes PUT qui _réécrivent_ la stratégie, les requêtes PATCH ne mettent à jour que le chemin spécifié dans le corps de la requête. Cela s’avère particulièrement utile lorsque vous souhaitez activer ou désactiver une stratégie, car vous devez uniquement envoyer le chemin d’accès spécifique que vous souhaitez mettre à jour (`/status`) et sa valeur (`ENABLE` ou `DISABLE`).
+Vous pouvez mettre à jour une partie spécifique d’une stratégie à l’aide d’une requête PATCH. Contrairement aux requêtes PUT qui _réécrivent_ la stratégie, les requêtes PATCH ne mettent à jour que le chemin spécifié dans le corps de la requête. Cela s’avère particulièrement utile lorsque vous souhaitez activer ou désactiver une stratégie, car il vous suffit d’envoyer le chemin spécifique à mettre à jour (`/status`) et sa valeur (`ENABLE` ou `DISABLE`).
 
-L&#39; [!DNL Policy Service] API prend actuellement en charge les opérations &quot;add&quot;, &quot;replace&quot; et &quot;remove&quot; PATCH et vous permet de combiner plusieurs mises à jour en un seul appel en les ajoutant comme un objet dans la baie, comme le montrent les exemples suivants.
+The [!DNL Policy Service] API currently supports &quot;add&quot;, &quot;replace&quot;, and &quot;remove&quot; PATCH operations, and allows you to combine several updates together into a single call by adding each as an object within the array, as shown in the following examples.
 
 **Format d’API**
 
@@ -416,7 +416,7 @@ PATCH /policies/custom/{id}
 
 **Requête**
 
-Dans cet exemple, nous utilisons l’opération &quot;remplacer&quot; pour changer l’état de la stratégie de &quot;BROUILLON&quot; en &quot;ACTIVÉ&quot; et pour mettre à jour le champ de description avec une nouvelle description. Nous aurions également pu mettre à jour le champ de description en utilisant l’opération &quot;supprimer&quot; pour supprimer la description de la stratégie, puis en utilisant l’opération &quot;ajouter&quot; pour ajouter une nouvelle fois, comme par exemple :
+Dans cet exemple, nous utilisons l’opération « replace » pour modifier l’état de la stratégie « DRAFT » en « ENABLED » et pour mettre à jour le champ de description. Nous aurions également pu mettre à jour le champ de description à l’aide de l’opération « delete » pour supprimer la description de la stratégie, puis à l’aide de l’opération « add » pour en ajouter une, comme dans l’exemple qui suit :
 
 ```SHELL
 [
@@ -432,7 +432,7 @@ Dans cet exemple, nous utilisons l’opération &quot;remplacer&quot; pour chang
 ]
 ```
 
-Lors de l&#39;envoi de plusieurs opérations PATCH dans une seule requête, n&#39;oubliez pas qu&#39;elles seront traitées dans l&#39;ordre dans lequel elles apparaissent dans la baie. Assurez-vous donc que vous envoyez les requêtes dans l&#39;ordre approprié si nécessaire.
+Lorsque vous envoyez plusieurs opérations PATCH dans une seule requête, n’oubliez pas qu’elles sont traitées dans l’ordre dans lequel elles apparaissent dans le tableau. Veillez donc à envoyer les requêtes dans l’ordre approprié, le cas échéant.
 
 ```SHELL
 curl -X PATCH \
@@ -458,7 +458,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une demande de mise à jour réussie renverra un état HTTP 200 (OK) et le corps de la réponse affichera la stratégie mise à jour (&quot;status&quot; est maintenant &quot;ENABLED&quot; et &quot;description&quot; a été modifié). La stratégie `id` doit correspondre à celle `id` envoyée dans la demande.
+Une requête de mise à jour réussie renvoie un état HTTP 200 (OK) et le corps de la réponse affiche la stratégie mise à jour (« status » est désormais « ENABLED » et « description » a été modifié). L’`id` de la stratégie doit correspondre à l’`id` envoyé dans la requête.
 
 
 ```JSON
@@ -506,7 +506,7 @@ Une demande de mise à jour réussie renverra un état HTTP 200 (OK) et le corps
 
 ## Suppression d’une stratégie
 
-Si vous devez supprimer une stratégie que vous avez créée, vous pouvez le faire en envoyant une demande de DELETE à la stratégie que vous souhaitez supprimer. `id` Il est recommandé d’effectuer d’abord une demande de recherche (GET) pour vue à la stratégie et vérifier que celle-ci est la bonne stratégie que vous souhaitez supprimer. **Une fois supprimées, les stratégies ne peuvent plus être récupérées.**
+Si vous devez supprimer une stratégie que vous avez créée, vous pouvez envoyer une requête DELETE à l’`id` de la stratégie à supprimer. Il est recommandé d’effectuer d’abord une requête de recherche GET afin d’afficher la stratégie et de confirmer qu’il s’agit bien de la stratégie à supprimer. **Les stratégies supprimées ne peuvent pas être récupérées.**
 
 **Format d’API**
 
@@ -527,6 +527,6 @@ curl -X DELETE \
 
 **Réponse**
 
-Si la stratégie a été correctement supprimée, le corps de la réponse sera vide avec un état HTTP 200 (OK).
+Si la stratégie a bien été supprimée, le corps de la réponse sera vide avec un état HTTP 200 (OK).
 
-Vous pouvez confirmer la suppression en tentant de rechercher à nouveau (GET) la stratégie. Vous devez recevoir un état HTTP 404 (introuvable) accompagné d’un message d’erreur &quot;Non trouvé&quot; car la stratégie a été supprimée.
+Vous pouvez confirmer la suppression de la stratégie en la recherchant à l’aide de GET. Vous devriez recevoir un état HTTP 404 (Not Found), ainsi qu’un message d’erreur indiquant que la stratégie est introuvable, puisqu’elle a été supprimée.
