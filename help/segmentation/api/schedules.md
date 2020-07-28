@@ -234,9 +234,9 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Update details for a specific schedule {#update}
 
-Vous pouvez mettre à jour une planification spécifique en exécutant une requête PATCH sur le point de `/config/schedules` terminaison et en indiquant l&#39;ID de la planification que vous tentez de mettre à jour dans le chemin de la requête.
+Vous pouvez mettre à jour une planification spécifique en envoyant une requête de PATCH au point de `/config/schedules` terminaison et en indiquant l&#39;identifiant de la planification que vous tentez de mettre à jour dans le chemin de la demande.
 
-La demande PATCH vous permet de mettre à jour l&#39; [état](#update-state) ou le calendrier [](#update-schedule) cron pour un calendrier individuel.
+La demande de PATCH vous permet de mettre à jour l&#39; [état](#update-state) ou le calendrier [](#update-schedule) cron pour une planification individuelle.
 
 ### Mise à jour de l’état du planning {#update-state}
 
