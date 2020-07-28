@@ -7,53 +7,53 @@ translation-type: tm+mt
 source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 0%
+ht-degree: 75%
 
 ---
 
 
 # Présentation des services intelligents
 
-Les services intelligents permettent aux analystes et aux praticiens du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Cela permet aux analystes marketing de configurer des prédictions spécifiques aux besoins d’une société en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’une expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer des prédictions dans [!DNL Adobe Experience Cloud]des applications [!DNL Adobe Experience Platform]tierces et tierces.
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
 
-La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À l’aide d’exemples d’utilisation commerciale, cette vidéo explique un flux de travail de haut niveau et décrit les fonctionnalités de l’API d’attribution et de l’IA du client.
+La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À l’aide d’exemples d’utilisation commerciale, cette vidéo explique un flux de travail de haut niveau et décrit les fonctionnalités d’Attribution AI et d’IA du client.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Avantages des services intelligents
 
-Les services intelligents, reposant sur [!DNL Adobe Experience Platform]ces services, permettent aux spécialistes du marketing responsables de l&#39;expérience client d&#39;accéder à l&#39;IA en tant que service, ce qui facilite la prédiction du comportement des clients, la mesure de l&#39;impact d&#39;une campagne ou la garantie d&#39;un meilleur retour sur investissement. Vous trouverez ci-dessous une liste des avantages offerts par Intelligent Services.
+Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Certains des avantages des services intelligents sont répertoriés ci-dessous.
 
-### Rapidité rentable sur le marché
+### Une vitesse de mise sur le marché rentable
 
-Adobe possède une expertise en IA/ML associée à une expérience CXM approfondie, et les services intelligents ont été conçus spécifiquement pour que les spécialistes du marketing puissent lancer l&#39;IA/ML immédiatement pour les cas courants d&#39;utilisation du marketing, sans avoir à embaucher des scientifiques de données rares et onéreux, ce qui accélère la vitesse du marché et la convivialité.
+Adobe dispose d’une expertise en IA/ML associée à une expérience CXM approfondie, et les services intelligents ont été conçus spécifiquement pour permettre aux professionnels du marketing d’utiliser l’IA/ML immédiatement pour les cas d’utilisation de marketing courants, sans avoir à embaucher de spécialistes en données rares et onéreux, et donc accélérer la vitesse de mise sur le marché et l’actionnabilité.
 
-### Plus grande précision des informations prédictives
+### Une plus grande précision des informations prédictives
 
-Développé avec le plus haut degré de précision résultant de l&#39;adoption de modèles algorithmiques avancés d&#39;IA/ML ; la possibilité d&#39;exécuter AI/ML sur un jeu de données commun avec la profondeur et la granularité pour permettre le découpage et la découpe des prédictions ; et des informations pour fournir les éléments et les raisons qui sous-tendent les connaissances prédictives des clients.
+Développés avec le plus haut niveau de précision grâce à l’adoption de modèles algorithmiques avancés d’IA/ML, ces services permettent d’exécuter l’IA/ML sur un jeu de données courant avec une profondeur et une granularité rendant possible le découpage des prédictions, et offrent une intelligence permettant de révéler ce que dissimulent les informations prédictives sur les clients.
 
-### Rapidité d&#39;accès aux informations et retour sur investissement
+### Informations et retour sur investissement rapides
 
-Permettre aux spécialistes du marketing de commencer immédiatement à utiliser l&#39;IA/ML et d&#39;améliorer le retour sur investissement marketing grâce à de nouveaux workflows en libre-service, des configurations personnalisées et des options flexibles permettant d&#39;exploiter les statistiques prédictives.
+Donnez aux professionnels du marketing les moyens de commencer immédiatement à utiliser l’IA/ML et d’améliorer le retour sur investissement marketing grâce à de nouveaux workflows en libre-service, à des configurations personnalisées et à des options flexibles pour rendre opérationnelles les informations prédictives.
 
-## Flux de travaux Intelligent Services
+## Workflow de services intelligents
 
-### Incorporer
+### Ingestion
 
-Les données du client sont assimilées et transformées avec le modèle de données d’expérience (XDM) sur [!DNL Adobe Experience Platform]. Pour en savoir plus sur XDM, consultez la présentation [de](../xdm/home.md)XDM.
+Les données clients sont assimilées et transformées avec le modèle de données d’expérience (XDM) sur [!DNL Adobe Experience Platform]. Pour en savoir plus sur XDM, consultez la [présentation de XDM](../xdm/home.md).
 
-### Configurez les
+### Configuration
 
-L’analyste marketing configure les prévisions souhaitées en spécifiant les règles de fonctionnement et en identifiant les données pertinentes.
+L’analyste marketing configure les prédictions souhaitées en spécifiant les règles commerciales et en identifiant les données pertinentes.
 
-### Prévoir
+### Prédiction
 
-Une fois que les modèles ont terminé la formation et le score, les scores sont réécrits dans Plateforme.
+Une fois que la formation et la notation avec les modèles sont terminées, les scores sont réinsérés dans Platform.
 
-### Agir
+### Actions
 
-Enfin, vous pouvez décider des actions à entreprendre avec les prédictions, telles que la consommation d’informations, l’activation d’applications sur l’ensemble du site [!DNL Adobe Experience Cloud]et la création de tableaux de bord personnalisés.
+Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
 
 ## Étapes suivantes
 
-Actuellement, Intelligent Services offre Attribution AI et Customer AI. L’API d’attribution permet aux spécialistes du marketing d’optimiser intelligemment l’efficacité marketing sur les canaux et les campagnes. Pour en savoir plus sur l’API d’attribution, consultez la présentation [de l’IA d’](./attribution-ai/overview.md)attribution. L’intelligence artificielle des clients permet aux spécialistes du marketing d’hyper-personnaliser les expériences client. Pour en savoir plus sur l’IA du client, consultez la présentation [de l’IA du](./customer-ai/overview.md)client.
+Actuellement, les services intelligents incluent Attribution AI et Customer AI. Attribution AI permet aux professionnels du marketing d’optimiser intelligemment l’efficacité du marketing pour tous les canaux et toutes les campagnes. Pour en savoir plus sur Attribution AI, consultez la [présentation d’Attribution AI](./attribution-ai/overview.md). Customer AI permet aux professionnel du marketing de personnaliser à l’extrême les expériences client. Pour en savoir plus sur Customer AI, consultez la [présentation de Customer AI](./customer-ai/overview.md).
