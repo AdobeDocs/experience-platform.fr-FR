@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 2%
+ht-degree: 14%
 
 ---
 
@@ -20,12 +20,12 @@ Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer un système d�
 
 ## Prise en main
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage system using the [!DNL Flow Service] API.
 
 ### Obtention d’une connexion de base
 
@@ -37,29 +37,29 @@ Pour explorer un enregistrement cloud tiers à l’aide [!DNL Platform] d’API,
 * [Google Cloud Store](../create/cloud-storage/google.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
+Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type : `application/json`
+* Content-Type: `application/json`
 
 ## Explorez votre enregistrement cloud
 
-En utilisant la connexion de base pour votre enregistrement cloud, vous pouvez explorer des fichiers et des répertoires en exécutant des requêtes GET. Lorsque vous exécutez des requêtes GET pour explorer votre enregistrement cloud, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
+En utilisant la connexion de base pour votre enregistrement cloud, vous pouvez explorer des fichiers et des répertoires en exécutant des demandes de GET. Lorsque vous effectuez des demandes de GET pour explorer votre enregistrement cloud, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -110,9 +110,9 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 ]
 ```
 
-## Inspection de la structure d’un fichier
+## Inspect de la structure d’un fichier
 
-Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, exécutez une requête GET tout en fournissant le chemin d’accès du fichier en tant que paramètre de requête.
+Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, effectuez une demande de GET tout en fournissant le chemin d’accès du fichier en tant que paramètre de requête.
 
 **Format d’API**
 
