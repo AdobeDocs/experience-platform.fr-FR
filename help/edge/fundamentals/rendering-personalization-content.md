@@ -14,7 +14,7 @@ ht-degree: 24%
 
 # Présentation des options de personnalisation
 
-L’Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
+L’Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendu automatique du contenu
 
