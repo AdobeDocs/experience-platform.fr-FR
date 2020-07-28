@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ Pour début à l&#39;aide de l&#39;apprentissage automatique en temps réel, vou
 
 Pour en savoir plus sur l&#39;utilisation d&#39;un jeu de données externe, tel que le transfert de données vers votre [!DNL JupyterLab] environnement, consultez le didacticiel sur l&#39; [analyse de vos données à l&#39;aide de portables](../jupyterlab/analyze-your-data.md#external-data).
 
-### Créer un jeu de données
+### Création d’un nouveau jeu de données
 
 Pour créer un nouveau jeu de données destiné à l&#39;apprentissage automatique en temps réel, vous avez besoin d&#39;un schéma de données pour votre jeu de données. Ensuite, vous devez importer des données à l’aide du schéma que vous avez créé. Utilisez les didacticiels suivants pour créer et renseigner un jeu de données pour [!DNL Platform]:
 
