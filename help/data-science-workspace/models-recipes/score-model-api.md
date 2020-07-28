@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Score d’un modèle (API)
+title: Notation d’un modèle (API)
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Score d’un modèle (API)
+# Notation d’un modèle (API)
 
-Ce didacticiel vous montrera comment exploiter les API pour créer une expérience et une exécution d’expérience. Pour obtenir une liste détaillée de la documentation de l&#39;API, veuillez consulter [ce document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour une liste détaillée de la documentation sur les API, voir [ce document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
-## Créer une expérience planifiée pour la notation
+## Création d’une expérience planifiée pour la notation
 
-Comme pour les expériences planifiées pour la formation, la création d’une expérience planifiée pour la notation est également effectuée en incluant une `template` section au paramètre body. De plus, le `name` champ sous `tasks` dans le corps est défini comme `score`.
+Comme pour les expériences planifiées pour la formation, la création d’une expérience planifiée pour la notation est également effectuée en ajoutant une section `template` au paramètre du corps. De plus, le champ `name` sous `tasks` dans le corps est défini sur `score`.
 
-Vous trouverez ci-dessous un exemple de création d’une expérience qui s’exécutera toutes les 20 minutes à partir de `startTime` et jusqu’à `endTime`laquelle elle sera exécutée.
+Vous trouverez ci-dessous un exemple de création d’une expérience qui s’exécutera toutes les 20 minutes entre `startTime` et `endTime`.
 
 **Requête**
 
@@ -34,10 +34,10 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{JSON_PAYLOAD}`: Objet d&#39;exécution d&#39;expérience à envoyer. L’exemple que nous utilisons dans notre didacticiel est illustré ci-dessous :
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{JSON_PAYLOAD}` : objet d’exécution d’expérience à envoyer. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
 {
@@ -67,10 +67,10 @@ curl -X POST \
 }
 ```
 
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.\
-`{MODEL_ID}`: ID qui représente le modèle formé.
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.\
+`{MODEL_ID}` : identifiant qui représente le modèle formé.
 
-Voici la réponse après la création de l’expérience planifiée.
+Voici la réponse après avoir créé l’expérience planifiée.
 
 **Réponse**
 
@@ -102,13 +102,13 @@ Voici la réponse après la création de l’expérience planifiée.
 }
 ```
 
-`{EXPERIMENT_ID}`: ID représentant l’expérience.\
-`{INSTANCE_ID}`: ID qui représente l&#39;instance MLInstance.
+`{EXPERIMENT_ID}` : identifiant qui représente l’expérience.\
+`{INSTANCE_ID}` : identifiant qui représente l’instance MLInstance.
 
 
 ### Création d’une exécution d’expérience pour la notation
 
-Maintenant, avec le modèle entraîné, nous pouvons créer une exécution d’expérience pour la notation. La valeur du `modelId` paramètre est le `id` paramètre renvoyé dans la demande de modèle GET ci-dessus.
+Une fois le modèle formé, il est possible de créer une exécution d’expérience pour la notation. La valeur du paramètre `modelId` est le paramètre `id` renvoyé dans la requête de modèle GET ci-dessus.
 
 **Requête**
 
@@ -122,11 +122,11 @@ curl -X POST \
   -d '{JSON_PAYLOAD}'
 ```
 
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{API_KEY}`: Votre valeur de clé d&#39;API spécifique se trouve dans votre intégration d&#39;Adobe Experience Platform unique.\
-`{EXPERIMENT_ID}`: ID correspondant à l’expérience que vous souhaitez cible. Cela se trouve dans la réponse lors de la création de votre expérience.\
-`{JSON_PAYLOAD}`: Données à publier. L’exemple que nous utilisons dans notre didacticiel est le suivant :
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
+`{JSON_PAYLOAD}` : données à publier. Voici l’exemple utilisé dans notre tutoriel :
 
 ```JSON
 {
@@ -145,9 +145,9 @@ curl -X POST \
 }
 ```
 
-`{MODEL_ID}`: ID correspondant au modèle.
+`{MODEL_ID}` : identifiant qui correspond au modèle.
 
-La réponse issue de la création de l’exécution d’expérience est illustrée ci-dessous :
+Voici la réponse de la création de l’exécution d’expérience :
 
 **Réponse**
 
@@ -168,13 +168,13 @@ La réponse issue de la création de l’exécution d’expérience est illustr�
 }
 ```
 
-`{EXPERIMENT_ID}`:  ID correspondant à l&#39;expérience sous laquelle l&#39;exécution est exécutée.\
-`{EXPERIMENT_RUN_ID}`: ID correspondant à l’exécution d’expérience que vous venez de créer.
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.\
+`{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’exécution d’expérience que vous venez de créer.
 
 
-### Récupérer un état d&#39;exécution d&#39;expérience pour l&#39;exécution d&#39;expérience planifiée
+### Récupération d’un état d’exécution d’expérience pour une exécution d’expérience planifiée
 
-Pour obtenir des exécutions d’expériences pour des expériences planifiées, la requête est présentée ci-dessous :
+Voici la requête qui permet d’obtenir des exécutions d’expérience pour les expériences planifiées :
 
 **Requête**
 
@@ -185,11 +185,11 @@ curl -X GET \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  ID correspondant à l&#39;expérience sous laquelle l&#39;exécution est exécutée.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
-Comme il existe plusieurs exécutions d’expériences pour une expérience spécifique, la réponse renvoyée comporte un tableau d’ID d’exécution.
+Puisqu’il existe plusieurs exécutions d’expérience pour une expérience spécifique, la réponse renvoyée comporte un tableau d’identifiant d’exécution.
 
 **Réponse**
 
@@ -212,12 +212,12 @@ Comme il existe plusieurs exécutions d’expériences pour une expérience spé
 }
 ```
 
-`{EXPERIMENT_RUN_ID}`: ID correspondant à l’exécution de l’expérience.\
-`{EXPERIMENT_ID}`:  ID correspondant à l&#39;expérience sous laquelle l&#39;exécution est exécutée.
+`{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’expérience d’exécution.\
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience sous laquelle se trouve l’exécution.
 
-### Arrêter et supprimer une expérience planifiée
+### Arrêt et suppression d’une expérience planifiée
 
-Si vous souhaitez interrompre l&#39;exécution d&#39;une expérience planifiée avant son `endTime`exécution, vous pouvez demander à un DELETE de répondre à la demande de la variable `{EXPERIMENT_ID}`
+Si vous souhaitez arrêter l’exécution d’une expérience planifiée avant son `endTime`, vous pouvez faire une requête DELETE à l’`{EXPERIMENT_ID}`.
 
 **Requête**
 
@@ -228,15 +228,15 @@ curl -X DELETE \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
-`{EXPERIMENT_ID}`:  ID correspondant à l’expérience.\
-`{ACCESS_TOKEN}`: Votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{IMS_ORG}`: Vos informations d’identification d’organisation IMS se trouvent dans votre intégration d’Adobe Experience Platform unique.
+`{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
+`{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
+`{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
 
 >[!NOTE]
 >
->L&#39;appel d&#39;API désactivera la création de nouvelles exécutions d&#39;expérience. Cependant, il n’arrêtera pas l’exécution des exécutions d’expériences déjà en cours d’exécution.
+>L’appel API désactive la création de nouvelles exécutions d’expérience. Toutefois, il n’arrête pas les exécutions d’expériences déjà en cours.
 
-Voici la réponse vous informant que l&#39;expérience a bien été supprimée.
+Voici la réponse qui indique que l’expérience a bien été supprimée.
 
 **Réponse**
 
