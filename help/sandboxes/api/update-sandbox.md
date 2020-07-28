@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Mise à jour d’un sandbox
+title: Mise à jour d’un environnement de test
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 
-# Mise à jour d’un sandbox
+# Mise à jour d’un environnement de test
 
-Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en exécutant une requête PATCH qui inclut le sandbox dans le chemin de la requête et la propriété à mettre à jour dans la charge utile de la requête. `name`
+Vous pouvez mettre à jour un ou plusieurs champs d’un environnement de test en effectuant une requête PATCH incluant le `name` de l’environnement de test dans le chemin de requête et la propriété à mettre à jour dans le payload de la requête.
 
 >[!NOTE]
 >
->Actuellement, seule la `title` propriété d’un sandbox peut être mise à jour.
+>Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
 
 **Format d’API**
 
@@ -28,11 +28,11 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | Propriété `name` du sandbox à mettre à jour. |
+| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour la propriété `title` du sandbox nommé &quot;dev-2&quot;.
+La requête suivante met à jour la propriété `title` de l’environnement de test nommé « dev-2 ».
 
 ```shell
 curl -X PATCH \
@@ -49,7 +49,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie l’état HTTP 200 (OK) avec les détails du sandbox nouvellement mis à jour.
+Une réponse réussie renvoie un état HTTP 200 (OK) avec les détails de l’environnement de test mis à jour.
 
 ```json
 {
