@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Présentation de l’interface utilisateur de Sandbox
+title: Présentation de l’interface utilisateur des environnements de test
 topic: user guide
 translation-type: tm+mt
 source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
 workflow-type: tm+mt
 source-wordcount: '96'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Présentation de l’interface utilisateur de Sandbox
+# Présentation de l’interface utilisateur des environnements de test
 
 
-Adobe Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts et isolés. L’interface utilisateur de Sandbox se trouve dans l’interface utilisateur [de la plateforme](https://platform.adobe.com)d’expérience.
+Adobe Experience Platform fournit des environnements de test virtuels qui partitionnent une instance unique de Platform en environnements virtuels séparés et isolés. Vous trouverez l’interface utilisateur des environnements de test dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.com).
 
-Une fois que vous êtes connecté à l’interface utilisateur de la plate-forme d’expérience, passez au guide [d’utilisation du](user-guide.md) sandbox pour connaître les étapes d’exécution de différentes tâches dans l’espace de travail sandbox.
+Une fois que vous êtes connecté à l’interface utilisateur d’Experience Platform UI, veuillez passer au [guide d’utilisation des environnements de test](user-guide.md) pour découvrir les étapes de réalisation de diverses tâches dans l’espace de travail des environnements de test.
 
-Pour obtenir des instructions sur l’exécution de différentes opérations à l’aide de l’API Sandbox, consultez le guide [du développeur](../api/getting-started.md)sandbox. Pour un aperçu général des sandbox dans la plateforme d’expérience, reportez-vous à la documentation [de](../home.md)présentation.
+Pour obtenir des instructions sur l’exécution de différentes opérations à l’aide de l’API Sandbox, consultez le [guide de développement des environnements de test](../api/getting-started.md). Pour une présentation générale des environnements de test dans Experience Platform, veuillez vous reporter à la [documentation de présentation](../home.md).
 
