@@ -83,7 +83,7 @@ La documentation de l&#39;Adobe Experience Platform est disponible en plusieurs 
 
 >[!NOTE]
 >
->Depuis mai 2020, Adobe met à jour la barre d’en-tête et le domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
+>À partir de mai 2020, l’Adobe procède à des mises à jour de la barre d’en-tête et du domaine afin d’unifier et d’améliorer votre expérience dans toutes les applications Experience Cloud. Ceci inclut un nouveau menu Aide. Le nouveau menu Aide comprend les éléments suivants :
 >
 >* Liens vers les articles présentés
 >* Recommandations relatives à la documentation contextuelle
@@ -129,7 +129,7 @@ Découvrez les concepts de base de l’utilisation des API de
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-L&#39;un des principaux avantages de l&#39;Adobe Experience Platform est sa capacité à s&#39;intégrer à d&#39;autres services Adobe existants. La vidéo suivante présente un aperçu de la manière dont [!DNL Experience Platform] les services s’intègrent aux [!DNL Experience Cloud] applications et fonctionnalités telles que Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes][!DNL Audience Library]et [!DNL Experience Platform Launch].
+L&#39;un des principaux avantages de l&#39;Adobe Experience Platform est sa capacité à s&#39;intégrer à d&#39;autres services d&#39;Adobe existants. La vidéo suivante présente un aperçu de la manière dont [!DNL Experience Platform] les services s’intègrent aux [!DNL Experience Cloud] applications et fonctionnalités telles que Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library]et [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
