@@ -1,50 +1,50 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aide sur les Adobes Experience Platform
+user-guide-title: Aide d’Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: a2726bfc5ef7feac374e57af9c986a9c521efa48
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 50%
+ht-degree: 96%
 
 ---
 
 
-# Adobe Experience Platform {#landing}
+# Adobe Experience Platform {#landing}
 
-* [Présentation de l’Experience Platform](home.md)
+* [Présentation d’Experience Platform](home.md)
 * [Prise en main](get-started.md)
 * Documentation Experience Platform {#documentation}
    * [Présentation de la documentation](documentation/overview.md)
-   * [Contrôle d’accès](https://docs.adobe.com/content/help/en/experience-platform/access-control/home.html)
+   * [Contrôle d’accès](https://docs.adobe.com/content/help/fr-FR/experience-platform/access-control/home.html)
    * [Auditor](https://docs.adobe.com/content/help/fr-FR/auditor/using/overview.html)
-   * [Catalogue et jeux de données](https://docs.adobe.com/content/help/en/experience-platform/catalog/home.html)
-   * [Accès aux données](https://docs.adobe.com/content/help/en/experience-platform/data-access/home.html)
-   * [Gouvernance des données](https://docs.adobe.com/content/help/en/experience-platform/data-governance/home.html)
-   * [Incorporation de données](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/home.html)
-   * [Espace de travail Data Science](https://docs.adobe.com/content/help/en/experience-platform/data-science-workspace/home.html)
+   * [Catalogue et jeux de données](https://docs.adobe.com/content/help/fr-FR/experience-platform/catalog/home.html)
+   * [Accès aux données](https://docs.adobe.com/content/help/fr-FR/experience-platform/data-access/home.html)
+   * [Gouvernance des données](https://docs.adobe.com/content/help/fr-FR/experience-platform/data-governance/home.html)
+   * [Data Ingestion](https://docs.adobe.com/content/help/fr-FR/experience-platform/ingestion/home.html)
+   * [Data Science Workspace](https://docs.adobe.com/content/help/fr-FR/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/fr-FR/debugger/using/experience-cloud-debugger.html)
-   * [Débogueur 2.0 (bêta)](https://docs.adobe.com/content/help/en/debugger/using-v2/experience-cloud-debugger.html)
-   * [Service de prise de décision](https://docs.adobe.com/content/help/en/experience-platform/decisioning/home.html)
+   * [Débogueur 2.0 (bêta)](https://docs.adobe.com/content/help/fr-FR/debugger/using-v2/experience-cloud-debugger.html)
+   * [Service de prise de décision](https://docs.adobe.com/content/help/fr-FR/experience-platform/decisioning/home.html)
    * [Destinations](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/destinations/destinations-overview.html)
-   * [ETL (extraction, transformation, chargement)](https://docs.adobe.com/content/help/en/experience-platform/etl/home.html)
-   * [Service d’identité](https://docs.adobe.com/content/help/fr-FR/experience-platform/identity/home.html)
-   * [Services intelligents](https://docs.adobe.com/content/help/fr-FR/experience-platform/intelligent-services/home.html)
+   * [ETL (extraction, transformation, chargement)](https://docs.adobe.com/content/help/fr-FR/experience-platform/etl/home.html)
+   * [Identity Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/identity/home.html)
+   * [Intelligent Services](https://docs.adobe.com/content/help/fr-FR/experience-platform/intelligent-services/home.html)
    * [Launch](https://docs.adobe.com/content/help/fr-FR/launch/using/overview.html)
-   * [Informations sur l&#39;observabilité](https://docs.adobe.com/content/help/en/experience-platform/observability/home.html)
-   * [Service confidentialité](https://docs.adobe.com/content/help/en/experience-platform/privacy/home.html)
-   * [Profil (Profil client en temps réel)](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/home.html)
-   * [Requête Service](https://docs.adobe.com/content/help/en/experience-platform/query/home.html)
-   * [Plateforme des données clients en temps réel](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/overview.html)
+   * [Observability Insights](https://docs.adobe.com/content/help/fr-FR/experience-platform/observability/home.html)
+   * [Privacy Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/privacy/home.html)
+   * [Profile (Real-time Customer Profile)](https://docs.adobe.com/content/help/fr-FR/experience-platform/profile/home.html)
+   * [Query Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/query/home.html)
+   * [Plateforme de données clients en temps réel](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/overview.html)
    * [Environnements de test](https://docs.adobe.com/content/help/fr-FR/experience-platform/sandbox/home.html)
    * [Segmentation](https://docs.adobe.com/content/help/fr-FR/experience-platform/segmentation/home.html)
    * [Sources (connecteurs)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
    * [SDK Web](https://docs.adobe.com/content/help/fr-FR/experience-platform/edge/home.html)
-   * [XDM (modèle de données d’expérience)](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html)
-* [Didacticiels à l’intention des Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html)
-* [Notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.translate.html)
+   * [Modèle de données d’expérience (XDM)](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html)
+* [Tutoriels Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html)
+* [Notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire](glossary.md)
 * [Guide de dépannage](troubleshooting.md)
-* [Principes de base des API](api-fundamentals.md)
-* [Référence API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
+* [Principes fondamentaux des API](api-fundamentals.md)
+* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)
