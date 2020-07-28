@@ -18,7 +18,7 @@ This document provides supplemental information related to working with the [!DN
 
 ## Mode de compatibilité
 
-[!DNL Experience Data Model] (XDM) est une spécification documentée publiquement, menée par Adobe pour améliorer l&#39;interopérabilité, l&#39;expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions formelles XDM dans un [projet open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites dans la notation standard XDM, et utilisent JSON-LD (JavaScript Object Notation for Linked Data) et le schéma JSON comme grammaire de définition des schémas XDM.
+[!DNL Experience Data Model] (XDM) est une spécification documentée publiquement, pilotée par l&#39;Adobe pour améliorer l&#39;interopérabilité, l&#39;expressivité et la puissance des expériences numériques. Adobe conserve le code source et les définitions formelles XDM dans un [projet open source sur GitHub](https://github.com/adobe/xdm/). Ces définitions sont écrites dans la notation standard XDM, et utilisent JSON-LD (JavaScript Object Notation for Linked Data) et le schéma JSON comme grammaire de définition des schémas XDM.
 
 Lorsque vous examinez les définitions XDM formelles dans le référentiel public, vous pouvez voir que le XDM standard est différent de ce que vous voyez dans Adobe Experience Platform. What you are seeing in [!DNL Experience Platform] is called Compatibility Mode, and it provides a simple mapping between standard XDM and the way it is used within [!DNL Platform].
 
