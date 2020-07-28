@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '1069'
-ht-degree: 3%
+ht-degree: 15%
 
 ---
 
@@ -20,32 +20,32 @@ Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers 
 
 ## Prise en main
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Sources](../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 - [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir assimiler avec succès des données de parquet provenant d’un enregistrement de cloud tiers à l’aide de l’ [!DNL Flow Service] API.
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
+Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-- Content-Type : `application/json`
+- Content-Type: `application/json`
 
 ## Création d’une connexion
 
@@ -63,7 +63,7 @@ Récupérez et stockez l’identifiant unique (`$id`) de la connexion, puis pass
 
 Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues.
 
-Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le didacticiel [de l’éditeur de](../../../xdm/tutorials/create-schema-ui.md) Schémas fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de Schéma.
+If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **Format d’API**
 
@@ -116,7 +116,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma nouvellement créé, y compris son identifiant unique (`$id`). Cet identifiant est requis à l’étape suivante pour créer une connexion source.
+A successful response returns details of the newly created schema including its unique identifier (`$id`). Cet identifiant est requis à l’étape suivante pour créer une connexion source.
 
 ```json
 {
@@ -198,7 +198,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Création d’une connexion source {#source}
 
-Une fois un schéma XDM de cible créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’ [!DNL Flow Service] API. Une connexion source consiste en une connexion pour l&#39;API, un format de données source et une référence au schéma XDM de cible récupéré à l&#39;étape précédente.
+Une fois un schéma XDM de cible créé, une connexion source peut désormais être créée à l’aide d’une requête de POST à l’ [!DNL Flow Service] API. Une connexion source consiste en une connexion pour l&#39;API, un format de données source et une référence au schéma XDM de cible récupéré à l&#39;étape précédente.
 
 **Format d’API**
 
@@ -263,9 +263,9 @@ Pour créer une connexion de base de jeux de données, suivez les étapes décri
 
 Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Récupérez et stockez l’identifiant unique (`$id`), puis utilisez-le comme identifiant de connexion de base à l’étape suivante pour créer une connexion de cible.
 
-## Création d’un jeu de données de cible
+## Création d’un jeu de données cible
 
-Un jeu de données de cible peut être créé en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’ID du schéma de cible dans la charge utile.
+Un jeu de données de cible peut être créé en exécutant une requête de POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’identifiant du schéma de cible dans la charge utile.
 
 **Format d’API**
 
@@ -301,7 +301,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’ID de jeu de données est une chaîne générée par le système en lecture seule qui est utilisée pour référencer le jeu de données dans les appels d’API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
+A successful response returns an array containing the ID of the newly created dataset in the format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. Stockez l’ID du jeu de données de cible tel qu’il est requis dans les étapes suivantes pour créer une connexion à une cible et un flux de données.
 
 ```json
 [
@@ -358,7 +358,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle connexion à la cible. Stocker cette valeur comme elle est requise dans les étapes ultérieures.
+Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle connexion à la cible. Conservez cette valeur car elle sera nécessaire lors de prochaines étapes.
 
 ```json
 {
@@ -374,7 +374,7 @@ La dernière étape vers l&#39;assimilation de données sur le parquet à partir
 - [ID de connexion source](#source)
 - [ID de connexion à la Cible](#target)
 
-Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
 **Format d’API**
 
@@ -419,7 +419,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouvellement créé.
+A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
