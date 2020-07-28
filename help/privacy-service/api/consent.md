@@ -20,7 +20,7 @@ Avant d&#39;utiliser ce guide, reportez-vous à la section [prise en main](./get
 
 ## Traiter une demande de consentement client
 
-Les demandes de consentement sont traitées en envoyant une demande POST au point de `/consent` terminaison.
+Les demandes de consentement sont traitées en adressant une demande de POST au point de `/consent` terminaison.
 
 **Format d’API**
 
