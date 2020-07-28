@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '3311'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -168,7 +168,7 @@ Votre structure de dossiers doit maintenant ressembler à l’exemple suivant (l
 
 L&#39;étape suivante consiste à suivre les fichiers source du [package dans un didacticiel de recette](./models-recipes/package-source-files-recipe.md) . Ce didacticiel comporte une section qui décrit la création d&#39;une image de docker pour une recette Scala (Spark). Une fois l&#39;opération terminée, vous recevez l&#39;image du Docker dans un Registre de Conteneur Azure avec l&#39;URL de l&#39;image correspondante.
 
-### Créer une recette ([!DNL Spark]) {#create-recipe-spark}
+### Création d’une recette ([!DNL Spark]) {#create-recipe-spark}
 
 Pour créer une recette, vous devez d&#39;abord compléter le didacticiel sur les fichiers [source du](./models-recipes/package-source-files-recipe.md) package et disposer de l&#39;URL de l&#39;image du dossier. Vous pouvez créer une recette à l&#39;aide de l&#39;interface utilisateur ou de l&#39;API.
 
