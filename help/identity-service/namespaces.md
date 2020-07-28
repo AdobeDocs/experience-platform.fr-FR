@@ -1,81 +1,81 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Identity Service d’Adobe Experience Platform
+title: Adobe Experience Platform Identity Service
 topic: overview
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 1%
+ht-degree: 74%
 
 ---
 
 
-# Présentation de l&#39;espace de nommage d&#39;identité
+# Présentation des espaces de noms d’identité
 
-Les espaces de nommage d&#39;identité sont une composante de [!DNL Identity Service](./home.md) l&#39;identité qui sert d&#39;indicateur du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de &quot;name<span>@email.com&quot; en tant qu’adresse électronique ou de &quot;443522&quot; en tant qu’identifiant CRM numérique.
+Les espaces de noms d’identité sont des composants d’[!DNL Identity Service](./home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur « name<span>@email.com » comme adresse électronique ou « 443522 » comme identifiant CRM numérique.
 
 ## Prise en main
 
-Travailler avec des espaces de nommage d&#39;identité nécessite une compréhension des différents services d&#39;Adobe Experience Platform impliqués. Avant de commencer à travailler avec des espaces de nommage, veuillez consulter la documentation relative aux services suivants :
+L’utilisation des espaces de noms d’identité nécessite une compréhension des différents services d’Adobe Experience Platform impliqués. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
-- [!DNL Real-time Customer Profile](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [!DNL Identity Service](./home.md): Obtenez une meilleure vue des clients individuels et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
-- [!DNL Privacy Service](../privacy-service/home.md): Les espaces de nommage d&#39;identité sont utilisés pour se conformer au Règlement général sur la protection des données (RGPD), où les demandes de RGPD peuvent être faites par rapport à un espace de nommage.
+- [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [!DNL Identity Service](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
+- [!DNL Privacy Service](../privacy-service/home.md) : les espaces de noms d’identité sont utilisés pour se conformer au Règlement général sur la protection des données (RGPD), les demandes de RGPD peuvent être faites par rapport à un espace de noms d’identité.
 
-## Comprendre les espaces de nommage d&#39;identité
+## Compréhension des espaces de noms d’identité
 
-Une identité pleinement qualifiée comprend une valeur d’identifiant et un espace de nommage. Lors de la correspondance de données d’enregistrement entre des fragments de profil, comme lors de la [!DNL Real-time Customer Profile] fusion de données de profil, la valeur d’identité et l’espace de nommage doivent correspondre.
+Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de nommage &quot;E-mail&quot;. Par conséquent, Platform peut voir que ces fragments sont en fait le même individu et rassembler les données dans le graphique d’identité de l’individu.
+Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais partager la même valeur pour l’espace de noms « Email ». Par conséquent, Platform est en mesure de voir que ces fragments représentent en fait la même personne et peut rassembler les données dans le graphique d’identités de la personne.
 
 ![](images/identity-service-stitching.png)
 
 ### Types d’identité
 
-Les données peuvent être identifiées par différents types d&#39;identité. Le type d&#39;identité est spécifié au moment de la création de l&#39;espace de nommage d&#39;identité et contrôle si les données sont conservées ou non sur le graphique d&#39;identité, ainsi que toute instruction spéciale sur la manière de gérer ces données.
+Les données peuvent être identifiées par plusieurs types d’identité différents. Le type d’identité est spécifié au moment de la création de l’espace de noms d’identité et contrôle la conservation ou non des données dans le graphique d’identités, ainsi que toutes les instructions spéciales concernant la manière dont ces données doivent être traitées.
 
-Les types d&#39;identité suivants sont disponibles dans [!DNL Platform]:
+Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 
-| Type d&#39;identité | Description |
+| Type d’identité | Description |
 | --- | --- |
-| Cookie | Ces identités sont essentielles à l&#39;expansion et constituent la majorité du graphique d&#39;identité. Cependant, par nature, ils se désintègrent rapidement et perdent leur valeur au fil du temps. La suppression des cookies est gérée spécialement dans le graphique d&#39;identité. |
-| Périphériques croisés | Cela indique que [!DNL Identity Service] cela devrait être considéré comme un identifiant de personne fort et donc le préserver pour toujours. Par exemple, un identifiant de connexion, un identifiant de gestion de la relation client, un identifiant de fidélité, etc. |
-| Appareil | Inclut les identifiants IDFA, GAID et autres identifiants IOT. Ceux-ci peuvent être partagés par les ménages. |
-| Email | Les identités de ce type incluent des informations d’identification personnelle (PII). Il s’agit d’une indication permettant [!DNL Identity Service] de gérer la valeur de façon sensible. |
-| Mobile | Les identités de ce type incluent les informations d’identification personnelle. Il s’agit d’une indication permettant [!DNL Identity Service] de gérer la valeur de façon sensible. |
-| Non-personnes | Utilisé pour stocker les identifiants qui ont besoin d’espaces de nommage, mais qui ne sont pas liés à une grappe de personnes. Ces identifiants sont ensuite filtrés à partir du graphique d’identité. Les cas d&#39;utilisation possibles incluent les données relatives aux produits, organisations, magasins, etc. (Par exemple, un SKU de produit.) |
-| Téléphone | Les identités de ce type incluent les informations d’identification personnelle. Il s’agit d’une indication permettant [!DNL Identity Service] de gérer la valeur de façon sensible. |
+| Cookie | Ces identités sont essentielles à l’expansion et constituent la majorité du graphique d’identités. Cependant, par nature, elles se désintègrent rapidement et perdent leur valeur au fil du temps. La suppression des cookies est traitée d’une façon spécifique dans le graphique d’identités. |
+| Multi-appareils | This indicates that [!DNL Identity Service] should consider this to be a strong people identifier and hence preserve it forever. Par exemple, un identifiant de connexion, un identifiant CRM, un identifiant de fidélité, etc. |
+| Appareil | Inclut les identifiants IDFA, GAID et autres identifiants IOT. Ils peuvent être partagés par les personnes d’un même foyer. |
+| Adresse électronique | Les identités de ce type comprennent des informations d’identification personnelle (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Mobile | Les identités de ce type incluent des informations d’identification personnelle. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
+| Non-humaine | Utilisé pour stocker des identifiants qui ont besoin d’espaces de noms, mais qui ne sont pas liés à un groupe de personnes. Ces identifiants sont ensuite filtrés à partir du graphique d’identités. Les cas d’utilisation possibles incluent les données relatives aux produits, aux organisations, aux magasins, etc. (Par exemple, un SKU de produit.) |
+| Téléphone | Les identités de ce type incluent des informations d’identification personnelle. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### espaces de nommage standard
+### Espaces de noms standard
 
-Adobe Experience Platform fournit plusieurs espaces de nommage d&#39;identité disponibles pour toutes les organisations. Ils sont appelés espaces de nommage standard et sont visibles à l’aide de l’ [!DNL Identity Service] API ou via l’ [!DNL Platform] interface utilisateur.
+Adobe Experience Platform fournit plusieurs espaces de noms d’identité disponibles pour toutes les organisations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-Pour vue des espaces de nommage standard dans l’interface utilisateur, cliquez sur **[!UICONTROL Identités]** dans le rail de gauche, puis cliquez sur l’onglet *[!UICONTROL Parcourir]* . Tous les espaces de nommage d&#39;identité accessibles à votre organisation seront affichés, mais ceux dont le &quot;[!UICONTROL propriétaire]&quot; est &quot;[!UICONTROL Standard]&quot; sont les espaces de nommage standard fournis par Adobe.
+Pour afficher les espaces de noms standard dans l’interface utilisateur, cliquez sur **[!UICONTROL Identités]** dans le rail de gauche, puis cliquez sur l’onglet *[!UICONTROL Parcourir]*. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
-Vous pouvez ensuite cliquer sur l’un des espaces de nommage répertoriés pour obtenir les détails de la vue.
+Vous pouvez ensuite cliquer sur l’un des espaces de noms de la liste pour plus d’informations.
 
 ![](./images/standard-namespace-detail.png)
 
-## Gestion des espaces de nommage de votre organisation
+## Gestion des espaces de noms pour votre organisation
 
-Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de nommage personnalisés.
+Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de noms personnalisés.
 
-Elles sont visibles dans l’interface utilisateur sous forme d’espaces de nommage avec &quot;[!UICONTROL Personnalisé]&quot; comme &quot;[!UICONTROL Propriétaire]&quot;. Les espaces de nommage personnalisés peuvent être créés à l’aide de l’ [!DNL Identity Service] API ou via l’interface utilisateur.
+These are visible in the UI as those namespaces with &quot;[!UICONTROL Custom]&quot; as the &quot;[!UICONTROL Owner]&quot;. Custom namespaces can be created using the [!DNL Identity Service] API or through the user interface.
 
-Pour créer un espace de nommage personnalisé à l’aide de l’interface utilisateur, cliquez sur **[!UICONTROL Créer un espace de nommage]** d’identité, puis complétez la boîte de dialogue et cliquez sur **[!UICONTROL Créer]**.
+Pour créer un espace de noms personnalisé à l’aide de l’interface utilisateur, cliquez sur **[!UICONTROL Créer un espace de noms d’identité]**, puis complétez la boîte de dialogue et cliquez sur **[!UICONTROL Créer]**.
 
-Les Espaces de nommage que vous définissez sont privés à votre organisation et nécessitent un &quot;symbole[!UICONTROL d’]identité&quot; unique (ou &quot;code&quot; si vous utilisez l’API) pour être créés avec succès.
+Namespaces that you define are private to your organization and require a unique &quot;[!UICONTROL Identity Symbol]&quot; (or &quot;code&quot; if you are using the API) in order to be created successfully.
 
 ![](./images/create-identity-namespace.png)
 
-Comme pour les espaces de nommage standard, vous pouvez cliquer sur un espace de nommage personnalisé dans l’onglet *[!UICONTROL Parcourir]* pour en vue les détails. Toutefois, avec un espace de nommage personnalisé, vous pouvez également modifier son nom d’affichage et sa description dans la zone de détails.
+Comme pour les espaces de noms standard, vous pouvez cliquer sur un espace de noms personnalisé à partir de l’onglet *[!UICONTROL Parcourir]* pour en afficher les détails. Toutefois, vous pouvez également modifier le nom d’affichage et la description d’un espace de noms personnalisé dans la zone de détails.
 
 >[!NOTE]
 >
->Une fois un espace de nommage créé, il ne peut plus être supprimé et son &quot;symbole d’identité&quot; (ou &quot;code&quot; dans l’API) et son &quot;type&quot; ne peuvent plus être modifiés.
+>Une fois qu’un espace de noms a été créé, il ne peut plus être supprimé et son « Symbole d’identité » (ou « code » dans l’API) et son « Type » ne peuvent plus être modifiés.
 
-## Espaces de nommage des données d&#39;identité
+## Espaces de noms dans les données d’identité
 
-La fourniture de l&#39;espace de nommage pour une identité dépend de la méthode que vous utilisez pour fournir les données d&#39;identité. Pour plus d&#39;informations sur la fourniture de données d&#39;identité, reportez-vous à la section relative à la [fourniture de données](./home.md#supplying-identity-data-to-identity-service) d&#39;identité dans la [!DNL Identity Service] présentation.
+La délivrance de l’espace de noms pour une identité dépend de la méthode que vous utilisez pour fournir les données d’identité. For details on providing data identity data, please see the section on [supplying identity data](./home.md#supplying-identity-data-to-identity-service) in the [!DNL Identity Service] overview.
