@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 workflow-type: tm+mt
 source-wordcount: '358'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
@@ -16,25 +16,25 @@ ht-degree: 8%
 
 ## Présentation
 
-La recette Prédiction des achats de produits vous permet de prévoir la probabilité d’un certain type de événement d’achat client - un achat de produit, par exemple.
+La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)
 
-Le document suivant répond à des questions telles que :
-* Pour qui est construite cette recette ?
-* Que fait cette recette ?
+Le document suivant apporte des réponses aux questions suivantes :
+* Pour qui cette recette a-t-elle été créée ?
+* Comment fonctionne cette recette ?
 
-## Pour qui est construite cette recette ?
+## Pour qui cette recette a-t-elle été créée ?
 
-Votre marque cherche à augmenter les ventes trimestrielles de votre gamme de produits grâce à des promotions efficaces et ciblées destinées à vos clients. Cependant, tous les clients ne se ressemblent pas et vous voulez que votre argent vaille. Qui cibles-tu ? Parmi vos clients, lequel est le plus susceptible de répondre sans que votre promotion soit intrusive ? Comment personnaliser vos promotions pour chaque client ? Quels canaux devriez-vous compter et quand devriez-vous envoyer des promotions ?
+Votre marque cherche à augmenter les ventes trimestrielles de votre gamme de produits grâce à des promotions ciblées et efficaces destinées à vos clients. Cependant, tous les clients ne se ressemblent pas et vous voulez en avoir pour votre argent. Qui ciblez-vous ? Quels sont vos clients les plus susceptibles de répondre sans trouver votre promotion ? Comment personnaliser vos promotions pour chaque client ? Sur quels canaux vous appuyer et à quel moment envoyer des promotions ?
 
-## Que fait cette recette ?
+## Comment fonctionne cette recette ?
 
-La recette Prédiction des achats de produits utilise l’apprentissage automatique pour prédire le comportement d’achat des clients. Pour ce faire, il applique un classificateur de forêt aléatoire personnalisé et un modèle de données d’expérience à deux niveaux (XDM) pour prévoir la probabilité d’un événement d’achat. Le modèle utilise des données d’entrée incorporant des informations sur le profil client et l’historique des achats précédents et utilise par défaut des paramètres de configuration prédéterminés déterminés déterminés par nos Data Scientists pour améliorer la précision prédictive.
+La recette de prédiction d’achat de produit utilise l’apprentissage automatique pour prédire le comportement d’achat des clients. Pour ce faire, elle applique une forêt aléatoire personnalisée et un modèle de données d’expérience (XDM) à deux niveaux, afin de prévoir la probabilité d’un événement d’achat. Le modèle utilise des données d’entrée incorporant des informations sur les profils clients et l’historique des achats. Il utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
 
-## Data schema
+## Schéma des données
 
-Cette recette utilise des schémas [](../../xdm/home.md) XDM pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
+Cette recette utilise les [schémas XDM](../../xdm/home.md) pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
 
 | Nom du champ | Type |
 --- | ---
@@ -59,6 +59,6 @@ Cette recette utilise des schémas [](../../xdm/home.md) XDM pour modéliser les
 
 ## Algorithme
 
-Tout d’abord, le jeu de données d’identification dans le schéma *ProductPrediction* est chargé. À partir de là, le modèle est formé à l&#39;aide d&#39;un classificateur [de forêt](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)aléatoire. Le classificateur de forêt aléatoire est un type d’algorithme intégré qui fait référence à un algorithme qui combine plusieurs algorithmes pour obtenir de meilleures performances prédictives. L&#39;idée derrière l&#39;algorithme est que le classificateur de forêt aléatoire construit plusieurs arbres de décision et les fusionne pour créer une prédiction plus précise et plus stable.
+Tout d’abord, le jeu de données d’entraînement dans le schéma *ProductPrediction* est chargé. Ensuite, le modèle est entraîné à l’aide d’une [forêt aléatoire](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html). La forêt aléatoire est un type d’algorithme intégré qui fait référence à un algorithme qui combine plusieurs algorithmes pour obtenir de meilleures performances prédictives. L’idée derrière l’algorithme est que la forêt aléatoire construit plusieurs arbres de décision et les fusionne pour créer une prédiction plus précise et plus stable.
 
-Ce processus début avec la création d’un ensemble d’arbres de décision qui sélectionne de manière aléatoire des sous-ensembles de données d’identification. Par la suite, les résultats de chaque arbre de décision sont calculés en moyenne.
+Ce processus démarre avec la création d’un ensemble d’arbres de décision qui sélectionne de manière aléatoire des sous-ensembles de données d’apprentissage. Par la suite, une moyenne des résultats de chaque arbre de décision est calculée.
