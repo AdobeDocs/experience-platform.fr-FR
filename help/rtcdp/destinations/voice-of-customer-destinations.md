@@ -1,24 +1,24 @@
 ---
-title: Voix des destinations du client
-seo-title: Voix des destinations du client
-description: Les plateformes vocales rassemblent et rassemblent des données provenant de diverses sources, y compris des messages vocaux, des données d'appel et des conversations en ligne. Les informations collectées peuvent être filtrées et analysées pour permettre aux sociétés d'optimiser leur site Web en fonction de leurs besoins.
-seo-description: Les plateformes vocales rassemblent et rassemblent des données provenant de diverses sources, y compris des messages vocaux, des données d'appel et des conversations en ligne. Les informations collectées peuvent être filtrées et analysées pour permettre aux sociétés d'optimiser leur site Web en fonction de leurs besoins.
+title: Destinations de voix du client
+seo-title: Destinations de voix du client
+description: Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
+seo-description: Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
 translation-type: tm+mt
 source-git-commit: e4da80338dbfbad70dfb3cf7df9fe589e949e788
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Voix des destinations du client {#voice-of-customer-destinations}
+# Destinations de voix du client {#voice-of-customer-destinations}
 
-Les plateformes vocales rassemblent et rassemblent des données provenant de diverses sources, y compris des messages vocaux, des données d&#39;appel et des conversations en ligne. Les informations collectées peuvent être filtrées et analysées pour permettre aux sociétés d&#39;optimiser leur site Web en fonction de leurs besoins.
+Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
 
-Actuellement, la plate-forme de données client en temps réel d’Adobe prend en charge la voix des destinations de client répertoriées ci-dessous. Pour plus d’informations sur la connexion à ces destinations, voir les liens individuels :
+Actuellement, la plateforme de données clients en temps réel d’Adobe prend en charge les destinations de voix du client répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
 
-* [Confirmer l&#39;extension de commentaires numériques](confirmit-digital-feedback-extension.md)
-* [Extension Balises d’appel](/help/rtcdp/destinations/invoca-extension.md)
-* [Extension de Medallia](medallia-extension.md)
-* [Extension de boîte de réception de l’URL de discussion](talkurl-extension.md)
+* [Extension Confirmit Digital Feedback](confirmit-digital-feedback-extension.md)
+* [Extension Invoca Tags](/help/rtcdp/destinations/invoca-extension.md)
+* [Extension Medallia](medallia-extension.md)
+* [Extension Talk URL Inbox](talkurl-extension.md)
