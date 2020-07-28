@@ -12,7 +12,7 @@ ht-degree: 57%
 ---
 
 
-# [!DNL Data Governance] et [!DNL Privacy] didacticiels
+# [!DNL Data Governance] et [!DNL Privacy] Tutorials
 
 [!DNL Data Usage Labeling and Enforcement] (DULE) est le mécanisme central de l&#39;Adobe Experience Platform [!DNL Data Governanc]e. Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d&#39;utilisation des données associées. Avant de commencer avec les libellés, consultez la [présentation de la gouvernance des données](../data-governance/home.md) pour une introduction plus détaillée de la structure DULE dans [!DNL Platform].
 
