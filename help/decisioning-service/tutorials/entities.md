@@ -102,7 +102,7 @@ Il suffit de créer des profils de produit qui correspondent à certaines autori
 
 Lorsque l’administrateur a autorisé les utilisateurs réguliers ou les intégrations à accéder aux conteneurs, ces derniers s’affichent dans la liste « Origine » du référentiel. La liste peut différer selon les utilisateurs et les intégrations, car il s’agit d’un sous-ensemble de tous les conteneurs accessibles pour l’appelant. La liste des conteneurs peut être filtrée selon leur association au contexte du produit. Le paramètre de filtre `product` peut être répété. Si plusieurs filtres contextuels de produit sont utilisés, ils renvoient l’union des conteneurs ayant des associations avec l’un des contextes de produit fournis. Notez qu’un même conteneur peut être associé à plusieurs contextes de produit.
 
-Le contexte des [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`en cours.
+Le contexte pour les [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`.
 
 >[!NOTE]
 >
