@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Guide de dépannage des sandbox
+title: Guide de dépannage des environnements de test
 topic: troubleshooting guide
 translation-type: tm+mt
 source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Guide de dépannage des sandbox
+# Guide de dépannage des environnements de test
 
-Ce document fournit des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services de plate-forme, reportez-vous au guide [de dépannage de](../landing/troubleshooting.md)Experience Platform.
+Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-Les sandbox partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique. See the [sandboxes overview](home.md) for more information.
+Les environnements de test divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
 
-## Qu&#39;est-ce qu&#39;un sandbox ?
+## Qu’est-ce qu’un environnement de test ?
 
-Les sandbox sont des partitions virtuelles au sein d’une seule instance de la plateforme d’expérience. Chaque sandbox conserve sa propre bibliothèque indépendante de ressources de plateforme (y compris les schémas, les jeux de données, les profils, etc.). Tout le contenu et les actions effectués dans un sandbox sont limités à ce sandbox et n’affectent aucun autre sandbox. See the [sandboxes overview](home.md) for more information.
+Les environnements de test sont des partitions virtuelles au sein d’une instance unique d’Experience Platform. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (qui comprend des schémas, des jeux de données, des profils, etc.). Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre. Pour plus d’informations, consultez la [Présentation des environnements de test](home.md).
 
-## Quels types de sandbox sont disponibles et quelles sont leurs différences ?
+## Quels sont les types d’environnements de test disponibles et quelles sont leurs différences ?
 
-Il existe deux types de sandbox disponibles dans la plateforme d’expérience :
+Deux types d’environnements de test sont disponibles dans Experience Platform :
 
-* sandbox de production
-* Sandbox hors production
+* Environnement de test de production
+* Environnement de test hors production
 
-Experience Platform fournit un sandbox **de** production unique, qui ne peut pas être supprimé ou réinitialisé. Un seul sandbox de production peut exister pour une instance de plateforme unique.
+Experience Platform fournit un **environnement de test de production** unique, qui ne peut pas être supprimé ou réinitialisé. Il ne peut y avoir qu’un seul environnement de test de production pour une instance Platform unique.
 
-En revanche, plusieurs sandbox **de** non production peuvent être créés par les administrateurs de sandbox pour une instance de plateforme unique. Les sandbox hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre sandbox de production. En outre, les sandbox hors production disposent d’une fonction de réinitialisation qui supprime toutes les ressources créées par les clients du sandbox. Les sandbox hors production ne peuvent pas être convertis en sandbox de production.
+Par comparaison, il est possible de créer plusieurs **environnements de test hors production** par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production.
 
-See the [sandboxes overview](./home.md) for more information.
+Pour plus d’informations, consultez la [Présentation des environnements de test](./home.md).
 
-## Puis-je accéder à une ressource à partir de plusieurs sandbox ?
+## Puis-je accéder à une ressource depuis plusieurs environnements de test ?
 
-Les sandbox sont des partitions isolées d’une seule instance de plateforme, chaque sandbox conservant sa propre bibliothèque de ressources indépendante. Une ressource qui existe dans un sandbox n&#39;est pas accessible à partir d&#39;un autre sandbox, quel que soit le type de sandbox (production ou non-production).
+Les environnements de test sont des partitions isolées d’une instance Platform unique pour laquelle chaque environnement de test conserve sa propre bibliothèque indépendante de ressources. Il n’est pas possible d’accéder à une ressource qui existe dans un environnement de test depuis un autre environnement de test, quel que soit le type d’environnement de test (production ou hors production).
 
-## Combien de sandbox de production puis-je avoir ?
+## De combien d’environnements de test de production puis-je disposer ?
 
-Experience Platform ne prend en charge qu’un seul sandbox de production par organisation IMS, qui est fourni prêt à l’emploi. Bien que le sandbox de production puisse être renommé, il ne peut pas être supprimé ni réinitialisé. Les utilisateurs disposant des autorisations d’administration de Sandbox peuvent uniquement créer, réinitialiser et supprimer des sandbox hors production.
+Experience Platform ne prend en charge qu’un environnement de test de production par organisation IMS qui est fourni prêt à l’emploi. Bien qu’il soit possible de renommer l’environnement de test de production, il ne peut être ni supprimé ni réinitialisé. Les utilisateurs possédant des droits d’administration pour les environnements de test peuvent seulement créer, réinitialiser et supprimer des environnements de test hors production.
 
-## Combien de sandbox hors production puis-je avoir ?
+## De combien d’environnements de test hors production puis-je disposer ?
 
-Experience Platform permet actuellement à 15 sandbox hors production d’être actifs au sein d’une seule organisation IMS.
+Pour le moment, vous pouvez avoir jusqu’à 15 environnements de test hors production actifs dans Experience Platform au sein d’une organisation IMS unique.
 
-## Je viens de créer un bac à sable. Comment puis-je définir des autorisations pour les utilisateurs qui travailleront avec ce sandbox ?
+## Je viens de créer un environnement de test. Comment puis-je définir des autorisations pour les utilisateurs qui travailleront avec cet environnement de test ?
 
-La console d’administration Adobe associe les utilisateurs à des sandbox et à des autorisations grâce à l’utilisation de profils **de** produit. Après avoir créé un nouveau sandbox, accédez à l’onglet _Autorisations_ du profil de produits auquel vous souhaitez accorder l’accès, puis cliquez sur **Sandbox**. A partir de là, vous pouvez ajouter ou supprimer l’accès au nouveau sandbox de la même manière que les autres autorisations.
+Adobe Admin Console lie les utilisateurs aux environnements de test et aux autorisations via l’utilisation de **profils de produits**. Après avoir créé un nouvel environnement de test, rendez-vous dans l’onglet _Autorisations_ du profil de produits auquel vous souhaitez accorder l’accès, puis cliquez sur **Environnements de test**. De là, vous pouvez ajouter ou supprimer l’accès au nouvel environnement de test de la même manière que pour les autres autorisations.
 
-Si vous souhaitez ajouter des autorisations uniques aux utilisateurs d’un sandbox particulier, vous devrez peut-être créer un nouveau profil de produits avec les sandbox appropriés et les autorisations appliquées, puis affecter ces utilisateurs à ce profil.
+Si vous souhaitez ajouter des autorisations uniques aux utilisateurs d’un environnement de test spécifique, vous pouvez avoir besoin de créer un nouveau profil de produits pour lequel vous aurez appliqué les environnements de test et les autorisations appropriées et attribuez ces utilisateurs à ce profil.
 
-Pour plus d’informations sur la gestion des sandbox et des autorisations dans la Console d’administration, consultez le guide [de l’utilisateur du](../access-control/ui/overview.md) contrôle d&#39;accès.
+Pour plus d’informations sur la gestion des environnements de test et des autorisations dans Admin Console, consultez le [guide d’utilisation du contrôle d’accès](../access-control/ui/overview.md).
