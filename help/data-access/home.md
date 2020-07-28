@@ -36,4 +36,4 @@ Vous pouvez lire et écrire avec des jeux de données à l’aide du [!DNL Spark
 
 ## Abonnement aux événements d’ingestion de données
 
-[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l’abonnement via la console [de développement](https://www.adobe.com/go/devs_console_ui_fr)Adobe. Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur l&#39; [abonnement aux notifications](../ingestion/quality/subscribe-events.md) d&#39;assimilation de données.
+[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l&#39;abonnement via la Console [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur l&#39; [abonnement aux notifications](../ingestion/quality/subscribe-events.md) d&#39;assimilation de données.
