@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '1367'
-ht-degree: 0%
+ht-degree: 31%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctions personnalisées pour effectuer l&#39;ingénierie de fonctions à l&#39;échelle via le cadre d&#39;exécution Sensei Machine Learning Framework (ci-après appelé &quot;Runtime&quot;).
 
-Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un didacticiel détaillé pour la création d’un pipeline de fonctionnalités personnalisées à l’aide du SDK [de création de](./sdk.md) modèles dans PySpark.
+This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
 Le processus suivant se produit lorsqu’un pipeline de fonctionnalités est exécuté :
 
@@ -39,7 +39,7 @@ Pour exécuter une recette dans n&#39;importe quelle organisation, les élément
 - Un schéma transformé et un jeu de données vide basé sur ce schéma.
 - schéma de sortie et jeu de données vide basé sur ce schéma.
 
-Tous les jeux de données ci-dessus doivent être téléchargés dans l’ [!DNL Platform] interface utilisateur. Pour configurer ce paramètre, utilisez le script [d’](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)amorçage fourni par Adobe.
+Tous les jeux de données ci-dessus doivent être téléchargés dans l’ [!DNL Platform] interface utilisateur. Pour configurer ce paramètre, utilisez le script [](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)d’amorçage fourni par l’Adobe.
 
 ## Classes de pipeline de fonctionnalités
 
@@ -47,27 +47,27 @@ Le tableau suivant décrit les principales classes abstraites que vous devez ét
 
 | Classe abstraite | Description |
 | -------------- | ----------- |
-| DataLoader | Une classe DataLoader fournit une implémentation pour la récupération des données d&#39;entrée. |
-| DatasetTransformer | Une classe DatasetTransformer fournit des implémentations pour transformer le jeu de données d&#39;entrée. Vous pouvez choisir de ne pas fournir de classe DatasetTransformer et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe FeaturePipelineFactory à la place. |
-| FeaturePipelineFactory | Une classe FeaturePipelineFactory crée un pipeline Spark consistant en une série de transformateurs Spark pour effectuer l&#39;ingénierie de fonctionnalités. Vous pouvez choisir de ne pas fournir une classe FeaturePipelineFactory et de mettre en oeuvre votre logique d&#39;ingénierie de fonctionnalités dans la classe DatasetTransformer à la place. |
-| DataSaver | Une classe DataSaver fournit la logique de l&#39;enregistrement d&#39;un jeu de données de fonctionnalités. |
+| DataLoader | Une classe DataLoader fournit une implémentation pour l’extraction de données d’entrée. |
+| DatasetTransformer | Une classe DatasetTransformer fournit des implémentations pour transformer le jeu de données d’entrée. Vous pouvez choisir de ne pas fournir une classe DatasetTransformer et mettre en œuvre votre logique de conception des fonctionnalités au sein de la classe FeaturePipelineFactory à la place. |
+| FeaturePipelineFactory | Une classe FeaturePipelineFactory crée un pipeline Spark qui consiste en une série de Spark Transformers pour réaliser la conception des fonctionnalités. Vous pouvez choisir de ne pas fournir une classe FeaturePipelineFactory et mettre en œuvre votre logique de conception des fonctionnalités au sein de la classe DatasetTransformer à la place. |
+| DataSaver | Une classe DataSaver fournit la logique de stockage d’un jeu de données de fonctionnalités. |
 
-Lorsqu’une tâche de pipeline de fonctionnalités est lancée, l’exécution commence par exécuter DataLoader pour charger les données d’entrée sous la forme d’un DataFrame, puis modifie le DataFrame en exécutant DatasetTransformer, FeaturePipelineFactory ou les deux. Enfin, le jeu de données des fonctionnalités qui en résulte est stocké via DataSaver.
+Lorsqu’une tâche de pipeline de fonctionnalités est lancée, l’exécution commence par exécuter DataLoader pour charger les données d’entrée sous la forme d’un DataFrame, puis modifie le DataFrame en exécutant DatasetTransformer, FeaturePipelineFactory ou les deux. Enfin, le jeu de données de fonctionnalités obtenu est conservé dans le DataSaver.
 
-L’organigramme suivant présente l’ordre d’exécution du runtime :
+L’organigramme suivant montre l’ordre d’exécution du Runtime :
 
 ![](../images/authoring/feature-pipeline/FeaturePipeline_Runtime_flow.png)
 
 
-## Mise en oeuvre des classes de tuyau de fonction {#implement-your-feature-pipeline-classes}
+## Mise en œuvre de vos classes de pipeline de fonctionnalités {#implement-your-feature-pipeline-classes}
 
-Les sections suivantes fournissent des détails et des exemples sur l&#39;implémentation des classes requises pour un pipeline de fonctionnalités.
+Les sections suivantes fournissent des détails et des exemples sur la mise en œuvre des classes obligatoires pour un pipeline de fonctionnalités.
 
-### Définition de variables dans le fichier JSON de configuration {#define-variables-in-the-configuration-json-file}
+### Définition de variables dans le fichier de configuration JSON {#define-variables-in-the-configuration-json-file}
 
-Le fichier JSON de configuration se compose de paires clé-valeur et est destiné à vous permettre de spécifier les variables à définir ultérieurement au cours de l’exécution. Ces paires clé-valeur peuvent définir des propriétés telles que l’emplacement du jeu de données d’entrée, l’ID du jeu de données de sortie, l’ID du client, les en-têtes de colonne, etc.
+Le fichier JSON de configuration se compose de paires clé-valeur et est conçu pour que vous puissiez préciser des variables à définir plus tard pendant l’exécution. Ces paires clé-valeur peuvent définir des propriétés telles que l’emplacement des jeux de données d’entrée, l’identifiant du jeu de données de sortie, l’identifiant du client, des en-têtes de colonne, etc.
 
-L&#39;exemple suivant montre les paires clé-valeur trouvées dans un fichier de configuration :
+L’exemple suivant montre les paires clé-valeur trouvées au sein d’un fichier de configuration:
 
 **exemple de configuration JSON**
 
@@ -93,7 +93,7 @@ L&#39;exemple suivant montre les paires clé-valeur trouvées dans un fichier de
 ]
 ```
 
-Vous pouvez accéder à la configuration JSON à l’aide de toute méthode de classe qui définit `config_properties` comme paramètre. Par exemple :
+Vous pouvez accéder à la configuration JSON à l’aide de n’importe quelle méthode de classe qui définit `config_properties` comme paramètre. Par exemple :
 
 **PySpark**
 
@@ -105,9 +105,9 @@ Consultez le fichier [pipeline.json](https://github.com/adobe/experience-platfor
 
 ### Préparation des données d’entrée avec DataLoader {#prepare-the-input-data-with-dataloader}
 
-DataLoader est responsable de la récupération et du filtrage des données d’entrée. Votre implémentation de DataLoader doit étendre la classe abstraite `DataLoader` et remplacer la méthode abstraite `load`.
+DataLoader est responsable de la récupération et du filtrage des données d’entrée. Votre mise en œuvre de DataLoader doit étendre la classe abstraite `DataLoader` et remplacer la méthode abstraite `load`.
 
-L&#39;exemple suivant récupère un [!DNL Platform] jeu de données par ID et le renvoie sous la forme d&#39;un DataFrame, où l&#39;ID du jeu de données (`dataset_id`) est une propriété définie dans le fichier de configuration.
+The following example retrieves a [!DNL Platform] dataset by ID and returns it as a DataFrame, where the dataset ID (`dataset_id`) is a defined property in the configuration file.
 
 **Exemple PySpark**
 
@@ -158,9 +158,9 @@ class MyDataLoader(DataLoader):
 
 ### Transformation d’un jeu de données à l’aide de DatasetTransformer {#transform-a-dataset-with-datasettransformer}
 
-Un DatasetTransformer fournit la logique de transformation d’un DataFrame d’entrée et renvoie un nouveau DataFrame dérivé. Cette classe peut être implémentée pour travailler en coopération avec une FeaturePipelineFactory, pour travailler comme seul composant d&#39;ingénierie de fonctionnalités, ou vous pouvez choisir de ne pas implémenter cette classe.
+Un DatasetTransformer fournit la logique de transformation d’un DataFrame d’entrée et renvoie un nouveau DataFrame dérivé. Cette classe peut être mise en œuvre de manière à travailler soit en coopération avec une FeaturePipelineFactory, soit comme composant d d’ingénierie de fonctionnalité unique. Vous pouvez également choisir de ne pas mettre en œuvre cette classe.
 
-L&#39;exemple suivant étend la classe DatasetTransformer :
+L’exemple suivant étend la classe DatasetTransformer:
 
 
 **Exemple PySpark**
@@ -217,9 +217,9 @@ class MyDatasetTransformer(DatasetTransformer):
         return pd
 ```
 
-### Fonctionnalités de données de l&#39;ingénieur avec FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
+### Conception de fonctionnalités de données avec FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
 
-Une FeaturePipelineFactory vous permet de mettre en oeuvre votre logique d&#39;ingénierie de caractéristiques en définissant et en assemblant une série de transformateurs Spark à travers un tuyau Spark. Cette classe peut être implémentée pour travailler en coopération avec un DatasetTransformer, pour travailler comme seul composant d&#39;ingénierie de fonctionnalités, ou vous pouvez choisir de ne pas implémenter cette classe.
+Une FeaturePipelineFactory vous permet de mettre en œuvre votre logique d’ingénierie de fonctionnalités en définissant et en associant une série de Spark Transformers à travers un pipeline Spark. Cette classe peut être mise en œuvre de manière à travailler soit en coopération avec un DatasetTransformer, soit comme composant d’ingénierie de fonctionnalité unique. Vous pouvez également choisir de ne pas mettre en œuvre cette classe.
 
 L&#39;exemple suivant étend la classe FeaturePipelineFactory :
 
@@ -282,11 +282,11 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
         return None
 ```
 
-### Stockage de votre jeu de données de fonctionnalités avec DataSaver {#store-your-feature-dataset-with-datasaver}
+### Stockage du jeu de données de votre fonctionnalité avec DataSaver {#store-your-feature-dataset-with-datasaver}
 
-DataSaver est responsable du stockage des jeux de données de fonctionnalités qui en résultent dans un emplacement d’enregistrement. Votre implémentation de DataSaver doit étendre la classe abstraite `DataSaver` et remplacer la méthode abstraite `save`.
+DataSaver est responsable du stockage des jeux de données de fonctionnalités qui en résultent dans un emplacement d’enregistrement. Votre mise en œuvre de DataSaver doit étendre la classe abstraite `DataSaver` et remplacer la méthode abstraite `save`.
 
-L&#39;exemple suivant étend la classe DataSaver qui stocke les données à un [!DNL Platform] jeu de données par ID, où l&#39;ID de jeu de données (`featureDatasetId`) et l&#39;ID de client (`tenantId`) sont des propriétés définies dans la configuration.
+The following example extends the DataSaver class which stores data to a [!DNL Platform] dataset by ID, where the dataset ID (`featureDatasetId`) and tenant ID (`tenantId`) are defined properties in the configuration.
 
 **Exemple PySpark**
 
@@ -350,11 +350,11 @@ class MyDataSaver(DataSaver):
 ```
 
 
-### Spécifiez les noms de classe mis en oeuvre dans le fichier d&#39;application. {#specify-your-implemented-class-names-in-the-application-file}
+### Précision des noms de classe mis en œuvre dans le fichier d’application {#specify-your-implemented-class-names-in-the-application-file}
 
 Maintenant que vos classes de pipeline de fonctionnalités sont définies et implémentées, vous devez spécifier les noms de vos classes dans le fichier YAML de l&#39;application.
 
-Les exemples suivants spécifient les noms de classe implémentés :
+Les exemples suivants précisent les noms des classes implémentés:
 
 **Exemple PySpark**
 
@@ -385,7 +385,7 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Création de votre moteur de pipeline de fonctionnalités à l’aide de l’API {#create-feature-pipeline-engine-api}
+## Create your feature pipeline Engine using the API {#create-feature-pipeline-engine-api}
 
 Maintenant que vous avez créé votre pipeline de fonctionnalités, vous devez créer une image Docker pour appeler les points de terminaison du pipeline de fonctionnalités dans l&#39; [!DNL Sensei Machine Learning] API. Vous avez besoin d’une URL d’image Docker pour pouvoir appeler les points de terminaison du pipeline de fonctionnalités.
 
@@ -398,36 +398,36 @@ https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Création d’un moteur de pipeline de fonctionnalités {#create-engine-api}
 
-Une fois que vous disposez de l&#39;emplacement de votre image Docker, vous pouvez [créer un moteur](../api/engines.md#feature-pipeline-docker) de pipeline de fonctionnalités à l&#39;aide de l&#39; [!DNL Sensei Machine Learning] API en exécutant une POST à `/engines`. La création réussie d&#39;un moteur de pipeline de fonctionnalités vous fournit un identifiant unique (`id`) de moteur. Veillez à enregistrer cette valeur avant de continuer.
+Une fois que vous disposez de l&#39;emplacement de votre image Docker, vous pouvez [créer un moteur](../api/engines.md#feature-pipeline-docker) de pipeline de fonctionnalités à l&#39;aide de l&#39; [!DNL Sensei Machine Learning] API en exécutant un POST à `/engines`. La création réussie d&#39;un moteur de pipeline de fonctionnalités vous fournit un identifiant unique (`id`) de moteur. Veillez à enregistrer cette valeur avant de continuer.
 
-### Création d’une instance MLI {#create-mlinstance}
+### Création d’une instance MLInstance {#create-mlinstance}
 
-A l’aide de votre nouvelle `engineID`instance, vous devez [créer une position](../api/mlinstances.md#create-an-mlinstance) MLI en envoyant une requête POST au `/mlInstance` point de terminaison. Une réponse réussie renvoie une charge utile contenant les détails de l&#39;instance MLInstance nouvellement créée, y compris son identifiant unique (`id`) utilisé dans l&#39;appel d&#39;API suivant.
+A l’aide de votre nouvelle `engineID`instance, vous devez [créer une position](../api/mlinstances.md#create-an-mlinstance) MLI en envoyant une requête de POST au `/mlInstance` point de terminaison. A successful response returns a payload containing the details of the newly created MLInstance including its unique identifier (`id`) used in the next API call.
 
 ### Création d’une expérience {#create-experiment}
 
-Ensuite, vous devez [créer une expérience](../api/experiments.md#create-an-experiment). Pour créer une expérience, vous devez disposer de votre identifiant unique MLIstance (`id`) et envoyer une requête POST au `/experiment` point de terminaison. Une réponse réussie renvoie une charge utile contenant les détails de l&#39;expérience nouvellement créée, y compris son identifiant unique (`id`) utilisé dans l&#39;appel d&#39;API suivant.
+Ensuite, vous devez [créer une expérience](../api/experiments.md#create-an-experiment). Pour créer une expérience, vous devez disposer de votre identifiant unique MLIstance (`id`) et envoyer une requête de POST au `/experiment` point de terminaison. A successful response returns a payload containing the details of the newly created Experiment including its unique identifier (`id`) used in the next API call.
 
 ### Spécifier la tâche de pipeline de fonction d&#39;exécution de l&#39;expérience {#specify-feature-pipeline-task}
 
-Après avoir créé une expérience, vous devez changer le mode de l’expérience en `featurePipeline`mode. Pour changer de mode, effectuez une POST supplémentaire [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) avec votre `EXPERIMENT_ID` et dans le corps envoyez `{ "mode":"featurePipeline"}` pour spécifier une exécution d&#39;expérience de pipeline de fonctionnalités.
+Après avoir créé une expérience, vous devez changer le mode de l’expérience en `featurePipeline`mode. Pour changer de mode, faites en sorte qu’un POST supplémentaire [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) avec votre `EXPERIMENT_ID` et dans le corps envoyez `{ "mode":"featurePipeline"}` pour spécifier une exécution d’expérience de pipeline de fonctionnalités.
 
-Une fois l’expérience terminée, demandez à GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
+Une fois l’expérience terminée, demandez à un GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
 
 ### Spécifier la tâche de formation d&#39;exécution de l&#39;expérience {#training}
 
-Ensuite, vous devez [spécifier la tâche](../api/experiments.md#experiment-training-scoring)de l&#39;exécution de la formation. Faites une POST sur `experiments/{EXPERIMENT_ID}/runs` et dans le corps définissez le mode sur `train` et envoyez un tableau de tâches qui contient vos paramètres d&#39;entraînement. Une réponse réussie renvoie une charge utile contenant les détails de l&#39;expérience demandée.
+Ensuite, vous devez [spécifier la tâche](../api/experiments.md#experiment-training-scoring)de l&#39;exécution de la formation. Faites en sorte qu&#39;un POST `experiments/{EXPERIMENT_ID}/runs` et dans le corps définissent le mode `train` et envoyer un tableau de tâches qui contient vos paramètres d&#39;entraînement. Une réponse réussie renvoie un payload contenant les détails de l’expérience interrogée.
 
-Une fois l’expérience terminée, demandez à GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
+Une fois l’expérience terminée, demandez à un GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
 
 ### Spécifier la tâche de notation de l&#39;exécution de l&#39;expérience {#scoring}
 
 >[!NOTE]
 > Pour terminer cette étape, vous devez avoir au moins une session de formation réussie associée à votre expérience.
 
-Après une exécution de formation réussie, vous devez [spécifier la tâche](../api/experiments.md#experiment-training-scoring)d’exécution de score. Effectuez une POST pour `experiments/{EXPERIMENT_ID}/runs` et dans le corps, définissez l’ `mode` attribut sur &quot;score&quot;. Cela début l’exécution de votre expérience de score.
+Après une exécution de formation réussie, vous devez [spécifier la tâche](../api/experiments.md#experiment-training-scoring)d’exécution de score. Faites d’un POST `experiments/{EXPERIMENT_ID}/runs` et dans le corps définissez l’ `mode` attribut sur &quot;score&quot;. Cela début l’exécution de votre expérience de score.
 
-Une fois l’expérience terminée, demandez à GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
+Une fois l’expérience terminée, demandez à un GET de `/experiments/{EXPERIMENT_ID}` récupérer l’état [](../api/experiments.md#retrieve-specific) de l’expérience et d’attendre que l’état de l’expérience soit mis à jour.
 
 Une fois la notation terminée, votre pipeline de fonctionnalités doit être opérationnel.
 
