@@ -58,7 +58,7 @@ Nous recommandons que l’un des attributs soit un [identifiant unique](/help/rt
    ![Identifiant de fidélité en tant qu&#39;identité](/help/rtcdp/destinations/assets/rewardsid-as-identity.gif)
 
 
-   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans l’Adobe Experience Platform, conformément aux exigences [!DNL Facebook] de hachage des [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Adobe Real-time CDP hachera les adresses électroniques pour se conformer aux [!DNL Facebook] exigences.
+   Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans l’Adobe Experience Platform, conformément aux exigences [!DNL Facebook] de hachage des [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques. <br> Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Adobe Le CDP en temps réel hachera les adresses électroniques pour se conformer aux [!DNL Facebook] exigences.
 
    ![mappage d’identité après le remplissage de champs](/help/rtcdp/destinations/assets/identity-mapping.png)
 
@@ -118,7 +118,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->L&#39;intégration entre le CDP en temps réel de Adobe et [!DNL Facebook] prend en charge les renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées [!DNL Facebook] lorsque vous activez les segments vers la destination.
+>L&#39;intégration entre le CDP en temps réel de l&#39;Adobe et la prise en charge [!DNL Facebook] des renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées [!DNL Facebook] lorsque vous activez les segments vers la destination.
 
 ## Désactivation de l’activation {#disable-activation}
 
