@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 0%
+ht-degree: 34%
 
 ---
 
@@ -45,23 +45,23 @@ Exemples :
 
 Outre les données minimales requises, l’API du client fonctionne également mieux avec les données récentes. Dans ce cas d’utilisation, l’API du client effectue une prévision pour l’avenir en fonction des données comportementales récentes d’un utilisateur. En d&#39;autres termes, des données plus récentes sont susceptibles de produire une prévision plus précise.
 
-## Données de sortie d’IA client
+## Données de sortie de Customer AI
 
-L’IA du client génère plusieurs attributs pour des profils individuels qui sont considérés comme éligibles. Il existe deux façons de consommer le score en fonction de ce que vous avez mis en service. Si le Profil client en temps réel est activé pour votre jeu de données, vous pouvez l’utiliser via le Profil client en temps réel. Si vous n’avez pas de Profil client en temps réel, vous pouvez télécharger le jeu de données de sortie de l’IA du client disponible sur le lac de données.
+Customer AI génère plusieurs attributs pour les profils individuels supposés éligibles. Il existe deux façons de consommer le score en fonction de ce que vous avez mis en service. Si le Profil client en temps réel est activé pour votre jeu de données, vous pouvez l’utiliser via le Profil client en temps réel. Si vous n’avez pas de Profil client en temps réel, vous pouvez télécharger le jeu de données de sortie de l’IA du client disponible sur le lac de données.
 
 >[!NOTE]
 >Les valeurs de sortie sont utilisées par le Profil client en temps réel qui peut être utilisé pour créer et définir des segments.
 
-Le tableau ci-dessous décrit les différents attributs trouvés dans la sortie de l’IA du client :
+Le tableau ci-dessous décrit les différents attributs trouvés dans les sorties de Customer AI :
 
 | Attribut | Description |
 | ----- | ----------- |
-| Score | probabilité relative pour un client d’atteindre l’objectif prévu dans le délai défini. Cette valeur ne doit pas être considérée comme un pourcentage de probabilité, mais plutôt comme la probabilité d&#39;un individu par rapport à la population globale. Ce score est compris entre 0 et 100. |
-| Probabilité | Cet attribut représente la probabilité réelle d&#39;un profil pour atteindre l&#39;objectif prévu dans le délai défini. Lors de la comparaison des sorties entre différents objectifs, il est recommandé de prendre en compte la probabilité sur le percentile ou le score. La probabilité doit toujours être utilisée pour déterminer la probabilité moyenne dans la population admissible, car la probabilité tend à être la plus faible pour les événements qui ne se produisent pas fréquemment. Les valeurs de probabilité sont comprises entre 0 et 1. |
-| Percentile | Cette valeur fournit des informations sur les performances d&#39;un profil par rapport à d&#39;autres profils ayant obtenu des résultats semblables. Par exemple, un profil dont le niveau de percentile est de 99 pour l&#39;église indique qu&#39;il est plus à risque de se produire que 99 % de tous les autres profils qui ont été notés. Les centiles vont de 1 à 100. |
-| Type de propension | Type de propension sélectionné. |
-| Date de note | Date à laquelle la notation a eu lieu. |
-| Facteurs influents | Raisons anticipées de la probabilité de conversion ou d’exécution d’un profil. Les facteurs sont constitués des attributs suivants :<ul><li>Code : Le profil ou le comportement qui influence positivement un score prédit par le profil. </li><li>Valeur : Valeur de l’attribut de profil ou de comportement.</li><li>Importance : Indique le poids du profil ou de l’attribut comportemental sur le score prévu (faible, moyen, élevé).</li></ul> |
+| Score | La probabilité relative qu’un client atteigne l’objectif prévu au cours de la période définie. Cette valeur ne doit pas être considérée comme un pourcentage de probabilité, mais plutôt comme la probabilité d’un individu par rapport à la population totale. Ce score est compris entre 0 et 100. |
+| Probabilité | Cet attribut est la probabilité réelle qu’un profil atteigne l’objectif prévu au cours de la période définie. Si vous comparez les sorties en fonction d’objectifs différents, nous vous recommandons de prendre en compte le percentile ou le score de probabilité. Vous devez toujours utiliser la probabilité lorsque vous essayez de déterminer la probabilité moyenne sur la population éligible, car la probabilité a tendance à être basse pour les événements qui ne se produisent pas fréquemment. Les valeurs des probabilités sont comprises entre 0 et 1. |
+| Percentile | Cette valeur fournit des informations concernant la performance d’un profil par rapport à d’autres profils aux notes similaires. Par exemple, un profil dont le rang de percentile est de 99 pour l’attrition indique qu’il y a une forte chance d’attrition par rapport à 99 % des autres profils évalués. Les percentiles sont compris entre 1 et 100. |
+| Type de propension | Le type de propension sélectionné. |
+| Date de la note | Date à laquelle la notation a eu lieu. |
+| Facteurs d’influence | Raisons prévues de la probabilité de conversion ou d’attrition d’un profil. Les facteurs se composent des attributs suivants :<ul><li>Code : le profil ou l’attribut comportemental qui influencent positivement le score prévu d’un profil. </li><li>Valeur : la valeur du profil ou de l’attribut comportemental.</li><li>Importance : indique le poids que le profil ou l’attribut comportemental a sur le score prévu (faible, moyen, élevé)</li></ul> |
 
 ## Étapes suivantes {#next-steps}
 
