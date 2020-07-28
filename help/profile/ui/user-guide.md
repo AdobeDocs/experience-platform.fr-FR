@@ -44,7 +44,7 @@ Sur le côté droit de l&#39;onglet *[!UICONTROL Parcourir]* se trouvent plusieu
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant la date et l’heure de la dernière évaluation des mesures.
+Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -52,7 +52,7 @@ Outre ces mesures, la section Mesures de profil fournit également une date et u
 
 The profile count displays the total number of profiles your organization has within [!DNL Experience Platform], after your organization&#39;s default merge policy has merged together profile fragments to form a single profile for each individual customer. En d’autres termes, votre organisation peut disposer de plusieurs fragments de profil liés à un seul client qui interagit avec votre marque sur différents canaux, mais ces fragments sont fusionnés (selon la stratégie de fusion par défaut) et renvoient le nombre de profils « 1 », car ils sont tous liés à la même personne.
 
-Le nombre de profils inclut également les profils avec des attributs (données d’enregistrement) ainsi que les profils contenant uniquement des données de séries chronologiques (événement), telles que les profils Adobe Analytics. Le nombre de profils est régulièrement actualisé afin de fournir un nombre total de profils actualisé à Platform.
+Le nombre de profils inclut également les profils avec des attributs (données d’enregistrement) ainsi que les profils contenant uniquement des données de séries chronologiques (événement), telles que les profils de Adobe Analytics. Le nombre de profils est régulièrement actualisé afin de fournir un nombre total de profils actualisé à Platform.
 
 Lorsque l&#39;assimilation d&#39;enregistrements dans la [!DNL Profile Store] table augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
 
