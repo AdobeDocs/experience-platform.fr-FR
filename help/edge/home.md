@@ -33,14 +33,14 @@ Il ne s’agit pas seulement d’une enveloppe autour des bibliothèques existan
 
 Outre une nouvelle bibliothèque, il existe un nouveau point de terminaison qui rationalise les requêtes HTTP vers les solutions Adobe. Auparavant, Visitor.js envoyait un appel de blocage au service d’ID de visiteur, puis AT.js envoyait un appel à Adobe Target, DIL.js envoyait un appel à Adobe Audience Manager, et finalement AppMeasurement.js envoyait un appel à Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-La vidéo suivante présente l&#39;Adobe Experience Platform [!DNL Web SDK] et l&#39; [!DNL Edge Network] action. L&#39;exemple vidéo utilise un appel unique à Adobe qui envoie des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]et [!DNL Target].
+La vidéo suivante présente l&#39;Adobe Experience Platform [!DNL Web SDK] et l&#39; [!DNL Edge Network] action. L&#39;exemple vidéo utilise un appel unique à l&#39;Adobe qui envoie des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]et [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
 
 ## Prise en main
 
-Nous vous recommandons vivement de [consulter notre guide](getting-started/quick-start-with-launch.md) de prise en main pour obtenir un didacticiel rapide sur la façon de commencer à utiliser Adobe Launch.
+Nous vous recommandons vivement de [consulter notre guide](getting-started/quick-start-with-launch.md) de prise en main pour obtenir un didacticiel rapide sur la façon de commencer à utiliser le lancement d&#39;Adobe.
 
 Ce produit est en constante évolution et croissance pour prendre en charge de plus en plus de cas d&#39;utilisation. Pour rester au courant des dernières nouveautés, consultez notre carte des [cas d&#39;utilisation](https://github.com/adobe/alloy/projects/5)prise en charge. Nous tenons à jour cette situation avec les cas d&#39;utilisation que nous prenons actuellement en charge et ceux sur lesquels nous travaillons pour vous permettre de prendre les meilleures décisions possibles.
 
