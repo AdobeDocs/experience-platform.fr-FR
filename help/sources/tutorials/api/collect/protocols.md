@@ -61,7 +61,7 @@ Continuez à suivre les étapes décrites dans le guide du développeur jusqu’
 
 ## Création d’une connexion source {#source}
 
-Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête de POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
 
 Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
 
@@ -134,7 +134,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 
 Dans les étapes précédentes, un schéma XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues. Ce schéma XDM de cible étend également la [!DNL Individual Profile] classe XDM.
 
-Un schéma XDM de cible peut être créé en exécutant une requête POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
+Un schéma XDM de cible peut être créé en exécutant une requête de POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 **Format d’API**
 
 ```http
@@ -246,7 +246,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Création d’un jeu de données cible
 
-Un jeu de données de cible peut être créé en exécutant une requête POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’ID du schéma de cible dans la charge utile.
+Un jeu de données de cible peut être créé en exécutant une requête de POST sur l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)Catalog Service, en fournissant l’identifiant du schéma de cible dans la charge utile.
 
 **Format d’API**
 
@@ -347,7 +347,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle con
 
 ## Création d’un mappage {#mapping}
 
-Pour que les données source soient assimilées à un jeu de données de cible, elles doivent d’abord être mises en correspondance avec le schéma de cible auquel adhère le jeu de données de cible. Pour ce faire, il exécute une requête POST sur l’API [du service de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) conversion avec des mappages de données définis dans la charge utile de la demande.
+Pour que les données source soient assimilées à un jeu de données de cible, elles doivent d’abord être mises en correspondance avec le schéma de cible auquel adhère le jeu de données de cible. Pour ce faire, il effectue une requête de POST à l’API [du service de](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) conversion avec des mappages de données définis dans la charge utile de la requête.
 
 **Format d’API**
 
@@ -428,7 +428,7 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 
 ## Rechercher les spécifications de flux de données {#specs}
 
-Un flux de données est responsable de la collecte de données provenant de sources et de leur intégration dans [!DNL Platform]les sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une requête GET à l’ [!DNL Flow Service] API. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une application de protocoles externes.
+Un flux de données est responsable de la collecte de données provenant de sources et de leur intégration dans [!DNL Platform]les sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une demande de GET à l’ [!DNL Flow Service] API. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une application de protocoles externes.
 
 **Format d’API**
 
@@ -579,7 +579,7 @@ La dernière étape de la collecte des données consiste à créer un flux de do
 * [ID de mappage](#mapping)
 * [ID de spécification du flux de données](#specs)
 
-Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
 Pour planifier une assimilation, vous devez d&#39;abord définir la valeur du temps de début en secondes. Ensuite, vous devez définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur d&#39;intervalle désigne la période entre deux ingérations consécutives et la création d&#39;une assimilation ponctuelle ne nécessite pas la définition d&#39;un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
 
@@ -663,7 +663,7 @@ A successful response returns the ID `id` of the newly created dataflow.
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un connecteur source pour collecter les données d’une application de protocoles sur une base planifiée. Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez créé un connecteur source pour collecter des données d’une application de protocoles sur une base planifiée. Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
 
 * [Présentation du profil client en temps réel](../../../../profile/home.md)
 * [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
