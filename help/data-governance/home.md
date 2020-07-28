@@ -82,7 +82,7 @@ Once data usage labels have been applied, data stewards can create policies usin
 
 >[!IMPORTANT]
 >
->Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
 
 Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, voir l’aperçu [des](./policies/overview.md)stratégies.
 
