@@ -1,12 +1,12 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aide des connecteurs de source Adobe Experience Platform
+user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
 source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
@@ -17,16 +17,16 @@ ht-degree: 2%
 - Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
       - [Connecteur de données Analytics](connectors/adobe-applications/analytics.md)
-      - [Connecteur Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Connecteur d’Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connecteur d’attributs du client](connectors/adobe-applications/customer-attributes.md)
-      - Mappage des champs d’application Adobe {#mapping}
+      - Mappage des champs d’application d’Adobe {#mapping}
          - [Champs de mappage Analytics](connectors/adobe-applications/mapping/analytics.md)
-         - [Champs de mappage Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Champs de mappage des Audiences Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Champs de Mapping de ciblage](connectors/adobe-applications/mapping/target.md)
    - Publicité {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
-      - [Connecteur Amazon Kinesis](connectors/cloud-storage/kinesis.md)
+      - [Connecteur Amazon](connectors/cloud-storage/kinesis.md)
       - [Connecteur Apache HDFS](connectors/cloud-storage/hdfs.md)
       - [Connecteur Azure Data Lake Enregistrement Gen2](connectors/cloud-storage/adls-gen2.md)
       - [Connecteur Azure Blob et Amazon S3](connectors/cloud-storage/blob-s3.md)
@@ -41,11 +41,11 @@ ht-degree: 2%
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
    - Bases de données {#databases}
-      - [Connecteur Amazon Redshift](connectors/databases/redshift.md)
+      - [Connecteur de redirection Amazon](connectors/databases/redshift.md)
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
-      - [Connecteur Azure Data Explorer](connectors/databases/data-explorer.md)
-      - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Connecteur de Data Explorer Azure](connectors/databases/data-explorer.md)
+      - [Connecteur Analytics Azure Synapse](connectors/databases/synapse-analytics.md)
       - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
       - [Connecteur Couchbase](connectors/databases/couchbase.md)
       - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
@@ -58,18 +58,18 @@ ht-degree: 2%
       - [Connecteur Oracle](connectors/databases/oracle.md)
       - [Connecteur Phoenix](connectors/databases/phoenix.md)
       - [Connecteur PostgreSQL](connectors/databases/postgres.md)
-   - Automatisation du marketing {#marketing-automation}
+   - Marketing automation {#marketing-automation}
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
    - Paiements {#payments}
       - [Connecteur PayPal](connectors/payments/paypal.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
-- Didacticiels sur les API {#api-tutorials}
+- Tutoriels sur les API {#api-tutorials}
    - Création d’un connecteur source {#create}
       - Publicité {#advertising}
          - [Connecteur Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
+         - [Amazon](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Connecteur de blocage Azure](tutorials/api/create/cloud-storage/blob.md)
@@ -86,11 +86,11 @@ ht-degree: 2%
          - [Connecteur Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [Connecteur ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de données {#databases}
-         - [Connecteur Amazon Redshift](tutorials/api/create/databases/redshift.md)
+         - [Connecteur de redirection Amazon](tutorials/api/create/databases/redshift.md)
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/api/create/databases/spark.md)
-         - [Connecteur Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Connecteur Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Connecteur de Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
+         - [Connecteur Analytics Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/api/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connecteur Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -103,13 +103,13 @@ ht-degree: 2%
          - [Connecteur Phoenix](tutorials/api/create/databases/phoenix.md)
          - [Connecteur PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Connecteur SQL Server](tutorials/api/create/databases/sql-server.md)
-      - Automatisation du marketing {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [Connecteur HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Paiements {#payments}
          - [Connecteur PayPal](tutorials/api/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [Connecteur OData générique](tutorials/api/create/protocols/odata.md)
-   - Explorer les données {#explore}
+   - Exploration des données {#explore}
       - [Explorer les données publicitaires](tutorials/api/explore/advertising.md)
       - [Explorer les données d’enregistrement de cloud](tutorials/api/explore/cloud-storage.md)
       - [Explorez les données CRM](tutorials/api/explore/crm.md)
@@ -138,7 +138,7 @@ ht-degree: 2%
       - Publicité {#create}
          - [Connecteur Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Connecteur Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Connecteur Amazon](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connecteur Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
          - [Connecteur Azure Blob et Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
@@ -153,11 +153,11 @@ ht-degree: 2%
          - [Connecteur Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Connecteur ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Bases de données {#databases}
-         - [Connecteur Amazon Redshift](tutorials/ui/create/databases/redshift.md)
+         - [Connecteur de redirection Amazon](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
-         - [Connecteur Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Connecteur Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Connecteur de Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
+         - [Connecteur Analytics Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/ui/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connecteur de Requête Google Big](tutorials/ui/create/databases/bigquery.md)
@@ -170,7 +170,7 @@ ht-degree: 2%
          - [Connecteur Oracle](tutorials/ui/create/databases/oracle.md)
          - [Connecteur Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [Connecteur PostgreSQL](tutorials/ui/create/databases/postgres.md)
-      - Automatisation du marketing {#marketing-automation}
+      - Marketing automation {#marketing-automation}
          - [Connecteur HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Paiements {#payments}
          - [Connecteur PayPal](tutorials/ui/create/payments/paypal.md)
@@ -188,4 +188,4 @@ ht-degree: 2%
       - [Configuration d’un flux de données pour un connecteur de protocole](tutorials/ui/dataflow/protocols.md)
    - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
    - [Surveiller les comptes et les flux de jeux de données](tutorials/ui/monitor.md)
-- [Notes de mise à jour de la plateforme](https://www.adobe.com/go/platform-release-notes-en)
+- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
