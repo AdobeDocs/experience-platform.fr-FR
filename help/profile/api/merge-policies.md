@@ -227,7 +227,7 @@ Pour en savoir plus sur chacun des éléments qui constituent une stratégie de 
 
 ### Récupérer plusieurs stratégies de fusion à l’aide de leur ID
 
-Vous pouvez récupérer plusieurs stratégies de fusion en envoyant une requête POST au point de `/config/mergePolicies/bulk-get` terminaison et en incluant les ID des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
+Vous pouvez récupérer plusieurs stratégies de fusion en adressant une requête de POST au point de `/config/mergePolicies/bulk-get` terminaison et en incluant les ID des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
 
 **Format d’API**
 
@@ -261,7 +261,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie HTTP Status 207 (Multi-Status) et les détails des stratégies de fusion dont les ID ont été fournis dans la demande POST.
+Une réponse réussie renvoie HTTP Status 207 (Multi-Status) et les détails des stratégies de fusion dont les ID ont été fournis dans la demande de POST.
 
 ```json
 { 
