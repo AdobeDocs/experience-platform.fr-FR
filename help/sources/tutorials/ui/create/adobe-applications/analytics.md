@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Création d’un connecteur source Adobe Analytics dans l’interface utilisateur
 
-Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Adobe dans l’interface utilisateur afin d’importer des données de consommation dans l’Adobe Experience Platform.
+Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Adobe Analytics dans l’interface utilisateur afin d’importer des données de consommation dans l’Adobe Experience Platform.
 
 ## Prise en main
 
@@ -30,7 +30,7 @@ Connectez-vous à <a href="https://platform.adobe.com" target="_blank">l’Adobe
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie des applications ** Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d&#39;informations sur le côté droit de l&#39;écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
+Sous la catégorie des applications *d’* Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -52,7 +52,7 @@ Dans la liste des suites de rapports disponibles, sélectionnez celle que vous s
 
 ### Nommer votre flux de données
 
-L&#39;étape détaillée *du flux de* jeux de données s&#39;affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[UICONTROL ! Suivant]** lorsque terminé.
+L’étape détaillée *du flux de* jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[UICONTROL ! Suivant]** lorsque terminé.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
@@ -61,7 +61,7 @@ L&#39;étape détaillée *du flux de* jeux de données s&#39;affiche, où vous d
 L’étape *Révision* s’affiche, ce qui vous permet de vérifier votre nouveau flux de jeux de données entrant Analytics avant de le créer. Les détails de la connexion sont regroupés par catégorie, notamment :
 
 * *Connexion*: Affiche le type de connexion source et la suite de rapports sélectionnée.
-* *Affectez des champs* de jeu de données et de mappage : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Le schéma de sortie et le jeu de données sont automatiquement configurés pour les flux de données Analytics.
+* *Attribuer des champs* de jeu de données et de mappage : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Le schéma de sortie et le jeu de données sont automatiquement configurés pour les flux de données Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
@@ -104,7 +104,7 @@ Une fois la connexion créée, un schéma de cible et un flux de jeux de donnée
 * [Présentation de Data Science Workspace](../../../../../data-science-workspace/home.md)
 * [Présentation de Query Service](../../../../../query-service/home.md)
 
-La vidéo suivante est destinée à vous aider à comprendre comment ingérer des données à l’aide du connecteur source Analytics Adobe :
+La vidéo suivante est destinée à vous aider à comprendre comment ingérer des données à l’aide du connecteur Adobe Analytics Source :
 
 >[!WARNING]
 >
