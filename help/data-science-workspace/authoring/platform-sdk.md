@@ -1,38 +1,38 @@
 ---
 keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Guide du SDK Platform
+title: Guide du SDK de Platform
 topic: SDK authoring
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '447'
-ht-degree: 5%
+ht-degree: 89%
 
 ---
 
 
 # [!DNL Platform] Guide SDK
 
-Ce tutoriel vous fournit des informations sur la conversion `data_access_sdk_python` au nouveau Python `platform_sdk` en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
+Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_python` en nouveau `platform_sdk` Python en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
-- [Créer l&#39;authentification](#build-authentication)
-- [Lecture de base des données](#basic-reading-of-data)
-- [Écriture de base des données](#basic-writing-of-data)
+- [Authentification de création](#build-authentication)
+- [Lecture basique des données](#basic-reading-of-data)
+- [Écriture basique des données](#basic-writing-of-data)
 
-## Créer l&#39;authentification {#build-authentication}
+## Authentification de création {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform]une clé d’API, un ID d’organisation IMS, un jeton d’utilisateur et un jeton de service.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
 
 ### Python
 
-Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour créer le `client_context`:
+Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour créer le `client_context` :
 
 ```python
 client_context = PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n&#39;utilisez pas Jupyter Notebook ou que vous devez modifier l&#39;organisation IMS, veuillez utiliser l&#39;exemple de code suivant :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer l’organisation IMS, veuillez utiliser l’exemple de code ci-dessous :
 
 ```python
 from platform_sdk.client_context import ClientContext
@@ -42,9 +42,9 @@ client_context = ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-### r
+### R
 
-Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour créer le `client_context`:
+Si vous utilisez Jupyter Notebook, veuillez utiliser le code ci-dessous pour créer le `client_context` :
 
 ```r
 library(reticulate)
@@ -55,7 +55,7 @@ py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
 client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
 ```
 
-Si vous n&#39;utilisez pas Jupyter Notebook ou que vous devez modifier l&#39;organisation IMS, veuillez utiliser l&#39;exemple de code suivant :
+Si vous n’utilisez pas Jupyter Notebook ou si vous devez changer l’organisation IMS, veuillez utiliser l’exemple de code ci-dessous :
 
 ```r
 library(reticulate)
@@ -67,16 +67,16 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
               service_token={SERVICE_TOKEN})
 ```
 
-## Lecture de base des données {#basic-reading-of-data}
+## Lecture basique des données {#basic-reading-of-data}
 
-Avec le nouveau [!DNL Platform] SDK, la taille de lecture maximale est de 32 Go, avec une durée de lecture maximale de 10 minutes.
+With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes.
 
-Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
+Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
 - [Filtrage des données par décalage et limite](#filter-by-offset-and-limit)
 - [Filtrage des données par date](#filter-by-date)
 - [Filtrage des données par colonne](#filter-by-selected-columns)
-- [Obtention des résultats triés](#get-sorted-results)
+- [Obtention de résultats triés](#get-sorted-results)
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’un
 
 ### Python
 
-Pour lire les données en Python, veuillez utiliser l&#39;exemple de code ci-dessous :
+Pour lire les données en Python, veuillez utiliser l’exemple de code ci-dessous :
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -93,9 +93,9 @@ df = dataset_reader.limit(100).read()
 df.head()
 ```
 
-### r
+### R
 
-Pour lire les données dans R, utilisez l&#39;exemple de code ci-dessous :
+Pour lire les données en R, utilisez l’exemple de code ci-dessous :
 
 ```r
 DatasetReader <- psdk$dataset_reader$DatasetReader
@@ -104,9 +104,9 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filtrage par décalage et limite {#filter-by-offset-and-limit}
+## Filtrage par décalage et par limite {#filter-by-offset-and-limit}
 
-Comme le filtrage par ID de lot n’est plus pris en charge, pour étendre la lecture des données, vous devez utiliser `offset` et `limit`.
+Le filtrage par identifiant de lot n’étant plus pris en charge, vous devez utiliser `offset` et `limit` pour étendre la lecture des données.
 
 ### Python
 
@@ -115,7 +115,7 @@ df = dataset_reader.limit(100).offset(1).read()
 df.head
 ```
 
-### r
+### R
 
 ```r
 df <- dataset_reader$limit(100L)$offset(1L)$read() 
@@ -124,7 +124,7 @@ df
 
 ## Filtrage par date {#filter-by-date}
 
-La granularité du filtrage par date est désormais définie par l’horodatage, plutôt que par jour.
+La granularité du filtrage par date est désormais définie par la date et l’heure, plutôt que par le jour.
 
 ### Python
 
@@ -136,7 +136,7 @@ df = dataset_reader.where(\
 df.head()
 ```
 
-### r
+### R
 
 ```r
 df2 <- dataset_reader$where(
@@ -146,17 +146,17 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-Le nouveau [!DNL Platform] SDK prend en charge les opérations suivantes :
+The new [!DNL Platform] SDK supports the following operations:
 
 | Opération | Fonction |
 | --------- | -------- |
-| Est égal (`=`) | `eq()` |
+| Est égal à (`=`) | `eq()` |
 | Supérieur à (`>`) | `gt()` |
 | Supérieur ou égal à (`>=`) | `ge()` |
 | Inférieur à (`<`) | `lt()` |
 | Inférieur ou égal à (`<=`) | `le()` |
-| And (`&`) | `And()` |
-| Sinon (`|`) | `Or()` |
+| Et (`&`) | `And()` |
+| Ou (`|`) | `Or()` |
 
 ## Filtrage par colonnes sélectionnées {#filter-by-selected-columns}
 
@@ -168,17 +168,17 @@ Pour affiner davantage votre lecture des données, vous pouvez également filtre
 df = dataset_reader.select(['column-a','column-b']).read()
 ```
 
-### r
+### R
 
 ```r
 df <- dataset_reader$select(c('column-a','column-b'))$read() 
 ```
 
-## Obtenir les résultats triés {#get-sorted-results}
+## Obtention de résultats triés {#get-sorted-results}
 
-Les résultats reçus peuvent être triés selon des colonnes spécifiées du jeu de données de la cible et dans leur ordre (asc/desc) respectivement.
+Les résultats obtenus peuvent être triés en fonction de colonnes spécifiques du jeu de données cible et dans leur ordre respectif (croissant/décroissant).
 
-Dans l&#39;exemple suivant, le cadre de données est trié par &quot;colonne-a&quot; en premier dans l&#39;ordre croissant. Les lignes dont les valeurs sont identiques pour &quot;colonne-a&quot; sont ensuite triées par &quot;colonne-b&quot; dans l’ordre décroissant.
+Dans l’exemple suivant, le cadre de données est trié par « colonne-a » en premier, dans l’ordre croissant. Les lignes ayant les mêmes valeurs pour « colonne-a » sont ensuite triées en fonction de « colonne-b » dans l’ordre décroissant.
 
 ### Python
 
@@ -186,19 +186,19 @@ Dans l&#39;exemple suivant, le cadre de données est trié par &quot;colonne-a&q
 df = dataset_reader.sort([('column-a', 'asc'), ('column-b', 'desc')])
 ```
 
-### r
+### R
 
 ```r
 df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 ```
 
-## Écriture de base des données {#basic-writing-of-data}
+## Écriture basique des données {#basic-writing-of-data}
 
 >[!NOTE]
 >
 >L’organisation IMS est définie dans le `client_context`.
 
-Pour écrire des données en Python et R, utilisez l&#39;un des exemples suivants :
+Pour écrire des données en Python et en R, utilisez l’un des exemples suivants :
 
 ### Python
 
@@ -211,7 +211,7 @@ dataset_writer = DatasetWriter(client_context, dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### r
+### R
 
 ```r
 dataset <- psdk$models$Dataset(client_context)$get_by_id("{DATASET_ID}")
@@ -221,4 +221,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré le chargeur de `platform_sdk` données, les données sont en préparation et sont ensuite fractionnées en jeux de données `train` et `val` de données. Pour en savoir plus sur la préparation des données et l&#39;ingénierie des fonctionnalités, consultez la section sur la préparation des [données et l&#39;ingénierie](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) des fonctionnalités du didacticiel sur la création d&#39;une recette à l&#39;aide de [!DNL JupyterLab] cahiers.
+Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur [la préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide des notebooks [!DNL JupyterLab]
