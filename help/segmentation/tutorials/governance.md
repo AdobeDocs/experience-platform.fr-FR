@@ -189,7 +189,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 
 Une fois que vous avez obtenu les ID des jeux de données source de la stratégie de fusion, vous pouvez utiliser l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la stratégie d&#39;utilisation des données.
 
-Pour évaluer les jeux de données, vous devez indiquer le nom de l’action marketing dans le chemin d’une requête POST, tout en indiquant les ID de jeu de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
+Pour évaluer les jeux de données, vous devez indiquer le nom de l’action marketing dans le chemin d’une requête de POST, tout en indiquant les ID de jeu de données dans le corps de la requête, comme indiqué dans l’exemple ci-dessous.
 
 **Format d’API**
 
