@@ -66,7 +66,7 @@ Indique si le débogage doit être activé. La définition de cette configuratio
 | -------- | ------------ | ------------------ |
 | Chaîne | Non | `beta.adobedc.net` |
 
-Domaine utilisé pour interagir avec les services Adobe. Cette valeur est utilisée uniquement si vous disposez d’un domaine propriétaire (CNAME) qui effectue des requêtes proxy vers l’infrastructure Adobe Edge.
+Domaine utilisé pour interagir avec les services d’Adobe. Cette valeur est utilisée uniquement si vous disposez d’un domaine propriétaire (CNAME) qui effectue des requêtes proxy vers l’infrastructure Adobe Edge.
 
 ### `orgId`
 
