@@ -331,7 +331,7 @@ Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer
 
 ## Vérification de l’état d’une tâche {#check-status}
 
-Vous pouvez récupérer des informations sur une tâche spécifique, comme son état de traitement actuel, en incluant celle-ci `jobId` dans le chemin d’une requête GET au point de `/jobs` terminaison.
+Vous pouvez récupérer des informations sur une tâche spécifique, comme son état de traitement actuel, en incluant celle-ci `jobId` dans le chemin d’une demande de GET au point de `/jobs` terminaison.
 
 >[!IMPORTANT]
 >
