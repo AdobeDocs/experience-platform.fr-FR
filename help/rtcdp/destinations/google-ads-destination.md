@@ -40,9 +40,9 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ads] destination dans Adobe Real-time CDP. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+>La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ads] destination dans le CDP en temps réel Adobe. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
 
-Avant de créer la destination dans le CDP en temps réel en Adobe, vous devez contacter [!DNL Google Ads] [!DNL Google] pour que Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] and provide the following information:
+Avant de créer la destination dans le CDP en temps réel Adobe, vous devez contacter [!DNL Google Ads] [!DNL Google] pour que l’Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] and provide the following information:
 
 * **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
@@ -61,7 +61,7 @@ Avant de créer la destination dans le CDP en temps réel en Adobe, vous devez c
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Type de compte]** : AdWords est la seule option disponible.
 * **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
-* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données.
+* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis par l’Adobe, voir la présentation [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données.
 
 ## Activate segments to [!DNL Google Ads]
 
