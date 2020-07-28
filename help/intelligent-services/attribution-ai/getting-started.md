@@ -1,57 +1,57 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
-title: Prise en main dans l’API d’attribution
+title: Prise en main d’Attribution AI
 topic: Getting started
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '499'
-ht-degree: 0%
+ht-degree: 82%
 
 ---
 
 
-# Prise en main dans l’API d’attribution
+# Prise en main d’Attribution AI
 
-Les guides ci-après exigent une compréhension des différents [!DNL Adobe Experience Platform] services liés à l&#39;utilisation de l&#39;IA Attribution. Avant de commencer les didacticiels, veuillez consulter les documents suivants :
+The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. Avant de commencer les tutoriels, veuillez consulter les documents suivants :
 
-- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle l’Experience Platform est créé, XDM System, rend opérationnels les schémas de modèles de données d’expérience pour les services Platform.
-- [Principes de base de la composition](../../xdm/schema/composition.md)des schémas : Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les éléments de base, les principes et les meilleures pratiques de composition des schémas à utiliser dans [!DNL Adobe Experience Platform]le cadre de ce modèle.
-- [schémas](../../xdm/tutorials/create-schema-ui.md)de construction : Ce didacticiel décrit les étapes de création d’un schéma à l’aide de l’éditeur de Schéma dans l’Experience Platform.
+- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
+- [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : ce document présente les schémas XDM ainsi que les blocs de création, les principes et les bonnes pratiques pour la composition de schémas à utiliser dans [!DNL Adobe Experience Platform].
+- [Création de schémas](../../xdm/tutorials/create-schema-ui.md) : ce tutoriel décrit les étapes de la création d’un schéma à l’aide de l’éditeur de schémas dans Experience Platform.
 
-Attribution AI nécessite que les jeux de données soient conformes au schéma CEE (Consumer Experience Événements), qui est un mélange dans le modèle [de données d’](../../xdm/home.md) expérience (XDM). Veuillez contacter l&#39;assistance Adobe à l&#39;adresse attributionai-support@adobe.com afin de mettre en oeuvre ces données ou d&#39;y apporter des modifications. Si des données de dépenses des médias sont présentes, vous pouvez effectuer d’autres analyses, telles que les recettes incrémentielles et le RSI. Si les données du profil client sont disponibles, vous pouvez en outre attribuer des crédits au niveau du profil client.
+Attribution AI nécessite des jeux de données pour se conformer au schéma d’événements d’expérience client (CEE) qui est un mixin du [modèle de données d’expérience](../../xdm/home.md) (XDM). Veuillez contacter l’assistance d’Adobe à l’adresse attributionai-support@adobe.com pour mettre en œuvre ou apporter des modifications à ces données. Si des données de dépenses médias sont présentes, vous pouvez effectuer une analyse supplémentaire par exemple du chiffre d’affaires incrémentiel et du retour sur investissement. Si des données de profil client sont disponibles, vous pouvez attribuer davantage de crédits au niveau de profil du client.
 
 ## Terminologie
 
-- **événement de conversion :** Tout événement numérique ou interaction numérique que les clients effectuent pour indiquer un jalon vers un objectif, tel que l’inscription à une conférence. Les autres exemples incluent les conversions payantes, les abonnements au compte gratuit ou les qualifications pour une caractéristique.
+- **Événement de conversion :** tout événement ou toute interaction digitale que les clients effectuent pour indiquer un jalon vers un objectif, par exemple dans le cadre d’inscriptions à une réunion. D’autres exemples incluent les conversions payantes, les créations gratuites de comptes ou l’éligibilité à une caractéristique.
 
-- **Point de contact :** Tout événement numérique ou interaction numérique que les clients effectuent sur le chemin d’un objectif. Les exemples incluent les actions marketing liées aux achats précédents, les impressions publicitaires affichées et les clics de recherche payante.
+- **Point de contact :** tout événement ou toute interaction numérique que les clients effectuent pour atteindre un objectif. Cela inclut par exemple les efforts marketing précédant un achat, les impressions de publicité display vues et les clics de référencement payant.
 
-## Téléchargement de scores d’API d’attribution
+## Téléchargement de scores Attribution AI
 
 >[!NOTE]
 >
->Si vous n’avez pas besoin de télécharger des scores bruts, vous pouvez ignorer cette étape et passer aux étapes [](#next-steps)suivantes.
+>If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
 
-Le téléchargement des scores d’API d’attribution se fait par le biais d’une combinaison d’appels d’API. Pour passer des appels aux API Platform, vous devez d’abord suivre le didacticiel [d’](../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Experience Platform, comme indiqué ci-dessous :
+Le téléchargement des scores d’Attribution AI s’effectue par le biais d’une combinaison d’appels d’API. Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
-- Autorisation : Porteur `{ACCESS_TOKEN}`
-- x-api-key : `{API_KEY}`
+- Authorization: Bearer `{ACCESS_TOKEN}`
+- x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de l&#39;Experience Platform sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux API Platform nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération aura lieu :
+Dans Experience Platform, toutes les ressources sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API Platform nécessitent un en-tête spécifiant le nom de l’environnement de test dans lequel l’opération sera effectuée :
 
-- x-sandbox-name : `{SANDBOX_NAME}`
+- x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Pour plus d’informations sur les sandbox dans Platform, voir la documentation [d’aperçu de](../../sandboxes/home.md)sandbox.
+>Pour plus d’informations sur les environnements de test dans Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../landing/troubleshooting.md) d’API dans le guide de dépannage de l’Experience Platform.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md) dans le guide de dépannage d’Experience Platform.
 
 ## Étapes suivantes {#next-steps}
 
-Une fois que vous êtes prêt et que vos informations d’identification et vos schémas sont en place, début en suivant le guide [de l’interface utilisateur](./user-guide.md)Attribution AI. Ce guide vous guide tout au long des étapes nécessaires pour créer une instance et l’envoyer pour formation et score.
+Lorsque vous êtes prêt et que tous vos identifiants et schémas sont en place, commencez par suivre le [guide de l’interface utilisateur d’Attribution AI](./user-guide.md). Ce guide vous accompagne dans la création d’une instance et son envoi pour formation et notation.
