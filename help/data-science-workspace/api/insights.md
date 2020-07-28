@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Statistiques
+title: Insights
 topic: Developer guide
 translation-type: tm+mt
 source-git-commit: 7bd6807e620febe134f8c75e67c0f723850e49c1
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# Statistiques
+# Insights
 
-Les statistiques contiennent des mesures qui permettent à un chercheur en données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
+Les insights contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 
-## Récupération d’une liste d’informations
+## Récupération d’une liste d’insights
 
-Vous pouvez récupérer une liste d’informations en exécutant une seule requête GET sur le point de terminaison d’informations.  Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
+Vous pouvez récupérer une liste d’insights en effectuant une requête GET unique sur le point de terminaison des insights.  Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile qui inclut une liste d’informations et chaque information possède un identifiant unique ( `id` ). De plus, vous recevrez `context` qui contient les identifiants uniques associés à cette information particulière suite aux données des événements et mesures d’statistiques.
+Une réponse réussie renvoie un payload incluant une liste d’insights, et chaque insight dispose d’un identifiant unique ( `id` ). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cet insight spécifique ainsi que les événements d’insights et les données de mesures.
 
 ```json
 {
@@ -101,14 +101,14 @@ Une réponse réussie renvoie une charge utile qui inclut une liste d’informat
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID correspondant à l’aperçu. |
-| `experimentId` | ID d’expérience valide. |
-| `experimentRunId` | ID d’exécution d’expérience valide. |
-| `modelId` | ID de modèle valide. |
+| `id` | L’identifiant correspondant à l’insight. |
+| `experimentId` | Un identifiant d’expérience valide. |
+| `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
+| `modelId` | Un identifiant de modèle valide. |
 
-## Récupération d’une information spécifique
+## Récupération d’un insight spécifique
 
-Pour rechercher une information particulière, effectuez une requête GET et fournissez une requête valide `{INSIGHT_ID}` dans le chemin de la requête. Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
+Pour rechercher un insight spécifique, effectuez une requête GET et fournissez un `{INSIGHT_ID}` valide dans le chemin d’accès de la requête. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -118,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{INSIGHT_ID}` | Identificateur unique d’une information Sensei. |
+| `{INSIGHT_ID}` | L’identifiant unique d’un insight Sensei. |
 
 **Requête**
 
@@ -133,7 +133,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile qui inclut l’identifiant unique d’informations (`id`). De plus, vous recevrez `context` qui contient les identifiants uniques associés aux informations particulières qui suivent les données des événements et mesures d’statistiques.
+Une réponse réussie renvoie un payload incluant l’identifiant unique d’insight (`id`). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cet insight spécifique ainsi que les événements d’insights et les données de mesures.
 
 ```json
 {
@@ -164,14 +164,14 @@ Une réponse réussie renvoie une charge utile qui inclut l’identifiant unique
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID correspondant à l’aperçu. |
-| `experimentId` | ID d’expérience valide. |
-| `experimentRunId` | ID d’exécution d’expérience valide. |
-| `modelId` | ID de modèle valide. |
+| `id` | L’identifiant correspondant à l’insight. |
+| `experimentId` | Un identifiant d’expérience valide. |
+| `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
+| `modelId` | Un identifiant de modèle valide. |
 
-## Ajouter une nouvelle information sur le modèle
+## Ajout d’un nouvel insight de modèle
 
-Vous pouvez créer une nouvelle vue du modèle en exécutant une requête POST et une charge utile qui fournit le contexte, les événements et les mesures pour la nouvelle vue du modèle. Le champ de contexte utilisé pour créer une nouvelle information sur le modèle n&#39;est pas nécessaire pour que des services existants y soient associés, mais vous pouvez choisir de créer la nouvelle information sur le modèle avec les services existants en fournissant un ou plusieurs des ID correspondants :
+Vous pouvez créer un insight de modèle en effectuant une requête POST et un payload fournissant le contexte, les événements et les mesures du nouvel insight de modèle. Le champ de contexte utilisé pour créer un insight de modèle n’est pas nécessaire pour associer les services existants à l’insight, mais vous pouvez choisir de créer l’insight de modèle avec les services existants en fournissant un ou plusieurs des identifiants correspondants :
 
 ```json
 "context": {
@@ -229,7 +229,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse positive renvoie une charge utile contenant un paramètre `{INSIGHT_ID}` et tous les paramètres fournis dans la demande initiale.
+Une réponse réussie renvoie un payload incluant un `{INSIGHT_ID}` et tous les paramètres fournis dans la requête initiale.
 
 ```json
 {
@@ -260,11 +260,11 @@ Une réponse positive renvoie une charge utile contenant un paramètre `{INSIGHT
 
 | Propriété | Description |
 | --- | --- |
-| `insightId` | ID unique créé pour cette information particulière lorsqu’une demande POST réussie est effectuée. |
+| `insightId` | L’identifiant unique créé pour cet insight spécifique en cas de requête POST réussie. |
 
 ## Récupération d’une liste de mesures par défaut pour les algorithmes
 
-Vous pouvez récupérer une liste de toutes les mesures par défaut et de l’algorithme en exécutant une seule requête GET sur le point de terminaison des mesures. Pour requête une mesure particulière, effectuez une demande GET et fournissez une valeur valide `{ALGORITHM}` dans le chemin de la demande.
+Vous pouvez récupérer une liste de toutes les mesures de vos algorithmes et mesures par défaut en effectuant une requête GET unique sur le point de terminaison des mesures. Pour interroger une mesure spécifique, effectuez une requête GET et fournissez un `{ALGORITHM}` valide dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -275,11 +275,11 @@ GET /insights/metrics?algorithm={ALGORITHM}
 
 | Paramètre | Description |
 | --- | --- |
-| `{ALGORITHM}` | Identificateur du type d’algorithme. |
+| `{ALGORITHM}` | L’identifiant du type d’algorithme. |
 
 **Requête**
 
-La requête suivante contient une requête et récupère une mesure spécifique à l’aide de l’identifiant d’algorithme. `{ALGORITHM}`
+La requête suivante contient une requête et renvoie une mesure spécifique à l’aide de l’identifiant d’algorithme `{ALGORITHM}`
 
 ```shell
 curl -X GET \
@@ -292,7 +292,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile qui inclut l’identifiant `algorithm` unique et un tableau de mesures par défaut.
+Une réponse réussie renvoie un payload incluant l’identifiant unique `algorithm` et un tableau de mesures par défaut.
 
 ```json
 {
