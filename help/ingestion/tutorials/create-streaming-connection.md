@@ -184,6 +184,6 @@ Cette section fournit des informations supplémentaires sur la création de conn
 
 ### Connexions en continu authentifiées
 
-Authenticated data collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Les clients qui souhaitent envoyer des informations d&#39;identification personnelle (informations d&#39;identification personnelle) peuvent le faire en envoyant des Jetons d&#39;accès IMS dans le cadre de la demande POST. Si le jeton IMS est valide, les enregistrements sont marqués comme collectés auprès de sources fiables.
+Authenticated data collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Les clients qui souhaitent envoyer des informations d&#39;identification personnelle (informations d&#39;identification personnelle) peuvent le faire en envoyant des Jetons d&#39;accès IMS dans le cadre de la demande du POST. Si le jeton IMS est valide, les enregistrements sont marqués comme collectés auprès de sources fiables.
 
 Pour plus d’informations sur la création d’une connexion en continu authentifiée, consultez le [tutoriel relatif à la création d’une connexion en continu authentifiée](create-authenticated-streaming-connection.md).
