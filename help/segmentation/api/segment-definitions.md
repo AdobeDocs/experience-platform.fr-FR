@@ -332,7 +332,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 
 ## Récupération en masse des définitions de segment {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête POST au point de `/segment/definitions/bulk-get` terminaison et en fournissant les `id` valeurs des définitions de segment dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de `/segment/definitions/bulk-get` terminaison et en fournissant les `id` valeurs des définitions de segment dans le corps de la requête.
 
 **Format d’API**
 
@@ -493,7 +493,7 @@ Une réponse réussie renvoie un état HTTP 200 sans message.
 
 ## Mise à jour d’une définition de segment spécifique
 
-Vous pouvez mettre à jour une définition de segment spécifique en exécutant une requête PATCH sur le point de `/segment/definitions` terminaison et en indiquant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin de requête.
+Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de `/segment/definitions` terminaison et en indiquant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin de la requête.
 
 **Format d’API**
 
