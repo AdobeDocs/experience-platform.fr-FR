@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -35,9 +35,9 @@ Le processus suivant décrit les étapes et les résultats typiques de la créat
 
 ### Extraction de données et préparations
 
-Les données sont ingérées et transformées avec le [!DNL Experience Data Model] (XDM) sur l’Adobe Experience Platform. Ces données sont utilisées pour la formation aux modèles. Pour en savoir plus sur XDM, consultez la présentation [de](../../xdm/home.md)XDM.
+Les données sont ingérées et transformées avec le [!DNL Experience Data Model] (XDM) sur l’Adobe Experience Platform. Ces données sont utilisées pour la formation aux modèles. Pour en savoir plus sur XDM, consultez la [présentation de XDM](../../xdm/home.md).
 
-### Création  
+### Création
 
 Créez un modèle d&#39;apprentissage automatique en temps réel en le rédigeant à partir de zéro ou en l&#39;incorporant sous la forme d&#39;un modèle ONNX sérialisé et préformé dans les Adobes Experience Platform portables Jupyter.
 
@@ -70,12 +70,12 @@ L&#39;apprentissage automatique en temps réel est actuellement en alpha. Les fo
 
 |  | Alpha (mai) |
 | --- | --- |
-| **Fonctionnalités** | - Utilisation du modèle de bloc-notes RTML, création, test et déploiement d&#39;un modèle d&#39;apprentissage automatique personnalisé. <br> - Appui à l&#39;importation de modèles d&#39;apprentissage automatique préformés. <br> - SDK d&#39;apprentissage automatique en temps réel. <br> - Ensemble de noeuds de création de départ. <br> - Déployé sur le Centre d&#39;Adobes Experience Platform. |
+| **Fonctionnalités** | - Utilisation du modèle de bloc-notes RTML, création, test et déploiement d&#39;un modèle d&#39;apprentissage automatique personnalisé. <br> - Soutien à l&#39;importation de modèles d&#39;apprentissage automatique préformés. <br> - SDK d&#39;apprentissage automatique en temps réel. <br> - Ensemble de noeuds de création de départ. <br> - Déployé sur le Centre d&#39;Adobes Experience Platform. |
 | **Disponibilité** | Amérique du Nord |
 | **Noeuds de création** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
 | **Score des durées d’exécution** | ONNX |
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le guide de [prise en main](./getting-started.md) . Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour créer un modèle d’apprentissage automatique en temps réel.
+Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour créer un modèle d’apprentissage automatique en temps réel.
 
