@@ -77,7 +77,7 @@ La boîte de dialogue de modification s’affiche et vous permet de modifier la 
 
 ### Actions supplémentaires
 
-Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite, en regard de **[!UICONTROL Modifier]**. Cliquer sur **[!UICONTROL Actions supplémentaires]** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
+Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Cliquer sur **[!UICONTROL Actions supplémentaires]** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
 
 - **[!UICONTROL Supprimer]** : supprime l’instance.
 - **[!UICONTROL Accéder aux scores]** : en cliquant sur *Accéder aux scores*, vous ouvrez une boîte de dialogue contenant un lien vers le tutoriel sur le [téléchargement des scores pour Customer AI](./download-scores.md). La boîte de dialogue fournit également l’identifiant de jeu de données requis pour effectuer des appels d’API.
