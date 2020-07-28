@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 >[!IMPORTANT]
 >
->Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
+>Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
 ## Conditions préalables 
 
@@ -69,7 +69,7 @@ L’onglet *[!UICONTROL Parcourir]* réapparaît et affiche désormais la nouvel
 
 ## Activation ou désactivation d’une stratégie d’utilisation des données {#enable}
 
-Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
+Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
 You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous *[!UICONTROL État]*, sélectionnez le bouton d’activation/désactivation pour activer ou désactiver la stratégie.
 
@@ -77,7 +77,7 @@ You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!
 
 ## Actions marketing Vue {#view-marketing-actions}
 
-Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par Adobe et votre propre organisation.
+Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par l’Adobe et votre propre organisation.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -99,9 +99,9 @@ L’action nouvellement créée s’affiche dans l’onglet Actions ** marketing
 
 >[!NOTE]
 >
->Seules les actions marketing personnalisées définies par votre organisation peuvent être modifiées. Les actions marketing définies par Adobe ne peuvent pas être modifiées ni supprimées.
+>Seules les actions marketing personnalisées définies par votre organisation peuvent être modifiées. Les actions marketing définies par l&#39;Adobe ne peuvent pas être modifiées ou supprimées.
 
-Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par Adobe et votre propre organisation. Sélectionnez une action marketing personnalisée dans la liste, puis utilisez les champs fournis dans la section de droite pour modifier les détails de l’action marketing.
+Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par l’Adobe et votre propre organisation. Sélectionnez une action marketing personnalisée dans la liste, puis utilisez les champs fournis dans la section de droite pour modifier les détails de l’action marketing.
 
 ![](../images/policies/edit-marketing-action.png)
 
