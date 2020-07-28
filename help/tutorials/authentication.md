@@ -37,7 +37,7 @@ Les sections suivantes décrivent les étapes à suivre pour créer un Adobe ID 
 
 Si vous ne possédez pas d’Adobe ID, vous pouvez en créer un en suivant les étapes suivantes :
 
-1. Accédez à [Adobe Developer Console](https://console.adobe.io)
+1. Accédez à la Console développeur [d&#39;Adobe](https://console.adobe.io)
 2. Cliquez sur **[!UICONTROL Créer un compte]**
 3. Suivez le processus d’inscription
 
@@ -67,13 +67,13 @@ Tout comme le processus d’ajout d’un développeur, l’administrateur doit v
 
 ![](images/authentication/assign-user-details.png)
 
-## Générer des informations d’identification d’accès dans Adobe Developer Console
+## Générer des informations d’identification d’accès dans la Console développeur d’Adobes
 
 >[!NOTE]
 >
 >Si vous suivez ce document du guide [du développeur](../privacy-service/api/getting-started.md)Privacy Service, vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques à [!DNL Privacy Service].
 
-A l’aide de Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
+A l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -85,7 +85,7 @@ Les étapes sont décrites en détail ci-dessous.
 
 ### Configuration ponctuelle
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
 
 Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation _du_ projet.
 
