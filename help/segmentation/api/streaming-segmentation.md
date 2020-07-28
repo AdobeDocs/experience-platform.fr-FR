@@ -92,7 +92,7 @@ En outre, certaines directives s’appliquent lors de la segmentation en flux co
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
 
-Vous pouvez récupérer une liste de tous vos segments qui sont activés pour la segmentation en flux continu au sein de votre organisation IMS en envoyant une requête GET au point de `/segment/definitions` terminaison.
+Vous pouvez récupérer une liste de tous vos segments qui sont activés pour la segmentation en flux continu au sein de votre organisation IMS en adressant une demande de GET au point de `/segment/definitions` terminaison.
 
 **Format d’API**
 
