@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1878'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -26,16 +26,16 @@ Le processus de préparation varie selon que vos données sont stockées dans l�
 
 Si vos données sont stockées en dehors de [!DNL Experience Platform], procédez comme suit :
 
-1. Contactez les services de conseil Adobe pour demander des informations d&#39;identification d&#39;accès pour un conteneur d&#39;Enregistrement Azure Blob dédié.
+1. Contactez les services de conseil en Adobe pour demander des informations d&#39;identification d&#39;accès pour un conteneur d&#39;Enregistrement Azure Blob dédié.
 1. A l’aide de vos informations d’identification d’accès, téléchargez vos données vers le conteneur Blob.
-1. Travaillez avec Adobe Consulting Services pour faire correspondre vos données au schéma [](#cee-schema) Consumer ExperienceEvent et les intégrer à Intelligent Services.
+1. Travaillez avec les services de conseil en Adobe pour faire correspondre vos données au schéma [](#cee-schema) Consumer ExperienceEvent et les intégrer à Intelligent Services.
 
 ### [!DNL Experience Platform] préparation des données
 
 Si vos données sont déjà stockées dans [!DNL Platform], procédez comme suit :
 
 1. Examinez la structure du schéma [](#cee-schema) Consumer ExperienceEvent et déterminez si vos données peuvent être mises en correspondance avec ses champs.
-1. Contactez les services de conseil Adobe pour vous aider à mapper vos données au schéma et à les intégrer dans les services intelligents, ou [suivez les étapes décrites dans ce guide](#mapping) si vous souhaitez mapper les données vous-même.
+1. Contactez les Services de conseil en Adobe pour vous aider à mapper vos données au schéma et à les intégrer dans Intelligent Services, ou [suivez les étapes décrites dans ce guide](#mapping) si vous souhaitez mapper les données vous-même.
 
 ## Comprendre le schéma CEE {#cee-schema}
 
@@ -61,7 +61,7 @@ Bien que l’utilisation de tous les champs clés soit fortement recommandée, d
 
 * [Un champ d&#39;identité principal](#identity)
 * [xdm:timestamp](#timestamp)
-* [xdm:canal](#channel) (obligatoire uniquement pour l’API d’attribution)
+* [xdm:canal](#channel) (obligatoire uniquement pour l’Attribution AI)
 
 #### Identité du Principal {#identity}
 
@@ -69,22 +69,22 @@ L&#39;un des champs de votre schéma doit être défini en tant que champ d&#39;
 
 Vous devez déterminer le meilleur champ à utiliser comme identité principale en fonction de la source et de la nature de vos données. Un champ d&#39;identité doit inclure un espace de nommage **d&#39;** identité qui indique le type de données d&#39;identité que le champ attend comme valeur. Certaines valeurs d’espace de nommage valides sont les suivantes :
 
-* &quot;email&quot;
+* &quot;e-mail&quot;
 * &quot;phone&quot;
 * &quot;mcid&quot; (pour les ID d’Adobe Audience Manager)
-* &quot;aid&quot; (pour les identifiants Analytics Adobe)
+* &quot;aid&quot; (pour les identifiants Adobe Analytics)
 
-Si vous ne savez pas quel champ vous devez utiliser comme identité principale, contactez les services de conseil d’Adobe pour déterminer la meilleure solution.
+Si vous ne savez pas quel champ vous devez utiliser comme identité principale, contactez les services de conseil en Adobe pour déterminer la meilleure solution.
 
 #### xdm:timestamp {#timestamp}
 
 Ce champ représente la date et l&#39;heure auxquelles le événement s&#39;est produit. Cette valeur doit être fournie sous forme de chaîne, conformément à la norme ISO 8601.
 
-#### xdm:canal {#channel}
+#### xdm:channel {#channel}
 
 >[!NOTE]
 >
->Ce champ est obligatoire uniquement lors de l’utilisation de l’API d’attribution.
+>Ce champ n’est obligatoire que lorsque vous utilisez Attribution AI.
 
 Ce champ représente le canal marketing associé à ExperienceEvent. Ce champ contient des informations sur le type de canal, le type de support et le type d’emplacement.
 
@@ -107,12 +107,12 @@ Pour obtenir des informations complètes sur chacun des sous-champs requis pour 
 
 Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm:channel` schéma :
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| Canal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
 | Afficher | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
-| Email | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
+| E-mail | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
 | Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
 | Redirection du code QR | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
@@ -241,7 +241,7 @@ Pour obtenir des informations complètes sur chacun des sous-champs obligatoires
 
 Une fois que vous avez déterminé si les données de vos événements marketing peuvent être mises en correspondance avec le schéma CEE, l’étape suivante consiste à déterminer les données à importer dans les services intelligents. Toutes les données historiques utilisées dans les services intelligents doivent respecter une période minimale de quatre mois, plus le nombre de jours prévus comme période de consultation.
 
-Après avoir décidé de la plage de données à envoyer, contactez les services de conseil Adobe pour les aider à mapper vos données au schéma et à les intégrer au service.
+Après avoir décidé de la plage de données à envoyer, contactez les services de conseil en Adobe pour aider à faire correspondre vos données au schéma et à les intégrer au service.
 
 Si vous avez un [!DNL Adobe Experience Platform] abonnement et souhaitez mapper et assimiler les données vous-même, suivez les étapes décrites dans la section ci-dessous.
 
@@ -281,7 +281,7 @@ Une fois le jeu de données créé, vous pouvez le trouver dans l’interface ut
 >
 >Les prochaines versions d&#39;Intelligent Services intégreront le service [d&#39;identité des](../identity-service/home.md) Adobes Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
 
-Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande PATCH à l’API du service de catalogue.
+Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande de PATCH à l’API du service de catalogue.
 
 Si vous importez des données à partir d’un fichier CSV local, vous pouvez passer à la section suivante sur le [mappage et l’assimilation des données](#ingest).
 
@@ -339,11 +339,11 @@ curl -X PATCH \
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur l&#39;utilisation des espaces de nommage d&#39;identité dans Platform, consultez la présentation [de l&#39;espace de nommage](../identity-service/namespaces.md)d&#39;identité.
+>For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la demande PATCH.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH.
 
 ```json
 [
@@ -353,15 +353,15 @@ Une réponse réussie renvoie un tableau contenant l&#39;identifiant du jeu de d
 
 #### Mapper et assimiler des données {#ingest}
 
-Après avoir créé un schéma CEE et un jeu de données, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans Platform. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
+Après avoir créé un schéma et un jeu de données CEE, vous pouvez début de mappage de vos tables de données sur le schéma et d’assimiler ces données dans Platform. Consultez le didacticiel sur le [mappage d’un fichier CSV à un schéma](../ingestion/tutorials/map-a-csv-file.md) XDM pour savoir comment effectuer cette opération dans l’interface utilisateur. Une fois qu&#39;un jeu de données a été renseigné, il est possible d&#39;utiliser le même jeu de données pour importer des fichiers de données supplémentaires.
 
 Si vos données sont stockées dans une application tierce prise en charge, vous pouvez également choisir de créer un connecteur [](../sources/home.md) source pour intégrer les données de vos événements marketing dans Platform en temps réel.
 
 ## Étapes suivantes {#next-steps}
 
-Ce document fournit des conseils généraux sur la préparation de vos données en vue de leur utilisation dans les services intelligents. Si vous avez besoin de conseils supplémentaires en fonction de votre cas d’utilisation, veuillez contacter le service d’assistance Adobe.
+Ce document fournit des conseils généraux sur la préparation de vos données en vue de leur utilisation dans les services intelligents. Si vous avez besoin de services de conseil supplémentaires en fonction de votre cas d&#39;utilisation, veuillez contacter le service d&#39;assistance-Adobe.
 
 Une fois que vous avez renseigné un jeu de données avec vos données d’expérience client, vous pouvez utiliser les services intelligents pour générer des informations. Pour commencer, reportez-vous aux documents suivants :
 
-* [Présentation de l’API d’attribution](./attribution-ai/overview.md)
+* [Présentation d’Attribution AI](./attribution-ai/overview.md)
 * [Présentation de Customer AI](./customer-ai/overview.md)
