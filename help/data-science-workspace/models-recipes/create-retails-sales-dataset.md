@@ -1,49 +1,49 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Créer un schéma de vente au détail et un jeu de données
+title: Création de jeux de données et de schéma de vente au détail
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 0%
+ht-degree: 76%
 
 ---
 
 
-# Créer un schéma de vente au détail et un jeu de données
+# Création de jeux de données et de schéma de vente au détail
 
-Ce didacticiel présente les conditions préalables et les ressources requises pour tous les autres [!DNL Adobe Experience Platform][!DNL Data Science Workspace] didacticiels. Une fois terminé, le schéma de vente au détail et les ensembles de données seront disponibles pour vous et les membres de votre organisation IMS le [!DNL Experience Platform]jour.
+Ce didacticiel présente les conditions préalables et les ressources requises pour tous les autres [!DNL Adobe Experience Platform][!DNL Data Science Workspace] didacticiels. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur [!DNL Experience Platform].
 
 ## Prise en main
 
-Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
-- Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform]votre entreprise, contactez votre administrateur système avant de continuer.
-- Autorisation d’effectuer des appels [!DNL Experience Platform] d’API. Suivez le didacticiel sur les API [](../../tutorials/authentication.md) d&#39;Adobe Experience Platform d&#39;authentification et d&#39;accès pour obtenir les valeurs suivantes afin de terminer ce didacticiel avec succès :
-   - Autorisation : `{ACCESS_TOKEN}`
-   - x-api-key : `{API_KEY}`
+Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
+- Accès à [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+- Authorization to make [!DNL Experience Platform] API calls. Suivez le tutoriel [Authentification et accès aux API Adobe Experience Platform](../../tutorials/authentication.md) afin d’obtenir les valeurs suivantes pour effectuer ce didacticiel :
+   - Authorization: `{ACCESS_TOKEN}`
+   - x-api-key: `{API_KEY}`
    - x-gw-ims-org-id: `{IMS_ORG}`
    - Client secret: `{CLIENT_SECRET}`
-   - Certificat client : `{PRIVATE_KEY}`
-- Exemples de données et de fichiers source pour la Recette [des ventes](../pre-built-recipes/retail-sales.md)au détail. Téléchargez les ressources requises pour ce didacticiel et d’autres [!DNL Data Science Workspace] didacticiels depuis le référentiel [Git public](https://github.com/adobe/experience-platform-dsw-reference/)Adobe.
-- [Python >= 2.7](https://www.python.org/downloads/) et les [!DNL Python] packages suivants :
+   - Client certificate: `{PRIVATE_KEY}`
+- Exemples de données et de fichiers source pour la [Recette des ventes au détail](../pre-built-recipes/retail-sales.md). Download the assets required for this and other [!DNL Data Science Workspace] tutorials from the [Adobe public Git repository](https://github.com/adobe/experience-platform-dsw-reference/).
+- [ >= 2.7](https://www.python.org/downloads/)[!DNL Python] et les paquets Python suivants :
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
-   - [dictateur](https://pypi.org/project/dictor/)
+   - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
-- Une compréhension pratique des concepts suivants utilisés dans ce tutoriel :
+- Une connaissance concrète des concepts suivants employés dans ce tutoriel :
    - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
    - [Principes de base de la composition des schémas](../../xdm/schema/field-dictionary.md)
 
-## Créer un schéma de vente au détail et un jeu de données
+## Création de jeux de données et de schéma de vente au détail
 
-Le schéma Ventes au détail et les jeux de données sont créés automatiquement à l’aide du script d’amorçage fourni. Suivez les étapes ci-dessous pour :
+Les jeux de données et le schéma de vente au détail sont créés automatiquement à l’aide du script de bootstrap fourni. Suivez les étapes ci-dessous dans l’ordre :
 
-### Configuration des fichiers
+### Fichiers de configuration
 
-1. Dans le package de ressources du [!DNL Experience Platform] didacticiel, accédez au répertoire `bootstrap`et ouvrez-le `config.yaml` à l’aide d’un éditeur de texte approprié.
-2. Sous la `Enterprise` section, saisissez les valeurs suivantes :
+1. Inside the [!DNL Experience Platform] tutorial resource package, navigate into the directory `bootstrap`, and open `config.yaml` using an appropriate text editor.
+2. Dans la section `Enterprise`, saisissez les valeurs suivantes :
 
    ```yaml
    Enterprise:
@@ -54,7 +54,7 @@ Le schéma Ventes au détail et les jeux de données sont créés automatiquemen
        priv_key_filename: {PRIVATE_KEY}
    ```
 
-3. Modifiez les valeurs figurant sous la `Platform` section Exemple illustré ci-dessous :
+3. Modifiez les valeurs figurant dans la section `Platform`, comme indiqué ci-dessous :
 
    ```yaml
    Platform:
@@ -65,13 +65,13 @@ Le schéma Ventes au détail et les jeux de données sont créés automatiquemen
        kernel_type: Python
    ```
 
-   - `platform_gateway` : Chemin d’accès de base pour les appels d’API. Ne modifiez pas cette valeur.
-   - `ims_token` : Tu `{ACCESS_TOKEN}` vas ici.
-   - `ingest_data` : Pour les besoins de ce didacticiel, définissez cette valeur comme `"True"` afin de créer les schémas de vente au détail et les jeux de données. Une valeur de `"False"` crée uniquement les schémas.
-   - `build_recipe_artifacts` : Pour les besoins de ce didacticiel, définissez cette valeur `"False"` afin d’empêcher le script de générer un artefact de recette.
-   - `kernel_type` : Type d&#39;exécution de l&#39;artefact de recette. Conservez cette valeur comme `Python` si `build_recipe_artifacts` est défini comme `"False"`, sinon spécifiez le type d’exécution correct.
+   - `platform_gateway` : le chemin d’accès de base des appels API. Ne modifiez pas cette valeur.
+   - `ims_token` : emplacement de votre `{ACCESS_TOKEN}`.
+   - `ingest_data` : pour les besoins de ce tutoriel, définissez cette valeur comme `"True"` pour créer les jeux de données et les schémas de vente au détail. Une valeur `"False"` crée uniquement les schémas.
+   - `build_recipe_artifacts` : pour les besoins de ce tutoriel, définissez cette valeur comme `"False"` pour empêcher le script de générer un artefact de recette.
+   - `kernel_type` : type d’exécution de l’artefact de recette. Laissez la valeur `Python` si `build_recipe_artifacts` est définie comme `"False"`, sinon spécifiez le type d’exécution correct.
 
-4. Sous la `Titles` section, fournissez les informations suivantes appropriées pour les données d&#39;exemple Ventes au détail, enregistrez et fermez le fichier une fois les modifications en place. Exemple illustré ci-dessous :
+4. Dans la section `Titles`, fournissez les informations suivantes adaptées aux données d’exemple de ventes au détail, enregistrez et fermez le fichier une fois les modifications effectuées. Exemple illustré ci-dessous :
 
    ```yaml
    Titles:
@@ -89,25 +89,25 @@ Le schéma Ventes au détail et les jeux de données sont créés automatiquemen
        output_dataset_title: retail_sales_output_dataset
    ```
 
-### Exécution du script d’amorçage
+### Exécution du script de bootstrap
 
-1. Ouvrez votre application de terminal et accédez au répertoire des ressources du [!DNL Experience Platform] didacticiel.
-2. Définissez le répertoire comme chemin d’accès actif et exécutez le `bootstrap` script `bootstrap.py` [!DNL Python] en saisissant la commande suivante :
+1. Open your terminal application and navigate to the [!DNL Experience Platform] tutorial resource directory.
+2. Définissez le répertoire `bootstrap` comme chemin d’accès opérationnel actuel et exécutez le script `bootstrap.py` en saisissant la commande suivante :[!DNL Python]
 
    ```bash
    python bootstrap.py
    ```
 
-   > [!NOTE] L’exécution du script peut prendre plusieurs minutes.
+   >[!NOTE] l’exécution du script peut prendre plusieurs minutes.
 
 ## Étapes suivantes
 
-Une fois le script d&#39;amorçage terminé, les schémas d&#39;entrée et de sortie des ventes au détail et les jeux de données peuvent être consultés sur [!DNL Experience Platform]. Consultez le didacticiel [sur les données du schéma de](./preview-schema-data.md)prévisualisation pour en savoir plus.
+Une fois l’exécution du script de bootstrap terminée, il est possible d’afficher les jeux de données et schémas d’entrée et de sortie de ventes au détail dans [!DNL Experience Platform]. Pour plus d’informations, consultez le [tutoriel de présentation des données de schéma](./preview-schema-data.md).
 
-Vous avez également correctement assimilé des données d’exemple Ventes au détail à [!DNL Experience Platform] l’aide du script d’amorçage fourni.
+You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
 
-Pour continuer à travailler avec les données imbriquées :
-- [Analyse de vos données à l&#39;aide de portables Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilisez les ordinateurs portables Jupyter de Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
-- [compresser les fichiers source dans une recette ;](./package-source-files-recipe.md)
-   - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette important.
+Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
+- [Analysez vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
+   - Utilisez les notebooks Jupyter dans Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
+- [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
+   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
