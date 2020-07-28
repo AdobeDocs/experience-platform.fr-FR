@@ -225,7 +225,7 @@ Après avoir lu ce guide, vous comprenez mieux comment fonctionne la recherche d
 
 ## Annexe {#appendix}
 
-Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou [!DNL Platform], vous utiliseriez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
+Les sections suivantes fournissent des informations supplémentaires sur le fonctionnement des termes de recherche. Les requêtes de recherche sont rédigées de la manière suivante : `s={FieldName}:{SearchExpression}`. Ainsi, par exemple, pour rechercher un segment nommé AAM ou [!DNL Platform], utilisez la requête de recherche suivante : `s=segmentName:AAM%20OR%20Platform`.
 
 > !![NOTE] Pour les meilleures pratiques, l’expression de recherche doit être encodée au format HTML, comme l’exemple ci-dessus.
 
