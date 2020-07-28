@@ -24,11 +24,11 @@ L’ [!DNL Dataset Service] API vous permet d’appliquer et de modifier des ét
 
 Avant de lire ce guide, suivez les étapes décrites dans la section [](../../catalog/api/getting-started.md) Prise en main du guide du développeur de catalogue afin de rassembler les informations d’identification requises pour appeler [!DNL Platform] les API.
 
-Pour effectuer des appels vers les [!DNL Dataset Service] points de terminaison décrits dans ce document, vous devez disposer de la valeur unique `id` pour un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
+Pour effectuer des appels aux points de [!DNL Dataset Service] terminaison décrits dans ce document, vous devez disposer de la valeur unique `id` pour un jeu de données spécifique. Si vous ne disposez pas de cette valeur, consultez le guide de [la liste des objets](../../catalog/api/list-objects.md) Catalog pour trouver les ID de vos jeux de données existants.
 
 ## Liste de toutes les étiquettes {#list-labels}
 
-A l’aide de l’ [!DNL Policy Service] API, vous pouvez liste toutes les `core` étiquettes ou `custom` les étiquettes en faisant une demande GET à `/labels/core` ou `/labels/custom`, respectivement.
+A l’aide de l’ [!DNL Policy Service] API, vous pouvez liste toutes les `core` étiquettes ou `custom` les étiquettes en faisant une demande de GET à `/labels/core` ou `/labels/custom`, respectivement.
 
 **Format d’API**
 
@@ -110,7 +110,7 @@ Une réponse réussie renvoie une liste d&#39;étiquettes personnalisées récup
 
 ## Rechercher une étiquette {#look-up-label}
 
-Vous pouvez rechercher une étiquette spécifique en incluant la `name` propriété de cette étiquette dans le chemin d’une requête GET à l’ [!DNL Policy Service] API.
+Vous pouvez rechercher une étiquette spécifique en incluant la `name` propriété de cette étiquette dans le chemin d’une demande de GET à l’ [!DNL Policy Service] API.
 
 **Format d’API**
 
@@ -164,7 +164,7 @@ Une réponse réussie renvoie les détails de l’étiquette personnalisée.
 
 ## Création ou mise à jour d’une étiquette personnalisée {#create-update-label}
 
-Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à l’ [!DNL Policy Service] API.
+Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête de PUT à l’ [!DNL Policy Service] API.
 
 **Format d’API**
 
@@ -230,7 +230,7 @@ Une réponse réussie renvoie les détails d&#39;une étiquette personnalisée, 
 
 ## Rechercher des étiquettes pour un jeu de données {#look-up-dataset-labels}
 
-Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en adressant une requête GET à l’ [!DNL Dataset Service] API.
+Vous pouvez rechercher les étiquettes d’utilisation des données qui ont été appliquées à un jeu de données existant en adressant une demande de GET à l’ [!DNL Dataset Service] API.
 
 **Format d’API**
 
@@ -283,7 +283,7 @@ Une réponse positive renvoie les étiquettes d’utilisation des données qui o
 
 ## Appliquer des étiquettes à un jeu de données {#apply-dataset-labels}
 
-Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête POST ou PUT à l’ [!DNL Dataset Service] API. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
+Vous pouvez créer un ensemble de libellés pour un jeu de données en les fournissant dans la charge utile d’une requête de POST ou de PUT à l’ [!DNL Dataset Service] API. L’utilisation de l’une ou l’autre de ces méthodes remplace les étiquettes existantes et les remplace par celles fournies dans la charge utile.
 
 **Format d’API**
 
@@ -298,7 +298,7 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Requête**
 
-La demande POST suivante ajoute une série d’étiquettes au jeu de données, ainsi qu’un champ spécifique dans ce jeu de données. Les champs fournis dans la charge utile sont identiques à ceux requis pour une demande de test de performances (PUT).
+La demande de POST suivante ajoute une série d&#39;étiquettes au jeu de données, ainsi qu&#39;un champ spécifique dans ce jeu de données. Les champs fournis dans la charge utile sont identiques à ceux requis pour une demande de PUT.
 
 ```shell
 curl -X POST \
