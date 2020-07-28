@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Suppression d’un sandbox
+title: Suppression d’un environnement de test
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 
-# Suppression d’un sandbox
+# Suppression d’un environnement de test
 
-Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le sandbox `name` dans le chemin de la requête.
+Vous pouvez supprimer un environnement de test en effectuant une requête DELETE qui inclut le `name` de l’environnement de test dans le chemin de la requête.
 
 >[!NOTE]
 >
->L’exécution de cet appel d’API met à jour la propriété `status` du sandbox en &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>L’appel de cette API met à jour la propriété `status` de l’environnement de test sur « supprimé » et la désactive. Les requêtes GET peuvent toujours récupérer les détails de l’environnement de test après sa suppression.
 
 **Format d’API**
 
@@ -28,11 +28,11 @@ DELETE /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | Le `name` sandbox à supprimer. |
+| `{SANDBOX_NAME}` | `name` de l’environnement de test que vous souhaitez supprimer. |
 
 **Requête**
 
-La requête suivante supprime un sandbox nommé &quot;dev-2&quot;.
+La requête suivante supprime un environnement de test nommé « dev-2 ».
 
 ```shell
 curl -X DELETE \
@@ -45,7 +45,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails mis à jour du sandbox, indiquant qu&#39;il `state` est &quot;supprimé&quot;.
+Une réponse réussie renvoie les détails mis à jour de l’environnement de test, indiquant que son `state` est « supprimé ».
 
 ```json
 {
