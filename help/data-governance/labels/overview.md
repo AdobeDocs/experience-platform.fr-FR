@@ -26,7 +26,7 @@ Les libellés d’utilisation des données appliqués au niveau du jeu de donné
 
 [!DNL Platform] fournit plusieurs étiquettes d’utilisation de données &quot;de base&quot; prêtes à l’emploi, qui couvrent une grande variété de restrictions courantes applicables à la gouvernance des données. Pour plus d’informations sur ces étiquettes et les stratégies d’utilisation qu’elles représentent, voir le guide sur les étiquettes [d’utilisation des données de](reference.md)base.
 
-Outre les étiquettes fournies par Adobe, vous pouvez également définir vos propres étiquettes personnalisées. Pour savoir comment procéder dans l’interface utilisateur, voir le guide [d’utilisation des étiquettes d’utilisation des](./user-guide.md)données. Pour savoir comment effectuer cette opération à l’aide d’appels d’API, consultez le guide [sur les étiquettes d’utilisation des](./api.md)données.
+In addition to the labels provided by Adobe, you can also define your own custom labels. Pour savoir comment procéder dans l’interface utilisateur, voir le guide [d’utilisation des étiquettes d’utilisation des](./user-guide.md)données. Pour savoir comment effectuer cette opération à l’aide d’appels d’API, consultez le guide [sur les étiquettes d’utilisation des](./api.md)données.
 
 ## Héritage d’étiquette pour les segments d’audience
 
@@ -34,7 +34,7 @@ Tous les segments d’audience créés par [Adobe Experience Platform Segmentati
 
 Outre l’héritage d’étiquettes au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Selon la manière dont votre application [!DNL Platform]basée sur le trafic des segments est utilisée, vous pouvez éventuellement spécifier les champs utilisés, ce qui empêche le segment d’hériter des libellés des champs exclus.
 
-Pour plus d&#39;informations sur le fonctionnement de l&#39;application automatique dans le CDP en temps réel, consultez l&#39;aperçu [de la gouvernance des données CDP en temps réel](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
+Pour plus d&#39;informations sur le fonctionnement de l&#39;application automatique dans le CDP en temps réel, consultez l&#39;aperçu [de la gouvernance des données CDP en temps réel de l&#39;](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)Adobe.
 
 ### Héritage des contrôles d&#39;exportation des données d&#39;Adobe Audience Manager
 
