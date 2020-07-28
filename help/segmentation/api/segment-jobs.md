@@ -164,7 +164,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
 
 ## Création d’une tâche de segmentation {#create}
 
-Vous pouvez créer une tâche de segment en adressant une requête POST au point de `/segment/jobs` terminaison et en incluant dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
+Vous pouvez créer une tâche de segment en adressant une requête de POST au point de `/segment/jobs` terminaison et en incluant dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
 
 **Format d’API**
 
@@ -355,7 +355,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Récupération en masse des tâches de segment {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segment en envoyant une requête POST au point de `/segment/jobs/bulk-get` terminaison et en fournissant les `id` valeurs des tâches de segment dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segment en envoyant une requête de POST au point de `/segment/jobs/bulk-get` terminaison et en fournissant les `id` valeurs des tâches de segment dans le corps de la requête.
 
 **Format d’API**
 
