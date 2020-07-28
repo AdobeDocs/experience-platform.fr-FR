@@ -78,7 +78,7 @@ Afin d’offrir à vos clients des expériences coordonnées, cohérentes et per
 [!DNL Platform]Vous pouvez configurer pour envoyer vos données d’enregistrement et de série temporelle à , compatible avec l’ingestion par flux et l’ingestion par lots en temps réel. [!DNL Profile] Pour plus d’informations, consultez le tutoriel décrivant comment [ajouter des données à Real-time Customer Profile](tutorials/add-profile-data.md).
 
 >[!NRemarque]
->Les données collectées par le biais de solutions Adobe, y compris [!DNL Analytics Cloud], [!DNL Marketing Cloud]et [!DNL Advertising Cloud], se déversent dans [!DNL Experience Platform] et sont ingérées dans [!DNL Profile].
+>Les données collectées par le biais de solutions d&#39;Adobe, y compris [!DNL Analytics Cloud], [!DNL Marketing Cloud]et [!DNL Advertising Cloud], se déversent dans [!DNL Experience Platform] et sont ingérées dans [!DNL Profile].
 
 ### [!DNL Profile] mesures d’assimilation
 
