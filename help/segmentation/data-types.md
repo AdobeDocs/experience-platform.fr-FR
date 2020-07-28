@@ -58,7 +58,7 @@ Actuellement, seul l’Adobe Audience Manager est pris en charge en tant qu’au
 
 ### Partage de segments
 
-Les segments créés dans Platform peuvent être utilisés dans d’autres services [principaux](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les segments créés dans Platform peuvent être utilisés dans d’autres services [](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html)Adobe Experience Cloud Core. Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 
