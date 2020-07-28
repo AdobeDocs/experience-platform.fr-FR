@@ -14,7 +14,7 @@ ht-degree: 54%
 
 # Utilisation de schémas [!DNL Experience Data Model] (XDM) et de descripteurs de relation
 
-La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [!DNL Experience Data Model] (XDM), piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. Pour en savoir plus sur les schémas XDM, commencez par lire la [présentation du système XDM](../xdm/home.md).
+La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. Pour en savoir plus sur les schémas XDM, commencez par lire la [présentation du système XDM](../xdm/home.md).
 
 ## Création d’un schéma à l’aide du registre des schémas
 
