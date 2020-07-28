@@ -14,7 +14,7 @@ ht-degree: 32%
 
 # Liste des ressources
 
-Vous pouvez vue une liste de toutes les ressources d’un certain type (classes, mixins, schémas, types de données ou descripteurs) au sein d’un conteneur en exécutant une seule requête GET. [!DNL Schema Registry]
+Vous pouvez vue une liste de toutes les ressources d’un certain type (classes, mixins, schémas, types de données ou descripteurs) au sein d’un conteneur en exécutant une seule requête de GET. [!DNL Schema Registry]
 
 >[!NOTE]
 >
