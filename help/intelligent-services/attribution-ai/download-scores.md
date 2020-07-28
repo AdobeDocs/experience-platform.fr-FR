@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics
 solution: Experience Platform
-title: Accès aux scores dans l’API d’attribution
+title: Accès aux scores dans Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 52%
+ht-degree: 75%
 
 ---
 
@@ -20,7 +20,7 @@ Ce document sert de guide pour le téléchargement de scores pour Attribution AI
 
 Attribution AI vous permet de télécharger des partitions au format parquet. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
-De plus, pour accéder aux scores de l’API d’attribution, vous devez disposer d’une instance de service avec un état d’exécution réussi. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores d’Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Chercher l’identifiant de votre jeu de données {#dataset-id}
 
@@ -261,7 +261,7 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger les scores d’IA d’attribution. Vous pouvez maintenant continuer à parcourir les autres [services intelligents](../home.md) et guides proposés.
+Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Vous pouvez maintenant continuer à parcourir les autres [services intelligents](../home.md) et guides proposés.
 
 ## Accès aux scores à l’aide du Snowflake
 
@@ -269,36 +269,36 @@ Ce document décrit les étapes requises pour télécharger les scores d’IA d�
 >
 >Veuillez contacter attributionai-support@adobe.com pour plus de détails sur l&#39;accès aux scores en utilisant le Snowflake.
 
-Vous pouvez accéder aux scores d’IA d’attribution agrégés par l’intermédiaire du Snowflake. Actuellement, vous devez envoyer un courrier électronique à l’assistance Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour le Snowflake.
+Vous pouvez accéder aux scores d’Attribution AI agrégés par Snowflake. Pour l’instant, vous devez envoyer un e-mail à l’assistance d’Adobe à l’adresse attributionai-support@adobe.com afin de configurer et de recevoir les informations d’identification de votre compte de lecteur pour Snowflake.
 
-Une fois que le support Adobe a traité votre demande, vous recevez une URL pour le compte de lecteur au Snowflake et les informations d’identification correspondantes ci-dessous :
+Une fois votre demande traitée par l’assistance d’Adobe, vous recevez l’URL du compte de lecteur pour Snowflake et les informations d’identification correspondantes :
 
-- URL du Snowflake
+- URL de Snowflake
 - Nom d’utilisateur
 - Mot de passe
 
 >[!NOTE]
 >
->Le compte reader permet d&#39;interroger les données à l&#39;aide de clients SQL, de feuilles de calcul et de solutions BI qui prennent en charge le connecteur JDBC.
+>Le compte de lecteur sert à interroger les données à l’aide de clients SQL, de feuilles de calcul et de solutions BI compatibles avec le connecteur JDBC.
 
 Une fois que vous disposez de vos informations d’identification et de votre URL, vous pouvez requête les tables de modèles, regroupées par date de point de contact ou date de conversion.
 
-### Recherche de votre schéma dans le Snowflake
+### Recherche de schéma dans Snowflake
 
-A l’aide des informations d’identification fournies, connectez-vous au Snowflake. Cliquez sur l’onglet **Feuilles** de calcul dans le volet de navigation principal supérieur gauche, puis accédez au répertoire de votre base de données dans le panneau de gauche.
+À l’aide des informations d’identification fournies, connectez-vous à Snowflake. Cliquez sur l’onglet **Feuilles de calcul** dans le volet de navigation principal supérieur gauche, puis accédez au répertoire de votre base de données dans le volet de gauche.
 
 ![Feuilles de calcul et navigation](./images/download-scores/edited_snowflake_1.png)
 
-Cliquez ensuite sur **Sélectionner un Schéma** dans le coin supérieur droit de l’écran. Dans la fenêtre contextuelle qui s’affiche, vérifiez que la base de données appropriée est sélectionnée. Cliquez ensuite sur la liste déroulante *Schéma* et sélectionnez l’un de vos schémas répertoriés. Vous pouvez directement requête à partir des tables de score répertoriées sous le schéma sélectionné.
+Cliquez ensuite sur **Sélectionner un schéma** dans le coin supérieur droit de l’écran. Dans la fenêtre contextuelle qui s’affiche, vérifiez que la base de données appropriée est sélectionnée. Cliquez ensuite sur la liste déroulante *Schéma* et sélectionnez l’un des schémas répertoriés. Vous pouvez interroger directement depuis les tableaux de scores répertoriés sous le schéma sélectionné.
 
-![trouver un schéma](./images/download-scores/edited_snowflake_2.png)
+![Recherche d’un schéma](./images/download-scores/edited_snowflake_2.png)
 
-## Connexion de PowerBI au Snowflake (facultatif)
+## Connexion de PowerBI à Snowflake (facultatif)
 
-Vos informations d&#39;identification de Snowflake peuvent être utilisées pour configurer une connexion entre PowerBI Desktop et les bases de données de Snowflake.
+Vos informations d’identification Snowflake peuvent être utilisées pour configurer une connexion entre les bases de données Snowflake et PowerBI Desktop.
 
-Tout d’abord, sous la zone *Serveur* , saisissez l’URL du Snowflake. Ensuite, sous *Warehouse*, tapez &quot;XSMALL&quot;. Entrez ensuite votre nom d’utilisateur et votre mot de passe.
+Tout d’abord, saisissez l’URL de Snowflake sous la zone *Serveur*. Ensuite, saisissez « XSMALL » sous *Entrepôt*. Saisissez maintenant votre nom d’utilisateur et votre mot de passe.
 
-![exemple de POWERBI](./images/download-scores/powerbi-snowflake.png)
+![Exemple de POWERBI](./images/download-scores/powerbi-snowflake.png)
 
-Une fois la connexion établie, sélectionnez votre base de données de Snowflake, puis sélectionnez le schéma approprié. Vous pouvez désormais charger toutes les tables.
+Une fois la connexion établie, sélectionnez votre base de données Snowflake, puis sélectionnez le schéma approprié. Vous pouvez désormais charger tous les tableaux.
