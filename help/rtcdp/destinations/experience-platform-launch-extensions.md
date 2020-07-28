@@ -1,66 +1,66 @@
 ---
-title: Extensions de lancement de plateforme d’expérience
-seo-title: Extensions de lancement de plateforme d’expérience
+title: Extensions d’Experience Platform Launch
+seo-title: Extensions d’Experience Platform Launch
 description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
 source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
 
-# Experience Platform Launch extensions {#experience-platform-launch-extensions}
+# Extensions d’Experience Platform Launch {#experience-platform-launch-extensions}
 
-Experience Platform Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Le lancement est proposé aux clients Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse.
+Experience Platform Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes. Launch est une fonctionnalité proposée gratuitement dans le cadre d’Adobe Experience Cloud.
 
-Pour une présentation des fonctionnalités de lancement de plateforme d’expérience, voir les ressources ci-dessous :
-* [Documentation sur le lancement de la plate-forme d’expérience](https://docs.adobe.com/content/help/fr-FR/launch/using/overview.html)
-* Vidéos [de début](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html)rapide sur le lancement de la plate-forme d’expérience. Début présentant l’aperçu [du processus de lancement](https://www.youtube.com/embed/rwqqkG1SERU) et de [](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html)publication de la plateforme d’expérience, puis passez aux concepts suivants.
+Pour obtenir une présentation des fonctionnalités d’Experience Platform Launch, consultez les ressources ci-dessous :
+* [Documentation](https://docs.adobe.com/content/help/fr-FR/launch/using/overview.html) d’Experience Platform Launch
+* [Vidéos de démarrage rapide](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/videos.html) d’Experience Platform Launch. Commencez par la [Présentation d’Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) et la [Présentation du processus de publication](https://helpx.adobe.com/fr/analytics/how-to/adobe-launch-publishing-process.html), puis passez aux concepts suivants.
 
-## Comment trouver les extensions de lancement dans l’interface CDP d’Adobe en temps réel {#how-to-find-extensions-in-interface}
+## Accès aux extensions de Launch depuis l’interface de la plateforme de données clients en temps réel d’Adobe {#how-to-find-extensions-in-interface}
 
-Pour rechercher les extensions de lancement dans l’interface CDP d’Adobe en temps réel, accédez à **[!UICONTROL Destinations > Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]** .
+Pour accéder aux extensions de Launch depuis l’interface de la plateforme de données clients en temps réel d’Adobe, accédez à **[!UICONTROL Destinations > Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]**.
 
-![Filtre Extensions dans l’interface](/help/rtcdp/destinations/assets/extensions-filter.png)
+![Filtre des extensions dans l’interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
-## Fonctionnement des extensions de lancement {#how-extensions-work}
+## Fonctionnement des extensions de Launch {#how-extensions-work}
 
-Les extensions lancent des extensions pour transférer des données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Événement de transfert** . Il s’agit d’un type d’intégration plus simple avec les plateformes de destination, qui transfère uniquement les données de événement brutes. Par exemple, l’extension [de personnalisation de](/help/rtcdp/destinations/gainsight-extension.md) Gainsight ou la voix de [confirmation de l’extension](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md)Client.
+Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](/help/rtcdp/destinations/gainsight-extension.md) ou l’[extension de voix du client Confirmit](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-**Profil/segment Exportez** les destinations dans la plateforme de données clientes Adobe en temps réel pour capturer les données du événement, les combiner avec d’autres sources de données, appliquer la segmentation et exporter des segments et des profils qualifiés vers des destinations. Par exemple, la destination [de l’enregistrement cloud](/help/rtcdp/destinations/amazon-s3-destination.md) Amazon S3 ou la destination [publicitaire](/help/rtcdp/destinations/google-dv360-destination.md)Google Display &amp; Video 360.
+Les destinations **Export de profil/segment** dans la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Par exemple, la [destination de stockage dans le cloud Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) ou la [destination publicitaire Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md).
 
-![Extensions de lancement de plateformes d’expérience par rapport à d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
+![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
-## Avantages de l’utilisation des extensions de lancement {#extensions-benefits}
+## Avantages des extensions de Launch {#extensions-benefits}
 
-Le lancement de la plate-forme d’expérience est gratuit pour les clients Experience Cloud existants. Le lancement simplifie le déploiement des balises sur votre site Web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Le lancement a une petite empreinte sur votre site Web et vous permet de continuer à charger rapidement vos pages.
+Experience Platform Launch est gratuit pour les clients Experience Cloud. Launch simplifie le déploiement des balises sur votre site web grâce à des extensions simples d’utilisation que vous pouvez installer, configurer, mettre à jour et supprimer. L’empreinte de Launch sur votre site web est minime et le chargement des pages reste rapide.
 
 >[!IMPORTANT]
 >
->Bien que vous ne puissiez pas activer les segments pour lancer les extensions, vous pouvez configurer des règles pour ne transférer que les données de événement dans certaines situations. Lisez plus ci-dessous.
+>Bien que vous ne puissiez pas activer les segments transmis aux extensions de Launch, vous pouvez définir des règles afin de transférer les données d’événement uniquement dans certaines situations. Retrouvez plus d’informations ci-dessous.
 
-Vous pouvez créer *des règles* qui déterminent à quel moment transférer des données de événement vers des extensions. Cette puissante fonctionnalité vous permet de transférer des données de événement uniquement dans certaines situations, plutôt que d’envoyer des données de événement à chaque interaction. For more information, read about rules in the [Launch documentation](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html).
+Vous pouvez créer des *règles* déterminant le moment où les données d’événement sont transférées aux extensions. Cette puissante fonctionnalité vous permet de transférer les données d’événement uniquement dans certaines situations, plutôt que d’envoyer les données d’événement à chaque interaction. Pour plus d’informations, consultez les règles dans la [Documentation de Launch](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.html).
 
-## Exemples de cas d’utilisation pour les extensions de lancement {#extensions-use-cases}
+## Exemples d’utilisation des extensions de Launch {#extensions-use-cases}
 
-Les extensions de lancement vous permettent de répondre à divers cas d’utilisation par les clients. Voici quelques exemples d’utilisation des extensions de lancement :
+Les extensions de Launch vous permettent de répondre à différents cas d’utilisation client. Voici quelques cas d’utilisation pour les extensions de Launch :
 
-* Vous pouvez envoyer des données de site Web ou d’application native à Facebook par le biais de l’extension de pixel Facebook. Pixel Facebook indique les parties de votre site ou application vers lesquelles un visiteur a navigué, transfère ces informations à Facebook et vous pouvez recibler votre visiteur via Facebook.
-* Vous pouvez transférer des données de événement de vos sites Web et applications vers Google Analytics afin d’analyser ces données et de prendre des décisions en fonction de celles-ci.
-* Vous pouvez activer une application de messagerie instantanée côté client au bon moment en fonction de la manière dont vos utilisateurs interagissent avec vos pages, conformément aux règles que vous avez définies dans Lancement.
+* Vous pouvez envoyer des données de site web ou d’application native par le biais de l’extension pour Facebook Pixel. Facebook Pixel vous indique les parties du site web ou de l’application qu’un utilisateur a consultées, transfère ces informations à Facebook et vous permet ainsi de recibler cet utilisateur via Facebook.
+* Vous pouvez transférer les données d’événement de vos sites web et de vos applications à Google Analytics afin d’analyser ces données et de prendre des décisions en fonction de celles-ci.
+* Vous pouvez activer une application de messagerie instantanée côté client au bon moment, en fonction de la manière dont vos utilisateurs interagissent avec vos pages, conformément aux règles définies dans Launch.
 
 
-## catégories d&#39;extension {#extension-categories}
+## Catégories d’extensions {#extension-categories}
 
-Les extensions de lancement peuvent se trouver sous les catégories suivantes dans Adobe Real-time CDP :
+Les extensions de Launch sont réparties dans les catégories suivantes dans la plateforme de données clients en temps réel d’Adobe :
 
 * [Publicité](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analytics](/help/rtcdp/destinations/analytics-destinations.md)
-* [Plateforme de Data Management](/help/rtcdp/destinations/dmp-destinations.md)
+* [Analyses](/help/rtcdp/destinations/analytics-destinations.md)
+* [Plateforme de gestion des données](/help/rtcdp/destinations/dmp-destinations.md)
 * [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Personnalisation ](/help/rtcdp/destinations/personalization-destinations.md)
-* [Questionnaires](/help/rtcdp/destinations/survey-destinations.md)
-* [Voix du client](/help/rtcdp/destinations/voice-of-customer-destinations.md)
+* [Personnalisation](/help/rtcdp/destinations/personalization-destinations.md)
+* [Enquêtes](/help/rtcdp/destinations/survey-destinations.md)
+* [Retours des consommateurs](/help/rtcdp/destinations/voice-of-customer-destinations.md)
