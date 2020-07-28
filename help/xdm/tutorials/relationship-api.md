@@ -391,7 +391,7 @@ Une réponse réussie renvoie les détails du descripteur d’identité que vous
 
 ## Création d’un descripteur de relation {#create-descriptor}
 
-Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de destination. Une fois que vous avez défini un descripteur de référence pour le schéma de destination, vous pouvez créer un nouveau descripteur de relation en envoyant une requête POST au point de `/tenant/descriptors` terminaison.
+Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de destination. Une fois que vous avez défini un descripteur de référence pour le schéma de destination, vous pouvez créer un nouveau descripteur de relation en envoyant une requête de POST au point de `/tenant/descriptors` terminaison.
 
 **Format d’API**
 
