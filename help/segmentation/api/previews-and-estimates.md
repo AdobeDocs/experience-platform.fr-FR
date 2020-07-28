@@ -171,7 +171,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
-Une fois que vous avez créé une tâche de prévisualisation, vous pouvez l’utiliser `previewId` dans le chemin d’une requête GET vers le point de `/estimate` terminaison vers les informations statistiques de la vue sur la définition de segment, y compris la taille estimée de l’audience, l’intervalle de fiabilité et l’écart type d’erreur.
+Une fois que vous avez créé une tâche de prévisualisation, vous pouvez l’utiliser `previewId` `/estimate` dans le chemin d’une demande de GET vers le point de terminaison vers les informations statistiques de la vue sur la définition de segment, y compris la taille estimée de l’audience, l’intervalle de fiabilité et l’écart type d’erreur.
 
 **Format d’API**
 
