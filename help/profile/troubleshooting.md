@@ -146,7 +146,7 @@ Cette erreur se produit lorsque le `destinationId` contenu d’une `POST /config
 }
 ```
 
-Cette erreur se produit lors de l&#39;envoi d&#39;une requête POST ou PUT avec un en-tête Content-Type non valide. Vérifiez par Doublon que vous fournissez une valeur Content-Type valide pour le point de terminaison que vous utilisez.
+Cette erreur se produit lors de l&#39;envoi d&#39;une demande de POST ou de PUT avec un en-tête Content-Type non valide. Vérifiez par Doublon que vous fournissez une valeur Content-Type valide pour le point de terminaison que vous utilisez.
 
 La plupart des points de terminaison de Profil acceptent &quot;application/json&quot; pour leur en-tête Content-Type, avec les exceptions suivantes :
 
