@@ -1,194 +1,194 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics
 solution: Experience Platform
-title: Guide de l’utilisateur de l’API d’attribution
+title: Guide d’utilisation d’Attribution AI
 topic: User guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1430'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
 
-# Guide de l’utilisateur de l’API d’attribution
+# Guide d’utilisation d’Attribution AI
 
-Attribution AI, dans le cadre d&#39;Intelligent Services, est un service d&#39;attribution algorithmique à plusieurs canaux qui calcule l&#39;influence et l&#39;impact incrémentiel des interactions client par rapport à des résultats spécifiés. Grâce à l’API d’attribution, les spécialistes du marketing peuvent mesurer et optimiser les dépenses marketing et publicitaires en comprenant l’impact de chaque interaction client individuelle sur chaque phase du parcours des clients.
+Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les professionnels du marketing peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
 
-Ce document sert de guide pour l’interaction avec l’API d’attribution dans l’interface utilisateur des services intelligents.
+Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 
 ## Création d’une instance
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. The *Services* browser appears and displays available Adobe intelligent services. In the container for Attribution AI, click **Open**.
+In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **Ouvrir**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
-La page du service AI d’attribution s’affiche. Cette page liste les instances de service d’attribution AI et affiche des informations à leur sujet, notamment le nom de l’instance, les événements de conversion, la fréquence d’exécution de l’instance et l’état de la dernière mise à jour. Cliquez sur **Créer une instance** pour commencer.
+La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour. Cliquez sur **Créer une instance** pour commencer.
 
 ![Création d’une instance](./images/user-guide/landing_page.png)
 
-Ensuite, la page de configuration de l’API d’attribution s’affiche, dans laquelle vous pouvez fournir des informations de base et spécifier un jeu de données pour l’instance.
+Ensuite, la page de configuration d’Attribution AI s’affiche, dans laquelle vous pouvez fournir des informations de base et spécifier un jeu de données pour l’instance.
 
 ![page de configuration](./images/user-guide/setup_attribution.png)
 
-### Nommer l’instance
+### Attribution d’un nom à l’instance
 
-Sous Informations ** de base, indiquez un nom et une description facultative pour votre instance de service.
+Sous *Informations de base*, donnez un nom et une description facultative de votre instance de service.
 
-![dénomination d’une instance](./images/user-guide/naming_instance.png)
+![attribution d’un nom à une instance](./images/user-guide/naming_instance.png)
 
-### Sélectionner un jeu de données
+### Sélection d’un jeu de données
 
-Après avoir rempli les informations de base, cliquez sur la liste déroulante **Sélectionner un jeu de données** pour sélectionner votre jeu de données. Le jeu de données est utilisé pour former le modèle et marquer les données suivantes qu&#39;il produit. Lors de la sélection d’un jeu de données dans le sélecteur de liste déroulante, seuls ceux qui sont compatibles avec l’API d’attribution et conformes au schéma du modèle de données d’expérience (XDM) sont répertoriés. Une fois un jeu de données sélectionné, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à la page de définition des événements.
+Après avoir renseigné les informations de base, cliquez sur le menu déroulant intitulé **Sélectionner le jeu de données** pour sélectionner votre jeu de données. Le jeu de données est utilisé pour former le modèle et noter les données ultérieures qui en résultent. Lors de la sélection d’un jeu de données à partir du sélecteur du menu déroulant, seuls les jeux compatibles avec Attribution AI et conformes au schéma de modèle de données d’expérience (XDM) sont répertoriés. Une fois qu’un jeu de données est sélectionné, cliquez sur **Suivant** dans le coin supérieur droit pour accéder à la page de définition des événements.
 
 ![page de configuration](./images/user-guide/initial_creation_attribution.png)
 
-## Définition de événements
+## Définition des événements
 
-Il existe trois types différents de données d’entrée utilisées pour définir des événements :
+Il existe trois types différents de données d’entrée utilisées pour définir les événements :
 
-- **événements de conversion :** Objectifs commerciaux qui identifient l’impact des activités marketing, telles que les commandes de commerce électronique, les achats en magasin et les visites sur le site Web.
-- **Fenêtre de recherche :** Fournit une période indiquant le nombre de jours avant l’inclusion des points de contact du événement de conversion.
-- **Points de contact :** événements marketing destinataires, individuels et ou de niveau cookie utilisés pour évaluer l’impact numérique ou basé sur les recettes des conversions.
+- **Événements de conversion :** objectifs professionnels qui identifient l’impact des activités marketing, comme les commandes e-commerce, les achats en magasin et les visites sur le site web.
+- **Intervalle de recherche en amont :** fournit une période indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
+- **Points de contact :** événements marketing au niveau des bénéficiaires, des individus ou des cookies utilisés pour évaluer l’impact numérique ou basé sur les recettes des conversions.
 
-### Définir des événements de conversion {#define-conversion-events}
+### Définition des événements de conversion {#define-conversion-events}
 
-Pour définir un événement de conversion, vous devez attribuer un nom au événement et sélectionner le type d&#39;événement en cliquant sur le menu déroulant **Entrer le nom** de champ.
+Pour définir un événement de conversion, vous devez donner un nom à l’événement et sélectionner le type d’événement en cliquant sur le menu déroulant **Saisir le nom du champ**.
 
-![liste déroulante des oui](./images/user-guide/conversion_event_2.png)
+![menu déroulant oui](./images/user-guide/conversion_event_2.png)
 
-Une fois qu’un événement est sélectionné, une nouvelle liste déroulante s’affiche à droite. La deuxième liste déroulante sert à donner un contexte plus détaillé à votre événement par le biais d’opérations. Pour ce événement de conversion, l’opération par défaut *existe* .
+Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’affiche à sa droite. Le second menu déroulant est utilisé pour fournir davantage de contexte à votre événement grâce à l’utilisation des opérations. Pour cet événement de conversion, l’opération par défaut *exists* est utilisée.
 
 >[!NOTE]
 >
->Une chaîne sous votre nom *de* conversion est mise à jour au fur et à mesure que vous définissez votre événement.
+>Une chaîne sous votre *nom de conversion* est mise à jour au fur et à mesure que vous définissez votre événement.
 
-![aucune liste déroulante](./images/user-guide/conversion_event_1.png)
+![aucun menu déroulant](./images/user-guide/conversion_event_1.png)
 
-Les boutons *Ajouter le événement* et *Ajouter le groupe* sont utilisés pour définir davantage votre conversion. Selon la conversion que vous définissez, vous devrez peut-être utiliser les boutons événement *de* Ajoute et *Ajouter un groupe* pour fournir un contexte plus détaillé.
+Les boutons *Ajouter un événement* et *Ajouter un groupe* permettent de définir plus précisément votre conversion. En fonction de la conversion que vous définissez, vous devrez peut-être utiliser les boutons *Ajouter un événement* et *Ajouter un groupe* pour fournir davantage de contexte.
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Le fait de cliquer sur le événement **** Ajouter crée des champs supplémentaires qui peuvent être remplis à l’aide de la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction *AND* à la définition de chaîne sous le nom *de* conversion. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
+Cliquer sur **Ajouter un événement** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction *ET* à la définition de la chaîne sous le *nom de la conversion*. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
-Cliquez sur **Ajouter le groupe** pour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne &quot;Ou&quot;. &quot;Ou&quot; est utilisé pour définir plusieurs chemins de conversion réussis. &quot;Et&quot; étend le chemin de conversion pour inclure d’autres conditions.
+Cliquer sur **Ajouter un groupe** donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne « Ou ». « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
 
-![utilisation et ou](./images/user-guide/and_or.png)
+![utilisation de et/ou](./images/user-guide/and_or.png)
 
-Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter la conversion** pour créer une nouvelle carte de conversion. Vous pouvez répéter le processus ci-dessus pour définir plusieurs conversions.
+Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter une conversion** pour créer une nouvelle carte de conversion. Vous pouvez répéter la procédure ci-dessus pour définir plusieurs conversions.
 
 ![ajouter une conversion](./images/user-guide/add_conversion.png)
 
-### Définir la fenêtre de recherche
+### Définition de l’intervalle de recherche en amont
 
-Une fois la définition de votre conversion terminée, vous devez confirmer votre fenêtre de recherche en amont. A l’aide des touches fléchées ou en cliquant sur la valeur par défaut (56), indiquez le nombre de jours avant le événement de conversion à partir duquel vous souhaitez inclure les points de contact. Les points de contact sont définis à l’étape suivante.
+Une fois la conversion définie, vous devez confirmer votre intervalle de recherche en amont. En utilisant les touches fléchées ou en cliquant sur la valeur par défaut (56), indiquez le nombre de jours avant votre événement de conversion à partir duquel vous souhaitez inclure des points de contact. Les points de contact sont définis à l’étape suivante.
 
-![recherche](./images/user-guide/lookback_window.png)
+![recherche en amont](./images/user-guide/lookback_window.png)
 
-### Définir des points de contact
+### Définition des points de contact
 
-La définition des points de contact suit un processus similaire à celui de la [définition des conversions](#define-conversion-events). Au départ, vous devez nommer votre point de contact et sélectionner une valeur de point de contact dans le menu déroulant *Entrer le nom* de champ. Une fois sélectionnée, la liste déroulante des opérateurs s’affiche avec la valeur par défaut &quot;existe&quot;. Cliquez sur la liste déroulante pour afficher une liste d’opérateurs.
+La définition des points de contact suit un workflow similaire à celui de la [définition des conversions](#define-conversion-events). Dans un premier temps, vous devez nommer votre point de contact et sélectionner une valeur de point de contact dans le menu déroulant *Saisir le nom du champ*. Une fois sélectionné, le menu déroulant de l’opérateur s’affiche avec la valeur par défaut « exists ». Cliquez sur le menu déroulant pour afficher une liste d’opérateurs.
 
 ![opérateurs](./images/user-guide/operators.png)
 
-Pour ce point de contact, sélectionnez **égal**.
+Pour ce point de contact, sélectionnez **equals**.
 
-![étape 1](./images/user-guide/touchpoint_step1.png)
+![étape 1](./images/user-guide/touchpoint_step1.png)
 
-Une fois qu’un opérateur pour un point de contact est sélectionné, *la saisie de la valeur* de champ est rendue disponible. Les valeurs de la liste déroulante *Saisir la valeur* de champ sont renseignées en fonction de l’opérateur et de la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’est pas renseignée dans la liste déroulante, vous pouvez la saisir manuellement. Cliquez sur la liste déroulante et sélectionnez **CLIQUEZ**.
+Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir la valeur du champ* est mis à disposition. Les valeurs du menu déroulant pour *Saisir la valeur du champ* reposent sur l’opérateur et la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’apparaît pas dans le menu déroulant, vous pouvez la saisir manuellement. Cliquez sur le menu déroulant et sélectionnez **CLICK**.
 
 >[!NOTE]
 >
->Les opérateurs &quot;existe&quot; et &quot;n’existe pas&quot; ne sont pas associés à des valeurs de champ.
+>Les opérateurs « exists » et « not exists » ne sont pas associés à des valeurs de champ.
 
-![liste déroulante des points de contact](./images/user-guide/touchpoint_dropdown.png)
+![menu déroulant du point de contact](./images/user-guide/touchpoint_dropdown.png)
 
-Les boutons *Ajouter le événement* et *Ajouter le groupe* sont utilisés pour définir davantage votre point de contact. En raison de la nature complexe qui entoure les points de contact, il n&#39;est pas rare d&#39;avoir plusieurs événements et groupes pour un seul point de contact.
+Les boutons *Ajouter un événement* et *Ajouter un groupe* permettent de définir plus précisément votre point de contact. En raison de la nature complexe des points de contact, il n’est pas rare d’avoir plusieurs événements et groupes pour un seul point de contact.
 
-Lorsque vous cliquez dessus, le événement **de** Ajoute permet d’ajouter d’autres champs. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
+En cliquant sur **Ajouter un événement**, il est possible d’ajouter des champs supplémentaires. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
 
 ![ajouter un événement](./images/user-guide/touchpoint_add_event.png)
 
-Cliquez sur le groupe **** Ajouter pour créer d’autres champs distincts de l’original. Avec l’ajout de groupes, un bouton bleu *et* apparaît. Cliquez sur **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins d’accès réussis. Ce point de contact particulier n&#39;a qu&#39;un seul chemin réussi, par conséquent &quot;Ou&quot; n&#39;est pas nécessaire.
+Cliquer sur **Ajouter un groupe** vous donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Cliquez sur **Et** pour modifier le paramètre. Le nouveau paramètre « Ou » est utilisé pour définir plusieurs chemins performants. Ce point de contact particulier n’a qu’un seul chemin performant. Par conséquent, « Ou » n’est pas nécessaire.
 
 ![présentation du point de contact](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->Utilisez la chaîne située sous le nom ** du point de contact pour obtenir un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
+>Utilisez la chaîne sous le *nom du point de contact* pour avoir un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Vous pouvez ajouter d’autres points de contact en cliquant sur **Ajouter le point de contact** et en répétant le processus ci-dessus.
+Vous pouvez ajouter d’autres points de contact en cliquant sur **Ajouter un point de contact** et en répétant la procédure ci-dessus.
 
 ![ajouter un point de contact](./images/user-guide/add_touchpoint.png)
 
-Une fois que vous avez terminé de définir tous les points de contact nécessaires, faites défiler la page vers le haut et cliquez sur **Suivant** dans le coin supérieur droit pour passer à l’étape finale.
+Une fois que vous avez défini tous les points de contact nécessaires, faites défiler la page vers le haut et cliquez sur **Suivant** dans le coin supérieur droit pour passer à l’étape finale.
 
 ![définition terminée](./images/user-guide/define_event_next.png)
 
-## Formation avancée et configuration des notes
+## Configuration de la formation et de la notation avancées
 
-La dernière page de l’API d’attribution est la page *Avancée* utilisée pour configurer la formation et la notation.
+La dernière page d’Attribution AI est la page *Avancé* utilisée pour configurer la formation et la notation.
 
-![nouvelle page avancée](./images/user-guide/advanced_settings.png)
+![nouvelle page Avancé](./images/user-guide/advanced_settings.png)
 
 ### Planification de la formation
 
-En utilisant le *calendrier*, vous pouvez sélectionner un jour et une heure de la semaine pour lesquels vous souhaitez que le score ait lieu.
+À l’aide du *planning*, vous pouvez sélectionner le jour et l’heure de la semaine où vous souhaitez que la notation soit effectuée.
 
-Cliquez sur la liste déroulante sous Fréquence *de* score pour sélectionner une note quotidienne, hebdomadaire et mensuelle. Ensuite, sélectionnez les jours de la semaine où vous souhaitez que le score ait lieu. Vous pouvez sélectionner plusieurs jours. Cliquez une seconde fois sur un jour pour le désélectionner.
+Cliquez sur le menu déroulant sous *Fréquence de notation* pour choisir entre une notation quotidienne, hebdomadaire et mensuelle. Ensuite, sélectionnez les jours de la semaine où vous souhaitez que la notation soit effectuée. Vous pouvez sélectionner plusieurs jours. Cliquez une seconde fois sur un jour pour le désélectionner.
 
 ![Planification de la formation](./images/user-guide/schedule_training.png)
 
-Pour modifier l’heure de la journée à laquelle vous souhaitez que le score se produise, cliquez sur l’icône de l’horloge. Dans la nouvelle incrustation qui s’affiche, entrez l’heure de la journée à laquelle vous souhaitez que le score ait lieu. Cliquez en dehors de l’incrustation pour la fermer.
+Pour modifier l’heure de la journée où vous souhaitez que la notation soit effectuée, cliquez sur l’icône de l’horloge. Dans la nouvelle fenêtre qui s’affiche, saisissez l’heure de la journée à laquelle vous souhaitez que la notation soit effectuée. Cliquez en dehors de la fenêtre pour la fermer.
 
 >[!NOTE]
 >
->Chaque processus de notation peut prendre jusqu’à 24 heures.
+>Chaque processus de notation peut prendre jusqu’à 24 heures.
 
-![icône horloge](./images/user-guide/time_of_day.png)
+![icône de l’horloge](./images/user-guide/time_of_day.png)
 
-### Modélisation basée sur la région (facultatif) {#region-based-modeling-optional}
+### Modélisation basée sur la région (facultative) {#region-based-modeling-optional}
 
-Les comportements de vos clients peuvent différer considérablement selon le pays et la région géographique. Pour les entreprises internationales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
+Le comportement de vos clients peut varier considérablement selon le pays et la région géographique. Pour les entreprises mondiales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
 
-Pour définir une nouvelle région, début en cliquant sur **Ajouter la région**. Dans le conteneur qui s’affiche, nommez la région. Une seule valeur (&quot;placeContext.geo.countryCode&quot;) est renseignée à partir de la liste déroulante *Entrer le nom* de champ. Sélectionnez cette valeur.
+Pour définir une nouvelle région, commencez par cliquer sur **Ajouter une région**. Dans le conteneur qui s’affiche, attribuez un nom à la région. Une seule valeur (« placeContext.geo.countryCode ») s’affiche dans le menu déroulant *Saisir le nom du champ*. Sélectionnez cette valeur.
 
-![Sélectionner une région à](./images/user-guide/select_region_att.png)
+![Sélectionner l’attribution de la région](./images/user-guide/select_region_att.png)
 
 Sélectionnez ensuite un opérateur.
 
 ![opérateur de région](./images/user-guide/region_operators.png)
 
-Enfin, tapez le code du pays dans la liste déroulante *Saisir la valeur* de champ.
+Pour finir, saisissez le code pays dans le menu déroulant *Saisir la valeur du champ*.
 
 >[!NOTE]
 >
->Les codes de pays comportent deux caractères. Une liste complète est disponible ici [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>Les codes pays se composent de deux caractères. Vous trouverez ci-contre une liste complète de ces codes [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![région](./images/user-guide/region-based.png)
 
-### Fenêtre Formation
+### Période de formation
 
-Pour vous assurer d&#39;obtenir le modèle le plus précis possible, il est important de former votre modèle à des données historiques qui représentent votre activité. Par défaut, le modèle est formé à l&#39;aide de 2 trimestres (6 mois) de données. Sélectionnez la liste déroulante pour modifier la valeur par défaut. Vous pouvez choisir de vous entraîner avec un à quatre quarts de données (3 à 12 mois).
+Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé sur la base de 2 trimestres (6 mois) de données. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
 
 >[!NOTE]
 >
->Une fenêtre de formation plus courte est plus sensible aux tendances récentes, tandis qu&#39;une fenêtre de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
+>Une période de formation plus courte est plus réceptive aux tendances récentes, tandis qu’une période de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
 
-![fenêtre de formation](./images/user-guide/training_window.png)
+![période de formation](./images/user-guide/training_window.png)
 
-Une fois que vous avez sélectionné votre fenêtre de formation, cliquez sur **Terminer** dans le coin supérieur droit. Patientez un peu avant que les données ne soient traitées. Une fois l’instance terminée, une boîte de dialogue contextuelle s’affiche, confirmant que la configuration de l’instance est terminée. Cliquez sur **OK** pour être redirigé vers la page des instances *de* service où vous pouvez voir votre instance de service.
+Une fois que vous avez sélectionné votre période de formation, cliquez sur **Terminer** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Cliquez sur **OK** pour être redirigé vers la page *Instances de service* sur laquelle vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à créer une instance de service dans l’API d’attribution. Une fois l’instance terminée (jusqu’à 24 heures), vous êtes prêt à [découvrir les informations](./discover-insights.md)sur l’API d’attribution. De plus, si vous souhaitez télécharger les résultats de votre score, consultez la [documentation des scores](./download-scores.md) bruts téléchargée.
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, consultez la documentation sur le [téléchargement de scores bruts](./download-scores.md).
 
 ## Ressources supplémentaires
 
