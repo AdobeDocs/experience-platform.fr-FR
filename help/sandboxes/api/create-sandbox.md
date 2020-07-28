@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d’un sandbox
+title: Création d’un environnement de test
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# Création d’un sandbox
+# Création d’un environnement de test
 
-You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
+Vous pouvez créer un nouvel environnement de test en effectuant une requête POST au point de terminaison `/sandboxes`.
 
 **Format d’API**
 
@@ -24,7 +24,7 @@ POST /sandboxes
 
 **Requête**
 
-La requête suivante crée un nouveau sandbox de développement nommé &quot;dev-3&quot;.
+La requête suivante crée un nouvel environnement de test de développement nommé « dev-3 ».
 
 ```shell
 curl -X POST \
@@ -43,13 +43,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Identifiant qui sera utilisé pour accéder au sandbox dans les futures requêtes. Cette valeur doit être unique et la meilleure pratique consiste à la rendre aussi descriptive que possible. Ne peut pas contenir d&#39;espaces ni de majuscules. |
-| `title` | Nom lisible par l’utilisateur utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
-| `type` | Type de sandbox à créer. Actuellement, seuls les sandbox de type &quot;développement&quot; peuvent être créés par une organisation. |
+| `name` | Identifiant qui sera utilisé pour accéder à l’environnement de test lors de futures requêtes. Cette valeur doit être unique, et il est recommandé de la décrire le plus précisément possible. Elle ne peut pas contenir d’espaces ni de majuscules. |
+| `title` | Nom compréhensible utilisé à des fins d’affichage dans l’interface utilisateur de Platform. |
+| `type` | Type d’environnement de test à créer. Actuellement, seuls les environnements de test de type « développement » peuvent être créés par une organisation. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau sandbox, indiquant qu’il `state` est en cours de &quot;création&quot;.
+Une réponse réussie renvoie les détails du nouvel environnement de test, indiquant que son `state` est « création ».
 
 ```json
 {
@@ -63,4 +63,4 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant qu’il
 
 >[!NOTE]
 >
->Les sandbox prennent environ 15 minutes pour être approvisionnés par le système, après quoi ils `state` deviendront &quot;actifs&quot; ou &quot;échoués&quot;.
+> Il faut environ 15 minutes pour que les environnements de test soient configurés par le système, après quoi leur `state` passe en « actif » ou en « échec ».
