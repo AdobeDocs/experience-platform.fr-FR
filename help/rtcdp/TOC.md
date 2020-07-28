@@ -76,7 +76,7 @@ ht-degree: 89%
       * Destinations de stockage dans le cloud {#cloud-storage}
          * [Présentation des destinations de stockage dans le cloud](destinations/cloud-storage-destinations.md)
          * [Workflow de création de destinations de stockage dans le cloud](/help/rtcdp/destinations/cloud-storage-destinations-workflow.md)
-         * [Destination Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md)
+         * [Destination Amazon](/help/rtcdp/destinations/amazon-kinesis-destination.md)
          * [Destination Amazon S3](destinations/amazon-s3-destination.md)
          * [Destination des centres de Événement Azure](/help/rtcdp/destinations/azure-event-hubs-destination.md)
          * [Destination SFTP](destinations/sftp-destination.md)
