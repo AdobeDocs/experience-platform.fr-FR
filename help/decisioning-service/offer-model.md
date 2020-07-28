@@ -1,153 +1,153 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Modèle de domaine de prise de décision d’Offre
+title: Modèle de domaine de prise de décision relative aux offres
 topic: overview
 translation-type: tm+mt
 source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
 workflow-type: tm+mt
 source-wordcount: '2614'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
 
-# Offre Prise de décision Présentation du modèle de domaine
+# Présentation du modèle de domaine de prise de décision relative aux offres
 
-La prise de décision par Offre est un exemple d’utilisation dans lequel vous pouvez formaliser et gérer de manière centralisée les règles et prédictions utilisées pour attirer les clients avec des offres. [!DNL Decisioning Service] La décision d’Offre est considérée comme un type de décision _**de**_ contenu. Dans ce cas d&#39;utilisation, les options _**de**_ décision sont appelées _**offres**_ et se caractérisent par le contenu qui leur est joint. Pour une présentation du modèle d&#39;objet utilisé par le [!DNL Decisioning Service]service, veuillez vous reporter au modèle [de domaine du service de](experience-model.md)prise de décision.
+Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. La prise de décision relative aux offres est considérée comme un type de _**prise de décision relative au contenu**_. Dans ce cas d’utilisation, les _**options de décision**_ sont appelées des _**offres**_, et sont caractérisées en tant que telles par le contenu qui y est associé. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
 
-L&#39;objectif est de présenter à l&#39;utilisateur final une &quot;meilleure Offre&quot; dans n&#39;importe quel canal en fonction des critères de ciblage, des contraintes de coût et de fréquence, ainsi que des interactions préalables entre canaux, y compris les Offres antérieures proposées.
+L’objectif est de présenter à l’utilisateur final une « meilleure offre » sur n’importe quel canal en fonction de critères de ciblage, de contraintes de coût et de fréquence, ainsi que d’interactions préalables entre les canaux, y compris les offres antérieures proposées.
 
-Comme pour tous les cas d’utilisation de la prise de décision, les options de décision (offres) sont gérées dans un rapport partagé par n’importe quel nombre d’applications. Les Offres peuvent être créées par différents services de votre organisation ou par des partenaires, et ces offres peuvent être ajoutées et supprimées quotidiennement.
+Comme pour tous les cas d’utilisation de prise de décision, les options de décision (offres) sont gérées dans un référentiel partagé par un certain nombre d’applications. Les offres peuvent être créées par différents services de votre organisation ou par des partenaires, et celles-ci peuvent être ajoutées et supprimées quotidiennement.
 
-Les Offres sont visuellement placées dans des expériences plus vastes par l’application qui les diffuse. _**Les emplacements**_, parfois appelés emplacements ou emplacements, sont des composants importants pour l&#39;élaboration d&#39;une stratégie. La conception d&#39;une stratégie d&#39;offre début souvent avec la définition de ces placements. En règle générale, une offre comporte plusieurs représentations _**de**_ contenu afin de pouvoir être correctement intégrée dans une variété d’expériences, où chacune présente des contraintes dimensionnelles ou autres et requiert différents formats de médias.
+Les offres sont placées visuellement dans des expériences plus importantes par l’application qui les propose. Les _**emplacements**_, parfois appelés zones ou places, sont des éléments importants pour l’élaboration d’une stratégie. La conception d’une stratégie d’offre commence souvent par la définition de ces emplacements. Une offre a généralement de multiples _**représentations de contenu**_ afin de pouvoir être correctement intégrée dans diverses expériences, où chacune présente des contraintes dimensionnelles ou autres et nécessite différents formats de médias.
 
-Les Offres ont souvent une association avec des biens ou des services physiques et il y a un calcul des coûts. Une organisation doit être en mesure de limiter les ressources consommées par les offres et doit donc être en mesure de _**plafonner**_ le nombre total de fois où une offre peut être proposée.
+Les offres sont souvent associées à des biens ou des services physiques et font l’objet d’un calcul de coût. Une organisation doit être capable de limiter les ressources utilisées par les offres et doit donc pouvoir _**plafonner**_ le nombre total de fois où une offre peut être proposée.
 
-La valeur prévue d&#39;une offre acceptée pour l&#39;organisation est le critère d&#39;optimisation et va à l&#39;encontre du coût de réalisation d&#39;une offre. Le coût, la probabilité d&#39;acceptation et la valeur prévue sont utilisés pour classer les offres. La Meilleure Offre est celle qui a le plus d&#39;impact positif prédit sur les objectifs de vos activités offres.
+La valeur prédite d’une offre acceptée pour l’organisation est le critère d’optimisation et s’oppose au coût de la présentation d’une offre. Le coût, la probabilité d’acceptation et la valeur prédite sont utilisés pour classer les offres. La meilleure offre est celle qui a le plus grand impact positif prédit sur les objectifs de vos activités d’offre.
 
-La prise de décision des Offres prend en compte les interactions qu’un utilisateur final a eu, _**dans de nombreux canaux**_ et applications, pour exploiter les données de événement d’profil et d’expérience d’un utilisateur final. Par exemple, une application de centre d’appels peut utiliser la prise de décision des Offres pour activer ou supprimer une offre en fonction des achats effectués et des révisions publiées par l’utilisateur final ; ou une application de gestion du courrier électronique peut s’appuyer sur la prise de décision des Offres pour sélectionner la prochaine meilleure Offre dans un bulletin d’information hebdomadaire en fonction de l’historique de navigation d’un site Web.
+La prise de décision relative aux offres tient compte des interactions qu’un utilisateur final a eues _**via de nombreux canaux**_ et applications. Elle s’appuie sur le profil de l’utilisateur final et sur les données d’événement d’expérience. Par exemple, une application de centre d’appel peut utiliser la prise de décision relative aux offres pour activer ou supprimer une offre basée sur les achats effectués et les commentaires émis par l’utilisateur final ; ou une application de gestion des e-mails peut s’appuyer sur la prise de décision relative aux offres pour sélectionner la meilleure offre disponible dans une newsletter hebdomadaire en fonction de l’historique de navigation sur un site web.
 
-Les Offres ont d&#39;autres propriétés intéressantes. Il existe souvent un _**calendrier**_ ou une plage de dates et d&#39;heures défini lorsque l&#39;offre est valide et selon le moment où l&#39;offre doit être invalidée.
+Les offres ont d’autres propriétés intéressantes. Souvent, il existe un _**planning**_ ou une plage de dates et d’heures définis lorsque l’offre est valide et au moment où elle doit être invalidée.
 
-Enfin, l&#39;appel d&#39;une offre se détériore avec la fréquence à laquelle elle est présentée. Une Offre qui n&#39;est pas acceptée après avoir été proposée à plusieurs reprises est une occasion perdue parce qu&#39;une autre offre aurait pu être présentée. C&#39;est pourquoi il faut gérer la _**fatigue**_ des utilisateurs finaux.
+Enfin, l’attrait d’une offre se détériore proportionnellement à la fréquence de sa présentation. Une offre qui n’est pas acceptée après avoir été proposée à plusieurs reprises est une occasion manquée car une autre offre aurait pu être présentée. C’est pourquoi il faut gérer la _**fatigue**_ de l’utilisateur final.
 
-## Offre Stratégie décisionnelle en un coup d&#39;oeil
+## Principales caractéristiques de la stratégie de décision relative aux offres
 
-L’approche globale consiste à restreindre la sélection des Offres jusqu’à ce que toutes les contraintes soient satisfaites, puis à appliquer le modèle de classement aux options restantes, puis à optimiser les  sur plusieurs activités à l’aide de contraintes de plafonnement (déduplication et évitement des choix de reprise).
+L’approche globale consiste à restreindre la sélection des offres jusqu’à ce que toutes les contraintes soient respectées, puis à appliquer le modèle de classement aux options restantes, et enfin à optimiser les activités multiples en utilisant les contraintes de limitation (déduplication et contournement des choix de secours).
 
-| Composant de la stratégie | Réalisé comme |
+| Composante de la stratégie | Réalisée à titre de |
 | --- | --- |
-| activités de décision | activités Offres |
-| Options de décision | Offre avec les représentations de contenu |
-| Options de secours | offre de secours avec représentations de contenu |
-| Ensemble fini d&#39;options de décision | Inventaire des Offres (bibliothèque d&#39;offres, par exemple) |
-| catégories thématiques | Filtre d’Offre basé sur les balises et les identifiants d’offre |
-| Résultats de la décision | Proposition d&#39;une offre par activité, pour plusieurs activités à la fois |
-| Résultats de la décision | événement d’expérience prévu par rapport à l’offre, p. ex. `eventType='opened'` |
-| Algorithme de décision | Logique de service interne, paramétré |
-| Contraintes | Contraintes de positionnement, contraintes de calendrier, contraintes de plafonnement globales et par utilisateur, contraintes de déduplication |
+| Activités de décision | Activités d’offre |
+| Options de décision | Offre avec représentations de contenu |
+| Options de secours | Offre de secours avec représentations de contenu |
+| Ensemble fini d’options de décision | Inventaire des offres (aussi appelé bibliothèque des offres) |
+| Catégories de thèmes | Filtre d’offres basé sur des balises et des identificateurs d’offres |
+| Propositions de décision | Proposition d’une offre par activité, pour plusieurs activités à la fois |
+| Résultats des décisions | Événement d’expérience attendu en référence à l’offre, par exemple `eventType='opened'` |
+| Algorithme de décision | Logique de service interne, paramétrée |
+| Contraintes | Contraintes d’emplacement, contraintes calendaires, contraintes de limitation globales et par utilisateur, contraintes de déduplication |
 | Règles de décision | Règles d’éligibilité |
-| Modèle pour l&#39;utilitaire *attendu* | Ordre de classement ou de priorité des Offres |
+| Modèle pour l’*utilité attendue* | Classement ou priorité de l’offre |
 
-Le nombre total d&#39;offres dans l&#39;inventaire des options est généralement assez important (de l&#39;ordre de 10 000) et chaque activité d&#39;offre peut être axée sur les offres qui tombent dans une catégorie différente (sujet). La stratégie de décision d&#39;offre permet d&#39;associer un filtre d&#39;offre à une activité d&#39;offre. D&#39;autres contraintes seront évaluées au moment où la décision sera demandée.
-Les sections suivantes décrivent en détail les composants du domaine de prise de décision des Offres.
+Le nombre total d’offres dans l’inventaire des options est généralement assez important (de l’ordre de 10 000) et chaque activité d’offre peut porter sur des offres qui relèvent d’une catégorie (thème) différente. La stratégie de décision relative aux offres permet de joindre un filtre d’offre à une activité d’offre. Les contraintes supplémentaires seront évaluées au moment où la décision sera requise.
+Les sections suivantes expliquent en détail les composantes du domaine de la prise de décision relative aux offres.
 
-## offres générales
+## Offres générales
 
-Les offres générales, également appelées offres personnalisées, sont les options au centre des activités décisionnelles des offres. Ils ont des attributs tels que le nom et l’état. L&#39;attribut status indique si l&#39;entité est prête à être incluse dans la liste des offres approuvées actives. Plusieurs contraintes s&#39;ajouteront aux offres générales. Pour plus d&#39;informations à ce sujet, consultez la section Contraintes ‎ [ci-dessous](#offer-constraints).
+Les offres générales, également appelées offres personnalisées, sont les options au centre des activités de décision relatives aux offres. Elles comportent des attributs comme le nom et l’état. L’attribut État indique si l’entité est prête à être incluse dans la liste des offres actives approuvées. Les offres générales sont soumises à plusieurs contraintes. Pour en savoir plus, consultez la section ‎Contraintes [ci-dessous](#offer-constraints).
 
-## Contenu dans les Offres
+## Contenu des offres
 
-### Positionnement des Offres
+### Emplacements d’offre
 
-Les emplacements définissent les contraintes de contenu et sont utilisés avec une activité pour spécifier l’emplacement dans lequel la meilleure expérience suivante est livrée. Cela réduit davantage le nombre d&#39;options qui peuvent être envisagées et constitue une autre contrainte imposée par l&#39;activité. Il s&#39;agit de la contrainte de placement. Seules les options dont le contenu répond à une contrainte de placement, telles que les offres, seront prises en compte. Cette évaluation est effectuée dans les premières étapes de la stratégie de décision. Lorsque les objets d’option modifient les contraintes de placement de chaque activité sont réévalués et l’option peut être prise en compte ou en ressortir pour une ou plusieurs activités.
+Les emplacements définissent les contraintes de contenu et sont utilisés avec une activité pour spécifier où la meilleure expérience disponible est proposée. Cela réduit davantage le nombre d’options pouvant être envisagées, et constitue une contrainte supplémentaire imposée par l’activité. Cette contrainte s’intitule contrainte d’emplacement. Seules les options dont le contenu répond à une contrainte d’emplacement, telles que les offres, seront prises en considération. Cette évaluation est effectuée dans les premières étapes de la stratégie de décision. Lorsque les objets d’option changent, les contraintes d’emplacement de chaque activité sont réévaluées, et l’option peut être prise en considération ou non pour une ou plusieurs activités.
 
-Il n&#39;est pas de la responsabilité du [!DNL Decisioning Service] gouvernement de formaliser les détails complexes des dépendances de contenu. Au lieu de cela, chaque client identifie la liste des placements sur tous les canaux et leur donne des identifiants et des noms uniques. En référençant un emplacement particulier, le concepteur affirme que le contenu donné s’adaptera à l’emplacement.
+It is not the responsibility of the [!DNL Decisioning Service] to formalize the complex details of content dependencies. Au lieu de cela, chaque client identifiera la liste des emplacements sur tous les canaux et attribuera à ces emplacements des identifiants et des noms uniques. En référençant un emplacement particulier, le concepteur affirme que le contenu donné s’y intégrera.
 
-Lorsque le contenu est développé, le spécialiste du marketing d’offre et le concepteur de contenu s’entendent simplement (doivent) sur un &quot;contrat implicite&quot; qui se trouve derrière le nom &quot;Page d&#39;accueil Hero Image&quot; ou &quot;Script d’ouverture d’appel de service&quot;. Le premier peut être convenu comme une image de 600 px de largeur et de 350 px de hauteur et le second peut restreindre le contenu au texte dans deux variantes de langue qui n&#39;est pas plus de 50 mots en trois ou quatre phrases avec une structure sémantique. Placement pour ne pas stocker tout le sens du contrat caché.
+Lorsque le contenu est développé, le spécialiste du marketing des offres et le concepteur du contenu (doivent se mettre) se mettent simplement d’accord sur un « contrat implicite » sous-jacent au nom « Bannière de la page d’accueil » ou « Scénario d’ouverture d’un appel de service ». Le premier peut se présenter sous la forme d’une image de 600 pixels de largeur et 350 pixels de hauteur et le second peut se limiter à un texte en deux variantes linguistiques qui ne dépasse pas 50 mots sur trois ou quatre phrases avec une structure sémantique. L’emplacement permet de ne pas retenir toute la signification du contrat caché.
 
-### Rendus de l&#39;offre
+### Représentations d’offre
 
-Pour s&#39;assurer qu&#39;une offre peut être présentée correctement dans les différents paramètres des emplacements de vos canaux, différentes représentations de cette offre doivent être créées. Le contenu joint aux offres est regroupé par emplacements. Chaque offre peut avoir une ou plusieurs représentations dans lesquelles chacune de ces représentations fait référence à l&#39;un des emplacements définis. Chaque représentation dans une offre doit utiliser un emplacement différent. Plus une offre a de représentations, plus elle a de chances d&#39;utiliser l&#39;offre dans différents contextes de placement.
+Pour qu’une offre puisse être présentée correctement dans les différents paramètres des emplacements de vos canaux, il faut créer différentes représentations de cette offre. Les contenus associés aux offres sont regroupés par emplacement. Chaque offre peut avoir une ou plusieurs représentations, et chacune de ces représentations fait référence à l’un des emplacements définis. Chaque représentation dans une offre doit utiliser un emplacement différent. Plus une offre a de représentations, plus il est possible de l’utiliser dans différents contextes d’emplacement.
 
-Un emplacement limite le type d’éléments de contenu qui peuvent être ajoutés à la représentation.
+Un emplacement limite le type d’éléments de contenu pouvant être ajoutés à la représentation.
 
-## offres de secours
+## Offres de secours
 
-Les offres de secours sont des options de décision qui ne comportent pas de contraintes supplémentaires, à l’exception des règles d’emplacements. Les offres de secours comportent des représentations de contenu liées à des emplacements, comme toute autre offre.
+Les offres de secours sont des options de décision qui n’ont pas de contraintes supplémentaires, à l’exception des règles d’emplacement. Les offres de secours ont des représentations de contenu liées aux emplacements, tout comme n’importe quelle autre offre.
 
-Les offres de secours sont spécifiées dans les activités pour indiquer une expérience de contenu viable à utiliser lorsque les contraintes combinées excluent toutes les options réduites. Etant donné qu’elle ne dépend pas du contexte d’exécution ou du profil, la contrainte de placement peut être vérifiée à l’avance lorsque l’activité est assemblée. Les offres de secours permettent toujours de répondre à la question suivante : Quelle est actuellement la meilleure offre ?
+Les offres de secours sont spécifiées dans les activités pour indiquer une expérience de contenu viable à utiliser lorsque des contraintes combinées rendent caduques toutes les options restreintes. Ne dépendant pas du contexte d’exécution ni du profil, il est possible de vérifier à l’avance la contrainte d’emplacement lors de la mise en place de l’activité. Grâce aux offres de secours, il existe toujours une réponse à la question : quelle est actuellement la meilleure offre ?
 
-## Contraintes d&#39;Offre
+## Contraintes d’offre
 
-### Contraintes de calendrier
+### Contraintes calendaires
 
-Dans le domaine de la décision d’offre, les offres ont une période de validité. Cela signifie que l&#39;offre ne peut pas être proposée avant que sa date et son heure de début ne soient dépassées et ne peut plus être proposée après que sa date et son heure de fin sont dépassées. L&#39;entité offre a une structure simple qui définit ces contraintes de calendrier.
+Dans le domaine de la prise de décision relative aux offres, les offres ont une période de validité. Cela signifie que l’offre ne peut pas être proposée avant que sa date et son heure de début ne soient passées, et ne peut plus être proposée après que sa date et son heure de fin soient écoulées. L’entité de l’offre a une structure simple qui définit ces contraintes calendaires.
 
-Régulièrement, les Offres expirées seront retirées de la liste des options considérées. Mais le filtre de calendrier est appliqué correctement au moment où la décision est demandée, de sorte que les contraintes soient appliquées avec précision.
+Régulièrement, les offres expirées sont retirées de la liste des options envisagées. Cependant, le filtre calendaire est appliqué au moment même où la décision est requise afin que les contraintes soient appliquées avec précision.
 
-### Contraintes de plafonnement
+### Contraintes de limitation
 
-Les Offres peuvent avoir une contrainte de plafonnement facultative. Il se compose de deux valeurs :
+Les offres peuvent avoir une contrainte de limitation facultative. Elle se compose de deux valeurs :
 
-- La valeur de plafond globale limite la fréquence à laquelle une offre peut être proposée dans l’ensemble du jeu de profils (audience ciblée).
+- La valeur de la limite globale restreint la fréquence à laquelle une offre peut être proposée sur l’ensemble du profil (audience ciblée).
 
-- Le plafond par profil et détermine la fréquence à laquelle cette Offre peut être proposée au même profil.
+- La limite par profil détermine la fréquence à laquelle cette offre peut être proposée au même profil.
 
 ### Contraintes de duplication
 
-Lorsqu&#39;une décision est demandée, le client peut demander des propositions pour plusieurs activités à la fois. Il s’agit d’un scénario typique de la prise de décision du contenu. Chaque activité fournit une ou plusieurs options de contenu à l’expérience globale. En raison de l&#39;aspect de la composition, les décisions doivent être arbitrées entre les activités pour éviter les doubles emplois - à moins que les activités ne choisissent chacune un sous-ensemble disjoint de l&#39;inventaire global des options. Une option de haut rang est susceptible de se situer au sommet de toutes les activités et ce serait une mauvaise expérience si toutes les activités proposaient la même option. D&#39;un autre côté, si un système de diffusion veut savoir ce qu&#39;est la prochaine meilleure conversion sur tous les canaux et qu&#39;il n&#39;y a pas de contrainte de plafonnement, il peut être correct de proposer la même option sur différentes activités.
+Lorsqu’une décision est requise, le client peut demander des propositions pour plusieurs activités à la fois. C’est un scénario typique de la prise de décision en matière de contenu. Chaque activité apporte une ou plusieurs options de contenu à l’expérience globale. En raison de l’aspect de la composition, les décisions doivent être arbitrées entre les activités pour éviter la duplication, à moins que celles-ci ne choisissent chacune un sous-ensemble disjoint de l’inventaire global des options. Une option de haut rang est susceptible de se retrouver en haut de la liste de toutes les activités. Si toutes les activités proposaient la même option, l’expérience serait médiocre. D’autre part, si un système de diffusion souhaite savoir quelle est la meilleure conversion disponible sur tous les canaux et qu’il n’y a pas de contrainte de limitation, il est possible de proposer la même option pour différentes activités.
 
-Les contraintes de duplication ne sont actuellement pas écrites dans le référentiel des objets métier. Au lieu de cela, la déduplication est la stratégie par défaut au moment de l’exécution. Un paramètre de requête peut remplacer le comportement par défaut pour supprimer l’étape de déduplication.
+Les contraintes de duplication ne sont actuellement pas écrites dans le référentiel d’objets métier. En revanche, la déduplication est la stratégie par défaut au moment de l’exécution. Un paramètre de requête peut remplacer le comportement par défaut pour supprimer l’étape de déduplication.
 
 ### [!DNL Profile] contraintes - Règles d&#39;éligibilité
 
-Jusqu&#39;à présent, les contraintes dont il a été question ont été applicables indépendamment de la personne pour laquelle l&#39;offre a été choisie. La prise de décision d’expérience prend également en charge un cas d’utilisation dans lequel les propositions de personnalisation sont basées sur les événements d’enregistrement et de séries chronologiques d’un client. Les règles sont évaluées par profil, afin de déterminer si une offre est admissible ou doit être supprimée pour cet utilisateur. Pour ce faire, une règle d&#39;éligibilité peut être associée à chaque offre. Outre les événements d’profil et d’expérience d’un utilisateur final, la règle d&#39;éligibilité tiendra compte des données contextuelles en temps réel. Ces données sont fournies par le service de diffusion et peuvent prendre la forme de données qui ne sont pas liées à un profil, comme les niveaux d&#39;inventaire, les conditions météorologiques, les horaires de vol.
+Jusqu’à présent, les contraintes évoquées ont été applicables quelle que soit la personne pour laquelle l’offre est sélectionnée. La prise de décision d’expérience prend également en charge un cas d’utilisation dans lequel les propositions de personnalisation reposent sur les événements d’enregistrement et de série temporelle d’un client. Les règles sont évaluées par profil, afin de décider si une offre est admissible ou doit être supprimée pour cet utilisateur. Pour ce faire, une règle d’éligibilité peut être associée à chaque offre. Outre les événements liés au profil et à l’expérience d’un utilisateur final, la règle d’éligibilité tiendra compte des données contextuelles en temps réel. Ces données sont fournies par le service de diffusion et peuvent prendre la forme de données non liées à un profil, comme les niveaux d’inventaire, les conditions météorologiques, et les horaires de vol.
 
-Il est important de faire la distinction entre les règles de ciblage et de segmentation, ainsi qu’entre les règles d’éligibilité et les règles de priorité pour la prise de décision. Pour le ciblage d’un ensemble de profils est la sortie (sélection d’audiences) pour l’éligibilité un ensemble d’options (offres autorisées) est le résultat de l’évaluation.
+Il est important de faire la distinction entre les règles de ciblage et de segmentation, et entre les règles d’éligibilité et de priorité pour la prise de décision. Pour le ciblage, un ensemble de profils est le résultat (sélection de l’audience). Pour l’éligibilité, un ensemble d’options (offres autorisées) est le résultat de l’évaluation.
 
-## Collections d’Offres
+## Collections d’offres
 
-L&#39;inventaire est le groupe global d&#39;options qui sont prises en compte pour la prise de décision. L&#39;inventaire peut être divisé en catégories ou en collections. Un ensemble d’options est représenté par une balise commune que ces options possèdent. Les Filtres sont utilisés pour tester si les offres appartiennent à une certaine catégorie ou, plus précisément, partagent la ou les mêmes balises.
+L’inventaire est l’ensemble des options envisagées pour la prise de décision. L’inventaire peut être subdivisé en catégories ou en collections. Une collection d’options est représentée par une balise commune attribuée à ces options. Les filtres sont utilisés pour vérifier si les offres appartiennent à une certaine catégorie ou, plus précisément, si elles partagent la ou les mêmes balises.
 
 ### Balises
 
-Les balises permettent d’exprimer qu’un groupe d’options appartient à une catégorie.
+Les balises permettent d’indiquer qu’un groupe d’options appartient à une catégorie.
 
-Une option peut comporter plusieurs balises et peut donc se trouver simultanément dans plusieurs catégories. Les Catégories peuvent également se chevaucher ou en contenir une autre. Lorsqu’une catégorie &quot;S&quot; est définie par des offres ayant la balise &quot;A&quot; et que la catégorie &quot;R&quot; est définie par des options avec les balises &quot;A&quot; et &quot;B&quot;, &quot;S&quot; est alors un ensemble superset de &quot;R&quot;.
+Une option peut comporter plusieurs balises et, par conséquent, se trouver simultanément dans plusieurs catégories. Les catégories peuvent également se chevaucher ou en contenir une autre. Lorsqu’une catégorie « S » est définie par des offres ayant la balise « A » et que la catégorie « R » est définie par des options ayant à la fois les balises « A » et « B », alors « S » devient un sur-ensemble de « R ».
 
 ### Filtres
 
-Les Filtres sont utilisés pour définir les critères d’un ensemble d’options appartenant à une catégorie. Les Filtres peuvent être considérés comme des requêtes par rapport à l&#39;inventaire des offres générales. Il existe deux méthodes de base pour former un filtre : en indiquant qu’une offre comporte une ou plusieurs balises et en sélectionnant explicitement l’ensemble d’offres. L’ancienne méthode peut être configurée pour indiquer qu’une offre de cette collection doit comporter toutes les balises spécifiées ou qu’une option est admissible lorsqu’elle comporte au moins une des balises spécifiées.
+Les filtres sont utilisés pour définir les critères d’un ensemble d’options appartenant à une catégorie. Les filtres peuvent être considérés comme des requêtes par rapport à l’inventaire des offres générales. Il existe deux méthodes de base pour former un filtre : en indiquant qu’une offre possède une ou plusieurs balises et en sélectionnant explicitement l’ensemble des offres. La première méthode peut être configurée pour indiquer qu’une offre dans cette collection doit avoir toutes les balises spécifiées ou qu’une option est admissible lorsqu’elle comporte au moins une des balises spécifiées.
 
 Lorsque des options sont explicitement placées dans une collection, leur jeu de balises est ignoré pour cette collection.
 
-## Activités Offres
+## Activités d’offre
 
-Les Activités configurent et contrôlent le processus de prise de décision. Actuellement, la stratégie de décision est principalement prédéfinie mais les futures itérations du modèle de domaine de prise de décision des Offres permettront la sélection de modèles, de règles supplémentaires et de contraintes.
+Les activités configurent et contrôlent le processus de prise de décision. Actuellement, la stratégie de décision est principalement prédéterminée, mais de futures itérations du modèle de domaine de prise de décision relative aux offres permettront de sélectionner des modèles, des règles et des contraintes supplémentaires.
 
-Une expérience peut être assemblée à l’aide de nombreuses activités simultanément. Actuellement, jusqu’à 30 activités peuvent être traitées dans une seule demande de décision. Si plus de 30 activités ou emplacements d’une expérience doivent être remplis avec du contenu, plusieurs requêtes peuvent être effectuées pour le même profil. Toutefois, lorsque des activités sont incluses dans la même demande de décision, la déduplication des Propositions d&#39;offre sera effectuée entre ces activités.
+Une expérience peut être constituée en utilisant plusieurs activités simultanément. Actuellement, il est possible de traiter jusqu’à 30 activités dans une seule requête de prise de décision. Si plus de 30 activités ou places dans une expérience doivent être complétées par du contenu, plusieurs requêtes peuvent être effectuées pour le même profil. Toutefois, lorsque des activités sont incluses dans une même requête de décision, la déduplication des propositions d’offre est effectuée parmi ces activités.
 
-Si les activités sont définies d&#39;une manière qu&#39;elles choisissent parmi des ensembles d&#39;offres disjoints, il n&#39;y a pas de différence entre les activités combinées dans la même requête ou fractionnées en requêtes distinctes. Mais les contraintes de temps de réseau et de réponse peuvent exiger la combinaison d&#39;activités dans la même demande. Comme différentes requêtes peuvent être acheminées vers différents noeuds de service, les mêmes données de profil peuvent devoir être extraites vers différents noeuds. Cela réduit la bande passante d&#39;E/S disponible pour les autres requêtes.
+Si les activités sont définies de manière à être sélectionnées parmi des ensembles d’offres disjoints, alors cela importe peu que les activités soient combinées dans une même requête ou séparées dans des requêtes distinctes. Cependant, les contraintes liées au réseau et au temps de réponse peuvent nécessiter le regroupement des activités dans une même requête. Comme différentes requêtes peuvent être acheminées vers différents nœuds de service, il est possible que les mêmes données de profil doivent être récupérées dans différents nœuds. Cela réduit la bande passante effective des E/S disponible pour les autres requêtes.
 
-Les Activités sont utilisées pour insérer du contenu dans une expérience. Pour faciliter (et non pour s’assurer) que les éléments de contenu &quot;s’adaptent&quot; correctement, une activité fait référence à un emplacement unique. Notez qu&#39;un emplacement n&#39;est pas toujours un emplacement/emplacement concret mais plutôt une abstraction de ces emplacements/emplacements. Par exemple, dans une page Web avec une grille de mosaïques, chaque mosaïque peut être régie par le même emplacement, en supposant qu’elle ait toutes la même forme et la même taille et qu’elle puisse contenir le même contenu. Cependant, une mosaïque individuelle est généralement fournie par sa propre activité.
+Les activités sont utilisées pour ajouter du contenu à une expérience. Pour faciliter (et non garantir) la bonne « adéquation » des éléments de contenu, une activité fait référence à un seul emplacement. Notez qu’un emplacement n’est pas toujours un endroit/une place concrète, mais plutôt une abstraction de ces endroits/places. Par exemple, dans une page web avec une grille de mosaïques, chaque mosaïque pourrait être régie par le même emplacement, à condition qu’elles aient toutes une forme et une taille similaires et qu’elles puissent contenir un même contenu. Toutefois, une mosaïque individuelle est généralement fournie par sa propre activité.
 
-La figure suivante illustre comment les entités commerciales sont liées les unes aux autres :
+La figure ci-dessous illustre les relations entre les entités commerciales :
 
 ![](./images/figure-10.png)
 
-Lorsque les clients créent et lient le graphique d’objets pour les décisions, il y a généralement trois flux de travail différents. Ces sont les suivants :
+Généralement, lorsque les clients créent et relient le graphique d’objets pour les décisions, trois axes de travail différents se distinguent. En voici la liste :
 
-- Configuration des entités de prise en charge telles que les balises et les emplacements. Ces entités sont utilisées pour structurer, filtrer et regrouper d&#39;autres entités. Ils servent également à assurer une certaine coordination entre le deuxième et le troisième processus. Ce flux de travail constitue un travail préalable mais à tout moment des améliorations peuvent être apportées à la configuration. Bien que les balises soient relativement simples, les placements nécessitent une planification un peu plus poussée. Au minimum, une entreprise doit dresser un inventaire de tous les lieux où une décision est présentée.
+- Mise en place des entités de prise en charge telles que les balises et les emplacements. Ces entités sont utilisées pour structurer, filtrer et regrouper d’autres entités. Elles assurent également une certaine coordination entre le deuxième et le troisième workflow. Ce workflow constitue un travail préparatoire, mais à tout moment, des améliorations peuvent être apportées à la mise en place. Bien que les balises soient relativement simples, les emplacements nécessitent une planification plus poussée. Une entreprise doit au minimum dresser un inventaire de tous les emplacements où une décision est présentée.
 
-- Création d’offres avec les différentes représentations et règles de fonctionnement (contraintes). Ce flux de travail centralisé fournit les options parmi lesquelles nous devons sélectionner les meilleures. Les balises du premier flux de travail sont utilisées pour classer les offres et les emplacements sont utilisés pour indiquer les options qui peuvent être présentées et où.
+- Création d’offres avec les différentes représentations et règles commerciales (contraintes). Ce workflow central fournit les options parmi lesquelles il nous faut sélectionner les meilleures. Les balises du premier workflow sont utilisées pour classer les offres et les emplacements permettent d’indiquer quelles options peuvent être présentées, et où.
 
-   - Ce processus définit également les contraintes absolues pour les offres. Ils sont absolus parce qu’ils seront toujours appliqués et n’affectent pas seulement le classement d’un ensemble d’offres. Par exemple, lorsqu&#39;une contrainte de calendrier est définie, l&#39;offre ne sera jamais sélectionnée avant la date et l&#39;heure de début définies et jamais après la date et l&#39;heure de fin. Les contraintes qui seront définies dans ce flux de travail sont les contraintes [de](#calendar-constraints)calendrier, les contraintes [de](#capping-constraints) plafonnement et les contraintes [d&#39;](#profile-constraints---eligibility-rules)éligibilité. Un sous-processus est ici la définition de règles supplémentaires qui déterminent qui peut recevoir une offre donnée.
+   - Ce workflow définit également des contraintes absolues pour les offres. Elles sont absolues car elles seront toujours appliquées et n’affectent pas seulement le classement parmi un ensemble d’offres. Par exemple, lorsqu’une contrainte calendaire est définie, l’offre n’est jamais sélectionnée avant sa date/heure de début et après sa date/heure de fin. Les contraintes qui seront définies dans ce workflow sont les [contraintes calendaires](#calendar-constraints), les [contraintes de limitation](#capping-constraints) et les [contraintes d’éligibilité](#profile-constraints---eligibility-rules). Un workflow secondaire est ici la définition de règles supplémentaires déterminant qui est éligible pour recevoir une offre donnée.
 
-      - En même temps que des contraintes sont créées pour une offre, ses représentations sont sélectionnées. Ce processus suppose que le contenu est déjà créé quelque part et qu’il est simplement téléchargé vers le référentiel de contenu et sélectionné à partir de celui-ci. C&#39;est ici que les emplacements du premier flux de travail entrent en jeu. Une offre peut sélectionner des emplacements et associer le contenu sous cet [emplacement](#offer-placements).
+      - Pendant que des contraintes sont créées pour une offre, ses représentations sont sélectionnées. Ce workflow suppose que le contenu est déjà créé quelque part et qu’il est simplement chargé et sélectionné dans le référentiel de contenu. C’est là que les emplacements du premier workflow entrent en jeu. Une offre peut sélectionner des emplacements et associer le contenu à cet [emplacement](#offer-placements).
 
-      - La création d&#39;offres de secours appropriées est la dernière étape de ce flux de travaux. Une offre de secours ressemble beaucoup à une offre générale sans contraintes.
+      - La création d’offres de secours adaptées est la dernière étape de ce workflow. Une offre de secours ressemble beaucoup à une offre générale sans contraintes.
 
-- Le dernier flux de travail concerne la création d’activités. Cependant, cette étape ne se produit pas nécessairement de manière séquentielle après le flux de travail pour créer des offres. Les deux processus sont en cours et simultanés. Les Activités sont utilisées pour restreindre la portée des options par sujet et par lieu de présentation des décisions. Une activité fait référence à une [collection](#offer-collections) et à un emplacement. Elle doit également spécifier une offre [de](#fallback-offers) secours utilisée dans les cas où une offre admissible ne peut pas être déterminée.
+- Le dernier workflow concerne la création d’activités. Toutefois, cette étape ne se déroule pas nécessairement de manière séquentielle après le workflow de création des offres. Les deux processus sont en cours et simultanés. Les activités sont utilisées pour réduire la portée des options par thème et par emplacement de présentation des décisions. Une activité fait référence à une [collection](#offer-collections) et à un emplacement. Elle doit également spécifier une [offre de secours](#fallback-offers) à utiliser dans les cas où une offre admissible ne peut être déterminée.
 
