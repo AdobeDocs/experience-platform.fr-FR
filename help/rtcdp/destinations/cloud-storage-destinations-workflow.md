@@ -22,7 +22,7 @@ Cette page explique comment se connecter aux emplacements de stockage dans le cl
 
    ![Connexion à la destination de stockage dans le cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
-2. À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. <br> Voir destination, [destination,](/help/rtcdp/destinations/amazon-s3-destination.md) destination et destination [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) SFTP [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) d’Amazon S3 [pour en savoir plus sur les informations d’identification saisies à l’étape](/help/rtcdp/destinations/sftp-destination.md) **Authentication.**
+2. À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. <br> Voir destination, [destination,](/help/rtcdp/destinations/amazon-s3-destination.md) destination et destination [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) SFTP [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) Amazon S3 [pour en savoir plus sur les informations d’identification saisies à l’étape](/help/rtcdp/destinations/sftp-destination.md) **Authentification.**
 
    >[!NOTE]
    >
@@ -31,7 +31,7 @@ Cette page explique comment se connecter aux emplacements de stockage dans le cl
    ![Connexion à la destination de stockage dans le cloud - étape d’authentification](/help/rtcdp/destinations/assets/cloud-destinations-authentication-step.png)
 
 3. À l’étape **[!UICONTROL Configuration]**, saisissez un **[!UICONTROL Nom]** et une **[!UICONTROL Description]** pour votre flux d’activation. <br>
-Cette étape vous permet également de sélectionner tout cas **[!UICONTROL d’utilisation]** marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis individuellement par Adobe, voir l’aperçu [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données. <br>
+Cette étape vous permet également de sélectionner tout cas **[!UICONTROL d’utilisation]** marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](/help/rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis par l’Adobe, voir la présentation [des stratégies d’utilisation des](/help/data-governance/policies/overview.md#core-actions)données. <br>
 Pour les destinations Amazon S3, insérez le **[!UICONTROL Nom du compartiment]** et le **[!UICONTROL Chemin du dossier]** dans votre destination de stockage dans le cloud où les fichiers seront distribués. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
    ![Connexion à la destination de stockage dans le cloud Amazon S3 : étape d’authentification](/help/rtcdp/destinations/assets/amazon-s3-setup-step.png)
@@ -40,13 +40,13 @@ Pour les destinations Amazon S3, insérez le **[!UICONTROL Nom du compartiment]*
 
    ![Connexion à la destination de stockage dans le cloud SFTP : étape d’authentification](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Pour [!DNL Amazon Kinesis] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+   Pour [!DNL Amazon Kinesis] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
-   ![Connexion à la destination de l&#39;enregistrement Kinesis Cloud - étape d&#39;authentification](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
+   ![Connexion à la destination de l&#39;enregistrement cloud Kinesis - étape d&#39;authentification](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Pour [!DNL Azure Event Hubs] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+   Pour [!DNL Azure Event Hubs] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
-   ![Connexion à la destination de l&#39;enregistrement Kinesis Cloud - étape d&#39;authentification](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
+   ![Connexion à la destination de l&#39;enregistrement cloud Kinesis - étape d&#39;authentification](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
 4. Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, consultez la section suivante, [Activation des segments](#activate-segments), pour le reste du processus d’exportation des données.
 
