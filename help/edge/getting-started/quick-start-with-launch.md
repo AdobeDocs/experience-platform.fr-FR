@@ -17,7 +17,7 @@ ht-degree: 27%
 Ce guide vous guide tout au long des différentes manières de configurer le Adobe Experience Platform Web SDK dans Launch. Pour utiliser cette fonctionnalité, vous devez être autorisé. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME, mais vous en avez besoin avant de commencer la production.
-- Avoir droit à l&#39;Adobe Experience Platform. Si vous n’avez pas acheté Platform, Adobe vous fournira la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
+- Avoir droit à l&#39;Adobe Experience Platform. Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Data Services Experience Platform pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur.
 
 ## Création d’un ID de configuration
