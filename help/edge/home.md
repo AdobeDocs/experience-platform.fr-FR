@@ -4,17 +4,42 @@ seo-title: Aide du SDK Web d’Adobe Experience Platform
 description: Découvrez le SDK Web d’Adobe Experience Platform et comment l’utiliser.
 seo-description: permettre aux clients d’Adobe Experience Cloud d’interagir avec les différents services dans Experience Cloud 
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 31%
+source-wordcount: '702'
+ht-degree: 21%
 
 ---
 
 
 # Qu’est-ce que le SDK Web Adobe Experience Platform
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network].
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. Outre la bibliothèque JavaScript, il existe une extension [](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch pour vous aider à configurer votre SDK Web.
+
+## Experience Edge
+
+[!DNL Adobe Experience Platform Web SDK] fait partie de la collection qui constitue Experience Edge. Experience Edge est constitué de trois technologies :
+
+* **[!DNL Adobe Experience Platform Web SDK]:**Un SDK JavaScript et une[!DNL Launch]extension pour simplifier considérablement le déploiement des[!DNL Adobe]technologies
+* **Adobe Experience Platform Mobile SDK :** Extension du SDK mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement
+* **[!DNL Adobe Experience Platform Edge Network]:**Réseau mondial distribué de serveurs qui permet une nouvelle méthodologie de déploiement de[!DNL Adobe]produits
+
+The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
+
+[!DNL Adobe Experience Edge] fournit un seul SDK consolidé pour chaque canal (JavaScript, Mobile, côté serveur), qui envoie les données à un domaine d’Adobe commun (`adobedc.net`) et reçoit une charge utile unique pour la diffusion des données et de l’expérience.
+
+Côté serveur, une passerelle d&#39;arête unifiée et un cadre commun de services de plate-forme facilitent la connexion et le déploiement de nouvelles fonctionnalités dans cet environnement informatique en temps réel.  Cette architecture :
+
+* Réduit le temps passé par le client à la valeur
+* Met fin au besoin d’intégrations &quot;ponctuelles&quot;
+* Améliore les performances par rapport aux anciennes bibliothèques.
+* Diminue les coûts
+* Augmente la vitesse d&#39;innovation
+* Créer des avantages concurrentiels durables pour les clients Adobes
+
+Un système d&#39;arête unique consolidé permet aux clients de gérer leurs campagnes de publicité, de marketing ou de personnalisation sur tous les canaux en tant qu&#39;expérience intégrée.  Il permet [!DNL Adobe] de fournir des services avec un coût total de possession inférieur pour les clients.  Il permet également d&#39;accélérer l&#39;innovation des produits en rendant l&#39;avantage en temps réel enfichable et en permettant à ses clients [!DNL Adobe] et à ses clients d&#39;ajouter plus rapidement de nouvelles fonctionnalités et une logique définie par le client à ce système en temps réel.
+
+## Vue d’ensemble des vidéos
 
 La vidéo suivante donne un aperçu de l&#39;Adobe Experience Platform [!DNL Web SDK] et [!DNL Edge Network].
 
@@ -37,14 +62,13 @@ La vidéo suivante présente l&#39;Adobe Experience Platform [!DNL Web SDK] et l
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-
 ## Prise en main
 
 Nous vous recommandons vivement de [consulter notre guide](getting-started/quick-start-with-launch.md) de prise en main pour obtenir un didacticiel rapide sur la façon de commencer à utiliser le lancement d&#39;Adobe.
 
 Ce produit est en constante évolution et croissance pour prendre en charge de plus en plus de cas d&#39;utilisation. Pour rester au courant des dernières nouveautés, consultez notre carte des [cas d&#39;utilisation](https://github.com/adobe/alloy/projects/5)prise en charge. Nous tenons à jour cette situation avec les cas d&#39;utilisation que nous prenons actuellement en charge et ceux sur lesquels nous travaillons pour vous permettre de prendre les meilleures décisions possibles.
 
-* __Cas d&#39;utilisation non encore pris en charge__ - Il s&#39;agit de cas d&#39;utilisation qui sont sur notre feuille de route à soutenir dans l&#39;avenir.
-* __Cas d&#39;utilisation en cours__ - Il s&#39;agit des cas d&#39;utilisation sur lesquels l&#39;équipe travaille actuellement pour la publication.
-* __Cas__ d&#39;utilisation pris en charge - Il s&#39;agit des cas d&#39;utilisation qui sont pris en charge et fonctionnent aujourd&#39;hui.
-* __Cas d&#39;utilisation que nous ne prendrons pas en charge__ - Il s&#39;agit des cas d&#39;utilisation que nous avons pris la décision de ne pas prendre en charge.
+* **Cas d’utilisation non encore pris en charge :** Il s&#39;agit de cas d&#39;utilisation qui sont sur notre feuille de route à soutenir à l&#39;avenir.
+* **Cas d’utilisation en cours :** Il s’agit des cas d’utilisation sur lesquels l’équipe travaille actuellement pour la publication.
+* **Cas d’utilisation pris en charge :** Il s’agit des cas d’utilisation qui sont pris en charge et qui fonctionnent aujourd’hui.
+* **Cas d&#39;utilisation que nous ne prendrons pas en charge :** Ce sont les cas d&#39;utilisation que nous avons pris la décision de ne pas appuyer.
