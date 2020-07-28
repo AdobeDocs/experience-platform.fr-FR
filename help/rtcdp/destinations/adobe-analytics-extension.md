@@ -28,7 +28,7 @@ Cette destination est une [!DNL Experience Platform Launch] extension. For more 
 
 Cette extension est disponible dans le catalogue des destinations pour tous les clients qui ont acheté la plateforme de données clients en temps réel d’Adobe.
 
-To use this extension, you need access to [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] est proposé aux clients d’Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contact your organization administrator to get access to [!DNL Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to [!DNL Experience Platform Launch]. [!DNL Experience Platform Launch] est proposé aux clients de Adobe Experience Cloud en tant que fonctionnalité à valeur ajoutée incluse. Contact your organization administrator to get access to [!DNL Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Installation de l’extension {#install-extension}
 
