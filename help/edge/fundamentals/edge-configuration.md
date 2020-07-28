@@ -18,7 +18,7 @@ La configuration de l’Adobe Experience Platform [!DNL Web SDK] est fractionné
 
 ## Création d’un identifiant de configuration Edge
 
-Les ID de configuration Edge peuvent être créés en Adobe [!DNL Launch] à l’aide de l’outil de configuration Edge. Cet outil vous permet de créer à la fois la configuration des arêtes et des environnements dans ces configurations.
+Les ID de configuration Edge peuvent être créés dans l’Adobe [!DNL Launch] à l’aide de l’outil de configuration Edge. Cet outil vous permet de créer à la fois la configuration des arêtes et des environnements dans ces configurations.
 
 ![navigation dans l&#39;outil de configuration des bords](../../assets/edge_configuration_nav.png)
 
@@ -104,7 +104,7 @@ Adobe recommande de définir cette variable différemment pour chacun de vos env
 
 Pour envoyer des données à l&#39;Adobe Audience Manager, il suffit d&#39;activer cette section. Les autres paramètres sont facultatifs mais encouragés.
 
-![Bloc des paramètres de gestion de l&#39;Audience Adobe](../../assets/edge_configuration_aam.png)
+![Audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinations des cookies activées]
 
@@ -122,4 +122,4 @@ Contrôle si les données sont envoyées à Adobe Analytics. Pour plus d’infor
 
 ##### [!UICONTROL Identifiant de Report Suite]
 
-La suite de rapports se trouve dans la section Admin Adobe sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont alors copiées dans chaque suite de rapports.
+La suite de rapports se trouve dans la section Admin Adobe Analytics sous [!UICONTROL Admin > ReportSuites]. Si plusieurs suites de rapports sont spécifiées, les données sont alors copiées dans chaque suite de rapports.
