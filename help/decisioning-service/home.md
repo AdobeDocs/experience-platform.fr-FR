@@ -7,100 +7,100 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1592'
-ht-degree: 0%
+ht-degree: 77%
 
 ---
 
 
 # Présentation du service de prise de décision
 
-[!DNL Decisioning Service] permet de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. Grâce à [!DNL Decisioning Service]elle, vous pouvez déterminer la meilleure *option* à partir d’un ensemble de choix disponibles. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience Web, des scripts de conversation et des actions à entreprendre. Actuellement, le cas d’utilisation et le domaine de la prise de décision ** Offre sont pris en charge, où les options de décision sont modélisées spécifiquement comme des offres, avec la prise en charge de cas d’utilisation supplémentaires à venir.
+[!DNL Decisioning Service] permet de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. Using [!DNL Decisioning Service], you can determine the best *option* from a set of available choices. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience web, des scripts de conversation et des actions à prendre. Actuellement, le cas d’utilisation et le domaine de la *prise de décision relative aux offres* sont pris en charge. Les options de décision y sont conçues spécifiquement comme des offres, avec une prise en charge pour d’autres cas d’utilisation à venir.
 
-Avec [!DNL Decisioning Service], les clients peuvent réutiliser la logique métier et partager un catalogue d’options entre canaux et applications. Au lieu de gérer les options de décision - et les stratégies de sélection - au sein même d’une application, elles peuvent désormais être exploitées indépendamment du moment, de la manière et du canal d’interaction de l’utilisateur final d’un client avec une entreprise ou une organisation.
+With [!DNL Decisioning Service], customers can reuse business logic as well as share a catalog of options across channels and applications. Au lieu de gérer les options de décision, et les stratégies pour les sélectionner, au sein même d’une application, il est désormais possible de les mettre à profit quels que soient le moment, le mode et le canal d’interaction entre l’utilisateur final d’un client et une entreprise ou une organisation.
 
-Les stratégies de prise de décision peuvent prendre en compte les nombreuses interactions qu’un client a eues dans de nombreux canaux et applications. Par exemple, l’activité de l’application du centre d’appels peut activer ou supprimer un message marketing pendant un certain temps après une plainte, et ce message lui-même peut être basé sur les achats effectués et les révisions publiées par le client.
+Les stratégies de prise de décision peuvent prendre en compte les nombreuses interactions qu’un client a eues via de nombreux canaux et applications. Par exemple, l’activité d’une application de centre d’appel pourrait consister à activer ou à supprimer un message marketing pendant un certain temps à la suite d’une plainte, et ce message lui-même pourrait découler des achats effectués et des commentaires émis par le client.
 
 [!DNL Decisioning Service] facilite la personnalisation de l’expérience évoluée.
 
-| Avant la prise de décision d’expérience | Après la prise de décision d’expérience |
+| Avant la prise de décision basée sur l’expérience | Après la prise de décision basée sur l’expérience |
 | --- | --- |
-| Personnalisez et optimisez l’expérience de l’utilisateur en un seul canal ou dans un petit ensemble de points de contact d’expérience. | Les expériences sont des réponses orchestrées entre les interactions. |
-| Les optimisations sont centrées sur une phase unique et généralement courte du parcours de l’utilisateur final. | Les décisions sont basées sur l&#39;ensemble de l&#39;historique des interactions, depuis les comportements détectés dans le passé jusqu&#39;au contexte situationnel le plus récent. |
-| En règle générale, les options et les stratégies de sélection des options à présenter lors de l’expérience d’un client sont codées de manière approfondie au sein d’une application. | Les stratégies de sélection de la meilleure option sont définies en dehors des applications spécifiques au canal et deviennent réutilisables. |
-| Les expériences client sont personnalisées et optimisées selon un objectif simpliste, par exemple augmenter le nombre de passages en caisse réussis sur une page Web ou accepter une offre présentée dans une interaction avec un représentant. | Les expériences client sont optimisées en fonction d’une compréhension globale des besoins actuels du client et s’adaptent à toutes les expériences que l’utilisateur a eues, bonnes ou mauvaises. Par exemple, une campagne marketing peut ne pas convenir à un client qui a récemment déposé une plainte à propos d’un produit ou d’un service. |
+| Personnalisation et optimisation des expériences de l’utilisateur sur un seul canal ou sur un petit ensemble de points de contact d’expérience. | Les expériences sont des réponses orchestrées entre les interactions. |
+| Les optimisations sont axées sur une seule phase, généralement courte, du parcours de l’utilisateur final. | Les décisions reposent sur l’historique complet des interactions, depuis les comportements détectés antérieurement jusqu’au contexte situationnel le plus récent. |
+| Les options et les stratégies de sélection des éléments à présenter lors de l’expérience d’un client sont généralement codées minutieusement au sein d’une application. | Les stratégies de sélection de la meilleure option sont définies en dehors des applications spécifiques au canal et deviennent réutilisables. |
+| Les expériences client sont personnalisées et optimisées selon un objectif simpliste, comme l’augmentation du nombre de passages en caisse réussis sur une page web ou l’acceptation d’une offre présentée lors d’une interaction avec un représentant. | Les expériences client sont optimisées par une compréhension globale des besoins actuels du client et s’adaptent à toutes les expériences que l’utilisateur a eues, bonnes ou mauvaises. Par exemple, une campagne marketing peut ne pas convenir à un client qui a récemment déposé une plainte concernant un produit ou un service. |
 
-[!DNL Decisioning Service] déplace les capacités de personnalisation de votre expérience du ciblage en un seul canal vers la détermination de l’étape globale du cycle de vie de l’engagement de vos clients auprès de votre marque indépendamment des canaux. Une étape de cycle de vie est beaucoup plus complexe qu&#39;une appartenance à un segment et repose presque toujours sur des flux de événements complexes, des règles de fonctionnement et des attributs prédits.
+[!DNL Decisioning Service] déplace les capacités de personnalisation de votre expérience du ciblage en un seul canal vers la détermination de l’étape globale du cycle de vie de l’engagement de vos clients auprès de votre marque indépendamment des canaux. Une étape du cycle de vie est beaucoup plus complexe qu’une appartenance à un segment, et repose presque toujours sur des flux d’événements complexes, des règles commerciales et des attributs prédéfinis.
 
-Autres termes utilisés par les produits et services visant à servir des cas d&#39;utilisation similaires :
+Autres termes employés par les produits et services visant à être utilisés dans des cas d’utilisation similaires :
 
 - Gestion des interactions en temps réel (RTIM)
-- Gestion du parcours
-- Marketing et personnalisation par canal Omni
+- Gestion des parcours
+- Personnalisation et marketing omnicanal
 - Prise de décision en temps réel
 
 ## How does [!DNL Decisioning Service] work?
 
-Les expériences peuvent être personnalisées [!DNL Decisioning Service] en temps réel, car votre client interagit avec votre marque via un canal entrant, tel que votre site ou votre application mobile. La prise de décision peut également être utilisée pour personnaliser les messages via un canal sortant, tel qu’un courriel ou une notification Push.
+Experiences can be customized using [!DNL Decisioning Service] in real time, as your customer engages with your brand via an inbound channel, such as your site or mobile app. Vous pouvez également utiliser la prise de décision pour personnaliser les messages via un canal sortant, comme un e-mail ou une notification push.
 
-Les décisions peuvent être prises de plusieurs façons. Une méthode consiste à éliminer les options successivement jusqu&#39;à ce qu&#39;il ne reste plus qu&#39;une seule option ou que les options aient été éliminées et qu&#39;il reste un sous-ensemble ou qu&#39;un gagnant soit sélectionné de façon aléatoire dans l&#39;ensemble réduit. Une variante de cette approche pour sélectionner l’option gagnante selon une formule calculée. Le classement des options éligibles est effectué à l’aide d’une fonction. Pour la prise de décision par offre, cette fonction peut calculer le coût, la valeur de l&#39;offre pour l&#39;entreprise et utiliser une méthode préétablie pour déterminer la probabilité que l&#39;offre soit acceptée par l&#39;utilisateur final. Le score obtenu peut être utilisé pour classer les offres.
+Les décisions peuvent être prises de plusieurs façons. Une des approches consiste à éliminer successivement les options jusqu’à ce qu’il n’en reste plus qu’une ou que les options aient été réduites et qu’il reste un sous-ensemble ou qu’un gagnant soit choisi au hasard dans l’ensemble réduit. Une variante de cette approche consiste à choisir l’option gagnante selon une formule calculée. Le classement des options admissibles s’effectue à l’aide d’une fonction. Pour la prise de décision relative aux offres, cette fonction pourrait calculer le coût, la valeur de l’offre pour l’entreprise et se baser sur une probabilité prédéterminée que l’offre soit acceptée par l’utilisateur final. Le résultat obtenu peut être utilisé pour commander les offres.
 
-Par ailleurs, une stratégie peut être basée sur les résultats recueillis lors d’interactions antérieures avec des clients semblables qui ont été proposés à des options similaires. Dans cette stratégie, la fonction qui a calculé les valeurs de priorité est apprise. La valeur optimale des résultats est liée aux objectifs de l&#39;activité et l&#39;indicateur de rendement pour la prévision est la fréquence à laquelle le résultat a été atteint après la proposition de l&#39;option.
+Alternativement ou en complément, une stratégie peut reposer sur les résultats recueillis lors d’interactions antérieures avec des clients similaires auxquels des options semblables ont été proposées. Dans cette stratégie, il est question d’apprendre à connaître la fonction qui a calculé les valeurs de priorité. La valeur optimale du résultat est liée aux objectifs de l’activité et l’indicateur de performance pour la prédiction est la fréquence à laquelle le résultat a été atteint après que l’option a été proposée.
 
 ### Stratégie de décision
 
-Les stratégies de décision sont configurées au moyen d’objets appelés _activités_. Chaque stratégie de décision est essentiellement un algorithme ou une fonction qui prend N options {o1, o2, ...oN} comme entrée et produit une liste ordonnée d&#39;options (o1, o2,...oK) par laquelle la première option de la liste est considérée comme la meilleure selon un critère d&#39;optimisation, la deuxième option de la liste de résultats est alors considérée comme la deuxième meilleure option et ainsi de suite.
+Les stratégies de décision sont configurées au moyen d’objets appelés _activités_. Chaque stratégie de décision est essentiellement un algorithme ou une fonction qui prend N options {o1, o2, …oN} comme entrée et produit une liste ordonnée d’options (o1, o2,…oK) où la première est considérée comme la meilleure selon un critère d’optimisation, la deuxième option de la liste de résultats est ensuite considérée comme la deuxième meilleure option, et ainsi de suite.
 
-A tout moment au cours du voyage d’un client, la meilleure option pour une activité donnée est réévaluée en fonction de l’ensemble le plus récent de variables contextuelles, de règles et de contraintes. Les variables contextuelles incluent les enregistrements stockés dans [!DNL Real Time Customer Profile]. Une entité d’enregistrement centrale est le profil d’un client, mais d’autres entités telles que les données opérationnelles sont également disponibles pour l’activité.
+À tout moment pendant le parcours d’un client, la meilleure option pour une activité donnée est réévaluée en fonction de l’ensemble le plus récent de variables contextuelles, de règles et de contraintes. Context variables include the records stored in [!DNL Real Time Customer Profile]. Une entité d’enregistrement centrale est le profil d’un client, mais d’autres entités comme les données commerciales opérationnelles sont également disponibles pour l’activité.
 
-L’algorithme ou la fonction qui produit la liste des options top-K varie selon le cas d’utilisation. Les composants internes de cet algorithme sont différents selon les cas d’utilisation. Les composants sont définis dans un référentiel au moment de la conception et &quot;compilés&quot; dans des instructions pour la stratégie de décision spécifique au cas d&#39;utilisation.
+L’algorithme ou la fonction qui produit la liste des options les plus fréquentes varie selon le cas d’utilisation. Les composants internes de cet algorithme sont différents selon les cas d’utilisation. Les composants sont définis dans un référentiel au moment de la conception et « compilés » en instructions pour la stratégie de décision spécifique au cas d’utilisation.
 
-![optimisation des décisions](./images/decisioning-optimization.png)
+![décision-optimisation](./images/decisioning-optimization.png)
 
 ## Working with [!DNL Decisioning Service]
 
-Comme les autres [!DNL Decisioning Service]services, [!DNL Platform] l’API adopte une philosophie de premier ordre. Cela signifie que l’API est l’interface principale dans laquelle toutes les fonctions, y compris les fonctions d’administration, sont rendues disponibles via les API. Cela signifie également que d’autres [!DNL Platform] services, solutions Adobe et intégrations tierces utilisent les mêmes API.
+The [!DNL Decisioning Service], like other [!DNL Platform] services, adopts an API first philosophy. Cela signifie que l’API est la principale interface où toutes les fonctions, y compris les fonctions administratives, sont mises à disposition via les API. It also means that other [!DNL Platform] services, Adobe solutions, and 3rd party integrations use the same APIs.
 
-Vous pouvez l’utiliser [!DNL Decisioning Service] en mode d’interaction requête-réponse synchrone, facilité par une API REST HTTP simple. L’appel d’API renvoie la meilleure option actuellement pour un seul profil. La sélection de la &quot;meilleure option actuellement&quot; changera en fonction des règles et contraintes appliquées à toutes les options qui sont prises en compte par une activité donnée. L’API REST permet d’obtenir la prochaine meilleure option pour plusieurs activités à la fois. Cela permet d&#39;arbitrer les options entre les canaux. Lorsque des réponses pour plusieurs activités sont obtenues ensemble, des règles supplémentaires peuvent être appliquées.
+You can use [!DNL Decisioning Service] in a synchronous request-response interaction mode facilitated by a simple HTTP REST API. L’appel API renvoie la meilleure option actuelle pour un profil unique. La sélection de la « meilleure option actuelle » changera en fonction des règles et des contraintes appliquées à toutes les options envisagées par une activité donnée. L’API REST permet d’obtenir la meilleure option suivante pour plusieurs activités à la fois. Cela permet l’arbitrage des options entre les différents canaux. Lorsque des réponses pour plusieurs activités sont obtenues simultanément, des règles supplémentaires peuvent s’appliquer.
 
-![decisioning-API](./images/decisioning-API.png)
+![prise de décision-API](./images/decisioning-API.png)
 
-### Intégration à d&#39;autres [!DNL Platform] workflows
+### Integration with other [!DNL Platform] workflows
 
-L&#39;utilisation de [!DNL Decisioning Service] est facultative et ne nécessite que quelques étapes en plus des étapes standard requises pour créer [!DNL Profile] des entités et les gérer.
+Use of [!DNL Decisioning Service] is optional and only requires a few steps in addition to the typical steps required to create [!DNL Profile] entities and manage them.
 
 >[!NOTE]
 >
->Pour en tirer le meilleur parti, le [!DNL Real-time Customer Profile][!DNL Decisioning Service] magasin de profils s&#39;intègre directement au magasin de . Les appels d&#39;API doivent uniquement indiquer l&#39;une des identités d&#39;un profil donné.
+>To make the most out of the [!DNL Real-time Customer Profile], the [!DNL Decisioning Service] directly integrates with the profile store. Les appels API n’ont besoin d’indiquer qu’une seule des identités pour un profil donné.
 
-La séquence type de débuts d’étapes avec création de profils :
+La séquence typique des étapes commence par l’établissement des profils :
 
 - Authentifiez-vous à [!DNL Experience Platform].
-- Définissez un schéma basé sur la classe de profil et éventuellement un schéma basé sur la classe de événement d’expérience.
-- Configurez un jeu de données pour transférer des données d’enregistrement et de série chronologique vers [!DNL Customer Profile].
-- Ajoutez les données au moyen du jeu de données configuré dans les données d’étape précédente ou d’instance de flux via Pipeline.
-- Diffusez des événements d’expérience dans le [!DNL Platform] afin d’enrichir le profil avec des données comportementales.
+- Définissez un schéma basé sur la classe de profil et, éventuellement, définissez un schéma basé sur la classe d’événement d’expérience.
+- Configurez un jeu de données pour charger des données d’enregistrement et de série temporelle dans [!DNL Customer Profile].
+- Ajoutez des données via le jeu de données configuré à l’étape précédente ou des données d’instance de flux via un pipeline.
+- Stream experience events into the [!DNL Platform] to enrich the profile with behavioral data.
 
-En outre, pour l’utiliser [!DNL Decisioning Service], procédez comme suit :
+Additionally, to use [!DNL Decisioning Service], the following steps:
 
-- Définissez les composants de décision à l’aide des API Repository. Il s&#39;agit des entités logiques qui composent la stratégie de décision. Les composants de décision seront automatiquement compilés dans un format utilisé par la [!DNL Decision Service Runtime]société. Les API Repository sont illustrées à gauche dans le diagramme ci-dessous.
-- Appelez l’API d’exécution pour obtenir la meilleure option, conformément à la logique métier définie à l’étape précédente. Les [!DNL Decision Service Runtime] API sont illustrées à droite dans le diagramme ci-dessous.
+- Définissez les composants de décision à l’aide des API Repository. Ce sont les entités de la logique commerciale qui constituent la stratégie de décision. The decision components will be automatically compiled into a format used by the [!DNL Decision Service Runtime]. Les API Repository sont illustrées sur le côté gauche du diagramme ci-dessous.
+- Appelez l’API Runtime pour obtenir la meilleure option selon la logique commerciale définie à l’étape précédente. The [!DNL Decision Service Runtime] APIs are illustrated on the right side in the diagram below.
 
-![decisioning-API1](./images/decisioning-API1.png)
+![prise de décision-API1](./images/decisioning-API1.png)
 
-L&#39;activation des entités logiques métier se produit automatiquement et en permanence. Dès qu&#39;une nouvelle option est enregistrée dans le référentiel et qu&#39;elle est marquée comme &quot;approuvée&quot;, elle sera candidate à l&#39;inclusion dans l&#39;ensemble des options disponibles. Dès qu’une règle de décision est mise à jour, le jeu de règles est réassemblé et préparé pour l’exécution. À cette étape d’activation automatique, toutes les contraintes définies par la logique métier qui ne dépendent pas du contexte d’exécution seront évaluées. Les résultats de cette étape d’activation sont envoyés dans un cache où ils sont disponibles pour l’ [!DNL Decisioning Service] exécution. Ceci est illustré dans le diagramme suivant.
+L’activation des entités de la logique commerciale s’effectue automatiquement et en continu. Dès qu’une nouvelle option est enregistrée dans le référentiel et qu’elle est marquée comme « approuvée », elle sera susceptible d’être incluse dans l’ensemble des options disponibles. Dès qu’une règle de décision est mise à jour, le jeu de règles est reconstitué et préparé pour son exécution. Lors de cette étape d’activation automatique, toutes les contraintes définies par la logique commerciale qui ne dépendent pas du contexte d’exécution seront évaluées. The results of this activation step are sent to a cache where they are available to the [!DNL Decisioning Service] runtime. Ceci est illustré dans le diagramme suivant.
 
-![decisioning-API2](./images/decisioning-API2.png)
+![prise de décision-API2](./images/decisioning-API2.png)
 
-Une fois que les options définies, les jeux de règles et les contraintes sont activés et ont été poussées vers [!DNL Decisioning Service] les noeuds, une API simple est utilisée pour publier une demande de décision. L’API est généralement appelée par un service de diffusion qui utilise ensuite l’option proposée (par exemple, la prochaine meilleure action ou la prochaine meilleure offre) et qui regroupe l’expérience ou exécute l’action. Si la proposition est une offre, le contenu qui représente cette offre est recherché et inséré dans une expérience fournie à l’utilisateur final. Ceci est illustré dans le diagramme suivant.
+Once the option sets, rule sets and constraints are activated, and have been pushed to [!DNL Decisioning Service] nodes, a simple API is used to post a request for a decision. L’API est généralement appelée par un service de diffusion qui prend ensuite l’option proposée (par exemple, la prochaine meilleure action ou la prochaine meilleure offre) et recueille l’expérience ou exécute l’action. Si la proposition est une offre, alors le contenu qui représente cette offre est recherché et intégré dans une expérience proposée à l’utilisateur final. Ceci est illustré dans le diagramme suivant.
 
-![decisioning-API3](./images/decisioning-API3.png)
+![prise de décision-API3](./images/decisioning-API3.png)
 
-[!DNL Delivery Service] collecte les données pour la demande de décision. Il détermine l&#39;ID de l&#39;entité de profil pour laquelle la meilleure option est décidée. Il assemble également toutes les données contextuelles qui ne sont pas stockées dans [!DNL Customer Profile] mais qui sont potentiellement utilisées par la logique de décision.
+[!DNL Delivery Service] collecte les données pour la demande de décision. Il détermine l’identifiant de l’entité de profil pour laquelle la meilleure option est décidée. It also assembles any context data that is not stored in [!DNL Customer Profile] but is potentially used by the decision logic.
 
-La logique de décision est organisée par activités, chacune d’elles spécifiant un filtre pour le sous-ensemble d’options à prendre en compte pour cette activité, ainsi qu’une seule option de secours.
+La logique de décision est organisée par activité, chacune d’entre elles spécifiant un filtre pour le sous-ensemble d’options à prendre en compte pour cette activité, ainsi qu’une seule option de secours.
 
-Chaque décision est prise en appliquant d&#39;abord des contraintes pour réduire le nombre d&#39;options, puis en classant les options restantes. Bien que la majeure partie de la logique soit évaluée à l&#39;intérieur [!DNL Decisioning Service], divers services auxiliaires sont utilisés pour aider à ces deux aspects. Par exemple, un service de plafonnement gère les limites supérieures de la fréquence d’utilisation d’une option dans une décision, et un autre service peut héberger un modèle d’apprentissage automatique utilisé pour calculer les scores pour un profil et une option.
+Chaque décision est prise en appliquant d’abord des contraintes pour réduire le nombre d’options, puis en classant les options restantes. Although most of the logic is evaluated inside [!DNL Decisioning Service], various adjunct services are used to help with these two aspects. Par exemple, un service de plafonnement gère les limites supérieures de la fréquence à laquelle une option peut être utilisée dans toute décision, et un autre service peut héberger un modèle d’apprentissage automatique utilisé pour calculer les scores d’un profil et d’une option.
 
-Pour en savoir plus sur l&#39;utilisation des API Repository, consultez le didacticiel sur la [gestion des entités de prise de décision et des règles à l&#39;aide des API.](./tutorials/entities.md)
+Pour en savoir plus sur l’utilisation des API Repository, consultez le tutoriel sur la [gestion des entités de prise de décision et des règles à l’aide des API](./tutorials/entities.md).
 
-Pour en savoir plus sur l’utilisation de l’ [!DNL Decisioning Service] exécution, consultez le didacticiel [Utilisation de l’exécution du service de prise de décision à l’aide des API](./tutorials/runtime.md)
+To learn more about using the [!DNL Decisioning Service] runtime, see the tutorial on [Working with the Decisioning Service runtime using APIs](./tutorials/runtime.md)
