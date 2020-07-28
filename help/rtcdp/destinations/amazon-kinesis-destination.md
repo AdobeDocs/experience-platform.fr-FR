@@ -1,8 +1,8 @@
 ---
-title: Destination Amazon Kinesis
-seo-title: Destination Amazon Kinesis
-description: Créez une connexion sortante en temps réel vers votre enregistrement Amazon Kinesis pour diffuser en continu des données à partir de l’Adobe Experience Platform.
-seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Amazon Kinesis pour diffuser en continu des données à partir de l’Adobe Experience Platform.
+title: Destination Amazon
+seo-title: Destination Amazon
+description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser en continu les données de l’Adobe Experience Platform.
+seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser en continu les données de l’Adobe Experience Platform.
 translation-type: tm+mt
 source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->La [!DNL Amazon Kinesis] destination en Adobe Real-time CDP est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La [!DNL Amazon Kinesis] destination en temps réel Adobe du CDP est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Présentation {#overview}
 
@@ -25,11 +25,11 @@ Le [!DNL Kinesis Data Streams] service de [!DNL Amazon Web Services] vous permet
 
 Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement pour diffuser en continu des données à partir de l’Adobe Experience Platform.
 
-* Pour plus d’informations sur [!DNL Amazon Kinesis]Amazon, voir la documentation [](https://docs.aws.amazon.com/streams/latest/dev/introduction.html)Amazon.
+* Pour plus d’informations sur [!DNL Amazon Kinesis]Amazon, consultez la documentation [](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Pour vous connecter à [!DNL Amazon Kinesis] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
-* Pour vous connecter à [!DNL Amazon Kinesis] l’aide de l’interface utilisateur CDP en temps réel d’Adobe, reportez-vous aux sections ci-dessous.
+* Pour vous connecter à [!DNL Amazon Kinesis] l&#39;aide de l&#39;interface utilisateur CDP en temps réel de l&#39;Adobe, consultez les sections ci-dessous.
 
-![Amazon Kinesis dans l’interface utilisateur](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![Amazon dans l’interface utilisateur](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 
 ## Cas d’utilisation {#use-cases}
@@ -46,7 +46,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Dans l’étape d’authentification {#authentication-step}
 
-* **[!DNL Amazon Web Services]clé d&#39;accès et clé&#x200B;**secrète : Dans[!DNL Amazon Web Services], générez une paire de clés d&#39;accès - accès secret pour accorder un accès au CDP Adobe en temps réel à votre[!DNL Amazon Kinesis]compte. Pour en savoir plus, consultez la documentation[sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clé d&#39;accès et clé&#x200B;**secrète : Dans[!DNL Amazon Web Services], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre[!DNL Amazon Kinesis]compte. Pour en savoir plus, consultez la documentation[sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **region**: Indiquez la [!DNL Amazon Web Services] région à laquelle diffuser les données.
 
 ![Champs d’entrée dans l’étape du compte](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -55,7 +55,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 * **Nom**: Attribuez un nom à votre connexion. [!DNL Amazon Kinesis]
 * **Description**: Fournissez une description de votre connexion à [!DNL Amazon Kinesis].
-* **stream**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux.
+* **stream**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux.
 
 ![Champs d’entrée dans l’étape d’authentification](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
