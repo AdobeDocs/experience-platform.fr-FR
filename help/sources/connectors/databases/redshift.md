@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connecteur Amazon Redshift
+title: Connecteur de redirection Amazon
 topic: overview
 translation-type: tm+mt
 source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
@@ -57,7 +57,7 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Se connecter [!DNL Amazon Redshift] à [!DNL Platform] l’aide des API
 
-- [Création d’un connecteur Redshift Amazon à l’aide de l’API du service de flux](../../tutorials/api/create/databases/redshift.md)
+- [Création d’un connecteur Amazon Redshift à l’aide de l’API du service de flux](../../tutorials/api/create/databases/redshift.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
