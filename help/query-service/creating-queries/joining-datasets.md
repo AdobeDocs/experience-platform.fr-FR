@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Regroupement de jeux de données
+title: Association de jeux de données
 topic: queries
 translation-type: tm+mt
 source-git-commit: 7d5d98d8e32607abf399fdc523d2b3bc99555507
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# Regroupement de jeux de données
+# Association de jeux de données
 
-La jonction de jeux de données vous permet d&#39;inclure dans votre requête des données provenant d&#39;autres jeux de données. Cet exemple utilise un jeu de données personnalisé du système d’exploitation pour mapper le `operatingsystemID` paramètre à la `operatingsystem` valeur.
+L’association de jeux de données vous permet d’inclure dans votre requête des données provenant d’autres jeux de données. Cet exemple utilise un jeu de données personnalisé provenant du système d’exploitation pour mapper la valeur `operatingsystemID` à la valeur `operatingsystem`.
 
-Jeux de données:
+Jeux de données :
 - your_analytics_table
 - custom_operating_system_lookup
 
-Créez une `SELECT` instruction pour les 50 premiers systèmes d’exploitation par nombre de vues de page.
+Créez une instruction `SELECT` pour les 50 premiers systèmes d’exploitation classés par nombre de visites des pages.
 
 ```sql
 SELECT 
