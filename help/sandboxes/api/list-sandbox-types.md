@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Types de sandbox pris en charge par la Liste
+title: Liste des types d’environnements de test pris en charge
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
 workflow-type: tm+mt
 source-wordcount: '47'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# Types de sandbox pris en charge par la Liste
+# Liste des types d’environnements de test pris en charge
 
-Vous pouvez récupérer une liste de types de sandbox pris en charge pour votre organisation en envoyant une requête GET au point de `/sandboxTypes` terminaison.
+Vous pouvez récupérer une liste des types d’environnements de test pris en charge pour votre organisation en envoyant une requête GET au point de terminaison `/sandboxTypes`.
 
 **Format d’API**
 
@@ -35,7 +35,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de types de sandbox pris en charge pour votre entreprise.
+Une réponse réussie renvoie une liste des types d’environnements de test pris en charge pour votre organisation.
 
 ```json
 {
