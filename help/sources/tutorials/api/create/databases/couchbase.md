@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 2%
+ht-degree: 18%
 
 ---
 
@@ -23,12 +23,12 @@ Ce didacticiel utilise l’API du service de flux pour vous guider à travers le
 
 ## Prise en main
 
-Ce guide exige une compréhension pratique des éléments suivants de l&#39;Adobe Experience Platform :
+Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
 * [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Couchbase] l’aide de l’ [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Couchbase] using the [!DNL Flow Service] API.
 
 ### Collecte des informations d’identification requises
 
@@ -37,25 +37,25 @@ Les sections suivantes contiennent des informations supplémentaires dont vous a
 | `connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Couchbase] instance. Le modèle de chaîne de connexion pour [!DNL Couchbase] est `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. Pour plus d&#39;informations sur l&#39;acquisition d&#39;une chaîne de connexion, consultez [ce document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview)Couchbase. |
 | `connectionSpec.id` | Identificateur nécessaire pour créer une connexion. L&#39;ID de spécification de connexion fixe pour [!DNL Couchbase] est `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
-### Lecture des exemples d’appels d’API
+### Lecture d’exemples d’appels API
 
-Ce didacticiel fournit des exemples d’appels d’API pour montrer comment formater vos requêtes. Il s’agit notamment des chemins d’accès, des en-têtes requis et des charges de requête correctement formatées. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section sur la [façon de lire des exemples d’appels](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) d’API dans le guide de [!DNL Experience Platform] dépannage.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
-### Rassembler les valeurs des en-têtes requis
+### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux [!DNL Platform] API, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../../../../tutorials/authentication.md)authentification. Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’ [!DNL Experience Platform] API, comme indiqué ci-dessous :
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Autorisation : Porteur `{ACCESS_TOKEN}`
-* x-api-key : `{API_KEY}`
+* Authorization: Bearer `{ACCESS_TOKEN}`
+* x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes aux [!DNL Platform] API nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name : `{SANDBOX_NAME}`
+* x-sandbox-name: `{SANDBOX_NAME}`
 
-Toutes les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête de type de support supplémentaire :
+Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type : `application/json`
+* Content-Type: `application/json`
 
 ## Création d’une connexion
 
@@ -69,7 +69,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante crée une nouvelle [!DNL Couchbase] connexion, configurée par les propriétés fournies dans la charge utile : .
+The following request creates a new [!DNL Couchbase] connection, configured by the properties provided in the payload:.
 
 ```shell
 curl -X POST \
@@ -102,7 +102,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le didacticiel suivant.
+A successful response returns the details of the newly created connection, including its unique identifier (`id`). Cet identifiant est nécessaire pour explorer vos données dans le didacticiel suivant.
 
 ```json
 {
