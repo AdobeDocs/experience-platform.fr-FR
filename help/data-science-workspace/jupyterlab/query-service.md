@@ -1,32 +1,32 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Service de Requête sur ordinateur portable Jupyter
+title: Query Service dans les notebooks Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 1%
+ht-degree: 70%
 
 ---
 
 
-# Service de Requête sur ordinateur portable Jupyter
+# Query Service dans les notebooks Jupyter
 
 [!DNL Adobe Experience Platform] vous permet d&#39;utiliser le langage SQL (Structured Requête Language) dans [!DNL Data Science Workspace] en intégrant [!DNL Query Service] en tant que fonction [!DNL JupyterLab] standard.
 
-Ce didacticiel présente des exemples de requêtes SQL pour des cas d&#39;utilisation courants afin d&#39;explorer, de transformer et d&#39;analyser [!DNL Adobe Analytics] des données.
+This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze [!DNL Adobe Analytics] data.
 
 ## Prise en main
 
-Avant de commencer ce didacticiel, vous devez disposer des conditions préalables suivantes :
+Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
-- Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer
+- Accès à [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding
 
 - Un [!DNL Adobe Analytics] jeu de données
 
-- Une compréhension pratique des concepts clés suivants utilisés dans ce tutoriel :
+- Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
    - [!DNL Experience Data Model (XDM) and XDM System](../../xdm/home.md)
    - [!DNL Query Service](../../query-service/home.md)
    - [!DNL Query Service SQL Syntax](../../query-service/sql/overview.md)
@@ -34,37 +34,37 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
 
 ## Accès [!DNL JupyterLab] et [!DNL Query Service] {#access-jupyterlab-and-query-service}
 
-1. Dans [!DNL Experience Platform](https://platform.adobe.com), accédez à **[!UICONTROL Ordinateurs portables]** à partir de la colonne de navigation de gauche. Il faut un moment pour que JupyterLab se charge.
+1. In [!DNL Experience Platform](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Laissez charger JupyterLab.
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   > [!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL Fichier]** , puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
+   >[!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL Fichier]** , puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
 
-2. Dans l&#39;onglet Lanceur, cliquez sur l&#39;icône **[!UICONTROL vierge]** dans un environnement Python 3 pour ouvrir un bloc-notes vide.
+2. Dans l’onglet de lanceur, cliquez sur l’icône **[!UICONTROL Vierge]** dans un environnement Python 3 pour ouvrir un notebook vierge.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   > [!NOTE] Python 3 est actuellement le seul environnement pris en charge pour Requête Service dans les portables.
+   >[!NOTE] Python 3 est actuellement le seul environnement pris en charge pour Query Service dans les notebooks.
 
-3. Dans le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]** et doublon cliquez sur le répertoire **[!UICONTROL Data]** Set pour liste à tous les jeux de données.
+3. Dans le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]** et double-cliquez sur le répertoire **[!UICONTROL Jeux de données]** pour afficher sous forme de liste tous les jeux de données.
 
    ![](../images/jupyterlab/query/dataset.png)
 
-4. Recherchez un [!DNL Adobe Analytics] jeu de données à explorer et cliquez avec le bouton droit sur la liste, cliquez sur Données de **[!UICONTROL Requête dans le bloc-notes]** pour générer des requêtes SQL dans le bloc-notes vide.
+4. Find an [!DNL Adobe Analytics] dataset to explore and right-click on the listing, click **[!UICONTROL Query Data in Notebook]** to generate SQL queries in the empty notebook.
 
-5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre l&#39;instance de votre bloc-notes et la [!DNL Query Service].
+5. Cliquez sur la première cellule générée contenant la fonction `qs_connect()` et exécutez-la en cliquant sur le bouton de lecture. Cette fonction crée une connexion entre votre instance de notebook et [!DNL Query Service].
 
    ![](../images/jupyterlab/query/execute.png)
 
-6. Copiez le nom du [!DNL Adobe Analytics] jeu de données à partir de la seconde requête SQL générée, il sera la valeur après `FROM`.
+6. Copy down the [!DNL Adobe Analytics] dataset name from the second generated SQL query, it will be the value after `FROM`.
 
    ![](../images/jupyterlab/query/dataset_name.png)
 
-7. Insérez une nouvelle cellule de bloc-notes en cliquant sur le bouton **+** .
+7. Insérez une nouvelle cellule de notebook en cliquant sur le bouton **+**.
 
    ![](../images/jupyterlab/query/insert_cell.gif)
 
-8. Copiez, collez et exécutez les instructions d&#39;importation suivantes dans une nouvelle cellule. Les instructions suivantes seront utilisées pour visualiser vos données :
+8. Copiez, collez et exécutez les instructions d’importation suivantes dans une nouvelle cellule. Ces instructions seront utilisées pour visualiser vos données :
 
    ```python
    import plotly.plotly as py
@@ -72,7 +72,7 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    from plotly.offline import iplot
    ```
 
-9. Ensuite, copiez et collez les variables suivantes dans une nouvelle cellule. Modifiez leurs valeurs selon vos besoins, puis exécutez-les.
+9. Ensuite, copiez et collez les variables suivantes dans une nouvelle cellule. Modifiez leur valeur en fonction de vos besoins, puis exécutez-les.
 
    ```python
    target_table = "your Adobe Analytics dataset name"
@@ -82,25 +82,25 @@ Avant de commencer ce didacticiel, vous devez disposer des conditions préalable
    ```
 
    - `target_table` : Nom de votre [!DNL Adobe Analytics] jeu de données.
-   - `target_year` : Année spécifique à partir de laquelle proviennent les données de cible.
-   - `target_month` : Mois spécifique d’où provient la cible.
-   - `target_day` : Jour spécifique à partir duquel proviennent les données de la cible.
+   - `target_year` : année spécifique de laquelle proviennent les données cibles.
+   - `target_month` : mois spécifique duquel provient la cible.
+   - `target_day` : jour spécifique d’où proviennent les données cibles.
 
-   >[!NOTE] Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables pour que les modifications soient appliquées.
+   >[!NOTE] Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables afin que les modifications soient appliquées.
 
-## Requête de vos données {#query-your-data}
+## Interrogation de vos données {#query-your-data}
 
-Entrez les requêtes SQL suivantes dans des cellules de bloc-notes individuelles. Exécutez une requête en cliquant sur sa cellule, puis en cliquant sur le bouton **[!UICONTROL Lecture]** . Les résultats de la requête ou les journaux d’erreurs sont affichés sous la cellule exécutée.
+Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en cliquant sur sa cellule, puis sur le bouton de **[!UICONTROL lecture]**. Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu&#39;un bloc-notes est inactif pendant une longue période, la connexion entre le bloc-notes et [!DNL Query Service] peut s&#39;interrompre. Dans ce cas, redémarrez [!DNL JupyterLab] en cliquant sur le bouton **[!UICONTROL Alimentation]** situé dans le coin supérieur droit.
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by clicking the **[!UICONTROL Power]** button located at the top right corner.
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Le noyau du bloc-notes sera réinitialisé mais les cellules resteront, réexécutez **[!UICONTROL toutes les]** cellules pour continuer là où vous l&#39;aviez laissé.
+Le noyau du notebook sera réinitialisé, mais les cellules seront conservées. Exécutez de nouveau **[!UICONTROL toutes]** les cellules pour reprendre là où vous vous étiez arrêté.
 
-### Nombre de visiteurs horaires {#hourly-visitor-count}
+### Décompte horaire de visiteurs {#hourly-visitor-count}
 
-La requête suivante renvoie le nombre de visiteurs horaires pour une date spécifiée :
+La requête suivante renvoie le décompte horaire de visiteurs pour une date spécifique :
 
 #### Requête
 
@@ -118,9 +118,9 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Dans la requête ci-dessus, la cible `_acp_year` de la `WHERE` clause est définie sur la valeur de `target_year`. Incluez des variables dans les requêtes SQL en les contenant entre accolades (`{}`).
+Dans la requête ci-dessus, le `_acp_year` cible dans la clause `WHERE` est défini comme la valeur `target_year`. Incluez des variables dans les requêtes SQL en les insérant entre parenthèses (`{}`).
 
-La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats de la Requête seront stockés dans cette variable sous la forme d&#39;une base de données Pandas. Le stockage des résultats dans un cadre de données vous permet de visualiser ultérieurement les résultats de la requête à l’aide d’un [!DNL Python] package souhaité. Exécutez le code suivant [!DNL Python] dans une nouvelle cellule pour générer un graphique à barres :
+La première ligne de la requête contient la variable facultative `hourly_visitor`. Les résultats des requêtes seront stockés dans cette variable sous la forme d’un cadre de données pandas. Storing results in a dataframe allows you to later visualize the query results using a desired [!DNL Python] package. Execute the following [!DNL Python] code in a new cell to generate a bar graph:
 
 ```python
 trace = go.Bar(
@@ -139,9 +139,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-### Nombre d&#39;activités horaires {#hourly-activity-count}
+### Décompte horaire de l’activité {#hourly-activity-count}
 
-La requête suivante renvoie le nombre d&#39;actions horaires pour une date spécifiée :
+La requête suivante renvoie le décompte horaire d’actions pour une date spécifique :
 
 #### Requête <!-- omit in toc -->
 
@@ -160,13 +160,13 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L&#39;exécution de la requête ci-dessus stockera les résultats dans `hourly_actions` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualisation des résultats :
+L’exécution de la requête ci-dessus stockera les résultats dans `hourly_actions` en tant que cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualiser les résultats :
 
 ```python
 hourly_actions.head()
 ```
 
-La requête ci-dessus peut être modifiée afin de renvoyer le nombre d’actions horaires pour une plage de dates spécifiée à l’aide d’opérateurs logiques dans la clause **WHERE** :
+La requête ci-dessus peut être modifiée pour renvoyer le décompte horaire d’actions pour une période spécifique à l’aide d’opérateurs logiques dans la clause **WHERE** :
 
 #### Requête <!-- omit in toc -->
 
@@ -184,15 +184,15 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-L&#39;exécution de la requête modifiée stockera les résultats dans `hourly_actions_date_range` un cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualisation des résultats :
+L’exécution de la requête modifiée stockera les résultats dans `hourly_actions_date_range` en tant que cadre de données. Exécutez la fonction suivante dans une nouvelle cellule pour prévisualiser les résultats :
 
 ```python
 hourly_actions_date_rage.head()
 ```
 
-### Nombre de événements par session de visiteur {#number-of-events-per-visitor-session}
+### Décompte d’événements par visite {#number-of-events-per-visitor-session}
 
-La requête suivante renvoie le nombre de événements par session de visiteur pour une date spécifiée :
+La requête suivante renvoie le décompte d’événements par visite pour une date spécifique :
 
 #### Requête <!-- omit in toc -->
 
@@ -210,7 +210,7 @@ GROUP BY aaid_sess_key
 ORDER BY Count DESC;
 ```
 
-Exécutez le [!DNL Python] code suivant pour générer un histogramme pour le nombre de événements par session de visite :
+Execute the following [!DNL Python] code to generate a histogram for the number of events per visit session:
 
 ```python
 data = [go.Histogram(x = events_per_session['Count'])]
@@ -225,9 +225,9 @@ fig = go.Figure(data = data, layout = layout)
 iplot(fig)
 ```
 
-### Pages populaires pour un jour donné {#popular-pages-for-a-given-day}
+### Pages les plus consultées pour un jour spécifique {#popular-pages-for-a-given-day}
 
-La requête suivante renvoie les dix pages les plus populaires pour une date spécifiée :
+La requête suivante renvoie les dix pages les plus consultées pour une date spécifique :
 
 #### Requête <!-- omit in toc -->
 
@@ -244,9 +244,9 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-### Utilisateurs actifs pour une journée donnée {#active-users-for-a-given-day}
+### Utilisateurs actifs pour un jour spécifique {#active-users-for-a-given-day}
 
-La requête suivante renvoie les dix utilisateurs les plus actifs pour une date spécifiée :
+La requête suivante renvoie les dix utilisateurs les plus actifs pour une date spécifique :
 
 #### Requête <!-- omit in toc -->
 
@@ -263,9 +263,9 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-### Villes actives par activité utilisateur {#active-cities-by-user-activity}
+### Villes actives par activité d’utilisateur {#active-cities-by-user-activity}
 
-La requête suivante renvoie les dix villes qui génèrent la majorité des activités utilisateur pour une date spécifiée :
+La requête suivante renvoie les dix villes qui génèrent la majorité des activités d’utilisateur pour une date spécifique :
 
 #### Requête <!-- omit in toc -->
 
@@ -284,4 +284,4 @@ LIMIT  10;
 
 ## Étapes suivantes <!-- omit in toc -->
 
-Ce tutoriel a montré quelques exemples d&#39;utilisation de cas pour l&#39;utilisation [!DNL Query Service] dans des [!DNL Jupyter] cahiers. Suivez le didacticiel [Analyser vos données à l’aide de Jupyter Notebooks](./analyze-your-data.md) pour voir comment des opérations similaires sont effectuées à l’aide du SDK d’accès aux données.
+This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Suivez le tutoriel [Analyser vos données à l’aide des notebooks Jupyter](./analyze-your-data.md) pour découvrir la manière dont des opérations similaires sont exécutées à l’aide du SDK d’accès aux données.
