@@ -68,7 +68,7 @@ Une fois que vous avez défini les champs appropriés dans le schéma en tant qu
 >
 > Cette section comprend des appels à l&#39;API de registre du Schéma. Pour obtenir des informations importantes sur l’utilisation de l’API, y compris la connaissance de votre concept `{TENANT_ID}` et du concept de conteneur, consultez la section [prise en main](../xdm/api/getting-started.md) du guide du développeur.
 
-Vous pouvez ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données en exécutant une requête POST sur le point de `/descriptors` terminaison de l&#39; [!DNL Schema Registry] API.
+Vous pouvez ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données en envoyant une requête de POST au point de `/descriptors` terminaison dans l&#39; [!DNL Schema Registry] API.
 
 **Format d’API**
 
