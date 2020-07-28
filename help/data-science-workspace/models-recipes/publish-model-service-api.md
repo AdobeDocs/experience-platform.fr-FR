@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1478'
-ht-degree: 2%
+ht-degree: 49%
 
 ---
 
@@ -28,9 +28,9 @@ Enfin, avant de commencer ce didacticiel, veuillez consulter la section [Prise e
 - `{IMS_ORG}`
 - `{API_KEY}`
 
-Toutes les requêtes POST, PUT et PATCH nécessitent un en-tête supplémentaire :
+Toutes les requêtes POST, PUT et PATCH requièrent un en-tête supplémentaire :
 
-- Content-Type : application/json
+- Content-Type: application/json
 
 ### Termes clés
 
@@ -38,17 +38,17 @@ Le tableau suivant décrit la terminologie utilisée dans ce tutoriel :
 
 | Terme | Définition |
 --- | ---
-| **Instance d&#39;apprentissage automatique (instance ML)** | Instance d&#39;un [!DNL Sensei] moteur pour un client particulier, contenant des données, des paramètres et du [!DNL Sensei] code spécifiques. |
-| **Expérience** | Entité parapluie permettant d’organiser des exécutions d’expériences de formation, des exécutions d’expériences de score ou les deux. |
+| **Instance d’apprentissage automatique (instance ML)** | Instance d&#39;un [!DNL Sensei] moteur pour un client particulier, contenant des données, des paramètres et du [!DNL Sensei] code spécifiques. |
+| **Expérience** | Entité parapluie permettant d’organiser des exécutions d’expériences de formation ou de notation ou les deux. |
 | **Expérience planifiée** | Terme décrivant l’automatisation des exécutions d’expériences de formation ou de notation, régies par un calendrier défini par l’utilisateur. |
-| **Exécution de l’expérience** | Un cas particulier d&#39;expériences de formation ou de notation. Les exécutions d’expériences multiples d’une expérience particulière peuvent différer des valeurs de jeu de données utilisées pour la formation ou la notation. |
-| **Modèle formé** | Un modèle d&#39;apprentissage automatique créé par le processus d&#39;expérimentation et d&#39;ingénierie de caractéristiques avant d&#39;arriver à un modèle validé, évalué et finalisé. |
-| **Modèle publié** | Un modèle finalisé et versionné est arrivé après la formation, la validation et l&#39;évaluation. |
-| **Service d&#39;apprentissage automatique (service ML)** | Une instance ML déployée en tant que service pour prendre en charge les demandes de formation et de notation à la demande à l’aide d’un point de terminaison API. Un service ML peut également être créé à l’aide d’exécutions d’expériences entraînées existantes. |
+| **Exécution de l’expérience** | Une instance particulière d’expériences de formation ou de notation. Les exécutions d’expériences multiples provenant d’une expérience particulière peuvent différer des valeurs de jeu de données utilisées pour la formation ou la notation. |
+| **Modèle formé** | Un modèle d’apprentissage automatique créé par le processus d’expérimentation et d’ingénierie de caractéristiques avant d’arriver à un modèle validé, évalué et finalisé. |
+| **Modèle publié** | Un modèle finalisé et versionné est arrivé après la formation, la validation et l’évaluation. |
+| **Service d’apprentissage automatique (service ML)** | Une instance ML déployée en tant que service pour prendre en charge les demandes de formation et de notation à la demande à l’aide d’un point de terminaison API. Un service ML peut également être créé à l’aide d’exécutions d’expériences entraînées existantes. |
 
 ## Création d’un service ML avec une exécution d’expérience de formation existante et un score planifié
 
-Lorsque vous publiez une expérience de formation Exécuter en tant que service ML, vous pouvez planifier la notation en fournissant des détails pour l’expérience de score Exécutez la charge utile d’une demande POST. Cela entraîne la création d&#39;une entité Expérience planifiée pour la notation.
+Lorsque vous publiez une expérience de formation Exécuter en tant que service ML, vous pouvez planifier la notation en fournissant des détails pour l’expérience de score Exécutez la charge utile d’une demande de POST. Cela entraîne la création d’une entité Expérience planifiée pour la notation.
 
 **Format d’API**
 
@@ -85,9 +85,9 @@ curl -X POST
 | `mlInstanceId` | Identification d&#39;instance ML existante, l&#39;exécution d&#39;expérience de formation utilisée pour créer le service ML doit correspondre à cette instance ML particulière. |
 | `trainingExperimentId` | Identification de l&#39;expérience correspondant à l&#39;identification de l&#39;instance ML. |
 | `trainingExperimentRunId` | Exécution d&#39;une expérience de formation spécifique à utiliser pour la publication du service ML. |
-| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de score planifiées. |
-| `scoringTimeframe` | Valeur Entier représentant les minutes de filtrage des données à utiliser pour les exécutions d’expériences de score. Par exemple, une valeur de `10080` moyenne pour les données des 10 080 dernières minutes ou 168 heures sera utilisée pour chaque exécution d’expérience de score planifiée. Notez qu’une valeur de `0` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
-| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de score planifiées. |
+| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de notation planifiées. |
+| `scoringTimeframe` | Valeur entière représentant les minutes pour la filtration des données à utiliser pour les exécutions d’expérience de notation. Par exemple, une valeur de `10080` signifie que les données des dernières 10 080 minutes ou 168 heures seront utilisées pour chaque exécution des expériences de notation planifiées. Notez qu’une valeur de `0` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
+| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de notation planifiées. |
 | `scoringSchedule.startTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.endTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.cron` | Valeur cron indiquant l’intervalle de score des exécutions d’expérience. |
@@ -120,16 +120,16 @@ Une réponse réussie renvoie les détails du nouveau service ML, y compris son 
 
 ## Création d&#39;un service ML à partir d&#39;une instance ML existante
 
-En fonction de votre cas d&#39;utilisation et de vos besoins spécifiques, la création d&#39;un service ML avec une instance ML est flexible en termes de planification de la formation et de notation des exécutions d&#39;expériences. Ce didacticiel porte sur les cas spécifiques où :
+En fonction de votre cas d&#39;utilisation et de vos besoins spécifiques, la création d&#39;un service ML avec une instance ML est flexible en termes de planification de la formation et de notation des exécutions d&#39;expériences. Ce tutoriel décrit les cas spécifiques où :
 
-- [Vous n’avez pas besoin d’une formation planifiée, mais d’un score planifié.](#ml-service-with-scheduled-experiment-for-scoring)
-- [Vous avez besoin d’exécutions d’expériences planifiées pour la formation et le score.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
+- [Vous n’avez pas besoin d’une formation planifiée, mais d’une notation planifiée.](#ml-service-with-scheduled-experiment-for-scoring)
+- [Vous avez besoin d’exécutions d’expériences planifiées pour la formation et la notation.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
 
 Notez qu’un service ML peut être créé à l’aide d’une instance ML sans avoir à programmer d’expériences de formation ou de notation. Ces services ML créeront des entités d&#39;expérience ordinaires et une seule exécution d&#39;expérience pour la formation et la notation.
 
-### Service ML avec expérience planifiée pour le score {#ml-service-with-scheduled-experiment-for-scoring}
+### Service ML avec une expérience planifiée pour la notation {#ml-service-with-scheduled-experiment-for-scoring}
 
-Vous pouvez créer un service ML en publiant une instance ML avec des exécutions d&#39;expériences planifiées pour le score, ce qui créera une entité Expérience ordinaire pour la formation. Une exécution d’expérience de formation est générée et sera utilisée pour toutes les exécutions d’expériences de score planifiées. Assurez-vous que vous disposez des éléments `mlInstanceId`, `trainingDataSetId`et `scoringDataSetId` requis pour la création du service ML, qu’ils existent et qu’ils sont des valeurs valides.
+Vous pouvez créer un service ML en publiant une instance ML avec des exécutions d&#39;expériences planifiées pour le score, ce qui créera une entité Expérience ordinaire pour la formation. Une exécution d’expérience de formation est générée et sera utilisée pour toutes les exécutions d’expériences de score planifiées. Assurez-vous que vous disposez des valeurs `mlInstanceId`, `trainingDataSetId` et `scoringDataSetId` requises pour la création du service ML, qu’elles existent et qu’elles sont des valeurs valides.
 
 **Format d’API**
 
@@ -164,12 +164,12 @@ curl -X POST
 
 | Clé JSON | Description |
 | --- | --- |
-| `mlInstanceId` | Identification d&#39;instance ML existante, représentant l&#39;instance ML utilisée pour créer le service ML. |
-| `trainingDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour l&#39;expérience de formation. |
-| `trainingTimeframe` | Valeur Entier représentant les minutes de filtrage des données à utiliser pour l’expérience de formation. Par exemple, une valeur de `"10080"` moyenne pour les données des 10 080 dernières minutes ou 168 heures sera utilisée pour l’exécution de l’expérience de formation. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la formation. |
-| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de score planifiées. |
-| `scoringTimeframe` | Valeur Entier représentant les minutes de filtrage des données à utiliser pour les exécutions d’expériences de score. Par exemple, une valeur de `"10080"` moyenne pour les données des 10 080 dernières minutes ou 168 heures sera utilisée pour chaque exécution d’expérience de score planifiée. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
-| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de score planifiées. |
+| `mlInstanceId` | Identification de l’instance ML existante, représentant l’instance ML utilisée pour créer le service ML. |
+| `trainingDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour l’expérience de formation. |
+| `trainingTimeframe` | Valeur entière représentant les minutes pour la filtration des données à utiliser pour les expériences de formation. Par exemple, une valeur de `"10080"` signifie que les données des dernières 10 080 minutes ou 168 heures seront utilisées pour l’exécution d’expérience de formation. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la formation. |
+| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de notation planifiées. |
+| `scoringTimeframe` | Valeur entière représentant les minutes pour la filtration des données à utiliser pour les exécutions d’expérience de notation. Par exemple, une valeur de `"10080"` signifie que les données des dernières 10 080 minutes ou 168 heures seront utilisées pour chaque exécution des expériences de notation planifiées. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
+| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de notation planifiées. |
 | `scoringSchedule.startTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.endTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.cron` | Valeur cron indiquant l’intervalle de score des exécutions d’expérience. |
@@ -200,9 +200,9 @@ Une réponse réussie renvoie les détails du nouveau service ML. Cela inclut le
 }
 ```
 
-### Service ML avec expériences planifiées pour la formation et la notation {#ml-service-with-scheduled-experiments-for-training-and-scoring}
+### Service ML avec des expériences planifiées pour la formation et la notation {#ml-service-with-scheduled-experiments-for-training-and-scoring}
 
-Pour publier une instance ML existante en tant que service ML avec une formation planifiée et des exécutions d’expériences de score, vous devez fournir des calendriers de formation et de notation. Lorsqu&#39;un service ML de cette configuration est créé, des entités Expérience planifiées pour la formation et le score sont également créées. Notez que les calendriers de formation et de notation ne doivent pas nécessairement être les mêmes. Lors de l’exécution d’un travail de score, le dernier modèle de formation produit par les exécutions d’expériences de formation programmée est récupéré et utilisé pour l’exécution de score planifiée.
+Pour publier une instance ML existante en tant que service ML avec une formation planifiée et des exécutions d’expériences de score, vous devez fournir des calendriers de formation et de notation. Lorsqu&#39;un service ML de cette configuration est créé, des entités Expérience planifiées pour la formation et le score sont également créées. Notez que les calendriers de formation et de notation ne doivent pas nécessairement être les mêmes. Au cours de l’exécution d’une tâche de notation, le dernier modèle formé produit par les exécutions d’expériences de formation programmée est récupéré et utilisé pour l’exécution de notation planifiée.
 
 **Format d’API**
 
@@ -241,13 +241,13 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 | Clé JSON | Description |
 | --- | --- |
-| `mlInstanceId` | Identification d&#39;instance ML existante, représentant l&#39;instance ML utilisée pour créer le service ML. |
-| `trainingDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour l&#39;expérience de formation. |
-| `trainingTimeframe` | Valeur Entier représentant les minutes de filtrage des données à utiliser pour l’expérience de formation. Par exemple, une valeur de `"10080"` moyenne pour les données des 10 080 dernières minutes ou 168 heures sera utilisée pour l’exécution de l’expérience de formation. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la formation. |
-| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de score planifiées. |
-| `scoringTimeframe` | Valeur Entier représentant les minutes de filtrage des données à utiliser pour les exécutions d’expériences de score. Par exemple, une valeur de `"10080"` moyenne pour les données des 10 080 dernières minutes ou 168 heures sera utilisée pour chaque exécution d’expérience de score planifiée. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
-| `trainingSchedule` | Contient des détails sur les exécutions d’expériences de formation programmées. |
-| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de score planifiées. |
+| `mlInstanceId` | Identification de l’instance ML existante, représentant l’instance ML utilisée pour créer le service ML. |
+| `trainingDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour l’expérience de formation. |
+| `trainingTimeframe` | Valeur entière représentant les minutes pour la filtration des données à utiliser pour les expériences de formation. Par exemple, une valeur de `"10080"` signifie que les données des dernières 10 080 minutes ou 168 heures seront utilisées pour l’exécution d’expérience de formation. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la formation. |
+| `scoringDataSetId` | Identification faisant référence au jeu de données spécifique à utiliser pour les exécutions d’expériences de notation planifiées. |
+| `scoringTimeframe` | Valeur entière représentant les minutes pour la filtration des données à utiliser pour les exécutions d’expérience de notation. Par exemple, une valeur de `"10080"` signifie que les données des dernières 10 080 minutes ou 168 heures seront utilisées pour chaque exécution des expériences de notation planifiées. Notez qu’une valeur de `"0"` ne filtre pas les données, toutes les données du jeu de données sont utilisées pour la notation. |
+| `trainingSchedule` | Contient des détails sur les exécutions d’expériences de formation planifiées. |
+| `scoringSchedule` | Contient des détails sur les exécutions d’expériences de notation planifiées. |
 | `scoringSchedule.startTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.endTime` | Date/heure indiquant à quel moment début le score. |
 | `scoringSchedule.cron` | Valeur cron indiquant l’intervalle de score des exécutions d’expérience. |
@@ -340,12 +340,12 @@ Une réponse réussie renvoie les détails du service ML.
 
 >[!NOTE]
 >
->La récupération de différents services ML peut renvoyer une réponse avec plus ou moins de paires clé-valeur. La réponse ci-dessus est une représentation d&#39;un service [ML avec une formation planifiée et des exécutions](#ml-service-with-scheduled-experiments-for-training-and-scoring)d&#39;expériences de score.
+>La récupération de différents services ML peut renvoyer une réponse avec plus ou moins de paires clé-valeur. La réponse ci-dessus est une représentation d’[un service ML avec des exécutions d’expériences de notation et de formation planifiées](#ml-service-with-scheduled-experiments-for-training-and-scoring).
 
 
 ## Planification de la formation ou de la notation
 
-Si vous souhaitez planifier la notation et la formation sur un service ML déjà publié, vous pouvez le faire en mettant à jour le service ML existant avec une `PUT` demande le `/mlServices`.
+If you want to schedule scoring and training on an ML Service that has already been published, you can do so by updating the existing ML Service with a `PUT` request on `/mlServices`.
 
 **Format d’API**
 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->N’essayez pas de modifier les `startTime` tâches de formation et de notation planifiées existantes. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à replanifier les tâches de formation et de notation.
+>Do not attempt to modify the `startTime` on existing scheduled training and scoring jobs. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à reprogrammer les tâches de formation et de notation.
 
 **Réponse**
 
