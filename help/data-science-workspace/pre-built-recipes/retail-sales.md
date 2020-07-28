@@ -1,43 +1,43 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Recette de vente au détail
+title: Recette Ventes au détail
 topic: overview
 translation-type: tm+mt
 source-git-commit: e08460bc76d79920bbc12c7665a1416d69993f34
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
-# Recette de vente au détail
+# Recette Ventes au détail
 
-La recette Ventes au détail vous permet de prédire les prévisions de ventes pour tous les magasins prédits pour une certaine période. Grâce à un modèle de prévision précis, le détaillant serait en mesure de trouver la relation entre les politiques de demande et de tarification et de prendre des décisions de prix optimisées pour maximiser les ventes et les recettes.
+La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 
-Le document suivant répond à des questions telles que :
-* Pour qui est construite cette recette ?
-* Que fait cette recette ?
+Le document suivant apporte des réponses aux questions suivantes :
+* Pour qui cette recette a-t-elle été créée ?
+* Comment fonctionne cette recette ?
 * Comment démarrer ?
 
-## Pour qui est construite cette recette ?
+## Pour qui cette recette a-t-elle été créée ?
 
-Un détaillant doit faire face à de nombreux défis pour rester compétitif sur le marché actuel. Votre marque cherche à augmenter les ventes annuelles de votre marque de vente au détail, mais il y a de nombreuses décisions à prendre pour minimiser vos coûts d&#39;exploitation. L&#39;offre excessive augmente les coûts d&#39;inventaire, tandis qu&#39;une offre insuffisante augmente le risque de perdre des clients vers d&#39;autres marques. Avez-vous besoin de commander plus d&#39;approvisionnement pour les prochains mois ? Comment décidez-vous de la tarification optimale de vos produits pour maintenir les objectifs de vente hebdomadaires ?
+Un détaillant doit faire face à de nombreux défis pour rester compétitif sur le marché actuel. Votre marque cherche à augmenter ses ventes annuelles pour votre marque de vente au détail, mais de nombreuses décisions doivent être prises pour minimiser vos coûts d’exploitation. Une offre excessive augmente les coûts d’inventaire, tandis qu’une offre insuffisante augmente le risque de perdre des clients au profit d’autres marques. Avez-vous besoin de commander plus de produits pour les prochains mois ? De quelle manière établissez-vous les prix optimaux de vos produits afin de maintenir les objectifs de ventes hebdomadaires ?
 
-## Que fait cette recette ?
+## Comment fonctionne cette recette ?
 
-La recette Prévision des ventes au détail utilise l&#39;apprentissage automatique pour prédire les tendances des ventes. La recette fait cela en exploitant la richesse des données historiques de vente au détail et en personnalisant l&#39;algorithme d&#39;apprentissage automatique de régresseurs pour prédire les ventes une semaine à l&#39;avance. Le modèle utilise l’historique des achats et les paramètres de configuration prédéterminés par défaut, déterminés par nos Data Scientists, pour améliorer la précision prédictive.
+La recette de prévision des ventes au détail se sert de l’apprentissage automatique pour prédire les tendances de vente. Pour ce faire, elle exploite la richesse des données historiques de vente au détail et développe l’algorithme d’apprentissage automatique personnalisé de variable libre de boosting de gradient pour prédire les ventes une semaine à l’avance. Le modèle se sert de l’historique des achats et utilise par défaut des paramètres de configuration prédéterminés par nos spécialistes des données afin d’améliorer la précision des prédictions.
 
 ## Comment démarrer ?
 
-Vous pouvez commencer en suivant ce [didacticiel](../jupyterlab/create-a-recipe.md).
+Pour commencer, suivez ce [tutoriel](../jupyterlab/create-a-recipe.md).
 
-Ce didacticiel porte sur la création de la recette Ventes au détail dans un bloc-notes Jupyter et sur l’utilisation du bloc-notes pour la recette afin de créer la recette dans Adobe Experience Platform.
+Ce tutoriel abordera la création de la recette Ventes au détail dans un notebook Jupyter et l’utilisation du notebook pour créer la recette dans Adobe Experience Platform.
 
-## Data schema
+## Schéma des données
 
-Cette recette utilise des schémas [](../../xdm/schema/field-dictionary.md) XDM pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
+Cette recette utilise les [schémas XDM](../../xdm/schema/field-dictionary.md) pour modéliser les données. Le schéma utilisé pour cette recette est illustré ci-dessous :
 
 | Nom du champ | Type |
 --- | ---
@@ -46,22 +46,22 @@ Cette recette utilise des schémas [](../../xdm/schema/field-dictionary.md) XDM 
 | storeType | Chaîne |
 | weeklySales | Nombre |
 | storeSize | Entier |
-| température | Nombre |
-| regionFuelPrice | Nombre |
-| annotation | Nombre |
+| temperature | Nombre |
+| regionalFuelPrice | Nombre |
+| markdown | Nombre |
 | cpi | Nombre |
-| chômage | Nombre |
+| unemployment | Nombre |
 | isHoliday | Booléen |
 
 
 ## Algorithme
 
-Tout d’abord, le jeu de données de formation dans le schéma *DSWRetailSales* est chargé. À partir de là, le modèle est formé à l’aide d’un algorithme [de régresseur](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html)de croissance en dégradé. Le gonflement des niveaux de gris se fonde sur l&#39;idée que les apprenants faibles (qui sont au moins légèrement meilleurs que les chances aléatoires) peuvent former une succession d&#39;apprenants concentrés sur l&#39;amélioration des faiblesses de l&#39;apprenant précédent. Ensemble, ils peuvent être utilisés pour créer un modèle prédictif puissant.
+Tout d’abord, le jeu de données d’entraînement dans le schéma *DSWRetailSales* est chargé. Ensuite, le modèle est entraîné à l’aide d’un [algorithme de variable libre de boosting de gradient](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Le boosting de gradient part du principe que les apprenants faibles (ceux qui sont au moins légèrement supérieurs au hasard) peuvent former une succession d’apprenants concentrés sur l’amélioration des faiblesses de l’apprenant précédent. Ensemble, ils peuvent être utilisés pour créer un puissant modèle prédictif.
 
-Le processus comprend trois éléments : une fonction de perte, un apprenant faible et un modèle additif.
+Le processus comprend trois éléments : une fonction de perte, un apprenant faible et un modèle additif.
 
-La fonction de perte se rapporte à une mesure de la qualité d&#39;un modèle de prévision en termes de capacité à prévoir le résultat attendu - la régression des moindres carrés est utilisée dans cette recette.
+La fonction de perte fait référence à une mesure de l’efficacité d’un modèle de prédiction en matière de capacité à prédire le résultat attendu ; la régression aux moindres carrés est utilisée dans cette recette.
 
-En augmentant le gradient, un arbre de décision est utilisé comme apprenant faible. En règle générale, les arbres avec un nombre limité de couches, de noeuds et de divisions sont utilisés pour s’assurer que l’apprenant reste faible.
+Dans un boosting de gradient, l’apprenant faible est un arbre de décision. En règle générale, les arbres avec un nombre limité de calques, de nœuds et de divisions sont utilisés pour s’assurer que l’apprenant reste faible.
 
-Enfin, un modèle additif est utilisé. Après avoir calculé la perte avec la fonction de perte, l&#39;arbre qui réduit la perte est choisi et pondéré pour améliorer la modélisation des observations les plus difficiles. La production de l&#39;arbre pondéré est ensuite ajoutée à la séquence d&#39;arbres existante pour améliorer la production finale du modèle - quantité de ventes futures .
+Pour finir, un modèle additif est utilisé. Après avoir calculé la perte avec la fonction de perte, l’arbre qui réduit la perte est choisi et pondéré pour améliorer la modélisation des observations les plus difficiles. Le résultat de l’arbre pondéré est alors ajouté à la séquence d’arbres existante pour améliorer le résultat final du modèle : le nombre de ventes futures.
