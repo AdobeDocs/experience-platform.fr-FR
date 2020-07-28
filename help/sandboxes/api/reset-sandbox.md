@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Réinitialisation d’un sandbox
+title: Réinitialisation d’un environnement de test
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 
-# Réinitialisation d’un sandbox
+# Réinitialisation d’un environnement de test
 
-Les sandbox de développement disposent d’une fonctionnalité de réinitialisation en usine qui supprime toutes les ressources non par défaut d’un sandbox. Vous pouvez réinitialiser un sandbox en exécutant une requête PUT qui inclut les sandbox `name` dans le chemin de la requête.
+Les environnements de test de développement disposent d’une fonctionnalité de réinitialisation supprimant toutes les ressources de l’environnement de test autres que celles par défaut. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -24,11 +24,11 @@ PUT /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | Propriété `name` du sandbox à réinitialiser. |
+| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez réinitialiser. |
 
 **Requête**
 
-La requête suivante réinitialise un sandbox nommé &quot;dev-2&quot;.
+La requête suivante réinitialise un environnement de test nommé « dev-2 ».
 
 ```shell
 curl -X PUT \
@@ -45,11 +45,11 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `action` | Ce paramètre doit être fourni dans la charge utile de la demande avec la valeur &quot;reset&quot; pour réinitialiser le sandbox. |
+| `action` | Ce paramètre doit être fourni dans le payload de la requête avec une valeur « reset » pour réinitialiser l’environnement de test. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu’il `state` est &quot;réinitialisé&quot;.
+Une réponse réussie renvoie les détails de l’environnement de test mis à jour, indiquant que son `state` est « resetting ».
 
 ```json
 {
@@ -64,4 +64,4 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant qu�
 
 >[!NOTE]
 >
->Une fois qu&#39;un sandbox est réinitialisé, il faut environ 15 minutes pour être approvisionné par le système. Une fois l’approvisionnement effectué, le sandbox `state` devient &quot;actif&quot; ou &quot;échec&quot;.
+>Une fois qu’un environnement de test est réinitialisé, il faut compter environ 15 minutes pour qu’il soit configuré par le système. Une fois la configuration effectuée, le `state` de l’environnement de test prend la valeur « active » ou « failed ».
