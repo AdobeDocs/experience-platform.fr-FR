@@ -39,7 +39,7 @@ Un schéma peut être considéré comme le plan directeur des données que vous 
 
 Le processus de composition du schéma commence par la sélection d’une classe. La classe définit les principaux aspects comportementaux des données (enregistrement ou série temporelle), ainsi que les champs minimaux requis pour décrire les données qui seront ingérées.
 
-The schema you are making in this tutorial uses the [!DNL XDM Individual Profile] class. [!DNL XDM Individual Profile] est une classe standard fournie par Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
+The schema you are making in this tutorial uses the [!DNL XDM Individual Profile] class. [!DNL XDM Individual Profile] est une classe standard fournie par l’Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
 
 Pour attribuer une classe, un appel API est effectué pour créer (POST) un nouveau schéma dans le conteneur du client. Cet appel inclut la classe que le schéma va implémenter. Chaque schéma ne peut mettre en œuvre qu’une seule classe.
 
