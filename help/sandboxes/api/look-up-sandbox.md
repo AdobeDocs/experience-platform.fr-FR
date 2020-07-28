@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Rechercher un sandbox
+title: Recherche d’un environnement de test
 topic: developer guide
 translation-type: tm+mt
 source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Rechercher un sandbox
+# Recherche d’un environnement de test
 
-Vous pouvez rechercher un sandbox individuel en effectuant une requête GET qui inclut la propriété `name` du sandbox dans le chemin de la requête.
+Vous pouvez rechercher un environnement de test individuel en effectuant une requête GET comprenant la propriété `name` de l’environnement de test dans le chemin de requête.
 
 **Format d’API**
 
@@ -24,11 +24,11 @@ GET /sandboxes/{SANDBOX_NAME}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez rechercher. |
+| `{SANDBOX_NAME}` | La propriété `name` de l’environnement de test que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère un sandbox nommé &quot;dev-2&quot;.
+La requête suivante récupère un environnement de test nommé « dev-2 ».
 
 ```shell
 curl -X GET \
@@ -41,7 +41,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `title`, `state`et `type`.
+Une réponse réussie renvoie les détails de l’environnement de test, y compris son `name`, `title`, `state` et `type`.
 
 ```json
 {
@@ -61,9 +61,9 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom du sandbox. Utilisé à des fins de recherche dans les appels d’API. |
-| `title` | Nom d’affichage du sandbox. |
-| `state` | Etat de traitement actuel du sandbox. L’état d’un sandbox peut être l’un des suivants : <ul><li>**création**: Le sandbox a été créé, mais est toujours en cours d&#39;approvisionnement par le système.</li><li>**actif**: Le sandbox est créé et actif.</li><li>**échec**: En raison d&#39;une erreur, le sandbox n&#39;a pas pu être configuré par le système et est désactivé.</li><li>**supprimé**: Le sandbox a été désactivé manuellement.</li></ul> |
-| `type` | Type de sandbox, &quot;développement&quot; ou &quot;production&quot;. |
-| `isDefault` | Propriété booléenne indiquant si ce sandbox est le sandbox par défaut pour l’organisation. Il s’agit généralement du sandbox de production. |
-| `eTag` | Identificateur d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et l’efficacité de la mise en cache, cette valeur est mise à jour chaque fois qu’une modification est apportée au sandbox. |
+| `name` | Le nom de l’environnement de test. Utilisé à des fins de recherche dans les appels API. |
+| `title` | Le nom d’affichage de l’environnement de test. |
+| `state` | L’état de traitement actuel de l’environnement de test. L’état d’un environnement de test peut correspondre à l’un des suivants : <ul><li>**création** : l’environnement de test a été créé, mais le système continue de le configurer.</li><li>**actif** : l’environnement de test est créé et actif.</li><li>**échec** : en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et a été désactivé.</li><li>**supprimé** : l’environnement de test a été désactivé manuellement.</li></ul> |
+| `type` | Le type d’environnement de test : « développement » ou « production ». |
+| `isDefault` | Une propriété booléenne indiquant s’il s’agit de l’environnement de test par défaut de l’organisation. Il s’agit généralement de l’environnement de test de production. |
+| `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
