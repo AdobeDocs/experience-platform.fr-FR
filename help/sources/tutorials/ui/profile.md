@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 0%
+ht-degree: 22%
 
 ---
 
@@ -18,21 +18,21 @@ Les données entrantes provenant de votre connecteur source peuvent être utilis
 
 ## Prise en main
 
-Ce didacticiel nécessite une compréhension pratique des composants suivants de l&#39;Adobe Experience Platform :
+Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système](../../../xdm/home.md)de modèle de données d’expérience (XDM) : Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-   - [Principes de base de la composition](../../../xdm/schema/composition.md)des schémas : Découvrez les éléments de base des schémas XDM, y compris les principes clés et les meilleures pratiques en matière de composition des schémas.
+- [Système de modèle de données d’expérience (XDM)](../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+   - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Profil](../../../profile/home.md)client en temps réel : Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [Real-time Customer Profile](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 De plus, ce didacticiel nécessite que vous ayez déjà créé et configuré un connecteur source.  Vous trouverez une liste de didacticiels pour la création de différents connecteurs dans l’interface utilisateur dans l’aperçu [des connecteurs](../../home.md)source.
 
 ## Renseigner vos [!DNL Real-time Customer Profile] données
 
-Pour enrichir les profils du client, le schéma source du jeu de données de cible doit être compatible pour une utilisation dans [!DNL Real-time Customer Profile]. Un schéma compatible satisfait aux exigences suivantes :
+Pour enrichir les profils du client, le schéma source du jeu de données de cible doit être compatible pour une utilisation dans [!DNL Real-time Customer Profile]. Un schéma compatible répond aux critères suivants :
 
-- Le schéma comporte au moins un attribut spécifié comme propriété d&#39;identité.
-- Le schéma possède une propriété d&#39;identité définie en tant qu&#39;identité principale.
+- Le schéma comporte au moins un attribut défini comme propriété d’identité.
+- Le schéma comporte au moins une propriété d’identité définie comme identité principale.
 - Il existe un mappage dans le flux de données où l&#39;identité principale est un attribut de cible.
 
 Dans l’espace de travail Sources, cliquez sur l’onglet **[!UICONTROL Parcourir]** pour liste vos connexions de base. Dans la liste affichée, recherchez la connexion qui contient le flux de données que vous souhaitez renseigner sur les profils. Cliquez sur le nom de la connexion pour accéder à ses détails.
@@ -67,4 +67,4 @@ Avec le schéma et le jeu de données activés pour [!DNL Profile], les données
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez activé avec succès les données entrantes pour [!DNL Profile] la population. Pour plus d’informations, voir la présentation [du Profil client en temps](../../../profile/home.md)réel.
+En suivant ce didacticiel, vous avez activé avec succès les données entrantes pour [!DNL Profile] la population. Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../../../profile/home.md).
