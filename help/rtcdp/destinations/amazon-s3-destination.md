@@ -24,7 +24,7 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **[!DNL Amazon S3]clé d&#39;accès et clé[!DNL Amazon S3]**secrète : Dans[!DNL Amazon S3], générez une paire de clés d&#39;accès - accès secret pour accorder un accès au CDP Adobe en temps réel à votre[!DNL Amazon S3]compte.
+* **[!DNL Amazon S3]clé d&#39;accès et clé[!DNL Amazon S3]**secrète : Dans[!DNL Amazon S3], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre[!DNL Amazon S3]compte.
 
 
 
