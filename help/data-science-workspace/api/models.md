@@ -7,18 +7,18 @@ translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '821'
-ht-degree: 4%
+ht-degree: 66%
 
 ---
 
 
 # Modèles
 
-Un modèle est l&#39;instance d&#39;une recette d&#39;apprentissage automatique qui est formée à l&#39;aide de données historiques et de configurations pour résoudre un cas d&#39;utilisation commerciale.
+Un modèle est une instance d’une recette d’apprentissage automatique formée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 
 ## Récupération d’une liste de modèles
 
-Vous pouvez récupérer une liste de détails de modèle appartenant à tous les modèles en exécutant une seule requête GET sur /models. Par défaut, cette liste se classe à partir du modèle créé le plus ancien et limite les résultats à 25. Vous pouvez choisir de filtrer les résultats en spécifiant certains paramètres de requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
+Vous pouvez récupérer une liste de détails de modèle communs à tous les modèles en exécutant une seule requête GET vers /models. Par défaut, cette liste se classe à partir du modèle créé le plus ancien et limite les résultats à 25. Vous pouvez choisir de filtrer les résultats en spécifiant certains paramètres de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -39,7 +39,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de vos modèles, y compris chaque identifiant unique de modèle (`id`).
+Une réponse réussie renvoie un payload contenant les détails de vos modèles, y compris chaque identifiant unique des modèles (`id`).
 
 ```json
 {
@@ -93,14 +93,14 @@ Une réponse réussie renvoie une charge utile contenant les détails de vos mod
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID correspondant au modèle. |
-| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la `name` valeur du modèle. |
-| `experimentId` | ID d’expérience valide. |
-| `experimentRunId` | ID d’exécution d’expérience valide. |
+| `id` | L’identifiant correspondant au modèle. |
+| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la valeur `name` du modèle. |
+| `experimentId` | Un identifiant d’expérience valide. |
+| `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
 
-## Récupérer un modèle spécifique
+## Récupération d’un modèle spécifique
 
-Vous pouvez récupérer une liste de détails de modèle appartenant à un modèle particulier en exécutant une seule requête GET et en fournissant un ID de modèle valide dans le chemin de la requête. Pour faciliter le filtrage des résultats, vous pouvez spécifier des paramètres de requête dans le chemin d’accès à la requête. Pour une liste des requêtes disponibles, reportez-vous à la section de l&#39;annexe sur les paramètres de [requête pour la récupération](./appendix.md#query)des ressources.
+Vous pouvez récupérer une liste de détails de modèle appartenant à un modèle spécifique en exécutant une seule requête GET et en renseignant un identifiant de modèle valide dans le chemin de la requête. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -111,12 +111,12 @@ GET /models/?property=experimentRunID=={EXPERIMENT_RUN_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
-| `{EXPERIMENT_RUN_ID}` | Identificateur de l&#39;exécution de l&#39;expérience. |
+| `{MODEL_ID}` | L’identifiant du modèle formé ou publié. |
+| `{EXPERIMENT_RUN_ID}` | L’identifiant de l’exécution de l’expérience. |
 
 **Requête**
 
-La requête suivante contient une requête et récupère une liste de modèles formés partageant la même expérienceRunID ({EXPERIMENT_RUN_ID}).
+La demande suivante contient une requête et récupère une liste de modèles formés partageant le même expérienceRunID ({EXPERIMENT_RUN_ID}).
 
 ```shell
 curl -X GET \
@@ -129,7 +129,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de votre modèle, y compris l&#39;identifiant unique Modèles (`id`).
+Une réponse réussie renvoie un payload contenant les détails de votre modèle, y compris l’identifiant unique des modèles (`id`).
 
 ```json
 {
@@ -157,14 +157,14 @@ Une réponse réussie renvoie une charge utile contenant les détails de votre m
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID correspondant au modèle. |
-| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la `name` valeur du modèle. |
-| `experimentId` | ID d’expérience valide. |
-| `experimentRunId` | ID d’exécution d’expérience valide. |
+| `id` | L’identifiant correspondant au modèle. |
+| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la valeur `name` du modèle. |
+| `experimentId` | Un identifiant d’expérience valide. |
+| `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
 
 ## Enregistrer un modèle prégénéré {#register-a-model}
 
-Vous pouvez enregistrer un modèle prégénéré en adressant une requête POST au point de `/models` terminaison. Pour enregistrer votre modèle, les valeurs de fichier et de `modelArtifact` `model` propriété doivent être incluses dans le corps de la requête.
+You can register a pre-generated Model by making a POST request to the `/models` endpoint. Pour enregistrer votre modèle, les valeurs de fichier et de `modelArtifact` `model` propriété doivent être incluses dans le corps de la requête.
 
 **Format d’API**
 
@@ -197,7 +197,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails de votre modèle, y compris l&#39;identifiant unique Modèles (`id`).
+Une réponse réussie renvoie un payload contenant les détails de votre modèle, y compris l’identifiant unique des modèles (`id`).
 
 ```json
 {
@@ -213,16 +213,16 @@ Une réponse réussie renvoie une charge utile contenant les détails de votre m
 
 | Propriété | Description |
 | --- | --- |
-| `id` | ID correspondant au modèle. |
-| `modelArtifactUri` | URI indiquant l’emplacement de stockage du modèle. L&#39;URI se termine par la `id` valeur de votre modèle. |
+| `id` | L’identifiant correspondant au modèle. |
+| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. The URI ends with the `id` value for your model. |
 
-## Mettre à jour un modèle par ID
+## Mise à jour d’un modèle par son identifiant
 
-Vous pouvez mettre à jour un modèle existant en remplaçant ses propriétés par une requête PUT qui inclut l’ID du modèle de cible dans le chemin de la requête et fournit une charge utile JSON contenant des propriétés mises à jour.
+Vous pouvez mettre à jour un modèle existant en écrasant ses propriétés par le biais d’une requête PUT qui inclut l’identifiant du modèle cible dans le chemin d’accès à la requête et en fournissant un payload JSON contenant des propriétés mises à jour.
 
 >[!TIP]
 >
->Afin d&#39;assurer le succès de cette requête PUT, il est conseillé d&#39;effectuer d&#39;abord une requête GET pour récupérer le modèle par ID. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié comme charge utile pour la demande PUT.
+>Afin de garantir le succès de cette requête PUT, il est conseillé d’effectuer en premier lieu une requête GET pour récupérer le modèle par son identifiant. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 **Format d’API**
 
@@ -232,7 +232,7 @@ PUT /models/{MODEL_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
+| `{MODEL_ID}` | L’identifiant du modèle formé ou publié. |
 
 **Requête**
 
@@ -261,7 +261,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse réussie renvoie une charge utile contenant les détails mis à jour de l’expérience.
+Une réponse réussie renvoie un payload contenant les détails mis à jour de l’expérience.
 
 ```json
 {
@@ -279,9 +279,9 @@ Une réponse réussie renvoie une charge utile contenant les détails mis à jou
     }
 ```
 
-## Supprimer un modèle par ID
+## Suppression d’un modèle par son identifiant
 
-Vous pouvez supprimer un seul modèle en exécutant une requête de DELETE qui inclut l&#39;ID du modèle de cible dans le chemin d&#39;accès à la requête.
+Vous pouvez supprimer un seul modèle en exécutant une requête DELETE qui inclut l’identifiant du modèle cible dans le chemin de la requête.
 
 **Format d’API**
 
@@ -291,7 +291,7 @@ DELETE /models/{MODEL_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
+| `{MODEL_ID}` | L’identifiant du modèle formé ou publié. |
 
 **Requête**
 
@@ -306,7 +306,7 @@ curl -X DELETE \
 
 **Réponse**
 
-Une réponse positive renvoie une charge utile contenant un état 200 confirmant la suppression du modèle.
+Une réponse réussie renvoie un payload contenant un état 200 qui confirme la suppression du modèle.
 
 ```json
 {
@@ -328,7 +328,7 @@ POST /models/{MODEL_ID}/transcodings
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
+| `{MODEL_ID}` | L’identifiant du modèle formé ou publié. |
 
 **Requête**
 
@@ -373,7 +373,7 @@ Une réponse réussie renvoie une charge utile contenant un objet JSON avec les 
 
 ## Récupérer une liste de transcodages pour un modèle {#retrieve-transcoded-model-list}
 
-Vous pouvez récupérer une liste de transcodages qui ont été effectués sur un modèle en exécutant une requête GET avec votre `{MODEL_ID}`système.
+Vous pouvez récupérer une liste de transcodages qui ont été effectués sur un modèle en exécutant une demande de GET avec votre `{MODEL_ID}`.
 
 **Format d’API**
 
@@ -383,7 +383,7 @@ GET /models/{MODEL_ID}/transcodings
 
 | Paramètre | Description |
 | --- | --- |
-| `{MODEL_ID}` | Identificateur du modèle formé ou publié. |
+| `{MODEL_ID}` | L’identifiant du modèle formé ou publié. |
 
 **Requête**
 
@@ -431,9 +431,9 @@ Une réponse réussie renvoie une charge utile contenant un objet json avec une 
 }
 ```
 
-## Récupérer un modèle transcodé spécifique {#retrieve-transcoded-model}
+## Retrieve a specific transcoded Model {#retrieve-transcoded-model}
 
-Vous pouvez récupérer un modèle transcodé spécifique en exécutant une requête GET avec votre modèle `{MODEL_ID}` et l&#39;identifiant d&#39;un modèle transcodé.
+Vous pouvez récupérer un modèle transcodé spécifique en exécutant une demande de GET avec votre modèle `{MODEL_ID}` et l&#39;identifiant d&#39;un modèle transcodé.
 
 **Format d’API**
 
