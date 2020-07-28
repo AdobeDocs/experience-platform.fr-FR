@@ -1,96 +1,96 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Analyse de vos données à l'aide de portables
+title: Analyse de vos données à l’aide de notebooks
 topic: Tutorial
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '1702'
-ht-degree: 0%
+ht-degree: 83%
 
 ---
 
 
-# Analyse de vos données à l&#39;aide de portables
+# Analyse de vos données à l’aide de notebooks
 
-Ce didacticiel se concentre sur l’utilisation de blocs-notes Jupyter, conçus dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
+Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein de Data Science Workspace pour accéder à vos données, les explorer et les visualiser. À la fin de ce tutoriel, vous maîtriserez certaines des fonctionnalités que proposent les notebooks Jupyter dans le but de mieux comprendre vos données.
 
-Les concepts suivants sont introduits :
+Les concepts suivants sont présentés :
 
 - **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans[!DNL Adobe Experience Platform].
-- **Lots :** Les jeux de données sont composés de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
-- **SDK d’accès aux données (obsolète) :** Le SDK d’accès aux données est désormais obsolète. Veuillez utiliser le [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
+- **Lots :** les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
+- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser le [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
 
-## Explorez des blocs-notes dans Data Science Workspace.
+## Exploration de notebooks dans Data Science Workspace
 
-Dans cette section, nous étudions les données qui étaient précédemment incorporées au schéma de vente au détail.
+Dans cette section, nous explorons les données qui ont été précédemment intégrées au schéma de ventes au détail.
 
-Data Science Workspace permet aux utilisateurs de créer [!DNL Jupyter Notebooks] par le biais de la [!DNL JupyterLab] plateforme, où ils peuvent créer et modifier des workflows d’apprentissage automatique. [!DNL JupyterLab] est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents de bloc-notes par le biais d&#39;un navigateur Web. Ces blocs-notes peuvent contenir du code exécutable et des éléments de texte enrichi. Pour nos besoins, nous utiliserons Markdown pour la description de l&#39;analyse et le code exécutable [!DNL Python] afin d&#39;explorer et d&#39;analyse des données.
+Data Science Workspace allows users to create [!DNL Jupyter Notebooks] through the [!DNL JupyterLab] platform where they can create and edit machine learning workflows. [!DNL JupyterLab] est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents de notebooks par le biais d’un navigateur web. Ces notebooks peuvent contenir à la fois du code exécutable et des éléments de texte enrichi. For our purposes, we will use Markdown for analysis description and executable [!DNL Python] code to perform data exploration and analysis.
 
-### Choisir votre espace de travail
+### Sélection de votre espace de travail
 
-Lors du lancement [!DNL JupyterLab], une interface Web est présentée pour les portables Jupyter. Selon le type de bloc-notes que nous choisissons, un noyau correspondant sera lancé.
+When launching [!DNL JupyterLab], we are presented with a web-based interface for Jupyter Notebooks. Selon le type de notebook sélectionné, un noyau correspondant sera lancé.
 
-Lorsque nous comparons l&#39;environnement à utiliser, nous devons tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec [!DNL Python], en tant qu’utilisateur régulier, la limite de RAM est de 2 Go. Même en tant qu&#39;utilisateur, nous serions limités à 20 Go de RAM. S&#39;il s&#39;agit de calculs plus volumineux, il serait logique d&#39;utiliser [!DNL Spark] les offres de 1,5 To qui sont partagées avec toutes les instances d&#39;ordinateur portable.
+Lors de la comparaison des environnements à utiliser, il faut tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec , la limite de RAM pour les utilisateurs réguliers est de 2 Go. [!DNL Python] Les utilisateurs avancés sont eux limités à 20 Go de RAM. If dealing with larger computations, it would make sense to use [!DNL Spark] which offers 1.5 TB that is shared with all notebook instances.
 
-Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s&#39;exécute dans un cluster CPU.
+Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s’exécute dans un cluster CPU.
 
-### Créer un bloc-notes
+### Création d’un nouveau filtre
 
-Dans l’ [!DNL Adobe Experience Platform] interface utilisateur, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder à Data Science Workspace. A partir de cette page, cliquez sur l&#39; [!DNL JupyterLab] onglet qui va ouvrir le [!DNL JupyterLab] lanceur. Vous devriez voir une page similaire à celle-ci.
+In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab_launcher.png)
 
-Dans notre tutoriel, nous utiliserons le [!DNL Python] 3 du Jupyter Notebook pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers de travail sont fournis. Nous utiliserons la recette Ventes au détail pour [!DNL Python] 3.
+In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. Sur la page du lanceur, vous trouverez des notebooks d’exemple. We will be using the Retail Sales recipe for [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
-La recette Ventes au détail est un exemple autonome qui utilise le même jeu de données Ventes au détail pour montrer comment explorer et visualiser les données dans Jupyter Notebook. En outre, le carnet de notes approfondit la formation et la vérification. Vous trouverez plus d&#39;informations sur ce bloc-notes spécifique dans cette [présentation](../walkthrough.md).
+La recette Ventes au détail constitue un exemple autonome qui utilise le même jeu de données Ventes au détail pour illustrer la manière dont les données peuvent être explorées et visualisées dans Jupyter Notebook. En outre, le notebook approfondit encore la formation et la vérification. Vous trouverez plus d’informations sur ce notebook en particulier dans cette [présentation détaillée](../walkthrough.md).
 
-### Données d’accès
+### Accès aux données
 
 >[!NOTE]
 >
->La variable `data_access_sdk_python` est obsolète et n’est plus recommandée. Pour convertir votre code, consultez le didacticiel [de conversion du SDK d’accès aux données en SDK](../authoring/platform-sdk.md) Platform. Les mêmes étapes ci-dessous s’appliquent toujours à ce didacticiel.
+>Le paramètre `data_access_sdk_python` est obsolète et n’est plus recommandé. Consultez le tutoriel de [conversion du SDK Data Access vers SDK Platform](../authoring/platform-sdk.md) pour convertir votre code. Les étapes décrites ci-dessous s’appliquent également à ce tutoriel.
 
-Nous allons passer en revue l&#39;accès aux données en interne [!DNL Adobe Experience Platform] et en externe. Nous utiliserons la `data_access_sdk_python` bibliothèque pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la [!DNL Python] bibliothèque pandas.
+We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. Nous passerons par la bibliothèque `data_access_sdk_python` pour accéder aux données internes telles que les jeux de données et les schémas XDM. For external data, we will use the pandas [!DNL Python] library.
 
 #### Données externes
 
-A l&#39;ouverture du bloc-notes Ventes au détail, recherchez l&#39;en-tête &quot;Charger les données&quot;. Le [!DNL Python] code suivant utilise la structure `DataFrame` de données de pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur [!DNL Github] dans DataFrame :
+Une fois le notebook Ventes au détail ouvert, cherchez l’en-tête « Charger les données ». The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the DataFrame:
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
-La structure de données DataFrame de Pandas est une structure de données étiquetées en deux dimensions. Pour voir rapidement les dimensions de nos données, nous pouvons utiliser le `df.shape`. Ceci renvoie un tuple qui représente la dimension du DataFrame :
+La structure de données du DataFrame de pandas est une structure de données étiquetées en deux dimensions. Pour voir rapidement les dimensions de nos données, nous pouvons utiliser `df.shape`. Cette opération renvoie un tuple qui représente les dimensions du DataFrame :
 
 ![](../images/jupyterlab/analyze-data/df_shape.png)
 
-Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous pouvons utiliser `df.head(n)` pour vue les premières `n` lignes du DataFrame :
+Enfin, nous pouvons avoir un aperçu de l’apparence de nos données. Nous pouvons utiliser `df.head(n)` pour voir les `n` premières lignes du DataFrame :
 
 ![](../images/jupyterlab/analyze-data/df_head.png)
 
 #### [!DNL Experience Platform] data
 
-Nous allons maintenant passer en revue l&#39;accès aux [!DNL Experience Platform] données.
+Now, we will go over accessing [!DNL Experience Platform] data.
 
-##### Par ID de jeu de données
+##### Par identifiant du jeu de données
 
-Pour cette section, nous utilisons le jeu de données Ventes au détail qui est le même jeu de données que celui utilisé dans l&#39;exemple de carnet de ventes au détail.
+Pour cette section, nous utilisons le jeu de données Ventes au détail, le même que celui utilisé dans le notebook d’exemple Ventes au détail.
 
-Dans notre portable Jupyter, nous pouvons accéder à nos données à partir de l&#39;onglet **Data** sur la gauche. Lorsque vous cliquez sur l&#39;onglet, vous pouvez voir une liste de jeux de données.
+Dans notre notebook Jupyter, nous pouvons accéder à nos données à partir de l’onglet **Données** sur la gauche. Lorsque vous cliquez sur l’onglet, une liste des jeux de données s’affiche.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Maintenant, dans le répertoire Datasets, nous pourrons voir tous les jeux de données assimilés. Notez que le chargement de toutes les entrées peut prendre une minute si votre répertoire est fortement rempli de jeux de données.
+Dans le répertoire Jeux de données, nous pourrons alors consulter tous les jeux de données ingérés. Remarque : le chargement de toutes les entrées peut prendre quelques instants si de nombreux jeux de données sont présents dans votre répertoire.
 
-Puisque le jeu de données est le même, nous voulons remplacer les données de charge de la section précédente qui utilise des données externes. Sélectionnez le bloc de code sous **Charger les données** et appuyez deux fois sur la **touche d&#39;** entrée de votre clavier. Assurez-vous que l’accent est mis sur le bloc et non sur le texte. Vous pouvez appuyer sur **&#39;esc&#39;** pour échapper à la cible d&#39;action du texte avant **&#39;d&#39;** double.
+Puisque le jeu de données est le même, nous voulons remplacer les données chargées au cours de la section précédente qui utilise des données externes. Sélectionnez le bloc de code sous **Charger les données** et appuyez deux fois sur la touche **« D »** de votre clavier. Assurez-vous que vous avez bien sélectionné le bloc et non le texte. Vous pouvez appuyer sur **« Echap »** pour désélectionner le texte avant d’appuyer deux fois sur **« D »**.
 
-Désormais, nous pouvons cliquer avec le bouton droit sur le `Retail-Training-<your-alias>` jeu de données et sélectionner l&#39;option &quot;Explorer les données dans le bloc-notes&quot; dans la liste déroulante. Une entrée de code exécutable apparaît dans votre bloc-notes.
+Nous pouvons maintenant cliquer avec le bouton droit sur le jeu de données `Retail-Training-<your-alias>` et sélectionner l’option « Explorer les données dans le notebook » de la liste déroulante. Une entrée de code exécutable apparaîtra dans votre notebook.
 
 >[!TIP]
 >
->reportez-vous au [!DNL Platform SDK](../authoring/platform-sdk.md) guide pour convertir votre code.
+>refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -100,20 +100,20 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-Si vous travaillez sur d&#39;autres noyaux autres que [!DNL Python], veuillez consulter [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données sur le [!DNL Adobe Experience Platform].
+If you are working on other kernels other than [!DNL Python], please refer to [this page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) to access data on the [!DNL Adobe Experience Platform].
 
-La sélection de la cellule exécutable, puis l&#39;activation du bouton de lecture dans la barre d&#39;outils, exécutera le code exécutable. La sortie pour `head()` sera un tableau avec les clés de votre jeu de données sous forme de colonnes et les n premières lignes du jeu de données. `head()` accepte un argument entier pour spécifier le nombre de lignes à générer. Par défaut, il s’agit de 5.
+Sélectionnez la cellule exécutable, puis cliquez sur le bouton de lecture dans la barre d’outils pour exécuter le code exécutable. La sortie pour `head()` sera un tableau comprenant les clés de votre jeu de données sous forme de colonnes et les n premières lignes du jeu de données. `head()` accepte un argument entier pour spécifier le nombre de lignes à générer. Par défaut, cette valeur est définie sur 5.
 
 ![](../images/jupyterlab/analyze-data/datasetreader_head.png)
 
-Si vous redémarrez votre noyau et réexécutez toutes les cellules, vous devriez obtenir les mêmes sorties qu&#39;auparavant.
+Si vous redémarrez votre noyau et exécutez à nouveau toutes les cellules, vous devriez obtenir les mêmes sorties qu’auparavant.
 
 ![](../images/jupyterlab/analyze-data/restart_kernel_run.png)
 
 
-### Explorez vos données
+### Exploration de vos données
 
-Maintenant que nous pouvons accéder à vos données, concentrons-nous sur les données elles-mêmes en utilisant les statistiques et la visualisation. Le jeu de données que nous utilisons est un jeu de données de vente au détail qui fournit des informations diverses sur 45 magasins différents un jour donné. Certaines caractéristiques d&#39;un produit donné `date` et `store` comprennent :
+Maintenant que vos données sont accessibles, intéressons-nous aux données elles-mêmes en utilisant les statistiques et la visualisation. Le jeu de données que nous utilisons est un jeu de données relatif aux ventes qui fournit des informations diverses sur 45 boutiques différentes pour un jour donné. Voici quelques caractéristiques pour une `date` et un `store` spécifiques :
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -126,7 +126,7 @@ Maintenant que nous pouvons accéder à vos données, concentrons-nous sur les d
 
 #### Résumé statistique
 
-Nous pouvons exploiter la bibliothèque [!DNL Python's] pandas pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. La sortie de l’appel suivant nous donnera des informations sur le nombre d’entrées et le type de données pour chacune des colonnes :
 
 ```PYTHON
 df.info()
@@ -134,9 +134,9 @@ df.info()
 
 ![](../images/jupyterlab/analyze-data/df_info.png)
 
-Ces informations sont utiles car connaître le type de données de chaque colonne nous permettra de savoir comment traiter les données.
+Ces informations sont utiles, car elles aident à identifier la méthode de traitement de ces données.
 
-Maintenant regardons le résumé statistique. Seuls les types de données numériques s’affichent. Par conséquent, `date``storeType`et `isHoliday` ne sont pas générés :
+Regardons maintenant le résumé statistique. Seuls les types de données numériques s’affichent. `date`, `storeType` et `isHoliday` ne sont donc pas générés :
 
 ```PYTHON
 df.describe()
@@ -144,59 +144,59 @@ df.describe()
 
 ![](../images/jupyterlab/analyze-data/df_describe.png)
 
-Avec cela, nous pouvons voir qu&#39;il y a 6435 instances pour chaque caractéristique. En outre, des informations statistiques telles que moyenne, écart type (std), min, max et interquartiles sont fournies. Ceci nous donne des informations sur l&#39;écart pour les données. Dans la section suivante, nous allons passer en revue la visualisation qui fonctionne avec ces informations pour nous donner une bonne compréhension de nos données.
+Grâce à cela, nous pouvons voir qu’il existe 6 435 instances pour chaque caractéristique. Nous obtenons également des informations statistiques, telles que la moyenne, l’écart type, le minimum, le maximum et les plages interquartiles. Cela nous permet d’identifier les variations de données. Dans la section suivante, nous allons passer en revue la visualisation qui accompagne ces informations, afin d’avoir une bonne compréhension de nos données.
 
-En examinant les valeurs minimale et maximale pour `store`, nous voyons qu&#39;il existe 45 magasins uniques que les données représentent. Il y a aussi `storeTypes` qui différencient ce qu&#39;est un magasin. Nous pouvons voir la distribution de `storeTypes` en procédant comme suit :
+En examinant les valeurs minimale et maximale pour `store`, nous voyons que les données représentent 45 boutiques uniques. Les `storeTypes` permettent également de différencier les boutiques. Nous pouvons voir la distribution des `storeTypes` en procédant comme suit :
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-Cela veut dire que 22 magasins sont de `storeType``A`, 17 `storeType``B`, et 6 `storeType``C`.
+Ici, nous avons 22 boutiques `storeType` `A`, 17 boutiques `storeType` `B` et 6 boutiques `storeType` `C`.
 
 #### Visualisation des données
 
-Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulons compléter cela par des visualisations pour rendre les choses plus claires et plus faciles à identifier les schémas. Les graphiques sont également utiles pour transmettre des résultats à une audience. Voici quelques [!DNL Python] bibliothèques utiles pour la visualisation :
+Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les compléter par des visualisations, afin de rendre les choses plus claires et d’identifier plus facilement les motifs. Les graphiques servent également à transmettre les résultats à une audience. Some [!DNL Python] libraries which are useful for visualization include:
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
 - [ggplot](https://ggplot2.tidyverse.org/)
 
-Dans cette section, nous examinerons rapidement certains avantages liés à l’utilisation de chaque bibliothèque.
+Dans cette section, nous passerons rapidement en revue certains avantages qu’apporte l’utilisation de chaque bibliothèque.
 
-[Matplotlib](https://matplotlib.org/) est le plus ancien package de [!DNL Python] visualisation. Leur but est de rendre les choses faciles et difficiles possibles. Cela a tendance à être vrai car le paquet est extrêmement puissant mais il est aussi livré avec la complexité. Il n&#39;est pas toujours facile d&#39;obtenir un graphique à l&#39;apparence raisonnable sans prendre beaucoup de temps et d&#39;efforts.
+[Matplotlib](https://matplotlib.org/)[!DNL Python] est le plus ancien paquet de visualisation Il a pour but de « simplifier les tâches faciles sans rendre les tâches difficiles impossibles ». Cette affirmation tend à se vérifier, puisque le paquet est extrêmement puissant, mais aussi relativement complexe. Il n’est pas toujours simple d’obtenir un graphique à l’apparence satisfaisante sans y consacrer beaucoup de temps et d’efforts.
 
-[Pandas](https://pandas.pydata.org/) est principalement utilisé pour son objet DataFrame qui permet la manipulation de données avec l&#39;indexation intégrée. Cependant, pandas inclut également une fonctionnalité de traçage intégrée basée sur matplotlib.
+[Pandas](https://pandas.pydata.org/) est principalement utilisé pour son objet DataFrame qui permet la manipulation de données avec l’indexation intégrée. Cependant, pandas inclut également une fonctionnalité de traçage intégrée basée sur matplotlib.
 
-[seaborn](https://seaborn.pydata.org/) est un paquet construit sur matplotlib. Son principal objectif est de rendre les graphiques par défaut plus attrayants visuellement et de simplifier la création de graphiques complexes.
+[seaborn](https://seaborn.pydata.org/) est un paquet élaboré sur la base de matplotlib. Son principal objectif est de rendre les graphiques par défaut plus attrayants visuellement et de simplifier la création de graphiques complexes.
 
-[ggplot](https://ggplot2.tidyverse.org/) est un paquet également construit sur matplotlib. Cependant, la principale différence est que l&#39;outil est un port de ggplot2 pour R. Comme pour seaborn, l&#39;objectif est d&#39;améliorer sur matplotlib. Les utilisateurs qui connaissent ggplot2 for R doivent prendre en compte cette bibliothèque.
+[ggplot](https://ggplot2.tidyverse.org/) est un paquet également élaboré sur la base de matplotlib. Cependant, sa principale différence est que l’outil est un port de ggplot2 pour R. Tout comme seaborn, l’objectif est de se baser sur matplotlib pour y apporter des améliorations par la suite. Les utilisateurs connaissant bien ggplot2 pour R devraient envisager l’utilisation de cette bibliothèque.
 
 
-##### Graphiques univariés
+##### Graphiques unidimensionnels
 
-Les graphiques univariés sont des tracés d’une variable individuelle. Un graphique unifié commun est utilisé pour visualiser vos données est la boîte et le tracé de muraille.
+Les graphiques unidimensionnels sont des tracés représentant une seule variable. La boîte à moustaches est un graphique unidimensionnel couramment utilisé pour visualiser les données.
 
-En utilisant notre jeu de données de vente au détail d&#39;avant, nous pouvons générer la boîte et le tracé de chuchotement pour chacun des 45 magasins et leurs ventes hebdomadaires. Le graphique est généré à l’aide de la `seaborn.boxplot` fonction.
+En utilisant le même jeu de données relatif aux ventes, nous pouvons générer un graphique de boîte à moustaches pour chacune des 45 boutiques et leurs ventes hebdomadaires. Le graphique est généré à l’aide de la fonction `seaborn.boxplot`.
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Un tracé de boîte et de muraille est utilisé pour montrer la distribution des données. Les lignes extérieures du tracé indiquent les quartiles supérieur et inférieur, tandis que la case s&#39;étend sur la plage interquartile. La ligne dans la zone marque la médiane. Les points de données plus de 1,5 fois le quartile supérieur ou inférieur sont marqués comme un cercle. Ces points sont considérés comme des valeurs aberrantes.
+Un graphique de boîte à moustaches sert à illustrer la distribution des données. Les lignes extérieures du graphique représentent les quartiles supérieur et inférieur, tandis que la boîte s’étend sur la plage interquartile. La ligne dans la zone indique la médiane. Tout point de données plus de 1,5 fois supérieur ou inférieur au quartile est marqué sous forme de cercle. Ces points sont considérés comme des valeurs aberrantes.
 
-##### Graphiques multivariés
+##### Graphiques multidimensionnels
 
-Les tracés multivariés permettent de visualiser l’interaction entre les variables. Avec la visualisation, les chercheurs de données peuvent voir s&#39;il y a des corrélations ou des modèles entre les variables. Un graphique multivarié commun utilisé est une matrice de corrélation. Avec une matrice de corrélation, les dépendances entre plusieurs variables sont quantifiées avec le coefficient de corrélation.
+Les graphiques multidimensionnels servent à visualiser les interactions entre les variables. Grâce à cette visualisation, les spécialistes des données peuvent vérifier s’il existe des corrélations ou des motifs entre les variables. La matrice de corrélation est un graphique multidimensionnel couramment utilisé. Avec une matrice de corrélation, les dépendances entre les différentes variables sont quantifiées à l’aide d’un coefficient de corrélation.
 
-En utilisant le même jeu de données de vente au détail, nous pouvons générer la matrice de corrélation.
+En utilisant le même jeu de données relatif aux ventes, nous pouvons générer la matrice de corrélation.
 
 ![](../images/jupyterlab/analyze-data/correlation_1.png)
 
-Remarquez la diagonale de 1 en bas au centre. Cela montre que lorsqu’une variable est comparée à elle-même, elle présente une corrélation positive complète. Une forte corrélation positive aura une magnitude proche de 1 tandis que des corrélations faibles seront plus proches de 0. Une corrélation négative est montrée avec un coefficient négatif montrant une tendance inverse.
+Notez la diagonale de 1 au centre. Elle indique que lorsqu’une variable est comparée à elle-même, elle présente une corrélation positive entière. Une corrélation positive élevée aura une magnitude proche de 1, tandis que les corrélations faibles seront plus proches de 0. Une corrélation négative s’affiche sous la forme d’un coefficient négatif, indiquant une tendance inverse.
 
 
 ## Étapes suivantes
 
-Ce didacticiel explique comment créer un nouveau bloc-notes Jupyter dans Data Science Workspace et comment accéder aux données à l’extérieur et à partir de [!DNL Adobe Experience Platform]celui-ci. Nous avons notamment suivi les étapes suivantes :
-- Créer un bloc-notes Jupyter
-- Accéder aux jeux de données et aux schémas
-- Explorer les jeux de données
+This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Plus précisément, nous avons réalisé les actions suivantes :
+- Création d’un nouveau notebook Jupyter
+- Accès aux jeux de données et aux schémas
+- Exploration des jeux de données
 
-Vous êtes maintenant prêt à passer à la section [](../models-recipes/package-source-files-recipe.md) suivante pour inclure une recette et l’importer dans Data Science Workspace.
+Vous êtes maintenant prêt à passer à la [section suivante](../models-recipes/package-source-files-recipe.md) pour empaqueter une recette et importer dans Data Science Workspace.
