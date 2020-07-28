@@ -23,7 +23,7 @@ This document provides a tutorial for sending multiple messages to [!DNL Experie
 Ce tutoriel nécessite une compréhension professionnelle d’Adobe Experience Platform [!DNL Data Ingestion]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
 - [Présentation](../home.md)de l&#39;importation de données : Couvre les concepts de base de [!DNL Experience Platform Data Ingestion]cette méthode, y compris les méthodes d’assimilation et les connecteurs de données.
-- [Présentation](../streaming-ingestion/overview.md)de l&#39;assimilation en flux continu : Flux de travaux et blocs de création de l’assimilation en flux continu, tels que les connexions en flux continu, les jeux de données [!DNL XDM Individual Profile]et [!DNL XDM ExperienceEvent].
+- [Présentation](../streaming-ingestion/overview.md)de l&#39;assimilation en flux continu : Flux de travaux et blocs de création d’assimilation en flux continu, tels que les connexions en flux continu, les jeux de données [!DNL XDM Individual Profile]et [!DNL XDM ExperienceEvent].
 
 Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience ](../../tutorials/authentication.md) afin de passer avec succès des appels aux API Platform. [!DNL Platform] Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
 
