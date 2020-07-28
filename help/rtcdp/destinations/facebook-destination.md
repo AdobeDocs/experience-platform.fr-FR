@@ -28,7 +28,7 @@ Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook]
 ### Cas d’utilisation 1
 
 
-Un détaillant en ligne souhaite atteindre les clients existants par le biais de plateformes sociales et leur montrer des offres personnalisées en fonction de leurs commandes précédentes. Le détaillant en ligne peut assimiler des adresses électroniques de sa propre gestion de la relation client au CDP en temps réel Adobe, créer des segments à partir de ses propres données hors ligne et envoyer ces segments à la plateforme [!DNL Facebook] sociale afin d’optimiser ses dépenses publicitaires.
+Un détaillant en ligne souhaite atteindre les clients existants par le biais de plateformes sociales et leur montrer des offres personnalisées en fonction de leurs commandes précédentes. Le détaillant en ligne peut assimiler des adresses électroniques de sa propre gestion de la relation client à un CDP en temps réel Adobe, créer des segments à partir de ses propres données hors ligne et envoyer ces segments à la plateforme [!DNL Facebook] sociale, optimisant ainsi ses dépenses publicitaires.
 
 
 ### Cas d’utilisation no 2
@@ -36,7 +36,7 @@ Un détaillant en ligne souhaite atteindre les clients existants par le biais de
 
 Une compagnie aérienne a différents niveaux de clients (Bronze, Argent et Or) et veut fournir à chacun des niveaux des offres personnalisées via des plateformes sociales. Cependant, tous les clients n’utilisent pas l’application mobile de la compagnie aérienne et certains d’entre eux ne se sont pas connectés au site Web de la société. Les seuls identifiants dont dispose la société à propos de ces clients sont les identifiants d’adhésion et les adresses électroniques.
 
-Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données client de leur gestion de la relation client dans le fichier CDP en temps réel Adobe, en utilisant les adresses électroniques comme identifiants.
+Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données client de leur gestion de la relation client dans un CDP en temps réel Adobe, en utilisant les adresses électroniques comme identifiants.
 
 Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d’adhésion et les niveaux de clients associés, pour créer de nouveaux segments d’audience qu’ils peuvent cible à travers la [!DNL Facebook] destination.
 
@@ -80,7 +80,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
 >[!IMPORTANT]
 >
->Si vous choisissez de ne pas hacher les adresses électroniques, Adobe Real-time CDP le fera pour vous lorsque vous activerez les segments vers [!DNL Facebook]. Dans le processus [d’](/help/rtcdp/destinations/activate-destinations.md#activate-data) activation (voir étape 5), sélectionnez l’ `Email` option comme illustré ci-dessous pour les adresses *de courriel* brutes et `Email_LC_SHA256` *pour les adresses de courriel hachées.*
+>Si vous choisissez de ne pas hacher les adresses électroniques, le CDP en temps réel Adobe le fera pour vous lorsque vous activerez les segments vers [!DNL Facebook]. Dans le processus [d’](/help/rtcdp/destinations/activate-destinations.md#activate-data) activation (voir étape 5), sélectionnez l’ `Email` option comme illustré ci-dessous pour les adresses *de courriel* brutes et `Email_LC_SHA256` *pour les adresses de courriel hachées.*
 
 
 ![Hachage sur l’activation](/help/rtcdp/destinations/assets/identity-mapping.png)
