@@ -12,13 +12,13 @@ ht-degree: 61%
 ---
 
 
-# Connectez-vous aux destinations de diffusion en continu et activez les données dans Adobe Real-time Customer Data Platform à l’aide d’API.
+# Connectez-vous aux destinations de diffusion en continu et activez les données dans le Platform de données client en temps réel de l’Adobe à l’aide d’API.
 
 >[!NOTE]
 >
->Les destinations [!DNL Amazon Kinesis] et les [!DNL Azure Event Hubs] destinations en Adobe Real-time CDP sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>Les destinations [!DNL Amazon Kinesis] et les [!DNL Azure Event Hubs] destinations dans le CDP en temps réel Adobe sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-Ce didacticiel explique comment utiliser les appels d&#39;API pour se connecter à vos données d&#39;Adobe Experience Platform, créer une connexion à une destination d&#39;enregistrement de cloud de flux continu ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou [Azure Événement Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md)), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
+Ce didacticiel explique comment utiliser les appels d&#39;API pour se connecter à vos données d&#39;Adobe Experience Platform, créer une connexion à une destination d&#39;enregistrement de cloud de flux continu ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou Azure Événement Hubs [](/help/rtcdp/destinations/azure-event-hubs-destination.md)), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
 
 Ce didacticiel utilise la [!DNL Amazon Kinesis] destination dans tous les exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
@@ -34,7 +34,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [!DNL Catalog Service](../../catalog/home.md): [!DNL Catalog] est le système d’enregistrement pour l’emplacement et le lignage des données dans l’Experience Platform.
 * [Environnements de test](../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en flux continu dans Adobe Real-time CDP.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour activer les données vers les destinations de diffusion en flux continu dans un CDP en temps réel Adobe.
 
 ### Collecte des informations d’identification requises
 
@@ -261,12 +261,12 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{CONNECTION_SPEC_ID}` : utilisez l’identifiant de spécification de connexion que vous avez obtenu lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
 * `{AUTHENTICATION_CREDENTIALS}`: renseignez le nom de votre destination de diffusion en continu, par exemple : `Amazon Kinesis authentication credentials` ou `Azure Event Hubs authentication credentials`.
-* `{ACCESS_ID}`: *Pour[!DNL Amazon Kinesis]les connexions.* Votre ID d’accès pour votre emplacement d’enregistrement Amazon Kinesis.
-* `{SECRET_KEY}`: *Pour[!DNL Amazon Kinesis]les connexions.* Votre clé secrète pour l’emplacement de votre enregistrement Amazon Kinesis.
-* `{REGION}`: *Pour[!DNL Amazon Kinesis]les connexions.* Région de votre [!DNL Amazon Kinesis] compte où Adobe Real-time CDP diffusera vos données.
+* `{ACCESS_ID}`: *Pour[!DNL Amazon Kinesis]les connexions.* Votre ID d’accès pour l’enregistrement Amazon Kinesis.
+* `{SECRET_KEY}`: *Pour[!DNL Amazon Kinesis]les connexions.* Votre clé secrète pour votre enregistrement Amazon.
+* `{REGION}`: *Pour[!DNL Amazon Kinesis]les connexions.* Région de votre [!DNL Amazon Kinesis] compte où le CDP en temps réel Adobe diffusera vos données.
 * `{SAS_KEY_NAME}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez le nom de votre clé SAS. Découvrez comment vous authentifier à [!DNL Azure Event Hubs] l&#39;aide de clés SAS dans la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
 * `{SAS_KEY}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez votre clé SAS. Découvrez comment vous authentifier à [!DNL Azure Event Hubs] l&#39;aide de clés SAS dans la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* `{EVENT_HUB_NAMESPACE}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez l’ [!DNL Azure Event Hubs] espace de nommage où Adobe Real-time CDP diffusera vos données. Pour plus d’informations, voir [Création d’un espace de nommage](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de concentrateurs de Événement dans la [!DNL Microsoft] documentation.
+* `{EVENT_HUB_NAMESPACE}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez l’ [!DNL Azure Event Hubs] espace de nommage où le CDP en temps réel Adobe diffusera vos données. Pour plus d’informations, voir [Création d’un espace de nommage](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) de concentrateurs de Événement dans la [!DNL Microsoft] documentation.
 
 **Réponse**
 
@@ -317,9 +317,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape ci-dessus.
 * `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *Pour[!DNL Amazon Kinesis]les connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Real-time CDP exportera les données dans ce flux.
-* `{REGION}`: *Pour[!DNL Amazon Kinesis]les connexions.* Région de votre compte Amazon Kinesis dans laquelle Adobe Real-time CDP diffusera vos données.
-* `{EVENT_HUB_NAME}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez le [!DNL Azure Event Hub] nom où Adobe Real-time CDP diffusera vos données. Pour plus d’informations, voir [Création d’un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de événement dans la [!DNL Microsoft] documentation.
+* `{NAME_OF_DATA_STREAM}`: *Pour[!DNL Amazon Kinesis]les connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux.
+* `{REGION}`: *Pour[!DNL Amazon Kinesis]les connexions.* Région de votre compte Amazon Kinesis dans laquelle le CDP en temps réel de l’Adobe diffusera vos données.
+* `{EVENT_HUB_NAME}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez le [!DNL Azure Event Hub] nom où le CDP en temps réel Adobe diffusera vos données. Pour plus d’informations, voir [Création d’un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de événement dans la [!DNL Microsoft] documentation.
 
 **Réponse**
 
