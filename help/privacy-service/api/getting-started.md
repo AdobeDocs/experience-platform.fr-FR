@@ -39,15 +39,15 @@ Pour appeler l’ [!DNL Privacy Service] API, vous devez d’abord rassembler vo
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Cela implique d’obtenir des autorisations de développeur pour [!DNL Experience Platform] dans Adobe Admin Console, puis de générer les informations d’identification dans Adobe Developer Console.
+Cela implique d’obtenir les autorisations de développeur pour [!DNL Experience Platform] dans Adobe Admin Console, puis de générer les informations d’identification dans Adobe Developer Console.
 
 ### Accédez à [!DNL Experience Platform]
 
-Pour permettre aux développeurs d’accéder à [!DNL Platform], suivez les premières étapes du didacticiel [d’authentification des](../../tutorials/authentication.md)Experience Platform. Une fois que vous êtes arrivé à l’étape &quot;Générer les informations d’identification d’accès dans Adobe Developer Console&quot;, revenez à ce didacticiel pour générer les informations d’identification spécifiques à [!DNL Privacy Service].
+Pour permettre aux développeurs d’accéder à [!DNL Platform], suivez les premières étapes du didacticiel [d’authentification des](../../tutorials/authentication.md)Experience Platform. Une fois que vous êtes arrivé à l&#39;étape &quot;Générer les informations d&#39;identification d&#39;accès dans la Console développeur d&#39;Adobe&quot;, revenez à ce didacticiel pour générer les informations d&#39;identification spécifiques à [!DNL Privacy Service].
 
 ### Générer des informations d’identification d’accès
 
-A l’aide de Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
+A l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
 * `{IMS_ORG}`
 * `{API_KEY}`
@@ -59,7 +59,7 @@ Les étapes de génération de ces valeurs sont décrites en détail ci-dessous.
 
 #### Configuration ponctuelle
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d’un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de Adobe Developer Console.
+Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
 
 Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation _[!UICONTROL du]_projet.
 
