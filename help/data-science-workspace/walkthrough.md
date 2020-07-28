@@ -1,82 +1,82 @@
 ---
 keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Présentation de Data Science Workspace
+title: Présentation détaillée de Data Science Workspace
 topic: Walkthrough
 translation-type: tm+mt
 source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
 workflow-type: tm+mt
 source-wordcount: '1638'
-ht-degree: 0%
+ht-degree: 93%
 
 ---
 
 
 # [!DNL Data Science Workspace] parcours
 
-Ce document fournit une passerelle pour l&#39;Adobe Experience Platform [!DNL Data Science Workspace]. Plus précisément, nous allons passer en revue le processus général qu&#39;un chercheur en données doit suivre pour résoudre un problème à l&#39;aide de l&#39;apprentissage automatique.
+This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. Plus précisément, nous allons passer en revue le processus général suivi par un spécialiste des données pour résoudre un problème à l’aide de l’apprentissage automatique.
 
 ## Conditions préalables
 
-- Un compte d&#39;Adobe ID enregistré
-   - Le compte d&#39;Adobe ID doit avoir été ajouté à une organisation ayant accès à l&#39;Adobe Experience Platform et au [!DNL Data Science Workspace]
+- Compte Adobe ID enregistré
+   - Le compte Adobe ID doit avoir été ajouté à une organisation ayant accès à Adobe Experience Platform et à [!DNL Data Science Workspace]
 
-## Motivation du chercheur en données
+## Motivation du spécialiste des données
 
-Un détaillant doit faire face à de nombreux défis pour rester compétitif sur le marché actuel. L&#39;une des principales préoccupations du détaillant est de décider du prix optimal de ses produits et de prédire les tendances de vente. Grâce à un modèle de prévision précis, le détaillant serait en mesure de trouver la relation entre les politiques de demande et de tarification et de prendre des décisions de prix optimisées pour maximiser les ventes et les recettes.
+Un détaillant doit faire face à de nombreux défis pour rester compétitif sur le marché actuel. L’une des principales préoccupations du détaillant concerne le prix optimal de ses produits et la prédiction des tendances de vente. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 
-## Solution du chercheur en données
+## Solution du spécialiste des données
 
-La solution d&#39;un chercheur en données consiste à exploiter la richesse des données historiques auxquelles un détaillant a accès, à prédire les tendances futures et à optimiser les décisions de tarification. Nous utiliserons les données des ventes passées pour former notre modèle d&#39;apprentissage automatique et nous utiliserons le modèle pour prédire les tendances futures des ventes. Ainsi, le détaillant pourra avoir des informations pour les aider à modifier les prix.
+La solution du spécialiste des données consiste à exploiter la richesse des données historiques auxquelles le détaillant a accès, à prédire les tendances futures et à optimiser les décisions relatives aux prix. Nous allons utiliser des données relatives aux ventes passées pour former notre modèle d’apprentissage automatique, puis nous utiliserons le modèle pour prédire les tendances futures en matière de ventes. Ces informations utiles aideront le détaillant à modifier les prix.
 
-Dans cet aperçu, nous allons passer en revue les étapes qu&#39;un scientifique spécialiste des données doit franchir pour créer un ensemble de données et un modèle pour prédire les ventes hebdomadaires. Nous passerons en revue les sections suivantes de l&#39;exemple de carnet de vente au détail sur l&#39;Adobe Experience Platform [!DNL Data Science Workspace]:
+Dans cette présentation, nous allons passer en revue les étapes suivies par un spécialiste des données pour utiliser un jeu de données et créer un modèle afin de prédire les ventes hebdomadaires. Nous passerons en revue les sections suivantes du notebook d’exemple « Ventes au détail » dans Adobe Experience Platform [!DNL Data Science Workspace]:
 
 - [Configuration](#setup)
 - [Exploration des données](#exploring-data)
-- [Ingénierie des fonctionnalités](#feature-engineering)
+- [Conception des fonctionnalités](#feature-engineering)
 - [Formation et vérification](#training-and-verification)
 
 ### Ordinateurs portables dans [!DNL Data Science Workspace]
 
-Tout d&#39;abord, nous voulons créer un [!DNL JupyterLab] bloc-notes pour ouvrir l&#39;exemple de bloc-notes &quot;Ventes au détail&quot;. Suivez les étapes effectuées par le data scientist dans le bloc-notes pour mieux comprendre un processus typique.
+Firstly, we want to create a [!DNL JupyterLab] notebook to open the &quot;Retail Sales&quot; sample notebook. Suivez les étapes effectuées par le spécialiste des données dans le notebook pour mieux comprendre ce processus type.
 
-Dans l’interface utilisateur de l’Adobe Experience Platform, cliquez sur l’onglet Data Science dans le menu supérieur pour accéder au [!DNL Data Science Workspace]. A partir de cette page, cliquez sur l&#39; [!DNL JupyterLab] onglet qui va ouvrir le [!DNL JupyterLab] lanceur. Vous devriez voir une page similaire à celle-ci.
+Dans l’interface utilisateur d’Adobe Experience Platform, cliquez sur l’onglet Data Science du menu supérieur pour accéder à [!DNL Data Science Workspace]. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Vous devriez voir une page similaire à celle-ci.
 
 ![](./images/walkthrough/jupyterlab_launcher.png)
 
-Dans notre tutoriel, nous utiliserons [!DNL Python] 3 dans le [!DNL Jupyter Notebook] pour montrer comment accéder aux données et les explorer. Dans la page Lanceur, des exemples de cahiers sont fournis. Nous utiliserons l&#39;échantillon &quot;Ventes au détail&quot; pour [!DNL Python] 3.
+In our tutorial, we will be using [!DNL Python] 3 in the [!DNL Jupyter Notebook] to show how to access and explore the data. Sur la page du lanceur, vous trouverez des notebooks d’exemple. We will be using the &quot;Retail Sales&quot; sample for [!DNL Python] 3.
 
 ![](./images/walkthrough/retail_sales.png)
 
 ### Configuration {#setup}
 
-Avec le bloc-notes Ventes au détail ouvert, la première chose que nous faisons est de charger les bibliothèques nécessaires à notre flux de travail. La liste suivante présente brièvement les utilisations de chacun d&#39;eux :
-- **numpy** - bibliothèque de calcul scientifique qui ajoute la prise en charge de grandes matrices et matrices multidimensionnelles
-- **pandas** - bibliothèque qui offre les structures de données et les opérations utilisées pour la manipulation et l&#39;analyse des données
-- **matplotlib.pyplot** - bibliothèque de mappage qui fournit une expérience de type MATLAB lors du mappage
-- **seaborn** - bibliothèque de visualisation de données d’interface de haut niveau basée sur matplotlib
-- **sklearn** - bibliothèque d’apprentissage automatique qui comprend les algorithmes de classification, de régression, de support vectoriel et de cluster
-- **avertissements** - bibliothèque qui contrôle les messages d’avertissement
+Une fois le notebook « Ventes au détail » ouvert, la première chose à faire est de charger les bibliothèques requises pour notre processus. La liste suivante fournit une brève description de la fonction de chacune :
+- **numpy** - Bibliothèque de calcul scientifique qui ajoute la prise en charge de tableaux et de matrices multidimensionnels volumineux
+- **pandas** - Bibliothèque qui offre les structures et opérations de données utilisées dans le cadre de la manipulation et de l’analyse de données
+- **matplotlib.pyplot** - Bibliothèque de représentation graphique qui fournit une expérience de type MATLAB
+- **seaborn** - Bibliothèque de visualisation des données d’interface générales basée sur matplotlib
+- **sklearn** - Bibliothèque d’apprentissage automatique qui comprend la classification, la régression, les vecteurs de support et les algorithmes de cluster
+- **warnings** - Bibliothèque qui contrôle les messages d’avertissement
 
-### Explorer les données {#exploring-data}
+### Exploration des données {#exploring-data}
 
-#### Charger les données
+#### Chargement des données
 
-Une fois les bibliothèques chargées, nous pouvons début de regarder les données. Le [!DNL Python] code suivant utilise la structure de `DataFrame` données des pandas et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur [!DNL Github] dans le DataFrame des pandas :
+Une fois les bibliothèques chargées, nous pouvons nous intéresser aux données. The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the pandas DataFrame:
 
 ![](./images/walkthrough/read_csv.png)
 
-La structure de données DataFrame de Pandas est une structure de données à deux dimensions étiquetées. Pour voir rapidement les dimensions de nos données, nous pouvons utiliser `df.shape`. Ceci renvoie un tuple qui représente la dimension du DataFrame :
+La structure de données du DataFrame de pandas est une structure de données étiquetées en deux dimensions. Pour voir rapidement les dimensions de nos données, nous pouvons utiliser `df.shape`. Cette opération renvoie un tuple qui représente les dimensions du DataFrame :
 
 ![](./images/walkthrough/df_shape.png)
 
-Enfin, nous pouvons jeter un oeil à ce à quoi ressemblent nos données. Nous pouvons utiliser `df.head(n)` pour vue les premières `n` lignes du DataFrame :
+Enfin, nous pouvons avoir un aperçu de l’apparence de nos données. Nous pouvons utiliser `df.head(n)` pour voir les `n` premières lignes du DataFrame :
 
 ![](./images/walkthrough/df_head.png)
 
 #### Résumé statistique
 
-Nous pouvons exploiter la bibliothèque [!DNL Python's] pandas pour obtenir le type de données de chaque attribut. La sortie de l&#39;appel suivant nous donnera des informations sur le nombre d&#39;entrées et le type de données pour chacune des colonnes :
+We can leverage [!DNL Python's] pandas library to get the data type of each attribute. La sortie de l’appel suivant nous donnera des informations sur le nombre d’entrées et le type de données pour chacune des colonnes :
 
 ```PYTHON
 df.info()
@@ -84,9 +84,9 @@ df.info()
 
 ![](./images/walkthrough/df_info.png)
 
-Ces informations sont utiles car connaître le type de données de chaque colonne nous permettra de savoir comment traiter les données.
+Ces informations sont utiles, car elles aident à identifier la méthode de traitement de ces données.
 
-Maintenant regardons le résumé statistique. Seuls les types de données numériques s’affichent de sorte que `date`, `storeType`et `isHoliday` ne soient pas générés :
+Regardons maintenant le résumé statistique. Seuls les types de données numériques s’affichent. `date`, `storeType` et `isHoliday` ne sont donc pas générés :
 
 ```PYTHON
 df.describe()
@@ -94,121 +94,121 @@ df.describe()
 
 ![](./images/walkthrough/df_describe.png)
 
-Avec cela, nous pouvons voir qu&#39;il y a 6435 instances pour chaque caractéristique. De plus, des informations statistiques telles que moyenne, écart type (std), min, max et interquartiles sont fournies. Ceci nous donne des informations sur l&#39;écart pour les données. Dans la section suivante, nous allons passer en revue la visualisation qui fonctionne avec ces informations pour nous donner une compréhension complète de nos données.
+Grâce à cela, nous pouvons voir qu’il existe 6 435 instances pour chaque caractéristique. Nous obtenons également des informations statistiques, telles que la moyenne, l’écart type, le minimum, le maximum et les plages interquartiles. Cela nous permet d’identifier les variations de données. Dans la section suivante, nous allons passer en revue la visualisation qui accompagne ces informations, afin d’avoir une compréhension complète de nos données.
 
-En examinant les valeurs minimale et maximale pour `store`, nous voyons qu&#39;il existe 45 magasins uniques que les données représentent. Il y a aussi `storeTypes` qui différencient ce qu&#39;est un magasin. Nous pouvons voir la distribution de `storeTypes` en procédant comme suit :
+En examinant les valeurs minimale et maximale pour `store`, nous voyons que les données représentent 45 boutiques uniques. Les `storeTypes` permettent également de différencier les boutiques. Nous pouvons voir la distribution des `storeTypes` en procédant comme suit :
 
 ![](./images/walkthrough/df_groupby.png)
 
-Cela signifie que 22 magasins sont de `storeType A` , 17 `storeType B`et 6 `storeType C`.
+Ici, nous avons 22 boutiques `storeType A`, 17 boutiques `storeType B` et 6 boutiques `storeType C`.
 
-#### Visualiser les données
+#### Visualisation des données
 
-Maintenant que nous connaissons les valeurs de nos blocs de données, nous voulons compléter cela par des visualisations pour rendre les choses plus claires et plus faciles à identifier les schémas. Ces graphiques sont également utiles pour transmettre des résultats à une audience.
+Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les compléter par des visualisations, afin de rendre les choses plus claires et d’identifier plus facilement les motifs. Ces graphiques servent également à transmettre les résultats à une audience.
 
-#### Graphiques univariés
+#### Graphiques unidimensionnels
 
-Les graphiques univariés sont des tracés d’une variable individuelle. Les graphiques univariés courants utilisés pour visualiser vos données sont les tracés de boîtes et de muraille.
+Les graphiques unidimensionnels sont des tracés représentant une seule variable. La boîte à moustaches est un graphique unidimensionnel couramment utilisé pour visualiser les données.
 
-En utilisant notre jeu de données de vente au détail d&#39;avant, nous pouvons générer la boîte et le tracé de chuchotement pour chacun des 45 magasins et leurs ventes hebdomadaires. Le graphique est généré à l’aide de la `seaborn.boxplot` fonction.
+En utilisant le même jeu de données relatif aux ventes, nous pouvons générer un graphique de boîte à moustaches pour chacune des 45 boutiques et leurs ventes hebdomadaires. Le graphique est généré à l’aide de la fonction `seaborn.boxplot`.
 
 ![](./images/walkthrough/box_whisker.png)
 
-Un tracé de boîte et de muraille est utilisé pour montrer la distribution des données. Les lignes extérieures du graphique montrent les quartiles supérieur et inférieur tandis que la boîte s&#39;étend sur la plage interquartile. La ligne dans la zone marque la médiane. Les points de données plus de 1,5 fois le quartile supérieur ou inférieur sont marqués comme un cercle. Ces points sont considérés comme des valeurs aberrantes.
+Un graphique de boîte à moustaches sert à illustrer la distribution des données. Les lignes extérieures du graphique représentent les quartiles supérieur et inférieur, tandis que la boîte s’étend sur la plage interquartile. La ligne dans la zone indique la médiane. Tout point de données plus de 1,5 fois supérieur ou inférieur au quartile est marqué sous forme de cercle. Ces points sont considérés comme des valeurs aberrantes.
 
-Ensuite, nous pouvons tracer les ventes hebdomadaires avec le temps. Nous n&#39;afficherons que la sortie du premier magasin. Le code du bloc-notes génère 6 tracés correspondant à 6 des 45 magasins de notre jeu de données.
+Ensuite, nous pouvons tracer les ventes hebdomadaires dans le temps. Nous n’afficherons que la sortie de la première boutique. Le code du notebook génère 6 tracés correspondant à 6 des 45 boutiques de notre jeu de données.
 
 ![](./images/walkthrough/weekly_sales.png)
 
-Ce diagramme permet de comparer les ventes hebdomadaires sur une période de 2 ans. Il est facile de voir les pics de ventes et les schémas de creux au fil du temps.
+Ce diagramme permet de comparer les ventes hebdomadaires sur une période de 2 ans. Nous pouvons facilement repérer les motifs des pics et des creux de ventes au fil du temps.
 
-#### Graphiques multivariés
+#### Graphiques multidimensionnels
 
-Les tracés multivariés permettent de visualiser l’interaction entre les variables. Avec la visualisation, les chercheurs de données peuvent voir s&#39;il y a des corrélations ou des modèles entre les variables. Un graphique multivarié commun utilisé est une matrice de corrélation. Avec une matrice de corrélation, les dépendances entre plusieurs variables sont quantifiées avec le coefficient de corrélation.
+Les graphiques multidimensionnels servent à visualiser les interactions entre les variables. Grâce à cette visualisation, les spécialistes des données peuvent vérifier s’il existe des corrélations ou des motifs entre les variables. La matrice de corrélation est un graphique multidimensionnel couramment utilisé. Avec une matrice de corrélation, les dépendances entre les différentes variables sont quantifiées à l’aide d’un coefficient de corrélation.
 
-En utilisant le même jeu de données de vente au détail, nous pouvons générer la matrice de corrélation.
+En utilisant le même jeu de données relatif aux ventes, nous pouvons générer la matrice de corrélation.
 
 ![](./images/walkthrough/correlation_1.png)
 
-Remarquez la diagonale de ceux qui sont au centre. Cela montre que lorsqu’une variable est comparée à elle-même, elle présente une corrélation positive complète. Une forte corrélation positive aura une magnitude proche de 1 tandis que des corrélations faibles seront plus proches de 0. Une corrélation négative est montrée avec un coefficient négatif montrant une tendance inverse.
+Notez la diagonale de 1 au centre. Elle indique que lorsqu’une variable est comparée à elle-même, elle présente une corrélation positive entière. Une corrélation positive élevée aura une magnitude proche de 1, tandis que les corrélations faibles seront plus proches de 0. Une corrélation négative s’affiche sous la forme d’un coefficient négatif, indiquant une tendance inverse.
 
-### Ingénierie des fonctionnalités {#feature-engineering}
+### Conception des fonctionnalités {#feature-engineering}
 
-Dans cette section, nous apporterons des modifications à notre jeu de données de vente au détail. Nous effectuerons les opérations suivantes :
+Dans cette section, nous allons apporter des modifications à notre jeu de données relatif aux ventes. Nous allons effectuer les opérations suivantes :
 
-- ajouter des colonnes semaine et année
-- convertir storeType en variable indicateur
-- convertir isHoliday en variable numérique
-- prévoir les ventes hebdomadaires de la semaine prochaine
+- Ajout de colonnes pour la semaine et l’année
+- Conversion de storeType en variable indicatrice
+- Conversion d’isHoliday en variable numérique
+- Prévision des ventes hebdomadaires de la semaine prochaine
 
-#### Ajouter les colonnes semaine et année
+#### Ajout de colonnes pour la semaine et l’année
 
-Le format actuel de la date (`2010-02-05`) est difficile à différencier si les données sont pour chaque semaine. C’est pourquoi nous allons convertir la date en semaine et en année.
+Avec le format de date actuel (`2010-02-05`), il est difficile d’identifier les semaines. Nous allons convertir la date en semaine et en année.
 
 ![](./images/walkthrough/date_to_week_year.png)
 
-La semaine et la date sont désormais les suivantes :
+À présent, la semaine et la date s’affichent comme suit :
 
 ![](./images/walkthrough/date_week_year.png)
 
-#### Convertir storeType en variable indicateur
+#### Conversion de storeType en variable indicatrice
 
-Ensuite, nous voulons convertir la colonne storeType en colonnes représentant chacune des `storeType`colonnes. Il existe 3 types de magasins (`A`, `B`, `C`), à partir desquels nous créons 3 nouvelles colonnes. La valeur définie dans chacun sera une valeur booléenne où &quot;1&quot; sera défini selon ce que `storeType` était et `0` pour les 2 autres colonnes.
+Maintenant, nous voulons convertir la colonne storeType en colonnes représentant chaque `storeType`. Il existe 3 types de boutique (`A`, `B` et `C`), à partir desquels nous allons créer 3 autres colonnes. La valeur de chaque colonne sera une valeur booléenne, à savoir un 1 dans la colonne correspondant au `storeType` et des `0` dans les 2 autres colonnes.
 
 ![](./images/walkthrough/storeType.png)
 
-La `storeType` colonne active sera supprimée.
+La colonne `storeType` actuelle sera supprimée.
 
-#### Convertir isHoliday en type numérique
+#### Conversion d’isHoliday en type numérique
 
-La prochaine modification consiste à remplacer la valeur booléenne par une représentation numérique. `isHoliday`
+La modification suivante consiste à remplacer la valeur booléenne `isHoliday` par une représentation numérique.
 
 ![](./images/walkthrough/isHoliday.png)
 
 
-#### Prévoir les ventes hebdomadaires de la semaine prochaine
+#### Prévision des ventes hebdomadaires de la semaine prochaine
 
-Maintenant, nous voulons ajouter les ventes hebdomadaires précédentes et futures à chacun de nos ensembles de données. Nous le faisons en compensant notre `weeklySales`action. De plus, nous calculons la `weeklySales` différence. Pour ce faire, on soustrait `weeklySales` les données de la semaine précédente `weeklySales`.
+Nous voulons maintenant ajouter les ventes hebdomadaires précédentes et futures à chacun de nos jeux de données. Pour ce faire, nous allons décaler nos `weeklySales`. Nous allons également calculer la différence entre les `weeklySales`. Pour cela, il faut soustraire les `weeklySales` aux `weeklySales` de la semaine précédente.
 
 ![](./images/walkthrough/weekly_past_future.png)
 
-Puisque nous compensons les `weeklySales` données 45 jeux de données à l’avant et 45 jeux de données à l’arrière pour créer de nouvelles colonnes, les 45 premiers et derniers points de données auront des valeurs NaN. Nous pouvons supprimer ces points de notre jeu de données en utilisant la `df.dropna()` fonction qui supprime toutes les lignes qui ont des valeurs NaN.
+Puisque nous décalons les données `weeklySales` de 45 jeux de données vers l’avant et de 45 jeux de données vers l’arrière pour créer des colonnes, les 45 premiers et derniers points de données auront des valeurs NaN. Nous pouvons supprimer ces points de notre jeu de données en utilisant la fonction `df.dropna()` qui supprime toutes les lignes comportant des valeurs NaN.
 
 ![](./images/walkthrough/dropna.png)
 
-Vous trouverez ci-dessous un résumé du jeu de données après les modifications :
+Vous trouverez ci-dessous un résumé du jeu de données après modification :
 
 ![](./images/walkthrough/df_info_new.png)
 
 ### Formation et vérification {#training-and-verification}
 
-Il est maintenant temps de créer des modèles de données et de sélectionner le modèle le plus performant pour prédire les ventes futures. Nous évaluerons les 5 algorithmes suivants :
+Il est maintenant temps de créer quelques modèles de données et de sélectionner le modèle qui sera le plus performant pour prédire les ventes futures. Nous allons évaluer les 5 algorithmes suivants :
 
 - Régression linéaire
 - Arborescence de décision
 - Forêt aléatoire
-- Augmentation du dégradé
-- K Voisins
+- Amplification progressive
+- Méthode des k plus proches voisins
 
-#### Diviser le jeu de données en sous-ensembles de formation et de test
+#### Scission du jeu de données en sous-ensembles de formation et de test
 
-Nous avons besoin d&#39;un moyen de savoir à quel point notre modèle sera capable de prédire les valeurs. Cette évaluation peut être effectuée en allouant une partie du jeu de données à utiliser comme validation et le reste comme données de formation. Puisque `weeklySalesAhead` sont les valeurs futures réelles de `weeklySales`, nous pouvons utiliser ceci pour évaluer la précision du modèle dans la prédiction de la valeur. Le fractionnement se fait comme suit :
+Nous avons besoin de déterminer la précision avec laquelle notre modèle sera capable de prédire les valeurs. Cette évaluation peut être effectuée en allouant une partie du jeu de données comme données de validation, et le reste comme données de formation. Puisque `weeklySalesAhead` représente les futures valeurs réelles des `weeklySales`, nous pouvons l’utiliser pour évaluer la précision du modèle dans la prédiction de la valeur. La scission se fait comme suit :
 
 ![](./images/walkthrough/split_data.png)
 
-Nous avons maintenant `X_train` et `y_train` pour préparer les modèles et `X_test` et `y_test` pour l&#39;évaluation ultérieure.
+Nous avons maintenant `X_train` et `y_train` pour préparer les modèles, ainsi que `X_test` et `y_test` pour l’évaluation ultérieure.
 
-#### Algorithmes de contrôle des points
+#### Contrôle des algorithmes
 
-Dans cette section, nous déclarerons tous les algorithmes dans un tableau appelé `model`. Ensuite, nous itérons à travers ce tableau et pour chaque algorithme, nous saisissons nos données d&#39;entraînement avec `model.fit()` lesquelles crée un modèle `mdl`. En utilisant ce modèle, nous prédirons `weeklySalesAhead` avec nos `X_test` données.
+Dans cette section, nous allons déclarer tous les algorithmes dans un tableau appelé `model`. Ensuite, nous allons itérer par le biais de ce tableau et, pour chaque algorithme, saisir nos données de formation avec `model.fit()`, qui crée un modèle `mdl`. Grâce à ce modèle, nous pourrons prédire `weeklySalesAhead` avec nos données `X_test`.
 
 ![](./images/walkthrough/training_scoring.png)
 
-Pour la notation, nous prenons la différence moyenne en pourcentage entre les valeurs prédites `weeklySalesAhead` et les valeurs réelles dans les `y_test` données. Puisque nous voulons minimiser la différence entre notre prédiction et la réalité, le régresseur d&#39;augmentation du rayonnement est le modèle le plus performant.
+Pour le score, nous prenons la différence moyenne en pourcentage entre les valeurs `weeklySalesAhead` prédites et les valeurs `y_test` réelles. Puisque nous voulons minimiser la différence entre notre prédiction et la réalité, la variable libre d’amplification progressive est le modèle le plus performant.
 
-#### Visualiser les prédictions
+#### Visualisation des prédictions
 
-Enfin, nous visualiserons notre modèle de prévision avec les valeurs de vente hebdomadaires réelles. La ligne bleue représente les chiffres réels, tandis que la ligne verte représente notre prédiction à l&#39;aide de l&#39;augmentation du dégradé. Le code suivant génère 6 tracés qui représentent 6 des 45 magasins de notre jeu de données. Seul `Store 1` :
+Enfin, nous allons visualiser notre modèle de prédiction avec les valeurs réelles des ventes hebdomadaires. La ligne bleue représente les chiffres réels, tandis que la ligne verte représente notre prévision à l’aide de l’amplification progressive. Le code suivant génère 6 tracés qui représentent 6 des 45 boutiques de notre jeu de données. Seule la boutique `Store 1` est illustrée ici :
 
 ![](./images/walkthrough/visualize_prediction.png)
 
@@ -216,9 +216,9 @@ Enfin, nous visualiserons notre modèle de prévision avec les valeurs de vente 
 
 ## Conclusion
 
-Avec cet aperçu, nous avons passé en revue le flux de travail qu&#39;un informaticien suivrait pour résoudre un problème de vente au détail. Plus précisément, nous avons suivi les étapes suivantes pour parvenir à une solution qui prévoit des ventes hebdomadaires futures.
+Dans cette présentation, nous avons passé en revue le processus suivi par un spécialiste des données pour résoudre un problème relatif aux ventes au détail. Plus précisément, nous avons suivi ces étapes pour fournir une solution qui prévoit les ventes hebdomadaires futures :
 
 - [Configuration](#setup)
 - [Exploration des données](#exploring-data)
-- [Ingénierie des fonctionnalités](#feature-engineering)
+- [Conception des fonctionnalités](#feature-engineering)
 - [Formation et vérification](#training-and-verification)
