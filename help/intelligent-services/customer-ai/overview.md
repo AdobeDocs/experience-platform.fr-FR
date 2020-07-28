@@ -7,46 +7,46 @@ translation-type: tm+mt
 source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
 workflow-type: tm+mt
 source-wordcount: '487'
-ht-degree: 26%
+ht-degree: 85%
 
 ---
 
 
 # Présentation de Customer AI
 
-L&#39;intelligence artificielle du client, dans le cadre d&#39;Intelligent Services, permet aux spécialistes du marketing de générer des prévisions client au niveau individuel avec des explications.
+En tant que composant des services intelligents, Customer AI permet aux professionnel du marketing de générer des prédictions client au niveau individuel avec des explications.
 
-Grâce à des facteurs influents, l’IA du client peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. En outre, les spécialistes du marketing peuvent tirer parti des prédictions et des connaissances d’IA du client pour personnaliser les expériences client en fournissant les offres et les messages les plus appropriés.
+À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les professionnels du marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
 
-## Comprendre l’IA du client
+## Fonctionnement de Customer AI
 
-Customer AI est utilisée pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, il n’est pas nécessaire de transformer les besoins de l’entreprise en un problème d’apprentissage automatique, de choisir un algorithme, de s’entraîner ou de se déployer.
+Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
-Customer AI est conçue pour :
+Customer AI est conçu pour :
 
-- Fournir des modèles de propension des clients à haute précision pour une segmentation et un ciblage renforcés.
-- Aidez à comprendre les facteurs influents et les probabilités de certains comportements de clients.
-- Proposez des options personnalisables pour les cas d’utilisation et les données uniques de votre société.
-- améliorer le profil client en temps réel grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
-- Améliorer les profils des clients en tenant compte de facteurs influents pour les scores de propension.
-- Créez des segments de clients en fonction de facteurs influents et de scores de propension.
+- proposer des modèles de propension des clients à haute précision pour une segmentation et un ciblage plus forts ;
+- faciliter la compréhension des facteurs d’influence et la probabilité derrière certains comportements des clients ;
+- offrir des options personnalisables pour les cas d’utilisation et les données uniques de votre entreprise ;
+- améliorer Real-time Customer Profile grâce aux scores de propension des clients, comme les taux d’attrition et de conversion ;
+- améliorer les profils client avec des facteurs d’influence pour les scores de propension ;
+- créer des segments de clientèle en fonction de facteurs d’influence et de scores de propension.
 
-Customer AI n’est pas conçue pour :
+Customer AI n’est pas conçu pour certaines utilisations :
 
-- L’intelligence artificielle du client ne doit pas être utilisée pour prévoir les prix dynamiques, ni le prix auquel le client va faire un achat.
-- L’intelligence artificielle du client ne peut pas déterminer si le fait de donner une offre rend le client plus susceptible d’acheter un article. Bien que vous puissiez décider d&#39;envoyer des offres d&#39;escompte en fonction des scores de propension, ce n&#39;est pas nécessairement le meilleur moyen de convertir ces clients.
-- L’IA du client n’est pas un outil de recommandation de produit. Si vous disposez de milliers de SKU, n’utilisez pas l’IA du client comme proxy pour une solution de recommandations de produits réelle telle que [!DNL Adobe Target].
-- L’intelligence artificielle du client ne peut pas prédire à quel stade du voyage d’achat se trouve le client, par exemple, s’il est en phase de &quot;connaissance&quot;, de &quot;prise en compte&quot;, d’achat ou de &quot;rétention&quot;.
-- N’utilisez pas l’intelligence artificielle du client pour déterminer les clients susceptibles d’acheter un produit lancé à l’avenir. Pour ce faire, certains événements de réussite doivent être présents dans le passé pour que l’API du client puisse correctement former l’algorithme d’apprentissage automatique à vos données.
+- Customer AI ne doit pas être utilisé pour prédire la tarification dynamique, ni le prix auquel le client va effectuer un achat.
+- Customer AI ne peut pas déterminer si une offre va inciter un client à acheter un article. Bien que vous puissiez décider d’envoyer des réductions basées sur des scores de propension, cela n’est pas nécessairement la meilleure façon de convertir ces clients.
+- Customer AI n’est pas un outil de recommandation de produits. If you have thousands of SKUs, do not use Customer AI as a proxy for a real product recommendations solution like [!DNL Adobe Target].
+- Customer AI ne peut pas déterminer à quel stade du parcours d’achat se trouve le client, par exemple s’il est en phase de « sensibilisation », de « considération », d’« achat » ou de « rétention ».
+- N’utilisez pas Customer AI pour identifier les clients susceptibles d’acheter un produit qui sera lancé ultérieurement. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement former l’algorithme d’apprentissage automatique sur vos données.
 
 La vidéo suivante est conçue pour vous aider à comprendre l’IA du client.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
-## Comment fonctionne-t-elle ?
+## Comment fonctionne-t-il ?
 
 Customer AI analyse les données d’événement d’expérience existantes pour le client afin de prévoir les taux d’attrition ou de conversion. Adobe sait que les définitions de l’attrition et de la conversion ne sont pas uniformes dans tous les cas d’utilisation. Pour cette raison, il est possible de définir des objectifs personnalisés comme ensemble de conditions. L’utilisateur peut configurer l’objectif prévu tant que l’événement d’intérêt est présent dans les données d’événement d’expérience client saisies.
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le guide de [prise en main](./getting-started.md) . Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’IA du client. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la [configuration d’une instance](./user-guide/configure.md)d’API client. Il décrit les étapes à suivre pour utiliser l’IA du client.
+Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’IA du client. If you already have all your credentials and data ready, visit  [configuring a Customer AI instance](./user-guide/configure.md). Il décrit les étapes à suivre pour utiliser l’IA du client.
