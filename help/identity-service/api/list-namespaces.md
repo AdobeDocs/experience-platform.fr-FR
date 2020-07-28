@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: espaces de nommage Listes disponibles
+title: Répertorier les espaces de noms disponibles
 topic: API guide
 translation-type: tm+mt
 source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
 workflow-type: tm+mt
 source-wordcount: '68'
-ht-degree: 8%
+ht-degree: 63%
 
 ---
 
 
-# espaces de nommage Listes disponibles
+# Répertorier les espaces de noms disponibles
 
 **Format d’API**
 
@@ -33,11 +33,11 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de nommage disponible. Les Espaces de nommage dont la valeur &quot;[!UICONTROL personnalisée]&quot; est &quot;[!UICONTROL false]&quot; sont des espaces de nommage standard, tandis que ceux dont la valeur &quot;[!UICONTROL personnalisée]&quot; est &quot;[!UICONTROL true&quot; sont des espaces de nommage créés par votre entreprise.]
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
 
 >[!NOTE]
 >
->Cette réponse a été tronquée pour l&#39;espace.
+>Cette réponse a été tronquée pour l’espace.
 
 ```json
 [
@@ -79,4 +79,4 @@ La réponse comprend un tableau d’objets, chaque objet représentant un espace
 
 ## Étapes suivantes
 
-Passez au didacticiel suivant pour [créer un espace de nommage personnalisé](./create-custom-namespace.md)
+Passez au tutoriel suivant pour [créer un espace de noms personnalisé](./create-custom-namespace.md).
