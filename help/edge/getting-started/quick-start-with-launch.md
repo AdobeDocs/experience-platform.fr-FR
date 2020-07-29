@@ -4,7 +4,7 @@ seo-title: 'SDK Web d’Adobe Experience Platform : démarrage rapide avec La
 description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 27%
@@ -20,14 +20,6 @@ Ce guide vous guide tout au long des différentes manières de configurer le Ado
 - Avoir droit à l&#39;Adobe Experience Platform. Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Data Services Experience Platform pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur.
 
-## Création d’un ID de configuration
-
-Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) edge dans Launch. Cela vous permet de permettre au réseau Edge d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
-
->[!NOTE]
->
->Votre organisation doit être mise en liste blanche pour cette fonctionnalité. Veuillez contacter votre CSM pour qu&#39;il soit mis sur la liste pour une éventuelle liste blanche.
-
 ## Préparation d’un Schéma
 
 L&#39;Experience Platform Edge Network prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
@@ -42,6 +34,14 @@ Connectez-vous à Launch et installez l’extension `AEP Web SDK`. Lorsque vous 
 
 
 Pour plus d’informations sur les différentes options de configuration, voir [Configuration du SDK](../fundamentals/configuring-the-sdk.md).
+
+## Création d’un ID de configuration
+
+Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) edge dans Launch. Cela vous permet de permettre au réseau Edge d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
+
+>[!NOTE]
+>
+>Votre organisation doit être mise en liste blanche pour cette fonctionnalité. Veuillez contacter votre CSM pour qu&#39;il soit mis sur la liste pour une éventuelle liste blanche.
 
 ## Créer un élément de données basé sur votre Schéma
 
