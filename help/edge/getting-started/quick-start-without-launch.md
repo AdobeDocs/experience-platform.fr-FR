@@ -4,7 +4,7 @@ seo-title: 'début rapide du SDK Web Adobe Experience Platform '
 description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 translation-type: tm+mt
-source-git-commit: 8574a2d54c00f1bd3c41780fb12ff739a7d98fc3
+source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 14%
@@ -20,14 +20,6 @@ Ce guide vous guide tout au long des différentes manières de configurer le SDK
 - Avoir droit à l&#39;Adobe Experience Platform.  Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Data Services Experience Platform pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur.
 
-## Création d’un ID de configuration
-
-Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) Edge dans Adobe Launch, même si vous n’utilisez pas les fonctionnalités de gestion des balises. Cela vous permet de permettre à la [!DNL Edge Network] d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
-
->[!NOTE]
->
->Votre organisation doit être sur la liste autorisée de la fonction. Veuillez contacter votre CSM pour être mis sur la liste autorisée.
-
 ## Préparation d’un Schéma
 
 Le [!DNL Experience Platform Edge Network] prend les données comme XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit la manière dont les données [!DNL Edge Network] doivent être formatées. Pour envoyer des données, vous devez définir votre schéma.
@@ -38,6 +30,14 @@ Le [!DNL Experience Platform Edge Network] prend les données comme XDM. XDM est
 La vidéo suivante est destinée à vous aider à créer un schéma, un jeu de données et un connecteur source de flux continu pour vos [!DNL Web SDK] données.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35395?quality=12&learn=on)
+
+## Création d’un ID de configuration
+
+Vous pouvez créer un ID de configuration à l’aide de l’outil [de configuration](../fundamentals/edge-configuration.md) Edge dans Adobe Launch, même si vous n’utilisez pas les fonctionnalités de gestion des balises. Cela vous permet de permettre à la [!DNL Edge Network] d&#39;envoyer des données aux différentes solutions. Vous trouverez des informations détaillées sur la manière de trouver chaque option dans la page Outil [de configuration](../fundamentals/edge-configuration.md) Edge.
+
+>[!NOTE]
+>
+>Votre organisation doit être sur la liste autorisée de la fonction. Veuillez contacter votre CSM pour être mis sur la liste autorisée.
 
 ## Installation du SDK
 
