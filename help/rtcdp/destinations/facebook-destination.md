@@ -4,10 +4,10 @@ seo-title: Destination Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 17%
+source-wordcount: '722'
+ht-degree: 19%
 
 ---
 
@@ -93,3 +93,11 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
 For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Données exportées {#exported-data}
+
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+
+>[!TIP]
+>
+>L&#39;intégration entre le CDP en temps réel de l&#39;Adobe et la prise en charge [!DNL Facebook] des renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées [!DNL Facebook] lorsque vous activez les segments vers la destination.
