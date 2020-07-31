@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: c79d9690f5d1f6c199d0c0a74238225c5b6fd2c2
+source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -36,11 +36,11 @@ Les vidéos suivantes décrivent comment [!DNL Experience Platform] créer des e
 
 L’Adobe Experience Platform est conçu pour fonctionner de manière optimale dans les **dernières versions** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
 
-| Operating system (Système d’exploitation) | Navigateurs pris en charge |  |  |
-|---|---|---|---|
-| Mac OS X | Google Chrome | Safari | Firefox |
-| Windows 10 | Google Chrome | Microsoft Edge | Firefox |
-| Windows 7 | Google Chrome |  | Firefox |
+| Operating system (Système d’exploitation) | Navigateurs pris en charge |
+|---|---|
+| **Mac OS X** | Google Chrome, Safari, Firefox |
+| **Windows 10** | Google Chrome, Microsoft Edge, Firefox |
+| **Windows 7** | Google Chrome, Firefox |
 
 Ces systèmes d’exploitation et navigateurs ne sont pas pris en charge :
 
