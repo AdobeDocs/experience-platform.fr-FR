@@ -4,10 +4,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
 workflow-type: tm+mt
-source-wordcount: '1013'
-ht-degree: 57%
+source-wordcount: '1036'
+ht-degree: 56%
 
 ---
 
@@ -93,20 +93,20 @@ Suivez les étapes ci-dessous pour modifier les flux d’activation existants da
 
 ## Vérification de la réussite de l’activation du segment {#verify-activation}
 
-### Destinations de marketing par e-mail  et destinations de stockage dans le cloud
+### Destinations de marketing par e-mail  et destinations de stockage dans le cloud {#esp-and-cloud-storage}
 
 Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, la plateforme de données clients en temps réel d’Adobe crée un fichier `.txt` ou `.csv` séparé par des tabulations dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
-`<destination name>id<destination id><timestamp-yyyymmddhhmmss>`
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Les fichiers que vous pouvez recevoir pendant trois jours consécutifs peuvent ressembler à ceux-ci :
 
 ```
-Salesforce_id3544_20191120110000.csv
-Salesforce_id3544_20191121123000.csv
-Salesforce_id3544_20191122124530.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
+Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-La présence de ces fichiers dans votre emplacement de stockage est la confirmation de la réussite de l’activation.
+La présence de ces fichiers dans votre emplacement de stockage est la confirmation de la réussite de l’activation. Pour comprendre comment les fichiers exportés sont structurés, vous pouvez [télécharger un exemple de fichier](/help/rtcdp/destinations/assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv).csv. Cet exemple de fichier inclut les attributs de profil `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`et `personalEmail.address`.
 
 ### Destinations publicitaires
 
