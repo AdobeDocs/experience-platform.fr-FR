@@ -4,10 +4,10 @@ seo-title: Destinations de marketing par e-mail
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 3c598454a868139b7604c5c7ca2b98fa0f1bb961
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '731'
-ht-degree: 56%
+ht-degree: 54%
 
 ---
 
@@ -24,7 +24,7 @@ Dans le flux de connexion à la destination, décrit dans la section ci-dessous,
 
 ## Étape 1 - Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez la destination de marketing par e-mail à laquelle vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Se connecter à la destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
 
    ![Se connecter à la destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
