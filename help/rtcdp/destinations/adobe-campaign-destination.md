@@ -4,10 +4,10 @@ seo-title: Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 seo-description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 88%
+ht-degree: 86%
 
 ---
 
@@ -22,7 +22,7 @@ Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [co
 
 ## Se connecter à la destination {#connect-destination}
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez Adobe Campaign, puis **[!UICONTROL Se connecter à la destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Connect destination]**.
 
    ![Se connecter à Adobe Campaign](/help/rtcdp/destinations/assets/connect-adobe-campaign.png)
 
