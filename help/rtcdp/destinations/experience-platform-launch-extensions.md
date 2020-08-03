@@ -4,10 +4,10 @@ seo-title: Extensions d’Experience Platform Launch
 description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
-source-git-commit: 98c3356db178507e0a8d94b47030e9490e721e46
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '622'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ Pour obtenir une présentation des fonctionnalités d’Experience Platform Laun
 
 ## Accès aux extensions de Launch depuis l’interface de la plateforme de données clients en temps réel d’Adobe {#how-to-find-extensions-in-interface}
 
-Pour accéder aux extensions de Launch depuis l’interface de la plateforme de données clients en temps réel d’Adobe, accédez à **[!UICONTROL Destinations > Catalogue]** et sélectionnez **[!UICONTROL Extensions]** dans le filtre **[!UICONTROL Types]**.
+To find the Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter.
 
 ![Filtre des extensions dans l’interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
