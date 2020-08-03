@@ -4,7 +4,7 @@ seo-title: Workflow de destinations de réseau social
 description: Instructions de connexion à vos comptes publicitaires de réseau social
 seo-description: Instructions de connexion à vos comptes publicitaires de réseau social
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 65%
@@ -18,7 +18,7 @@ ht-degree: 65%
 
 This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
 
-1. In **[!UICONTROL Destinations > Catalog]**, scroll to the **[!UICONTROL Social]** category. Sélectionnez la destination de réseau social de votre choix, puis sélectionnez **[!UICONTROL Se connecter à la destination]**.
+1. In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Sélectionnez la destination de réseau social de votre choix, puis sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
    ![Connexion à la destination de réseau social](/help/rtcdp/destinations/assets/facebook-catalog-view.png)
 
