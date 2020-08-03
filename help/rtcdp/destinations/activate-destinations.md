@@ -4,10 +4,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 098dd31be4d6ee6971cd87bcbfe0f686e34918e1
+source-git-commit: 08b6fd2d43e8ca9d0208ac1bfadc2db15e3f2e90
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 56%
+source-wordcount: '1039'
+ht-degree: 55%
 
 ---
 
@@ -95,8 +95,8 @@ Suivez les étapes ci-dessous pour modifier les flux d’activation existants da
 
 ### Destinations de marketing par e-mail  et destinations de stockage dans le cloud {#esp-and-cloud-storage}
 
-Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, la plateforme de données clients en temps réel d’Adobe crée un fichier `.txt` ou `.csv` séparé par des tabulations dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
+Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, la plateforme de données clients en temps réel d’Adobe crée un fichier `.csv` ou `.txt` séparé par des tabulations dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé chaque jour à votre emplacement de stockage. Le format du fichier est :
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Les fichiers que vous pouvez recevoir pendant trois jours consécutifs peuvent ressembler à ceux-ci :
 
@@ -110,11 +110,11 @@ La présence de ces fichiers dans votre emplacement de stockage est la confirmat
 
 ### Destinations publicitaires
 
-Vérifiez la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
+Vérifiez votre compte dans la destination publicitaire vers laquelle vous activez vos données. Si l’activation a réussi, les audiences sont renseignées dans votre plateforme publicitaire.
 
 ### Destinations de réseau social
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [Facebook Ads Manager](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
 >[!TIP]
 >
