@@ -4,10 +4,10 @@ seo-title: Processus des destinations de stockage dans le cloud
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 68%
+ht-degree: 65%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 68%
 
 Cette page explique comment se connecter aux emplacements de stockage dans le cloud dans la plateforme des données clients en temps réel d’Adobe.
 
-1. Dans **[!UICONTROL Connexions > Destinations]**, sélectionnez votre destination préférée de stockage dans le cloud, puis **[!UICONTROL Connecter la destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
 
    ![Connexion à la destination de stockage dans le cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
 
