@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Libellés d’utilisation des données pris en charge
+title: Étiquettes d’utilisation des données de base
 topic: labels
 translation-type: tm+mt
-source-git-commit: d4964231ee957349f666eaf6b0f5729d19c408de
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '1878'
-ht-degree: 95%
+source-wordcount: '1869'
+ht-degree: 93%
 
 ---
 
 
-# Libellés d’utilisation des données pris en charge
+# Étiquettes d’utilisation des données de base
 
-Adobe Experience Platform comprend une infrastructure pour la gouvernance des données avec, au cœur, Data Usage Labeling and Enforcement (DULE).  Les fonctionnalités de DULE permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs afin de classer les données en fonction du type de stratégies d’utilisation qui s’appliquent à ces données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. La gouvernance des données d’Adobe Experience Platform fournit plusieurs étiquettes d’utilisation des données de base prêtes à l’emploi que vous pouvez utiliser pour début de catégoriser vos données.
 
-Ce document décrit tous les libellés d’utilisation des données actuellement pris en charge par [!DNL Experience Platform]. More information regarding [!DNL Data Governance] and DULE can be found in the [Data Governance overview](../home.md).
+Ce document décrit les étiquettes d’utilisation des données de base actuellement fournies par [!DNL Experience Platform]. Vous trouverez plus d&#39;informations sur [!DNL Data Governance] ce sujet dans l&#39;aperçu [de la gouvernance des](../home.md)données.
 
 ## Étiquettes Contrat
 
