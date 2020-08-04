@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’Attribution AI
 topic: Attribution AI
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: 7fc121d310509739c7ee81f7d6657ea8f3963b69
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 94%
+source-wordcount: '407'
+ht-degree: 91%
 
 ---
 
@@ -29,24 +29,6 @@ Attribution AI prend en charge deux catégories de scores : les scores algorith
 La vidéo suivante est conçue pour vous aider à comprendre l&#39;Attribution AI.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
-
-## Scores algorithmiques d’Attribution AI
-
-Attribution AI prend en charge deux catégories de scores d’attribution : les scores algorithmiques et les scores basés sur des règles.
-
-Attribution AI produit deux types différents de scores algorithmiques : les scores incrémentiels et les scores influencés. Un score influencé représente la fraction de la conversion dont chaque point de contact marketing est à l’origine. Un score incrémentiel représente le degré d’impact marginal directement causé par le point de contact marketing. La principale différence entre le score incrémentiel et le score influencé est que le score incrémentiel prend en compte l’effet de base. Il ne présume pas qu’une conversion est provoquée uniquement par les points de contact marketing précédents.
-
-Consultez le tableau ci-dessous pour plus de détails sur chacun de ces scores d’attribution :
-
-| Scores d’attribution | Description |
-| ----- | ----------- |
-| Première touche | Score d’attribution basé sur des règles qui attribue tous les crédits au point de contact initial d’un chemin de conversion. |
-| Dernière touche | Score d’attribution basé sur des règles qui attribue tous les crédits au point de contact le plus proche de la conversion. |
-| Linéaire | Score d’attribution basé sur des règles qui répartit de manière égale les crédits entre chaque point de contact d’un chemin de conversion. |
-| En forme de U | Score d’attribution basé sur des règles qui attribue 40 % des crédits au premier point de contact et 40 % des crédits au dernier point de contact. Les autres points de contact se partagent de manière égale les 20 % restants. |
-| Décroissance temporelle | Score d’attribution basé sur des règles qui attribue plus de crédits aux points de contact les plus proches de la conversion par rapport aux points de contact plus éloignés dans le temps de la conversion. |
-| Influencé (algorithmique) | Le score influencé représente la fraction de la conversion dont chaque point de contact marketing est à l’origine. |
-| Incrémentiel (algorithmique) | Le score incrémentiel représente le degré d’impact marginal directement causé par un point de contact marketing. |
 
 ## Exemples de cas d’utilisation commerciale
 
