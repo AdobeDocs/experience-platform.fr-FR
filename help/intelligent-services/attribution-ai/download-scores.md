@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Accès aux scores dans Attribution AI
 topic: Accessing scores
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 24449d0138ab449dbc01aecbbe9f70e05c781c89
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 75%
+source-wordcount: '1028'
+ht-degree: 71%
 
 ---
 
@@ -259,9 +259,11 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
+Les partitions téléchargées seront en parquet et auront besoin soit d&#39;un lecteur de [!DNL Spark]coquillages, soit d&#39;un lecteur de parquet pour vue les partitions. Pour l’affichage des scores bruts, vous pouvez utiliser des outils [en](https://github.com/apache/parquet-mr/tree/master/parquet-tools)parquet. Les outils de parquets peuvent analyser les données avec [!DNL Spark].
+
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Vous pouvez maintenant continuer à parcourir les autres [services intelligents](../home.md) et guides proposés.
+Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Pour plus d&#39;informations sur les résultats obtenus, veuillez consulter la documentation sur les entrées et les extrants [de l&#39;](./input-output.md) attrition AI.
 
 ## Accès aux scores à l’aide du Snowflake
 
