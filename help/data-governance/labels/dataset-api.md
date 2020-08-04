@@ -4,17 +4,17 @@ solution: Experience Platform
 title: 'Gérer les étiquettes d’utilisation des données pour les jeux de données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 2f35765c0dfadbfb4782b6c3904e33ae7a330b2f
+source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 9%
+source-wordcount: '912'
+ht-degree: 6%
 
 ---
 
 
 # Gérer les étiquettes d’utilisation des données pour les jeux de données à l’aide d’API
 
-Elle [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données d’Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
+Elle [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
 
 Ce document explique comment gérer les étiquettes des jeux de données et des champs à l’aide du [!DNL Dataset Service API]. Pour savoir comment gérer les libellés d’utilisation des données eux-mêmes à l’aide d’appels d’API, consultez le guide [des points de terminaison](../api/labels.md) d’étiquettes pour le [!DNL Policy Service API].
 
@@ -94,16 +94,21 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Requête**
 
-La demande de POST suivante ajoute une série d&#39;étiquettes au jeu de données, ainsi qu&#39;un champ spécifique dans ce jeu de données. Les champs fournis dans la charge utile sont identiques à ceux requis pour une demande de PUT.
+La demande de PUT suivante met à jour les étiquettes existantes pour un jeu de données, ainsi qu’un champ spécifique dans ce jeu de données. Les champs fournis dans la charge utile sont identiques à ceux requis pour une demande de POST.
+
+>[!IMPORTANT]
+>
+>Un `If-Match` en-tête valide doit être fourni lors de l’envoi de requêtes PUT au `/datasets/{DATASET_ID}/labels` point de terminaison. Pour plus d’informations sur l’utilisation de l’en-tête requis, voir la section [de l’](#if-match) annexe.
 
 ```shell
-curl -X POST \
+curl -X PUT \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000' \
   -d '{
         "labels": [ "C1", "C2", "C3", "I1", "I2" ],
         "optionalLabels": [
@@ -160,13 +165,20 @@ DELETE /datasets/{DATASET_ID}/labels
 
 **Requête**
 
+La demande suivante supprime les étiquettes du jeu de données spécifié dans le chemin d’accès.
+
+>[!IMPORTANT]
+>
+>Un `If-Match` en-tête valide doit être fourni lors de l’envoi de requêtes DELETE au `/datasets/{DATASET_ID}/labels` point de terminaison. Pour plus d’informations sur l’utilisation de l’en-tête requis, voir la section [de l’](#if-match) annexe.
+
 ```shell
 curl -X DELETE \
   'https://platform.adobe.io/data/foundation/dataset/datasets/5abd49645591445e1ba04f87/labels' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: 8f00d38e-0000-0200-0000-5ef4fc6d0000'
 ```
 
 **Réponse**
@@ -182,3 +194,17 @@ Once you have added data usage labels at the dataset- and field-level, you can b
 Désormais, vous pouvez également définir des stratégies d’utilisation des données en fonction des libellés que vous avez appliqués. Pour plus d’informations, consultez la [présentation des stratégies d’utilisation des données](../policies/overview.md).
 
 Pour plus d&#39;informations sur la gestion des jeux de données dans [!DNL Experience Platform], consultez l&#39;aperçu [des jeux de](../../catalog/datasets/overview.md)données.
+
+## Annexe {#appendix}
+
+La section suivante contient des informations supplémentaires sur l’utilisation des étiquettes à l’aide de l’API Service de dataset.
+
+### En-tête [!DNL If-Match]{#if-match}
+
+Lors d’appels d’API qui mettent à jour les étiquettes existantes d’un jeu de données (PUT et DELETE), un `If-Match` en-tête qui indique la version actuelle de l’entité d’étiquette de jeu de données dans le service de jeux de données doit être inclus. Afin d’éviter les collisions de données, le service ne mettra à jour l’entité de jeu de données que si la chaîne incluse correspond à la dernière balise de version générée par le système pour ce jeu de données. `If-Match`
+
+>[!NOTE]
+>
+>S’il n’existe actuellement aucune étiquette pour le jeu de données en question, les nouvelles étiquettes ne peuvent être ajoutées que par le biais d’une demande de POST, qui ne nécessite pas d’ `If-Match` en-tête. Une fois que des étiquettes ont été ajoutées à un jeu de données, une `etag` valeur est attribuée qui peut être utilisée pour mettre à jour ou supprimer les étiquettes ultérieurement.
+
+Pour récupérer la version la plus récente de l&#39;entité de type DataSet-label, envoyez une demande [de](#look-up) GET au point de `/datasets/{DATASET_ID}/labels` terminaison. La valeur actuelle est renvoyée dans la réponse sous un `etag` en-tête. Lors de la mise à jour des libellés de jeux de données existants, il est recommandé d’effectuer d’abord une requête de recherche pour le jeu de données afin de récupérer sa dernière `etag` valeur avant d’utiliser cette valeur dans l’ `If-Match` en-tête de votre demande de PUT ou de DELETE ultérieure.
