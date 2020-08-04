@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide d’utilisation d’Attribution AI
 topic: User guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 15f9f90e5a1439e071eeb46ad655eee10954c2ac
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 98%
+source-wordcount: '1432'
+ht-degree: 97%
 
 ---
 
@@ -82,7 +82,7 @@ Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter une conversi
 
 ![ajouter une conversion](./images/user-guide/add_conversion.png)
 
-### Définition de l’intervalle de recherche en amont
+### Définition de l’intervalle de recherche en amont {#lookback-window}
 
 Une fois la conversion définie, vous devez confirmer votre intervalle de recherche en amont. En utilisant les touches fléchées ou en cliquant sur la valeur par défaut (56), indiquez le nombre de jours avant votre événement de conversion à partir duquel vous souhaitez inclure des points de contact. Les points de contact sont définis à l’étape suivante.
 
@@ -172,9 +172,9 @@ Pour finir, saisissez le code pays dans le menu déroulant *Saisir la valeur du 
 
 ![région](./images/user-guide/region-based.png)
 
-### Période de formation
+### Période de formation {#training-window}
 
-Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé sur la base de 2 trimestres (6 mois) de données. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
+Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé à l’aide de 2 trimestres (6 mois) de données sur les événements de conversion. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
 
 >[!NOTE]
 >
