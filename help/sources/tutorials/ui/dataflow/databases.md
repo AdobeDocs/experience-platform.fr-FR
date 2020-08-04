@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd0ce5b5c45133b570970b1d1d7e2f484b89c2e9
+source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1225'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 
-Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base de données.
+Un flux de données est une tâche planifiée qui récupère et ingère des données d&#39;une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de base de données.
 
 ## Prise en main
 
@@ -25,11 +25,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [Real-time Customer Profile](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-De plus, ce didacticiel nécessite que vous ayez déjà créé un connecteur de base de données. Vous trouverez une liste de didacticiels pour la création de différents connecteurs de base de données dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../home.md)source.
+De plus, ce didacticiel nécessite que vous ayez déjà créé un compte de base de données. Vous trouverez une liste de didacticiels pour la création de différents connecteurs de base de données dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../home.md)source.
 
 ## Sélectionner des données
 
-Après avoir créé votre connecteur de base de données, l’étape *[!UICONTROL Sélectionner les données]* s’affiche, ce qui vous permet d’explorer la hiérarchie de votre base de données dans une interface interactive.
+Après avoir créé votre compte de base de données, l’étape *[!UICONTROL Sélectionner les données]* s’affiche, ce qui vous permet d’explorer la hiérarchie de votre base de données dans une interface interactive.
 
 - La moitié gauche de l&#39;interface est un navigateur, qui affiche la liste des bases de données de votre compte.
 - La moitié droite de l’interface vous permet de prévisualisation jusqu’à 100 lignes de données.
@@ -40,7 +40,7 @@ Sélectionnez la base de données à utiliser, puis cliquez sur **[!UICONTROL Su
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape *Mappage* s’affiche, fournissant une interface interactive permettant de mapper les données source à un jeu de données Platform.
+L’étape *Mappage* s’affiche, fournissant une interface interactive permettant de mapper les données source à un jeu de données de plateforme.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -58,11 +58,11 @@ The *[!UICONTROL Select dataset]* dialog appears. Recherchez le jeu de données 
 
 Pour importer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** et entrez un nom et une description pour le jeu de données dans les champs fournis.
 
-Vous pouvez joindre un champ de schéma en entrant un nom de schéma dans la barre de recherche **[!UICONTROL Sélectionner un schéma]** . Vous pouvez également sélectionner l’icône de liste déroulante pour afficher une liste de schémas existants. Vous pouvez également sélectionner Recherche **** avancée sur un écran de schémas existants, y compris leurs détails respectifs.
+Vous pouvez joindre un champ de schéma en entrant un nom de schéma dans la barre de recherche **[!UICONTROL Sélectionner un schéma]** . Vous pouvez également sélectionner l’icône de liste déroulante pour afficher une liste de schémas existants. Vous pouvez également sélectionner Recherche **** avancée pour accéder à l’écran des schémas existants, y compris leurs détails respectifs.
 
-![](../../../images/tutorials/dataflow/databases/new-dataset.png)
+![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema] dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminé]**.
+The *[!UICONTROL Select schema]* dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminé]**.
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
@@ -70,7 +70,7 @@ Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utili
 
 Une fois les données source mises en correspondance, cliquez sur **[!UICONTROL Suivant]**.
 
-![](../../../images/tutorials/dataflow/databases/mapping.png)
+![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
 
 ## Planifier les exécutions d&#39;assimilation
 
@@ -78,10 +78,10 @@ L&#39;étape *[!UICONTROL Planification]* s&#39;affiche, ce qui vous permet de c
 
 | Champ | Description |
 | --- | --- |
-| Fréquence | Les fréquences sélectionnées sont les suivantes : Une fois, Minute, Heure, Jour et Semaine. |
+| Fréquence | Les fréquences sélectionnables sont `Once`, `Minute`, `Hour`, `Day`et `Week`. |
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
-| Début | Horodatage UTC indiquant à quel moment la première assimilation est prévue |
-| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *renvoi* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *renvoi* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai *de* Début seront ingérés. Les fichiers chargés avant l&#39;heure *de* Début ne seront pas ingérés. |
+| Début | Horodatage UTC indiquant à quel moment la première importation est prévue. |
+| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *[!UICONTROL renvoi]* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *renvoi* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai *[!UICONTROL de]* Début seront ingérés. Les fichiers chargés avant l&#39;heure *[!UICONTROL de]* Début ne seront pas ingérés. |
 | Colonne Delta | Option avec un ensemble filtré de champs de schéma source de type, de date ou d’heure. Ce champ permet de différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
 Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Début en sélectionnant la fréquence d&#39;ingestion. Ensuite, définissez l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
@@ -98,13 +98,18 @@ Pour configurer l’assimilation unique, sélectionnez la flèche de la liste d�
 
 >[!TIP] **[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
 
-![](../../../images/tutorials/dataflow/databases/schedule-once.png)
-
 Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
-## Nommer votre flux de données
+![](../../../images/tutorials/dataflow/databases/schedule-once.png)
 
-L’étape de détail *[!UICONTROL du]* flux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de données. Select **[!UICONTROL Next]** when finished.
+## Fournir des détails sur le flux de données
+
+L’étape de détail ** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
+
+Au cours de ce processus, vous pouvez également activer les tests de diagnostic *[!UICONTROL d&#39;assimilation]* *[!UICONTROL partielle et d&#39;]* erreur. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Une fois l&#39;assimilation ** partielle activée, faites glisser le seuil d&#39; *[!UICONTROL erreur %]* pour ajuster le seuil d&#39;erreur du lot. Vous pouvez également ajuster manuellement le seuil en sélectionnant la zone d’entrée. Pour plus d&#39;informations, consultez la présentation [de l&#39;assimilation](../../../../ingestion/batch-ingestion/partial.md)partielle des lots.
+Fournissez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
+
+Fournissez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../../../images/tutorials/dataflow/databases/dataflow-detail.png)
 
@@ -112,9 +117,9 @@ L’étape de détail *[!UICONTROL du]* flux de données s’affiche, où vous d
 
 L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-- *Connexion*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
-- *Attribuer des champs* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-- *Planification*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
+- *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
+- *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- *[!UICONTROL Planification]*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
@@ -126,7 +131,7 @@ Une fois que votre flux de données a été créé, vous pouvez surveiller les d
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données d&#39;une base de données externe et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par les services Platform en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données d&#39;une base de données externe et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par les services Plateforme en aval, tels que le Profil client en temps réel et l’espace de travail Data Science. Pour plus d’informations, voir les documents suivants :
 
 - [Présentation du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
