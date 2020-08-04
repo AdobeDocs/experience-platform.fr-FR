@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: e135bc33e6c3daa411e85cb37e407322fd0bca5b
+source-git-commit: 876ac35f6366411adda821805bf628470839f80e
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 83%
+source-wordcount: '106'
+ht-degree: 79%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 83%
 * [Présentation de la gouvernance des données](home.md)
 * Libellés d’utilisation des données {#labels}
    * [Présentation des libellés d’utilisation des données](labels/overview.md)
+   * [Étiquettes d’utilisation des données de base](labels/reference.md)
    * [Gérer les étiquettes d’utilisation des données dans l’interface utilisateur](labels/user-guide.md)
-   * [Gérer les étiquettes d’utilisation des données dans l’API](labels/api.md)
-   * [Libellés d’utilisation des données pris en charge](labels/reference.md)
+   * [Gérer les libellés des jeux de données et des champs à l’aide d’API](labels/dataset-api.md)
 * Stratégies d’utilisation des données {#policies}
    * [Présentation des stratégies d’utilisation des données](policies/overview.md)
    * [Guide d’utilisation des stratégies de données](policies/user-guide.md)
@@ -26,8 +26,9 @@ ht-degree: 83%
 * Application des stratégies {#enforcement}
    * [Présentation de l’application des stratégies](enforcement/overview.md)
    * [Application des stratégies d’utilisation des données à l’aide de l’API Policy Service](enforcement/api-enforcement.md)
-* API DULE Policy Service {#api}
+* Guide de développement de l’API Policy Service{#api}
    * [Prise en main](api/getting-started.md)
+   * [Étiquettes](api/labels.md)
    * [Stratégies](api/policies.md)
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
