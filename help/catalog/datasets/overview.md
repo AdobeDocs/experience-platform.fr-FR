@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des jeux de données
 topic: datasets
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '712'
 ht-degree: 46%
 
 ---
@@ -47,7 +47,7 @@ Les libellés d’utilisation des données peuvent être appliqués à des jeux 
 Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les libellés d’utilisation dans [!DNL Platform], consultez les guides suivants :
 
 * [Gestion des libellés dans l’interface utilisateur](../../data-governance/labels/user-guide.md)
-* [Gestion des libellés dans l’API](../../data-governance/labels/api.md)
+* [Gérer les étiquettes de jeux de données dans l’API](../../data-governance/labels/dataset-api.md)
 
 ## Datasets in downstream [!DNL Platform] services
 
