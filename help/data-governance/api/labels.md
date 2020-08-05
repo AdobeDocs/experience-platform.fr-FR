@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Point de terminaison des étiquettes
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: ec743484028e537fa28706b0c8ec3a1f1f1d2ba3
+source-git-commit: 80526bc0fea9e1854174a2edf9389ff0c4e98f71
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Les étiquettes d’utilisation des données vous permettent de classer les donn
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Retrieve a list of labels {#list}
 
