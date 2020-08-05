@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Segmentation Service
 translation-type: tm+mt
-source-git-commit: c5880153f4ba9a6518423985e42fb1b3b71cd862
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 86%
+source-wordcount: '116'
+ht-degree: 87%
 
 ---
 
@@ -27,6 +27,8 @@ ht-degree: 86%
    - [Segmentation par flux](api/streaming-segmentation.md)
 - Interface utilisateur de segmentation {#ui}
    - [Présentation](ui/overview.md)
+   - [Créateur de segments](ui/segment-builder.md)
+   - [Segmentation par flux](ui/streaming-segmentation.md)
 - [Respect du droit d’opposition](honoring-opt-outs.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
 - Langage de requête de profil {#pql}
@@ -48,4 +50,4 @@ ht-degree: 86%
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
 - [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
-- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
