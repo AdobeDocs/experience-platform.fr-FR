@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation par flux
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 43%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Le document suivant indique comment utiliser la segmentation en flux continu à l’aide de l’API. Pour plus d’informations sur l’utilisation de la segmentation en flux continu à l’aide de l’interface utilisateur, consultez le guide [du créateur de](../ui/overview.md#streaming-segmentation)segments.
+>Le document suivant indique comment utiliser la segmentation en flux continu à l’aide de l’API. Pour plus d’informations sur l’utilisation de la segmentation en flux continu à l’aide de l’interface utilisateur, consultez le guide [de la segmentation en](../ui/streaming-segmentation.md)flux continu.
 
 La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent en [!DNL Platform]jeu, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
@@ -79,8 +79,8 @@ La section suivante liste des exemples de définition de segment qui **ne seront
 | Type de requête | Détails |
 | ---------- | ------- | 
 | Accès entrant dans une fenêtre de temps relative | Si la définition de segment fait référence à un événement entrant **qui ne se trouve pas** dans la **dernière période** de sept jours. Par exemple, au cours des deux **dernières semaines**. |
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques d’Adobe Audience Manager (AAM).</li></ul> |
-| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques d’Adobe Audience Manager (AAM).</li></ul> |
+| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
+| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
 | requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
@@ -403,4 +403,4 @@ La même opération peut être utilisée pour désactiver un planning en rempla�
 
 Maintenant que vous avez activé la segmentation par flux pour les nouveaux segments et les segments existants, et que vous avez activé la segmentation planifiée pour développer une ligne de base et effectuer des évaluations récurrentes, vous pouvez commencer à créer des segments pour votre organisation.
 
-Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/overview.md).
+Pour savoir comment effectuer des actions similaires et utiliser des segments à l’aide de l’interface utilisateur d’Adobe Experience Platform, consultez le [guide d’utilisation du créateur de segments](../ui/segment-builder.md).
