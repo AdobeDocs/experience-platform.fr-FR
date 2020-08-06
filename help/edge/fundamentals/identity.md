@@ -1,20 +1,20 @@
 ---
 title: Récupération de l'ID d'Experience Cloud
-seo-title: Adobe Experience Platform du SDK Web Récupération de l'ID d'Experience Cloud
+seo-title: Adobe Experience Platform Web SDK Récupération de l’ID d’Experience Cloud
 description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: d2870df230811486c09ae29bf9f600beb24fe4f8
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 10%
+source-wordcount: '730'
+ht-degree: 6%
 
 ---
 
 
 # Identité - Récupération de l&#39;ID d&#39;Experience Cloud
 
-L&#39;Adobe Experience Platform [!DNL Web SDK] tire parti du service [d&#39;identité](../../identity-service/ecid.md)Adobe. Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
+Le Adobe Experience Platform [!DNL Web SDK] tire parti du service [d&#39;identité](../../identity-service/ecid.md)Adobe. Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
 
 ## Identité de premier niveau
 
@@ -23,6 +23,14 @@ L’ [!DNL Identity Service] utilisateur stocke l’identité dans un cookie dan
 ## Identité tierce
 
 Il [!DNL Identity Service] peut synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le `thirdPartyCookiesEnabled` paramètre de la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez la valeur `thirdPartyCookiesEnabled` sur false.
+
+## Migration des identifiants
+
+Lors de la migration à partir de l’API du Visiteur, vous pouvez également migrer les cookies AMCV existants. Pour activer la migration ECID, définissez le `idMigrationEnabled` paramètre dans la configuration. La migration des identifiants est configurée pour activer certains cas d’utilisation :
+
+* Lorsque certaines pages d’un domaine utilisent l’API du Visiteur et que d’autres pages utilisent ce SDK. Pour prendre en charge ce cas, le SDK lit les cookies AMCV existants et écrit un nouveau cookie avec l’ECID existant. En outre, le SDK écrit des cookies AMCV de sorte que si l’ECID est obtenu en premier sur une page instrumentée avec le SDK Web AEP, les pages suivantes instrumentées avec l’API Visiteur ont le même ECID.
+* Lorsque le SDK Web AEP est configuré sur une page qui comporte également une API de Visiteur. Pour prendre en charge ce cas, si le cookie AMCV n’est pas défini, le SDK recherche l’API du Visiteur sur la page et l’appelle pour obtenir l’ECID.
+* Lorsque le site entier utilise le SDK Web AEP et ne dispose pas d’API de Visiteur, il est utile de migrer les ECID pour que les informations de visiteur de retour soient conservées. Une fois le SDK déployé `idMigrationEnabled` pendant un certain temps afin que la plupart des cookies visiteurs soient migrés, le paramètre peut être désactivé.
 
 ## Récupération de l’ID de Visiteur
 
@@ -45,20 +53,34 @@ alloy("getIdentity")
 
 ## Synchronisation des identités
 
+>[!NOTE]
+>
+>La `syncIdentity` méthode a été supprimée dans la version 2.1.0, en plus de la fonction de hachage. Si vous utilisez la version 2.1.0+ et souhaitez synchroniser les identités, vous pouvez les envoyer directement dans l&#39; `xdm` option de la `sendEvent` commande, sous le `identityMap` champ.
+
 En outre, la [!DNL Identity Service] permet de synchroniser vos propres identifiants avec l&#39;ECID à l&#39;aide de la `syncIdentity` commande.
 
+>[!NOTE]
+>
+>Il est vivement recommandé de transmettre toutes les identités disponibles à chaque `sendEvent` commande. Cette opération permet de déverrouiller une gamme de cas d’utilisation, y compris la personnalisation. Maintenant que vous pouvez transmettre ces identités dans la `sendEvent` commande, elles peuvent être placées directement dans votre couche de données.
+
+La synchronisation des identités vous permet d&#39;identifier un périphérique/utilisateur à l&#39;aide de plusieurs identités, de définir leur état d&#39;authentification et de décider quel identifiant est considéré comme Principal. Si aucun identifiant n’a été défini comme `primary`, la valeur par défaut de l’identifiant Principal est `ECID`.
+
 ```javascript
-alloy("syncIdentity",{
-    identity:{
-      "AppNexus":{
-        "id":"123456,
-        "authenticationState":"ambiguous",
-        "primary":false,
-        "hashEnabled": true,
-      }
+alloy("sendEvent", {
+  xdm: {
+    "identityMap": {
+      "ID_NAMESPACE": [ // Notice how each namespace can contain multiple identifiers.
+        {
+          "id": "1234",
+          "authenticatedState": "ambiguous",
+          "primary": true
+        }
+      ]
     }
+  }
 })
 ```
+
 
 ### Options de synchronisation des identités
 
@@ -68,7 +90,7 @@ alloy("syncIdentity",{
 | -------- | ------------ | ----------------- |
 | Chaîne | Oui | Aucune |
 
-La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Cette liste figure dans l’interface utilisateur de l’Adobe Experience Platform sous [!UICONTROL Identités].
+La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Vous trouverez cette liste dans l’interface utilisateur de Adobe Experience Platform sous [!UICONTROL Identités].
 
 #### `id`
 
@@ -92,7 +114,7 @@ Etat d’authentification de l’ID.
 | -------- | ------------ | ----------------- |
 | Booléen | facultatif | false |
 
-Détermine si cette identité doit être utilisée comme fragment principal dans le profil unifié. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur.
+Détermine si cette identité doit être utilisée comme Principal fragment dans le profil unifié. Par défaut, l’ECID est défini comme identifiant Principal de l’utilisateur.
 
 #### `hashEnabled`
 
