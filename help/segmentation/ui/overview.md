@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1365'
 ht-degree: 30%
 
 ---
@@ -47,7 +47,7 @@ La méthode d’évaluation peut être soit par flux, soit par lot. Les segments
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
-En haut de la page se trouvent des options permettant de **[!UICONTROL Ajouter tous les segments à planifier]** et de **[!UICONTROL créer un segment]**.
+En haut de la page se trouvent les options permettant d’ajouter tous les segments à un calendrier et de créer un segment.
 
 Si vous basculez sur **[!UICONTROL Ajouter tous les segments à planifier]** , la segmentation planifiée sera activée. Vous trouverez plus d’informations sur la segmentation planifiée dans la section Segmentation [planifiée de ce guide](#scheduled-segmentation)d’utilisateur.
 
@@ -73,7 +73,7 @@ La page Détails du segment s’affiche. En haut, vous trouverez un résumé de 
 
 ### Résumé de segment
 
-La section Résumé ** de segment fournit des informations telles que l’ID, le nom, la description et les détails des attributs.
+La section Résumé **** de segment fournit des informations telles que l’ID, le nom, la description et les détails des attributs.
 
 De plus, vous disposez de l’option permettant de modifier le segment. Si vous sélectionnez **[!UICONTROL Modifier le segment]** , vous accédez au [!DNL Segment Builder]segment. Pour plus d&#39;informations sur l&#39;utilisation de l&#39; [!DNL Segment Builder] espace de travail, veuillez lire le guide [[!DNL Segment Builder] d&#39;](./segment-builder.md)utilisation.
 
