@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide du SDK Web Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 71193ad346c3976f80b14ee0d6e5b12055a17473
+source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '96'
 ht-degree: 67%
 
 ---
@@ -44,4 +44,5 @@ ht-degree: 67%
 * Référence {#ref}
    * [Informations collectées automatiquement](reference/automatic-information.md)
    * [Récupération des informations sur la bibliothèque](reference/retrieving-library-information.md)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour](release-notes.md)
+* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
