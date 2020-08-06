@@ -4,9 +4,9 @@ seo-title: Informations automatiquement collectées par le SDK Web d’Adobe Exp
 description: Description de chaque information collectée automatiquement par le SDK d’Adobe Experience Cloud
 seo-description: Description de chaque information collectée automatiquement par le SDK d’Adobe Experience Cloud
 translation-type: tm+mt
-source-git-commit: e9fb726ddb84d7a08afb8c0f083a643025b0f903
+source-git-commit: ccd47e024f3ea53507454b7785528c031746d681
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '387'
 ht-degree: 100%
 
 ---
@@ -91,6 +91,13 @@ Identifiant du kit de développement logiciel (SDK).  Ce champ utilise un URI po
 | **Chemin d’accès dans la charge utile :** | **Exemple :** |
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
+
+### Environnement
+
+| **Chemin d’accès dans la charge utile :** | **Exemple :** |
+| ------------------------------------------------ | ------------ |
+| `events[].xdm.implementationDetails.environment` | `browser` |
+
 
 ## Contexte de l’emplacement (`placeContext`)
 
