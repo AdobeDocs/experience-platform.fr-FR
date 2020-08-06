@@ -4,10 +4,10 @@ seo-title: Prise en charge des préférences de consentement du SDK Web d’Adob
 description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 96%
+source-wordcount: '756'
+ht-degree: 62%
 
 ---
 
@@ -39,17 +39,17 @@ Lorsque le consentement par défaut pour un usage général est défini sur En a
 
 À ce stade, vous préférerez peut-être demander à l’utilisateur de donner son consentement à un emplacement dans l’interface utilisateur. Une fois les préférences de l’utilisateur collectées, communiquez-les au SDK.
 
-## Communication des préférences de consentement
+## Communication des préférences de consentement via Adobe Standard
 
 Si l’utilisateur accorde son consentement, exécutez la commande `setConsent` en définissant l’option `general` sur `in` de la manière suivante :
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "in" 
+      value: {
+        general: "in"
       }
     }]
 });
@@ -61,11 +61,11 @@ Si l’utilisateur choisit de ne pas donner son consentement, exécutez la comma
 
 ```javascript
 alloy("setConsent", {
-    consent: [{ 
+    consent: [{
       standard: "Adobe",
       version: "1.0",
-      value: { 
-        general: "out" 
+      value: {
+        general: "out"
       }
     }]
 });
@@ -81,6 +81,49 @@ L’utilisateur ayant choisi de ne pas donner son consentement, les promesses qu
 >
 >Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
+## Communication des préférences de consentement via la norme TCF de l&#39;IAB
+
+Le SDK prend en charge l’enregistrement des préférences de consentement d’un utilisateur fournies par le biais de la norme Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). La chaîne de consentement peut être définie à l’aide de la même commande setConsent que ci-dessus :
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
+Lorsque le consentement est défini de cette manière, le Profil unifié est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). Lors de l’envoi de événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet xdm événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, le Mélange de confidentialité [Experience Événement](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) doit être ajouté au schéma du événement d’expérience.
+
+## Envoi des deux normes dans une seule requête
+
+Le SDK prend également en charge l’envoi de plusieurs objets de consentement dans une requête.
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "1.0",
+      value: {
+        general: "in"
+      }
+    },{
+      standard: "IAB TCF",
+      version: "2.0",
+      value: "CO1Z4yuO1Z4yuAcABBENArCsAP_AAH_AACiQGCNX_T5eb2vj-3Zdt_tkaYwf55y3o-wzhhaIse8NwIeH7BoGP2MwvBX4JiQCGBAkkiKBAQdtHGhcCQABgIhRiTKMYk2MjzNKJLJAilsbe0NYCD9mnsHT3ZCY70--u__7P3fAwQgkwVLwCRIWwgJJs0ohTABCOICpBwCUEIQEClhoACAnYFAR6gAAAIDAACAAAAEEEBAIABAAAkIgAAAEBAKACIBAACAEaAhAARIEAsAJEgCAAVA0JACKIIQBCDgwCjlACAoAAAAA.YAAAAAAAAAAA",
+      gdprApplies: true
+    }]
+});
+```
+
 ## Persistance des préférences de consentement
 
-Après avoir communiqué les préférences de l’utilisateur au SDK à l’aide de la commande `setConsent`, le SDK les conserve dans un cookie. La prochaine fois que l’utilisateur charge votre site web dans le navigateur, le SDK récupère ces préférences persistantes et les utilise. Il n’est pas nécessaire d’exécuter de nouveau la commande `setConsent`, sauf pour communiquer un changement dans les préférences de l’utilisateur, ce que vous pouvez faire à tout moment.
+Après avoir communiqué les préférences de l’utilisateur au SDK à l’aide de la commande `setConsent`, le SDK les conserve dans un cookie. La prochaine fois que l’utilisateur charge votre site Web dans le navigateur, le SDK récupérera et utilisera ces préférences persistantes pour déterminer si des événements peuvent être envoyés à l’Adobe ou non. Il n’est pas nécessaire d’exécuter de nouveau la commande `setConsent`, sauf pour communiquer un changement dans les préférences de l’utilisateur, ce que vous pouvez faire à tout moment.
+
+## Synchronisation des identités lors de la définition du consentement
+
+Lorsque le consentement par défaut est en attente, &quot;setConsent&quot; peut être la première requête à être envoyée et à établir l&#39;identité. C’est pourquoi il peut s’avérer important de synchroniser les identités lors de la première requête. La carte d&#39;identité peut être ajoutée à la commande &quot;setConsent&quot;, tout comme dans la commande &quot;sendEvent&quot;. Voir [Récupération de l’ID d’Experience Cloud](./identity.md)
+
