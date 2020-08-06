@@ -4,10 +4,10 @@ seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 87%
+source-wordcount: '688'
+ht-degree: 79%
 
 ---
 
@@ -79,6 +79,24 @@ alloy("sendEvent", {
   "type": "commerce.purchases"
 });
 ```
+
+### Remplacement de l’ID de jeu de données
+
+Dans certains cas, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour cela, vous devez définir l&#39; `datasetId` option sur la `sendEvent` commande :
+
+```javascript
+var myXDMData = { ... };
+
+alloy("sendEvent", {
+  "xdm": myXDMData,
+  "type": "commerce.checkout",
+  "datasetId": "YOUR_DATASET_ID"
+});
+```
+
+### Ajouter des informations d&#39;identité
+
+Des informations d&#39;identité personnalisées peuvent également être ajoutées au événement. Voir [Récupération de l’ID d’Experience Cloud](./identity.md)
 
 ## Utilisation de l’API sendBeacon
 
