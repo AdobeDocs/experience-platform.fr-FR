@@ -4,21 +4,21 @@ solution: Experience Platform
 title: Se connecter aux destinations de diffusion en continu et activer les données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: dce9a7040ad25d5bb08de95fce7655f1fec7c226
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 61%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Connectez-vous aux destinations de diffusion en continu et activez les données dans le Platform de données client en temps réel de l’Adobe à l’aide d’API.
+# Connectez-vous aux destinations de diffusion en continu et activez les données dans la plate-forme de données client en temps réel de l’Adobe à l’aide d’API.
 
 >[!NOTE]
 >
 >Les destinations [!DNL Amazon Kinesis] et les [!DNL Azure Event Hubs] destinations dans le CDP en temps réel Adobe sont actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
-Ce didacticiel explique comment utiliser les appels d&#39;API pour se connecter à vos données d&#39;Adobe Experience Platform, créer une connexion à une destination d&#39;enregistrement de cloud de flux continu ([Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou Azure Événement Hubs [](/help/rtcdp/destinations/azure-event-hubs-destination.md)), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
+Ce didacticiel explique comment utiliser les appels d&#39;API pour se connecter à vos données Adobe Experience Platform, créer une connexion à une destination d&#39;enregistrement de cloud de flux continu ([Amazon](/help/rtcdp/destinations/amazon-kinesis-destination.md) ou centres [de Événement](/help/rtcdp/destinations/azure-event-hubs-destination.md)Azure), créer un flux de données vers votre nouvelle destination créée et activer les données vers votre nouvelle destination créée.
 
 Ce didacticiel utilise la [!DNL Amazon Kinesis] destination dans tous les exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
@@ -59,7 +59,8 @@ Les ressources d’Experience Platform peuvent être isolées dans des environne
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NRemarque] :
+>[!NOTE]
+>
 >Pour plus d’informations sur les environnements de test dans Experience Platform, consultez la [documentation de présentation des environnements de test](../../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
@@ -317,7 +318,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape ci-dessus.
 * `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
-* `{NAME_OF_DATA_STREAM}`: *Pour[!DNL Amazon Kinesis]les connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux.
+* `{NAME_OF_DATA_STREAM}`: *Pour[!DNL Amazon Kinesis]les connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. adobe Le CDP en temps réel exportera les données dans ce flux.
 * `{REGION}`: *Pour[!DNL Amazon Kinesis]les connexions.* Région de votre compte Amazon Kinesis dans laquelle le CDP en temps réel de l’Adobe diffusera vos données.
 * `{EVENT_HUB_NAME}`: *Pour[!DNL Azure Event Hubs]les connexions.* Renseignez le [!DNL Azure Event Hub] nom où le CDP en temps réel Adobe diffusera vos données. Pour plus d’informations, voir [Création d’un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de événement dans la [!DNL Microsoft] documentation.
 
