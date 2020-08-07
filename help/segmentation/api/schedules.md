@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Plannings
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 47%
@@ -55,7 +55,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation IMS spécifiée en tant que JSON.
 
->[!NOTE] La réponse suivante a été tronquée pour l’espace et affiche uniquement la première planification renvoyée.
+>[!NOTE]
+>
+>La réponse suivante a été tronquée pour l’espace et affiche uniquement la première planification renvoyée.
 
 ```json
 {
@@ -99,7 +101,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pou
 | `children.properties` | Objet contenant des propriétés supplémentaires liées au planning. |
 | `children.properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `children.schedule` | Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plusieurs fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. |
-| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actifs&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principaux&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 ## Création d’un nouveau planning {#create}
 
@@ -141,7 +143,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **Obligatoire lorsque`type`est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plusieurs fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. <br><br>Si cette chaîne n&#39;est pas fournie, un calendrier généré par le système est généré automatiquement. |
-| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actifs&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principaux&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 **Réponse**
 
@@ -273,7 +275,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 | Propriété | Description |
 | -------- | ----------- |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. In this case, since you are updating the schedule&#39;s state, you need to set the value of `path` to &quot;/state&quot;. |
-| `value` | Valeur mise à jour de l&#39;état de la planification. Cette valeur peut être définie comme &quot;active&quot; ou &quot;inactive&quot; pour activer ou désactiver la planification. |
+| `value` | Valeur mise à jour de l&#39;état de la planification. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactive&quot; pour activer ou désactiver la planification. |
 
 **Réponse**
 
