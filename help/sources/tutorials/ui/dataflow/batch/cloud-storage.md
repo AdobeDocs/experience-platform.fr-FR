@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de lot d’enregistrement cloud dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: f532bd6393bfad84fa09c2fc753d1d5c5b39d013
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 6%
@@ -115,7 +115,9 @@ Indiquez les valeurs de la planification et sélectionnez **[!UICONTROL Suivant]
 
 Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**. Vous pouvez continuer à apporter des modifications à un jeu de flux de données pour une assimilation de fréquence unique, tant que le début de temps restera dans le futur. Une fois l’heure du début écoulée, la valeur de fréquence unique ne peut plus être modifiée.
 
->[!TIP] **[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
+>[!TIP]
+>
+>**[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
 
 Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -137,7 +139,7 @@ L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier vo
 
 * *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
 * *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-* *[!UICONTROL Planification]*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
+* *[!UICONTROL Planification]*: Indique la principale période, fréquence et intervalle du calendrier d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
@@ -166,13 +168,13 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 ### Désactivation d’un flux de données
 
-Lorsqu’un flux de données est créé, il devient immédiatement actif et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données actif à tout moment en suivant les instructions ci-dessous.
+Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données principal à tout moment en suivant les instructions ci-dessous.
 
-Dans l’espace de travail *[!UICONTROL Sources]* , cliquez sur l’onglet **[!UICONTROL Parcourir]** . Cliquez ensuite sur le nom du compte associé au flux de données actif que vous souhaitez désactiver.
+Dans l’espace de travail *[!UICONTROL Sources]* , cliquez sur l’onglet **[!UICONTROL Parcourir]** . Cliquez ensuite sur le nom du compte associé au flux de données principal que vous souhaitez désactiver.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
-La page activité ** source s&#39;affiche. Sélectionnez le flux de données actif dans la liste pour ouvrir sa colonne *[!UICONTROL Propriétés]* sur le côté droit de l&#39;écran, qui contient un bouton d&#39;activation **** de la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
+La page activité ** source s&#39;affiche. Sélectionnez le flux de données principal dans la liste pour ouvrir sa colonne *[!UICONTROL Propriétés]* sur le côté droit de l&#39;écran, qui contient un bouton d&#39;activation **** de la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/disable-source.png)
 
