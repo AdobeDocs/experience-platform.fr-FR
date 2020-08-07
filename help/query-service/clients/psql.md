@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connexion à PSQL
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 71%
+ht-degree: 58%
 
 ---
 
@@ -68,7 +68,9 @@ Click **[!UICONTROL copy]** for *[!UICONTROL PSQL Command]*.
 
 ![Image](../images/clients/psql/connect-bi.png)
 
->[!IMPORTANT] : si vous utilisez un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne.
+>[!IMPORTANT]
+>
+>Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne.
 
 Collez la chaîne de commande dans une fenêtre de terminal ou de commande et appuyez sur Entrée.
 
