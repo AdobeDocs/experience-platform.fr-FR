@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 28%
@@ -36,13 +36,17 @@ La taille d’échantillon de l’analyse dépend du nombre total d’entités p
 | 1 à 20 millions | 1 million |
 | Plus de 20 millions | 5 % du total |
 
->[!NOTE] Les estimations prennent généralement entre 10 et 15 secondes à s&#39;exécuter, en commençant par une estimation approximative et à être affinées au fur et à mesure que les enregistrements sont lus.
+>[!NOTE]
+>
+>Les estimations prennent généralement entre 10 et 15 secondes à s&#39;exécuter, en commençant par une estimation approximative et à être affinées au fur et à mesure que les enregistrements sont lus.
 
 ## Création d’une nouvelle prévisualisation {#create-preview}
 
 Vous pouvez créer une nouvelle prévisualisation en effectuant une requête POST au point de terminaison `/preview`.
 
->[!NOTE] Une tâche d’estimation est automatiquement créée lorsqu’une tâche de prévisualisation est créée. Ces deux tâches partagent le même ID.
+>[!NOTE]
+>
+>Une tâche d’estimation est automatiquement créée lorsqu’une tâche de prévisualisation est créée. Ces deux tâches partagent le même ID.
 
 **Format d’API**
 
