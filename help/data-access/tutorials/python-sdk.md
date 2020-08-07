@@ -4,7 +4,7 @@ solution: Experience Platform
 title: SDK Secure Python Data Access
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # SDK sécurisé [!DNL Python][!DNL Data Access]
 
-Secure [!DNL Python] SDK [!DNL Data Access] est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données à partir d&#39;Adobe Experience Platform.
+Secure [!DNL Python] SDK [!DNL Data Access] est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données de Adobe Experience Platform.
 
 ## Prise en main
 
@@ -128,7 +128,9 @@ df = dataset_reader.select(['column-a']).distinct().read()
 
 Le [!DNL Python] SDK prend en charge certains opérateurs pour aider à filtrer le jeu de données.
 
->[!NOTE] Les fonctions utilisées pour le filtrage sont sensibles à la casse.
+>[!NOTE]
+>
+>Les fonctions utilisées pour le filtrage sont sensibles à la casse.
 
 ```python
 eq() = '='
