@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Tâches d’exportation - API de Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2c0466bf0534d09e3cad54caef213def122d948b
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1494'
 ht-degree: 67%
@@ -20,7 +20,7 @@ This document provides step-by-step instructions for creating and managing expor
 
 >[!NOTE]
 >
->Ce guide porte sur l&#39;utilisation des tâches d&#39;exportation dans le [!DNL Profile API]secteur. Pour plus d’informations sur la gestion des tâches d’exportation pour le service de segmentation des Adobes Experience Platform, voir le guide sur les tâches d’ [exportation dans l’API](../../profile/api/export-jobs.md)de segmentation.
+>Ce guide porte sur l&#39;utilisation des tâches d&#39;exportation dans le [!DNL Profile API]secteur. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, voir le guide sur les tâches d’ [exportation dans l’API](../../profile/api/export-jobs.md)de segmentation.
 
 Outre la création d’une tâche d’exportation, vous pouvez également accéder aux [!DNL Profile] données à l’aide du `/entities` point de terminaison, également appelé &quot;[!DNL Profile Access]&quot;. See the [entities endpoint guide](./entities.md) for more information. Pour savoir comment accéder aux [!DNL Profile] données à l’aide de l’interface utilisateur, consultez le guide [d’](../ui/user-guide.md)utilisation.
 
@@ -146,7 +146,9 @@ curl -X POST \
 | `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch` : *(facultatif)* valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. La valeur `false` exporte tous les identifiants de segment vers un seul identifiant de lot. La valeur `true` exporte un identifiant de segment vers un identifiant de lot. Notez que la définition de la valeur sur `true` peut affecter les performances d’exportation par lots.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
 
->[!NOTE] Pour exporter uniquement les données de Profil et ne pas inclure les données de série chronologique associées, supprimez l’objet &quot;additionalFields&quot; de la requête.
+>[!NOTE]
+>
+>Pour exporter uniquement les données de Profil et ne pas inclure les données de série chronologique associées, supprimez l’objet &quot;additionalFields&quot; de la requête.
 
 **Réponse**
 
