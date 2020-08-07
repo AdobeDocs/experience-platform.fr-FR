@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définition d’une relation entre deux schémas à l’aide de l’API Schema Registry
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 849142e44c56f2958e794ca6aefaccd5670c28ba
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 54%
@@ -38,7 +38,9 @@ Vous devez avoir déjà créé les deux schémas qui seront définis dans la rel
 
 Les relations de schémas sont représentées par un **schéma source** disposant d’un champ qui fait référence à un autre champ dans un **schéma de destination**. In the steps that follow, &quot;[!DNL Loyalty Members]&quot; will be the source schema, while &quot;[!DNL Hotels]&quot; will act as the destination schema.
 
->[!IMPORTANT] Pour établir une relation, les deux schémas doivent avoir défini des identités primaires et être autorisés à [!DNL Real-time Customer Profile]établir une relation. Reportez-vous à la section relative à l’ [activation d’un schéma pour une utilisation en Profil](./create-schema-api.md#profile) dans le didacticiel de création de schéma si vous avez besoin de conseils sur la manière de configurer vos schémas en conséquence.
+>[!IMPORTANT]
+>
+>Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être autorisés à [!DNL Real-time Customer Profile]établir une relation. Reportez-vous à la section relative à l’ [activation d’un schéma pour une utilisation en Profil](./create-schema-api.md#profile) dans le didacticiel de création de schéma si vous avez besoin de conseils sur la manière de configurer vos schémas en conséquence.
 
 Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en envoyant une requête GET au point de terminaison `/tenant/schemas` dans l’API [!DNL Schema Registry]
 
@@ -112,11 +114,13 @@ Within the [!DNL Schema Registry], relationship descriptors work similarly to fo
 
 >[!IMPORTANT]
 >
->Contrairement au schéma de destination, l&#39;schéma source ne peut pas utiliser son identité principale comme champ de référence.
+>Contrairement au schéma de destination, l&#39;schéma source ne peut pas utiliser son Principale identité comme champ de référence.
 
-Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un `email` champ qui sert d’identité principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence et doit recevoir un nouveau mixin qui ajoute un nouveau champ au schéma : `favoriteHotel`.
+Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un `email` champ qui sert d&#39;identité Principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence et doit recevoir un nouveau mixin qui ajoute un nouveau champ au schéma : `favoriteHotel`.
 
->[!NOTE] Si votre schéma source comporte déjà un champ dédié que vous prévoyez d’utiliser comme champ de référence, vous pouvez passer à l’étape suivante lors de la [création d’un descripteur](#reference-identity)de référence.
+>[!NOTE]
+>
+>Si votre schéma source comporte déjà un champ dédié que vous prévoyez d’utiliser comme champ de référence, vous pouvez passer à l’étape suivante lors de la [création d’un descripteur](#reference-identity)de référence.
 
 ### Création d’un nouveau mixin
 
@@ -371,7 +375,7 @@ curl -X POST \
 | `xdm:sourceSchema` | L’URL `$id` du schéma de destination. |
 | `xdm:sourceVersion` | Le numéro de version du schéma de destination. |
 | `sourceProperty` | Le chemin d’accès au champ d’identité principale du schéma de destination. |
-| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de nommage utilisé lors de la définition du champ comme identité principale du schéma. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
+| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de nommage utilisé lors de la définition du champ que l’identité Principale du schéma. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
 
 **Réponse**
 
