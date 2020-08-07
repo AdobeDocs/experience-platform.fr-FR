@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide pas-à-pas de création et de publication d’un modèle d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1542'
 ht-degree: 83%
@@ -117,7 +117,9 @@ Vous pouvez choisir d’attendre la fin de la session d’entraînement ou conti
 
    Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant les sessions d’entraînement. L’ajustement d’hyperparamètres peut modifier la précision du modèle entraîné. L’optimisation d’un modèle étant un processus itératif, il peut être nécessaire de procéder à plusieurs sessions d’entraînement avant d’effectuer une évaluation satisfaisante.
 
-   >[!TIP] Définissez **[!UICONTROL num_recommendations]** sur 10.
+   >[!TIP]
+   >
+   >Définissez **[!UICONTROL num_recommendations]** sur 10.
 
    ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3. Un point de données supplémentaire apparaîtra sur le graphique d’évaluation du modèle une fois la nouvelle session d’entraînement terminée, ce qui peut prendre plusieurs minutes.
