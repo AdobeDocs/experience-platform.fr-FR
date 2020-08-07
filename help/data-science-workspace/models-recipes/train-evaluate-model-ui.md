@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Formation et évaluation d’un modèle (interface utilisateur)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 1214728063c5835510fda1a16bf1fdcca4abee48
 workflow-type: tm+mt
 source-wordcount: '975'
 ht-degree: 95%
@@ -36,7 +36,10 @@ Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recett
    ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Attribuez un nom au modèle et passez en revue les configurations de modèle par défaut. Les configurations par défaut ont été appliquées lors de la création de la recette. Vérifiez et modifiez les valeurs de configuration en double-cliquant sur celles-ci. Pour fournir un nouvel ensemble de configurations, cliquez sur **[!UICONTROL Charger une nouvelle configuration]** et faites glisser un fichier JSON contenant des configurations de modèle dans la fenêtre du navigateur. Cliquez sur **[!UICONTROL Terminer]** pour créer le modèle.
-   >[!NOTE]Les configurations sont uniques et spécifiques à leur recette de destination : cela signifie que les configurations pour la recette des ventes au détail ne fonctionneront pas pour la recette des recommandations de produit. Reportez-vous à la section [référence](#reference) pour une liste des configurations de la recette de ventes au détail.
+
+   >[!NOTE]
+   >
+   >Les configurations sont uniques et spécifiques à leur recette de destination : cela signifie que les configurations pour la recette des ventes au détail ne fonctionneront pas pour la recette des recommandations de produit. Reportez-vous à la section [référence](#reference) pour une liste des configurations de la recette de ventes au détail.
 
    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
@@ -55,7 +58,10 @@ Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recett
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Les configurations par défaut fournies lors de la création du modèle s’affichent : modifiez-les en conséquence en double-cliquant sur les valeurs. Cliquez sur **[!UICONTROL Terminer]** pour créer et exécuter l’opération de formation.
-   >[!NOTE]Les configurations sont uniques et spécifiques à leur recette de destination : cela signifie que les configurations pour la recette des ventes au détail ne fonctionneront pas pour la recette des recommandations de produit. Reportez-vous à la section [référence](#reference) pour une liste des configurations de la recette de ventes au détail.
+
+   >[!NOTE]
+   >
+   >Les configurations sont uniques et spécifiques à leur recette de destination : cela signifie que les configurations pour la recette des ventes au détail ne fonctionneront pas pour la recette des recommandations de produit. Reportez-vous à la section [référence](#reference) pour une liste des configurations de la recette de ventes au détail.
 
    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
