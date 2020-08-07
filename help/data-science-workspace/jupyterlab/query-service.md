@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Query Service dans les notebooks Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 70%
@@ -38,13 +38,17 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
    ![](../images/jupyterlab/query/jupyterlab_launcher.png)
 
-   >[!NOTE] Si un nouvel onglet Lanceur n’apparaissait pas automatiquement, ouvrez un nouvel onglet Lanceur en cliquant sur **[!UICONTROL Fichier]** , puis sélectionnez **[!UICONTROL Nouveau lanceur]**.
+   >[!NOTE]
+   >
+   >If a new Launcher tab did not automatically appear, open a new Launcher tab by clicking **[!UICONTROL File]** then select **[!UICONTROL New Launcher]**.
 
 2. Dans l’onglet de lanceur, cliquez sur l’icône **[!UICONTROL Vierge]** dans un environnement Python 3 pour ouvrir un notebook vierge.
 
    ![](../images/jupyterlab/query/blank_notebook.png)
 
-   >[!NOTE] Python 3 est actuellement le seul environnement pris en charge pour Query Service dans les notebooks.
+   >[!NOTE]
+   >
+   >Python 3 est actuellement le seul environnement pris en charge pour Query Service dans les notebooks.
 
 3. Dans le rail de sélection de gauche, cliquez sur l’icône **[!UICONTROL Données]** et double-cliquez sur le répertoire **[!UICONTROL Jeux de données]** pour afficher sous forme de liste tous les jeux de données.
 
@@ -86,7 +90,9 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    - `target_month` : mois spécifique duquel provient la cible.
    - `target_day` : jour spécifique d’où proviennent les données cibles.
 
-   >[!NOTE] Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables afin que les modifications soient appliquées.
+   >[!NOTE]
+   >
+   >Vous pouvez modifier ces valeurs à tout moment. Dans ce cas, veillez à exécuter la cellule de variables afin que les modifications soient appliquées.
 
 ## Interrogation de vos données {#query-your-data}
 
