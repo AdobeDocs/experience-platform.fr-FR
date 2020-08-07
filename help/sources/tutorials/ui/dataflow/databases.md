@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 91714bea4e165d64bcc33e32e73d1d32a505ba00
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '1225'
 ht-degree: 7%
@@ -96,7 +96,9 @@ Sélectionnez **[!UICONTROL Charger les données incrémentielles par]** pour af
 
 Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**.
 
->[!TIP] **[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
+>[!TIP]
+>
+>**[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
 
 Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -119,7 +121,7 @@ L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier vo
 
 - *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
 - *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-- *[!UICONTROL Planification]*: Affiche la période active, la fréquence et l&#39;intervalle du programme d&#39;assimilation.
+- *[!UICONTROL Planification]*: Indique la principale période, fréquence et intervalle du calendrier d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
@@ -142,7 +144,7 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 ### Désactivation d’un flux de données
 
-Lorsqu’un flux de données est créé, il devient immédiatement actif et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données actif à tout moment en suivant les instructions ci-dessous.
+Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données principal à tout moment en suivant les instructions ci-dessous.
 
 Dans l’espace de travail *[!UICONTROL Sources]* , sélectionnez l’onglet **[!UICONTROL Flux de données]** . Sélectionnez ensuite le flux de données que vous souhaitez désactiver.
 
