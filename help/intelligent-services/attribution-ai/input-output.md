@@ -5,7 +5,7 @@ title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: 5126ef74330d9cee7234ccd1ee7260b09db9e78c
+source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
 workflow-type: tm+mt
 source-wordcount: '2174'
 ht-degree: 15%
@@ -29,7 +29,7 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 
 | Colonnes obligatoires | Nécessaire pour |
 | --- | --- |
-| Champ d&#39;identité du Principal | Point de contact / Conversion |
+| Champ d&#39;identité Principal | Point de contact / Conversion |
 | Horodatage | Point de contact / Conversion |
 | Channel._type | Point de contact |
 | Channel.mediaAction | Point de contact |
@@ -39,7 +39,7 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 | Marketing.campaigngroup | Point de contact |
 | Commerce | Conversion |
 
-En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; sont vivement conseillées pour définir des points de contact afin d’obtenir de bonnes informations. Cependant, vous pouvez inclure toute autre colonne supplémentaire ainsi que les colonnes ci-dessus à configurer comme une conversion ou une définition de point de contact.
+En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; sont fortement conseillées pour définir des points de contact pour obtenir de bonnes informations. Cependant, vous pouvez inclure toute autre colonne supplémentaire ainsi que les colonnes ci-dessus à configurer comme une conversion ou une définition de point de contact.
 
 Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les inclure dans votre schéma CEE si vous disposez des informations disponibles.
 
