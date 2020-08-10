@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Segmentation par flux
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 2adadad855edd01436a6961cc9be3e58e6483732
 workflow-type: tm+mt
-source-wordcount: '1365'
+source-wordcount: '1377'
 ht-degree: 43%
 
 ---
@@ -70,6 +70,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation en flux contin
 | ---------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. |
 | Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant **au cours des sept derniers jours**. |
+| Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil, **au cours des sept derniers jours**. |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
@@ -79,15 +80,15 @@ La section suivante liste des exemples de définition de segment qui **ne seront
 | Type de requête | Détails |
 | ---------- | ------- | 
 | Accès entrant dans une fenêtre de temps relative | Si la définition de segment fait référence à un événement entrant **qui ne se trouve pas** dans la **dernière période** de sept jours. Par exemple, au cours des deux **dernières semaines**. |
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
-| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
-| requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
+| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
+| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
+| Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
 | Type de requête | Ligne directrice |
 | ---------- | -------- |
-| requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
+| Requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
 | Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
