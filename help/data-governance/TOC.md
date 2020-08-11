@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 876ac35f6366411adda821805bf628470839f80e
+source-git-commit: de79706be6303f82c6d0e68cdf2c9d389f23d9a8
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '107'
 ht-degree: 79%
 
 ---
@@ -27,10 +27,11 @@ ht-degree: 79%
    * [Présentation de l’application des stratégies](enforcement/overview.md)
    * [Application des stratégies d’utilisation des données à l’aide de l’API Policy Service](enforcement/api-enforcement.md)
 * Guide de développement de l’API Policy Service{#api}
+   * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Étiquettes](api/labels.md)
    * [Stratégies](api/policies.md)
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
