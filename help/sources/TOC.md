@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
+source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '606'
 ht-degree: 8%
 
 ---
@@ -27,13 +27,15 @@ ht-degree: 8%
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
       - [Connecteur Amazon](connectors/cloud-storage/kinesis.md)
+      - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
       - [Connecteur Apache HDFS](connectors/cloud-storage/hdfs.md)
       - [Connecteur Azure Data Lake Enregistrement Gen2](connectors/cloud-storage/adls-gen2.md)
-      - [Connecteur Azure Blob et Amazon S3](connectors/cloud-storage/blob-s3.md)
+      - [Connecteur de blocage Azure](connectors/cloud-storage/blob.md)
       - [Connecteur de concentrateurs de Événement Azure](connectors/cloud-storage/eventhub.md)
       - [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
       - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
@@ -139,13 +141,15 @@ ht-degree: 8%
          - [Connecteur Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
          - [Connecteur Amazon](tutorials/ui/create/cloud-storage/kinesis.md)
+         - [Connecteur Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Connecteur Azure Blob et Amazon S3](tutorials/ui/create/cloud-storage/blob-s3.md)
+         - [Connecteur de blocage Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Connecteur de concentrateurs de Événement Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Connecteur FTP et SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Connecteur Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Connecteur Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
          - [Connecteur Salesforce](tutorials/ui/create/crm/salesforce.md)
