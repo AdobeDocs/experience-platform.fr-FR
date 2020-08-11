@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source HP Vertica dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 4f7d7e2bf255afe1588dbe7cfb2ec055f2dcbf75
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '494'
 ht-degree: 15%
@@ -17,7 +17,7 @@ ht-degree: 15%
 >[!NOTE]
 > Le connecteur HP [!DNL Vertica] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-Les connecteurs source dans l’Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HP [!DNL Vertica] à l&#39;aide de l&#39; [!DNL Platform] interface utilisateur.
+Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HP [!DNL Vertica] à l&#39;aide de l&#39; [!DNL Platform] interface utilisateur.
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
+   * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 Si vous disposez déjà d&#39;une connexion HP valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [!DNL Vertica] configuration d&#39;un flux [](../../dataflow/databases.md)de données.
@@ -44,11 +44,11 @@ Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document
 
 Une fois que vous avez rassemblé les informations d&#39;identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte HP [!DNL Vertica] auquel vous connecter [!DNL Platform].
 
-Connectez-vous à [l’Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui y sont associés.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui y sont associés.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez **[!UICONTROL HP Vertica]** cliquez **sur l&#39;icône + (+)** pour créer un nouveau connecteur HP Vertica.
+Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez **[!UICONTROL HP Vertica]** suivi de données **** Ajoutées pour créer un nouveau connecteur HP Vertica.
 
 ![catalogue](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
@@ -68,4 +68,4 @@ Pour connecter un compte existant, sélectionnez le compte HP [!DNL Vertica] auq
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre [!DNL Vertica] compte HP. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données dans Platform](../../dataflow/databases.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre [!DNL Vertica] compte HP. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données dans la plate-forme](../../dataflow/databases.md).
