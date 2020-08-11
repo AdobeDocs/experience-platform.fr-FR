@@ -4,10 +4,10 @@ seo-title: Espace de travail des destinations
 description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 96%
+source-wordcount: '807'
+ht-degree: 61%
 
 ---
 
@@ -22,15 +22,34 @@ L’espace de travail [!UICONTROL Destinations] se compose de quatre sections :
 
 ## [!UICONTROL Catalogue] {#catalog}
 
-L’onglet **[!UICONTROL Catalogue]** affiche une liste de toutes les destinations proposées par Adobe auxquelles vous pouvez envoyer des données.
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Adobe Real-time CDP, that you can send data to.
 
-Utilisez la fonctionnalité de recherche sur la page pour trouver une destination spécifique ou filtrer les destinations à l’aide de la commande **[!UICONTROL Catégories]**.
+L’interface utilisateur CDP en temps réel de l’Adobe fournit un certain nombre d’options de recherche et de filtrage sur la page de catalogue des destinations :
 
-Sélectionnez une destination dans le catalogue pour ouvrir le rail de droite. Ici, vous pouvez configurer une connexion à la destination (**[!UICONTROL Se connecter à la destination]**), voir les connexions à la destination existantes (**[!UICONTROL Parcourir les destinations]**) ou en savoir plus sur chaque destination en consultant la documentation (**[!UICONTROL Afficher la documentation]**).
+* Utilisez la fonctionnalité de recherche de la page pour localiser une destination spécifique.
+* Filtrez les destinations à l’aide du contrôle **[!UICONTROL Catégories]** .
+* Basculez entre **[!UICONTROL Toutes les destinations]** et **[!UICONTROL Mes destinations]**. Lorsque **[!UICONTROL Toutes les destinations]** sont sélectionnées, toutes les destinations CDP en temps réel Adobe disponibles sont affichées. Lorsque **[!UICONTROL Mes destinations]** est sélectionné, vous ne pouvez voir que les destinations avec lesquelles vous avez établi une connexion.
+* Sélectionnez vue **[!UICONTROL Connections]** et/ou **[!UICONTROL Extensions]**. Pour comprendre la différence entre les deux catégories, voir Types et Catégories [de](/help/rtcdp/destinations/destination-types.md)destination.
 
-![Options du catalogue des destinations](/help/rtcdp/destinations/assets/destination-ui-catalog-options.png)
+![destinations filtrage et démonstration de recherche](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
 
-Pour plus d’informations sur les catégories de destination et sur chaque destination, consultez [Catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md).
+Les cartes de destination contiennent un contrôle **[!UICONTROL Configurer]** ou **[!UICONTROL Activer]** , et un contrôle secondaire qui affiche d&#39;autres options. Ils sont tous décrits ci-dessous :
+
+| Contrôle | Description |
+---------|----------
+| [!UICONTROL Configuration] | Permet de créer une connexion à la destination. |
+| [!UICONTROL Activer] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer des segments. |
+| [!UICONTROL Compte vue] | Vue des comptes que vous avez connectés pour une destination. |
+| [!UICONTROL Flux de données de vue] | Vue des flux d’activation de données qui existent pour une destination |
+| [!UICONTROL Documentation sur la vue] | Ouvre un lien vers la page de documentation de cette destination spécifique, pour plus d’informations et pour vous aider à la configurer. |
+
+![Contrôles sur la carte de destination](/help/rtcdp/destinations/assets/destination-card-options.png)
+
+Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de droite.  Vous pouvez voir ici une description de la destination. Le rail droit fournit les mêmes commandes que celles décrites dans le tableau ci-dessus, ainsi qu&#39;une description de la destination et une indication de la catégorie et du type de destination.
+
+![Options du catalogue des destinations](/help/rtcdp/destinations/assets/destination-right-rail.png)
+
+Pour plus d&#39;informations sur les catégories de destination et sur chaque destination, consultez le catalogue [de](/help/rtcdp/destinations/destinations-catalog.md) destination et les types et Catégories [de](/help/rtcdp/destinations/destination-types.md)destination.
 
 ## [!UICONTROL Parcourir] {#browse}
 
