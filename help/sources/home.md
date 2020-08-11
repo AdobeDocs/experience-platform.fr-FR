@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6ffdcc2143914e2ab41843a52dc92344ad51bcfb
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '801'
 ht-degree: 59%
 
 ---
@@ -45,8 +45,9 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
 
 - [!DNL Azure Data Lake Storage Gen2](connectors/cloud-storage/adls-gen2.md) connecteur
-- [!DNL Azure Blob and Amazon S3](connectors/cloud-storage/blob-s3.md) connecteur
+- [!DNL Azure Blob](connectors/cloud-storage/blob.md) connecteur
 - [!DNL Amazon Kinesis](connectors/cloud-storage/kinesis.md) connecteur
+- [!DNL Amazon S3](connectors/cloud-storage/s3.md) connecteur
 - [!DNL Apache HDFS](connectors/cloud-storage/hdfs.md) connecteur
 - [!DNL Azure Event Hubs](connectors/cloud-storage/eventhub.md) connecteur
 - [!DNL Azure File Storage](connectors/cloud-storage/azure-file-storage.md) connecteur
