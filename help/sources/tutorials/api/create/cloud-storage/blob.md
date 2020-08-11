@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d'un connecteur Blob Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '582'
 ht-degree: 15%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 15%
 
 # Création d’un [!DNL Azure Blob] connecteur à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Experience Platform] à un [!DNL Azure Blob] (ci-après appelé &quot;Blob&quot;) enregistrement.
 
-Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le didacticiel [sur l&#39;interface utilisateur du connecteur source](../../../ui/create/cloud-storage/blob-s3.md) Azure Blob ou Amazon S3 fournit des instructions détaillées pour exécuter des actions similaires.
+Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le didacticiel [](../../../ui/create/cloud-storage/blob.md) sur l&#39;interface utilisateur du connecteur source Azure Blob fournit des instructions détaillées pour exécuter des actions similaires.
 
 ## Prise en main
 
