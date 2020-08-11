@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecteur Azure Blob et Amazon S3
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 3cee9b2515d833a640b091a90cd2152f0c1b1e64
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 5%
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
@@ -18,48 +18,6 @@ Adobe Experience Platform fournit une connectivité native aux fournisseurs de c
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données de [!DNL Azure Blob] et S3 par lots.
 
-## liste autorisée d&#39;adresse IP
+Pour plus d&#39;informations sur le [!DNL Azure Blob] connecteur, veuillez lire la présentation [[!DNL Azure Blob] du](./blob.md)connecteur.
 
-Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
-
-### Région est-américaine
-
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
-
-### Région de l&#39;Europe occidentale
-
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
-
-### Australie-Est
-
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
-
-La documentation ci-dessous fournit des informations sur la façon de connecter Azure Blob et S3 à Platform à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
-
-## Connexion [!DNL Azure Blob] et S3 à [!DNL Platform] l’aide des API
-
-- [Création d&#39;un connecteur Blob Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/blob.md)
-- [Création d’un connecteur S3 à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/s3.md)
-- [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
-- [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
-
-## Connexion [!DNL Blob] et S3 à [!DNL Platform] l’aide de l’interface utilisateur
-
-- [Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/blob-s3.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+Pour plus d&#39;informations sur le [!DNL Amazon S3] connecteur, veuillez lire la présentation [[!DNL Amazon S3] du](./s3.md)connecteur.
