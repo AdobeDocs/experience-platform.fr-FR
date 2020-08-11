@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Regroupement des fichiers source dans une recette
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 45461e3420f3b7e227f80fe775d80b8442a1069c
+source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 49%
@@ -38,7 +38,7 @@ Une image Docker permet au développeur d’empaqueter une application avec tous
 
 L&#39;image Docker construite est envoyée au Registre du Conteneur Azure à l&#39;aide des informations d&#39;identification qui vous ont été fournies pendant le processus de création de la recette.
 
-Pour obtenir vos informations d’identification Azure Container Registry, connectez-vous à <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. Dans la colonne de navigation de gauche, accédez aux **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Importer la recette]** , puis sélectionnez **[!UICONTROL Lancement]**. Voir la capture d’écran ci-dessous pour référence.
+Pour obtenir vos informations d’identification Azure Container Registry, connectez-vous à [Adobe Experience Platform](https://platform.adobe.com). Dans la colonne de navigation de gauche, accédez aux **[!UICONTROL Workflows]**. Sélectionnez **[!UICONTROL Importer la recette]** , puis sélectionnez **[!UICONTROL Lancement]**. Voir la capture d’écran ci-dessous pour référence.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
