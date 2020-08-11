@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clients en temps réel
 translation-type: tm+mt
-source-git-commit: b0068c0ef0897d5d4ec578f0c97b20aef3b2931c
+source-git-commit: 836feb48c62e0e0ed11248846d63021125796b76
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 89%
+source-wordcount: '443'
+ht-degree: 88%
 
 ---
 
@@ -47,6 +47,7 @@ ht-degree: 89%
          * [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
          * [Extension Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
          * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+         * [Correspondance client Google](/help/rtcdp/destinations/google-customer-match-destination.md)
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extension Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extension LinkedIn Insight Tag](/help/rtcdp/destinations/linkedin-extension.md)
