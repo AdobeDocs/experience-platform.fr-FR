@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 03fd716d6f743d839bc24ff99660efdf47b187a0
+source-git-commit: 23653949cd16e9d4ee8c3f345cbee74f147263cd
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 8%
       - Mappage des champs d’application d’Adobe {#mapping}
          - [Champs de mappage Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Champs de mappage des Audiences Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Champs de Mapping de ciblage](connectors/adobe-applications/mapping/target.md)
+         - [Champs de mapping de ciblage](connectors/adobe-applications/mapping/target.md)
    - Publicité {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
    - Cloud storage {#cloud-storage}
@@ -45,7 +45,7 @@ ht-degree: 8%
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
       - [Connecteur de Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connecteur Analytics Azure Synapse](connectors/databases/synapse-analytics.md)
+      - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
       - [Connecteur Couchbase](connectors/databases/couchbase.md)
       - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
@@ -69,7 +69,7 @@ ht-degree: 8%
       - Publicité {#advertising}
          - [Connecteur Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [Amazon](tutorials/api/create/cloud-storage/kinesis.md)
+         - [amazon](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Connecteur de blocage Azure](tutorials/api/create/cloud-storage/blob.md)
@@ -90,7 +90,7 @@ ht-degree: 8%
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/api/create/databases/spark.md)
          - [Connecteur de Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Connecteur Analytics Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
+         - [Connecteur Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/api/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connecteur Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -157,7 +157,7 @@ ht-degree: 8%
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
          - [Connecteur de Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Connecteur Analytics Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Connecteur Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/ui/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connecteur de Requête Google Big](tutorials/ui/create/databases/bigquery.md)
@@ -187,5 +187,6 @@ ht-degree: 8%
       - [Configurer un flux de données pour un connecteur de paiement](tutorials/ui/dataflow/payments.md)
       - [Configuration d’un flux de données pour un connecteur de protocole](tutorials/ui/dataflow/protocols.md)
    - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
-   - [Surveiller les comptes et les flux de jeux de données](tutorials/ui/monitor.md)
-- [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+   - [Surveiller les comptes et les flux de données](tutorials/ui/monitor.md)
+   - [Supprimer des flux de données](tutorials/ui/delete.md)
+- [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
