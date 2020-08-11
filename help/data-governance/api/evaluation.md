@@ -4,44 +4,55 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 95%
+source-wordcount: '1472'
+ht-degree: 14%
 
 ---
 
 
-# Évaluation des stratégies
+# Évaluation des stratégies points de terminaison
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 
-Par défaut, **seules les stratégies dont l’état est défini sur « ENABLED » participent à l’évaluation**. Toutefois, vous pouvez utiliser le paramètre de requête `?includeDraft=true` pour inclure dans l’évaluation les stratégies dont l’état est défini sur « DRAFT ».
+By default, only policies whose status is set to `ENABLED` participate in evaluation. Cependant, vous pouvez utiliser le paramètre de requête `?includeDraft=true` pour inclure `DRAFT` des stratégies dans l’évaluation.
 
 Les requêtes d’évaluation peuvent être effectuées de trois façons :
 
-1. Compte tenu d’un ensemble de libellés d’utilisation des données et d’une action marketing, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’un ou plusieurs jeux de données et d’une action marketing, l’action enfreint-elle des stratégies ?
-1. Compte tenu d’un ou plusieurs jeux de données et d’un sous-ensemble comprenant un ou plusieurs champs dans chaque jeu de données, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’une action marketing et d’un ensemble d’étiquettes d’utilisation des données, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’une action marketing et d’un ou de plusieurs jeux de données, l’action enfreint-elle des stratégies ?
+1. Compte tenu d’une action marketing, d’un ou de plusieurs jeux de données et d’un sous-ensemble d’un ou de plusieurs champs de chacun de ces jeux de données, l’action est-elle contraire à des stratégies ?
 
-## Évaluation des stratégies à l’aide de libellés d’utilisation des données et d’une action marketing
+## Prise en main
 
-Pour évaluer les violations de stratégie en fonction de la présence de libellés d’utilisation des données, vous devez spécifier l’ensemble de libellés présents sur les données pendant la requête. Pour cela, vous devez utiliser des paramètres de requête où les libellés d’utilisation des données sont fournis sous la forme d’une liste de valeurs séparées par des virgules, comme illustré dans l’exemple suivant.
+The API endpoints used in this guide is part of the [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le guide [de](./getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+
+## Evaluer les violations de stratégie à l’aide de libellés d’utilisation des données {#labels}
+
+Vous pouvez évaluer les violations de stratégie en fonction de la présence d’un ensemble spécifique d’étiquettes d’utilisation des données à l’aide du paramètre `duleLabels` requête dans une demande de GET.
 
 **Format d’API**
 
 ```http
-GET /marketingActions/core/{marketingActionName}/constraints?duleLabels={value1},{value2}
-GET /marketingActions/custom/{marketingActionName}/constraints?duleLabels={value1},{value2}
+GET /marketingActions/core/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
+GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LABELS_LIST}
 ```
+
+| Paramètre | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un ensemble d’étiquettes d’utilisation des données. Vous pouvez récupérer une liste d’actions marketing disponibles en envoyant une demande de [GET au point de terminaison](./marketing-actions.md#list)des actions marketing. |
+| `{LABELS_LIST}` | Liste de noms d’utilisation des données séparés par des virgules pour tester l’action marketing. Par exemple : `duleLabels=C1,C2,C3`<br><br>Notez que les noms d’étiquette sont sensibles à la casse. Assurez-vous d’utiliser la bonne casse lorsque vous les répertoriez dans le `duleLabels` paramètre. |
 
 **Requête**
 
-L’exemple de requête ci-dessous évalue une action marketing en fonction des libellés C1 et C3. Lors de l’évaluation des stratégies à l’aide de libellés d’utilisation des données, considérez les points suivants :
-* **Les libellés d’utilisation des données sont sensibles à la casse.** La requête illustrée ci-dessus renvoie une stratégie enfreinte, contrairement à une même requête utilisant des libellés en minuscules (par exemple, `"c1,c3"`, `"C1,c3"` ou `"c1,C3"`).
-* **Tenez compte des opérateurs`AND`et`OR`dans l’expression des stratégies.** Dans cet exemple, si un des libellés (`C1` ou `C3`) était apparu seul dans la requête, l’action marketing n’aurait pas enfreint cette stratégie. Les deux libellés (`C1 AND C3`) sont nécessaires pour renvoyer la stratégie enfreinte. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
+L’exemple de requête ci-dessous évalue une action marketing en fonction des libellés C1 et C3.
 
-```SHELL
+>[!IMPORTANT]
+>
+>Tenez compte des opérateurs `AND` et `OR` dans l’expression des stratégies. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
+
+```sh
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -52,7 +63,7 @@ curl -X GET \
 
 **Réponse**
 
-L’objet de la réponse comprend un tableau `duleLabels` qui doit correspondre aux libellés envoyés dans la requête. Si l’exécution de l’action marketing spécifiée enfreint une stratégie à cause des libellés d’utilisation des données, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
+Une réponse positive comprend un `violatedPolicies` tableau, qui contient les détails des stratégies violées suite à l&#39;exécution de l&#39;action marketing par rapport aux étiquettes fournies. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -110,29 +121,33 @@ L’objet de la réponse comprend un tableau `duleLabels` qui doit correspondre 
 }
 ```
 
-## Évaluation des stratégies à l’aide de jeux de données et d’une action marketing
+## Evaluer les violations de stratégie à l’aide de jeux de données {#datasets}
 
-Vous pouvez également évaluer les violations de stratégie en spécifiant l’identifiant d’un ou plusieurs jeux de données où collecter les libellés d’utilisation des données. Pour cela, vous devez effectuer une requête POST au point de terminaison `/constraints` principal ou personnalisé pour une action marketing, et spécifier les identifiants des jeux de données dans le corps de la requête, comme illustré ci-dessous.
+Vous pouvez évaluer les violations de stratégie en fonction d’un ensemble de jeux de données à partir desquels des étiquettes d’utilisation de données peuvent être collectées. Pour ce faire, il exécute une requête de POST sur le point de `/constraints` terminaison pour une action marketing spécifique et fournit une liste d’ID de jeu de données dans le corps de la requête.
 
 **Format d’API**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Paramètre | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un ou plusieurs jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en envoyant une demande de [GET au point de terminaison](./marketing-actions.md#list)des actions marketing. |
 
 **Requête**
 
-Le corps de la requête contient un tableau avec un objet pour chaque identifiant de jeu de données. Puisque vous envoyez un corps de requête, l’en-tête de requête « Content-Type: application/json » est obligatoire, comme illustré dans l’exemple suivant.
+La requête suivante exécute l’action `crossSiteTargeting` marketing sur un ensemble de trois jeux de données afin d’évaluer les violations de stratégie.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '[
         {
             "entityType": "dataSet",
@@ -149,13 +164,14 @@ curl -X POST \
       ]'
 ```
 
+| Propriété | Description |
+| --- | --- |
+| `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
+| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. Pour plus d’informations, consultez le guide sur la [ [!DNL Catalog] liste des objets](../../catalog/api/list-objects.md) . |
+
 **Réponse**
 
-L’objet de la réponse comprend un tableau `duleLabels` qui contient une liste consolidée de tous les libellés trouvés dans les jeux de données spécifiés. Cette liste inclut des libellés de jeu de données et de champ pour tous les champs du jeu de données.
-
-La réponse comprend également un tableau `discoveredLabels` contenant des objets pour chaque jeu de données, divisant les `datasetLabels` entre les libellés de jeu de données et les libellés de champ. Chaque libellé de champ indique le chemin d’accès au champ spécifique portant ce libellé.
-
-Si l’action marketing spécifiée enfreint une stratégie impliquant les `duleLabels` des jeux de données, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
+Une réponse réussie comprend un `violatedPolicies` tableau, qui contient les détails des stratégies violées suite à l&#39;exécution de l&#39;action marketing par rapport aux jeux de données fournis. If no policies are violated, the `violatedPolicies` array will be empty.
 
 ```JSON
 {
@@ -326,27 +342,36 @@ Si l’action marketing spécifiée enfreint une stratégie impliquant les `dule
 }
 ```
 
-## Évaluation des stratégies à l’aide de jeux de données, de champs et d’une action marketing
+| Propriété | Description |
+| --- | --- |
+| `duleLabels` | L’objet de la réponse comprend un tableau `duleLabels` qui contient une liste consolidée de tous les libellés trouvés dans les jeux de données spécifiés. Cette liste inclut des libellés de jeu de données et de champ pour tous les champs du jeu de données. |
+| `discoveredLabels` | La réponse comprend également un tableau `discoveredLabels` contenant des objets pour chaque jeu de données, divisant les `datasetLabels` entre les libellés de jeu de données et les libellés de champ. Chaque libellé de champ indique le chemin d’accès au champ spécifique portant ce libellé. |
 
-Outre l’utilisation d’un ou plusieurs identifiants de jeu de données, vous pouvez également spécifier un sous-ensemble de champs issus de chaque jeu de données en indiquant que seuls les libellés d’utilisation des données de ces champs doivent être évalués. Tout comme la requête POST impliquant uniquement les jeux de données, cette requête ajoute au corps de la requête des champs spécifiques pour chaque jeu de données.
+## Evaluer les violations de stratégie à l’aide de champs de jeux de données spécifiques {#fields}
+
+Vous pouvez évaluer les violations de stratégie en fonction d’un sous-ensemble de champs d’un ou de plusieurs jeux de données, de sorte que seuls les libellés d’utilisation des données appliqués à ces champs soient évalués.
 
 Lors de l’évaluation des stratégies à l’aide de champs de jeu de données, considérez les points suivants :
 
-* **Les noms de champ sont sensibles à la casse.** Lorsque vous spécifiez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple, `firstName` vs `firstname`).
-* **Les libellés de jeu de données sont hérités.** Les libellés d’utilisation des données peuvent être appliqués à plusieurs niveaux et font l’objet d’un héritage descendant. Si vos évaluations de stratégie ne renvoient pas les résultats attendus, vérifiez les libellés des jeux de données hérités par les champs en plus de ceux appliqués au niveau des champs.
+* **Les noms de champ respectent** la casse : Lorsque vous fournissez des champs, ils doivent être écrits exactement comme ils apparaissent dans le jeu de données (par exemple, `firstName` vs `firstname`).
+* **Héritage** d&#39;étiquette du jeu de données : Les champs individuels d’un jeu de données héritent des étiquettes qui ont été appliquées au niveau du jeu de données. Si vos évaluations de stratégie ne reviennent pas comme prévu, veillez à rechercher les étiquettes qui ont pu être héritées du niveau des jeux de données vers les champs, en plus de celles appliquées au niveau des champs.
 
 **Format d’API**
 
 ```http
-POST /marketingActions/core/{marketingActionName}/constraints
-POST /marketingActions/custom/{marketingActionName}/constraints
+POST /marketingActions/core/{MARKETING_ACTION_NAME}/constraints
+POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 ```
+
+| Paramètre | Description |
+| --- | --- |
+| `{MARKETING_ACTION_NAME}` | Nom de l’action marketing à tester par rapport à un sous-ensemble de champs de jeux de données. Vous pouvez récupérer une liste d’actions marketing disponibles en envoyant une demande de [GET au point de terminaison](./marketing-actions.md#list)des actions marketing. |
 
 **Requête**
 
-Le corps de la requête contient un tableau avec un objet pour chaque identifiant de jeu de données et le sous-ensemble de champs issu du jeu de données à utiliser pour l’évaluation. Puisque vous envoyez un corps de requête, l’en-tête de requête « Content-Type: application/json » est obligatoire, comme illustré dans l’exemple suivant.
+La requête suivante teste l’action marketing `crossSiteTargeting` sur un ensemble spécifique de champs appartenant à trois jeux de données. La charge utile est similaire à une demande d’ [évaluation impliquant uniquement des jeux de données](#datasets), ajoutant des champs spécifiques pour chaque jeu de données à partir desquels collecter des étiquettes.
 
-```SHELL
+```sh
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -387,13 +412,17 @@ curl -X POST \
       ]'
 ```
 
+| Propriété | Description |
+| --- | --- |
+| `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. Pour plus d’informations, consultez le guide sur la [ [!DNL Catalog] liste des objets](../../catalog/api/list-objects.md) . |
+| `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeur JSON. Consultez la section sur le pointeur [](../../landing/api-fundamentals.md#json-pointer) JSON du guide des fondamentaux de l’API pour plus d’informations sur la syntaxe acceptée pour ces chaînes. |
+
 **Réponse**
 
-L’objet de la réponse comprend un tableau `duleLabels` qui contient la liste consolidée des libellés figurant dans les champs spécifiés. N’oubliez pas que cela inclut également les libellés des jeux de données, car ils sont hérités par les champs.
+Une réponse réussie comprend un `violatedPolicies` tableau, qui contient les détails des stratégies qui ont été violées suite à l&#39;exécution de l&#39;action marketing par rapport aux champs du jeu de données fournis. If no policies are violated, the `violatedPolicies` array will be empty.
 
-Si une stratégie est enfreinte par l’exécution de l’action marketing spécifiée sur les données des champs fournis, le tableau `violatedPolicies` contient les détails des stratégies concernées. Si aucune stratégie n’est enfreinte, le tableau `violatedPolicies` apparaît vide (`[]`).
-
-Dans la réponse ci-dessous, vous pouvez constater que la liste de `duleLabels` est désormais plus courte, tout comme les `discoveredLabels` de chaque jeu de données, car ils ne comprennent que les champs spécifiés dans le corps de la requête. Vous remarquerez également que la stratégie précédemment enfreinte, « Targeting Ads or Content », exigeait les deux libellés `C4 AND C6`. Elle n’est donc plus enfreinte et le tableau `violatedPolicies` apparaît vide.
+En comparant l&#39;exemple de réponse ci-dessous à la [réponse impliquant uniquement des jeux de données](#datasets), notez que la liste des étiquettes collectées est plus courte. Les données `discoveredLabels` de chaque jeu ont également été réduites, car elles incluent uniquement les champs spécifiés dans le corps de la demande. En outre, la stratégie précédemment violée `Targeting Ads or Content` exige que les deux `C4 AND C6` étiquettes soient présentées et n&#39;est donc plus violée, comme indiqué par le tableau vide `violatedPolicies` .
 
 ```JSON
 {
@@ -491,6 +520,166 @@ Dans la réponse ci-dessous, vous pouvez constater que la liste de `duleLabels` 
     ],
     "violatedPolicies": []
 }
+```
+
+## Évaluer les stratégies en bloc {#bulk}
+
+Le `/bulk-eval` point de terminaison vous permet d’exécuter plusieurs tâches d’évaluation dans un seul appel d’API.
+
+**Format d’API**
+
+```http
+POST /bulk-eval
+```
+
+**Requête**
+
+La charge utile d&#39;une demande d&#39;évaluation en masse doit être un tableau d&#39;objets ; un pour chaque tâche d&#39;évaluation à exécuter. Pour les tâches qui sont évaluées en fonction de jeux de données et de champs, un `entityList` tableau doit être fourni. Pour les tâches qui sont évaluées en fonction des étiquettes d’utilisation des données, un `labels` tableau doit être fourni.
+
+>[!WARNING]
+>
+>Si une tâche d’évaluation répertoriée contient à la fois un tableau `entityList` et un `labels` tableau, une erreur se produit. Si vous souhaitez évaluer la même action marketing en fonction des jeux de données et des étiquettes, vous devez inclure des tâches d’évaluation distinctes pour cette action marketing.
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '[
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "labels": [
+            "C1",
+            "C2",
+            "C3"
+          ]
+        },
+        {
+          "evalRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting/constraints",
+          "includeDraft": false,
+          "entityList": [
+            {
+              "entityType": "dataSet",
+              "entityId": "5b67f4dd9f6e710000ea9da4",
+              "entityMeta": {
+                "fields": [
+                  "address"
+                ]
+              }
+            }
+          ]
+        }
+      ]'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `evalRef` | URI de l’action marketing à tester par rapport aux étiquettes ou aux jeux de données en cas de violation de stratégie. |
+| `includeDraft` | Par défaut, seules les stratégies activées participent à l’évaluation. Si `includeDraft` est défini sur `true`, les stratégies qui sont en `DRAFT` état y participent également. |
+| `labels` | Tableau d’étiquettes d’utilisation des données pour tester l’action marketing.<br><br>**IMPORTANT **: Lors de l’utilisation de cette propriété, une`entityList`propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la charge utile de requête qui contient un`entityList`tableau. |
+| `entityList` | Tableau de jeux de données et de champs (facultatifs) spécifiques à ces jeux de données pour tester l’action marketing.<br><br>**IMPORTANT **: Lors de l’utilisation de cette propriété, une`labels`propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la charge utile de requête qui contient un`labels`tableau. |
+| `entityType` | Type d&#39;entité par lequel tester l&#39;action marketing. Actuellement, seul `dataSet` est pris en charge. |
+| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. |
+| `entityMeta.fields` | (Facultatif) liste de champs spécifiques dans le jeu de données pour tester l’action marketing. |
+
+**Réponse**
+
+Une réponse positive renvoie un ensemble de résultats d&#39;évaluation ; une pour chaque tâche d’évaluation de stratégie envoyée dans la demande.
+
+```json
+[
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "violatedPolicies": []
+    }
+  },
+  {
+    "status": 200,
+    "body": {
+      "timestamp": 1595866566165,
+      "clientId": "{CLIENT_ID}",
+      "userId": "{USER_ID}",
+      "imsOrg": "{IMS_ORG}",
+      "sandboxName": "prod",
+      "marketingActionRef": "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting",
+      "duleLabels": [
+        "C1",
+        "C2"
+      ],
+      "discoveredLabels": [
+        {
+          "entityType": "dataset",
+          "entityId": "5b67f4dd9f6e710000ea9da4",
+          "dataSetLabels": {
+            "connection": {
+              "labels": [
+
+              ]
+            },
+            "dataset": {
+              "labels": [
+                "C1",
+                "C2"
+              ]
+            },
+            "fields": []
+          }
+        }
+      ],
+      "violatedPolicies": [
+        {
+          "name": "Email Policy",
+          "status": "DRAFT",
+          "marketingActionRefs": [
+            "https://platform.adobe.io:443/data/foundation/dulepolicy/marketingActions/core/emailTargeting"
+          ],
+          "description": "Conditions under which we won't send marketing-based email",
+          "deny": {
+            "label": "C1",
+            "operator": "AND",
+            "operands": [
+              {
+                "label": "C1"
+              },
+              {
+                "label": "C3"
+              }
+            ]
+          },
+          "id": "76131228-7654-11e8-adc0-fa7ae01bbebc",
+          "imsOrg": "{IMS_ORG}",
+          "created": 1529696681413,
+          "createdClient": "{CLIENT_ID}",
+          "createdUser": "{USER_ID}",
+          "updated": 1529697651972,
+          "updatedClient": "{CLIENT_ID}",
+          "updatedUser": "{USER_ID}",
+          "_links": {
+            "self": {
+              "href": "./76131228-7654-11e8-adc0-fa7ae01bbebc"
+            }
+          }
+        }
+      ]
+    }
+  }
+]
 ```
 
 ## Évaluation des politiques [!DNL Real-time Customer Profile]
