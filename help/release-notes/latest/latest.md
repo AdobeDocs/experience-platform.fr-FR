@@ -1,13 +1,13 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour les plus récentes pour l’Experience Platform
+description: Notes de mise à jour des Experience Platform 10 août 2020
 doc-type: release notes
-last-update: July 15, 2020
-author: crhoades, ens25212
+last-update: August 10, 2020
+author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '296'
 ht-degree: 33%
 
 ---
@@ -15,53 +15,24 @@ ht-degree: 33%
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 15 juillet 2020**
+**Date de publication : 12 août 2020**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Notes de mise à jour les plus récentes pour l’Experience Platform
 
-- [Gouvernance des données](#governance)
-- [Real-time Customer Profile](#profile)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
+- [[ ! Espace de travail scientifique des données DNL]](#dsw)
+- [[ !Sources DNL]](#sources)
 
-## [!DNL Data Governance] {#governance}
+## [!DNL Data Science Workspace] {#dsw}
 
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de stratégies et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| -----------| ---------- |
-| Application automatique de la stratégie dans [!DNL Real-time Customer Data Platform] | Les stratégies d’utilisation des données sont désormais automatiquement appliquées [!DNL Real-time CDP] en cas de violation des actions, y compris l’activation de segments vers les destinations. Lorsqu’une violation de stratégie est déclenchée, les utilisateurs obtiennent une visibilité en temps réel sur les restrictions d’utilisation dans le processus des activations, indiquant les données qu’ils ne peuvent pas utiliser et pourquoi.<br><br>Pour plus d’informations, consultez la section relative à l’ [application de la conformité](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) à l’utilisation des données dans l’aperçu [!DNL Data Governance] de la section dans [!DNL Real-time CDP] . |
-| Intégration des Adobes Audience Manager | Tout segment qui est partagé à partir [!DNL Audience Manager] de [!DNL Platform] hérite des étiquettes d’utilisation de données appliquées comme [!DNL Data Export Controls]et vice versa. Consultez la [!DNL Audience Manager] documentation pour connaître les [correspondances spécifiques entre les étiquettes d’utilisation et les contrôles](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)d’exportation de données. |
-| Étiquettes d’utilisation des données personnalisées | Vous pouvez désormais créer des étiquettes d’utilisation de données personnalisées à l’aide de l’API de service de stratégie ou dans l’interface utilisateur. See the [labels overview](../../data-governance/labels/overview.md) for more information. |
-
-Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données.](../../data-governance/home.md)
-
-## [!DNL Real-time Customer Profile] {#profile}
-
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte d’activité horodaté de chaque interaction client.
+[!DNL Data Science Workspace] utilise l&#39;apprentissage automatique et l&#39;intelligence artificielle pour libérer des informations de vos données. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Application de la stratégie d’utilisation des données | Dans [!DNL Real-time Customer Data Platform]le cas présent, les violations de la stratégie d’utilisation des données sont automatiquement survenues lorsqu’une action violente est tentée dans l’espace de travail [!UICONTROL Profil] . Pour plus d’informations sur l’application automatique de la stratégie, consultez les notes de [mise à jour de la gouvernance](#governance) des données. |
+| Améliorations des machines virtuelles dans [!DNL JupyterLab] | Stabilité des machines [!DNL JupyterLab notebook] virtuelles à long terme améliorée. |
 
-## [!DNL Segmentation Service] {#segmentation}
-
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
-
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| ------- | ----------- |
-| Segmentation par flux | La segmentation en flux continu peut désormais être considérée comme un utilisateur dans un segment lorsque les données entrent en [!DNL Platform]ligne de compte, ce qui réduit considérablement le temps de qualification des segments. La segmentation en flux continu évite également d’exécuter manuellement des tâches de segmentation. |
-| Application de la stratégie d’utilisation des données | Dans [!DNL Real-time Customer Data Platform]le cas présent, les violations de la stratégie d’utilisation des données sont automatiquement survenues lorsqu’une action violente est tentée dans l’espace de travail [!UICONTROL Segments] . Pour plus d’informations sur l’application automatique de la stratégie, consultez les notes de [mise à jour de la gouvernance](#governance) des données. |
-
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+Pour plus d&#39;informations sur [!DNL JupyterLab]cette application, consultez le guide [[!DNL JupyterLab] d&#39;](../../data-science-workspace/jupyterlab/overview.md)utilisation.
 
 ## Sources {#sources}
 
@@ -73,7 +44,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de l’interface utilisateur pour la suppression de flux de données | Les flux de données qui ont été créés avec des erreurs ou qui sont devenus inutiles peuvent désormais être supprimés via l’interface utilisateur. |
-| Prise en charge des API et de l’interface utilisateur pour l’assimilation unique | L’assimilation ponctuelle des flux de données, où seule la date du début est fournie et qu’aucune assimilation ultérieure n’est planifiée, peut désormais être exécutée via les API ou à l’aide de l’interface utilisateur. |
+| Surveillance de l&#39;exécution du flux | Les utilisateurs peuvent surveiller toutes les exécutions de flux et voir une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les mesures. Pour plus d&#39;informations, consultez le document des flux [de données de](../../sources/tutorials/ui/monitor.md) surveillance. |
+| Mise à jour du compte | Les utilisateurs peuvent mettre à jour les informations d’identification, le nom et la description de tout compte existant afin de fournir des informations plus significatives et de corriger les erreurs qui ont pu être créées. |
+| Notifications d’exécution de flux | Les utilisateurs peuvent s’abonner à des événements et enregistrer des hameçons Web pour recevoir des notifications en temps réel sur l’état, les mesures et les erreurs concernant les exécutions de flux. |
+| Améliorations du catalogue de l’interface utilisateur | Mises à jour de l’écran du catalogue de sources pour faciliter l’accès aux actions Principales des objets sélectionnés. |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
