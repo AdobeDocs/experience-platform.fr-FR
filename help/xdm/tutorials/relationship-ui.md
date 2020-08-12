@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 6d291ac9a8c194dd63e411e4d064492c38412749
+source-git-commit: d847329f675c7ac34a4feabb9e57a9e97f7e3ed1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '911'
 ht-degree: 46%
 
 ---
@@ -48,7 +48,7 @@ Le schéma source &quot;Membresfidèles&quot; est basé sur la classe XDM [!DNL 
 
 ### Schéma Hotels
 
-Le schéma de destination &quot;[!UICONTROL Hôtels]&quot; est basé sur une classe personnalisée &quot;[!UICONTROL Hôtels]&quot; et contient des champs qui décrivent un hôtel. The &quot;[!UICONTROL email]&quot; field serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. Tout comme &quot;Membresfidèles&quot;, ce schéma a également été activé pour [!DNL Real-time Customer Profile].
+Le schéma de destination &quot;[!UICONTROL Hôtels]&quot; est basé sur une classe personnalisée &quot;[!UICONTROL Hôtels]&quot; et contient des champs qui décrivent un hôtel. The &quot;[!DNL hotelId]&quot; field serves as the primary identity for the schema under a custom &quot;[!DNL hotelId]&quot; namespace. Tout comme &quot;Membresfidèles&quot;, ce schéma a également été activé pour [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/hotels.png)
 
