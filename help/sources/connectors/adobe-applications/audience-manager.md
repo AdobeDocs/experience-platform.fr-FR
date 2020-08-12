@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecteur d’Audience Manager
 topic: overview
 translation-type: tm+mt
-source-git-commit: fb4ffa2c95365905f5417586fa7ecf88523009a0
+source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 92%
+source-wordcount: '643'
+ht-degree: 88%
 
 ---
 
@@ -17,10 +17,9 @@ ht-degree: 92%
 Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur Audience Manager ingère trois catégories de données vers Platform :
 
 - **Données en temps réel :** données capturées en temps réel sur le serveur de collecte de données d’Audience Manager. Ces données sont utilisées dans Audience Manager pour générer des caractéristiques basées sur des règles et apparaîtront dans Platform dans le temps de latence le plus court.
-- **Données intégrées (entrantes) :** il s’agit de fichiers chargés par un utilisateur dans un emplacement Amazon S3 hébergé par Audience Manager. Audience Manager utilise ces données pour générer des caractéristiques intégrées à l’aide de la méthode de fichier entrante, ce qui peut entraîner un peu de latence.
 - **Données de profil :** Audience Manager utilise des données en temps réel et intégrées pour dériver des profils clients. Ces profils sont utilisés pour générer des graphiques d’identités et des caractéristiques sur des réalisations de segment.
 
-Le connecteur Audience Manager associe ces catégories de données à un schéma modèle de données d’expérience (XDM) et les envoie vers Platform. Les données en temps réel et les données intégrées sont envoyées en tant que données XDM ExperienceEvent, tandis que les données de profil envoyées sous la forme de profils individuels XDM.
+Le connecteur Audience Manager associe ces catégories de données à un schéma modèle de données d’expérience (XDM) et les envoie vers Platform. Les données en temps réel sont envoyées sous forme de données XDM ExperienceEvent, tandis que les données de Profil sont envoyées sous forme de Profils individuels XDM.
 
 Pour obtenir des instructions sur la création d’une connexion avec Adobe Audience Manager à l’aide de l’interface utilisateur de Platform, consultez le [tutoriel sur le connecteur d’Audience Manager](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
@@ -64,8 +63,6 @@ Par défaut, les jeux de données d&#39;Audience Manager sont désactivés pour 
 | Audience Manager Device Profile Data | Utilisé pour les diagnostics de connecteur d’Audience Manager. |
 | Audience Manager Authenticated Profiles | Ce jeu de données contient des profils authentifiés Audience Manager. |
 | Audience Manager Authenticated Profiles Meta Data | Utilisé pour les diagnostics de connecteur d’Audience Manager. |
-| Audience Manager Inbound {Datasource ID} **(obsolète)** | Ce jeu de données représente les enregistrements intégrés dans Audience Manager à l’aide de la méthode de fichier entrante. Ce flux de données est obsolète et sera supprimé dans une version à venir. |
-| Audience Manager Inbound Meta Data **(obsolète)** | Utilisé pour les diagnostics de connecteur d’Audience Manager. Ce flux de données est obsolète et sera supprimé dans une version à venir. |
 
 ### Connexions
 
