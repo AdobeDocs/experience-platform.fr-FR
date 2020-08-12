@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b019b6b8b69e0bfac6fc8840da350d92733dc97c
+source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '613'
 ht-degree: 8%
 
 ---
@@ -131,6 +131,7 @@ ht-degree: 8%
       - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
    - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
    - [Création d’une connexion de base de jeux de données à l’aide de l’API du service de flux](tutorials/api/create-dataset-base-connection.md)
+   - [Surveillance des flux de données à l’aide de l’API du service de flux](tutorials/api/monitor.md)
 - Didacticiels sur l’interface utilisateur {#ui-tutorials}
    - Création d’un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
