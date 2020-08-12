@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 89531ad458bd41720090ef2c429376af4460d7c0
+source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 33%
+source-wordcount: '480'
+ht-degree: 31%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 33%
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[ ! Espace de travail scientifique des données DNL]](#dsw)
+- [!DNL Destinations](#destinations)
 - [[ !Sources DNL]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -33,6 +34,25 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 | Améliorations des machines virtuelles dans [!DNL JupyterLab] | Stabilité des machines [!DNL JupyterLab notebook] virtuelles à long terme améliorée. |
 
 Pour plus d&#39;informations sur [!DNL JupyterLab]cette application, consultez le guide [[!DNL JupyterLab] d&#39;](../../data-science-workspace/jupyterlab/overview.md)utilisation.
+
+## Destinations {#destinations}
+
+Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+
+**Nouvelles destinations**
+
+De nouvelles destinations vous permettent d’activer vos données Adobe Experience Platform. Voir ci-dessous pour plus de détails :
+
+| Destination | Description |
+|--- | ---|
+| [!DNL Google Customer Match] | La Correspondance avec les clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, comme : [!DNL Search], [!DNL Shopping], Gmail et YouTube. Consultez la [!DNL Google Customer Match] page [](/help/rtcdp/destinations/google-customer-match-destination.md) du catalogue de destinations pour en savoir plus sur la destination et sur la façon de la configurer dans le CDP en temps réel Adobe. |
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+|------- | -----------|
+| Editeur de nom de fichier personnalisé | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud, ce qui vous permet de modifier le nom des fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;étape [](/help/rtcdp/destinations/activate-destinations.md#configure) Configurer du processus d&#39;activation. |
+| Attributs recommandés | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud qui affichent les attributs recommandés à ajouter aux fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;étape [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Sélectionner des attributs dans le processus d&#39;activation. |
 
 ## Sources {#sources}
 
