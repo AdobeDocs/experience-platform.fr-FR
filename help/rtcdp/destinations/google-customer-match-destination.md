@@ -4,9 +4,9 @@ seo-title: Destination de la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 seo-description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 31eb03c6625f820c9729caf5181c56e748e853a5
+source-git-commit: 6a57c0da3425b7b83050f1b734d4abe8a290c8bc
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1517'
 ht-degree: 11%
 
 ---
@@ -118,7 +118,9 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 
    >[!IMPORTANT]
    >
-   > Pour [!DNL Google Customer Match] les destinations. **[!UICONTROL L’ID]** de compte correspond à l’ID client de votre client avec Google. Le format de l’ID est xxx-xxx-xxxx.
+   > * Le cas d’utilisation **[!UICONTROL Combiner avec les informations d’identification personnelle]** pour le marketing est sélectionné par défaut pour la [!DNL Google Customer Match] destination et ne peut pas être supprimé.
+   > * Pour [!DNL Google Customer Match] les destinations. **[!UICONTROL L’ID]** de compte correspond à l’ID client de votre client avec Google. Le format de l’ID est xxx-xxx-xxxx.
+
 
    ![Connexion à la correspondance client Google - étape d’authentification](/help/rtcdp/destinations/assets/google-customer-match-authentication-step.png)
 
@@ -171,3 +173,7 @@ Insert in Step 6 when mobile device ID activation is available
 ## Vérification de la réussite de l’activation du segment {#verify-activation}
 
 Une fois le flux d’activation terminé, basculez sur votre compte Publicités **** Google. Les segments activés s’affichent désormais dans votre compte Google en tant que listes client. Notez que selon la taille du segment, certaines audiences ne seront pas renseignées à moins qu’il y ait plus de 100 utilisateurs principaux à diffuser.
+
+## Ressources supplémentaires {#additional-resources}
+
+* [Intégration de la correspondance client Google - Didacticiel vidéo](https://docs.adobe.com/content/help/en/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
