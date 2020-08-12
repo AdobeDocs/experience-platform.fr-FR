@@ -5,10 +5,10 @@ title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
 workflow-type: tm+mt
-source-wordcount: '2174'
-ht-degree: 15%
+source-wordcount: '2075'
+ht-degree: 16%
 
 ---
 
@@ -58,7 +58,7 @@ Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les
 > - Vous avez besoin d’au moins 1 000 conversions.
 
 
-Attribution AI nécessite des données historiques comme entrée pour la formation au modèle. La durée des données requises est principalement déterminée par deux facteurs clés : fenêtre de formation et fenêtre de rappel. Les entrées avec des fenêtres de formation plus courtes sont plus sensibles aux tendances récentes, tandis que des fenêtres de formation plus longues permettent de produire des modèles plus stables et précis. Il est important de modéliser l&#39;objectif avec des données historiques qui représentent le mieux vos objectifs commerciaux.
+attribution ai nécessite des données historiques comme entrée pour la formation au modèle. La durée des données requises est principalement déterminée par deux facteurs clés : fenêtre de formation et fenêtre de rappel. Les entrées avec des fenêtres de formation plus courtes sont plus sensibles aux tendances récentes, tandis que des fenêtres de formation plus longues permettent de produire des modèles plus stables et précis. Il est important de modéliser l&#39;objectif avec des données historiques qui représentent le mieux vos objectifs commerciaux.
 
 Les événements de conversion des filtres de la configuration [de la fenêtre de](./user-guide.md#training-window) formation sont définis pour être inclus pour la formation de modèle en fonction du temps d’occurrence. Actuellement, la période minimale de formation est de 1 quart (90 jours). The [lookback window](./user-guide.md#lookback-window) provides a time frame indicating how many days prior to the conversion event touchpoints related to this conversion event should be included. Ces deux concepts déterminent ensemble la quantité de données d’entrée (mesurées en jours) requise pour une application.
 
@@ -77,22 +77,10 @@ Exemple :
 
 ## Données de sortie Attribution AI
 
-Attribution AI génère les résultats suivants :
+attribution ai génère les résultats suivants :
 
 - [Score granulaire brut](#raw-granular-scores)
 - [Scores agrégées](#aggregated-attribution-scores)
-
-Dans les exemples ci-dessous, un exemple de sortie CSV a été utilisé à des fins d’illustration. Voici quelques-unes des caractéristiques du fichier d&#39;exemple.
-
-- Le fichier ne comportait aucun événement de jeton.
-- Le fichier ne contenait pas de événements de conversion uniquement (il ne contenait pas de lignes de score avec 0 comme score marginal).
-- Caractéristiques des données :
-   - 368 lignes d’exemple au total.
-   - Au moins 8 conversions avec 3 canaux distincts chacune.
-   - 151 conversions de type de conversion `“Digital_Product_Purchase”`.
-   - 10 points de contact distincts, EMAIL, SOCIAL_LINKEDIN, ADS_GOOGLE, SOCIAL_AUTRE, ADS_AUTRE, SOCIAL_TWITTER, LANDINGPAGE, SOCIAL_FB, ADS_BING, PRINT.
-   - Les conversions et les points de contact sont de plus de 8 et 9 mois, respectivement.
-   - Les lignes sont triées par `id`, `conversion_timestamp` et `touchpoint_timestamp`.
 
 **Exemple de schéma de sortie :**
 
@@ -100,7 +88,7 @@ Dans les exemples ci-dessous, un exemple de sortie CSV a été utilisé à des f
 
 ### Score granulaire brut {#raw-granular-scores}
 
-Attribution AI génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section sur l’ [affichage des chemins](#raw-score-path)de score brut. Pour télécharger les scores à l’aide de l’API, consultez les scores de [téléchargement dans le document Attribution AI](./download-scores.md) .
+attribution ai génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section sur l’ [affichage des chemins](#raw-score-path)de score brut. Pour télécharger les scores à l’aide de l’API, consultez les scores de [téléchargement dans le document Attribution AI](./download-scores.md) .
 
 >[!NOTE]
 >
@@ -118,13 +106,13 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie des 
 | eventType (chaîne) | True | The primary event type for this time-series record. <br> **Exemple :** &quot;Commande&quot;, &quot;Achat&quot;, &quot;Visite&quot; |
 | eventMergeId (chaîne) | True | ID permettant de corréler ou de fusionner plusieurs [!DNL Experience Events] ensembles qui sont essentiellement le même événement ou qui doivent être fusionnés. Le producteur de données doit l&#39;indiquer avant l&#39;assimilation. <br> **Exemple :** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (chaîne) | False | Identificateur unique du événement de la série chronologique. <br> **Exemple :** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _locataireId (objet) | False | conteneur d’objet de niveau supérieur correspondant à votre ID de tentant. <br> **Exemple :** _atsdsnrmsv2 |
+| _locataireId (objet) | False | Conteneur d’objet de niveau supérieur correspondant à votre ID de tentant. <br> **Exemple :** _atsdsnrmsv2 |
 | your_schéma_name (Object) | False | Score la ligne avec le événement de conversion tous les événements de point de contact qui y sont associés et leurs métadonnées. <br> **Exemple :** Scores Attribution AI - Nom du modèle__2020 |
 | segmentation (chaîne) | True | Segment de conversion tel que la géosegmentation sur lequel le modèle est construit. En cas d’absence de segments, le segment est identique à conversionName. <br> **Exemple :** ORDER_US |
 | conversionName (chaîne) | True | Nom de la conversion configurée lors de la configuration. <br> **Exemple :** Commande, Piste, Visite |
 | conversion (objet) | False | Colonnes de métadonnées de conversion. |
-| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple :** Adobe Analytics |
-| eventSource (chaîne) | True | Source à laquelle le événement s’est produit. <br> **Exemple :** Adobe.com |
+| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple :** adobe analytics |
+| eventSource (chaîne) | True | Source à laquelle le événement s’est produit. <br> **Exemple :** adobe.com |
 | eventType (chaîne) | True | The primary event type for this time-series record. <br> **Exemple :** Ordre |
 | geo (chaîne) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Exemple :** US |
 | priceTotal (Doublon) | True | Recettes obtenues par la conversion <br> **Exemple :** 99,9 |
@@ -139,8 +127,8 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie des 
 | customerProfile (objet) | False | Détails d’identité de l’utilisateur utilisé pour créer le modèle. |
 | identity (objet) | False | Contient les détails de l’utilisateur utilisé pour créer le modèle, tels que `id` et `namespace`. |
 | id (chaîne) | True | Identifiant de l’utilisateur tel que l’ID de cookie ou AAID ou MCID, etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
-| espace de nommage (chaîne) | True | espace de nommage d&#39;identité utilisé pour construire les chemins et par conséquent le modèle. <br> **Exemple :** aaid |
-| touchpointsDetail (tableau d’objets) | True | liste des détails du point de contact menant à la conversion ordonnée par l’occurrence du point de contact ou l’horodatage. |
+| espace de nommage (chaîne) | True | Espace de nommage d&#39;identité utilisé pour construire les chemins et par conséquent le modèle. <br> **Exemple :** aaid |
+| touchpointsDetail (tableau d’objets) | True | Liste des détails du point de contact menant à la conversion ordonnée par l’occurrence du point de contact ou l’horodatage. |
 | touchpointName (chaîne) | True | Nom du point de contact configuré lors de la configuration. <br> **Exemple :** PAID_SEARCH_CLICK |
 | scores (Objet) | True | Contribution du point de contact à cette conversion en tant que score. Pour plus d’informations sur les scores produits dans cet objet, voir la section scores [d’attribution](#aggregated-attribution-scores) agrégés. |
 | touchPoint (objet) | True | Métadonnées du point de contact. Pour plus d&#39;informations sur les scores produits dans cet objet, consultez la section scores [](#aggregated-scores) agrégés. |
