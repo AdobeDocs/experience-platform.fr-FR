@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Collecte de données de protocole par le biais des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: d5a21462b9f0362414dfe4f73a6c4e4a2c92af61
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1605'
-ht-degree: 14%
+source-wordcount: '1660'
+ht-degree: 13%
 
 ---
 
 
 # Collecte de données de protocole par le biais des connecteurs et des API source
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les intégrer dans [!DNL Platform] des connecteurs et API source.
 
@@ -24,7 +24,7 @@ Ce didacticiel vous demande d&#39;avoir accès à un système de protocole par l
 
 * [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des Schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
 * [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
@@ -130,7 +130,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 }
 ```
 
-## Création d’un schéma XDM cible {#target}
+## Création d’un schéma XDM cible {#target-schema}
 
 Dans les étapes précédentes, un schéma XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues. Ce schéma XDM de cible étend également la [!DNL Individual Profile] classe XDM.
 
@@ -287,7 +287,7 @@ A successful response returns an array containing the ID of the newly created da
 ]
 ```
 
-## Création d’une connexion à une cible
+## Création d’une connexion à une cible {#target-connection}
 
 Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -575,7 +575,7 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
 La dernière étape de la collecte des données consiste à créer un flux de données. A ce stade, les valeurs requises suivantes doivent être préparées :
 
 * [ID de connexion source](#source)
-* [ID de connexion à la Cible](#target)
+* [ID de connexion à la cible](#target)
 * [ID de mappage](#mapping)
 * [ID de spécification du flux de données](#specs)
 
@@ -641,13 +641,14 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `flowSpec.id` | ID de spécification de flux de données associé à votre source de protocoles tiers. |
-| `sourceConnectionIds` | ID de connexion source associé à votre source de protocoles tiers. |
-| `targetConnectionIds` | ID de connexion de cible associé à votre source de protocoles tiers. |
+| `flowSpec.id` | Identifiant [de spécification de](#specs) flux récupéré à l’étape précédente. |
+| `sourceConnectionIds` | ID [de connexion](#source) source récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | ID [de connexion à la](#target-connection) cible récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | ID [de](#mapping) mappage récupéré lors d’une étape précédente. |
 | `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
-| `transformations.params.mappingId` | ID de mappage associé à votre source de protocoles tiers. |
-| `scheduleParams.startTime` | Heure début du flux de données en secondes. |
-| `scheduleParams.frequency` | Les valeurs de fréquence sélectionnables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
+| `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
+| `scheduleParams.frequency` | Fréquence à laquelle le flux de données va collecter les données. Les valeurs acceptables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L&#39;intervalle n&#39;est pas requis lorsque la fréquence est définie comme `once` et doit être supérieure ou égale à `15` pour d&#39;autres valeurs de fréquence. |
 
 **Réponse**
@@ -660,6 +661,11 @@ A successful response returns the ID `id` of the newly created dataflow.
     "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
 }
 ```
+
+## Surveiller votre flux de données
+
+Une fois votre flux de données créé, vous pouvez surveiller les données qui y sont ingérées afin d’afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour plus d&#39;informations sur la surveillance des flux de données, consultez le didacticiel sur la [surveillance des flux de données dans l&#39;API. ](../monitor.md)
+
 
 ## Étapes suivantes
 
