@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Collecte de données de gestion de la relation client via les connecteurs et les API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 7988dd97af133caf9ecfb3448be6b7d895c5df7c
+source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 15%
+source-wordcount: '1662'
+ht-degree: 14%
 
 ---
 
 
 # Collecte de données de gestion de la relation client via les connecteurs et les API source
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les intégrer [!DNL Platform] par le biais des connecteurs source et des API.
 
@@ -22,11 +22,11 @@ Ce didacticiel décrit les étapes à suivre pour récupérer les données d’u
 
 Ce didacticiel vous demande d&#39;avoir accès à un système de gestion de la relation client tiers par une connexion valide et des informations sur la table que vous souhaitez introduire [!DNL Platform], y compris le chemin et la structure de la table. Si vous ne disposez pas de ces informations, consultez le didacticiel sur l’ [exploration des systèmes de gestion de la relation client à l’aide de l’API](../explore/crm.md) Flow Service avant de tenter ce didacticiel.
 
-Ce didacticiel nécessite également une bonne compréhension des composants suivants de l’Adobe Experience Platform :
+Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
 * [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des Schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+   * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
 * [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
@@ -613,7 +613,7 @@ Une réponse positive renvoie les détails de la spécification de flux de donn�
 La dernière étape de la collecte des données de gestion de la relation client consiste à créer un flux de données. A l’heure actuelle, les valeurs requises suivantes sont préparées :
 
 * [ID de connexion source](#source)
-* [ID de connexion à la Cible](#target)
+* [ID de connexion à la cible](#target)
 * [ID de mappage](#mapping)
 * [ID de spécification du flux de données](#specs)
 
@@ -666,13 +666,15 @@ curl -X POST \
 ```
 
 | Propriété | Description |
-| --- | --- |
-| `flowSpec.id` | ID de spécification de flux récupéré à l’étape précédente. |
-| `sourceConnectionIds` | ID de connexion source récupéré lors d’une étape précédente. |
-| `targetConnectionIds` | ID de connexion à la cible récupéré lors d’une étape précédente. |
-| `transformations.params.mappingId` | ID de mappage récupéré lors d’une étape précédente. |
-| `scheduleParams.startTime` | Heure début du flux de données en secondes. |
-| `scheduleParams.frequency` | Les valeurs de fréquence sélectionnables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
+| -------- | ----------- |
+| `flowSpec.id` | Identifiant [de spécification de](#specs) flux récupéré à l’étape précédente. |
+| `sourceConnectionIds` | ID [de connexion](#source) source récupéré lors d’une étape précédente. |
+| `targetConnectionIds` | ID [de connexion à la](#target-connection) cible récupéré lors d’une étape précédente. |
+| `transformations.params.mappingId` | ID [de](#mapping) mappage récupéré lors d’une étape précédente. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
+| `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
+| `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
+| `scheduleParams.frequency` | Fréquence à laquelle le flux de données va collecter les données. Les valeurs acceptables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. L&#39;intervalle n&#39;est pas requis lorsque la fréquence est définie comme `once` et doit être supérieure ou égale à `15` pour d&#39;autres valeurs de fréquence. |
 
 **Réponse**
@@ -686,6 +688,10 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 }
 ```
+
+## Surveiller votre flux de données
+
+Une fois votre flux de données créé, vous pouvez surveiller les données qui y sont ingérées afin d’afficher des informations sur les exécutions de flux, l’état d’achèvement et les erreurs. Pour plus d&#39;informations sur la surveillance des flux de données, consultez le didacticiel sur la [surveillance des flux de données dans l&#39;API. ](../monitor.md)
 
 ## Étapes suivantes
 
