@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: dba7ae62b51b5cc4556f7f12d43b84e90f6c29dc
+source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 31%
@@ -45,7 +45,7 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 
 | Destination | Description |
 |--- | ---|
-| [!DNL Google Customer Match] | La Correspondance avec les clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, comme : [!DNL Search], [!DNL Shopping], Gmail et YouTube. Consultez la [!DNL Google Customer Match] page [](/help/rtcdp/destinations/google-customer-match-destination.md) du catalogue de destinations pour en savoir plus sur la destination et sur la façon de la configurer dans le CDP en temps réel Adobe. |
+| [!DNL Google Customer Match] | La Correspondance avec les clients de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, comme : [!DNL Search], [!DNL Shopping], Gmail et YouTube. <br><br> Consultez la [!DNL Google Customer Match] page [](/help/rtcdp/destinations/google-customer-match-destination.md) du catalogue de destinations pour en savoir plus sur la destination et sur la façon de la configurer dans le CDP en temps réel Adobe. |
 
 **Nouvelles fonctionnalités**
 
