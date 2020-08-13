@@ -4,7 +4,7 @@ seo-title: Configuration du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: abd72993577f298141ed0d25b6c4abc42050b68e
+source-git-commit: b7b206573a130af70a82c73a3f9b0a0eb28a513a
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -78,7 +78,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Lors de la configuration
 
 ## Collecte de données
 
-### `clickCollectionEnabled`
+### `clickCollectionEnabled` {#clickCollectionEnabled}
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ----------------- |
