@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide pour Real-time Customer Profile
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 64%
+source-wordcount: '84'
+ht-degree: 59%
 
 ---
 
@@ -22,12 +22,13 @@ ht-degree: 64%
    * [Entités ([!Profil DNL] accès)](api/entities.md)
    * [Tâches d’exportation ([!Profil DNL])](api/export-jobs.md)
    * [Stratégies de fusion](api/merge-policies.md)
+   * [État de l&#39;exemple de prévisualisation ([ !Profil DNL] prévisualisation)](api/preview-sample-status.md)
    * [[!DNL Profile] tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
 * Guides de l’interface utilisateur {#ui}
    * [[!DNL Profile] guide de l&#39;utilisateur](ui/user-guide.md)
    * [Guide d’utilisation des stratégies de fusion](ui/merge-policies.md)
 * Tutoriels {#tutorials}
-   * [Ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
+   * [ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configurer un jeu de données pour [!DNL Profile] et [!DNL Identity]](tutorials/dataset-configuration.md)
    * [Plus de tutoriels](https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
