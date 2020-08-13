@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de dépannage d’Adobe Experience Platform Identity Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 87%
@@ -72,7 +72,7 @@ Les champs d’identité doivent être associés à un espace de noms d’identi
 
 Pour obtenir des instructions détaillées sur la définition d’un espace de noms lors de la création d’un descripteur d’identité à l’aide de l’API, reportez-vous à la section relative à la [création d’un descripteur](../xdm/tutorials/create-schema-ui.md) dans le guide de développement du registre des schémas. Pour marquer un champ de schéma comme identité dans l’interface utilisateur, suivez les étapes du [tutoriel de l’éditeur de schéma](../xdm/tutorials/create-schema-api.md).
 
-## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ?
+## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
 
 Les espaces de noms standards fournis sont les suivants. Ils peuvent être utilisés par toutes les organisations au sein d’Experience Platform :
 
