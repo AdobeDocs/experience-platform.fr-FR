@@ -4,10 +4,10 @@ seo-title: Destinations de marketing par e-mail
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 54%
+source-wordcount: '800'
+ht-degree: 48%
 
 ---
 
@@ -47,15 +47,21 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ![Sélectionner des segments](/help/rtcdp/destinations/assets/email-select-segments.png)
 
-## Étape 3 - Sélectionner les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés {#destination-attributes}
+## Etape 3 - Configuration des noms de fichier
+
+Pour plus d&#39;informations sur les options d&#39;édition des noms de fichier, reportez-vous à l&#39;étape [Configurer](/help/rtcdp/destinations/activate-destinations.md#configure) du didacticiel Activer les destinations.
+
+## Step 4 - Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 Au cours de cette étape, vous sélectionnez les champs à exporter vers des destinations de marketing par e-mail.
 
-![Attributs de destination](/help/rtcdp/destinations/assets/destination-attributes.png)
+![Attributs de destination](/help/rtcdp/destinations/assets/recommended-attributes.png)
+
+Pour plus d&#39;informations sur cette étape, reportez-vous à l&#39;étape [Sélectionner des attributs](/help/rtcdp/destinations/activate-destinations.md#select-attributes) du didacticiel Activer les destinations.
 
 ### Identité {#identity}
 
-Nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Il s’agit du champ dans lequel les identités de vos utilisateurs sont déclenchées. Généralement, ce champ correspond à l’adresse électronique, mais il peut également s’agir d’un identifiant du programme de fidélité ou d’un numéro de téléphone. Consultez le tableau ci-dessous pour connaître les identifiants uniques les plus courants et leur champ XDM dans le schéma d’union.
+Nous vous recommandons de sélectionner un identifiant unique dans votre [schéma d’union](../../profile/home.md#profile-fragments-and-union-schemas). Il s’agit du champ dans lequel les identités de vos utilisateurs sont déclenchées. Généralement, ce champ correspond à l’adresse électronique, mais il peut également s’agir d’un identifiant du programme de fidélité ou d’un numéro de téléphone. Consultez le tableau ci-dessous pour connaître les identifiants uniques les plus courants et leur champ XDM dans le schéma.
 
 | Identifiant unique | Champ XDM dans le schéma unifié |
 ---------|----------
@@ -76,8 +82,9 @@ Dans le sélecteur de champ Schéma, choisissez les autres champs à exporter ve
 | État de l’adresse | `homeAddress.stateProvince` |
 | Code postal de l’adresse | `homeAddress.postalCode` |
 | Date de naissance | `person.birthDayAndMonth` |
+| Appartenance à un segment | `segmentMembership.status` |
 
-## Étape 3 - Importer les données de l’emplacement de stockage vers la destination
+## Étape 5 - Importer les données de l’emplacement de stockage vers la destination
 
 Consultez les articles de destination de marketing par e-mail individuelle pour découvrir comment importer des données de l’emplacement de stockage vers les destinations :
 
@@ -89,3 +96,8 @@ Consultez les articles de destination de marketing par e-mail individuelle pour 
 ## Activer les segments vers les destinations de marketing par e-mail
 
 Pour plus d’informations sur l’activation des segments vers les destinations de marketing par e-mail, consultez [Activation des données vers des destinations](/help/rtcdp/destinations/activate-destinations.md).
+
+## Ressources supplémentaires
+
+* [Activer les données vers les destinations](/help/rtcdp/destinations/activate-destinations.md)
+* [Créez des destinations de marketing par courrier électronique et activez les données à l’aide de l’API du service de flux.](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
