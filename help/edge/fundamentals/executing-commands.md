@@ -4,7 +4,7 @@ seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -28,7 +28,7 @@ alloy("commandName", options);
 
 Les [promesses](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) sont fondamentales pour la communication du SDK avec le code de votre page web. Une promesse est une structure de programmation commune et n’est pas spécifique à ce SDK ni même à JavaScript. Elle agit comme un proxy pour une valeur inconnue lors de la création de la promesse. Une fois la valeur connue, la promesse est « résolue » avec la valeur. Des fonctions de gestionnaire peuvent être associées à une promesse, de sorte que vous puissiez être averti lorsque la promesse a été résolue ou lorsqu’une erreur s’est produite lors du processus de résolution de la promesse. Pour en savoir plus sur les promesses, veuillez lire [ce tutoriel](https://javascript.info/promise-basics) ou toute autre ressource sur le web.
 
-## Gestion des succès ou des échecs
+## Gestion des succès ou des échecs {#handling-success-or-failure}
 
 Chaque fois qu’une commande est exécutée, une promesse est renvoyée. La promesse représente l’achèvement éventuel de la commande. Dans l’exemple ci-dessous, vous pouvez utiliser les méthodes `then` et `catch` pour déterminer le moment où la commande a réussi ou échoué.
 
