@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Prise en main de l’API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 29%
+source-wordcount: '359'
+ht-degree: 28%
 
 ---
 
@@ -21,7 +21,7 @@ Using the developer guide requires a working understanding of the various Adobe 
 * [!DNL Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
 * [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 * [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
@@ -34,13 +34,13 @@ The [!DNL Real-time Customer Profile] API documentation provides example API cal
 
 La documentation de l’API exige aussi que vous ayez suivi le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour lancer des appels vers des points de terminaison [!DNL Platform] Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
