@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Guide de développement de l’API Real-time Customer Profile
 topic: guide
 translation-type: tm+mt
-source-git-commit: d80d49df9c5ac197bdc7f851bbfff18d9b3019d4
+source-git-commit: 84789a8e6e8c1f0fc91d0b54ba29d449963c3117
 workflow-type: tm+mt
-source-wordcount: '704'
-ht-degree: 33%
+source-wordcount: '796'
+ht-degree: 30%
 
 ---
 
@@ -46,7 +46,11 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To learn more about working with merge policies using the API, please visit the [merge policies endpoint guide](merge-policies.md).
 
-For a guide to working with merge policies using the [!DNL Platform] UI, please see the [Merge Policies user guide](../ui/merge-policies.md).
+For a guide to working with merge policies using the [!DNL Platform] UI, please see the [merge policies user guide](../ui/merge-policies.md).
+
+## Etat de l’exemple de prévisualisation ([!DNL Profile] prévisualisation) {#profile-preview}
+
+Les données activées pour le Profil étant ingérées dans l’Experience Platform, elles sont stockées dans le magasin de données du Profil. À mesure que le nombre d’enregistrements dans la banque de Profils augmente ou diminue, une tâche d’exemple est exécutée qui comprend des informations sur le nombre de fragments de profil et de profils fusionnés présents dans la banque de données. L&#39;API de Profil vous permet de prévisualisation du dernier exemple réussi, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d&#39;identité. Pour commencer à utiliser le `/profilepreviewstatus` point de terminaison, reportez-vous au guide [de l’exemple de point de terminaison de l’état de la](preview-sample-status.md)prévisualisation.
 
 ## Tâches de système Profile {#profile-system-jobs}
 
