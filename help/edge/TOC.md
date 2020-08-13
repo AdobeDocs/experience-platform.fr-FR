@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide du SDK Web Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c12d854f272c6775ae940b7a4056d0f527c5dd01
+source-git-commit: 3a0ef81980910cedcec69a2a53bcf270b8d12d00
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 67%
+source-wordcount: '101'
+ht-degree: 69%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 67%
 * [Présentation du SDK Web](home.md)
 * Prise en main {#get-started}
    * [Démarrage rapide avec Launch](getting-started/quick-start-with-launch.md)
-   * [début rapide sans lancement](getting-started/quick-start-without-launch.md)
+   * [Début rapide sans lancement](getting-started/quick-start-without-launch.md)
 * Notions fondamentales {#fundamentals}
    * [Installation du SDK](fundamentals/installing-the-sdk.md)
    * [Exécution des commandes](fundamentals/executing-commands.md)
@@ -36,6 +36,7 @@ ht-degree: 67%
       * [Aperçu des analyses](solution-specific/analytics/analytics-overview.md)
       * [Mappage manuel des variables dans Analytics](solution-specific/analytics/manually-mapping-variables.md)
       * [Variables mappées automatiquement](solution-specific/analytics/automatically-mapped-vars.md)
+      * [Envoi de données à Adobe Analytics](solution-specific/analytics/link-tracking.md)
    * Audience Manager {#aam}
       * [Présentation d’Audience Manager](solution-specific/audience-manager/audience-manager-overview.md)
    * Target {#target}
