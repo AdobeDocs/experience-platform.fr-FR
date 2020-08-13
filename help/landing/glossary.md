@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Documentation du produit Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: b67513a83a46861872e92d9db57232554e7d831b
+source-git-commit: c91bcdff5b57ef69f79e211fbeb912e3d7fcdb39
 workflow-type: tm+mt
-source-wordcount: '7237'
+source-wordcount: '7245'
 ht-degree: 65%
 
 ---
@@ -210,7 +210,7 @@ ht-degree: 65%
 
 **Stratégie d’enregistrement delta :** `Delta save strategy` est une option permettant d’ingérer des données tierces via une connexion. Cette option permet à l’utilisateur de spécifier que les lignes de données sources nouvelles ou modifiées sont assimilées à [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
-**Destination :** Dans [!DNL Real-time Customer Data Platform] une destination est un terme général pour tout système, tel qu’une application d’Adobe, un serveur publicitaire ou un réseau publicitaire où une audience est activée et diffusée.
+**Destination :** Dans [!DNL Real-time Customer Data Platform] une destination est un terme général désignant tout point de terminaison, tel qu’une application d’Adobe, une plateforme publicitaire, un service d’enregistrement cloud ou un service marketing, où une audience est activée et diffusée.
 
 **Catégorie de destination :** Une catégorie de destination est un groupe de destinations présentant des caractéristiques similaires. [!DNL Real-time Customer Data Platform]
 
@@ -326,9 +326,9 @@ ht-degree: 65%
 
 ## J
 
-**[!DNL JupyterLab]:**Une interface web open-source pour Project[!DNL Jupyter]et est étroitement intégrée dans[!DNL Experience Platform].
+**[!DNL JupyterLab]:** Une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
 
-**[!DNL Jupyter Notebook] :**application web open source qui permet aux utilisateurs de créer et de partager des documents contenant du code en direct, des équations, des visualisations et du texte narratif.
+**[!DNL Jupyter Notebook] :** application web open source qui permet aux utilisateurs de créer et de partager des documents contenant du code en direct, des équations, des visualisations et du texte narratif.
 
 ## K
 
@@ -366,7 +366,7 @@ ht-degree: 65%
 
 **Environnement de test hors production :** les environnement de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les environnement de test hors production peuvent être réinitialisés et supprimés.
 
-**[!DNL Notebooks]:**[!DNL Notebooks]sont créés à l’aide *[!DNL Jupyter Notebook]*d’une description de l’analyse, de résultats et peuvent être exécutés pour effectuer l’analyse des données.
+**[!DNL Notebooks]:** [!DNL Notebooks] sont créés à l’aide *[!DNL Jupyter Notebook]* d’une description de l’analyse, de résultats et peuvent être exécutés pour effectuer l’analyse des données.
 
 [Haut de page](#adobe-experience-platform-glossary)
 
@@ -418,7 +418,7 @@ ht-degree: 65%
 
 **Exportation profil :** [!DNL Profile] export est l&#39;un des deux types de destinations dans [!DNL Real-time Customer Data Platform]. [!DNL Profile] export génère un fichier contenant des profils et des attributs, utilise des données d’identification personnelle brutes avec le courrier électronique et est utilisé pour l’intégration avec les plateformes de marketing et d’automatisation du courrier électronique.
 
-**Fragment de profil FProfile :** Un fragment de profil est l’information de profil d’une seule identité sur la liste des identités qui existent pour un utilisateur particulier.
+**Fragment de profil :** Un fragment de profil est l’information de profil d’une seule identité sur la liste des identités qui existent pour un utilisateur particulier.
 
 **Identifiant de profil :** un identifiant de profil est un identifiant généré automatiquement, associé à un type d’identité et qui représente un profil.
 
@@ -490,7 +490,7 @@ ht-degree: 65%
 
 **Méthode d’évaluation des segments :** l’évaluation planifiée des segments permet de créer un planning récurrent pour exécuter une tâche d’exportation à un moment précis, tandis que l’évaluation sur demande implique la création d’une tâche de segmentation pour créer immédiatement l’audience.
 
-**Exportation de segments :** l’exportation de segments est l’un des deux types de destinations et envoie les profils qui remplissent les conditions requises et qui ont été mappés à la destination. Elle utilise les identifiants de segment et d’utilisateur, ainsi que les données pseudonymes, et s’intègre généralement aux réseaux sociaux et aux autres plateformes cible de médias numériques.
+**Exportation de segments :** L’exportation de segments est l’un des deux types de destinations dans [!DNL Real-time Customer Data Platform]. Avec l’exportation de segments, vous pouvez envoyer les profils qui remplissent les conditions requises et qui ont été mappés à la destination. Elle utilise les identifiants de segment et d’utilisateur, ainsi que les données pseudonymes, et s’intègre généralement aux réseaux sociaux et aux autres plateformes cible de médias numériques.
 
 **Identifiant de segment :** l’identifiant de segment est un identifiant généré automatiquement associé à un segment.
 
