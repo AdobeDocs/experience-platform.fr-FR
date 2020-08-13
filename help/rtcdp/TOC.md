@@ -3,10 +3,10 @@ product: adobe experience platform
 audience: user
 user-guide-title: Aide sur la plateforme de données clients en temps réel
 translation-type: tm+mt
-source-git-commit: 759c96d091194d1d7d670d947169eceac7910730
+source-git-commit: 5802c05ce166f0b355b17a28655ff2f18f7cd0c4
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 85%
+source-wordcount: '469'
+ht-degree: 83%
 
 ---
 
@@ -128,13 +128,13 @@ ht-degree: 85%
       * [Activation de profils et de segments vers une destination](destinations/activate-destinations.md)
    * Didacticiels sur l’API de destination {#api-tutorials}
       * [Se connecter aux destinations de diffusion en continu (AWS Kinesis et Azure Événement Hubs) et activer les données](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)
-      * [Se connecter aux destinations de marketing par courrier électronique et activer les données](/help/tutorials/destinations/email-marketing-api.md)
+      * [Se connecter aux destinations de marketing par courrier électronique et activer les données](https://docs.adobe.com/content/help/en/experience-platform/tutorials/destinations/email-marketing-api.html)
 * Confidentialité et gouvernance des données {#privacy}
    * [Présentation de la confidentialité](privacy/privacy-overview.md)
    * [Présentation de la gouvernance des données](privacy/data-governance-overview.md)
    * Prise en charge d’IAB TCF 2.0 {#iab}
-      * [Prise en charge d’IAB TCF 2.0 dans le CDP en temps réel](./privacy/iab/overview.md)
-      * [Créer des jeux de données pour capturer les données de consentement IAB TCF 2.0](./privacy/iab/dataset-preparation.md)
+      * [Prise en charge d’IAB TCF 2.0 dans le CDP en temps réel](privacy/iab/overview.md)
+      * [Créer des jeux de données pour capturer les données de consentement IAB TCF 2.0](privacy/iab/dataset-preparation.md)
 * Profils {#profile}
    * [Présentation du profil](profile/profile-overview.md)
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
