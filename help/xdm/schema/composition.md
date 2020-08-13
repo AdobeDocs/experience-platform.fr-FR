@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 topic: overview
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: dae86df3ca4fcc9c5951068e905081df29e3b5f2
 workflow-type: tm+mt
-source-wordcount: '2628'
-ht-degree: 62%
+source-wordcount: '2782'
+ht-degree: 58%
 
 ---
 
@@ -59,13 +59,52 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 
 ### [!UICONTROL Identité]
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Therefore, it is important when thinking about schemas to think about &quot;[!UICONTROL Identity]&quot; and which fields can be used to identify a subject regardless of where the data may be coming from.
+Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Par conséquent, il est important, lors de la réflexion sur les schémas, de penser aux identités des clients et de déterminer les champs qui peuvent être utilisés pour identifier un sujet, quel que soit l&#39;endroit d&#39;où proviennent les données.
 
-To help with this process, key fields can be marked as &quot;[!UICONTROL Identity]&quot;. Upon data ingestion, the data in those fields will be inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
 Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
-Il est important de réfléchir aux identités client au cours de la phase de planification des schémas afin de vous assurer que les données sont rassemblées pour créer le profil le plus complet possible. Pour en savoir plus sur la manière dont les informations sur les identités peuvent vous aider à proposer des expériences numériques à vos clients, reportez-vous à la [présentation d’Identity Service](../../identity-service/home.md).
+Il est important de réfléchir aux identités client au cours de la phase de planification des schémas afin de vous assurer que les données sont rassemblées pour créer le profil le plus complet possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+
+#### xdm:identityMap
+
+`xdm:identityMap` est un champ de type carte qui décrit les différentes valeurs d’identité d’un individu, ainsi que les espaces de nommage qui lui sont associés. Ce champ peut être utilisé pour fournir des informations d&#39;identité à vos schémas, au lieu de définir des valeurs d&#39;identité dans la structure du schéma lui-même.
+
+Voici un exemple de carte d’identité simple :
+
+```json
+"identityMap": {
+  "email": [
+    {
+      "id": "jsmith@example.com",
+      "primary": false
+    }
+  ],
+  "ECID": [
+    {
+      "id": "87098882279810196101440938110216748923",
+      "primary": false
+    },
+    {
+      "id": "55019962992006103186215643814973128178",
+      "primary": false
+    }
+  ],
+  "loyaltyId": [
+    {
+      "id": "2e33192000007456-0365c00000000000",
+      "primary": true
+    }
+  ]
+}
+```
+
+Comme l&#39;exemple ci-dessus le montre, chaque clé de l&#39; `identityMap` objet représente un espace de nommage d&#39;identité. La valeur de chaque clé est un tableau d&#39;objets représentant les valeurs d&#39;identité (`id`) de l&#39;espace de nommage respectif. Consultez la [!DNL Identity Service] documentation pour obtenir une [liste d&#39;espaces de nommage](../../identity-service/troubleshooting-guide.md#standard-namespaces) d&#39;identité standard reconnus par les applications d&#39;Adobe.
+
+>[!NOTE]
+>
+>Une valeur booléenne indique si la valeur est ou non une Principale identité (`primary`) peut également être fournie pour chaque valeur d&#39;identité. Les identités Principal ne doivent être définies que pour les schémas destinés à être utilisés dans [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
 
 ### Principes d’évolution des schémas {#evolution}
 
