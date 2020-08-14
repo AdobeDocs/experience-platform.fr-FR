@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Surveiller les comptes et les flux de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 8bdd0493444c2c3b0f56db1166a6fa5d616e41be
+source-git-commit: dcdb1eb1f89b7393b83941a18abb2be2afa3576f
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 9%
@@ -100,7 +100,9 @@ Le panneau prévisualisation *[!UICONTROL de diagnostics d&#39;]* erreur s&#39;a
 
 Cette section comprend également une prévisualisation de la colonne qui contient l’erreur.
 
-> [!IMPORTANT] Pour activer la prévisualisation *[!UICONTROL de diagnostics d&#39;]* erreur, vous devez activer les diagnostics *[!UICONTROL d&#39;assimilation]* *[!UICONTROL partielle et d&#39;]* erreur lors de la configuration d&#39;un flux de données. Cela permettra au système d&#39;analyser tous les enregistrements ingérés pendant l&#39;exécution du flux.
+>[!IMPORTANT]
+>
+>Pour activer la prévisualisation *[!UICONTROL de diagnostics d&#39;]* erreur, vous devez activer les diagnostics *[!UICONTROL d&#39;assimilation]* *[!UICONTROL partielle et d&#39;]* erreur lors de la configuration d&#39;un flux de données. Cela permettra au système d&#39;analyser tous les enregistrements ingérés pendant l&#39;exécution du flux.
 
 ![Prévisualisation-erreur-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
