@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1d9c8cbf273e9aef13e34df91a98b6c08180c8ff
+source-git-commit: 8b540a108336ae4475f072b71a34e37cac064826
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 31%
+source-wordcount: '452'
+ht-degree: 32%
 
 ---
 
@@ -65,7 +65,6 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Surveillance de l&#39;exécution du flux | Les utilisateurs peuvent surveiller toutes les exécutions de flux et voir une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les mesures. Pour plus d&#39;informations, consultez le document des flux [de données de](../../sources/tutorials/ui/monitor.md) surveillance. |
-| Mise à jour du compte | Les utilisateurs peuvent mettre à jour les informations d’identification, le nom et la description de tout compte existant afin de fournir des informations plus significatives et de corriger les erreurs qui ont pu être créées. |
 | Notifications d’exécution de flux | Les utilisateurs peuvent s’abonner à des événements et enregistrer des hameçons Web pour recevoir des notifications en temps réel sur l’état, les mesures et les erreurs concernant les exécutions de flux. |
 | Améliorations du catalogue de l’interface utilisateur | Mises à jour de l’écran du catalogue de sources pour faciliter l’accès aux actions Principales des objets sélectionnés. |
 
