@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Tutoriels Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: ac1186e0afc3d135e8d02b1e5ab0cd907c12dcf3
 workflow-type: tm+mt
 source-wordcount: '41'
 ht-degree: 100%
@@ -19,7 +19,7 @@ ht-degree: 100%
 * [Gouvernance et confidentialité des données](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)
 * [Prise de décision](decisioning.md)
-* [Destinations](destinations.md)
+* [Destinations](destinations-tutorials.md)
 * [Ingestion des données dans Platform](data-ingestion.md)
 * [Profils et identités](configure-profile.md)
 * [Schémas et descripteurs de relation](schemas.md)
