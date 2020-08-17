@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;
+keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment
 solution: Adobe Experience Platform
 title: Point de terminaison de la recherche de segments
 topic: guide
+description: La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Ce guide fournit des informations qui vous aideront à mieux comprendre la recherche de segments et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 47%
+source-wordcount: '1179'
+ht-degree: 45%
 
 ---
 
@@ -242,7 +243,7 @@ Le tableau suivant liste les champs qui peuvent être recherchés dans le param�
 | segmentName | Le segment correspond au nom du segment de votre recherche spécifiée. |
 | segmentDescription | Le segment correspond à la description du segment de votre recherche spécifiée. |
 
-### expression de recherche {#search-expression}
+### Expression de recherche {#search-expression}
 
 Le tableau suivant liste les détails du fonctionnement des requêtes de recherche lors de l&#39;utilisation de l&#39;API de recherche de segment.
 
