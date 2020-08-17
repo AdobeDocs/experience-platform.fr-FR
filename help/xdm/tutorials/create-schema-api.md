@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;schema api;enum;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API Schema Registry
 topic: tutorials
+description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '2322'
+source-wordcount: '2343'
 ht-degree: 84%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 84%
 
 # Create a schema using the [!DNL Schema Registry] API
 
-Le [!DNL Schema Registry] est utilisé pour accéder au [!DNL Schema Library] dans l’Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
+Le [!DNL Schema Registry] est utilisé pour accéder au [!DNL Schema Library] dans Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
 This tutorial uses the [!DNL Schema Registry] API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
 
