@@ -1,10 +1,11 @@
 ---
+keywords: Catalog;catalog
 title: Catalogue des destinations
 seo-title: Catalogue des destinations
 description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 91%
