@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA
 solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 15%
@@ -61,7 +61,7 @@ En fonction des [!DNL Experience Cloud] applications que vous utilisez, vous dev
 
 Pour [!DNL Privacy Service] traiter une demande de confidentialité d&#39;un client, au moins une valeur d&#39;identité unique doit être fournie dans la demande elle-même. Une valeur d&#39;identité unique est tout élément d&#39;information qui peut être utilisé pour identifier une personne et ses données personnelles stockées dans vos [!DNL Experience Cloud] entrepôts de données. [!DNL Privacy Service] utilise ces informations d&#39;identité pour localiser et traiter les données personnelles du client en fonction de la nature de la demande (accès, suppression ou exclusion).
 
-Selon les [!DNL Experience Cloud] applications utilisées par votre système de gestion de la relation client, le type et le nombre de valeurs d’identité que vous devez fournir à chaque client varieront. Certaines applications utilisent leurs propres valeurs d’ID de client internes (par exemple, les ID d’Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux d’Adobe [!DNL Experience Cloud Identity Service] (ECID) qui effectuent le suivi de l’activité de client dans toutes les [!DNL Experience Cloud] applications. En outre, des informations personnelles génériques telles qu&#39;une adresse électronique ou un numéro de téléphone peuvent également servir de données d&#39;identité valides.
+Selon les [!DNL Experience Cloud] applications utilisées par votre système de gestion de la relation client, le type et le nombre de valeurs d’identité que vous devez fournir à chaque client varieront. Certaines applications utilisent leurs propres valeurs d’ID client internes (tels que les ID Adobe Target), tandis que d’autres solutions reposent sur des identifiants globaux d’Adobe [!DNL Experience Cloud Identity Service] (ECID) qui effectuent le suivi de l’activité des clients dans toutes les [!DNL Experience Cloud] applications. En outre, des informations personnelles génériques telles qu&#39;une adresse électronique ou un numéro de téléphone peuvent également servir de données d&#39;identité valides.
 
 Le document sur les données d&#39; [identité pour les demandes](./identity-data.md) de confidentialité fournit des informations plus détaillées sur les types d&#39;informations d&#39;identité qui sont acceptées [!DNL Privacy Service]. Le document fournit également des conseils sur la manière d&#39;exploiter les technologies d&#39;Adobe pour récupérer efficacement les informations d&#39;identité appropriées de vos clients lorsqu&#39;ils interagissent avec votre site Web et envoyer ces données [!DNL Privacy Service] dans des demandes d&#39;API.
 
@@ -93,7 +93,7 @@ Une fois que vous avez effectué des tâches de confidentialité, vous disposez 
 
 | Méthode de surveillance | Description |
 | --- | --- |
-| [!DNL Privacy Service] L’nterface utilisateur | L’ [!DNL Privacy Service] interface utilisateur fournit un tableau de bord de surveillance qui vous permet de vue une représentation visuelle de l’état de toutes les requêtes actives. See the [Privacy Service user guide](ui/overview.md) for more information. |
+| [!DNL Privacy Service] L’nterface utilisateur | L’ [!DNL Privacy Service] interface utilisateur fournit un tableau de bord de surveillance qui vous permet de vue une représentation visuelle de l’état de toutes les demandes principales. See the [Privacy Service user guide](ui/overview.md) for more information. |
 | [!DNL Privacy Service] API | Vous pouvez contrôler par programmation l’état des tâches de confidentialité en utilisant les points de terminaison de recherche fournis par l’ [!DNL Privacy Service] API. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le guide [du développeur](./api/getting-started.md) Privacy Service. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] exploiter les Événements d&#39;E/S d&#39;Adobe envoyés à un webhook configuré afin de faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Pour plus d’informations, consultez le didacticiel sur l’ [abonnement aux Événements](./privacy-events.md) de confidentialité. |
 
