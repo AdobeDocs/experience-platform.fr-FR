@@ -1,10 +1,11 @@
 ---
+Keywords: ECID;ecid
 title: Extension du service Experience Cloud ID
 seo-title: Extension du service Experience Cloud ID
 description: L’extension du service Experience Cloud ID est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: L’extension du service Experience Cloud ID est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 75%
