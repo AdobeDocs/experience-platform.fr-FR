@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
 title: Prise en main de l’API Policy Service
 topic: developer guide
+description: L’API Policy Service vous permet de créer et de gérer diverses ressources liées à la gouvernance des données Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels à l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 22%
+source-wordcount: '440'
+ht-degree: 25%
 
 ---
 
