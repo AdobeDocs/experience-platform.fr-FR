@@ -1,10 +1,11 @@
 ---
+keywords: rtcdp profile;real-time customer profile
 title: Présentation du profil client en temps réel
 seo-title: Profil client en temps réel sur la plateforme de données client en temps réel
 description: Cette section présente la manière dont la plateforme de données client en temps réel vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
 seo-description: Plateforme de données client en temps réel, profil, données, expériences, canaux
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 47%
