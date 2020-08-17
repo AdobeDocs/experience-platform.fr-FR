@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Espace de travail des destinations
 seo-title: Espace de travail des destinations
 description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: f3e489416a9bc80cfb0502d3973a86748123a687
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 61%
