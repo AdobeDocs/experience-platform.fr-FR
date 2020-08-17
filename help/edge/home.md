@@ -1,10 +1,11 @@
 ---
+keywords: web sdk;SDK;web SDK;Launch;launch
 title: Aide du SDK Web d’Adobe Experience Platform
 seo-title: Aide du SDK Web d’Adobe Experience Platform
 description: Découvrez le SDK Web d’Adobe Experience Platform et comment l’utiliser.
 seo-description: permettre aux clients d’Adobe Experience Cloud d’interagir avec les différents services dans Experience Cloud 
 translation-type: tm+mt
-source-git-commit: fc8b26e237821d5fa2d72fb38189894ed0b05271
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 21%
@@ -12,7 +13,7 @@ ht-degree: 21%
 ---
 
 
-# Qu’est-ce que le SDK Web Adobe Experience Platform
+# Qu’est-ce que le SDK Web Adobe Experience Platform ?
 
 Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of the Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe [!DNL Experience Platform Edge Network]. Outre la bibliothèque JavaScript, il existe une extension [](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) Launch pour vous aider à configurer votre SDK Web.
 
@@ -20,9 +21,9 @@ Adobe Experience Platform Web SDK is a client-side JavaScript library that allow
 
 [!DNL Adobe Experience Platform Web SDK] fait partie de la collection qui constitue Experience Edge. Experience Edge est constitué de trois technologies :
 
-* **[!DNL Adobe Experience Platform Web SDK]:**Un SDK JavaScript et une[!DNL Launch]extension pour simplifier considérablement le déploiement des[!DNL Adobe]technologies
+* **[!DNL Adobe Experience Platform Web SDK]:** Un SDK JavaScript et une [!DNL Launch] extension pour simplifier considérablement le déploiement des [!DNL Adobe] technologies
 * **Adobe Experience Platform Mobile SDK :** Extension du SDK mobile v5 pour permettre aux clients d’utiliser la nouvelle méthodologie de déploiement
-* **[!DNL Adobe Experience Platform Edge Network]:**Réseau mondial distribué de serveurs qui permet une nouvelle méthodologie de déploiement de[!DNL Adobe]produits
+* **[!DNL Adobe Experience Platform Edge Network]:** Réseau mondial distribué de serveurs qui permet une nouvelle méthodologie de déploiement de [!DNL Adobe] produits
 
 The [!DNL Adobe Experience Edge] is a new framework for low-latency data collection, pluggable computing and rapid data activation across all addressable channels.
 
@@ -41,7 +42,7 @@ Un système d&#39;arête unique consolidé permet aux clients de gérer leurs ca
 
 ## Vue d’ensemble des vidéos
 
-La vidéo suivante donne un aperçu de l&#39;Adobe Experience Platform [!DNL Web SDK] et [!DNL Edge Network].
+La vidéo suivante donne un aperçu de la Adobe Experience Platform [!DNL Web SDK] et [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -58,7 +59,7 @@ Il ne s’agit pas seulement d’une enveloppe autour des bibliothèques existan
 
 Outre une nouvelle bibliothèque, il existe un nouveau point de terminaison qui rationalise les requêtes HTTP vers les solutions Adobe. Auparavant, Visitor.js envoyait un appel de blocage au service d’ID de visiteur, puis AT.js envoyait un appel à Adobe Target, DIL.js envoyait un appel à Adobe Audience Manager, et finalement AppMeasurement.js envoyait un appel à Adobe Analytics. This new library and endpoint can retrieve an ID, fetch a [!DNL Target] experience, send data to [!DNL Audience Manager], and pass the data to the Adobe Experience Platform in a single call.
 
-La vidéo suivante présente l&#39;Adobe Experience Platform [!DNL Web SDK] et l&#39; [!DNL Edge Network] action. L&#39;exemple vidéo utilise un appel unique à l&#39;Adobe qui envoie des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]et [!DNL Target].
+La vidéo suivante présente la Adobe Experience Platform [!DNL Web SDK] et [!DNL Edge Network] l&#39;action. L&#39;exemple vidéo utilise un appel unique à l&#39;Adobe qui envoie des données à [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager]et [!DNL Target].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
