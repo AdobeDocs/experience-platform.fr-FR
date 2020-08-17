@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
+description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 translation-type: tm+mt
-source-git-commit: d02f12202e51b00453f719604052a54f6fcfe4ab
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1672'
-ht-degree: 75%
+source-wordcount: '1707'
+ht-degree: 76%
 
 ---
 
@@ -61,7 +62,7 @@ Vos clients peuvent interagir avec votre marque par le biais d’une combinaison
 
 [!DNL Experience Platform] relève ce défi grâce à deux concepts : [espaces de noms d’identité](#identity-namespaces) et [graphiques d’identités](#identity-graphs).
 
-La vidéo suivante est destinée à vous aider à comprendre les identités et les graphiques d&#39;identité. La vidéo suivante couvre les trois fonctionnalités de la collecte d’identité, des graphiques d’identité et des API. Il décrit également comment les algorithmes déterministes et probabilistes sont utilisés pour construire des graphiques d&#39;identité privés et traite du rôle des graphiques d&#39;identité privés, des graphiques coop du service d&#39;identité d&#39;Adobe Experience Platform et des graphiques tiers.
+La vidéo suivante est destinée à vous aider à comprendre les identités et les graphiques d&#39;identité. La vidéo suivante couvre les trois fonctionnalités de la collecte d’identité, des graphiques d’identité et des API. Il décrit également comment les algorithmes déterministes et probabilistes sont utilisés pour construire des graphiques d&#39;identité privés et traite du rôle des graphiques d&#39;identité privés, des graphiques Co-op du service d&#39;identité de Adobe Experience Platform et des graphiques tiers.
 
 >[!IMPORTANT]
 >
@@ -131,7 +132,7 @@ During the streaming ingestion process, [!DNL Identity Service ]automatically ex
 
 [!DNL Identity Service] consomme les données conformes XDM envoyées à [!DNL Experience Platform] l’unité par assimilation [](../ingestion/batch-ingestion/overview.md) par lot ou par assimilation [](../ingestion/streaming-ingestion/overview.md)en flux continu.
 
-La vidéo suivante est destinée à vous aider à comprendre Identity Service. Cette vidéo vous montre comment étiqueter les champs de données comme identités, assimiler les données d&#39;identité, puis vérifier que les données ont été envoyées au graphique privé Adobe Experience Platform Identity Service.
+La vidéo suivante est destinée à vous aider à comprendre Identity Service. Cette vidéo vous montre comment étiqueter les champs de données comme identités, assimiler des données d&#39;identité, puis vérifier que les données ont été envoyées au graphique privé Adobe Experience Platform Identity Service.
 
 >[!WARNING]
 >
