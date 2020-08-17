@@ -4,7 +4,7 @@ seo-title: Liaison du suivi à Adobe Analytics avec le SDK Web Adobe Experience 
 description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
 seo-description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
 translation-type: tm+mt
-source-git-commit: ab73e4d793cf39c29ddca385487bf027002db883
+source-git-commit: b50082405cd0392ff827a83ad82091fbcd370b21
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 2%
