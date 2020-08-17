@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
 title: Adobe Experience Platform Segmentation Service
 topic: overview
+description: Ce document présente Segmentation Service et le rôle qu’il joue dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96b6f820e5d372446c4927e7719aedadb2b11bc9
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1991'
 ht-degree: 79%
 
 ---
@@ -215,7 +216,7 @@ Un autre défi classique pour les professionnels du marketing a été de créer 
 - Objet
 - Map
 - Événements
-- audiences externes
+- Audiences externes
 - Segments
 
 Vous trouverez des informations plus détaillées sur ces types de données pris en charge dans le document [des types de données](./data-types.md)pris en charge.
