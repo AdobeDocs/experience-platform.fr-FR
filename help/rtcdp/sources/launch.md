@@ -1,10 +1,11 @@
 ---
+keywords: Launch;launch
 title: Tutoriel Mise en œuvre des balises de site web avec Adobe Launch
 seo-title: Mise en œuvre des balises de site web avec Adobe Launch
 description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 seo-description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 83%
