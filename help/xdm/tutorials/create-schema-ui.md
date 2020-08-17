@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;schema;Schema;create schema;enum;XDM individual profile;primary identity;primary idenity;enum datatype;schema design
 solution: Experience Platform
 title: Création d’un schéma à l’aide de l’éditeur de schémas
 topic: tutorials
+description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 661789fa15ea11b0e42060b1b90d74785c04fa1f
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '3376'
+source-wordcount: '3392'
 ht-degree: 59%
 
 ---
@@ -24,7 +25,7 @@ Ce tutoriel comprend également des étapes pour [définir une nouvelle classe](
 
 Ce tutoriel exige une bonne compréhension des différents aspects d’Adobe Experience Platform inhérents à l’utilisation de l’éditeur de schémas. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-* [!DNL Experience Data Model (XDM)](../home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+* [!DNL Experience Data Model (XDM)](../home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 * [Principes de base de la composition des schémas](../schema/composition.md) : présentation des schémas XDM et de leurs blocs de création, notamment les classes, les mixins, les types de données et les champs.
 * [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
@@ -122,7 +123,7 @@ Cliquez sur les différents champs dans le canevas pour voir les champs supplém
 
 Vous pouvez maintenant répéter les mêmes étapes pour ajouter un autre mixin. When you view the *[!UICONTROL Add Mixin]* dialog this time, notice that the &quot;[!UICONTROL Profile Person Details]&quot; mixin has been greyed out and the radio button next to it cannot be selected. Cela vous évite de dupliquer accidentellement des mixins que vous avez déjà inclus dans le schéma actuel.
 
-Vous pouvez maintenant ajouter &quot;[!DNL Profile Personal Details" mixin] depuis la boîte de dialogue *[!UICONTROL Ajouter le mixin]* .
+Vous pouvez maintenant ajouter &quot;[!DNL Profile Personal Details" mixin] à partir de la boîte de dialogue *[!UICONTROL Ajouter le mixin]* .
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
@@ -172,10 +173,10 @@ The changes are applied and the newly created &quot;[!UICONTROL loyalty]&quot; o
 
 Chaque champ nécessite les informations suivantes :
 
-* **[!UICONTROL Nom]du champ :**Le nom du champ, écrit dans le boîtier du chameau. Exemple : loyaltyLevel
-* **[!UICONTROL Nom]d&#39;affichage :**Nom du champ, écrit en cas de titre. Exemple : Loyalty Level
-* **[!UICONTROL Type]:**Type de données du champ. This includes basic scalar types and any data types defined in the[!DNL Schema Registry]. Exemples : string, integer, boolean, Person, Address, Phone Number, etc. (chaîne, entier, booléen, Personne, Adresse, Numéro de téléphone, etc.)
-* **[!UICONTROL Description]:**Une description facultative du champ doit être incluse, écrite en cas de phrase. (200 caractères max.)
+* **[!UICONTROL Nom]du champ :** Le nom du champ, écrit dans le boîtier du chameau. Exemple : loyaltyLevel
+* **[!UICONTROL Nom]d&#39;affichage :** Nom du champ, écrit en cas de titre. Exemple : Loyalty Level
+* **[!UICONTROL Type]:** Type de données du champ. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Exemples : string, integer, boolean, Person, Address, Phone Number, etc. (chaîne, entier, booléen, Personne, Adresse, Numéro de téléphone, etc.)
+* **[!UICONTROL Description]:** Une description facultative du champ doit être incluse, écrite en cas de phrase. (200 caractères max.)
 
 The first field for the Loyalty object will be a string called &quot;[!UICONTROL loyaltyId]&quot;. When setting the new field&#39;s type to &quot;[!UICONTROL String]&quot;, the *[!UICONTROL Field Properties]* window becomes populated with several options for applying constraints, including **[!UICONTROL Default Value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum Length]**.
 
@@ -214,10 +215,10 @@ When you have completed all field properties, click **[!UICONTROL Apply]** and t
 
 Vous trouverez ci-dessous davantage d’informations sur les contraintes supplémentaires disponibles :
 
-* **[!UICONTROL Obligatoire]:**Indique que le champ est requis pour l’assimilation de données. Toute donnée chargée dans un ensemble de données basé sur ce schéma qui ne contient pas ce champ sera défaillante lors de l’ingestion.
-* **[!UICONTROL Tableau]:**Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, si vous sélectionnez un type de données « String » et que vous cochez la case « Tableau », cela signifie que le champ contiendra un tableau de chaînes.
-* **[!UICONTROL Enum]:**Indique que ce champ doit contenir l’une des valeurs d’une liste énumérée de valeurs possibles.
-* **[!UICONTROL Identité]:**Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité[dans la suite de ce tutoriel](#identity-field).
+* **[!UICONTROL Obligatoire]:** Indique que le champ est requis pour l’assimilation de données. Toute donnée chargée dans un ensemble de données basé sur ce schéma qui ne contient pas ce champ sera défaillante lors de l’ingestion.
+* **[!UICONTROL Tableau]:** Indique que le champ contient un tableau de valeurs, chacune avec le type de données spécifié. Par exemple, si vous sélectionnez un type de données « String » et que vous cochez la case « Tableau », cela signifie que le champ contiendra un tableau de chaînes.
+* **[!UICONTROL Enum]:** Indique que ce champ doit contenir l’une des valeurs d’une liste énumérée de valeurs possibles.
+* **[!UICONTROL Identité]:** Indique que ce champ est un champ d’identité. Vous trouverez plus d’informations sur les champs d’identité [dans la suite de ce tutoriel](#identity-field).
 
 ## Conversion d’un objet à plusieurs champs en un type de données {#datatype}
 
@@ -317,7 +318,7 @@ Les informations suivantes viennent compléter le tutoriel de l’éditeur de sc
 
 [!DNL Experience Platform] offre la possibilité de définir un schéma basé sur une classe propre à votre organisation.
 
-Ouvrez la boîte de dialogue *[!UICONTROL Attribuer une classe]* en cliquant sur **[!UICONTROL Attribuer]** dans la section *[!UICONTROL Classe]* de l’éditeur de schémas. Within the dialog, select **C[!UICONTROL reate New Class ]**.
+Ouvrez la boîte de dialogue *[!UICONTROL Attribuer une classe]* en cliquant sur **[!UICONTROL Attribuer]** dans la section *[!UICONTROL Classe]* de l’éditeur de schémas. Within the dialog, select **C[!UICONTROL reate New Class]**.
 
 You can then give your new class a **[!UICONTROL Display Name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** (&quot;[!UICONTROL Record]&quot; or &quot;[!UICONTROL Time Series]&quot;) for the data the schema will define.
 
