@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 solution: Adobe Experience Platform
 title: Guide d’utilisation de Real-time Customer Profile
 topic: guide
+description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5c2429f10dfed8cc927914572c690a0536ddae99
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 15%
+source-wordcount: '1191'
+ht-degree: 19%
 
 ---
 
@@ -38,7 +39,7 @@ Sélectionnez l’onglet *[!UICONTROL Parcourir]* pour parcourir les profils par
 
 ![](../images/user-guide/profiles-browse.png)
 
-### Mesures de Profil {#profile-metrics}
+### Mesures de profil {#profile-metrics}
 
 Sur le côté droit de l&#39;onglet *[!UICONTROL Parcourir]* se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
 
@@ -68,7 +69,7 @@ Le sélecteur de stratégies **[!UICONTROL de]** fusion sélectionne automatique
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
-### espace de nommage d&#39;identité
+### Espace de nommage d&#39;identité
 
 Le sélecteur d&#39;espace de nommage **** d&#39;identité ouvre une boîte de dialogue dans laquelle vous pouvez choisir l&#39;espace de nommage d&#39;identité à rechercher et personnaliser les attributs affichés à partir de votre recherche en sélectionnant l&#39;icône de filtre et en choisissant les attributs à ajouter ou à supprimer.
 
@@ -88,7 +89,7 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher le
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Détails du Profil {#profile-detail}
+### Détails du profil {#profile-detail}
 
 Lorsque vous sélectionnez l’ID **[!UICONTROL de]** Profil, l’onglet _[!UICONTROL Détails]_s’ouvre. Cette page affiche des informations sur le profil sélectionné, y compris les attributs de base, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel.
 
