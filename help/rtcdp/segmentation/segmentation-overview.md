@@ -1,10 +1,11 @@
 ---
+keywords: segmentation; segmentation rtcdp;real time customer data platform segmentation
 title: Présentation du service de segmentation
 seo-title: Service de segmentation dans la plateforme de données client en temps réel d’Adobe
 description: Présentation du service de segmentation.
 seo-description: Présentation du service de segmentation et des segments dans la plateforme de données client en temps réel d’Adobe.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 60%
