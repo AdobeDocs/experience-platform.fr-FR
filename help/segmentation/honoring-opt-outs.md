@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;opt-out
 solution: Experience Platform
 title: Respect du droit d’opposition
 topic: overview
+description: 'Experience Platform permet à vos clients d’envoyer des demandes d’opposition concernant l’utilisation et le stockage de leurs données au sein de Real-time Customer Profile]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui). '
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 66%
+source-wordcount: '1006'
+ht-degree: 68%
 
 ---
 
@@ -24,7 +25,7 @@ Honoring opt-out requests requires an understanding of the various [!DNL Adobe E
 
 - [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Experience Data Model (XDM)](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein [!DNL Platform]de.
 
 ## Mixins d’exclusion
