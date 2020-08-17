@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;data location;Data Location;Data management;data management;Lineage;lineage;Catalog;enable dataset
 solution: Experience Platform
 title: Présentation du service de catalogue
 topic: overview
+description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 46%
+source-wordcount: '783'
+ht-degree: 49%
 
 ---
 
 
 # [!DNL Catalog Service] aperçu
 
-[!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et le lignage des données dans l’Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
+[!DNL Catalog Service] est le système d’enregistrement de l’emplacement et de la lignée des données dans Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
 Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
