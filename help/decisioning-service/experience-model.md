@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Modèle de domaine de prise de décision d’expérience
 topic: overview
+description: Cette section détaille les composants du service de prise de décision ainsi que leurs modalités d’interaction. Les concepts et leurs relations forment le *domaine* du problème de prise de décision. Ces composants fondamentaux jouent un rôle, quelle que soit la manière dont vous utilisez le service de prise de décision].
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1367'
-ht-degree: 91%
+source-wordcount: '1412'
+ht-degree: 90%
 
 ---
 
@@ -18,9 +19,9 @@ In this section, the components of [!DNL Decisioning Service] are explained and 
 
 ## Options de décision
 
-Une *option de décision* d’expérience est une expérience potentielle qui peut être présentée à un client spécifique. Une option peut également être appelée choix ou alternative. When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>***to*** d<sub>N</sub>*** from amongst a finite set of options **`D`**.
+Une *option de décision* d’expérience est une expérience potentielle qui peut être présentée à un client spécifique. Une option peut également être appelée choix ou alternative. When deciding on the next best option for a customer, [!DNL Decisioning Service] considers options ***d<sub>1</sub>*** to ***d<sub>N</sub>*** from amongst a finite set of options **`D`**.
 
-Les décisions sont prises en identifiant la meilleure option parmi un ensemble d’options disponibles. L’une des approches consiste à éliminer successivement les *options de décision* ***d<sub>i</sub>*** du jeu *** D *** jusqu’à ce qu’il ne reste plus qu’une seule option, puis à choisir un « gagnant » de manière aléatoire dans le jeu restant. Une autre forme de prise de décision consiste à classer les autres options de décision (admissibles) en fonction de leur résultat attendu.
+Les décisions sont prises en identifiant la meilleure option parmi un ensemble d’options disponibles. L’une des approches consiste à éliminer successivement les *options de décision* ***d<sub>i</sub>*** du jeu ***D*** jusqu’à ce qu’il ne reste plus qu’une seule option, puis à choisir un « gagnant » de manière aléatoire dans le jeu restant. Une autre forme de prise de décision consiste à classer les autres options de décision (admissibles) en fonction de leur résultat attendu.
 
 ### Ensemble fini d’options de décision
 
