@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
 title: Présentation des jeux de données
 topic: datasets
+description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1bf6b0948c47c7941fb8f9cf2edfac4d665b8189
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '723'
 ht-degree: 46%
 
 ---
@@ -60,7 +61,7 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [!DNL Real-time Customer Profile](../../profile/home.md): Exploite [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] extrait les données [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
-* [Adobe Experience Platform Requête Service](../../query-service/home.md): Vous permet d&#39;utiliser SQL standard pour requête des données dans [!DNL Experience Platform], de joindre des jeux de données dans les jeux de données [!DNL Data Lake] et de capturer les résultats des requêtes sous la forme d&#39;un nouveau jeu de données à utiliser dans le rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
+* [Service](../../query-service/home.md)de Requête Adobe Experience Platform : Vous permet d&#39;utiliser SQL standard pour requête des données dans [!DNL Experience Platform], de joindre des jeux de données dans les jeux de données [!DNL Data Lake] et de capturer les résultats des requêtes sous la forme d&#39;un nouveau jeu de données à utiliser dans le rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
 * [Service de prise de décision d’Adobe Experience Platform](../../decisioning-service/home.md)[!DNL Real-time Customer Profile] : exploite pour déterminer le choix le plus probable du client à partir d’un ensemble d’options, en fonction des données comportementales que extrait des jeux de données activés.[!DNL Profile]
 
 ## Étapes suivantes
