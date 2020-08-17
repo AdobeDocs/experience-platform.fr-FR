@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor
 solution: Experience Platform
-title: Guide sur Query Editor d’Adobe Experience Platform Query Service
+title: Guide d’utilisation de Query Editor
 topic: query editor
+description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 71%
+source-wordcount: '1086'
+ht-degree: 72%
 
 ---
 
@@ -118,7 +119,7 @@ Une fois la requête terminée, les résultats s’affichent dans l’onglet *[!
 
 ## Exécution de requêtes avec une vidéo [!DNL Query Service] didacticiel
 
-La vidéo suivante montre comment exécuter des requêtes dans l&#39;interface d&#39;Adobe Experience Platform et dans un client PSQL. En outre, l&#39;utilisation de propriétés individuelles dans un objet XDM, l&#39;utilisation de fonctions définies par Adobe et l&#39;utilisation de CREATE TABLE AS SELECT (CTAS) sont démontrées.
+La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. En outre, l&#39;utilisation de propriétés individuelles dans un objet XDM, l&#39;utilisation de fonctions définies par Adobe et l&#39;utilisation de CREATE TABLE AS SELECT (CTAS) sont démontrées.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
