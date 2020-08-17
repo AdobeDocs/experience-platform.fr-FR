@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;decision events;decision event;Decision events
 solution: Experience Platform
 title: Utilisation du composant d’exécution du service de prise de décision à l’aide d’API
 topic: tutorial
+description: 'Ce document fournit un tutoriel expliquant comment utiliser les services du composant d’exécution du service de prise de décision à l’aide d’API Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2004'
 ht-degree: 81%
 
 ---
@@ -21,7 +22,7 @@ This document provides a tutorial for working with the runtime services of [!DNL
 This tutorial requires a working understanding of the [!DNL Experience Platform] services involved in decisioning and determining the next best offer to present during customer experiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux éléments suivants :
 
 - [!DNL Decisioning Service](./../home.md): Fournit la structure permettant d’ajouter et de supprimer des offres et de créer des algorithmes pour choisir le meilleur à présenter lors de l’expérience d’un client.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est utilisé pour définir des règles et des filtres.
 - [Gestion des objets et des règles de prise de décision à l’aide d’API](./entities.md) : avant d’utiliser le composant d’exécution des services de prise de décision, vous devez configurer les entités associées.
 
