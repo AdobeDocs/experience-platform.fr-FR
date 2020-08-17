@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics
+keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Présentation de Data Science Workspace
 topic: overview
+description: Ce guide présente un aperçu des concepts clés liés à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '2569'
-ht-degree: 74%
+source-wordcount: '2584'
+ht-degree: 73%
 
 ---
 
@@ -20,7 +21,7 @@ Les spécialistes des données de tout niveau de compétence trouveront des outi
 
 With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs - powered by machine learning. Ces services fonctionnent avec d’autres services Adobe, notamment Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées dans les applications web, de bureau et mobiles.
 
-This guide provides an overview the key concepts related to [!DNL Data Science Workspace].
+This guide provides an overview of the key concepts related to [!DNL Data Science Workspace].
 
 ## Introduction
 
@@ -69,7 +70,7 @@ With [!DNL Data Science Workspace], your data scientists can streamline the cumb
 
 Les données sont la pierre angulaire de l’IA et de l’apprentissage automatique.
 
-[!DNL Data Science Workspace] est entièrement intégrée à l&#39;Adobe Experience Platform, y compris le lac Data, [!DNL Real-time Customer Profile]et [!DNL Unified Edge]. Explore all your organizational data stored in Adobe Experience Platform at once, along with common big data and deep learning libraries, such as [!DNL Spark] ML and [!DNL TensorFlow]. Si vous ne trouvez pas ce dont vous avez besoin, ingérez vos propres jeux de données à l’aide du schéma XDM normalisé.
+[!DNL Data Science Workspace] est entièrement intégrée à Adobe Experience Platform, y compris le lac Data, [!DNL Real-time Customer Profile]et [!DNL Unified Edge]. Explore all your organizational data stored in Adobe Experience Platform at once, along with common big data and deep learning libraries, such as [!DNL Spark] ML and [!DNL TensorFlow]. Si vous ne trouvez pas ce dont vous avez besoin, ingérez vos propres jeux de données à l’aide du schéma XDM normalisé.
 
 ### Recettes d’apprentissage automatique prédéfinies
 
