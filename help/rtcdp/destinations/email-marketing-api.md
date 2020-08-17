@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création de destinations de marketing par e-mail
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d833257b4dffbf2a02ab4a3fc7a6a9e7347e7df5
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1610'
 ht-degree: 79%
 
 ---
@@ -55,7 +55,8 @@ Resources in [!DNL Experience Platform] can be isolated to specific virtual sand
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NRemarque] :
+>[!NOTE]
+>
 >For more information on sandboxes in [!DNL Experience Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
