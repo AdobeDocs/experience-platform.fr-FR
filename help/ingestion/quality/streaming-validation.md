@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming
 solution: Experience Platform
 title: Validation de l’ingestion par flux
 topic: overview
+description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '843'
 ht-degree: 82%
 
 ---
