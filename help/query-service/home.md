@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
+description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 28%
+source-wordcount: '627'
+ht-degree: 30%
 
 ---
 
@@ -38,7 +39,7 @@ Adobe Experience Platform [!DNL Segmentation Service] allows users to divide the
 
 ### Cas d’utilisation de Looker BI
 
-Avec l&#39;Adobe Experience Platform, vous pouvez ingérer, stocker, structurer et extraire tous les jeux de données stockés — y compris les données comportementales, CRM et de point de vente. En utilisant [!DNL Experience Platform's Query Service]ces jeux de données, vous pouvez requête sur ces jeux de données et répondre à des questions spécifiques sur l’entreprise, puis début générant des informations d’impact. La vidéo suivante montre l&#39;utilité de la création de tableaux de bord dans les outils de Business Intelligence (BI) à l&#39;aide de [!DNL Query Service].
+Adobe Experience Platform vous permet d&#39;assimiler, de stocker, de structurer et d&#39;extraire tous les jeux de données stockés, y compris les données comportementales, de gestion de la relation client et de point de vente. En utilisant [!DNL Experience Platform's Query Service]ces jeux de données, vous pouvez requête sur ces jeux de données et répondre à des questions spécifiques sur l’entreprise, puis début générant des informations d’impact. La vidéo suivante montre l&#39;utilité de la création de tableaux de bord dans les outils de Business Intelligence (BI) à l&#39;aide de [!DNL Query Service].
 
 >[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
 
