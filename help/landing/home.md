@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey
 solution: Experience Platform
 title: Présentation d’Adobe Experience Platform
 topic: getting started
+description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 translation-type: tm+mt
-source-git-commit: 99bee24a8b1a0a212424ca63464f7733adba2ba2
+source-git-commit: 4c3a947051c11860ab4f0f53b48d8f4bda8dc195
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 27%
+source-wordcount: '872'
+ht-degree: 31%
 
 ---
 
@@ -34,7 +35,7 @@ Les vidéos suivantes décrivent comment [!DNL Experience Platform] créer des e
 
 ## Prise en charge des navigateurs
 
-L’Adobe Experience Platform est conçu pour fonctionner de manière optimale dans les **dernières versions** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
+Le Adobe Experience Platform est conçu pour fonctionner de manière optimale dans les **dernières versions** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctions sur des versions plus anciennes des navigateurs.
 
 | Operating system (Système d’exploitation) | Navigateurs pris en charge |
 |---|---|
@@ -50,11 +51,11 @@ Ces systèmes d’exploitation et navigateurs ne sont pas pris en charge :
 
 ## Prise en charge des langues
 
-L’interface utilisateur et la documentation de l’Adobe Experience Platform sont disponibles en plusieurs langues.
+L’interface utilisateur et la documentation de Adobe Experience Platform sont disponibles en plusieurs langues.
 
 ### Langues de l’interface utilisateur
 
-L’interface utilisateur de l’Adobe Experience Platform est actuellement disponible dans les langues suivantes :
+L’interface utilisateur de Adobe Experience Platform est actuellement disponible dans les langues suivantes :
 
 * Anglais
 * Français
@@ -73,7 +74,7 @@ La langue de votre interface utilisateur par défaut est déterminée par la ré
 
 ### Langues de documentation
 
-La documentation de l&#39;Adobe Experience Platform est disponible en plusieurs langues. Pour modifier la langue, cliquez dans la liste déroulante des langues et sélectionnez la langue souhaitée.
+La documentation de Adobe Experience Platform est disponible en plusieurs langues. Pour modifier la langue, cliquez dans la liste déroulante des langues et sélectionnez la langue souhaitée.
 
 ![image](assets/lang.jpg)
 
@@ -110,30 +111,30 @@ Pour une visite rapide de l’interface [!DNL Experience Platform's] utilisateur
 
 ## Documents de référence et ressources
 
-* [**Notes **](../release-notes/latest/latest.md)<br/>de mise à jour Trouvez des informations sur la dernière[!DNL Experience Platform]version et passez en revue les versions antérieures.
+* [**Notes**](../release-notes/latest/latest.md)<br/> de mise à jour Trouvez des informations sur la dernière [!DNL Experience Platform] version et passez en revue les versions antérieures.
 
-*  [**Glossaire **](glossary.md)<br/> 
+*  [**Glossaire**](glossary.md)<br/> 
 Consultez la terminologie d’Adobe Experience Platform.
 
-*  [**Guide de dépannage **](troubleshooting.md)<br/> 
+*  [**Guide de dépannage**](troubleshooting.md)<br/> 
 Trouvez des solutions aux erreurs courantes et des réponses aux questions fréquentes.
 
-*  [**Principes de base des API **](api-fundamentals.md)<br/>[!DNL Platform] 
-Découvrez les concepts de base de l’utilisation des API de
+*  [**Principes de base des API**](api-fundamentals.md)<br/>[!DNL Platform] 
+Découvrez les concepts de base de l’utilisation des API de 
 
-* [**Référence **](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de l&#39;API[!DNL Experience Platform]APIDiscover, y compris les en-têtes, les paramètres, les exemples de requêtes et les réponses.*Ces documents sont hébergés sur Adobe I/O.*
+* [**Référence**](https://www.adobe.io/apis/experienceplatform/home/api-reference.html)<br/>de l&#39;API [!DNL Experience Platform] APIDiscover, y compris les en-têtes, les paramètres, les exemples de requêtes et les réponses. *Ces documents sont hébergés sur Adobe I/O.*
 
-## Ressources vidéo d&#39;intégration d&#39;Adobe Experience Platform
+## Ressources vidéo d’intégration Adobe Experience Platform
 
 [!DNL Experience Platform] utilise Application Services et [!DNL Intelligent Services] est basé sur [!DNL Experience Platform]les, pour plus d’informations, regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
 
-L&#39;un des principaux avantages de l&#39;Adobe Experience Platform est sa capacité à s&#39;intégrer à d&#39;autres services d&#39;Adobe existants. La vidéo suivante présente un aperçu de la manière dont [!DNL Experience Platform] les services s’intègrent aux [!DNL Experience Cloud] applications et fonctionnalités telles que Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library]et [!DNL Experience Platform Launch].
+L&#39;un des principaux avantages de Adobe Experience Platform est sa capacité à s&#39;intégrer à d&#39;autres services d&#39;Adobe existants. La vidéo suivante présente un aperçu de la manière dont [!DNL Experience Platform] les services s’intègrent à [!DNL Experience Cloud] des applications et fonctionnalités telles que Adobe Analytics, Adobe Target, Adobe Campaign, Adobe Experience Manager, [!DNL Customer Attributes], [!DNL Audience Library]et [!DNL Experience Platform Launch].
 
 >[!VIDEO](https://video.tv.adobe.com/v/32553?quality=12&learn=on)
 
-Pour plus d&#39;informations sur l&#39;architecture qui alimente l&#39;Adobe Experience Platform, regardez la vidéo suivante :
+Pour plus d&#39;informations sur l&#39;architecture qui alimente Adobe Experience Platform, regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
 
