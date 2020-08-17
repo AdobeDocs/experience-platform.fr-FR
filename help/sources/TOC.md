@@ -3,9 +3,9 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 2ee74c9ea0e4838eacfaba1b1e6b8aac7012f427
+source-git-commit: 18af4226c07cd7bc8a093aa4b1ce2b5f8f018cb6
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '616'
 ht-degree: 8%
 
 ---
@@ -194,4 +194,5 @@ ht-degree: 8%
    - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
    - [Surveiller les comptes et les flux de données](tutorials/ui/monitor.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
+- [Notifications d’exécution de flux](notifications.md)
 - [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
