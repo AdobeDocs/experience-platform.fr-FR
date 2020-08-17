@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 83%
 
 ---
@@ -39,9 +39,9 @@ Les attributs calculés incluent la création d’une expression ou « règle 
 
 Les cas d’utilisation des attributs calculés peuvent aller de calculs simples à des références très complexes. Voici quelques exemples de cas d’utilisation des attributs calculés :
 
-1. **[!UICONTROL Pourcentages]:**Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
-1. **[!UICONTROL Utilisation]de l&#39;application :**Un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures d’une application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
-1. **[!UICONTROL Valeurs]de durée de vie :**Il peut s’avérer très difficile de rassembler des totaux d’exécution, tels qu’une valeur d’achat à vie pour un client. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
+1. **[!UICONTROL Pourcentages]:** Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
+1. **[!UICONTROL Utilisation]de l&#39;application :** Un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures d’une application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
+1. **[!UICONTROL Valeurs]de durée de vie :** Il peut s’avérer très difficile de rassembler des totaux d’exécution, tels qu’une valeur d’achat à vie pour un client. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
 
 ## Configuration d’un attribut calculé
 
@@ -151,7 +151,7 @@ curl -X POST \
 | `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
 | `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
-| `expression.value` | expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
+| `expression.value` | Expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
 | `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 
 **Réponse**
@@ -472,7 +472,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
+| `{NEW_EXPRESSION_VALUE}` | Expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
 
 **Réponse**
 
@@ -482,8 +482,7 @@ Une mise à jour réussie renvoie un état HTTP 204 (No Content) et un corps de
 
 Il est également possible de supprimer un attribut calculé à l’aide de l’API. Vous pouvez effectuer ceci à l’aide d’une requête DELETE sur le point de terminaison `/config/computedAttributes` et inclure l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
->[!NRemarque]
->
+>[!NOTE]
 >
 >Soyez prudent lorsque vous supprimez un attribut calculé, car celui-ci peut être utilisé sur plusieurs schémas. Par ailleurs, l’opération DELETE ne peut pas être annulée.
 
