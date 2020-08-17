@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
 title: Invitation de données de parquet à partir d’un système d’enregistrement cloud tiers à l’aide de l’API Flow Service
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes d’assimilation des données de parquet d’un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1092'
 ht-degree: 15%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 15%
 
 # Envoi de données de parquet à partir d’un système d’enregistrement cloud tiers à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes d’assimilation des données de parquet provenant d’un système d’enregistrement cloud tiers.
 
@@ -372,7 +373,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la nouvelle con
 La dernière étape vers l&#39;assimilation de données sur le parquet à partir d&#39;un enregistrement Cloud tiers consiste à créer un flux de données. A l’heure actuelle, les valeurs requises suivantes sont préparées :
 
 - [ID de connexion source](#source)
-- [ID de connexion à la Cible](#target)
+- [ID de connexion à la cible](#target)
 
 Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
