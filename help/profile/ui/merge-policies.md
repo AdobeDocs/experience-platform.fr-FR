@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Guide d’utilisation des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1103'
 ht-degree: 84%
 
 ---
@@ -80,7 +80,8 @@ Vous pouvez modifier une stratégie de fusion existante depuis l’onglet *[!UIC
 
 Lorsque l’écran *[!UICONTROL Modifier la stratégie de fusion]* apparaît, vous pouvez apporter des modifications au *[!UICONTROL nom]*, au *[!UICONTROL schéma]*, au type de *[!UICONTROL combinaison d’identités]* et au type de *[!UICONTROL fusion d’attributs]* ainsi que sélectionner cette stratégie ou non comme *[!UICONTROL Stratégie de fusion par défaut]* pour votre organisation.
 
->[!NRemarque]
+>[!NOTE]
+>
 >Vous ne pouvez pas modifier l’identifiant de stratégie de fusion qui apparaît en haut de l’écran de modification. Il s’agit d’un identifiant en lecture seule généré par le système qui ne peut pas être modifié.
 
 ![](../images/merge-policies/edit-screen.png)
