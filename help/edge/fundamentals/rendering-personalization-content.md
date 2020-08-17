@@ -4,17 +4,17 @@ seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience P
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 24%
+source-wordcount: '237'
+ht-degree: 23%
 
 ---
 
 
 # Présentation des options de personnalisation
 
-L’Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris l’Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
+Le Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../../edge/solution-specific/target/flicker-management.md).
 
 ## Rendu automatique du contenu
 
@@ -40,15 +40,15 @@ Le rendu du contenu personnalisé est asynchrone. Il ne doit donc pas y avoir d�
 
 ## Rendu manuel du contenu
 
-Vous pouvez demander la liste des décisions à renvoyer comme promesse sur la `event` commande en utilisant `scopes`. Une portée est une chaîne qui permet à la solution de personnalisation de savoir quelle décision vous souhaitez prendre.
+Vous pouvez demander la liste des décisions à renvoyer en tant que promesse sur la `sendEvent` commande en spécifiant l&#39; `decisionScopes` option. Une portée est une chaîne qui permet à la solution de personnalisation de savoir quelle décision vous souhaitez prendre.
 
 ```javascript
 alloy("sendEvent",{
     xdm:{...},
-    scopes:['demo-1', 'demo-2']
+    decisionScopes:['demo-1', 'demo-2']
   }).then(function(result){
     if (result.decisions){
-      //do something with the decisions
+      // Do something with the decisions.
     }
   })
 ```
@@ -92,8 +92,8 @@ Cela renverra une liste de décisions en tant qu’objet JSON pour chaque décis
 
 >[!TIP]
 >
-> Si vous utilisez [!DNL Target] des étendues, vous obtenez des mBoxes sur le serveur, mais ce sont toutes des requêtes en même temps et non pas individuellement. La mbox globale est toujours envoyée.
+> Si vous utilisez [!DNL Target], les étendues deviennent des mBoxes sur le serveur, mais elles sont toutes demandées à la fois et non pas individuellement. La mbox globale est toujours envoyée.
 
 ### Récupérer le contenu automatique
 
-Si vous souhaitez que les `result.decisions` décisions de rendu automatique soient incluses, vous pouvez définir la valeur false `renderDecisions` et inclure la portée spéciale `__view__`.
+Si vous souhaitez que les décisions `result.decisions` de rendu automatique soient incluses et que l’option NOT have Alloy les génère automatiquement, vous pouvez définir `renderDecisions` sur `false`et inclure la portée spéciale `__view__`.
