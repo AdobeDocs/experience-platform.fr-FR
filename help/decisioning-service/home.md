@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;offer management;Offer Management;Journey;customer journey;journey;decision events;decision event;Decision events
 solution: Experience Platform
 title: Service de prise de décision
 topic: overview
+description: Le service de prise de décision vous offre la possibilité de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. À l’aide du service de prise de décision, vous pouvez déterminer la meilleure option depuis un ensemble de choix disponibles. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience web, des scripts de conversation et des actions à prendre.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 77%
+source-wordcount: '1648'
+ht-degree: 78%
 
 ---
 
