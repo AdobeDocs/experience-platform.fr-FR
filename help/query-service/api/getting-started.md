@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Guide de développement de Query Service
 topic: query templates
+description: Ce guide de développement décrit les étapes à suivre pour effectuer diverses opérations dans l’API Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 32%
+source-wordcount: '369'
+ht-degree: 35%
 
 ---
 
