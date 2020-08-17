@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Guide de dépannage d’Adobe Experience Platform Identity Service
 topic: troubleshooting
+description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 translation-type: tm+mt
-source-git-commit: 5d7e6387382e20b3e7f07070006b6d9d59ac47eb
+source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
 workflow-type: tm+mt
-source-wordcount: '2225'
+source-wordcount: '2248'
 ht-degree: 87%
 
 ---
