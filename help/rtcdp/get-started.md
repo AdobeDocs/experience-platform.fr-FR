@@ -1,10 +1,11 @@
 ---
+keywords: RTCDP;rtcdp
 title: Prise en main de la plateforme des données clients en temps réel d’Adobe
 seo-title: Prise en main de la plateforme des données clients en temps réel d’Adobe
 description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 seo-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 89%
