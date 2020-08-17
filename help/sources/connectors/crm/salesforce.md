@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
 solution: Experience Platform
 title: Connecteur Salesforce
 topic: overview
+description: L’Experience Platform prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. Salesforce prend en charge les fournisseurs de gestion de la relation client.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 14%
+source-wordcount: '199'
+ht-degree: 13%
 
 ---
 
@@ -18,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. La prise en charge des fournisseurs de gestion de la relation client comprend [!DNL Salesforce].
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
