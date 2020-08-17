@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segment;Segment;segment builder;Segment builder
 solution: Experience Platform
 title: Guide de l’utilisateur du créateur de segments de service de segmentation
 topic: ui guide
+description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: ab43c677ab45c7aa047a50049c0dd8613b003403
+source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 57%
+source-wordcount: '1723'
+ht-degree: 58%
 
 ---
 
@@ -86,7 +87,7 @@ For [!DNL Platform] audiences created using [!DNL Segment Builder], you are give
 
 Si des conflits surviennent lors de la conversion d’audiences en règles, [!DNL Segment Builder] tentera de préserver les options existantes au mieux de ses capacités.
 
-### vue de code
+### Vue de code
 
 Vous pouvez également vue une version basée sur un code d’une règle créée dans le [!DNL Segment Builder]. Une fois que vous avez créé votre règle dans le canevas du créateur de règles, vous pouvez sélectionner vue **[!UICONTROL de]** code pour voir votre segment comme étant PQL.
 
