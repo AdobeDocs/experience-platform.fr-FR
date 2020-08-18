@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: df6a6e20733953a0983bbfdf66ca2abc6f03e977
+source-git-commit: ac75b1858b6a731915bbc698107f0be6043267d8
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 41%
+source-wordcount: '1446'
+ht-degree: 38%
 
 ---
 
@@ -129,7 +129,7 @@ Le **[!UICONTROL seuil d’erreur]** vous permet de définir le pourcentage d’
 
 Adobe Experience Platform permet aux utilisateurs de télécharger les métadonnées des fichiers d’entrée. Les métadonnées seront conservées dans un délai [!DNL Platform] de 30 jours.
 
-### Fichiers d’entrée de Liste {#list-files}
+### Fichiers d’entrée de liste {#list-files}
 
 La requête suivante vous permet de vue une liste de tous les fichiers fournis dans un lot finalisé.
 
@@ -373,7 +373,7 @@ Si le lot ingéré comporte un schéma ou des en-têtes non valides, les erreurs
 
 ### Lignes non analysables {#unparsable}
 
-Si le lot ingéré comporte des lignes non analysables, les erreurs du lot seront stockées dans un fichier accessible à l’aide du point de terminaison décrit ci-dessous.
+Si le lot que vous avez assimilé contient des lignes non analysables, vous pouvez utiliser le point de terminaison suivant pour vue une liste de fichiers contenant des erreurs.
 
 **Format d’API**
 
@@ -397,15 +397,48 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails des lignes non analysables.
+Une réponse réussie renvoie l’état HTTP 200 avec une liste des fichiers qui contiennent des erreurs.
 
 ```json
 {
-    "_corrupt_record": "{missingQuotes:"v1"}",
+    "data": [
+        {
+            "name": "conversion_errors_0.json",
+            "length": "1162",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fconversion_errors_0.json"
+                }
+            }
+        },
+        {
+            "name": "parsing_errors_0.json",
+            "length": "153",
+            "_links": {
+                "self": {
+                    "href": "https://platform.adobe.io:443/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors%2Fparsing_errors_0.json"
+                }
+            }
+        }
+    ],
+    "_page": {
+        "limit": 100,
+        "count": 2
+    }
+}
+```
+
+Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l’aide du point de terminaison [de récupération des](#retrieve-metadata)métadonnées.
+
+Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d’erreur :
+
+```json
+{
+    "_corrupt_record": "{missingQuotes: "v1"}",
     "_errors": [{
-         "code": "1401",
-         "message": "Row is corrupted and cannot be read, please fix and resend."
+        "code": "1401",
+        "message": "Row is corrupted and cannot be read, please fix and resend."
     }],
-    "_filename": "a1.json"
+    "_filename": "parsing_errors_0.json"
 }
 ```
