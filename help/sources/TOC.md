@@ -3,10 +3,10 @@ product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 8%
+source-wordcount: '619'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 8%
 - [Présentation des connecteurs source](home.md)
 - Connecteurs source disponibles {#connectors}
    - Applications Adobe {#adobe-applications}
+      - [Connecteur de données des classifications Analytics](connectors/adobe-applications/classifications.md)
       - [Connecteur de données Analytics](connectors/adobe-applications/analytics.md)
       - [Connecteur d’Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connecteur d’attributs du client](connectors/adobe-applications/customer-attributes.md)
@@ -133,6 +134,7 @@ ht-degree: 8%
 - Didacticiels sur l’interface utilisateur {#ui-tutorials}
    - Création d’un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
+         - [Connecteur de données de classifications Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Connecteur Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
          - [Connecteur Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Connecteur d’attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
