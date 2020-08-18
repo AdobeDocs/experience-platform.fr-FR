@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un connecteur source Adobe Analytics dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 0479f5097b530dd97e28474d8e5eb832e5e44e5a
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 15%
+source-wordcount: '768'
+ht-degree: 16%
 
 ---
 
@@ -30,13 +30,13 @@ Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie des applications *d’* Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
+Sous la catégorie des applications **[!UICONTROL d’]** Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Sélectionner des données
 
-L’étape *Adobe Analytics* s’affiche. Les flux de jeux de données précédemment établis pour Analytics sont répertoriés dans cet écran. Vous pouvez créer un flux de jeux de données en cliquant sur **[!UICONTROL Sélectionner les données]**.
+L’étape **[!UICONTROL Adobe Analytics]** s’affiche. Les flux de jeux de données précédemment établis pour Analytics sont répertoriés dans cet écran. Vous pouvez créer un flux de jeux de données en cliquant sur **[!UICONTROL Sélectionner les données]**.
 
 >[!NOTE]
 >
@@ -52,22 +52,22 @@ Dans la liste des suites de rapports disponibles, sélectionnez celle que vous s
 
 ### Nommer votre flux de données
 
-L’étape détaillée *du flux de* jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Sélectionnez **[UICONTROL ! Suivant]** lorsque terminé.
+L’étape détaillée **[!UICONTROL du flux de]** jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Vérifier le flux de vos jeux de données
 
-L’étape *Révision* s’affiche, ce qui vous permet de revoir votre nouveau flux de jeux de données liés à Analytics avant de le créer. Les détails de la connexion sont regroupés par catégorie, notamment :
+L’étape **[!UICONTROL Révision]** s’affiche, ce qui vous permet de revoir votre nouveau flux de jeux de données liés à Analytics avant de le créer. Les détails de la connexion sont regroupés par catégorie, notamment :
 
-* *Connexion*: Affiche le type de connexion source et la suite de rapports sélectionnée.
-* *Attribuer des champs* de jeu de données et de mappage : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Le schéma de sortie et le jeu de données sont automatiquement configurés pour les flux de jeux de données Analytics.
+* **[!UICONTROL Connexion]**: Affiche le type de connexion source et la suite de rapports sélectionnée.
+* **[!UICONTROL Attribuer des champs]** de jeu de données et de mappage : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Le schéma de sortie et le jeu de données sont automatiquement configurés pour les flux de jeux de données Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Surveiller le flux de vos jeux de données
 
-Une fois le flux de votre jeu de données créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran *Catalogue* , sélectionnez Flux *de* données pour vue d’une liste de flux établis associés à votre compte Analytics.
+Une fois le flux de votre jeu de données créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran **[!UICONTROL Catalogue]** , sélectionnez Flux **[!UICONTROL de]** données pour vue d’une liste de flux établis associés à votre compte Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
