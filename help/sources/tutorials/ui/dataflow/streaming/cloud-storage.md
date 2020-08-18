@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de flux continu d’enregistrement cloud dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 168ac3a3ab9f475cb26dc8138cbc90a3e35c836d
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 12%
+source-wordcount: '667'
+ht-degree: 7%
 
 ---
 
@@ -20,10 +20,10 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+- [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de Schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+   - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
+- [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 De plus, ce didacticiel nécessite que vous ayez déjà créé un connecteur d’enregistrement de cloud. Vous trouverez une liste de didacticiels pour la création de différents connecteurs d’enregistrement de cloud dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../../home.md)source.
 
@@ -35,7 +35,7 @@ Après avoir créé votre connecteur d’enregistrement de cloud, l’étape *S�
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape *Mappage* s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données.
+L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez soit utiliser un jeu de données existant, soit en créer un nouveau.
 
@@ -45,7 +45,7 @@ Pour importer des données dans un jeu de données existant, sélectionnez **[!U
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/use-existing-data.png)
 
-The _Select dataset_ dialog appears. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
+The **[!UICONTROL Select dataset]** dialog appears. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-existing-data.png)
 
@@ -57,7 +57,7 @@ Pour importer des données dans un nouveau jeu de données, sélectionnez **[!UI
 
 ## Nommer votre flux de données
 
-L’étape de détail ** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
+L’étape de détail **** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
 
 Fournissez des valeurs pour le flux de données et cliquez sur **[!UICONTROL Suivant]**.
 
@@ -65,10 +65,10 @@ Fournissez des valeurs pour le flux de données et cliquez sur **[!UICONTROL Sui
 
 ### Vérifier votre flux de données
 
-L’étape *Révision* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Révision]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-- *[!UICONTROL Détails]* de la source : Affiche le type de source et d’autres détails pertinents sur la source.
-- *[!UICONTROL Détails]* de la Cible : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- **[!UICONTROL Détails]** de la source : Affiche le type de source et d’autres détails pertinents sur la source.
+- **[!UICONTROL Détails]** de la cible : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
@@ -82,8 +82,8 @@ Une fois le flux de données de votre enregistrement cloud créé, vous pouvez s
 
 En suivant ce didacticiel, vous avez réussi à créer un flux de données pour importer des données à partir d’un enregistrement cloud externe et à mieux comprendre la surveillance des jeux de données. Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
 
-- [Présentation du profil client en temps réel](../../../../../profile/home.md)
-- [Présentation de Data Science Workspace](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] aperçu](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] aperçu](../../../../../data-science-workspace/home.md)
 
 ## Annexe
 
@@ -91,13 +91,13 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 ### Désactivation d’un flux de données
 
-Lorsqu’un flux de données est créé, il devient immédiatement actif et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données actif à tout moment en suivant les instructions ci-dessous.
+Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données principal à tout moment en suivant les instructions ci-dessous.
 
-Dans l’espace de travail *[!UICONTROL Sources]* , cliquez sur l’onglet **[!UICONTROL Parcourir]** . Cliquez ensuite sur le nom de la connexion de base associée au flux de données actif que vous souhaitez désactiver.
+Dans l’espace de travail **[!UICONTROL Sources]** , cliquez sur l’onglet **[!UICONTROL Parcourir]** . Cliquez ensuite sur le nom de la connexion associée au flux de données principal que vous souhaitez désactiver.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/browse.png)
 
-La page activité ** source s&#39;affiche. Sélectionnez le flux de données actif dans la liste pour ouvrir sa colonne *Propriétés* sur le côté droit de l&#39;écran, qui contient un bouton d&#39;activation **** de la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
+La page activité **** source s&#39;affiche. Sélectionnez le flux de données principal dans la liste pour ouvrir sa colonne **[!UICONTROL Propriétés]** sur le côté droit de l&#39;écran, qui contient un bouton d&#39;activation **** de la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/streaming/disable-source.png)
 
