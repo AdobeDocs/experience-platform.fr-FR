@@ -5,7 +5,7 @@ seo-title: Espace de travail des destinations
 description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: ac9c629e8c83d3e056ba94b30d978edbda274923
 workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 61%
@@ -41,7 +41,7 @@ Les cartes de destination contiennent un contrôle **[!UICONTROL Configurer]** o
 | [!UICONTROL Configuration] | Permet de créer une connexion à la destination. |
 | [!UICONTROL Activer] | Une fois que vous avez établi une connexion à la destination, vous pouvez activer des segments. |
 | [!UICONTROL Compte vue] | Vue des comptes que vous avez connectés pour une destination. |
-| [!UICONTROL Flux de données de vue] | Vue des flux d’activation de données qui existent pour une destination |
+| [!UICONTROL Flux de données de vue] | Vue des flux d’activation de données qui existent pour une destination. |
 | [!UICONTROL Documentation sur la vue] | Ouvre un lien vers la page de documentation de cette destination spécifique, pour plus d’informations et pour vous aider à la configurer. |
 
 ![Contrôles sur la carte de destination](/help/rtcdp/destinations/assets/destination-card-options.png)
