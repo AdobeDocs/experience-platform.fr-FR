@@ -4,10 +4,10 @@ seo-title: Extension TMMData
 description: L’extension TMMData est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: L’extension TMMData est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: be4cf64c89a189a09a4a7774c8fadc76c6ee8458
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 86%
+source-wordcount: '568'
+ht-degree: 81%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 86%
 
 ## Présentation {#overview}
 
-[!DNL TMMData's] La plate-forme Foundation for Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder et fusionner toutes leurs sources de données essentielles - y compris les données internes/externes et en ligne/hors ligne - pour une analyse intercanal sûre et complète, avec la configuration automatisée des campagnes et les importations directes vers les Adobes et autres outils d&#39;analyse et de BI.
+[!DNL TMMData's] La plate-forme Foundation for Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder et fusionner toutes leurs sources de données essentielles - y compris les données internes/externes et en ligne/hors ligne - afin de garantir une analyse croisée des canaux fiable et complète, avec une configuration de campagne automatisée et des importations directes vers l&#39;Adobe et d&#39;autres outils d&#39;analyse et de BI.
 
 [!DNL TMMData] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
@@ -36,7 +36,7 @@ Pour installer l’ [!DNL TMMData] extension :
 
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
-3. Cliquez sur la destination pour la mettre en surbrillance, puis sélectionnez **[!UICONTROL Installer l’extension]** dans le rail droit. Si la commande **[!UICONTROL Installer l’extension]** est grisée, vous ne disposez pas de l’autorisation **[!UICONTROL manage_properties]**. Voir les [Conditions préalables](#prerequisites).
+3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Voir les [Conditions préalables](#prerequisites).
 4. Dans la fenêtre **[!UICONTROL Sélectionner la propriété Launch disponible]**, sélectionnez la propriété Launch dans laquelle vous souhaitez installer l’extension. Vous pouvez aussi créer une nouvelle propriété dans Launch. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de Launch.
 5. Le workflow vous redirige vers Launch pour terminer l’installation.
 
