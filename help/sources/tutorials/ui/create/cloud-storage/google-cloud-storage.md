@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un connecteur source Google Cloud Storage dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 16%
+source-wordcount: '537'
+ht-degree: 10%
 
 ---
 
@@ -20,12 +20,12 @@ Les connecteurs source de Adobe Experience Platform permettent d’importer des 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-* [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une connexion de base GCS, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/batch/cloud-storage.md).
+Si vous disposez déjà d’une connexion GCS valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/batch/cloud-storage.md).
 
 ### Formats de fichiers pris en charge
 
@@ -37,25 +37,32 @@ Si vous disposez déjà d’une connexion de base GCS, vous pouvez ignorer le re
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à vos données GCS sur [!DNL Platform], vous devez fournir un identifiant **de clé d&#39;** accès GCS valide et un **secret**. Vous pouvez en savoir plus sur la manière d’obtenir ces valeurs en lisant le guide <a href="https://cloud.google.com/docs/authentication/production" target="_blank">d’authentification</a> serveur à serveur pour [!DNL Google Cloud].
+Pour accéder à vos données GCS sur [!DNL Platform], vous devez fournir les valeurs suivantes :
 
-## Connecter votre compte GCS
+| Informations d’identification | Description |
+| ---------- | ----------- |
+| ID de clé d&#39;accès | ID de clé d’accès du [!DNL Google Cloud Storage] compte. |
+| Clé d&#39;accès secrète | Le secret client du [!DNL Google Cloud Storage] compte. |
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un nouveau compte GCS auquel vous connecter [!DNL Platform].
+Pour plus d&#39;informations sur la prise en main, reportez-vous au guide [d&#39;authentification](https://cloud.google.com/docs/authentication/production) serveur à serveur pour [!DNL Google Cloud Storage].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Sources]* . L’écran *[!UICONTROL Catalogue]* affiche diverses sources pour lesquelles vous pouvez créer un compte entrant et chaque source affiche le nombre de comptes et de flux de données existants qui y sont associés.
+## Connecter votre [!DNL Google Cloud Storage] compte
+
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte GCS à [!DNL Platform].
+
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]** . L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie *[!UICONTROL Bases de données]* , sélectionnez Enregistrement **** Google Cloud suivi de données **** Ajoutées pour créer un nouveau connecteur GCS.
+Sous la catégorie **[!UICONTROL Bases de données]** , sélectionnez Enregistrement **** Google Cloud. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur GCS.
 
 ![catalogue](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-La page *[!UICONTROL Se connecter à l’Enregistrement]* Google Cloud s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à l’Enregistrement]** Google Cloud s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez le nom de la connexion, une description facultative et vos informations d’identification GCS. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un certain temps à l’établissement du nouveau compte.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification GCS. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un peu de temps à la nouvelle connexion pour établir.
 
 ![connecter](../../../../images/tutorials/create/google-cloud-storage/connect.png)
 
@@ -67,4 +74,4 @@ Pour connecter un compte existant, sélectionnez le compte GCS avec lequel vous 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/batch/cloud-storage.md).
+En suivant ce didacticiel, vous avez établi une connexion à votre compte GCS. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer [!DNL Platform]](../../dataflow/batch/cloud-storage.md)les données de votre enregistrement cloud.
