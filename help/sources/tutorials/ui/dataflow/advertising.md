@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: d80622aaa8408d640a1a80b6a37f4083344e7fa1
+source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 6%
+source-wordcount: '1272'
+ht-degree: 4%
 
 ---
 
@@ -20,10 +20,10 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+- [[!DNL Experience Data Model] (XDM) Système](../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Real-time Customer Profile](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[ !Profil client en temps réel DNL]](../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 De plus, ce didacticiel nécessite que vous ayez déjà créé un compte publicitaire. Vous trouverez une liste de didacticiels pour la création de différents connecteurs de paiement dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../home.md)source.
 
@@ -106,20 +106,20 @@ Une fois que vous avez fourni les valeurs appropriées à la planification, sél
 
 ## Fournir des détails sur le flux de données
 
-L’étape de détail ** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
+L’étape de détail **** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
 
-Au cours de ce processus, vous pouvez également activer les tests de diagnostic *[!UICONTROL d&#39;assimilation]* *[!UICONTROL partielle et d&#39;]* erreur. Enabling *[!UICONTROL Partial ingestion]* provides the ability to ingest data containing errors up to a certain threshold. Une fois l&#39;assimilation ** partielle activée, faites glisser le seuil d&#39; *[!UICONTROL erreur %]* pour ajuster le seuil d&#39;erreur du lot. Vous pouvez également ajuster manuellement le seuil en sélectionnant la zone d’entrée. Pour plus d&#39;informations, consultez la présentation [de l&#39;assimilation](../../../../ingestion/batch-ingestion/partial.md)partielle des lots.
+Au cours de ce processus, vous pouvez également activer les tests de diagnostic **[!UICONTROL d&#39;assimilation]** **[!UICONTROL partielle et d&#39;]** erreur. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Une fois l&#39;assimilation **** partielle activée, faites glisser le seuil d&#39; **[!UICONTROL erreur %]** pour ajuster le seuil d&#39;erreur du lot. Vous pouvez également ajuster manuellement le seuil en sélectionnant la zone d’entrée. Pour plus d&#39;informations, consultez la présentation [de l&#39;assimilation](../../../../ingestion/batch-ingestion/partial.md)partielle des lots.
 Fournissez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
 
 ![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
 
 ## Vérifier votre flux de données
 
-L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Révision]** s’affiche, vous permettant de vérifier votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-- *[!UICONTROL Connexion]*: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
-- *[!UICONTROL Attribuer des champs]* de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
-- *[!UICONTROL Planification]*: Indique la principale période, fréquence et intervalle du calendrier d&#39;assimilation.
+- **[!UICONTROL Connexion]**: Indique le type de source, le chemin d’accès approprié du fichier source choisi et le nombre de colonnes qu’il contient.
+- **[!UICONTROL Attribuer des champs]** de jeu de données et de mappage : Affiche le jeu de données dans lequel les données source sont ingérées, y compris le schéma auquel le jeu de données adhère.
+- **[!UICONTROL Planification]**: Indique la principale période, fréquence et intervalle du calendrier d&#39;assimilation.
 
 Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
 
@@ -131,7 +131,7 @@ Une fois le flux de données créé, vous pouvez surveiller les données ingér�
 
 ## Supprimer votre flux de données
 
-Vous pouvez supprimer des flux de données qui ne sont plus nécessaires ou qui ont été créés incorrectement à l’aide de la fonction *[!UICONTROL Supprimer]* disponible dans l’espace de travail *[!UICONTROL Flux de données]* . Pour plus d&#39;informations sur la suppression de flux de données, consultez le didacticiel sur la [suppression de flux de données dans l&#39;interface utilisateur](../delete.md).
+Vous pouvez supprimer des flux de données qui ne sont plus nécessaires ou qui ont été créés incorrectement à l’aide de la fonction **[!UICONTROL Supprimer]** disponible dans l’espace de travail **[!UICONTROL Flux de données]** . Pour plus d&#39;informations sur la suppression de flux de données, consultez le didacticiel sur la [suppression de flux de données dans l&#39;interface utilisateur](../delete.md).
 
 ## Étapes suivantes
 
@@ -148,11 +148,11 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données principal à tout moment en suivant les instructions ci-dessous.
 
-Dans l’écran *[!UICONTROL Flux de données]* , sélectionnez le nom du flux de données que vous souhaitez désactiver.
+Dans l’écran **[!UICONTROL Flux de données]** , sélectionnez le nom du flux de données que vous souhaitez désactiver.
 
 ![browse-dataset-flow](../../../images/tutorials/dataflow/advertising/view-dataset-flows.png)
 
-La colonne *[!UICONTROL Propriétés]* s’affiche à droite de l’écran. Ce panneau contient un bouton **[!UICONTROL Activer]** la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
+La colonne **[!UICONTROL Propriétés]** s’affiche à droite de l’écran. Ce panneau contient un bouton **[!UICONTROL Activer]** la bascule. Cliquez sur la bascule pour désactiver le flux de données. La même bascule peut être utilisée pour réactiver un flux de données après sa désactivation.
 
 ![disable](../../../images/tutorials/dataflow/advertising/disable.png)
 
