@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un connecteur source Amazon dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 17%
+source-wordcount: '461'
+ht-degree: 9%
 
 ---
 
@@ -23,12 +23,12 @@ Les connecteurs source de Adobe Experience Platform permettent d’importer des 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+- [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [Real-time Customer Profile](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’un [!DNL Kinesis] compte, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage.md).
+Si vous disposez déjà d’une [!DNL Kinesis] connexion valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage.md).
 
 ### Collecte des informations d’identification requises
 
@@ -40,19 +40,21 @@ Pour authentifier votre connecteur [!DNL Kinesis] source, vous devez fournir des
 | `Secret access key` | Clé d’accès secrète pour votre [!DNL Kinesis] compte. |
 | `region` | Région de votre serveur AWS. |
 
-Pour plus d’informations sur ces valeurs, consultez [ce document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html)Kinesis.
+Pour plus d&#39;informations sur ces valeurs, consultez [ [!DNL Kinesis] ce document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Connecter votre [!DNL Kinesis] compte
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre [!DNL Kinesis] compte à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail *Sources* . L’onglet *Catalogue* affiche diverses sources auxquelles il est possible de se connecter [!DNL Platform]. Chaque source affiche le nombre de comptes existants qui lui sont associés.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]** . L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
-Sous *[!UICONTROL Cloud Enregistrement]* catégorie, sélectionnez **[!UICONTROL Amazon Kinesis]** suivi de données **** Ajoutées pour créer un nouveau [!DNL Kinesis] connecteur.
+Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
+
+Sous la catégorie Enregistrement **** Cloud, sélectionnez **[!UICONTROL Amazon]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau [!DNL Kinesis] connecteur.
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-La boîte de dialogue *[!UICONTROL Se connecter à Amazon]* s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La boîte de dialogue **[!UICONTROL Se connecter à Amazon]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
@@ -68,4 +70,4 @@ Pour connecter un compte existant, sélectionnez le [!DNL Kinesis] compte auquel
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous vous êtes connecté à votre [!DNL Kinesis] compte [!DNL Platform]. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données afin d’importer des données de votre enregistrement cloud dans la plate-forme](../../dataflow/streaming/cloud-storage.md).
+En suivant ce didacticiel, vous vous êtes connecté à votre [!DNL Kinesis] compte [!DNL Platform]. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)les données de votre enregistrement cloud.
