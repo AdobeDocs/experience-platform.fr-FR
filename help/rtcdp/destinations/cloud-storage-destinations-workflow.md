@@ -4,10 +4,10 @@ seo-title: Processus des destinations de stockage dans le cloud
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 570c627672439a5ee0f4215b7bf7915ec3dd2bb3
+source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 65%
+source-wordcount: '530'
+ht-degree: 60%
 
 ---
 
@@ -18,9 +18,13 @@ ht-degree: 65%
 
 Cette page explique comment se connecter aux emplacements de stockage dans le cloud dans la plateforme des données clients en temps réel d’Adobe.
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
 
    ![Connexion à la destination de stockage dans le cloud](/help/rtcdp/destinations/assets/connect-cloud-destination.png)
+
+   >[!NOTE]
+   >
+   >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
 2. À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. <br> Voir destination, [destination,](/help/rtcdp/destinations/amazon-s3-destination.md) destination et destination [!DNL Amazon Kinesis](/help/rtcdp/destinations/amazon-kinesis-destination.md) SFTP [!DNL Azure Event Hubs](/help/rtcdp/destinations/azure-event-hubs-destination.md) Amazon S3 [pour en savoir plus sur les informations d’identification saisies à l’étape](/help/rtcdp/destinations/sftp-destination.md) **Authentification.**
 
@@ -40,11 +44,11 @@ Pour les destinations Amazon S3, insérez le **[!UICONTROL Nom du compartiment]*
 
    ![Connexion à la destination de stockage dans le cloud SFTP : étape d’authentification](/help/rtcdp/destinations/assets/sftp-destinations-setup-step.png)
 
-   Pour [!DNL Amazon Kinesis] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+   Pour [!DNL Amazon Kinesis] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
    ![Connexion à la destination de l&#39;enregistrement cloud Kinesis - étape d&#39;authentification](/help/rtcdp/destinations/assets/kinesis-destinations-setup-step.png)
 
-   Pour [!DNL Azure Event Hubs] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
+   Pour [!DNL Azure Event Hubs] les destinations, indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. adobe Le CDP en temps réel exportera les données dans ce flux. Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
    ![Connexion à la destination de l&#39;enregistrement cloud Kinesis - étape d&#39;authentification](/help/rtcdp/destinations/assets/eventhubs-destinations-setup-step.png)
 
