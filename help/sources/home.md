@@ -5,10 +5,10 @@ title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: 88f999691cde2fbebdf23f940f6d48acdfb188e3
 workflow-type: tm+mt
-source-wordcount: '846'
-ht-degree: 61%
+source-wordcount: '863'
+ht-degree: 60%
 
 ---
 
@@ -31,6 +31,8 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 - [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Création d’un connecteur source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Présentation du connecteur de données Classifications Adobe Analytics](connectors/adobe-applications/classifications.md)
+- [Création d’un connecteur de source de données de classifications Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Présentation du connecteur de données Adobe Analytics](connectors/adobe-applications/analytics.md)
 - [Création d’un connecteur source Adobe Analytics dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Création d’un connecteur source Attributs du client dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/customer-attributes.md)
