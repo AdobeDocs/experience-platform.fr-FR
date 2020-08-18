@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’un connecteur source d’attributs du client dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 999ff0e9525d7d9f67298862c68bb59ddc35e558
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 10%
+source-wordcount: '352'
+ht-degree: 9%
 
 ---
 
@@ -34,7 +34,7 @@ L&#39;écran activité ** source liste toutes les connexions précédemment éta
 
 ![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
 
-Dans la liste des jeux de données de profil d&#39;attributs du client disponibles, sélectionnez celui que vous souhaitez importer dans Plateforme et cliquez sur **Suivant**.
+Dans la liste des jeux de données de profil d&#39;attributs du client disponibles, sélectionnez celui dans lequel vous souhaitez importer [!DNL Platform] et cliquez sur **Suivant**.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ L’étape *Révision* s’affiche, vous permettant de vérifier votre nouvelle 
 
 ## Étapes suivantes
 
-Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’assimilation initiale terminée, les données du profil des attributs du client peuvent être utilisées par les services de plateforme en aval tels que Profil client en temps réel et service de segmentation. Pour plus d’informations, voir les documents suivants :
+Une fois la connexion créée, un schéma et un jeu de données cibles sont automatiquement créés pour contenir les données entrantes. Une fois l’assimilation initiale terminée, les données du profil des attributs du client peuvent être utilisées par [!DNL Platform] les services en aval, tels que [!DNL Real-time Customer Profile] et [!DNL Segmentation Service]. Pour plus d’informations, voir les documents suivants :
 
-* [Présentation du profil client en temps réel](../../../../../profile/home.md)
-* [Présentation du service de segmentation](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] aperçu](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] aperçu](../../../../../segmentation/home.md)
