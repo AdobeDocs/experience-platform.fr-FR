@@ -5,10 +5,10 @@ title: Configuration d’un flux de données pour un connecteur CRM dans l’int
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte CRM.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 6%
+source-wordcount: '1353'
+ht-degree: 4%
 
 ---
 
@@ -21,10 +21,10 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+* [[!DNL Experience Data Model] (XDM) Système](../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-* [Real-time Customer Profile](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[ !Profil client en temps réel DNL]](../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 En outre, ce didacticiel nécessite que vous ayez déjà créé un compte CRM. Vous trouverez une liste de didacticiels pour la création de différents connecteurs CRM dans l’interface utilisateur dans la présentation [des connecteurs](../../../home.md)source.
 
@@ -156,7 +156,7 @@ Les sections suivantes fournissent des informations supplémentaires sur l’uti
 
 Lorsqu’un flux de données est créé, il devient immédiatement principal et ingère les données selon le planning qu’il a reçu. Vous pouvez désactiver un flux de données principal à tout moment en suivant les instructions ci-dessous.
 
-Dans l’écran *[!UICONTROL d’authentification]* , sélectionnez le nom de la connexion de base associée au flux de données que vous souhaitez désactiver.
+Dans l’écran *[!UICONTROL d’authentification]* , sélectionnez le nom de la connexion associée au flux de données que vous souhaitez désactiver.
 
 ![](../../../images/tutorials/dataflow/crm/monitor.png)
 
