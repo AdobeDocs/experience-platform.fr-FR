@@ -4,10 +4,10 @@ seo-title: Destinations de marketing par e-mail
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 6850a1ee5a578a3dccce9f9decd8f6a368705f4a
+source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
 workflow-type: tm+mt
-source-wordcount: '800'
-ht-degree: 48%
+source-wordcount: '799'
+ht-degree: 47%
 
 ---
 
@@ -22,9 +22,9 @@ La connexion aux destinations de marketing par e-mail est un processus en trois 
 
 Dans le flux de connexion à la destination, décrit dans la section ci-dessous, connectez-vous à Amazon S3 ou SFTP. La plateforme CDP en temps réel exporte vos segments sous forme de fichiers `.csv` ou `.txt` et les diffuse sur l’emplacement de votre choix. Planifiez l’importation des données dans la plateforme de marketing par e-mail à partir de l’emplacement de stockage activé dans la plateforme CDP en temps réel. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles de destinations individuelles.
 
-## Étape 1 - Se connecter à la destination {#connect-destination}
+## Étape 1 - Configuration de la destination {#connect-destination}
 
-1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Connect destination]**.
+1. In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Configure]**.
 
    ![Se connecter à la destination](/help/rtcdp/destinations/assets/connect-email-marketing.png)
 
