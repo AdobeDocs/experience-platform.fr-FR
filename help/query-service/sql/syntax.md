@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Syntaxe SQL
 topic: syntax
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 98%
+source-wordcount: '1973'
+ht-degree: 97%
 
 ---
 
@@ -463,3 +463,22 @@ where transaction_mode is one of:
     ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
     READ WRITE | READ ONLY
 ```
+
+### COPIER
+
+Cette commande permet de vider la sortie de toute requête SELECT vers un emplacement spécifié. L&#39;utilisateur doit avoir accès à cet emplacement pour que cette commande réussisse.
+
+```
+COPY  query
+    TO '%scratch_space%/folder_location'
+    [  WITH FORMAT 'format_name']
+
+where 'format_name' is be one of:
+    'parquet', 'csv', 'json'
+
+'parquet' is the default format.
+```
+
+>[!NOTE]
+>
+>Le chemin de sortie complet sera `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
