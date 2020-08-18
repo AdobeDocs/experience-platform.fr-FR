@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Fonctions Spark SQL
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: a98e31f57c6ff4fc49d8d8f64441a6e1e18d89da
+source-git-commit: a10508770a862621403bad94c14db4529051020c
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 99%
+source-wordcount: '4996'
+ht-degree: 97%
 
 ---
 
@@ -24,17 +24,18 @@ Référence : [documentation des fonctions Spark SQL](https://spark.apache.org/
 
 ## Catégories
 
-- [Fonctions et opérateurs mathématiques et statistiques](#math-and-statistical-operators-and-functions)
+- [Fonctions et opérateurs mathématiques et statistiques](#math)
 - [Opérateurs logiques](#logical-operators)
-- [Fonctions de date/heure](#date/time-functions)
+- [Fonctions de date/heure](#datetime-functions)
 - [Fonctions d’agrégation](#aggregate-functions)
 - [Tableaux](#arrays)
-- [Fonctions de diffusion du type de données](#datatype-casting-functions)
-- [Fonctions de conversion et de formatage](#conversion-and-formatting-functions)
+- [Fonctions de diffusion du type de données](#datatype-casting)
+- [Fonctions de conversion et de formatage](#conversion)
 - [Évaluation des données](#data-evaluation)
 - [Informations actuelles](#current-information)
+- [Fonctions d&#39;ordre supérieur](#higher-order)
 
-### Fonctions et opérateurs mathématiques et statistiques
+### Fonctions et opérateurs mathématiques et statistiques {#math}
 
 #### Modulo
 
@@ -745,7 +746,7 @@ Exemple :
 
 `variance(expr)` : renvoie la variance d’échantillon calculée à partir des valeurs d’un groupe.
 
-### Opérateurs logiques
+### Opérateurs logiques {#logical-operators}
 
 #### Logical not
 
@@ -1008,7 +1009,7 @@ Exemple :
  true
 ```
 
-### Fonctions de date/heure
+### Fonctions de date/heure {#datetime-functions}
 
 #### add_months
 
@@ -1426,13 +1427,13 @@ Exemple :
 
 Depuis : 1.5.0
 
-### Fonctions d’agrégation
+### Fonctions d’agrégation {#aggregate-functions}
 
 #### approx_count_distinct
 
 `approx_count_distinct(expr[, relativeSD])` : renvoie la cardinalité estimée par HyperLogLog++. `relativeSD` définit l’erreur d’estimation maximale autorisée.
 
-### Tableaux
+### Tableaux {#arrays}
 
 #### array
 
@@ -1810,7 +1811,7 @@ Exemples :
 
 Depuis : 2.4.0
 
-### Fonctions de diffusion du type de données
+### Fonctions de diffusion du type de données {#datatype-casting}
 
 #### bigint
 
@@ -1895,7 +1896,7 @@ Exemples :
 
 `tinyint(expr)` : diffuse la valeur `expr` vers le type de données cibles `tinyint`.
 
-### Fonctions de conversion et de formatage
+### Fonctions de conversion et de formatage {#conversion}
 
 #### ascii
 
@@ -2404,7 +2405,7 @@ Exemple :
 >
 >La fonction  est non déterministe.
 
-### Évaluation des données
+### Évaluation des données {#data-evaluation}
 
 #### coalesce
 
@@ -2997,7 +2998,7 @@ Exemple :
  cc
 ```
 
-### Informations actuelles
+### Current information {#current-information}
 
 #### current_database
 
@@ -3027,3 +3028,65 @@ Depuis : 1.5.0
 `now()` : renvoie l’horodatage actuel au début de l’évaluation de requête.
 
 Depuis : 1.5.0
+
+### Fonctions d&#39;ordre supérieur {#higher-order}
+
+#### transformer
+
+`transform(array, lambdaExpression): array`
+
+Transformez les éléments d&#39;un tableau à l&#39;aide de la fonction.
+
+S&#39;il existe deux arguments pour la fonction lambda, le second argument signifie l&#39;index de l&#39;élément.
+
+Exemple :
+
+```
+> SELECT transform(array(1, 2, 3), x -> x + 1);
+  [2,3,4]
+> SELECT transform(array(1, 2, 3), (x, i) -> x + i);
+  [1,3,5]
+```
+
+
+#### existe
+
+`exists(array, lambdaExpression returning Boolean): Boolean`
+
+Vérifiez si un prédicat contient un ou plusieurs éléments du tableau.
+
+Exemple :
+
+```
+> SELECT exists(array(1, 2, 3), x -> x % 2 == 0);
+  true
+```
+
+#### filtrer
+
+`filter(array, lambdaExpression returning Boolean): array`
+
+Filtrez le tableau d&#39;entrée à l&#39;aide du prédicat donné.
+
+Exemple :
+
+```
+> SELECT filter(array(1, 2, 3), x -> x % 2 == 1);
+ [1,3]
+```
+
+
+#### agrégat
+
+`aggregate(array, <initial accumulator value>, lambdaExpression to accumulate the value): array`
+
+Appliquez un opérateur binaire à un état initial et à tous les éléments du tableau, puis réduisez-le à un état unique. L&#39;état final est converti en résultat final en appliquant une fonction de finition.
+
+Exemple :
+
+```
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x);
+  6
+> SELECT aggregate(array(1, 2, 3), 0, (acc, x) -> acc + x, acc -> acc * 10);
+  60
+```
