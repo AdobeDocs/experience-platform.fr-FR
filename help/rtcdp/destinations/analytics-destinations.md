@@ -1,10 +1,11 @@
 ---
+keywords: analytics destinations;analytics destination
 title: Destinations d’analyse
 seo-title: Destinations d’analyse
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 seo-description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
