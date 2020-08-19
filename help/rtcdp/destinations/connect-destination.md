@@ -1,9 +1,10 @@
 ---
+keywords: connect destination;destination connect;how to connect destination
 title: Connexion à une destination dans la plateforme de données clients en temps réel d’Adobe
 seo-title: Connexion à une destination dans la plateforme de données clients en temps réel d’Adobe
 description: Ce tutoriel répertorie les étapes de connexion à une destination dans la plateforme de données client en temps réel d’Adobe
 translation-type: tm+mt
-source-git-commit: b070a8a6eee1c1b95b20468c7067181ec62bdbd0
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 100%
