@@ -1,10 +1,11 @@
 ---
+keywords: social network;social network destinations;Livefyre;facebook;Facebook
 title: Destinations de réseau social
 seo-title: Destinations de réseau social
 description: Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 100%
