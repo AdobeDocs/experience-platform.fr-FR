@@ -1,13 +1,14 @@
 ---
-title: Guide du créateur de segments
+keywords: rtcdp segments;segment builder rtcdp;rtcdp segment
+title: Guide du créateur de segments pour la plateforme de données clientes en temps réel
 seo-title: Utilisation du créateur de segments de Segmentation Service sur la plateforme de données clients en temps réel
 description: Un guide décrivant l’utilisation du créateur de segments.
 seo-description: Un guide d’utilisation décrivant l’utilisation du créateur de segments de Segmentation Service sur la plateforme de données clients en temps réel.
 translation-type: tm+mt
-source-git-commit: e351a2d489730c1f1bd5f87be8d85612090bc009
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 77%
+source-wordcount: '105'
+ht-degree: 70%
 
 ---
 
