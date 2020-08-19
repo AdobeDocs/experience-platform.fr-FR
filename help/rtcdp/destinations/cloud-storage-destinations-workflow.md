@@ -1,10 +1,11 @@
 ---
+keywords: cloud storage destination;cloud storage
 title: Processus des destinations de stockage dans le cloud
 seo-title: Processus des destinations de stockage dans le cloud
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 60%
