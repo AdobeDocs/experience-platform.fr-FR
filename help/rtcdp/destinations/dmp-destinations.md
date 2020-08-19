@@ -1,10 +1,11 @@
 ---
+keywords: dmp destinations;DIL;audience manager dmp extension;dmp extension;data management platform;data management platform destinations
 title: Destinations de la plateforme de gestion des données (DMP)
 seo-title: Destinations de la plateforme de gestion des données (DMP)
 description: Les plateformes de gestion des données (DMP) permettent aux annonceurs, aux éditeurs et aux agences d’élaborer des profils d’audience unique, d’identifier les segments les plus précieux et de les utiliser sur n’importe quel canal numérique. Elles vous permettent de créer une véritable vision à 360 degrés d’un profil de consommateur, et de créer et d’activer des audiences significatives.
 seo-description: Les plateformes de gestion des données (DMP) permettent aux annonceurs, aux éditeurs et aux agences d’élaborer des profils d’audience unique, d’identifier les segments les plus précieux et de les utiliser sur n’importe quel canal numérique. Elles vous permettent de créer une véritable vision à 360 degrés d’un profil de consommateur, et de créer et d’activer des audiences significatives.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 85%
