@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Data Access
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1332'
 ht-degree: 72%
@@ -365,7 +365,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Propriété | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | L’identifiant du fichier. |
-| `{FILE_NAME`} | Le nom du fichier (par exemple, profiles.parquet) |
+| `{FILE_NAME}` | Le nom du fichier (par exemple, profiles.parquet). |
 
 **Requête**
 
@@ -396,7 +396,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Propriété | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | L’identifiant du fichier. |
-| `{FILE_NAME`} | Le nom du fichier (par exemple, profiles.parquet). |
+| `{FILE_NAME}` | Le nom du fichier (par exemple, profiles.parquet). |
 
 **Requête**
 
