@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1882'
 ht-degree: 77%
 
 ---
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez la [documentation de la plateforme de donn
 | Tableau de bord de mesures de la page d’accueil | La page d’accueil de la plateforme de données clients en temps réel d’Adobe comprend un tableau de bord de mesures affichant des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures de la plateforme de données clients en temps réel](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
-**[!DNL Real-time Customer Data Platform]metrics **
+**[!DNL Real-time Customer Data Platform]metrics**
 
 La page d’accueil de la plateforme de données client (CDP) en temps réel d’Adobe inclut un tableau de bord de mesures et s’affiche lorsque vous vous connectez à la plateforme CDP en temps réel.
 
@@ -72,8 +72,8 @@ Pour en savoir plus, consultez la [présentation des mesures de la plateforme de
 La version de novembre permet à la plateforme de données clients en temps réel d’Adobe de prendre en charge les destinations suivantes :
 
 * Publicité: [!DNL Google]
-* Marketing par courriel : Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua
-   ]
+* Marketing par courriel : adobe campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys][!DNL Oracle Eloqua]
+
 Consultez le [catalogue des destinations](../../rtcdp/destinations/destinations-catalog.md) pour en savoir plus sur chacune des destinations.
 
 **Limites connues**
