@@ -1,10 +1,11 @@
 ---
+keywords: destinations;experience cloud solutions
 title: Destinations Adobe
 seo-title: Destinations Adobe
 description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 seo-description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 translation-type: tm+mt
-source-git-commit: e3b7dd4788042deaeba68bfdbe08e8448b46c270
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 100%
