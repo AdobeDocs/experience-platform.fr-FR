@@ -4,7 +4,7 @@ seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 translation-type: tm+mt
-source-git-commit: 8ac603f749928440438f2e0d1f3f1f1cc95b2916
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 79%
@@ -43,6 +43,7 @@ alloy("sendEvent", {
 ```
 
 >[!NOTE]
+>
 >Les données pouvant être envoyées dans chaque événement du champ XDM sont limitées à 32 Ko.
 
 ### Envoi de données autres que XDM
@@ -94,7 +95,7 @@ alloy("sendEvent", {
 });
 ```
 
-### Ajouter des informations d&#39;identité
+### ajouter des informations d&#39;identité
 
 Des informations d&#39;identité personnalisées peuvent également être ajoutées au événement. Voir [Récupération de l’ID d’Experience Cloud](./identity.md)
 
