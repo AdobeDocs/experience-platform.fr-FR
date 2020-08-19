@@ -1,13 +1,14 @@
 ---
+keywords: rtcdp administration overview;administration overview
 title: Présentation de l’administration
 seo-title: Présentation de l’administration de la plateforme CDP en temps réel
-description: description
+description: 'Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform. '
 seo-description: description seo
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 57%
+source-wordcount: '277'
+ht-degree: 60%
 
 ---
 
