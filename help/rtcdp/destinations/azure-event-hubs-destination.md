@@ -1,10 +1,11 @@
 ---
+keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (bêta) Destination des centres de Événement Azure
 seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -22,7 +23,7 @@ ht-degree: 7%
 
 [!DNL Azure Event Hubs] est une plate-forme de diffusion de données massives et un service d’assimilation de événements. Il peut recevoir et traiter des millions de événements par seconde. Les données envoyées à un hub de événement peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou de cartes de traitement par lot/d’enregistrement.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser en continu des données à partir de l’Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement pour diffuser des données à partir de Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Azure Event Hubs]Microsoft, consultez la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)Microsoft.
 * Pour vous connecter à [!DNL Azure Event Hubs] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
@@ -45,7 +46,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 ### Dans l’étape d’authentification {#authentication-step}
 
 * **[!UICONTROL Nom]** de la clé SAS et clé **** SAS : Renseignez votre clé et votre nom de clé SAS. Découvrez comment vous authentifier à [!DNL Azure Event Hubs] l&#39;aide de clés SAS dans la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature)Microsoft.
-* **[!UICONTROL Espace de nommage]**: Remplissez votre [!DNL Azure Event Hubs] espace de nommage. Découvrez les [!DNL Azure Event Hubs] espaces de nommage dans la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)Microsoft.
+* **[!UICONTROL espace de nommage]**: Remplissez votre [!DNL Azure Event Hubs] espace de nommage. Découvrez les [!DNL Azure Event Hubs] espaces de nommage dans la documentation [](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace)Microsoft.
 
 ![Entrée requise dans l’étape d’authentification](/help/rtcdp/destinations/assets/event-hubs-authentication.png)
 
