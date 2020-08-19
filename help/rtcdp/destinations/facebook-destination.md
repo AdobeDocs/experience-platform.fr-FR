@@ -1,10 +1,11 @@
 ---
+keywords: facebook extensions;facebook extension;facebook destinations;facebook
 title: Destination Facebook
 seo-title: Destination Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 7f3df12da5e93c3d0cc53eed1aa603ddbafdb0b2
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 19%
@@ -22,7 +23,7 @@ Activate profiles for your [!DNL Facebook] campaigns for audience targeting, per
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook] destination, voici deux exemples d’utilisation que les clients Platform de données client en temps réel Adobe peuvent résoudre à l’aide de cette fonctionnalité.
+Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook] destination, voici deux exemples d’utilisation que les clients de la plate-forme de données client en temps réel Adobe peuvent résoudre à l’aide de cette fonctionnalité.
 
 
 ### Cas d’utilisation 1
@@ -57,14 +58,14 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d’ad
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
 1. Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
-2. Ajoutez le compte commercial **Adobe Experience Cloud** comme partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, reportez-vous à la section [Ajouter des partenaires à votre gestionnaire](https://www.facebook.com/business/help/1717412048538897) d’entreprise dans la documentation Facebook.
+2. Ajoutez le compte commercial **Adobe Experience Cloud** comme partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, reportez-vous à la documentation [Ajouter des partenaires à votre gestionnaire](https://www.facebook.com/business/help/1717412048538897) d’entreprise dans la documentation Facebook.
    >[!IMPORTANT]
    > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Real-time CDP].
 3. Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
 
 ### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
 
-[!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] doivent être masquées des adresses électroniques *hachées* . Vous pouvez choisir de hacher les adresses électroniques avant de les ingérer dans l’Adobe Experience Platform, ou de travailler avec les adresses électroniques en clair dans l’Experience Platform et de faire en sorte que notre algorithme les hache sur l’activation.
+[!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] doivent être masquées des adresses électroniques *hachées* . Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
 
 Pour en savoir plus sur l&#39;assimilation d&#39;adresses électroniques dans l&#39;Experience Platform, consultez la présentation [de l&#39;assimilation par](/help/ingestion/batch-ingestion/overview.md) lot et la présentation [de l&#39;assimilation par](/help/ingestion/streaming-ingestion/overview.md)flux continu.
 
