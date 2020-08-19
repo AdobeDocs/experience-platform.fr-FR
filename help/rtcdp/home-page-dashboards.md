@@ -1,10 +1,11 @@
 ---
+keywords: metrics overview; rtcdp metrics overview
 title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
 seo-title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 94%
