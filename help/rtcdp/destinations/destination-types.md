@@ -1,10 +1,11 @@
 ---
+keywords: destinations;destination;destination types
 title: Types et catégories de destinations
 seo-title: Types et catégories de destinations
 description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. '
 seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: 6f680a60c88bc5fee6ce9cb5a4f314c4b9d02249
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 93%
