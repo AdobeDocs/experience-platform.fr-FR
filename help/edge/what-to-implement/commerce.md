@@ -4,7 +4,7 @@ seo-title: Prise en charge des produits avec le SDK Web d’Adobe Experience P
 description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
 seo-description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 100%
@@ -28,7 +28,6 @@ Ce document utilise le mixin [ExperienceEvent Commerce Details](https://github.c
 Vous trouverez ci-dessous une liste de `measures` disponibles dans l’objet `commerce`.
 
 >[!Tip]
->
 >
 >Une mesure comporte deux champs : `id` et `value`. La plupart du temps, vous utiliserez uniquement le champ `value` (par exemple, `'value':1`). Le champ `id` vous permet de définir un identifiant unique que vous pouvez utiliser pour suivre le moment où la mesure a été envoyée. Voir la documentation XDM pour [Mesure](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/measure.schema.md).
 
