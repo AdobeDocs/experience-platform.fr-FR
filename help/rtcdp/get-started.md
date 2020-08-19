@@ -1,11 +1,11 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Prise en main de la plateforme des données clients en temps réel d’Adobe
 seo-title: Prise en main de la plateforme des données clients en temps réel d’Adobe
 description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 seo-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 89%
