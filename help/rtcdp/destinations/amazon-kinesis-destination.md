@@ -1,10 +1,11 @@
 ---
+keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Destination Amazon
 seo-title: Destination Amazon
-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser en continu les données de l’Adobe Experience Platform.
-seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser en continu les données de l’Adobe Experience Platform.
+description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
+seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 7%
@@ -23,13 +24,13 @@ ht-degree: 7%
 
 Le [!DNL Kinesis Data Streams] service de [!DNL Amazon Web Services] vous permet de collecter et de traiter des flux importants d&#39;enregistrements de données en temps réel.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement pour diffuser en continu des données à partir de l’Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement pour diffuser des données à partir de Adobe Experience Platform.
 
 * Pour plus d’informations sur [!DNL Amazon Kinesis]Amazon, consultez la documentation [](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Pour vous connecter à [!DNL Amazon Kinesis] l’aide d’appels d’API, consultez le didacticiel [sur l’API](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md)de destinations de diffusion en continu.
 * Pour vous connecter à [!DNL Amazon Kinesis] l&#39;aide de l&#39;interface utilisateur CDP en temps réel de l&#39;Adobe, consultez les sections ci-dessous.
 
-![Amazon dans l’interface utilisateur](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
+![amazon dans l’interface utilisateur](/help/rtcdp/destinations/assets/aws-kinesis-destination.png)
 
 
 ## Cas d’utilisation {#use-cases}
@@ -46,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Dans l’étape d’authentification {#authentication-step}
 
-* **[!DNL Amazon Web Services]clé d&#39;accès et clé&#x200B;**secrète : Dans[!DNL Amazon Web Services], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre[!DNL Amazon Kinesis]compte. Pour en savoir plus, consultez la documentation[sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans [!DNL Amazon Web Services], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **region**: Indiquez la [!DNL Amazon Web Services] région à laquelle diffuser les données.
 
 ![Champs d’entrée dans l’étape du compte](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -55,7 +56,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 * **Nom**: Attribuez un nom à votre connexion. [!DNL Amazon Kinesis]
 * **Description**: Fournissez une description de votre connexion à [!DNL Amazon Kinesis].
-* **stream**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux.
+* **stream**: Indiquez le nom d’un flux de données existant dans votre [!DNL Amazon Kinesis] compte. adobe Le CDP en temps réel exportera les données dans ce flux.
 
 ![Champs d’entrée dans l’étape d’authentification](/help/rtcdp/destinations/assets/aws-kinesis-setup-step.png)
 
