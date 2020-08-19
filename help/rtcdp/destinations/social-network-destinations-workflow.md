@@ -1,10 +1,11 @@
 ---
+keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
 title: Workflow de destinations de réseau social
 seo-title: Workflow de destinations de réseau social
 description: Instructions de connexion à vos comptes publicitaires de réseau social
 seo-description: Instructions de connexion à vos comptes publicitaires de réseau social
 translation-type: tm+mt
-source-git-commit: 9306266edc0a4afdcf378e94b46b239187b18644
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 58%
