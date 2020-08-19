@@ -5,7 +5,7 @@ title: Segmentation d’entités multiples
 topic: overview
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 42%
@@ -17,7 +17,7 @@ ht-degree: 42%
 
 Multi-entity segmentation is the ability to extend [!DNL Profile] data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the [!DNL Profile] schema.
 
-Pour en savoir plus sur la segmentation multientité, veuillez continuer à lire la documentation et compléter votre apprentissage en regardant la vidéo ci-dessous ou en explorant la présentation [de la](./home.md)segmentation.]
+Pour en savoir plus sur la segmentation multientité, veuillez continuer à lire la documentation et compléter votre apprentissage en regardant la vidéo ci-dessous ou en explorant la présentation [de la](./home.md)segmentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28947?quality=12&learn=on)
 
