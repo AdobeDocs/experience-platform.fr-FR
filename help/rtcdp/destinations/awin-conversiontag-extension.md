@@ -1,10 +1,11 @@
 ---
+keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Extension Awin Advertiser Conversion Tag
 seo-title: Extension Awin Advertiser Conversion Tag
 description: L’extension Awin Advertiser Conversion Tag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: null
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 72%
