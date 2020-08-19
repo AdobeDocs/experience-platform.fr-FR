@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Annexe de développement du registre des schémas
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 87%
@@ -53,7 +53,7 @@ Le tableau ci-dessous contient une comparaison côte à côte affichant les cham
               "minimum": 1,
               "maximum": 32767
         }
-      </pre>
+  </pre>
   </td>
   <td>
   <pre class="JSON language-JSON hljs">
