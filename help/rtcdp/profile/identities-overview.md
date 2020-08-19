@@ -1,13 +1,12 @@
 ---
-title: Identités et espaces de noms d’identité
-seo-title: Adobe Experience Platform Identity Service
-description: description
-seo-description: description seo
+keywords: identities rtcdp;rtcdp identities;real-time cdp identities
+title: Identités sur la plateforme CDP en temps réel
+description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 72%
+source-wordcount: '424'
+ht-degree: 74%
 
 ---
 
