@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Liste des ressources
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 32%
@@ -31,7 +31,7 @@ GET /{CONTAINER_ID}/{RESOURCE_TYPE}?{QUERY_PARAMS}
 | --- | --- |
 | `{CONTAINER_ID}` | Le conteneur où se trouvent les ressources (« global » ou « client »). |
 | `{RESOURCE_TYPE}` | The type of resource to retrieve from the [!DNL Schema Library]. Valid types are `classes`, `mixins`, `schemas`, `datatypes`, and `descriptors`. |
-| `{QUERY_PARAMS`} | Paramètres de requête facultatifs pour filtrer les résultats en fonction. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats en fonction. See the section on [query parameters](#query) for more information. |
 
 **Requête**
 
