@@ -4,7 +4,7 @@ seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 075d71353877045e12985b3914aaeeb478ed46d6
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Configuration du bord
 
-La configuration de l’Adobe Experience Platform [!DNL Web SDK] est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à l’Adobe Experience Platform [!DNL Edge Network], elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+La configuration du Adobe Experience Platform [!DNL Web SDK] est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée au Adobe Experience Platform [!DNL Edge Network], `edgeConfigId` elle est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
 ## Création d’un identifiant de configuration Edge
 
@@ -23,8 +23,6 @@ Les ID de configuration Edge peuvent être créés dans l’Adobe [!DNL Launch] 
 ![navigation dans l&#39;outil de configuration des bords](../../assets/edge_configuration_nav.png)
 
 >[!NOTE]
->
->
 >
 >L’outil de configuration des arêtes est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Launch] ou non comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations de développement dans [!DNL Launch]. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la [!DNL Launch] documentation.
 
@@ -38,7 +36,7 @@ L’ID utilisé dans le SDK en tant qu’ `edgeConfigId` ID composite spécifie 
 
 ### Paramètres d’Environnement
 
-Vous trouverez ci-dessous chacun des paramètres disponibles pour un environnement. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés mais ne sont pas actifs.
+Vous trouverez ci-dessous chacun des paramètres disponibles pour un environnement. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés mais ne sont pas principaux.
 
 #### [!UICONTROL Identité]
 
@@ -56,31 +54,29 @@ Les synchronisations d’identifiants peuvent être regroupées en conteneurs po
 
 #### Adobe Experience Platform
 
-Les paramètres répertoriés ici vous permettent d&#39;envoyer des données à l&#39;Adobe Experience Platform. Vous ne devez activer cette section que si vous avez acheté l’Adobe Experience Platform.
+Les paramètres répertoriés ici vous permettent d&#39;envoyer des données au Adobe Experience Platform. Vous ne devez activer cette section que si vous avez acheté le Adobe Experience Platform.
 
-![Bloc des paramètres d&#39;Adobe Experience Platform](../../assets/edge_configuration_aep.png)
+![Bloc des paramètres Adobe Experience Platform](../../assets/edge_configuration_aep.png)
 
 ##### [!UICONTROL Environnement de test]
 
-Les sandbox sont des emplacements de l’Adobe Experience Platform qui permettent aux clients d’isoler les données et les implémentations les unes des autres. Pour plus d’informations sur leur fonctionnement, consultez la documentation [](../../sandboxes/home.md)Sandbox.
+Les sandbox sont des emplacements dans la Adobe Experience Platform qui permettent aux clients d’isoler leurs données et leurs implémentations les unes des autres. Pour plus d’informations sur leur fonctionnement, consultez la documentation [](../../sandboxes/home.md)Sandbox.
 
 ##### [!UICONTROL Entrée de diffusion en continu]
 
-Une entrée en flux continu est une source HTTP dans l’Adobe Experience Platform. Elles sont créées sous l’onglet [!UICONTROL Sources] de l’Adobe Experience Platform sous la forme d’une API HTTP.
+Une entrée en flux continu est une source HTTP dans le Adobe Experience Platform. Elles sont créées sous l’onglet [!UICONTROL Sources] de Adobe Experience Platform sous la forme d’une API HTTP.
 
-##### [!UICONTROL Jeu de données Événement]
+##### [!UICONTROL Jeu de données événement]
 
 Les configurations Edge prennent en charge l’envoi de données à des jeux de données ayant un schéma de Événement [!UICONTROL d’]expérience de classe.
 
 #### Adobe Target
 
-Pour configurer l’Adobe Target, vous devez fournir un code client. Les autres champs sont facultatifs.
+Pour configurer Adobe Target, vous devez fournir un code client. Les autres champs sont facultatifs.
 
-![Bloc des paramètres d&#39;Adobe Target](../../assets/edge_configuration_target.png)
+![Bloc des paramètres Adobe Target](../../assets/edge_configuration_target.png)
 
 >[!NOTE]
->
->
 >
 >L&#39;organisation associée au code client doit correspondre à l&#39;organisation dans laquelle l&#39;ID de configuration est créé.
 
@@ -94,17 +90,17 @@ ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à
 
 Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > [!UICONTROL Propriétés.]
 
-##### [!UICONTROL ID d’Environnement Cible]
+##### [!UICONTROL ID d’Environnement cible]
 
 [Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) d’Adobe Target vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements  d’Adobe Target, vous pouvez les utiliser.
+adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements  Adobe Target, vous pouvez les utiliser.
 
 #### Adobe Audience Manager
 
-Pour envoyer des données à l&#39;Adobe Audience Manager, il suffit d&#39;activer cette section. Les autres paramètres sont facultatifs mais encouragés.
+Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette section. Les autres paramètres sont facultatifs mais encouragés.
 
-![Audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
+![audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinations des cookies activées]
 
@@ -116,7 +112,7 @@ Permet au SDK de partager des informations de segment par le biais des destinati
 
 #### Adobe Analytics
 
-Contrôle si les données sont envoyées à Adobe Analytics. Pour plus d’informations, consultez la section Aperçu [de l’](../solution-specific/analytics/analytics-overview.md)Analytics.
+Contrôle si les données sont envoyées à Adobe Analytics. Vous trouverez d’autres informations dans la présentation [d’](../solution-specific/analytics/analytics-overview.md)Analytics.
 
 ![Bloc des paramètres Adobe Analytics](../../assets/edge_configuration_aa.png)
 
