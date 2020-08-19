@@ -1,10 +1,11 @@
 ---
+keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
 title: Confidentialité du profil de données client en temps réel
 seo-title: Confidentialité du profil de données client en temps réel
 description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 translation-type: tm+mt
-source-git-commit: b96286f6a06f0583b45343a513ee64f0025d79a7
+source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 61%
@@ -20,7 +21,7 @@ La plupart des fonctionnalités de la plateforme CDP en temps réel fonctionnent
 
 ## [!DNL Privacy Service]
 
-L&#39;Adobe Experience Platform [!DNL Privacy Service] vous permet de simplifier le processus de maintien de vos opérations de données en conformité avec les règlements sur la protection des renseignements personnels, tels que le [!DNL General Data Protection Regulation] (RGMD) et l&#39; [!DNL California Consumer Privacy Act] (APPC). Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. Consultez le document [Présentation du service confidentialité](../../privacy-service/home.md) pour une présentation plus détaillée du service.
+Adobe Experience Platform [!DNL Privacy Service] vous permet de rationaliser le processus de conservation de vos opérations de données en conformité avec les réglementations sur la confidentialité, telles que le [!DNL General Data Protection Regulation] (RGPD) et l&#39; [!DNL California Consumer Privacy Act] (ACCP). Since Real-time CDP leverages [!DNL Experience Platform] capabilities for data collection and storage, the access and delete requests for GDPR and CCPA should be managed within [!DNL Platform]. Consultez le document [Présentation du service confidentialité](../../privacy-service/home.md) pour une présentation plus détaillée du service.
 
 Il existe deux manières de soumettre des requêtes individuelles pour consulter ou supprimer des données de propriétaires dans le cadre du RGPD ou de la CCPA :
 
