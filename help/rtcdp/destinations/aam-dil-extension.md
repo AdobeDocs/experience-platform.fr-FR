@@ -1,10 +1,11 @@
 ---
+keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: Extension Audience Manager DIL
 seo-title: Extension Audience Manager DIL
 description: L’extension Audience Manager DIL est une destination de plateforme de gestion des données (DMP) de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: L’extension Audience Manager DIL est une destination de plateforme de gestion des données (DMP) de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: a251d843401d2f092e368a4cdac217171fa4687f
+source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 71%
