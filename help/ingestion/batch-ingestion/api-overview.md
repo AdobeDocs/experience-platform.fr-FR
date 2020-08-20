@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de développement de l’ingestion par lots d’Adobe Experience Platform
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 3eaef72de2999fc088b92562c08a896d1cb08e55
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 93%
+source-wordcount: '2670'
+ht-degree: 88%
 
 ---
 
@@ -27,8 +27,8 @@ Les sections suivantes fournissent des informations supplémentaires que vous de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Ingestion par lots](./overview.md) : vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [[!DNL Experience Data Model] (XDM) Système](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[ !Sandbox DNL]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 ### Lecture d’exemples d’appels API
 
@@ -38,22 +38,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
 
-Les requêtes contenant un payload (POST, PUT, PATCH) peuvent requérir un en-tête `Content-Type` supplémentaire. Les valeurs acceptées propres à chaque appel sont précisées dans les paramètres d’appel. Les types de contenu suivants sont utilisés dans ce guide :
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+Les requêtes contenant un payload (POST, PUT, PATCH) peuvent requérir un en-tête `Content-Type` supplémentaire. Les valeurs acceptées propres à chaque appel sont précisées dans les paramètres d’appel.
 
 ## Types
 
@@ -176,7 +173,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
 
 **Requête**
 
@@ -196,7 +193,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
@@ -311,7 +308,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
 
 **Requête**
 
@@ -331,7 +328,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
@@ -484,7 +481,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
 
 **Requête**
 
@@ -506,7 +503,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `Users/sample-user/Downloads/sample.json`. |
 
 
 **Réponse**
@@ -734,7 +731,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
 
 **Requête**
 
@@ -754,7 +751,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `Users/sample-user/Downloads/sample.json`. |
 
 
 **Réponse**
@@ -941,7 +938,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. |
+| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Ce chemin d&#39;accès au fichier correspond à l&#39;emplacement d&#39;enregistrement du fichier côté Adobe. |
 
 **Requête**
 
@@ -961,7 +958,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. |
+| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier correspond au chemin d’accès au fichier local, par exemple `Users/sample-user/Downloads/sample.json`. |
 
 **Réponse**
 
