@@ -1,10 +1,11 @@
 ---
-title: 'Adobe Target et l’Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform du SDK Web et utilisation de Adobe Target
-description: Découvrez comment rendre du contenu personnalisé avec le kit Experience Platform Web SDK à l’aide d’Adobe Target
-seo-description: Découvrez comment rendre du contenu personnalisé avec le kit Experience Platform Web SDK à l’aide d’Adobe Target
+title: 'adobe target et le kit de développement Web Adobe Experience Platform. '
+seo-title: Adobe Experience Platform Web SDK et utilisation de Adobe Target
+description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
+seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 5%
@@ -14,9 +15,9 @@ ht-degree: 5%
 
 # [!DNL Target] Présentation
 
-L’Adobe Experience Platform [!DNL Web SDK] peut fournir et rendre des expériences personnalisées gérées en Adobe Target sur le canal Web. Vous pouvez utiliser un éditeur WYSIWYG, appelé compositeur [d’expérience](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuelle (VEC), ou une interface non visuelle, le compositeur d’expérience [basé sur les](https://docs.adobe.com/content/help/fr-FR/target/using/experiences/form-experience-composer.html)formulaires, pour créer, activer et diffuser vos activités et expériences de personnalisation.
+Adobe Experience Platform [!DNL Web SDK] peut fournir et rendre des expériences personnalisées gérées à Adobe Target sur le canal Web. Vous pouvez utiliser un éditeur WYSIWYG, appelé compositeur [d’expérience](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) visuelle (VEC), ou une interface non visuelle, le compositeur d’expérience [basé sur les](https://docs.adobe.com/content/help/fr-FR/target/using/experiences/form-experience-composer.html)formulaires, pour créer, activer et diffuser vos activités et expériences de personnalisation.
 
-## Activation de l&#39;Adobe Target
+## Activation de Adobe Target
 
 Pour activer [!DNL Target]cette fonction, vous devez effectuer les opérations suivantes :
 
@@ -25,20 +26,20 @@ Pour activer [!DNL Target]cette fonction, vous devez effectuer les opérations s
 ![cible_reponse_token](../../solution-specific/target/assets/target_response_token.png)
 
 1. Activez la cible dans votre configuration [](../../fundamentals/edge-configuration.md) Edge avec le code client approprié.
-1. Ajoutez l’ `renderDecisions` option à vos événements.
+1. ajoutez l’ `renderDecisions` option à vos événements.
 
 Ensuite, vous pouvez également :
 
-* Ajoutez `decisionScopes` vos événements pour récupérer des activités spécifiques (utiles pour les activités créées avec le compositeur basé sur les formulaires).
-* Ajoutez le fragment de code [](../../solution-specific/target/flicker-management.md) caché pour masquer uniquement certaines parties de la page.
+* ajoutez `decisionScopes` vos événements pour récupérer des activités spécifiques (utiles pour les activités créées avec le compositeur basé sur les formulaires).
+* ajoutez le fragment de code [](../../solution-specific/target/flicker-management.md) caché pour masquer uniquement certaines parties de la page.
 
-## Utilisation de l’Adobe Target VEC
+## Utilisation du compositeur d’expérience visuelle Adobe Target
 
-Avec le SDK, vous pouvez utiliser le compositeur d’expérience visuelle normalement à une exception près : vous avez besoin de l&#39;extension [d&#39;assistance du compositeur d&#39;expérience visuelle de](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) cible installée et active.
+Avec le SDK, vous pouvez utiliser le compositeur d’expérience visuelle normalement à une exception près : vous avez besoin de l&#39;extension [d&#39;assistance du compositeur d&#39;expérience visuelle de](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) cible installée et principale.
 
 ## Activités du compositeur d’expérience visuelle à rendu automatique
 
-Le SDK Web AEP a le pouvoir de rendre automatiquement à vos utilisateurs les expériences définies par le compositeur d’expérience visuelle d’Adobe Target sur le Web. Pour indiquer au SDK Web AEP de générer automatiquement des activités du compositeur d’expérience visuelle, envoyez un événement avec `renderDecisions = true`:
+Le SDK Web AEP a le pouvoir de rendre automatiquement à vos utilisateurs les expériences définies via le compositeur d’expérience visuelle d’Adobe Target sur le Web. Pour indiquer au SDK Web AEP de générer automatiquement des activités du compositeur d’expérience visuelle, envoyez un événement avec `renderDecisions = true`:
 
 ```javascript
 alloy
@@ -61,7 +62,7 @@ alloy
 
 ## Utilisation du compositeur d’après les formulaires
 
-Le compositeur d’expérience d’après les formulaires est une interface non visuelle qui s’avère utile pour configurer des tests A/B, [!DNL Experience Targeting]Automated Personalization et des activités Recommendations avec différents types de réponse, tels que JSON, HTML, Image, etc. En fonction du type de réponse ou de la décision renvoyée par l’Adobe Target, votre logique métier principale peut être exécutée. Pour récupérer les décisions relatives à vos activités de compositeur d’après les formulaires, envoyez un événement contenant toutes les &quot;étendues de décision&quot; pour lesquelles vous souhaitez récupérer une décision.
+Le compositeur d’expérience d’après les formulaires est une interface non visuelle qui s’avère utile pour configurer des tests A/B, [!DNL Experience Targeting]Automated Personalization et des activités Recommendations avec différents types de réponse, tels que JSON, HTML, Image, etc. En fonction du type de réponse ou de la décision renvoyée par Adobe Target, votre logique métier de base peut être exécutée. Pour récupérer les décisions relatives à vos activités de compositeur d’après les formulaires, envoyez un événement contenant toutes les &quot;étendues de décision&quot; pour lesquelles vous souhaitez récupérer une décision.
 
 ```javascript
 alloy
@@ -109,7 +110,7 @@ alloy("sendEvent", {
 };
 ```
 
-## Audiences dans XDM
+## audiences dans XDM
 
 Lors de la définition d’Audiences pour vos activités de Cible qui seront diffusées via le SDK Web AEP, [XDM](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html) doit être défini et utilisé. Après avoir défini des schémas XDM, des classes et des mixins, vous pouvez créer une règle d’audience de Cible définie par les données XDM pour le ciblage. Dans la Cible, les données XDM s’affichent dans le créateur d’Audiences sous la forme d’un paramètre personnalisé. Le XDM est sérialisé à l’aide de la notation par point (par exemple, `web.webPageDetails.name`).
 
@@ -120,7 +121,7 @@ Si vous disposez d’activités de Cible avec des audiences prédéfinies qui ut
 * Réseau
 * Système d’exploitation
 * Pages du site
-* Browser
+* Navigateur
 * Sources de trafic
 * Période
 
