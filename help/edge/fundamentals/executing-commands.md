@@ -3,8 +3,9 @@ title: Exécution des commandes
 seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
+keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
 translation-type: tm+mt
-source-git-commit: bf4194e1449bddd662f2152f84dbbe90060b5d30
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 79%
@@ -76,4 +77,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 ### Consentement
 
-Si un utilisateur n&#39;a pas donné son consentement à un usage particulier, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
+Si l&#39;utilisateur n&#39;a pas donné son consentement à une fin particulière, la promesse sera toujours résolue ; toutefois, l’objet response ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
