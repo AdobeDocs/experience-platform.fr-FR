@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Création d’un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: abb15e3daac4aebd46012822c790b056d0b3d2c1
+source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 5%
+source-wordcount: '624'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ Ce didacticiel décrit la procédure à suivre pour créer un connecteur de donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 * [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [[ !Sandbox DNL]](../../../../../sandboxes/home.md): experience platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
@@ -57,7 +57,7 @@ Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!U
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
-## Surveiller et supprimer votre flux de données de classifications
+## Surveiller le flux de données de vos classifications
 
 Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran **[!UICONTROL Catalogue]** , sélectionnez **[!UICONTROL Flux de données]** pour vue d’une liste de flux établis associés à votre [!DNL Classifications] compte.
 
@@ -69,13 +69,13 @@ Sélectionnez le jeu **[!UICONTROL de données de]** Cible auquel vous souhaitez
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-La page activité **[!UICONTROL des]** jeux de données affiche des informations sur le jeu de données de cible que vous avez sélectionné, y compris des détails sur son statut de lot, son ID de jeu de données et son schéma. Sélectionnez **[!UICONTROL Supprimer le jeu de données]** à supprimer.
+La page activité **[!UICONTROL des]** jeux de données affiche des informations sur le jeu de données de cible que vous avez sélectionné, y compris des détails sur son statut de lot, son ID de jeu de données et son schéma.
 
-![](../../../../images/tutorials/create/classifications/batch-screen.png)
+>[!IMPORTANT]
+>Bien que la suppression de jeux de données soit possible pour d’autres connecteurs source, elle n’est actuellement pas prise en charge pour le connecteur de données des classifications Analytics. Si vous supprimez un jeu de données par erreur, contactez le service à la clientèle Adobe.
 
-Une boîte de dialogue s’affiche pour confirmer la suppression. Sélectionnez **[!UICONTROL Supprimer]** pour terminer.
+![](../../../../images/tutorials/create/classifications/dataset.png)
 
-![](../../../../images/tutorials/create/classifications/delete-confirm.png)
 
 ## Étapes suivantes
 
