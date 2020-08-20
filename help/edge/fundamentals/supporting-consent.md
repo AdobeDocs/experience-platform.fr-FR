@@ -3,8 +3,9 @@ title: Prise en charge du consentement
 seo-title: Prise en charge des préférences de consentement du SDK Web d’Adobe Experience Platform
 description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
+keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 0869c6c54e8936a1ac1225cf6510f7139dce1936
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 62%
