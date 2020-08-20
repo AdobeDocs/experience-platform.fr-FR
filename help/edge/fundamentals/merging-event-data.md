@@ -3,8 +3,9 @@ title: Fusion de données d’événement
 seo-title: Fusion des données d’événement du SDK Web d’Adobe Experience Platform
 description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 seo-description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
+keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 42%
