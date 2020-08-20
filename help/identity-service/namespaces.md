@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name<span>@email.com" en tant qu’adresse électronique ou de "443522" en tant qu’identifiant CRM numérique. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 73%
@@ -49,7 +49,7 @@ Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 | Non-humaine | Utilisé pour stocker des identifiants qui ont besoin d’espaces de noms, mais qui ne sont pas liés à un groupe de personnes. Ces identifiants sont ensuite filtrés à partir du graphique d’identités. Les cas d’utilisation possibles incluent les données relatives aux produits, aux organisations, aux magasins, etc. (Par exemple, un SKU de produit.) |
 | Téléphone | Les identités de ce type incluent des informations d’identification personnelle. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
-### Espaces de noms standard
+### Espaces de noms standard {#standard}
 
 Adobe Experience Platform fournit plusieurs espaces de noms d’identité disponibles pour toutes les organisations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
