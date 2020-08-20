@@ -3,8 +3,9 @@ title: Débogage
 seo-title: Débogage du SDK Web d’Adobe Experience Platform
 description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 seo-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
+keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 5f263a2593cdb493b5cd48bc0478379faa3e155d
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 91%
