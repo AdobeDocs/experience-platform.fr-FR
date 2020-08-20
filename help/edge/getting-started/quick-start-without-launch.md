@@ -1,10 +1,11 @@
 ---
-title: début rapide à l’aide de JavaScript standard
+title: Début rapide à l’aide de JavaScript standard
 seo-title: 'début rapide du SDK Web Adobe Experience Platform '
 description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
+keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: d958e323df2535c168edd3a35b878fcc4bb73370
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 14%
@@ -14,10 +15,10 @@ ht-degree: 14%
 
 # Bienvenue
 
-Ce guide vous guide tout au long des différentes manières de configurer le SDK Adobe Experience Platform Web. Pour utiliser cette fonctionnalité, vous devez être autorisé. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
+Ce guide vous guide dans les différentes manières de configurer le SDK Web de Adobe Experience Platform. Pour utiliser cette fonctionnalité, vous devez être placé sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME, mais vous en avez besoin avant de commencer la production.
-- Avoir droit à l&#39;Adobe Experience Platform.  Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Data Services Experience Platform pour une utilisation limitée avec le SDK sans frais supplémentaires.
+- Avoir droit à Adobe Experience Platform.  Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
 - Vous devez utiliser la dernière version du service d’identifiant visiteur.
 
 ## Préparation d’un Schéma
