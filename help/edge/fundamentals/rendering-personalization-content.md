@@ -3,8 +3,9 @@ title: Rendu du contenu personnalisé
 seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
+keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: c342e8d7698c1d213658f3f1dae751edbde04b83
+source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 23%
