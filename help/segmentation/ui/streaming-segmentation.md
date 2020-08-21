@@ -5,9 +5,9 @@ title: Segmentation par flux
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '767'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,9 @@ Après avoir créé un segment compatible avec la diffusion en continu, vous pou
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Plus précisément, des détails sur la taille **** totale des audiences qualifiées sont affichés. Si une tâche a été exécutée au cours des 24 dernières heures, la taille **** totale de l’audience qualifiée de la tâche s’affiche, en plus d’un graphique linéaire pour l’audience ajoutée. Sinon, la taille **[!UICONTROL estimée de l’audience]** totale s’affiche, en plus d’une ligne de tendance de visualisation.
+Plus précisément, des détails sur la taille **** totale des audiences qualifiées sont affichés. La taille **** totale des audiences qualifiées indique le nombre total d’audiences qualifiées de la dernière exécution de la tâche de segment terminée. Si une tâche de segmentation n&#39;a pas été effectuée au cours des 24 dernières heures, le nombre d&#39;audiences est pris à partir d&#39;une estimation.
+
+Un graphique linéaire indique le nombre de segments qui ont été qualifiés et disqualifiés au cours des dernières 24 heures. La liste déroulante peut être ajustée pour afficher les dernières 24 heures, la semaine dernière ou les 30 derniers jours.
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
