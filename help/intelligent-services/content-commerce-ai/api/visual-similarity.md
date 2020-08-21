@@ -5,9 +5,9 @@ title: similarité visuelle
 topic: Developer guide
 description: Lorsqu’une image est fournie, le service de similarité visuelle recherche automatiquement les images visuellement similaires d’un catalogue.
 translation-type: tm+mt
-source-git-commit: e69f4e8ddc0fe5f7be2b2b2bd89c09efdfca8e75
+source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Lorsqu’une image est fournie, le service de similarité visuelle recherche aut
 
 L&#39;image suivante a été utilisée dans l&#39;exemple de demande illustré dans ce document :
 
-![image test](../images/test_image.jpeg)
+![image test](../images/Query_Image.jpeg)
 
 **Format d’API**
 
@@ -37,7 +37,7 @@ La demande suivante récupère des images visuellement similaires d’un catalog
 
 >[!CAUTION]
 >
->`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande.
+>`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Contactez l’équipe bêta de Content and Commerce AI pour recevoir votre `analyzer_id` demande pour ce service.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -76,7 +76,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | ID [!DNL Sensei] de service sous lequel votre demande est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. | Oui |
+| `analyzer_id` | ID [!DNL Sensei] de service sous lequel votre demande est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
 | `application-id` | ID de l’application créée. | Oui |
 | `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant une image. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du `data` tableau. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées de l’intérieur `data`. | Oui |
 | `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si elle n’est pas transmise, un identifiant généré automatiquement est attribué. | Non |
@@ -91,6 +91,10 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 **Réponse**
 
 Une réponse réussie renvoie un `response` tableau contenant un `feature_value` et `feature_name` pour chacune des images visuellement similaires trouvées dans le catalogue.
+
+Les images visuellement similaires suivantes ont été renvoyées dans l’exemple de réponse illustré ci-dessous :
+
+![images similaires](../images/results.jpg)
 
 ```json
 {
@@ -156,3 +160,4 @@ Une réponse réussie renvoie un `response` tableau contenant un `feature_value`
   "error": []
 }
 ```
+
