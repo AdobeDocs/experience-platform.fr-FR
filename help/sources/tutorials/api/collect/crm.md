@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collecte de données de gestion de la relation client via les connecteurs et les API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1678'
 ht-degree: 14%
 
 ---
@@ -651,6 +651,16 @@ curl -X POST \
         ],
         "transformations": [
             {
+                "name": "Copy",
+                "params": {
+                    "deltaColumn": {
+                        "name": "updatedAt",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
+                }
+            },
+            {
                 "name": "Mapping",
                 "params": {
                     "mappingId": "ab91c736-1f3d-4b09-8424-311d3d3e3cea"
@@ -671,7 +681,7 @@ curl -X POST \
 | `sourceConnectionIds` | ID [de connexion](#source) source récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | ID [de connexion à la](#target-connection) cible récupéré lors d’une étape précédente. |
 | `transformations.params.mappingId` | ID [de](#mapping) mappage récupéré lors d’une étape précédente. |
-| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. Le format pris en charge pour `deltaColumn` est `yyyy-MM-dd HH:mm:ss`. Si vous utilisez Microsoft Dynamics, le format pris en charge `deltaColumn` est `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
 | `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
 | `scheduleParams.frequency` | Fréquence à laquelle le flux de données va collecter les données. Les valeurs acceptables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
