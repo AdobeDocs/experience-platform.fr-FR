@@ -3,12 +3,12 @@ keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Extension Confirmit Digital Feedback
 seo-title: Extension Confirmit Digital Feedback
 description: L’extension Confirmit Digital Feedback est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: null
+seo-description: L’extension Confirmit Digital Feedback est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 84%
+source-wordcount: '594'
+ht-degree: 85%
 
 ---
 
