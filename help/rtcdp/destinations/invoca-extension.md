@@ -3,11 +3,11 @@ keywords: Invoca;invoca
 title: Extension Invoca Tags
 seo-title: Extension Invoca Tags
 description: L’extension Invoca Tags est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: null
+seo-description: L’extension Invoca Tags est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 164c51e543d5eba11e4756723f3fecd84ec48f59
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '569'
 ht-degree: 85%
 
 ---
