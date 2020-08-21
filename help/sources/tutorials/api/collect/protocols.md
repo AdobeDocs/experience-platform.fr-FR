@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Collecte de données de protocole par le biais des connecteurs et des API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1669'
 ht-degree: 13%
 
 ---
@@ -645,7 +645,7 @@ curl -X POST \
 | `sourceConnectionIds` | ID [de connexion](#source) source récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | ID [de connexion à la](#target-connection) cible récupéré lors d’une étape précédente. |
 | `transformations.params.mappingId` | ID [de](#mapping) mappage récupéré lors d’une étape précédente. |
-| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. Le format pris en charge pour `deltaColumn` l’utilisation de Generic OData est `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
 | `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
 | `scheduleParams.frequency` | Fréquence à laquelle le flux de données va collecter les données. Les valeurs acceptables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
