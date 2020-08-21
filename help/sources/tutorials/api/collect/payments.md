@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Collecte de données de paiement via les connecteurs et les API source
 topic: overview
 translation-type: tm+mt
-source-git-commit: 773823333fe0553515ebf169b4fd956b8737a9c3
+source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
 workflow-type: tm+mt
-source-wordcount: '1696'
-ht-degree: 13%
+source-wordcount: '1702'
+ht-degree: 14%
 
 ---
 
@@ -136,7 +136,7 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 
 Dans les étapes précédentes, un schéma XDM ad hoc a été créé pour structurer les données source. Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues. Ce schéma XDM de cible étend également la [!DNL Individual Profile] classe XDM.
 
-Un schéma XDM de cible peut être créé en exécutant une requête de POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
+Un schéma XDM de cible peut être créé en exécutant une requête de POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **Format d’API**
 
@@ -647,7 +647,7 @@ curl -X POST \
 | `sourceConnectionIds` | ID [de connexion](#source) source récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | ID [de connexion à la](#target-connection) cible récupéré lors d’une étape précédente. |
 | `transformations.params.mappingId` | ID [de](#mapping) mappage récupéré lors d’une étape précédente. |
-| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
+| `transformations.params.deltaColum` | Colonne désignée utilisée pour différencier les données nouvelles et existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. Le format de date pris en charge pour `deltaColumn` est `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | ID de mappage associé à votre base de données. |
 | `scheduleParams.startTime` | Heure de début du flux de données dans l’époque. |
 | `scheduleParams.frequency` | Fréquence à laquelle le flux de données va collecter les données. Les valeurs acceptables sont les suivantes : `once`, `minute`, `hour`, `day`ou `week`. |
