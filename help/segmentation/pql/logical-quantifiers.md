@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Quantificateurs logiques
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 93%
+source-wordcount: '185'
+ht-degree: 87%
 
 ---
 
 
 # Fonctions de quantificateur logique
 
-Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
+Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Existe
 
