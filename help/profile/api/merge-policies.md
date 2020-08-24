@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 0309a2d6da888a2a88af161977310f213c36a85d
+source-git-commit: 2c83e282a7674ed6f36c8608035ddf19d88f0433
 workflow-type: tm+mt
-source-wordcount: '2381'
+source-wordcount: '2392'
 ht-degree: 67%
 
 ---
@@ -239,7 +239,7 @@ POST /config/mergePolicies/bulk-get
 
 **Requête**
 
-Le corps de la requête comprend un tableau &quot;id&quot; avec des objets individuels contenant l&#39;&quot;id&quot; pour chaque stratégie de fusion pour laquelle vous souhaitez récupérer des détails.
+Le corps de la requête comprend un tableau &quot;id&quot; avec des objets individuels contenant &quot;id&quot; pour chaque stratégie de fusion pour laquelle vous souhaitez récupérer des détails.
 
 ```shell
 curl -X POST \
@@ -730,6 +730,8 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
 
 ## Annexe
+
+Cette section fournit des informations supplémentaires sur l’utilisation des stratégies de fusion.
 
 ### Utilisation d’horodatages personnalisés {#custom-timestamps}
 
