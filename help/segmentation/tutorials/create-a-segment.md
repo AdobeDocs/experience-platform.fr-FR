@@ -5,17 +5,17 @@ title: Création d’un segment
 topic: tutorial
 description: Ce document fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 60%
+source-wordcount: '894'
+ht-degree: 61%
 
 ---
 
 
 # Création d’un segment
 
-This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
+This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [!DNL Adobe Experience Platform Segmentation Service API](../api/getting-started.md).
 
 Pour plus d’informations sur la création de segments à l’aide de l’interface utilisateur, consultez le [guide du créateur de segments](../ui/overview.md).
 
