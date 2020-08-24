@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exporter le point de terminaison des tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b3e6a6f1671a456b2ffa61139247c5799c495d92
+source-git-commit: 6ddb420ad3c4df3096dac456c58afc7a4916ce51
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1521'
 ht-degree: 38%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 38%
 
 # Exporter le point de terminaison des tâches
 
-Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le `/export/jobs` point de terminaison dans l’API de segmentation des Adobes Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
+Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le `/export/jobs` point de terminaison dans l’API de segmentation Adobe Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
 
 >[!NOTE]
 >
@@ -268,6 +268,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
     },
     "schema":{
         "name": "_xdm.context.profile"
+    },
+    "evaluationInfo": {
+        "segmentation": true
     }
 }'
 ```
@@ -279,13 +282,14 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter` | Objet qui spécifie les segments qui seront inclus dans la tâche d’exportation par ID, heure de qualification ou heure d’assimilation, selon les sous-propriétés répertoriées ci-dessous. Si rien n’est indiqué, toutes les données seront exportées. |
 | `filter.segments` | Indique les segments à exporter. Si vous omettez cette valeur, toutes les données de l’ensemble des profils seront exportées. Accepte un tableau d’objets de segment, chacun contenant les champs suivants :<ul><li>`segmentId` : **(obligatoire en cas d’utilisation de`segments`)** identifiant du segment pour les profils à exporter.</li><li>`segmentNs` : *(facultatif)* espace de noms du segment pour le `segmentID` donné.</li><li>`status` : *(facultatif)* tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `"realized"`, `"existing"` et `"exited"`.</li></ul> |
 | `filter.segmentQualificationTime` | Filtrer en fonction de l’heure de qualification du segment. L’heure de début et/ou l’heure de fin peuvent être fournies. |
-| `filter.segmentQualificationTime.startTime` | début de qualification des segments pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de début pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
+| `filter.segmentQualificationTime.startTime` | Début de qualification des segments pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de début pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
 | `filter.segmentQualificationTime.endTime` | Heure de fin de qualification de segment pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de fin pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
 | `filter.fromIngestTimestamp ` | Limite les profils exportés à inclure uniquement ceux qui ont été mis à jour après cet horodatage. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). <ul><li>`fromIngestTimestamp` pour les **profils**, le cas échéant : inclut tous les profils fusionnés dans lesquels la date et l’heure mises à jour et fusionnées sont supérieures à la date et l’heure données. Prend en charge l’opérande `greater_than`.</li><li>`fromIngestTimestamp` pour les **événements** : tous les événements ingérés après cette date et cette heure seront exportés en fonction du résultat du profil obtenu. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li> |
-| `filter.emptyProfiles` | Valeur booléenne indiquant si un filtre doit être appliqué aux profils vides. Les Profils peuvent contenir des enregistrements de profil, des enregistrements ExperienceEvent ou les deux. Les Profils sans enregistrement de profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. To export all profiles in the profile store, including the &quot;emptyProfiles&quot;, set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `filter.emptyProfiles` | Valeur booléenne indiquant si un filtre doit être appliqué aux profils vides. Les profils peuvent contenir des enregistrements de profil, des enregistrements ExperienceEvent ou les deux. Les profils sans enregistrement de profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. To export all profiles in the profile store, including the &quot;emptyProfiles&quot;, set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
 | `additionalFields.eventList` | Contrôle les champs de événement de séries chronologiques exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`fields` : contrôlent les champs à exporter.</li><li>`filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`filter.fromIngestTimestamp`: Filtres les événements de série chronologique à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li><li>`filter.toIngestTimestamp`: Filtres l’horodatage à ceux qui ont été ingérés avant l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
 | `destination` | **(Obligatoire)** Informations relatives aux données exportées :<ul><li>`datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`segmentPerBatch`: *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur &quot;false&quot;. La valeur &quot;false&quot; exporte tous les ID de segment dans un seul ID de lot. La valeur &quot;true&quot; exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur sur &quot;true&quot; peut affecter les performances d’exportation par lot.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
+| `evaluationInfo.segmentation` | *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur `false`. Une valeur de `true` indique que la segmentation doit être effectuée sur la tâche d’exportation. |
 
 **Réponse**
 
