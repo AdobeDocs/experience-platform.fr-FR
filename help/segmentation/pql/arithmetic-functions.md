@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Fonctions arithmétiques
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 94%
+source-wordcount: '227'
+ht-degree: 89%
 
 ---
 
 
 # Fonctions arithmétiques
 
-Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
+Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Addition
 
