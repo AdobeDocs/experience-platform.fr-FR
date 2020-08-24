@@ -5,10 +5,10 @@ title: Présentation du langage de requête de profil (PQL)
 topic: developer guide
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 translation-type: tm+mt
-source-git-commit: 691af873e0753217b9e7566042c508d9d9b8d8d5
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '686'
-ht-degree: 94%
+source-wordcount: '705'
+ht-degree: 91%
 
 ---
 
@@ -81,6 +81,7 @@ Le tableau suivant décrit les différentes catégories des fonctions PQL prises
 | Tableau, liste et ensemble | Utilisé pour interagir avec des tableaux, des listes et des ensembles. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de tableau, de liste et d’ensemble](./array-functions.md). |
 | Map | Utilisé pour interagir avec des maps. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de mappage](./map-functions.md). |
 | Chaîne | Utilisé pour interagir avec des chaînes. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de chaîne](./string-functions.md). |
+| Objet | Utilisé pour interagir avec des objets. More information about these functions can be found in the [object functions document](./object-functions.md). |
 | Arithmétique | Utilisé pour réaliser des fonctions arithmétiques de base sur des éléments PQL. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions arithmétiques](./arithmetic-functions.md) |
 | Agrégation | Utilisé pour combiner les résultats d’un tableau en un résultat unique. Vous trouverez plus d’informations sur les fonctions d’agrégation dans la [documentation consacrée aux fonctions d’agrégation](./aggregation-functions.md). |
 | Date et heure | Utilisé en association avec les objets date, heure et date-heure. Vous trouverez plus d’informations sur ces fonctions dans la [documentation des fonctions de date/d’heure](./datetime-functions.md). |
