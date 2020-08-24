@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Abonnement aux événements d’ingestion de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '831'
 ht-degree: 38%
 
 ---
@@ -39,7 +39,7 @@ Vous trouverez ci-dessous une liste des notifications d’état d’ingestion de
 
 ## Schéma de payload de notification
 
-The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
+The data ingestion notification event schema is an [!DNL Experience Data Model] (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM [!DNL GitHub] repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## S’abonner aux notifications d’état d’assimilation de données
 
@@ -49,13 +49,13 @@ Par le biais des [événements Adobe I/O](https://www.adobe.io/apis/experiencepl
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
 
-### Ajouter [!DNL Experience Platform] des événements au projet
+### ajouter les [!DNL Experience Platform] événements au projet
 
 Une fois que vous avez créé un nouveau projet, accédez à l’écran d’aperçu de ce projet. From here, click **[!UICONTROL Add event]**.
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_dialog appears. Cliquez sur**[!UICONTROL  Experience Platform ]**pour filtrer la liste des options disponibles, puis cliquez sur Notifications**[!UICONTROL  Platform ]**avant de cliquer sur**[!UICONTROL  Suivant ]**.
+The _[!UICONTROL Add events]_ dialog appears. Cliquez sur **[!UICONTROL Experience Platform]** pour filtrer la liste des options disponibles, puis sur Notifications **[!UICONTROL de]** plateforme avant de cliquer sur **[!UICONTROL Suivant]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
