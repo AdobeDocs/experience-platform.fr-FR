@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Fonctions de chaîne
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 84a5b992639c1cabfdeaec5262964c9873826592
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 98%
+source-wordcount: '754'
+ht-degree: 97%
 
 ---
 
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre les fonctions pour rendre l&#39;interaction avec les chaînes plus simple. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
+[!DNL Profile Query Language] (PQL) offre les fonctions pour rendre l&#39;interaction avec les chaînes plus simple. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Like
 
