@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Surveiller les comptes et les flux de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: c15f582eeaa895f03441b2f488686a9a48942f3d
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '890'
 ht-degree: 5%
 
 ---
@@ -106,7 +106,7 @@ Cette section comprend également une prévisualisation de la colonne qui contie
 
 ![Prévisualisation-erreur-diagnostics](../../images/tutorials/monitor/preview-error-diagnostics.png)
 
-Après avoir prévisualisé les erreurs, vous pouvez sélectionner **[!UICONTROL Télécharger]** depuis le panneau d&#39;aperçu **[du flux de données]** UICONTROL pour accéder aux diagnostics d&#39;erreur complets et télécharger le manifeste de fichier. Pour plus d’informations, consultez les documents sur les diagnostics [d’](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erreur et le [téléchargement des métadonnées](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
+Après avoir prévisualisé les erreurs, vous pouvez sélectionner **[!UICONTROL Télécharger]** dans le panneau d’aperçu **[!UICONTROL des exécutions de flux de]** données pour accéder aux diagnostics d’erreur complets et télécharger le manifeste de fichier. Pour plus d’informations, consultez les documents sur les diagnostics [d’](../../../ingestion/batch-ingestion/partial.md#retrieve-errors) erreur et le [téléchargement des métadonnées](../../../ingestion/batch-ingestion/partial.md#download-metadata) .
 
 ![Prévisualisation-erreur-diagnostics](../../images/tutorials/monitor/download.png)
 
