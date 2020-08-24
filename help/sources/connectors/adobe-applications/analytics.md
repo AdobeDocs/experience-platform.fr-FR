@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur de données Analytics
 topic: overview
 translation-type: tm+mt
-source-git-commit: 662ca170b7416dfb55cfb6b8cbaef640c1f83d31
+source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 50%
@@ -51,7 +51,9 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | Nouvelles données pour le lac de données | &lt; 45 minutes |
 | Renvoi des données (13 mois de données ou 10 milliards d’événements, selon la valeur la plus faible) | &lt; 4 semaines |
 
->[!NOTE] La latence varie selon la configuration client, les volumes de données et les applications clients. Par exemple, si l’implémentation d’Analytics est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
+>[!NOTE]
+>
+>La latence varie selon la configuration client, les volumes de données et les applications clients. Par exemple, si l’implémentation d’Analytics est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
 
 ## Identifiants de Principal dans les données Analytics
 
