@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Fonctions de tableau, de liste et d’ensemble
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 98%
+source-wordcount: '734'
+ht-degree: 96%
 
 ---
 
 
 # Fonctions de tableau, de liste et d’ensemble
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l&#39;interaction avec les tableaux, les listes et les chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [présentation du langage de requête de profil](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l&#39;interaction avec les tableaux, les listes et les chaînes. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## In
 
@@ -228,7 +228,7 @@ La requête PQL suivante crée un tableau de nombres et élève les valeurs d’
 numbers.map(square)
 ```
 
-## First `n` in array
+## First `n` in array {#first-n}
 
 La fonction `topN` est utilisée pour renvoyer les premiers éléments `N` d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction d’une expression numérique donnée.
 
@@ -288,7 +288,7 @@ La fonction `head` est utilisée pour renvoyer le premier élément du tableau o
 
 **Exemple**
 
-La requête PQL suivante renvoie la première des cinq premières commandes au prix le plus élevé. Vous trouverez plus d’informations sur la fonction `topN` dans la section [First `n` in array](#first-n-in-array).
+La requête PQL suivante renvoie la première des cinq premières commandes au prix le plus élevé. Vous trouverez plus d’informations sur la fonction `topN` dans la section [First `n` in array](#first-n).
 
 ```sql
 orders.topN(price, 5).head()
