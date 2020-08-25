@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Optimisation d’un modèle
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 89%
@@ -95,7 +95,7 @@ L’évaluateur personnalisé peut être fourni en étendant l’interface de `M
 
 Une fois définie dans la recette, l’étape suivante consiste à l’activer dans les recettes. Cette opération est effectuée dans le fichier [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) du dossier `resources` du projet. Ici, la `evaluation.class` est définie sur la classe `Evaluator` définie dans `Evaluator.scala`
 
-```properties
+```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
