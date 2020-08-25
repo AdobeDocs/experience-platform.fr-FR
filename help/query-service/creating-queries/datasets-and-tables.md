@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Jeux de données par rapport aux tableaux et schémas
 topic: queries
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 92%
@@ -35,7 +35,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `\d` affiche la vue PostgreSQL standard
 
-```
+```sql
              List of relations
  Schema |       Name      | Type  |  Owner   
 --------+-----------------+-------+----------
@@ -46,7 +46,7 @@ To view the available tables on [!DNL Platform] with SQL, you can use either `\d
 
 `SHOW TABLES;`[!DNL Platform] est une commande personnalisée qui apporte une vue plus détaillée et présente le tableau ainsi que le nom du jeu de données qui apparaît dans l’interface utilisateur de 
 
-```
+```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
 -----------------+--------------------------+----------------+-------------+----------
  luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
@@ -62,7 +62,7 @@ Pour afficher le schéma racine d’un tableau, utilisez la commande `\d table_n
 
 `\d luma_midvalues`
 
-```
+```sql
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 -------------------+-----------------------------+-----------+----------+---------
@@ -87,7 +87,7 @@ Pour aller plus loin dans le schéma, utilisez des traits de soulignement (`_`) 
 
 `\d luma_midvalues_web`
 
-```
+```sql
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 ----------------+-----------------------------------+-----------+----------+---------
