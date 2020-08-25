@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Actions marketing
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 10%
@@ -37,7 +37,7 @@ GET /marketingActions/custom
 
 La requête suivante récupère une liste d’actions marketing personnalisées conservées par votre organisation.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -124,7 +124,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La requête suivante récupère une action marketing personnalisée nommée `combineData`.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/combineData \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -174,7 +174,7 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 La requête suivante crée une nouvelle action marketing nommée `crossSiteTargeting`, à condition qu’une action marketing du même nom n’existe pas encore dans le système. S’il existe une action `crossSiteTargeting` marketing, cet appel met à jour cette action en fonction des propriétés fournies dans la charge utile.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -190,7 +190,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Nom de l’action marketing à créer ou à mettre à jour. <br><br>**IMPORTANT **: Cette propriété doit correspondre au chemin`{MARKETING_ACTION_NAME}`d’accès, faute de quoi une erreur HTTP 400 (Mauvaise requête) se produira. En d’autres termes, une fois qu’une action marketing a été créée, sa`name`propriété ne peut plus être modifiée. |
+| `name` | Nom de l’action marketing à créer ou à mettre à jour. <br><br>**IMPORTANT**: Cette propriété doit correspondre au chemin `{MARKETING_ACTION_NAME}` d’accès, faute de quoi une erreur HTTP 400 (Mauvaise requête) se produira. En d’autres termes, une fois qu’une action marketing a été créée, sa `name` propriété ne peut plus être modifiée. |
 | `description` | Description facultative afin de fournir un contexte supplémentaire pour l’action marketing. |
 
 **Réponse**
@@ -236,7 +236,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 **Requête**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
