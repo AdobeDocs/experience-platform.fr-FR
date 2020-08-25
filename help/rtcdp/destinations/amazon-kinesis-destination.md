@@ -5,7 +5,7 @@ seo-title: Destination Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 7%
@@ -47,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Dans l’étape d’authentification {#authentication-step}
 
-* **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans [!DNL Amazon Web Services], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans [!DNL Amazon Web Services], générez une paire de clés d&#39;accès - accès secret pour accorder à l&#39;Adobe un accès CDP en temps réel à votre [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **region**: Indiquez la [!DNL Amazon Web Services] région à laquelle diffuser les données.
 
 ![Champs d’entrée dans l’étape du compte](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
@@ -76,7 +76,7 @@ Pour obtenir des informations sur le processus d’activation des segments, voir
 
 Vos données [!DNL Experience Platform] exportées s’affichent [!DNL Amazon Kinesis] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
