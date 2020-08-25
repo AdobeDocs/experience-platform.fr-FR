@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 7bc7050d64727f09d3a13d803d532a9a3ba5d1a7
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 8%
@@ -22,7 +22,7 @@ The API endpoint used in this guide is part of the [[!DNL Policy Service] API](h
 
 ## Retrieve a list of policies {#list}
 
-Vous pouvez liste toutes les `core` stratégies ou `custom` les stratégies en adressant une demande de GET `/policies/core` ou `/policies/custom`, respectivement.
+Vous pouvez liste toutes les `core` stratégies ou `custom` les stratégies en adressant une demande de GET à `/policies/core` ou `/policies/custom`, respectivement.
 
 **Format d’API**
 
@@ -35,7 +35,7 @@ GET /policies/custom
 
 La requête suivante récupère une liste de stratégies personnalisées définies par votre organisation.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -163,7 +163,7 @@ GET /policies/custom/{POLICY_ID}
 
 **Requête**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -266,8 +266,8 @@ Par exemple, afin de définir une stratégie qui interdit l’exécution d’une
 
 | Propriété | Description |
 | --- | --- |
-| `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR`: L&#39;expression est résolue sur true si l&#39;un des libellés du `operands` tableau est présent.</li><li>`AND`: L&#39;expression ne se résout à true que si tous les libellés du `operands` tableau sont présents.</li></ul> |
-| `operands` | Tableau d’objets, chaque objet représentant soit une seule étiquette, soit une paire supplémentaire de `operator` propriétés et de propriétés `operands` . La présence des libellés et/ou des opérations dans un `operands` tableau est résolue sur true ou false en fonction de la valeur de sa `operator` propriété frère. |
+| `operator` | Indique la relation conditionnelle entre les étiquettes fournies dans le tableau `operands` frère. Les valeurs acceptées sont les suivantes : <ul><li>`OR`: L&#39;expression est résolue sur true si l&#39;un des libellés du `operands` tableau est présent.</li><li>`AND`: L&#39;expression se résout sur true uniquement si tous les libellés du tableau sont présents. `operands`</li></ul> |
+| `operands` | Tableau d’objets, chaque objet représentant soit une seule étiquette, soit une paire supplémentaire de `operator` propriétés et de propriétés `operands` . La présence des libellés et/ou des opérations dans un `operands` tableau est résolue sur true ou false en fonction de la valeur de sa propriété `operator` frère. |
 | `label` | Nom d’une étiquette d’utilisation de données unique qui s’applique à la stratégie. |
 
 You can create a new custom policy by making a POST request to the `/policies/custom` endpoint.
@@ -282,7 +282,7 @@ POST /policies/custom
 
 La requête suivante crée une nouvelle stratégie qui limite l’exécution de l’action marketing `exportToThirdParty` aux données contenant des étiquettes `C1 OR (C3 AND C7)`.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -396,7 +396,7 @@ Dans cet exemple, les conditions d’exportation des données vers un tiers ont 
 
 La requête suivante met à jour la stratégie existante pour inclure la nouvelle expression de stratégie. Notez que puisque cette requête réécrit essentiellement la stratégie, tous les champs doivent être inclus dans la charge utile, même si certaines de leurs valeurs ne sont pas mises à jour.
 
-```sh
+```shell
 curl -X PUT \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6dacdf685a4913dc48937c \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -590,7 +590,7 @@ DELETE /policies/custom/{POLICY_ID}
 
 **Requête**
 
-```sh
+```shell
 curl -X DELETE \
   https://platform.adobe.io/data/foundation/dulepolicy/policies/custom/5c6ddb56eb60ca13dbf8b9a8 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -617,7 +617,7 @@ GET /enabledCorePolicies
 
 **Requête**
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -675,7 +675,7 @@ PUT /enabledCorePolicies
 
 La requête suivante met à jour la liste des stratégies de base activées en fonction des ID fournis dans la charge utile.
 
-```sh
+```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/dulepolicy/enabledCorePolicies \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
