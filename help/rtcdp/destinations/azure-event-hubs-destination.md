@@ -5,7 +5,7 @@ seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -67,7 +67,7 @@ Pour obtenir des informations sur le processus d’activation des segments, voir
 
 Vos données [!DNL Experience Platform] exportées s’affichent [!DNL Azure Event Hubs] au format JSON. Par exemple, le événement ci-dessous contient l’attribut profil d’adresse électronique d’une audience qui s’est qualifiée pour un certain segment et a quitté un autre segment. Les identités de cette prospect sont ECID et email.
 
-```
+```json
 {
   "person": {
     "email": "yourstruly@adobe.con"
