@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des entités du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '7207'
 ht-degree: 95%
@@ -26,7 +26,7 @@ Le tutoriel se décompose en deux parties :
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. Il offre une méthode sécurisée et flexible pour gérer et interroger ces objets en vue de les utiliser dans plusieurs services d’exécution. Le [!DNL Decisioning Service] est l&#39;un de ceux-là. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux éléments suivants :
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [!DNL Decisioning Service](./../home.md): Explique les concepts et les composants utilisés pour la prise de décision d’expérience en général et la prise de décision d’Offre en particulier. Illustre les stratégies utilisées pour choisir la meilleure option à présenter lors de l’expérience client.
 - [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est un langage puissant pour écrire des expressions sur des instances XDM. Il est utilisé pour définir des règles de décision.
 
@@ -94,7 +94,7 @@ La liste des conteneurs accessibles est obtenue en appelant le point de terminai
 
 ## Gestion de l’accès aux conteneurs
 
-Un administrateur peut regrouper des entités principales, des ressources et des autorisations d’accès similaires dans des profils. Cette méthode est compatible avec l’[interface utilisateur d’Adobe Admin Console](https://adminconsole.adobe.com) et permet de réduire la charge de gestion. Pour créer des profils et y affecter des utilisateurs, vous devez être un administrateur de produits pour que votre entreprise puisse y avoir Adobe Experience Platform.
+Un administrateur peut regrouper des entités principales, des ressources et des autorisations d’accès similaires dans des profils. Cette méthode est compatible avec l’[interface utilisateur d’Adobe Admin Console](https://adminconsole.adobe.com) et permet de réduire la charge de gestion. Pour créer des profils et y affecter des utilisateurs, vous devez être un administrateur de produit pour Adobe Experience Platform.
 
 Il suffit de créer des profils de produit qui correspondent à certaines autorisations en une seule étape, puis d’ajouter des utilisateurs à ces profils. Les profils agissent comme des groupes ayant reçu des autorisations, et chaque utilisateur réel ou technique de ce groupe hérite de ces autorisations.
 
@@ -102,7 +102,7 @@ Il suffit de créer des profils de produit qui correspondent à certaines autori
 
 Lorsque l’administrateur a autorisé les utilisateurs réguliers ou les intégrations à accéder aux conteneurs, ces derniers s’affichent dans la liste « Origine » du référentiel. La liste peut différer selon les utilisateurs et les intégrations, car il s’agit d’un sous-ensemble de tous les conteneurs accessibles pour l’appelant. La liste des conteneurs peut être filtrée selon leur association au contexte du produit. Le paramètre de filtre `product` peut être répété. Si plusieurs filtres contextuels de produit sont utilisés, ils renvoient l’union des conteneurs ayant des associations avec l’un des contextes de produit fournis. Notez qu’un même conteneur peut être associé à plusieurs contextes de produit.
 
-Le contexte pour les [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`.
+Le contexte des [!DNL Platform][!DNL Decisioning Service] conteneurs est actuellement `dma_offers`en cours.
 
 >[!NOTE]
 >
@@ -776,7 +776,7 @@ La référence à la règle est incorporée dans la propriété `xdm:selectionCo
 
 Vous pouvez également ajouter et supprimer une règle à l’aide d’une opération PATCH :
 
-```
+```json
 [
   {
     "op":   "replace",
