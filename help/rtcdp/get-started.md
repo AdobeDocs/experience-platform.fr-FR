@@ -5,7 +5,7 @@ seo-title: Prise en main de la plateforme des données clients en temps réel d�
 description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 seo-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 89%
@@ -216,7 +216,7 @@ L’équipe de science des données de Luma a créé des modèles autour de la p
 
 Modifiez ou créez un segment représentant les personnes qui abandonnent leur panier et qui semblent rechercher un cadeau :
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
