@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Stratégies
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 14%
@@ -52,7 +52,7 @@ L’exemple de requête ci-dessous évalue une action marketing en fonction des 
 >
 >Tenez compte des opérateurs `AND` et `OR` dans l’expression des stratégies. In the example below, if either label (`C1` or `C3`) had appeared alone in the request, the marketing action would not have violated this policy. It takes both labels (`C1` and `C3`) to return the violated policy. Assurez-vous d’évaluer soigneusement les stratégies et de bien définir l’expression des stratégies.
 
-```sh
+```shell
 curl -X GET \
   'https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/sampleMarketingAction/constraints?duleLabels=C1,C3' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -140,7 +140,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La requête suivante exécute l’action `crossSiteTargeting` marketing sur un ensemble de trois jeux de données afin d’évaluer les violations de stratégie.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -371,7 +371,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 La requête suivante teste l’action marketing `crossSiteTargeting` sur un ensemble spécifique de champs appartenant à trois jeux de données. La charge utile est similaire à une demande d’ [évaluation impliquant uniquement des jeux de données](#datasets), ajoutant des champs spécifiques pour chaque jeu de données à partir desquels collecter des étiquettes.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/marketingActions/custom/crossSiteTargeting/constraints \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -540,7 +540,7 @@ La charge utile d&#39;une demande d&#39;évaluation en masse doit être un table
 >
 >Si une tâche d’évaluation répertoriée contient à la fois un tableau `entityList` et un `labels` tableau, une erreur se produit. Si vous souhaitez évaluer la même action marketing en fonction des jeux de données et des étiquettes, vous devez inclure des tâches d’évaluation distinctes pour cette action marketing.
 
-```sh
+```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/dulepolicy/bulk-eval \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -580,8 +580,8 @@ curl -X POST \
 | --- | --- |
 | `evalRef` | URI de l’action marketing à tester par rapport aux étiquettes ou aux jeux de données en cas de violation de stratégie. |
 | `includeDraft` | Par défaut, seules les stratégies activées participent à l’évaluation. Si `includeDraft` est défini sur `true`, les stratégies qui sont en `DRAFT` état y participent également. |
-| `labels` | Tableau d’étiquettes d’utilisation des données pour tester l’action marketing.<br><br>**IMPORTANT **: Lors de l’utilisation de cette propriété, une`entityList`propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la charge utile de requête qui contient un`entityList`tableau. |
-| `entityList` | Tableau de jeux de données et de champs (facultatifs) spécifiques à ces jeux de données pour tester l’action marketing.<br><br>**IMPORTANT **: Lors de l’utilisation de cette propriété, une`labels`propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la charge utile de requête qui contient un`labels`tableau. |
+| `labels` | Tableau d’étiquettes d’utilisation des données pour tester l’action marketing.<br><br>**IMPORTANT**: Lors de l’utilisation de cette propriété, une `entityList` propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de jeux de données et/ou de champs, vous devez inclure un objet distinct dans la charge utile de requête qui contient un `entityList` tableau. |
+| `entityList` | Tableau de jeux de données et de champs (facultatifs) spécifiques à ces jeux de données pour tester l’action marketing.<br><br>**IMPORTANT**: Lors de l’utilisation de cette propriété, une `labels` propriété ne doit PAS être incluse dans le même objet. Pour évaluer la même action marketing à l’aide de libellés d’utilisation de données spécifiques, vous devez inclure un objet distinct dans la charge utile de requête qui contient un `labels` tableau. |
 | `entityType` | Type d&#39;entité par lequel tester l&#39;action marketing. Actuellement, seul `dataSet` est pris en charge. |
 | `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. |
 | `entityMeta.fields` | (Facultatif) liste de champs spécifiques dans le jeu de données pour tester l’action marketing. |
