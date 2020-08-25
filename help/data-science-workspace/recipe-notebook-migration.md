@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '3311'
 ht-degree: 1%
@@ -29,14 +29,14 @@ Des modifications récentes pour [!DNL Data Science Workspace] exiger la mise à
 - [Guide de migration Spark](#spark-migration-guide)
    - [Modifier la manière dont vous lisez et écrivez des jeux de données](#read-write-recipe-spark)
    - [Télécharger l&#39;exemple de recette](#download-sample-spark)
-   - [Ajouter le fichier d&#39;ancrage](#add-dockerfile-spark)
+   - [ajouter le fichier d&#39;ancrage](#add-dockerfile-spark)
    - [Vérifier les dépendances](#change-dependencies-spark)
    - [Préparation des scripts d’ancrage](#prepare-docker-spark)
    - [créer la recette avec un docker](#create-recipe-spark)
 - [Guide de migration PySpark](#pyspark-migration-guide)
    - [Modifier la manière dont vous lisez et écrivez des jeux de données](#pyspark-read-write)
    - [Télécharger l&#39;exemple de recette](#pyspark-download-sample)
-   - [Ajouter le fichier d&#39;ancrage](#pyspark-add-dockerfile)
+   - [ajouter le fichier d&#39;ancrage](#pyspark-add-dockerfile)
    - [Préparation des scripts d’ancrage](#pyspark-prepare-docker)
    - [créer la recette avec un docker](#pyspark-create-recipe)
 
@@ -132,7 +132,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 La recette Scala se trouve dans le répertoire suivant `experience-platform-dsw-reference/recipes/scala/retail`.
 
-### Ajouter le fichier Dockerfile ([!DNL Spark]) {#add-dockerfile-spark}
+### ajouter le fichier Dockerfile ([!DNL Spark]) {#add-dockerfile-spark}
 
 Un nouveau fichier est nécessaire dans votre dossier de recette pour utiliser le flux de travail basé sur le docker. Copiez et collez le fichier Dockerfile du dossier des recettes situé dans `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Vous pouvez également copier et coller le code ci-dessous dans un nouveau fichier appelé `Dockerfile`.
 
@@ -172,7 +172,7 @@ L&#39;étape suivante consiste à suivre les fichiers source du [package dans un
 
 Pour créer une recette, vous devez d&#39;abord compléter le didacticiel sur les fichiers [source du](./models-recipes/package-source-files-recipe.md) package et disposer de l&#39;URL de l&#39;image du dossier. Vous pouvez créer une recette à l&#39;aide de l&#39;interface utilisateur ou de l&#39;API.
 
-Pour créer votre recette à l&#39;aide de l&#39;interface utilisateur, suivez le didacticiel [Importer une recette (IU)](./models-recipes/import-packaged-recipe-ui.md) emballée pour Scala.
+Pour créer votre recette à l&#39;aide de l&#39;interface utilisateur, suivez le didacticiel [d&#39;importation d&#39;une recette emballée (IU)](./models-recipes/import-packaged-recipe-ui.md) pour Scala.
 
 Pour créer votre recette à l&#39;aide de l&#39;API, suivez le didacticiel [d&#39;importation de recette (API)](./models-recipes/import-packaged-recipe-api.md) emballée pour Scala.
 
@@ -269,7 +269,7 @@ git clone https://github.com/adobe/experience-platform-dsw-reference.git
 
 La recette PySpark se trouve dans le répertoire suivant `experience-platform-dsw-reference/recipes/pyspark`.
 
-### Ajouter le fichier Dockerfile (PySpark) {#pyspark-add-dockerfile}
+### ajouter le fichier Dockerfile (PySpark) {#pyspark-add-dockerfile}
 
 Un nouveau fichier est nécessaire dans votre dossier de recette pour utiliser le flux de travail basé sur le docker. Copiez et collez le fichier Dockerfile du dossier des recettes situé dans `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Vous pouvez également copier et coller le code ci-dessous et créer un nouveau fichier appelé `Dockerfile`.
 
@@ -647,7 +647,7 @@ L&#39;utilisation de [!DNL Spark] la version 2.4 avec le noyau Scala requiert qu
 
 ![importation et définition de spark](./images/migration/spark-scala/start-session.png)
 
-## Données de Requête
+## Données de requête
 
 Avec Scala ([!DNL Spark] 2.4) `%%` sparkmagic n&#39;est plus pris en charge. Les opérations suivantes ne peuvent plus être utilisées :
 
@@ -769,6 +769,7 @@ Le bloc-notes Scala ([!DNL Spark] 2.4) utilise le noyau Scala qui nécessite plu
 >[!TIP]
 >
 >Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant illustre `val userToken` l’exemple ci-dessus et le déclare en ligne dans `option`:
+>
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
