@@ -5,7 +5,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 28%
@@ -201,7 +201,7 @@ Notez que vous pouvez modifier le format de fichier. Pour plus d’informations,
 
 Avec le format de fichier par défaut, les fichiers que vous recevriez trois jours consécutifs peuvent ressembler à ceci :
 
-```
+```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200409052200.csv
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
