@@ -23,11 +23,11 @@ Le service d&#39;extraction de mots-clés, lorsqu&#39;il reçoit un document de 
 
 **Extraction de mots-clés non surveillée**
 
-Pour l&#39;extraction non supervisée du mot-clé, [[ !DNL YAKE]](http://yake.inesctec.pt/) est utilisé. [!DNL YAKE] est une méthode d&#39;extraction automatique des mots-clés rapide et précise, non supervisée, utilisée pour sélectionner les mots-clés les plus importants d&#39;un document. Les extraits de mots-clés [!DNL YAKE] sont ensuite filtrés afin de ne sélectionner que des phrases de nom.
+Pour l&#39;extraction non supervisée du mot-clé, [[!DNL YAKE]](http://yake.inesctec.pt/) est utilisé. [!DNL YAKE] est une méthode d&#39;extraction automatique des mots-clés rapide et précise, non supervisée, utilisée pour sélectionner les mots-clés les plus importants d&#39;un document. Les extraits de mots-clés [!DNL YAKE] sont ensuite filtrés afin de ne sélectionner que des phrases de nom.
 
 **Reconnaissance d&#39;entité nommée**
 
-Pour la reconnaissance d’entité nommée, le modèle OntoNotes de [[ !DNL spaCy]](https://spacy.io/)est utilisé. Ce modèle affecte des vecteurs de jeton spécifiques au contexte, des balises POS (partie de parole), l’analyse des dépendances et des entités nommées. Le modèle OntoNotes est l’un des modèles principaux [!DNL spaCy] . Vous trouverez plus d&#39;informations sur le modèle OntoNotes [ici](https://spacy.io/models/en).
+Pour la reconnaissance d’entité nommée, le modèle OntoNotes de [[!DNL spaCy]](https://spacy.io/)est utilisé. Ce modèle affecte des vecteurs de jeton spécifiques au contexte, des balises POS (partie de parole), l’analyse des dépendances et des entités nommées. Le modèle OntoNotes est l’un des modèles principaux [!DNL spaCy] . Vous trouverez plus d&#39;informations sur le modèle OntoNotes [ici](https://spacy.io/models/en).
 
 Les entités nommées reconnues par [!DNL Content and Commerce AI] sont répertoriées dans le tableau suivant :
 
