@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'un connecteur de Data Explorer Azure à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 15%
@@ -15,9 +15,10 @@ ht-degree: 15%
 # Création d’un [!DNL Azure Data Explorer] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL Azure Data Explorer] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes de connexion [!DNL Azure Data Explorer] (ci-après appelé &quot;Data Explorer&quot;) à [!DNL Experience Platform].
 
@@ -36,8 +37,8 @@ Pour [!DNL Flow Service] établir une connexion avec [!DNL Data Explorer], vous 
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `endpoint` | Point de terminaison du [!DNL Data Explorer] serveur. |
-| `database` | Nom de la [!DNL Data Explorer] base de données. |
+| `endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `database` | The name of the [!DNL Data Explorer] database. |
 | `tenant` | ID de client unique utilisé pour la connexion à la [!DNL Data Explorer] base de données. |
 | `servicePrincipalId` | ID principal de service unique utilisé pour la connexion à la [!DNL Data Explorer] base de données. |
 | `servicePrincipalKey` | Clé principale de service unique utilisée pour la connexion à la [!DNL Data Explorer] base de données. |
@@ -109,8 +110,8 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.endpoint` | Point de terminaison du [!DNL Data Explorer] serveur. |
-| `auth.params.database` | Nom de la [!DNL Data Explorer] base de données. |
+| `auth.params.endpoint` | The endpoint of the [!DNL Data Explorer] server. |
+| `auth.params.database` | The name of the [!DNL Data Explorer] database. |
 | `auth.params.tenant` | ID de client unique utilisé pour la connexion à la [!DNL Data Explorer] base de données. |
 | `auth.params.servicePrincipalId` | ID principal de service unique utilisé pour la connexion à la [!DNL Data Explorer] base de données. |
 | `auth.params.servicePrincipalKey` | Clé principale de service unique utilisée pour la connexion à la [!DNL Data Explorer] base de données. |
