@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur OData générique à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 23%
@@ -15,9 +15,10 @@ ht-degree: 23%
 # Création d’un [!DNL Generic OData] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL Generic OData] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de la connexion [!DNL Generic OData] à [!DNL Experience Platform].
 
@@ -101,7 +102,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.url` | Hôte du [!DNL OData] serveur. |
+| `auth.params.url` | The host of the [!DNL OData] server. |
 | `connectionSpec.id` | ID de spécification de [!DNL OData] connexion : `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **Réponse**
