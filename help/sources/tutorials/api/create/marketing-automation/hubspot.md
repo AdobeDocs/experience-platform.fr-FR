@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur HubSpot à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 15%
@@ -15,9 +15,10 @@ ht-degree: 15%
 # Création d’un [!DNL HubSpot] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL HubSpot] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de la connexion [!DNL Experience Platform] à [!DNL HubSpot].
 
@@ -38,7 +39,7 @@ Pour [!DNL Flow Service] se connecter à [!DNL HubSpot], vous devez fournir les 
 | ---------- | ----------- |
 | ID client | ID client associé à votre [!DNL HubSpot] application. |
 | Secret client | Le secret client associé à votre [!DNL HubSpot] application. |
-| Jeton d&#39;accès | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
+| jeton d&#39;accès | Jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | Actualiser le jeton | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 | ID de spécification de connexion | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL HubSpot] est : `cc6a4487-9e91-433e-a3a3-9cf6626c1806` |
 
@@ -109,7 +110,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | ID client associé à votre [!DNL HubSpot] application. |
 | `auth.params.clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
-| `auth.params.accessToken` | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
+| `auth.params.accessToken` | Jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 
 **Réponse**
