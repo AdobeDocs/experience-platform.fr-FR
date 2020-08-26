@@ -5,10 +5,10 @@ seo-title: Destination Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 seo-description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 42%
+source-wordcount: '213'
+ht-degree: 39%
 
 ---
 
@@ -25,7 +25,7 @@ See [Cloud storage destinations workflow ](/help/rtcdp/destinations/cloud-storag
 
 For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
 
-* **[!DNL Amazon S3]clé d&#39;accès et clé[!DNL Amazon S3]** secrète : Dans [!DNL Amazon S3], générez une paire de clés d&#39;accès secrète pour accorder un accès CDP en temps réel à votre [!DNL Amazon S3] compte.
+* **[!DNL Amazon S3]clé d&#39;accès et clé[!DNL Amazon S3]** secrète : Dans [!DNL Amazon S3], générez une `access key - secret access key` paire pour accorder un accès CDP en temps réel Adobe à votre [!DNL Amazon S3] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 
 >[!IMPORTANT]
 >
