@@ -5,7 +5,7 @@ title: Guide d’utilisation de JupyterLab
 topic: Overview
 description: JupyterLab est une interface utilisateur web pour Project Jupyter et est étroitement intégré à Adobe Experience Platform. Il fournit un environnement de développement interactif pour que les analystes de données puissent travailler avec les notebooks, le code et les données Jupyter.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '3684'
 ht-degree: 57%
@@ -237,6 +237,7 @@ Pour ouvrir un nouveau *lanceur*, cliquez sur **Fichier > Nouveau lanceur**. Vo
 Dans [!DNL JupyterLab] sélectionnez l&#39;icône d&#39;engrenage dans le coin supérieur droit pour ouvrir la configuration *du serveur* portable. Vous pouvez activer GPU et allouer la quantité de mémoire dont vous avez besoin en utilisant le curseur. La quantité de mémoire que vous pouvez allouer dépend de la quantité de mémoire allouée par votre organisation. Sélectionnez **[!UICONTROL Mettre à jour les configurations]** pour enregistrer.
 
 >[!NOTE]
+>
 >Un seul processeur graphique est configuré par organisation pour les ordinateurs portables. Si le GPU est en cours d’utilisation, vous devez attendre que l’utilisateur qui a actuellement réservé le GPU le publie. Pour ce faire, déconnectez-vous ou quittez le GPU en état d&#39;inactivité pendant quatre heures ou plus.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
@@ -425,6 +426,7 @@ dataFrame.show()
 ```
 
 >[!TIP]
+>
 >Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`.
 
 ### Utilisation de la magie %dataset dans les blocs-notes PySpark 3 ([!DNL Spark] 2.4) {#magic}
@@ -604,9 +606,7 @@ timedf.show()
 
 >[!TIP]
 >
->
 >Dans Scala, vous pouvez utiliser `sys.env()` pour déclarer et renvoyer une valeur de l’intérieur `option`. Cela évite de définir des variables si vous savez qu’elles ne seront utilisées qu’une seule fois. L’exemple suivant extrait `val userToken` de l’exemple ci-dessus et le déclare en ligne `option` comme alternative :
->
 > 
 ```scala
 > .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
