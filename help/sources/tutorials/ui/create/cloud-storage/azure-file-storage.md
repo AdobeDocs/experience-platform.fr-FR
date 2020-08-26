@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement de fichiers Azure dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create an [!DNL Azure File Storage] source connector in the UI
 
 >[!NOTE]
+>
 >Le [!DNL Azure File Storage] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur [!DNL Azure File Storage] source à l’aide de l’ [!DNL Platform] interface utilisateur.
