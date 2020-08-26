@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 38%
@@ -341,7 +341,6 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d&#39;erreur 
 >[!NOTE]
 >
 >Si les diagnostics d’erreur ne sont pas disponibles, le message d’erreur suivant s’affiche à la place :
->
 > 
 ```json
 > {
