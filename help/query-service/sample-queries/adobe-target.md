@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Exemples de requêtes
 topic: queries
 translation-type: tm+mt
-source-git-commit: 7b07a974e29334cde2dee7027b9780a296db7b20
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 82%
@@ -17,6 +17,7 @@ ht-degree: 82%
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
 
 >[!NOTE]
+>
 >Dans les exemples suivants, vous devrez modifier le code SQL pour remplir les paramètres attendus pour vos requêtes en fonction du jeu de données, des variables ou de la période que vous souhaitez évaluer. Spécifiez les paramètres partout où vous voyez `{ }` dans le SQL.
 
 ## Nom de jeu de données standard pour la source de données cible sur [!DNL Platform]:
