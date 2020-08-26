@@ -4,7 +4,7 @@ seo-title: FAQ sur le SDK Web Adobe Experience Platform
 description: Questions fréquentes sur Adobe Experience Platform Web SDK
 seo-description: Questions fréquentes sur Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 87669db063781750097057463536723274eb0b4f
+source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
 workflow-type: tm+mt
 source-wordcount: '1684'
 ht-degree: 3%
@@ -48,7 +48,7 @@ En outre, il n’existe actuellement aucune bibliothèque JavaScript qui envoie 
 
 ### Avec Adobe Experience Platform Web SDK
 
-Le nouveau SDK Web envoie les données des solutions suivantes vers une destination unique (AEP Edge Network) et résout les cas d’utilisation les plus courants de la solution mentionnée ci-dessus.
+Le nouveau SDK Web envoie les données pour les solutions suivantes à une destination unique (AEP Edge Network) et résout les cas d’utilisation les plus courants mentionnés ci-dessus.
 
 * Adobe Analytics
 * Adobe Audience Manager
