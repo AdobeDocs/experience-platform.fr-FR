@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur Google BigQuery à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 13%
@@ -15,9 +15,10 @@ ht-degree: 13%
 # Création d’un [!DNL Google BigQuery] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL Google BigQuery] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes à suivre pour vous connecter [!DNL Experience Platform] à [!DNL Google BigQuery] (ci-après &quot;BigQuery&quot;).
 
