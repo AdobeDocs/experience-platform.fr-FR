@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Moteurs
 topic: Developer guide
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1118'
 ht-degree: 70%
@@ -44,7 +44,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 Une réponse réussie renvoie un payload contenant les détails de votre registre Docker, y compris l’URL Docker (`host`), le nom d’utilisateur (`username`), et le mot de passe (`password`).
 
 >[!NOTE]
->
 >
 >Votre mot de passe Docker change chaque fois que votre `{ACCESS_TOKEN}` est mis à jour.
 
@@ -136,10 +135,10 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom souhaité pour le moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
 | `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul le Dockerhub Azure ACR ou Public (non authentifié) est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 
 **Réponse**
 
@@ -213,13 +212,13 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
+| `type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. La valeur peut être définie sur Spark ou PySpark. |
 | `algorithm` | L’algorithme utilisé, définissez cette valeur sur `fp` (pipeline de fonctionnalités). |
 | `name` | Nom souhaité pour le moteur de pipeline de fonctionnalités. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que nom de la recette. |
 | `description` | Description facultative du moteur. La recette correspondant à ce moteur héritera de cette valeur afin d’être affichée dans l’interface utilisateur en tant que description de la recette. Cette propriété est obligatoire. Si vous ne souhaitez pas fournir de description, définissez sa valeur comme étant une chaîne vide. |
 | `mlLibrary` | Champ obligatoire lors de la création de moteurs pour les recettes PySpark et Scala. Ce champ doit être défini sur `databricks-spark`. |
 | `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul le Dockerhub Azure ACR ou Public (non authentifié) est pris en charge. |
-| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
+| `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Type d&#39;emballage du moteur. Cette valeur doit être définie sur `docker`. |
 | `artifacts.default.defaultMLInstanceConfigs` | Paramètres de votre fichier `pipeline.json` de configuration. |
 
