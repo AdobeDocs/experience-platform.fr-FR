@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur HDFS
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -15,11 +15,12 @@ ht-degree: 0%
 # Connecteur [!DNL Apache] HDFS (bêta)
 
 >[!NOTE]
+>
 >Le connecteur Apache HDFS est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de cloud tels que AWS, [!DNL Google Cloud Platform]et [!DNL Azure]vous permet d’importer vos données à partir de ces systèmes. Les données insérées peuvent être formatées en JSON, en parquet ou délimitées. La prise en charge des fournisseurs d&#39;enregistrement cloud inclut [!DNL Apache] HDFS.
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
