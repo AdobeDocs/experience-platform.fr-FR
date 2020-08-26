@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Regroupement des fichiers source dans une recette
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 41fe3e5b2a830c3182b46b3e0873b1672a1f1b03
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 49%
@@ -49,9 +49,11 @@ La page *Configurer* s’ouvre. Indiquez un *nom de recette* approprié, par exe
 Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** for *Type*. Les informations d&#39;identification de votre Registre Azure Conteneur sont générées une fois l&#39;opération terminée.
 
 >[!NOTE]
->*Type *is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
+>
+>*Type* est la classe de problème d&#39;apprentissage automatique pour laquelle la recette est conçue et est utilisée après la formation pour aider à personnaliser l&#39;évaluation de la course de formation.
 
 >[!TIP]
+>
 >- Pour [!DNL Python] les recettes, sélectionnez l&#39;exécution **[!UICONTROL Python]** .
 >- Pour les recettes R, sélectionnez le **[!UICONTROL runtime R]** .
 >- Pour les recettes PySpark, sélectionnez le **[!UICONTROL runtime PySpark]** . Un type d’artefact est renseigné automatiquement.
@@ -63,6 +65,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 Notez les valeurs de *Hôte Docker*, *Nom d’utilisateur* et *Mot de passe*. Elles sont utilisées pour créer et pousser votre [!DNL Docker] image dans les workflows décrits ci-dessous.
 
 >[!NOTE]
+>
 >L’URL source est fournie après avoir exécuté les étapes décrites ci-dessous. Le fichier de configuration est expliqué dans les didacticiels suivants, qui se trouvent dans les étapes [](#next-steps)suivantes.
 
 ### Regroupement des fichiers source
@@ -180,6 +183,7 @@ Accédez ensuite au répertoire `experience-platform-dsw-reference/recipes/scala
 ```
 
 >[!TIP]
+>
 >Si vous recevez une erreur d&#39;autorisation lors de la tentative de connexion au Docker à l&#39;aide du `login.sh` script, essayez d&#39;utiliser la commande `bash login.sh`.
 
 Lors de l&#39;exécution du script de connexion, vous devez indiquer l&#39;hôte, le nom d&#39;utilisateur et le mot de passe du Docker. Lors de la création, vous devez fournir l’hôte Docker et une balise de version pour la génération.
