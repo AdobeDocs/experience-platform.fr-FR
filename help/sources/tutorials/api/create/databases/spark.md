@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'un Apache Spark sur le connecteur Azure HDInsights à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 16%
@@ -15,9 +15,10 @@ ht-degree: 16%
 # Création d’un connecteur [!DNL Apache Spark] sur [!DNL Azure] HDInsights à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL Apache Spark] connecteur on [!DNL Azure HDInsights] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Apache Spark] à [!DNL Azure HDInsights] (ci-après appelé &quot;[!DNL Spark]&quot;) à [!DNL Experience Platform].
 
@@ -105,7 +106,7 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.host` | Hôte du [!DNL Spark] serveur. |
+| `auth.params.host` | The host of the [!DNL Spark] server. |
 | `auth.params.username` | Nom d’utilisateur associé à votre [!DNL Spark] connexion. |
 | `auth.params.password` | Mot de passe associé à votre [!DNL Spark] connexion. |
 | `connectionSpec.id` | ID de spécification de [!DNL Spark] connexion : `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
