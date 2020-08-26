@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Google Big Requête dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: a4ba11b8e05e5e054133c954b749381e39a7f721
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create a [!DNL Google Big Query] source connector in the UI
 
 >[!NOTE]
+>
 > Le [!DNL Google BigQuery] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Google Big Query] (ci-après appelé &quot;GBQ&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
