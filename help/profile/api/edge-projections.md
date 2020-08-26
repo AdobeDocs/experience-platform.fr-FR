@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Projections Edge - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1900'
 ht-degree: 86%
@@ -21,6 +21,7 @@ Afin d’offrir à vos clients des expériences coordonnées, cohérentes et per
 Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 >[!NOTE]
+>
 >Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
 
 ## Destinations de projection
@@ -53,6 +54,7 @@ curl -X GET \
 La réponse inclut un tableau `projectionDestinations` qui contient les détails de chaque destination affichés sous la forme d’un objet individuel du tableau. Si aucune projection n’a été définie, le tableau `projectionDestinations` est vide.
 
 >[!NOTE]
+>
 >Cette réponse a été raccourcie pour des raisons de place et n’affiche que deux destinations.
 
 ```json
@@ -122,6 +124,7 @@ POST /config/destinations
 La requête suivante crée une nouvelle destination de périphérie.
 
 >[!NOTE]
+>
 >La requête POST pour créer une destination nécessite un en-tête `Content-Type` spécifique, comme indiqué ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
@@ -227,6 +230,7 @@ L’objet de réponse affiche les détails de la destination de projection. L’
 Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point de terminaison `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à _réécrire_ la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
 
 >[!CAUTION]
+>
 >La réponse de l’API à la demande de mise à jour est immédiate, c’est pourquoi les modifications sont appliquées de manière asynchrone aux projections. En d’autres termes, il y a une différence de temps entre le moment où la mise à jour de la définition de la destination est effectuée et le moment où elle est appliquée.
 
 **Format d’API**
@@ -244,6 +248,7 @@ PUT /config/destinations/{DESTINATION_ID}
 La requête suivante met à jour la destination existante pour y inclure un second emplacement (`dataCenters`).
 
 >[!IMPORTANT]
+>
 >La requête PUT nécessite un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
@@ -295,6 +300,7 @@ La réponse inclut les détails mis à jour pour la destination, y compris son i
 Si votre organisation n’a plus besoin d’une destination de projection, celle-ci peut-être supprimée en exécutant une requête DELETE au point de terminaison `/config/destinations` et en incluant l’identifiant de la destination que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!CAUTION]
+>
 >La réponse de l’API à la demande de suppression est immédiate, c’est pourquoi les modifications actuelles sur les données en périphérie se produisent de manière asynchrone. En d’autres termes, les données de profil seront retirées de toutes les périphéries (les `dataCenters` précisés dans la destination de projection), mais terminer le processus prendra du temps.
 
 **Format d’API**
@@ -345,6 +351,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 | `{PROJECTION_NAME}` | Le nom de la configuration de projection auquel vous souhaitez accéder. |
 
 >[!NOTE]
+>
 >`schemaName` est requis lorsque vous utilisez le paramètre `name`, comme nom de configuration de projection unique dans le contexte d’une classe schéma.
 
 **Requête**
@@ -429,6 +436,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 **Requête**
 
 >[!NOTE]
+>
 >The POST request to create a configuration requires a specific `Content-Type` header, as shown below. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
@@ -506,6 +514,7 @@ Un sélecteur est une liste de noms de champ XDM séparés par des virgules. Dan
    * L’exemple ci-dessus équivaut à `addresses.type,addresses.city.country`.
 
 >[!NOTE]
+>
 >La notation par points et la notation entre parenthèses sont toutes les deux prises en charge pour référencer les sous-champs. Toutefois, la bonne pratique consiste à utiliser la notation par point, car celle-ci est plus concise et fournit une meilleure illustration de la hiérarchie des champs.
 
 * Chaque champ d’un sélecteur est associé spécifiquement à la racine de la réponse.
@@ -610,6 +619,7 @@ Renvoie uniquement le champ city pour tous les éléments du tableau addresses.
 ```
 
 >[!NOTE]
+>
 >Lorsqu’un champ imbriqué est renvoyé, la projection inclut les objets parents imbriqués. Les champs parents n’incluent pas d’autres champs enfants sauf s’ils sont également sélectionnés de manière explicite.
 
 **addresses(type,city)**
