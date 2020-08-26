@@ -2,8 +2,9 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide du système de modèle de données d’expérience (XDM)
+user-guide-description: Experience Data Model (XDM) is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with Adobe Experience Platform services. By adhering to XDM standards, all customer experience data can be incorporated into a common representation that can deliver insights in a faster, more integrated way.
 translation-type: tm+mt
-source-git-commit: ef11e3c4f0a3be42e17080f8b2deb464ae6fcd2a
+source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 92%
@@ -17,7 +18,7 @@ ht-degree: 92%
 * Schémas XDM {#schema}
    * [Principes de base de la composition des schémas](schema/composition.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
-   * Cas d&#39;utilisation de Schéma {#use-cases}
+   * Cas d&#39;utilisation de schéma {#use-cases}
       * [Mélange de consentement de confidentialité](schema/privacy-consent.md)
 * API Schema Registry {#api}
    * [Prise en main](api/getting-started.md)
@@ -42,4 +43,4 @@ ht-degree: 92%
    * [Création d’un schéma ad hoc (API)](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
