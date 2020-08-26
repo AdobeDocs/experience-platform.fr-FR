@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Tutoriels Data Science Workspace
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 17%
@@ -60,7 +60,6 @@ Pour en savoir plus, suivez les fichiers source du [package dans un didacticiel]
 ## Importer une recette
 
 >[!NOTE]
->
 >
 >Ce didacticiel nécessite que vous disposiez d’une URL de fichier [!DNL Docker] source. Consultez les fichiers source du [package dans un didacticiel](../data-science-workspace/models-recipes/package-source-files-recipe.md) de recette si vous ne disposez pas d’une URL de fichier [!DNL Docker] source.
 
@@ -127,9 +126,10 @@ Pour commencer, suivez le didacticiel [de](../data-science-workspace/models-reci
 ## Création d’un pipeline de fonctionnalités
 
 >[!NOTE]
+>
 >Actuellement, les pipelines de fonctionnalités ne sont disponibles que par API.
 
-L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisées pour effectuer l&#39;ingénierie de fonctionnalités à l&#39;échelle du [!DNL Sensei Machine Learning Framework Runtime].
+Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisées pour effectuer l&#39;ingénierie de fonctionnalités à l&#39;échelle du [!DNL Sensei Machine Learning Framework Runtime].
 
 **Ce guide vous aidera à :**
 - Mettez en oeuvre les classes de pipeline de fonctionnalités.
