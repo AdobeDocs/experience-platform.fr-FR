@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Oracle DB dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create an [!DNL Oracle DB] source connector in the UI
 
 >[!NOTE]
+>
 > Le [!DNL Oracle DB] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur [!DNL Oracle DB] source à l’aide de l’ [!DNL Platform] interface utilisateur.
