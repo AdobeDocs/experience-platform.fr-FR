@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: fa439ebb9d02d4a08c8ed92b18f2db819d089174
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 83%
@@ -15,6 +15,7 @@ ht-degree: 83%
 # (Alpha) Point de terminaison des attributs calculés
 
 >[!IMPORTANT]
+>
 >La fonctionnalité d’attribut calculé décrite dans ce document est actuellement en version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agréger des valeurs sur tous les enregistrements et tous les événements.
@@ -48,6 +49,7 @@ Les cas d’utilisation des attributs calculés peuvent aller de calculs simples
 Pour configurer un attribut calculé, vous devez d’abord identifier le champ dans lequel la valeur d’attribut calculé sera conservée. Vous pouvez créer ce champ à l’aide d’un mixin qui ajoutera le champ à un schéma existant ou en sélectionnant un champ que vous avez déjà défini dans un schéma.
 
 >[!NOTE]
+>
 >Il n’est pas possible d’ajouter des attributs calculés à des champs au sein de mixins définis par Adobe. Le champ doit se trouver dans l’espace de noms `tenant`, ce qui signifie qu’il doit s’agir d’un champ que vous définissez et ajoutez à un schéma.
 
 In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). Nous vous recommandons également de consulter la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation des principes de base de la composition des schémas.
@@ -89,6 +91,7 @@ Après avoir cliqué sur **[!UICONTROL Ajouter un champ]**, un nouvel objet port
 À l’aide de la section *[!UICONTROL Propriétés du champ]* située sur le côté droit de l’éditeur, renseignez les informations nécessaires pour votre nouveau champ, notamment son nom, son nom d’affichage et son type.
 
 >[!NOTE]
+>
 >Le type de champ doit être identique à celui de la valeur de l’attribut calculé. Par exemple, si la valeur de l’attribut calculé est une chaîne, le champ défini dans le schéma doit être une chaîne.
 
 Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le nom du champ, ainsi que son type, s’afficheront dans la section *[!UICONTROL Structure]* de l’éditeur.
@@ -100,6 +103,7 @@ Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le no
 Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section *[!UICONTROL Structure]* de l’éditeur pour faire apparaître l’onglet *[!UICONTROL Propriétés du schéma]*. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
 
 >[!NOTE]
+>
 >Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
 
 ![](../images/computed-attributes/Profile.png)
