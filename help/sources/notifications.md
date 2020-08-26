@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Notifications d’exécution de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: b5b785d8415c15e3acb9e1155811a66c51477717
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 4%
@@ -44,6 +44,7 @@ Pour recevoir des notifications sur l&#39;état de votre flux d&#39;exécution, 
 Une fois que vous avez acquis une URL webhook unique, accédez aux Événements [d&#39;E/S d&#39;](https://www.adobe.io/apis/experienceplatform/events.html) Adobe et suivez les étapes décrites dans le document de notifications [d&#39;assimilation des](../ingestion/quality/subscribe-events.md) données au début s&#39;abonnant aux événements.
 
 >[!IMPORTANT]
+>
 >Au cours du processus d’abonnement, veillez à sélectionner [!DNL Platform] les notifications en tant que fournisseur de événements et à sélectionner les abonnements de événement suivants :
 >
 >* **[!UICONTROL L&#39;exécution de flux de la source Experience Platform a réussi]**
@@ -60,6 +61,7 @@ Une fois votre webhook connecté et votre abonnement d’événement terminé, v
 Une notification renvoie des informations telles que le nombre de tâches d’assimilation exécutées, la taille du fichier et les erreurs. Une notification renvoie également une charge utile associée à votre flux exécuté au format JSON. La charge utile de réponse peut être classée en tant que `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
+>
 >Si l’assimilation partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des intégrations réussies et en échec est marqué comme `sources_flow_run_success` uniquement si le nombre d’erreurs est inférieur au pourcentage de seuil d’erreur défini pendant le processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la charge utile de retour.
 
 ### Réussite
@@ -322,6 +324,7 @@ La réponse suivante est un exemple d’échec de l’exécution du flux, avec u
 | `fileInfo` | URL qui conduit à un aperçu des fichiers qui ont été correctement et non correctement ingérés. |
 
 >[!NOTE]
+>
 >Consultez l&#39; [annexe](#errors) pour plus d&#39;informations sur les messages d&#39;erreur.
 
 ## Étapes suivantes
