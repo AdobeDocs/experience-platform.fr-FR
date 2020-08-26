@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Importation d’une recette empaquetée (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 62%
@@ -50,6 +50,7 @@ Vous pouvez créer des moteurs en adressant une requête de POST au point de ter
 Pour créer un moteur avec un fichier de recette empaquetée stocké dans un conteneur Docker, vous devez fournir l’URL Docker au fichier de recette empaquetée.
 
 >[!CAUTION]
+>
 > Si vous utilisez [!DNL Python] ou R, utilisez la requête ci-dessous. Si vous utilisez PySpark ou Scala, utilisez l’exemple de requête PySpark/Scala situé sous l’exemple Python/R.
 
 **Format d’API**
