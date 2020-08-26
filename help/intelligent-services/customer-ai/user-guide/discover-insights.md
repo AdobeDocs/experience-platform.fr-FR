@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Découverte d’insights avec Customer AI
 topic: Discovering insights
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 89%
@@ -112,6 +112,7 @@ Une carte est générée pour chaque compartiment de score, présentant les 10 
 Cliquer sur le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments de propension faible, moyenne ou élevée vous redirige vers le créateur de segments.
 
 >[!NOTE]
+>
 >Le bouton **[!UICONTROL Créer un segment]** n’est disponible que si le Profil client en temps réel est activé pour le jeu de données. Pour plus d’informations sur la façon d’activer le Profil client en temps réel, consultez la présentation [du Profil client en temps](../../../rtcdp/overview.md)réel.
 
 ![Cliquez sur Créer un segment](../images/insights/influential-factors-create-segment.png)
