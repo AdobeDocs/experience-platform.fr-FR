@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur PayPal à l’aide de l’API du service de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 17%
@@ -15,9 +15,10 @@ ht-degree: 17%
 # Création d’un [!DNL PayPal] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
+>
 >Le [!DNL PayPal] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes de la connexion [!DNL PayPal] à l’Experience Platform.
 
@@ -26,7 +27,7 @@ Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les é
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une instance de plate-forme unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL PayPal] using the [!DNL Flow Service] API.
 
@@ -36,7 +37,7 @@ Pour [!DNL Flow Service] établir une connexion avec [!DNL PayPal], vous devez f
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| Hôte | URL de l’ [!DNL PayPal] instance. (par défaut : api.sandbox.paypal.com). |
+| Hôte | The URL of the [!DNL PayPal] instance. (par défaut : api.sandbox.paypal.com). |
 | ID client | ID client associé à votre [!DNL PayPal] application. |
 | Client secret | Le secret client associé à votre [!DNL PayPal] application. |
 | ID de spécification de connexion | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL PayPal] est : `221c7626-58f6-4eec-8ee2-042b0226f03b` |
@@ -105,7 +106,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.host` | URL de l’ [!DNL PayPal] instance. |
+| `auth.params.host` | The URL of the [!DNL PayPal] instance. |
 | `auth.params.clientId` | ID client associé à votre [!DNL PayPal] instance. |
 | `auth.params.clientSecret` | Le secret client associé à votre [!DNL PayPal] instance. |
 | `connectionSpec.id` | ID de spécification de [!DNL PayPal] connexion : `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
