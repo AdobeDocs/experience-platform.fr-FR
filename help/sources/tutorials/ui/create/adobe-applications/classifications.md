@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Création d’un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: e0d842b3c5d3b628e117c14d47d6c114b36484dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '624'
 ht-degree: 4%
@@ -72,6 +72,7 @@ Sélectionnez le jeu **[!UICONTROL de données de]** Cible auquel vous souhaitez
 La page activité **[!UICONTROL des]** jeux de données affiche des informations sur le jeu de données de cible que vous avez sélectionné, y compris des détails sur son statut de lot, son ID de jeu de données et son schéma.
 
 >[!IMPORTANT]
+>
 >Bien que la suppression de jeux de données soit possible pour d’autres connecteurs source, elle n’est actuellement pas prise en charge pour le connecteur de données des classifications Analytics. Si vous supprimez un jeu de données par erreur, contactez le service à la clientèle Adobe.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
