@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Diffusion par flux de données de série temporelle
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1126'
 ht-degree: 80%
 
 ---
@@ -405,7 +405,7 @@ To validate the previously ingested records, you can use the [!DNL Profile Acces
 
 >[!NOTE]
 >
->Si la stratégie de fusion n’est pas définie et que schema.</span>name ou relatedSchema</span>.name est `_xdm.context.profile`, [!DNL Profile Access] récupère **** toutes les identités liées.
+>Si l’ID de stratégie de fusion n’est pas défini et que le ou `schema.name` est `relatedSchema.name` défini, `_xdm.context.profile`récupère [!DNL Profile Access] **** toutes les identités liées.
 
 **Format d’API**
 
