@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Création d'un connecteur Analytics Azure Synapse à l'aide de l'API Flow Service
+title: Création d'un connecteur Azure Synapse Analytics à l'aide de l'API Flow Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 16%
@@ -15,9 +15,10 @@ ht-degree: 16%
 # Création d’un [!DNL Azure Synapse Analytics] connecteur à l’aide de l’ [!DNL Flow Service] API
 
 >[!NOTE]
->Le connecteur Analytics Azure Synapse est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>
+>Le connecteur Azure Synapse Analytics est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes à suivre pour vous connecter [!DNL Azure Synapse Analytics] (ci-après appelé &quot;[!DNL Synapse]&quot;) à [!DNL Experience Platform].
 
