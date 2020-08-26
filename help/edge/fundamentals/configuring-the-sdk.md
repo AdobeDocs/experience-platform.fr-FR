@@ -5,7 +5,7 @@ description: Découvrez la procédure de configuration du SDK Web d’Experience
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -107,9 +107,9 @@ Définissez cette option pour configurer un rappel appelé pour chaque événeme
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ----------------- |
-| Objet | Non | `{"general": "in"}` |
+| Objet | Non | `"in"` |
 
-Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. L’autre valeur valide est `{"general": "pending"}`. Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement. Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](supporting-consent.md).
+Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. L’autre valeur valide est `"pending"`. Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement. Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](supporting-consent.md).
 
 ## Options de personnalisation
 
