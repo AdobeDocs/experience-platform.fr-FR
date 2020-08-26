@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Entrée et sortie de l’IA client
 topic: Getting started
 translation-type: tm+mt
-source-git-commit: 5cab341138e809bae79623bb65e499ac6b955f27
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 34%
@@ -33,6 +33,7 @@ Les exemples suivants fournis utilisent une formule simple pour vous aider à d�
 Longueur minimale des données requises = population admissible + fenêtre de résultat
 
 >[!NOTE]
+>
 > 30 est le nombre minimum de jours requis pour la population admissible. Si ce n’est pas le cas, la valeur par défaut est de 120 jours.
 
 Exemples :
@@ -50,6 +51,7 @@ Outre les données minimales requises, l’API du client fonctionne également m
 Customer AI génère plusieurs attributs pour les profils individuels supposés éligibles. Il existe deux façons de consommer le score en fonction de ce que vous avez mis en service. Si le Profil client en temps réel est activé pour votre jeu de données, vous pouvez l’utiliser via le Profil client en temps réel. Si vous n’avez pas de Profil client en temps réel, vous pouvez télécharger le jeu de données de sortie de l’IA du client disponible sur le lac de données.
 
 >[!NOTE]
+>
 >Les valeurs de sortie sont utilisées par le Profil client en temps réel qui peut être utilisé pour créer et définir des segments.
 
 Le tableau ci-dessous décrit les différents attributs trouvés dans les sorties de Customer AI :
