@@ -5,7 +5,7 @@ title: Extraction des couleurs
 topic: Developer guide
 description: Le service d’extraction des couleurs, lorsqu’on lui donne une image, peut calculer l’histogramme des couleurs de pixels et les trier par couleurs dominantes en compartiments.
 translation-type: tm+mt
-source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Cette méthode utilise un extracteur de premier plan basé sur l’apprentissage
 
 L&#39;image suivante a été utilisée dans l&#39;exemple illustré dans ce document :
 
-![image test](../images/QQAsset1.jpg)
+![image de test](../images/QQAsset1.jpg)
 
 **Format d’API**
 
@@ -47,7 +47,8 @@ La requête suivante extrait les couleurs d’une image en fonction des paramèt
 
 >[!CAUTION]
 >
->`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Pour le service d’extraction des couleurs, l’ `analyzer_id` ID est : `Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
+>`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Pour le service d’extraction des couleurs, l’ `analyzer_id` ID est :
+>`Feature:image-color-histogram:Service-6fe52999293e483b8e4ae9a95f1b81a7`
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -94,7 +95,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-type` | Permet d’indiquer si l’entrée fait partie du corps de la requête ou si une URL signée est associée à un compartiment S3. La valeur par défaut de cette propriété est `inline`. | Non |
 | `encoding` | Format de fichier de l’image d’entrée. Actuellement, seules les images JPEG et PNG peuvent être traitées. La valeur par défaut de cette propriété est `jpeg`. | Non |
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
-| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le plus faible des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
 | `custom` | Tout paramètre personnalisé à transmettre. | Non |
 | `historic-metadata` | Tableau qui peut être transmis des métadonnées. | Non |
 
