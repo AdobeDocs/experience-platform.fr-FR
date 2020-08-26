@@ -5,7 +5,7 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: fe53ecbf6adff4f1e09979cd170a88ac0bd3cb75
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 62%
@@ -26,13 +26,13 @@ Si l’utilisateur choisit de refuser son consentement pour tous les usages, le 
 
 ## Configuration du consentement
 
-Par défaut, le consentement de l’utilisateur est donné pour tous les usages. Pour empêcher le SDK d’exécuter les tâches ci-dessus jusqu’à ce que l’utilisateur donne son consentement, transmettez `"defaultConsent": { "general": "pending" }` pendant la configuration du SDK de la manière suivante :
+Par défaut, le consentement de l’utilisateur est donné pour tous les usages. Pour empêcher le SDK d’exécuter les tâches ci-dessus jusqu’à ce que l’utilisateur donne son consentement, transmettez `"defaultConsent": "pending"` pendant la configuration du SDK de la manière suivante :
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "imsOrgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "defaultConsent": { "general": "pending" }
+  "defaultConsent": "pending"
 });
 ```
 
