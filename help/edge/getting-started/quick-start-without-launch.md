@@ -5,7 +5,7 @@ description: Guide de début rapide pour l’utilisation du SDK Web Experience P
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 14%
@@ -51,7 +51,7 @@ Pour installer le SDK, copiez et collez le &quot;code de base&quot; suivant le p
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
-<script src="https://cdn1.adoberesources.net/alloy/1.0.0/alloy.min.js" async></script>
+<script src="https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js" async></script>
 ```
 
 Pour plus d’informations sur les différentes options pour ce faire, voir [Installation du SDK](../fundamentals/installing-the-sdk.md).
