@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de référence des noeuds d’apprentissage automatique en temps réel
 topic: Nodes reference
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -15,6 +15,7 @@ ht-degree: 1%
 # Guide de référence des noeuds d’apprentissage automatique en temps réel (Alpha)
 
 >[!IMPORTANT]
+>
 >L&#39;apprentissage automatique en temps réel n&#39;est pas encore disponible pour tous les utilisateurs. Cette fonction est en alpha et est encore en cours de test. Ce document est sujet à changement.
 
 Un noeud est l’unité fondamentale dont les graphiques sont formés. Chaque noeud exécute une tâche spécifique et peut être chaîné ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche exécutée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation de données ou de schéma, ou une inférence d’apprentissage automatique. Le noeud envoie la valeur transformée ou déduite au(x) noeud(s) suivant(s).
@@ -72,6 +73,7 @@ model_id = msg_model.model['model_id']
 ONNXNode est un noeud d&#39;Adobe interne qui utilise un ID de modèle pour extraire le modèle ONNX préentraîné et l&#39;utilise pour marquer les données entrantes.
 
 >[!TIP]
+>
 >Spécifiez les colonnes dans le même ordre que celui dans lequel vous souhaitez que les données soient envoyées au modèle ONNX pour obtenir un score.
 
 ```python
@@ -121,7 +123,7 @@ msg6 = model_train.process(msg5)
 | Valeur | Description |
 | --- | --- |
 | features | Fonctionnalités d&#39;entrée du modèle (liste de chaînes). <br> Par exemple: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Nom de la colonne de Cible (chaîne). |
+| label | Nom de la colonne de cible (chaîne). |
 | mode | Train/test (chaîne). |
 | model_path | Chemin d&#39;accès au modèle d&#39;enregistrement local au format unique. |
 | params.model | Chemin d&#39;importation absolu du modèle (chaîne), par exemple : `sklearn.linear_model.LogisticRegression`. |
