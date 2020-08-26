@@ -5,7 +5,7 @@ seo-title: Présentation de l’administration de la plateforme CDP en temps ré
 description: 'Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform. '
 seo-description: description seo
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 60%
@@ -28,6 +28,7 @@ Le contrôle d’accès est géré à l’aide d’[Adobe Admin Console](http://
 To learn more about access control, see the [access control overview](../../access-control/home.md) in the [!DNL Experience Platform] documentation.
 
 >[!IMPORTANT]
+>
 >Pour obtenir un guide détaillé sur l’accès aux fonctionnalités de la plateforme CDP en temps réel, notamment sur l’activation de la visibilité dans l’interface utilisateur, suivez les étapes fournies dans le [guide d’utilisation du contrôle d’accès](../../access-control/ui/overview.md), plus particulièrement les sections sur la gestion des informations et des services supplémentaires pour un profil de produit.
 
 ## Environnements de test
