@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Entités - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1671'
 ht-degree: 89%
@@ -115,6 +115,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >Si un graphique associé lie plus de 50 identités, ce service renvoie un état HTTP 422 et le message « Trop d’identités connexes ». Si cette erreur s’affiche, pensez à ajouter d’autres paramètres de requête pour affiner votre recherche.
 
 ## Accès aux données de profil par liste d’identités
@@ -361,6 +362,7 @@ curl -X GET \
 Une réponse réussie renvoie une liste paginée d’événements de série temporelle et des champs associés spécifiés dans les paramètres de requête.
 
 >[!NOTE]
+>
 >La requête spécifie une limite de un (`limit=1`), donc le `count` de la réponse ci-dessous est de 1 et une seule entité est renvoyée.
 
 ```json
@@ -415,6 +417,7 @@ Une réponse réussie renvoie une liste paginée d’événements de série temp
 Les résultats sont paginés lors de la récupération des événements de série temporelle. Si des pages de résultats ultérieures sont disponibles, la propriété `_page.next` contiendra un identifiant. En outre, la propriété `_links.next.href` fournit un URI de requête pour récupérer la page suivante. Pour récupérer les résultats, effectuez une autre requête GET sur le point de terminaison `/access/entities`, mais assurez-vous de remplacer `/entities` par la valeur de l’URI fourni.
 
 >[!NOTE]
+>
 >Veillez à ne pas répéter accidentellement `/entities/` dans le chemin de requête. Il ne doit apparaître qu’une seule fois, par exemple : `/access/entities?start=...`
 
 **Format d’API**
