@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Microsoft SQL Server dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 12%
@@ -15,6 +15,7 @@ ht-degree: 12%
 # Create a [!DNL Microsoft SQL Server] source connector in the UI
 
 >[!NOTE]
+>
 > Le [!DNL Microsoft SQL Server] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Microsoft SQL Server] (ci-après dénommé &quot;[!DNL SQL Server]&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
