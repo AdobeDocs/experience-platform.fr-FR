@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur ServiceNow
 topic: overview
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 13%
@@ -15,13 +15,14 @@ ht-degree: 13%
 # (Bêta) [!DNL ServiceNow] Connecteur
 
 >[!NOTE]
+>
 >Le [!DNL ServiceNow] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
 [!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de succès client tiers. La prise en charge des fournisseurs de succès client comprend [!DNL ServiceNow].
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
