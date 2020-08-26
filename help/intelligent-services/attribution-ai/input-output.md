@@ -5,7 +5,7 @@ title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: 2b51569a4c3dd9863edb6831bd182a7fa9d1d891
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 16%
@@ -37,7 +37,7 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 | Marketing.trackingCode | Point de contact |
 | Marketing.campaignname | Point de contact |
 | Marketing.campaigngroup | Point de contact |
-| Commerce | Conversion |
+| Commerce | Conversion  |
 
 En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; sont fortement conseillées pour définir des points de contact pour obtenir de bonnes informations. Cependant, vous pouvez inclure toute autre colonne supplémentaire ainsi que les colonnes ci-dessus à configurer comme une conversion ou une définition de point de contact.
 
@@ -69,6 +69,7 @@ Par défaut, Attribution AI définit la fenêtre de formation comme les deux der
 Longueur minimale de données requise = fenêtre de formation + fenêtre de recherche
 
 >[!TIP]
+>
 > La longueur minimale de données requise pour une application avec des configurations par défaut est la suivante : 2 trimestres (180 jours) + 56 jours = 236 jours.
 
 Exemple :
