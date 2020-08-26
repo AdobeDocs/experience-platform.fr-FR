@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur IBM DB2
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '194'
 ht-degree: 0%
@@ -15,13 +15,14 @@ ht-degree: 0%
 # (Bêta) Connecteur IBM DB2
 
 >[!NOTE]
+>
 >Le connecteur IBM DB2 est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
-Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft]MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Différents types de bases de données tierces sont pris en charge, y compris relationnelles, NoSQL ou les datas warehouse. IBM DB2 est pris en charge par les fournisseurs de base de données.
+Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou Data Warehouse. IBM DB2 est pris en charge par les fournisseurs de base de données.
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
