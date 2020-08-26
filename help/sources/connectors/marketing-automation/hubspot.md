@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur HubSpot
 topic: overview
 translation-type: tm+mt
-source-git-commit: 52a01c5f90a9643691a25e2d0a5f03a7f0334a7d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 18%
@@ -15,13 +15,14 @@ ht-degree: 18%
 # (Bêta) [!DNL HubSpot] Connecteur
 
 >[!NOTE]
+>
 >Le [!DNL HubSpot] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
 [!DNL Experience Platform ]prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. La prise en charge des fournisseurs d’automatisation de marketing inclut [!DNL HubSpot].
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
