@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Tâches du système de profil - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 73f2c05a0e63f376f7a2f5644133e773980d0b26
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1420'
 ht-degree: 66%
@@ -17,6 +17,7 @@ ht-degree: 66%
 Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
+>
 >If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
 
 ## Prise en main
@@ -106,6 +107,7 @@ L’exécution d’une nouvelle requête de suppression se fait par le biais d�
 Pour supprimer un jeu de données, l’identifiant du jeu de données doit être inclus dans le corps de la requête POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
 
 >[!CAUTION]
+>
 > When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. Pour plus d’informations, reportez-vous à l’[annexe](#appendix) du présent document.
 
 **Format d’API**
@@ -159,6 +161,7 @@ Une réponse réussie renvoie les détails de la requête de suppression créée
 Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de la requête POST. Veuillez noter que vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement. Seuls les lots des jeux de données basés sur des schémas de séries temporelles peuvent être supprimés.
 
 >[!NOTE]
+>
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l&#39;impact des lots erronés pour les jeux de données basés sur des schémas d&#39;enregistrement consiste à réassimiler le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
 For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
