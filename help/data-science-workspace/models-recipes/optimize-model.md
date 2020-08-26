@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Optimisation d’un modèle
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1221'
 ht-degree: 89%
 
 ---
@@ -28,7 +28,7 @@ Après la mise en œuvre et la formation d’un modèle, l’étape suivante pou
 
 Actuellement, Model Insights Framework prend en charge les exécutions suivantes :
 - [Scala](#scala)
-- [!DNL Python/Tensorflow](#pythontensorflow)
+- [Python/Tensorflow](#pythontensorflow)
 - [R](#r)
 
 Vous trouverez un exemple de code pour les recettes dans le référentiel [experience-platform-dsw-reference](https://github.com/adobe/experience-platform-dsw-reference) sous `recipes`. Des fichiers spécifiques de ce référentiel seront référencés dans ce tutoriel.
