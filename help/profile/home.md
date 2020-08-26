@@ -5,7 +5,7 @@ title: Présentation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 translation-type: tm+mt
-source-git-commit: 05032ba72afd5224e33cb4fdc93c97ba6ec6f8e8
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1718'
 ht-degree: 53%
@@ -58,6 +58,7 @@ When bringing data together from multiple sources and combining it in order to s
 ### (Alpha) Configuration des attributs calculés
 
 >[!IMPORTANT]
+>
 >Ce document décrit la version alpha de la fonctionnalité des attributs calculés. La documentation et les fonctionnalités peuvent changer.
 
 Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agréger des valeurs sur tous les enregistrements et tous les événements. Chaque attribut calculé contient une expression, ou « règle », qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil ou dans un événement. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Pour plus d’informations sur les attributs calculés et des instructions détaillées sur leur utilisation à l’aide de l’ [!DNL Real-time Customer Profile] API, consultez le guide [des points de terminaison des attributs](api/computed-attributes.md)calculés. Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans Adobe Experience Platform et comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base.
@@ -132,7 +133,6 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 >[!NOTE]
 >
->
 >Une entité non-personne fait référence à toute classe XDM qui **ne fait pas** partie de [!DNL Profile].
 
 ## Étapes suivantes et ressources supplémentaires
@@ -140,6 +140,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 To learn more about [!DNL Real-time Customer Profile], please continue reading the documentation and supplement your learning by watching the video below or exploring other [Experience Platform video tutorials](https://docs.adobe.com/content/help/en/platform-learn/tutorials/overview.html).
 
 >[!WARNING]
+>
 >L’ [!DNL Platform] interface utilisateur affichée dans la vidéo suivante est obsolète. Consultez le guide [d&#39;utilisation du Profil client en temps](ui/user-guide.md) réel pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
