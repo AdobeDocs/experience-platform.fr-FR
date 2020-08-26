@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une recette à l’aide de notebooks Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2292'
 ht-degree: 87%
@@ -25,12 +25,11 @@ Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèl
 
 ## Get started with the [!DNL JupyterLab] notebook environment
 
-Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. Pour début, accédez à l&#39; [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l&#39;onglet **[!UICONTROL Ordinateurs portables]** à gauche. Créez un bloc-notes en sélectionnant le modèle Créateur de recettes dans le [!DNL JupyterLab Launcher].
+Creating a recipe from scratch can be done within [!DNL Data Science Workspace]. Pour début, accédez à [Adobe Experience Platform](https://platform.adobe.com) et cliquez sur l&#39;onglet **[!UICONTROL Ordinateurs portables]** à gauche. Créez un bloc-notes en sélectionnant le modèle Créateur de recettes dans le [!DNL JupyterLab Launcher].
 
 The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring runs inside the notebook. Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Once you are happy with the outputs of the training and scoring, you can create a recipe to be used in [!DNL Data Science Workspace] using the notebook to recipe functionality built in to the Recipe Builder notebook.
 
 >[!NOTE]
->
 >
 >Le notebook Recipe Builder prend en charge l’utilisation de tous les formats de fichier, mais la fonctionnalité Create Recipe ne prend actuellement en charge que [!DNL Python].
 
@@ -78,7 +77,6 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->
 >Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus.
 
 ### Fichiers de configuration {#configuration-files}
@@ -96,7 +94,7 @@ Pour rechercher les identifiants du jeu de données et du schéma, accédez dans
 
 ![](../images/jupyterlab/create-recipe/datasets.png)
 
-Vous trouverez les mêmes informations sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[Schéma](https://platform.adobe.com/schema)**et**[Jeu de données](https://platform.adobe.com/dataset/overview)**.
+Vous trouverez les mêmes informations sur [Adobe Experience Platform](https://platform.adobe.com/) sous les onglets **[Schéma](https://platform.adobe.com/schema)** et **[Jeu de données](https://platform.adobe.com/dataset/overview)**.
 
 Les paramètres de configuration suivants sont définis par défaut lorsque vous accédez aux données :
 
@@ -121,7 +119,6 @@ Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pan
 - [Sources externes](#external-sources)
 
 >[!NOTE]
->
 >
 > Dans le notebook Recipe Builder, les données sont chargées via le chargeur de données `platform_sdk`.
 
@@ -153,7 +150,6 @@ Vos données se trouvent maintenant dans l’objet « cadre de données » et 
 
 >[!CAUTION]
 >
->
 > `data_access_sdk_python`   n’est plus recommandé, reportez-vous à [Conversion du code Data Access vers SDK Platform](../authoring/platform-sdk.md) pour obtenir un guide sur l’utilisation du chargeur de données `platform_sdk`.
 
 Les utilisateurs peuvent charger des données à l’aide du SDK Data Access. La bibliothèque peut être importée en haut de la page en incluant la ligne :
@@ -172,7 +168,6 @@ df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
 ```
 
 >[!NOTE]
->
 >
 >As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
@@ -304,7 +299,6 @@ Le fichier `pipeline.py` inclut la logique de formation et de notation.
 L’objectif de la formation est de créer un modèle à l’aide des fonctionnalités et des étiquettes présentes dans votre jeu de données d’apprentissage.
 
 >[!NOTE]
->
 > 
 >_Les Fonctionnalités_ font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les _étiquettes_.
 
