@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 75%
@@ -15,6 +15,7 @@ ht-degree: 75%
 # Présentation des tutoriels d’Adobe Experience Platform
 
 >[!NOTE]
+>
 >Nous avons récemment déplacé les tutoriels d’Adobe Experience Platform. To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. Prenez quelques instants pour mettre à jour les signets existants.
 
 Adobe Experience Platform est la première plateforme de gestion de l’expérience client personnalisable. Grâce à ses profils clients en temps réel, à son intelligence continue et à son architecture ouverte et extensible, elle propose des expériences personnalisées à grande échelle. Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms.
