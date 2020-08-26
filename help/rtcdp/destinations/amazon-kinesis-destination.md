@@ -5,10 +5,10 @@ seo-title: Destination Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 7%
+source-wordcount: '437'
+ht-degree: 8%
 
 ---
 
@@ -47,7 +47,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### Dans l’étape d’authentification {#authentication-step}
 
-* **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans [!DNL Amazon Web Services], générez une paire de clés d&#39;accès - accès secret pour accorder à l&#39;Adobe un accès CDP en temps réel à votre [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
+* **[!DNL Amazon Web Services]clé d&#39;accès et clé** secrète : Dans [!DNL Amazon Web Services], générez une `access key - secret access key` paire pour accorder un accès CDP en temps réel Adobe à votre [!DNL Amazon Kinesis] compte. Pour en savoir plus, consultez la documentation [sur les services Web](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html)Amazon.
 * **region**: Indiquez la [!DNL Amazon Web Services] région à laquelle diffuser les données.
 
 ![Champs d’entrée dans l’étape du compte](/help/rtcdp/destinations/assets/aws-kinesis-account-step.png)
