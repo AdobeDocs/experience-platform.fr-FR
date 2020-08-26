@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Apache Hive sur le connecteur Azure HDInsights
 topic: overview
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 11%
@@ -15,13 +15,14 @@ ht-degree: 11%
 # (Bêta) [!DNL Apache Hive] sur le [!DNL Azure HDInsights] connecteur
 
 >[!NOTE]
+>
 >Le connecteur Apache Hive sur Azure HDInsights est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, tels que relational, NoSQL ou datas warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL Apache Hive] l&#39;activation [!DNL Azure HDInsights].
+[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, telles que relationnelles, NoSQL ou des entrepôts de données. La prise en charge des fournisseurs de base de données inclut [!DNL Apache Hive] l&#39;activation [!DNL Azure HDInsights].
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
