@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source HP Vertica dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create an HP [!DNL Vertica] source connector in the UI
 
 >[!NOTE]
+>
 > Le connecteur HP [!DNL Vertica] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HP [!DNL Vertica] à l&#39;aide de l&#39; [!DNL Platform] interface utilisateur.
