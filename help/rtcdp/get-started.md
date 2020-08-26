@@ -5,7 +5,7 @@ seo-title: Prise en main de la plateforme des données clients en temps réel d�
 description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 seo-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 89%
@@ -258,6 +258,7 @@ Dans ce scénario, Luma souhaite recibler cette audience avec personnalisation s
 Vous pouvez également choisir un moment précis pour planifier le début ou la fin du segment. Le segment est publié et mis à jour automatiquement dans les plateformes configurées aux dates prévues.
 
 >[!NOTE]
+>
 >Vous pouvez également cliquer dans le champ de la date pour effectuer automatiquement une planification pendant 90 jours.
 
 Cliquez sur **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
