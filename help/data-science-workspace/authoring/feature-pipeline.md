@@ -4,7 +4,7 @@ solution: Adobe Experience Platform Data Science Workspace
 title: Création d’un pipeline de fonctionnalités
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: c48079ba997a7b4c082253a0b2867df76927aa6d
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 31%
@@ -15,16 +15,17 @@ ht-degree: 31%
 # Création d’un pipeline de fonctionnalités
 
 >[!IMPORTANT]
+>
 > Les pipelines de fonctionnalités ne sont actuellement disponibles que par API.
 
-L&#39;Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctions personnalisées pour effectuer l&#39;ingénierie de fonctions à l&#39;échelle via le cadre d&#39;exécution Sensei Machine Learning Framework (ci-après appelé &quot;Runtime&quot;).
+Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctionnalités personnalisées pour effectuer l&#39;ingénierie de fonctionnalités à l&#39;échelle via le cadre d&#39;apprentissage automatique Sensei (ci-après appelé &quot;Runtime&quot;).
 
 This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the [Model Authoring SDK](./sdk.md) in PySpark.
 
 Le processus suivant se produit lorsqu’un pipeline de fonctionnalités est exécuté :
 
 1. La recette charge le jeu de données dans un pipeline.
-2. La transformation des fonctionnalités est effectuée sur le jeu de données et renvoyée à l’Adobe Experience Platform.
+2. La transformation des fonctionnalités est effectuée sur le jeu de données et renvoyée à Adobe Experience Platform.
 3. Les données transformées sont chargées pour la formation.
 4. Le pipeline de fonctionnalités définit les étapes avec le régresseur de poussée en dégradé comme modèle choisi.
 5. Le pipeline est utilisé pour adapter les données d&#39;entraînement et le modèle formé est créé.
@@ -37,7 +38,7 @@ Pour exécuter une recette dans n&#39;importe quelle organisation, les élément
 - Jeu de données d’entrée.
 - Schéma du jeu de données.
 - Un schéma transformé et un jeu de données vide basé sur ce schéma.
-- schéma de sortie et jeu de données vide basé sur ce schéma.
+- Schéma de sortie et jeu de données vide basé sur ce schéma.
 
 Tous les jeux de données ci-dessus doivent être téléchargés dans l’ [!DNL Platform] interface utilisateur. Pour configurer ce paramètre, utilisez le script [](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap)d’amorçage fourni par l’Adobe.
 
@@ -390,6 +391,7 @@ scoring.dataSaver: MyDatasetSaver
 Maintenant que vous avez créé votre pipeline de fonctionnalités, vous devez créer une image Docker pour appeler les points de terminaison du pipeline de fonctionnalités dans l&#39; [!DNL Sensei Machine Learning] API. Vous avez besoin d’une URL d’image Docker pour pouvoir appeler les points de terminaison du pipeline de fonctionnalités.
 
 >[!TIP]
+>
 >Si vous n&#39;avez pas d&#39;URL Docker, consultez les fichiers source du [package dans un didacticiel de recette](../models-recipes/package-source-files-recipe.md) pour découvrir comment créer une URL hôte Docker étape par étape.
 
 Vous pouvez également utiliser la collection Postman suivante pour faciliter l’exécution du processus de l’API du pipeline de fonctionnalités :
@@ -423,6 +425,7 @@ Une fois l’expérience terminée, demandez à un GET de `/experiments/{EXPERIM
 ### Spécifier la tâche de notation de l&#39;exécution de l&#39;expérience {#scoring}
 
 >[!NOTE]
+>
 > Pour terminer cette étape, vous devez avoir au moins une session de formation réussie associée à votre expérience.
 
 Après une exécution de formation réussie, vous devez [spécifier la tâche](../api/experiments.md#experiment-training-scoring)d’exécution de score. Faites d’un POST `experiments/{EXPERIMENT_ID}/runs` et dans le corps définissez l’ `mode` attribut sur &quot;score&quot;. Cela début l’exécution de votre expérience de score.
