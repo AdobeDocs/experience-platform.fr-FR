@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions Spark SQL
 topic: spark sql functions
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '4991'
 ht-degree: 97%
@@ -1746,6 +1746,7 @@ Exemples :
 ```
 
 Depuis : 1.5.0
+
 >[!NOTE]
 >
 >La logique rse pour les tableaux est disponible depuis la version 2.4.0.
@@ -1764,6 +1765,7 @@ Exemples :
 ```
 
 Depuis : 2.4.0
+
 >[!NOTE]
 >
 >La fonction  est non déterministe.
