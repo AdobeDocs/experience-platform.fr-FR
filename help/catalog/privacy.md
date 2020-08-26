@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Traitement des demandes d’accès à des informations personnelles dans le lac de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1189'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 # Traitement de la demande de confidentialité dans [!DNL Data Lake]
 
-L’Adobe Experience Platform [!DNL Privacy Service] traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
+Adobe Experience Platform [!DNL Privacy Service] traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et de confidentialité de l’entreprise.
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
 
@@ -35,7 +35,7 @@ Adobe Experience Platform [!DNL Identity Service] bridges customer identity data
 
 For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
 
-## Ajouter des données d&#39;identité aux jeux de données
+## ajouter des données d&#39;identité aux jeux de données
 
 Lors de la création de demandes de confidentialité pour les [!DNL Data Lake]clients, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur **[!UICONTROL d’]** identité dans leur schéma XDM associé.
 
@@ -56,7 +56,7 @@ Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un sché
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l&#39;interface [!DNL Experience Platform ]utilisateur, l&#39;espace de travail _[!UICONTROL Schémas]_vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour[définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field)d&#39;identité dans le[!DNL Schema Editor]didacticiel.
+Dans l&#39;interface [!DNL Experience Platform ]utilisateur, l&#39;espace de travail _[!UICONTROL Schémas]_ vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field) d&#39;identité dans le [!DNL Schema Editor] didacticiel.
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs d’identité, vous pouvez passer à la section suivante lors de l’ [envoi des demandes](#submit)de confidentialité.
 
@@ -108,7 +108,7 @@ curl -X POST \
 | `xdm:sourceProperty` | Chemin d’accès au champ de schéma auquel le descripteur est appliqué. |
 | `xdm:namespace` | L&#39;un des espaces de nommage [d&#39;identité](../privacy-service/api/appendix.md#standard-namespaces) standard reconnus par [!DNL Privacy Service]ou un espace de nommage personnalisé défini par votre organisation. |
 | `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, selon l’espace de nommage utilisé sous `xdm:namespace`. |
-| `xdm:isPrimary` | Une valeur booléenne facultative. Lorsque la valeur est true, cela indique que le champ est une identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. La valeur par défaut est false si elle n’est pas incluse. |
+| `xdm:isPrimary` | Une valeur booléenne facultative. Lorsque la valeur est true, cela indique que le champ est une identité Principale. Les schémas ne peuvent contenir qu’une seule identité principale. La valeur par défaut est false si elle n’est pas incluse. |
 
 **Réponse**
 
@@ -132,13 +132,13 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et les détails du des
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [!DNL Privacy Service UI](../privacy-service/ui/overview.md) or [!DNL Privacy Service API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 La section suivante décrit comment effectuer des demandes de confidentialité pour l’ [!DNL Data Lake] utilisation de l’ [!DNL Privacy Service] interface utilisateur ou de l’API.
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_ afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
