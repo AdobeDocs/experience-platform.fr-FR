@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d'un connecteur source Azure Événement Hubs dans l'interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 9%
@@ -15,6 +15,7 @@ ht-degree: 9%
 # Create an [!DNL Azure Event Hubs] source connector in the UI
 
 >[!NOTE]
+>
 > Le [!DNL Azure Event Hubs] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source [!DNL Azure Event Hubs] (ci-après dénommé &quot;[!DNL Event Hubs]&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
@@ -38,7 +39,7 @@ Pour authentifier votre connecteur [!DNL Event Hubs] source, vous devez fournir 
 | ---------- | ----------- |
 | `sasKeyName` | Nom de la règle d&#39;autorisation, également connue sous le nom de clé SAS. |
 | `sasKey` | Signature d’accès partagé générée. |
-| `namespace` | Espace de nommage de l’ [!DNL Event Hubs] accès auquel vous accédez. |
+| `namespace` | Espace de nommage du [!DNL Event Hubs] visiteur. |
 
 Pour plus d&#39;informations sur ces valeurs, consultez [ [!DNL Event Hubs] ce document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
