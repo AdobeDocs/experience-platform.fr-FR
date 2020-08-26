@@ -4,15 +4,15 @@ seo-title: FAQ sur le SDK Web Adobe Experience Platform
 description: Questions fréquentes sur Adobe Experience Platform Web SDK
 seo-description: Questions fréquentes sur Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: 8cd9c52acd981c92d3959e12d91ebb65b2c3cec8
+source-git-commit: f51513e66945c41d06f12f4ac8f05ddad0d32898
 workflow-type: tm+mt
-source-wordcount: '1684'
-ht-degree: 3%
+source-wordcount: '1679'
+ht-degree: 4%
 
 ---
 
 
-# Questions fréquentes sur le SDK Web Adobe Experience Platform
+# Questions fréquemment posées
 
 Ce forum aux questions comprend les questions souvent posées sur l&#39;Adobe Web SDK/
 
