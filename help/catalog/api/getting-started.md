@@ -5,10 +5,10 @@ title: Guide de développement du service de catalogue
 topic: developer guide
 description: Ce guide de développement fournit des étapes pour vous aider à commencer à utiliser l’API Catalog. Ce guide fournit aussi des exemples d’appels API pour réaliser des opérations clés à l’aide du catalogue.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 42%
+source-wordcount: '589'
+ht-degree: 41%
 
 ---
 
@@ -23,7 +23,7 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 [!DNL Catalog] effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations au sein de [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
 * [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données en temps réel dans à partir de périphériques côté client et côté serveur.
 
