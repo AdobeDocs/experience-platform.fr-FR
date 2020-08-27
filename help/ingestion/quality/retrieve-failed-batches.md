@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Récupération des lots en échec
 topic: overview
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 71%
+source-wordcount: '607'
+ht-degree: 70%
 
 ---
 
@@ -22,8 +22,8 @@ This tutorial covers steps for retrieving information about a failed batch using
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-- [!DNL Data Ingestion](../home.md): Méthodes d’envoi des données à [!DNL Experience Platform].
+- [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[ !Ingestion des données DNL]](../home.md): Méthodes d’envoi des données à [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
