@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Présentation de Data Access
 topic: tutorial
+description: Ce document propose un tutoriel détaillé qui explique comment localiser, accéder et télécharger les données stockées dans un jeu de données à l’aide de l’API Data Access d’Adobe Experience Platform. Certaines des fonctionnalités uniques de l’API Data Access vous seront également présentées comme la pagination et les téléchargements partiels.
 translation-type: tm+mt
-source-git-commit: cb5df9b44486bda84f08805f1077d6097e3666e2
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '1384'
 ht-degree: 72%
 
 ---
@@ -18,7 +19,7 @@ This document provides a step-by-step tutorial that covers how to locate, access
 
 ## Prise en main
 
-Ce tutoriel explique comment créer et générer un jeu de données. Pour plus d’informations, consultez le [tutoriel sur la création de jeux de données](../../catalog/datasets/create.md).
+Ce didacticiel nécessite une compréhension pratique de la création et du remplissage d&#39;un jeu de données. Pour plus d’informations, consultez le [tutoriel sur la création de jeux de données](../../catalog/datasets/create.md).
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API Platform.
 
