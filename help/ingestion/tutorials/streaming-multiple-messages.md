@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Diffusion de plusieurs messages en flux continu dans une requête HTTP unique
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 80392190c7fcae9b6e73cc1e507559f834853390
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 83%
+source-wordcount: '1466'
+ht-degree: 82%
 
 ---
 
@@ -508,7 +508,7 @@ Le deuxième message a échoué parce qu’il manquait un corps de message. Pour
     },
 ```
 
-Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation IMS invalide dans l’en-tête. L’organisation IMS doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
+Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation IMS invalide dans l’en-tête. L’organisation IMS doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
 
 Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. Corriger le schéma dans l’en-tête et le corps du message lui permettra de passer la validation DCCS et d’être envoyé avec succès vers [!DNL Platform]. Vous devez également mettre à jour le corps du message de manière à ce qu’il corresponde au schéma XDM de `{DATASET_ID}` pour passer la validation en continu sur [!DNL Platform]. Pour plus d’informations sur ce qui arrive aux messages diffusés en continu vers Platform, consultez la section [Confirmation des messages ingérés](#confirm-messages-ingested) de ce tutoriel.
 
@@ -529,7 +529,7 @@ Batch messages that pass streaming validation on [!DNL Platform] are ingested in
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment envoyer plusieurs messages en une seule requête et vérifier quand les messages ont été ingérés avec succès dans le jeu de données cibles, vous pouvez commencer à diffuser vos propres données vers [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guide.
+Maintenant que vous savez comment envoyer plusieurs messages en une seule requête et vérifier quand les messages ont été ingérés avec succès dans le jeu de données cibles, vous pouvez commencer à diffuser vos propres données vers [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guide.
 
 ## Annexe
 
