@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mappage d’un fichier CSV à un schéma XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 7876e6d52815968802bd73bb5e340c99ea3387a8
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1354'
-ht-degree: 58%
+source-wordcount: '1371'
+ht-degree: 57%
 
 ---
 
@@ -22,14 +22,14 @@ En outre, l’annexe du présent tutoriel fournit des informations supplémentai
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [!DNL Experience Data Model (XDM System)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
-- [!DNL Batch ingestion](../batch-ingestion/overview.md): Méthode par laquelle [!DNL Platform] ingère les données des fichiers de données fournis par l’utilisateur.
+- [[ ! Modèle de données d’expérience DNL (système XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+- [[ ! Apport du lot DNL]](../batch-ingestion/overview.md): Méthode par laquelle [!DNL Platform] ingère les données des fichiers de données fournis par l’utilisateur.
 
 Vous devez également avoir créé un jeu de données dans lequel ingérer vos données CSV pour suivre ce tutoriel. Pour connaître les étapes de création d’un jeu de données dans l’interface utilisateur, consultez le [tutoriel sur l’ingestion de données](./ingest-batch-data.md).
 
 ## Choix d’une destination
 
-Connectez-vous à [!DNL Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Workflows]* .
+Connectez-vous à [[ !DNL Adobe Experience Platform]](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Workflows]* .
 
 Dans l’écran **[!UICONTROL Workflows]** , sélectionnez **[!UICONTROL Mapper le fichier CSV au schéma]** XDM sous la section d’assimilation **[!UICONTROL des]** données, puis sélectionnez **[!UICONTROL Lancement.]**
 
@@ -83,7 +83,7 @@ If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the
 
 Lors du mappage des champs, vous pouvez également inclure des fonctions pour calculer les valeurs en fonction des champs sources d’entrée. Pour plus d’informations, consultez la section relative aux [fonctions de mappage](#mapping-functions) de l’annexe.
 
-### Ajouter le champ calculé
+### ajouter le champ calculé
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être attribuées à des attributs dans le schéma de cible et recevoir un nom et une description pour faciliter la référence.
 
@@ -117,7 +117,7 @@ Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the overview for [!DNL Real-time Customer Profile](../../profile/home.md) for more information.
+En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez la présentation du Profil client [[ !DNL en temps réel]](../../profile/home.md) .
 
 ## Annexe
 
