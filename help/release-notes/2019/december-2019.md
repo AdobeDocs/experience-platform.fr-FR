@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '668'
-ht-degree: 69%
+source-wordcount: '682'
+ht-degree: 67%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 69%
 
 **Date de lancement : 11 décembre 2019**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [!DNL Segmentation Service](#segmentation)
-* [!DNL Decisioning Service](#decisioning)
-* [!DNL Sources](#sources)
-* [!DNL Experience Data Model (XDM) System](#xdm)
+* [[ !Service de segmentation DNL]](#segmentation)
+* [[ !Service de prise de décision DNL]](#decisioning)
+* [[ !Sources DNL]](#sources)
+* [[ ! Système de modèle de données d’expérience DNL (XDM)]](#xdm)
 
 ## [!DNL Segmentation Service] {#segmentation}
 
@@ -34,8 +34,8 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Onglet Audiences fusionnées dans [!DNL Segment Builder] | The [!UICONTROL _Segments _]and[!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences _]tab. Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans le canevas du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
-| Nouvel emplacement du sélecteur de stratégie de fusion | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. Pour sélectionner une stratégie de fusion pour une définition de segment, cliquez sur l’icône en forme d’engrenage dans l’onglet [!UICONTROL _Champs _], puis utilisez le menu déroulant_[!UICONTROL  Stratégie de fusion]_ pour sélectionner la stratégie de fusion à utiliser. |
+| Onglet Audiences fusionnées dans [!DNL Segment Builder] | The [!UICONTROL _Segments_] and [!UICONTROL _Audiences_] tabs in the [!DNL Segment Builder] have been combined into a single [!UICONTROL _Audiences_] tab. Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans le canevas du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
+| Nouvel emplacement du sélecteur de stratégie de fusion | The location of the merge policy selector in the [!DNL Segment Builder] has been changed. Pour sélectionner une stratégie de fusion pour une définition de segment, cliquez sur l’icône en forme d’engrenage dans l’onglet [!UICONTROL _Champs_], puis utilisez le menu déroulant _[!UICONTROL Stratégie de fusion]_ pour sélectionner la stratégie de fusion à utiliser. |
 
 **Problèmes connus**
 
