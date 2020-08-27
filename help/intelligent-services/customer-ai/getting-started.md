@@ -3,10 +3,11 @@ keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform
 title: Prise en main de Customer AI
 topic: Getting started
+description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '555'
 ht-degree: 78%
 
 ---
