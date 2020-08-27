@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: Découverte d’insights avec Customer AI
 topic: Discovering insights
+description: Customer AI fait partie d’Intelligent Services et permet aux spécialistes du marketing de tirer parti d’Adobe Sensei pour anticiper les prochaines actions de vos clients. Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique, en choisissant un algorithme, une formation ou un déploiement.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1125'
 ht-degree: 89%
 
 ---
