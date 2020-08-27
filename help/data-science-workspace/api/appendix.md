@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
 title: Annexe
 topic: Developer guide
+description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '313'
 ht-degree: 85%
 
 ---
