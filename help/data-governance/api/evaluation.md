@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Stratégies
 topic: developer guide
+description: Une fois les actions marketing créées et les stratégies définies, vous pouvez utiliser l’API Policy Service pour déterminer si certaines actions ne respectent pas les stratégies. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1472'
-ht-degree: 14%
+source-wordcount: '1528'
+ht-degree: 17%
 
 ---
 
 
-# Évaluation des stratégies points de terminaison
+# Points de terminaison de l&#39;évaluation des politiques
 
 Once marketing actions have been created and policies have been defined, you can use the [!DNL Policy Service] API to evaluate if any policies are violated by certain actions. Les contraintes renvoyées prennent la forme d’un ensemble de stratégies qui seraient enfreintes si l’action marketing était appliquée aux données spécifiées contenant les libellés d’utilisation des données.
 
