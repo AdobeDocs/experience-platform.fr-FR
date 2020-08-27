@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
 title: Guide d’utilisation des stratégies de données
 topic: policies
+description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '768'
 ht-degree: 39%
 
 ---
