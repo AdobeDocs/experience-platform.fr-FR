@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;api;update an object
 solution: Experience Platform
 title: Mise à jour d’un objet
 topic: developer guide
+description: 'Vous pouvez mettre à jour un objet Catalogue en incluant son identifiant dans le chemin d’accès d’une requête PATCH. Ce document couvre l’utilisation des champs et l’utilisation de la notation de correctif JSON pour effectuer des opérations de PATCH sur des objets de catalogue. '
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 89%
+source-wordcount: '349'
+ht-degree: 85%
 
 ---
 
