@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de développement du contrôle d’accès
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '333'
 ht-degree: 54%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 54%
 
 [!DNL Access control] car [!DNL Experience Platform] est administré par le [Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../home.md).
 
-This developer guide provides information on how to format your requests to the [!DNL Access Control API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
+This developer guide provides information on how to format your requests to the [[!DNL Access Control API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml), and covers the following operations:
 
 - [Liste des noms des autorisations et des types de ressources](./permissions-and-resource-types.md)
 - [Affichage des stratégies efficaces pour l’utilisateur actuel](./effective-policies.md)
