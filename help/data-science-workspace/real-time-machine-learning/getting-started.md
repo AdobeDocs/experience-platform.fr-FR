@@ -3,10 +3,11 @@ keywords: Experience Platform;developer guide;Data Science Workspace;popular top
 solution: Experience Platform
 title: Prise en main de l’apprentissage automatique en temps réel
 topic: Getting started
+description: Le document suivant décrit les étapes requises pour créer un modèle d’apprentissage automatique en temps réel dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
