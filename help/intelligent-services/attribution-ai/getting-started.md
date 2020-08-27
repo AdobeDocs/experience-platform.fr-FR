@@ -3,11 +3,12 @@ keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform
 title: Prise en main d’Attribution AI
 topic: Getting started
+description: Les guides ci-dessous nécessitent une compréhension des différents services impliqués dans l’utilisation d’Attribution AI. Avant de commencer les didacticiels, veuillez consulter les documents suivants.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 82%
+source-wordcount: '526'
+ht-degree: 81%
 
 ---
 
