@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de développement de l’API Policy Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: cb3a17aa08c67c66101cbf3842bf306ebcca0305
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 16%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform [!DNL Data Governance] allows you to manage customer d
 
 L’ [!DNL Policy Service] API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation les étiquettes et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation des stratégies. Ces points de terminaison sont décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le guide [de](./getting-started.md) prise en main pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
-Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez le Swagger [d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)Policy Service.
+Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez la page de permutation [[!DNL Policy Service] des](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)API.
 
 ## Étiquettes
 
