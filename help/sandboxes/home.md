@@ -5,9 +5,9 @@ title: Présentation des environnements de test
 topic: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '706'
 ht-degree: 95%
 
 ---
@@ -51,7 +51,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ## Environnements de test dans les API Experience Platform
 
-Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. For example, when making a call to the [!DNL Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox&#39;s name (&quot;prod&quot;) is provided as a header in the API request:
+Lors d’appels aux API Experience Platform, un nom d’environnement de test doit être renseigné sous l’en-tête `x-sandbox-name`. For example, when making a call to the [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) to view all datasets within the Production sandbox, the sandbox&#39;s name (&quot;prod&quot;) is provided as a header in the API request:
 
 ```shell
 curl -X GET \
