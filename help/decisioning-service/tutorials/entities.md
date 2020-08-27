@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;manage decisioning;decisioning objects api;manage decisioning objects
 solution: Experience Platform
 title: Gestion des entités du service de prise de décision à l’aide d’API
 topic: tutorial
+description: 'Ce document fournit un tutoriel expliquant comment travailler avec les entités commerciales du service de prise de décision à l’aide des API d’Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '7220'
+source-wordcount: '7239'
 ht-degree: 95%
 
 ---
