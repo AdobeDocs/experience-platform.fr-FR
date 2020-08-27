@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Enrichissement de Real-time Customer Profile avec des insights d’apprentissage automatique
 topic: Tutorial
+description: Ce document fournit un didacticiel détaillé pour enrichir le Profil client en temps réel avec des informations d’apprentissage automatique, les étapes sont réparties dans les sections suivantes, créer un schéma de sortie/jeu de données, configurer un schéma de sortie/jeu de données et créer des segments à l’aide du Créateur de segments.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 73%
+source-wordcount: '1230'
+ht-degree: 71%
 
 ---
 
