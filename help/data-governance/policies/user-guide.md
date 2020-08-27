@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide d’utilisation des stratégies de données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 39%
 
 ---
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [!DNL Data Governance](../home.md)
+- [[ ! Gouvernance des données DNL]](../home.md)
 - [Stratégies d’utilisation des données](./overview.md)
 
 ## Affichage des stratégies d’utilisation des données {#view-policies}
@@ -75,7 +75,7 @@ You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!
 
 ![](../images/policies/enable-policy.png)
 
-## Actions marketing Vue {#view-marketing-actions}
+## Actions marketing vue {#view-marketing-actions}
 
 Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’onglet Actions **** marketing pour vue d’une liste d’actions marketing disponibles définies par l’Adobe et votre propre organisation.
 
