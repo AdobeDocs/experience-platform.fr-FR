@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;spark sdk;data access api
 solution: Experience Platform
 title: SDK Secure Spark Data Access
 topic: tutorial
+description: Le SDK Secure Spark Data Access est un kit de développement logiciel qui permet de lire et d'écrire des jeux de données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '538'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # SDK sécurisé [!DNL Spark Data Access]
 
-Secure [!DNL Spark] SDK [!DNL Data Access] est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données à partir d&#39;Adobe Experience Platform.
+Secure [!DNL Spark] SDK [!DNL Data Access] est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données de Adobe Experience Platform.
 
 ## Prise en main
 
@@ -140,7 +141,7 @@ Le [!DNL Spark] SDK permet deux méthodes de filtrage : Utilisation d&#39;une ex
 
 Vous trouverez ci-dessous un exemple d’utilisation de ces fonctions de filtrage :
 
-#### expression SQL
+#### EXPRESSION SQL
 
 ```scala
 df.where("age > 15")
