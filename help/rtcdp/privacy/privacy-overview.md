@@ -5,10 +5,10 @@ seo-title: Confidentialité du profil de données client en temps réel
 description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 61%
+source-wordcount: '312'
+ht-degree: 60%
 
 ---
 
@@ -25,8 +25,8 @@ Adobe Experience Platform [!DNL Privacy Service] vous permet de rationaliser le 
 
 Il existe deux manières de soumettre des requêtes individuelles pour consulter ou supprimer des données de propriétaires dans le cadre du RGPD ou de la CCPA :
 
-* Use the [!DNL Privacy Service UI](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Consultez le [tutoriel sur l’interface utilisateur du service confidentialité](../../privacy-service/ui/overview.md) pour obtenir des instructions étape par étape.
-* Use the [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Consultez le [tutoriel sur L’API du service confidentialité](../../privacy-service/api/getting-started.md) pour obtenir des instructions étapes par étape.
+* Use the [[!DNL Privacy Service UI]](https://gdprui.cloud.adobe.io/) to create and monitor access and delete requests within a visual workspace. Consultez le [tutoriel sur l’interface utilisateur du service confidentialité](../../privacy-service/ui/overview.md) pour obtenir des instructions étape par étape.
+* Use the [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) to manage access and delete requests with RESTful API calls. Consultez le [tutoriel sur L’API du service confidentialité](../../privacy-service/api/getting-started.md) pour obtenir des instructions étapes par étape.
 
 <!-- (Capability will not be available for November GA) 
 ## Opt-out capabilities
