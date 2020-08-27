@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Prise en main de l’API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6df3e6579139f01d9877c1f033ea7721ca78118c
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 28%
+source-wordcount: '382'
+ht-degree: 20%
 
 ---
 
@@ -18,11 +18,11 @@ Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD oper
 
 Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
 
-* [!DNL Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [!DNL Adobe Experience Platform Identity Service](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
-* [!DNL Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-* [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [[ !Profil client en temps réel DNL]](../home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[ !Service d&#39;identité Adobe Experience Platform DNL]](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
+* [[ !Service de segmentation Adobe Experience Platform DNL]](../../segmentation/home.md): Permet de créer des segments d’audience à partir des données du Profil client en temps réel.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+* [[ !Sandbox DNL]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Profile] API endpoints.
 
