@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Application de la conformité de l’utilisation des données aux segments ciblés
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 46%
+source-wordcount: '1335'
+ht-degree: 43%
 
 ---
 
@@ -20,10 +20,10 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [!DNL Real-time Customer Profile](../../profile/home.md): [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer les données [!DNL Experience Data Model] (XDM) dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
+- [[ !Profil client en temps réel DNL]](../../profile/home.md): [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer les données [!DNL Experience Data Model] (XDM) dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
    - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Merge policies can be configured for [!DNL Data Governance] purposes.
-- [!DNL Segmentation](../home.md)[!DNL Real-time Customer Profile] : manière dont divise un grand groupe d’individus inclus dans la banque de profils en groupes plus petits partageant des caractéristiques et réagissant de la même manière aux stratégies marketing.
-- [!DNL Data Governance](../../data-governance/home.md): [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données (DULE), en utilisant les composants suivants :
+- [[ !Segmentation DNL]](../home.md): Comment [!DNL Real-time Customer Profile] divise un grand groupe d’individus contenus dans le magasin de profils en groupes plus petits qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
+- [[ !Gouvernance des données DNL]](../../data-governance/home.md): [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données (DULE), en utilisant les composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
    - [Stratégies d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
    - [Application des](../../data-governance/enforcement/overview.md)politiques : Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégies.
@@ -185,7 +185,7 @@ Une réponse réussie renvoie les détails de la stratégie de fusion.
 
 >[!NOTE]
 >
-> Cette étape suppose que vous disposez d’au moins une stratégie d’utilisation des données active qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certaines étiquettes. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, suivez le didacticiel [de création de](../../data-governance/policies/create.md) stratégies pour en créer un avant de poursuivre cette étape.
+> Cette étape suppose que vous disposez d’au moins une stratégie d’utilisation des données principale qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certaines étiquettes. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, suivez le didacticiel [de création de](../../data-governance/policies/create.md) stratégies pour en créer un avant de poursuivre cette étape.
 
 Une fois que vous avez obtenu les ID des jeux de données source de la stratégie de fusion, vous pouvez utiliser l&#39;API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de vérifier les violations de la stratégie d&#39;utilisation des données.
 
@@ -233,7 +233,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’URI de l’action marketing, les étiquettes d’utilisation des données collectées à partir des jeux de données fournis et une liste de toute stratégie d’utilisation des données qui a été violée suite au test de l’action par rapport à ces étiquettes. In this example, the &quot;Export Data to Third Party&quot; policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered a policy violation.
+Une réponse positive renvoie l’URI de l’action marketing, les étiquettes d’utilisation des données collectées à partir des jeux de données fournis et une liste de toute stratégie d’utilisation des données qui a été violée suite au test de l’action par rapport à ces étiquettes. In this example, the &quot;Export Data to Third Party&quot; policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered a policy violation.
 
 ```json
 {
@@ -359,7 +359,7 @@ Une réponse réussie renvoie l’URI de l’action marketing, les étiquettes d
 
 | Propriété | Description |
 | --- | --- |
-| `duleLabels` | liste d’étiquettes d’utilisation des données extraites des jeux de données fournis. |
+| `duleLabels` | Liste d’étiquettes d’utilisation des données extraites des jeux de données fournis. |
 | `discoveredLabels` | Liste des jeux de données fournis dans le payload de la requête affichant les libellés au niveau du jeu de données et au niveau du champ trouvées dans chaque jeu. |
 | `violatedPolicies` | An array listing any data usage policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
@@ -383,4 +383,4 @@ Pour plus d’informations, consultez la section sur l’[exportation d’un seg
 
 ## Étapes suivantes
 
-Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d&#39;informations sur [!DNL Data Governance] dans [!DNL Experience Platform], veuillez lire l&#39;aperçu pour [!DNL Data Governance](../../data-governance/home.md).
+Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d&#39;informations sur [!DNL Data Governance] in [!DNL Experience Platform], veuillez lire la présentation de [[ ! DNL Data Governance]](../../data-governance/home.md).
