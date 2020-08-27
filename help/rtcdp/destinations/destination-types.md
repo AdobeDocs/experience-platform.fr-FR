@@ -5,10 +5,10 @@ seo-title: Types et catégories de destinations
 description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. '
 seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 93%
+source-wordcount: '587'
+ht-degree: 92%
 
 ---
 
@@ -37,7 +37,7 @@ Les destinations d’exportation de profils génèrent un fichier contenant des 
 
 #### Destinations d’exportation de segments
 
-Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [!DNL Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md) or [!DNL Google Ads](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
+Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### Destinations d’exportation de segments et de profils : présentation vidéo
 
