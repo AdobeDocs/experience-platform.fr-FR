@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des entités du service de prise de décision à l’aide d’API
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '7207'
+source-wordcount: '7220'
 ht-degree: 95%
 
 ---
@@ -26,9 +26,9 @@ Le tutoriel se décompose en deux parties :
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services and the API conventions. The [!DNL Platform] repository is a service used by several other [!DNL Platform] services to store business objects and various types of metadata. Il offre une méthode sécurisée et flexible pour gérer et interroger ces objets en vue de les utiliser dans plusieurs services d’exécution. Le [!DNL Decisioning Service] est l&#39;un de ceux-là. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux éléments suivants :
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [!DNL Decisioning Service](./../home.md): Explique les concepts et les composants utilisés pour la prise de décision d’expérience en général et la prise de décision d’Offre en particulier. Illustre les stratégies utilisées pour choisir la meilleure option à présenter lors de l’expérience client.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est un langage puissant pour écrire des expressions sur des instances XDM. Il est utilisé pour définir des règles de décision.
+- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [[ !Service de prise de décision DNL]](./../home.md): Explique les concepts et les composants utilisés pour la prise de décision d’expérience en général et la prise de décision d’Offre en particulier. Illustre les stratégies utilisées pour choisir la meilleure option à présenter lors de l’expérience client.
+- [[ ! DNL Profil Requête Language (PQL)]](../../segmentation/pql/overview.md): PQL est un langage puissant pour écrire des expressions sur des instances XDM. Il est utilisé pour définir des règles de décision.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
 
