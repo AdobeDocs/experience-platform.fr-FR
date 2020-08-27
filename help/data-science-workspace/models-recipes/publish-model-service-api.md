@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Publication d’un modèle en tant que service (API)
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1483'
 ht-degree: 49%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 49%
 
 # Publication d’un modèle en tant que service (API)
 
-Ce didacticiel porte sur le processus de publication d’un modèle en tant que service à l’aide du [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Ce didacticiel porte sur le processus de publication d’un modèle en tant que service à l’aide de l’API d’apprentissage automatique [[ !DNL Sensei]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Prise en main
 
-Ce didacticiel nécessite une bonne compréhension de l’espace de travail des sciences des données d’Adobe Experience Platform. Avant de commencer ce didacticiel, veuillez consulter la présentation [de](../home.md) Data Science Workspace pour une présentation générale du service.
+Ce didacticiel nécessite une bonne compréhension de Adobe Experience Platform Data Science Workspace. Avant de commencer ce didacticiel, veuillez consulter la présentation [de](../home.md) Data Science Workspace pour une présentation générale du service.
 
 Pour suivre ce didacticiel, vous devez disposer d&#39;un moteur ML, d&#39;une instance ML et d&#39;une expérience. Pour connaître les étapes de création de ces recettes dans l&#39;API, consultez le didacticiel sur l&#39; [importation d&#39;une recette](./import-packaged-recipe-api.md)assemblée.
 
