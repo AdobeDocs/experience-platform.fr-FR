@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Présentation de l’application des stratégies
 topic: enforcement
+description: Une fois les étiquettes d’utilisation des données appliquées aux jeux de données Adobe Experience Platform et les stratégies d’utilisation des données définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur la plate-forme, l’application basée sur les API et l’application automatique.
 translation-type: tm+mt
-source-git-commit: 1a835c6c20c70bf03d956c601e2704b68d4f90fa
+source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 21%
+source-wordcount: '262'
+ht-degree: 16%
 
 ---
 
