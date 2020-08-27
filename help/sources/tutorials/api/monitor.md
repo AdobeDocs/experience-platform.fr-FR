@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveiller les flux et les exécutions
 topic: overview
 translation-type: tm+mt
-source-git-commit: 9bdc45f6e51f1a140da503ac36355619300cedd2
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '597'
 ht-degree: 14%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide du [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide de l’API [[ !DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prise en main
 
