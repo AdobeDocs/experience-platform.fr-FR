@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;api;getting started
 solution: Experience Platform
 title: Guide de développement du contrôle d’accès
 topic: developer guide
+description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin afin de passer des appels avec succès à l’API Schema Registry.
 translation-type: tm+mt
-source-git-commit: d059f48a2a3ba6398418fd3d5b0b3fd837ff69a2
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 54%
+source-wordcount: '379'
+ht-degree: 59%
 
 ---
 
