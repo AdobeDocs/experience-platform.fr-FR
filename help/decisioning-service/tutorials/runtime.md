@@ -5,9 +5,9 @@ title: Utilisation du composant d’exécution du service de prise de décision 
 topic: tutorial
 description: 'Ce document fournit un tutoriel expliquant comment utiliser les services du composant d’exécution du service de prise de décision à l’aide d’API Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2017'
 ht-degree: 81%
 
 ---
@@ -21,9 +21,9 @@ This document provides a tutorial for working with the runtime services of [!DNL
 
 This tutorial requires a working understanding of the [!DNL Experience Platform] services involved in decisioning and determining the next best offer to present during customer experiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux éléments suivants :
 
-- [!DNL Decisioning Service](./../home.md): Fournit la structure permettant d’ajouter et de supprimer des offres et de créer des algorithmes pour choisir le meilleur à présenter lors de l’expérience d’un client.
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [!DNL Profile Query Language (PQL)](../../segmentation/pql/overview.md): PQL est utilisé pour définir des règles et des filtres.
+- [[ !Service de prise de décision DNL]](./../home.md): Fournit la structure permettant d’ajouter et de supprimer des offres et de créer des algorithmes pour choisir le meilleur à présenter lors de l’expérience d’un client.
+- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [[ ! DNL Profil Requête Language (PQL)]](../../segmentation/pql/overview.md): PQL est utilisé pour définir des règles et des filtres.
 - [Gestion des objets et des règles de prise de décision à l’aide d’API](./entities.md) : avant d’utiliser le composant d’exécution des services de prise de décision, vous devez configurer les entités associées.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
