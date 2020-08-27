@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du système de modèle de données d’expérience (XDM)
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 77%
+source-wordcount: '1839'
+ht-degree: 74%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 77%
 
 This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)**est une spécification open source qui définit des schémas normalisés pour la gestion de l’expérience client. The methodology on which[!DNL Experience Platform]is built,**XDM System **, operationalizes[!DNL Experience Data Model]schemas for use by[!DNL Platform]services. Le **[!DNL Schema Registry]**fournit une interface utilisateur et une API RESTful pour accéder à la **[!DNL Schema Library]**dans[!DNL Experience Platform]. Pour plus d’informations, consultez la[documentation XDM](home.md).
+**[!DNL Experience Data Model](XDM)** est une spécification open source qui définit des schémas normalisés pour la gestion de l’expérience client. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. Le **[!DNL Schema Registry]** fournit une interface utilisateur et une API RESTful pour accéder à la **[!DNL Schema Library]** dans [!DNL Experience Platform]. Pour plus d’informations, consultez la [documentation XDM](home.md).
 
 ## FAQ
 
@@ -42,7 +42,7 @@ Pour plus d’informations, consultez la section sur l’[identification des sch
 
 ### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
 
-Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [!DNL Real-time Customer Profile](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### Quelle est la taille maximale d’un type de champ long ?
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur les types de champ, consultez la section [Défini
 
 ### Comment définir les identités pour mon schéma ?
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. Elles sont définies dans les schémas en marquant les champs clés comme « Identité ». Commonly used fields for identity include email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, and other unique ID fields.
+In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. Elles sont définies dans les schémas en marquant les champs clés comme « Identité ». Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, and other unique ID fields.
 
 Les champs peuvent être marqués comme identités à l’aide de l’API ou de l’interface utilisateur.
 
@@ -76,7 +76,7 @@ Les identités principales sont facultatives, car les schémas peuvent en avoir 
 
 ### How do I enable a schema for use in [!DNL Real-time Customer Profile]?
 
-Les schémas peuvent être utilisés dans [!DNL Real-time Customer Profile](../profile/home.md) grâce à l’ajout d’une balise « union », située dans l’attribut `meta:immutableTags` du schéma. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a &quot;union&quot; tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 
