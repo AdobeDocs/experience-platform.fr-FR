@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Authentification et accès aux API Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 42%
+source-wordcount: '853'
+ht-degree: 41%
 
 ---
 
@@ -47,7 +47,7 @@ Avant de créer des intégrations sur Adobe I/O, votre compte doit disposer des 
 
 **Obtenir un accès en tant que développeur**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [!DNL Admin Console](https://adminconsole.adobe.com/).
+Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -91,7 +91,7 @@ Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajout
 
 ![](images/authentication/add-api-button.png)
 
-L’écran _Ajouter une API_ s’affiche. Cliquez sur l’icône de produit pour l’Adobe Experience Platform, puis sélectionnez API **** Experience Platform avant de cliquer sur **[!UICONTROL Suivant]**.
+L’écran _Ajouter une API_ s’affiche. Cliquez sur l’icône de produit pour Adobe Experience Platform, puis sélectionnez API **** Experience Platform avant de cliquer sur **[!UICONTROL Suivant]**.
 
 ![](images/authentication/add-platform-api.png)
 
