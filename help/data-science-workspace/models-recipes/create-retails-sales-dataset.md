@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
 title: Création de jeux de données et de schéma de vente au détail
 topic: Tutorial
+description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 75%
+source-wordcount: '544'
+ht-degree: 77%
 
 ---
 
