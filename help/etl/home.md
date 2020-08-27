@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
 solution: Experience Platform
 title: Création d’intégrations ETL
 topic: overview
+description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 translation-type: tm+mt
-source-git-commit: 8b1b61b6446b28f92d6cf221003674fa09716c53
+source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '4153'
+source-wordcount: '4173'
 ht-degree: 75%
 
 ---
