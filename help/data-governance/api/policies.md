@@ -1,18 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;API-based enforcement;data governance
 solution: Experience Platform
 title: Stratégies
 topic: developer guide
+description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point de terminaison /policies est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
 translation-type: tm+mt
-source-git-commit: 12c53122d84e145a699a2a86631dc37ee0073578
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '1756'
-ht-degree: 8%
+source-wordcount: '1804'
+ht-degree: 9%
 
 ---
 
 
-# Stratégies point de terminaison
+# Point de terminaison des stratégies
 
 Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. Le `/policies` point de terminaison de la [!DNL Policy Service API] permet de gérer par programmation les stratégies d’utilisation des données pour votre entreprise.
 
