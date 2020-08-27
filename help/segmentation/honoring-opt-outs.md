@@ -5,10 +5,10 @@ title: Respect du droit d’opposition
 topic: overview
 description: 'Experience Platform permet à vos clients d’envoyer des demandes d’opposition concernant l’utilisation et le stockage de leurs données au sein de Real-time Customer Profile]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui). '
 translation-type: tm+mt
-source-git-commit: 0fc356b67af4d34e35cd9329385ec284d9336953
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 68%
+source-wordcount: '1030'
+ht-degree: 65%
 
 ---
 
@@ -23,10 +23,10 @@ Lorsqu’un client fait valoir son droit d’opposition, il est important que vo
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Avant de travailler sur les demandes d’opposition, consultez la documentation des services suivants :
 
-- [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
-- [!DNL Experience Data Model (XDM)](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [!DNL Adobe Experience Platform Privacy Service](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein [!DNL Platform]de.
+- [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[ !Service de segmentation Adobe Experience Platform DNL]](./home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [[ ! Modèle de données d’expérience DNL (XDM)]](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [[ !DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Aide les entreprises à automatiser la conformité aux règles de confidentialité des données impliquant les données des clients au sein [!DNL Platform]de.
 
 ## Mixins d’exclusion
 
@@ -132,4 +132,4 @@ In some instances, such as building a segment of people who have opted out, it m
 
 Pour plus d’informations sur la segmentation et notamment sur la manière dont travailler avec les définitions de segment et les audiences dans l’API et l’interface utilisateur, veuillez commencer par lire la [présentation de la segmentation](./home.md).
 
-To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [!DNL Privacy Service](../privacy-service/home.md).
+To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [[!DNL Privacy Service]](../privacy-service/home.md).
