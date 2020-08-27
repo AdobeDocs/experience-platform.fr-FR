@@ -3,11 +3,12 @@ keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Présentation détaillée de Data Science Workspace
 topic: Walkthrough
+description: Ce document fournit une présentation détaillée d’Adobe Experience Platform Data Science Workspace. Plus précisément, le processus général par lequel un chercheur de données doit résoudre un problème à l’aide de l’apprentissage automatique.
 translation-type: tm+mt
-source-git-commit: 1e5526b54f3c52b669f9f6a792eda0abfc711fdd
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 93%
+source-wordcount: '1667'
+ht-degree: 92%
 
 ---
 
