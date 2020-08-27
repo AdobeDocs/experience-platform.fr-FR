@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de développement de Segmentation Service
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 23%
+source-wordcount: '300'
+ht-degree: 18%
 
 ---
 
@@ -18,9 +18,9 @@ Adobe Experience Platform [!DNL Segmentation Service] allows you to build segmen
 
 The developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with using [!DNL Segmentation Service].
 
-- [!DNL Segmentation](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-- [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[ !Segmentation DNL]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully work with the [!DNL Segmentation] API.
