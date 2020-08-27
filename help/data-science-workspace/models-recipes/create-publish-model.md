@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide pas-à-pas de création et de publication d’un modèle d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1548'
 ht-degree: 83%
 
 ---
@@ -45,10 +45,10 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 * Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 * Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
-   * [!DNL Experience Data Model](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
+   * [[ !Modèle de données d’expérience DNL]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
    * Jeux de données : construction de stockage et de gestion pour les données réelles. Instance instanciée physique d’un [schéma XDM](../../xdm/schema/field-dictionary.md).
    * Lots : les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité.
-   * [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[ !DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
 
 ## Préparation de vos données {#prepare-your-data}
 
