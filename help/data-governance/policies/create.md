@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
+description: Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. L’API DULE Policy Service vous permet de créer et de gérer des stratégies DULE afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés DULE. Ce document fournit un tutoriel détaillé sur la création d’une stratégie DULE à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1254'
 ht-degree: 84%
 
 ---
