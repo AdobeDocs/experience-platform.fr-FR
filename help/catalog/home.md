@@ -5,10 +5,10 @@ title: Présentation du service de catalogue
 topic: overview
 description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 49%
+source-wordcount: '782'
+ht-degree: 47%
 
 ---
 
@@ -64,4 +64,4 @@ The following table outlines the different object types supported by [!DNL Catal
 
 ## Étapes suivantes
 
-This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. Pour savoir comment interagir avec les différents points de terminaison de cette API , consultez le [guide de développement du catalogue](api/getting-started.md). [!DNL Catalog] Il vous est également recommandé de consulter le guide sur le [filtrage des données du catalogue](api/filter-data.md) afin de suivre les bonnes pratiques de limitation des données renvoyées dans les réponses de l’API.
+This document provided an introduction to [!DNL Catalog Service] and how it functions within the greater scope of [!DNL Experience Platform]. See the [[!DNL Catalog] developer guide](api/getting-started.md) for steps on interacting with the different endpoints of that [!DNL Catalog] API. Il vous est également recommandé de consulter le guide sur le [filtrage des données du catalogue](api/filter-data.md) afin de suivre les bonnes pratiques de limitation des données renvoyées dans les réponses de l’API.
