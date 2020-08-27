@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Catalog service;catalog api;appendix
 solution: Experience Platform
 title: Annexe du guide de développement du service de catalogue
 topic: developer guide
+description: Ce document contient des informations supplémentaires pour vous aider à utiliser l’API Catalogue de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 78%
+source-wordcount: '910'
+ht-degree: 77%
 
 ---
 
