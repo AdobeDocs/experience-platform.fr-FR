@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23a69653ee773562cb0261b8e0bb67411eb4856e
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2811'
-ht-degree: 59%
+source-wordcount: '2839'
+ht-degree: 58%
 
 ---
 
@@ -62,9 +62,9 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Par conséquent, il est important, lors de la réflexion sur les schémas, de penser aux identités des clients et de déterminer les champs qui peuvent être utilisés pour identifier un sujet, quel que soit l&#39;endroit d&#39;où proviennent les données.
 
-Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [!DNL Real-time Customer Profile](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
+Pour faciliter ce processus, les champs clés de vos schémas peuvent être marqués comme identités. Upon data ingestion, the data in those fields is inserted into the &quot;[!UICONTROL Identity Graph]&quot; for that individual. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched-together view of each individual customer.
 
-Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [!DNL Experience Cloud ID (ECID)](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
+Fields that are commonly marked as &quot;[!UICONTROL Identity]&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good &quot;[!UICONTROL Identity]&quot; fields as well.
 
 Il est important de réfléchir aux identités client au cours de la phase de planification des schémas afin de vous assurer que les données sont rassemblées pour créer le profil le plus complet possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
@@ -123,7 +123,7 @@ Since maintaining backwards compatibility is crucial for schema evolution, [!DNL
 
 ### Schémas et ingestion de données
 
-In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [!DNL Catalog Service](../../catalog/home.md), and generally represent tables or files that contain ingested data. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Adobe Experience Platform Data Ingestion](../../ingestion/home.md).
+In order to ingest data into [!DNL Experience Platform], a dataset must first be created. Datasets are the building blocks for data transformation and tracking for [[!DNL Catalog Service]](../../catalog/home.md), and generally represent tables or files that contain ingested data. Tous les jeux de données sont basés sur des schémas XDM existants qui fournissent des contraintes sur ce que les données ingérées doivent contenir et sur la manière dont elles doivent être structurées. Pour plus d’informations, consultez la présentation d’[Adobe Experience Platform Data Ingestion](../../ingestion/home.md).
 
 ## Blocs de création d’un schéma
 
@@ -194,11 +194,11 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 Certaines opérations de données utilisées par des services et des applications en aval imposent des contraintes sur certains types de champs. Les services concernés incluent, sans s’y limiter :
 
-* [!DNL Real-time Customer Profile](../../profile/home.md)
-* [!DNL Identity Service](../../identity-service/home.md)
-* [!DNL Segmentation](../../segmentation/home.md)
-* [!DNL Query Service](../../query-service/home.md)
-* [!DNL Data Science Workspace](../../data-science-workspace/home.md)
+* [[ ! Profil client en temps réel DNL]](../../profile/home.md)
+* [[ !Service d&#39;identité DNL]](../../identity-service/home.md)
+* [[ !Segmentation DNL]](../../segmentation/home.md)
+* [[ !Service de Requête DNL]](../../query-service/home.md)
+* [[ ! Espace de travail scientifique des données DNL]](../../data-science-workspace/home.md)
 
 Avant de créer un schéma à utiliser dans les services en aval, veuillez consulter la documentation appropriée de ces services afin de mieux comprendre les exigences et les contraintes de champ pour les opérations de données auxquelles le schéma est destiné.
 
