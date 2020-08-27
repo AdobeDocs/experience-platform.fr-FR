@@ -5,10 +5,10 @@ title: Surveillance de l’ingestion des données
 topic: overview
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 70%
+source-wordcount: '560'
+ht-degree: 69%
 
 ---
 
@@ -25,7 +25,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance *[!UICONTROL Diffusion en continu de bout en bout]* apparaît. Cet espace de travail fournit un graphique qui affiche le taux de réception des événements en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par [!DNL Real-time Customer Profile](../../profile/home.md)et une liste détaillée des données entrantes.
+La page de surveillance *[!UICONTROL Diffusion en continu de bout en bout]* apparaît. Cet espace de travail fournit un graphique qui affiche le taux de événements reçus en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par le Profil client en temps réel [[ !DNL]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -61,7 +61,7 @@ De plus, les enregistrements en échec fournissent des informations sur les erre
 
 ## Surveillance de l’ingestion des données du lot de bout en bout
 
-In the [!DNL Experience Platform UI](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
+In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
