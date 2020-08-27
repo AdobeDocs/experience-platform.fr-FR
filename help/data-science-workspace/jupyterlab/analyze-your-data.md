@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Analyse de vos données à l’aide de notebooks
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1702'
+source-wordcount: '1710'
 ht-degree: 83%
 
 ---
@@ -18,9 +18,9 @@ Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein d
 
 Les concepts suivants sont présentés :
 
-- **[!DNL JupyterLab]:**[!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906)est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans[!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[ !DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter, et est étroitement intégrée dans [!DNL Adobe Experience Platform].
 - **Lots :** les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
-- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser le [!DNL Platform SDK](../authoring/platform-sdk.md) guide.
+- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
 ## Exploration de notebooks dans Data Science Workspace
 
@@ -90,7 +90,7 @@ Nous pouvons maintenant cliquer avec le bouton droit sur le jeu de données `Ret
 
 >[!TIP]
 >
->refer to the [!DNL Platform SDK](../authoring/platform-sdk.md) guide to convert your code.
+>refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
