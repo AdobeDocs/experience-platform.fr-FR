@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descripteurs
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: b021b6813af18e29f544dc55541f23dd7dd57d47
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1481'
 ht-degree: 82%
 
 ---
@@ -300,7 +300,7 @@ An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
-| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. A list of namespaces can be found using the [!DNL Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. A list of namespaces can be found using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | `xdm:id` ou `xdm:code` selon l’espace de noms `xdm:namespace` utilisé. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsqu’elle est définie sur true, le champ est l’identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. |
 
@@ -369,7 +369,7 @@ Les descripteurs de relation décrivent une relation entre deux schémas différ
 
 #### Descripteur d’identité de référence
 
-Les descripteurs d&#39;identité de référence fournissent un contexte de référence à l&#39;identité principale d&#39;un champ de schéma, ce qui permet de le référencer par des champs d&#39;autres schémas. Les champs doivent déjà disposer d’un libellé de descripteur d’identité avant qu’un descripteur de référence puisse leur être appliqué.
+Les descripteurs d&#39;identité de référence fournissent un contexte de référence à l&#39;identité Principale d&#39;un champ de schéma, ce qui permet de le référencer par des champs d&#39;autres schémas. Les champs doivent déjà disposer d’un libellé de descripteur d’identité avant qu’un descripteur de référence puisse leur être appliqué.
 
 ```json
 {
