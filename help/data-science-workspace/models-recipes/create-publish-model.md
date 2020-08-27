@@ -5,7 +5,7 @@ title: Guide pas-à-pas de création et de publication d’un modèle d’appren
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous donne les moyens d’atteindre votre objectif à l’aide de la recette des recommandations de produits prédéfinie. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 78f080fd7598799825c59a4fdfdcaf7d294560a3
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 83%
@@ -43,7 +43,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    * Valeurs de publication du jeu de données favori
    * Schéma du jeu de données favori
 
-* Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+* Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 * Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
    * [[ !Modèle de données d’expérience DNL]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
