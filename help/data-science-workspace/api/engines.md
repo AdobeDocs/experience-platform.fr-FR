@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
 solution: Experience Platform
 title: Moteurs
 topic: Developer guide
+description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 70%
+source-wordcount: '1147'
+ht-degree: 71%
 
 ---
 
