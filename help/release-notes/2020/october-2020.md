@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: e9d7a045a88e0126549adcfa6136684e7b933b71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 51%
+source-wordcount: '307'
+ht-degree: 50%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 51%
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-- [!DNL Access control](#access-control)
-- [!DNL Sandboxes](#sandboxes)
+- [[ !Contrôle d&#39;accès DNL]](#access-control)
+- [[ ! Sandbox DNL]](#sandboxes)
 
 ## [!DNL Access control] {#access-control}
 
@@ -31,7 +31,7 @@ Nouvelles fonctionnalités d’Adobe Experience Platform :
 | Fonctionnalité | Description |
 |--- | ---|
 | Autorisations | In the [!DNL Admin Console], the  tab within a [!DNL Platform] product profile allows you customize which [!DNL Platform] capabilities are available for the users attached to that profile. Available permission categories include: [!UICONTROL Data Modeling], [!UICONTROL Data Management], [!UICONTROL Profile Management], [!UICONTROL Identities], [!UICONTROL Data Monitoring], [!UICONTROL Sandbox Administration], [!UICONTROL Destinations], [!UICONTROL Sources]. |
-| Accès aux environnements de test | L’onglet [!UICONTROL _Autorisations _]d’un profil de produit peut accorder aux utilisateurs l’accès à des environnements de test spécifiques.[!DNL Platform]Consultez la section sur les[environnements de test](#sandboxes)ci-dessous pour plus d’informations. |
+| Accès aux environnements de test | L’onglet [!UICONTROL _Autorisations_] d’un profil de produit peut accorder aux utilisateurs l’accès à des environnements de test spécifiques. [!DNL Platform] Consultez la section sur les [environnements de test](#sandboxes) ci-dessous pour plus d’informations. |
 
 Pour plus d’informations, consultez la [présentation du contrôle d’accès](../../access-control/home.md).
 
