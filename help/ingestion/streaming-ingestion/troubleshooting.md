@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Dépannage de l’ingestion par flux
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 70%
+source-wordcount: '997'
+ht-degree: 69%
 
 ---
 
@@ -100,4 +100,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
 
-You can use the [!DNL Experience Platform UI](https://platform.adobe.com) to see more information on why a message failed ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet _[!UICONTROL Diffusion en continu de bout en bout]_pour voir les lots de messages diffusés au cours d’une période sélectionnée.
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet _[!UICONTROL Diffusion en continu de bout en bout]_ pour voir les lots de messages diffusés au cours d’une période sélectionnée.
