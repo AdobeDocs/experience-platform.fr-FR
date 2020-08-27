@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Traitement de la demande d’accès à des informations personnelles dans Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: f910351d49de9c4a18a444b99b7f102f4ce3ed5b
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 55%
+source-wordcount: '603'
+ht-degree: 46%
 
 ---
 
@@ -22,9 +22,9 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [!DNL Privacy Service](home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
-* [!DNL Identity Service](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
-* [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[ !Privacy Service DNL]](home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou supprimer leurs données personnelles.
+* [[ !Service d&#39;identité DNL]](../identity-service/home.md): Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
+* [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_ afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
