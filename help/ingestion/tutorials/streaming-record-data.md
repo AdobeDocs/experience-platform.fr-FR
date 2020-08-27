@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Diffusion en continu des données d’enregistrement
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 78%
+source-wordcount: '1072'
+ht-degree: 74%
 
 ---
 
@@ -20,8 +20,8 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
-- [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de plusieurs sources.
 - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
 De plus, pour suivre ce tutoriel, vous devez avoir déjà créé une connexion en continu. Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Le nom que vous souhaitez utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous êtes en train de créer. |
-| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Réponse**
 
@@ -348,7 +348,7 @@ A successful response returns HTTP status 200 with details of the newly streamed
 
 ## Récupération des données d’enregistrement nouvellement ingérées
 
-To validate the previously ingested records, you can use the [!DNL Profile Access API](../../profile/api/entities.md) to retrieve the record data.
+To validate the previously ingested records, you can use the [[!DNL Profile Access API]](../../profile/api/entities.md) to retrieve the record data.
 
 >[!NOTE]
 >
