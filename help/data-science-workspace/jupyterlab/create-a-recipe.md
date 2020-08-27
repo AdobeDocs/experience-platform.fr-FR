@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création d’une recette à l’aide de notebooks Jupyter
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2295'
 ht-degree: 87%
 
 ---
@@ -115,7 +115,7 @@ Les deux prochaines sections traiteront du chargement et de la préparation des 
 
 Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas&#39; `read_csv()` or `read_json()` functions.
 
-- [!DNL Platform SDK](#platform-sdk)
+- [[ !SDK de plate-forme DNL]](#platform-sdk)
 - [Sources externes](#external-sources)
 
 >[!NOTE]
