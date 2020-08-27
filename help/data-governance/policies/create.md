@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
 translation-type: tm+mt
-source-git-commit: 0534fe8dcc11741ddc74749d231e732163adf5b0
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 85%
+source-wordcount: '1194'
+ht-degree: 84%
 
 ---
 
@@ -22,9 +22,9 @@ This document provides a step-by-step tutorial for creating a DULE policy using 
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies DULE :
 
-* [!DNL Data Governance](../home.md): Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
+* [[ !Gouvernance des données DNL]](../home.md): Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
 * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API DULE , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
