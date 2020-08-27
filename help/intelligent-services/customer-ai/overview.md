@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics
+keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform
 title: Présentation de Customer AI
 topic: Customer AI overview
+description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 translation-type: tm+mt
-source-git-commit: 83e74ad93bdef056c8aef07c9d56313af6f4ddfd
+source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 85%
+source-wordcount: '526'
+ht-degree: 86%
 
 ---
 
