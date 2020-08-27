@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Traitement des demandes d’accès à des informations personnelles dans le lac de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 36%
+source-wordcount: '1204'
+ht-degree: 32%
 
 ---
 
@@ -22,10 +22,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [!DNL Privacy Service](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
-* [!DNL Catalog Service](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
-* [!DNL Experience Data Model (XDM) System](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-* [!DNL Identity Service](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [[ !Privacy Service DNL]](../privacy-service/home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou supprimer leurs données personnelles.
+* [[ !Service de catalogue DNL]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
+* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[ !Service d&#39;identité DNL]](../identity-service/home.md): Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
