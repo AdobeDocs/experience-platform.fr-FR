@@ -4,9 +4,9 @@ solution: Experience Platform
 title: 'Gérer les étiquettes d’utilisation des données pour les jeux de données à l’aide d’API '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 3b6f46c5a81e1b6e8148bf4b78ae2560723f9d20
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '916'
 ht-degree: 6%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 6%
 
 # Gérer les étiquettes d’utilisation des données pour les jeux de données à l’aide d’API
 
-Elle [!DNL Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
+L&#39;API [[ !DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) vous permet d&#39;appliquer et de modifier des étiquettes d&#39;utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
 
 Ce document explique comment gérer les étiquettes des jeux de données et des champs à l’aide du [!DNL Dataset Service API]. Pour savoir comment gérer les libellés d’utilisation des données eux-mêmes à l’aide d’appels d’API, consultez le guide [des points de terminaison](../api/labels.md) d’étiquettes pour le [!DNL Policy Service API].
 
@@ -74,8 +74,8 @@ Une réponse positive renvoie les étiquettes d’utilisation des données qui o
 
 | Propriété | Description |
 | --- | --- |
-| `labels` | liste des étiquettes d’utilisation des données qui ont été appliquées au jeu de données. |
-| `optionalLabels` | liste de champs individuels au sein du jeu de données auxquels des étiquettes d’utilisation de données sont appliquées. |
+| `labels` | Liste des étiquettes d’utilisation des données qui ont été appliquées au jeu de données. |
+| `optionalLabels` | Liste de champs individuels au sein du jeu de données auxquels des étiquettes d’utilisation de données sont appliquées. |
 
 ## Appliquer des étiquettes à un jeu de données {#apply}
 
@@ -126,8 +126,8 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `labels` | liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/look-up-resource.md"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
+| `labels` | Liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au jeu de données. |
+| `optionalLabels` | Liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/look-up-resource.md"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: Liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
