@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '746'
 ht-degree: 28%
 
 ---
@@ -171,7 +171,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l’aide du [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide de l&#39;API d&#39;accès au Profil [[ !DNL]](../../profile/api/entities.md). |
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
