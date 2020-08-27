@@ -6,10 +6,10 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 64%
+source-wordcount: '861'
+ht-degree: 63%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 64%
 
 **Date de lancement : 11 mars 2020**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [!DNL Data Governance](#governance)
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Destinations](#destinations)
-* [!DNL Identity Service](#identity)
-* [!DNL Sources](#sources)
+* [[ ! Gouvernance des données DNL]](#governance)
+* [[ !Ingestion des données DNL]](#ingestion)
+* [[ !Destinations DNL]](#destinations)
+* [[ !Service d&#39;identité DNL]](#identity)
+* [[ !Sources DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
