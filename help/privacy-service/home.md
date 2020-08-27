@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 15%
+source-wordcount: '1502'
+ht-degree: 14%
 
 ---
 
@@ -31,7 +31,7 @@ Ces décisions peuvent être résumées par les questions suivantes :
 1. **Ai-je correctement étiqueté mes données ?**
    * Les données doivent être correctement étiquetées pour que le service puisse déterminer les champs à accéder ou à supprimer pendant les tâches de confidentialité. See the section on [labelling data](#label) for more information.
 1. **Est-ce que je sais à quels identifiants envoyer[!DNL Privacy Service]?**
-   * Lors de l’envoi de demandes de confidentialité, des ID de client individuels spécifiques à des applications d’Adobe particulières doivent être fournis. Pour plus d&#39;informations, consultez les sections sur la [fourniture de données](#identity) d&#39;identité et sur l&#39; [exécution de demandes](#requests) de confidentialité.
+   * Lors de l’envoi de demandes de confidentialité, des ID de client individuels spécifiques à des applications d’Adobe particulières doivent être fournis. Pour plus d&#39;informations, consultez les sections sur la [fourniture de données](#identity) d&#39;identité et sur la [demande](#requests) de confidentialité.
 1. **Comment effectuer le suivi de mes tâches de confidentialité ?**
    * Une fois que vous avez effectué des demandes de confidentialité, il existe plusieurs options pour suivre leur état et leurs résultats. Pour plus d’informations, voir la section sur la [surveillance des tâches](#monitor) de confidentialité.
 
@@ -77,7 +77,7 @@ Une fois que vous avez déterminé les besoins en matière de confidentialité d
 
 #### Utilisation de l’API
 
-Le [!DNL Privacy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fournit plusieurs points de terminaison pour la création et la gestion des tâches de confidentialité à l’aide des appels d’API RESTful, ce qui vous permet d’approcher par programmation la conformité à la réglementation de confidentialité pour vos [!DNL Experience Cloud] applications. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
+L&#39;API du Privacy Service [[ !DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fournit plusieurs points de terminaison pour la création et la gestion des tâches de confidentialité à l&#39;aide des appels d&#39;API RESTful, ce qui vous permet d&#39;approcher par programmation la conformité de la réglementation de confidentialité pour vos [!DNL Experience Cloud] applications. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
 
 #### Utilisation de l’interface utilisateur
 
