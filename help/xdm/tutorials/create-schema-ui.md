@@ -5,10 +5,10 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 topic: tutorials
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed100e2acfcfc3dfabef6ccfbe88e98489193567
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '3512'
-ht-degree: 22%
+source-wordcount: '3528'
+ht-degree: 21%
 
 ---
 
@@ -27,13 +27,13 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 Ce tutoriel exige une compréhension pratique des différents aspects de Adobe Experience Platform impliqués dans la création de schémas. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-* [!DNL Experience Data Model (XDM)](../home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : présentation des schémas XDM et de leurs blocs de création, notamment les classes, les mixins, les types de données et les champs.
-* [!DNL Real-time Customer Profile](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
 ## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
 
-L’espace de travail [!UICONTROL Schémas] de l’ [!DNL Platform] interface utilisateur fournit une visualisation du [!DNL Schema Library]rapport, ce qui vous permet de gérer les schémas disponibles pour votre organisation par vue. The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
+L’espace de travail [!UICONTROL Schémas] de l’ [!DNL Platform] interface utilisateur fournit une visualisation du [!DNL Schema Library]rapport, ce qui vous permet de gérer les schémas disponibles pour votre entreprise par vue. The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
 
 Après vous être connecté [!DNL Experience Platform], sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l&#39;espace de travail **[!UICONTROL Schémas]** . L’onglet **[!UICONTROL Parcourir]** affiche une liste de schémas (une représentation du [!DNL Schema Library]) que vous pouvez vue et personnaliser. La liste comprend le nom, le type, la classe et le comportement (enregistrement ou série chronologique) sur lesquels repose le schéma, ainsi que la date et l’heure de la dernière modification du schéma.
 
@@ -245,11 +245,11 @@ Now all data ingested into the &quot;[!DNL loyaltyId]&quot; field will be used t
 >
 >Une fois qu’un champ du schéma a été défini comme identité principale, vous recevrez un message d’erreur si vous tentez par la suite de définir un autre champ du schéma comme identité principale. Chaque schéma ne peut contenir qu’un seul champ d’identité principal.
 
-To learn more about working with identities in [!DNL Experience Platform], please review the [!DNL Identity Service](../../identity-service/home.md) documentation.
+To learn more about working with identities in [!DNL Experience Platform], please review the [[!DNL Identity Service]](../../identity-service/home.md) documentation.
 
 ## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
-[!DNL Real-time Customer Profile](../../profile/home.md) exploite les données d&#39;identité dans [!DNL Experience Platform] le but de fournir une vue globale à chaque client. Le service crée des profils robustes de 360° d&#39;attributs du client ainsi que des comptes horodatés de chaque interaction que les clients ont eue dans tout système intégré à [!DNL Experience Platform].
+[[ !Profil client en temps réel DNL]](../../profile/home.md) utilise les données d&#39;identité [!DNL Experience Platform] pour fournir une vue holistique de chaque client individuel. Le service crée des profils robustes de 360° d&#39;attributs du client ainsi que des comptes horodatés de chaque interaction que les clients ont eue dans tout système intégré à [!DNL Experience Platform].
 
 In order for a schema to be enabled for use with [!DNL Real-time Customer Profile], it must have a primary identity defined. Vous recevrez un message d&#39;erreur si vous tentez d&#39;activer un schéma sans définir au préalable une identité Principale.
 
