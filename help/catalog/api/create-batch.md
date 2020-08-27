@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
 title: Création d’un jeu de données
 topic: developer guide
+description: Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. A l’aide de la valeur id d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête de POST au point de terminaison /batches de l’API Catalog.
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 100%
+source-wordcount: '128'
+ht-degree: 79%
 
 ---
 
