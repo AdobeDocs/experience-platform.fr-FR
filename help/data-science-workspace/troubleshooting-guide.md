@@ -3,11 +3,12 @@ keywords: Experience Platform;troubleshooting;Data Science Workspace;popular top
 solution: Experience Platform
 title: Guide de dépannage de Data Science Workspace
 topic: Troubleshooting
+description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '665'
-ht-degree: 45%
+source-wordcount: '680'
+ht-degree: 46%
 
 ---
 
