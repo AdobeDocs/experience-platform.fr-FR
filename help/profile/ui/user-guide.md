@@ -5,10 +5,10 @@ title: Guide d’utilisation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 19%
+source-wordcount: '1207'
+ht-degree: 17%
 
 ---
 
@@ -23,13 +23,13 @@ This document serves as a guide for interacting with [!DNL Real-time Customer Pr
 
 This user guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
-* [!DNL Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [!DNL Identity Service](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier les identités à partir de sources de données disparates au fur et à mesure de leur assimilation [!DNL Platform].
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[ !Profil client en temps réel DNL]](../home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[ !Service d&#39;identité DNL]](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier les identités à partir de sources de données disparates au fur et à mesure de leur assimilation [!DNL Platform].
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
 ## Présentation
 
-Dans le [!DNL Experience Platform UI](http://platform.adobe.com), cliquez sur **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet _[!UICONTROL Aperçu]_. Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
+In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the _[!UICONTROL Overview]_ tab. Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -45,7 +45,7 @@ Sur le côté droit de l&#39;onglet *[!UICONTROL Parcourir]* se trouvent plusieu
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
+Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant la date et l’heure de la dernière évaluation des mesures.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -91,7 +91,7 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher le
 
 ### Détails du profil {#profile-detail}
 
-Lorsque vous sélectionnez l’ID **[!UICONTROL de]** Profil, l’onglet _[!UICONTROL Détails]_s’ouvre. Cette page affiche des informations sur le profil sélectionné, y compris les attributs de base, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel.
+Lorsque vous sélectionnez l’ID **[!UICONTROL de]** Profil, l’onglet _[!UICONTROL Détails]_ s’ouvre. Cette page affiche des informations sur le profil sélectionné, y compris les attributs de base, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
