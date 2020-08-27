@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Formation et évaluation d’un modèle (API)
 topic: Tutorial
+description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
 translation-type: tm+mt
-source-git-commit: bd9884a24c5301121f30090946ab24d9c394db1b
+source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 100%
+source-wordcount: '1210'
+ht-degree: 98%
 
 ---
 
