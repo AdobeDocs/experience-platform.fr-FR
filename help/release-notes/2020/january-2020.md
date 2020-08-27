@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: f881c1365684b1ca9e6bf9a8ce866d234dc54128
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 73%
+source-wordcount: '894'
+ht-degree: 72%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 73%
 
 **Date de publication : 15 janvier 2020**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [!DNL Experience Data Model (XDM) System](#xdm)
-* [!DNL Privacy Service](#privacy)
-* [!DNL Sources](#sources)
-* [!DNL Destinations](#destinations)
+* [[ ! Système de modèle de données d’expérience DNL (XDM)]](#xdm)
+* [[ ! Privacy Service DNL]](#privacy)
+* [[ !Sources DNL]](#sources)
+* [[ !Destinations DNL]](#destinations)
 
 ## [!DNL Experience Data Model] Système (XDM) {#xdm}
 
@@ -105,7 +105,7 @@ Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/ov
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Destinations | Gestion des destinations | Accès à la lecture, la création, la modification et la désactivation des destinations. |
-| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet [!UICONTROL _Catalogue _]et aux destinations authentifiées dans l’onglet_ Parcourir _. |
+| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet [!UICONTROL _Catalogue_] et aux destinations authentifiées dans l’onglet _Parcourir_. |
 | Destinations | Activation des destinations | Possibilité d’activer les données vers les destinations. Cette autorisation nécessite l’ajout de « Gestion des destinations » ou « Affichage des destinations » au profil de produits. |
 
 **Problèmes connus**
