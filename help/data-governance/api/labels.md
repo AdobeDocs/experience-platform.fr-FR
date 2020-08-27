@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison des étiquettes
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 80526bc0fea9e1854174a2edf9389ff0c4e98f71
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '493'
 ht-degree: 6%
 
 ---
@@ -22,7 +22,7 @@ Les étiquettes d’utilisation des données vous permettent de classer les donn
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [!DNL Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie de l&#39;API [[ ! DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Retrieve a list of labels {#list}
 
@@ -196,7 +196,7 @@ curl -X PUT \
 | Propriété | Description |
 | --- | --- |
 | `name` | Identifiant de chaîne unique pour l’étiquette. Cette valeur est utilisée à des fins de recherche et d’application de l’étiquette aux jeux de données et aux champs. Il est donc recommandé qu’elle soit courte et concise. |
-| `category` | catégorie de l&#39;étiquette. Bien que vous puissiez créer vos propres catégories pour les étiquettes personnalisées, il est vivement recommandé de les utiliser `Custom` si vous souhaitez qu’elles apparaissent dans l’interface utilisateur. |
+| `category` | Catégorie de l&#39;étiquette. Bien que vous puissiez créer vos propres catégories pour les étiquettes personnalisées, il est vivement recommandé de les utiliser `Custom` si vous souhaitez qu’elles apparaissent dans l’interface utilisateur. |
 | `friendlyName` | Nom convivial de l’étiquette, utilisé à des fins d’affichage. |
 | `description` | (Facultatif) Description de l’étiquette afin de fournir un contexte plus poussé. |
 
