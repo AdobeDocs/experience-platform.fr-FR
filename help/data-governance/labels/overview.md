@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 topic: labels
+description: Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. Les fonctionnalités de DULE vous permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document donne un aperçu des libellés d’utilisation des données (également appelés libellés DULE) dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5e65c843c3c612b657ebe915c53f14f0b8d7f541
+source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 16%
+source-wordcount: '632'
+ht-degree: 23%
 
 ---
 
@@ -30,15 +31,15 @@ Outre les étiquettes fournies par Adobe, vous pouvez également définir vos pr
 
 ## Héritage d’étiquette pour les segments d’audience
 
-Tous les segments d’audience créés par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des étiquettes d’utilisation des jeux de données correspondants. Cela permet aux applications créées sur [!DNL Experience Platform] (par exemple [!DNL Real-time Customer Data Platform]) de fournir une application automatique de la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
+Tous les segments d’audience créés par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des étiquettes d’utilisation de leurs jeux de données correspondants. Cela permet aux applications créées sur [!DNL Experience Platform] (par exemple [!DNL Real-time Customer Data Platform]) de fournir une application automatique de la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
 
 Outre l’héritage d’étiquettes au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Selon la manière dont votre application [!DNL Platform]basée sur le trafic des segments est utilisée, vous pouvez éventuellement spécifier les champs utilisés, ce qui empêche le segment d’hériter des libellés des champs exclus.
 
 Pour plus d’informations sur le fonctionnement de l’application automatique dans le CDP en temps réel, voir l’aperçu sur la gouvernance des [données dans le CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)en temps réel.
 
-### Héritage des contrôles d&#39;exportation des données d&#39;Adobe Audience Manager
+### Héritage des contrôles d&#39;exportation des données Adobe Audience Manager
 
-[!DNL Experience Platform] permet de partager des segments avec l’Adobe Audience Manager. Tous les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont traduits en étiquettes équivalentes et en actions marketing reconnues par [!DNL Experience Platform][!DNL Data Governance].
+[!DNL Experience Platform] permet de partager des segments avec Adobe Audience Manager. Tous les contrôles d’exportation de données appliqués aux segments d’Audience Manager sont traduits en étiquettes équivalentes et en actions marketing reconnues par [!DNL Experience Platform][!DNL Data Governance].
 
 Pour savoir comment des contrôles d’exportation de données spécifiques correspondent aux étiquettes d’utilisation des données dans [!DNL Platform], consultez la documentation [de l’](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep)Audience Manager.
 
