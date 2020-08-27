@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création de jeux de données et de schéma de vente au détail
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 86ded28b1830d3607c8b5214c8d31dfcbf446252
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 76%
+source-wordcount: '502'
+ht-degree: 75%
 
 ---
 
@@ -33,7 +33,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Une connaissance concrète des concepts suivants employés dans ce tutoriel :
-   - [!DNL Experience Data Model (XDM)](../../xdm/home.md)
+   - [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md)
    - [Principes de base de la composition des schémas](../../xdm/schema/field-dictionary.md)
 
 ## Création de jeux de données et de schéma de vente au détail
