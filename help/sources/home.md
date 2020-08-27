@@ -5,10 +5,10 @@ title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 53%
+source-wordcount: '866'
+ht-degree: 60%
 
 ---
 
@@ -47,68 +47,68 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
 
-- [Connecteur [ !DNL Azure Data Lake Enregistrement Gen2]](connectors/cloud-storage/adls-gen2.md)
-- [Connecteur [ !DNL Azure Blob]](connectors/cloud-storage/blob.md)
-- [Connecteur [ !DNL Amazon]](connectors/cloud-storage/kinesis.md)
-- [Connecteur [ !DNL Amazon S3]](connectors/cloud-storage/s3.md)
-- [Connecteur [ ! DNL Apache HDFS]](connectors/cloud-storage/hdfs.md)
-- [Connecteur [ ! DNL Azure Événement Hubs]](connectors/cloud-storage/eventhub.md)
-- [Connecteur [ ! DNL Azure File Enregistrement]](connectors/cloud-storage/azure-file-storage.md)
-- [Connecteur [ !DNL FTP et SFTP]](connectors/cloud-storage/ftp-sftp.md)
-- [Connecteur [ ! DNL Google Cloud Enregistrement]](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Azure Data Lake Storage Gen2] connecteur](connectors/cloud-storage/adls-gen2.md)
+- [[!DNL Azure Blob] connecteur](connectors/cloud-storage/blob.md)
+- [[!DNL Amazon Kinesis] connecteur](connectors/cloud-storage/kinesis.md)
+- [[!DNL Amazon S3] connecteur](connectors/cloud-storage/s3.md)
+- [[!DNL Apache HDFS] connecteur](connectors/cloud-storage/hdfs.md)
+- [[!DNL Azure Event Hubs] connecteur](connectors/cloud-storage/eventhub.md)
+- [[!DNL Azure File Storage] connecteur](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL FTP and SFTP] connecteur](connectors/cloud-storage/ftp-sftp.md)
+- [[!DNL Google Cloud Storage] connecteur](connectors/cloud-storage/google-cloud-storage.md)
 
 ### Gestion de la relation client (CRM)
 
 Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. [!DNL Experience Platform] prend en charge l’assimilation de données de gestion de la relation client à partir de [!DNL Microsoft Dynamics 365] et [!DNL Salesforce]. Consultez les documents connexes suivants pour plus d’informations :
 
-- [Connecteur [ !DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md)
-- [Connecteur [ !DNL Salesforce]](connectors/crm/salesforce.md)
+- [[!DNL Microsoft Dynamics] connecteur](connectors/crm/ms-dynamics.md)
+- [[!DNL Salesforce] connecteur](connectors/crm/salesforce.md)
 
 ### Réussite des clients
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
 
-- [Connecteur [ !DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md)
-- [Connecteur [ !DNL ServiceNow]](connectors/customer-success/servicenow.md)
+- [[!DNL Salesforce Service Cloud] connecteur](connectors/customer-success/salesforce-service-cloud.md)
+- [[!DNL ServiceNow] connecteur](connectors/customer-success/servicenow.md)
 
 ### Base de données
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Connecteur [ !DNL Amazon Redshift]](connectors/databases/redshift.md)
-- [Connecteur [ !DNL Apache Hive sur Azure HDInsights]](connectors/databases/hive.md)
-- [Connecteur [ ! DNL Apache Spark sur Azure HDInsights]](connectors/databases/spark.md)
-- [Connecteur [ !DNL Azure Data Explorer]](connectors/databases/data-explorer.md)
-- [Connecteur [ !DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)
-- [Connecteur [ ! DNL Azure Table Enregistrement]](connectors/databases/ats.md)
-- [Connecteur [ !DNL Couchbase]](connectors/databases/couchbase.md)
-- [Connecteur [ !DNL Google BigQuery]](connectors/databases/bigquery.md)
-- [Connecteur [ !DNL GreenPlum]](connectors/databases/greenplum.md)
-- [Connecteur [ !DNL HP Vertica]](connectors/databases/hp-vertica.md)
-- [Connecteur [ !DNL IBM DB2]](connectors/databases/ibm-db2.md)
-- [Connecteur [ !DNL Microsoft SQL Server]](connectors/databases/sql-server.md)
-- [Connecteur [ !DNL MySQL]](connectors/databases/mysql.md)
-- [Connecteur [ !DNL Oracle]](connectors/databases/oracle.md)
-- [Connecteur [ !DNL Phoenix]](connectors/databases/phoenix.md)
-- [Connecteur [ !DNL PostgreSQL]](connectors/databases/postgres.md)
+- [[!DNL Amazon Redshift] connecteur](connectors/databases/redshift.md)
+- [[!DNL Apache Hive on Azure HDInsights] connecteur](connectors/databases/hive.md)
+- [[!DNL Apache Spark on Azure HDInsights] connecteur](connectors/databases/spark.md)
+- [[!DNL Azure Data Explorer] connecteur](connectors/databases/data-explorer.md)
+- [[!DNL Azure Synapse Analytics] connecteur](connectors/databases/synapse-analytics.md)
+- [[!DNL Azure Table Storage] connecteur](connectors/databases/ats.md)
+- [[!DNL Couchbase] connecteur](connectors/databases/couchbase.md)
+- [[!DNL Google BigQuery] connecteur](connectors/databases/bigquery.md)
+- [[!DNL GreenPlum] connecteur](connectors/databases/greenplum.md)
+- [[!DNL HP Vertica] connecteur](connectors/databases/hp-vertica.md)
+- [[!DNL IBM DB2] connecteur](connectors/databases/ibm-db2.md)
+- [[!DNL Microsoft SQL Server] connecteur](connectors/databases/sql-server.md)
+- [[!DNL MySQL] connecteur](connectors/databases/mysql.md)
+- [[!DNL Oracle] connecteur](connectors/databases/oracle.md)
+- [[!DNL Phoenix] connecteur](connectors/databases/phoenix.md)
+- [[!DNL PostgreSQL] connecteur](connectors/databases/postgres.md)
 
 ### Automatisation du marketing
 
 [!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Connecteur [ !DNL HubSpot]](connectors/marketing-automation/hubspot.md)
+- [[!DNL HubSpot] connecteur](connectors/marketing-automation/hubspot.md)
 
 ### Paiements
 
 [!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Connecteur [ !DNL PayPal]](connectors/payments/paypal.md)
+- [[!DNL PayPal] connecteur](connectors/payments/paypal.md)
 
 ### Protocoles
 
 [!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Connecteur [ !DNL Generic OData]](connectors/protocols/odata.md)
+- [[!DNL Generic OData] connecteur](connectors/protocols/odata.md)
 
 ## Contrôle d’accès des sources dans l’ingestion des données
 
