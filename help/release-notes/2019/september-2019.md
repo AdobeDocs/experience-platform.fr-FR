@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 translation-type: tm+mt
-source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 55%
+source-wordcount: '542'
+ht-degree: 54%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 55%
 
 **Date de publication : 10 septembre 2019**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [!DNL Data Ingestion](#ingestion)
-* [!DNL Data Science Workspace](#dsw)
-* [!DNL Query Service](#query)
+* [[ !Ingestion des données DNL]](#ingestion)
+* [[ ! Espace de travail scientifique des données DNL]](#dsw)
+* [[ !Service de Requête DNL]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
