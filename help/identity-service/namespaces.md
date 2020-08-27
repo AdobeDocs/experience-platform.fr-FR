@@ -5,25 +5,25 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name<span>@email.com" en tant qu’adresse électronique ou de "443522" en tant qu’identifiant CRM numérique. '
 translation-type: tm+mt
-source-git-commit: 235f611115b89a87c924a00409a6acae4f5ac97d
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 73%
+source-wordcount: '774'
+ht-degree: 63%
 
 ---
 
 
 # Présentation des espaces de noms d’identité
 
-Les espaces de noms d’identité sont des composants d’[!DNL Identity Service](./home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur « name<span>@email.com » comme adresse électronique ou « 443522 » comme identifiant CRM numérique.
+Identity namespaces are a component of [[!DNL Identity Service]](./home.md) that serve as indicators of the context to which an identity relates. Par exemple, ils distinguent une valeur « name<span>@email.com » comme adresse électronique ou « 443522 » comme identifiant CRM numérique.
 
 ## Prise en main
 
 L’utilisation des espaces de noms d’identité nécessite une compréhension des différents services d’Adobe Experience Platform impliqués. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
-- [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [!DNL Identity Service](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-- [!DNL Privacy Service](../privacy-service/home.md) : les espaces de noms d’identité sont utilisés pour se conformer au Règlement général sur la protection des données (RGPD), les demandes de RGPD peuvent être faites par rapport à un espace de noms d’identité.
+- [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[ !Service d&#39;identité DNL]](./home.md): Obtenez une meilleure vue des clients individuels et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
+- [[ !Privacy Service DNL]](../privacy-service/home.md): Les espaces de nommage d&#39;identité sont utilisés pour se conformer au Règlement général sur la protection des données (RGPD), où les demandes de RGPD peuvent être faites par rapport à un espace de nommage.
 
 ## Compréhension des espaces de noms d’identité
 
