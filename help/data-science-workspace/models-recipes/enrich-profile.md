@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Enrichissement de Real-time Customer Profile avec des insights d’apprentissage automatique
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 4b0f0dda97f044590f55eaf75a220f631f3313ee
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 75%
+source-wordcount: '1191'
+ht-degree: 73%
 
 ---
 
@@ -26,9 +26,9 @@ This document provides a step-by-step tutorial to enrich [!DNL Real-time Custome
 
 This tutorial requires a working understanding of the various aspects of [!DNL Adobe Experience Platform] involved in ingesting [!DNL Profile] data and creating segments. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-* [!DNL Real-time Customer Profile](../../rtcdp/overview.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [!DNL Identity Service](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier les identités provenant de sources de données disparates et ingérées dans Platform.
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): Cadre normalisé selon lequel Platform organise les données d’expérience client.
+* [[ !Profil client en temps réel DNL]](../../rtcdp/overview.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[ !Service d&#39;identité DNL]](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier des identités provenant de sources de données disparates et d’être assimilées à une plateforme.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 
 Outre les documents mentionnés ci-dessus, il est vivement recommandé de consulter également les guides suivants sur les schémas et l’éditeur de schémas :
 
