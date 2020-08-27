@@ -5,10 +5,10 @@ title: Validation de l’ingestion par flux
 topic: overview
 description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 82%
+source-wordcount: '852'
+ht-degree: 81%
 
 ---
 
@@ -21,8 +21,8 @@ L’ingestion par flux vous permet de charger vos données dans Adobe Experience
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-- [!DNL Streaming Ingestion](../streaming-ingestion/overview.md): L&#39;une des méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
+- [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[ ! DNL Streaming Ingestion]](../streaming-ingestion/overview.md): L&#39;une des méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
