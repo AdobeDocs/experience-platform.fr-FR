@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Segmentation par flux
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 41%
+source-wordcount: '1426'
+ht-degree: 40%
 
 ---
 
@@ -18,9 +18,13 @@ ht-degree: 41%
 >
 >Le document suivant indique comment utiliser la segmentation en flux continu à l’aide de l’API. Pour plus d’informations sur l’utilisation de la segmentation en flux continu à l’aide de l’interface utilisateur, consultez le guide [de la segmentation en](../ui/streaming-segmentation.md)flux continu.
 
-La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent en [!DNL Platform]jeu, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit maintenant lorsque les données en flux continu arrivent à destination [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 
 ![](../images/api/streaming-segment-evaluation.png)
+
+>[!NOTE]
+>
+>La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation de lot ne seront pas évaluées par la segmentation en flux continu et nécessiteront le déclenchement de l’évaluation de lot.
 
 ## Prise en main
 
