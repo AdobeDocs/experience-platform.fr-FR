@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Amazon dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 9%
@@ -29,7 +29,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une [!DNL Kinesis] connexion valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage.md).
+Si vous disposez déjà d’une [!DNL Kinesis] connexion valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Collecte des informations d’identification requises
 
@@ -71,4 +71,4 @@ Pour connecter un compte existant, sélectionnez le [!DNL Kinesis] compte auquel
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous vous êtes connecté à votre [!DNL Kinesis] compte [!DNL Platform]. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer [!DNL Platform]](../../dataflow/streaming/cloud-storage.md)les données de votre enregistrement cloud.
+En suivant ce didacticiel, vous vous êtes connecté à votre [!DNL Kinesis] compte [!DNL Platform]. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md)les données de votre enregistrement cloud.
