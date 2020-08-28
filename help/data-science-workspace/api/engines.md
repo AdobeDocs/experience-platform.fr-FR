@@ -5,7 +5,7 @@ title: Moteurs
 topic: Developer guide
 description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 71%
@@ -20,6 +20,7 @@ Les moteurs sont le fondement des modèles d’apprentissage automatique dans Da
 ## Recherche de votre registre Docker
 
 >[!TIP]
+>
 >Si vous n&#39;avez pas d&#39;URL Docker, consultez les fichiers source du [package dans un didacticiel de recette](../models-recipes/package-source-files-recipe.md) pour découvrir comment créer une URL hôte Docker étape par étape.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
