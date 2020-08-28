@@ -4,7 +4,7 @@ audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 7%
@@ -184,7 +184,7 @@ ht-degree: 7%
    - Configuration d’un flux de données {#dataflow}
       - [Configuration d’un flux de données pour un connecteur de publicité](tutorials/ui/dataflow/advertising.md)
       - [Configuration d’un flux de données pour un connecteur d’enregistrement de cloud par lot](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage.md)
+      - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Configuration d’un flux de données pour un connecteur de base de données](tutorials/ui/dataflow/databases.md)
       - [Configuration d’un flux de données pour un connecteur CRM](tutorials/ui/dataflow/crm.md)
       - [Configuration d’un flux de données pour un connecteur de réussite client](tutorials/ui/dataflow/customer-success.md)
