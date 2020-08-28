@@ -5,7 +5,7 @@ title: Création d’une recette à l’aide de notebooks Jupyter
 topic: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '2336'
 ht-degree: 87%
@@ -475,6 +475,7 @@ Voici l’aspect de la recette une fois le processus terminé :
 ![](../images/jupyterlab/create-recipe/recipe_details.png)
 
 >[!CAUTION]
+>
 > - Ne supprimer aucune cellule de fichier
 > - Ne pas modifier la ligne `%%writefile` en haut des cellules de fichier
 > - Ne pas créer plusieurs recettes dans différents cahiers simultanément
