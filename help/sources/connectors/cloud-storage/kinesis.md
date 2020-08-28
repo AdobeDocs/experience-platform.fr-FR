@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur Amazon
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: e628621903dbc0ec7381dfeae99902f503b34869
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -65,4 +65,4 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 ## Se connecter [!DNL Amazon Kinesis] à [!DNL Platform] l’aide de l’interface utilisateur
 
 - [Création d’un connecteur source Amazon dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage.md)
+- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
