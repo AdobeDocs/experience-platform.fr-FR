@@ -5,10 +5,10 @@ title: Recherche de plusieurs objets
 topic: developer guide
 description: Si vous souhaitez afficher plusieurs objets spécifiques au lieu d’effectuer une requête par objet, le catalogue fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 63%
+source-wordcount: '225'
+ht-degree: 60%
 
 ---
 
@@ -28,7 +28,9 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}
 GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 ```
 
-| `{OBJECT_TYPE}` | Le type d’objets à récupérer. [!DNL Catalog] Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| Paramètre | Description |
+| -------- | ----------- |
+| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Un identifiant de l’un des objets spécifiques que vous souhaitez récupérer. |
 
 **Requête**
