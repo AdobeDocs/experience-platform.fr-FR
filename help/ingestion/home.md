@@ -5,7 +5,7 @@ title: Présentation d’Adobe Experience Platform Data Ingestion
 topic: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 55%
@@ -47,6 +47,6 @@ This document provided a brief introduction to the different aspects of [!DNL Da
 
 >[!WARNING]
 >
-> Le terme &quot;Profil unifié&quot; utilisé dans la vidéo suivante est obsolète. Les termes [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] sont les termes appropriés utilisés dans la [!DNL Experience Platform] documentation. Reportez-vous à la documentation pour connaître les dernières fonctionnalités.
+>Le terme &quot;Profil unifié&quot; utilisé dans la vidéo suivante est obsolète. Les termes [!DNL "Profile"] ou [!DNL "Real-time Customer Profile"] sont les termes appropriés utilisés dans la [!DNL Experience Platform] documentation. Reportez-vous à la documentation pour connaître les dernières fonctionnalités.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
