@@ -5,7 +5,7 @@ title: Guides de migration des recettes et des blocs-notes
 topic: Tutorial
 description: Les guides suivants décrivent les étapes et les informations requises pour migrer des recettes et des cahiers de travail existants dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
 source-wordcount: '3330'
 ht-degree: 1%
@@ -16,6 +16,7 @@ ht-degree: 1%
 # Guides de migration des recettes et des blocs-notes
 
 >[!NOTE]
+>
 >Les ordinateurs portables et les recettes utilisant [!DNL Python]/R ne sont pas concernés. La migration ne s&#39;applique qu&#39;aux recettes et cahiers PySpark/[!DNL Spark] (2.3).
 
 Les guides suivants décrivent les étapes et les informations requises pour migrer des recettes et des cahiers de notes existants.
@@ -85,6 +86,7 @@ var df = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Le mode interactif expire si les requêtes durent plus de 10 minutes. Si vous ingérez plus de quelques gigaoctets de données, il est recommandé de passer en mode &quot;batch&quot;. Le mode de traitement par lots prend plus de temps à début, mais il peut gérer des ensembles de données plus volumineux.
 
 #### Écrire dans un jeu de données
@@ -138,6 +140,7 @@ La recette Scala se trouve dans le répertoire suivant `experience-platform-dsw-
 Un nouveau fichier est nécessaire dans votre dossier de recette pour utiliser le flux de travail basé sur le docker. Copiez et collez le fichier Dockerfile du dossier des recettes situé dans `experience-platform-dsw-reference/recipes/scala/Dockerfile`. Vous pouvez également copier et coller le code ci-dessous dans un nouveau fichier appelé `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > L&#39;exemple de fichier jar illustré ci-dessous `ml-retail-sample-spark-*-jar-with-dependencies.jar` doit être remplacé par le nom du fichier jar de votre recette.
 
 ```scala
@@ -222,6 +225,7 @@ pd = sparkSession.read.format("com.adobe.platform.query")
 ```
 
 >[!TIP]
+>
 > Le mode interactif expire si les requêtes durent plus de 10 minutes. Si vous ingérez plus de quelques gigaoctets de données, il est recommandé de passer en mode &quot;batch&quot;. Le mode de traitement par lots prend plus de temps à début, mais il peut gérer des ensembles de données plus volumineux.
 
 #### Écrire dans un jeu de données
@@ -275,6 +279,7 @@ La recette PySpark se trouve dans le répertoire suivant `experience-platform-ds
 Un nouveau fichier est nécessaire dans votre dossier de recette pour utiliser le flux de travail basé sur le docker. Copiez et collez le fichier Dockerfile du dossier des recettes situé dans `experience-platform-dsw-reference/recipes/pyspark/Dockerfile`. Vous pouvez également copier et coller le code ci-dessous et créer un nouveau fichier appelé `Dockerfile`.
 
 >[!IMPORTANT]
+>
 > L&#39;exemple de fichier d&#39;oeufs illustré ci-dessous `pysparkretailapp-*.egg` doit être remplacé par le nom du fichier d&#39;oeufs de votre recette.
 
 ```scala
