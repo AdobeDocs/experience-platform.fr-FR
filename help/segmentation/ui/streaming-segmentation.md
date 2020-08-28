@@ -5,10 +5,10 @@ title: Segmentation par flux
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: d0323fd2e769f97fa738ea55e7aba1d7ae821051
+source-git-commit: d35d598b2ae8b46f53a20d41770b21ceeeafcce8
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 2%
+source-wordcount: '805'
+ht-degree: 1%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 2%
 >
 >Le document suivant indique comment utiliser la segmentation en flux continu à l’aide de l’interface utilisateur. Pour plus d’informations sur l’utilisation de la segmentation en flux continu à l’aide de l’API, consultez le guide [de l’API de segmentation en](../api/streaming-segmentation.md)flux continu.
 
-La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent en [!DNL Platform]jeu, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux clients d’effectuer la segmentation en temps quasi réel tout en se concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit maintenant lorsque les données en flux continu arrivent à destination [!DNL Platform], ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. With this capability, most segment rules can now be evaluated as the data is passed into [!DNL Platform], meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+
+>[!NOTE]
+>
+>La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation de lot ne seront pas évaluées par la segmentation en flux continu et nécessiteront le déclenchement de l’évaluation de lot.
 
 ## Types de requête de segmentation en flux continu
 
