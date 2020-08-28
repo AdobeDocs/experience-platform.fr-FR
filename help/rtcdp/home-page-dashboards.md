@@ -5,7 +5,7 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 98d3792f50f2ab95b86d162c51af9445f06343b5
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 94%
@@ -19,7 +19,7 @@ La page d’accueil de la plateforme de données client (CDP) en temps réel d�
 
 La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
-![image](assets/home2.jpg)
+![image](assets/home.png)
 
 Si le système ne contient aucune donnée lorsque vous vous connectez à la plateforme CDP en temps réel, le tableau de bord de la page d’accueil n’apparaît pas. Dans ce cas, la page d’accueil propose des ressources pédagogiques pour une première expérience client. Au fur et à mesure de la collecte des données (c’est-à-dire au fur et à mesure de la création <!--sources-->des jeux de données, profils, segments et destinations ainsi que de la transmission des données au système), le tableau de bord se met automatiquement à jour pour afficher les informations sur ces données<!-- in metric cards-->.
 
@@ -31,14 +31,14 @@ Le tableau de bord se divise en plusieurs parties<!-- two areas.--> :
 
 * **Le tableau de classement** occupe toute la partie supérieure du tableau de bord. Le tableau de classement indique le nombre de jeux de données, de profils, de segments et de destinations du système.
 
-   ![image](assets/home-leaderboard2.jpg)
+   ![image](assets/leaderboard.png)
 
 <!-- * **Metric cards** display beneath the leaderboard. Metric cards show additional information, such as percentages or trends. Metric cards appear as data is collected.
     ![image](assets/home-metrics.jpg)
 Some information is shown in different ways on both the leaderboard and metric cards. -->
 * La section **Éléments récents** répertorie les cinq jeux de données, sources, segments et destinations ajoutés le plus récemment au système.
 
-   ![image](assets/home-recent.jpg)
+   ![image](assets/recent.png)
 
 D’autres mesures, par exemple pour les profils et les segments, sont disponibles dans d’autres parties de la plateforme de données client en temps réel.
 
