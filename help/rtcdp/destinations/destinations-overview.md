@@ -5,10 +5,10 @@ seo-title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent l’activation transparente des données provenant de la plateforme des données clients en temps réel. Vous pouvez utiliser les destinations dans la plateforme des données clients en temps réel d’Adobe pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 seo-description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent l’activation transparente des données provenant de la plateforme des données clients en temps réel. Vous pouvez utiliser les destinations dans la plateforme des données clients en temps réel d’Adobe pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 76%
+source-wordcount: '528'
+ht-degree: 75%
 
 ---
 
@@ -67,4 +67,4 @@ Pour plus d’informations sur la sélection des cas d’utilisation marketing d
 * [Destinations de marketing par e-mail](/help/rtcdp/destinations/email-marketing-destinations.md)
 * [Destinations de réseau social](/help/rtcdp/destinations/social-network-destinations-workflow.md)
 
-Pour plus d’informations sur les violations de la stratégie de données dans le processus d’activation des segments, voir l’étape 7 de la section [Activation des profils et des segments vers une destination](/help/rtcdp/destinations/activate-destinations.md).
+Pour plus d’informations sur les violations de la stratégie de données dans le processus d’activation des segments, voir l’étape de révision dans [Activation des profils et des segments vers une destination](/help/rtcdp/destinations/activate-destinations.md#review).
