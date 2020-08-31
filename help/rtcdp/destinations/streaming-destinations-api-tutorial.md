@@ -4,15 +4,15 @@ solution: Experience Platform
 title: Se connecter aux destinations de diffusion en continu et activer les données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 60%
 
 ---
 
 
-# Connectez-vous aux destinations de diffusion en continu et activez les données dans la plate-forme de données client en temps réel de l’Adobe à l’aide d’API.
+# Connectez-vous aux destinations de diffusion en continu et activez les données à l’aide d’appels d’API dans la plateforme de données client en temps réel du Adobe.
 
 >[!NOTE]
 >
