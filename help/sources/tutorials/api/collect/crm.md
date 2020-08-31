@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; crm; salesforce; dynamics
 solution: Experience Platform
 title: Collecte de données de gestion de la relation client via les connecteurs et les API source
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un logiciel de gestion de la relation client tiers et les intégrer à la plate-forme par le biais des connecteurs source et de l’API du service de flux.
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 14%
+source-wordcount: '1596'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 14%
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les intégrer [!DNL Platform] par le biais des connecteurs source et des API.
+Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un logiciel de gestion de la relation client tiers et les intégrer dans [!DNL Platform] des connecteurs source et dans l’ [[ !DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Prise en main
 
@@ -24,11 +25,11 @@ Ce didacticiel vous demande d&#39;avoir accès à un système de gestion de la r
 
 Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-* [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
-* [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
+* [[ !Service de catalogue DNL]](../../../../catalog/home.md): Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données à l’intérieur [!DNL Experience Platform].
+* [[ ! Apport du lot DNL]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a CRM system using the [!DNL Flow Service] API.
@@ -39,31 +40,23 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
-
-## Création d’une classe et d’un schéma XDM ad hoc
-
-Pour importer des données externes dans [!DNL Platform] les connecteurs source, une classe XDM ad hoc et un schéma doivent être créés pour les données source brutes.
-
-Pour créer une classe et un schéma ad hoc, suivez les étapes décrites dans le didacticiel [schéma](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
-
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. L’identifiant unique (`$id`) du schéma ad hoc est nécessaire pour passer à l’étape suivante de ce didacticiel.
+* `Content-Type: application/json`
 
 ## Création d’une connexion source {#source}
 
-Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête de POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
 Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "Source Connection for a CRM system",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/140c03de81b959db95879033945cfd4c",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "tableName": "{TABLE_PATH}",
@@ -136,7 +125,6 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `baseConnectionId` | ID de connexion unique du système de gestion de la relation client tiers auquel vous accédez. |
-| `data.schema.id` | ID du schéma XDM ad hoc. |
 | `params.path` | Chemin d’accès du fichier source. |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système de gestion de la relation client tiers spécifique. Consultez l’ [annexe](#appendix) pour une liste d’ID de spécification de connexion. |
 
