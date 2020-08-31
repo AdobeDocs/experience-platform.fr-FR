@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage des environnements de test
 topic: troubleshooting guide
 translation-type: tm+mt
-source-git-commit: f15049ca917818d325b5783c70faaa53ba669aba
+source-git-commit: d4ae318f43904dd73756985512c303fa7149b678
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 100%
+source-wordcount: '530'
+ht-degree: 91%
 
 ---
 
@@ -31,7 +31,7 @@ Deux types d’environnements de test sont disponibles dans Experience Platform�
 
 Experience Platform fournit un **environnement de test de production** unique, qui ne peut pas être supprimé ou réinitialisé. Il ne peut y avoir qu’un seul environnement de test de production pour une instance Platform unique.
 
-Par comparaison, il est possible de créer plusieurs **environnements de test hors production** par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production.
+Par comparaison, il est possible de créer plusieurs **environnements de test hors production** par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 Pour plus d’informations, consultez la [Présentation des environnements de test](./home.md).
 
