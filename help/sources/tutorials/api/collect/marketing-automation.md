@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; marketing automation; hubspot
 solution: Experience Platform
 title: Collecte de données d’automatisation marketing par le biais des connecteurs et des API source
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système d’automatisation marketing tiers et les intégrer à la plate-forme via les connecteurs source et l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 744f7f1c5203f3537e979c50d7f8e20c1e8c50a5
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 13%
+source-wordcount: '1587'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 13%
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système d’automatisation marketing et les intégrer à [!DNL Platform] des connecteurs et API source.
+Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système d’automatisation marketing tiers et les intégrer dans [!DNL Platform] des connecteurs source et dans l’ [[ !DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Prise en main
 
@@ -24,11 +25,11 @@ Ce didacticiel vous oblige à avoir accès à un système d’automatisation mar
 
 Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-* [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
-* [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+* [[ ! Apport du lot DNL]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully connect to an marketing automation system using the [!DNL Flow Service] API.
@@ -41,29 +42,21 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
-
-## Création d’une classe et d’un schéma XDM ad hoc
-
-Pour importer des données externes dans [!DNL Platform] les connecteurs source, une classe XDM ad hoc et un schéma doivent être créés pour les données source brutes.
-
-Pour créer une classe et un schéma ad hoc, suivez les étapes décrites dans le didacticiel [schéma](../../../../xdm/tutorials/ad-hoc.md)ad hoc. Lors de la création d’une classe ad hoc, tous les champs trouvés dans les données source doivent être décrits dans le corps de la requête.
-
-Continuez à suivre les étapes décrites dans le guide du développeur jusqu’à ce que vous ayez créé un schéma ad hoc. L’identifiant unique (`$id`) du schéma ad hoc est nécessaire pour passer à l’étape suivante de ce didacticiel.
+* `Content-Type: application/json`
 
 ## Création d’une connexion source {#source}
 
-Avec un schéma XDM ad hoc créé, une connexion source peut désormais être créée à l’aide d’une requête de POST envoyée à l’ [!DNL Flow Service] API. Une connexion source se compose d’un ID de connexion, d’un fichier de données source et d’une référence au schéma qui décrit les données source.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
 Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
 
@@ -99,10 +92,6 @@ curl -X POST \
         "description": "Source connection for a marketing automationj connector",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/5c65688f44feff94fe61cb3ae34de445fc885548b5ba5d57",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "Hubspot.Contacts"
@@ -117,7 +106,6 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `baseConnectionId` | ID de connexion unique du système d’automatisation marketing tiers auquel vous accédez. |
-| `data.schema.id` | ID du schéma XDM ad hoc. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
 | `connectionSpec.id` | ID de spécification de connexion de votre système d’automatisation marketing. |
 
@@ -289,7 +277,7 @@ A successful response returns an array containing the ID of the newly created da
 
 Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’ID de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
 **Format d’API**
 
 ```https
@@ -411,7 +399,7 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 }
 ```
 
-## Rechercher les spécifications de flux de données {#specs}
+## Rechercher les spécifications des flux de données {#specs}
 
 Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à [!DNL Platform]ces sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications de flux de données qui sont responsables de la collecte des données d’automatisation marketing.
 
