@@ -5,10 +5,10 @@ title: Présentation des environnements de test
 topic: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 95%
+source-wordcount: '750'
+ht-degree: 89%
 
 ---
 
@@ -25,7 +25,7 @@ Ce document présente de manière générale les environnements de test dans Exp
 
 Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique. Une instance d’Experience Platform prend en charge un environnement de test de production et plusieurs environnements de test hors production. Chaque environnement de test conserve sa propre bibliothèque indépendante de ressources Platform (y compris les schémas, les jeux de données, les profils, etc.).  Tout le contenu et les actions réalisés dans un environnement de test sont limités à celui-ci et n’en affectent aucun autre.
 
-Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production.
+Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 >[!NOTE]
 >
