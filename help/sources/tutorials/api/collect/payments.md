@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics; flow service; payment; paypal
 solution: Experience Platform
 title: Collecte de données de paiement via les connecteurs et les API source
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application de paiement tierce et les intégrer à la plate-forme par le biais des connecteurs source et de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: c26b2b4256d8d1d23a285efbacd8b6c9e255cd18
+source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
 workflow-type: tm+mt
-source-wordcount: '1702'
-ht-degree: 14%
+source-wordcount: '1747'
+ht-degree: 12%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 14%
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes à suivre pour récupérer des données d&#39;une application de paiement et les intégrer dans [!DNL Platform] des connecteurs et API source.
+Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système de paiement tiers et les intégrer dans [!DNL Platform] des connecteurs source et dans l’ [[ !DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Prise en main
 
@@ -24,11 +25,11 @@ Ce didacticiel vous demande d&#39;avoir accès à un système de paiement par le
 
 Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
+* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Guide](../../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
-* [Service de catalogue](../../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
-* [Importation](../../../../ingestion/batch-ingestion/overview.md)par lot : L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
+* [[ !Service de catalogue DNL]](../../../../catalog/home.md): Le catalogue est le système d’enregistrement pour l’emplacement et le lignage des données à l’intérieur [!DNL Experience Platform].
+* [[ ! Apport du lot DNL]](../../../../ingestion/batch-ingestion/overview.md): L&#39;API d&#39;importation par lot vous permet d&#39;assimiler des données dans [!DNL Experience Platform] des fichiers de commandes.
 * [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
@@ -294,7 +295,7 @@ A successful response returns an array containing the ID of the newly created da
 
 Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’ID de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -428,7 +429,7 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
 }
 ```
 
-## Rechercher les spécifications de flux de données {#specs}
+## Rechercher les spécifications des flux de données {#specs}
 
 Un flux de données est responsable de la collecte de données provenant de sources et de leur intégration dans [!DNL Platform]les sources. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en exécutant une demande de GET à l’ [!DNL Flow Service] API. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;une base de données externe ou d&#39;un système NoSQL.
 
