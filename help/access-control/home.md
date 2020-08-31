@@ -5,10 +5,10 @@ topic: overview
 title: Présentation du contrôle d’accès
 description: Le contrôle d'accès de Adobe Experience Platform est fourni par l'intermédiaire du Adobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
 workflow-type: tm+mt
-source-wordcount: '1131'
-ht-degree: 65%
+source-wordcount: '1162'
+ht-degree: 63%
 
 ---
 
@@ -57,7 +57,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Environnements de test et autorisations
 
-[!DNL Experience Platform] fournit un accès à un environnement de test de production et vous permet de créer des **environnements de test** hors production. Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les **[!UICONTROL autorisations]** d’un profil de produit donnent aux utilisateurs du profil l’accès aux fonctionnalités de dans les environnements de test auxquels ils se sont vus accorder l’accès.[!DNL Platform]
+Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les **[!UICONTROL autorisations]** d’un profil de produit donnent aux utilisateurs du profil l’accès aux fonctionnalités de dans les environnements de test auxquels ils se sont vus accorder l’accès. [!DNL Platform] Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
