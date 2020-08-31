@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide d’utilisation des environnements de test
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c52d8cdbc5a4ee6fab8c2b1b284efea5f735d424
+source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 80%
@@ -46,7 +46,7 @@ Pour créer un nouvel environnement de test dans l’interface utilisateur, cliq
 
 ![](../images/ui/create-sandbox-button.png)
 
-La boîte de dialogue _[!UICONTROL Créer un environnement de test]_s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage**est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. The sandbox**[!UICONTROL  Name ]**is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+La boîte de dialogue _[!UICONTROL Créer un environnement de test]_ s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
@@ -56,7 +56,7 @@ Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 >
 >Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **[!UICONTROL type]** est verrouillée sur « hors production » et ne peut pas être modifiée.
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_ dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
