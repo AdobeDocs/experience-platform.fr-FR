@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;update;Update;patch;PATCH
 solution: Experience Platform
 title: Mise à jour d’une ressource
+description: 'Vous pouvez modifier ou mettre à jour des ressources dans le conteneur client à l’aide d’une requête PATCH. Le registre des schémas prend en charge toutes les opérations standard JSON Patch, notamment l’ajout, la suppression et le remplacement de valeurs. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 91%
+source-wordcount: '401'
+ht-degree: 92%
 
 ---
 
