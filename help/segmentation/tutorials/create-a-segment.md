@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;create segment
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
 title: Création d’un segment
 topic: tutorial
 description: Ce document fournit un didacticiel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 57%
