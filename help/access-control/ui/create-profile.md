@@ -5,7 +5,7 @@ title: Création d’un profil de produits
 topic: user guide
 description: Ce document couvre les étapes nécessaires à la création d'un nouveau profil de produits dans le Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 86%
@@ -15,11 +15,11 @@ ht-degree: 86%
 
 # Création d’un profil de produits
 
-Pour commencer la création d’un profil, accédez à l’onglet *[!UICONTROL Profil de produits]* et cliquez sur **[!UICONTROL Nouveau profil]**.
+Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL Profil de produits]** et cliquez sur **[!UICONTROL Nouveau profil]**.
 
 ![new-profile-button](../images/new-profile-button.png)
 
-La boîte de dialogue _[!UICONTROL Créer un nouveau profil]_ s’affiche, vous invitant à saisir un **[!UICONTROL Nom de profil]** ainsi qu’une **[!UICONTROL Description]** pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous *[!UICONTROL Notifications utilisateur]*, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue **[!UICONTROL Créer un nouveau profil]** s’affiche, vous invitant à saisir un **[!UICONTROL Nom de profil]** ainsi qu’une **[!UICONTROL Description]** pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
