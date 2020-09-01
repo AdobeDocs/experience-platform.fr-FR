@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
 solution: Experience Platform
 title: Création d’un connecteur PayPal à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l'API du service de flux pour vous guider à travers les étapes de connexion de PayPal à l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 17%
+source-wordcount: '579'
+ht-degree: 16%
 
 ---
 
