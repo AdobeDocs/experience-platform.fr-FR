@@ -5,7 +5,7 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1022'
 ht-degree: 54%
@@ -76,7 +76,7 @@ Si une violation de politique se produit lors de la tentative d’activation d�
 
 ![](assets/violation-popover.png)
 
-L’onglet *[!UICONTROL Détails]* de la fenêtre contextuelle indique l’action qui a déclenché la violation, la raison pour laquelle la violation s’est produite et fournit des suggestions pour résoudre le problème.
+L’onglet **[!UICONTROL Détails]** de la fenêtre contextuelle indique l’action qui a déclenché la violation, la raison pour laquelle la violation s’est produite et fournit des suggestions pour résoudre le problème.
 
 Cliquez sur **[!UICONTROL Liaison des données]** pour effectuer le suivi des destinations, des segments, des politiques de fusion ou des jeux de données dont le ou les libellés de données ont déclenché la violation.
 
