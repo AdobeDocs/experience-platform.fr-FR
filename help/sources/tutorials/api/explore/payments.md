@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Explorez un système de paiement à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour explorer les applications de paiement.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '587'
 ht-degree: 16%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 16%
 
 # Explorez un système de paiement à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39; [!DNL Flow Service] API pour explorer les applications de paiement.
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### Collecte des informations d’identification requises
 
-Ce didacticiel nécessite que vous disposiez d’une connexion valide avec l’application de paiement tierce à partir de laquelle vous souhaitez importer des données. Une connexion valide implique l&#39;ID de spécification de connexion et l&#39;ID de connexion de votre application. Pour plus d&#39;informations sur la création d&#39;une connexion aux paiements et la récupération de ces valeurs, consultez le didacticiel [Connexion d&#39;une source de paiement à Platform](../../api/create/payments/paypal.md) .
+Ce didacticiel nécessite que vous disposiez d’une connexion valide avec l’application de paiement tierce à partir de laquelle vous souhaitez importer des données. Une connexion valide implique l&#39;ID de spécification de connexion et l&#39;ID de connexion de votre application. Pour plus d&#39;informations sur la création d&#39;une connexion de paiement et la récupération de ces valeurs, consultez le didacticiel [Connexion d&#39;une source de paiement à la plateforme](../../api/create/payments/paypal.md) .
 
 ### Lecture d’exemples d’appels API
 
@@ -113,7 +114,7 @@ Une réponse réussie renvoie un tableau de tables de votre système de paiement
 ]
 ```
 
-## Inspect de la structure d’un tableau
+## inspect de la structure d’un tableau
 
 Pour inspecter la structure d&#39;une table à partir de votre système de paiements, effectuez une demande de GET tout en spécifiant le chemin d&#39;une table en tant que paramètre de requête.
 
