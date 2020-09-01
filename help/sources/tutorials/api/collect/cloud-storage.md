@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; cloud storage
+keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Collecte de données d’enregistrement Cloud via les connecteurs et les API source
 topic: overview
-description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un enregistrement cloud tiers et les importer dans Platform via les connecteurs source et l’API Flow Service.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1581'
 ht-degree: 12%
 
 ---
