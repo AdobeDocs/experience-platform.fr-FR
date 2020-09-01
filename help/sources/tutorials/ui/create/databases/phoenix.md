@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Création d’un connecteur source Phoenix dans l’interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Phoenix à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 9%
+source-wordcount: '519'
+ht-degree: 8%
 
 ---
 
