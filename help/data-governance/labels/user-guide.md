@@ -3,19 +3,19 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Guide d’utilisation des libellés d’utilisation des données
 topic: labels
-description: Ce guide d’utilisateur décrit les étapes à suivre pour utiliser des libellés d’utilisation des données (également appelés libellés DULE) dans l’interface utilisateur de Adobe Experience Platform.
+description: Ce guide d’utilisateur décrit les étapes à suivre pour travailler avec des libellés d’utilisation des données dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 81%
+source-wordcount: '1119'
+ht-degree: 80%
 
 ---
 
 
 # Guide d’utilisation des libellés d’utilisation des données
 
-This user guide covers steps for working with data usage labels (also known as DULE labels) within the [!DNL Experience Platform] user interface. Avant d’utiliser ce guide, consultez la [présentation de la gouvernance des données](../home.md) pour une introduction plus détaillée de la structure DULE.
+Ce guide d’utilisation décrit les étapes à suivre pour utiliser les libellés d’utilisation des données dans l’ [!DNL Experience Platform] interface utilisateur. Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.
 
 ## Gestion des libellés d’utilisation des données au niveau du jeu de données
 
