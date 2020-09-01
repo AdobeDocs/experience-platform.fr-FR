@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Blob;azure blob;Azure blob connector
 solution: Experience Platform
 title: Création d'un connecteur source Azure Blob dans l'interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour créer une blob Azure (ci-après appelée "blob") à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '549'
 ht-degree: 9%
 
 ---
