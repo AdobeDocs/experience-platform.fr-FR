@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’une connexion en continu à l’aide de l’interface utilisateur
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 73a492ba887ddfe651e0a29aac376d82a7a1dcc4
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 81%
@@ -26,30 +26,30 @@ Veuillez noter que pour compléter ce guide, vous devez avoir accès à Adobe Ex
 
 ## Création d’une connexion en continu
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the *[!UICONTROL Catalog]* tab. Cette page affiche les types de source disponibles sous forme de cartes individuelles, chaque carte contenant une bulle qui indique le nombre de flux de données créés à partir de connexions en continu à des jeux de données.
+After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. Cette page affiche les types de source disponibles sous forme de cartes individuelles, chaque carte contenant une bulle qui indique le nombre de flux de données créés à partir de connexions en continu à des jeux de données.
 
 ![](../images/streaming-ingestion/ui/click-sources.png)
 
-Sur la page *[!UICONTROL Sources]*, cliquez sur **[!UICONTROL API HTTP]**, puis sur **[!UICONTROL Connecter une source]**.
+Sur la page **[!UICONTROL Sources]**, cliquez sur **[!UICONTROL API HTTP]**, puis sur **[!UICONTROL Connecter une source]**.
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-L’écran *[!UICONTROL Se connecter avec le protocole HTTP]* s’affiche. Dans *[!UICONTROL Informations sur le service]*, indiquez le **[!UICONTROL nom]** et une **[!UICONTROL description]** de votre nouvelle connexion en continu.
+L’écran **[!UICONTROL Se connecter avec le protocole HTTP]** s’affiche. Dans **[!UICONTROL Informations sur le service]**, indiquez le **[!UICONTROL nom]** et une **[!UICONTROL description]** de votre nouvelle connexion en continu.
 
-Sous *[!UICONTROL Authentification du compte]*, sélectionnez les propriétés de configuration suivantes pour votre connexion en continu :
+Sous **[!UICONTROL Authentification du compte]**, sélectionnez les propriétés de configuration suivantes pour votre connexion en continu :
 
-- **[!UICONTROL Authentification]:**Indique si la connexion en flux continu nécessite ou non une authentification. L’authentification garantit que les données sont collectées auprès de sources approuvées. Il est recommandé de l’activer si vous traitez des informations d’identification personnelle (PII).
-- **[!UICONTROL Compatibilité]des Schémas XDM :**Indique si cette connexion de flux continu envoie ou non des événements compatibles avec les schémas XDM. Par défaut, cette propriété est**activée **.
+- **[!UICONTROL Authentification]:** Indique si la connexion en flux continu nécessite ou non une authentification. L’authentification garantit que les données sont collectées auprès de sources approuvées. Il est recommandé de l’activer si vous traitez des informations d’identification personnelle (PII).
+- **[!UICONTROL Compatibilité]des Schémas XDM :** Indique si cette connexion de flux continu envoie ou non des événements compatibles avec les schémas XDM. Par défaut, cette propriété est **activée**.
 
-Une fois les propriétés de configuration sélectionnées, cliquez sur **[!UICONTROL Se connecter]**. Votre connexion HTTP en continu est maintenant créée. Vous pouvez désormais la visualiser sous l’onglet *[!UICONTROL Parcourir]* de l’espace de travail *[!UICONTROL Sources]*.
+Une fois les propriétés de configuration sélectionnées, cliquez sur **[!UICONTROL Se connecter]**. Votre connexion HTTP en continu est maintenant créée. Vous pouvez désormais la visualiser sous l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **[!UICONTROL Sources]**.
 
 ![](../images/streaming-ingestion/ui/http-sources-details.png)
 
-Dans l’onglet *[!UICONTROL Parcourir]*, vous pouvez cliquer sur votre nouvelle connexion HTTP en continu et voir les détails de cette dernière.
+Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez cliquer sur votre nouvelle connexion HTTP en continu et voir les détails de cette dernière.
 
 ![](../images/streaming-ingestion/ui/browse-sources.png)
 
-En cliquant sur le lien hypertexte du nom de la connexion, vous pouvez sélectionner les données à afficher en configurant le jeu de données connecté, via le bouton *[!UICONTROL Sélectionner les données]*.
+En cliquant sur le lien hypertexte du nom de la connexion, vous pouvez sélectionner les données à afficher en configurant le jeu de données connecté, via le bouton **[!UICONTROL Sélectionner les données]**.
 
 ![](../images/streaming-ingestion/ui/select-data.png)
 
