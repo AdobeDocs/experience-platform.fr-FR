@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Traitement de la demande d’accès à des informations personnelles dans Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 46%
@@ -93,7 +93,7 @@ curl -X POST \
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_ afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
