@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File Storage connector
 solution: Experience Platform
 title: Création d'un connecteur source d'Enregistrement de fichiers Azure dans l'interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source d'Enregistrement de fichiers Azure à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '480'
 ht-degree: 9%
 
 ---
