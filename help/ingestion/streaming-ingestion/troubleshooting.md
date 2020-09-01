@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dépannage de l’ingestion par flux
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 69%
@@ -58,7 +58,7 @@ Vous pouvez regrouper plusieurs messages dans un payload de requête unique et l
 
 All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. L’état du traitement des lots s’affiche dans le jeu de données dans lequel ils ont été envoyés.
 
-Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’*[!UICONTROL activité du jeu de données]*, qui montre tous les lots envoyés au cours d’une période sélectionnée. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
+Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’**[!UICONTROL activité du jeu de données]**, qui montre tous les lots envoyés au cours d’une période sélectionnée. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
 
 If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. Pour plus d’informations, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
@@ -100,4 +100,4 @@ If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to
 
 Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
 
-You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet _[!UICONTROL Diffusion en continu de bout en bout]_ pour voir les lots de messages diffusés au cours d’une période sélectionnée.
+You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Diffusion en continu de bout en bout]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.
