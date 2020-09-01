@@ -5,7 +5,7 @@ title: Surveillance de l’ingestion des données
 topic: overview
 description: Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 69%
@@ -25,7 +25,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance *[!UICONTROL Diffusion en continu de bout en bout]* apparaît. Cet espace de travail fournit un graphique qui affiche le taux de événements reçus en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par le Profil client en temps réel [[ !DNL]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
+La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux de événements reçus en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par le Profil client en temps réel [[ !DNL]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
