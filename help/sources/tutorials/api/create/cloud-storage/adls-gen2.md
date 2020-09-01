@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
-title: Création d'un connecteur Gen2 pour Enregistrement Azure Data Lake à l'aide de l'API Flow Service
+title: Création d'un connecteur Gen2 d'Enregistrement Azure Data Lake à l'aide de l'API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter l'Experience Platform à Azure Data Lake Enregistrement Gen2 (ci-après appelé "ADLS Gen2").
 translation-type: tm+mt
-source-git-commit: 11431ffcfc2204931fe3e863bfadc7878a40b49c
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 17%
+source-wordcount: '570'
+ht-degree: 16%
 
 ---
 
 
 # Création d’un connecteur Gen2 [!DNL Azure] Data Lake Enregistrement à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce tutoriel utilise l&#39; [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Experience Platform] à [!DNL Azure] Data Lake Enregistrement Gen2 (ci-après appelé &quot;ADLS Gen2&quot;).
 
@@ -23,7 +24,7 @@ Ce tutoriel utilise l&#39; [!DNL Flow Service] API pour vous guider à travers l
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une instance Platform unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une instance de plate-forme unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir créer un connecteur source ADLS Gen2 à l&#39;aide de l&#39; [!DNL Flow Service] API.
 
