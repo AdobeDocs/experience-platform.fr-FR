@@ -5,7 +5,7 @@ title: Planification d’un modèle (interface utilisateur)
 topic: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous permet de configurer des exécutions planifiées de notation et de formation sur un service d’apprentissage automatique. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 81%
@@ -17,7 +17,7 @@ ht-degree: 81%
 
 Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 
-Ce tutoriel décrit les étapes à suivre pour configurer les plannings de formation et de notation sur un service existant au moyen de la *[!UICONTROL Galerie de services]*. Il est composé des sections principales suivantes :
+Ce tutoriel décrit les étapes à suivre pour configurer les plannings de formation et de notation sur un service existant au moyen de la **[!UICONTROL Galerie de services]**. Il est composé des sections principales suivantes :
 
 - [Configuration d’une notation planifiée](#configure-scheduled-scoring)
 - [Configuration d’une formation planifiée](#configure-scheduled-training)
@@ -51,7 +51,7 @@ La configuration des opérations de formation planifiées sur un service garanti
 
 Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour configurer et appliquer un planning de formation :
 
-1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la *[!UICONTROL Galerie de services]*. Recherchez le service pour lequel vous souhaitez planifier des opérations d’==e formation, puis cliquez sur **[!UICONTROL Ouvrir]** pour afficher la page de *Présentation* correspondante.
+1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la **[!UICONTROL Galerie de services]**. Recherchez le service pour lequel vous souhaitez planifier des opérations d’==e formation, puis cliquez sur **[!UICONTROL Ouvrir]** pour afficher la page de *Présentation* correspondante.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. La page Présentation affiche les informations sur la formation du service. Cliquez sur le lien **[!UICONTROL Mettre à jour le planning]** pour configurer un planning de formation.
