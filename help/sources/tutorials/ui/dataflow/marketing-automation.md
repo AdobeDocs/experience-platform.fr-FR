@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur d’automatisation marketing dans l’interface utilisateur
 topic: overview
+description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source à un [!DNL Platform] ensemble de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’automatisation marketing.
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1315'
 ht-degree: 3%
 
 ---
