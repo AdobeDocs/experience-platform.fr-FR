@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
 title: Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '697'
 ht-degree: 14%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 14%
 
 # Explorez un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer un système d’enregistrement cloud tiers.
 
@@ -110,7 +111,7 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 ]
 ```
 
-## Inspect de la structure d’un fichier
+## inspect de la structure d’un fichier
 
 Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, effectuez une demande de GET tout en fournissant le chemin d’accès du fichier en tant que paramètre de requête.
 
