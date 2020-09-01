@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Création d’un connecteur Microsoft Dynamics à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes de connexion de Platform à un compte Microsoft Dynamics (ci-après appelé "Dynamics") pour la collecte de données de gestion de la relation client.
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 15%
+source-wordcount: '709'
+ht-degree: 14%
 
 ---
 
 
 # Création d’un [!DNL Microsoft Dynamics] connecteur à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Platform] à un [!DNL Microsoft Dynamics] (ci-après appelé &quot;Dynamics&quot;) compte pour la collecte de données de gestion de la relation client.
 
-Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le didacticiel [sur l&#39;interface utilisateur du connecteur](../../../ui/create/crm/dynamics.md) Dynamics source fournit des instructions détaillées pour effectuer des actions similaires.
+Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le didacticiel [sur l&#39;interface utilisateur du connecteur](../../../ui/create/crm/dynamics.md) Dynamics source fournit des instructions détaillées pour exécuter des actions similaires.
 
 ## Prise en main
 
