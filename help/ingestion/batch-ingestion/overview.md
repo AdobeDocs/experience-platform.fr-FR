@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
 title: Présentation de l’ingestion par lots d’Adobe Experience Platform
 topic: overview
 description: L’API Batch Ingestion vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots. Les données en cours d’ingestion peuvent être les données du profil d’un fichier plat dans un système CRM (par exemple un fichier parquet) ou des données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c04fb056d4564e53f192e0734a700a13820f5ba7
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 82%
