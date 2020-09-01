@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide d’utilisation de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 86%
@@ -70,7 +70,7 @@ Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de reche
 
 ![Options de recherche de Requête de tâche](../images/user-guide/job-search.png)
 
-Pour consulter les détails d’une requête de tâche spécifique, cliquez sur l’identifiant de celle-ci dans la liste pour ouvrir la page *[!UICONTROL Détails de la tâche]*.
+Pour consulter les détails d’une requête de tâche spécifique, cliquez sur l’identifiant de celle-ci dans la liste pour ouvrir la page **[!UICONTROL Détails de la tâche]**.
 
 ![Interface utilisateur des Détails de la tâche pour le RGPD](../images/user-guide/job-details.png)
 
@@ -101,7 +101,7 @@ Pour commencer à utiliser le créateur de requêtes, cliquez sur **[!UICONTROL 
 
 ![Cliquez sur Créer une requête](../images/user-guide/create-request.png)
 
-La boîte de dialogue *[!UICONTROL Créer une requête]* s’ouvre et affiche les options disponibles pour envoyer une requête de tâche de confidentialité pour le type de réglementation actuellement sélectionné.
+La boîte de dialogue **[!UICONTROL Créer une requête]** s’ouvre et affiche les options disponibles pour envoyer une requête de tâche de confidentialité pour le type de réglementation actuellement sélectionné.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
@@ -109,7 +109,7 @@ Dans la liste, sélectionnez le **[!UICONTROL Type de tâche]** de la requête (
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Sous *[!UICONTROL Type d’espace de nom]*, sélectionnez le type d’espace de nom approprié pour les identifiants de client envoyés à [!DNL Privacy Service].
+Sous **[!UICONTROL Type d’espace de nom]**, sélectionnez le type d’espace de nom approprié pour les identifiants de client envoyés à [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
@@ -135,7 +135,7 @@ Cliquez sur la flèche près de **[!UICONTROL Créer une requête]**, sous le wi
 
 ![Options de création de requête](../images/user-guide/create-options.png)
 
-La boîte de dialogue *[!UICONTROL Charger JSON]* s’affiche, vous permettant ainsi de faire glisser votre fichier JSON dans la fenêtre.
+La boîte de dialogue **[!UICONTROL Charger JSON]** s’affiche, vous permettant ainsi de faire glisser votre fichier JSON dans la fenêtre.
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
