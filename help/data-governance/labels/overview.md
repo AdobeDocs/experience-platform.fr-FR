@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;data governance;data usage lab
 solution: Experience Platform
 title: Présentation des libellés d’utilisation des données
 topic: labels
-description: Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. Les fonctionnalités de DULE vous permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Ce document donne un aperçu des libellés d’utilisation des données (également appelés libellés DULE) dans Experience Platform.
+description: La gouvernance des données Adobe Experience Platform vous permet d’appliquer des étiquettes d’utilisation des données aux jeux de données et aux champs, en les classant par catégorie selon les stratégies d’utilisation des données associées. Ce document présente un aperçu des étiquettes d’utilisation des données dans l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 23%
+source-wordcount: '614'
+ht-degree: 15%
 
 ---
 
