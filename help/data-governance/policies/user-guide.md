@@ -5,9 +5,9 @@ title: Guide d’utilisation des stratégies de données
 topic: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '765'
 ht-degree: 39%
 
 ---
@@ -116,7 +116,7 @@ Si l’action marketing n’est utilisée par aucune stratégie d’utilisation 
 
 ## Étapes suivantes
 
-This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. For steps on how to manage policies using the DULE Policy API, see the [developer guide](../api/getting-started.md). Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la [présentation de l’application des stratégies](../enforcement/overview.md).
+This document provided an overview of how to manage data usage policies in [!DNL Experience Platform] UI. Pour connaître les étapes de gestion des stratégies à l’aide de la section [!DNL Policy Service API], consultez le guide [du](../api/getting-started.md)développeur. Pour plus d’informations sur l’application des stratégies d’utilisation des données, voir la [présentation de l’application des stratégies](../enforcement/overview.md).
 
 La vidéo suivante montre comment utiliser les stratégies d’utilisation dans l’ [!DNL Experience Platform] interface utilisateur :
 
