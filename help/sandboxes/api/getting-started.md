@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
 title: Guide de développement de l’API Sandbox
 topic: developer guide
+description: Ce guide de développement décrit les étapes à suivre pour utiliser l’API Sandbox afin de gérer les environnements de test dans Experience Platform. Il inclut des exemples d’appels API pour effectuer diverses opérations.
 translation-type: tm+mt
-source-git-commit: b4741cdfd065bbaed7f2feeafe8619191e4b8f6c
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '337'
+source-wordcount: '364'
 ht-degree: 100%
 
 ---
