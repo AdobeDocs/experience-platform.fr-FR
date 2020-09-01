@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;ADLS Gen2;adls gen2;adls connector
 solution: Experience Platform
 title: Création d’un connecteur source Azure Data Lake Storage Gen2 dans l’interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source Azure Data Lake Enregistrement Gen2 (ci-après dénommé "ADLS Gen2") à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: dd036cf4df5d772206d2b73292c60f2d866ba0de
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '480'
 ht-degree: 12%
 
 ---
