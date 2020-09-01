@@ -5,7 +5,7 @@ title: Guide d’utilisation de Query Editor
 topic: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1086'
 ht-degree: 72%
@@ -77,19 +77,19 @@ Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erre
 
 ### Détails de la requête
 
-While you are viewing a query in [!DNL Query Editor], the *[!UICONTROL Query Details]* panel provides tools to manage the selected query.
+While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet *[!UICONTROL Requête SQL]*. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue *[!UICONTROL Jeu de données de sortie]* s’affiche. Saisissez un nom et une description, puis cliquez sur **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet *[!UICONTROL Jeux de données]*[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
+Ce panneau vous permet de générer un jeu de données de sortie directement depuis l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’afficher le code SQL dans un format facile à copier dans l’onglet **[!UICONTROL Requête SQL]**. Ce panneau présente également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, cliquez sur **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis cliquez sur **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]**[!DNL Query Service] de l’interface utilisateur de dans [!DNL Platform].
 
 ### Enregistrement des requêtes
 
-[!DNL Query Editor] dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, cliquez sur **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau *[!UICONTROL Détails]*.
+[!DNL Query Editor] dispose d’une fonction d’enregistrement qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, cliquez sur **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails]**.
 
 ### Accès aux requêtes précédentes
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet *[!UICONTROL Journal]* pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet *[!UICONTROL Parcourir]*.
+All queries executed from [!DNL Query Editor] are captured in the Log table. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Parcourir]**.
 
 Pour plus d’informations, reportez-vous à la [Présentation de l’interface utilisateur de Query Service][query-service-ui].
 
@@ -99,7 +99,7 @@ Pour plus d’informations, reportez-vous à la [Présentation de l’interface 
 
 ## Exécution de requête à l’aide de Query Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or *[!UICONTROL Browse]* tab, and click **Play**. L’état de l’exécution de la requête s’affiche dans l’onglet *[!UICONTROL Console]* ci-dessous et les données de sortie s’affichent dans l’onglet *[!UICONTROL Résultats]*.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]** tab, and click **Play**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
 
 ### Console
 
@@ -113,7 +113,7 @@ La console fournit des informations sur l’état et le fonctionnement de [!DNL 
 
 ### Résultats de requête
 
-Une fois la requête terminée, les résultats s’affichent dans l’onglet *[!UICONTROL Résultats]*, en regard de l’onglet *[!UICONTROL Console]*. Cet affichage indique la sortie tabulaire de votre requête (jusqu’à 100 lignes). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données][query-service-create-datasets] pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
+Une fois la requête terminée, les résultats s’affichent dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cet affichage indique la sortie tabulaire de votre requête (jusqu’à 100 lignes). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données][query-service-create-datasets] pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
