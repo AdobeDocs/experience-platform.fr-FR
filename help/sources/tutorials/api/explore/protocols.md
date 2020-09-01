@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: Explorer un système de protocole à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour explorer les applications de protocoles.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 16%
+source-wordcount: '578'
+ht-degree: 15%
 
 ---
 
 
 # Explorer un système de protocole à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l&#39; [!DNL Flow Service] API pour explorer les applications de protocoles.
 
@@ -115,9 +116,9 @@ Une réponse réussie renvoie un tableau de tables de votre application de proto
 ]
 ```
 
-## Inspect de la structure d’un tableau
+## inspect de la structure d’un tableau
 
-Pour inspecter la structure d&#39;une table à partir de l&#39;application de protocoles, effectuez une requête de GET tout en spécifiant le chemin d&#39;une table en tant que paramètre de requête.
+Pour inspecter la structure d&#39;une table à partir de votre application de protocoles, effectuez une requête de GET tout en spécifiant le chemin d&#39;une table en tant que paramètre de requête.
 
 **Format d’API**
 
