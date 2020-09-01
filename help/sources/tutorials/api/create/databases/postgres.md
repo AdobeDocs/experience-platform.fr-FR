@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Création d’un connecteur PostgreSQL à l’aide de l’API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes de connexion de l'Experience Platform à PostgreSQL (ci-après appelé "PSQL").
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 17%
+source-wordcount: '577'
+ht-degree: 16%
 
 ---
 
