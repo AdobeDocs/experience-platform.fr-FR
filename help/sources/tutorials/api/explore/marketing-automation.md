@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;marketing automation
 solution: Experience Platform
 title: Explorez un système d’automatisation marketing à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour explorer les systèmes d’automatisation marketing.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '608'
 ht-degree: 15%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 15%
 
 # Explorez un système d’automatisation marketing à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer les systèmes d’automatisation marketing.
 
@@ -29,7 +30,7 @@ The following sections provide additional information that you will need to know
 
 ### Collecte des informations d’identification requises
 
-Ce didacticiel nécessite que vous disposiez d’une connexion valide avec l’application d’automatisation marketing tierce à partir de laquelle vous souhaitez importer des données. Une connexion valide implique l&#39;ID de spécification de connexion et l&#39;ID de connexion de votre application. Pour plus d’informations sur la création d’une connexion d’automatisation marketing et la récupération de ces valeurs, consultez le didacticiel [Connexion d’une source d’automatisation marketing à Platform](../../api/create/marketing-automation/hubspot.md) .
+Ce didacticiel nécessite que vous disposiez d’une connexion valide avec l’application d’automatisation marketing tierce à partir de laquelle vous souhaitez importer des données. Une connexion valide implique l&#39;ID de spécification de connexion et l&#39;ID de connexion de votre application. Pour plus d’informations sur la création d’une connexion d’automatisation marketing et la récupération de ces valeurs, consultez le didacticiel [Connexion d’une source d’automatisation marketing à la plate-forme](../../api/create/marketing-automation/hubspot.md) .
 
 ### Lecture d’exemples d’appels API
 
@@ -113,7 +114,7 @@ Une réponse positive est un ensemble de tables de votre système d’automatisa
 ]
 ```
 
-## Inspect de la structure d’un tableau
+## inspect de la structure d’un tableau
 
 Pour inspecter la structure d’une table à partir de votre système d’automatisation marketing, effectuez une demande de GET tout en spécifiant le chemin d’une table en tant que paramètre de requête.
 
