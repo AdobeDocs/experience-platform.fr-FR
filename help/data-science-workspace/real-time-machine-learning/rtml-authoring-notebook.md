@@ -5,7 +5,7 @@ title: Guide de l'utilisateur du portable d'apprentissage automatique en temps r
 topic: Training and scoring a ML model
 description: Le guide suivant décrit les étapes nécessaires à la création d'une application d'apprentissage automatique en temps réel dans Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -92,7 +92,7 @@ Si vous souhaitez utiliser un jeu de données depuis Adobe Experience Platform, 
 
 ![dataset rtml](../images/rtml/rtml-dataset.png)
 
-Pour accéder à un jeu de données dans votre [!DNL JupyterLab] bloc-notes, sélectionnez l&#39;onglet **Données** dans le volet de navigation de gauche de [!DNL JupyterLab]. Les répertoires *[!UICONTROL Datasets]* et *[!UICONTROL Schémas]* s’affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit de la souris, puis sélectionnez l&#39;option **[!UICONTROL Explorer les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas du bloc-notes. Cette cellule a ta `dataset_id`cellule.
+Pour accéder à un jeu de données dans votre [!DNL JupyterLab] bloc-notes, sélectionnez l&#39;onglet **Données** dans le volet de navigation de gauche de [!DNL JupyterLab]. Les répertoires **[!UICONTROL Datasets]** et **[!UICONTROL Schémas]** s’affichent. Sélectionnez **[!UICONTROL Datasets]** et cliquez avec le bouton droit de la souris, puis sélectionnez l&#39;option **[!UICONTROL Explorer les données dans le bloc-notes]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s&#39;affiche au bas du bloc-notes. Cette cellule a ta `dataset_id`cellule.
 
 ![accès aux jeux de données](../images/rtml/access-dataset.png)
 
@@ -113,11 +113,11 @@ config_properties = {
 
 ### Préparation de votre modèle
 
-En utilisant le modèle ML *[!UICONTROL en temps]* réel, vous devez analyser, prétraiter, former et évaluer votre modèle ML. Pour ce faire, il applique les transformations de données et crée un canal de formation.
+En utilisant le modèle ML **[!UICONTROL en temps]** réel, vous devez analyser, prétraiter, former et évaluer votre modèle ML. Pour ce faire, il applique les transformations de données et crée un canal de formation.
 
 **Transformations de données**
 
-La cellule de transformation *[!UICONTROL des]* données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
+La cellule de transformation **[!UICONTROL des]** données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
 
 >[!NOTE]
 >
@@ -410,7 +410,7 @@ Vous recevez le DSL mis à jour.
 
 ## Notation {#scoring}
 
-Une fois la publication sur [!DNL Edge], le score est effectué par une demande de POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML ** en temps réel utilise EdgeUtils pour démontrer ce processus.
+Une fois la publication sur [!DNL Edge], le score est effectué par une demande de POST d’un client. En règle générale, cela peut être fait à partir d’une application cliente qui a besoin de scores ML. Vous pouvez aussi le faire depuis Postman. Le modèle ML **** en temps réel utilise EdgeUtils pour démontrer ce processus.
 
 >[!NOTE]
 >
