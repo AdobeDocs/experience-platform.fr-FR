@@ -3,45 +3,45 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
-description: Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. L’API DULE Policy Service vous permet de créer et de gérer des stratégies DULE afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés DULE. Ce document fournit un tutoriel détaillé sur la création d’une stratégie DULE à l’aide de l’API Policy Service.
+description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer les actions marketing à entreprendre par rapport aux données qui contiennent certains libellés d’utilisation des données. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 84%
+source-wordcount: '1209'
+ht-degree: 72%
 
 ---
 
 
 # Création d’une stratégie d’utilisation des données dans l’API
 
-Data Usage Labeling and Enforcement (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governance]. L’[API DULE Policy Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) vous permet de créer et de gérer des stratégies DULE afin de déterminer quelles actions marketing peuvent être entreprises concernant les données qui contiennent certains libellés DULE.
+The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
-This document provides a step-by-step tutorial for creating a DULE policy using the [!DNL Policy Service] API. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
+This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. Pour consulter un guide plus complet sur les différentes opérations disponibles dans l’API, référez-vous au [guide de développement de Policy Service](../api/getting-started.md).
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies DULE :
+Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies 
 
 * [[ !Gouvernance des données DNL]](../home.md): Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
 * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API DULE , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
 
 ## Définition d’une action marketing {#define-action}
 
 In the [!DNL Data Governance] framework, a marketing action is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 
-La première étape de la création d’une stratégie DULE consiste à déterminer l’action marketing évaluée par la stratégie. Pour ce faire, utilisez l’une des options suivantes :
+La première étape de la création d’une stratégie d’utilisation des données consiste à déterminer l’action marketing qu’elle évaluera. Pour ce faire, utilisez l’une des options suivantes :
 
 * [Recherche d’une action marketing existante](#look-up)
 * [Création d’une action marketing](#create-new)
 
 ### Recherche d’une action marketing existante {#look-up}
 
-Vous pouvez rechercher des actions marketing existantes à évaluer par votre stratégie DULE à l’aide d’une requête GET envoyée à l’un des points de terminaison `/marketingActions`.
+Vous pouvez rechercher des actions marketing existantes à évaluer par votre stratégie à l’aide d’une requête GET envoyée à l’un des points de terminaison `/marketingActions`.
 
 **Format d’API**
 
@@ -122,7 +122,7 @@ Une réponse réussie renvoie le nombre total d’actions marketing trouvées (`
 | --- | --- |
 | `_links.self.href` | Chaque élément du tableau `children` contient un identifiant d’URI pour l’action marketing listée. |
 
-Lorsque vous trouvez l’action marketing à utiliser, enregistrez la valeur de sa propriété `href`. Cette valeur est utilisée lors de l’étape suivante de la [création d’une stratégie DULE](#create-policy).
+Lorsque vous trouvez l’action marketing à utiliser, enregistrez la valeur de sa propriété `href`. Cette valeur est utilisée lors de l’étape suivante de la [création d’une stratégie ](#create-policy).
 
 ### Création d’une action marketing {#create-new}
 
@@ -188,13 +188,13 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de l�
 | --- | --- |
 | `_links.self.href` | Identifiant d’URI de l’action marketing. |
 
-Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée, car il sera utilisé à l’étape suivante de la création d’une stratégie DULE.
+Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée, car il sera utilisé à l’étape suivante de la création d’une stratégie 
 
-## Création d’une stratégie DULE {#create-policy}
+## Création d’une stratégie {#create-policy}
 
-Pour créer une stratégie, vous devez fournir l’identifiant d’URI d’une action marketing avec l’expression des libellés DULE qui interdisent cette action marketing.
+Pour créer une nouvelle stratégie, vous devez fournir l’ID URI d’une action marketing avec une expression des étiquettes d’utilisation qui interdisent cette action marketing.
 
-Cette expression, appelée **expression de stratégie**, est un objet contenant soit (a) un libellé DULE, soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
+Cette expression, appelée **expression de stratégie**, est un objet contenant soit (a) un libellé , soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
 
 ```json
 "deny": {
@@ -222,7 +222,7 @@ Cette expression, appelée **expression de stratégie**, est un objet contenant 
 >
 >Seuls les opérateurs OR et AND sont pris en charge.
 
-Une fois l’expression de stratégie définie, vous pouvez créer une stratégie DULE à l’aide d’une requête POST envoyée au point de terminaison `/policies/custom`.
+Une fois l’expression de stratégie définie, vous pouvez créer une stratégie à l’aide d’une requête POST envoyée au point de terminaison `/policies/custom`.
 
 **Format d’API**
 
@@ -232,7 +232,7 @@ POST /policies/custom
 
 **Requête**
 
-La requête suivante crée une stratégie DULE appelée « Export Data to Third Party » en fournissant une action marketing et une expression de stratégie dans le payload de la requête.
+La requête suivante crée une stratégie appelée « Export Data to Third Party » en fournissant une action marketing et une expression de stratégie dans le payload de la requête.
 
 ```shell
 curl -X POST \
@@ -268,7 +268,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `marketingActionRefs` | Tableau contenant la valeur `href` d’une action marketing, obtenue à l’[étape précédente](#define-action). Bien que l’exemple ci-dessus ne liste qu’une action marketing, il est possible de fournir plusieurs actions. |
-| `deny` | Objet de l’expression de stratégie. Définit les conditions et les libellés DULE qui entraîneraient le rejet par la stratégie de l’action marketing référencée dans `marketingActionRefs`. |
+| `deny` | Objet de l’expression de stratégie. Defines the usage labels and conditions that would cause the policy to reject the marketing action referenced in `marketingActionRefs`. |
 
 **Réponse**
 
@@ -319,17 +319,17 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails de la
 
 | Propriété | Description |
 | --- | --- |
-| `id` | Valeur générée par le système en lecture seule et qui identifie la stratégie DULE de manière unique. |
+| `id` | Valeur générée par le système en lecture seule et qui identifie la stratégie de manière unique. |
 
-Enregistrez l’identifiant d’URI de la stratégie DULE nouvellement créée, car il est utilisé à l’étape suivante pour activer la stratégie.
+Enregistrez l’identifiant d’URI de la stratégie nouvellement créée, car il est utilisé à l’étape suivante pour activer la stratégie.
 
-## Activation de la stratégie DULE
+## Activer la stratégie
 
 >[!NOTE]
 >
->Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie DULE à l’état `DRAFT`, veuillez noter que, par défaut, une stratégie doit avoir l’état `ENABLED` pour participer à l’évaluation. Consultez le tutoriel sur l’[application des stratégies DULE](../enforcement/api-enforcement.md) pour apprendre à créer des exceptions pour les stratégies dont l’état est défini sur `DRAFT`.
+>Bien que cette étape soit facultative si vous souhaitez laisser votre stratégie à l’état `DRAFT`, veuillez noter que, par défaut, une stratégie doit avoir l’état `ENABLED` pour participer à l’évaluation. See the guide on [policy enforcement](../enforcement/api-enforcement.md) for information on how to make exceptions for policies in `DRAFT` status.
 
-Par défaut, les stratégies DULE dont la propriété `status` est définie sur `DRAFT` ne participent pas à l’évaluation. Vous pouvez activer votre stratégie pour l’évaluation à l’aide d’une requête PATCH envoyée au point de terminaison `/policies/custom/` et en fournissant l’identifiant unique de la stratégie à la fin du chemin d’accès de la requête.
+By default, policies that have their `status` property set to `DRAFT` do not participate in evaluation. Vous pouvez activer votre stratégie pour l’évaluation à l’aide d’une requête PATCH envoyée au point de terminaison `/policies/custom/` et en fournissant l’identifiant unique de la stratégie à la fin du chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -343,7 +343,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Requête**
 
-La requête suivante effectue une opération PATCH sur la propriété `status` de la stratégie DULE, changeant la valeur `DRAFT` en `ENABLED`.
+La requête suivante effectue une opération PATCH sur la propriété `status` de la stratégie , changeant la valeur `DRAFT` en `ENABLED`.
 
 ```shell
 curl -X PATCH \
