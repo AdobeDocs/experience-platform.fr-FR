@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; protocol; generic odata
+keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
 title: Collecte de données de protocole par le biais des connecteurs et des API source
 topic: overview
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un fournisseur de protocole tiers et les importer dans la plate-forme par le biais des connecteurs source et de l’API du service de flux.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de protocoles et les intégrer à la plate-forme par le biais des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1587'
 ht-degree: 12%
 
 ---
