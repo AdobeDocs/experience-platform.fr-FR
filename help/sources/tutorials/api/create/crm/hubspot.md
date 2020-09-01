@@ -1,20 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Création d’un connecteur HubSpot à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à HubSpot.
 translation-type: tm+mt
-source-git-commit: 5839e4695589455bd32b6e3e33a7c377343f920d
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 14%
+source-wordcount: '659'
+ht-degree: 13%
 
 ---
 
 
 # Création d’un [!DNL HubSpot] connecteur à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de la connexion [!DNL Experience Platform] à [!DNL HubSpot].
 
@@ -35,7 +36,7 @@ Pour [!DNL Flow Service] se connecter à [!DNL HubSpot], vous devez fournir les 
 | ---------- | ----------- |
 | `clientId` | ID client associé à votre [!DNL HubSpot] application. |
 | `clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
-| `accessToken` | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
+| `accessToken` | Jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | `refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 
 Pour plus d&#39;informations sur la prise en main, reportez-vous à ce document [](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview)HubSpot.
@@ -183,7 +184,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | ID client associé à votre [!DNL HubSpot] application. |
 | `auth.params.clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
-| `auth.params.accessToken` | jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
+| `auth.params.accessToken` | Jeton d&#39;accès obtenu lors de l’authentification initiale de l’intégration OAuth. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 
 **Réponse**
