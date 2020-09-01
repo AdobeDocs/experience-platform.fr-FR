@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
 title: Création d’une classe
+description: Une classe est le bloc de création principal d’un schéma. La classe contient l’ensemble de champs minimum devant être défini afin de capturer les données principales d’un schéma. Par exemple, si vous concevez un schéma pour des voitures et des camions, il est fort probable que vous utilisiez une classe intitulée Véhicule pour décrire les propriétés courantes de base de tous les véhicules.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d04bf35e49488ab7d5e07de91eb77d0d9921b6fa
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '477'
-ht-degree: 89%
+source-wordcount: '539'
+ht-degree: 90%
 
 ---
 
