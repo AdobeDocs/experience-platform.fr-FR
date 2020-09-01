@@ -4,7 +4,7 @@ solution: Adobe Experience Platform
 title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 83%
@@ -60,7 +60,7 @@ The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows t
 
 Les étapes qui suivent utilisent l’interface utilisateur d’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
-Dans l’interface utilisateur, cliquez sur **[!UICONTROL Schémas]** dans le rail de gauche et utilisez la barre de recherche dans l’onglet *[!UICONTROL Parcourir]* pour trouver rapidement le schéma que vous souhaitez mettre à jour.
+Dans l’interface utilisateur, cliquez sur **[!UICONTROL Schémas]** dans le rail de gauche et utilisez la barre de recherche dans l’onglet **[!UICONTROL Parcourir]** pour trouver rapidement le schéma que vous souhaitez mettre à jour.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
@@ -70,7 +70,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Création d’un mixin
 
-Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Ajouter]** en regard de *Mixins* dans la section *[!UICONTROL Composition]* située à gauche de l’éditeur. Cela ouvre la boîte de dialogue **[!UICONTROL Ajouter un mixin]** dans laquelle les mixins existants s’affichent. Cliquez sur le bouton radio **[!UICONTROL Créer un nouveau mixin]** qui vous permet de définir votre nouveau mixin.
+Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Ajouter]** en regard de *Mixins* dans la section **[!UICONTROL Composition]** située à gauche de l’éditeur. Cela ouvre la boîte de dialogue **[!UICONTROL Ajouter un mixin]** dans laquelle les mixins existants s’affichent. Cliquez sur le bouton radio **[!UICONTROL Créer un nouveau mixin]** qui vous permet de définir votre nouveau mixin.
 
 Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajouter un mixin]** lorsque vous avez terminé.
 
@@ -78,29 +78,29 @@ Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajoute
 
 ### Ajout d’un champ attribut calculé au schéma
 
-Votre nouveau mixin devrait maintenant apparaître dans la section *[!UICONTROL Mixins]* en dessous de *[!UICONTROL Composition]*. Cliquez sur le nom du mixin, ce qui fera apparaître plusieurs boutons **[!UICONTROL Ajouter un champ]** dans la section *[!UICONTROL Structure]* de l’éditeur.
+Votre nouveau mixin devrait maintenant apparaître dans la section **[!UICONTROL Mixins]** en dessous de **[!UICONTROL Composition]**. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
 
 Sélectionnez **[!UICONTROL Ajouter un champ]** en regard du nom du schéma afin d’ajouter un champ de niveau supérieur. Vous pouvez également ajouter le champ n’importe où dans le schéma que vous préférez.
 
-Après avoir cliqué sur **[!UICONTROL Ajouter un champ]**, un nouvel objet portant l’identifiant du client s’ouvre et affiche que ce champ se trouve dans le bon espace de noms. Dans cet objet, un *[!UICONTROL Nouveau champ]* apparaît. Il s’agit du champ dans lequel vous définirez l’attribut calculé.
+Après avoir cliqué sur **[!UICONTROL Ajouter un champ]**, un nouvel objet portant l’identifiant du client s’ouvre et affiche que ce champ se trouve dans le bon espace de noms. Dans cet objet, un **[!UICONTROL Nouveau champ]** apparaît. Il s’agit du champ dans lequel vous définirez l’attribut calculé.
 
 ![](../images/computed-attributes/New-field.png)
 
 ### Configuration du champ
 
-À l’aide de la section *[!UICONTROL Propriétés du champ]* située sur le côté droit de l’éditeur, renseignez les informations nécessaires pour votre nouveau champ, notamment son nom, son nom d’affichage et son type.
+À l’aide de la section **[!UICONTROL Propriétés du champ]** située sur le côté droit de l’éditeur, renseignez les informations nécessaires pour votre nouveau champ, notamment son nom, son nom d’affichage et son type.
 
 >[!NOTE]
 >
 >Le type de champ doit être identique à celui de la valeur de l’attribut calculé. Par exemple, si la valeur de l’attribut calculé est une chaîne, le champ défini dans le schéma doit être une chaîne.
 
-Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le nom du champ, ainsi que son type, s’afficheront dans la section *[!UICONTROL Structure]* de l’éditeur.
+Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le nom du champ, ainsi que son type, s’afficheront dans la section **[!UICONTROL Structure]** de l’éditeur.
 
 ![](../images/computed-attributes/Apply.png)
 
 ### Enable schema for [!DNL Profile]
 
-Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section *[!UICONTROL Structure]* de l’éditeur pour faire apparaître l’onglet *[!UICONTROL Propriétés du schéma]*. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
+Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section **[!UICONTROL Structure]** de l’éditeur pour faire apparaître l’onglet **[!UICONTROL Propriétés du schéma]**. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
 
 >[!NOTE]
 >
