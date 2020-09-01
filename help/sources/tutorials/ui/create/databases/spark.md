@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure HDInsights;Apache Spark
 solution: Experience Platform
 title: Création d'un Apache Spark sur le connecteur source Azure HDInsights dans l'interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour créer un Apache Spark sur Azure HDInsights source connector à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: ec2d0a33e0ae92a3153b7bdcad29734e487a0439
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '488'
 ht-degree: 16%
 
 ---
