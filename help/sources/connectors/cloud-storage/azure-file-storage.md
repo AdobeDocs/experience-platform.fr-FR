@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure File Storage;azure file storage
 solution: Experience Platform
 title: Connecteur d'Enregistrement de fichiers Azure
 topic: overview
+description: La documentation ci-dessous fournit des informations sur la façon de connecter Azure File Enregistrement à Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
