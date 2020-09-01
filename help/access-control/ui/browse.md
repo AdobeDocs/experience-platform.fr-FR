@@ -5,7 +5,7 @@ title: Parcourir l’espace de travail du contrôle d’accès
 topic: user guide
 description: Ce document décrit les étapes nécessaires pour parcourir l’espace de travail contrôle d'accès. Afin de configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation IMS disposant d’un abonnement à Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -19,11 +19,11 @@ In order to configure access control for [!DNL Experience Platform] through the 
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, la page *[!UICONTROL Présentation]* s’affiche pour l’organisation IMS pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation IMS est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation IMS. Cliquez sur **[!UICONTROL Adobe Experience]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.[!DNL Platform]
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Admin Console](https://adminconsole.adobe.com) et connectez-vous à l’aide de vos informations d’identification Adobe. Une fois connecté, la page **[!UICONTROL Présentation]** s’affiche pour l’organisation IMS pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation IMS est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’ensemble de l’organisation IMS. Cliquez sur **[!UICONTROL Adobe Experience]** pour ouvrir l’espace de travail du contrôle d’accès en vue de votre intégration Platform.[!DNL Platform]
 
 ![page-présentation](../images/overview-page.png)
 
-L’espace de travail du contrôle d’accès d’Adobe Experience Platform apparaît, s’ouvrant sur l’onglet *[!UICONTROL Profil de produit]*. Cet onglet vous permet d’afficher tous les profils de produits et de gérer divers paramètres comme indiqué dans le présent document.
+L’espace de travail du contrôle d’accès d’Adobe Experience Platform apparaît, s’ouvrant sur l’onglet **[!UICONTROL Profil de produit]**. Cet onglet vous permet d’afficher tous les profils de produits et de gérer divers paramètres comme indiqué dans le présent document.
 
 ![contrôle-accès-platform](../images/platform-access-control.png)
 
