@@ -5,10 +5,10 @@ title: Gouvernance des données d’Adobe Experience Platform
 topic: overview
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1394'
-ht-degree: 73%
+source-wordcount: '1326'
+ht-degree: 71%
 
 ---
 
@@ -43,11 +43,11 @@ Les professionnels du marketing sont le point de terminaison de la gouvernance d
 * Les spécialistes du marketing et les concepteurs dans Experience utilisent des données pour concevoir de nouvelles expériences client.
 
 
-## Cadre DULE
+## [!DNL Data Governance] cadre
 
-L’étiquetage et l’application de l’utilisation des données (DULE) constituent le cadre de base pour [!DNL Experience Platform][!DNL Data Governance]le secteur. DULE simplifie et rationalise le processus de catégorisation des données et de création des stratégies d’utilisation des données. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
+The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
 
-Trois éléments principaux entrent dans le cadre DULE : les libellés, les stratégies et l’application.
+There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
 1. **Stratégies :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
@@ -57,7 +57,7 @@ Trois éléments principaux entrent dans le cadre DULE : les libellés, les str
 
 [!DNL Data Governance] permet aux responsables de données d’appliquer des étiquettes d’utilisation au niveau du jeu de données et des champs afin de classer les données en fonction du type de stratégies appliquées.
 
-La structure DULE comprend des étiquettes d’utilisation de données prédéfinies qui peuvent être utilisées pour classer les données de trois manières :
+The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
 
 ![Catégorie des libellés d’utilisation des données](./images/overview/label-categories.png)
 
@@ -79,7 +79,7 @@ Des stratégies d’utilisation des données doivent être mises en œuvre pour 
 
 Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an &quot;I&quot; label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
 
-Once data usage labels have been applied, data stewards can create policies using the DULE [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -89,7 +89,7 @@ Pour plus d’informations sur les stratégies d’utilisation des données et l
 
 ## Étapes suivantes
 
-This document provided a high-level introduction to [!DNL Data Governance] and the DULE framework. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
+This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
 
 ## Annexe
 
@@ -97,7 +97,7 @@ The following section provides additional information regarding [!DNL Data Gover
 
 ### [!DNL Data Governance] terminologie
 
-The following table outlines key terms related to [!DNL Data Governance] and the DULE framework.
+The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
 
 | Terme | Définition |
 |---|---|
@@ -107,7 +107,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 | **Gestionnaire de données** | Le gestionnaire de données est la personne responsable de la gestion, de la supervision et de l’application des ressources de données d’une organisation. Un gestionnaire de données assure également la protection et la conservation des politiques de gouvernance des données afin qu’elles soient conformes aux réglementations gouvernementales et aux politiques de l’organisation. |
 | **Libellés d’utilisation des données** | Les libellés d’utilisation des données permettent aux utilisateurs de catégoriser les données en fonction des considérations liées à la confidentialité et des conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques d’entreprise. |
 | **Libellés de jeux de données** | Les libellés peuvent être ajoutés à un jeu de données. Tous les champs d’un jeu de données héritent des libellés du jeu de données. |
-| **DULE** | DULE est l’acronyme de « Data Usage Labeling and Enforcement ». En tant qu’élément clé de la gouvernance des données, DULE est un ensemble de fonctionnalités qui permet de libeller l’utilisation des données et d’appliquer des politiques d’accès aux données à des fins de gouvernance au sein d’une organisation. |
 | **Libellés de champ** | Les libellés de champ sont des libellés de gouvernance des données qui sont soit hérités d’un jeu de données soit appliqués directement à un champ.  Les libellés de gouvernance des données appliquées à un champ ne sont pas hérités d’un jeu de données. |
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
 | **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
@@ -118,6 +117,6 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 
 ## Ressources supplémentaires
 
-The following video is intended to support your understanding of [!DNL Data Governance], and outlines the key aspects of the Data Usage Labeling and Enforcement (DULE) framework.
+La vidéo suivante est destinée à vous aider à comprendre la [!DNL Data Governance] structure.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
