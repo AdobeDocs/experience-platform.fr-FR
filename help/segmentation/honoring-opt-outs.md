@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: Respect du droit d’opposition
 topic: overview
 description: 'Experience Platform permet à vos clients d’envoyer des demandes d’opposition concernant l’utilisation et le stockage de leurs données au sein de Real-time Customer Profile]. Ces demandes d’opposition entrent dans le cadre du California Consumer Privacy Act (CCPA) qui donne aux personnes résidant en Californie le droit d’accéder à leurs données personnelles et de les supprimer, mais aussi de savoir si celles-ci sont vendues ou divulguées (et si oui, à qui). '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 65%
