@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mappage d’un fichier CSV à un schéma XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 57%
@@ -29,13 +29,13 @@ Vous devez également avoir créé un jeu de données dans lequel ingérer vos d
 
 ## Choix d’une destination
 
-Connectez-vous à [[ !DNL Adobe Experience Platform]](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail *[!UICONTROL Workflows]* .
+Connectez-vous à [[ !DNL Adobe Experience Platform]](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Workflows]** .
 
 Dans l’écran **[!UICONTROL Workflows]** , sélectionnez **[!UICONTROL Mapper le fichier CSV au schéma]** XDM sous la section d’assimilation **[!UICONTROL des]** données, puis sélectionnez **[!UICONTROL Lancement.]**
 
 ![](../images/tutorials/map-a-csv-file/workflows.png)
 
-The *[!UICONTROL Map CSV to XDM schema]* workflow appears, starting on the *[!UICONTROL Destination]* step. Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez soit utiliser un jeu de données existant, soit en créer un nouveau.
+The **[!UICONTROL Map CSV to XDM schema]** workflow appears, starting on the **[!UICONTROL Destination]** step. Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez soit utiliser un jeu de données existant, soit en créer un nouveau.
 
 **Utilisation d’un jeu de données existant**
 
@@ -49,27 +49,27 @@ Pour intégrer vos données CSV dans un nouveau jeu de données, sélectionnez *
 
 ## Ajout de données
 
-L’étape *[!UICONTROL Ajouter les données]* apparaît. Faites glisser votre fichier CSV dans l’espace prévu à cet effet ou sélectionnez **[!UICONTROL Choisir les fichiers]** pour entrer manuellement votre fichier CSV.
+L’étape **[!UICONTROL Ajouter les données]** apparaît. Faites glisser votre fichier CSV dans l’espace prévu à cet effet ou sélectionnez **[!UICONTROL Choisir les fichiers]** pour entrer manuellement votre fichier CSV.
 
 ![](../images/tutorials/map-a-csv-file/add-data.png)
 
-The *[!UICONTROL Sample data]* section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
+The **[!UICONTROL Sample data]** section appears once the file is uploaded, showing the first ten rows of data. Once you have confirmed that the data has uploaded as expected, select **[!UICONTROL Next]**.
 
 ![](../images/tutorials/map-a-csv-file/sample-data.png)
 
 ## Mappage des champs CSV aux champs de schéma XDM
 
-L’étape *[!UICONTROL Mappage]* apparaît. Les colonnes du fichier CSV sont répertoriées sous *[!UICONTROL Champ source]*, et les champs de schéma XDM correspondants sont répertoriés sous *[!UICONTROL Champ cible]*. Les champs cibles non sélectionnés sont indiqués en rouge. Vous pouvez utiliser l’option de filtre de champs pour restreindre la liste des champs source disponibles.
+L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**. Les champs cibles non sélectionnés sont indiqués en rouge. Vous pouvez utiliser l’option de filtre de champs pour restreindre la liste des champs source disponibles.
 
 Pour mapper une colonne CSV à un champ XDM, sélectionnez l’icône de schéma en regard du champ de cible correspondant à la colonne.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
 
-La fenêtre *[!UICONTROL Sélectionner un champ de schéma]* apparaît. Ici, vous pouvez parcourir la structure du schéma XDM et localiser le champ vers lequel vous souhaitez mapper la colonne CSV. Cliquez sur un champ XDM pour le sélectionner, puis sur **[!UICONTROL Sélectionner]**.
+La fenêtre **[!UICONTROL Sélectionner un champ de schéma]** apparaît. Ici, vous pouvez parcourir la structure du schéma XDM et localiser le champ vers lequel vous souhaitez mapper la colonne CSV. Cliquez sur un champ XDM pour le sélectionner, puis sur **[!UICONTROL Sélectionner]**.
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-L’écran *[!UICONTROL Mappage]* réapparaît, le champ XDM sélectionné s’affichant désormais sous *[!UICONTROL Champ cible]*.
+L’écran **[!UICONTROL Mappage]** réapparaît, le champ XDM sélectionné s’affichant désormais sous **[!UICONTROL Champ cible]**.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
 
@@ -77,7 +77,7 @@ Si vous ne souhaitez pas mapper une colonne CSV spécifique, vous pouvez supprim
 
 ![](../images/tutorials/map-a-csv-file/remove-mapping.png)
 
-If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the *[!UICONTROL Source Field]* list.
+If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the **[!UICONTROL Source Field]** list.
 
 ![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
@@ -125,7 +125,7 @@ La section suivante fournit des informations supplémentaires sur le mappage des
 
 ### Fonctions de mappage
 
-Certaines fonctions de mappage peuvent être utilisées pour calculer des valeurs en fonction de ce qui est saisi dans les champs sources. Pour utiliser une fonction, saisissez-la sous *[!UICONTROL Champ source]* avec la syntaxe et les entrées appropriées.
+Certaines fonctions de mappage peuvent être utilisées pour calculer des valeurs en fonction de ce qui est saisi dans les champs sources. Pour utiliser une fonction, saisissez-la sous **[!UICONTROL Champ source]** avec la syntaxe et les entrées appropriées.
 
 Par exemple, pour concaténer les champs CSV **city** et **country** et les attribuer au champ XDM **city**, définissez le champ source en tant que `concat(city, ", ", county)`.
 
