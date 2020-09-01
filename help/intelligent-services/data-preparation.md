@@ -5,7 +5,7 @@ title: Préparation des données en vue de leur utilisation dans les services in
 topic: Intelligent Services
 description: 'Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1980'
 ht-degree: 3%
@@ -112,7 +112,7 @@ Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
-| Afficher | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
+| Afficher  | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
 | E-mail | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
 | Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
@@ -272,7 +272,7 @@ Une fois le schéma créé et enregistré, vous pouvez créer un jeu de données
 * [Créer un jeu de données dans l’interface utilisateur](../catalog/datasets/user-guide.md#create) (Suivez le processus pour utiliser un schéma existant)
 * [Création d’un jeu de données dans l’API](../catalog/datasets/create.md)
 
-Une fois le jeu de données créé, vous pouvez le trouver dans l’interface utilisateur de la plate-forme de l’espace de travail *[!UICONTROL Datasets]* .
+Une fois le jeu de données créé, vous pouvez le trouver dans l’interface utilisateur de la plate-forme de l’espace de travail **[!UICONTROL Datasets]** .
 
 ![](images/data-preparation/dataset-location.png)
 
