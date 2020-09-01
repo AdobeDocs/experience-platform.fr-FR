@@ -5,7 +5,7 @@ title: Gestion des utilisateurs pour un profil de produits
 topic: user guide
 description: Ce document vous montre comment gérer les utilisateurs d’un profil de produits dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 72%
@@ -15,11 +15,11 @@ ht-degree: 72%
 
 # Gestion des utilisateurs pour un profil de produits
 
-Pour attribuer ou supprimer des utilisateurs d’un profil de produits, ouvrez la page des détails du profil et accédez à l’onglet *[!UICONTROL Utilisateurs]*. À partir de là, cliquez sur **[!UICONTROL Ajouter un utilisateur]**.
+Pour attribuer ou supprimer des utilisateurs d’un profil de produits, ouvrez la page des détails du profil et accédez à l’onglet **[!UICONTROL Utilisateurs]**. À partir de là, cliquez sur **[!UICONTROL Ajouter un utilisateur]**.
 
 ![add-users-button](../images/add-users-button.png)
 
-La boîte de dialogue *[!UICONTROL Ajouter un utilisateur]* s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse électronique. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
+La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse électronique. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
 
 ![add-user-autocomplete](../images/add-user-autocomplete.png)
 
@@ -31,7 +31,7 @@ Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL E
 
 ![add-user-save](../images/add-user-save.png)
 
-L’onglet *[!UICONTROL Utilisateurs]* du profil de produit réapparaît, et l’utilisateur ajouté y est maintenant répertorié.
+L’onglet **[!UICONTROL Utilisateurs]** du profil de produit réapparaît, et l’utilisateur ajouté y est maintenant répertorié.
 
 ![user-added](../images/user-added.png)
 
