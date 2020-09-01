@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connexion avec Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: 3b710e7a20975880376f7e434ea4d79c01fa0ce5
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 74%
@@ -20,12 +20,12 @@ After installing [!DNL Aqua Data Studio], you must first register the server. Da
 
 ![](../images/clients/aqua-data-studio/register-server.png)
 
-La boîte de dialogue *[!UICONTROL Enregistrer le serveur]* s’affiche. Sous l’onglet *[!UICONTROL Général]*, sélectionnez **[!UICONTROL PostgreSQL]** dans la liste de gauche. Dans la boîte de dialogue qui s’affiche, saisissez les détails suivants pour les paramètres du serveur.
+La boîte de dialogue **[!UICONTROL Enregistrer le serveur]** s’affiche. Sous l’onglet **[!UICONTROL Général]**, sélectionnez **[!UICONTROL PostgreSQL]** dans la liste de gauche. Dans la boîte de dialogue qui s’affiche, saisissez les détails suivants pour les paramètres du serveur.
 
 - **[!UICONTROL Nom]** : le nom de la connexion.
 - **[!UICONTROL Identifiant de connexion et mot de passe]** : Ies informations de connexion qui seront utilisées. Le nom d’utilisateur prend la forme `ORG_ID@AdobeOrg`.
 - **[!UICONTROL Hôte et port]** : le point de terminaison hôte et son port pour [!DNL Query Service].
-- **[!UICONTROL Base de données]:**Base de données qui sera utilisée.
+- **[!UICONTROL Base de données]:** Base de données qui sera utilisée.
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ La boîte de dialogue *[!UICONTROL Enregistrer le serveur]* s’affiche. Sous l�
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 
-Sélectionnez l’onglet **[!UICONTROL Pilote]**. Sous *[!UICONTROL Paramètres]*, définissez la valeur sur `?sslmode=require`
+Sélectionnez l’onglet **[!UICONTROL Pilote]**. Sous **[!UICONTROL Paramètres]**, définissez la valeur sur `?sslmode=require`
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
@@ -41,4 +41,4 @@ Après avoir saisi les détails de votre connexion, cliquez sur **[!UICONTROL Te
 
 ## Étapes suivantes
 
-Now that you have connected to [!DNL Query Service], you can use the *[!UICONTROL Query Analyzer]* within [!DNL Aqua Data Studio] to execute and edit SQL statements. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../creating-queries/creating-queries.md).
+Now that you have connected to [!DNL Query Service], you can use the **[!UICONTROL Query Analyzer]** within [!DNL Aqua Data Studio] to execute and edit SQL statements. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../creating-queries/creating-queries.md).
