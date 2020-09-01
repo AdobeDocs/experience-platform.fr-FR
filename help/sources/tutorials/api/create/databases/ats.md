@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ATS;ats;Azure table storage
 solution: Experience Platform
 title: Création d'un connecteur d'Enregistrement de table Azure à l'aide de l'API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter Azure Table Enregistrement (ci-après appelé "ATS") à l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 16%
+source-wordcount: '587'
+ht-degree: 15%
 
 ---
 
