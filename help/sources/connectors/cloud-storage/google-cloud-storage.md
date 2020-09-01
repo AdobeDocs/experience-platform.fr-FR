@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecteur d’Enregistrement Google Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 340f5d0611e9e9eb4676018ee10c8a8aa08dbb2d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 3%
@@ -18,7 +18,7 @@ Adobe Experience Platform fournit une connectivité native aux fournisseurs de c
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données à partir de [!DNL Google Cloud Storage] lots.
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
@@ -60,7 +60,7 @@ The **[!UICONTROL Settings]** page appears. A partir de là, vous pouvez voir de
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-La page **[!UICONTROL Interopérabilité]** contient des informations sur l’authentification, les clés d’accès et le projet par défaut associé à votre compte utilisateur. Si vous n&#39;avez pas encore établi de projet par défaut pour l&#39;accès interopérable, vous pouvez en configurer un dans la section *[!UICONTROL Par défaut pour l&#39;accès]* interopérable. Si un projet par défaut a déjà été établi, la section affiche la confirmation qu&#39;un projet a été défini comme projet par défaut.
+La page **[!UICONTROL Interopérabilité]** contient des informations sur l’authentification, les clés d’accès et le projet par défaut associé à votre compte utilisateur. Si vous n&#39;avez pas encore établi de projet par défaut pour l&#39;accès interopérable, vous pouvez en configurer un dans la section **[!UICONTROL Par défaut pour l&#39;accès]** interopérable. Si un projet par défaut a déjà été établi, la section affiche la confirmation qu&#39;un projet a été défini comme projet par défaut.
 
 Pour générer un nouvel ID de clé d’accès et une clé d’accès secret pour votre compte d’utilisateur, sélectionnez **[!UICONTROL Créer une clé]**.
 
