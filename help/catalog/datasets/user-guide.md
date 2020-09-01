@@ -5,10 +5,10 @@ title: Guide d’utilisation des jeux de données
 topic: datasets
 description: Ce guide d'utilisation des jeux de données fournit des instructions sur l'exécution d'actions courantes lors de l'utilisation de jeux de données dans l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 73%
+source-wordcount: '1159'
+ht-degree: 74%
 
 ---
 
@@ -26,7 +26,7 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de la [!DNL Schema Editor] section dans l’ [!DNL Platform] interface utilisateur.
 * [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[ !Gouvernance des données DNL]](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
+* [[ !Gouvernance des données Adobe Experience Platform DNL]](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
 
 ## Affichage des jeux de données
 
@@ -114,7 +114,7 @@ If a dataset already contains data and is then enabled for [!DNL Profile], the e
 
 ## Gestion et application de la gouvernance des données sur un jeu de données
 
-Data Usage Labeling and Enforcement (DULE) is the core data governance mechanism for [!DNL Experience Platform]. Les libellés DULE vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Pour en savoir plus sur les libellés, consultez la [Présentation de la gouvernance des données](../../data-governance/home.md) ou reportez-vous au [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour savoir comment appliquer des libellés à vos jeux de données.
 
 ## Suppression d’un jeu de données
 
