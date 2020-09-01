@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
 solution: Experience Platform
 title: Création d'un connecteur Azure Synapse Analytics à l'aide de l'API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter Azure Synapse Analytics (ci-après appelée "Synapse") à l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 16%
+source-wordcount: '585'
+ht-degree: 15%
 
 ---
 
