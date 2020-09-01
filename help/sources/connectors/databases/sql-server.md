@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: Connecteur SQL Server
 topic: overview
+description: La documentation ci-dessous fournit des informations sur la connexion de Microsoft SQL Server à la plate-forme à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 3b5e76afea5689dbd59f64f6192e6ef2a6acb7d3
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 17%
+source-wordcount: '232'
+ht-degree: 16%
 
 ---
 
@@ -16,9 +17,9 @@ ht-degree: 17%
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, tels que relational, NoSQL ou datas warehouse. Les fournisseurs de base de données prennent en charge [!DNL Microsoft] SQL Server.
+[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. [!DNL Platform] peut se connecter à différents types de bases de données, telles que relationnelles, NoSQL ou des entrepôts de données. Les fournisseurs de base de données prennent en charge [!DNL Microsoft] SQL Server.
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
