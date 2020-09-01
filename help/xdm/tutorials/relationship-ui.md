@@ -5,7 +5,7 @@ title: Définition d’une relation entre deux schémas à l’aide de l’édit
 description: Ce document fournit un didacticiel pour la définition d'une relation entre deux schémas à l'aide de l'éditeur de Schémas dans l'interface utilisateur de l'Experience Platform.
 topic: tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 45%
@@ -43,7 +43,7 @@ Les relations de schéma sont représentées par un champ dédié dans un schém
 
 ### [!UICONTROL Schéma Loyalty Members]
 
-Le schéma source &quot;Membresfidèles&quot; est basé sur la classe XDM [!DNL Individual Profile] et est le schéma qui a été créé dans le didacticiel pour [créer un schéma dans l’interface utilisateur](create-schema-ui.md). It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. Comme vous pouvez le voir sous _[!UICONTROL Propriétés du schéma]_, ce schéma a été activé pour une utilisation dans [!DNL Real-time Customer Profile].
+Le schéma source &quot;Membresfidèles&quot; est basé sur la classe XDM [!DNL Individual Profile] et est le schéma qui a été créé dans le didacticiel pour [créer un schéma dans l’interface utilisateur](create-schema-ui.md). It includes a &quot;[!UICONTROL loyalty]&quot; object under its &quot;\_tenantId&quot; namespace, which includes several loyalty-specific fields. One of these fields, &quot;loyaltyId&quot;, serves as the primary identity for the schema under the &quot;[!UICONTROL Email]&quot; namespace. Comme vous pouvez le voir sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
@@ -61,19 +61,19 @@ Le schéma de destination &quot;[!UICONTROL Hôtels]&quot; est basé sur une cla
 
 Pour définir une relation entre deux schémas, le schéma source doit disposer d’un champ dédié à utiliser comme référence au schéma de destination. Vous pouvez ajouter ce champ au schéma source en créant un nouveau mixin.
 
-Commencez par cliquer sur **[!UICONTROL Ajouter]** dans la section _[!UICONTROL Mixins]_.
+Commencez par cliquer sur **[!UICONTROL Ajouter]** dans la section **[!UICONTROL Mixins]**.
 
 ![](../images/tutorials/relationship/loyalty-add-mixin.png)
 
-La boîte de dialogue _[!UICONTROL Ajouter un mixin]_ s’affiche. À partir de là, cliquez sur **[!UICONTROL Créer un nouveau mixin]**. Dans les champs de texte qui s’affichent, saisissez le nom d’affichage et la description du nouveau mixin. Cliquez sur **[!UICONTROL Ajouter un mixin]** lorsque vous avez terminé.
+La boîte de dialogue **[!UICONTROL Ajouter un mixin]** s’affiche. À partir de là, cliquez sur **[!UICONTROL Créer un nouveau mixin]**. Dans les champs de texte qui s’affichent, saisissez le nom d’affichage et la description du nouveau mixin. Cliquez sur **[!UICONTROL Ajouter un mixin]** lorsque vous avez terminé.
 
 <img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
 
-The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the _[!UICONTROL Mixins]_ section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
+The canvas reappears with &quot;[!UICONTROL Loyalty Relationship]&quot; appearing in the **[!UICONTROL Mixins]** section. Click the mixin name, then click **[!UICONTROL Add Field]** next to the root-level &quot;[!UICONTROL Loyalty Members]&quot; field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
-Un nouveau champ apparaît dans le canevas sous l’espace de noms « &quot;\_tenantId ». Under _[!UICONTROL Field Properties]_, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
+Un nouveau champ apparaît dans le canevas sous l’espace de noms « &quot;\_tenantId ». Under **[!UICONTROL Field Properties]**, provide a field name and display name for the field, and set its type to &quot;[!UICONTROL String]&quot;.
 
 ![](../images/tutorials/relationship/relationship-field-details.png)
 
@@ -89,7 +89,7 @@ The updated &quot;[!UICONTROL favoriteHotel]&quot; field appears in the canvas. 
 
 Une fois que le champ de référence dédié de votre schéma source est défini, vous pouvez le désigner comme champ de relation.
 
-Select the reference field in the canvas, then scroll down under _[!UICONTROL Field Properties]_ until the **[!UICONTROL Relationship]** checkbox appears. Cochez la case pour afficher les paramètres requis pour la configuration d’un champ de relation.
+Select the reference field in the canvas, then scroll down under **[!UICONTROL Field Properties]** until the **[!UICONTROL Relationship]** checkbox appears. Cochez la case pour afficher les paramètres requis pour la configuration d’un champ de relation.
 
 ![](../images/tutorials/relationship/relationship-checkbox.png)
 
