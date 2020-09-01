@@ -5,7 +5,7 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 topic: overview
 description: adobe experience platform privacy service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 32%
@@ -57,7 +57,7 @@ Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un sché
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l&#39;interface [!DNL Experience Platform ]utilisateur, l&#39;espace de travail _[!UICONTROL Schémas]_ vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field) d&#39;identité dans le [!DNL Schema Editor] didacticiel.
+Dans l&#39;interface [!DNL Experience Platform ]utilisateur, l&#39;espace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field) d&#39;identité dans le [!DNL Schema Editor] didacticiel.
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs d’identité, vous pouvez passer à la section suivante lors de l’ [envoi des demandes](#submit)de confidentialité.
 
@@ -139,7 +139,7 @@ La section suivante décrit comment effectuer des demandes de confidentialité p
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous _[!UICONTROL Produits]_ afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à bien sélectionner **[!UICONTROL AEP]** et/ou **[!UICONTROL Profile]** sous **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées respectivement dans le lac de données ou dans .[!DNL Data Lake][!DNL Real-time Customer Profile]
 
 <img src="images/privacy/product-value.png" width="450"><br>
 
