@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
 title: Activer les données source entrantes pour renseigner les profils client
 topic: overview
+description: Les données entrantes de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos données de Profil client en temps réel.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: fb60e11b9502c31e654d3fbe5dc240ace9429332
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '494'
 ht-degree: 14%
 
 ---
