@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Generic OData;generic odata
 solution: Experience Platform
 title: Création d’un connecteur OData générique à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de Generic OData à l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 23%
+source-wordcount: '545'
+ht-degree: 22%
 
 ---
 
