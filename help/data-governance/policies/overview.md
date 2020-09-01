@@ -5,9 +5,9 @@ title: Présentation des stratégies d’utilisation des données
 topic: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 18%
 
 ---
@@ -26,19 +26,19 @@ Ce document fournit un aperçu général des stratégies d’utilisation des don
 1. Une action marketing spécifique
 2. Étiquette(s) d&#39;utilisation des données pour laquelle l&#39;action est limitée ne peut pas être exécutée
 
-Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données (tels que les informations d’identification personnelle) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant une étiquette &quot;I&quot; (données d’identité), vous recevrez une réponse de la part de l’utilisateur vous indiquant qu’une stratégie d’utilisation des données a été enfreinte. [!DNL Policy Service]
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types de données spécifiques (tels que les informations d’identification personnelle) ne peuvent pas être exportés et que vous tentez d’exporter un jeu de données contenant une étiquette &quot;I&quot; (données d’identité), vous recevrez une réponse de la part de l’utilisateur vous indiquant qu’une stratégie d’utilisation des données a été enfreinte. [!DNL Policy Service]
 
 >[!NOTE]
 >
 >Les actions marketing ne limitent pas l’utilisation des données. Ils doivent être inclus dans les stratégies d’utilisation des données activées pour que ces actions soient évaluées en cas de violation des stratégies.
 
-Lorsque des données sont utilisées dans le service de votre entreprise, les actions marketing appropriées doivent être indiquées afin que toute violation de stratégie puisse être identifiée. Vous pouvez ensuite utiliser l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) DULE Policy Service pour vérifier les violations de stratégie dans votre intégration.
+Lorsque des données sont utilisées dans le service de votre entreprise, les actions marketing appropriées doivent être indiquées afin que toute violation de stratégie puisse être identifiée. Vous pouvez ensuite utiliser l’API [](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) Policy Service pour vérifier les violations de stratégie dans votre intégration.
 
 >[!NOTE]
 >
 >Si vous utilisez [!DNL Real-time Customer Data Platform], vous pouvez configurer des cas d’utilisation marketing sur des destinations afin d’automatiser l’application des stratégies. Pour plus d’informations, consultez le document sur la gouvernance des [données dans le CDP](../../rtcdp/privacy/data-governance-overview.md) en temps réel.
 
-Consultez l’annexe du présent document pour obtenir une liste des actions [marketing définies par l’Adobe](#core-actions)disponibles. Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’ [!DNL Policy Service] API DULE ou de l’interface [!DNL Experience Platform ]utilisateur. Vous trouverez plus d’informations sur l’utilisation des actions et stratégies marketing dans la section suivante.
+Consultez l’annexe du présent document pour obtenir une liste des actions [marketing définies par l’Adobe](#core-actions)disponibles. Vous pouvez également définir vos propres actions marketing personnalisées à l’aide de l’ [!DNL Policy Service] API ou de l’interface [!DNL Experience Platform ]utilisateur. Vous trouverez plus d’informations sur l’utilisation des actions et stratégies marketing dans la section suivante.
 
 <!-- (Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
@@ -50,7 +50,7 @@ For a reference on how specific Data Export Controls map to marketing actions in
 
 ## Managing data usage policies {#manage}
 
-Une fois les libellés d’utilisation des données appliqués, les responsables de données peuvent utiliser l’ [!DNL Policy Service] API DULE ou l’ [!DNL Experience Platform] interface utilisateur pour gérer et évaluer les stratégies liées aux actions marketing effectuées sur les données contenant des libellés d’utilisation des données. Vous pouvez créer et mettre à jour des stratégies, déterminer l’état d’une stratégie et travailler avec des actions marketing pour évaluer si une action spécifique viole une stratégie d’utilisation des données.
+Une fois les libellés d’utilisation des données appliqués, les responsables de l’utilisation des données peuvent utiliser l’ [!DNL Policy Service] API ou l’ [!DNL Experience Platform] interface utilisateur pour gérer et évaluer les stratégies liées aux actions marketing effectuées sur les données contenant des libellés d’utilisation des données. Vous pouvez créer et mettre à jour des stratégies, déterminer l’état d’une stratégie et travailler avec des actions marketing pour évaluer si une action spécifique viole une stratégie d’utilisation des données.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Pour plus d’informations sur la manière d’utiliser les actions et stratégi
 
 ## Étapes suivantes
 
-Ce document présente les politiques d&#39;utilisation des données dans le cadre du DULE. Vous pouvez maintenant continuer à lire la documentation de processus liée à tout au long de ce guide pour en savoir plus sur l’utilisation des stratégies dans l’API et l’interface utilisateur.
+Ce document présente les politiques d&#39;utilisation des données dans le [!DNL Data Governance] cadre. Vous pouvez maintenant continuer à lire la documentation de processus liée à tout au long de ce guide pour en savoir plus sur l’utilisation des stratégies dans l’API et l’interface utilisateur.
 
 ## Annexe
 
@@ -74,7 +74,7 @@ Le tableau ci-dessous décrit les principales actions marketing fournies par Ado
 
 >[!NOTE]
 >
->Les principales actions marketing doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
+>Les actions marketing de base doivent être considérées comme un point de départ pour vous aider à identifier les stratégies d’utilisation à créer et à vérifier les violations. Les définitions et leur interprétation dépendent des besoins et des stratégies de votre entreprise.
 
 | Action marketing | Description |
 | --- | --- |
