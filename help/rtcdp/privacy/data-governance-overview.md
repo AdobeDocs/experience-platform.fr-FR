@@ -5,9 +5,9 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1021'
 ht-degree: 54%
 
 ---
@@ -58,7 +58,7 @@ Le diagramme suivant illustre la procédure d’intégration des politiques dans
 
 ![](assets/enforcement-flow.png)
 
-When a segment is first activated, DULE [!DNL Policy Service] checks for policy violations based on the following factors:
+When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
 
 * Les libellés d’utilisation des données ont été appliquées aux champs et aux jeux de données du segment à activer.
 * Objectif marketing de la destination.
