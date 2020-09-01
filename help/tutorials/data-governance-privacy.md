@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriels sur la gouvernance et la confidentialité des données
 topic: tutorial
+description: Data Usage Labeling and Enforcement (DULE) constitue le mécanisme de base de la gouvernance des données d’Adobe Experience Platform. Les fonctionnalités de DULE vous permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 57%
+source-wordcount: '506'
+ht-degree: 65%
 
 ---
 
 
 # [!DNL Data Governance] et [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) est le mécanisme central de l&#39;Adobe Experience Platform [!DNL Data Governanc]e. Les fonctions DULE permettent d&#39;appliquer des étiquettes d&#39;utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d&#39;utilisation des données associées. Avant de commencer avec les libellés, consultez la [présentation de la gouvernance des données](../data-governance/home.md) pour une introduction plus détaillée de la structure DULE dans [!DNL Platform].
+[!DNL Data Usage Labeling and Enforcement] (DULE) est le mécanisme central de Adobe Experience Platform [!DNL Data Governance]. Les fonctionnalités de DULE vous permettent d’appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant en fonction des stratégies d’utilisation des données associées. Avant de commencer avec les libellés, consultez la [présentation de la gouvernance des données](../data-governance/home.md) pour une introduction plus détaillée de la structure DULE dans [!DNL Platform].
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. Pour en savoir plus, commencez par lire la [présentation de Privacy Service](../privacy-service/home.md).
 
