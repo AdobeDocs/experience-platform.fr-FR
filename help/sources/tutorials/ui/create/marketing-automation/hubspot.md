@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Création d’un connecteur source HubSpot dans l’interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source HubSpot à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '483'
 ht-degree: 11%
 
 ---
