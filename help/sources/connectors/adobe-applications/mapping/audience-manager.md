@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
 solution: Experience Platform
 title: Champ de mappage Audience Manager
 topic: overview
+description: Les tableaux ci-dessous contiennent les mappages entre les champs des données Adobe Audience Manager (données en temps réel, intégrées et de profil) et les champs XDM correspondants.
 translation-type: tm+mt
-source-git-commit: a1b09f3e88e489f1b0ec0c1fcb72a2a5a4356d87
+source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 96%
+source-wordcount: '151'
+ht-degree: 97%
 
 ---
 
