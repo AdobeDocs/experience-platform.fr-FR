@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;MariaDB;mariadb
 solution: Experience Platform
 title: Création d’un connecteur MariaDB à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes permettant de connecter l’Experience Platform] à MariaDB.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 17%
+source-wordcount: '556'
+ht-degree: 16%
 
 ---
 
