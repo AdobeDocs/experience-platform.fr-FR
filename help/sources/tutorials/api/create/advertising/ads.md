@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
 solution: Experience Platform
 title: Création d’un connecteur Google AdWords à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à Google AdWords.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '618'
 ht-degree: 15%
 
 ---
