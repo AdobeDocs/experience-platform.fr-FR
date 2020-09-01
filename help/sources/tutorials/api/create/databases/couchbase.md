@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Création d’un connecteur Couchbase à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de Couchbase à l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 18%
+source-wordcount: '535'
+ht-degree: 17%
 
 ---
 
