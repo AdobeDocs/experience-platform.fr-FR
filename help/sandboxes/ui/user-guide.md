@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide d’utilisation des environnements de test
 topic: user guide
 translation-type: tm+mt
-source-git-commit: c8446f6040ac9ef1f4196d9057b531011e243258
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 80%
@@ -18,7 +18,7 @@ Ce document fournit la procédure à suivre pour réaliser différentes opérati
 
 ## Affichage des environnements de test
 
-Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Environnements de test]** dans le panneau de navigation de gauche pour ouvrir le tableau de bord _[!UICONTROL Environnements de test]_. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris le type d’environnement de test (production ou développement) et l’état (actif, en cours de création, supprimé ou en échec).
+Dans l’interface utilisateur d’Experience Platform, cliquez sur **[!UICONTROL Environnements de test]** dans le panneau de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Environnements de test]**. Le tableau de bord répertorie tous les environnements de test disponibles pour votre organisation, y compris le type d’environnement de test (production ou développement) et l’état (actif, en cours de création, supprimé ou en échec).
 
 ![](../images/ui/sandboxes-tab.png)
 
@@ -46,7 +46,7 @@ Pour créer un nouvel environnement de test dans l’interface utilisateur, cliq
 
 ![](../images/ui/create-sandbox-button.png)
 
-La boîte de dialogue _[!UICONTROL Créer un environnement de test]_ s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
+La boîte de dialogue **[!UICONTROL Créer un environnement de test]** s’affiche et vous invite à fournir un titre et un nom d’affichage à votre environnement de test. Le **titre d’affichage** est prévu pour être lu par un utilisateur et doit être suffisamment descriptif pour permettre son identification rapide. The sandbox **[!UICONTROL Name]** is an all-lowercase identifier for use in API calls, and should therefore be unique and concise.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 
@@ -56,7 +56,7 @@ Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
 >
 >Étant donné que vous êtes limité à la création d’environnement de test de type hors production, l’option **[!UICONTROL type]** est verrouillée sur « hors production » et ne peut pas être modifiée.
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the _[!UICONTROL Sandboxes]_ dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of &quot;[!UICONTROL Creating]&quot;. New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to &quot;[!UICONTROL Active]&quot;.
 
 ![](../images/ui/sandbox-created.png)
 
@@ -96,7 +96,7 @@ Une boîte de dialogue s’affiche vous invitant à confirmer votre choix. Cliqu
 
 <img src="../images/ui/delete-are-you-sure.png" width="350"><br>
 
-Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail _[!UICONTROL Environnements de test]_.
+Un message de confirmation s’affiche et l’environnement de test est supprimé de l’espace de travail **[!UICONTROL Environnements de test]**.
 
 ## Étapes suivantes
 
