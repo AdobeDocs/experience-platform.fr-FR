@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: e7266fba14b2dffe46ce77428ad6fe0dd92abdf5
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
 source-wordcount: '1365'
 ht-degree: 30%
@@ -49,7 +49,7 @@ La méthode d’évaluation peut être soit par flux, soit par lot. Les segments
 
 En haut de la page se trouvent les options permettant d’ajouter tous les segments à un calendrier et de créer un segment.
 
-Si vous basculez sur **[!UICONTROL Ajouter tous les segments à planifier]** , la segmentation planifiée sera activée. Vous trouverez plus d’informations sur la segmentation planifiée dans la section Segmentation [planifiée de ce guide](#scheduled-segmentation)d’utilisateur.
+Si vous basculez **[!UICONTROL sur tous les segments pour les planifier]** , la segmentation programmée sera activée. Vous trouverez plus d’informations sur la segmentation planifiée dans la section Segmentation [planifiée de ce guide](#scheduled-segmentation)d’utilisateur.
 
 Si vous sélectionnez **[!UICONTROL Créer un segment]** , vous accédez au créateur de segments. Pour en savoir plus sur la création de segments, consultez la section sur la [création d’un segment dans le guide](#create-segment)d’utilisateur.
 
@@ -77,7 +77,7 @@ La section Résumé **** de segment fournit des informations telles que l’ID, 
 
 De plus, vous disposez de l’option permettant de modifier le segment. Si vous sélectionnez **[!UICONTROL Modifier le segment]** , vous accédez au [!DNL Segment Builder]segment. Pour plus d&#39;informations sur l&#39;utilisation de l&#39; [!DNL Segment Builder] espace de travail, veuillez lire le guide [[!DNL Segment Builder] d&#39;](./segment-builder.md)utilisation.
 
-### audience totale dans le segment
+### Audience totale dans le segment
 
 La section audience **[!UICONTROL totale du segment]** affiche le nombre total de profils admissibles pour le segment.
 
@@ -91,7 +91,7 @@ La section Destinations **** activées affiche les destinations pour lesquelles 
 >
 > Les destinations sont une fonction disponible avec [!DNL Real-time Customer Data Platform]laquelle vous pouvez exporter des données vers des plateformes externes. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). Pour savoir comment activer un segment vers une destination, consultez le [guide d’activation des segments vers une destination](../../rtcdp/destinations/activate-destinations.md).
 
-### Échantillons de Profil
+### Échantillons de profil
 
 Vous trouverez ci-dessous un échantillon des profils qui remplissent les critères du segment, en détaillant des informations, notamment l’ [!DNL Profile] identifiant, le prénom, le nom et l’adresse électronique personnelle.
 
