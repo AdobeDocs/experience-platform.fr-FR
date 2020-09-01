@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;datatype;Datatype
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;datatype;Datatype;data type;Data type;create
 solution: Experience Platform
 title: Création d’un type de données
 topic: developer guide
 description: 'Lorsque votre organisation souhaite utiliser des structures de données communes de plusieurs manières, vous pouvez définir un type de données. Les types de données permettent l''utilisation cohérente de structures à champs multiples, avec plus de flexibilité que les mixins car ils peuvent être inclus n''importe où dans un schéma en les ajoutant comme "type" d''un champ. '
 translation-type: tm+mt
-source-git-commit: cc81d590f308c7e2677cec000c27e8aca42437f5
+source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 83%
