@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 solution: Adobe Experience Platform
-title: Guide du développeur de Adobe Experience Platform Segmentation Service
+title: Guide du développeur du service de segmentation Adobe Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: 995fadef9abacf22d0561e0590dfbe172adf0a43
+source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: 467
 ht-degree: 6%
 
 ---
 
 
-# Guide du développeur d&#39; [!DNL Segmentation Service] API Adobe Experience Platform
+# Guide du développeur d’ [!DNL Segmentation Service] API Adobe Experience Platform
 
 [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des segments et de générer des audiences dans [!DNL Adobe Experience Platform] à partir de vos [!DNL Real-time Customer Profile] données.
 
@@ -28,7 +28,7 @@ For more information on using this endpoint, please read the [export jobs endpoi
 
 ## Prévisualisations et estimations
 
-Les Prévisualisations fournissent une liste paginée de profils qualifiants pour une définition de segment, ce qui vous permet de comparer les résultats à ce que vous attendez. Vous pouvez utiliser le `/preview` point de terminaison pour créer une tâche de prévisualisation ou rechercher les résultats d’une tâche de prévisualisation spécifique.
+Les prévisualisations fournissent une liste paginée de profils qualifiants pour une définition de segment, ce qui vous permet de comparer les résultats à ce que vous attendez. Vous pouvez utiliser le `/preview` point de terminaison pour créer une tâche de prévisualisation ou rechercher les résultats d’une tâche de prévisualisation spécifique.
 
 Les estimations fournissent des informations statistiques pour les définitions de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur. Vous pouvez utiliser le `/estimate` point de terminaison pour vue une estimation d&#39;une définition de segment.
 
