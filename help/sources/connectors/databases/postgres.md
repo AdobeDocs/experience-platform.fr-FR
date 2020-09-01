@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
 solution: Experience Platform
 title: Connecteur PostgreSQL
 topic: overview
+description: La documentation ci-dessous fournit des informations sur la connexion de PostgreSQL à Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 29%
+source-wordcount: '232'
+ht-degree: 27%
 
 ---
 
