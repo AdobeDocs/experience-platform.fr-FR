@@ -5,7 +5,7 @@ title: Guide d’utilisation des stratégies de données
 topic: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 39%
@@ -30,7 +30,7 @@ This guide requires a working understanding of the following [!DNL Experience Pl
 
 ## Affichage des stratégies d’utilisation des données {#view-policies}
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the *[!UICONTROL Policies]* workspace. Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez voir une liste des stratégies disponibles, y compris leurs libellés associés, les actions marketing et les états.
+In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez voir une liste des stratégies disponibles, y compris leurs libellés associés, les actions marketing et les états.
 
 ![](../images/policies/browse-policies.png)
 
@@ -40,11 +40,11 @@ Cliquez sur une stratégie répertoriée pour afficher sa description et son typ
 
 ## Création d’une stratégie d’utilisation des données personnalisée {#create-policy}
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the *[!UICONTROL Policies]* workspace.
+To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
 
-Le workflow de *[!UICONTROL création de stratégies]* s’affiche. Commencez par fournir un nom et une description à la nouvelle stratégie.
+Le workflow de **[!UICONTROL création de stratégies]** s’affiche. Commencez par fournir un nom et une description à la nouvelle stratégie.
 
 ![](../images/policies/create-policy-description.png)
 
@@ -52,7 +52,7 @@ Ensuite, sélectionnez les libellés d’utilisation des données sur lesquels l
 
 ![](../images/policies/add-labels.png)
 
-L’étape *[!UICONTROL Sélectionner les actions marketing]* s’affiche. Sélectionnez les actions marketing appropriées dans la liste fournie, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+L’étape **[!UICONTROL Sélectionner les actions marketing]** s’affiche. Sélectionnez les actions marketing appropriées dans la liste fournie, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 >[!NOTE]
 >
@@ -60,11 +60,11 @@ L’étape *[!UICONTROL Sélectionner les actions marketing]* s’affiche. Séle
 
 ![](../images/policies/add-marketing-actions.png)
 
-L’étape *[!UICONTROL Révision]* s’affiche, vous permettant de consulter les détails de la nouvelle stratégie avant de la créer. Une fois que vous êtes satisfait, cliquez sur **[!UICONTROL Terminer]** pour créer la stratégie.
+L’étape **[!UICONTROL Révision]** s’affiche, vous permettant de consulter les détails de la nouvelle stratégie avant de la créer. Une fois que vous êtes satisfait, cliquez sur **[!UICONTROL Terminer]** pour créer la stratégie.
 
 ![](../images/policies/policy-review.png)
 
-L’onglet *[!UICONTROL Parcourir]* réapparaît et affiche désormais la nouvelle stratégie avec l’état « Version préliminaire ». Pour activer la stratégie, consultez la section suivante.
+L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouvelle stratégie avec l’état « Version préliminaire ». Pour activer la stratégie, consultez la section suivante.
 
 ![](../images/policies/created-policy.png)
 
@@ -72,7 +72,7 @@ L’onglet *[!UICONTROL Parcourir]* réapparaît et affiche désormais la nouvel
 
 Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
-You can enable or disable policies from the *[!UICONTROL Browse]* tab in the *[!UICONTROL Policies]* workspace. Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous *[!UICONTROL État]*, sélectionnez le bouton d’activation/désactivation pour activer ou désactiver la stratégie.
+You can enable or disable policies from the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace. Sélectionnez une stratégie personnalisée dans la liste pour afficher ses détails à droite. Sous **[!UICONTROL État]**, sélectionnez le bouton d’activation/désactivation pour activer ou désactiver la stratégie.
 
 ![](../images/policies/enable-policy.png)
 
@@ -84,15 +84,15 @@ Dans l’espace de travail **[!UICONTROL Stratégies]** , sélectionnez l’ongl
 
 ## Create a marketing action {#create-marketing-action}
 
-Pour créer une action marketing personnalisée, cliquez sur **[!UICONTROL Créer une action]** marketing dans le coin supérieur droit de l’onglet Actions **** marketing de l’espace de travail *[!UICONTROL Stratégies]* .
+Pour créer une action marketing personnalisée, cliquez sur **[!UICONTROL Créer une action]** marketing dans le coin supérieur droit de l’onglet Actions **** marketing de l’espace de travail **[!UICONTROL Stratégies]** .
 
 ![](../images/policies/create-marketing-action.png)
 
-La boîte de dialogue *[!UICONTROL Créer une action]* marketing s’affiche. Saisissez un nom et une description pour l’action marketing, puis cliquez sur **[!UICONTROL Créer]**.
+La boîte de dialogue **[!UICONTROL Créer une action]** marketing s’affiche. Saisissez un nom et une description pour l’action marketing, puis cliquez sur **[!UICONTROL Créer]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
-L’action nouvellement créée s’affiche dans l’onglet Actions ** marketing. Vous pouvez désormais utiliser l’action marketing lors de la [création de nouvelles stratégies](#create-policy)d’utilisation des données.
+L’action nouvellement créée s’affiche dans l’onglet Actions **** marketing. Vous pouvez désormais utiliser l’action marketing lors de la [création de nouvelles stratégies](#create-policy)d’utilisation des données.
 
 ![](../images/policies/created-marketing-action.png)
 
