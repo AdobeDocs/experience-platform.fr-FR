@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonnement à des événements de confidentialité
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 31%
@@ -76,7 +76,7 @@ Prenez note de l’URL `Forwarding` (`https://212d6cd2.ngrok.io`) qui sera utili
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
 
-## Ajouter des Événements de confidentialité au projet
+## ajouter des Événements de confidentialité au projet
 
 Une fois que vous avez terminé de créer un projet dans la console, cliquez sur **[!UICONTROL Ajouter le événement]** dans l’écran Présentation _du_ projet.
 
@@ -86,7 +86,7 @@ The _Add events_ dialog appears. Sélectionnez **[!UICONTROL Experience Cloud]**
 
 ![](./images/privacy-events/add-privacy-events.png)
 
-La boîte de dialogue _Configurer l&#39;enregistrement_ du événement s&#39;affiche. Sélectionnez les événements que vous souhaitez recevoir en cochant les cases correspondantes. Les Événements que vous sélectionnez apparaissent sous Événements __abonnés dans la colonne de gauche. Lorsque vous avez terminé, cliquez sur**[!UICONTROL  Suivant ]**.
+La boîte de dialogue _Configurer l&#39;enregistrement_ du événement s&#39;affiche. Sélectionnez les événements que vous souhaitez recevoir en cochant les cases correspondantes. Les événements que vous sélectionnez apparaissent sous Événements **** abonnés dans la colonne de gauche. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
 ![](./images/privacy-events/choose-subscriptions.png)
 
@@ -106,11 +106,11 @@ Dans l’écran suivant, indiquez le nom et la description de l’enregistrement
 
 ![](./images/privacy-events/event-details.png)
 
-Plus loin dans le même écran, vous disposez de deux options pour configurer la manière de recevoir des événements. Sélectionnez **[!UICONTROL Webhook]** et fournissez l’ `Forwarding` URL du webhook de réseau créé précédemment sous URL __Webhook. Ensuite, sélectionnez votre style de diffusion préféré (unique ou par lot) avant de cliquer sur**[!UICONTROL  Enregistrer les événements ]**configurés pour terminer l’enregistrement du événement.
+Plus loin dans le même écran, vous disposez de deux options pour configurer la manière de recevoir des événements. Sélectionnez **[!UICONTROL Webhook]** et fournissez l’ `Forwarding` URL du webhook de réseau créé précédemment sous URL **** Webhook. Ensuite, sélectionnez votre style de diffusion préféré (unique ou par lot) avant de cliquer sur **[!UICONTROL Enregistrer les événements]** configurés pour terminer l’enregistrement du événement.
 
 ![](./images/privacy-events/webhook-details.png)
 
-La page de détails de votre projet réapparaît et s’ [!DNL Privacy Events] affiche sous _[!UICONTROL Événements]_dans le volet de navigation de gauche.
+La page de détails de votre projet réapparaît et s’ [!DNL Privacy Events] affiche sous **[!UICONTROL Événements]** dans le volet de navigation de gauche.
 
 ## Affichage des données d’événement
 
@@ -126,7 +126,7 @@ Cliquez sur l’onglet Suivi **** du débogage pour vue d’une liste de événe
 
 ![](images/privacy-events/debug-tracing.png)
 
-La section _[!UICONTROL Payload]_fournit des détails sur l’événement sélectionné, y compris sur le type d’événement (`com.adobe.platform.gdpr.productcomplete`), comme indiqué dans l’exemple ci-dessus.
+La section **[!UICONTROL Payload]** fournit des détails sur l’événement sélectionné, y compris sur le type d’événement (`com.adobe.platform.gdpr.productcomplete`), comme indiqué dans l’exemple ci-dessus.
 
 ## Étapes suivantes
 
