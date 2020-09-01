@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
 solution: Experience Platform
 title: Création d'un connecteur source Azure Événement Hubs dans l'interface utilisateur
 topic: overview
+description: Ce didacticiel décrit les étapes d'authentification d'un connecteur source Azure Événement Hubs (ci-après dénommé "Événement Hubs") à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: a664a0420189d6a2dda9f33b3aa58cb4883e252f
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '495'
 ht-degree: 9%
 
 ---
