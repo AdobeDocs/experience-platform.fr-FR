@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 72%
@@ -82,7 +82,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Ingestion de données | Gestion des sources | Accès à la lecture, la création, la modification et la désactivation des sources. |
-| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet *[!UICONTROL Catalogue]* et aux sources authentifiées dans l’onglet *[!UICONTROL Parcourir]*. |
+| Ingestion de données | Affichage des sources | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 
 **Problèmes connus**
 
