@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;Google AdWords source connector;google adwords connector
 solution: Experience Platform
 title: Création d’un connecteur source Google AdWords dans l’interface utilisateur
 topic: overview
+description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur source Google AdWords à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0da686743e8bc57d310f7eff6f1bf812a8f31238
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '498'
 ht-degree: 9%
 
 ---
