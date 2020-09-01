@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriels de prise de décision
 topic: tutorial
+description: Le service de prise de décision vous offre la possibilité de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. À l’aide du service de prise de décision, vous pouvez déterminer la meilleure option depuis un ensemble de choix disponibles.
 translation-type: tm+mt
-source-git-commit: 5c5f6c4868e195aef76bacc0a1e5df3857647bde
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 27%
+source-wordcount: '152'
+ht-degree: 43%
 
 ---
 
