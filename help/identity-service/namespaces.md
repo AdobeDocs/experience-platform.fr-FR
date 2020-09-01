@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name<span>@email.com" en tant qu’adresse électronique ou de "443522" en tant qu’identifiant CRM numérique. '
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 63%
@@ -53,7 +53,7 @@ Les types d’identité suivants sont disponibles dans [!DNL Platform]:
 
 Adobe Experience Platform fournit plusieurs espaces de noms d’identité disponibles pour toutes les organisations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-Pour afficher les espaces de noms standard dans l’interface utilisateur, cliquez sur **[!UICONTROL Identités]** dans le rail de gauche, puis cliquez sur l’onglet *[!UICONTROL Parcourir]*. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
+Pour afficher les espaces de noms standard dans l’interface utilisateur, cliquez sur **[!UICONTROL Identités]** dans le rail de gauche, puis cliquez sur l’onglet **[!UICONTROL Parcourir]**. All identity namespaces accessible to your organization will be shown, however those with &quot;[!UICONTROL Standard]&quot; as the &quot;[!UICONTROL Owner]&quot; are the Standard namespaces provided by Adobe.
 
 Vous pouvez ensuite cliquer sur l’un des espaces de noms de la liste pour plus d’informations.
 
@@ -71,7 +71,7 @@ Namespaces that you define are private to your organization and require a unique
 
 ![](./images/create-identity-namespace.png)
 
-Comme pour les espaces de noms standard, vous pouvez cliquer sur un espace de noms personnalisé à partir de l’onglet *[!UICONTROL Parcourir]* pour en afficher les détails. Toutefois, vous pouvez également modifier le nom d’affichage et la description d’un espace de noms personnalisé dans la zone de détails.
+Comme pour les espaces de noms standard, vous pouvez cliquer sur un espace de noms personnalisé à partir de l’onglet **[!UICONTROL Parcourir]** pour en afficher les détails. Toutefois, vous pouvez également modifier le nom d’affichage et la description d’un espace de noms personnalisé dans la zone de détails.
 
 >[!NOTE]
 >
