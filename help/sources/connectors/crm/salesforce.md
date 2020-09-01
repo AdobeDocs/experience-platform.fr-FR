@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;crm schema;crm;CRM
+keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
 title: Connecteur Salesforce
 topic: overview
 description: L’Experience Platform prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. Salesforce prend en charge les fournisseurs de gestion de la relation client.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 13%
