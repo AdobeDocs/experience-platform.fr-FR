@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
 solution: Adobe Experience Platform
 title: Présentation du mixage de confidentialité
+description: Le mixin Préférences de confidentialité/marketing (Consentement) est un mélange de modèle de données d’expérience (XDM) destiné à prendre en charge la collecte des autorisations et préférences utilisateur générées par les CMP et d’autres sources provenant de clients. Ce document couvre la structure et l'utilisation prévue des différents champs fournis par le mixin.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 02014c503dc9d4597e1129cafe3ba86f4abe37e9
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '1778'
+source-wordcount: '1827'
 ht-degree: 1%
 
 ---
@@ -23,7 +24,7 @@ Ce document exige une compréhension pratique de [!DNL Experience Data Model] (X
 * [Présentation du système XDM](http://www.adobe.com/go/xdm-home-en)
 * [Principes de base de la composition des schémas](http://www.adobe.com/go/xdm-schema-best-practices-en)
 
-## Exemple de Schéma {#schema}
+## Exemple de schéma {#schema}
 
 >[!NOTE]
 >
@@ -266,7 +267,7 @@ Le tableau suivant présente les valeurs acceptées pour `xdm:basisOfProcessing`
 
 | Valeur | Description |
 | --- | --- |
-| `consent` **(Par défaut)** | La collecte de données à l&#39;usage spécifié est autorisée, étant donné que l&#39;individu a fourni une autorisation explicite. Il s’agit de la valeur par défaut de `xdm:basisOfProcessing` si aucune autre valeur n’est fournie. <br><br>**IMPORTANT **: Les valeurs pour`xdm:choice`et`xdm:optOutValue`ne sont respectées que lorsque`xdm:basisOfProcessing`est défini sur`consent`. Si l&#39;une des autres valeurs indiquées dans ce tableau est utilisée à`xdm:basisOfProcessing`la place, les choix de consentement de la personne sont ignorés. |
+| `consent` **(Par défaut)** | La collecte de données à l&#39;usage spécifié est autorisée, étant donné que l&#39;individu a fourni une autorisation explicite. Il s’agit de la valeur par défaut de `xdm:basisOfProcessing` si aucune autre valeur n’est fournie. <br><br>**IMPORTANT**: Les valeurs pour `xdm:choice` et `xdm:optOutValue` ne sont respectées que lorsque `xdm:basisOfProcessing` est défini sur `consent`. Si l&#39;une des autres valeurs indiquées dans ce tableau est utilisée à `xdm:basisOfProcessing` la place, les choix de consentement de la personne sont ignorés. |
 | `compliance` | La collecte de données à des fins déterminées est nécessaire pour satisfaire aux obligations légales de l&#39;entreprise. |
 | `contract` | La collecte de données aux fins spécifiées est nécessaire pour respecter les obligations contractuelles avec la personne. |
 | `legitimate_interest` | L&#39;intérêt commercial légitime de recueillir et de traiter ces données à des fins déterminées l&#39;emporte sur le préjudice qu&#39;elles peuvent causer à la personne. |
@@ -301,16 +302,16 @@ Le tableau suivant présente les valeurs acceptées pour `xdm:type`:
 | `in_home` | Messages internes. |
 | `in_store` | Messages en magasin. |
 | `in_vehicle` | Messages embarqués. |
-| `offers` | offres spéciales. |
+| `offers` | Offres spéciales. |
 | `phone_calls` | Données relatives aux interactions d’appel téléphonique. |
 | `push_notifications` | Notifications push. |
 | `sms` | SMS. |
 | `social_media` | Contenu des médias sociaux. |
 | `snail_mail` | Messages envoyés par diffusion postale conventionnelle. |
 | `third_party_content` | Contenu ou articles affichés sur votre site Web qui sont fournis par une entité non liée. |
-| `third_party_offers` | Offres ou publicités affichées sur votre site Web à partir de services publicitaires provenant d’une entité non liée. |
+| `third_party_offers` | offres ou publicités affichées sur votre site Web à partir de services publicitaires provenant d’une entité non liée. |
 
-### schéma complet [!DNL Privacy Consent] {#full-schema}
+### Schéma complet [!DNL Privacy Consent] {#full-schema}
 
 Le fichier JSON suivant représente le [!DNL Privacy Consent] schéma complet tel qu’il apparaît dans le registre des Schémas :
 
