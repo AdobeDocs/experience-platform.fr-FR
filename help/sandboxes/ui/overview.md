@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;sandbox overview
 solution: Experience Platform
 title: Présentation de l’interface utilisateur des environnements de test
 topic: user guide
+description: Adobe Experience Platform fournit des environnements de test virtuels qui partitionnent une instance unique de Platform en environnements virtuels séparés et isolés. Vous trouverez l’interface utilisateur des environnements de test dans l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6438c1841889ff345e1ebaedabfed0531c1f97f9
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '125'
 ht-degree: 100%
 
 ---
