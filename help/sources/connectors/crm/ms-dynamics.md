@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Connecteur Microsoft Dynamics 
 topic: overview
+description: La documentation ci-dessous fournit des informations sur la connexion de Microsoft Dynamics à la plate-forme à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 25f4589ff1f4fa11f3cd5b96c11731577949b5b0
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 13%
+source-wordcount: '205'
+ht-degree: 12%
 
 ---
 
@@ -18,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. La prise en charge des fournisseurs de gestion de la relation client comprend [!DNL Microsoft Dynamics].
 
-## liste autorisée d&#39;adresse IP
+## LISTE AUTORISÉE d&#39;adresse IP
 
 Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
 
