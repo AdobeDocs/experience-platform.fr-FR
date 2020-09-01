@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en charge d’IAB TCF 2.0 dans la plate-forme de données client en temps réel
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 06eda1502d34da1caeebbe9b753dd437bbd9d6ab
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 3%
@@ -121,7 +121,7 @@ Une fois que vous avez configuré votre CMP pour générer des chaînes de conse
 
 Pour que le SDK envoie des données à [!DNL Experience Platform], vous devez d’abord créer une nouvelle configuration de périphérie pour [!DNL Platform] dans [!DNL Adobe Experience Platform Launch]. La documentation [du](../../../edge/fundamentals/edge-configuration.md)SDK décrit les étapes spécifiques à la création d’une nouvelle configuration.
 
-Après avoir fourni un nom unique pour la configuration, sélectionnez le bouton bascule en regard de *[!UICONTROL Adobe Experience Platform]*. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
+Après avoir fourni un nom unique pour la configuration, sélectionnez le bouton bascule en regard de **[!UICONTROL Adobe Experience Platform]**. Ensuite, utilisez les valeurs suivantes pour compléter le reste du formulaire :
 
 | Champ de configuration Edge | Valeur |
 | --- | --- |
@@ -132,7 +132,7 @@ Après avoir fourni un nom unique pour la configuration, sélectionnez le bouton
 
 ![](../assets/iab/edge-config.png)
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les invites supplémentaires pour terminer la configuration.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les autres invites pour terminer la configuration.
 
 ### Commandes de modification du consentement
 
@@ -191,7 +191,7 @@ OneTrust.OnConsentChanged(function () {
 
 #### Utilisation de événements
 
-Vous pouvez également collecter des données de consentement TCF 2.0 sur chaque événement déclenché dans [!DNL Platform] le à l’aide de la `sendEvent` commande.
+Vous pouvez également collecter des données de consentement TCF 2.0 sur chaque événement déclenché dans [!DNL Platform] le à l&#39;aide de la `sendEvent` commande.
 
 >[!NOTE]
 >
@@ -222,7 +222,7 @@ alloy("sendEvent", {
 
 ### Gestion des réponses au SDK
 
-Toutes les [!DNL Platform SDK] commandes renvoient des promesses indiquant si l&#39;appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation à l’intention du client. Pour obtenir des exemples spécifiques, reportez-vous à la section relative à la [gestion des réussites ou des échecs](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) dans le guide relatif à l’exécution des commandes du SDK.
+Toutes les [!DNL Platform SDK] commandes renvoient des promesses qui indiquent si l&#39;appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage de messages de confirmation à l’intention du client. Pour obtenir des exemples spécifiques, reportez-vous à la section relative à la [gestion des réussites ou des échecs](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) dans le guide relatif à l’exécution des commandes du SDK.
 
 ## Exportation de segments {#export}
 
