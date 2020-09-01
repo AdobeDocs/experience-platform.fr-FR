@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Abonnement aux événements d’ingestion de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '831'
 ht-degree: 38%
@@ -55,7 +55,7 @@ Une fois que vous avez créé un nouveau projet, accédez à l’écran d’aper
 
 ![](../images/quality/subscribe-events/add-event-button.png)
 
-The _[!UICONTROL Add events]_ dialog appears. Cliquez sur **[!UICONTROL Experience Platform]** pour filtrer la liste des options disponibles, puis sur Notifications **[!UICONTROL de]** plateforme avant de cliquer sur **[!UICONTROL Suivant]**.
+The **[!UICONTROL Add events]** dialog appears. Cliquez sur **[!UICONTROL Experience Platform]** pour filtrer la liste des options disponibles, puis sur Notifications **[!UICONTROL de]** plateforme avant de cliquer sur **[!UICONTROL Suivant]**.
 
 ![](../images/quality/subscribe-events/select-platform-events.png)
 
