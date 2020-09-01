@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment ciblé
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 6a0a9b020b0dc89a829c557bdf29b66508a10333
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '733'
 ht-degree: 71%
@@ -33,7 +33,7 @@ Pour visualiser les schémas d’union dans l’interface utilisateur, cliquez s
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur l’onglet *[!UICONTROL Parcourir]*. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le *[!UICONTROL nom]*, la date et l’heure de *[!UICONTROL création]*, la *[!UICONTROL source]*, le *[!UICONTROL schéma]* et l’*[!UICONTROL état du dernier lot]*, ainsi que la date et l’heure de la *[!UICONTROL dernière mise à jour]* du jeu de données. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
+Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Parcourir]**. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le **[!UICONTROL nom]**, la date et l’heure de **[!UICONTROL création]**, la **[!UICONTROL source]**, le **[!UICONTROL schéma]** et l’**[!UICONTROL état du dernier lot]**, ainsi que la date et l’heure de la **[!UICONTROL dernière mise à jour]** du jeu de données. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de donn�
 
 ![Cliquez sur Créer un jeu de données](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
-Sur l’écran *[!UICONTROL Créer un jeu de données]*, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour continuer.
+Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour continuer.
 
 ![Sélectionner la source de données](../images/tutorials/segment-export-dataset/create-dataset.png)
 
 ## Sélection du schéma d’union XDM Individual Profile
 
-To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the *[!UICONTROL Select Schema]* screen.
+To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the **[!UICONTROL Select Schema]** screen.
 
 Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, puis cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit.
 
@@ -61,7 +61,7 @@ Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, 
 
 ## Configuration d’un jeu de données
 
-Dans l’écran **[!UICONTROL Configurer le jeu de données]**, vous devrez attribuer un *[!UICONTROL nom]* à votre jeu de données et pourrez également fournir une *[!UICONTROL description]* pour celui-ci.
+Dans l’écran **[!UICONTROL Configurer le jeu de données]**, vous devrez attribuer un **[!UICONTROL nom]** à votre jeu de données et pourrez également fournir une **[!UICONTROL description]** pour celui-ci.
 
 **Remarques sur les noms des jeux de données :**
 - Les noms des jeux de données doivent être courts et descriptifs afin qu’ils puissent être facilement retrouvés par la suite dans la bibliothèque.
@@ -74,9 +74,9 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 ## Activité du jeu de données
 
-Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet *[!UICONTROL Activité du jeu de données]* dans l’espace de travail des jeux de données.  Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
+Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données.  Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’*[!UICONTROL identifiant du jeu de données]*, le *[!UICONTROL nom]*, la *[!UICONTROL description]*, le *[!UICONTROL nom du tableau]*, le *[!UICONTROL schéma]*, le *[!UICONTROL Streaming]* et la *[!UICONTROL Source]*. The [!UICONTROL Info] tab also includes information about when the dataset was *[!UICONTROL Created]* and its *[!UICONTROL Last Modified]* date.
+Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’**[!UICONTROL identifiant du jeu de données]**, le **[!UICONTROL nom]**, la **[!UICONTROL description]**, le **[!UICONTROL nom du tableau]**, le **[!UICONTROL schéma]**, le **[!UICONTROL Streaming]** et la **[!UICONTROL Source]**. The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
 
 Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cette valeur est indispensable pour terminer le workflow d’exportation du segment ciblé.
 
