@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
 title: Création d'un connecteur Blob Azure à l'aide de l'API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter un Experience Platform à un enregistrement Azure Blob (ci-après appelé "Blob").
 translation-type: tm+mt
-source-git-commit: 8e39cc206efa3fc314ae689845c88f0923ac1743
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '609'
 ht-degree: 15%
 
 ---
