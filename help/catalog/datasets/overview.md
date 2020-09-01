@@ -5,9 +5,9 @@ title: Présentation des jeux de données
 topic: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '722'
 ht-degree: 46%
 
 ---
@@ -41,7 +41,7 @@ Pour plus d’informations, consultez la [présentation de Data Ingestion](../..
 
 ## Application de libellés d’utilisation aux jeux de données
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. Using Data Usage Labeling and Enforcement (DULE) as its core framework, [!DNL Data Governance] allows you to apply usage labels to categorize data according to the usage policies that apply to that data.
+Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data in order to ensure compliance with regulations, restrictions, and policies applicable to data use. La [!DNL Data Governance] structure vous permet d’appliquer des étiquettes d’utilisation pour classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données.
 
 Les libellés d’utilisation des données peuvent être appliqués à des jeux de données entiers ou à des champs de jeu de données individuels. Les libellés ajoutés au niveau du jeu de données sont hérités par tous les champs du jeu de données.
 
