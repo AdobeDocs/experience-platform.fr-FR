@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Activer les données source entrantes pour renseigner les profils client
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 14%
@@ -35,7 +35,7 @@ Pour enrichir les profils du client, le schéma source du jeu de données de cib
 - Le schéma comporte au moins une propriété d’identité définie comme identité principale.
 - Il existe un mappage dans le flux de données où l&#39;identité Principale est un attribut de cible.
 
-Dans l’espace de travail Sources, cliquez sur l’onglet **[!UICONTROL Parcourir]** pour liste vos connexions de base. Dans la liste affichée, recherchez la connexion qui contient le flux de données que vous souhaitez renseigner sur les profils. Cliquez sur le nom de la connexion pour accéder à ses détails.
+Dans l&#39;espace de travail Sources, cliquez sur l&#39;onglet **[!UICONTROL Parcourir]** pour liste vos connexions de base. Dans la liste affichée, recherchez la connexion qui contient le flux de données que vous souhaitez renseigner sur les profils. Cliquez sur le nom de la connexion pour accéder à ses détails.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/browse.png)
 
@@ -47,7 +47,7 @@ L’écran activité **[!UICONTROL des]** jeux de données s’affiche. La colon
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/select-dataset-schema.png)
 
-L’éditeur **[!UICONTROL de]** Schéma s’affiche, indiquant la structure du schéma dans la trame centrale. Dans la trame, sélectionnez le champ à définir comme identité Principale. Sous l’onglet Propriétés *[!UICONTROL des]* champs qui s’affiche, cochez la case **[!UICONTROL Identité]** , puis l’identité **** Principal. Enfin, sélectionnez un espace de nommage **[!UICONTROL d&#39;]** identité approprié, puis cliquez sur **[!UICONTROL Appliquer]**.
+L’éditeur **[!UICONTROL de]** Schéma s’affiche, indiquant la structure du schéma dans la trame centrale. Dans la trame, sélectionnez le champ à définir comme identité Principale. Sous l’onglet Propriétés **[!UICONTROL des]** champs qui s’affiche, cochez la case **[!UICONTROL Identité]** , puis l’identité **** Principal. Enfin, sélectionnez un espace de nommage **[!UICONTROL d&#39;]** identité approprié, puis cliquez sur **[!UICONTROL Appliquer]**.
 
 ![](../../images/tutorials/dataflow/cloud-storage/batch/set-schema-identity.png)
 
