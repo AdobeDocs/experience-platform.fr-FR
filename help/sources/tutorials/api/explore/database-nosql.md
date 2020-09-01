@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;third party database;database flow service
 solution: Experience Platform
 title: Exploration d’une base de données à l’aide de l’API du service de flux
 topic: overview
+description: Ce didacticiel utilise l’API Flow Service pour explorer le contenu et la structure de fichiers d’une base de données tierce.
 translation-type: tm+mt
-source-git-commit: fc5cdaa661c47e14ed5412868f3a54fd7bd2b451
+source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '585'
 ht-degree: 16%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 16%
 
 # Exploration d’une base de données à l’aide de l’ [!DNL Flow Service] API
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de l’Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer le contenu et la structure des fichiers d’une base de données tierce.
 
@@ -99,7 +100,7 @@ Une réponse réussie renvoie un tableau de tables de votre base de données. Tr
 ]
 ```
 
-## Inspect de la structure d’un tableau
+## inspect de la structure d’un tableau
 
 Pour inspecter la structure d&#39;une table à partir de votre base de données, effectuez une demande de GET tout en spécifiant le chemin d&#39;une table en tant que paramètre de requête.
 
