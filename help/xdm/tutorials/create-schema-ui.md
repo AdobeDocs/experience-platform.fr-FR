@@ -5,7 +5,7 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 topic: tutorials
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d946f5014707bf73f373d712b287de259c3df5cd
 workflow-type: tm+mt
 source-wordcount: '3528'
 ht-degree: 21%
@@ -113,7 +113,7 @@ Similar to the &quot;[!UICONTROL name]&quot; field, the fields you just added re
 
 The &quot;[!UICONTROL Loyalty Members]&quot; schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. Il n’existe pas de mixins standard qui contiennent les champs nécessaires. Vous devrez donc définir un nouveau mixin.
 
-Cette fois, lorsque vous ouvrez la boîte de dialogue *[!UICONTROL Ajouter un mixin]*, sélectionnez **[!UICONTROL Créer un mixin]**. Il vous sera alors demandé de fournir un **[!UICONTROL nom d’affichage]** et une **[!UICONTROL description]** pour votre mixin.
+Cette fois, lorsque vous ouvrez la boîte de dialogue **[!UICONTROL Ajouter un mixin]**, sélectionnez **[!UICONTROL Créer un mixin]**. Il vous sera alors demandé de fournir un **[!UICONTROL nom d’affichage]** et une **[!UICONTROL description]** pour votre mixin.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
