@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
 solution: Experience Platform
 title: Recherche d’un environnement de test
 topic: developer guide
+description: Vous pouvez rechercher un sandbox individuel en effectuant une requête de GET qui inclut la propriété name du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: ef423a8c1b412315d03cddf7d8c351a232eb509b
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 100%
+source-wordcount: '226'
+ht-degree: 90%
 
 ---
 
