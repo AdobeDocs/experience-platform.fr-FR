@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriels de segmentation
 topic: tutorial
+description: Adobe Experience Platform Segmentation Service propose une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir des données Real-time Customer Profile. Ces segments sont configurés et conservés de manière centralisée sur Platform et sont facilement accessibles depuis n’importe quelle solution Adobe.
 translation-type: tm+mt
-source-git-commit: ae244711ed89f4c7d6f87fd38bf7f8324e9b64be
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 52%
+source-wordcount: '584'
+ht-degree: 56%
 
 ---
 
@@ -38,7 +39,7 @@ Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a
 
 ## Segmentation par flux
 
-La segmentation en flux continu permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à l’Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter de tâches de segmentation planifiées. Pour en savoir plus, consultez la [présentation de la segmentation par flux](../segmentation/api/streaming-segmentation.md).
+La segmentation en flux continu permet d’évaluer instantanément un client dès qu’un événement entre dans un groupe de segments particulier. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à Adobe Experience Platform, ce qui signifie que l’appartenance à un segment est mise à jour sans exécuter de tâches de segmentation planifiées. Pour en savoir plus, consultez la [présentation de la segmentation par flux](../segmentation/api/streaming-segmentation.md).
 
 ## Segmentation d’entités multiples
 
