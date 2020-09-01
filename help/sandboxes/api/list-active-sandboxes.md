@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
 title: Répertorier les environnements de test actifs de l’utilisateur actuel
 topic: developer guide
+description: Vous pouvez liste les sandbox principaux pour l’utilisateur actuel en adressant une demande de GET au point de terminaison racine.
 translation-type: tm+mt
-source-git-commit: 07ff49c74ea05f84d5c7cf9a3f44e7300f0b39b8
+source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 100%
+source-wordcount: '241'
+ht-degree: 91%
 
 ---
 
