@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Création d’un connecteur Oracle à l’aide de l’API Flow Service
 topic: overview
+description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes de connexion d'Oracle à l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 5959d4344ec1c16542de045899ce74beb39a7bc4
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 17%
+source-wordcount: '535'
+ht-degree: 16%
 
 ---
 
