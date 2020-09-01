@@ -5,7 +5,7 @@ topic: overview
 title: Présentation du contrôle d’accès
 description: Le contrôle d'accès de Adobe Experience Platform est fourni par l'intermédiaire du Adobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 63%
@@ -32,7 +32,7 @@ Un workflow de haut niveau d’obtention et d’attribution d’autorisations d�
 - L’administrateur peut afficher les [profils de produit](#product-profiles) par défaut ou créer de nouveaux profils de produit clients si nécessaire.
 - L’administrateur peut modifier les autorisations et les utilisateurs pour tout profil de produit existant.
 - When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as &quot;[!UICONTROL Read Datasets]&quot; or &quot;[!UICONTROL Manage Schemas]&quot;) by accessing the **[!UICONTROL permissions]** tab. De même, l’administrateur peut attribuer des accès aux environnements de test à l’aide du même onglet Autorisations.
-- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the *[!UICONTROL Datasets]* tab in the side menu will not be visible to that user.
+- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the &quot;[!UICONTROL View Datasets]&quot; permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
 
 For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
 
@@ -95,10 +95,10 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des environnements de test] | Accès en lecture seule aux environnements de test appartenant à votre organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un environnement de test] | Capacité à réinitialiser un environnement de test. |
 | [!DNL Destinations] | [!UICONTROL Gestion des destinations] | Accès à la lecture, la création, la modification et la désactivation des destinations.* |
-| [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet *[!UICONTROL Catalogue]* et aux destinations authentifiées dans l’onglet *[!UICONTROL Parcourir]*.* |
+| [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]**.* |
 | [!DNL Destinations] | [!UICONTROL Activation des destinations] | Capacité à activer les données vers les destinations actives qui ont été créées. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations.* |
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
-| [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet *[!UICONTROL Catalogue]* et aux sources authentifiées dans l’onglet *[!UICONTROL Parcourir]*. |
+| [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 
 _(*) Cette autorisation requiert des dispositions pour[!DNL Real-time Customer Data Platform]. Pour plus d’informations concernant la plateforme de données clients en temps réel d’Adobe, commencez par lire la[présentation de la plateforme de données clients en temps réel d’Adobe](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/overview.html)._
