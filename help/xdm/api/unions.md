@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
 title: Unions
+description: Unions Les  (ou vues d’union) sont des schémas en lecture seule générés par le système qui regroupent les champs de tous les schémas qui partagent la même classe (XDM ExperienceEvent ou XDM Individual Profile) et sont activés pour Real-time Customer Profile.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 88%
+source-wordcount: '825'
+ht-degree: 89%
 
 ---
 
