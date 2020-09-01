@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur d’automatisation marketing dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 3%
@@ -108,7 +108,7 @@ Une fois que vous avez fourni les valeurs appropriées à la planification, sél
 
 L’étape de détail **** Flux de données s’affiche, vous permettant de nommer et de décrire brièvement votre nouveau flux de données.
 
-Au cours de ce processus, vous pouvez également activer les tests de diagnostic **[!UICONTROL d&#39;assimilation]** **[!UICONTROL partielle et d&#39;]** erreur. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Une fois l&#39;assimilation **** partielle activée, faites glisser le seuil d&#39; *[!UICONTROL erreur %]* pour ajuster le seuil d&#39;erreur du lot. Vous pouvez également ajuster manuellement le seuil en sélectionnant la zone d’entrée. Pour plus d&#39;informations, consultez la présentation [de l&#39;assimilation](../../../../ingestion/batch-ingestion/partial.md)partielle des lots.
+Au cours de ce processus, vous pouvez également activer les tests de diagnostic **[!UICONTROL d&#39;assimilation]** **[!UICONTROL partielle et d&#39;]** erreur. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Une fois l&#39;assimilation **** partielle activée, faites glisser le seuil d&#39; **[!UICONTROL erreur %]** pour ajuster le seuil d&#39;erreur du lot. Vous pouvez également ajuster manuellement le seuil en sélectionnant la zone d’entrée. Pour plus d&#39;informations, consultez la présentation [de l&#39;assimilation](../../../../ingestion/batch-ingestion/partial.md)partielle des lots.
 
 Fournissez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
 
