@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Amazon Redshift;Amazon redshift;redshift;Redshift
 solution: Experience Platform
 title: Connecteur de redirection Amazon
 topic: overview
+description: La documentation ci-dessous fournit des informations sur la façon de connecter Amazon Redshift à la plate-forme à l'aide des API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 12%
+source-wordcount: '235'
+ht-degree: 11%
 
 ---
 
