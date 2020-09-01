@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur d’Adobe Experience Platform Query Se
 topic: guide
 description: Adobe Experience Platform Query Service présente une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, de voir les requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '617'
 ht-degree: 67%
@@ -19,17 +19,17 @@ The Adobe Experience Platform [!DNL Query Service] provides a user interface tha
 
 ## [!DNL Query Editor]
 
-The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the *[!UICONTROL Log]* or *[!UICONTROL Browse]* tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
+The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
 
 ![Image](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] fournit un espace de modification dans lequel vous pouvez commencer à saisir une requête. Au fur et à mesure que vous tapez, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms des champs dans les tables. When finished writing your query, click the **Play** button to run the query. L’onglet *[!UICONTROL Console]* situé sous l’éditeur indique ce que fait actuellement , indiquant le moment où une requête a été renvoyée. [!DNL Query Service] L’onglet *[!UICONTROL Résultat]*, en regard de la Console, affiche les résultats de la requête. See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
+[!DNL Query Editor] fournit un espace de modification dans lequel vous pouvez commencer à saisir une requête. Au fur et à mesure que vous tapez, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms des champs dans les tables. When finished writing your query, click the **Play** button to run the query. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que fait actuellement , indiquant le moment où une requête a été renvoyée. [!DNL Query Service] L’onglet **[!UICONTROL Résultat]**, en regard de la Console, affiche les résultats de la requête. See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
 
 ![Image](../images/queries/ui-overview/query-editor.png)
 
 ## Parcourir
 
-L’onglet *[!UICONTROL Parcourir]* affiche les requêtes enregistrées par les utilisateurs de votre organisation. Il est utile de les voir comme des projets de requêtes, car les requêtes enregistrées ici peuvent encore être en cours de construction. Les requêtes affichées dans l’onglet *[!UICONTROL Parcourir]* s’affichent également sous la forme de requêtes exécutées dans l’onglet *[!UICONTROL Journal]* si elles ont été exécutées par [!DNL Query Service].
+L’onglet **[!UICONTROL Parcourir]** affiche les requêtes enregistrées par les utilisateurs de votre organisation. Il est utile de les voir comme des projets de requêtes, car les requêtes enregistrées ici peuvent encore être en cours de construction. Les requêtes affichées dans l’onglet **[!UICONTROL Parcourir]** s’affichent également sous la forme de requêtes exécutées dans l’onglet **[!UICONTROL Journal]** si elles ont été exécutées par [!DNL Query Service].
 
 ![Image](../images/queries/ui-overview/browse.png)
 
@@ -42,7 +42,7 @@ L’onglet *[!UICONTROL Parcourir]* affiche les requêtes enregistrées par les 
 
 ## Journal
 
-L’onglet *[!UICONTROL Journal]* fournit une liste de requêtes qui ont été exécutées précédemment. Par défaut, le journal répertorie les requêtes dans l’ordre chronologique décroissant.
+L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été exécutées précédemment. Par défaut, le journal répertorie les requêtes dans l’ordre chronologique décroissant.
 
 ![Image](../images/queries/ui-overview/log.png)
 
@@ -58,7 +58,7 @@ L’onglet *[!UICONTROL Journal]* fournit une liste de requêtes qui ont été e
 
 ## Informations d’identification
 
-L’onglet *[!UICONTROL Informations d’identification]* affiche vos informations d’identification [!DNL Postgres] Cliquez sur l’icône **[!UICONTROL Copier]** en regard d’un champ pour stocker son contenu dans la mémoire tampon du clavier. Pour plus d’informations sur l’utilisation de ces informations d’identification pour établir une connexion avec des clients externes, consultez le [guide de connexion aux clients][connect-clients].
+L’onglet **[!UICONTROL Informations d’identification]** affiche vos informations d’identification [!DNL Postgres] Cliquez sur l’icône **[!UICONTROL Copier]** en regard d’un champ pour stocker son contenu dans la mémoire tampon du clavier. Pour plus d’informations sur l’utilisation de ces informations d’identification pour établir une connexion avec des clients externes, consultez le [guide de connexion aux clients][connect-clients].
 
 ![Image](../images/queries/ui-overview/credentials.png)
 
