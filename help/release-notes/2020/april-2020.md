@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 59%
+source-wordcount: '991'
+ht-degree: 60%
 
 ---
 
@@ -73,7 +73,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 La prise en main de la gouvernance des données nécessite une compréhension approfondie des réglementations, des obligations contractuelles et des politiques d’entreprise qui s’appliquent aux données clients. À partir de là, les données peuvent être classifiées en appliquant les libellés d’utilisation des données appropriés, et leur utilisation peut être contrôlée via la définition des stratégies d’utilisation des données.
 
-The DULE framework simplifies and streamlines the process of categorizing data and creating data usage policies through the [!DNL Experience Platform] user interface and DULE [!DNL Policy Service] API.
+The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies through the [!DNL Experience Platform] user interface and [!DNL Policy Service] API.
 
 **Nouvelles fonctionnalités**
 
