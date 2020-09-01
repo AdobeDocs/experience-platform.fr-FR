@@ -5,7 +5,7 @@ title: Gestion des détails et des services supplémentaires pour un profil de p
 topic: user guide
 description: Ce document couvre les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produits dans le Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 83%
@@ -15,19 +15,19 @@ ht-degree: 83%
 
 # Gestion des détails et des services supplémentaires pour un profil de produit
 
-Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu *[!UICONTROL Paramètres du profil]*. Pour accéder au menu, cliquez sur **[!UICONTROL Paramètres]** dans la page *[!UICONTROL Profil du produit]*.
+Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu **[!UICONTROL Paramètres du profil]**. Pour accéder au menu, cliquez sur **[!UICONTROL Paramètres]** dans la page **[!UICONTROL Profil du produit]**.
 
 ![profile-settings](../images/profile-settings.png)
 
-Le menu *[!UICONTROL Paramètres du profil]* s’affiche à partir de l’onglet *[!UICONTROL Détails]*. Cet onglet vous permet de saisir et de modifier le **[!UICONTROL Nom du profil]** et la **[!UICONTROL Description]**. Vous pouvez également modifier le **[!UICONTROL Nom d’affichage]** ainsi que les paramètres de notification par e-mail de votre compte.
+Le menu **[!UICONTROL Paramètres du profil]** s’affiche à partir de l’onglet **[!UICONTROL Détails]**. Cet onglet vous permet de saisir et de modifier le **[!UICONTROL Nom du profil]** et la **[!UICONTROL Description]**. Vous pouvez également modifier le **[!UICONTROL Nom d’affichage]** ainsi que les paramètres de notification par e-mail de votre compte.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
-Cliquez sur **[!UICONTROL Services]** pour accéder à la page *[!UICONTROL Services]*.
+Cliquez sur **[!UICONTROL Services]** pour accéder à la page **[!UICONTROL Services]**.
 
 ![services-page](../images/services-page.png)
 
-Le menu *[!UICONTROL Services]* vous permet de modifier l’accès d’un profil aux services supplémentaires de qui ont été initialement configurés lors de la création du profil. [!DNL Platform] Depending on your [!DNL Platform] subscription, these services can include:
+Le menu **[!UICONTROL Services]** vous permet de modifier l’accès d’un profil aux services supplémentaires de qui ont été initialement configurés lors de la création du profil. [!DNL Platform] Depending on your [!DNL Platform] subscription, these services can include:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
