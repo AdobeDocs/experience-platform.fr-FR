@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; payment; paypal
+keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
 title: Collecte de données de paiement via les connecteurs et les API source
 topic: overview
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application de paiement tierce et les intégrer à la plate-forme par le biais des connecteurs source et de l’API de service de flux.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de paiement et les intégrer à la plate-forme par le biais des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 6578fd607d6f897a403d0af65c81dafe3dc12578
+source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1743'
 ht-degree: 12%
 
 ---
