@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en charge d’IAB TCF 2.0 dans la plate-forme de données client en temps réel
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: e7cbbd2e376ab109367d1d16cb9e033202866a6f
+source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 5%
@@ -71,7 +71,7 @@ Bien que chaque mélange de confidentialité varie en structure et en types de c
 
 ## Créer des schémas de consentement client {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas]workspace *. À partir de là, suivez les étapes décrites dans les sections ci-dessous pour créer chaque schéma requis.
+In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas]workspace*. À partir de là, suivez les étapes décrites dans les sections ci-dessous pour créer chaque schéma requis.
 
 >[!NOTE]
 >
@@ -79,11 +79,11 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Créer un schéma de consentement basé sur les enregistrements {#profile-schema}
 
-Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail *Schémas *, créez un schéma en fonction de la classe**[!DNL XDM Individual Profile]**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]**sous la section *[!UICONTROL Mélanges]*située sur le côté gauche de la trame.
+Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma basé sur la **[!DNL XDM Individual Profile]classe**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The *[!UICONTROL Add mixin]* dialog appears. A partir de là, sélectionnez **[!UICONTROL Profil de confidentialité]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois le mixin sélectionné, cliquez sur **[!UICONTROL Ajouter le mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. A partir de là, sélectionnez **[!UICONTROL Profil de confidentialité]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois le mixin sélectionné, cliquez sur **[!UICONTROL Ajouter le mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -112,7 +112,7 @@ Pour [!DNL Real-time CDP] associer les données de consentement qu&#39;il reçoi
 >
 >Pour savoir comment définir un Principal champ d&#39;identité pour un schéma, consultez le didacticiel [de création de](../../../xdm/tutorials/create-schema-ui.md#identity-field)schéma.
 
-Pour activer le schéma pour [!DNL Profile], cliquez sur le nom du schéma dans le rail de gauche pour ouvrir la boîte de dialogue des propriétés *[!UICONTROL du]* Schéma dans le rail de droite. A partir de là, cliquez sur le bouton bascule **[!UICONTROL Profil]** .
+Pour activer le schéma pour [!DNL Profile], cliquez sur le nom du schéma dans le rail de gauche pour ouvrir la boîte de dialogue des propriétés **[!UICONTROL du]** Schéma dans le rail de droite. A partir de là, cliquez sur le bouton bascule **[!UICONTROL Profil]** .
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -126,11 +126,11 @@ Enfin, cliquez sur **[!UICONTROL Enregistrer]** pour confirmer vos modifications
 
 ### Créer un schéma de consentement basé sur une série chronologique {#event-schema}
 
-Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail *Schémas *, créez un schéma en fonction de la classe**[!DNL XDM ExperienceEvent]**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]**sous la section *[!UICONTROL Mélanges]*située sur le côté gauche de la trame.
+Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma basé sur la **[!DNL XDM ExperienceEvent]classe**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
 
 ![](../assets/iab/add-mixin-event.png)
 
-The *[!UICONTROL Add mixin]* dialog appears. Sélectionnez **[!UICONTROL Expérience événement privacy mixin]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois le mixin sélectionné, cliquez sur **[!UICONTROL Ajouter le mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. Sélectionnez **[!UICONTROL Expérience événement privacy mixin]** dans la liste. Vous pouvez également utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le mixin. Une fois le mixin sélectionné, cliquez sur **[!UICONTROL Ajouter le mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -161,11 +161,11 @@ On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-Le processus _[!UICONTROL Créer un jeu de données à partir du schéma]_s&#39;affiche, en commençant à l&#39;étape_[!UICONTROL  Sélectionner un schéma]_ . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la recherche pour affiner les résultats et faciliter la localisation de votre schéma. Cliquez sur le bouton radio en regard du schéma pour le sélectionner, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Le processus **[!UICONTROL Créer un jeu de données à partir du schéma]** s&#39;affiche, en commençant à l&#39;étape **[!UICONTROL Sélectionner un schéma]** . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la recherche pour affiner les résultats et faciliter la localisation de votre schéma. Cliquez sur le bouton radio en regard du schéma pour le sélectionner, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-L’étape _[!UICONTROL Configurer le jeu de données]_apparaît. Fournissez un nom et une description uniques et facilement identifiables pour le jeu de données avant de cliquer sur**[!UICONTROL  Terminer ]**.
+L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Fournissez un nom et une description uniques et facilement identifiables pour le jeu de données avant de cliquer sur **[!UICONTROL Terminer]**.
 
 ![](../assets/iab/dataset-configure.png)
 
