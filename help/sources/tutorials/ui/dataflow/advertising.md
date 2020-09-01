@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur
 topic: overview
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 4%
@@ -29,7 +29,7 @@ De plus, ce didacticiel nécessite que vous ayez déjà créé un compte publici
 
 ## Sélectionner des données
 
-Après avoir créé votre compte publicitaire, l’étape *[!UICONTROL Sélectionner les données]* s’affiche, ce qui vous permet d’explorer la hiérarchie des fichiers dans une interface interactive.
+Après avoir créé votre compte publicitaire, l’étape **[!UICONTROL Sélectionner les données]** s’affiche, ce qui vous permet d’explorer la hiérarchie des fichiers dans une interface interactive.
 
 - La moitié gauche de l&#39;interface est un navigateur d&#39;annuaire qui affiche les fichiers et répertoires de votre serveur.
 - La moitié droite de l&#39;interface vous permet de prévisualisation jusqu&#39;à 100 lignes de données à partir d&#39;un fichier compatible.
@@ -40,7 +40,7 @@ Sélectionnez le répertoire que vous souhaitez utiliser, puis sélectionnez **[
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape *[!UICONTROL Mappage]* s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données.
+L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -50,7 +50,7 @@ Pour importer des données dans un jeu de données existant, sélectionnez **[!U
 
 ![use-existing-dataset](../../../images/tutorials/dataflow/advertising/use-existing-target-dataset.png)
 
-The *[!UICONTROL Select dataset]* dialog appears. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
+The **[!UICONTROL Select dataset]** dialog appears. Recherchez le jeu de données que vous souhaitez utiliser, sélectionnez-le, puis cliquez sur **[!UICONTROL Continuer]**.
 
 ![select-existing-dataset](../../../images/tutorials/dataflow/advertising/select-existing-dataset.png)
 
@@ -62,7 +62,7 @@ Vous pouvez joindre un champ de schéma en entrant un nom de schéma dans la bar
 
 ![create-new-dataset](../../../images/tutorials/dataflow/all-tabular/new-target-dataset.png)
 
-The *[!UICONTROL Select schema]* dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!DNL Done]**.
+The **[!UICONTROL Select schema]** dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis cliquez sur **[!DNL Done]**.
 
 ![sélection-schéma](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
@@ -74,14 +74,14 @@ Une fois les données source mises en correspondance, cliquez sur **[!UICONTROL 
 
 ## Planifier les exécutions d&#39;assimilation
 
-L&#39;étape *[!UICONTROL Planification]* s&#39;affiche, ce qui vous permet de configurer un programme d&#39;assimilation pour assimiler automatiquement les données source sélectionnées à l&#39;aide des mappages configurés. Le tableau suivant décrit les différents champs configurables pour la planification :
+L&#39;étape **[!UICONTROL Planification]** s&#39;affiche, ce qui vous permet de configurer un programme d&#39;assimilation pour assimiler automatiquement les données source sélectionnées à l&#39;aide des mappages configurés. Le tableau suivant décrit les différents champs configurables pour la planification :
 
 | Champ | Description |
 | --- | --- |
 | Fréquence | Les fréquences sélectionnables sont `Once`, `Minute`, `Hour`, `Day`et `Week`. |
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
 | Début | Horodatage UTC indiquant à quel moment la première importation est prévue. |
-| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le *[!UICONTROL renvoi]* est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le *renvoi* est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai *[!UICONTROL de]* Début seront ingérés. Les fichiers chargés avant l&#39;heure *[!UICONTROL de]* Début ne seront pas ingérés. |
+| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le **[!UICONTROL renvoi]** est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le **[!UICONTROL renvoi]** est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai **[!UICONTROL de]** Début seront ingérés. Les fichiers chargés avant l&#39;heure **[!UICONTROL de]** Début ne seront pas ingérés. |
 | Colonne Delta | Option avec un ensemble filtré de champs de schéma source de type, de date ou d’heure. Ce champ permet de différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
 Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Début en sélectionnant la fréquence d&#39;ingestion. Ensuite, définissez l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
