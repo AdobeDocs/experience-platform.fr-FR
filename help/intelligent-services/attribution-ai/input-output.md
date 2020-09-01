@@ -5,7 +5,7 @@ title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 16%
@@ -136,11 +136,11 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie des 
 
 ### Affichage des chemins d’accès aux scores bruts (interface utilisateur) {#raw-score-path}
 
-Vous pouvez vue le chemin d’accès à vos scores bruts dans l’interface utilisateur. Début en sélectionnant **[!UICONTROL Schémas]** dans l’interface utilisateur de la plate-forme, puis en recherchant et en sélectionnant votre schéma de scores AI d’attribution dans l’onglet *[!UICONTROL Parcourir]* .
+Vous pouvez vue le chemin d’accès à vos scores bruts dans l’interface utilisateur. Début en sélectionnant **[!UICONTROL Schémas]** dans l’interface utilisateur de la plate-forme, puis en recherchant et en sélectionnant votre schéma de scores AI d’attribution dans l’onglet **[!UICONTROL Parcourir]** .
 
 ![Choisissez votre schéma](./images/input-output/schemas_browse.png)
 
-Ensuite, sélectionnez un champ dans la fenêtre *[!UICONTROL Structure]* de l’interface utilisateur. L’onglet Propriétés *[!UICONTROL du]* champ s’ouvre. Dans les propriétés ** de champ se trouve le champ *[!UICONTROL Chemin]* qui correspond à vos scores bruts.
+Ensuite, sélectionnez un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet Propriétés **[!UICONTROL du]** champ s’ouvre. Dans les propriétés **** de champ se trouve le champ **[!UICONTROL Chemin]** qui correspond à vos scores bruts.
 
 ![Choisir un Schéma](./images/input-output/field_properties.png)
 
