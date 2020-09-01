@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 30%
+source-wordcount: '1359'
+ht-degree: 28%
 
 ---
 
@@ -155,17 +155,17 @@ Vous trouverez plus d’informations sur la segmentation en flux continu dans le
 >
 >Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’entreprise. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
 
-## Violations de stratégie DULE
+## Violations de stratégie
 
 >[!NOTE]
 >
->Les violations de stratégie DULE ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
+>Les violations de stratégie ne s’appliquent que si vous créez un segment qui a été affecté à une destination.
 
-Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. Pour plus d’informations sur DULE et sur les violations de stratégie, reportez-vous à la [présentation des libellés d’utilisation des données](../../data-governance/labels/overview.md).
+Une fois que vous avez créé votre segment, celui-ci est analysé par la gouvernance des données Adobe Experience Platform afin de s’assurer qu’il n’y a aucune violation de stratégie dans le segment. Pour plus d’informations, consultez la [[!DNL Data Governance] présentation des ](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
-## Étapes suivantes and additional resources {#next-steps}
+## Étapes suivantes et ressources supplémentaires {#next-steps}
 
 The [!DNL Segmentation Service] UI provides a rich workflow allowing you to isolate marketable audiences from [!DNL Real-time Customer Profile] data.
 
