@@ -5,7 +5,7 @@ title: Notation d’un modèle (interface utilisateur)
 topic: Tutorial
 description: 'La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot. '
 translation-type: tm+mt
-source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
+source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 91%
@@ -43,7 +43,7 @@ Vous pouvez créer une opération de notation l’aide de configurations optimis
 5. La dernière étape du processus vous invite à configurer votre opération de notation. Ces configurations sont utilisées par le modèle pour l’opération de notation.
 Notez que vous ne pourrez pas supprimer les paramètres hérités définis lors de la création du modèle. Vous pouvez modifier ou rétablir des paramètres non hérités en double-cliquant sur la valeur ou en cliquant sur l’icône d’annulation lorsque vous survolez l’entrée.
    ![](../images/models-recipes/score/configuration.png)
-Vérifiez et confirmez les configurations de notation, puis cliquez sur **[!UICONTROL Terminer]** pour créer et exécuter l’opération de notation. Vous serez dirigé vers l’onglet *Opérations de notation* et la nouvelle opération de notation affichera un état.
+Vérifiez et confirmez les configurations de notation, puis cliquez sur **[!UICONTROL Terminer]** pour créer et exécuter l’opération de notation. Vous serez dirigé vers l’onglet **[!UICONTROL Opérations de notation]** et la nouvelle opération de notation affichera un état.
    ![](../images/models-recipes/score/scoring_runs_tab.png)
 L’opération de notation affiche l’un des quatre états suivants : En attente, Terminé, Échec ou En cours d’exécution. Ils sont mis à jour automatiquement. Passez à l’étape suivante si l’état affiché est « Terminé » ou « Échec ».
 
