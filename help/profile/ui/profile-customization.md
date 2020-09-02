@@ -5,9 +5,9 @@ title: Personnalisation des détails du profil
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: c3076b37d2242fce4fa62e747adeb8b0534e995d
+source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Après l’enregistrement, vous revenez à l’onglet [!UICONTROL Détails] , o�
 
 ## Restaurer les cartes par défaut
 
-Si vous décidez à tout moment de supprimer vos modifications et de revenir à la vue par défaut, vous avez la possibilité de restaurer rapidement et facilement toutes les cartes et attributs par défaut. Pour ce faire, sélectionnez **[UICONTROL Modify tableau de bord]**, puis **[UICONTROL Restore default cards]**. Cette opération supprime toutes les personnalisations (y compris le redimensionnement) que vous avez effectuées. Pour continuer, sélectionnez **[UICONTROL Save]** pour enregistrer vos modifications ou, si vous avez choisi de restaurer par erreur, sélectionnez **[UICONTROL Cancel]** pour éviter d&#39;enregistrer vos modifications et conserver les modifications que vous avez effectuées.
+Si vous décidez à tout moment de supprimer vos modifications et de revenir à la vue par défaut, vous avez la possibilité de restaurer rapidement et facilement toutes les cartes et attributs par défaut. Pour ce faire, sélectionnez **[!UICONTROL Modifier le tableau de bord]**, puis **[!UICONTROL Restaurer les cartes]** par défaut. Cette opération supprime toutes les personnalisations (y compris le redimensionnement) que vous avez effectuées. Vous pouvez ensuite sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications ou, si vous ne souhaitez pas restaurer la valeur par défaut, sélectionner **[!UICONTROL Annuler]** pour conserver les modifications que vous avez effectuées.
 
 >[!NOTE]
 >
