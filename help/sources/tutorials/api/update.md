@@ -5,9 +5,9 @@ title: Mise à jour des informations de connexion à l’aide de l’API du serv
 topic: overview
 description: Ce didacticiel décrit les étapes de mise à jour des informations de connexion, y compris leur nom, leur description et leurs informations d’identification à l’aide de l’API du service de flux.
 translation-type: tm+mt
-source-git-commit: 1292e39ea7682b839ea75dd069ce32f1591345b8
+source-git-commit: 81ce43bf705bea65b523ac612fae5961e8eeb322
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '713'
 ht-degree: 13%
 
 ---
@@ -19,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes de mise à jour des informations de connexion, y compris le nom, la description et les informations d’identification à l’aide du [!DNL Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce didacticiel décrit les étapes de mise à jour des informations de connexion, y compris le nom, la description et les informations d’identification à l’aide de l’API [[ !DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prise en main
 
