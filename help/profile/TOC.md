@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Aide pour Real-time Customer Profile
 user-guide-description: Real-time Customer Profile provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third-party data. Profile allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 59%
+source-wordcount: '86'
+ht-degree: 58%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 59%
    * [[!DNL Profile] tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
 * Guides de l’interface utilisateur {#ui}
    * [[!DNL Profile] guide de l&#39;utilisateur](ui/user-guide.md)
+   * [[!DNL Profile] personnalisation détaillée](ui/profile-customization.md)
    * [Guide d’utilisation des stratégies de fusion](ui/merge-policies.md)
 * Tutoriels {#tutorials}
    * [ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
