@@ -5,10 +5,10 @@ title: Connecteur de concentrateurs de Événement Azure
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la façon de connecter les concentrateurs de Événement Azure à la plate-forme à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 7b92327cfeb2410baf313dd650f68cfeb6db36e6
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '241'
+ht-degree: 1%
 
 ---
 
@@ -55,15 +55,17 @@ Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Se connecter [!DNL Azure Event Hubs] à [!DNL Platform]
+
 La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Azure Event Hubs] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Se connecter [!DNL Azure Event Hubs] à [!DNL Platform] l’aide des API
+### Utilisation des API
 
 - [Création d&#39;un connecteur Azure Événement Hubs à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Se connecter [!DNL Azure Event Hubs] à [!DNL Platform] l’aide de l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 - [Création d&#39;un connecteur source Azure Événement Hubs dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/eventhub.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
