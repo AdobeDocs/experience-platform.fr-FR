@@ -5,10 +5,10 @@ title: Connecteur FTP et SFTP
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la connexion d’un serveur FTP ou STFP à une plateforme à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: d42351c194bb5a11f3175535de83fbd3b6ac58d2
 workflow-type: tm+mt
-source-wordcount: '264'
-ht-degree: 3%
+source-wordcount: '424'
+ht-degree: 5%
 
 ---
 
@@ -55,15 +55,28 @@ Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
-La documentation ci-dessous fournit des informations sur la connexion d’un serveur FTP ou STFP à [!DNL Platform] l’aide d’API ou de l’interface utilisateur :
+## Contraintes de nommage pour les fichiers et répertoires
 
-## Connectez FTP et SFTP à [!DNL Platform] l’aide d’API.
+Voici une liste de contraintes dont vous devez tenir compte lorsque vous nommez votre fichier ou répertoire d’enregistrement cloud.
+
+- Les noms des composants de répertoire et de fichier ne peuvent pas dépasser 255 caractères.
+- Les noms de répertoire et de fichier ne peuvent pas se terminer par une barre oblique (`/`). S&#39;il est fourni, il sera automatiquement supprimé.
+- Les caractères d’URL réservés suivants doivent être correctement placés en séquence d’échappement : `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Les caractères suivants ne sont pas autorisés : `" \ / : | < > * ?`.
+- Caractères de chemin d’URL non autorisés. Les points de code tels que `\uE000`, bien qu&#39;ils soient valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode dans HTTP/1.1, voir [RFC 2616, Section 2.2 : Règles](https://www.ietf.org/rfc/rfc2616.txt) de base et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractère point (.) et deux caractères de point (.).
+
+## Connectez FTP et SFTP à [!DNL Platform]
+
+La documentation ci-dessous fournit des informations sur la connexion d’un serveur FTP ou SFTP à [!DNL Platform] l’aide d’API ou de l’interface utilisateur :
+
+### Utilisation des API
 
 - [Création d’un connecteur FTP ou SFTP à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
-## Connectez FTP ou SFTP à [!DNL Platform] l’aide de l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 - [Création d’un connecteur source FTP ou SFTP dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
