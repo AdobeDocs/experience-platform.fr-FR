@@ -4,10 +4,10 @@ solution: Adobe Experience Platform
 title: Guide d’utilisation des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '1433'
-ht-degree: 44%
+source-wordcount: '1440'
+ht-degree: 36%
 
 ---
 
@@ -55,16 +55,16 @@ L’écran **[!UICONTROL Créer une stratégie de fusion]** apparaît et vous pe
 * **[!UICONTROL Combinaison d’identités]** : ce champ définit la manière de déterminer les identités liées d’un client. Deux valeurs sont possibles :
    * **[!UICONTROL Aucun]** : ne réalise pas de combinaison d’identités.
    * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
-* **[!UICONTROL Fusion d’attributs]** : un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un client individuel. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit d&#39;attributs de profil et la priorité doit être spécifiée. L’utilisation de la fusion  Attribut vous permet de spécifier les valeurs de profil de jeux de données à classer par priorité en cas de conflit de fusion entre des jeux de données de type Valeur clé (données d’enregistrement). Deux valeurs sont possibles :
-   * **[!UICONTROL Classé par date et heure]** : en cas de conflit, vous donnez la priorité au profil mis à jour le plus récemment. [!UICONTROL L’horodatage ordonné] prend également en charge les horodatages personnalisés qui prennent la priorité sur les horodatages système lors de la fusion de données dans le même jeu de données (identités multiples) ou entre plusieurs jeux de données. Pour en savoir plus, reportez-vous à la section [horodatage ordonné](#timestamp-ordered) qui suit.
-   * **[!UICONTROL Priorité du jeu de données]** : donne la priorité aux fragments de profil en fonction de leur jeu de données d’origine. Lorsque vous sélectionnez cette option, vous devez sélectionner les jeux de données associés et leur ordre de priorité. Consultez les détails de la [priorité du jeu de données](#dataset-precedence) ci-dessous pour plus d’informations.
+* **[!UICONTROL Fusion]** d&#39;attribut : Un fragment de profil contient des informations pour une seule identité sur la liste des identités qui existent pour un client individuel. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit d&#39;attributs de profil et la priorité doit être spécifiée. Using [!UICONTROL Attribute merge] allows you to specify which dataset profile values to prioritize if a merge conflict occurs between key-value (record data) type datasets. Deux valeurs sont possibles :
+   * **[!UICONTROL Horodatage ordonné]**: Dans le événement d&#39;un conflit, la priorité est donnée au profil qui a été mis à jour le plus récemment. [!UICONTROL L’horodatage ordonné] prend également en charge les horodatages personnalisés qui prennent la priorité sur les horodatages système lors de la fusion de données dans le même jeu de données (identités multiples) ou entre plusieurs jeux de données. Pour en savoir plus, reportez-vous à la section [horodatage ordonné](#timestamp-ordered) qui suit.
+   * **[!UICONTROL Ordre de priorité]** des jeux de données : Dans le événement d’un conflit, donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Lorsque vous sélectionnez cette option, vous devez choisir les jeux de données connexes et leur ordre de priorité. Consultez les détails de la [priorité du jeu de données](#dataset-precedence) ci-dessous pour plus d’informations.
 * **[!UICONTROL Stratégie de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette stratégie de fusion ou non comme stratégie par défaut pour votre organisation. Si le sélecteur est activé et que la nouvelle stratégie est enregistrée, votre stratégie précédente par défaut est mise à jour automatiquement et n’est plus la stratégie par défaut.
 
 ### Horodatage trié {#timestamp-ordered}
 
 Comme les enregistrements de Profil sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque l’ [!UICONTROL horodatage ordonné] est sélectionné comme type de fusion  Attribut pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
 
-Il peut arriver, par exemple, que des données soient renvoyées ou que l’ordre des événements soit correct si les enregistrements sont ingérés dans l’ordre, lorsqu’il est nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système.
+Parfois, il peut être nécessaire de fournir un horodatage personnalisé et de faire en sorte que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système. Par exemple, le renvoi de données ou la vérification de l’ordre correct des événements en cas d’assimilation irrégulière d’enregistrements.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ La capture d&#39;écran suivante affiche les champs du Mélange [!UICONTROL des 
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
-Pour utiliser des horodatages personnalisés à l’aide de l’API, reportez-vous à l’Annexe du guide [des points de terminaison des stratégies de](../api/merge-policies.md) fusion, puis à la section relative à l’ [utilisation d’horodatages](../api/merge-policies.md#custom-timestamps)personnalisés.
+Pour utiliser des horodatages personnalisés à l’aide de l’API, reportez-vous à l’Annexe du guide [des points de terminaison des stratégies de](../api/merge-policies.md) fusion et à la section relative à l’ [utilisation d’horodatages](../api/merge-policies.md#custom-timestamps)personnalisés.
 
 ### Priorité du jeu de données {#dataset-precedence}
 
@@ -92,7 +92,7 @@ Lors de la sélection d’une valeur de [!UICONTROL fusion d’attributs], vous 
 
 Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
 
-Lorsque vous sélectionnez une [!UICONTROL priorité de jeu de données], un panneau séparé s’ouvre vous demandant de sélectionner parmi les [!UICONTROL jeux de données disponibles] (vous pouvez également utiliser la case à cocher pour tous les sélectionner) les jeux de données qui seront inclus. Vous pouvez ensuite faire glisser et déposer ces jeux de données dans le panneau [!UICONTROL Jeux de données sélectionnés] et les faire glisser dans l’ordre de priorité correct. Le jeu de données supérieur se verra accorder la priorité la plus élevée, puis le deuxième jeu de données sera placé en deuxième position et ainsi de suite.
+Lors de la sélection de la priorité Jeu de données, un panneau distinct s’ouvre et vous demande de sélectionner dans les jeux de données  disponibles les jeux de données qui seront inclus (ou d’utiliser la case à cocher pour sélectionner tous les jeux de données). Vous pouvez ensuite faire glisser et déposer ces jeux de données dans le panneau [!UICONTROL Jeux de données sélectionnés] et les faire glisser dans l’ordre de priorité correct. Le jeu de données le plus élevé aura la priorité la plus élevée, le deuxième jeu de données la plus élevée, etc.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -100,11 +100,11 @@ Once you have finished creating the merge policy, select **[!UICONTROL Save]** t
 
 ## Modification d’une stratégie de fusion
 
-You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by clicking on the [!UICONTROL Policy name]* for the merge policy you wish to edit.
+You can modify an existing merge policy through the [!UICONTROL Merge policies] tab by selecting the **[!UICONTROL Policy name]** for the merge policy you wish to edit.
 
 ![Page d’entrée des stratégies de fusion](../images/merge-policies/select-edit.png)
 
-Lorsque l’écran [!UICONTROL Modifier la stratégie de fusion] apparaît, vous pouvez apporter des modifications au [!UICONTROL nom], au [!UICONTROL schéma], au type de [!UICONTROL combinaison d’identités] et au type de [!UICONTROL fusion d’attributs] ainsi que sélectionner cette stratégie ou non comme [!UICONTROL Stratégie de fusion par défaut] pour votre organisation.
+Lorsque l’écran **[!UICONTROL Modifier la stratégie de fusion]** apparaît, vous pouvez apporter des modifications au [!UICONTROL nom], au [!UICONTROL schéma], au type de [!UICONTROL combinaison d’identités] et au type de [!UICONTROL fusion d’attributs] ainsi que sélectionner cette stratégie ou non comme [!UICONTROL Stratégie de fusion par défaut] pour votre organisation.
 
 >[!NOTE]
 >
