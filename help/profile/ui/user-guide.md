@@ -5,10 +5,10 @@ title: Guide d’utilisation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
 workflow-type: tm+mt
-source-wordcount: '1207'
-ht-degree: 17%
+source-wordcount: '1292'
+ht-degree: 13%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 17%
 
 [!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces.
 
-This document serves as a guide for interacting with [!DNL Real-time Customer Profile] in the Adobe Experience Platform user interface.
+This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface.
 
 ## Prise en main
 
@@ -25,11 +25,11 @@ This user guide requires an understanding of the various [!DNL Experience Platfo
 
 * [[ !Profil client en temps réel DNL]](../home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [[ !Service d&#39;identité DNL]](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier les identités à partir de sources de données disparates au fur et à mesure de leur assimilation [!DNL Platform].
-* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
 ## Présentation
 
-In the [[!DNL Experience Platform UI]](http://platform.adobe.com), click **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
+Dans l’ [[!DNL Experience Platform] interface utilisateur](http://platform.adobe.com), sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]** . Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -41,11 +41,11 @@ Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour parcourir les profils p
 
 ### Mesures de profil {#profile-metrics}
 
-Sur le côté droit de l&#39;onglet **[!UICONTROL Parcourir]** se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
+Sur le côté droit de l&#39;onglet [!UICONTROL Parcourir] se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-Outre ces mesures, la section Mesures de profil fournit également une date et une heure de *dernière mise à jour* , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
+Outre ces mesures, la section Mesures de profil fournit également une date et une heure de [!UICONTROL dernière mise à jour] , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -55,17 +55,17 @@ The profile count displays the total number of profiles your organization has wi
 
 Le nombre de profils inclut également les profils avec des attributs (données d’enregistrement) ainsi que les profils contenant uniquement des données de séries chronologiques (événement), telles que les profils de Adobe Analytics. Le nombre de profils est régulièrement actualisé afin de fournir un nombre total de profils actualisé au sein de la Plateforme.
 
-Lorsque l&#39;assimilation d&#39;enregistrements dans la [!DNL Profile Store] table augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
+Lorsque l’assimilation d’enregistrements dans la [!DNL Profile] boutique augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre de profils.
 
 ### Profils par espace de nommage {#profiles-by-namespace}
 
 La mesure **[!UICONTROL Profils par espace de nommage]** affiche le nombre total et la ventilation des espaces de nommage sur l’ensemble des profils fusionnés dans votre Profil Store. Le nombre total de profils par espace de nommage (en d’autres termes, l’ajout des valeurs affichées pour chaque espace de nommage) sera toujours supérieur à la mesure Nombre de profils, car un profil peut être associé à plusieurs espaces de nommage. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de nommage sont associés à ce client individuel.
 
-Tout comme la mesure du nombre [de](#profile-count) profils, lorsque l’assimilation d’enregistrements dans le [!DNL Profile Store] augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour les mesures d’espace de nommage. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’assimilation par lot, dans les 15 minutes qui suivent l’assimilation réussie d’un lot dans le [!DNL Profile Store], si le seuil de 5 % d’augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour les mesures.
+Tout comme la mesure du nombre [de](#profile-count) profils, lorsque l’assimilation d’enregistrements dans la [!DNL Profile] boutique augmente ou diminue le nombre de plus de 5 %, une tâche est déclenchée pour mettre à jour les mesures d’espace de nommage. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le nombre de profils. Pour l’assimilation par lot, dans les 15 minutes qui suivent l’importation d’un lot dans la [!DNL Profile] boutique, si le seuil de 5 % d’augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour les mesures.
 
 ### Fusionner la stratégie
 
-Le sélecteur de stratégies **[!UICONTROL de]** fusion sélectionne automatiquement la stratégie de fusion par défaut pour votre organisation. Si vous ne souhaitez pas utiliser cette stratégie de fusion, vous pouvez sélectionner la stratégie de fusion `X` en regard de la stratégie de fusion par défaut pour ouvrir une boîte de dialogue **[!UICONTROL Sélectionner la stratégie]** de fusion dans laquelle vous pouvez choisir une autre stratégie de fusion. Pour en savoir plus sur les stratégies de fusion, consultez le guide [de l’utilisateur](merge-policies.md)Fusionner les stratégies.
+Le sélecteur de stratégies **[!UICONTROL de]** fusion sélectionne automatiquement la stratégie de fusion par défaut pour votre organisation. Si vous ne souhaitez pas utiliser cette stratégie de fusion, vous pouvez sélectionner la stratégie de fusion `X` en regard de la stratégie de fusion par défaut pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner la stratégie]** de fusion, dans laquelle vous pouvez choisir une autre stratégie de fusion. Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez le guide [d’utilisation des stratégies de](merge-policies.md)fusion.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -75,13 +75,13 @@ Le sélecteur d&#39;espace de nommage **** d&#39;identité ouvre une boîte de d
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-Dans la boîte de dialogue **[!UICONTROL Sélectionner un espace de nommage]** d&#39;identité, choisissez l&#39;espace de nommage de recherche ou utilisez la barre de **[!UICONTROL recherche]** de la boîte de dialogue pour commencer à saisir le nom d&#39;un espace de nommage. Vous pouvez sélectionner un espace de nommage pour vue d&#39;autres détails, et une fois que vous avez trouvé l&#39;espace de nommage, vous pouvez sélectionner le bouton radio et appuyer sur **[!UICONTROL Sélectionner]** pour continuer.
+Dans la boîte de dialogue **[!UICONTROL Sélectionner un espace de nommage]** d&#39;identité, choisissez l&#39;espace de nommage de recherche ou utilisez la barre de recherche de la boîte de dialogue pour commencer à saisir le nom d&#39;un espace de nommage. Vous pouvez sélectionner un espace de nommage pour vue des détails supplémentaires, et une fois que vous avez trouvé l&#39;espace de nommage que vous souhaitez utiliser, vous pouvez sélectionner le bouton radio et appuyer sur **[!UICONTROL Sélectionner]** pour continuer.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Valeur d’identité
 
-Après avoir sélectionné un espace de nommage **[!UICONTROL d&#39;]** identité, vous revenez à l&#39;onglet **[!UICONTROL Parcourir]** où vous pouvez saisir une valeur **[!UICONTROL d&#39;]** identité. Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de nommage fourni. Par exemple, la sélection de l’espace de nommage **[!UICONTROL d’]** identité &quot;courriel&quot; exigerait une valeur **[!UICONTROL d’]** identité sous la forme d’une adresse électronique valide.
+Après avoir sélectionné un espace de nommage [!UICONTROL d&#39;]identité, vous revenez à l&#39;onglet [!UICONTROL Parcourir] où vous pouvez saisir une valeur **[!UICONTROL d&#39;]** identité. Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de nommage fourni. Par exemple, la sélection de l’espace de nommage [!UICONTROL d’] identité &quot;courriel&quot; exigerait une valeur [!UICONTROL d’] identité sous la forme d’une adresse électronique valide.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -91,32 +91,30 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher le
 
 ### Détails du profil {#profile-detail}
 
-Lorsque vous sélectionnez l’ID **[!UICONTROL de]** Profil, l’onglet **[!UICONTROL Détails]** s’ouvre. Cette page affiche des informations sur le profil sélectionné, y compris les attributs de base, les identités liées et les canaux de contact disponibles. Les informations de profil affichées ont été fusionnées à partir de plusieurs fragments de profil afin de former une vue unique du client individuel.
+Lorsque vous sélectionnez l’ID [!UICONTROL de]Profil, l’onglet **[!UICONTROL Détails]** s’ouvre. The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation pour afficher les attributs de Profil préférés. Pour en savoir plus sur la personnalisation de ces champs, y compris des instructions détaillées pour l’ajout et la suppression d’attributs et le redimensionnement des panneaux de tableau de bord, consultez le guide [de personnalisation des détails du](profile-customization.md)profil.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Vous pouvez vue d’autres informations relatives au profil, y compris **[!UICONTROL les attributs]**, les **[!UICONTROL Événements]** et les **[!UICONTROL segments]** auxquels le profil est membre.
+Vous pouvez vue des informations supplémentaires relatives à chaque profil en sélectionnant un autre onglet disponible. Ces onglets comprennent [!UICONTROL les attributs], les [!UICONTROL Événements]et l’appartenance aux segments, qui indiquent les [!UICONTROL segments pour lesquels le profil est actuellement qualifié.]
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Stratégies de fusion
 
-Select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Chaque stratégie répertoriée affiche son nom, indique s’il s’agit ou non de la stratégie de fusion par défaut, et précise le schéma auquel elle s’applique.
+Dans le menu [!UICONTROL Profils] principal, sélectionnez l’onglet **[!UICONTROL Fusionner les stratégies]** pour vue d’une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, indique s’il s’agit ou non de la stratégie de fusion par défaut, et précise le schéma auquel elle s’applique.
 
-For more information on merge policies, see the [Merge Policies user guide](merge-policies.md).
+For more information on merge policies, see the [merge policies user guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
-## Schéma d’union
+## Schéma d’union {#union-schema}
 
-Sélectionnez l&#39;onglet Schéma ** d&#39;Union [!DNL Profile Store]pour vue des schémas d&#39;union de votresite. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. Sélectionnez une classe dans la liste de gauche pour vue de la structure de son schéma d&#39;union dans la trame.
+Dans le menu [!UICONTROL Profils] principal, sélectionnez l&#39;onglet Schéma **** d&#39;Union pour vue des schémas d&#39;union de vos données de Profil. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. En sélectionnant une classe dans la liste [!UICONTROL Classe] située à gauche, vous pouvez vue la structure de son schéma dans la trame. Par exemple, la sélection de &quot;[!DNL XDM Profile]&quot; affiche le schéma d’union de la [!DNL XDM Individual Profile] classe.
 
-Par exemple, la sélection de &quot;[!DNL XDM Profile]&quot; affiche le schéma d’union de la [!DNL XDM Individual Profile] classe.
-
-Consultez la section sur les schémas d’union dans le [guide de composition de schémas](../../xdm/schema/composition.md) pour en savoir plus sur les schémas d’union et leur rôle dans [!DNL Real-time Customer Profile].
+Pour plus d&#39;informations sur les schémas d&#39;union et leur rôle au sein du Adobe Experience Platform, voir la section sur les schémas d&#39;union dans le guide [de composition des](../../xdm/schema/composition.md)schémas.
 
 ![](../images/user-guide/profiles-union-schema.png)
 
 ## Étapes suivantes
 
-By reading this guide, you now know how to view and manage your [!DNL Profile] data using the [!DNL Experience Platform] UI. For information on how to leverage [!DNL Real-time Customer Profile] data to generate audience segments, see the [Segmentation documentation](../../segmentation/home.md).
+By reading this guide, you now know how to view and manage your [!DNL Profile] data using the [!DNL Experience Platform] UI. Pour plus d’informations sur la façon d’utiliser les données de Profil à l’aide de l’API Profil client en temps réel, consultez le guide [du développeur de](../api/overview.md)Profils.
