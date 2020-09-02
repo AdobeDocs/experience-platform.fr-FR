@@ -5,10 +5,10 @@ title: Connecteur Google AdWords
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la connexion de Google AdWords à la plate-forme à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: ca3084a9c30cc2dd9e0ebc9cef5ae630cbe47b98
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 8%
+source-wordcount: '217'
+ht-degree: 10%
 
 ---
 
@@ -55,15 +55,17 @@ Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant 
 - `40.79.163.80/28`
 - `40.79.171.160/28`
 
+## Se connecter [!DNL Google AdWords] à [!DNL Platform]
+
 La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google AdWords] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
-## Se connecter [!DNL Google AdWords] à [!DNL Platform] l’aide des API
+### Utilisation des API
 
 - [Création d’un connecteur Google AdWords à l’aide de l’API du service de flux](../../tutorials/api/create/advertising/ads.md)
 - [Explorez un système de publicité à l’aide de l’API du service de flux](../../tutorials/api/explore/advertising.md)
 - [Collecte de données publicitaires à l’aide de l’API du service de flux](../../tutorials/api/collect/advertising.md)
 
-## Se connecter [!DNL Google AdWords] à [!DNL Platform] l’aide de l’interface utilisateur
+### Utilisation de l’interface utilisateur
 
 - [Création d’un connecteur source Google AdWords dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
 - [Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur](../../tutorials/ui/dataflow/advertising.md)
