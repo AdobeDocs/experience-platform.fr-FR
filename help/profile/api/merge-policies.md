@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 95b4964f4d506a7f5618590fe43116e2297be22e
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2382'
 ht-degree: 67%
 
 ---
@@ -123,7 +123,7 @@ Un fragment de profil correspond aux informations de profil d’une seule identi
 
 Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
-* **`timestampOrdered`**: (par défaut) Donner la priorité au profil mis à jour en dernier cas de conflit. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire. `timestampOrdered` prend également en charge les horodatages personnalisés qui sont prioritaires lors de la fusion de fragments de profil dans ou entre des jeux de données. Pour en savoir plus, consultez la section Annexe sur l’ [utilisation d’horodatages](#custom-timestamps)personnalisés.
+* **`timestampOrdered`**: (par défaut) Attribuez la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire. `timestampOrdered` prend également en charge les horodatages personnalisés qui sont prioritaires lors de la fusion de fragments de profil dans ou entre des jeux de données. Pour en savoir plus, consultez la section Annexe sur l’ [utilisation d’horodatages](#custom-timestamps)personnalisés.
 * **`dataSetPrecedence`** : Donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
    * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
@@ -735,23 +735,23 @@ Cette section fournit des informations supplémentaires sur l’utilisation des 
 
 ### Utilisation d’horodatages personnalisés {#custom-timestamps}
 
-Comme les enregistrements de Profil sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque `timestampOrdered` est sélectionné comme `attributeMerge` type pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
+Comme les enregistrements sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque `timestampOrdered` est sélectionné comme `attributeMerge` type pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
 
 Il peut arriver, par exemple, que des données soient renvoyées ou que l’ordre des événements soit correct si les enregistrements sont ingérés dans l’ordre, lorsqu’il est nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système.
 
-Pour utiliser un horodatage personnalisé, le mélange [Détails de l&#39;audit du système](#mixin-details) externe source doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du `xdm:lastUpdatedDate` champ. Lorsqu’un enregistrement est assimilé à un champ `xdm:lastUpdatedDate` rempli, l’Experience Platform l’utilise pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si elle `xdm:lastUpdatedDate` n’est pas présente ou n’est pas renseignée, la plate-forme continuera à utiliser l’horodatage du système.
+Pour utiliser un horodatage personnalisé, le [[ ! DNL External Source Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du `xdm:lastUpdatedDate` champ. Lorsqu’un enregistrement est assimilé à un champ `xdm:lastUpdatedDate` rempli, l’Experience Platform l’utilise pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si elle `xdm:lastUpdatedDate` n’est pas présente ou n’est pas renseignée, la plate-forme continuera à utiliser l’horodatage du système.
 
 >[!NOTE]
 >
 >Vous devez vous assurer que l’ `xdm:lastUpdatedDate` horodatage est renseigné lors de l’envoi d’un PATCH sur le même enregistrement.
 
-Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API de registre des schémas, y compris sur la façon d&#39;ajouter des mixins aux schémas, consultez le [didacticiel de création d&#39;un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
+Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API de registre de Schéma, y compris sur la façon d&#39;ajouter des mixins aux schémas, consultez le [didacticiel pour créer un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
 
 Pour utiliser des horodatages personnalisés à l’aide de l’interface utilisateur, reportez-vous à la section relative à l’ [utilisation d’horodatages](../ui/merge-policies.md#custom-timestamps) personnalisés dans le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
 
-#### Détails du mélange d&#39;audit du système source externe {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] détails {#mixin-details}
 
-L&#39;exemple suivant montre les champs correctement renseignés dans le Mélange des détails de l&#39;audit du système source externe. Le mixin JSON complet peut également être visualisé dans le référentiel [XDM (Experience Data Model)](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) public sur GitHub.
+L’exemple suivant montre comment afficher les champs correctement renseignés dans le [!DNL External Source System Audit Details Mixin]. Le mixin JSON complet peut également être visualisé dans le référentiel [XDM (Experience Data Model)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) public sur GitHub.
 
 ```json
 {
