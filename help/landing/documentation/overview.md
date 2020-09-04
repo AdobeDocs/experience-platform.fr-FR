@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration
+keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
 solution: Experience Platform
 title: Documentation Adobe Experience Platform
 topic: overview
+description: La documentation Adobe Experience Platform est fournie dans plusieurs formats, notamment des présentations, des tutoriels et des guides de l’interface utilisateur et de l’API. Voici une brève description des types de documentation les plus courants disponibles pour les services Experience Platform.
 translation-type: tm+mt
-source-git-commit: 96be9401b3d3bf28176cbce5d139c42f63707c81
+source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1084'
 ht-degree: 68%
 
 ---
