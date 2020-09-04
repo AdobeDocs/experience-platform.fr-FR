@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;consent;Consent
 solution: Experience Platform
 title: FAQ relative à la CCPA
 topic: troubleshooting
+description: Ce document répond aux questions les plus fréquemment posées à propos de la Loi sur la protection de la confidentialité des consommateurs (CCPA) de Californie et de sa mise en œuvre dans Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 80%
+source-wordcount: '809'
+ht-degree: 81%
 
 ---
 
