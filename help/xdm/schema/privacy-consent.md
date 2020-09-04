@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;consent;Consent;preferences;Preferences;privacyOptOuts;marketingPreferences;optOutType;basisOfProcessing;consent;Consent
 solution: Adobe Experience Platform
 title: Présentation du mixage de confidentialité
 description: Le mixin Préférences de confidentialité/marketing (Consentement) est un mélange de modèle de données d’expérience (XDM) destiné à prendre en charge la collecte des autorisations et préférences utilisateur générées par les CMP et d’autres sources provenant de clients. Ce document couvre la structure et l'utilisation prévue des différents champs fournis par le mixin.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '1827'
 ht-degree: 1%
