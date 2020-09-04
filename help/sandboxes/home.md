@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;sandbox;Sandbox
+keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
 title: Présentation des environnements de test
 topic: overview
 description: Les environnements de test constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience numérique.
 translation-type: tm+mt
-source-git-commit: e22b0f64fd6153f76cff862a6e973a235257430e
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 89%
