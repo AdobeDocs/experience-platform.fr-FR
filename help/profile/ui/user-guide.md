@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
 solution: Adobe Experience Platform
 title: Guide d’utilisation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 31166ddf8afbe13874be66b29c89501bd6ce1e51
+source-git-commit: e94278c1b64e1d940f55861518c78cca24822c1b
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 13%
@@ -45,7 +45,7 @@ Sur le côté droit de l&#39;onglet [!UICONTROL Parcourir] se trouvent plusieurs
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-Outre ces mesures, la section Mesures de profil fournit également une date et une heure de [!UICONTROL dernière mise à jour] , indiquant le moment où les mesures ont été évaluées pour la dernière fois.
+Outre ces mesures, la section Mesures de profil fournit également une date et une heure de [!UICONTROL dernière mise à jour] , indiquant la date et l’heure de la dernière évaluation des mesures.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
