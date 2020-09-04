@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores
+keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
 solution: Experience Platform
 title: Accès aux scores dans Attribution AI
 topic: Accessing scores
 description: Ce document sert de guide pour le téléchargement de scores pour Attribution AI.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 70%
