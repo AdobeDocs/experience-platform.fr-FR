@@ -5,9 +5,9 @@ title: Prévisualisation de profil - API de Profil client en temps réel
 description: Adobe Experience Platform vous permet d'assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans la plate-forme, elles sont stockées dans le magasin de données du Profil. À mesure que le nombre d’enregistrements dans la banque de Profils augmente ou diminue, une tâche d’exemple est exécutée qui comprend des informations sur le nombre de fragments de profil et de profils fusionnés présents dans la banque de données. L'API de Profil vous permet de prévisualisation du dernier exemple réussi, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d'identité.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 75a07abd27f74bcaa2c7348fcf43820245b02334
+source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1478'
 ht-degree: 6%
 
 ---
@@ -59,6 +59,10 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -75,6 +79,7 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 | Propriété | Description |
 |---|---|
 | `numRowsToRead` | Nombre total de profils fusionnés dans l’échantillon. |
+| `sampleJobRunning` | Valeur booléenne qui renvoie `true` lorsqu’un exemple de travail est en cours. Fournit de la transparence dans la latence qui survient lorsqu’un fichier de commandes est téléchargé lorsqu’il est effectivement ajouté au magasin de Profils. |
 | `cosmosDocCount` | Nombre total de documents dans Cosmos. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans le magasin de Profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d&#39;assimilation par lot réussi. |
@@ -206,7 +211,7 @@ La requête suivante ne spécifie aucun `date` paramètre et renvoie donc le rap
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
