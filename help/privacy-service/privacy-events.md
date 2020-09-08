@@ -1,133 +1,78 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Abonnement à des événements de confidentialité
+title: S'abonner aux Événements Privacy Service
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 31%
+source-wordcount: '420'
+ht-degree: 7%
 
 ---
 
 
-# S’abonner à [!DNL Privacy Events]
+# S’abonner à [!DNL Privacy Service Events]
 
-[!DNL Privacy Events] sont des messages fournis par Adobe Experience Platform [!DNL Privacy Service], qui tirent parti des Événements d&#39;E/S d&#39;Adobe envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform [!DNL Privacy Service], qui tirent parti des Événements d&#39;E/S d&#39;Adobe envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 Il existe actuellement quatre types de notifications liées au cycle de vie de la tâche de demande d’accès à des informations personnelles :
 
 | Type | Description |
---- | ---
-| Fin de tâche | All [!DNL Experience Cloud] solutions have reported back and the overall or global status of the job has been marked as complete. |
-| Erreur de tâche | Une ou plusieurs solutions ont signalé une erreur lors du traitement de la requête. |
-| Produit terminé | L’une des solutions associées à cette tâche a terminé son travail. |
-| Erreur de produit | L’une des solutions a signalé une erreur lors du traitement de la requête. |
+| --- | --- |
+| Fin de tâche | All [!DNL Experience Cloud] applications have reported back and the overall or global status of the job has been marked as complete. |
+| Erreur de tâche | Une ou plusieurs applications ont signalé une erreur lors du traitement de la demande. |
+| Produit terminé | Une des demandes associées à ce travail a terminé son travail. |
+| Erreur de produit | L’une des applications a signalé une erreur lors du traitement de la demande. |
 
-This document provides steps for setting up an integration for [!DNL Privacy Service] notifications within Adobe I/O. For a high-level overview of [!DNL Privacy Service] and its features, see the [Privacy Service overview](home.md).
+Ce document décrit la procédure à suivre pour configurer un enregistrement de événement pour les [!DNL Privacy Service] notifications et pour interpréter les charges utiles des notifications.
 
 ## Prise en main
 
-Ce tutoriel utilise **ngrok**, un logiciel exposant les serveurs locaux à l’Internet public par le biais de canaux sécurisés. Avant de commencer, [installez ngrok](https://ngrok.com/download) pour suivre ce tutoriel et créer un webhook sur votre machine locale. This guide also requires you to have a GIT repository downloaded that contains a simple [Node.js](https://nodejs.org/) server.
+Veuillez consulter la documentation Privacy Service suivante avant de commencer ce didacticiel :
 
-## Création d’un serveur local
+* [Présentation de Privacy Service](./home.md)
+* [Guide du développeur d&#39;API Privacy Service](./api/getting-started.md)
 
-Votre serveur Node.js doit renvoyer un paramètre `challenge` envoyé par une requête au point de terminaison racine (`/`). Pour ce faire, configurez votre fichier `index.js` avec le code JavaScript suivant :
+## Enregistrement d’un webhook dans [!DNL Privacy Service Events]
 
-```js
-var express = require('express')
-var app = express()
+Pour pouvoir recevoir [!DNL Privacy Service Events]des informations, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre [!DNL Privacy Service] intégration.
 
-app.set('port', (process.env.PORT || 3000))
-app.use(express.static(__dirname + '/public'))
+Suivez le didacticiel sur les [tonotifications [!DNL I/O Event] ](../observability/notifications/subscribe.md) d’abonnement pour obtenir des instructions détaillées sur la façon d’y parvenir. Veillez à choisir des Événements **** Privacy Service comme fournisseur de événements afin d’accéder aux événements répertoriés ci-dessus.
 
-app.get('/', function(request, response) {
-  response.send(request.originalUrl.split('?challenge=')[1]);
-})
+## Recevoir [!DNL Privacy Service Event] des notifications
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
-```
-
-À l’aide de la ligne de commande, accédez au répertoire racine du serveur Node.js. Exécutez ensuite les commandes suivantes :
-
-1. `npm install`
-1. `npm start`
-
-Ces commandes installent toutes les dépendances et initialisent le serveur. En cas de réussite, votre serveur s’exécute à l’adresse http://localhost:3000/.
-
-## Création d’un webhook à l’aide de ngrok
-
-Ouvrez une nouvelle fenêtre de ligne de commande et accédez au répertoire dans lequel vous avez installé ngrok précédemment. A partir de là, tapez la commande suivante :
-
-```shell
-./ngrok http -bind-tls=true 3000
-```
-
-Une sortie réussie a l’apparence suivante :
-
-![sortie ngrok](images/privacy-events/ngrok-output.png)
-
-Prenez note de l’URL `Forwarding` (`https://212d6cd2.ngrok.io`) qui sera utilisée pour identifier votre webhook à l’étape suivante.
-
-## Créer un projet dans la console de développement Adobe
-
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
-
-## ajouter des Événements de confidentialité au projet
-
-Une fois que vous avez terminé de créer un projet dans la console, cliquez sur **[!UICONTROL Ajouter le événement]** dans l’écran Présentation _du_ projet.
-
-![](./images/privacy-events/add-event-button.png)
-
-The _Add events_ dialog appears. Sélectionnez **[!UICONTROL Experience Cloud]** pour filtrer la liste d’un type d&#39;événement disponible, puis sélectionnez Événements **** Privacy Service avant de cliquer sur **[!UICONTROL Suivant]**.
-
-![](./images/privacy-events/add-privacy-events.png)
-
-La boîte de dialogue _Configurer l&#39;enregistrement_ du événement s&#39;affiche. Sélectionnez les événements que vous souhaitez recevoir en cochant les cases correspondantes. Les événements que vous sélectionnez apparaissent sous Événements **** abonnés dans la colonne de gauche. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
-
-![](./images/privacy-events/choose-subscriptions.png)
-
-L’écran suivant vous invite à fournir une clé publique pour l’enregistrement du événement. Vous avez la possibilité de générer automatiquement une paire de clés ou de télécharger votre propre clé publique générée dans le terminal.
-
-Pour les besoins de ce didacticiel, la première option est suivie. Cliquez sur la zone d’options **[!UICONTROL Générer une paire]** de clés, puis cliquez sur le bouton **[!UICONTROL Générer la paire de clés]** dans le coin inférieur droit.
-
-![](./images/privacy-events/generate-key-value.png)
-
-Lorsque la paire de clés est générée, elle est automatiquement téléchargée par le navigateur. Vous devez stocker ce fichier vous-même, car il n’est pas conservé dans la Console développeur.
-
-L’écran suivant vous permet de vérifier les détails de la paire de clés nouvellement générée. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
-
-![](./images/privacy-events/keypair-generated.png)
-
-Dans l’écran suivant, indiquez le nom et la description de l’enregistrement du événement. Il est recommandé de créer un nom unique et facilement identifiable afin de différencier cette inscription de événement des autres sur le même projet.
-
-![](./images/privacy-events/event-details.png)
-
-Plus loin dans le même écran, vous disposez de deux options pour configurer la manière de recevoir des événements. Sélectionnez **[!UICONTROL Webhook]** et fournissez l’ `Forwarding` URL du webhook de réseau créé précédemment sous URL **** Webhook. Ensuite, sélectionnez votre style de diffusion préféré (unique ou par lot) avant de cliquer sur **[!UICONTROL Enregistrer les événements]** configurés pour terminer l’enregistrement du événement.
-
-![](./images/privacy-events/webhook-details.png)
-
-La page de détails de votre projet réapparaît et s’ [!DNL Privacy Events] affiche sous **[!UICONTROL Événements]** dans le volet de navigation de gauche.
-
-## Affichage des données d’événement
-
-Une fois que vous vous êtes inscrit [!DNL Privacy Events] à votre projet et que les tâches de confidentialité ont été traitées, vous pouvez vue les notifications reçues pour cette inscription. Dans l’onglet **[!UICONTROL Projets]** de la Console développeur, sélectionnez votre projet dans la liste pour ouvrir la page d’aperçu _des_ produits. Sélectionnez Événements **[!UICONTROL de]** confidentialité dans le volet de navigation de gauche.
-
-![](./images/privacy-events/events-left-nav.png)
-
-The _Registration Details_ tab appears, allowing you to view more information about the registration, edit its configuration, or view the actual events that were received since activating your webhook.
-
-![](./images/privacy-events/registration-details.png)
-
-Cliquez sur l’onglet Suivi **** du débogage pour vue d’une liste de événements reçus. Cliquez sur un événement répertorié pour en vue les détails.
+Une fois que vous avez enregistré votre webhook et que les tâches de confidentialité ont été exécutées, vous pouvez début recevoir des notifications de événement. Ces événements peuvent être visualisés à l&#39;aide du crochet Web lui-même ou en sélectionnant l&#39;onglet Suivi **[!UICONTROL du]** débogage dans l&#39;aperçu de l&#39;enregistrement des événements de votre projet dans Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
-La section **[!UICONTROL Payload]** fournit des détails sur l’événement sélectionné, y compris sur le type d’événement (`com.adobe.platform.gdpr.productcomplete`), comme indiqué dans l’exemple ci-dessus.
+L’objet JSON suivant est un exemple de charge utile de [!DNL Privacy Service Event] notification qui serait envoyée à votre webhook lorsque l’une des applications associées à une tâche de confidentialité a terminé son travail :
+
+```json
+{
+  "id":"b472e249-368b-4706-90f3-1d774713f827",
+  "event_id":"b116f797-e50b-432e-9c65-189106a34820",
+  "specversion":"0.2",
+  "type":"com.adobe.platform.gdpr.productcomplete",
+  "source":"https://ns.adobe.com/platform/gdpr",
+  "time":"Wed Oct 23 18:52:32 GMT 2019",
+  "data":{
+    "imsOrg":"{IMS_ORG}",
+    "value":{
+      "jobId":"6f0f2b62-88a7-4515-ba05-432d9a7021c5",
+      "message":"analytics.access.complete"
+    }
+  }
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `id` | Identifiant unique généré par le système pour la notification. |
+| `type` | Type de notification envoyée, en donnant un contexte aux informations fournies sous `data`. Les valeurs potentielles sont les suivantes : <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | Horodatage du moment où le événement s’est produit. |
+| `data.value` | Contient des informations supplémentaires sur ce qui a déclenché la notification : <ul><li>`jobId`: ID de la tâche de confidentialité qui a déclenché la notification.</li><li>`message`: Message concernant l’état spécifique de la tâche. Pour les `productcomplete` notifications ou `producterror` les notifications, ce champ indique l’application Experience Cloud en question.</li></ul> |
 
 ## Étapes suivantes
 
-Vous pouvez répéter les étapes ci-dessus afin d’ajouter de nouvelles intégrations pour différentes adresses webhook, le cas échéant.
+Ce document décrit comment enregistrer des Événements Privacy Service sur un crochet Web configuré et comment interpréter les charges utiles de notification. Pour savoir comment suivre les tâches de confidentialité à l’aide de l’interface utilisateur, consultez le guide [d’utilisation du](./ui/user-guide.md)Privacy Service.
