@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 81%
+source-wordcount: '1782'
+ht-degree: 78%
 
 ---
 
@@ -33,7 +33,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont `gdpr`, `ccpa` et `pdpa_tha`. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Accepted values are `gdpr`, `ccpa`, `lgpd_bra`, and `pdpa_tha`. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
@@ -153,7 +153,7 @@ curl -X POST \
 | `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par [!DNL Analytics]). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 | `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des trois valeurs suivantes : <ul><li>rgpd</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des quatre valeurs suivantes : <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Réponse**
 
@@ -286,7 +286,7 @@ curl -X POST \
 | `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par [!DNL Analytics]). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 | `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des trois valeurs suivantes : <ul><li>rgpd</li><li>ccpa</li><li>pdpa_tha</li></ul> |
+| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des quatre valeurs suivantes : <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
 
 **Réponse**
 
@@ -436,27 +436,27 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 | Propriété | Description |
 | --- | --- |
 | `productStatusResponse` | Chaque objet du tableau contient des informations sur l&#39;état actuel de la tâche par rapport à une `productResponses` [!DNL Experience Cloud] application spécifique. |
-| `productStatusResponse.status` | catégorie d’état actuelle de la tâche. Le tableau ci-dessous présente une liste des catégories [d’état](#status-categories) disponibles et leur signification correspondante. |
+| `productStatusResponse.status` | Catégorie d’état actuelle de la tâche. Le tableau ci-dessous présente une liste des catégories [d’état](#status-categories) disponibles et leur signification correspondante. |
 | `productStatusResponse.message` | Statut spécifique de la tâche, correspondant à la catégorie d’état. |
 | `productStatusResponse.responseMsgCode` | Code standard pour les messages de réponse de produit reçus par [!DNL Privacy Service]le client. Les détails du message sont fournis sous `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Une explication plus détaillée de l&#39;état de la tâche. Les messages pour des états similaires peuvent varier d’un produit à l’autre. |
 | `productStatusResponse.results` | Pour certains états, certains produits peuvent renvoyer un `results` objet qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
 | `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 
-### catégories d&#39;état de la tâche {#status-categories}
+### Catégories d&#39;état de la tâche {#status-categories}
 
 Le tableau suivant liste les différentes catégories possibles de statut professionnel et leur signification correspondante :
 
-| catégorie d&#39;état | Signification |
+| Catégorie d&#39;état | Signification |
 | -------------- | -------- |
-| Terminée | La tâche est terminée et les fichiers (si nécessaire) sont chargés depuis toutes les applications. |
-| En cours de traitement | Les applications ont reconnu la tâche et sont actuellement en train de la traiter. |
-| Envoyée | La tâche est envoyée vers chaque application nécessaire. |
-| Erreur | Une erreur s’est produite lors du traitement de la tâche. Vous pouvez obtenir de plus amples informations en récupérant les détails individuels de la tâche. |
+| `complete` | La tâche est terminée et les fichiers (si nécessaire) sont chargés depuis toutes les applications. |
+| `processing` | Les applications ont reconnu la tâche et sont actuellement en train de la traiter. |
+| `submitted` | La tâche est envoyée vers chaque application nécessaire. |
+| `error` | Une erreur s’est produite lors du traitement de la tâche. Vous pouvez obtenir de plus amples informations en récupérant les détails individuels de la tâche. |
 
 >[!NOTE]
 >
->Une tâche envoyée peut rester à l’état en cours de traitement si celle-ci possède une tâche enfant dépendante toujours en cours de traitement.
+>A submitted job might remain in a `processing` state if it has a dependent child job that is still processing.
 
 ## Étapes suivantes
 
