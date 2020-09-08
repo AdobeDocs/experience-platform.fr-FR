@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b4ce4c2e5ff5083f663c2daf23c32a1cec32124c
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 32%
+source-wordcount: '597'
+ht-degree: 25%
 
 ---
 
@@ -21,6 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[ ! Espace de travail scientifique des données DNL]](#dsw)
 - [[ !Destinations DNL]](#destinations)
+- [[ !Plateforme de données client en temps réel DNL]](#rtcdp)
 - [[ !Sources DNL]](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -53,6 +54,18 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 |------- | -----------|
 | Editeur de nom de fichier personnalisé | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud, ce qui vous permet de modifier le nom des fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;étape [](/help/rtcdp/destinations/activate-destinations.md#configure) Configurer du processus d&#39;activation. |
 | Attributs recommandés | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud qui affichent les attributs recommandés à ajouter aux fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;étape [](/help/rtcdp/destinations/activate-destinations.md#select-attributes) Sélectionner des attributs dans le processus d&#39;activation. |
+
+## [!DNL Real-time Customer Data Platform] {#rtcdp}
+
+Built on Experience Platform, Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] combine plusieurs sources de données d’entreprise pour créer des profils clients en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences client personnalisées un à un sur tous les canaux et périphériques.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Prise en charge d’IAB TCF 2.0 | [!DNL Real-time CDP] est maintenant un fournisseur enregistré pour la version 2.0 du [!DNL Transparency & Consent Framework] (TCF), comme indiqué par le [!DNL Interactive Advertising Bureau] (IAB). Vous pouvez configurer vos opérations de données et vos schémas de profil pour accepter les données de consentement des clients générées par un CMP et appliquer les préférences de consentement de vos clients lors de l’activation de segments vers des destinations en aval. Pour plus d’informations, consultez l’aperçu de la prise en charge [d’IAB TCF 2.0 dans le CDP](../../rtcdp/privacy/iab/overview.md) en temps réel. |
+
+Pour plus d&#39;informations sur [!DNL Real-time CDP]cette application, consultez la [[!DNL Real-time CDP] présentation](../../rtcdp/overview.md).
 
 ## Sources {#sources}
 
