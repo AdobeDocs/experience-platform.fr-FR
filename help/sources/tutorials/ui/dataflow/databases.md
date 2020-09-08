@@ -5,9 +5,9 @@ title: Configuration d’un flux de données pour un connecteur de base de donn�
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de base de données.
 translation-type: tm+mt
-source-git-commit: 14044f9af50cd4c922294cd60f7b6549828e8aca
+source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1328'
 ht-degree: 3%
 
 ---
@@ -35,9 +35,16 @@ Après avoir créé votre compte de base de données, l’étape **[!UICONTROL S
 - La moitié gauche de l&#39;interface est un navigateur, qui affiche la liste des bases de données de votre compte.
 - La moitié droite de l’interface vous permet de prévisualisation jusqu’à 100 lignes de données.
 
-Sélectionnez la base de données à utiliser, puis cliquez sur **[!UICONTROL Suivant]**.
+Vous pouvez utiliser l’option **[!UICONTROL Rechercher]** en haut de la page pour identifier rapidement les données source que vous prévoyez d’utiliser.
 
-![](../../../images/tutorials/dataflow/databases/add-data.png)
+>[!NOTE]
+>
+>L’option de données de source de recherche est disponible pour tous les connecteurs de source basés sur des tabulations, à l’exception des connecteurs Analytics, Classifications, Événements centraux et Kinesis.
+
+Une fois les données source trouvées, sélectionnez le répertoire, puis cliquez sur **[!UICONTROL Suivant]**.
+
+![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
+
 
 ## Mappage des champs de données à un schéma XDM
 
