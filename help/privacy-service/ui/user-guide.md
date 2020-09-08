@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide d’utilisation de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1059'
 ht-degree: 86%
 
 ---
@@ -24,11 +24,12 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### Type de réglementation
 
-[!DNL Privacy Service] prend en charge les demandes d&#39;emploi pour trois types de réglementation :
+[!DNL Privacy Service] prend en charge les demandes d&#39;emploi pour quatre types de réglementation :
 
-* L&#39;Union européenne [!DNL General Data Protection Regulation] (RGD)
-* Le [!DNL California Consumer Privacy Act] (CCPA)
-* Thaïlande : [!DNL Personal Data Protection Act] (PDPA_THA)
+* L&#39;Union européenne [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
+* Le [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
+* Brésil [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Thaïlande [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
 
 Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à l’autre, cliquez sur le menu déroulant **[!UICONTROL Type de réglementation]** et sélectionnez la réglementation souhaitée dans la liste.
 
@@ -56,7 +57,7 @@ Pour afficher plus d’informations sur un point de données précis, cliquez su
 
 >[!NOTE]
 >
->Lorsqu’un filtre a été appliqué au widget Requêtes de tâche, vous pouvez le supprimer en cliquant sur le **[!UICONTROL X]** dans le cadre de filtre. Les requêtes de tâche reviennent alors à la liste de suivi par défaut.
+>Lorsqu’un filtre a été appliqué au widget Requêtes de tâche, vous pouvez le supprimer en cliquant sur le **X** dans le cadre de filtre. Les requêtes de tâche reviennent alors à la liste de suivi par défaut.
 
 ### Requêtes de tâche
 
