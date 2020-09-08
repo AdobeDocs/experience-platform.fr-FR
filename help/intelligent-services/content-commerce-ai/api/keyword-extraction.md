@@ -5,10 +5,10 @@ title: Extraction des couleurs
 topic: Developer guide
 description: Le service d'extraction de mots-clés, lorsqu'il reçoit un document de texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux le sujet du document. Afin d'extraire des mots-clés, une combinaison d'algorithmes de reconnaissance d'entité nommée (NER) et d'extraction de mot-clé non supervisée est utilisée.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 3%
+source-wordcount: '625'
+ht-degree: 4%
 
 ---
 
@@ -20,14 +20,6 @@ ht-degree: 3%
 >[!DNL Content and Commerce AI] est en version bêta. La documentation peut être modifiée.
 
 Le service d&#39;extraction de mots-clés, lorsqu&#39;il reçoit un document de texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux le sujet du document. Afin d&#39;extraire des mots-clés, une combinaison d&#39;algorithmes de reconnaissance d&#39;entité nommée (NER) et d&#39;extraction de mot-clé non supervisée est utilisée.
-
-**Extraction de mots-clés non surveillée**
-
-Pour l&#39;extraction non supervisée du mot-clé, [[ !DNL YAKE]](http://yake.inesctec.pt/) est utilisé. [!DNL YAKE] est une méthode d&#39;extraction automatique des mots-clés rapide et précise, non supervisée, utilisée pour sélectionner les mots-clés les plus importants d&#39;un document. Les extraits de mots-clés [!DNL YAKE] sont ensuite filtrés afin de ne sélectionner que des phrases de nom.
-
-**Reconnaissance d&#39;entité nommée**
-
-Pour la reconnaissance d’entité nommée, le modèle OntoNotes de [[ !DNL spaCy]](https://spacy.io/)est utilisé. Ce modèle affecte des vecteurs de jeton spécifiques au contexte, des balises POS (partie de parole), l’analyse des dépendances et des entités nommées. Le modèle OntoNotes est l’un des modèles principaux [!DNL spaCy] . Vous trouverez plus d&#39;informations sur le modèle OntoNotes [ici](https://spacy.io/models/en).
 
 Les entités nommées reconnues par [!DNL Content and Commerce AI] sont répertoriées dans le tableau suivant :
 
@@ -44,8 +36,6 @@ Les entités nommées reconnues par [!DNL Content and Commerce AI] sont réperto
 | WORK_OF_ART | Des titres de livres, de chansons, etc. |
 | DROIT | Les documents nommés sont des lois. |
 | LANGUE | Toute langue nommée. |
-
-Les résultats de [!DNL OntoNotes] sont combinés aux mots-clés de [!DNL YAKE]et sont ensuite renvoyés par ordre de classement en fonction de leur importance.
 
 **Format d’API**
 
