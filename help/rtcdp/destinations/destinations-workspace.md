@@ -5,10 +5,10 @@ seo-title: Espace de travail des destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
 workflow-type: tm+mt
-source-wordcount: '809'
-ht-degree: 61%
+source-wordcount: '825'
+ht-degree: 56%
 
 ---
 
@@ -52,9 +52,31 @@ Sélectionnez une carte de destination dans le catalogue pour ouvrir le rail de 
 
 Pour plus d&#39;informations sur les catégories de destination et sur chaque destination, consultez le catalogue [de](/help/rtcdp/destinations/destinations-catalog.md) destination et les types et Catégories [de](/help/rtcdp/destinations/destination-types.md)destination.
 
+## [!UICONTROL Comptes] {#accounts}
+
+Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les connexions que vous avez établies avec différentes destinations. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque destination :
+
+>[!TIP]
+>
+>Utilisez le bouton ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Ajouter les données de la colonne **[!UICONTROL Plateforme]** pour créer une nouvelle connexion de destination pour ce compte.
+
+![Onglet Comptes](/help/rtcdp/destinations/assets/accounts-tab.png)
+
+| Élément | Description |
+---------|----------
+| [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
+| [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li></ul> |
+| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination). |
+| [!UICONTROL Destinations] | Représente le nombre de flux de destination réussis uniques et connectés avec des informations de base créées pour une destination. |
+| [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
+
 ## [!UICONTROL Parcourir] {#browse}
 
-L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Les destinations dont le bouton **[!UICONTROL Activer]** est sélectionné définissent la destination comme active et vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles vous avez établi une connexion. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. Consultez le tableau ci-dessous pour toutes les informations fournies pour chaque destination dans l’onglet Parcourir :
+
+>[!TIP]
+>
+>Utilisez le bouton ![](/help/rtcdp/destinations/assets/add-data-symbol.png) Ajouter les données de la colonne **[!UICONTROL Nom]** pour activer des segments supplémentaires vers cette destination.
 
 ![Onglet Parcourir](/help/rtcdp/destinations/assets/browse-tab.png)
 
@@ -73,21 +95,6 @@ Cliquez sur une ligne de destination pour afficher plus d’informations sur la 
 ![Cliquer sur la ligne de destination](/help/rtcdp/destinations/assets/click-destination-row.png)
 
 Sélectionnez le nom de la destination pour afficher des informations sur les segments activés vers cette destination. Cliquez sur **[!UICONTROL Modifier l’activation]** pour modifier ou ajouter les segments envoyés vers cette destination.
-
-## [!UICONTROL Comptes] {#accounts}
-
-Dans l’onglet **[!UICONTROL Comptes]**, vous pouvez en savoir plus sur les connexions que vous avez établies avec différentes destinations. Consultez le tableau ci-dessous pour obtenir toutes les informations disponibles sur chaque destination :
-
-![Onglet Comptes](/help/rtcdp/destinations/assets/accounts-tab.png)
-
-| Élément | Description |
----------|----------
-| [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
-| [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li></ul> |
-| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](/help/rtcdp/destinations/email-marketing-destinations.md#connect-destination). |
-| [!UICONTROL Flux de données] | Représente le nombre de flux de destination réussis uniques et connectés avec des informations de base créées pour une destination. |
-| [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
-| [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont actuellement activées vers cette destination. Pour modifier le statut, consultez [Désactiver l’activation](/help/rtcdp/destinations/activate-destinations.md#disable-activation). |
 
 ## [!UICONTROL Vue du système] {#system-view}
 
