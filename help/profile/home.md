@@ -5,10 +5,10 @@ title: Présentation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: cef27082fec97530031061476b46f60859717825
 workflow-type: tm+mt
-source-wordcount: '1649'
-ht-degree: 55%
+source-wordcount: '1650'
+ht-degree: 54%
 
 ---
 
@@ -90,7 +90,7 @@ Afin d’offrir à vos clients des expériences coordonnées, cohérentes et per
 
 ### [!DNL Profile] mesures d’assimilation
 
-Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. Pour en savoir plus, commencez par lire la [présentation d’Observability Insights](../observability/home.md)[!DNL Profile] et pour obtenir une liste complète des mesures de , consultez la documentation sur les [mesures disponibles](../observability/metrics.md).
+Observability Insights vous permet d’afficher les mesures clés dans Adobe Experience Platform. In addition to [!DNL Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific [!DNL Profile]-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of [!DNL Profile] metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
 ## [!DNL Data governance] et [!DNL Privacy]
 
