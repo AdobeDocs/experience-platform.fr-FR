@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Notifications d’exécution de flux
 topic: overview
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 4%
+source-wordcount: '787'
+ht-degree: 5%
 
 ---
 
@@ -25,34 +25,23 @@ Ce document décrit la procédure à suivre pour s’abonner à des événements
 
 ## Prise en main
 
-Ce document exige une compréhension pratique des composantes suivantes de Adobe Experience Platform :
+Ce didacticiel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n&#39;avez pas encore configuré de connexion source, début en visitant l&#39;aperçu [des](./home.md) sources pour configurer la source de votre choix avant de revenir à ce guide.
 
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-* [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[ ! Extraction de données Adobe Experience Platform DNL]](../ingestion/home.md): [!DNL Data Ingestion] représente les méthodes multiples par lesquelles [!DNL Platform] ingère des données provenant de ces sources, ainsi que la manière dont ces données sont conservées au sein de l’ [!DNL Data Lake] entreprise pour être utilisées par [!DNL Platform] les services en aval.
+Ce document nécessite également une bonne compréhension des hameçons Web et de la façon de connecter un hameçon Web d&#39;une application à une autre. Reportez-vous à la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) pour une introduction aux hameçons Web.
 
-Ce document nécessite également une bonne compréhension des hameçons Web et de la façon de connecter un hameçon Web d&#39;une application à une autre. Consultez la [documentation](https://requestbin.com/blog/working-with-webhooks/) suivante pour plus d’informations sur les hameçons Web.
+## Enregistrement d’un hook Web pour les notifications d’exécution de flux
 
-## Enregistrement de votre webhook
+Pour recevoir des notifications d&#39;exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre [!DNL Experience Platform] intégration.
 
-Pour recevoir des notifications sur l&#39;état de votre flux d&#39;exécution, vous devez enregistrer un webhook en spécifiant une URL webhook unique dans les détails d&#39;enregistrement de votre événement. Pour connecter un webhook à votre [!DNL I/O Events] abonnement, visitez le service [](https://webhook.site/) webhook et copiez l’URL unique fournie.
-
-![webhook](./images/notifications/webhook-url.png)
-
-## S&#39;abonner aux événements
-
-Une fois que vous avez acquis une URL webhook unique, accédez aux Événements [d&#39;E/S d&#39;](https://www.adobe.io/apis/experienceplatform/events.html) Adobe et suivez les étapes décrites dans le document de notifications [d&#39;assimilation des](../ingestion/quality/subscribe-events.md) données au début s&#39;abonnant aux événements.
+Suivez le didacticiel sur les [tonotifications [!DNL I/O Event] ](../observability/notifications/subscribe.md) d’abonnement pour obtenir des instructions détaillées sur la façon d’y parvenir.
 
 >[!IMPORTANT]
 >
->Au cours du processus d’abonnement, veillez à sélectionner [!DNL Platform] les notifications en tant que fournisseur de événements et à sélectionner les abonnements de événement suivants :
+>Au cours du processus d’abonnement, veillez à sélectionner les notifications **[!UICONTROL de]** plateforme en tant que fournisseur de événement, puis sélectionnez les abonnements de événement suivants :
 >
 >* **[!UICONTROL L&#39;exécution de flux de la source Experience Platform a réussi]**
 >* **[!UICONTROL Échec de l&#39;exécution du flux de la source Experience Platform]**
 
->
->
-Lorsque vous êtes invité à fournir une adresse webhook, utilisez l’URL webhook que vous avez acquise précédemment.
 
 ## Recevoir des notifications d&#39;exécution de flux
 
