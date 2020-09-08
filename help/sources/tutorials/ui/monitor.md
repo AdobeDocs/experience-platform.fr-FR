@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Surveiller les comptes et les flux de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: a93b3a1980ca0f1d3a32257a923eb7ffc8896fd5
+source-git-commit: b900ea05cc046cf19d415543c581d0bcdc4296ba
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '971'
 ht-degree: 5%
 
 ---
@@ -42,15 +42,25 @@ Sélectionnez l&#39;icône d&#39;entonnoir en haut à gauche pour lancer la fen�
 
 Le panneau de tri vous permet d’accéder aux comptes à partir d’une source spécifique. Sélectionnez la source à utiliser et sélectionnez le compte dans la liste de droite.
 
+>[!TIP]
+>
+> Utilisez le bouton ![spectre-contrôle](../../images/tutorials/monitor/spectrum-control.png) de la colonne **[!UICONTROL Nom]** pour créer un nouveau flux de données source pour le compte sélectionné.
+
 ![comptes-sélectionner](../../images/tutorials/monitor/accounts-sort.png)
 
-Sur la page **[!UICONTROL Comptes]** , vous pouvez vue une liste de flux de données ou de jeux de données de cible existants associés au compte auquel vous avez accédé.
+Dans la page **[!UICONTROL Comptes]** , vous pouvez vue une liste de flux de données ou de jeux de données de cible existants associés au compte auquel vous avez accédé.Sélectionnez le contrôle secondaire pour afficher d&#39;autres options disponibles pour le flux de données sélectionné. Ces options sont décrites plus en détail ci-dessous :
+
+| Contrôle | Description |
+| ------- | ----------- |
+| [!UICONTROL Modifier le calendrier] | Permet de modifier le calendrier d’assimilation du flux de données. |
+| [!UICONTROL Désactiver le flux de données] | Permet de désactiver l&#39;assimilation des données pour le flux de données sélectionné. |
+| [!UICONTROL Supprimer] | Permet de supprimer le flux de données sélectionné. |
 
 ![flux de données](../../images/tutorials/monitor/dataflows.png)
 
 ## Surveiller les flux de données
 
-Les flux de données sont accessibles directement à partir de la page **[!UICONTROL Catalogue]** sans afficher **[!UICONTROL les comptes]**. Sélectionnez **[!UICONTROL Flux de données]** dans l&#39;en-tête supérieur pour vue d&#39;une liste de flux de données existants.
+Les flux de données sont accessibles directement à partir de la page **[!UICONTROL Catalogue]** sans afficher **[!UICONTROL les comptes]**. Sélectionnez **[!UICONTROL Flux de données]** dans l&#39;en-tête supérieur pour vue d&#39;une liste de flux de données.
 
 ![catalogue-flux de données](../../images/tutorials/monitor/catalog-dataflows.png)
 
@@ -58,7 +68,7 @@ Une liste de flux de données existants s’affiche. Cette page contient une lis
 
 ![flux de données-liste](../../images/tutorials/monitor/dataflows-list.png)
 
-Le panneau de tri s’affiche. Sélectionnez la source à laquelle vous souhaitez accéder dans le menu de défilement et sélectionnez le flux de données dans la liste située à droite.
+Le panneau de tri s’affiche. Sélectionnez la source à laquelle vous souhaitez accéder dans le menu de défilement et sélectionnez le flux de données dans la liste située à droite. Vous pouvez également sélectionner le contrôle secondaire pour afficher d&#39;autres options disponibles pour le flux de données sélectionné.
 
 ![sort-données-flux](../../images/tutorials/monitor/dataflows-sort.png)
 
@@ -82,11 +92,10 @@ L’aperçu **[!UICONTROL de l’exécution]** de flux de données affiche des i
 
 Reportez-vous au tableau suivant pour connaître les codes d’erreur visibles dans le résumé **** d’erreur.
 
-| Code erreur | Message d’erreur |
+| Erreur | Description |
 | ---------- | ----------- |
-| `CONNECTOR-1001-500` | &quot;Un problème est survenu avec l&#39;activité de copie.&quot; |
-| `CONNECTOR-2001-500` | &quot;Un problème est survenu lors de la copie de la source Experience Platform vers le jeu de données.&quot; |
-| `CONNECTOR-3001-500` | &quot;Un problème est survenu avec le fournisseur de flux lors de la création d’un lot à l’aide de l’API d’assimilation en masse.&quot; |
+| `CONNECTOR-1001-500` | Une erreur s&#39;est produite lors de la copie des données à partir d&#39;une source. |
+| `CONNECTOR-2001-500` | Une erreur s&#39;est produite lors du traitement des données copiées vers [!DNL Platform]. Cette erreur peut concerner l’analyse, la validation ou la transformation. |
 
 La moitié inférieure de l&#39;écran contient des informations sur les erreurs **[!UICONTROL d&#39;exécution de flux de]** données. À partir de là, vous pouvez également vue les fichiers assimilés, prévisualisation et télécharger les diagnostics d&#39;erreur, ou télécharger le manifeste de fichier.
 
