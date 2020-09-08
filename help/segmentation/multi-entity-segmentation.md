@@ -5,10 +5,10 @@ title: Segmentation d’entités multiples
 topic: overview
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 translation-type: tm+mt
-source-git-commit: 5dd07bf9afe96be3a4c3f4a4d4e3b23aef4fde70
+source-git-commit: 8568c55003127a295acff9cfbbc3bbf6005e7a51
 workflow-type: tm+mt
-source-wordcount: '605'
-ht-degree: 20%
+source-wordcount: '620'
+ht-degree: 17%
 
 ---
 
@@ -21,10 +21,10 @@ La segmentation multientité est une fonction avancée disponible dans le cadre 
 
 La segmentation multientité nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans la segmentation. Avant de poursuivre avec ce guide, veuillez consulter la documentation suivante :
 
-* [!DNL Real-time Customer Profile](../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
+* [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
    * [Gardiens](../profile/guardrails.md)de profil : Meilleures pratiques pour la création de modèles de données pris en charge par [!DNL Profile].
-* [!DNL Adobe Experience Platform Segmentation Service](./home.md): Permet de créer des segments à partir de [!DNL Real-time Customer Profile] données.
-* [!DNL Experience Data Model (XDM)](../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[ !Service de segmentation Adobe Experience Platform DNL]](./home.md): Permet de créer des segments à partir de [!DNL Real-time Customer Profile] données.
+* [[ ! Modèle de données d’expérience DNL (XDM)]](../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition](../xdm/schema/composition.md#union)des schémas : Découvrez les meilleures pratiques pour composer des schémas à utiliser en Experience Platform.
 
 ## Cas d’utilisation
