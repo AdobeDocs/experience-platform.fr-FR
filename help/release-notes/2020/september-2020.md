@@ -3,12 +3,12 @@ title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour d’Experience Platform, 9 septembre 2020
 doc-type: release notes
 last-update: September 8, 2020
-author: crhoades, ens28527
+author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
+source-git-commit: 9a9b1294507986723c1e4d1230a854630131be3a
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 36%
+source-wordcount: '805'
+ht-degree: 33%
 
 ---
 
@@ -19,10 +19,12 @@ ht-degree: 36%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [[ ! Gouvernance des données DNL]](#governance)
-* [[ !Destinations DNL]](#destinations)
-* [[ ! Privacy Service DNL]](#privacy)
-* [[ !Sources DNL]](#sources)
+- [[ ! Gouvernance des données DNL]](#governance)
+- [[ !Destinations DNL]](#destinations)
+- [[ ! Privacy Service DNL]](#privacy)
+- [[ ! Profil client en temps réel DNL]](#profile)
+- [[ !Service de segmentation DNL]](#segmentation)
+- [[ !Sources DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -31,7 +33,7 @@ Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
-| --- | --- |
+| ------- | ----------- |
 | Améliorations de l’interface utilisateur d’étiquetage des jeux de données | Plusieurs nouvelles commandes de tri et de filtrage ont été ajoutées à l’interface d’étiquetage des jeux de données afin de faciliter l’utilisation des schémas volumineux : <ul><li>Triez les champs par ordre alphabétique en fonction du chemin d’accès complet au schéma.</li><li>Effectuez des recherches partielles sur les noms de chemin d’accès aux champs.</li><li>Filtrez les champs sans libellé, avec une étiquette sélectionnée ou avec une catégorie d’étiquettes.</li></ul> |
 
 Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données.](../../data-governance/home.md)
@@ -48,6 +50,31 @@ Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/ov
 
 Pour en savoir plus, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md)
 
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte d’activité horodaté de chaque interaction client.
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Visionneuse de profils | Le lecteur de profil, dans l’interface utilisateur de la plate-forme, a été mis à jour pour être un tableau de bord entièrement personnalisé. L’utilisateur peut désormais effectuer les tâches suivantes : <ul><li>Mettez à jour les attributs standard et personnalisés sélectionnés dans le widget d&#39;informations de base.</li><li>Créer, modifier et supprimer des widgets personnalisés</li><li>Redimensionner et réorganiser les widgets</li></ul> |
+
+For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
+## Segmentation Service {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Tâches d’exportation | Un indicateur a été ajouté pour permettre l’évaluation des segments dans le cadre d’une tâche d’exportation. En conséquence, les utilisateurs peuvent exécuter la segmentation et les exportations dans une seule tâche. |
+| Stratégies de fusion | Plusieurs stratégies de fusion peuvent être incluses dans une seule tâche de segmentation par lot. |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+
 ## [!DNL Privacy Service] {#privacy}
 
 Plusieurs réglementations légales et organisationnelles donnent aux utilisateurs le droit d&#39;accéder à vos données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
@@ -55,7 +82,7 @@ Plusieurs réglementations légales et organisationnelles donnent aux utilisateu
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
-| --- | --- |
+| ------- | ----------- |
 | Prise en charge de la LGPD (Brésil) | Des emplois dans le domaine de la protection de la vie privée peuvent désormais être créés en vertu de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces emplois font l&#39;objet d&#39;un suivi dans le cadre du code réglementaire `lgpd_bra`. |
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
