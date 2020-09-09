@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 user-guide-description: Monthly release notes for Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: bd3c31e7d39f7f66d755356a3dbb754e97c196fb
+source-git-commit: 312794af2cdb111fb81c0aa226dec68db2cbc374
 workflow-type: tm+mt
-source-wordcount: '25'
+source-wordcount: '26'
 ht-degree: 100%
 
 ---
@@ -14,7 +14,8 @@ ht-degree: 100%
 
 # Notes de mise à jour d’Adobe Experience Platform {#release-notes}
 
-* [Août 2020](latest/latest.md)
+* [Septembre 2020](latest/latest.md)
+* [Août 2020](2020/august-2020.md)
 * [Juillet 2020](2020/july-2020.md)
 * [Juin 2020](2020/june-2020.md)
 * [Mai 2020](2020/may-2020.md)
