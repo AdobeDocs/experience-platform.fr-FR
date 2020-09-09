@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 64b6b59923d549cdcbf35d2e375529aec8cf81b8
+source-git-commit: 23c7a0d82cb849568d6411c1a09c7a16b86d4954
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 45%
+source-wordcount: '507'
+ht-degree: 36%
 
 ---
 
@@ -21,6 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 * [[ ! Gouvernance des données DNL]](#governance)
 * [[ !Destinations DNL]](#destinations)
+* [[ ! Privacy Service DNL]](#privacy)
 * [[ !Sources DNL]](#sources)
 
 ## [!DNL Data Governance] {#governance}
@@ -46,6 +47,18 @@ Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/ov
 | Améliorations de l&#39;environnement | Les utilisateurs peuvent accéder aux actions de tableaux intégrés pour accéder plus facilement aux actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md)
+
+## [!DNL Privacy Service] {#privacy}
+
+Plusieurs réglementations légales et organisationnelles donnent aux utilisateurs le droit d&#39;accéder à vos données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de la LGPD (Brésil) | Des emplois dans le domaine de la protection de la vie privée peuvent désormais être créés en vertu de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces emplois font l&#39;objet d&#39;un suivi dans le cadre du code réglementaire `lgpd_bra`. |
+
+See the [Privacy Service overview](../../privacy-service/home.md) for more information on the service.
 
 ## Sources {#sources}
 
