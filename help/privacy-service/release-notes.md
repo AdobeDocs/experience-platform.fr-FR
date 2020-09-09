@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Notes de mise à jour de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 4cfa64e3371496e2408fe8fee64d49883334917c
+source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 64%
+source-wordcount: '538'
+ht-degree: 62%
 
 ---
 
@@ -19,6 +19,14 @@ This document contains information about new features for Adobe Experience Platf
 >[!NOTE]
 >
 >Les dernières notes de mise à jour des autres [!DNL Experience Platform] services sont disponibles [ici](../release-notes/latest/latest.md).
+
+## 9 septembre 2020
+
+### Nouvelles fonctionnalités
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Prise en charge de la LGPD (Brésil) | Des emplois dans le domaine de la protection de la vie privée peuvent désormais être créés en vertu de la réglementation brésilienne [!DNL Lei Geral de Proteção de Dados] (LGPD). Ces emplois font l&#39;objet d&#39;un suivi dans le cadre du code réglementaire `lgpd_bra`. |
 
 ## 8 avril 2020
 
