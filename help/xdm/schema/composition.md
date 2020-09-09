@@ -5,7 +5,7 @@ title: Principes de base de la composition des schémas
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4251dc292ead3ce4dc8aef68ff04bb774047160d
+source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 58%
@@ -173,7 +173,7 @@ Un champ est le bloc de création le plus basique d’un schéma. Les champs app
 
 * Chaîne
 * Entier
-* Nombre
+* Double
 * Booléen
 * Tableau
 * Objet
