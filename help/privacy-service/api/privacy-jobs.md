@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Tâches
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e7bb3e8a418631e9220865e49a1651e4dc065daf
+source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
 workflow-type: tm+mt
-source-wordcount: '1782'
-ht-degree: 78%
+source-wordcount: '1309'
+ht-degree: 70%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 78%
 # Tâches de confidentialité
 
 Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels d’API. Plus précisément, il couvre l’utilisation du point de `/job` terminaison dans l’ [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+
+>[!NOTE]
+>
+>Si vous tentez de gérer les demandes de consentement ou d’exclusion des clients, consultez le guide [du point de terminaison du](./consent.md)consentement.
 
 ## Liste de toutes les tâches {#list}
 
@@ -206,128 +210,6 @@ Une réponse réussie renvoie les détails des tâches créées.
 | `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée à l’étape suivante pour rechercher une tâche spécifique. |
 
 Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de [vérification de l’état de la tâche](#check-status).
-
-### Création d’une tâche d’exclusion de la vente {#opt-out}
-
-Cette section explique comment effectuer une requête de tâche d’exclusion de la vente à l’aide de l’API.
-
-**Format d’API**
-
-```http
-POST /jobs
-```
-
-**Requête**
-
-La requête suivante crée une nouvelle requête de tâche configurée par les attributs fournis dans le payload comme décrit ci-dessous.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/privacy/gdpr/ \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -d '{
-    "companyContexts": [
-      {
-        "namespace": "imsOrgID",
-        "value": "{IMS_ORG}"
-      }
-    ],
-    "users": [
-      {
-        "key": "DavidSmith",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "dsmith@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "ECID",
-            "type": "standard",
-            "value":  "443636576799758681021090721276",
-            "isDeletedClientSide": false
-          }
-        ]
-      },
-      {
-        "key": "user12345",
-        "action": ["opt-out-of-sale"],
-        "userIDs": [
-          {
-            "namespace": "email",
-            "value": "ajones@acme.com",
-            "type": "standard"
-          },
-          {
-            "namespace": "loyaltyAccount",
-            "value": "12AD45FE30R29",
-            "type": "integrationCode"
-          }
-        ]
-      }
-    ],
-    "include": ["Analytics", "AudienceManager"],
-    "expandIds": false,
-    "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
-    "regulation": "ccpa"
-}'
-```
-
-| Propriété | Description |
-| --- | --- |
-| `companyContexts` **(Obligatoire)** | Un tableau contenant des informations d’authentification pour votre organisation. Chaque identifiant répertorié inclut les attributs suivants : <ul><li>`namespace` : l’espace de noms d’un identifiant.</li><li>`value` : la valeur de l’identifiant.</li></ul>Il est **obligatoire** que l’un des identifiants utilise `imsOrgId` en tant que `namespace` avec son `value` contenant l’identifiant unique pour votre organisation IMS. <br/><br/>Les identifiants supplémentaires peuvent être des qualificateurs d’entreprise spécifiques aux produits (par exemple, `Campaign`) qui identifient une intégration avec une application Adobe appartenant à votre organisation. Les valeurs potentielles incluent des noms de compte, des codes client, des identifiants du client ou d’autres identifiants d’application. |
-| `users` **(Obligatoire)** | Un tableau contenant une collection d’au moins un utilisateur pour lequel vous souhaitez accéder aux informations ou les supprimer. Vous pouvez fournir un maximum de 1 000 identifiants d’utilisateur dans une seule requête. Chaque objet d’utilisateur contient les informations suivantes : <ul><li>`key` : un identifiant pour un utilisateur utilisé pour exécuter les identifiants de tâches distincts dans les données de réponse. Nous vous recommandons de choisir une chaîne unique et facilement identifiable pour cette valeur afin de pouvoir facilement la référencer ou la rechercher ultérieurement.</li><li>`action` : un tableau répertoriant les actions souhaitées pouvant être effectuées sur les données. Pour les demandes d’exclusion de la vente, le tableau ne doit contenir que la valeur `opt-out-of-sale`.</li><li>`userIDs` : une collection d’identités pour cet utilisateur. Le nombre d’identités qu’un utilisateur unique peut posséder est limité à neuf. Chaque identité se compose d’un `namespace`, d’un `value`et d’un qualificateur d’espace de noms (`type`). Consultez l’[annexe](appendix.md) pour en savoir plus sur les propriétés requises.</li></ul> Consultez le [guide de dépannage](../troubleshooting-guide.md#user-ids) pour une explication plus détaillée de `users` et de `userIDs`. |
-| `include` **(Obligatoire)** | Un tableau de produits Adobe à inclure dans votre traitement. Si cette valeur manque ou est vide, la requête sera rejetée. N’incluez que les produits pour lesquels votre organisation possède une intégration. Pour plus d’informations, consultez la section [Valeurs de produits acceptés](appendix.md) de l’annexe. |
-| `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par [!DNL Analytics]). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
-| `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
-| `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des quatre valeurs suivantes : <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
-
-**Réponse**
-
-Une réponse réussie renvoie les détails des tâches créées.
-
-```json
-{
-    "jobs": [
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bd9vjs0",
-            "customer": {
-                "user": {
-                    "key": "DavidSmith",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        },
-        {
-            "jobId": "6fc09b53-c24f-4a6c-9ca2-c6076bes0ewj2",
-            "customer": {
-                "user": {
-                    "key": "user12345",
-                    "action": [
-                        "opt-out-of-sale"
-                    ]
-                }
-            }
-        }
-    ],
-    "requestStatus": 1,
-    "totalRecords": 2
-}
-```
-
-| Propriété | Description |
-| --- | --- |
-| `jobId` | Un identifiant généré par le système unique et en lecture seule pour une tâche. Cette valeur est utilisée pour effectuer une recherche sur une tâche spécifique à l’étape suivante. |
-
-Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer à l’étape suivante de vérification de l’état de la tâche.
 
 ## Vérification de l’état d’une tâche {#check-status}
 
