@@ -5,9 +5,9 @@ title: Segmentation par flux
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '831'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,8 @@ En outre, certaines directives s’appliquent lors de la segmentation en flux co
 | ---------- | -------- |
 | Requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
 | Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
+
+Si une définition de segment est modifiée de sorte qu’elle ne réponde plus aux critères de la segmentation en flux continu, elle passe automatiquement de &quot;Diffusion en flux continu&quot; à &quot;Lot&quot;.
 
 ## Détails du segment de segmentation en flux continu
 
