@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Tâches de segmentation
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 3926c989a05ee97f2a09c0ab38d6a444674563cb
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1002'
 ht-degree: 38%
 
 ---
@@ -191,7 +191,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `segmentId` | ID de la définition de segment pour laquelle vous souhaitez créer une tâche de segment. Vous trouverez plus d’informations sur les définitions de segment dans le guide [des points de terminaison de la définition de](./segment-definitions.md)segment. |
+| `segmentId` | ID de la définition de segment pour laquelle vous souhaitez créer une tâche de segment. Ces définitions de segment peuvent appartenir à différentes stratégies de fusion. Vous trouverez plus d’informations sur les définitions de segment dans le guide [des points de terminaison de la définition de](./segment-definitions.md)segment. |
 
 **Réponse**
 
