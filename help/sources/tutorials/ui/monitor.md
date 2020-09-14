@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Surveiller les comptes et les flux de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 737ee0bd55dbf178505c9be0875b2a0b75d3217a
+source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1014'
 ht-degree: 5%
 
 ---
@@ -47,6 +47,14 @@ Le panneau de tri vous permet d’accéder aux comptes à partir d’une source 
 > Utilisez le bouton ![spectre-contrôle](../../images/tutorials/monitor/spectrum-control.png) de la colonne **[!UICONTROL Nom]** pour créer un nouveau flux de données source pour le compte sélectionné.
 
 ![comptes-sélectionner](../../images/tutorials/monitor/accounts-sort.png)
+
+De plus, vous pouvez modifier les informations de compte existantes et mettre à jour les informations de connexion de votre compte. Sélectionnez l&#39;icône représentant un crayon pour les informations de compte à modifier.
+
+![](../../images/tutorials/monitor/click-edit.png)
+
+Le module **[!UICONTROL Modifier les détails]** du compte s&#39;affiche. Cette page vous permet de mettre à jour les informations de compte et les informations d’identification d’authentification existantes.
+
+![](../../images/tutorials/monitor/edit-account.png)
 
 Sur la page **[!UICONTROL Comptes]** , vous pouvez vue une liste de flux de données ou de jeux de données de cible existants associés au compte auquel vous avez accédé. Sélectionnez le bouton ellipses (`...`) pour afficher d&#39;autres options disponibles pour le flux de données sélectionné. Ces options sont décrites plus en détail ci-dessous :
 
