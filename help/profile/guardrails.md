@@ -4,9 +4,9 @@ solution: Adobe Experience Platform
 title: Instructions pour les Experience Platform
 topic: guide
 translation-type: tm+mt
-source-git-commit: d9e4812e3506de3082670a8afde5480cd8f865d6
+source-git-commit: 51111b2e831a37949150b107eb76711e2470523c
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1201'
 ht-degree: 4%
 
 ---
@@ -96,5 +96,5 @@ Les garde-fous suivants se rapportent à la taille des données et sont recomman
 
 | Gardrail | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Taille totale maximale par entité dimensionnelle | 1 Go   | Soft | **La taille totale maximale recommandée pour une entité de dimension est de 1 Go.** L&#39;insertion d&#39;entités de grande dimension entraîne une dégradation des performances du système. Par exemple, il n’est pas recommandé de tenter de charger un catalogue de produits de 10 Go en tant qu’entité de dimension. |
+| Taille totale maximale pour toutes les entités dimensionnelles | 5 Go   | Soft | **La taille totale maximale recommandée pour toutes les entités dimensionnelles est de 5 Go.** L&#39;insertion d&#39;entités de grande dimension entraîne une dégradation des performances du système. Par exemple, il n’est pas recommandé de tenter de charger un catalogue de produits de 10 Go en tant qu’entité de dimension. |
 | Jeu de données par schéma d&#39;entité dimensionnelle | 5 | Soft | **Il est recommandé d’associer un maximum de 5 jeux de données à chaque schéma d’entité dimensionnelle.** Par exemple, si vous créez un schéma pour &quot;produits&quot; et ajoutez cinq jeux de données de contribution, vous ne devriez pas créer un sixième jeu de données lié au schéma de produits. |
