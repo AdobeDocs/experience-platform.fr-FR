@@ -5,9 +5,9 @@ title: Personnalisation des détails du profil
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: b08644102e6455d4c4c8b03e747411d3c05c7deb
+source-git-commit: 52cccd7436e203725a9fb4be8406332d8f23a71d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
@@ -103,11 +103,7 @@ Après l’enregistrement, vous revenez à l’onglet [!UICONTROL Détails] , o�
 
 ## Restaurer les cartes par défaut
 
-Si vous décidez à tout moment de supprimer vos modifications et de revenir à la vue par défaut, vous avez la possibilité de restaurer rapidement et facilement toutes les cartes et attributs par défaut. Pour ce faire, sélectionnez **[!UICONTROL Modifier le tableau de bord]**, puis **[!UICONTROL Restaurer les cartes]** par défaut. Cette opération supprime toutes les personnalisations (y compris le redimensionnement) que vous avez effectuées. Vous pouvez ensuite sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications ou, si vous ne souhaitez pas restaurer la valeur par défaut, sélectionner **[!UICONTROL Annuler]** pour conserver les modifications que vous avez effectuées.
-
->[!NOTE]
->
->Soyez prudent lors de la restauration des cartes et des attributs par défaut. Une fois que la valeur par défaut a été restaurée et enregistrée, la seule façon de revenir aux personnalisations de vos vues est de les créer à nouveau en suivant les étapes décrites dans ce document.
+Si vous décidez à tout moment de restaurer les cartes par défaut qui ont été supprimées depuis, vous avez la possibilité de le faire rapidement et facilement. Tout d’abord, sélectionnez **[!UICONTROL Modifier le tableau de bord]**, puis **[!UICONTROL Restaurer les cartes]** par défaut. Une fois les cartes par défaut visibles, vous pouvez sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications ou sélectionner **[!UICONTROL Annuler]** si vous ne souhaitez pas restaurer les cartes par défaut.
 
 ![](../images/profile-customization/profiles-restore-default.png)
 
