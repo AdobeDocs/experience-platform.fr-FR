@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: a345efca3c38c3077c89b47271f54b924d58db45
+source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 31%
@@ -290,7 +290,7 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 >               "description": "Encountered errors while parsing, converting or otherwise validating the data. Please resend the data with error diagnostics enabled to collect additional information on failure types"
 >       }]
 >}
-> ```
+>```
 
 ## Types d’erreurs d’ingestion par lots partielle {#appendix}
 
