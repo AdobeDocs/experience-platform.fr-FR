@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Ingestion de données dans Adobe Experience Platform
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 0816781620ca73a0511290d8d04b8f1a96db8a11
+source-git-commit: 2eef47cd4afe8c6dfd71d7b78035861ba1b368f7
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1278'
 ht-degree: 70%
 
 ---
@@ -153,4 +153,3 @@ Pour en savoir plus sur l&#39;assimilation par lots, veuillez lire l&#39;aperçu
 >L’ [!DNL Platform] interface utilisateur affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
-glisser
