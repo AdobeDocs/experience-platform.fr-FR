@@ -5,10 +5,10 @@ description: Découvrez la procédure de suivi des événements du SDK Web d’E
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 79%
+source-wordcount: '1116'
+ht-degree: 71%
 
 ---
 
@@ -27,6 +27,7 @@ Les données envoyées à Adobe Experience Cloud entrent dans deux catégories
 Les données XDM sont un objet dont le contenu et la structure correspondent à un schéma que vous avez créé dans Adobe Experience Platform. [En savoir plus sur la création d’un schéma.](../../xdm/tutorials/create-schema-ui.md)
 
 Any XDM data that you would like to be part of your analytics, personalization, audiences, or destinations should be sent using the `xdm` option.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -53,7 +54,37 @@ Actuellement, l’envoi de données qui ne correspondent pas à un schéma XDM n
 
 ### Définition de `eventType`
 
-Dans un événement d’expérience XDM, il existe un champ `eventType`. Il contient le type d’événement principal pour l’enregistrement. Vous pouvez le transmettre comme faisant partie de l’option `xdm`.
+In an XDM experience event, there is an optional `eventType` field. Il contient le type d’événement principal pour l’enregistrement. Définir un type d&#39;événement peut vous aider à différencier les différents événements que vous allez envoyer. XDM fournit plusieurs types d&#39;événement prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d&#39;événement personnalisés pour vos cas d&#39;utilisation. Vous trouverez ci-dessous une liste de tous les types d&#39;événement prédéfinis fournis par XDM.
+
+
+| **Type d’événement:** | **Définition:** |
+| ---------------------------------- | ------------ |
+| advertising.completes | Indique si un fichier multimédia minuté a été visionné jusqu’à la fin ; cela ne signifie pas nécessairement que l’utilisateur a visionné l’ensemble de la vidéo, elle aurait pu faire une avance rapide |
+| advertising.timePlayed | Décrit le temps passé par un utilisateur sur une ressource multimédia minutée spécifique. |
+| advertising.federated | Indique si un événement d’expérience a été créé par le biais d’une fédération de données (partage de données entre clients). |
+| advertising.clicks | Actions de clic sur une publicité |
+| advertising.conversions | Actions prédéfinies par le client qui déclenchent un événement pour l’évaluation des performances |
+| advertising.firstQuartiles | Une publicité vidéo numérique a été lue pendant 25 % de sa durée à une vitesse normale |
+| advertising.impressions | Impression d’une publicité destinée à un utilisateur final susceptible d’être visualisé |
+| advertising.midpoints | Une publicité vidéo numérique a été lue pendant 50% de sa durée à une vitesse normale |
+| advertising.starts | La lecture d’une publicité vidéo numérique a commencé |
+| advertising.thirdQuartiles | Une publicité vidéo numérique a été lue pendant 75 % de sa durée à une vitesse normale |
+| web.webpagedetails.pageViews | Vues qu’une page web a produites |
+| web.webinteraction.linkClicks | Un clic sur un lien web s’est produit |
+| commerce.checkouts | Action durant un processus de passage en caisse d’une des listes de produits. Il peut y avoir plusieurs événements de passage en caisse s’il existe plusieurs étapes dans un processus de passage en caisse. S’il existe plusieurs étapes, les informations sur l’heure de l’événement et la page ou l’expérience référencée sont utilisées pour identifier l’étape que chaque événement représente dans l’ordre |
+| commerce.productListAdds | Ajout d’un produit à la liste de produits. Exemple : ajout d’un produit dans le panier |
+| commerce.productListOpens | Initialisation d’une nouvelle liste de produits. Exemple : création d’un panier |
+| commerce.productListRemovals | Suppression d’une ou de plusieurs entrées sur une liste de produits. Exemple : suppression d’un produit dans un panier |
+| commerce.productListReopens | Une liste de produits qui n’était plus accessible (abandonnée) a été réactivée par l’utilisateur. Exemple avec une activité de remarketing |
+| commerce.productListViews | Vues qu’une liste de produits a générées |
+| commerce.productViews | Vues qu’un produit a générées |
+| commerce.purchases | Une commande a été acceptée. L’achat est la seule action requise dans une conversion commerciale. Une liste de produits doit être référencée pour l’achat |
+| commerce.saveForLaters | La liste de produits est enregistrée pour une utilisation ultérieure. Exemple d’une liste de souhaits de produits |
+| delivery.feedback | Événements de commentaires pour une diffusion. Exemples de événements de commentaire pour une diffusion de courriel |
+
+
+Ces types d&#39;événement s&#39;afficheront dans une liste déroulante si vous utilisez l&#39;extension Launch ou si vous pouvez toujours les transmettre sans Launch. They can be passed in as part of the `xdm` option.
+
 
 ```javascript
 alloy("sendEvent", {
@@ -73,6 +104,7 @@ alloy("sendEvent", {
 
 Vous pouvez également transmettre `eventType` dans la commande d’événement à l’aide de l’option `type`. Cela est ajouté aux données XDM en arrière-plan. Disposer de `type` comme option permet de définir plus facilement `eventType` sans avoir à modifier la charge utile XDM.
 
+
 ```javascript
 var myXDMData = { ... };
 
@@ -85,6 +117,7 @@ alloy("sendEvent", {
 ### Remplacement de l’ID de jeu de données
 
 Dans certains cas, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour cela, vous devez définir l&#39; `datasetId` option sur la `sendEvent` commande :
+
 
 ```javascript
 var myXDMData = { ... };
@@ -103,6 +136,7 @@ Des informations d&#39;identité personnalisées peuvent également être ajout�
 ## Utilisation de l’API sendBeacon
 
 Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et n’interrompt pas la navigation dans la page. To tell Adobe Experience Platform [!DNL Web SDK] to use `sendBeacon`, add the option `"documentUnloading": true` to the event command.  Voici un exemple :
+
 
 ```javascript
 alloy("sendEvent", {
@@ -125,6 +159,7 @@ Les navigateurs ont imposé des limites à la quantité de données pouvant êtr
 ## Gestion des réponses d’événements
 
 Si vous souhaitez gérer une réponse d’un événement, vous pouvez être averti d’un succès ou d’un échec de la manière suivante :
+
 
 ```javascript
 alloy("sendEvent", {
@@ -150,6 +185,7 @@ alloy("sendEvent", {
 ## Modification globale des événements {#modifying-events-globally}
 
 Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifiez `event.xdm` pour changer les données envoyées dans l’événement.
+
 
 ```javascript
 alloy("configure", {
