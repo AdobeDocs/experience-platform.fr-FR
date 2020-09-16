@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Se connecter aux destinations de diffusion en continu et activer les données
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: 3cfbee08c1948b2e073547f9bbf0c8526cbfd4bc
+source-git-commit: f31b03f027d8b44f761917f4edf19a0b5eedd76c
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1822'
 ht-degree: 60%
 
 ---
@@ -468,7 +468,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}` : utilisez le flux de données obtenu à l’étape précédente.
 * `{ETAG}` : utilisez l’etag obtenu à l’étape précédente.
-* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/, sélectionnez API **** Segmentation Service dans le menu de navigation de gauche et recherchez l’ `GET /segment/jobs` opération.
+* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL Segmentation Service API]** dans le menu de navigation de gauche et recherchez l’ `GET /segment/definitions` opération dans Définitions **[!UICONTROL de]** segment.
 * `{PROFILE_ATTRIBUTE}`: Par exemple, `personalEmail.address` ou `person.lastName`
 
 **Réponse**
