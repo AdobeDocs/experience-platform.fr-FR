@@ -5,7 +5,7 @@ title: Query Service dans les notebooks Jupyter
 topic: Tutorial
 description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce didacticiel présente des exemples de requêtes SQL pour des cas d'utilisation courants afin d'explorer, de transformer et d'analyser les données Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 43d568a401732a753553847dee1b4a924fcc24fd
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 68%
@@ -37,7 +37,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 1. In [[!DNL Experience Platform]](https://platform.adobe.com), navigate to **[!UICONTROL Notebooks]** from the left navigation column. Laissez charger JupyterLab.
 
-   ![](../images/jupyterlab/query/jupyterlab_launcher.png)
+   ![](../images/jupyterlab/query/jupyterlab-launcher.png)
 
    >[!NOTE]
    >
@@ -289,6 +289,6 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-## Étapes suivantes <!-- omit in toc -->
+## Étapes suivantes
 
 This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Suivez le tutoriel [Analyser vos données à l’aide des notebooks Jupyter](./analyze-your-data.md) pour découvrir la manière dont des opérations similaires sont exécutées à l’aide du SDK d’accès aux données.
