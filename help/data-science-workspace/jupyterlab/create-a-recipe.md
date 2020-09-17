@@ -5,9 +5,9 @@ title: Création d’une recette à l’aide de notebooks Jupyter
 topic: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 3876c33a2d20481f45bd12eda3921898e9e65654
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2335'
 ht-degree: 87%
 
 ---
@@ -34,11 +34,11 @@ The [!UICONTROL Recipe Builder] notebook allows you to run training and scoring 
 >
 >Le notebook Recipe Builder prend en charge l’utilisation de tous les formats de fichier, mais la fonctionnalité Create Recipe ne prend actuellement en charge que [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe-builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder.png)
 
-Lorsque vous cliquez sur le notebook Recipe Builder depuis le lanceur, le notebook s’ouvrira dans l’onglet. Le modèle utilisé dans le notebook est la recette Python de prévision des ventes au détail, qui se trouve également dans [ce référentiel public](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/).
+Lorsque vous cliquez sur le bloc-notes du Générateur de recettes depuis le lanceur, le bloc-notes s&#39;ouvre dans l&#39;onglet. Le modèle utilisé dans le notebook est la recette Python de prévision des ventes au détail, qui se trouve également dans [ce référentiel public](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail/).
 
-Vous remarquerez la présence de trois autres actions dans la barre d’outils : **[!UICONTROL Former]**, **[!UICONTROL Noter]** et **[!UICONTROL Créer une recette]**. These icons will only appear in the [!UICONTROL Recipe Builder] notebook. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
+Vous remarquerez la présence de trois autres actions dans la barre d’outils : **[!UICONTROL Former]**, **[!UICONTROL Noter]** et **[!UICONTROL Créer une recette]**. These icons only appear in the [!UICONTROL Recipe Builder] notebook. Vous trouverez plus d’informations sur ces actions [dans la section Formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
