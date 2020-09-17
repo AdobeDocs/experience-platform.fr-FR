@@ -5,10 +5,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Data Science Workspace Guide
 user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.
 translation-type: tm+mt
-source-git-commit: 1565c19fdd07935e503e9faa2d9f748331d7f933
+source-git-commit: 638a7ea607ffe269b2c6788324860f3a25f43727
 workflow-type: tm+mt
-source-wordcount: '215'
-ht-degree: 88%
+source-wordcount: '204'
+ht-degree: 87%
 
 ---
 
@@ -19,9 +19,10 @@ ht-degree: 88%
 * [Présentation détaillée de Data Science Workspace](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
    * [Guide d’utilisation de JupyterLab](jupyterlab/overview.md)
-   * [Analysez vos données à l’aide de notebooks](jupyterlab/analyze-your-data.md)
-   * [Query Service dans les notebooks Jupyter](jupyterlab/query-service.md)
-   * [Création d’une recette à l’aide de notebooks Jupyter](jupyterlab/create-a-recipe.md)
+   * [Accès aux données](jupyterlab/access-notebook-data.md)
+   * [Analyse de vos données](jupyterlab/analyze-your-data.md)
+   * [Service de requête](jupyterlab/query-service.md)
+   * [Création d’une recette](jupyterlab/create-a-recipe.md)
    * [Collaboration dans JupyterLab à l&#39;aide de Git](jupyterlab/using-git-for-collaboration.md)
 * API Sensei Machine Learning {#api}
    * [Prise en main](api/getting-started.md)
@@ -61,7 +62,6 @@ ht-degree: 88%
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation et de la notation automatisée d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
-* [Guides de migration des recettes et des blocs-notes](recipe-notebook-migration.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
