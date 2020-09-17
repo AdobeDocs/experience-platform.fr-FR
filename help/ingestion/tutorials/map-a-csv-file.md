@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mappage d’un fichier CSV à un schéma XDM
 topic: tutorial
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 57%
+source-wordcount: '1350'
+ht-degree: 55%
 
 ---
 
@@ -61,6 +61,10 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**. Les champs cibles non sélectionnés sont indiqués en rouge. Vous pouvez utiliser l’option de filtre de champs pour restreindre la liste des champs source disponibles.
 
+>[!TIP]
+>
+>[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+
 Pour mapper une colonne CSV à un champ XDM, sélectionnez l’icône de schéma en regard du champ de cible correspondant à la colonne.
 
 ![](../images/tutorials/map-a-csv-file/mapping.png)
@@ -69,17 +73,9 @@ La fenêtre **[!UICONTROL Sélectionner un champ de schéma]** apparaît. Ici, v
 
 ![](../images/tutorials/map-a-csv-file/select-schema-field.png)
 
-L’écran **[!UICONTROL Mappage]** réapparaît, le champ XDM sélectionné s’affichant désormais sous **[!UICONTROL Champ cible]**.
+Une fois que vous avez terminé les étapes pour les champs source non mappés restants, l’écran **[!UICONTROL Mappage]** s’affiche de nouveau avec le champ XDM sélectionné qui s’affiche désormais sous Champ **[!UICONTROL de]** Cible.
 
 ![](../images/tutorials/map-a-csv-file/field-mapped.png)
-
-Si vous ne souhaitez pas mapper une colonne CSV spécifique, vous pouvez supprimer le mappage en cliquant sur l’**icône de suppression** en regard du champ cible. Vous pouvez également supprimer tous les mappages en cliquant sur le bouton **** Effacer tous les mappages.
-
-![](../images/tutorials/map-a-csv-file/remove-mapping.png)
-
-If you want to add a new mapping, select **[!UICONTROL Add new mapping]** at the top of the **[!UICONTROL Source Field]** list.
-
-![](../images/tutorials/map-a-csv-file/add-mapping.png)
 
 Lors du mappage des champs, vous pouvez également inclure des fonctions pour calculer les valeurs en fonction des champs sources d’entrée. Pour plus d’informations, consultez la section relative aux [fonctions de mappage](#mapping-functions) de l’annexe.
 
@@ -89,7 +85,7 @@ Les champs calculés permettent de créer des valeurs en fonction des attributs 
 
 Sélectionnez le bouton **[!UICONTROL Ajouter le champ]** calculé pour continuer.
 
-![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
 
 Le panneau **[!UICONTROL Créer un champ]** calculé s’affiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez l’un des onglets à début pour ajouter des fonctions, des champs ou des opérateurs à l’éditeur d’expressions.
 
