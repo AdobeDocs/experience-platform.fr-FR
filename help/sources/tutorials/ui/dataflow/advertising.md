@@ -5,9 +5,9 @@ title: Configuration d’un flux de données pour un connecteur de publicité da
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Adobe Experience Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte publicitaire.
 translation-type: tm+mt
-source-git-commit: 5d4aa8eebc1837a5d8b275fa631f4af73c38158e
+source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1377'
 ht-degree: 4%
 
 ---
@@ -76,9 +76,13 @@ The **[!UICONTROL Select schema]** dialog appears. Sélectionnez le schéma à a
 
 Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utiliser les fonctions de mappage pour transformer les données source afin de dériver des valeurs calculées ou calculées. Pour plus d’informations sur les fonctions de mappage et de mappage de données, consultez le didacticiel sur le [mappage des données CSV aux champs](../../../../ingestion/tutorials/map-a-csv-file.md)de schéma XDM.
 
-Une fois les données source mises en correspondance, cliquez sur **[!UICONTROL Suivant]**.
+>[!TIP]
+>
+>[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-updated.png)
+Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Suivant]**.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
 
 ## Planifier les exécutions d&#39;assimilation
 
