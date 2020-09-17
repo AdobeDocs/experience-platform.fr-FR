@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: c9ff4d26accd880d5169526f84be607fc722883b
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 28%
+source-wordcount: '1452'
+ht-degree: 25%
 
 ---
 
@@ -41,7 +41,19 @@ Sélectionnez l&#39;onglet **[!UICONTROL Parcourir]** pour afficher une liste de
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-Cette vue contient des informations sur la définition de segment, y compris la méthode d’évaluation, la date de création et la date de dernière modification.
+Cette vue liste des informations sur la définition de segment, y compris la ventilation, l’exécution, le nombre de profils, la méthode d’évaluation, la date de création et la date de dernière modification.
+
+La ventilation présente un graphique à barres indiquant le pourcentage de profils appartenant à chacun des états suivants : [!UICONTROL Entré], [!UICONTROL Réalisé]et [!UICONTROL Quitter].
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| État | Description |
+| ------ | ----------- |
+| Entrés | Un nouveau profil dans le segment. |
+| Réalisé | Profil existant qui est resté dans le segment. |
+| Fermeture | Profil existant qui quitte le segment. |
+
+L’événement représente le pourcentage de profils qui changent au sein d’une définition de segment par rapport à la dernière exécution de la tâche de segment, tandis que le nombre de profils représente le nombre total de profils admissibles pour le segment.
 
 La méthode d’évaluation peut être soit par flux, soit par lot. Les segments par flux sont constamment évalués au fur et à mesure que les données entrent dans le système. Les segments par lot sont évalués selon un planning établi.
 
