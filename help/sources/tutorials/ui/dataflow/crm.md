@@ -5,10 +5,10 @@ title: Configuration d’un flux de données pour un connecteur CRM dans l’int
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte CRM.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 4%
+source-wordcount: '1466'
+ht-degree: 3%
 
 ---
 
@@ -79,9 +79,15 @@ Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utili
 >
 >[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Suivant]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Sélectionnez des données **[!UICONTROL de]** Prévisualisation pour afficher les résultats de mappage de 100 lignes de données d’exemple au maximum du jeu de données sélectionné.
+
+Au cours de la prévisualisation, la colonne d&#39;identité est considérée comme le premier champ, car il s&#39;agit des informations clés nécessaires à la validation des résultats de mappage.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Fermer]**.
 
 ## Planifier les exécutions d&#39;assimilation
 
@@ -92,7 +98,7 @@ L&#39;étape **[!UICONTROL Planification]** s&#39;affiche, ce qui vous permet de
 | Fréquence | Les fréquences sélectionnables sont `Once`, `Minute`, `Hour`, `Day`et `Week`. |
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. |
 | Début | Horodatage UTC indiquant à quel moment la première importation est prévue. |
-| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le **[!UICONTROL renvoi ]*est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le*renvoi *est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai*[!UICONTROL de ]*Début seront ingérés. Les fichiers chargés avant l&#39;heure*[!UICONTROL de]** Début ne seront pas ingérés. |
+| Renvoi | Valeur booléenne qui détermine quelles données sont initialement ingérées. Si le **[!UICONTROL renvoi]** est activé, tous les fichiers actuels du chemin d’accès spécifié seront ingérés lors de la première assimilation planifiée. Si le **[!UICONTROL renvoi]** est désactivé, seuls les fichiers chargés entre la première exécution de l’assimilation et le délai **[!UICONTROL de]** Début seront ingérés. Les fichiers chargés avant l&#39;heure **[!UICONTROL de]** Début ne seront pas ingérés. |
 | Colonne Delta | Option avec un ensemble filtré de champs de schéma source de type, de date ou d’heure. Ce champ permet de différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
 Les flux de données sont conçus pour intégrer automatiquement les données sur une base planifiée. Début en sélectionnant la fréquence d&#39;ingestion. Ensuite, définissez l’intervalle pour désigner la période entre deux exécutions de flux. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15.
