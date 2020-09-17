@@ -5,9 +5,9 @@ title: Configuration d’un flux de données pour un connecteur de base de donn�
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de base de données.
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: ad9b52e46d3eb4f6ed7774e4cbcb031a52801b49
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1396'
 ht-degree: 3%
 
 ---
@@ -80,9 +80,15 @@ Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utili
 >
 >[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Suivant]**.
-
 ![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+
+Sélectionnez des données **[!UICONTROL de]** Prévisualisation pour afficher les résultats de mappage de 100 lignes de données d’exemple au maximum du jeu de données sélectionné.
+
+Au cours de la prévisualisation, la colonne d&#39;identité est considérée comme le premier champ, car il s&#39;agit des informations clés nécessaires à la validation des résultats de mappage.
+
+![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
+
+Une fois les données source mises en correspondance, sélectionnez **[!UICONTROL Fermer]**.
 
 ## Planifier les exécutions d&#39;assimilation
 
