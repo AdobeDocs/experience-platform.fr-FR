@@ -5,10 +5,10 @@ title: Présentation de Data Science Workspace
 topic: overview
 description: Ce guide présente un aperçu des concepts clés liés à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
+source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
 workflow-type: tm+mt
-source-wordcount: '2584'
-ht-degree: 73%
+source-wordcount: '2578'
+ht-degree: 72%
 
 ---
 
@@ -196,7 +196,7 @@ Lorsque vous formez vos modèles, des opérations et des évaluations de formati
 
 ![](./images/home/evaluation_metrics.png)
 
-Consultez [cette section](https://docs.adobe.com/content/help/fr-FR/experience-platform/data-science-workspace/home.html) pour obtenir des tutoriels sur la formation et l’évaluation des modèles dans [!DNL Data Science Workspace].
+Visitez le didacticiel [API](./models-recipes/train-evaluate-model-api.md) ou [IU](./models-recipes/train-evaluate-model-ui.md) pour découvrir comment former et évaluer des modèles dans [!DNL Data Science Workspace].
 
 ### Mise en œuvre du modèle
 
@@ -206,7 +206,7 @@ Un service intelligent publié peut être configuré pour se former automatiquem
 
 ## Étapes suivantes
 
-[!DNL Data Science Workspace] permet de rationaliser et de simplifier le processus de science des données, de la collecte de données aux algorithmes en passant par les services intelligents, pour les spécialistes des données de tout niveau de compétence. With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
+[!DNL Data Science Workspace] permet de rationaliser et de simplifier le flux de données scientifiques, de la collecte de données aux algorithmes en passant par les services intelligents pour les spécialistes des données de tous les niveaux de compétences. With the sophisticated tools [!DNL Data Science Workspace] provides, you can significantly shorten the time from data to insights.
 
 More importantly, [!DNL Data Science Workspace] puts the data science and algorithmic optimization capabilities of Adobe&#39;s leading marketing platform in the hands of enterprise data scientists. Pour la première fois, les entreprises peuvent intégrer des algorithmes propriétaires à la plateforme, en tirant parti des puissantes fonctionnalités d’apprentissage machine et d’IA d’Adobe pour offrir des expériences client hautement personnalisées à grande échelle.
 
