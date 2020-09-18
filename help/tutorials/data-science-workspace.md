@@ -5,9 +5,9 @@ title: Tutoriels Data Science Workspace
 topic: tutorial
 description: Adobe Experience Platform Data Science Workspace utilise l'apprentissage automatique et l'intelligence artificielle pour créer des informations à partir de vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 10c9ce66b0fb3b5d1be931f37d95d283673bef15
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1297'
 ht-degree: 19%
 
 ---
@@ -41,10 +41,18 @@ Pour en savoir plus et obtenir les valeurs requises pour effectuer des opératio
 - Accédez à l&#39; [!DNL JupyterLab] interface et comprenez-la.
 - Comprendre les cellules de code et les noyaux disponibles dans [!DNL JupyterLab].
 - Comprendre la configuration du GPU et du serveur de mémoire dans [!DNL Python]/R.
-- Lecture et requête [!DNL Platform] des données à l’aide de portables.
-- Comprenez les limites de données des ordinateurs portables.
 
 Pour en savoir plus, consultez le guide [d&#39;utilisation de](../data-science-workspace/jupyterlab/overview.md)JupyterLab.
+
+## Accès aux données dans les portables JupyterLab
+
+Actuellement, JupyterLab dans Data Science Workspace prend en charge les ordinateurs portables pour [!DNL Python], R, PySpark et Scala. Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de Platform à partir d’un jeu de données dans un notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks. Ce guide se concentre sur l&#39;utilisation des portables JupyterLab pour accéder à vos données.
+
+**Ce guide vous aidera à :**
+- Données de plateformes en lecture, écriture et requête à l&#39;aide de portables Python, R, PySpark ou Scala.
+- Comprendre les limites de lecture de chaque type de bloc-notes.
+
+Pour en savoir plus, consultez le guide du développeur [d&#39;accès aux données des ordinateurs portables JupyterLab.](../data-science-workspace/jupyterlab/access-notebook-data.md)
 
 ## compresser les fichiers source pour la création de [!DNL Docker] recettes ;
 
