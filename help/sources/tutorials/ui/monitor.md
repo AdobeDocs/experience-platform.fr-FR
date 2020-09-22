@@ -5,9 +5,9 @@ solution: Experience Platform
 title: Surveiller les comptes et les flux de données
 topic: overview
 translation-type: tm+mt
-source-git-commit: 20c3037295b49cba45fcc5901803107dea26b3b2
+source-git-commit: 8f752d6a08496f9583627781d9143ee7f9159bf0
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1097'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,7 @@ Sur la page **[!UICONTROL Comptes]** , vous pouvez vue une liste de flux de donn
 
 | Contrôle | Description |
 | ------- | ----------- |
-| [!UICONTROL Modifier la planification] | Permet de modifier le calendrier d’assimilation du flux de données. |
+| [!UICONTROL Modifier le planning] | Permet de modifier le calendrier d’assimilation du flux de données. |
 | [!UICONTROL Désactiver le flux de données] | Permet de désactiver l&#39;assimilation des données pour le flux de données sélectionné. |
 | [!UICONTROL Supprimer] | Permet de supprimer le flux de données sélectionné. |
 
@@ -72,7 +72,18 @@ Les flux de données sont accessibles directement à partir de la page **[!UICON
 
 ![catalogue-flux de données](../../images/tutorials/monitor/catalog-dataflows.png)
 
-Une liste de flux de données existants s’affiche. Cette page contient une liste de flux de données affichables, y compris des informations sur leur source, leur nom d&#39;utilisateur, leur nombre de flux de données et leur état. Sélectionnez l’icône d’entonnoir en haut à gauche pour effectuer le tri.
+Une liste de flux de données existants s’affiche. Cette page contient une liste de flux de données affichables, y compris des informations sur leur source, leur nom d&#39;utilisateur, leur nombre de flux de données et leur état.
+
+Pour plus d’informations sur les états, voir le tableau suivant :
+
+| État | Description |
+| ------ | ----------- |
+| Activé | L’ `Enabled` état indique qu’un flux de données est principal et qu’il ingère des données selon le calendrier prévu. |
+| Désactivé | L’ `Disabled` état indique qu’un flux de données est inactif et n’ingère aucune donnée. |
+| En cours de traitement | L’ `Processing` état indique qu’un flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
+| Erreur | L’ `Error` état indique que le processus d’activation d’un flux de données a été interrompu. |
+
+Sélectionnez l’icône d’entonnoir en haut à gauche pour effectuer le tri.
 
 ![flux de données-liste](../../images/tutorials/monitor/dataflows-list.png)
 
