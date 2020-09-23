@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: Prévisualisation de profil - API de Profil client en temps réel
 description: Adobe Experience Platform vous permet d'assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans la plate-forme, elles sont stockées dans le magasin de données du Profil. À mesure que le nombre d’enregistrements dans la banque de Profils augmente ou diminue, une tâche d’exemple est exécutée qui comprend des informations sur le nombre de fragments de profil et de profils fusionnés présents dans la banque de données. L'API de Profil vous permet de prévisualisation du dernier exemple réussi, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d'identité.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 2edba7cba4892f5c8dd41b15219bf45597bd5219
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 6%
