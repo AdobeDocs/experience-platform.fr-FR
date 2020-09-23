@@ -1,10 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Guide de dépannage de Real-time Customer Profile
 topic: guide
 translation-type: tm+mt
-source-git-commit: 94fd6ee324b35acb7ef1185f7851d76d76f3e91c
+source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
 source-wordcount: '983'
 ht-degree: 9%
@@ -26,15 +25,15 @@ Vous trouverez ci-dessous une liste de réponses aux questions fréquentes sur l
 
 Profil accepte à la fois les données **d’enregistrement** et les données de séries **** chronologiques, pour autant que les données en question contiennent au moins une valeur d’identité qui associe les données à une personne individuelle unique.
 
-Comme tous les services Platform, le Profil exige que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). En retour, ce schéma doit avoir une identité **** principale définie et être activé pour une utilisation dans le Profil.
+Comme tous les services de plate-forme, le Profil exige que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). En retour, ce schéma doit avoir une identité **** Principale définie et être activé pour une utilisation dans le Profil.
 
 Si vous ne connaissez pas XDM, début de l&#39;aperçu [](../xdm/home.md) XDM pour en savoir plus. Ensuite, consultez le guide de l&#39;utilisateur XDM pour savoir comment [définir des champs](../xdm/tutorials/create-schema-ui.md#identity-field) d&#39;identité et [activer un schéma pour le Profil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Où les données de Profil sont-elles stockées ?
 
-Le Profil client en temps réel conserve sa propre banque de données (appelée &quot;banque de Profils&quot;), distincte de Data Lake qui contient d’autres données Platform ingérées.
+Le Profil client en temps réel conserve sa propre banque de données (appelée &quot;banque de Profils&quot;), distincte de Data Lake qui contient d’autres données de plateforme imbriquées.
 
-### Si j&#39;ai déjà assimilé des données à Platform, puis-je les rendre disponibles dans le magasin de Profils ?
+### Si j&#39;ai déjà assimilé des données dans Platform, puis-je les rendre disponibles dans le magasin de Profils ?
 
 Si des données ont été ingérées dans un jeu de données non Profil, vous devez réingérer ces données dans un jeu de données compatible Profil afin de les rendre disponibles dans le magasin de Profils. Il est possible d&#39;activer un jeu de données existant pour le Profil ; toutefois, les données ingérées avant cette configuration n&#39;apparaîtront toujours pas dans le Profil Store.
 
@@ -58,7 +57,7 @@ Vous pouvez également vue une liste de vos segments sous l’onglet **[!UICONTR
 
 ## Codes d’erreur
 
-Voici une liste de messages d’erreur que vous pouvez rencontrer lorsque vous utilisez l’API Profil client en temps réel. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans le guide [général de dépannage de](../landing/troubleshooting.md) Platform à la place.
+Voici une liste de messages d’erreur que vous pouvez rencontrer lorsque vous utilisez l’API Profil client en temps réel. Si l’erreur que vous rencontrez n’est pas répertoriée ici, vous pouvez la trouver dans le guide [général de dépannage de](../landing/troubleshooting.md) la plate-forme à la place.
 
 ### Impossible de rechercher le schéma de l&#39;attribut calculé pour le chemin d&#39;accès fourni
 
@@ -104,7 +103,7 @@ Lors de la création d’un nouvel attribut calculé, cette erreur se produit lo
 }
 ```
 
-Cette erreur se produit lorsqu&#39;une charge utile non valide est fournie pour une tâche de suppression du système. Assurez-vous de fournir un jeu de données ou un ID de lot valide sous la propriété `dataSetID` ou la propriété `batchID` de la charge utile, respectivement. Pour plus d&#39;informations, consultez la section relative à la [création d&#39;une demande](./api/profile-system-jobs.md#create-a-delete-request) de suppression dans le guide du développeur de Profils.
+Cette erreur se produit lorsqu&#39;une charge utile non valide est fournie pour une tâche de suppression du système. Assurez-vous de fournir un jeu de données ou un ID de lot valide sous la propriété `dataSetID` `batchID` ou la propriété de la charge utile, respectivement. Pour plus d&#39;informations, consultez la section relative à la [création d&#39;une demande](./api/profile-system-jobs.md#create-a-delete-request) de suppression dans le guide du développeur de Profils.
 
 ### Lot introuvable pour le jeu de données de profil
 
@@ -134,7 +133,7 @@ Cette erreur se produit lorsqu&#39;un lot valide est introuvable lors de la tent
 }
 ```
 
-Cette erreur se produit lorsque le `destinationId` contenu d’une `POST /config/projections` requête n’est pas valide. Vérifiez par Doublon que vous avez fourni un ID de destination valide avant de réessayer. Pour créer une nouvelle destination, suivez les étapes décrites dans le guide [des développeurs de](./api/edge-projections.md#create-a-destination)Profils.
+Cette erreur se produit lorsque le `destinationId` contenu d’une `POST /config/projections` requête n’est pas valide. Vérifiez par doublon que vous avez fourni un ID de destination valide avant de réessayer. Pour créer une nouvelle destination, suivez les étapes décrites dans le guide [des développeurs de](./api/edge-projections.md#create-a-destination)Profils.
 
 ### Type de support non pris en charge
 
@@ -146,7 +145,7 @@ Cette erreur se produit lorsque le `destinationId` contenu d’une `POST /config
 }
 ```
 
-Cette erreur se produit lors de l&#39;envoi d&#39;une demande de POST ou de PUT avec un en-tête Content-Type non valide. Vérifiez par Doublon que vous fournissez une valeur Content-Type valide pour le point de terminaison que vous utilisez.
+Cette erreur se produit lors de l&#39;envoi d&#39;une demande de POST ou de PUT avec un en-tête Content-Type non valide. Vérifiez par doublon que vous fournissez une valeur Content-Type valide pour le point de terminaison que vous utilisez.
 
 La plupart des points de terminaison de Profil acceptent &quot;application/json&quot; pour leur en-tête Content-Type, avec les exceptions suivantes :
 
