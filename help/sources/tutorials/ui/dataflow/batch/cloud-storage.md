@@ -5,9 +5,9 @@ title: Configuration d’un flux de données pour un connecteur de lot d’enreg
 topic: overview
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: a4fd95904159a7b3e9c420f720a315641fd6706f
+source-git-commit: 63eb8407617cda64f3f3b0cefd6bf427314e0216
 workflow-type: tm+mt
-source-wordcount: '1625'
+source-wordcount: '1674'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,11 @@ The **[!UICONTROL Select dataset]** dialog appears. Recherchez le jeu de donnée
 
 Pour importer des données dans un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** et entrez un nom et une description pour le jeu de données dans les champs fournis. Pour ajouter un schéma, vous pouvez entrer un nom de schéma existant dans la boîte de dialogue **[!UICONTROL Sélectionner un schéma]** . Vous pouvez également sélectionner le **[!UICONTROL Schéma de recherche]** avancée pour rechercher un schéma approprié.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/use-new-dataset.png)
+Au cours de cette étape, vous pouvez activer votre jeu de données pour [!DNL Real-time Customer Profile] et créer une vue holistique des attributs et des comportements d’une entité. Les données de tous les jeux de données activés seront incluses dans [!DNL Profile] et des modifications seront appliquées lorsque vous enregistrez votre flux de données.
+
+Active/désactive le bouton **[!UICONTROL Profil dataset]** pour activer votre jeu de données de cible pour [!DNL Profile].
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
 The **[!UICONTROL Select schema]** dialog appears. Sélectionnez le schéma à appliquer au nouveau jeu de données, puis sélectionnez **[!UICONTROL Terminé]**.
 
