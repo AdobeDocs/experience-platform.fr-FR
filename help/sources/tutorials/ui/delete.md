@@ -4,8 +4,9 @@ description: Les connecteurs source de Adobe Experience Platform permettent d’
 solution: Experience Platform
 title: Supprimer des flux de données
 topic: overview
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 6bd5dc5a68fb2814ab99d43b34f90aa7e50aa463
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 10%
@@ -34,7 +35,7 @@ Sélectionnez **[!UICONTROL Flux de données]** pour accéder à la page Flux de
 
 ![dataset-flow-activité](../../images/tutorials/delete/dataflows.png)
 
-Une liste de flux de données existants s’affiche. Cette page contient une liste d&#39;informations pouvant être triées pour les flux de données existants tels que la source, le nom d&#39;utilisateur, l&#39;état d&#39;exécution et la date de dernière exécution. Sélectionnez l’icône **** d’entonnoir située en haut à gauche pour effectuer le tri.
+Une liste de flux de données existants s’affiche. Cette page contient une liste d&#39;informations pouvant être triées pour les flux de données existants, tels que la source, le nom d&#39;utilisateur, l&#39;état d&#39;exécution et la date de dernière exécution. Sélectionnez l’icône **** d’entonnoir située en haut à gauche pour effectuer le tri.
 
 ![flux de données-liste](../../images/tutorials/delete/dataflows-list.png)
 
