@@ -1,11 +1,12 @@
 ---
 keywords: activate destination;activate destinations;activate data
 title: Activation de profils et de segments vers une destination
+type: Tutorial
 seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données clients en temps réel d’Adobe en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 22bca041673cec5eee54ed4234aba19eca470441
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 28%
