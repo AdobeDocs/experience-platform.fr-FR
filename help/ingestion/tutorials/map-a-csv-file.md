@@ -3,8 +3,9 @@ keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv f
 solution: Experience Platform
 title: Mappage d’un fichier CSV à un schéma XDM
 topic: tutorial
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 785bc95ff3460ebbb1a126ac5fec85ad165ca973
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1350'
 ht-degree: 55%
@@ -95,7 +96,7 @@ Le panneau **[!UICONTROL Créer un champ]** calculé s’affiche. La boîte de d
 | --------- | ----------- |
 | Champs | L’onglet Champs liste les champs et les attributs disponibles dans le schéma source. |
 | Fonctions | L&#39;onglet Fonctions liste les fonctions disponibles pour transformer les données. |
-| Opérateurs   | L’onglet opérateurs liste les opérateurs disponibles pour transformer les données. |
+| Opérateurs | L’onglet opérateurs liste les opérateurs disponibles pour transformer les données. |
 
 Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à l’aide de l’éditeur d’expressions situé au centre. Sélectionnez l’éditeur à début de la création d’une expression.
 
