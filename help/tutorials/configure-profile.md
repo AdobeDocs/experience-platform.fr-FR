@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Ide
 solution: Experience Platform
 title: Tutoriels sur Real-time Customer Profile
 topic: tutorial
+type: Tutorial
 description: Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 49%
