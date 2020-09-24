@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experi
 solution: Experience Platform
 title: Création d’un schéma ad hoc
 description: Dans des cas spécifiques, il peut être nécessaire de créer un schéma de modèle de données d’expérience (XDM) avec des champs dont l’espace de noms n’est utilisé que par un seul jeu de données. On parle alors de schéma « ad hoc ». Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
-topic: tutorials
+topic: tutorial
+type: Tutorials
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 85%
