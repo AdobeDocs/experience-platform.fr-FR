@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Création d’un connecteur GreenPlum à l’aide de l’API du service de flux
 topic: overview
+type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes nécessaires à la connexion de GreenPlum à l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 16%
