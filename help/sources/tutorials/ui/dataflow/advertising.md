@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;configure dataflow;advertising
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur
 topic: overview
+type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Adobe Experience Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte publicitaire.
 translation-type: tm+mt
-source-git-commit: e504e0be465c755a77aa30589731941ca50426d2
+source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 3%
