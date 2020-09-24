@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connexion avec Aqua Data Studio
 topic: connect
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 106d5150371a890e2d4c295bf5d12c110c593568
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 74%
+source-wordcount: '245'
+ht-degree: 72%
 
 ---
 
@@ -24,7 +24,7 @@ La boîte de dialogue **[!UICONTROL Enregistrer le serveur]** s’affiche. Sous 
 
 - **[!UICONTROL Nom]** : le nom de la connexion.
 - **[!UICONTROL Identifiant de connexion et mot de passe]** : Ies informations de connexion qui seront utilisées. Le nom d’utilisateur prend la forme `ORG_ID@AdobeOrg`.
-- **[!UICONTROL Hôte et port]** : le point de terminaison hôte et son port pour [!DNL Query Service].
+- **[!UICONTROL Hôte et port]** : le point de terminaison hôte et son port pour [!DNL Query Service]. Vous devez utiliser le port 80 pour vous connecter à [!DNL Query Service].
 - **[!UICONTROL Base de données]:** Base de données qui sera utilisée.
 
 >[!NOTE]
