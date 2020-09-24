@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;access data sources
 solution: Experience Platform
 title: Tutoriels sur l’accès aux données
 topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform permet aux utilisateurs de découvrir les jeux de données ingérés et d’y accéder dans Experience Platform à l’aide de l’API Data Access.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 67%
