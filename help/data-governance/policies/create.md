@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data governance;data usage pol
 solution: Experience Platform
 title: Création d’une stratégie d’utilisation des données
 topic: policies
+type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer les actions marketing à entreprendre par rapport aux données qui contiennent certains libellés d’utilisation des données. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 72%
