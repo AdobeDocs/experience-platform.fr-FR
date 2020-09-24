@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;data access;spark sdk;data acc
 solution: Experience Platform
 title: SDK Secure Spark Data Access
 topic: tutorial
+type: Tutorial
 description: Le SDK Secure Spark Data Access est un kit de développement logiciel qui permet de lire et d'écrire des jeux de données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 1%
