@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Apache Hive;Azure HDInsights;a
 solution: Experience Platform
 title: Création d'une Apache Hive sur le connecteur source Azure HDInsights dans l'interface utilisateur
 topic: overview
+type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour créer une Apache Hive sur un connecteur source Azure HDInsights à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: f82dfee2c75a0b8b2ec1615266780b309152ead4
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
