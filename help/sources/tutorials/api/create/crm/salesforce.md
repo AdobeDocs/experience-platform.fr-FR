@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Création d’un connecteur Salesforce à l’aide de l’API du service de flux
 topic: overview
+type: Tutorial
 description: Ce didacticiel utilise l’API de service de flux pour vous guider tout au long des étapes de connexion de la plate-forme à un compte Salesforce pour la collecte de données de gestion de la relation client.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '707'
 ht-degree: 14%
