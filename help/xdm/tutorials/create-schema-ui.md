@@ -5,10 +5,10 @@ title: Création d’un schéma à l’aide de l’éditeur de schémas
 topic: tutorials
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 58e0ee234492731d5f875ab845fca11fcda3539b
+source-git-commit: f0d3aad649fa550443db0fc5168c848ae85fb459
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 18%
+source-wordcount: '3835'
+ht-degree: 17%
 
 ---
 
@@ -143,7 +143,7 @@ To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. Ce nœud (appelé « _tenantId » dans cet exemple) représente l’identifiant du client de votre organisation IMS, précédé d’un caractère de soulignement. La présence de l’identifiant du client indique que les champs que vous ajoutez sont contenus dans l’espace de noms de votre organisation.
+Select **[!UICONTROL Add field]** next to &quot;[!DNL Loyalty Members]&quot; to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization&#39;s tenant ID, preceded by an underscore. La présence de l’identifiant du client indique que les champs que vous ajoutez sont contenus dans l’espace de noms de votre organisation.
 
 En d’autres termes, les champs que vous ajoutez sont propres à votre organisation et seront enregistrés dans une zone spécifique accessible uniquement à votre organisation [!DNL Schema Registry] dans une zone spécifique. Les champs que vous définissez doivent toujours être ajoutés à votre espace de nommage locataire afin d’éviter les collisions avec des noms provenant d’autres classes standard, mixins, types de données et champs.
 
@@ -236,6 +236,10 @@ Votre schéma contient désormais plusieurs mixins en plus des champs fournis pa
 Si vous recherchez un champ spécifique dans votre schéma, vous pouvez également utiliser la barre de recherche pour filtrer les champs affichés par nom, quel que soit le mixin sous lequel ils sont fournis.
 
 ![](../images/tutorials/create-schema/search.png)
+
+>[!IMPORTANT]
+>
+>La fonction de recherche tient compte des filtres de mixin sélectionnés lors de l’affichage des champs correspondants. Si une requête de recherche n’affiche pas les résultats attendus, vous devrez peut-être vérifier par doublon que vous ne filtrez aucun mixin pertinent.
 
 ## Définition d’un champ de schéma comme champ d’identité {#identity-field}
 
