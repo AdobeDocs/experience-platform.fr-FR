@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics;cloud storage connector;cloud 
 solution: Experience Platform
 title: Configuration d’un flux de données pour un connecteur de flux continu d’enregistrement cloud dans l’interface utilisateur
 topic: overview
+type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre connecteur de base d’enregistrements de cloud.
 translation-type: tm+mt
-source-git-commit: c1b493de7374cbd1c916d90f9382574f831e11e3
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 6%
