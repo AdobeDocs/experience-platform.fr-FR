@@ -3,9 +3,10 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Tutoriels sur l’ingestion de données
 topic: tutorial
+type: Tutorial
 description: Data Ingestion comprend l’ingestion par lots, l’ingestion par flux et l’ingestion à l’aide de connecteurs de sources.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 51%
