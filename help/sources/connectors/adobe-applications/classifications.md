@@ -5,10 +5,10 @@ title: Connecteur de données de classifications Adobe Analytics
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la connexion des classifications Analytics à la plate-forme à l’aide de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 14%
+source-wordcount: '172'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 [!DNL Experience Platform] prend en charge l’importation de données des classifications Analytics dans Adobe Experience Platform.
 
-Les classifications permettent de classer les données de variable Analytics et de les afficher de différentes manières lors de la génération des rapports.
+Les classifications permettent de classer les données de variable Analytics et de les afficher de différentes manières lors de la génération des rapports. Le connecteur de données des classifications Analytics nécessite que vos données aient été migrées vers la nouvelle [!DNL Classifications] infrastructure d’Adobe Analytics avant d’être utilisées. Pour confirmer l’état de migration de vos données, contactez votre responsable de succès client Adobe.
 
 La documentation ci-dessous fournit des informations sur la connexion des classifications Analytics à la plate-forme à l’aide de l’interface utilisateur :
 
