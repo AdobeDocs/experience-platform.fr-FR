@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP ou SFTP à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 12%
+source-wordcount: '702'
+ht-degree: 9%
 
 ---
 
@@ -61,9 +61,24 @@ La page **[!UICONTROL Se connecter au protocole SFTP]** s’affiche. Sur cette p
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification FTP ou SFTP. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un peu de temps à la nouvelle connexion pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un peu de temps à la nouvelle connexion pour établir.
 
-![connecter](../../../../images/tutorials/create/sftp/new.png)
+Le connecteur SFTP fournit différents types d’authentification pour l’accès. Sous Authentification **[!UICONTROL du]** compte, sélectionnez **[!UICONTROL Mot de passe]** pour utiliser des informations d’identification basées sur un mot de passe.
+
+![connect-password](../../../../images/tutorials/create/sftp/password.png)
+
+Vous pouvez également sélectionner la clé **[publique]** SSH et connecter votre compte SFTP à l’aide d’une combinaison de contenu **[!UICONTROL de clé]** privée et de phrase secrète ****.
+
+>[!IMPORTANT]
+>
+>Le connecteur SFTP prend en charge une clé RSA/DSA OpenSSH. Assurez-vous que le contenu de votre fichier clé s’début `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est au format PPK, utilisez l&#39;outil PuTTY pour convertir le fichier de clé privée au format OpenSSH.
+
+![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
+
+| Informations d’identification | Description |
+| ---------- | ----------- |
+| Contenu de clé privée | Contenu de clé privée SSH codée en base 64. La clé privée SSH doit être au format OpenSSH. |
+| Passphrase | Indique l’expression de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par une expression de passe. Si PrivateKeyContent est protégé par un mot de passe, ce paramètre doit être utilisé avec la phrase secrète de PrivateKeyContent comme valeur. |
 
 ### Compte existant
 
