@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 translation-type: tm+mt
-source-git-commit: 01b1d9a0d0af82f5380bbc204e65b682d4a50ac1
+source-git-commit: 4652722b17a290c9ef53244498257eb4cb97ac6d
 workflow-type: tm+mt
-source-wordcount: '871'
-ht-degree: 31%
+source-wordcount: '881'
+ht-degree: 30%
 
 ---
 
@@ -292,7 +292,15 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 >}
 >```
 
-## Types d’erreurs d’ingestion par lots partielle {#appendix}
+## Étapes suivantes {#next-steps}
+
+Ce didacticiel explique comment surveiller les erreurs d&#39;assimilation partielle de lots. Pour plus d’informations sur l’ingestion par lots, consultez le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
+
+## Annexe {#appendix}
+
+Cette section fournit des informations supplémentaires sur les types d&#39;erreur d&#39;assimilation.
+
+### Types d’erreurs d’ingestion par lots partielle {#partial-ingestion-types}
 
 L&#39;assimilation partielle par lot comporte trois types d&#39;erreur différents lors de l&#39;assimilation de données :
 
@@ -379,7 +387,3 @@ Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d�
     "_filename": "parsing_errors_0.json"
 }
 ```
-
-## Étapes suivantes {#next-steps}
-
-Ce didacticiel explique comment surveiller les erreurs d&#39;assimilation partielle de lots. Pour plus d’informations sur l’ingestion par lots, consultez le [guide de développement de l’ingestion par lots](../batch-ingestion/api-overview.md).
