@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Requêtes ExperienceEvent
 topic: queries
 type: Tutorial
+description: Le document suivant fournit des exemples de requête impliquant ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 69%
+source-wordcount: '284'
+ht-degree: 70%
 
 ---
 
