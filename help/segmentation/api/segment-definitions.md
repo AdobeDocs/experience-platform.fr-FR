@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Définitions de segment
 topic: developer guide
+description: Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1041'
-ht-degree: 52%
+source-wordcount: '1064'
+ht-degree: 51%
 
 ---
 
