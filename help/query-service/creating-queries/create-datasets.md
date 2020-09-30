@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Génération des jeux de données à partir de résultats de requête
 topic: queries
 type: Tutorial
+description: 'Query Service permet de créer des jeux de données à partir de l’interface utilisateur. Une fois un jeu de données créé, il est accessible comme tout autre jeu de données du lac Data et utilisé pour divers cas d''utilisation. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 56%
+source-wordcount: '305'
+ht-degree: 53%
 
 ---
 
