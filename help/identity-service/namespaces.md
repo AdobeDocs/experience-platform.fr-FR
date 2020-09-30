@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
-description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur de "name<span>@email.com" en tant qu’adresse électronique ou de "443522" en tant qu’identifiant CRM numérique. '
+description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent la valeur "name@email.com" en tant qu’adresse électronique ou "443522" en tant qu’identifiant CRM numérique. '
 translation-type: tm+mt
-source-git-commit: 1bb896f7629d7b71b94dd107eeda87701df99208
+source-git-commit: dfb16c1808ac61e6c4f4d97c08ac3d1dcc8499a8
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '772'
 ht-degree: 63%
 
 ---
