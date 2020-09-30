@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Association de jeux de données
 topic: queries
 type: Tutorial
+description: L’association de jeux de données vous permet d’inclure dans votre requête des données provenant d’autres jeux de données. Cet exemple utilise un jeu de données personnalisé du système d’exploitation pour mapper l’ID du système d’exploitation à la valeur du système d’exploitation.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '53'
-ht-degree: 100%
+source-wordcount: '82'
+ht-degree: 80%
 
 ---
 
