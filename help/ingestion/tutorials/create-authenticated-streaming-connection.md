@@ -4,18 +4,19 @@ solution: Experience Platform
 title: Créer une connexion en continu authentifiée
 topic: tutorial
 type: Tutorial
+description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le Profil client et l’identité en temps réel, de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 70%
+source-wordcount: '659'
+ht-degree: 67%
 
 ---
 
 
 # Création d’une connexion en continu authentifiée
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and un-trusted sources. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
+Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
 
 ## Prise en main
 
