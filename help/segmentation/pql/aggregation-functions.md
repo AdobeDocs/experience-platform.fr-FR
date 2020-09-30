@@ -3,18 +3,19 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Fonctions d’agrégation
 topic: developer guide
+description: 'Fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux PQL (Profil Requête Language) afin de former une seule valeur de synthèse. '
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 85%
+source-wordcount: '226'
+ht-degree: 79%
 
 ---
 
 
 # Fonctions d’agrégation
 
-Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Fonctions d’agrégation are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Count
 
