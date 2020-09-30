@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Jeux de données par rapport aux tableaux et schémas
 topic: queries
 type: Tutorial
+description: Ce document contient des informations sur l'affichage de vos jeux de données dans la structure du schéma de jeux de données et l'utilisation des commandes PostgreSQL.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 92%
+source-wordcount: '198'
+ht-degree: 84%
 
 ---
 
