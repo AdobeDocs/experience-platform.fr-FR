@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Segmentation par flux
 topic: developer guide
+description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API de segmentation en flux continu.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1441'
 ht-degree: 40%
 
 ---
@@ -90,7 +91,7 @@ La section suivante liste des exemples de définition de segment qui **ne seront
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
-| Type de requête | Ligne directrice |
+| Type de requête | Instruction |
 | ---------- | -------- |
 | Requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
 | Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
