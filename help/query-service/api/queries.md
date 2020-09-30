@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;query service;api guide;querie
 solution: Experience Platform
 title: Guide de développement de Query Service
 topic: queries
+description: Les sections suivantes décrivent les appels que vous pouvez effectuer à l’aide du point de terminaison /requêtes de l’API Requête Service.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 100%
+source-wordcount: '663'
+ht-degree: 97%
 
 ---
 
