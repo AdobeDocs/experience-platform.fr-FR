@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;Query service;query service;po
 solution: Experience Platform
 title: Connexion à Postico
 topic: connect
+description: Ce document contient le lien permettant d’installer le client de sauvegarde Postico pour Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '22'
-ht-degree: 27%
+source-wordcount: '39'
+ht-degree: 15%
 
 ---
 
