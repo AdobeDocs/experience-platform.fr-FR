@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Diffusion de plusieurs messages en flux continu dans une requête HTTP unique
 topic: tutorial
 type: Tutorial
+description: Ce document fournit un didacticiel pour l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1466'
-ht-degree: 82%
+source-wordcount: '1487'
+ht-degree: 81%
 
 ---
 
