@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Création d’une connexion en continu à l’aide de l’interface utilisateur
 topic: tutorial
 type: Tutorial
+description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '512'
 ht-degree: 81%
 
 ---
