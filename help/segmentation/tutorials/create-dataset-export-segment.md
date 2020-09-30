@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment ciblé
 topic: tutorial
 type: Tutorial
+description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '733'
-ht-degree: 71%
+source-wordcount: '758'
+ht-degree: 72%
 
 ---
 
