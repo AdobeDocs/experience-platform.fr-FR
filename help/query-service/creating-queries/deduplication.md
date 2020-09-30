@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Dédoublonnage des données
 topic: queries
 type: Tutorial
+description: 'Ce document présente des exemples complets et de sous-sélection de requêtes pour dédupliquer trois cas d’utilisation courants : Événements d’expérience, achats et mesures.'
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 75%
+source-wordcount: '424'
+ht-degree: 71%
 
 ---
 
