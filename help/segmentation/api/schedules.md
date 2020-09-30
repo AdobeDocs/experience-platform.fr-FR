@@ -3,10 +3,11 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Plannings
 topic: developer guide
+description: Les calendriers sont un outil qui permet d'exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1188'
 ht-degree: 47%
 
 ---
