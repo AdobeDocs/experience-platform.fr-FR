@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
 title: Guide du développeur du service de segmentation Adobe Experience Platform
 topic: guide
+description: Ce document d’aperçu présente de manière approfondie chacun des points de terminaison de l’API du service de segmentation et fournit des liens vers les guides des points de terminaison associés pour plus de détails.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '490'
 ht-degree: 6%
 
 ---
