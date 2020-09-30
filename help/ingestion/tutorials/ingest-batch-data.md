@@ -4,11 +4,12 @@ solution: Experience Platform
 title: Ingestion de données dans Adobe Experience Platform
 topic: tutorial
 type: Tutorial
+description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers de commandes sous la forme de fichiers de parquet ou de données conformes à un schéma connu de modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 70%
+source-wordcount: '1308'
+ht-degree: 68%
 
 ---
 
