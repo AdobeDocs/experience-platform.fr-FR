@@ -3,11 +3,12 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
+description: Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour obtenir des informations de niveau récapitulatif sur la vue afin de vous assurer que vous isolez l’audience attendue.
 translation-type: tm+mt
-source-git-commit: 69d173e163720c962d910fa4c1e2491fb1262251
+source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 28%
+source-wordcount: '777'
+ht-degree: 27%
 
 ---
 
