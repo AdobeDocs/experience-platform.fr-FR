@@ -5,15 +5,20 @@ description: Notes de mise à jour du SDK Web Adobe Experience Platform.
 seo-description: Notes de mise à jour du SDK Web Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '108'
 ht-degree: 3%
 
 ---
 
 
 # Notes de mise à jour
+
+## Version 2.2.0
+
+* Correctif : L’objet Opt-in empêchait Alloy d’effectuer des appels en `idMigrationEnabled` `true`l’état.
+* Correctif : Sensibilisez Alloy aux demandes qui doivent renvoyer des offres de personnalisation afin d’éviter un problème de scintillement.
 
 ## Version 2.1.0
 
