@@ -5,17 +5,17 @@ description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’
 seo-description: Guide de démarrage rapide pour utiliser l’extension SDK Web d’Experience Platform pour la collecte de données
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a9c45aed92dc7c7148db7c9383060bbeab763447
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 27%
+source-wordcount: '566'
+ht-degree: 26%
 
 ---
 
 
-# Bienvenue
+# Guide de début rapide du lancement du SDK Web Adobe Experience Platform
 
-Ce guide vous guide tout au long des différentes manières de configurer le SDK Web de Adobe Experience Platform dans Launch. Pour utiliser cette fonctionnalité, vous devez être placé sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
+Ce guide vous guide tout au long des différentes manières de configurer le SDK Web de Adobe Experience Platform dans Launch. Pour utiliser cette fonction, vous devez être sur la liste autorisée. Si vous souhaitez vous rendre sur la liste d&#39;attente, contactez votre responsable logiciel certifié (CSM).
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME, mais vous en avez besoin avant de commencer la production.
 - Avoir droit à Adobe Experience Platform. Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
@@ -23,7 +23,7 @@ Ce guide vous guide tout au long des différentes manières de configurer le SDK
 
 ## Préparation d’un Schéma
 
-L&#39;Experience Platform Edge Network prend les données au format XDM. XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
+Le réseau Edge Experience Platform utilise le modèle de données d’expérience (XDM). XDM est un format de données qui vous permet de définir des schémas. Le schéma définit comment le réseau Edge prévoit que les données seront formatées. Pour envoyer des données, vous devez définir votre schéma.
 
 1. [Création d’un schéma](../../xdm/tutorials/create-schema-ui.md)
 2. ajoutez le [!DNL Web SDK ExperienceEvent] mixin AEP au schéma que vous avez créé.
@@ -45,7 +45,7 @@ Vous pouvez créer un ID de configuration à l’aide de l’outil [de configura
 
 >[!NOTE]
 >
->Votre organisation doit être placée sur la liste autorisée pour cette fonctionnalité. Veuillez contacter votre CSM pour qu&#39;il soit mis sur la liste pour une liste autorisée éventuelle.
+>Votre entreprise doit être sur la liste autorisée de cette fonctionnalité. Veuillez contacter votre responsable logiciel certifié (CSM) pour être mis en liste autorisée.
 
 ## Créer un élément de données basé sur votre Schéma
 
@@ -66,6 +66,7 @@ Une fois les données circulées, vous pouvez effectuer les opérations suivante
 - [Construisez votre schéma](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/schema/composition.html)
 - [En savoir plus sur le débogage](../fundamentals/debugging.md)
 - Découvrez comment [personnaliser l’expérience](../fundamentals/rendering-personalization-content.md)
+- Intégrer le cadre de transparence et de consentement [IAB 2.0](../solution-specific/iab-tcf/with-launch.md) en Adobe Experience Platform Launch.
 - Découvrez comment envoyer des données à plusieurs solutions
    - [Adobe Analytics](../solution-specific/analytics/analytics-overview.md)
    - [Adobe Audience Manager](../solution-specific/audience-manager/audience-manager-overview.md)
