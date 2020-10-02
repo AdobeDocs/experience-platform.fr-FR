@@ -5,10 +5,10 @@ seo-title: Destination Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 seo-description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 translation-type: tm+mt
-source-git-commit: 4c45da353b1deeb66b0dedb37450158f4bdc2a7c
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 39%
+source-wordcount: '256'
+ht-degree: 33%
 
 ---
 
@@ -18,6 +18,12 @@ ht-degree: 39%
 ## Présentation
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
+
+## Type d’exportation {#export-type}
+
+**Exportation** de profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [d’activation de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destination.
+
+![Type d’exportation basée sur le profil Amazon S3](/help/rtcdp/destinations/assets/aws-export-type.png)
 
 ## Connexion à la destination {#connect-destination}
 
