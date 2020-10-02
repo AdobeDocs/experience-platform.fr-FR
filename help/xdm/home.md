@@ -5,7 +5,7 @@ title: Système de modèle de données d’expérience (XDM)
 topic: overview
 description: 'La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. '
 translation-type: tm+mt
-source-git-commit: ed1f2fdac0f9c977d11c867327c084353c1bcd0f
+source-git-commit: d49bbc91b67dec0468b46d165521c7d097a801ee
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 60%
@@ -56,7 +56,7 @@ Les profils moins identifiés peuvent n’être constitués que de signaux compo
 
 Au fur et à mesure qu’un profil client croît, il devient un solide référentiel des informations personnelles, des informations d’identification, des coordonnées et des préférences de communication d’une personne.
 
-### [!DNL XDM ExperienceEvent]
+### [!DNL XDM ExperienceEvent] {#xdm-experience-event}
 
 XDM ExperienceEvent est une classe basée sur une série temporelle utilisée pour capturer l’état du système lorsqu’un événement (ou un ensemble d’événements) se produit, y compris le moment et l’identité du sujet concerné. Les événements d’expérience sont des enregistrements factuels de ce qui s’est passé. Par conséquent, ces événements sont inaltérables et représentent ce qui s’est passé sans agrégation ni interprétation. Ils sont essentiels à l’analyse du domaine temporel, puisqu’ils peuvent être utilisés pour analyser les modifications survenant au cours d’une période donnée et pour comparer plusieurs périodes afin de suivre les tendances.
 
