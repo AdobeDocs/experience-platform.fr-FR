@@ -5,10 +5,10 @@ seo-title: Destination SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 seo-description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: cbd748c1881c61f5e636567d94b68f2cf7302fa5
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 77%
+source-wordcount: '206'
+ht-degree: 60%
 
 ---
 
@@ -19,7 +19,11 @@ ht-degree: 77%
 
 Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 
-Pour exporter des données, procédez comme suit :
+## Type d’exportation {#export-type}
+
+**Exportation** de profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [d’activation de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destination.
+
+![Type d’exportation par profil SFTP](/help/rtcdp/destinations/assets/sftp-export-type.png)
 
 ## Connexion à la destination {#connect-destination}
 
