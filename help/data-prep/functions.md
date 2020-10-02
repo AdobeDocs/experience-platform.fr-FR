@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
-title: Fonctions de mappage
+title: Fonctions d’aperçu des données
 topic: overview
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: d47410106a6d3955cc9af78e605c893f08185ffa
 workflow-type: tm+mt
-source-wordcount: '3288'
-ht-degree: 18%
+source-wordcount: '3432'
+ht-degree: 19%
 
 ---
 
 
-# Fonctions de mappage
+# Fonctions d’aperçu des données
 
-Les fonctions de mappage peuvent être utilisées pour calculer et calculer des valeurs en fonction de ce qui est entré dans les champs source.
+Les fonctions d’aperçu de données peuvent être utilisées pour calculer et calculer des valeurs en fonction de ce qui est entré dans les champs source.
 
 ## Champs
 
@@ -37,6 +37,10 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Fonctions de chaîne
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatène les chaînes données. | <ul><li>CHAÎNE : Chaînes qui seront concaténées.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
@@ -47,7 +51,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | lower /<br>lcase | Convertit une chaîne en minuscules. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui sera convertie en minuscules.</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | Convertit une chaîne en majuscules. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui sera convertie en majuscules.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | Divise une chaîne d’entrée sur un séparateur. | <ul><li>ENTRÉE : **Obligatoire** Chaîne d’entrée qui va être fractionnée.</li><li>SÉPARATEUR : **Obligatoire** Chaîne utilisée pour fractionner l’entrée.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Joint une liste d’objets à l’aide du séparateur. | <ul><li>SÉPARATEUR : **Obligatoire** Chaîne qui sera utilisée pour joindre les objets.</li><li>OBJETS : **Obligatoire** Tableau de chaînes qui seront jointes.</li></ul> | join(SÉPARATEUR, [OBJETS]) | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | Joint une liste d’objets à l’aide du séparateur. | <ul><li>SÉPARATEUR : **Obligatoire** Chaîne qui sera utilisée pour joindre les objets.</li><li>OBJETS : **Obligatoire** Tableau de chaînes qui seront jointes.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
 | lpad | Applique une pression sur le côté gauche d’une chaîne avec l’autre chaîne donnée. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COMPTE : **Obligatoire** Taille de la chaîne à ajouter.</li><li>REMPLISSAGE : **Obligatoire** Chaîne avec laquelle ajouter le remplissage de l’entrée. S’il est nul ou vide, il sera traité comme un espace unique.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Applique une superposition au côté droit d’une chaîne avec l’autre chaîne donnée. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COMPTE : **Obligatoire** Taille de la chaîne à ajouter.</li><li>REMPLISSAGE : **Obligatoire** Chaîne avec laquelle ajouter le remplissage de l’entrée. S’il est nul ou vide, il sera traité comme un espace unique.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Récupère les premiers caractères &quot;n&quot; de la chaîne donnée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne pour laquelle vous obtenez les premiers caractères &quot;n&quot;.</li><li>COMPTE : **** ObligatoireCaractères &quot;n&quot; que vous souhaitez obtenir à partir de la chaîne.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -60,15 +64,23 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Fonctions de hachage
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| sha1 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 1 (SHA-1). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a2448690840c5dfcce3c80 |
-| sha256 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 256 (SHA-256). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21ee6a39af698154a83a586ee270a0d372104 |
-| sha512 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 512 (SHA-512). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef708bf11b4232bb21d2a8704ada2cdcd7b367dd0788a89a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
-| md5 | Récupère une entrée et produit une valeur de hachage à l’aide de MD5. | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4e9bd0198d03ba6852c7 |
+| sha1 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 1 (SHA-1). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
+| sha256 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 256 (SHA-256). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
+| sha512 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 512 (SHA-512). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd00 788a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
+| md5 | Récupère une entrée et produit une valeur de hachage à l’aide de MD5. | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Prend une entrée à l’aide d’un algorithme de contrôle de redondance cyclique (CRC) pour produire un code cyclique de 32 bits. | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
 ### Fonctions URL
+
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -79,6 +91,10 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | get_url_requête_str | Renvoie la chaîne de requête d’une URL donnée. | <ul><li>URL : **Obligatoire** URL à partir de laquelle vous tentez d’obtenir la chaîne de requête.</li><li>ANCRAGE : **Obligatoire** Détermine ce qui sera fait avec l&#39;ancre dans la chaîne de requête. Il peut s’agir de l’une des trois valeurs suivantes : &quot;preserve&quot;, &quot;remove&quot; ou &quot;append&quot;.<br><br>Si la valeur est &quot;preserve&quot;, l’ancre est attachée à la valeur renvoyée.<br>Si la valeur est &quot;remove&quot;, l’ancre est supprimée de la valeur renvoyée.<br>Si la valeur est &quot;append&quot;, l’ancre est renvoyée sous forme de valeur distincte.</li></ul> | get_url_requête_str(URL, ANCHOR) | get_url_requête_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;keep&quot;)<br>get_url_requête_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;remove&quot;)<br>get_url_requête_str(&quot;foo://example.com:8042/over/there?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
 ### Fonctions de date et d’heure
+
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -97,6 +113,10 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Hiérarchies - Objets
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | size_of | Renvoie la taille de l’entrée. | <ul><li>ENTRÉE : **Obligatoire** Objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
@@ -108,6 +128,10 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Hiérarchies - Tableaux
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | coalesce | Renvoie le premier objet non nul dans un tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le premier objet non nul.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
@@ -117,6 +141,10 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Opérateurs logiques
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>CLÉ : **Obligatoire** Clé à faire correspondre.</li><li>options : **Obligatoire** Tableau aplati de paires clé/valeur. Une valeur par défaut peut éventuellement être placée à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si le code d&#39;état donné est &quot;ca&quot;, &quot;California&quot;.<br>Si le code d&#39;état donné est &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si le code d’état ne correspond pas à ce qui suit, &quot;S/O&quot;. |
@@ -124,12 +152,20 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Agrégation
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>options : **Obligatoire** Un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Renvoie le maximum des arguments donnés. Utilise l’ordre naturel. | <ul><li>options : **Obligatoire** Un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
 ### Conversions de type
+
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -140,17 +176,29 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 ### Fonctions JSON
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne JSON à désérialiser.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}}) | Objet représentant le fichier JSON. |
 
 ### Opérations spéciales
 
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | uuid /<br>guid | Génère un identifiant pseudo-aléatoire. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### Fonctions de l&#39;agent utilisateur
+
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
