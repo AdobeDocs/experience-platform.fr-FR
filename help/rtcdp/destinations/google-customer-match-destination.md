@@ -5,10 +5,10 @@ seo-title: Destination de la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 seo-description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
 workflow-type: tm+mt
 source-wordcount: '1555'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 ## Présentation {#overview}
 
-[La Correspondance](https://support.google.com/google-ads/answer/6379332?hl=en) client de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, telles que : [!DNL Search], [!DNL Shopping], [!DNL Gmail]et [!DNL YouTube].
+[La Correspondance](https://support.google.com/google-ads/answer/6379332?hl=en) client de Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, comme : [!DNL Search], [!DNL Shopping], [!DNL Gmail]et [!DNL YouTube].
 
 ![Destination Google Customer Match dans l’interface utilisateur CDP en temps réel](/help/rtcdp/destinations/assets/google-customer-match-catalog.png)
 
@@ -40,7 +40,7 @@ Pour promouvoir cette version, ils téléchargent les adresses électroniques de
 
 Les destinations dans l&#39;Adobe CDP en temps réel peuvent avoir certaines règles et obligations pour les données envoyées à la plateforme de destination ou reçues de celle-ci. Il vous incombe de comprendre les limites et les obligations de vos données et de comprendre comment vous les utilisez dans Adobe Experience Platform et la plateforme de destination. Adobe Experience Platform fournit des outils de gouvernance des données pour vous aider à gérer certaines de ces obligations d’utilisation des données. [En savoir plus](/help/data-governance/labels/overview.md) sur les outils et les stratégies de gouvernance des données.
 
-## Type d’Activation et identités {#activation-type}
+## Type et identités d’exportation {#export-type}
 
 **Exportation** de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) used in the [!DNL Google Customer Match] destination.
 
