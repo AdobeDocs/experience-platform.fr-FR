@@ -5,17 +5,17 @@ description: Guide de début rapide pour l’utilisation du SDK Web Experience P
 seo-description: Guide de début rapide pour l’utilisation du SDK Web Experience Platform pour la collecte de données
 keywords: 1st-party domain;CNAME;schema;create schema;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;install sdk;install web sdk;configure;configure web sdk;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: f178da80d0902f76868986426600f3da426cf24d
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 14%
+source-wordcount: '530'
+ht-degree: 13%
 
 ---
 
 
-# Bienvenue
+# Guide du début rapide JavaScript du SDK Web Adobe Experience Platform
 
-Ce guide vous guide dans les différentes manières de configurer le SDK Web de Adobe Experience Platform. Pour utiliser cette fonctionnalité, vous devez être placé sur la liste autorisée. Si vous souhaitez monter sur la liste d&#39;attente, veuillez contacter votre CSM.
+Ce guide vous guide dans les différentes manières de configurer le SDK Web de Adobe Experience Platform. Pour utiliser cette fonctionnalité, vous devez être sur la liste autorisée. Si vous souhaitez vous rendre sur la liste d&#39;attente, contactez votre responsable logiciel certifié (CSM).
 
 - Vous devez disposer d’un [domaine propriétaire (CNAME)](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html) activé. Si vous disposez déjà d’un CNAME pour Analytics, vous devez l’utiliser. Les tests en cours de développement fonctionnent sans CNAME, mais vous en avez besoin avant de commencer la production.
 - Avoir droit à Adobe Experience Platform.  Si vous n’avez pas acheté Platform, l’Adobe vous fournira la Fondation Experience Platform Data Services pour une utilisation limitée avec le SDK sans frais supplémentaires.
