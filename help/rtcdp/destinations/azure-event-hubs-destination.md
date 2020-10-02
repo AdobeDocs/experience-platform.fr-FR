@@ -5,10 +5,10 @@ seo-title: (bêta) Destination des centres de Événement Azure
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 seo-description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 38cb8eeae3ac0a1852c59e433d1cacae82b1c6c0
+source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 7%
+source-wordcount: '505'
+ht-degree: 6%
 
 ---
 
@@ -36,6 +36,10 @@ Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure 
 En utilisant des destinations de diffusion en flux continu, telles que [!DNL Azure Event Hubs], vous pouvez facilement intégrer des événements de segmentation à forte valeur ajoutée et des attributs de profil associés dans vos systèmes de choix.
 
 Par exemple, une prospect a téléchargé un livre blanc qui les classe dans un segment &quot;forte propension à la conversion&quot;. En mappant le segment dans lequel la prospect arrive à la [!DNL Azure Event Hubs] destination, vous recevrez ce événement dans [!DNL Azure Event Hubs]. Vous pouvez y appliquer une approche par soi-même et décrire la logique d&#39;entreprise en plus du événement, comme vous pensez qu&#39;elle fonctionne le mieux avec vos systèmes informatiques d&#39;entreprise.
+
+## Type d’exportation {#export-type}
+
+**Exportation** de profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), comme choisi dans l&#39;écran de sélection des attributs du processus [d&#39;activation de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destination.\
 
 ## Connexion à la destination {#connect-destination}
 
