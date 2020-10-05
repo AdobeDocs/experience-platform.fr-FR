@@ -5,9 +5,9 @@ description: Découvrez comment envoyer des données de lien vers l'Adobe Analyt
 seo-description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: c6b572f8757e46ccb22ccea326a7537747f81893
+source-git-commit: 8840e00ec3aa28d43c371b793da4a4b9bfc8d259
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '362'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ alloy("sendEvent", {
 });
 ```
 
-Bien qu’Analytics enregistre techniquement une vue de page même si cette variable n’est pas définie, il est recommandé de définir cette variable chaque fois que vous souhaitez enregistrer une vue de page pour qu’elle soit explicite dans vos données et pour que votre implémentation soit à l’épreuve de l’avenir.
+Bien qu’Analytics enregistre techniquement une vue de page même si cette variable n’est pas définie, il est recommandé de définir cette variable chaque fois que vous souhaitez enregistrer une vue de page pour qu’elle soit explicite dans vos données et pour votre implémentation future BAT.
 
 ## Suivi des liens
 
