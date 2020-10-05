@@ -2,12 +2,13 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
+description: Ce document répond aux questions les plus fréquemment posées à propos d’Adobe Experience Platform, et propose un guide de dépannage de haut niveau pour les erreurs courantes qui peuvent se produire dans toute API d’Experience Platform.
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 3798e687da07dee7336121c203948158523de5bd
+source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
 workflow-type: tm+mt
-source-wordcount: '1965'
-ht-degree: 73%
+source-wordcount: '1996'
+ht-degree: 74%
 
 ---
 
