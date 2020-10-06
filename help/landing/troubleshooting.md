@@ -4,8 +4,9 @@ solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Ce document répond aux questions les plus fréquemment posées à propos d’Adobe Experience Platform, et propose un guide de dépannage de haut niveau pour les erreurs courantes qui peuvent se produire dans toute API d’Experience Platform.
 topic: getting started
+user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 translation-type: tm+mt
-source-git-commit: ed0bbe1017790cd0b01757a2e43c0040a125be18
+source-git-commit: 9981c5e34d675f7fcb767a097af3b2d3c56ec091
 workflow-type: tm+mt
 source-wordcount: '1996'
 ht-degree: 74%
