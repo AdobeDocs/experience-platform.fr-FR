@@ -5,9 +5,9 @@ seo-title: Destination Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d0a04c61bfe4024a2bb45ea7babab9073fcd6c22
+source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 7%
 
 ---
@@ -41,7 +41,7 @@ Par exemple, une prospect a téléchargé un livre blanc qui les classe dans un 
 
 ## Type d’exportation {#export-type}
 
-**Exportation** de profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [d’activation de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destination.
+**Basé sur** le profil : vous exportez tous les membres d’un segment, ainsi que les champs de schéma de votre choix (par exemple : adresse électronique, numéro de téléphone, nom de famille), tel que choisi dans l’écran de sélection des attributs du processus [d’activation de](/help/rtcdp/destinations/activate-destinations.md#select-attributes)destination.
 
 ## Connexion à la destination {#connect-destination}
 
