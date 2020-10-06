@@ -5,9 +5,9 @@ title: Point de terminaison de l’API de classification de texte
 topic: Developer guide
 description: Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classifier en une ou plusieurs étiquettes. La classification peut être à libellé unique, à libellé multiple ou hiérarchique.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: 09200be6eb078ecbefc91c6449373f811b602797
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 5%
 
 ---
