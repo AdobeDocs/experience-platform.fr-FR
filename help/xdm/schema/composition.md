@@ -5,7 +5,7 @@ title: Principes de base de la composition des schémas
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4a76101cb8a7afb947bdce263a73f79d931db154
+source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 58%
@@ -58,7 +58,7 @@ Tous les schémas XDM décrivent des données pouvant être catégorisées en ta
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un sujet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
-### [!UICONTROL Identité]
+### [!UICONTROL Identité] {#identity}
 
 Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Par conséquent, il est important, lors de la réflexion sur les schémas, de penser aux identités des clients et de déterminer les champs qui peuvent être utilisés pour identifier un sujet, quel que soit l&#39;endroit d&#39;où proviennent les données.
 
@@ -195,7 +195,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 Certaines opérations de données utilisées par des services et des applications en aval imposent des contraintes sur certains types de champs. Les services concernés incluent, sans s’y limiter :
 
 * [[ ! Profil client en temps réel DNL]](../../profile/home.md)
-* [[ !Service d&#39;identité DNL]](../../identity-service/home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
 * [[ !Segmentation DNL]](../../segmentation/home.md)
 * [[ !Service de Requête DNL]](../../query-service/home.md)
 * [[ ! Espace de travail scientifique des données DNL]](../../data-science-workspace/home.md)
