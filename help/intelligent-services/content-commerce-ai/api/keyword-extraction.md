@@ -5,9 +5,9 @@ title: Extraction des couleurs
 topic: Developer guide
 description: Le service d'extraction de mots-clés, lorsqu'il reçoit un document de texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux le sujet du document. Afin d'extraire des mots-clés, une combinaison d'algorithmes de reconnaissance d'entité nommée (NER) et d'extraction de mot-clé non supervisée est utilisée.
 translation-type: tm+mt
-source-git-commit: 31e4f1441676daa79f064c567ddc47e9198d0a0b
+source-git-commit: eb92a7d57b1ef0ca19bc2d175ad1b2014ac1a8b0
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '1059'
 ht-degree: 4%
 
 ---
@@ -36,6 +36,10 @@ Les entités nommées reconnues par [!DNL Content and Commerce AI] sont réperto
 | WORK_OF_ART | Des titres de livres, de chansons, etc. |
 | DROIT | Les documents nommés sont des lois. |
 | LANGUE | Toute langue nommée. |
+
+>[!NOTE]
+>
+>Si vous prévoyez de traiter des fichiers PDF, passez aux instructions relatives à l’extraction [du mot-clé](#pdf-extraction) PDF dans ce document. En outre, la prise en charge d’autres types de fichiers, tels que docx, ppt et amd xml, est définie pour être publiée ultérieurement.
 
 **Format d’API**
 
@@ -119,7 +123,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
 | `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
 | `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Consultez l’ [annexe](#appendix) pour plus d’informations sur les paramètres personnalisés. | Non |
-| `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si ce n’est pas le cas, un identifiant généré automatiquement est attribué. | Non |
+| `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si elle n’est pas transmise, un identifiant généré automatiquement est attribué. | Non |
 | `content` | Contenu utilisé par le service d&#39;extraction de mots-clés. Le contenu peut être du texte brut (type de contenu &quot;intégré&quot;). <br> Si le contenu est un fichier sur S3 (&#39;s3-bucket&#39; content-type), transmettez l’URL signée. Lorsque le contenu fait partie du corps de la requête, la liste des éléments de données ne doit comporter qu’un seul objet. Si plusieurs objets sont transmis, seul le premier objet est traité. | Oui |
 
 **Réponse**
@@ -223,6 +227,139 @@ Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits da
   "error": []
 }
 ```
+
+## EXTRACTION de mot-clé PDF {#pdf-extraction}
+
+Le service d’extraction de mots-clés prend en charge les fichiers PDF. Toutefois, vous devez utiliser un nouvel AnalyzerID pour les fichiers PDF et modifier le type de document en PDF. Consultez l’exemple ci-dessous pour plus d’informations.
+
+**Format d’API**
+
+```http
+POST /services/v1/predict
+```
+
+**Requête**
+
+La requête suivante extrait les mots-clés d’un document PDF en fonction des paramètres d’entrée fournis dans la charge utile.
+
+>[!CAUTION]
+>
+>`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Pour l’extraction du mot-clé PDF, l’ `analyzer_id` ID est :
+>`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
+
+```SHELL
+curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
+  -H "Authorization: Bearer {ACCESS_TOKEN}" \
+  -H "Content-Type: multipart/form-data" \
+  -H "cache-control: no-cache,no-cache" \
+  -H "x-api-key: {API_KEY}" \
+  -F file=@TestPDF.pdf \
+  -F 'contentAnalyzerRequests={
+    "enable_diagnostics":"true",
+    "requests":[{
+    "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+    "parameters": {
+      "application-id": "1234",
+      "content-type": "file",
+      "encoding": "pdf",
+      "threshold": "0.01",
+      "top-N": "0",
+      "custom": {},
+      "data": [{
+        "content-id": "abc123",
+        "content": "file",
+        }]
+      }
+    }]
+  }'
+```
+
+| Propriété | Description | Obligatoire |
+| --- | --- | --- |
+| `analyzer_id` | ID [!DNL Sensei] de service sous lequel votre demande est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
+| `application-id` | ID de l’application créée. | Oui |
+| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du `data` tableau. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées de l’intérieur `data`. | Oui |
+| `language` | Langue de saisie. The default value is `en` (english). | Non |
+| `content-type` | Permet d’indiquer le type de contenu d’entrée. Il doit être défini sur `file`. | Oui |
+| `encoding` | Format de codage de l’entrée. Il doit être défini sur `pdf`. D’autres types de codage sont définis pour être pris en charge ultérieurement. | Oui |
+| `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Consultez l’ [annexe](#appendix) pour plus d’informations sur les paramètres personnalisés. | Non |
+| `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si elle n’est pas transmise, un identifiant généré automatiquement est attribué. | Non |
+| `content` | Il doit être défini sur `file`. | Oui |
+
+**Réponse**
+
+Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits dans le `response` tableau.
+
+```json
+{
+  "statusCode": 200,
+  "body": {
+    "type": "JSON",
+    "matchType": "strict",
+    "json": {
+      "status": 200,
+      "content_id": "161hw2.pdf",
+      "cas_responses": [
+        {
+          "status": 200,
+          "analyzer_id": "Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5",
+          "content_id": "161hw2.pdf",
+          "result": {
+            "response_type": "feature",
+            "response": [
+              {
+                "feature_value": [
+                  {
+                    "feature_name": "status",
+                    "feature_value": "success"
+                  },
+                  {
+                    "feature_value": [
+                      {
+                        "feature_name": "delbick",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0.03673855028832046
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "KEYWORD"
+                          }
+                        ]
+                      },
+                      {
+                        "feature_name": "Ci",
+                        "feature_value": [
+                          {
+                            "feature_name": "score",
+                            "feature_value": 0
+                          },
+                          {
+                            "feature_name": "type",
+                            "feature_value": "PERSON"
+                          }
+                        ]
+                      }
+                    ],
+                    "feature_name": "labels"
+                  }
+                ],
+                "feature_name": "abc123"
+              }
+            ]
+          }
+        }
+      ],
+      "error": []
+    }
+  }
+}
+```
+
+Pour plus d’informations et un exemple sur l’utilisation de l’extraction PDF contenant des instructions sur la configuration, le déploiement et l’intégration avec le service AEM cloud. Visitez le référentiel [github du travailleur d’extraction PDF](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI.
 
 ## Annexe {#appendix}
 
