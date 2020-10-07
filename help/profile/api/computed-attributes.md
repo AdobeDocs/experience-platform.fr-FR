@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Attributs calculés - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2403'
 ht-degree: 83%
@@ -31,7 +31,7 @@ The API endpoint used in this guide is part of the [Real-time Customer Profile A
 
 Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Chaque profil contient des informations importantes liées à une personne, comme ses coordonnées de contact, ses préférences et son historique d’achat, vous offrant une vision à 360 degrés du client.
 
-Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). To make this data easier to understand at a glance, [!DNL Platform] allows you to create **[!UICONTROL computed attributes]** that automatically perform these references and calculations, returning the value in the appropriate field.
+Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 
 Les attributs calculés incluent la création d’une expression ou « règle » qui agit sur les données entrantes et conserve la valeur obtenue dans un attribut de profil ou dans un événement. Les expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de préciser qu’une règle n’évalue que les événements entrants, un événement entrant et les données du profil ou un événement entrant, les données du profil et les événements historiques.
 
@@ -69,7 +69,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ### Création d’un mixin
 
-Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Ajouter]** en regard de *Mixins* dans la section **[!UICONTROL Composition]** située à gauche de l’éditeur. Cela ouvre la boîte de dialogue **[!UICONTROL Ajouter un mixin]** dans laquelle les mixins existants s’affichent. Cliquez sur le bouton radio **[!UICONTROL Créer un nouveau mixin]** qui vous permet de définir votre nouveau mixin.
+Pour créer un nouveau mixin, cliquez sur **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Mixins]** dans la section **[!UICONTROL Composition]** située à gauche de l’éditeur. Cela ouvre la boîte de dialogue **[!UICONTROL Ajouter un mixin]** dans laquelle les mixins existants s’affichent. Cliquez sur le bouton radio **[!UICONTROL Créer un nouveau mixin]** qui vous permet de définir votre nouveau mixin.
 
 Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajouter un mixin]** lorsque vous avez terminé.
 
@@ -77,7 +77,7 @@ Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajoute
 
 ### Ajout d’un champ attribut calculé au schéma
 
-Votre nouveau mixin devrait maintenant apparaître dans la section **[!UICONTROL Mixins]** en dessous de **[!UICONTROL Composition]**. Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the *[!UICONTROL Structure]** section of the editor.
+Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section under &quot;[!UICONTROL Composition]&quot;. Cliquez sur le nom du mixin, ce qui fera apparaître plusieurs boutons **[!UICONTROL Ajouter un champ]** dans la section **[!UICONTROL Structure]** de l’éditeur.
 
 Sélectionnez **[!UICONTROL Ajouter un champ]** en regard du nom du schéma afin d’ajouter un champ de niveau supérieur. Vous pouvez également ajouter le champ n’importe où dans le schéma que vous préférez.
 
