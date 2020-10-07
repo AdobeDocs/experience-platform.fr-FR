@@ -5,7 +5,7 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 62%
@@ -56,7 +56,7 @@ alloy("setConsent", {
 });
 ```
 
-L’utilisateur ayant donné son consentement, le SDK exécute toutes les commandes précédemment mises en file d’attente. Les prochaines commandes qui dépendent du consentement de l’utilisateur _ne seront pas_ mises en file d’attente et seront exécutées rapidement.
+L’utilisateur ayant donné son consentement, le SDK exécute toutes les commandes précédemment mises en file d’attente. Les prochaines commandes qui dépendent du consentement de l’utilisateur ne seront pas mises en file d’attente et seront exécutées rapidement.
 
 Si l’utilisateur choisit de ne pas donner son consentement, exécutez la commande `setConsent` en définissant l’option `general` sur `out` de la manière suivante :
 
