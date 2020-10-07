@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Notes de mise à jour de Privacy Service
 topic: release notes
 translation-type: tm+mt
-source-git-commit: 6eee7e903d36ed641c9f8e6120f549c02cb4bce4
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 62%
@@ -20,7 +20,7 @@ This document contains information about new features for Adobe Experience Platf
 >
 >Les dernières notes de mise à jour des autres [!DNL Experience Platform] services sont disponibles [ici](../release-notes/latest/latest.md).
 
-## 9 septembre 2020
+## 9 septembre 2020
 
 ### Nouvelles fonctionnalités
 
@@ -53,7 +53,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] Améliorations de l’interface utilisateur :
    * Pages de suivi des tâches distinctes pour les règlements RGPD et CCPA.
-   * Nouvelle liste déroulante _Type de règlement_ pour passer d’un ensemble de données de suivi à un autre dans le cadre du RGPD et du CCPA.
+   * Nouvelle liste déroulante *Type de règlement* pour passer d’un ensemble de données de suivi à un autre dans le cadre du RGPD et du CCPA.
 
 ## 25 juillet 2019
 
