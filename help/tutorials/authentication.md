@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 43%
@@ -89,17 +89,17 @@ Les étapes sont décrites en détail ci-dessous.
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
 
-Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation _du_ projet.
+Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation **du** projet.
 
 ![](images/authentication/add-api-button.png)
 
-L’écran _Ajouter une API_ s’affiche. Cliquez sur l’icône de produit pour Adobe Experience Platform, puis sélectionnez API **** Experience Platform avant de cliquer sur **[!UICONTROL Suivant]**.
+L’écran **Ajouter une API** s’affiche. Cliquez sur l’icône de produit pour Adobe Experience Platform, puis sélectionnez API **** Experience Platform avant de cliquer sur **[!UICONTROL Suivant]**.
 
 ![](images/authentication/add-platform-api.png)
 
 Une fois que vous avez sélectionné [!DNL Experience Platform] l’API à ajouter au projet, suivez les étapes décrites dans le didacticiel sur l’ [ajout d’une API à un projet à l’aide d’un compte de service (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (à partir de l’étape &quot;Configurer l’API&quot;) pour terminer le processus.
 
-Une fois l&#39;API ajoutée au projet, la page d&#39;aperçu _du_ projet affiche les informations d&#39;identification suivantes requises dans tous les appels aux [!DNL Experience Platform] API :
+Une fois l&#39;API ajoutée au projet, la page d&#39;aperçu **du** projet affiche les informations d&#39;identification suivantes requises dans tous les appels aux [!DNL Experience Platform] API :
 
 * `{API_KEY}` (ID client)
 * `{IMS_ORG}` (ID d’organisation)
