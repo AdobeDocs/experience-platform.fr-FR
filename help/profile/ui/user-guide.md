@@ -4,7 +4,7 @@ title: Guide d’utilisation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 13%
@@ -40,11 +40,11 @@ Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour parcourir les profils p
 
 ### Mesures de profil {#profile-metrics}
 
-Sur le côté droit de l&#39;onglet [!UICONTROL Parcourir] se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
+Sur le côté droit de l&#39;onglet **[!UICONTROL Parcourir]** se trouvent plusieurs mesures importantes liées à vos données de profil, dont le nombre [total de](#profile-count) profils ainsi qu&#39;une liste des [profils par espace de nommage](#profiles-by-namespace).
 
 Ces mesures de profil sont évaluées à l’aide de la stratégie de fusion par défaut de votre organisation. Pour plus d’informations sur l’utilisation des stratégies de fusion, y compris sur la manière de définir une stratégie de fusion par défaut, voir le guide [d’utilisation](merge-policies.md)Fusionner les stratégies.
 
-Outre ces mesures, la section Mesures de profil fournit également une date et une heure de [!UICONTROL dernière mise à jour] , indiquant la date et l’heure de la dernière évaluation des mesures.
+Outre ces mesures, la section Mesures de profil fournit également une date et une heure de dernière mise à jour, indiquant le moment où les mesures ont été évaluées pour la dernière fois.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
@@ -80,7 +80,7 @@ Dans la boîte de dialogue **[!UICONTROL Sélectionner un espace de nommage]** d
 
 ### Valeur d’identité
 
-Après avoir sélectionné un espace de nommage [!UICONTROL d&#39;]identité, vous revenez à l&#39;onglet [!UICONTROL Parcourir] où vous pouvez saisir une valeur **[!UICONTROL d&#39;]** identité. Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de nommage fourni. Par exemple, la sélection de l’espace de nommage [!UICONTROL d’] identité &quot;courriel&quot; exigerait une valeur [!UICONTROL d’] identité sous la forme d’une adresse électronique valide.
+Après avoir sélectionné un espace de nommage d&#39;identité, vous revenez à l&#39;onglet **[!UICONTROL Parcourir]** où vous pouvez saisir une valeur **** d&#39;identité. Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de nommage fourni. Par exemple, la sélection de l&#39;espace de nommage d&#39;identité &quot;Courriel&quot; exigerait une valeur d&#39;identité sous la forme d&#39;une adresse électronique valide.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
@@ -90,17 +90,17 @@ Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Afficher le
 
 ### Détails du profil {#profile-detail}
 
-Lorsque vous sélectionnez l’ID [!UICONTROL de]Profil, l’onglet **[!UICONTROL Détails]** s’ouvre. The profile information displayed on the [!UICONTROL Detail] tab has been merged together from multiple profile fragments to form a single view of the individual customer. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation pour afficher les attributs de Profil préférés. Pour en savoir plus sur la personnalisation de ces champs, y compris des instructions détaillées pour l’ajout et la suppression d’attributs et le redimensionnement des panneaux de tableau de bord, consultez le guide [de personnalisation des détails du](profile-customization.md)profil.
+Lorsque vous sélectionnez l’ID **[!UICONTROL de]** Profil, l’onglet **[!UICONTROL Détails]** s’ouvre. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. Cela inclut les détails du client tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation pour afficher les attributs de Profil préférés. Pour en savoir plus sur la personnalisation de ces champs, y compris des instructions détaillées pour l’ajout et la suppression d’attributs et le redimensionnement des panneaux de tableau de bord, consultez le guide [de personnalisation des détails du](profile-customization.md)profil.
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Vous pouvez vue des informations supplémentaires relatives à chaque profil en sélectionnant un autre onglet disponible. Ces onglets comprennent [!UICONTROL les attributs], les [!UICONTROL Événements]et l’appartenance aux segments, qui indiquent les [!UICONTROL segments pour lesquels le profil est actuellement qualifié.]
+Vous pouvez vue des informations supplémentaires relatives à chaque profil en sélectionnant un autre onglet disponible. Ces onglets comprennent des attributs, des événements et des adhésions de segments, qui affichent les segments pour lesquels le profil est actuellement qualifié.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Stratégies de fusion
 
-Dans le menu [!UICONTROL Profils] principal, sélectionnez l’onglet **[!UICONTROL Fusionner les stratégies]** pour vue d’une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, indique s’il s’agit ou non de la stratégie de fusion par défaut, et précise le schéma auquel elle s’applique.
+Dans le menu **[!UICONTROL Profils]** principal, sélectionnez l’onglet **[!UICONTROL Fusionner les stratégies]** pour vue d’une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, indique s’il s’agit ou non de la stratégie de fusion par défaut, et précise le schéma auquel elle s’applique.
 
 For more information on merge policies, see the [merge policies user guide](merge-policies.md).
 
@@ -108,7 +108,7 @@ For more information on merge policies, see the [merge policies user guide](merg
 
 ## Schéma d’union {#union-schema}
 
-Dans le menu [!UICONTROL Profils] principal, sélectionnez l&#39;onglet Schéma **** d&#39;Union pour vue des schémas d&#39;union de vos données de Profil. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. En sélectionnant une classe dans la liste [!UICONTROL Classe] située à gauche, vous pouvez vue la structure de son schéma dans la trame. Par exemple, la sélection de &quot;[!DNL XDM Profile]&quot; affiche le schéma d’union de la [!DNL XDM Individual Profile] classe.
+Dans le menu **[!UICONTROL Profils]** principal, sélectionnez l&#39;onglet Schéma **** d&#39;Union pour vue des schémas d&#39;union de vos données de Profil. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. En sélectionnant une classe dans la liste &quot;[!UICONTROL Classe]&quot; sur la gauche, vous pouvez vue la structure de son schéma dans la trame. Par exemple, la sélection de &quot;[!DNL XDM Profile]&quot; affiche le schéma d’union de la [!DNL XDM Individual Profile] classe.
 
 Pour plus d&#39;informations sur les schémas d&#39;union et leur rôle au sein du Adobe Experience Platform, voir la section sur les schémas d&#39;union dans le guide [de composition des](../../xdm/schema/composition.md)schémas.
 
