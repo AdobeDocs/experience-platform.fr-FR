@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les amener à la plate-forme par le biais des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
 ht-degree: 12%
@@ -61,7 +61,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 Pour créer une connexion source, vous devez également définir une valeur d’énumération pour l’attribut de format de données.
 
-Utilisez les valeurs d’énumération suivantes pour les connecteurs **basés sur des** fichiers :
+Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur des fichiers :
 
 | Data.format | Valeur maximale |
 | ----------- | ---------- |
@@ -69,7 +69,7 @@ Utilisez les valeurs d’énumération suivantes pour les connecteurs **basés s
 | Fichiers JSON | `json` |
 | Fichiers de parquet | `parquet` |
 
-Pour tous les connecteurs **basés sur des** tables, utilisez la valeur enum : `tabular`.
+Pour tous les connecteurs basés sur une table, utilisez la valeur enum : `tabular`.
 
 **Format d’API**
 
