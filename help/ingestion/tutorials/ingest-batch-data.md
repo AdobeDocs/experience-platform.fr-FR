@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers de commandes sous la forme de fichiers de parquet ou de données conformes à un schéma connu de modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1308'
-ht-degree: 68%
+ht-degree: 56%
 
 ---
 
@@ -28,7 +28,7 @@ Si vous préférez ingérer des données à l’aide des API Data Ingestion, lis
 
 The Datasets workspace within [!DNL Experience Platform] allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le **[!UICONTROL nom]**, la date et l’heure de **[!UICONTROL création]**, la **[!UICONTROL source]**, le **[!UICONTROL schéma]** et l’**[!UICONTROL état du dernier lot]**, ainsi que la date et l’heure de la **[!UICONTROL dernière mise à jour]** du jeu de données.
+Affichez l’espace de travail des jeux de données en cliquant sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche. L&#39;espace de travail Jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la création (date et heure), la source, le schéma et l&#39;état du dernier lot, ainsi que la date et l&#39;heure de la dernière mise à jour du jeu de données.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Une fois que vous avez sélectionné la case d’option en regard du schéma que
 
 ## Configuration d’un jeu de données
 
-Dans l’écran **[!UICONTROL Configurer le jeu de données]**, vous devrez attribuer un **[!UICONTROL nom]** à votre jeu de données et pourrez également fournir une **[!UICONTROL description]** pour celui-ci.
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset as well.
 
 **Remarques sur les noms des jeux de données :**
 
@@ -74,7 +74,7 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’**[!UICONTROL identifiant du jeu de données]**, le **[!UICONTROL nom]**, la **[!UICONTROL description]**, le **[!UICONTROL nom du tableau]**, le **[!UICONTROL schéma]**, le **[!UICONTROL Streaming]** et la **[!UICONTROL Source]**. L’onglet Informations contient également la date de **[!UICONTROL création]** du jeu de données et celle de sa **[!UICONTROL dernière modification]**.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. L’onglet Informations contient également des informations sur le moment de création du jeu de données et sa date de dernière modification.
 
 L’onglet Informations contient également un bouton activer/désactiver de **[!UICONTROL Profile]** qui permet d’activer votre jeu de données pour l’utiliser avec [!DNL Real-time Customer Profile]. Use of this toggle, and [!DNL Real-time Customer Profile], will be explained in more detail in the section that follows.
 
@@ -122,13 +122,13 @@ Once you drag and drop (or browse and select) a parquet or JSON file that you wi
 
 Une fois le chargement du fichier terminé, l’onglet **[!UICONTROL Activité du jeu de données]** n’indique plus qu’« aucun lot n’a été ajouté ». Instead, the **[!UICONTROL Dataset Activity]** tab now shows dataset metrics. Toutes les mesures indiqueront « 0 » à cette étape, car le lot n’a pas encore été chargé.
 
-En bas de l’onglet se trouve une liste présentant l’**[!UICONTROL identifiant du lot]** des données qui venaient d’être ingérées via le processus [« Ajouter des données à un jeu de données »](#add-data-to-dataset). Sont également incluses les informations relatives au lot, notamment la date **[!UICONTROL d’ingestion]**, le nombre d’**[!UICONTROL enregistrements ingérés]** et l’**[!UICONTROL état]** actuel du lot.
+En bas de l’onglet se trouve une liste présentant l’**[!UICONTROL identifiant du lot]** des données qui venaient d’être ingérées via le processus [« Ajouter des données à un jeu de données »](#add-data-to-dataset). Sont également incluses les informations relatives au lot, y compris la date d&#39;assimilation, le nombre d&#39;enregistrements assimilés et l&#39;état actuel du lot.
 
 ![Mesures de jeux de données](../images/tutorials/ingest-batch-data/batch-id.png)
 
 ## Détails du lot
 
-Cliquez sur l’**[!UICONTROL identifiant du lot]** pour afficher un **[!UICONTROL aperçu du lot]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations sur le lot sont mises à jour afin d’afficher le nombre d’ **[!UICONTROL enregistrements ingérés]** et la **[!UICONTROL taille du fichier]**. L’**[!UICONTROL état]** passe également à « Succès » ou « Échec ». Si le lot échoue, la section **[!UICONTROL Code d’erreur]** contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
+Cliquez sur l’**[!UICONTROL identifiant du lot]** pour afficher un **[!UICONTROL aperçu du lot]**, indiquant des détails supplémentaires sur le lot. Une fois le chargement du lot terminé, les informations relatives au lot sont mises à jour afin d’afficher le nombre d’enregistrements ingérés et la taille du fichier. L’état devient également &quot;Succès&quot; ou &quot;Échec&quot;. Si le lot échoue, la section **[!UICONTROL Code d’erreur]** contiendra des informations détaillées sur les erreurs survenues lors de l’ingestion.
 
 Pour plus d’informations et pour obtenir des questions fréquentes sur l’ingestion par lots, consultez le [guide de dépannage de l’ingestion par lots](../batch-ingestion/troubleshooting.md).
 
