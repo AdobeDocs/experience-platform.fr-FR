@@ -5,7 +5,7 @@ title: Création d’intégrations ETL
 topic: overview
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '4173'
 ht-degree: 75%
@@ -95,7 +95,7 @@ Using the source of data for mapping, a list of all available datasets can be fe
 
 Vous pouvez émettre une seule requête API pour visualiser tous les jeux de données disponibles (p. ex. `GET /dataSets`), la meilleure méthode étant d’inclure des paramètres de requête qui limitent la taille de la réponse.
 
-Dans les cas où des informations _complètes_ sur les jeux de données sont demandées, le payload de la réponse peut dépasser 3 Go, ce qui est susceptible de ralentir les performances globales. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
+Dans les cas où des informations complètes sur les jeux de données sont demandées, le payload de la réponse peut dépasser 3 Go, ce qui est susceptible de ralentir les performances globales. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
 
 #### Filtrage de liste
 
@@ -165,7 +165,7 @@ La réponse comprend trois (`limit=3`) jeux de données indiquant le « name �
 
 ### Visualisation du schéma du jeu de données
 
-La propriété « schemaRef » d’un jeu de données contient un URI faisant référence au XDM sur lequel le jeu de données est basé. Le schéma XDM (« schemaRef ») représente tous les champs _potentiels_ pouvant être utilisés par le jeu de données, mais pas nécessairement les champs _effectivement_ utilisés (voir « observableSchema » ci-dessous).
+La propriété « schemaRef » d’un jeu de données contient un URI faisant référence au XDM sur lequel le jeu de données est basé. Le schéma XDM (« schemaRef ») représente tous les champs potentiels pouvant être utilisés par le jeu de données, mais pas nécessairement les champs effectivement utilisés (voir « observableSchema » ci-dessous).
 
 Le schéma XDM est le schéma que vous utilisez lorsque vous devez présenter à l’utilisateur une liste de tous les champs disponibles sur lesquels il est possible d’écrire.
 
@@ -601,7 +601,7 @@ Vous trouverez des détails sur la création d’un lot ainsi que des échantill
 
 ### Écriture dans un jeu de données
 
-Une fois le nouveau lot créé avec succès, les fichiers peuvent être chargés vers un jeu de données spécifique. Plusieurs fichiers peuvent être publiés dans un lot jusqu’à ce qu’il soit converti. Les fichiers peuvent être chargés à l’aide de l’_API Small File Upload_. Cependant, si vos fichiers sont trop volumineux et dépassent la limite de la passerelle, vous pouvez utiliser l’_API Large File Upload_. Vous trouverez des informations détaillées sur l’utilisation de ces deux API dans la [présentation de l’ingestion par lots](../ingestion/batch-ingestion/overview.md).
+Une fois le nouveau lot créé avec succès, les fichiers peuvent être chargés vers un jeu de données spécifique. Plusieurs fichiers peuvent être publiés dans un lot jusqu’à ce qu’il soit converti. Les fichiers peuvent être chargés à l’aide de l’API Small File Upload. Cependant, si vos fichiers sont trop volumineux et dépassent la limite de la passerelle, vous pouvez utiliser l’API Large File Upload. Vous trouverez des informations détaillées sur l’utilisation de ces deux API dans la [présentation de l’ingestion par lots](../ingestion/batch-ingestion/overview.md).
 
 **Requête**
 
