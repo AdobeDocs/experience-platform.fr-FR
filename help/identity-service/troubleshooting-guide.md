@@ -5,7 +5,7 @@ title: Guide de dépannage d’Adobe Experience Platform Identity Service
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 translation-type: tm+mt
-source-git-commit: 04efbf63741ef39bbf0b22795be74087f1f7c595
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '2248'
 ht-degree: 87%
@@ -100,7 +100,7 @@ Les espaces de noms standards fournis sont les suivants. Ils peuvent être utili
 
 ## Que sont les identités composites et les XID ?
 
-Les identités sont référencées dans les appels API par leur identité composite ou XID. Une **identité composite** est une représentation d’une identité qui contient une valeur d’identifiant et un espace de noms. Un **XID** est un identifiant à une seule valeur qui représente le même concept qu’une identité composite (un identifiant et un espace de noms) et qui est automatiquement affecté à de nouvelles identités lorsqu’il est conservé par Identity Service. Pour plus d’informations, voir la [présentation de l’API Identity Service](./home.md).
+Les identités sont référencées dans les appels API par leur identité composite ou XID. Une identité composite est une représentation d’une identité qui contient une valeur d’identifiant et un espace de noms. Un XID est un identifiant à une seule valeur qui représente le même concept qu’une identité composite (un identifiant et un espace de noms) et qui est automatiquement affecté à de nouvelles identités lorsqu’il est conservé par Identity Service. Pour plus d’informations, voir la [présentation de l’API Identity Service](./home.md).
 
 ## Comment Identity Service gère-t-il les données personnelles identifiables (PII) ?
 
@@ -311,7 +311,7 @@ The following is a list of error messages related to [!DNL Identity Service] you
 }
 ```
 
-[!DNL Identity Service] ne consomme que les identités pour les données d’enregistrement ou de série chronologique conformes aux [!DNL Profile] classes ou [!DNL ExperienceEvent] aux classes, respectivement. Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
+[!DNL Identity Service] ne consomme que les identités des données d’enregistrement ou de série chronologique conformes aux [!DNL Profile] classes ou [!DNL ExperienceEvent] aux classes, respectivement. Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
 
 ### Aucune identité valide dans les 100 premières lignes du lot traité
 
