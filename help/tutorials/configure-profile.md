@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 translation-type: tm+mt
-source-git-commit: 844ef4a0131e41d3a7a3da319ccf7f8d5cf1f40d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 26%
@@ -52,7 +52,7 @@ Before data can be ingested into Adobe Experience Platform and used in the creat
 **Ce guide vous aidera à :**
 - Parcourir les schémas existants.
 - Création et attribution d’un nom à un schéma.
-- ajoutez et définissez des mixins XDM.
+- Ajoutez et définissez des mixins XDM.
 - Définissez vos champs de schéma comme champs d’identité.
 - Activez le Profil pour votre schéma.
 
@@ -99,8 +99,8 @@ Dans l’interface utilisateur de l’Experience Platform, vous pouvez vue et in
 
 **Ce guide vous aidera à :**
 - Réorganiser, redimensionner, modifier et supprimer des cartes.
-- ajouter des attributs.
-- ajoutez une nouvelle carte.
+- Ajouter des attributs.
+- Ajoutez une nouvelle carte.
 - Restaurer les valeurs par défaut.
 
 Pour en savoir plus sur la personnalisation des données de profil, consultez la documentation sur la personnalisation des [Profils.](../profile/ui/profile-customization.md)
