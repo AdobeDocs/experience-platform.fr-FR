@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP ou SFTP à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: c3352c090ce9e5a89d9285aabdc4851632d4d437
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '701'
 ht-degree: 9%
 
 ---
@@ -43,7 +43,7 @@ Si vous disposez déjà d’une connexion FTP ou SFTP valide, vous pouvez ignore
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre serveur FTP ou SFTP sur [!DNL Platform], vous devez indiquer le nom **d’** hôte du serveur, un nom **d’** utilisateur et un **mot de passe**.
+Pour accéder à votre serveur FTP ou SFTP sur [!DNL Platform], vous devez indiquer le nom d’hôte du serveur, un nom d’utilisateur et un mot de passe.
 
 ## Connexion à votre serveur FTP ou SFTP
 
