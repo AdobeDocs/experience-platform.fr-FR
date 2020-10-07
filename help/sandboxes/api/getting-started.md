@@ -5,7 +5,7 @@ title: Guide de développement de l’API Sandbox
 topic: developer guide
 description: Ce guide de développement décrit les étapes à suivre pour utiliser l’API Sandbox afin de gérer les environnements de test dans Experience Platform. Il inclut des exemples d’appels API pour effectuer diverses opérations.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 100%
@@ -45,4 +45,4 @@ Toutes les requêtes contenant un payload (POST, PUT et PATCH) requièrent un en
 
 ## Étapes suivantes
 
-Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points de terminaison et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le **format général de l’API**, un exemple de **requête** montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de **réponse** pour un appel réussi.
+Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points de terminaison et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le format général de l’API, un exemple de requête montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de réponse pour un appel réussi.
