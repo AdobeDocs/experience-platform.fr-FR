@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Documentation du produit Adobe Experience Platform
 topic: getting started
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '7145'
 ht-degree: 65%
@@ -24,7 +24,7 @@ ht-degree: 65%
 
 **Activer :** Dans [!DNL Real-time Customer Data Platform], activer désigne l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que [!DNL Oracle Eloqua], [!DNL Google]ou [!DNL Salesforce Marketing Cloud]la destination.
 
-**activité :** En [!DNL Offer Decisioning]effet, une activité est un ensemble d’offres dont le spécialiste du marketing souhaite que le moteur de décision sélectionne la meilleure offre.
+**Activité :** En [!DNL Offer Decisioning]effet, une activité est un ensemble d’offres dont le spécialiste du marketing souhaite que le moteur de décision sélectionne la meilleure offre.
 
 **Administrateur :** Une ou plusieurs personnes de votre organisation qui peuvent configurer et personnaliser les autorisations pour l’Experience Platform.
 
@@ -34,7 +34,7 @@ ht-degree: 65%
 
 **Adobe Experience Platform :** Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience tout au long du parcours client.
 
-**adobe experience platform launch :** [!DNL Launch] est un écosystème de gestion des balises et des SDK, intégré aux [!DNL Experience Platform] applications et aux [!DNL Experience Cloud] applications. [!DNL Launch] fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyse, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques client.
+**Adobe Experience Platform Launch :** [!DNL Launch] est un écosystème de gestion des balises et des SDK, intégré aux [!DNL Experience Platform] applications et aux [!DNL Experience Cloud] applications. [!DNL Launch] fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyse, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques client.
 
 **Extensions Adobe Experience Platform Launch :** [!DNL Experience Platform Launch] les extensions permettent la diffusion de données de événement brutes directement vers [!DNL Real-time Customer Data Platform] les destinations. L’installation [!DNL Launch] des extensions nécessite l’accès aux [!DNL Launch] propriétés.
 
@@ -68,7 +68,7 @@ ht-degree: 65%
 
 ** :**[!DNL Attribution AI] Attribution AI est un service d’Adobe Sensei qui offre des fonctionnalités d’attribution algorithmique à plusieurs canaux, tout au long du cycle de vie des clients.
 
-**audience**: Une taille d’audience ou d’audience est l’ensemble de profils résultant qui répondent aux critères d’une définition de segment.
+**Audience**: Une taille d’audience ou d’audience est l’ensemble de profils résultant qui répondent aux critères d’une définition de segment.
 
 **Instantané d’audience** : un instantané d’audience capture tous les profils qui remplissent les critères de segmentation au moment de la segmentation.
 
@@ -214,7 +214,7 @@ ht-degree: 65%
 
 **Catalogue de destination :** Un catalogue de destination est une liste de destinations disponibles dans le [!DNL Real-time Customer Data Platform].
 
-**Règles d&#39;appel direct :** dans [!DNL Experience Platform Launch], vous pouvez configurer une [!UICONTROL règle] d’appel  direct qui s’exécute lorsqu’elle est appelée directement à partir de la page. Si le chargement de votre page ou votre action sur votre site est très simple, ou s’il est unique et peut exécuter un ensemble spécifique d’instructions à chaque fois (défini [!DNL eVar4] sur X et déclenché [!DNL event2] à chaque fois), vous pouvez alors utiliser une [!UICONTROL règle] d’appel direct. Voir [!DNL Launch] la documentation relative à la création de [!UICONTROL règles] d’appel direct.
+**Règles d&#39;appel direct :** dans [!DNL Experience Platform Launch], vous pouvez configurer une règle d’appel direct qui s’exécute lorsqu’elle est appelée directement à partir de la page. Si le chargement de votre page ou votre action sur votre site est très simple, ou s’il est unique et peut exécuter un ensemble spécifique d’instructions à chaque fois (défini [!DNL eVar4] sur X et déclenché [!DNL event2] à chaque fois), vous pouvez alors utiliser une règle d’appel direct. Voir [!DNL Launch] la documentation relative à la création de règles d’appel direct.
 
 **Nom d’affichage :** un nom d’affichage est le nom convivial d’un champ qui apparaît dans l’interface utilisateur.
 
@@ -232,7 +232,7 @@ ht-degree: 65%
 
 **Énumération :** une énumération est une liste de valeurs qui représente les données valides d’un champ.
 
-**environnement :** Dans [!DNL Experience Platform Launch], un environnement est un ensemble d&#39;instructions de déploiement qui spécifie la diffusion hôte et le format de fichier d&#39;une build. Une bibliothèque doit être associée à un environnement avant qu’il puisse être créé.
+**Environnement :** Dans [!DNL Experience Platform Launch], un environnement est un ensemble d&#39;instructions de déploiement qui spécifie la diffusion hôte et le format de fichier d&#39;une build. Une bibliothèque doit être associée à un environnement avant qu’il puisse être créé.
 
 **Diagnostics d’erreur :** les diagnostics d’erreur permettent de générer des messages d’erreur détaillés pour les lots ingérés. Le seuil d’erreur permet de configurer le pourcentage d’erreurs acceptables avant l’échec du lot entier.
 
@@ -368,9 +368,9 @@ ht-degree: 65%
 
 ## O
 
-**offre :** Une offre est un message marketing auquel des règles peuvent être associées, indiquant qui peut être autorisé à voir l’offre.
+**Offre :** Une offre est un message marketing auquel des règles peuvent être associées, indiquant qui peut être autorisé à voir l’offre.
 
-**Décision sur l&#39;Offre :** La prise de décision par Offre permet au spécialiste du marketing de gérer les règles et les modèles de Propositions d&#39;offre formés lorsqu’il s’adresse à un utilisateur final en fonction des données collectées sur plusieurs canaux et applications.
+**Offer Decisioning :** La prise de décision par Offre permet au spécialiste du marketing de gérer les règles et les modèles de Propositions d&#39;offre formés lorsqu’il s’adresse à un utilisateur final en fonction des données collectées sur plusieurs canaux et applications.
 
 **Bibliothèque d&#39;Offres :** La bibliothèque d’offres est une bibliothèque centrale utilisée pour gérer les offres personnalisées et de secours, les règles de décision et les activités.
 
