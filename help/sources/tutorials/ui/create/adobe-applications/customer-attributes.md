@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source dans l’interface utilisateur afin de collecter les données du profil des attributs du client dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 8%
@@ -28,7 +28,7 @@ Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-L&#39;écran activité ** source liste toutes les connexions précédemment établies pour les données du profil des attributs du client. Vous pouvez créer une nouvelle connexion en cliquant sur **Sélectionner les données**.
+L&#39;écran activité **** source liste toutes les connexions précédemment établies pour les données du profil des attributs du client. Vous pouvez créer une nouvelle connexion en cliquant sur **Sélectionner les données**.
 
 >[!NOTE]
 >
@@ -44,10 +44,10 @@ Dans la liste des jeux de données de profil d&#39;attributs du client disponibl
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-L’étape *Révision* s’affiche, vous permettant de vérifier votre nouvelle connexion entrante avant de la créer. Les détails de la connexion sont regroupés par catégorie, notamment :
+L’étape **Révision** s’affiche, vous permettant de vérifier votre nouvelle connexion entrante avant de la créer. Les détails de la connexion sont regroupés par catégorie, notamment :
 
-* *Détails* de la source : Affiche le type de connexion source et les données source sélectionnées.
-* *Détails* de la cible : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Les données du profil des attributs du client sont automatiquement mises en correspondance et ingérées dans les Profils client en temps réel.
+* **Détails** de la source : Affiche le type de connexion source et les données source sélectionnées.
+* **Détails** de la cible : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Les données du profil des attributs du client sont automatiquement mises en correspondance et ingérées dans les Profils client en temps réel.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
