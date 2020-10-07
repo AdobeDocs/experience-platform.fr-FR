@@ -5,7 +5,7 @@ title: Principes de base de la composition des schémas
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2839'
 ht-degree: 58%
@@ -54,7 +54,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournissent un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
 
-Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la **classe** du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM sont décrites en détail par la suite dans ce document.
+Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM sont décrites en détail par la suite dans ce document.
 
 Les schémas d’enregistrement et de série temporelle contiennent tous deux une carte des identités (`xdm:identityMap`). Ce champ contient la représentation de l’identité d’un sujet tiré des champs marqués comme « Identité » décrit à la section suivante.
 
@@ -133,7 +133,7 @@ Les schémas sont composés à l’aide de la formule suivante :
 
 **Classe + Mixin&amp;ast; = Schéma XDM**
 
-&amp;ast;Un schéma est composé d’une classe et de _zéro, un ou plusieurs_ mixins. Cela signifie que vous pouvez composer un schéma du jeu de données sans utiliser de mixins.
+&amp;ast;Un schéma est composé d’une classe et de zéro, un ou plusieurs mixins. Cela signifie que vous pouvez composer un schéma du jeu de données sans utiliser de mixins.
 
 ### Classe
 
