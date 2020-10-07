@@ -5,10 +5,10 @@ topic: overview
 title: Présentation du contrôle d’accès
 description: Le contrôle d'accès de Adobe Experience Platform est fourni par l'intermédiaire du Adobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 63%
+ht-degree: 61%
 
 ---
 
@@ -19,7 +19,7 @@ Access control for [!DNL Experience Platform] is provided through the [Adobe Adm
 
 ## Hiérarchie et workflow du contrôle d’accès
 
-In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un **[!UICONTROL administrateur de profils de produit]**. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les **[!UICONTROL administrateurs de produit]** (qui peuvent gérer tous les profils au sein d’un produit) et les **[!UICONTROL administrateurs système]** (aucune restriction). Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un administrateur de profils de produit. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les administrateurs de produit (qui peuvent gérer tous les profils au sein d’un produit) et les administrateurs système (aucune restriction). Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Adobe Admin Console permet de centraliser la gestion des droits et accès de vos
 
 ### Profils de produit
 
-In the [!DNL Admin Console], permissions are assigned to users through the use of **[!UICONTROL product profiles]**. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux environnements de test qui leur sont attribués par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
+In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. Les profils de produit vous permettent d’accorder des autorisations à un ou plusieurs utilisateurs, mais aussi de contenir leur accès aux environnements de test qui leur sont attribués par le biais des profils de produit. Il est possible d’attribuer un ou plusieurs profils de produit appartenant à votre organisation.
 
 ### Profils de produit par défaut
 
@@ -57,7 +57,7 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 ## Environnements de test et autorisations
 
-Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. Les **[!UICONTROL autorisations]** d’un profil de produit donnent aux utilisateurs du profil l’accès aux fonctionnalités de dans les environnements de test auxquels ils se sont vus accorder l’accès. [!DNL Platform] Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
+Les environnements de test hors production sont une forme de virtualisation des données qui vous permet d’isoler des données des autres environnements de test et qui est généralement utilisée à des fins d’expériences de développement, de test ou d’évaluations. A product profile&#39;s permissions give the profile&#39;s users access to [!DNL Platform] features within the sandbox environments to which they&#39;ve been granted access to. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
@@ -71,7 +71,7 @@ L’autorisation « Gestion des environnements de test » permet aux utilisate
 
 ### Autorisations
 
-L’onglet **Autorisations** au sein d’un profil de produit affiche les environnements de test et les autorisations actives pour ce profil :
+L’onglet Autorisations au sein d’un profil de produit affiche les environnements de test et les autorisations actives pour ce profil :
 
 ![](./images/permissions-overview.png)
 
