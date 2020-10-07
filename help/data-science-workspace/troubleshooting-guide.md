@@ -5,7 +5,7 @@ title: Guide de dépannage de Data Science Workspace
 topic: Troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 76e598c743df320e4b3cb821e118749fe7304d9c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '750'
 ht-degree: 42%
@@ -31,7 +31,7 @@ In your [!DNL Chrome] browser, navigate to the top-right and select **Settings**
 
 ![paramètres avancés de Chrome](./images/faq/chrome-advanced.png)
 
-La section *Confidentialité et sécurité* s’affiche. Cliquez ensuite sur **Paramètres des sites**, puis sur **Cookies et données du site**.
+La section **Confidentialité et sécurité** s’affiche. Cliquez ensuite sur **Paramètres des sites**, puis sur **Cookies et données du site**.
 
 ![paramètres avancés de Chrome](./images/faq/privacy-security.png)
 
@@ -63,7 +63,7 @@ Dans la fenêtre des préférences de Safari, sélectionnez **Avancé**. Cochez 
 
 ![Safari avancé](./images/faq/advanced.png)
 
-Ensuite, dans la barre de navigation supérieure, sélectionnez le menu **Développer** . Dans la liste déroulante *Développer* , passez la souris sur Agent ** utilisateur. Vous pouvez sélectionner la chaîne **[!DNL Chrome]** ou **[!DNL Firefox]** User Agent que vous souhaitez utiliser.
+Ensuite, dans la barre de navigation supérieure, sélectionnez le menu **Développer** . Dans la liste déroulante **Développer** , passez la souris sur Agent **** utilisateur. Vous pouvez sélectionner la chaîne **[!DNL Chrome]** ou **[!DNL Firefox]** User Agent que vous souhaitez utiliser.
 
 ![Menu Développer](./images/faq/user-agent.png)
 
