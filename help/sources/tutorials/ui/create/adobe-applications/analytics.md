@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Adobe Analytics dans l’interface utilisateur afin d’importer des données de consommation dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 15%
@@ -28,7 +28,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Créer une connexion source avec Adobe Analytics
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran *Catalogue* affiche les sources disponibles pour créer des connexions entrantes avec, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran **Catalogue** affiche les sources disponibles pour créer des connexions entrantes avec, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
@@ -73,7 +73,7 @@ Une fois le flux de votre jeu de données créé, vous pouvez surveiller les don
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-L’écran Flux *de* données s’affiche. Cette page contient une paire de flux de jeux de données, y compris des informations sur leur nom, leurs données source, leur heure de création et leur état.
+L’écran Flux **de** données s’affiche. Cette page contient une paire de flux de jeux de données, y compris des informations sur leur nom, leurs données source, leur heure de création et leur état.
 
 Le connecteur instancie deux flux de jeux de données. L’un représente les données de renvoi et l’autre les données actives. Les données de renvoi ne sont pas configurées pour le Profil, mais sont envoyées au lac de données pour des utilisations analytiques et scientifiques des données.
 
@@ -83,7 +83,7 @@ Sélectionnez le flux de jeux de données que vous souhaitez vue à partir de la
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-La page activité *des* jeux de données s&#39;affiche. Cette page affiche le taux de messages consommés sous forme de graphique. Sélectionnez Gouvernance *des* données dans l’en-tête supérieur pour accéder aux champs d’étiquetage.
+La page activité **des** jeux de données s&#39;affiche. Cette page affiche le taux de messages consommés sous forme de graphique. Sélectionnez Gouvernance *des* données dans l’en-tête supérieur pour accéder aux champs d’étiquetage.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
@@ -91,7 +91,7 @@ Vous pouvez vue les étiquettes héritées d’un flux de données à partir de 
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The *Edit governance labels* panel appears. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
+The **Edit governance labels** panel appears. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
 
 Pour plus d’informations sur la manière d’étiqueter les données provenant d’Analytics, consultez le guide [des étiquettes d’utilisation des](../../../../../data-governance/labels/user-guide.md)données.
 
