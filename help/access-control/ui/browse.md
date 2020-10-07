@@ -5,7 +5,7 @@ title: Parcourir l’espace de travail du contrôle d’accès
 topic: user guide
 description: Ce document décrit les étapes nécessaires pour parcourir l’espace de travail contrôle d'accès. Afin de configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation IMS disposant d’un abonnement à Experience Platform.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 77%
@@ -15,7 +15,7 @@ ht-degree: 77%
 
 # Parcourir l’espace de travail du contrôle d’accès
 
-In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’**[!UICONTROL administrateur système]**, d’**[!UICONTROL administrateur produit]**, ou d’**[!UICONTROL administrateur de profil de produit]** pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
+In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’administrateur système, d’administrateur produit, ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
 Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour obtenir l’accès.
 
