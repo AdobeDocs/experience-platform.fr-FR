@@ -6,7 +6,7 @@ title: Création d’un connecteur de données de classifications Adobe Analytic
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1a49cccfbf8d565c8154329cf1f94382911b2f85
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 4%
@@ -24,7 +24,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 * [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[ !Sandbox DNL]](../../../../../sandboxes/home.md): experience platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
+* [[ !Sandbox DNL]](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
 Le connecteur de données des classifications Analytics nécessite que vos données aient été migrées vers la nouvelle [!DNL Classifications] infrastructure d’Adobe Analytics avant d’être utilisées. Pour confirmer l’état de migration de vos données, contactez votre responsable de succès client Adobe.
 
@@ -38,7 +38,7 @@ Sous la catégorie des applications **[!UICONTROL d’]** Adobe, sélectionnez l
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-L’étape d’ajout de données **[!UICONTROL à la source]** Analytics s’affiche. Sélectionnez **[!UICONTROL Classifications]** dans l’en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID **[!UICONTROL de]** Dimension, le nom **[!UICONTROL de la suite de]** rapports et l’ID de la suite de rapports .****
+L’étape d’ajout de données **[!UICONTROL à la source]** Analytics s’affiche. Sélectionnez **[!UICONTROL Classifications]** dans l’en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID de dimension, le nom de la suite de rapports et l’identifiant de la suite de rapports.
 
 Chaque page affiche jusqu’à dix [!DNL Classifications] jeux de données différents parmi lesquels vous pouvez choisir. Sélectionnez **[!UICONTROL Suivant]** en bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de jeux de données que vous avez sélectionnés, ainsi que leurs noms. [!DNL Classifications] Ce panneau vous permet également de supprimer tous les [!DNL Classifications] jeux de données sélectionnés par erreur ou d&#39;effacer toutes les sélections par une seule action.
 
