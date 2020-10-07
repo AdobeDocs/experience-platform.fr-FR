@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce didacticiel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7adf18e4251f377fee586c8a0f23b89acd75afca
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 28%
@@ -81,7 +81,7 @@ Une fois que vous avez terminé les étapes pour les champs source non mappés r
 
 Lors du mappage des champs, vous pouvez également inclure des fonctions pour calculer les valeurs en fonction des champs sources d’entrée. Pour plus d’informations, consultez la section relative aux [fonctions de mappage](#mapping-functions) de l’annexe.
 
-### ajouter le champ calculé
+### Ajouter le champ calculé
 
 Les champs calculés permettent de créer des valeurs en fonction des attributs du schéma d’entrée. Ces valeurs peuvent ensuite être attribuées à des attributs dans le schéma de cible et recevoir un nom et une description pour faciliter la référence.
 
@@ -117,7 +117,7 @@ Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données
 
 Pour utiliser une fonction, saisissez-la sous **[!UICONTROL Champ source]** avec la syntaxe et les entrées appropriées.
 
-Par exemple, pour concaténer les champs CSV **city** et **country** et les attribuer au champ XDM **city**, définissez le champ source en tant que `concat(city, ", ", county)`.
+Par exemple, pour concaténer les champs CSV city et country et les attribuer au champ XDM city, définissez le champ source en tant que `concat(city, ", ", county)`.
 
 ![](../images/tutorials/map-a-csv-file/mapping-function.png)
 
