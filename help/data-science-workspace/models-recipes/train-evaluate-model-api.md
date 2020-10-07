@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1210'
 ht-degree: 98%
@@ -35,7 +35,7 @@ Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
 ## Workflow API
 
-Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points de terminaison **Engines**,**MLInstances** et **Experiments**. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
+Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points de terminaison Engines,MLInstances et Experiments. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
