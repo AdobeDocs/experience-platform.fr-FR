@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;data lake privacy;identity nam
 solution: Experience Platform
 title: Traitement des demandes d’accès à des informations personnelles dans le lac de données
 topic: overview
-description: adobe experience platform privacy service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
+description: Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 translation-type: tm+mt
-source-git-commit: 397f08efa276f7885e099a0a8d9dc6d23fe0e8cc
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 32%
@@ -30,15 +30,15 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] utilise les **[!UICONTROL espaces de noms d’identité]** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
 [!DNL Identity Service] conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
 For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
 
-## ajouter des données d&#39;identité aux jeux de données
+## Ajouter des données d&#39;identité aux jeux de données
 
-Lors de la création de demandes de confidentialité pour les [!DNL Data Lake]clients, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur **[!UICONTROL d’]** identité dans leur schéma XDM associé.
+Lors de la création de demandes de confidentialité pour les [!DNL Data Lake]clients, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur d’identité dans leur schéma XDM associé.
 
 >[!NOTE]
 >
