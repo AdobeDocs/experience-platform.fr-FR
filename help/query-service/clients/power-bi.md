@@ -5,10 +5,10 @@ title: Connexion de Power BI
 topic: connect
 description: Ce document passe par les étapes de connexion de Power BI avec Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '349'
-ht-degree: 64%
+ht-degree: 63%
 
 ---
 
@@ -61,7 +61,7 @@ ORDER BY SUM(web.webPageDetails.pageviews.value) DESC
 LIMIT 10
 ```
 
-- Sélectionnez le mode **[!UICONTROL DirectQuery]** ou le mode **[!UICONTROL Importer]**. En mode **[!UICONTROL Importer]**, les données sont importées dans [!DNL Power BI]. En mode **[!UICONTROL DirectQuery]**, toutes les requêtes sont envoyées à pour exécution.[!DNL Query Service]
+- Select either &quot;[!UICONTROL DirectQuery]&quot; or &quot;[!UICONTROL Import]&quot; mode. En mode [!UICONTROL DirectQuery], toutes les requêtes sont envoyées à pour exécution. [!DNL Query Service] En mode [!UICONTROL Importer], les données sont importées dans [!DNL Power BI].
 
 - Cliquez sur **[!UICONTROL OK]**. Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. Il existe un problème connu avec les colonnes numériques de rendu de prévisualisation. Passez à l’étape suivante.
 
