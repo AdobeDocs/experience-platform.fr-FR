@@ -5,7 +5,7 @@ title: Stratégies
 topic: developer guide
 description: Les stratégies d’utilisation des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données au sein d’Experience Platform. Le point de terminaison /policies est utilisé pour tous les appels d’API liés à l’affichage, la création, la mise à jour ou la suppression des stratégies d’utilisation des données.
 translation-type: tm+mt
-source-git-commit: cddc559dfb65ada888bb367d6265863091a9b2a1
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 9%
@@ -235,7 +235,7 @@ Dans l’ [!DNL Policy Service] API, une stratégie est définie par les éléme
 * Référence à une action marketing spécifique
 * Expression décrivant les étiquettes d’utilisation des données pour lesquelles l’action marketing ne peut pas être exécutée par rapport à
 
-Pour satisfaire à cette dernière exigence, les définitions de stratégie doivent inclure une expression booléenne concernant la présence d’étiquettes d’utilisation des données. Cette expression s&#39;appelle une expression **de** politique.
+Pour satisfaire à cette dernière exigence, les définitions de stratégie doivent inclure une expression booléenne concernant la présence d’étiquettes d’utilisation des données. Cette expression s&#39;appelle une expression de politique.
 
 Les expressions de stratégie sont fournies sous la forme d’une `deny` propriété au sein de chaque définition de stratégie. Voici un exemple d’objet simple `deny` qui ne vérifie la présence que d’une seule étiquette :
 
@@ -245,7 +245,7 @@ Les expressions de stratégie sont fournies sous la forme d’une `deny` propri�
 }
 ```
 
-Cependant, de nombreuses stratégies spécifient des conditions plus complexes concernant la présence d’étiquettes d’utilisation des données. Pour prendre en charge ces cas d’utilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de stratégie. L&#39;objet d&#39;expression de stratégie doit contenir _soit_ une étiquette _soit_ un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie.
+Cependant, de nombreuses stratégies spécifient des conditions plus complexes concernant la présence d’étiquettes d’utilisation des données. Pour prendre en charge ces cas d’utilisation, vous pouvez également inclure des opérations booléennes pour décrire vos expressions de stratégie. L’objet d’expression de stratégie doit contenir un libellé ou un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie.
 
 Par exemple, afin de définir une stratégie qui interdit l’exécution d’une action marketing sur des données où `C1 OR (C3 AND C7)` `deny` des étiquettes sont présentes, la propriété de la stratégie est spécifiée comme suit :
 
@@ -375,7 +375,7 @@ A successful response returns the details of the newly created policy, including
 >
 >Vous pouvez uniquement mettre à jour des stratégies personnalisées. Si vous souhaitez activer ou désactiver les stratégies de base, reportez-vous à la section relative à la [mise à jour de la liste des stratégies](#update-enabled-core)de base activées.
 
-Vous pouvez mettre à jour une stratégie personnalisée existante en fournissant son identifiant dans le chemin d’une demande de PUT avec une charge utile qui inclut la forme mise à jour de la stratégie dans son intégralité. En d&#39;autres termes, la demande du PUT _réécrit_ essentiellement la politique.
+Vous pouvez mettre à jour une stratégie personnalisée existante en fournissant son identifiant dans le chemin d’une demande de PUT avec une charge utile qui inclut la forme mise à jour de la stratégie dans son intégralité. En d&#39;autres termes, la demande du PUT réécrit essentiellement la politique.
 
 >[!NOTE]
 >
