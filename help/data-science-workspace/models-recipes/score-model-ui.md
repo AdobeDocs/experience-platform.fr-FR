@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: 'La notation dans Adobe Experience Platform Data Science Workspace peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 91%
@@ -32,7 +32,7 @@ Vous pouvez créer une opération de notation l’aide de configurations optimis
 
 1. Trouvez l’opération de formation optimale afin d’utiliser ses configurations pour la notation. Ouvrez l’opération de formation souhaitée en cliquant sur son nom.
 
-2. Dans l’onglet **[!UICONTROL Évaluation]** de l’opération de formation, cliquez sur le bouton **[!UICONTROL Noter]** dans le coin supérieur droit de l’écran. Cela lancera un nouveau processus *Exécuter la notation*.
+2. Dans l’onglet **[!UICONTROL Évaluation]** de l’opération de formation, cliquez sur le bouton **[!UICONTROL Noter]** dans le coin supérieur droit de l’écran. Cela lancera un nouveau processus **Exécuter la notation**.
    ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Sélectionnez le jeu de données de notation d’entrée, puis cliquez sur **[!UICONTROL Suivant]**.
