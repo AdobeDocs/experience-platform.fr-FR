@@ -4,7 +4,7 @@ solution: Experience Platform
 title: FAQ sur Privacy Service
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 48%
@@ -94,7 +94,7 @@ Pour plus d’informations, reportez-vous à la section relative à la [recherch
 
 ### Utilisation de l’interface utilisateur
 
-On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Cliquez sur l’identifiant de la tâche pour ouvrir la page _Détails de la tâche_. Ensuite, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Cliquez sur l’identifiant de la tâche pour ouvrir la page Détails de la tâche. Ensuite, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
 
 ## Messages d’erreur courants
 
