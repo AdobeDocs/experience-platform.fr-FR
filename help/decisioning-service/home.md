@@ -5,7 +5,7 @@ title: Service de prise de décision
 topic: overview
 description: Le service de prise de décision vous offre la possibilité de créer des expériences personnalisées, optimisées et orchestrées dans des applications s’exécutant sur Adobe Experience Platform. À l’aide du service de prise de décision, vous pouvez déterminer la meilleure option depuis un ensemble de choix disponibles. Ces options, également appelées alternatives, peuvent être des offres, des recommandations de produits, des composants de contenu pour une expérience web, des scripts de conversation et des actions à prendre.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '1648'
 ht-degree: 78%
@@ -49,7 +49,7 @@ Alternativement ou en complément, une stratégie peut reposer sur les résultat
 
 ### Stratégie de décision
 
-Les stratégies de décision sont configurées au moyen d’objets appelés _activités_. Chaque stratégie de décision est essentiellement un algorithme ou une fonction qui prend N options {o1, o2, …oN} comme entrée et produit une liste ordonnée d’options (o1, o2,…oK) où la première est considérée comme la meilleure selon un critère d’optimisation, la deuxième option de la liste de résultats est ensuite considérée comme la deuxième meilleure option, et ainsi de suite.
+Les stratégies de décision sont configurées au moyen d’objets appelés activités. Chaque stratégie de décision est essentiellement un algorithme ou une fonction qui prend N options {o1, o2, …oN} comme entrée et produit une liste ordonnée d’options (o1, o2,…oK) où la première est considérée comme la meilleure selon un critère d’optimisation, la deuxième option de la liste de résultats est ensuite considérée comme la deuxième meilleure option, et ainsi de suite.
 
 À tout moment pendant le parcours d’un client, la meilleure option pour une activité donnée est réévaluée en fonction de l’ensemble le plus récent de variables contextuelles, de règles et de contraintes. Context variables include the records stored in [!DNL Real Time Customer Profile]. Une entité d’enregistrement centrale est le profil d’un client, mais d’autres entités comme les données commerciales opérationnelles sont également disponibles pour l’activité.
 
