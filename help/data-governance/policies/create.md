@@ -6,7 +6,7 @@ topic: policies
 type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer les actions marketing à entreprendre par rapport aux données qui contiennent certains libellés d’utilisation des données. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1209'
 ht-degree: 72%
@@ -195,7 +195,7 @@ Enregistrez l’identifiant d’URI de l’action marketing nouvellement créée
 
 Pour créer une nouvelle stratégie, vous devez fournir l’ID URI d’une action marketing avec une expression des étiquettes d’utilisation qui interdisent cette action marketing.
 
-Cette expression, appelée **expression de stratégie**, est un objet contenant soit (a) un libellé , soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
+Cette expression, appelée expression de stratégie, est un objet contenant soit (a) un libellé , soit (b) un opérateur et des opérandes, mais pas les deux. De même, chaque opérande est également un objet d’expression de stratégie. Par exemple, une stratégie relative à l’exportation de données vers un tiers peut être interdite en présence de libellés`C1 OR (C3 AND C7)`. Cette expression serait spécifiée comme suit :
 
 ```json
 "deny": {
