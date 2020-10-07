@@ -5,7 +5,7 @@ seo-title: Page de détails des destinations
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 100%
@@ -53,8 +53,8 @@ Le rail de droite contient des informations sur la destination. Pour plus d’in
 | Plateforme | Représente la plateforme de destination vers laquelle les audiences sont envoyées. Pour plus d’informations, consultez le [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md). |
 | Description | Vous pouvez modifier la description du flux de destination. |
 | Catégorie | Indique le type de destination. Pour plus d’informations, consultez le [catalogue des destinations](/help/rtcdp/destinations/destinations-catalog.md). |
-| Type de connexion | Indique la forme sous laquelle vos audiences sont envoyées vers la destination. Il peut s’agir d’un **[!UICONTROL cookie]** ou d’un **[!UICONTROL profil]**. |
-| Fréquence | Indique la fréquence d’envoi des audiences vers la destination. Il peut s’agir d’un **[!UICONTROL flux continu]** ou d’un **[!UICONTROL lot]**. |
+| Type de connexion | Indique la forme sous laquelle vos audiences sont envoyées vers la destination. Il peut s’agir d’un [!UICONTROL cookie] ou d’un [!UICONTROL profil]. |
+| Fréquence | Indique la fréquence d’envoi des audiences vers la destination. Il peut s’agir d’un [!UICONTROL flux continu] ou d’un [!UICONTROL lot]. |
 | Identité | Représente l’espace de noms d’identité accepté par la destination. Par exemple, le champ Identité peut correspondre à GAID, IDFA ou un e-mail. Pour tous les espaces de noms d’identité acceptés, consultez les espaces de noms standard dans la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
 | Créé par | Indique l’utilisateur qui a créé ce flux de destination. |
 | Créé | Indique la date et l’heure (UTC) de création de ce flux de destination. |
