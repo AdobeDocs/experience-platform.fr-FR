@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous donne les moyens d’atteindre votre objectif à l’aide de la recette des recommandations de produits prédéfinie. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1595'
-ht-degree: 83%
+ht-degree: 81%
 
 ---
 
@@ -85,7 +85,7 @@ Les recettes sont la base d’un modèle puisqu’elles contiennent des algorith
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Recherchez et ouvrez la **[!UICONTROL recette de recommandations]** fournie en cliquant sur son nom.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Dans le rail de droite, cliquez sur **[!UICONTROL Schéma d’entrée des recommandations]** pour afficher le schéma qui alimente la recette. Les champs de schéma **[!UICONTROL itemId]** et **[!UICONTROL userId]** correspondent à un produit acheté (**[!UICONTROL interactionType]**) par ce client à un moment spécifique (**[!UICONTROL horodatage]**). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
+3. Dans le rail de droite, cliquez sur **[!UICONTROL Schéma d’entrée des recommandations]** pour afficher le schéma qui alimente la recette. The schema fields &quot;[!UICONTROL itemId]&quot; and &quot;[!UICONTROL userId]&quot; correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Vous avez maintenant examiné les schémas d’entrée et de sortie requis par la recette des recommandations de produits. Vous pouvez maintenant passer à la section suivante pour savoir comment créer, entraîner et évaluer un modèle de recommandations de produits.
@@ -113,9 +113,9 @@ Vous pouvez choisir d’attendre la fin de la session d’entraînement ou conti
 
 ### Entraînement du modèle à l’aide d’hyperparamètres personnalisés
 
-1. Sur la page de *présentation du modèle*, cliquez sur **[!UICONTROL Entraîner]** près du coin supérieur droit pour créer une session d’entraînement. Sélectionnez le même jeu de données d’entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Suivant]**.
+1. Sur la page de **présentation du modèle**, cliquez sur **[!UICONTROL Entraîner]** près du coin supérieur droit pour créer une session d’entraînement. Sélectionnez le même jeu de données d’entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. La page de *configuration* s’affiche. Vous pouvez y configurer ici la valeur **[!UICONTROL num_recommendations]** de la session d’entraînement, également connue sous le nom d’hyperparamètre. Un modèle entraîné et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de la session d’entraînement.
+2. La page de **configuration** s’affiche. Here you can configure the training run&#39;s &quot;[!UICONTROL num_recommendations]&quot; value, also known as a Hyperparameter. Un modèle entraîné et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de la session d’entraînement.
 
    Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant les sessions d’entraînement. L’ajustement d’hyperparamètres peut modifier la précision du modèle entraîné. L’optimisation d’un modèle étant un processus itératif, il peut être nécessaire de procéder à plusieurs sessions d’entraînement avant d’effectuer une évaluation satisfaisante.
 
@@ -159,7 +159,7 @@ Une fois l’opération de notation terminée, vous serez en mesure de prévisua
 
 1. Sur la page des opérations de notation, cliquez sur l’opération de notation terminée, puis cliquez sur **[!UICONTROL Aperçu du jeu de données des résultats de la notation]** sur le rail de droite.
    ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2. Dans le tableau de prévisualisation, chaque ligne contient des recommandations de produits pour un client en particulier, respectivement libellés **[!UICONTROL recommendations]** et **[!UICONTROL userId]**. Puisque l’hyperparamètre **[!UICONTROL num_recommendations]** a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
+2. Dans le tableau de prévisualisation, chaque ligne contient des recommandations de produits pour un client en particulier, respectivement libellés [!UICONTROL recommendations] et [!UICONTROL userId]. Puisque l’hyperparamètre [!UICONTROL num_recommendations] a été défini sur 10 dans les exemples de captures d’écran, chaque ligne de recommandations peut contenir jusqu’à 10 identités de produit délimitées par un signe dièse (#).
    ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Étapes suivantes {#next-steps}
