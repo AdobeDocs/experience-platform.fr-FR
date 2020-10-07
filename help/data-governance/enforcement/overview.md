@@ -5,7 +5,7 @@ title: Présentation de l’application des stratégies
 topic: enforcement
 description: Une fois les étiquettes d’utilisation des données appliquées aux jeux de données Adobe Experience Platform et les stratégies d’utilisation des données définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur la plate-forme, l’application basée sur les API et l’application automatique.
 translation-type: tm+mt
-source-git-commit: 2fdab7d984a7368df77110f8ba0e0ba687e96d7e
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 16%
@@ -17,7 +17,7 @@ ht-degree: 16%
 
 Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
-Deux méthodes d&#39;application des politiques sont offertes par les [!DNL Data Governance] fonctionnalités [!DNL Platform]: **Application** basée sur les API et application **** automatique.
+Deux méthodes d&#39;application des politiques sont offertes par les [!DNL Data Governance] fonctionnalités [!DNL Platform]: Application de la loi basée sur les API et application automatique.
 
 ## Application basée sur les API
 
