@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: overview
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 75%
@@ -13,7 +13,7 @@ ht-degree: 75%
 ---
 
 
-# [!DNL Identity Service] aperçu
+# [!DNL Identity Service]aperçu
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ». Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
 
@@ -35,11 +35,11 @@ The identity relationships that [!DNL Identity Service] defines and maintains ar
 
 ### Identités
 
-Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité correspond à une **identité connue**.
+Une identité correspond à des données propres à une entité, généralement une personne individuelle. Une identité telle qu’un identifiant de connexion, un ECID ou un identifiant de fidélité correspond à une identité connue.
 
 Les PII telles que l’adresse électronique et le numéro de téléphone permettent d’identifier directement un client. Par conséquent, les PII sont utilisées pour faire correspondre les identités multiples d’un client sur plusieurs systèmes.
 
-**Les identités inconnues ou anonymes** distinguent un appareil sans identifier la personne qui l’utilise. Cette catégorie comprend des informations telles que l’adresse IP et l’identifiant de cookie d’un visiteur. Bien que les données comportementales puissent être collectées à partir d’un appareil à l’aide d’identités inconnues, l’association de ces identités sur plusieurs appareils ou supports est limitée jusqu’à ce que votre client fournisse des PII lors de son parcours.
+Les identités inconnues ou anonymes distinguent un appareil sans identifier la personne qui l’utilise. Cette catégorie comprend des informations telles que l’adresse IP et l’identifiant de cookie d’un visiteur. Bien que les données comportementales puissent être collectées à partir d’un appareil à l’aide d’identités inconnues, l’association de ces identités sur plusieurs appareils ou supports est limitée jusqu’à ce que votre client fournisse des PII lors de son parcours.
 
 Comme illustré ci-dessous, les identités connues et anonymes sont deux composants importants des [graphiques d’identités](#identity-graphs), qui sont abordés plus loin dans ce document.
 
