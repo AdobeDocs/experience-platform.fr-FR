@@ -4,7 +4,7 @@ seo-title: FAQ sur le SDK Web Adobe Experience Platform
 description: Questions fréquentes sur Adobe Experience Platform Web SDK
 seo-description: Questions fréquentes sur Adobe Experience Platform Web SDK
 translation-type: tm+mt
-source-git-commit: f178da80d0902f76868986426600f3da426cf24d
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1683'
 ht-degree: 4%
@@ -76,7 +76,7 @@ Adobe Experience Platform Web SDK peut également envoyer des données directeme
 
 **Moderne et prêt pour l&#39;avenir :** Le SDK Web et sa connexion au réseau Experience Edge ont permis à l’Adobe de moderniser de façon significative la façon dont l’Adobe traite la collecte de données, la personnalisation, le consentement et l’avenir des cookies tiers. (Il active un domaine propriétaire, géré par Adobe.)
 
-**Durée/valeur :** adobe a travaillé dur (et continuera) pour faciliter au maximum le déploiement du SDK Web via Launch et pour mapper les données côté client à XDM.  Une fois ce travail effectué, toutes les autres solutions d&#39;Adobe et services Adobe Experience Platform peuvent être activés ou désactivés côté serveur. Par exemple, si vous utilisez ceci pour Adobe Analytics et que vous souhaitez activer la Cible ou l’Experience Platform, vous pouvez simplement basculer sur la configuration d’Experience Edge et éclairer ces cas d’utilisation.
+**Durée/valeur :** Adobe a travaillé dur (et continuera) pour faciliter au maximum le déploiement du SDK Web via Launch et pour mapper les données côté client à XDM.  Une fois ce travail effectué, toutes les autres solutions d&#39;Adobe et services Adobe Experience Platform peuvent être activés ou désactivés côté serveur. Par exemple, si vous utilisez ceci pour Adobe Analytics et que vous souhaitez activer la Cible ou l’Experience Platform, vous pouvez simplement basculer sur la configuration d’Experience Edge et éclairer ces cas d’utilisation.
 
 ## Qu’est-ce que `alloy.js` ?
 
@@ -117,7 +117,7 @@ Tout dépend. Le SDK Web de Adobe Experience Platform peut être déployé dans 
 
 * **Juste une autre balise :** Si le site est déjà balisé pour des solutions et que vous ne pouvez pas le remarquer, mais que vous souhaitez envoyer des données au Adobe Experience Platform Edge Network pour les cas d’utilisation des Experience Platform ou les prochaines fonctionnalités côté serveur de lancement (voir ci-dessous), vous pouvez ajouter la `alloy.js` balise au site, où elle fonctionne comme &quot;une autre balise&quot;.
 
-* **La seule et unique balise :** Si vous souhaitez utiliser le SDK Web pour une solution Experience Cloud, vous devez l’utiliser pour _toutes les_ solutions de cette page. Par exemple, si votre site est déjà balisé pour Analytics et que vous souhaitez l’utiliser pour la Cible, vous devez l’utiliser à la fois pour Analytics et pour tout autre site à l’avenir.
+* **La seule et unique balise :** Si vous souhaitez utiliser le SDK Web pour une solution Experience Cloud, vous devez l’utiliser pour toutes les solutions de cette page. Par exemple, si votre site est déjà balisé pour Analytics et que vous souhaitez l’utiliser pour la Cible, vous devez l’utiliser à la fois pour Analytics et pour tout autre site à l’avenir.
 
 En d’autres termes, si vous décidez d’utiliser le Adobe Experience Platform Web SDK pour des cas d’utilisation non liés aux solutions, vous pouvez baliser le site avec `alloy.js` et passer à autre chose comme s’il s’agissait d’une nouvelle solution. Si vous souhaitez l’utiliser pour l’Adobe Analytics, la Cible ou l’Audience Manager, ou pour des cas d’utilisation d’application, vous devrez peut-être supprimer n’importe quel code hérité sur votre page.
 
@@ -141,7 +141,7 @@ Cependant :
 
 * Le SDK Web de Adobe Experience Platform nécessite un identifiant de configuration Experience Edge, afin que le réseau Edge puisse identifier le flux et déterminer ce qu’il convient de faire avec les données. Cet identifiant est créé dans Lancement. Cela ne signifie pas que vous devez utiliser Launch pour créer des propriétés ou déployer le code JavaScript, mais vous devez utiliser Launch pour créer un identifiant de configuration.
 
-* adobe experience platform launch est non seulement le meilleur gestionnaire de balises et de SDK disponible, mais il facilite également le déploiement `alloy.js` et la mise en correspondance des données vers les schémas XDM. Si vous décidez de ne pas utiliser le lancement, vous devrez gérer le déploiement `alloy.js`, l&#39;événement et le mappage de vos données dans XDM avant de les envoyer. Il s&#39;agit d&#39;un processus _beaucoup_ plus difficile que l&#39;utilisation du lancement.
+* Adobe Experience Platform Launch est non seulement le meilleur gestionnaire de balises et de SDK disponible, mais il facilite également le déploiement `alloy.js` et la mise en correspondance des données vers les schémas XDM. Si vous décidez de ne pas utiliser le lancement, vous devrez gérer le déploiement `alloy.js`, l&#39;événement et le mappage de vos données dans XDM avant de les envoyer. Il s’agit d’un processus beaucoup plus difficile que l’utilisation du lancement.
 
 * Il est recommandé d’utiliser Launch pour le déploiement `alloy.js`, même s’il s’agit de la seule balise pour laquelle vous l’utilisez.
 
