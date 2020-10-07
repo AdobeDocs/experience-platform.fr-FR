@@ -5,10 +5,10 @@ title: Présentation de l’ingestion par lots
 topic: overview
 description: L’API Batch Ingestion vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots. Les données en cours d’ingestion peuvent être les données du profil d’un fichier plat dans un système CRM (par exemple un fichier parquet) ou des données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1196'
-ht-degree: 82%
+ht-degree: 80%
 
 ---
 
@@ -127,7 +127,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Une fois le nouveau lot créé avec succès pour le chargement, les fichiers peuvent désormais être chargés dans le jeu de données spécifique.
 
-Vous pouvez charger des fichiers à l’aide de **l’API Small File Upload**. Toutefois, si vos fichiers sont trop volumineux et que la limite de la passerelle est dépassée (par exemple, délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes), vous pouvez passer à **l’API Large File Upload**. Cette API charge le fichier par blocs et assemble les données à l’aide de l’appel à l’**API Large File Upload Complete**.
+Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Toutefois, si vos fichiers sont trop volumineux et que la limite de la passerelle est dépassée (par exemple, délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes), vous pouvez passer à l’API Large File Upload. Cette API charge le fichier par blocs et assemble les données à l’aide de l’appel à l’API Large File Upload Complete.
 
 >[!NOTE]
 >
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signalement de la fin du lot
 
-Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]**DataSetFile** de pour les fichiers terminés et les associe au lot généré ci-dessus. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]DataSetFile de pour les fichiers terminés et les associe au lot généré ci-dessus. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Requête**
 
@@ -389,10 +389,10 @@ Le champ `"status"` indique l’état actuel du lot demandé. Les lots peuvent a
 | État | Description |
 | ------ | ----------- |
 | Abandonné | Le lot ne s’est pas terminé dans le délai prévu. |
-| Interrompu | Une opération pour interrompre l’opération a été **explicitement** appelée (via l’API Batch Ingest) pour le lot spécifié. Une fois le lot **chargé**, il ne peut plus être interrompu. |
-| Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec **Succès**. |
+| Interrompu | Une opération pour interrompre l’opération a été **explicitement** appelée (via l’API Batch Ingest) pour le lot spécifié. Une fois que le lot est à l’état &quot;Chargé&quot;, il ne peut plus être abandonné. |
+| Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec &quot;Succès&quot;. |
 | Supprimé | Les données du lot ont été entièrement supprimées. |
-| Échoué | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Cet état peut être utilisé de manière interchangeable avec **Échec**. |
+| Échoué | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Cet état peut être utilisé de manière interchangeable avec &quot;Échec&quot;. |
 | Inactif | La conversion du lot a réussi, mais a été annulée ou a expiré. Le lot n’est plus disponible pour la consommation en aval. |
 | Chargé | Les données du lot sont transférées et le lot est prêt pour la promotion. |
 | Chargement | Les données de ce lot sont en cours de chargement et le lot **n’est actuellement pas** prêt à être converti. |
