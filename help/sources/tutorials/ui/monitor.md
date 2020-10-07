@@ -6,7 +6,7 @@ title: Surveiller les comptes et les flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 5%
@@ -96,7 +96,7 @@ La page activité **** de flux de données contient des détails sur le nombre d
 
 ![datflow-activité](../../images/tutorials/monitor/dataflow-activity.png)
 
-Le calendrier vous permet de vue les différentes périodes des enregistrements assimilés. Vous pouvez sélectionner l’une des deux options prédéfinies **[!UICONTROL Derniers 7 jours]** ou **[!UICONTROL Derniers 30 jours]**. Vous pouvez également définir une période personnalisée à l’aide du calendrier. Sélectionnez la période de votre choix et sélectionnez **[!UICONTROL Appliquer]** pour continuer.
+Le calendrier vous permet de vue les différentes périodes des enregistrements assimilés. Vous pouvez sélectionner l’une des deux options prédéfinies &quot;[!UICONTROL Derniers 7 jours]&quot; ou &quot;[!UICONTROL Derniers 30 jours]&quot;. Vous pouvez également définir une période personnalisée à l’aide du calendrier. Sélectionnez la période de votre choix et sélectionnez **[!UICONTROL Appliquer]** pour continuer.
 
 ![flow-calendar](../../images/tutorials/monitor/flow-calendar.png)
 
@@ -106,7 +106,7 @@ Sélectionnez début **[!UICONTROL d’exécution]** de flux de données pour ac
 
 ![exécute](../../images/tutorials/monitor/run-metadata.png)
 
-L’aperçu **[!UICONTROL de l’exécution]** de flux de données affiche des informations sur le flux de données, notamment ses métadonnées, l’état d’assimilation **** partielle et le seuil **[!UICONTROL d’]** erreur attribué. L’en-tête supérieur comprend également un résumé **[!UICONTROL des]** erreurs. Le résumé **** d&#39;erreur contient l&#39;erreur de niveau supérieur spécifique qui indique à quelle étape le processus d&#39;assimilation a rencontré une erreur.
+L’aperçu **[!UICONTROL de l’exécution]** de flux de données affiche des informations sur le flux de données, notamment ses métadonnées, l’état d’assimilation partielle et le seuil d’erreur attribué. L’en-tête supérieur comprend également un résumé des erreurs. Le résumé **** d&#39;erreur contient l&#39;erreur de niveau supérieur spécifique qui indique à quelle étape le processus d&#39;assimilation a rencontré une erreur.
 
 ![dataflow-run-overview](../../images/tutorials/monitor/dataflow-run-overview.png)
 
@@ -119,13 +119,13 @@ Consultez le tableau suivant pour connaître les erreurs répertoriées dans le 
 
 La moitié inférieure de l&#39;écran contient des informations sur les erreurs **[!UICONTROL d&#39;exécution de flux de]** données. À partir de là, vous pouvez également vue les fichiers assimilés, prévisualisation et télécharger les diagnostics d&#39;erreur, ou télécharger le manifeste de fichier.
 
-La section Erreurs **[!UICONTROL d&#39;exécution de flux de]** données affiche le code **[!UICONTROL d&#39;]** erreur, le nombre d&#39;enregistrements ayant échoué et des informations décrivant l&#39;erreur.
+La section Erreurs **[!UICONTROL d&#39;exécution de flux de]** données affiche le code d&#39;erreur, le nombre d&#39;enregistrements ayant échoué et des informations décrivant l&#39;erreur.
 
 Sélectionnez Diagnostic **[!UICONTROL des erreurs de]** Prévisualisation pour afficher plus d&#39;informations sur l&#39;erreur d&#39;assimilation.
 
 ![Erreurs d’exécution de flux de données](../../images/tutorials/monitor/dataflow-run-errors.png)
 
-Le panneau prévisualisation **[!UICONTROL de diagnostics d&#39;]** erreur s&#39;affiche. Cet écran affiche des informations spécifiques concernant l&#39;échec d&#39;assimilation, notamment le nom **[!UICONTROL du]** fichier, le code **** d&#39;erreur, le nom de la colonne dans laquelle l&#39;erreur s&#39;est produite et une description de l&#39;erreur.
+Le panneau prévisualisation **[!UICONTROL de diagnostics d&#39;]** erreur s&#39;affiche. Cet écran affiche des informations spécifiques concernant l&#39;échec d&#39;assimilation, notamment le nom de fichier, le code d&#39;erreur, le nom de la colonne dans laquelle l&#39;erreur s&#39;est produite et une description de l&#39;erreur.
 
 Cette section comprend également une prévisualisation de la colonne qui contient l’erreur.
 
