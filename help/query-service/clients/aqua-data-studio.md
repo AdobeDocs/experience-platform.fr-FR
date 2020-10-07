@@ -5,7 +5,7 @@ title: Connexion avec Aqua Data Studio
 topic: connect
 description: Ce document décrit les étapes à suivre pour connecter Aqua Data Studio à Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 74%
@@ -38,7 +38,7 @@ Sélectionnez l’onglet **[!UICONTROL Pilote]**. Sous **[!UICONTROL Paramètres
 
 ![](../images/clients/aqua-data-studio/register-server-driver-tab.png)
 
-Après avoir saisi les détails de votre connexion, cliquez sur **[!UICONTROL Tester la connexion]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si vous réussissez à vous connecter, cliquez sur **[!UICONTROL Enregistrer]** pour enregistrer votre serveur. La connexion s’affiche sur le *Tableau de bord* une fois l’enregistrement réussi, confirmant que vous pouvez désormais vous connecter au serveur et visualiser ses objets de schéma.
+Après avoir saisi les détails de votre connexion, cliquez sur **[!UICONTROL Tester la connexion]** pour vous assurer que vos informations d’identification fonctionnent correctement. Si vous réussissez à vous connecter, cliquez sur **[!UICONTROL Enregistrer]** pour enregistrer votre serveur. La connexion s’affiche sur le **Tableau de bord** une fois l’enregistrement réussi, confirmant que vous pouvez désormais vous connecter au serveur et visualiser ses objets de schéma.
 
 ## Étapes suivantes
 
