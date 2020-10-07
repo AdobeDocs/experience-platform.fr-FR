@@ -5,15 +5,15 @@ title: Présentation de Data Access
 topic: overview
 description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l'accessibilité des jeux de données assimilés dans l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 75e1d3c9912e54e925032bbc2ae4e984948a30eb
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 19%
+source-wordcount: '173'
+ht-degree: 21%
 
 ---
 
 
-# [!DNL Data Access] aperçu
+# [!DNL Data Access]aperçu
 
 [!DNL Data Access] prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l&#39;accessibilité des jeux de données assimilés dans [!DNL Experience Platform].
 
@@ -23,17 +23,11 @@ ht-degree: 19%
 
 Vous trouverez des informations détaillées sur l&#39;utilisation de l&#39; [!DNL Data Access] API pour la connexion [!DNL Platform] dans le guide [du développeur](api.md)Data Access.
 
-## [!DNL Python] SDK
+## Accès aux données dans Data Science Workspace
 
-Vous pouvez lire et écrire avec des jeux de données à l’aide du [!DNL Python] SDK. Vous trouverez des informations plus détaillées sur le [!DNL Python] SDK dans le didacticiel [](./tutorials/python-sdk.md)Python SDK.
+Vous pouvez lire et écrire dans des jeux de données à l’aide [!DNL Python] et [!DNL Spark] pour le développement de recettes et de modèles dans Data Science Workspace. Pour en savoir plus sur l&#39;accès à vos données, consultez la documentation sur l&#39;accès aux [données](../data-science-workspace/authoring/python.md) Python ou sur l&#39;accès aux [données](../data-science-workspace/authoring/spark.md) Spark.
 
-[!DNL Data Science Workspace] utilise le [!DNL Python] SDK dans les blocs-notes et les recettes. Pour plus d&#39;informations sur [!DNL Data Science Workspace]les données, veuillez début en lisant l&#39;aperçu [de l&#39;espace de travail](../data-science-workspace/home.md)Data Science.
-
-## [!DNL Spark] SDK
-
-Vous pouvez lire et écrire avec des jeux de données à l’aide du [!DNL Spark] SDK. Vous trouverez des informations plus détaillées sur le [!DNL Spark] SDK dans le didacticiel [](./tutorials/spark-sdk.md)Spark SDK.
-
-[!DNL Data Science Workspace] utilise le [!DNL Spark] SDK dans les blocs-notes et les recettes. Pour plus d&#39;informations sur [!DNL Data Science Workspace]les données, veuillez début en lisant l&#39;aperçu [de l&#39;espace de travail](../data-science-workspace/home.md)Data Science.
+Pour plus d’informations sur [!DNL Data Science Workspace], consultez l’aperçu [de l’espace de travail](../data-science-workspace/home.md)Data Science.
 
 ## Abonnement aux événements d’ingestion de données
 
