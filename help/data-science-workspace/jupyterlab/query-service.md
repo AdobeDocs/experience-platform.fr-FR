@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce didacticiel présente des exemples de requêtes SQL pour des cas d'utilisation courants afin d'explorer, de transformer et d'analyser les données Adobe Analytics.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 66%
@@ -104,7 +104,7 @@ When a notebook is inactive for an extended period of time, the connection betwe
 
 ![](../images/jupyterlab/query/restart_button.png)
 
-Le noyau du notebook sera réinitialisé, mais les cellules seront conservées. Exécutez de nouveau **[!UICONTROL toutes]** les cellules pour reprendre là où vous vous étiez arrêté.
+Le noyau du notebook sera réinitialisé, mais les cellules seront conservées. Exécutez de nouveau **toutes** les cellules pour reprendre là où vous vous étiez arrêté.
 
 ### Décompte horaire de visiteurs {#hourly-visitor-count}
 
