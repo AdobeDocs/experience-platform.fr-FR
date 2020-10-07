@@ -5,7 +5,7 @@ title: Guide d’utilisation des stratégies de données
 topic: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 39%
@@ -15,13 +15,13 @@ ht-degree: 39%
 
 # Guide d’utilisation des stratégies de données
 
-Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
+Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
 >Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
-## Conditions préalables 
+## Conditions préalables
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
@@ -56,7 +56,7 @@ L’étape **[!UICONTROL Sélectionner les actions marketing]** s’affiche. Sé
 
 >[!NOTE]
 >
-> Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle « OU ». En d’autres termes, la stratégie s’applique si _l’une_ des actions marketing sélectionnées est exécutée.
+> Lors de la sélection de plusieurs actions marketing, la stratégie les interprète comme une règle « OU ». En d’autres termes, la stratégie s’applique si **l’une** des actions marketing sélectionnées est exécutée.
 
 ![](../images/policies/add-marketing-actions.png)
 
