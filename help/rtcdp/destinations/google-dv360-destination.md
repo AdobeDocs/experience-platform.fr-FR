@@ -5,10 +5,10 @@ seo-title: Destination Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 seo-description: 'Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile. '
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 58%
+source-wordcount: '714'
+ht-degree: 55%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 58%
 
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
-* Vous pouvez envoyer les [identités](../../identity-service/namespaces.md)[!DNL Google Display & Video 360] suivantes vers les destinations  : **identifiant de cookie Google, IDFA, GAID, identifiants Roku, identifiants Microsoft, identifiants Amazon Fire TV**.
+* You can send the following [identities](../../identity-service/namespaces.md) to [!DNL Google Display & Video 360] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
 * Les audiences activées sont créées par programmation dans la plateforme Google.
 * La plateforme CDP en temps réel Adobe n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
@@ -56,7 +56,7 @@ Avant de créer la destination dans le CDP en temps réel Adobe, vous devez cont
 
    >[!NOTE]
    >
-   >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+   >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre [!UICONTROL Activer] et [!UICONTROL Configurer], consultez la section [Catalogue](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
 2. À l’étape de **configuration** du processus de création de destination, renseignez les informations [!UICONTROL de] base de la destination, ainsi que les cas d’utilisation marketing qui doivent s’appliquer à cette destination. <br>
 
