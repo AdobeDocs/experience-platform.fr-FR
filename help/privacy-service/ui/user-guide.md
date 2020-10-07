@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide d’utilisation de Privacy Service
 topic: UI guide
 translation-type: tm+mt
-source-git-commit: a09d80f4bacd5d4be77443d75aad278ad89259ef
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1059'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -18,7 +18,7 @@ This document provides steps for creating and managing privacy requests using th
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: **[!UICONTROL Status Report]** and **[!UICONTROL Job Requests]**. Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
+The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: &quot;[!UICONTROL Status Report]&quot; and &quot;[!UICONTROL Job Requests]&quot;. Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
 
 ![Tableau de bord de l’interface utilisateur](../images/user-guide/dashboard.png)
 
@@ -106,7 +106,7 @@ La boîte de dialogue **[!UICONTROL Créer une requête]** s’ouvre et affiche 
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Dans la liste, sélectionnez le **[!UICONTROL Type de tâche]** de la requête (« Supprimer » ou « Accéder ») et un ou plusieurs **[!UICONTROL produits]** disponibles.
+Select the **[!UICONTROL Job Type]** of the request (&quot;Delete&quot; or &quot;Access&quot;) and one or more available products from the list.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -114,11 +114,11 @@ Sous **[!UICONTROL Type d’espace de nom]**, sélectionnez le type d’espace d
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Lors de l’utilisation du type d’espace de nom _standard_, sélectionnez un espace de nom dans le menu déroulant (adresse électronique, ECID ou AAID), puis saisissez les valeurs d’identifiant dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque identifiant afin de l’ajouter à la liste.
+Lors de l’utilisation du type d’espace de nom standard, sélectionnez un espace de nom dans le menu déroulant (adresse électronique, ECID ou AAID), puis saisissez les valeurs d’identifiant dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque identifiant afin de l’ajouter à la liste.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Lors de l’utilisation du type d’espace de noms _personnalisé_, vous devez saisir manuellement l’espace de nom avant de fournir les valeurs d’identifiant plus bas.
+Lors de l’utilisation du type d’espace de noms personnalisé, vous devez saisir manuellement l’espace de nom avant de fournir les valeurs d’identifiant plus bas.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -148,7 +148,7 @@ Si vous ne disposez d’aucun fichier JSON à charger, cliquez sur **[!UICONTROL
 
 Trouvez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le chargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget _Requêtes de tâche_, où s’affiche également leur état de traitement actuel.
+Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
 
 ### Étapes suivantes
 
