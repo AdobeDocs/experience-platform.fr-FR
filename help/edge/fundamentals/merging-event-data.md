@@ -5,7 +5,7 @@ description: Découvrez comment fusionner les données d’événement du SDK We
 seo-description: Découvrez comment fusionner les données d’événement du SDK Web d’Experience Platform
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 42%
@@ -19,7 +19,7 @@ ht-degree: 42%
 >
 >Cette fonctionnalité est encore en cours de développement. Toutes les solutions ne pourront pas fusionner les données de événement comme décrit sur cette page.
 
-Parfois, toutes les données ne sont pas disponibles lorsqu’un événement se produit. Vous souhaiterez peut-être capturer les données que vous _possédez_ afin qu’elles ne soient pas perdues si, par exemple, l’utilisateur ferme le navigateur. D’un autre côté, vous pouvez également inclure toutes les données qui seront disponibles ultérieurement.
+Parfois, toutes les données ne sont pas disponibles lorsqu’un événement se produit. Vous souhaiterez peut-être capturer les données que vous possédez afin qu’elles ne soient pas perdues si, par exemple, l’utilisateur ferme le navigateur. D’un autre côté, vous pouvez également inclure toutes les données qui seront disponibles ultérieurement.
 
 Dans ce cas, vous pouvez fusionner les données avec des événements précédents en transmettant `eventMergeId` comme option aux commandes `event` de la manière suivante :
 
