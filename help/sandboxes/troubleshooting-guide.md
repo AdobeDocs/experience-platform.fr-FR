@@ -5,7 +5,7 @@ title: Guide de dépannage des environnements de test
 topic: troubleshooting guide
 description: Ce document apporte des réponses aux questions fréquentes sur les environnements de test dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6f4714561c2946a084eed4e89d3148df5b8044f5
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 92%
@@ -30,9 +30,9 @@ Deux types d’environnements de test sont disponibles dans Experience Platform�
 * Environnement de test de production
 * Environnement de test hors production
 
-Experience Platform fournit un **environnement de test de production** unique, qui ne peut pas être supprimé ou réinitialisé. Il ne peut y avoir qu’un seul environnement de test de production pour une instance Platform unique.
+Experience Platform fournit un environnement de test de production unique, qui ne peut pas être supprimé ou réinitialisé. Il ne peut y avoir qu’un seul environnement de test de production pour une instance Platform unique.
 
-Par comparaison, il est possible de créer plusieurs **environnements de test hors production** par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
+Par comparaison, il est possible de créer plusieurs environnements de test hors production par administrateurs d’environnement de test pour une instance Platform unique. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. En outre, les environnements de test hors production disposent d’une fonctionnalité de réinitialisation supprimant de l’environnement de test toutes les ressources créées par les clients. Les environnements de test hors production ne peuvent pas être convertis en environnements de test de production. Une licence d’Experience Platform par défaut vous accorde cinq sandbox (une production et quatre non-production). Vous pouvez ajouter des packs de dix sandbox hors production jusqu’à un maximum de 75 sandbox au total. Veuillez contacter votre administrateur d&#39;entreprise IMS ou votre représentant commercial d&#39;Adobe pour plus de détails.
 
 Pour plus d’informations, consultez la [Présentation des environnements de test](./home.md).
 
@@ -50,7 +50,7 @@ Pour le moment, vous pouvez avoir jusqu’à 15 environnements de test hors pro
 
 ## Je viens de créer un environnement de test. Comment puis-je définir des autorisations pour les utilisateurs qui travailleront avec cet environnement de test ?
 
-Adobe Admin Console lie les utilisateurs aux environnements de test et aux autorisations via l’utilisation de **profils de produits**. Après avoir créé un nouvel environnement de test, rendez-vous dans l’onglet _Autorisations_ du profil de produits auquel vous souhaitez accorder l’accès, puis cliquez sur **Environnements de test**. De là, vous pouvez ajouter ou supprimer l’accès au nouvel environnement de test de la même manière que pour les autres autorisations.
+Adobe Admin Console lie les utilisateurs aux environnements de test et aux autorisations via l’utilisation de profils de produits. Après avoir créé un nouvel environnement de test, rendez-vous dans l’onglet **Autorisations** du profil de produits auquel vous souhaitez accorder l’accès, puis cliquez sur **Environnements de test**. De là, vous pouvez ajouter ou supprimer l’accès au nouvel environnement de test de la même manière que pour les autres autorisations.
 
 Si vous souhaitez ajouter des autorisations uniques aux utilisateurs d’un environnement de test spécifique, vous pouvez avoir besoin de créer un nouveau profil de produits pour lequel vous aurez appliqué les environnements de test et les autorisations appropriées et attribuez ces utilisateurs à ce profil.
 
