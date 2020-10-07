@@ -5,7 +5,7 @@ title: Connecteur d’Audience Manager
 topic: overview
 description: Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère trois catégories de données à la plate-forme.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '673'
 ht-degree: 87%
@@ -67,7 +67,7 @@ Par défaut, les jeux de données d&#39;Audience Manager sont désactivés pour 
 
 ### Connexions
 
-Adobe Audience Manager crée une connexion dans le catalogue : **connexion Audience Manager**. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet du catalogue qui est une instance des connecteurs spécifique au client. Pour plus d’informations sur le catalogue, les connexions et les connecteurs, veuillez consulter la [présentation du service de catalogue](../../../catalog/home.md).
+Adobe Audience Manager crée une connexion dans le catalogue : connexion Audience Manager. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet du catalogue qui est une instance des connecteurs spécifique au client. Pour plus d’informations sur le catalogue, les connexions et les connecteurs, veuillez consulter la [présentation du service de catalogue](../../../catalog/home.md).
 
 ## Quelle est la latence attendue sur Platform pour les données Audience Manager ?
 
