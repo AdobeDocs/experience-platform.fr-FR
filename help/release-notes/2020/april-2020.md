@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '991'
 ht-degree: 60%
@@ -79,7 +79,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 | Fonctionnalité | Description |
 | -----------| ---------- |
-| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Data usage policies can now be managed within the _Policies_ workspace in the [!DNL Experience Platform] UI. Pour plus d’informations, voir le [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md). |
+| Gestion des stratégies d’utilisation des données dans l’interface utilisateur | Data usage policies can now be managed within the **Policies** workspace in the [!DNL Experience Platform] UI. Pour plus d’informations, voir le [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md). |
 
 **Problèmes connus**
 
