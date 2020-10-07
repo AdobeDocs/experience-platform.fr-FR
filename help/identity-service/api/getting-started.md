@@ -5,7 +5,7 @@ title: Prise en main
 topic: API guide
 description: 'Adobe Experience Platform Identity Service gère l’identification inter-appareils, inter-canaux et en temps quasi réel de vos clients, dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '754'
 ht-degree: 62%
@@ -88,4 +88,4 @@ The examples in this document do not cover the complete functionality of the [!D
 
 ## Étapes suivantes
 
-Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points de terminaison et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le **format général de l’API**, un exemple de **requête** montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de **réponse** pour un appel réussi.
+Maintenant que vous avez collecté les informations d’identification requises, vous pouvez passer au reste du guide de développement. Chaque section fournit des informations importantes sur les points de terminaison et inclut des exemples d’appels API pour effectuer des opérations CRUD. Chaque appel comprend le format général de l’API, un exemple de requête montrant les en-têtes requis et les payloads correctement formatés, ainsi qu’un exemple de réponse pour un appel réussi.
