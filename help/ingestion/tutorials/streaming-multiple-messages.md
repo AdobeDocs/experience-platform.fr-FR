@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce document fournit un didacticiel pour l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1487'
-ht-degree: 81%
+ht-degree: 77%
 
 ---
 
@@ -45,7 +45,7 @@ Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que 
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. Vous trouverez l’identifiant du jeu de données sur [Experience Platform](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’identifiant et en copiant la chaîne depuis le champ **[!UICONTROL Identifiant du jeu de données]** de l’onglet **[!UICONTROL Infos]**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -543,7 +543,7 @@ Le tableau suivant affiche les codes d’état renvoyés par les messages de ré
 
 | Code d’état | Description |
 | :---: | --- |
-| 207 | Bien que « 207 » soit utilisé comme code de réponse général, le destinataire doit consulter les contenus du corps de réponse sur plusieurs états pour des informations supplémentaires sur la réussite ou l’échec de l’exécution de la méthode. Le code de réponse est utilisé en cas de réussite, de réussite partielle, mais aussi dans les situations d’échec. |
+| 207 | Bien que &#39;207&#39; soit utilisé comme code d&#39;état global de la réponse, le destinataire doit consulter le contenu de l&#39;organisme de réponse à plusieurs états pour obtenir de plus amples informations sur la réussite ou l&#39;échec de l&#39;exécution de la méthode. Le code de réponse est utilisé en cas de réussite, de réussite partielle, mais aussi dans les situations d’échec. |
 | 400 | Un problème s’est produit avec la requête. Consultez le corps de la réponse pour obtenir un message plus spécifique à l’erreur (par exemple, des champs obligatoires manquaient dans le payload du message ou le message était à un format xdm inconnu). |
 | 401 | Non autorisé : un en-tête d’autorisation valide manque dans la requête. Ce message n’est renvoyé que pour les inlets dont l’authentification est activée. |
 | 403 | Non autorisé : le jeton d’autorisation fourni est non valide ou a expiré. Ce message n’est renvoyé que pour les inlets dont l’authentification est activée. |
