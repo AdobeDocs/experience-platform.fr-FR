@@ -5,10 +5,10 @@ title: Guide de l’utilisateur du créateur de segments de service de segmentat
 topic: ui guide
 description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '1723'
-ht-degree: 58%
+ht-degree: 54%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 58%
 
 ## Blocs de création de définitions de segment
 
-Les blocs de création de base des définitions de segment sont les **[!UICONTROL Attributs]** et les **[!UICONTROL Événements]**. En outre, les attributs et les événements contenus dans les **[!UICONTROL Audiences]** existantes peuvent également être utilisés comme éléments de nouvelles définitions.
+Les éléments de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent également servir de composants pour de nouvelles définitions.
 
-You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. Les **[!UICONTROL champs]** contiennent un onglet pour chacun des blocs de création principaux : **[!UICONTROL Attributs]**, **[!UICONTROL Événements]** et **[!UICONTROL Audiences]**.
+You can see these building blocks in the **[!UICONTROL Fields]** section on the left side of the [!DNL Segment Builder] workspace. **[!UICONTROL Les champs]** contiennent un onglet pour chacun des blocs de construction principaux : &quot;[!UICONTROL Attributs]&quot;, &quot;[!UICONTROL Événements]&quot; et &quot;[!UICONTROL Audiences]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 
@@ -45,11 +45,11 @@ Vous pouvez rechercher n’importe quel type de composant en tapant son nom dans
 >
 >Les champs de schéma personnalisés définis par votre organisation peuvent mettre jusqu’à 24 heures pour s’afficher et être utilisables dans les règles de création.
 
-You can then easily drag and drop [!DNL ExperienceEvents] and [!UICONTROL Event Types] into your segment definition.
+You can then easily drag and drop [!DNL ExperienceEvents] and &quot;[!UICONTROL Event Types]&quot; into your segment definition.
 
 ![](../images/ui/segment-builder/events-eventTypes.png)
 
-Par défaut, seuls les champs de schéma renseignés de votre banque de données s’affichent. This includes [!UICONTROL Event Types]. If the [!UICONTROL Event Types] list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an [!UICONTROL Event Type], select the gear icon next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the gear icon again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple [!UICONTROL Event Types] and schema fields, regardless of whether they contain data or not.
+Par défaut, seuls les champs de schéma renseignés de votre banque de données s’affichent. This includes &quot;[!UICONTROL Event Types]&quot;. If the &quot;[!UICONTROL Event Types]&quot; list is not visible, or you are only able to select &quot;[!UICONTROL Any]&quot; as an &quot;[!UICONTROL Event Type]&quot;, select the **gear icon** next to **[!UICONTROL Fields]**, then select **[!UICONTROL Show full XDM schema]** under **[!UICONTROL Available Fields]**. Select the **gear icon** again to return to the **[!UICONTROL Fields]** tab and you should now be able to view multiple &quot;[!UICONTROL Event Types]&quot; and schema fields, regardless of whether they contain data or not.
 
 ![](../images/ui/segment-builder/show-populated.png)
 
@@ -63,13 +63,13 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 
 ![](../images/ui/segment-builder/audience-folder-structure.png)
 
-You can also search for [!UICONTROL Audiences] using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. For example, to find an [!UICONTROL Audience] named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
+You can also search for audiences using the search bar, which utilizes [Lucene&#39;s search syntax](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. For example, to find an audience named `Online Shoppers`, start typing &quot;Online&quot; in the search bar. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
 
 ## Canevas du créateur de règles {#rule-builder-canvas}
 
 Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. These rules are created using the rule builder canvas, located in the center of [!DNL Segment Builder].
 
-Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur le canevas du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Available data types include: strings, dates, [!DNL ExperienceEvents], [!UICONTROL Event Types], and [!UICONTROL Audiences].
+Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur le canevas du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Available data types include: strings, dates, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, and audiences.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -133,7 +133,7 @@ To select a merge policy for your segment definition, select the gear icon on th
 
 Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située dans la partie droite de l’espace de travail affiche une estimation de la taille du segment obtenu, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-La section **[!UICONTROL Propriétés du segment]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son **[!UICONTROL nom]** et sa **[!UICONTROL description]**. Les noms des définitions de segment sont utilisés pour identifier votre segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
+The **[!UICONTROL Segment Properties]** section is also where you can specify important information about your segment definition, including its name and description. Les noms des définitions de segment sont utilisés pour identifier votre segment parmi ceux définis par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
