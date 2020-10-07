@@ -5,7 +5,7 @@ title: Présentation des stratégies d’utilisation des données
 topic: policies
 description: Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur des données d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 18%
@@ -21,7 +21,7 @@ Ce document fournit un aperçu général des stratégies d’utilisation des don
 
 ## Actions marketing {#marketing-actions}
 
-**Les actions** marketing (également appelées cas **d’utilisation**[!DNL Experience Platform] marketing) dans le cadre de la gouvernance des données, sont des actions qu’un utilisateur de données peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
+Les actions marketing (également appelées cas d’utilisation marketing) dans le contexte de la structure de gouvernance des données sont des actions qu’un utilisateur de [!DNL Experience Platform] données peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 2. Étiquette(s) d&#39;utilisation des données pour laquelle l&#39;action est limitée ne peut pas être exécutée
