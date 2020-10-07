@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce document fournit un didacticiel détaillé pour enrichir le Profil client en temps réel avec des informations d’apprentissage automatique, les étapes sont réparties dans les sections suivantes, créer un schéma de sortie/jeu de données, configurer un schéma de sortie/jeu de données et créer des segments à l’aide du Créateur de segments.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1230'
 ht-degree: 71%
@@ -43,10 +43,10 @@ The first step towards enriching [!DNL Real-time Customer Profile] with scoring 
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). Cette section fournit des instructions de base pour créer un schéma à l’aide du créateur de schémas. Pour un tutoriel plus détaillé, reportez-vous au tutoriel sur la [création d’un schéma à l’aide de l’éditeur de schémas](../../xdm/tutorials/create-schema-ui.md).
 
-1. Sur Adobe Experience Platform, cliquez sur l’onglet du **[!UICONTROL schéma]** pour accéder au navigateur de schéma. Cliquez sur **[!UICONTROL Créer un schéma]**, accédez à l’*éditeur de schémas*, où vous pouvez créer des schémas de manière interactive.
+1. Sur Adobe Experience Platform, cliquez sur l’onglet du **[!UICONTROL schéma]** pour accéder au navigateur de schéma. Cliquez sur **[!UICONTROL Créer un schéma]**, accédez à l’**éditeur de schémas**, où vous pouvez créer des schémas de manière interactive.
    ![](../images/models-recipes/enrich-rtcdp/schema_browser.png)
 
-2. Dans la fenêtre *Composition*, cliquez sur **[!UICONTROL Attribuer]** pour parcourir les classes disponibles.
+2. Dans la fenêtre **Composition**, cliquez sur **[!UICONTROL Attribuer]** pour parcourir les classes disponibles.
    * Pour attribuer une classe existante, cliquez et mettez en surbrillance la classe souhaitée, puis cliquez sur **[!UICONTROL Attribuer une classe]**.
       ![](../images/models-recipes/enrich-rtcdp/existing_class.png)
 
@@ -55,7 +55,7 @@ La composition d’un schéma commence par l’attribution d’une classe. Les c
 
    À ce stade, la structure de votre schéma doit contenir certains champs de classe et vous êtes prêt à attribuer des mixins. Un mixin est un groupe d’un ou de plusieurs champs qui décrivent un concept particulier.
 
-3. Dans la fenêtre *Composition*, cliquez sur **[!UICONTROL Ajouter]** dans la sous-section *Mixins*.
+3. Dans la fenêtre **Composition**, cliquez sur **[!UICONTROL Ajouter]** dans la sous-section **Mixins**.
    * Pour attribuer un mixin existant, cliquez et mettez en surbrillance le mixin souhaité, puis cliquez sur **[!UICONTROL Attribuer un mixin]**. Contrairement aux classes, plusieurs mixins peuvent être attribués à un seul schéma tant qu’il est approprié de le faire.
       ![](../images/models-recipes/enrich-rtcdp/existing_mixin.png)
 
