@@ -5,7 +5,7 @@ title: Guide de l'utilisateur du portable d'apprentissage automatique en temps r
 topic: Training and scoring a ML model
 description: Le guide suivant décrit les étapes nécessaires à la création d'une application d'apprentissage automatique en temps réel dans Adobe Experience Platform JupyterLab.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Le guide suivant décrit les étapes nécessaires à la création d&#39;une appl
 
 ## Créer un bloc-notes d&#39;apprentissage automatique en temps réel
 
-Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Ordinateurs portables]** dans *Data Science*. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
+Dans l’interface utilisateur de Adobe Experience Platform, sélectionnez **[!UICONTROL Ordinateurs portables]** dans **Data Science**. Ensuite, sélectionnez **[!UICONTROL JupyterLab]** et accordez un peu de temps pour que l&#39;environnement se charge.
 
 ![ouvrir JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -115,9 +115,9 @@ config_properties = {
 
 En utilisant le modèle ML **[!UICONTROL en temps]** réel, vous devez analyser, prétraiter, former et évaluer votre modèle ML. Pour ce faire, il applique les transformations de données et crée un canal de formation.
 
-**Transformations de données**
+**Transformation des données**
 
-La cellule de transformation **[!UICONTROL des]** données des modèles ML *en temps* réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
+La cellule de transformation **[!UICONTROL des]** données des modèles ML **en temps** réel doit être modifiée pour fonctionner avec votre propre jeu de données. Cela implique généralement de renommer les colonnes, le cumul de données et la préparation des données/l&#39;ingénierie des fonctionnalités.
 
 >[!NOTE]
 >
@@ -355,7 +355,7 @@ Une fois terminé, un `edge` objet est renvoyé contenant chacun des noeuds et l
 
 >[!NOTE]
 >
->L’apprentissage automatique en temps réel est temporairement déployé et géré par le Centre de la plate-forme d’expérience d’Adobe. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
+>L’apprentissage automatique en temps réel est temporairement déployé et géré par le Adobe Experience Platform Hub. Pour plus d&#39;informations, consultez la section d&#39;aperçu sur l&#39;architecture [d&#39;apprentissage automatique en temps](./home.md#architecture)réel.
 
 Maintenant que vous avez créé un graphique DSL, vous pouvez déployer le graphique sur le [!DNL Edge].
 
