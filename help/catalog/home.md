@@ -5,7 +5,7 @@ title: Présentation du service de catalogue
 topic: overview
 description: Le service de catalogue constitue le système d’enregistrement de l’emplacement et de la liaison des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 47%
@@ -13,11 +13,11 @@ ht-degree: 47%
 ---
 
 
-# [!DNL Catalog Service] aperçu
+# [!DNL Catalog Service]aperçu
 
 [!DNL Catalog Service] est le système d’enregistrement de l’emplacement et de la lignée des données dans Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-Simply put, [!DNL Catalog] acts as a metadata store or &quot;[!UICONTROL catalog]&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
+Simply put, [!DNL Catalog] acts as a metadata store or &quot;catalog&quot; where you can find information about your data within [!DNL Experience Platform]. You can use [!DNL Catalog] to answer the following questions:
 
 * Où se trouvent mes données ?
 * À quel stade de traitement ces données sont-elles arrivées ?
@@ -35,7 +35,7 @@ Les ressources qui [!DNL Catalog Service] suivent sont utilisées par plusieurs 
 
 [!DNL Experience Data Model] (XDM) Le système est le cadre normalisé qui [!DNL Platform] organise les données d’expérience client. [!DNL Experience Platform] tire parti des schémas XDM pour décrire la structure des données de manière cohérente et réutilisable.
 
-When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a **dataset**. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
+When data is ingested into [!DNL Platform], the structure of that data is mapped to an XDM schema and stored within the [!DNL Data Lake] as part of a dataset. The metadata for each dataset is tracked by [!DNL Catalog Service], which includes a reference to the XDM schema that the dataset conforms to.
 
 Pour obtenir des informations générales sur le système XDM, consultez la [présentation du système XDM](../xdm/home.md).
 
@@ -43,7 +43,7 @@ Pour obtenir des informations générales sur le système XDM, consultez la [pr�
 
 [!DNL Experience Platform] ingère des données provenant de plusieurs sources et conserve les enregistrements en tant que jeux de données dans le [!DNL Data Lake]. [!DNL Catalog] suit les métadonnées de ces jeux de données, quelle que soit leur source ou leur méthode d’assimilation.
 
-When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for **batch** files. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. [!DNL Catalog] effectue le suivi des métadonnées de ces fichiers de commandes, ainsi que des jeux de données dans lesquels ils sont conservés après l’assimilation. Les métadonnées de lot contiennent des informations sur le nombre d’enregistrements correctement ingérés, ainsi que sur les enregistrements ayant échoué et les messages d’erreur associés.
+When using the batch ingestion method, [!DNL Catalog] also tracks additional metadata for batch files. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique. [!DNL Catalog] effectue le suivi des métadonnées de ces fichiers de commandes, ainsi que des jeux de données dans lesquels ils sont conservés après l’assimilation. Les métadonnées de lot contiennent des informations sur le nombre d’enregistrements correctement ingérés, ainsi que sur les enregistrements ayant échoué et les messages d’erreur associés.
 
 Pour plus d’informations, consultez la [Présentation de l’ingestion de données](../ingestion/home.md).
 
