@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Projections Edge - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1905'
 ht-degree: 86%
@@ -226,7 +226,7 @@ L’objet de réponse affiche les détails de la destination de projection. L’
 
 ### Mise à jour d’une destination
 
-Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point de terminaison `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à _réécrire_ la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
+Vous pouvez mettre à jour une destination existante en effectuant une requête PUT sur le point de terminaison `/config/destinations` et en incluant l’identifiant de la destination à mettre à jour dans le chemin d’accès de la requête. Cette opération consiste essentiellement à réécrire la destination. Par conséquent, les mêmes attributs doivent être fournis dans le corps de la requête que ceux fournis lors de la création d’une nouvelle destination.
 
 >[!CAUTION]
 >
