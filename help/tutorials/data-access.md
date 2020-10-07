@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform permet aux utilisateurs de découvrir les jeux de données ingérés et d’y accéder dans Experience Platform à l’aide de l’API Data Access.
 translation-type: tm+mt
-source-git-commit: 0ec93ef44facc725e22547d002de677d93f3bd1f
+source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 29%
+source-wordcount: '140'
+ht-degree: 57%
 
 ---
 
@@ -33,26 +33,3 @@ L’API Data Access soutient Adobe Experience Platform en fournissant aux utilis
 - Configuration de la pagination des réponses de l’API.
 
 To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
-
-## Utiliser le SDK Python sécurisé pour accéder aux données
-
-Le SDK Secure Python Data Access est un kit de développement logiciel qui permet la lecture et l&#39;écriture de jeux de données d&#39;Experience Platform utilisant Python.
-
-**Ce guide vous aidera à :**
-- Configurez votre environnement et installez les packages appropriés.
-- Lis à partir d&#39;un jeu de données.
-- Écrivez dans un jeu de données.
-- Lecture et écriture dans un répertoire d’espace utilisateur.
-
-Pour commencer, vue la documentation [du SDK](../data-access/tutorials/python-sdk.md)Python Data Access.
-
-## Utiliser le SDK Spark sécurisé pour accéder aux données
-
-Le SDK Secure Spark Data Access est un kit de développement logiciel qui permet la lecture et l’écriture de jeux de données de Adobe Experience Platform à l’aide de Spark.
-
-**Ce guide vous aidera à :**
-- Configurez votre environnement et installez les packages appropriés.
-- Lis à partir d&#39;un jeu de données.
-- Écrivez dans un jeu de données.
-
-Pour commencer, vue la documentation [du SDK](../data-access/tutorials/spark-sdk.md)Spark Data Access.
