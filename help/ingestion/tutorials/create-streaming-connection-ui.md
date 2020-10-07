@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce guide de l’interface utilisateur vous aidera à créer une connexion en continu à l’aide d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '512'
-ht-degree: 81%
+ht-degree: 78%
 
 ---
 
@@ -36,7 +36,7 @@ Sur la page **[!UICONTROL Sources]**, cliquez sur **[!UICONTROL API HTTP]**, pui
 
 ![](../images/streaming-ingestion/ui/click-connect-source.png)
 
-L’écran **[!UICONTROL Se connecter avec le protocole HTTP]** s’affiche. Dans **[!UICONTROL Informations sur le service]**, indiquez le **[!UICONTROL nom]** et une **[!UICONTROL description]** de votre nouvelle connexion en continu.
+L’écran **[!UICONTROL Se connecter avec le protocole HTTP]** s’affiche. Dans **[!UICONTROL Informations sur le service]**, indiquez le nom et une description de votre nouvelle connexion en continu.
 
 Sous **[!UICONTROL Authentification du compte]**, sélectionnez les propriétés de configuration suivantes pour votre connexion en continu :
 
@@ -59,7 +59,7 @@ Vous pouvez soit [créer un nouveau jeu de données](#create-a-new-dataset), soi
 
 ### Création d’un nouveau jeu de données
 
-Pour créer un nouveau jeu de données, indiquez le **[!UICONTROL nom]**, la **[!UICONTROL description]**, ainsi que le **[!UICONTROL schéma]** cible du jeu de données.
+Pour créer un nouveau jeu de données, indiquez le nom, la description ainsi que le schéma de cible du jeu de données.
 
 ![](../images/streaming-ingestion/ui/create-new-dataset.png)
 
