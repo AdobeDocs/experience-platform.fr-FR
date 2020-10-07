@@ -5,7 +5,7 @@ title: Prise en charge d’IAB TCF 2.0 dans la plate-forme de données client en
 topic: privacy events
 description: Ce document décrit les étapes à suivre pour configurer les deux jeux de données nécessaires à la collecte des données de consentement IAB TCF 2.0.
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 4%
@@ -24,7 +24,7 @@ Plus précisément, deux jeux de données sont nécessaires pour capturer les do
 
 Ce document décrit les étapes à suivre pour configurer ces deux ensembles de données afin de collecter les données de consentement IAB TCF 2.0. Pour une présentation du flux de travail complet à configurer [!DNL Real-time CDP] pour TCF 2.0, consultez la présentation [de la conformité à la norme](./overview.md)IAB TCF 2.0.
 
-## Conditions préalables 
+## Conditions préalables
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -72,7 +72,7 @@ Bien que chaque mélange de confidentialité varie en structure et en types de c
 
 ## Créer des schémas de consentement client {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas]workspace*. À partir de là, suivez les étapes décrites dans les sections ci-dessous pour créer chaque schéma requis.
+In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. À partir de là, suivez les étapes décrites dans les sections ci-dessous pour créer chaque schéma requis.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Créer un schéma de consentement basé sur les enregistrements {#profile-schema}
 
-Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma basé sur la **[!DNL XDM Individual Profile]classe**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
+Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma en fonction de la [!DNL XDM Individual Profile] classe. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
 
 ![](../assets/iab/add-mixin-profile.png)
 
@@ -127,7 +127,7 @@ Enfin, cliquez sur **[!UICONTROL Enregistrer]** pour confirmer vos modifications
 
 ### Créer un schéma de consentement basé sur une série chronologique {#event-schema}
 
-Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma basé sur la **[!DNL XDM ExperienceEvent]classe**. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
+Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **[!UICONTROL Schémas]** , créez un schéma en fonction de la [!DNL XDM ExperienceEvent] classe. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
 
 ![](../assets/iab/add-mixin-event.png)
 
