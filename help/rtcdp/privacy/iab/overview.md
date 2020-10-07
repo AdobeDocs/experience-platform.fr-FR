@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en charge d’IAB TCF 2.0 dans la plate-forme de données client en temps réel
 topic: privacy events
 translation-type: tm+mt
-source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
+source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 3%
@@ -28,7 +28,7 @@ Le [!DNL Transparency & Consent Framework] (TCF), tel qu&#39;il est décrit par 
 
 Ce document fournit une vue d’ensemble de la configuration de vos opérations de données et de vos schémas de profil pour accepter les données de consentement des clients générées par votre CMP, ainsi que de la manière dont [!DNL Real-time CDP] les choix de consentement des utilisateurs sont transmis lors de l’exportation de segments.
 
-## Conditions préalables 
+## Conditions préalables
 
 Afin de suivre ce guide, vous devez utiliser une plateforme de gestion du consentement (CMP), commerciale ou la vôtre, qui est intégrée et conforme au TCF de l&#39;IAB. Pour plus d&#39;informations, consultez la [liste des CMP](https://iabeurope.eu/cmp-list/) conformes.
 
@@ -89,7 +89,7 @@ Cette boîte de dialogue doit permettre au client d&#39;opt-in ou de sortir des 
 
 ### Chaînes de consentement {#consent-strings}
 
-Quelle que soit la méthode utilisée pour collecter les données, l’objectif est de générer une valeur de chaîne basée sur les options de consentement choisies par le client, appelée chaîne **de** consentement.
+Quelle que soit la méthode utilisée pour collecter les données, l’objectif est de générer une valeur de chaîne basée sur les options de consentement choisies par le client, appelée chaîne de consentement.
 
 Dans la spécification TCF, les chaînes de consentement sont utilisées pour coder les détails pertinents sur les paramètres de consentement d&#39;un client, en termes d&#39;objectifs marketing spécifiques définis par les stratégies et les fournisseurs. [!DNL Real-time CDP] utilise ces chaînes pour stocker les paramètres de consentement de chaque client. Par conséquent, une nouvelle chaîne de consentement doit être générée chaque fois que ces paramètres changent.
 
