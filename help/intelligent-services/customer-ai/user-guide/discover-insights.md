@@ -5,7 +5,7 @@ title: Découverte d’insights avec Customer AI
 topic: Discovering insights
 description: Customer AI fait partie d’Intelligent Services et permet aux spécialistes du marketing de tirer parti d’Adobe Sensei pour anticiper les prochaines actions de vos clients. Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique, en choisissant un algorithme, une formation ou un déploiement.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 89%
@@ -98,7 +98,7 @@ Le résumé de notation affiche le nombre total de profils notés et les classe 
 
 ## Distribution des scores
 
-La carte *Distribution des scores* vous donne un résumé visuel de la population en fonction du score. Les couleurs présentes sur la carte *Distribution des scores* représentent le type de score de propension généré.
+La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs présentes sur la carte *Distribution des scores* représentent le type de score de propension généré.
 
 ![distribution des scores](../images/insights/distribution-of-scores.png)
 
@@ -128,7 +128,7 @@ Le créateur de segments permet de définir un segment. Lorsque vous sélectionn
 
 ![Remplissage de segment](../images/insights/segment-saving.png)
 
-Pour afficher le nouveau segment dans l’interface utilisateur de Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page *Parcourir* apparaît et affiche tous les segments disponibles.
+Pour afficher le nouveau segment dans l’interface utilisateur de Platform, cliquez sur **[!UICONTROL Segments]** dans le volet de navigation de gauche. La page **[!UICONTROL Parcourir]** apparaît et affiche tous les segments disponibles.
 
 ![Tous vos segments](../images/insights/Segments-dashboard.png)
 
