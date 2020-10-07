@@ -5,7 +5,7 @@ title: Guide d’utilisation d’Attribution AI
 topic: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1449'
 ht-degree: 97%
@@ -21,7 +21,7 @@ Ce document sert de guide pour interagir avec Attribution AI dans l’interface 
 
 ## Création d’une instance
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **Ouvrir**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
@@ -35,7 +35,7 @@ Ensuite, la page de configuration d’Attribution AI s’affiche, dans laquelle 
 
 ### Attribution d’un nom à l’instance
 
-Sous *Informations de base*, donnez un nom et une description facultative de votre instance de service.
+Sous **[!UICONTROL Informations de base]**, donnez un nom et une description facultative de votre instance de service.
 
 ![attribution d’un nom à une instance](./images/user-guide/naming_instance.png)
 
@@ -67,15 +67,15 @@ Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’a
 
 ![aucun menu déroulant](./images/user-guide/conversion_event_1.png)
 
-Les boutons *Ajouter un événement* et *Ajouter un groupe* permettent de définir plus précisément votre conversion. En fonction de la conversion que vous définissez, vous devrez peut-être utiliser les boutons *Ajouter un événement* et *Ajouter un groupe* pour fournir davantage de contexte.
+Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** permettent de définir plus précisément votre conversion. En fonction de la conversion que vous définissez, vous devrez peut-être utiliser les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** pour fournir davantage de contexte.
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Cliquer sur **Ajouter un événement** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction *ET* à la définition de la chaîne sous le *nom de la conversion*. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
+Cliquer sur **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de la chaîne sous le nom de la conversion. Cliquez sur le **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
-Cliquer sur **Ajouter un groupe** donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne « Ou ». « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
+Cliquer sur **[!UICONTROL Ajouter un groupe]** donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Cliquer sur **Et** permet de modifier le paramètre pour qu’il contienne « Ou ». « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
 
 ![utilisation de et/ou](./images/user-guide/and_or.png)
 
@@ -157,7 +157,7 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 
 Le comportement de vos clients peut varier considérablement selon le pays et la région géographique. Pour les entreprises mondiales, l’utilisation de modèles basés sur les pays ou les régions peut accroître la précision de l’attribution. Chaque région ajoutée crée un nouveau modèle avec les données de cette région.
 
-Pour définir une nouvelle région, commencez par cliquer sur **Ajouter une région**. Dans le conteneur qui s’affiche, attribuez un nom à la région. Une seule valeur (« placeContext.geo.countryCode ») s’affiche dans le menu déroulant *Saisir le nom du champ*. Sélectionnez cette valeur.
+Pour définir une nouvelle région, commencez par cliquer sur **[!UICONTROL Ajouter une région]**. Dans le conteneur qui s’affiche, attribuez un nom à la région. Une seule valeur (« placeContext.geo.countryCode ») s’affiche dans le menu déroulant **[!UICONTROL Saisir le nom du champ]**. Sélectionnez cette valeur.
 
 ![Sélectionner l’attribution de la région](./images/user-guide/select_region_att.png)
 
@@ -165,7 +165,7 @@ Sélectionnez ensuite un opérateur.
 
 ![opérateur de région](./images/user-guide/region_operators.png)
 
-Pour finir, saisissez le code pays dans le menu déroulant *Saisir la valeur du champ*.
+Pour finir, saisissez le code pays dans le menu déroulant **[!UICONTROL Saisir la valeur du champ]**.
 
 >[!NOTE]
 >
@@ -183,7 +183,7 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 
 ![période de formation](./images/user-guide/training_window.png)
 
-Une fois que vous avez sélectionné votre période de formation, cliquez sur **Terminer** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Cliquez sur **OK** pour être redirigé vers la page *Instances de service* sur laquelle vous pouvez voir votre instance de service.
+Une fois que vous avez sélectionné votre période de formation, cliquez sur **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Cliquez sur **[!UICONTROL OK]** pour être redirigé vers la page **[!UICONTROL Instances de service]** sur laquelle vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
 
