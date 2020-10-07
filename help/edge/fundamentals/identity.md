@@ -5,7 +5,7 @@ description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%
@@ -19,7 +19,7 @@ Le Adobe Experience Platform [!DNL Web SDK] tire parti du service [d&#39;identit
 
 ## Identité de premier niveau
 
-L’ [!DNL Identity Service] utilisateur stocke l’identité dans un cookie dans un domaine propriétaire. Le cookie [!DNL Identity Service] tente de le définir à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la [!DNL Identity Service] fonction revient à définir des cookies via Javascript. adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
+L’ [!DNL Identity Service] utilisateur stocke l’identité dans un cookie dans un domaine propriétaire. Le cookie [!DNL Identity Service] tente de le définir à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la [!DNL Identity Service] fonction revient à définir des cookies via Javascript. Adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
 
 ## Identité tierce
 
@@ -91,7 +91,7 @@ alloy("sendEvent", {
 | -------- | ------------ | ----------------- |
 | Chaîne | Oui | Aucune |
 
-La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Vous trouverez cette liste dans l’interface utilisateur de Adobe Experience Platform sous [!UICONTROL Identités].
+La clé de l&#39;objet est le symbole [d&#39;Espace de nommage](../../identity-service/namespaces.md) d&#39;identité. Vous trouverez cette liste dans l’interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;.
 
 #### `id`
 
@@ -107,7 +107,7 @@ Il s’agit de l’identifiant que vous souhaitez synchroniser pour l’espace d
 | -------- | ------------ | ----------------- | ------------------------------------ |
 | Chaîne | Oui | ambigu | ambigu, authentifié et déconnecté |
 
-Etat d’authentification de l’ID.
+État d’authentification de l’ID.
 
 #### `primary`
 
