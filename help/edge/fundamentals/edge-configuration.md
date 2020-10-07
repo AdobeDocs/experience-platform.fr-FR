@@ -5,7 +5,7 @@ description: 'Découvrez comment configurer le réseau Edge Experience Platform.
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 4%
@@ -41,7 +41,7 @@ Vous trouverez ci-dessous chacun des paramètres disponibles pour un environneme
 
 #### [!UICONTROL Identité]
 
-La section d&#39;identité est la seule qui est toujours activée. Deux paramètres sont disponibles : [!UICONTROL Synchronisation des identifiants activée] et ID de Conteneur [!UICONTROL de synchronisation des]identifiants.
+La section d&#39;identité est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL ID Syncs Enabled]&quot; et &quot;ID de Conteneur Sync&quot;.
 
 ![Section Identité de l’interface utilisateur de configuration](../../assets/edge_configuration_identity.png)
 
@@ -65,7 +65,7 @@ Les sandbox sont des emplacements dans la Adobe Experience Platform qui permette
 
 ##### [!UICONTROL Entrée de diffusion en continu]
 
-Une entrée en flux continu est une source HTTP dans le Adobe Experience Platform. Elles sont créées sous l’onglet [!UICONTROL Sources] de Adobe Experience Platform sous la forme d’une API HTTP.
+Une entrée en flux continu est une source HTTP dans le Adobe Experience Platform. Elles sont créées sous l’onglet &quot;[!UICONTROL Sources]&quot; dans Adobe Experience Platform sous la forme d’une API HTTP.
 
 ##### [!UICONTROL Jeu de données événement]
 
@@ -95,13 +95,13 @@ Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL c
 
 [Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) d’Adobe Target vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements  Adobe Target, vous pouvez les utiliser.
+Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements Adobe Target, vous pouvez les utiliser.
 
 #### Adobe Audience Manager
 
 Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette section. Les autres paramètres sont facultatifs mais encouragés.
 
-![audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
+![Audience d&#39;Adobe Gérer les paramètres Bloc](../../assets/edge_configuration_aam.png)
 
 ##### [!UICONTROL Destinations des cookies activées]
 
