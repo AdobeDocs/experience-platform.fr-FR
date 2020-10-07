@@ -5,10 +5,10 @@ title: Gestion des détails et des services supplémentaires pour un profil de p
 topic: user guide
 description: Ce document couvre les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produits dans le Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '206'
-ht-degree: 83%
+ht-degree: 68%
 
 ---
 
@@ -19,7 +19,7 @@ Vous pouvez configurer les détails d’un profil et accéder aux services suppl
 
 ![profile-settings](../images/profile-settings.png)
 
-Le menu **[!UICONTROL Paramètres du profil]** s’affiche à partir de l’onglet **[!UICONTROL Détails]**. Cet onglet vous permet de saisir et de modifier le **[!UICONTROL Nom du profil]** et la **[!UICONTROL Description]**. Vous pouvez également modifier le **[!UICONTROL Nom d’affichage]** ainsi que les paramètres de notification par e-mail de votre compte.
+Le menu **[!UICONTROL Paramètres du profil]** s’affiche à partir de l’onglet **[!UICONTROL Détails]**. Cet onglet vous permet de saisir et de modifier le nom et la description de votre profil. Vous pouvez également modifier le nom d’affichage ainsi que les paramètres de notification par courrier électronique de votre compte.
 
 ![edit-details-settings](../images/edit-details-settings.png)
 
