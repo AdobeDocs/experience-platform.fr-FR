@@ -5,10 +5,10 @@ title: Découverte des insights dans Attribution AI
 topic: Attribution AI insights
 description: Ce document sert de guide pour interagir avec les insights des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '1183'
-ht-degree: 97%
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ Pour utiliser les insights relatifs à Attribution AI, vous devez avoir à dispo
 
 ## Aperçu des insights des instances de service
 
-In the [!DNL Adobe Experience Platform] UI, click **Services** in the left navigation. Le navigateur *Services* apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **Ouvrir**.
+In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](./images/insights/open_Attribution_ai.png)
 
@@ -43,7 +43,7 @@ Ensuite, la page d’insights pour cette instance de service apparaît sur laque
 
 ### Détails des instances de service
 
-Pour afficher plus de détails sur une instance de service, cliquez sur **Afficher plus** en haut à droite.
+Pour afficher plus de détails sur une instance de service, cliquez sur **[!UICONTROL Afficher plus]** en haut à droite.
 
 ![afficher plus](./images/insights/show-more.png)
 
@@ -53,20 +53,20 @@ Une liste détaillée s’affiche. Pour plus d’informations sur l’une des pr
 
 ### Modification d’une instance
 
-Pour modifier une instance, cliquez sur *Modifier* dans la navigation en haut à droite.
+Pour modifier une instance, cliquez sur **[!UICONTROL Modifier]** dans la navigation en haut à droite.
 ![cliquez sur le bouton Modifier](./images/insights/edit-button.png)
 
-La boîte de dialogue Modifier s’affiche et vous permet de modifier la description et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur *Modifier* dans le coin en bas à droite.
+La boîte de dialogue Modifier s’affiche et vous permet de modifier la description et la fréquence de notation de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur **[!UICONTROL Modifier]** dans le coin en bas à droite.
 
 ![modifier la fenêtre contextuelle](./images/insights/edit-popover.png)
 
 ### Actions supplémentaires {#more-actions}
 
-Le bouton *Actions supplémentaires* se trouve dans la navigation en haut à droite en regard de *Modifier*. Cliquer sur **Actions supplémentaires** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
+Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de *Modifier*. Cliquer sur **[!UICONTROL Actions supplémentaires]** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
 
 - **Supprimer** : supprime l’instance.
 - **Télécharger des données récapitulatives** : télécharge un fichier CSV contenant les données récapitulatives.
-- **Accéder aux scores** : cliquer sur *Accéder aux scores* vous redirige vers le [tutoriel Accéder aux scores d’Attribution AI](./download-scores.md).
+- **Accéder aux scores** : cliquer sur **Accéder aux scores** vous redirige vers le [tutoriel Accéder aux scores d’Attribution AI](./download-scores.md).
 - **Afficher l’historique d’exécution** : une fenêtre contextuelle contenant une liste des exécutions de notation associée à l’instance de service apparaît.
 
 ![actions supplémentaires](./images/insights/more-actions.png)
@@ -77,31 +77,31 @@ Les insights d’Attribution AI vous permettent de filtrer vos données et de me
 
 >[!NOTE]
 >
-> Par défaut, chaque filtre est défini sur « Tous », sauf le filtre *Modèle d’attribution* qui est défini sur « Conversions attribuées aux modèles incrémentielles et d’influence ».
+>By default, every filter is set to &quot;All&quot; except the &quot;[!UICONTROL Attribution Model]&quot; filter which is set to &quot;Incremental and Influenced attributed conversions&quot;.
 
 ### Événement de conversion
 
 Lorsque vous créez une nouvelle instance dans Attribution AI, le champ « Événements de conversion » fait partie des champs obligatoires. Les événements de conversion sont des objectifs professionnels qui identifient l’impact des activités marketing comme les commandes e-commerce, les achats en magasin et les visites sur le site web.
 
-À partir de l’instance, le menu déroulant *Événements de conversion* vous permet de sélectionner l’un des événements définis pour votre instance afin de filtrer vos données. Sélectionner des événements spécifiques modifie les visualisations de l’interface utilisateur pour ne gérer que les conversions appartenant à ces événements.
+À partir de l’instance, le menu déroulant **[!UICONTROL Événements de conversion]** vous permet de sélectionner l’un des événements définis pour votre instance afin de filtrer vos données. Sélectionner des événements spécifiques modifie les visualisations de l’interface utilisateur pour ne gérer que les conversions appartenant à ces événements.
 
 ![événement de conversion](./images/insights/conversion-event.png)
 
 ### Modèle d’attribution
 
-Cliquer sur *Modèle d’attribution* ouvre un menu déroulant contenant l’ensemble des différents modèles d’attribution disponibles. Vous pouvez sélectionner plusieurs modèles pour en comparer les résultats. Pour plus d’informations sur les différents modèles d’attribution et la manière dont ils fonctionnent, rendez-vous sur l’aperçu [Attribution AI](./overview.md) sur lequel vous trouverez un tableau contenant des informations sur chaque modèle.
+Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. Vous pouvez sélectionner plusieurs modèles pour en comparer les résultats. Pour plus d’informations sur les différents modèles d’attribution et la manière dont ils fonctionnent, rendez-vous sur l’aperçu [Attribution AI](./overview.md) sur lequel vous trouverez un tableau contenant des informations sur chaque modèle.
 
 ![modèle d’attribution](./images/insights/attribution-model.png)
 
 ### Produit
 
-Le filtre *Produit* vous permet de faire une sélection parmi des produits ingérés à la création de votre instance. Cliquez sur le menu déroulant et utilisez la fonctionnalité Rechercher pour sélectionner rapidement tous les produits que vous souhaitez comparer.
+Le filtre **[!UICONTROL Produit]** vous permet de faire une sélection parmi des produits ingérés à la création de votre instance. Cliquez sur le menu déroulant et utilisez la fonctionnalité Rechercher pour sélectionner rapidement tous les produits que vous souhaitez comparer.
 
 ![filtre de produits](./images/insights/product-filter.png)
 
 ### Géographie
 
-Le filtre *Géographie* génère des codes pays basés sur des modèles régionaux. En fonction de vos données, ce filtre peut être présent ou ne pas l’être.
+Le filtre **[!UICONTROL Géographie]** génère des codes pays basés sur des modèles régionaux. En fonction de vos données, ce filtre peut être présent ou ne pas l’être.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Ce filtre vous permet de sélectionner les régions que vous avez configurées a
 
 ### Canal
 
-Cliquer sur le filtre *Canal* révèle un menu déroulant contenant l’ensemble de vos canaux marketing disponibles. Vous pouvez sélectionner plusieurs canaux pour les comparer.
+Cliquer sur le filtre **[!UICONTROL Canal]** révèle un menu déroulant contenant l’ensemble de vos canaux marketing disponibles. Vous pouvez sélectionner plusieurs canaux pour les comparer.
 
 ![Canal](./images/insights/channel.png)
 
@@ -129,13 +129,13 @@ Cliquez sur l’icône Calendrier pour ouvrir la fenêtre contextuelle Période.
 
 ## Aperçu de vos données
 
-La fiche *Aperçu* affiche vos conversions totales par modèle d’attribution. Le nombre total change en fonction de la manière dont votre recherche est spécifique à l’aide des filtres soulignés précédemment dans ce document. Sélectionner plus de modèles ajoute des cercles supplémentaires à l’Aperçu, dont chacun se voit définir une couleur correspondant à la légende.
+La fiche **[!UICONTROL Aperçu]** affiche vos conversions totales par modèle d’attribution. Le nombre total change en fonction de la manière dont votre recherche est spécifique à l’aide des filtres soulignés précédemment dans ce document. Sélectionner plus de modèles ajoute des cercles supplémentaires à l’Aperçu, dont chacun se voit définir une couleur correspondant à la légende.
 
 ![aperçu](./images/insights/Overview.png)
 
 ## Tendances hebdomadaires
 
-La fiche *Tendances hebdomadaires* décompose vos conversions totales selon la période que vous avez définie au cours du processus de filtrage.
+La fiche **[!UICONTROL Tendances hebdomadaires]** décompose vos conversions totales selon la période que vous avez définie au cours du processus de filtrage.
 
 ![tendances](./images/insights/weekly-trends.png)
 
@@ -147,17 +147,17 @@ Survoler la ligne des données avec votre souris d’un modèle d’attribution 
 
 ## Répartition par canal
 
-La fiche *Répartition par canal* est utilisée pour déterminer le nombre total de conversions associé à chaque canal. Vous pouvez utiliser cette fiche pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
+La fiche **[!UICONTROL Répartition par canal]** est utilisée pour déterminer le nombre total de conversions associé à chaque canal. Vous pouvez utiliser cette fiche pour vous aider à prendre des décisions sur l’efficacité de chaque canal et le retour sur investissement.
 
 ![canal de répartition](./images/insights/channel-breakdown.png)
 
-Cliquer sur les points de suspension en haut à droite de la fiche *Répartition par canal* ouvre un menu déroulant vous permettant de générer des données en fonction des points de contact.
+Cliquer sur les points de suspension en haut à droite de la fiche **[!UICONTROL Répartition par canal]** ouvre un menu déroulant vous permettant de générer des données en fonction des points de contact.
 
 ![points de contact](./images/insights/breakdown-by-touchpoints.png)
 
 ## Campagnes principales
 
-La fiche *Campagnes principales* affiche un aperçu de vos campagnes et des performances de vos campagnes dans chaque canal. Cette fiche peut vous aider à informer votre équipe de l’efficacité d’une campagne spécifique pour un canal donné et fournir des insights sur celles sur lesquelles vous pourriez investir davantage.
+La fiche **[!UICONTROL Campagnes principales]** affiche un aperçu de vos campagnes et des performances de vos campagnes dans chaque canal. Cette fiche peut vous aider à informer votre équipe de l’efficacité d’une campagne spécifique pour un canal donné et fournir des insights sur celles sur lesquelles vous pourriez investir davantage.
 
 ![campagnes principales](./images/insights/top-campaigns.png)
 
