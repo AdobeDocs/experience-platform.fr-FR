@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 72%
+source-wordcount: '756'
+ht-degree: 60%
 
 ---
 
@@ -35,7 +35,7 @@ Pour visualiser les schémas d’union dans l’interface utilisateur, cliquez s
 
 The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
 
-Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Parcourir]**. L’espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le **[!UICONTROL nom]**, la date et l’heure de **[!UICONTROL création]**, la **[!UICONTROL source]**, le **[!UICONTROL schéma]** et l’**[!UICONTROL état du dernier lot]**, ainsi que la date et l’heure de la **[!UICONTROL dernière mise à jour]** du jeu de données. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
+Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Parcourir]**. L&#39;espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la création (date et heure), la source, le schéma et l&#39;état du dernier lot, ainsi que la date et l&#39;heure de la dernière mise à jour du jeu de données. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONT
 
 ## Création d’un jeu de données
 
-Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l’espace de travail des jeux de données.
+Pour créer un jeu de données, cliquez sur **[!UICONTROL Créer un jeu de données]** dans le coin supérieur droit de l’espace de travail des jeux de données.****
 
 ![Cliquez sur Créer un jeu de données](../images/tutorials/segment-export-dataset/dataset-click-create.png)
 
@@ -63,7 +63,7 @@ Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, 
 
 ## Configuration d’un jeu de données
 
-Dans l’écran **[!UICONTROL Configurer le jeu de données]**, vous devrez attribuer un **[!UICONTROL nom]** à votre jeu de données et pourrez également fournir une **[!UICONTROL description]** pour celui-ci.
+On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset.
 
 **Remarques sur les noms des jeux de données :**
 - Les noms des jeux de données doivent être courts et descriptifs afin qu’ils puissent être facilement retrouvés par la suite dans la bibliothèque.
@@ -76,9 +76,9 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 ## Activité du jeu de données
 
-Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données.  Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
+Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. **** Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-Sur le côté droit de l’espace de travail des jeux de données, l’onglet **[!UICONTROL Informations]** contient des informations relatives à votre nouveau jeu de données, telles que l’**[!UICONTROL identifiant du jeu de données]**, le **[!UICONTROL nom]**, la **[!UICONTROL description]**, le **[!UICONTROL nom du tableau]**, le **[!UICONTROL schéma]**, le **[!UICONTROL Streaming]** et la **[!UICONTROL Source]**. The [!UICONTROL Info] tab also includes information about when the dataset was **[!UICONTROL Created]** and its **[!UICONTROL Last Modified]** date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cette valeur est indispensable pour terminer le workflow d’exportation du segment ciblé.
 
@@ -86,6 +86,6 @@ Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cett
 
 ## Étapes suivantes
 
-Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the **[!UICONTROL Dataset ID]** to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
 At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.
