@@ -5,7 +5,7 @@ seo-title: Espace de travail des destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans la plateforme de données client en temps réel Adobe, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: 59ac673c35954696fbb37417510035bdebff6f62
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '825'
 ht-degree: 56%
@@ -17,7 +17,7 @@ ht-degree: 56%
 
 Dans la plateforme de données clients en temps réel d’Adobe, sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Destinations].
 
-L’espace de travail [!UICONTROL Destinations] se compose de quatre sections : **[!UICONTROL Catalogue]**, **[!UICONTROL Parcourir]**, **[!UICONTROL Comptes]** et **[!UICONTROL Vue du système]**, décrites dans les sections ci-dessous.
+L’espace de travail [!UICONTROL Destinations] se compose de quatre sections : [!UICONTROL Catalogue], [!UICONTROL Parcourir], [!UICONTROL Comptes] et [!UICONTROL Vue du système], décrites dans les sections ci-dessous.
 
 ![Présentation des destinations](/help/rtcdp/destinations/assets/destinations-overview.png)
 
@@ -28,8 +28,8 @@ The **[!UICONTROL Catalog]** tab displays a list of all destinations available i
 L’interface utilisateur CDP en temps réel de l’Adobe fournit un certain nombre d’options de recherche et de filtrage sur la page de catalogue des destinations :
 
 * Utilisez la fonctionnalité de recherche de la page pour localiser une destination spécifique.
-* Filtrez les destinations à l’aide du contrôle **[!UICONTROL Catégories]** .
-* Basculez entre **[!UICONTROL Toutes les destinations]** et **[!UICONTROL Mes destinations]**. Lorsque **[!UICONTROL Toutes les destinations]** sont sélectionnées, toutes les destinations CDP en temps réel Adobe disponibles sont affichées. Lorsque **[!UICONTROL Mes destinations]** est sélectionné, vous ne pouvez voir que les destinations avec lesquelles vous avez établi une connexion.
+* Filtrez les destinations à l’aide du contrôle [!UICONTROL Catégories] .
+* Basculez entre [!UICONTROL Toutes les destinations] et [!UICONTROL Mes destinations]. Lorsque **[!UICONTROL Toutes les destinations]** sont sélectionnées, toutes les destinations CDP en temps réel Adobe disponibles sont affichées. Lorsque **[!UICONTROL Mes destinations]** est sélectionné, vous ne pouvez voir que les destinations avec lesquelles vous avez établi une connexion.
 * Sélectionnez vue **[!UICONTROL Connections]** et/ou **[!UICONTROL Extensions]**. Pour comprendre la différence entre les deux catégories, voir Types et Catégories [de](/help/rtcdp/destinations/destination-types.md)destination.
 
 ![destinations filtrage et démonstration de recherche](/help/rtcdp/destinations/assets/destinations-search-and-filter.gif)
