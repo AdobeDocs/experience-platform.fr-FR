@@ -5,10 +5,10 @@ title: Présentation de l'assimilation par lots partielle
 topic: overview
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 37%
+source-wordcount: '916'
+ht-degree: 35%
 
 ---
 
@@ -121,7 +121,7 @@ The **[!UICONTROL Error diagnostics]** toggle only appears when the **[!UICONTRO
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-Le **[!UICONTROL seuil d’erreur]** vous permet de définir le pourcentage d’erreurs acceptables avant le rejet de l’ensemble du lot. Par défaut, cette valeur est définie sur 5 %.
+**[!UICONTROL Le seuil]** d’erreur permet de définir le pourcentage d’erreurs acceptables avant que le lot entier ne soit mis en échec. Par défaut, cette valeur est définie sur 5 %.
 
 ## Étapes suivantes {#next-steps}
 
