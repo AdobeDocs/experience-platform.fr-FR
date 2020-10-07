@@ -5,7 +5,7 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 54%
@@ -48,7 +48,7 @@ Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les politiques d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé, ou non, à effectuer sur des données de la plateforme des données clients en temps réel. See the &quot;Data usage policies&quot; section in the [!DNL Experience Platform] [Data Governance overview](../../data-governance/home.md) for more information.
 
-Adobe Experience Platform propose plusieurs **politiques fondamentales** pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation [!DNL Experience Platform] .
+Adobe Experience Platform propose plusieurs politiques fondamentales pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être affichées dans l’interface utilisateur en accédant à l’espace de travail **[!UICONTROL Stratégies]** et en sélectionnant l’onglet **[!UICONTROL Parcourir]** . Pour obtenir des instructions plus détaillées sur l’utilisation de stratégies dans l’interface utilisateur, notamment sur la manière de créer vos propres stratégies personnalisées, consultez le guide [d’utilisation des](../../data-governance/policies/user-guide.md) stratégies dans la documentation [!DNL Experience Platform] .
 
 ## Application de la conformité de l’utilisation des données {#enforce-data-usage-compliance}
 
