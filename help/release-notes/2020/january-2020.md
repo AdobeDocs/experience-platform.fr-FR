@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '894'
-ht-degree: 72%
+ht-degree: 71%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 72%
 
 **Date de publication : 15 janvier 2020**
 
-Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 * [[ ! Système de modèle de données d’expérience DNL (XDM)]](#xdm)
 * [[ ! Privacy Service DNL]](#privacy)
@@ -55,7 +55,7 @@ Les nouvelles réglementations légales et organisationnelles donnent aux utilis
 | Nouveaux points de terminaison de l’API | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
 | Nouvelle propriété `regulation` requise | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Les valeurs acceptées sont `gdpr` et `ccpa`. |
 | Prise en charge de [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepte désormais les demandes d’accès/de suppression d’Adobe [!DNL Primetime Authentication], en utilisant `primetimeAuthentication` comme valeur de produit. |
-| Améliorations de l’interface utilisateur de Privacy Service | Pages de suivi des tâches distinctes pour les règlements RGPD et CCPA. Nouvelle liste déroulante _Type de règlement_ pour passer d’un ensemble de données de suivi à un autre dans le cadre du RGPD et de la CCPA. |
+| Améliorations de l’interface utilisateur de Privacy Service | Pages de suivi des tâches distinctes pour les règlements RGPD et CCPA. Nouvelle **liste déroulante de type de règlement **pour basculer entre les données de suivi pour le RGPD et l&#39;ACCP. |
 
 **Problèmes connus**
 
@@ -105,7 +105,7 @@ Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/ov
 | Catégorie | Autorisation | Description |
 |--- | --- | ---|
 | Destinations | Gestion des destinations | Accès à la lecture, la création, la modification et la désactivation des destinations. |
-| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet [!UICONTROL _Catalogue_] et aux destinations authentifiées dans l’onglet _Parcourir_. |
+| Destinations | Affichage des destinations | Accès en lecture seule aux destinations disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux destinations authentifiées dans l’onglet **Parcourir**. |
 | Destinations | Activation des destinations | Possibilité d’activer les données vers les destinations. Cette autorisation nécessite l’ajout de « Gestion des destinations » ou « Affichage des destinations » au profil de produits. |
 
 **Problèmes connus**
