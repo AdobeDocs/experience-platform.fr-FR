@@ -5,7 +5,7 @@ title: Guide de dépannage du contrôle d’accès
 topic: troubleshooting guide
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 71%
@@ -17,7 +17,7 @@ ht-degree: 71%
 
 Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](http://adminconsole.adobe.com) pour fournir des **contrôles d’accès** en fonction du rôle, en liant les utilisateurs à des autorisations et des environnements de test.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
+[!DNL Experience Platform] exploite les profils de produit dans [Adobe Admin Console](http://adminconsole.adobe.com) pour fournir des contrôles d’accès en fonction du rôle, en liant les utilisateurs à des autorisations et des environnements de test.  Pour plus d’informations, consultez la [présentation du contrôle d’accès](home.md).
 
 ## Où puis-je trouver mes autorisations d’accès actuelles ?
 
