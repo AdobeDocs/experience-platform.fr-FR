@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous permet de publier un modèle formé et noté en tant que service et permet ainsi aux utilisateurs de votre organisation IMS de noter des données sans avoir besoin de créer leurs propres modèles.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 95%
+source-wordcount: '456'
+ht-degree: 92%
 
 ---
 
@@ -49,9 +49,9 @@ Si vous préférez publier un modèle à l’aide des API Sensei Machine Learnin
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Lorsqu’un service est créé, il hérite des configurations de notation par défaut. Vous pouvez revoir ces configurations et les ajuster selon les besoins en double-cliquant sur les valeurs. Lorsque vous trouvez les configurations satisfaisantes, cliquez sur **[!UICONTROL Terminer]** pour lancer l’opération de notation.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Sur la page *Présentation* du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, la tâche de notation **[!UICONTROL la plus récente]** est mise à jour.
+5. Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur de **[!UICONTROL score]** est mis à jour.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez publié avec succès un modèle en tant que service accessible et noté des données à l’aide du nouveau service, par le biais de la **[!UICONTROL Galerie de services]**. Passez au tutoriel suivant pour apprendre à [planifier des opérations de formation et de notation automatisées sur un service](./schedule-models-ui.md).
+En suivant ce tutoriel, vous avez publié avec succès un modèle en tant que service accessible et noté des données à l’aide du nouveau service, par le biais de la [!UICONTROL Galerie de services]. Passez au tutoriel suivant pour apprendre à [planifier des opérations de formation et de notation automatisées sur un service](./schedule-models-ui.md).
