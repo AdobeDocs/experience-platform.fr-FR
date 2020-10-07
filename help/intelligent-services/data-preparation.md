@@ -5,7 +5,7 @@ title: Préparation des données en vue de leur utilisation dans les services in
 topic: Intelligent Services
 description: 'Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: d9bf87e41fe002ac1d70a241b48c7b9fd1139d6c
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1979'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Préparer les données à utiliser dans [!DNL Intelligent Services]
 
-Pour [!DNL Intelligent Services] découvrir des informations issues des données de vos événements marketing, les données doivent être enrichies et conservées sémantiquement dans une structure standard. [!DNL Intelligent Services] tirer parti [!DNL Experience Data Model] des schémas (XDM) pour y parvenir. En particulier, tous les jeux de données utilisés dans [!DNL Intelligent Services] doivent être conformes au schéma XDM **Consumer ExperienceEvent (CEE)** .
+Pour [!DNL Intelligent Services] découvrir des informations issues des données de vos événements marketing, les données doivent être enrichies et conservées sémantiquement dans une structure standard. [!DNL Intelligent Services] tirer parti [!DNL Experience Data Model] des schémas (XDM) pour y parvenir. En particulier, tous les jeux de données utilisés dans [!DNL Intelligent Services] doivent être conformes au schéma XDM de Consumer ExperienceEvent (CEE).
 
 Ce document fournit des conseils généraux sur le mappage des données de vos événements marketing de plusieurs canaux à ce schéma, en décrivant les informations sur les champs importants du schéma afin de vous aider à déterminer comment mapper efficacement vos données à leur structure.
 
@@ -112,7 +112,7 @@ Le tableau suivant fournit quelques exemples de canaux marketing mappés au `xdm
 | --- | --- | --- | --- |
 | Recherche payante | https:/<span>/ns.adobe.com/xdm/canal-types/search | payé | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/canal-types/social | gagné | clicks |
-| Afficher  | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
+| Afficher | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | clicks |
 | E-mail | https:/<span>/ns.adobe.com/xdm/canal-types/email | payé | clicks |
 | Parrain interne | https:/<span>/ns.adobe.com/xdm/canal-types/direct | détenu | clicks |
 | Afficher la vue publicitaire | https:/<span>/ns.adobe.com/xdm/canal-types/display | payé | impressions |
@@ -276,7 +276,7 @@ Une fois le jeu de données créé, vous pouvez le trouver dans l’interface ut
 
 ![](images/data-preparation/dataset-location.png)
 
-#### ajouter une balise d&#39;espace de nommage d&#39;identité Principale au jeu de données
+#### Ajouter une balise d&#39;espace de nommage d&#39;identité Principale au jeu de données
 
 >[!NOTE]
 >
