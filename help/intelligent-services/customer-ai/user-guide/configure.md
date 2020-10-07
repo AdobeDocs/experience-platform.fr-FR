@@ -5,10 +5,10 @@ title: Configuration d’une instance d’API client
 topic: Instance creation
 description: Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple d’emploi pouvant être configuré pour de multiples cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
 workflow-type: tm+mt
 source-wordcount: '746'
-ht-degree: 90%
+ht-degree: 88%
 
 ---
 
@@ -35,7 +35,7 @@ Vous trouverez ci-dessous des informations importantes sur les valeurs que vous 
 
 * Le nom de l’instance est utilisé partout où le score de Customer AI est affiché. Les noms doivent donc décrire ce que représentent les scores de prédiction, par exemple, « Likelihood to cancel magazine subscription » (Probabilité d’annuler l’abonnement au magazine).
 
-* Le type de propension détermine l’intention de score et de polarité des mesures. Vous pouvez choisir **[!UICONTROL Attrition]** ou **[!UICONTROL Conversion]**. Pour plus d’informations sur l’impact du type de propension sur votre instance, consultez la note située sous [résumé de notation](./discover-insights.md#scoring-summary) dans le document d’informations sur les découvertes.
+* Le type de propension détermine l’intention de score et de polarité des mesures. You can either choose &quot;[!UICONTROL Churn]&quot; or &quot;[!UICONTROL Conversion]&quot;. Pour plus d’informations sur l’impact du type de propension sur votre instance, consultez la note située sous [résumé de notation](./discover-insights.md#scoring-summary) dans le document d’informations sur les découvertes.
 
 * La source de données désigne l’endroit où se trouvent les données. Le jeu de données est le jeu de données d’entrée utilisé pour prévoir les scores. Par conception, Customer AI utilise des données d’événement d’expérience client pour calculer les scores de propension. Lors de la sélection d’un jeu de données à partir du sélecteur de liste déroulante, seuls les jeux compatibles avec Customer AI sont répertoriés.
 
@@ -47,7 +47,7 @@ Indiquez les valeurs requises, puis cliquez sur **[!UICONTROL Suivant]**.
 
 ### Définition d’un objectif {#define-a-goal}
 
-L’étape *Définir un objectif* s’affiche et fournit un environnement interactif permettant de définir un objectif visuellement. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
+L’étape **[!UICONTROL Définir un objectif]** s’affiche et fournit un environnement interactif permettant de définir un objectif visuellement. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
 
 Cliquez sur **[!UICONTROL Saisir le nom du champ]** et sélectionnez un champ dans la liste déroulante. Cliquez sur la seconde entrée et sélectionnez une clause pour la condition de l’événement, puis indiquez la valeur cible pour terminer l’événement. D’autres événements peuvent être configurés en cliquant sur **[!UICONTROL Ajouter un événement]**. Enfin, atteignez l’objectif en appliquant une période de prédiction en nombre de jours, puis cliquez sur **[!UICONTROL Suivant]**.
 
@@ -55,7 +55,7 @@ Cliquez sur **[!UICONTROL Saisir le nom du champ]** et sélectionnez un champ da
 
 ### Configuration d’un planning *(facultatif)* {#configure-a-schedule}
 
-L’étape *avancée* s’affiche. Lors de cette étape facultative, vous pouvez configurer un planning pour automatiser les opérations de prédiction, définir les exclusions de prédiction pour filtrer certains événements ou cliquer sur **[!UICONTROL Terminer]** si aucune opération n’est requise.
+The **[!UICONTROL Advanced]** step appears. Lors de cette étape facultative, vous pouvez configurer un planning pour automatiser les opérations de prédiction, définir les exclusions de prédiction pour filtrer certains événements ou cliquer sur **[!UICONTROL Terminer]** si aucune opération n’est requise.
 
 Configurez un planning de notation en configurant la *Fréquence de notation*. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
 
