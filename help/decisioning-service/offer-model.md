@@ -5,33 +5,33 @@ title: Modèle de domaine de prise de décision relative aux offres
 topic: overview
 description: La prise de décision relative aux offres est un cas d’utilisation du service de prise de décision dans lequel vous formalisez et gérez de manière centralisée les règles et les prédictions utilisées pour impliquer les clients vis-à-vis des offres.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
 source-wordcount: '2640'
-ht-degree: 97%
+ht-degree: 96%
 
 ---
 
 
 # Présentation du modèle de domaine de prise de décision relative aux offres
 
-Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. La prise de décision relative aux offres est considérée comme un type de _**prise de décision relative au contenu**_. Dans ce cas d’utilisation, les _**options de décision**_ sont appelées des _**offres**_, et sont caractérisées en tant que telles par le contenu qui y est associé. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
+Offer decisioning is a use case of [!DNL Decisioning Service] within which you formalize and centrally manage the rules and predictions used for engaging customers with offers. La prise de décision relative aux offres est considérée comme un type de prise de décision relative au contenu. Dans ce cas d’utilisation, les options de décision sont appelées des offres, et sont caractérisées en tant que telles par le contenu qui y est associé. For an introduction of the object model used by the [!DNL Decisioning Service], please refer to [Decisioning Service Domain Model](experience-model.md).
 
 L’objectif est de présenter à l’utilisateur final une « meilleure offre » sur n’importe quel canal en fonction de critères de ciblage, de contraintes de coût et de fréquence, ainsi que d’interactions préalables entre les canaux, y compris les offres antérieures proposées.
 
-Comme pour tous les cas d’utilisation de prise de décision, les options de décision (offres) sont gérées dans un référentiel partagé par un certain nombre d’applications. Les offres peuvent être créées par différents services de votre organisation ou par des partenaires, et celles-ci peuvent être ajoutées et supprimées quotidiennement.
+Comme pour tous les cas d’utilisation de la prise de décision, les options de décision (offres) sont gérées dans un référentiel partagé par n’importe quel nombre d’applications. Les offres peuvent être créées par différents services de votre organisation ou par des partenaires, et celles-ci peuvent être ajoutées et supprimées quotidiennement.
 
-Les offres sont placées visuellement dans des expériences plus importantes par l’application qui les propose. Les _**emplacements**_, parfois appelés zones ou places, sont des éléments importants pour l’élaboration d’une stratégie. La conception d’une stratégie d’offre commence souvent par la définition de ces emplacements. Une offre a généralement de multiples _**représentations de contenu**_ afin de pouvoir être correctement intégrée dans diverses expériences, où chacune présente des contraintes dimensionnelles ou autres et nécessite différents formats de médias.
+Les offres sont placées visuellement dans des expériences plus importantes par l’application qui les propose. Les emplacements, parfois appelés zones ou places, sont des éléments importants pour l’élaboration d’une stratégie. La conception d’une stratégie d’offre commence souvent par la définition de ces emplacements. Une offre a généralement de multiples représentations de contenu afin de pouvoir être correctement intégrée dans diverses expériences, où chacune présente des contraintes dimensionnelles ou autres et nécessite différents formats de médias.
 
-Les offres sont souvent associées à des biens ou des services physiques et font l’objet d’un calcul de coût. Une organisation doit être capable de limiter les ressources utilisées par les offres et doit donc pouvoir _**plafonner**_ le nombre total de fois où une offre peut être proposée.
+Les offres sont souvent associées à des biens ou des services physiques et font l’objet d’un calcul de coût. Une organisation doit être capable de limiter les ressources utilisées par les offres et doit donc pouvoir plafonner le nombre total de fois où une offre peut être proposée.
 
 La valeur prédite d’une offre acceptée pour l’organisation est le critère d’optimisation et s’oppose au coût de la présentation d’une offre. Le coût, la probabilité d’acceptation et la valeur prédite sont utilisés pour classer les offres. La meilleure offre est celle qui a le plus grand impact positif prédit sur les objectifs de vos activités d’offre.
 
-La prise de décision relative aux offres tient compte des interactions qu’un utilisateur final a eues _**via de nombreux canaux**_ et applications. Elle s’appuie sur le profil de l’utilisateur final et sur les données d’événement d’expérience. Par exemple, une application de centre d’appel peut utiliser la prise de décision relative aux offres pour activer ou supprimer une offre basée sur les achats effectués et les commentaires émis par l’utilisateur final ; ou une application de gestion des e-mails peut s’appuyer sur la prise de décision relative aux offres pour sélectionner la meilleure offre disponible dans une newsletter hebdomadaire en fonction de l’historique de navigation sur un site web.
+La prise de décision relative aux offres tient compte des interactions qu’un utilisateur final a eues via de nombreux canaux et applications. Elle s’appuie sur le profil de l’utilisateur final et sur les données d’événement d’expérience. Par exemple, une application de centre d’appel peut utiliser la prise de décision relative aux offres pour activer ou supprimer une offre basée sur les achats effectués et les commentaires émis par l’utilisateur final ; ou une application de gestion des e-mails peut s’appuyer sur la prise de décision relative aux offres pour sélectionner la meilleure offre disponible dans une newsletter hebdomadaire en fonction de l’historique de navigation sur un site web.
 
-Les offres ont d’autres propriétés intéressantes. Souvent, il existe un _**planning**_ ou une plage de dates et d’heures définis lorsque l’offre est valide et au moment où elle doit être invalidée.
+Les offres ont d’autres propriétés intéressantes. Souvent, il existe un planning ou une plage de dates et d’heures définis lorsque l’offre est valide et au moment où elle doit être invalidée.
 
-Enfin, l’attrait d’une offre se détériore proportionnellement à la fréquence de sa présentation. Une offre qui n’est pas acceptée après avoir été proposée à plusieurs reprises est une occasion manquée car une autre offre aurait pu être présentée. C’est pourquoi il faut gérer la _**fatigue**_ de l’utilisateur final.
+Enfin, l’attrait d’une offre se détériore proportionnellement à la fréquence de sa présentation. Une offre qui n’est pas acceptée après avoir été proposée à plusieurs reprises est une occasion manquée car une autre offre aurait pu être présentée. C’est pourquoi il faut gérer la fatigue de l’utilisateur final.
 
 ## Principales caractéristiques de la stratégie de décision relative aux offres
 
