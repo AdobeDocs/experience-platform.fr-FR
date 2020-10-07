@@ -5,7 +5,7 @@ title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
 source-wordcount: '2075'
 ht-degree: 16%
@@ -37,7 +37,7 @@ Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pa
 | Marketing.trackingCode | Point de contact |
 | Marketing.campaignname | Point de contact |
 | Marketing.campaigngroup | Point de contact |
-| Commerce | Conversion  |
+| Commerce | Conversion |
 
 En règle générale, l’attribution est exécutée sur les colonnes de conversion telles que la commande, les achats et les passages en caisse sous &quot;commerce&quot;. Les colonnes &quot;canal&quot; et &quot;marketing&quot; sont fortement conseillées pour définir des points de contact pour obtenir de bonnes informations. Cependant, vous pouvez inclure toute autre colonne supplémentaire ainsi que les colonnes ci-dessus à configurer comme une conversion ou une définition de point de contact.
 
@@ -58,7 +58,7 @@ Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les
 > - Vous avez besoin d’au moins 1 000 conversions.
 
 
-attribution ai nécessite des données historiques comme entrée pour la formation au modèle. La durée des données requises est principalement déterminée par deux facteurs clés : fenêtre de formation et fenêtre de rappel. Les entrées avec des fenêtres de formation plus courtes sont plus sensibles aux tendances récentes, tandis que des fenêtres de formation plus longues permettent de produire des modèles plus stables et précis. Il est important de modéliser l&#39;objectif avec des données historiques qui représentent le mieux vos objectifs commerciaux.
+Attribution AI nécessite des données historiques comme entrée pour la formation au modèle. La durée des données requises est principalement déterminée par deux facteurs clés : fenêtre de formation et fenêtre de rappel. Les entrées avec des fenêtres de formation plus courtes sont plus sensibles aux tendances récentes, tandis que des fenêtres de formation plus longues permettent de produire des modèles plus stables et précis. Il est important de modéliser l&#39;objectif avec des données historiques qui représentent le mieux vos objectifs commerciaux.
 
 Les événements de conversion des filtres de la configuration [de la fenêtre de](./user-guide.md#training-window) formation sont définis pour être inclus pour la formation de modèle en fonction du temps d’occurrence. Actuellement, la période minimale de formation est de 1 quart (90 jours). The [lookback window](./user-guide.md#lookback-window) provides a time frame indicating how many days prior to the conversion event touchpoints related to this conversion event should be included. Ces deux concepts déterminent ensemble la quantité de données d’entrée (mesurées en jours) requise pour une application.
 
@@ -78,7 +78,7 @@ Exemple :
 
 ## Données de sortie Attribution AI
 
-attribution ai génère les résultats suivants :
+Attribution AI génère les résultats suivants :
 
 - [Score granulaire brut](#raw-granular-scores)
 - [Scores agrégées](#aggregated-attribution-scores)
@@ -89,7 +89,7 @@ attribution ai génère les résultats suivants :
 
 ### Score granulaire brut {#raw-granular-scores}
 
-attribution ai génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section sur l’ [affichage des chemins](#raw-score-path)de score brut. Pour télécharger les scores à l’aide de l’API, consultez les scores de [téléchargement dans le document Attribution AI](./download-scores.md) .
+Attribution AI génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section sur l’ [affichage des chemins](#raw-score-path)de score brut. Pour télécharger les scores à l’aide de l’API, consultez les scores de [téléchargement dans le document Attribution AI](./download-scores.md) .
 
 >[!NOTE]
 >
@@ -112,8 +112,8 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie des 
 | segmentation (chaîne) | True | Segment de conversion tel que la géosegmentation sur lequel le modèle est construit. En cas d’absence de segments, le segment est identique à conversionName. <br> **Exemple :** ORDER_US |
 | conversionName (chaîne) | True | Nom de la conversion configurée lors de la configuration. <br> **Exemple :** Commande, Piste, Visite |
 | conversion (objet) | False | Colonnes de métadonnées de conversion. |
-| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple :** adobe analytics |
-| eventSource (chaîne) | True | Source à laquelle le événement s’est produit. <br> **Exemple :** adobe.com |
+| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple :** Adobe Analytics |
+| eventSource (chaîne) | True | Source à laquelle le événement s’est produit. <br> **Exemple :** Adobe.com |
 | eventType (chaîne) | True | The primary event type for this time-series record. <br> **Exemple :** Ordre |
 | geo (chaîne) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Exemple :** US |
 | priceTotal (Doublon) | True | Recettes obtenues par la conversion <br> **Exemple :** 99,9 |
@@ -140,7 +140,7 @@ Vous pouvez vue le chemin d’accès à vos scores bruts dans l’interface util
 
 ![Choisissez votre schéma](./images/input-output/schemas_browse.png)
 
-Ensuite, sélectionnez un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet Propriétés **[!UICONTROL du]** champ s’ouvre. Dans les propriétés **** de champ se trouve le champ **[!UICONTROL Chemin]** qui correspond à vos scores bruts.
+Ensuite, sélectionnez un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet Propriétés **[!UICONTROL du]** champ s’ouvre. Dans les propriétés **** de champ se trouve le champ de chemin qui correspond à vos scores bruts.
 
 ![Choisir un Schéma](./images/input-output/field_properties.png)
 
@@ -187,7 +187,7 @@ Le tableau ci-dessous mappe les scores d’attribution aux scores bruts. Si vous
 
 Les scores agrégés peuvent être téléchargés au format CSV depuis l’interface utilisateur de la plate-forme si la période est inférieure à 30 jours. Consultez le tableau ci-dessous pour plus d&#39;informations sur chacune de ces colonnes d&#39;agrégat.
 
-| Nom de colonne | Contrainte | Nullable | Description |
+| Nom de la colonne | Contrainte | Nullable | Description |
 | --- | --- | --- | --- |
 | customerevents_date (DateTime) | Format défini par l&#39;utilisateur et fixe | False | Date du Événement client au format AAAA-MM-JJ. <br> **Exemple**: 2016-05-02 |
 | mediatouchpoints_date (DateTime) | Format défini par l&#39;utilisateur et fixe | True | Date du point de contact multimédia au format AAAA-MM-JJ <br> **Exemple**: 21/04/2017 |
@@ -208,7 +208,7 @@ Les scores agrégés peuvent être téléchargés au format CSV depuis l’inter
 
 Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souhaitez télécharger vos scores bruts, consultez la documentation sur le [téléchargement dans Attribution AI](./download-scores.md) . Pour vue des chemins d’accès aux scores bruts depuis l’interface utilisateur, consultez la section sur l’ [affichage des chemins d’accès aux](#raw-score-path) scores bruts dans ce document.
 
-| Nom de colonne | Colonne de référence Note brute |
+| Nom de la colonne | Colonne de référence Note brute |
 | --- | --- |
 | customerevents_date | timestamp |
 | mediatouchpoints_date | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.timestamp |
@@ -220,7 +220,7 @@ Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souha
 | géo | _locataireID.your_schéma_name.conversion.geo |
 | événement_type | eventType |
 | media_type | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.mediaType |
-| marketing | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.mediaChannel |
+| channel | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.mediaChannel |
 | action | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _locataireID.your_schéma_name.touchpointsDetail.element.touchpoint.campaignName |
