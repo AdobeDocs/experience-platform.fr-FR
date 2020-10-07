@@ -5,7 +5,7 @@ title: Présentation du langage de requête de profil (PQL)
 topic: developer guide
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 translation-type: tm+mt
-source-git-commit: 5a10a31f4be5173af8b459b9ab8a53096348be1d
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 91%
@@ -29,7 +29,7 @@ Les requêtes PQL possèdent la signature suivante :
 
 Le paramètre d’entrée peut être un primitif simple, comme un booléen ou une chaîne de type plus complexe, comme un objet, un tableau ou une carte.
 
-Il existe **trois** manières différentes de faire référence aux paramètres d’entrée dans le corps d’une expression PQL :
+Il existe trois manières différentes de faire référence aux paramètres d’entrée dans le corps d’une expression PQL :
 
 ### Référence implicite au premier paramètre
 
