@@ -5,7 +5,7 @@ title: Guide de développement de l’API Schema Registry
 description: Le registre des schémas est utilisé pour accéder à Schema Library dans Adobe Experience Platform et fournit une interface utilisateur ainsi qu’une API RESTful depuis lesquelles toutes les ressources de bibliothèque disponibles sont accessibles. Grâce à l’API Schema Registry, vous pouvez réaliser des opérations CRUD de base afin d’afficher et de gérer tous les schémas et toutes les ressources associées disponibles pour vous au sein d’Adobe Experience Platform.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 74a4a3cc713cc068be30379e8ee11572f8bb0c63
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 68%
@@ -162,7 +162,7 @@ A successful response returns information regarding your organization&#39;s use 
 
 ## Comprendre le `CONTAINER_ID` {#container}
 
-Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. Il existe deux conteneurs sur lesquels vous pouvez passer des appels API : le **conteneur mondial** et le **conteneur client**.
+Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. Il existe deux conteneurs sur lesquels vous pouvez passer des appels API : le conteneur mondial et le conteneur client.
 
 ### Conteneur mondial
 
