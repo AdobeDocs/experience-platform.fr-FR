@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel explique comment regrouper les fichiers source fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans Adobe Experience Platform Data Science Workspace en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '1156'
-ht-degree: 51%
+ht-degree: 50%
 
 ---
 
@@ -44,7 +44,7 @@ Pour obtenir vos informations d’identification Azure Container Registry, conne
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-La page *Configurer* s’ouvre. Indiquez un *nom de recette* approprié, par exemple « Recette des ventes au détail », et éventuellement une description ou une URL de documentation. Une fois terminé, cliquez sur **[!UICONTROL Suivant]**.
+La page **[!UICONTROL Configurer]** s’ouvre. Indiquez un **[!UICONTROL nom de recette]** approprié, par exemple « Recette des ventes au détail », et éventuellement une description ou une URL de documentation. Une fois terminé, cliquez sur **[!UICONTROL Suivant]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
@@ -64,7 +64,7 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Notez les valeurs de *Hôte Docker*, *Nom d’utilisateur* et *Mot de passe*. Elles sont utilisées pour créer et pousser votre [!DNL Docker] image dans les workflows décrits ci-dessous.
+Notez les valeurs de l&#39;hôte Docker, du nom d&#39;utilisateur et du mot de passe. Elles sont utilisées pour créer et pousser votre [!DNL Docker] image dans les workflows décrits ci-dessous.
 
 >[!NOTE]
 >
