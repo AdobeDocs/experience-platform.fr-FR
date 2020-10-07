@@ -5,10 +5,10 @@ title: Guide d’utilisation des jeux de données
 topic: datasets
 description: Ce guide d'utilisation des jeux de données fournit des instructions sur l'exécution d'actions courantes lors de l'utilisation de jeux de données dans l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -41,7 +41,7 @@ Cliquez sur le nom d’un jeu de données pour accéder à l’écran **[!UICONT
 
 ## Prévisualisation d’un jeu de données
 
-À l’écran **[!UICONTROL Activité du jeu de données]**, cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit de votre écran pour prévisualiser jusqu’à 100 lignes de données. Si le jeu de données est vide, le lien de prévisualisation sera désactivé et indiquera à la place **[!UICONTROL Prévisualisation non disponible]**.
+À l’écran **[!UICONTROL Activité du jeu de données]**, cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit de votre écran pour prévisualiser jusqu’à 100 lignes de données. Si le jeu de données est vide, le lien de la prévisualisation est désactivé et indique que la prévisualisation n&#39;est pas disponible.
 
 ![](../images/datasets/user-guide/click_to_preview.png)
 
