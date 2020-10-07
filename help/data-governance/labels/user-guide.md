@@ -5,7 +5,7 @@ title: Guide d’utilisation des libellés d’utilisation des données
 topic: labels
 description: Ce guide d’utilisateur décrit les étapes à suivre pour travailler avec des libellés d’utilisation des données dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 259c26a9d3b6ef397acd552e255f68ecb25b2dd1
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 80%
@@ -19,7 +19,7 @@ Ce guide d’utilisation décrit les étapes à suivre pour utiliser les libell�
 
 ## Gestion des libellés d’utilisation des données au niveau du jeu de données
 
-Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail _Jeux de données_. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
+Pour gérer les libellés d’utilisation des données au niveau du jeu de données, vous devez sélectionner un jeu de données existant ou en créer un nouveau. Après vous être connecté à Adobe Experience Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Jeux de données]**. Cette page répertorie tous les jeux de données créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque jeu de données.
 
 ![Onglet Jeu de données dans Data Workspace](../images/labels/datasets.png)
 
@@ -43,7 +43,7 @@ L’écran **[!UICONTROL Sélectionner un schéma]** s’affiche, répertoriant 
 
 ![Sélectionner le schéma d’un jeu de données](../images/labels/dataset_schema.png)
 
-L’écran **[!UICONTROL Configurer le jeu de données]** s’affiche. Indiquez un **nom** (obligatoire) et une **description** (facultative, mais recommandée) pour votre nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminer]**.
+L’écran **[!UICONTROL Configurer le jeu de données]** s’affiche. Indiquez un nom (obligatoire) et une description (facultative, mais recommandée) pour votre nouveau jeu de données, puis cliquez sur **[!UICONTROL Terminer]**.
 
 ![Configurer un jeu de données avec le nom et la description](../images/labels/dataset_configure.png)
 
