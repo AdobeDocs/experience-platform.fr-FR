@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mesures disponibles
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: ae6f220cdec54851fb78b7ba8a8eb19f2d06b684
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 77%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +22,18 @@ The API endpoint used in this guide is part of the [[!DNL Observability Insights
 
 ## Récupération des mesures d’observabilité
 
-Vous pouvez récupérer des mesures d’observabilité en effectuant une requête GET sur le point de terminaison `/metrics` dans l’API [!DNL Observability Insights]
+Il existe deux méthodes prises en charge pour récupérer les données de mesure à l’aide de l’API :
+
+* [Version 1](#v1): Spécifiez des mesures à l’aide de paramètres de requête.
+* [Version 2](#v2): Spécifiez et appliquez des filtres aux mesures à l’aide d’une charge utile JSON.
+
+### Version 1 {#v1}
+
+Vous pouvez récupérer des données de mesures en faisant une demande de GET au point de `/metrics` terminaison, en spécifiant des mesures à l’aide de paramètres de requête.
 
 **Format d’API**
 
-Lors de l’utilisation du point de terminaison `/metrics`, au moins un paramètre de requête de mesure doit être fourni. Les autres paramètres de requête sont facultatifs pour le filtrage des résultats.
+Au moins une mesure doit être fournie dans le `metric` paramètre. Les autres paramètres de requête sont facultatifs pour le filtrage des résultats.
 
 ```http
 GET /metrics?metric={METRIC}
@@ -39,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Paramètre | Description |
 | --- | --- |
 | `{METRIC}` | La mesure que vous souhaitez afficher. Lorsque vous combinez plusieurs mesures dans un seul appel, vous devez utiliser une esperluette (`&`) pour les séparer. Par exemple : `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. Cet identifiant peut être facultatif, obligatoire ou non applicable en fonction des mesures utilisées. Consultez l’ [annexe](#available-metrics) pour obtenir une liste des mesures disponibles, ainsi que les ID pris en charge (obligatoires et facultatifs) pour chaque mesure. |
+| `{ID}` | The identifier for a particular [!DNL Platform] resource whose metrics you want to expose. Cet identifiant peut être facultatif, obligatoire ou non applicable en fonction des mesures utilisées. Consultez l’ [annexe](#available-metrics) pour obtenir une liste des mesures disponibles, y compris les ID pris en charge (obligatoires et facultatifs) pour chaque mesure. |
 | `{DATE_RANGE}` | La période des mesures que vous souhaitez afficher, au format ISO 8601 (par exemple, `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Requête**
@@ -59,53 +66,208 @@ Une réponse réussie renvoie une liste d’objets, dont chacun contient une dat
 
 ```json
 {
-    "id": "5cf8ab4ec48aba145214abeb",
-    "imsOrgId": "{IMS_ORG}",
-    "timeseries": {
-        "granularity": "MONTH",
-        "items": [
-            {
-                "timestamp": "2019-06-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1125,
-                    "timeseries.ingestion.dataset.size": 32320
-                }
-            },
-            {
-                "timestamp": "2019-05-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 1003,
-                    "timeseries.ingestion.dataset.size": 31409
-                }
-            },
-            {
-                "timestamp": "2019-04-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-03-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 740,
-                    "timeseries.ingestion.dataset.size": 25809
-                }
-            },
-            {
-                "timestamp": "2019-02-01T00:00:00Z",
-                "metrics": {
-                    "timeseries.ingestion.dataset.recordsuccess.count": 390,
-                    "timeseries.ingestion.dataset.size": 16801
-                }
-            }
-        ],
-        "_page": null,
-        "_links": null
-    },
-    "stats": {}
+  "id": "5cf8ab4ec48aba145214abeb",
+  "imsOrgId": "{IMS_ORG}",
+  "timeseries": {
+    "granularity": "MONTH",
+    "items": [
+      {
+        "timestamp": "2019-06-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1125,
+          "timeseries.ingestion.dataset.size": 32320
+        }
+      },
+      {
+        "timestamp": "2019-05-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 1003,
+          "timeseries.ingestion.dataset.size": 31409
+        }
+      },
+      {
+        "timestamp": "2019-04-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-03-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 740,
+          "timeseries.ingestion.dataset.size": 25809
+        }
+      },
+      {
+        "timestamp": "2019-02-01T00:00:00Z",
+        "metrics": {
+          "timeseries.ingestion.dataset.recordsuccess.count": 390,
+          "timeseries.ingestion.dataset.size": 16801
+        }
+      }
+    ],
+    "_page": null,
+    "_links": null
+  },
+  "stats": {}
 }
 ```
+
+### Version 2 {#v2}
+
+Vous pouvez récupérer des données de mesures en adressant une requête de POST au point de `/metrics` terminaison, en spécifiant les mesures que vous souhaitez récupérer dans la charge utile.
+
+**Format d’API**
+
+```http
+POST /metrics
+```
+
+**Requête**
+
+```sh
+curl -X POST \
+  https://platform.adobe.io/data/infrastructure/observability/insights/metrics \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "start": "2020-07-14T00:00:00.000Z",
+        "end": "2020-07-22T00:00:00.000Z",
+        "granularity": "day",
+        "metrics": [
+          {
+            "name": "timeseries.ingestion.dataset.recordsuccess.count",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+                "groupBy": true
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          },
+          {
+            "name": "timeseries.ingestion.dataset.dailysize",
+            "filters": [
+              {
+                "name": "dataSetId",
+                "value": "5eddb21420f516191b7a8dad",
+                "groupBy": false
+              }
+            ],
+            "aggregator": "sum",
+            "downsample": "sum"
+          }
+        ]
+      }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `start` | Date/heure la plus ancienne à partir de laquelle récupérer les données de mesure. |
+| `end` | Date/heure la plus récente à partir de laquelle récupérer les données de mesure. |
+| `granularity` | Champ facultatif qui indique l’intervalle de temps de division des données de mesure par. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la `start` et la `end` date, alors qu’une valeur de `MONTH` regrouperait les résultats de la mesure par mois. Lors de l’utilisation de ce champ, une `downsample` propriété correspondante doit également être fournie pour indiquer la fonction d’agrégation par laquelle grouper les données. |
+| `metrics` | Tableau d’objets, un pour chaque mesure à récupérer. |
+| `name` | Nom d’une mesure reconnue par Observability Insights. Consultez l’ [annexe](#available-metrics) pour obtenir une liste complète des noms de mesure acceptés. |
+| `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), avec chaque objet contenant les propriétés suivantes : <ul><li>`name`: Type d’entité par lequel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value`: ID d’un ou de plusieurs jeux de données. Plusieurs ID de jeu de données peuvent être fournis sous la forme d’une chaîne unique, chaque ID étant séparé par des caractères verticaux (`|`).</li><li>`groupBy`: Lorsqu’elle est définie sur true, indique que le résultat correspondant `value` représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
+| `aggregator` | Spécifie la fonction d&#39;agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de séries chronologiques en résultats uniques. Pour obtenir des informations détaillées sur les agrégateurs disponibles, consultez la documentation [](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html)OpenTSDB. |
+| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation pour réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle de sous-échantillonnage est déterminé par la `granularity` propriété. Pour plus d’informations sur le sous-échantillonnage, reportez-vous à la documentation [](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html)OpenTSDB. |
+
+**Réponse**
+
+Une réponse réussie renvoie les points de données résultants pour les mesures et les filtres spécifiés dans la requête.
+
+```json
+{
+  "metricResponses": [
+    {
+      "metric": "timeseries.ingestion.dataset.recordsuccess.count",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5edcfb2fbb642119194c7d94|5eddb21420f516191b7a8dad",
+          "groupBy": true
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {
+            "dataSetId": "5edcfb2fbb642119194c7d94"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        },
+        {
+          "groupBy": {
+            "dataSetId": "5eddb21420f516191b7a8dad"
+          },
+          "dps": {
+            "2020-07-14T00:00:00Z": 44.0,
+            "2020-07-15T00:00:00Z": 46.0,
+            "2020-07-16T00:00:00Z": 36.0,
+            "2020-07-17T00:00:00Z": 50.0,
+            "2020-07-18T00:00:00Z": 38.0,
+            "2020-07-19T00:00:00Z": 40.0,
+            "2020-07-20T00:00:00Z": 42.0,
+            "2020-07-21T00:00:00Z": 42.0,
+            "2020-07-22T00:00:00Z": 50.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    },
+    {
+      "metric": "timeseries.ingestion.dataset.dailysize",
+      "filters": [
+        {
+          "name": "dataSetId",
+          "value": "5eddb21420f516191b7a8dad",
+          "groupBy": false
+        }
+      ],
+      "datapoints": [
+        {
+          "groupBy": {},
+          "dps": {
+            "2020-07-14T00:00:00Z": 38455.0,
+            "2020-07-15T00:00:00Z": 40213.0,
+            "2020-07-16T00:00:00Z": 31476.0,
+            "2020-07-17T00:00:00Z": 43705.0,
+            "2020-07-18T00:00:00Z": 33227.0,
+            "2020-07-19T00:00:00Z": 34977.0,
+            "2020-07-20T00:00:00Z": 36735.0,
+            "2020-07-21T00:00:00Z": 36737.0,
+            "2020-07-22T00:00:00Z": 43715.0
+          }
+        }
+      ],
+      "granularity": "DAY"
+    }
+  ]
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `metricResponses` | Tableau dont les objets représentent chacune des mesures spécifiées dans la requête. Chaque objet contient des informations sur la configuration du filtre et les données de mesure renvoyées. |
+| `metric` | Nom de l’une des mesures fournies dans la demande. |
+| `filters` | Configuration du filtre pour la mesure spécifiée. |
+| `datapoints` | Tableau dont les objets représentent les résultats de la mesure et des filtres spécifiés. Le nombre d’objets dans le tableau dépend des options de filtre fournies dans la requête. Si aucun filtres n&#39;a été fourni, le tableau ne contiendra qu&#39;un seul objet qui représente tous les jeux de données. |
+| `groupBy` | Si plusieurs jeux de données ont été spécifiés dans la `filter` propriété pour une mesure et que l’ `groupBy` option a été définie sur true dans la requête, cet objet contient l’identifiant du jeu de données auquel s’applique la `dps` propriété correspondante.<br><br>Si cet objet apparaît vide dans la réponse, la `dps` propriété correspondante s&#39;applique à tous les jeux de données fournis dans le `filters` tableau (ou à tous les jeux de données [!DNL Platform] si aucun filtres n&#39;a été fourni). |
+| `dps` | Données renvoyées pour la mesure, le filtre et la période donnés. Chaque clé de cet objet représente un horodatage avec une valeur correspondante pour la mesure spécifiée. La période entre chaque point de données dépend de la `granularity` valeur spécifiée dans la requête. |
 
 ## Annexe
 
@@ -206,3 +368,46 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Horodatage de la dernière requête d’enregistrement de mise à jour pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Taille moyenne des enregistrements. | Organisation IMS (**Obligatoire**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Taux de requêtes de mise à jour pour les enregistrements ingérés pour un jeu de données. | Identifiant du jeu de données (**Obligatoire**) |
+
+### Messages d’erreur
+
+Les réponses du point de `/metrics` terminaison peuvent renvoyer des messages d’erreur dans certaines conditions. Ces messages d’erreur sont renvoyés au format suivant :
+
+```json
+{
+    "type": "http://ns.adobe.com/aep/errors/INSGHT-1000-400",
+    "title": "Bad Request - Start date cannot be after end date.",
+    "status": 400,
+    "report": {
+        "tenantInfo": {
+            "sandboxName": "prod",
+            "sandboxId": "49f58060-5d47-34rd-aawf-a5384333ff12",
+            "imsOrgId": "{IMS_ORG}"
+        },
+        "additionalContext": null
+    },
+    "error-chain": [
+        {
+            "serviceId": "INSGHT",
+            "errorCode": "INSGHT-1000-400",
+            "invokingServiceId": "INSGHT",
+            "unixTimeStampMs": 1602095177129
+        }
+    ]
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `title` | Chaîne contenant le message d’erreur et la raison potentielle pour laquelle il s’est produit. |
+| `report` | Contient des informations contextuelles sur l’erreur, y compris le sandbox et l’organisation IMS utilisées dans l’opération qui l’a déclenchée. |
+
+Le tableau suivant liste les différents codes d’erreur qui peuvent être renvoyés par l’API :
+
+| Code erreur | Titre | Description |
+| --- | --- | --- |
+| `INSGHT-1000-400` | Charge utile de requête incorrecte | Un problème est survenu avec la charge utile de la demande. Assurez-vous de faire correspondre la mise en forme de la charge utile exactement comme indiqué [ci-dessus](#v2). L’une des raisons possibles peut déclencher cette erreur :<ul><li>Champs obligatoires manquants, tels que `aggregator`</li><li>Mesures non valides</li><li>La demande contient un agrégateur non valide</li><li>Une date de début a lieu après une date de fin.</li></ul> |
+| `INSGHT-1001-400` | Échec de la requête des mesures | Une erreur s&#39;est produite lors de la tentative de requête de la base de données des mesures, en raison d&#39;une demande incorrecte ou de l&#39;impossibilité d&#39;analyser la requête elle-même. Assurez-vous que votre requête est correctement formatée avant de réessayer. |
+| `INSGHT-1001-500` | Échec de la requête des mesures | Une erreur s&#39;est produite lors de la tentative de requête de la base de données de mesures, en raison d&#39;une erreur du serveur. Réessayez la demande, et si le problème persiste, contactez l’assistance Adobe. |
+| `INSGHT-1002-500` | Erreur de service | La demande n&#39;a pas pu être traitée en raison d&#39;une erreur interne. Réessayez la demande, et si le problème persiste, contactez l’assistance Adobe. |
+| `INSGHT-1003-401` | Erreur de validation Sandbox | La demande n&#39;a pas pu être traitée en raison d&#39;une erreur de validation de sandbox. Assurez-vous que le nom de sandbox que vous avez indiqué dans l’ `x-sandbox-name` en-tête représente un sandbox valide et activé pour votre organisation IMS avant de réessayer la requête. |
