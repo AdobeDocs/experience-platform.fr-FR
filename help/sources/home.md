@@ -5,10 +5,10 @@ title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: c6c5ada52321b11543254f80399c38365f0fb9d7
+source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
 source-wordcount: '866'
-ht-degree: 60%
+ht-degree: 57%
 
 ---
 
@@ -118,7 +118,7 @@ Le tableau suivant décrit le comportement de l’interface utilisateur en fonct
 
 | Niveau d’autorisation | Description |
 | ---- | ----|
-| **[!UICONTROL Afficher les sources]** activée | Accordez un accès en lecture seule aux sources dans chaque type de source dans l’onglet *Catalogue*, ainsi que dans les onglets *Parcourir*, *Comptes* et *Flux de données*. |
+| **[!UICONTROL Afficher les sources]** activée | Accordez un accès en lecture seule aux sources de chaque type de source dans l’onglet Catalogue, ainsi qu’aux onglets Parcourir, Comptes et Flux de données. |
 | **[!UICONTROL Gérer les sources]** activée | Outre les fonctions incluses dans **[!UICONTROL Afficher les sources]**, elle accorde un accès à l’option **[!UICONTROL Connecter une source]** dans **[!UICONTROL Catalogue]** et l’option **[!UICONTROL Sélectionner les données]** dans **[!UICONTROL Parcourir]**. **[!UICONTROL Gérer les sources]** vous permet également d’activer ou de désactiver **[!UICONTROL les flux de données]** et de modifier leurs planifications. |
 | **[!UICONTROL Afficher les sources]** désactivée et **[!UICONTROL Gérer les sources]** désactivée | Révoquez tous les accès aux sources. |
 
