@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
 source-wordcount: '2335'
 ht-degree: 86%
@@ -302,7 +302,7 @@ L’objectif de la formation est de créer un modèle à l’aide des fonctionna
 
 >[!NOTE]
 > 
->_Les Fonctionnalités_ font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les _étiquettes_.
+>Les Fonctionnalités font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les étiquettes.
 
 La fonction `train()` doit inclure le modèle de formation et renvoyer le modèle formé. Vous trouverez quelques exemples de différents modèles dans la [documentation du guide d’utilisation de scikit-learn](https://scikit-learn.org/stable/user_guide.html).
 
