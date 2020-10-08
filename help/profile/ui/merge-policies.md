@@ -61,7 +61,7 @@ L’écran **[!UICONTROL Créer une stratégie de fusion]** apparaît et vous pe
 
 ### Horodatage trié {#timestamp-ordered}
 
-Comme les enregistrements de Profil sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque **[!UICONTROL l’horodatage ordonné]** est sélectionné comme type de fusion[!UICONTROL d’]attributs pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
+Comme les enregistrements de Profil sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque l’ **[!UICONTROL horodatage ordonné]** est sélectionné comme type de fusion **** Attribut pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
 
 Parfois, il peut être nécessaire de fournir un horodatage personnalisé et de faire en sorte que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système. Par exemple, le renvoi de données ou la vérification de l’ordre correct des événements en cas d’assimilation irrégulière d’enregistrements.
 
