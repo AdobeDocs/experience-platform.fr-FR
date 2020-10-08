@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guide d’utilisation des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: fcced39c0a78457ebb108b7378e32f1b2f75808b
+source-git-commit: 45f42bae4060e107e6c131659cea5d10457c34f8
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 31%
+source-wordcount: '1440'
+ht-degree: 33%
 
 ---
 
@@ -91,7 +91,7 @@ Lors de la sélection d’une valeur de **[!UICONTROL fusion d’attributs]**, v
 
 Par exemple, un cas d’utilisation serait la présence d’informations de votre organisation dans un jeu de données que vous préférez ou dont les données sont davantage de confiance par rapport à un autre jeu de données.
 
-Lors de la sélection de la priorité **** Jeu de données, un panneau distinct s’ouvre et vous demande de sélectionner dans les jeux de données **** disponibles les jeux de données qui seront inclus (ou d’utiliser la case à cocher pour sélectionner tous les jeux de données). You can then drag and drop those datasets into the [**!UICONTROL Selected Datasets]** panel and drag them into the correct order of priority. Le jeu de données le plus élevé aura la priorité la plus élevée, le deuxième jeu de données la plus élevée, etc.
+Lors de la sélection de la priorité **** Jeu de données, un panneau distinct s’ouvre et vous demande de sélectionner dans les jeux de données **** disponibles les jeux de données qui seront inclus (ou d’utiliser la case à cocher pour sélectionner tous les jeux de données). Vous pouvez ensuite faire glisser et déposer ces jeux de données dans le panneau **[!UICONTROL Jeux de données sélectionnés]** et les faire glisser dans l’ordre de priorité correct. Le jeu de données le plus élevé aura la priorité la plus élevée, le deuxième jeu de données la plus élevée, etc.
 
 ![](../images/merge-policies/dataset-precedence.png)
 
