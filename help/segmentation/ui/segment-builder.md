@@ -5,10 +5,10 @@ title: Guide de l’utilisateur du créateur de segments de service de segmentat
 topic: ui guide
 description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 54%
+source-wordcount: '1774'
+ht-degree: 52%
 
 ---
 
@@ -72,6 +72,10 @@ Une définition de segment est un ensemble de règles utilisées pour décrire l
 Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur le canevas du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Available data types include: strings, dates, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot;, and audiences.
 
 ![](../images/ui/segment-builder/rule-builder-canvas.png)
+
+>[!IMPORTANT]
+>
+>Les dernières modifications apportées à Adobe Experience Platform ont mis à jour l&#39;utilisation des opérateurs `OR` et `AND` logiques entre les événements. Ces mises à jour n’affectent pas les segments existants. Cependant, toutes les mises à jour ultérieures des segments existants et des créations de nouveaux segments seront affectées par ces modifications. Veuillez lire la mise à jour [des constantes de](./segment-refactoring.md) temps pour plus d&#39;informations.
 
 ### Ajout d’audiences
 
