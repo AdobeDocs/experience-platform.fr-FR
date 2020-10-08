@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 60%
@@ -78,7 +78,7 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. **** Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema], streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
 
 Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cette valeur est indispensable pour terminer le workflow d’exportation du segment ciblé.
 
