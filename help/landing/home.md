@@ -5,7 +5,7 @@ title: Présentation d’Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Experience Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 translation-type: tm+mt
-source-git-commit: fa667d86c089c692f22cfd1b46f3f11b6e9a68d7
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '936'
 ht-degree: 31%
@@ -76,7 +76,7 @@ La langue de votre interface utilisateur par défaut est déterminée par la ré
 
 La documentation de Adobe Experience Platform est disponible en plusieurs langues. Pour modifier la langue, cliquez dans la liste déroulante des langues et sélectionnez la langue souhaitée.
 
-![image](assets/lang.jpg)
+![image](images/overview/lang.jpg)
 
 ## [!DNL Experience Platform] documentation
 
