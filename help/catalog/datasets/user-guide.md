@@ -5,7 +5,7 @@ title: Guide d’utilisation des jeux de données
 topic: datasets
 description: Ce guide d'utilisation des jeux de données fournit des instructions sur l'exécution d'actions courantes lors de l'utilisation de jeux de données dans l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: eaff457140ba4ac7c25a0f3a3e5aef47d1b99773
+source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -62,10 +62,10 @@ Pour créer un nouveau jeu de données, commencez par cliquer sur **[!UICONTROL 
 
 Sur l’écran suivant, les deux options de création d’un nouveau jeu de données suivantes vous sont proposées :
 
-* [Créer un jeu de données à partir d’un schéma](#create-a-dataset-with-an-existing-schema)
-* [Créer un jeu de données à partir d’un fichier CSV](#create-a-dataset-with-a-csv-file)
+* [Créer un jeu de données à partir d’un schéma](#schema)
+* [Créer un jeu de données à partir d’un fichier CSV](#csv)
 
-### Création d’un jeu de données à partir d’un schéma existant
+### Création d’un jeu de données à partir d’un schéma existant {#schema}
 
 Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour créer un nouveau jeu de données vide.
 
@@ -79,7 +79,7 @@ L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Ajoutez un 
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Création d’un jeu de données à partir d’un fichier CSV
+### Création d’un jeu de données à partir d’un fichier CSV {#csv}
 
 Lorsque vous créez un jeu de données à l’aide d’un fichier CSV, un schéma ad hoc est créé pour fournir une structure au jeu de données qui correspond au fichier CSV fourni. Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur la case intitulée **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]**.
 
