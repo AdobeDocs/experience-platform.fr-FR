@@ -5,9 +5,9 @@ user-guide-title: Aide d’Adobe Experience Platform
 breadcrumb-title: Experience Platform Guide
 user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: 84f1f840e15cb4487807c13131d0787772fa063a
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '323'
 ht-degree: 92%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 92%
 
 * [Présentation d’Experience Platform](home.md)
 * [Prise en main](get-started.md)
+* [Guide de l’utilisateur d’Experience Platform ](./ui-guide.md)
 * Documentation Experience Platform {#documentation}
    * [Présentation de la documentation](documentation/overview.md)
    * [Contrôle d’accès](https://docs.adobe.com/content/help/fr-FR/experience-platform/access-control/home.html)
