@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
-user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
+user-guide-description: Regroupez des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients, de créer des segments d’audience à partir de ces profils et d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: e3017744bfe35c6a60cf921121135352a1119bdd
+source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 85%
+source-wordcount: '489'
+ht-degree: 81%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 85%
       * [Page de détails des destinations](destinations/destination-details-page.md)
    * Catalogue des destinations {#destinations-cat}
       * [Présentation du catalogue des destinations](destinations/destinations-catalog.md)
+      * [Destination HTTP](/help/rtcdp/destinations/http-destination.md)
       * Destinations Adobe {#adobe-destinations}
          * [Présentation des destinations Adobe](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
@@ -148,4 +149,4 @@ ht-degree: 85%
    * [Présentation des sources](sources/sources-overview.md)
    * [Implémentation des balises de site web avec Adobe Launch](sources/launch.md)
 * [Notes de mise à jour des Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
-* [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)
+* [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)
