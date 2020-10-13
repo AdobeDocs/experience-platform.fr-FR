@@ -5,10 +5,10 @@ seo-title: Destinations publicitaires
 description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 seo-description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 87%
+source-wordcount: '219'
+ht-degree: 75%
 
 ---
 
@@ -21,6 +21,21 @@ Lors de la connexion à une destination publicitaire, vos audiences sont envoyé
 
 Actuellement, la plateforme de données clients en temps réel prend en charge les destinations publicitaires répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
 
+## Connexions
+
+Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](/help/rtcdp/destinations/destination-types.md#connections) dans la page Types et Catégories de destination.
+
+
+* [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
+* [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
+* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
+* [Correspondance client Google](/help/rtcdp/destinations/google-customer-match-destination.md)
+
+
+## Extensions
+
+Pour comprendre la différence entre les connexions et les extensions, voir [Extensions](/help/rtcdp/destinations/destination-types.md#extensions) dans la page Types et Catégories de destination.
+
 * [Extension Adobe Advertising Cloud](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
 * [Extension Awin Advertising Conversion Tag](/help/rtcdp/destinations/awin-conversiontag-extension.md)
 * [Extension Awin Advertising Mastertag](/help/rtcdp/destinations/awin-mastertag-extension.md)
@@ -30,13 +45,8 @@ Actuellement, la plateforme de données clients en temps réel prend en charge l
 * [Extension DoubleClick Floodlight](/help/rtcdp/destinations/doubleclick-floodlight-extension.md)
 * [Extension Facebook Pixel](/help/rtcdp/destinations/facebook-pixel-extension.md)
 * [Extension Flashtalking OneTag](/help/rtcdp/destinations/flashtalking-extension.md)
-* [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
-* [Google Ads](/help/rtcdp/destinations/google-ads-destination.md)
 * [Extension Google Ads](/help/rtcdp/destinations/google-ads-extension.md)
-* [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
-* [Correspondance client Google](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Extension Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
 * [Extension LinkedIn Insight Tag](linkedin-extension.md)
 * [Extension Pinterest Conversion Tracking](pinterest-extension.md)
 * [Extension Twitter Universal Website Tag](twitter-uwt-extension.md)
-
