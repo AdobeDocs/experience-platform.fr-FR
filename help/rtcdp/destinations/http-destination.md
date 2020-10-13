@@ -5,7 +5,7 @@ seo-title: La destination HTTP est une destination de plateforme de données cli
 description: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 seo-description: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 translation-type: tm+mt
-source-git-commit: 5a5cbc31c6445f141d41fca5082b666ec3b26510
+source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 7%
