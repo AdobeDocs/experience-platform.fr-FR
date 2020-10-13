@@ -5,10 +5,10 @@ seo-title: Types et catégories de destinations
 description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. '
 seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 92%
+source-wordcount: '580'
+ht-degree: 93%
 
 ---
 
@@ -25,7 +25,7 @@ Dans la plateforme de données clients en temps réel d’Adobe., nous faisons l
 
 <br> 
 
-### Connexions
+### Connexions {#connections}
 
 Les destinations d’**[!UICONTROL exportation de profils]** et d’**[!UICONTROL exportation de segments]** dans la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](/help/profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
 
@@ -37,7 +37,7 @@ Les destinations d’exportation de profils génèrent un fichier contenant des 
 
 #### Destinations d’exportation de segments
 
-Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [[!DNL Google Display &amp; Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
+Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [[!DNL Google Display & Video 360]](/help/rtcdp/destinations/google-dv360-destination.md) or [[!DNL Google Ads]](/help/rtcdp/destinations/google-ads-destination.md) are examples of these types of destinations.
 
 #### Destinations d’exportation de segments et de profils : présentation vidéo
 
@@ -47,7 +47,7 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 <br> 
 
-### Extensions
+### Extensions {#extensions}
 
 La plateforme de données clients en temps réel d’Adobe utilise la puissance et la flexibilité d’Experience Platform Launch pour inclure des extensions Launch dans l’interface de la plateforme de données clients en temps réel d’Adobe.
 
