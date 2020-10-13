@@ -1,13 +1,13 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; audience manager; audience manager destination
+keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
 title: Destinations Adobe
 seo-title: Destinations Adobe
 description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 seo-description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 translation-type: tm+mt
-source-git-commit: d1b87d696e113d229d69059a3a0f1b7786fa5add
+source-git-commit: e3e01474fcd6874f50b929116eff5bdfd4298f22
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 57%
 
 ---
@@ -43,4 +43,4 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Ext
 
 Utilisez la fonctionnalité de partage de segments Experience Platform pour partager vos segments Experience Platform vers d’autres destinations d’Adobe. Reportez-vous à la page ci-dessous pour plus d’informations (s’ouvre dans le portail de documentation de l’Audience Manager) :
 
-* [Partage de segments Experience Platform avec Adobe Audience Manager, Ad Cloud et Cible via l’intégration des services principaux](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+* [Partage de segments Experience Platform avec Adobe Audience Manager, Adobe Advertising Cloud et Adobe Target via l’intégration des services principaux](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
