@@ -2,12 +2,12 @@
 product: adobe experience platform
 audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
-user-guide-description: Regroupez des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients, de créer des segments d’audience à partir de ces profils et d’activer ces segments vers des destinations tierces.
+user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: ac114a7d0313582c6adf05404e0626c618a13253
+source-git-commit: 797aff558f0f8b818609631792e96be3f6277b62
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 81%
+source-wordcount: '490'
+ht-degree: 86%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 81%
       * [Page de détails des destinations](destinations/destination-details-page.md)
    * Catalogue des destinations {#destinations-cat}
       * [Présentation du catalogue des destinations](destinations/destinations-catalog.md)
-      * [Destination HTTP](/help/rtcdp/destinations/http-destination.md)
+      * [ (Alpha) destination HTTP](/help/rtcdp/destinations/http-destination.md)
       * Destinations Adobe {#adobe-destinations}
          * [Présentation des destinations Adobe](destinations/adobe-destinations.md)
          * [Adobe Campaign](destinations/adobe-campaign-destination.md)
