@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 39668013723dcda332558b74cf72b5f93db04461
+source-git-commit: ab87cac94ae69acde3be75ae95b11cf003a274e9
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 14%
+source-wordcount: '281'
+ht-degree: 35%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 14%
 **Date de publication : Octobre 2020**
 
 - [Prép de données](#data-prep)
+- [Sources](#sources)
 
 ## Prép de données {#data-prep}
 
@@ -31,3 +32,19 @@ La préparation des données permet aux ingénieurs de données de mapper, de tr
 | `get_values` fonction | La `get_values` fonction vous permet d&#39;obtenir les valeurs de la carte d&#39;entrée pour une clé donnée. |
 
 For more information, please read the [Data Prep overview](../../data-prep/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+
+[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Mappage hiérarchique | Vous pouvez prévisualisation un fichier source hiérarchique, tel que JSON ou Parquet, pendant le processus d’assimilation des données. |
+| Prise en charge de l’authentification SSH pour SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Platform] l’aide des clés SSH RSA/DSA Open SSH. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| Améliorations de l&#39;environnement | Vous pouvez activer votre jeu de données pendant [!DNL Profile] le processus d&#39;assimilation des données. Pour plus d’informations, consultez le didacticiel sur le flux de travail [des flux de données](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Cloud enregistrement. |
+
+Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
