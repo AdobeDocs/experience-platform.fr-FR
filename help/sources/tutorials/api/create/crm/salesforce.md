@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API de service de flux pour vous guider tout au long des étapes de connexion de la plate-forme à un compte Salesforce pour la collecte de données de gestion de la relation client.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 14%
 
 ---
@@ -145,11 +145,9 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Salesf
 }
 ```
 
-## Créer une connexion de base
+## Création d’une connexion pour l’API
 
-Une connexion de base spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion de base est requise par [!DNL Salesforce] compte, car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
-
-Effectuez la requête de POST suivante pour créer une connexion de base.
+Une connexion pour l’API spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion pour l’API est requise par [!DNL Salesforce] compte car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
 
 **Format d’API**
 
@@ -161,7 +159,7 @@ POST /connections
 
 ```shell
 curl -X POST \
-    'http://platform.adobe.io/data/foundation/flowservice/connections' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -205,4 +203,4 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion de base pour votre [!DNL Salesforce] compte à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de connexion de base dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de gestion de la relation client à l’aide de l’API](../../explore/crm.md)de service de flux.
+En suivant ce didacticiel, vous avez créé une connexion pour votre [!DNL Salesforce] compte à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet identifiant de connexion dans le didacticiel suivant lorsque vous apprendrez à [explorer les systèmes de gestion de la relation client à l’aide de l’API](../../explore/crm.md)de service de flux.
