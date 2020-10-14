@@ -5,10 +5,10 @@ title: Segmentation par flux
 topic: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API de segmentation en flux continu.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 40%
+source-wordcount: '1359'
+ht-degree: 43%
 
 ---
 
@@ -25,15 +25,15 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation de lot ne seront pas évaluées par la segmentation en flux continu et nécessiteront le déclenchement de l’évaluation de lot.
+>La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation par lot ne seront pas évaluées par la segmentation en flux continu et seront évaluées en même temps que la tâche segmentée programmée de nuit.
 
 ## Prise en main
 
 This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[ !Segmentation DNL]](../home.md): Permet de créer des segments et des audiences à partir de vos [!DNL Real-time Customer Profile] données.
-- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
+- [[!DNL Segmentation]](../home.md): Permet de créer des segments et des audiences à partir de vos [!DNL Real-time Customer Profile] données.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
 
@@ -74,26 +74,25 @@ Pour qu’un segment soit évalué à l’aide de la segmentation en flux contin
 | Type de requête | Détails |
 | ---------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. |
-| Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant **au cours des sept derniers jours**. |
+| Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant. |
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. |
-| Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil, **au cours des sept derniers jours**. |
+| Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 La section suivante liste des exemples de définition de segment qui **ne seront pas** activés pour la segmentation en flux continu.
 
 | Type de requête | Détails |
 | ---------- | ------- | 
-| Accès entrant dans une fenêtre de temps relative | Si la définition de segment fait référence à un événement entrant **qui ne se trouve pas** dans la **dernière période** de sept jours. Par exemple, au cours des deux **dernières semaines**. |
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
-| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> |
+| Accès entrant faisant référence à un profil dans une fenêtre relative | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
+| Plusieurs événements faisant référence à un profil | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
 | Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
 | Type de requête | Instruction |
 | ---------- | -------- |
-| Requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
+| Requête événement unique | Il n&#39;y a aucune limite à la fenêtre de recherche en amont. |
 | Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
@@ -336,7 +335,7 @@ curl -X POST \
 | `name` | **(Obligatoire)** Le nom du planning. Doit être une chaîne. |
 | `type` | **(Obligatoire)** Le type de tâche au format chaîne. Les types `batch_segmentation` et `export` sont pris en charge. |
 | `properties` | **(Obligatoire)** Un objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **(Obligatoire lorsque`type`est égal à`batch_segmentation`)** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `properties.segments` | **(Obligatoire lorsque `type` est égal à `batch_segmentation`)** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | **(Obligatoire)** Une chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. L’exemple illustré (`0 0 1 * * ?`) signifie que la tâche est déclenchée tous les jours à 1:00:00 UTC. Pour plus d’informations, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
 | `state` | *(Facultatif)* Chaîne contenant l’état du planning. Valeurs disponibles : `active` et `inactive`. La valeur par défaut est `inactive`. Une organisation IMS ne peut créer qu’un seul planning. Les étapes de mise à jour du planning sont disponibles plus loin dans ce tutoriel. |
 
