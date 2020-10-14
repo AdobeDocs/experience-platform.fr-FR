@@ -5,10 +5,10 @@ title: Fonctions de date
 topic: overview
 description: Ce document présente les fonctions de date utilisées avec l’aperçu des données.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 17%
+source-wordcount: '384'
+ht-degree: 18%
 
 ---
 
@@ -80,4 +80,4 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 
 **Exemple**
 
-L’expression `date(orderDate, 'yyyy-MM-dd')` convertit la date de commande, si sa valeur est &quot;31 décembre 2020&quot;, en une heure de date avec la valeur &quot;2020-12-31&quot;.
+L’expression `date(orderDate, 'yyyy-MM-dd')` convertira la `orderDate` valeur &quot;31 décembre 2020&quot; en la valeur datetime &quot;2020-12-31&quot;.
