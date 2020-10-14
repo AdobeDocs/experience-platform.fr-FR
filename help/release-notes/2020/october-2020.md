@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
+source-git-commit: fc1174c8435c1afc3c58dd748daf89f387a19980
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 28%
+source-wordcount: '591'
+ht-degree: 31%
 
 ---
 
@@ -19,9 +19,10 @@ ht-degree: 28%
 
 - [Prép de données](#data-prep)
 - [Real-time Customer Profile](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Prép de données {#data-prep}
+## Data Prep {#data-prep}
 
 La préparation des données permet aux ingénieurs de données de mapper, de transformer et de valider les données à partir du modèle de données d’expérience (XDM).
 
@@ -44,6 +45,20 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 | Mises à jour de vue schéma Union | Dans l’interface utilisateur de l’Experience Platform, les utilisateurs peuvent plus facilement trouver des informations concernant tous les schémas et jeux de données contribuant au schéma d’union, ainsi que des attributs de surface clés tels que les champs d’identité et de relation. Ces mises à jour permettent de résoudre les problèmes et de vérifier que les profils sont correctement configurés, que les identités sont correctement assemblées et que les données ont été correctement ingérées. |
 
 For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+
+## Segmentation Service {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Suppression des limites de segmentation en flux continu | La limite de sept jours pour la période de consultation a été supprimée. |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
 
 ## Sources {#sources}
 
