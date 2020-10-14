@@ -5,10 +5,10 @@ title: Segmentation par flux
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: c7e8cf31f4c03eec9b24064c6888e09a7070aaa5
+source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 1%
+source-wordcount: '759'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation de lot ne seront pas évaluées par la segmentation en flux continu et nécessiteront le déclenchement de l’évaluation de lot.
+>La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation par lot ne seront pas évaluées par la segmentation en flux continu et seront évaluées en même temps que la tâche segmentée programmée de nuit.
 
 ## Types de requête de segmentation en flux continu
 
@@ -36,26 +36,25 @@ Une requête sera automatiquement évaluée avec la segmentation en flux continu
 | Type de requête | Détails | Exemple |
 | ---------- | ------- | ------- |
 | Accès entrant | Toute définition de segment faisant référence à un seul événement entrant sans restriction de temps. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant **au cours des sept derniers jours**. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Accès entrant dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
 | Profil uniquement | Toute définition de segment faisant référence uniquement à un attribut de profil. |  |
 | Accès entrant faisant référence à un profil | Toute définition de segment faisant référence à un seul événement entrant, sans restriction de temps, et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil, **au cours des sept derniers jours**. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 La section suivante liste des exemples de définition de segment qui **ne seront pas** activés pour la segmentation en flux continu.
 
-| Type de requête | Détails | Exemple |
-| ---------- | ------- | ------- |
-| Accès entrant dans une fenêtre de temps relative | Si la définition de segment fait référence à un événement entrant **qui ne se trouve pas** dans la **dernière période** de sept jours. Par exemple, au cours des deux **dernières semaines**. | ![](../images/ui/streaming-segmentation/relative-hit-failure.png) |
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement entrant **non** compris dans la **dernière période** de sept jours.</li><li>Définition de segment qui inclut [!DNL Adobe Audience Manager (AAM)] des segments ou des caractéristiques.</li></ul> | ![](../images/ui/streaming-segmentation/profile-relative-failure.png) |
-| Plusieurs événements faisant référence à un profil | Les options suivantes **ne prennent pas** en charge la segmentation en flux continu :<ul><li>Événement qui **ne se produit pas** au cours **des dernières 24 heures**.</li><li>Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).</li></ul> | ![](../images/ui/streaming-segmentation/event-history-failure.png) |
-| Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |  |
+| Type de requête | Détails |
+| ---------- | ------- |
+| Accès entrant faisant référence à un profil dans une fenêtre relative | Définition de segment qui inclut [!DNL Adobe Audience Manager (AAM)] des segments ou des caractéristiques. |
+| Plusieurs événements faisant référence à un profil | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
+| Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
-| Type de requête | Ligne directrice |
+| Type de requête | Instruction |
 | ---------- | -------- |
-| Requête événement unique | La fenêtre de rétrospective est limitée à **sept jours**. |
+| Requête événement unique | Il n&#39;y a aucune limite à la fenêtre de recherche en amont. |
 | Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
 
 Si une définition de segment est modifiée de sorte qu’elle ne réponde plus aux critères de la segmentation en flux continu, elle passe automatiquement de &quot;Diffusion en flux continu&quot; à &quot;Lot&quot;.
