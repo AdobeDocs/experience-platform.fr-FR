@@ -5,17 +5,17 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: bf4271cec6126de3b5d9f98df280afdcc798589d
+source-git-commit: 43ceda3d95511c3972fd0588f472c6c412dd95bf
 workflow-type: tm+mt
 source-wordcount: '478'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : Octobre 2020**
+**Date de publication : 14 octobre 2020**
 
 - [Prép de données](#data-prep)
 - [Real-time Customer Profile](#profile)
