@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes de connexion de l'Enregistrement de fichiers Azure à l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: d332226541685108b58d88096146ed6048606774
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 16%
@@ -79,7 +79,6 @@ POST /connections
 **Requête**
 
 The following request creates a new [!DNL Azure File Storage] connection, configured by the properties provided in the payload:
-
 
 ```shell
 curl -X POST \
