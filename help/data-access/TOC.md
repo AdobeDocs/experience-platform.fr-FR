@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Access
-breadcrumb-title: Data Access Guide
-user-guide-description: Discover and access ingested datasets within Platform.
+breadcrumb-title: Guide d’accès aux données
+user-guide-description: Découvrez les jeux de données ingérés et accédez à ces derniers dans Platform.
 translation-type: tm+mt
 source-git-commit: eb8bb8a744c5f3a5e390c1282ad894293184c4ee
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 77%
+source-wordcount: '37'
+ht-degree: 83%
 
 ---
 
