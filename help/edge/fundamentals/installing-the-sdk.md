@@ -5,17 +5,17 @@ description: Découvrez la procédure d’installation du SDK Web d’Experience
 seo-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 keywords: web sdk installation;installing web sdk;internet explorer;promise;
 translation-type: tm+mt
-source-git-commit: 7aa0e654300f10db774794d66ece9d0d040cb2ba
+source-git-commit: 5ef902ef7f7717121744f7f0074c0aa17e5a9e9a
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 66%
+source-wordcount: '626'
+ht-degree: 65%
 
 ---
 
 
 # Installation du SDK {#installing-the-sdk}
 
-La méthode privilégiée pour utiliser le SDK Web de Adobe Experience Platform est le [lancement](http://launch.adobe.com/). Recherchez l&#39;extension `AEP Web SDK` dans le catalogue d&#39;extensions, installez-la, puis configurez-la.
+La méthode préférée pour utiliser le Adobe Experience Platform Web SDK est via [Adobe Experience Platform Launch](http://launch.adobe.com/). Recherchez l&#39;extension `AEP Web SDK` dans le catalogue d&#39;extensions, installez-la, puis configurez-la.
 
 Le SDK Web AEP est également disponible sur un CDN que vous pouvez utiliser. Vous pouvez référencer ce fichier ou le télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans une version réduite et non réduite. La version non réduite est utile pour le débogage.
 
@@ -26,7 +26,7 @@ Par exemple :
 * Minifié : [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.min.js)
 * Non minifié : [https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.1.0/alloy.js)
 
-## ajouter le code {#adding-the-code}
+## Ajouter le code {#adding-the-code}
 
 The first step in implementing the Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
 
