@@ -5,10 +5,10 @@ description: Découvrez la procédure de suivi des événements du SDK Web d’E
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 69ddfca041624123b03eb01d0f10a5bdb36cd119
+source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 71%
+source-wordcount: '1139'
+ht-degree: 69%
 
 ---
 
@@ -54,7 +54,7 @@ Actuellement, l’envoi de données qui ne correspondent pas à un schéma XDM n
 
 ### Définition de `eventType`
 
-In an XDM experience event, there is an optional `eventType` field. Il contient le type d’événement principal pour l’enregistrement. Définir un type d&#39;événement peut vous aider à différencier les différents événements que vous allez envoyer. XDM fournit plusieurs types d&#39;événement prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d&#39;événement personnalisés pour vos cas d&#39;utilisation. Vous trouverez ci-dessous une liste de tous les types d&#39;événement prédéfinis fournis par XDM.
+In an XDM experience event, there is an optional `eventType` field. Il contient le type d’événement principal pour l’enregistrement. Définir un type d&#39;événement peut vous aider à différencier les différents événements que vous allez envoyer. XDM fournit plusieurs types d&#39;événement prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d&#39;événement personnalisés pour vos cas d&#39;utilisation. Vous trouverez ci-dessous une liste de tous les types d&#39;événement prédéfinis fournis par XDM. [En savoir plus sur le repo public XDM](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values)
 
 
 | **Type d’événement:** | **Définition:** |
@@ -83,7 +83,7 @@ In an XDM experience event, there is an optional `eventType` field. Il contient 
 | delivery.feedback | Événements de commentaires pour une diffusion. Exemples de événements de commentaire pour une diffusion de courriel |
 
 
-Ces types d&#39;événement s&#39;afficheront dans une liste déroulante si vous utilisez l&#39;extension Launch ou si vous pouvez toujours les transmettre sans Launch. They can be passed in as part of the `xdm` option.
+Ces types d&#39;événement s&#39;afficheront dans une liste déroulante si vous utilisez l&#39;extension Adobe Experience Platform Launch ou si vous pouvez toujours les transmettre sans Experience Platform Launch. They can be passed in as part of the `xdm` option.
 
 
 ```javascript
@@ -129,9 +129,9 @@ alloy("sendEvent", {
 });
 ```
 
-### ajouter des informations d&#39;identité
+### Ajouter des informations d&#39;identité
 
-Des informations d&#39;identité personnalisées peuvent également être ajoutées au événement. Voir [Récupération de l’ID d’Experience Cloud](./identity.md)
+Des informations d&#39;identité personnalisées peuvent également être ajoutées au événement. Voir [Récupération de l’ID d’Experience Cloud](../identity/overview.md)
 
 ## Utilisation de l’API sendBeacon
 
@@ -205,7 +205,7 @@ alloy("configure", {
 Les champs `xdm` sont définis dans l’ordre suivant :
 
 1. Valeurs transmises sous forme d’options à la commande d’événement `alloy("sendEvent", { xdm: ... });`
-2. Valeurs collectées automatiquement  (voir [Informations automatiques](../reference/automatic-information.md))
+2. Valeurs collectées automatiquement  (voir [Informations automatiques](../data-collection/automatic-information.md))
 3. Modifications apportées dans le rappel `onBeforeEventSend`
 
 Si le rappel `onBeforeEventSend` renvoie une exception, l’événement est toujours envoyé ; toutefois, aucune des modifications apportées dans le rappel n’est appliquée à l’événement final.
