@@ -5,10 +5,10 @@ description: Découvrez comment activer/désactiver le débogage du SDK Web d’
 seo-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
 keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: e21374eb51ec1d572f6a4973d33cadf9ae17969b
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 91%
+source-wordcount: '384'
+ht-degree: 92%
 
 ---
 
@@ -68,3 +68,17 @@ Lorsque le débogage est défini par le biais de la commande`debug` ou du param�
 * la fin de votre session ;
 * l’exécution de la commande `debug` ;
 * la nouvelle définition du paramètre de chaîne de requête.
+
+## Récupération des informations sur la bibliothèque
+
+Il est souvent utile d’accéder à certains détails de la bibliothèque que vous avez chargée sur votre site web. Pour cela, exécutez la commande `getLibraryInfo` de la manière suivante :
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+Actuellement, l’objet `libraryInfo` fourni contient les propriétés suivantes :
+
+* `version` Il s’agit de la version de la bibliothèque chargée. Par exemple, si la version de la bibliothèque chargée est 1.0.0, la valeur est `1.0.0`.
