@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide aux environnements de test dans Adobe Experience Platform
-breadcrumb-title: Sandoxes Guide
-user-guide-description: Partition a Platform instance into virtual environments for development, testing, and application deployment.
+breadcrumb-title: Guide des environnements de test
+user-guide-description: Partitionnez une instance de Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 95%
+source-wordcount: '86'
+ht-degree: 96%
 
 ---
 
