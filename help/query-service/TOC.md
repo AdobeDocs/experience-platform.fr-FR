@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide d’Adobe Experience Platform Query Service
-breadcrumb-title: Query Service Guide
-user-guide-description: Use standard SQL to query data in Platform Data Lake.
+breadcrumb-title: Guide de Query Service
+user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '147'
 ht-degree: 97%
 
 ---
