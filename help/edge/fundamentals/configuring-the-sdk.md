@@ -5,7 +5,7 @@ description: Découvrez la procédure de configuration du SDK Web d’Experience
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
 workflow-type: tm+mt
 source-wordcount: '749'
 ht-degree: 78%
@@ -46,7 +46,7 @@ L’ID de configuration que vous avez attribué, qui lie le SDK aux comptes et �
 | ---------------- | ------------ | -------------------------------------------------- |
 | Tableau de chaînes | Non | `["web", "device", "environment", "placeContext"]` |
 
-Indique les catégories contextuelles à collecter automatiquement, comme décrit dans la section [Informations automatiques](../reference/automatic-information.md).  Si cette configuration n’est pas spécifiée, toutes les catégories sont utilisées par défaut.
+Indique les catégories contextuelles à collecter automatiquement, comme décrit dans la section [Informations automatiques](../data-collection/automatic-information.md).  Si cette configuration n’est pas spécifiée, toutes les catégories sont utilisées par défaut.
 
 ### `debugEnabled`
 
@@ -109,7 +109,7 @@ Définissez cette option pour configurer un rappel appelé pour chaque événeme
 | -------- | ------------ | ----------------- |
 | Objet | Non | `"in"` |
 
-Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. L’autre valeur valide est `"pending"`. Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement. Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](supporting-consent.md).
+Définit le consentement par défaut de l’utilisateur. Cette option est utilisée lorsqu’aucune préférence de consentement n’est déjà enregistrée pour l’utilisateur. L’autre valeur valide est `"pending"`. Lorsque cette option est définie, le travail est mis en file d’attente jusqu’à ce que l’utilisateur indique ses préférences de consentement. Une fois les préférences de l’utilisateur fournies, le travail se poursuit ou est abandonné en fonction de celles-ci. Pour plus d’informations, voir [Prise en charge du consentement](../consent/supporting-consent.md).
 
 ## Options de personnalisation
 
