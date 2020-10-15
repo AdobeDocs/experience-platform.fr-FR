@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
+source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 76%
+source-wordcount: '1215'
+ht-degree: 75%
 
 ---
 
@@ -22,8 +22,8 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
-- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
 De plus, pour suivre ce tutoriel, vous devez avoir déjà créé une connexion en continu. Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
@@ -101,7 +101,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Le nom que vous souhaitez utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous êtes en train de créer. |
-| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Réponse**
 
@@ -312,10 +312,13 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Requête**
 
+L’insertion de données de série chronologique sur une connexion de flux continu peut se faire avec ou sans le nom source.
+
+L&#39;exemple de requête ci-dessous ingère des données de série chronologique avec un nom source manquant à la plate-forme. Si le nom de la source est absent des données, l’ID source est ajouté à partir de la définition de connexion de flux continu.
+
 >[!NOTE]
 >
 >Vous devrez générer vos propres `xdmEntity._id` et `xdmEntity.timestamp`. Un bon moyen de générer un identifiant est d’utiliser un UUID. De plus, l’appel API suivant ne nécessite **pas** d’en-têtes d’authentification.
-
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -378,6 +381,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         }
     }
 }'
+```
+
+Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’inclure.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
 ```
 
 **Réponse**
