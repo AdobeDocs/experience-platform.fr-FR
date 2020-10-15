@@ -2,13 +2,13 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;destinations;destination;rtcdp
 title: Présentation des destinations
 seo-title: Présentation des destinations
-description: Activez les données de la plateforme vers les destinations pour les campagnes marketing inter-canaux, les courriels, les publicités ciblées, etc.
+description: Activez les données de Platform vers des destinations pour les campagnes marketing intercanaux, les emails, les publicités ciblées, et bien plus encore.
 seo-description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent l’activation transparente des données provenant de la plateforme des données clients en temps réel. Vous pouvez utiliser les destinations dans la plateforme des données clients en temps réel d’Adobe pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
 source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
 workflow-type: tm+mt
 source-wordcount: '491'
-ht-degree: 71%
+ht-degree: 73%
 
 ---
 
