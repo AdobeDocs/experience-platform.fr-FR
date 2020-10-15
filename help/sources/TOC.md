@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
-breadcrumb-title: Source Connectors Guide
-user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+breadcrumb-title: Guide des connecteurs sources
+user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
 source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 7%
+source-wordcount: '645'
+ht-degree: 10%
 
 ---
 
@@ -73,7 +73,7 @@ ht-degree: 7%
       - Publicité {#advertising}
          - [Connecteur Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud storage {#cloud-storage}
-         - [amazon](tutorials/api/create/cloud-storage/kinesis.md)
+         - [Amazon](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
          - [Connecteur de blocage Azure](tutorials/api/create/cloud-storage/blob.md)
