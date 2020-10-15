@@ -2,15 +2,15 @@
 keywords: Experience Platform;home;popular topics;API error codes;API error code;error code API;error codes API;API request error;API troubleshooting;API error
 solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
-description: Trouvez des réponses aux questions fréquentes et un guide pour dépanner les erreurs courantes dans l’Experience Platform.
+description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 topic: getting started
 type: Documentation
-user-guide-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
+user-guide-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 translation-type: tm+mt
 source-git-commit: bc7c0a5d59c666ba80fac81a859b5ecf4dd37412
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 73%
+source-wordcount: '1956'
+ht-degree: 75%
 
 ---
 
@@ -243,15 +243,15 @@ The following is a list of troubleshooting guides and API reference documentatio
 | Service | Référence d’API | Dépannage |
 | --- | --- | --- |
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
-| Adobe Experience Platform Data Ingestion | [[ ! API d&#39;importation de données DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guide de dépannage de l&#39;assimilation par lots](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guide de dépannage de l&#39;assimilation en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Espace de travail des données Adobe Experience Platform | [[ ! DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guide de dépannage](../data-science-workspace/troubleshooting-guide.md) |
-| Gouvernance des données d’Adobe Experience Platform | [[ ! API du service de stratégie DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
-| Adobe Experience Platform Identity Service | [[ ! API du service d&#39;identité DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guide de dépannage](../identity-service/troubleshooting-guide.md) |
-| Adobe Experience Platform Query Service | [[ ! API du service de Requête DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guide de dépannage](../query-service/troubleshooting-guide.md) |
-| Segmentation Adobe Experience Platform | [[ ! API de segmentation DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
-| [!DNL Catalog Service] | [[ ! API du service de catalogue DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
-| [!DNL Experience Data Model] (XDM) | [[ ! API de registre de Schéma DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ et guide de dépannage](../xdm/troubleshooting-guide.md) |
-| [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[ ! API du service de flux DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
-| [!DNL Real-time Customer Profile] | [[ ! API de Profil client en temps réel DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guide de dépannage](../profile/troubleshooting.md) |
+| Adobe Experience Platform Data Ingestion | [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) | [Guide de dépannage de l&#39;assimilation par lots](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Guide de dépannage de l&#39;assimilation en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Espace de travail des données Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] guide de dépannage](../data-science-workspace/troubleshooting-guide.md) |
+| Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) |  |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] guide de dépannage](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml) | [[!DNL Query Service] guide de dépannage](../query-service/troubleshooting-guide.md) |
+| Segmentation Adobe Experience Platform | [[!DNL Segmentation API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml) |
+| [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
+| [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQ et guide de dépannage](../xdm/troubleshooting-guide.md) |
+| [!DNL Flow Service] ([!DNL Sources] et [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] guide de dépannage](../profile/troubleshooting.md) |
 | Environnements de test | [API Sandbox](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Guide de dépannage des environnements de test](../sandboxes/troubleshooting-guide.md) |
 
