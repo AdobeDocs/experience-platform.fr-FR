@@ -6,10 +6,10 @@ title: Surveiller les comptes et les flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2514c282d16a1b6ddb2232e46e6283ab2ab3d356
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 5%
+source-wordcount: '1103'
+ht-degree: 6%
 
 ---
 
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 - [[!DNL Experience Data Model] (XDM) Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [[ !Profil client en temps réel DNL]](../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Surveiller les comptes
 
@@ -54,6 +54,10 @@ De plus, vous pouvez modifier les informations de compte existantes et mettre à
 ![](../../images/tutorials/monitor/click-edit.png)
 
 Le module **[!UICONTROL Modifier les détails]** du compte s&#39;affiche. Cette page vous permet de mettre à jour les informations de compte et les informations d’identification d’authentification existantes.
+
+>[!NOTE]
+>
+> La modification des détails du compte est disponible sur tous les connecteurs d’origine par lot.
 
 ![](../../images/tutorials/monitor/edit-account.png)
 
