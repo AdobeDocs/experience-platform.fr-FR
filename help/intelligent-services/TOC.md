@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide d’Intelligent Services
-breadcrumb-title: Intelligent Services Guide
-user-guide-description: Utilize intelligent AI services to generate scores, discover insights, and create segments from your marketing events data.
+breadcrumb-title: Guide des services intelligents
+user-guide-description: Utilisez les services intelligents d’IA pour générer des scores, découvrir des insights et créer des segments à partir des données de vos événements marketing.
 translation-type: tm+mt
 source-git-commit: ada5a34ffa3ea9c90ff578ab27f425b82f7ed18c
 workflow-type: tm+mt
-source-wordcount: '94'
-ht-degree: 48%
+source-wordcount: '114'
+ht-degree: 57%
 
 ---
 
