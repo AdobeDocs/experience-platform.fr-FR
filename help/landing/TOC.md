@@ -5,10 +5,10 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 13aa49c28db0818df5d47560ae7a220d0790610f
+source-git-commit: e36a6be43bffa90ce707933c5f9407fade0b6474
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 73%
+source-wordcount: '402'
+ht-degree: 72%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 73%
    * [Rôles et phases du projet (vidéo)](video/roles-project-phases.md)
 * Interface utilisateur Experience Platform {#platform-ui}
    * [Guide de l’interface utilisateur de la plate-forme](ui-guide.md)
+   * [Guide des workflows de plateforme](workflows.md)
    * [Visite de l’interface utilisateur de la plate-forme (vidéo)](video/platform-ui.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
 * API Experience Platform {#platform-apis}
