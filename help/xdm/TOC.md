@@ -5,10 +5,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de Data Model (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 90%
+source-wordcount: '194'
+ht-degree: 73%
 
 ---
 
@@ -16,12 +16,43 @@ ht-degree: 90%
 # Système de modèle de données d’expérience (XDM) {#xdm}
 
 * [Présentation du système XDM](home.md)
-* Schémas XDM {#schema}
+* Schémas {#schema}
    * [Principes de base de la composition des schémas](schema/composition.md)
    * [Contraintes de type de champ XDM](schema/field-constraints.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
    * Cas d&#39;utilisation de schéma {#use-cases}
       * [Mélange de consentement de confidentialité](schema/privacy-consent.md)
+* Classes {#classes}
+   * [XDM Individual Profile](./classes/individual-profile.md)
+   * [XDM ExperienceEvent](./classes/experienceevent.md)
+* Mélanges {#mixins}
+   * Mélanges profils {#profile}
+      * [IdentityMap](./mixins/profile/identitymap.md)
+      * [Détails de la personne profil](./mixins/profile/person-details.md)
+      * [Détails personnels du profil](./mixins/profile/personal-details.md)
+      * [Segmentation des profils](./mixins/profile/segmentation.md)
+      * [Détails du travail profil](./mixins/profile/work-details.md)
+   * Mélanges événements {#event}
+      * [ID d’utilisateur final ExperienceEvent](./mixins/event/enduserids.md)
+      * [Détails de l’environnement ExperienceEvent](./mixins/event/environment-details.md)
+* Types des données {#data-types}
+   * [Balise](./data-types/beacon.md)
+   * [Détails du navigateur](./data-types/browser-details.md)
+   * [Appareil](./data-types/device.md)
+   * [Adresse électronique](./data-types/email-address.md)
+   * [Environnement](./data-types/environment.md)
+   * [Géo](./data-types/geo.md)
+   * [Cercle géographique](./data-types/geo-circle.md)
+   * [Coordonnées géographiques](./data-types/geo-coordinates.md)
+   * [Détails de l’interaction géographique](./data-types/geo-interaction-details.md)
+   * [Forme géographique](./data-types/geo-shape.md)
+   * [Identité](./data-types/identity.md)
+   * [Nom de la personne](./data-types/person-name.md)
+   * [Numéro de téléphone](./data-types/phone-number.md)
+   * [Contexte de l’emplacement](./data-types/place-context.md)
+   * [Détails de la publication](./data-types/poi-details.md)
+   * [Interaction POI](./data-types/poi-interaction.md)
+   * [Adresse postale](./data-types/postal-address.md)
 * API Schema Registry {#api}
    * [Prise en main](api/getting-started.md)
    * [Liste des ressources](api/list-resources.md)
