@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Le document suivant contient des exemples d’accès aux données à l’aide de Spark en vue de les utiliser dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: e1035f3d1ad225a0892c5f97ca51618cd6b47412
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -38,7 +38,6 @@ Class Helper {
 
    def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
             // Read the configs
-            val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
             val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
             val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
             val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -60,7 +59,6 @@ Vous trouverez ci-dessous un exemple de lecture d’un jeu de données en mode i
 
 ```scala
   // Read the configs
-    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
     val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
     val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
     val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -71,7 +69,6 @@ Vous trouverez ci-dessous un exemple de lecture d’un jeu de données en mode i
     // Load the dataset
     var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "interactive")
@@ -88,7 +85,6 @@ De même, vous trouverez ci-dessous un exemple de lecture d’un jeu de données
 ```scala
 val df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.mode, "batch")
@@ -158,7 +154,6 @@ df = df.limit(100)
 A l’aide de votre `configProperties` mappage, vous pouvez écrire dans un jeu de données dans l’Experience Platform à l’aide `QSOption`.
 
 ```scala
-val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
 val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
 val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
 val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
@@ -166,7 +161,6 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
     df.write.format(PLATFORM_SDK_PQS_PACKAGE)
       .option(QSOption.userToken, userToken)
-      .option(QSOption.serviceToken, serviceToken)
       .option(QSOption.imsOrg, orgId)
       .option(QSOption.apiKey, apiKey)
       .option(QSOption.datasetId, scoringResultsDataSetId)
