@@ -5,9 +5,9 @@ title: Système de modèle de données d’expérience (XDM)
 topic: overview
 description: 'La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1639'
 ht-degree: 60%
 
 ---
@@ -48,7 +48,7 @@ Tous les schémas XDM décrivent des données pouvant être catégorisées en ta
 
 Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. Ces classes sont décrites plus en détail ci-dessous.
 
-### [!DNL XDM Individual Profile]
+### [!DNL XDM Individual Profile] (#xdm-individuel-profil)
 
 [!DNL XDM Individual Profile] est une classe basée sur les enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses électroniques.
 
