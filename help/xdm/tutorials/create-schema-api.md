@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorials
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: de3d3a12e5e362bfa5d3149481a0eb7a6b278b70
 workflow-type: tm+mt
-source-wordcount: '2368'
-ht-degree: 82%
+source-wordcount: '2343'
+ht-degree: 84%
 
 ---
 
@@ -24,10 +24,10 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-* [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[ !Sandbox DNL]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 
@@ -956,7 +956,7 @@ L’exécution d’une requête GET pour consulter le schéma indique maintenant
 
 ### Définition d’un descripteur d’identité
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. The graph data can then be accessed by [[!DNL Real-time Customer Profile]](../../profile/home.md) and other [!DNL Experience Platform] services to provide a stitched together view of each individual customer.
+Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-time Customer Profile]](../../profile/home.md)[!DNL Experience Platform] et d’autres services afin de fournir une vue d’ensemble de chaque client individuel.
 
 Fields that are commonly marked as &quot;Identity&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, or other unique ID fields.
 
@@ -1614,7 +1614,7 @@ Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
                 "stateProvince": {
                     "title": "State or province",
                     "type": "string",
-                    "description": "The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)][http://www.unece.org/cefact/locode/subdivisions.html] standard.",
+                    "description": "The state, or province portion of the observation. The format follows the ISO 3166-2 (country and subdivision) standard.",
                     "examples": [
                         "US-CA",
                         "DE-BB",
