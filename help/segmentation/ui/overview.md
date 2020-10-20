@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
 workflow-type: tm+mt
-source-wordcount: '1467'
-ht-degree: 25%
+source-wordcount: '1449'
+ht-degree: 26%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 25%
 
 Working with segment definitions requires an understanding of the various [!DNL Experience Platform] services involved with segmentation. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
-- [[ !Service de segmentation DNL]](../home.md): [!DNL Segmentation Service] vous permet de diviser les données stockées dans [!DNL Experience Platform] des données relatives à des individus (tels que des clients, des prospects, des utilisateurs ou des organisations) en groupes plus petits.
-- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [[ !Service d&#39;identité Adobe Experience Platform DNL]](../../identity-service/home.md): Permet la création de profils client en faisant le lien entre les identités issues de sources de données disparates et qui sont incorporées dans [!DNL Platform].
-- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] vous permet de diviser les données stockées dans [!DNL Experience Platform] des données relatives à des individus (tels que des clients, des prospects, des utilisateurs ou des organisations) en groupes plus petits.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permet la création de profils client en faisant le lien entre les identités issues de sources de données disparates et qui sont incorporées dans [!DNL Platform].
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
 
 Il est également important de connaître deux termes clés utilisés dans ce document et de comprendre la différence entre eux :
 - **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible.
