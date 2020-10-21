@@ -5,10 +5,10 @@ description: Découvrez comment envoyer des données de lien vers l'Adobe Analyt
 seo-description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 translation-type: tm+mt
-source-git-commit: ab1618a9d8c6cc60407d301dad03983ce432bbbe
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
@@ -46,7 +46,7 @@ Le type de lien peut être l’une des trois valeurs suivantes :
 
 ## Suivi automatique des liens {#automaticLinkTracking}
 
-Par défaut, le SDK Web capture, [étiquette](#labelingLinks)et [enregistre les clics sur les balises de lien](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) qualifiantes [](#qualifyingLinks) . Les clics sont capturés à l’aide d’un écouteur de événement de [capture](https://www.w3.org/TR/uievents/#capture-phase) de clics attaché au document.
+Par défaut, le SDK Web capture, [étiquette](#labelingLinks)et [enregistre les clics sur les balises de lien](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) qualifiantes [](#qualifyingLinks) . Les clics sont capturés à l’aide d’un écouteur de événement de [capture](https://www.w3.org/TR/uievents/#capture-phase) de clics attaché au document.
 
 Vous pouvez désactiver le suivi automatique des liens en [configurant](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) le SDK Web.
 
