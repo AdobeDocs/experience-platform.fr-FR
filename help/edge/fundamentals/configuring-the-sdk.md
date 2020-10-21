@@ -5,10 +5,10 @@ description: Découvrez la procédure de configuration du SDK Web d’Experience
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 233bbd33e3d1e89ff67a9daa00372732934ac573
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
 source-wordcount: '749'
-ht-degree: 78%
+ht-degree: 76%
 
 ---
 
@@ -85,7 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Lors de la configuration
 | -------- | ------------ | ----------------- |
 | Booléen | Non | `true` |
 
-Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Pour les clics considérés comme des clics sur des liens, les données d’[interaction Web](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) suivantes sont collectées :
+Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Pour les clics considérés comme des clics sur des liens, les données d’[interaction Web](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) suivantes sont collectées :
 
 | **Propriété** | **Description** |
 | ------------ | ----------------------------------- |
