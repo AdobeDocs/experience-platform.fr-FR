@@ -5,9 +5,9 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: '753'
 ht-degree: 63%
 
 ---
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Lorsque le consentement est défini de cette manière, le Profil client en temps réel est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/context/profile-privacy.schema.md). Lors de l’envoi de événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet XDM du événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, le Mélange de confidentialité [Experience Événement](https://github.com/adobe/xdm/blob/master/docs/reference/context/experienceevent-privacy.schema.md) doit être ajouté au schéma Experience Événement.
+Lorsque le consentement est défini de cette manière, le Profil client en temps réel est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi de événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet XDM du événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, le Mélange de confidentialité [Experience Événement](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) doit être ajouté au schéma Experience Événement.
 
 ## Envoi des deux normes dans une seule requête
 
