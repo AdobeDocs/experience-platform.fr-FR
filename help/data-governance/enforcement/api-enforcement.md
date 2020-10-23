@@ -6,10 +6,10 @@ topic: enforcement
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des stratégies d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 63%
+source-wordcount: '993'
+ht-degree: 60%
 
 ---
 
@@ -170,7 +170,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -179,6 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
 | `entityId` | Chaque élément du tableau de payload doit fournir l’identifiant unique d’un jeu de données. |
+| `entityMeta.fields` | (Facultatif) Tableau de chaînes de pointeur [](../../landing/api-fundamentals.md#json-pointer) JSON faisant référence à des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans le tableau participent à l&#39;évaluation. Les champs de schéma qui ne sont pas inclus dans la baie ne participent pas à l&#39;évaluation.<br><br>Si ce champ n&#39;est pas inclus, tous les champs du schéma de jeux de données seront inclus dans l&#39;évaluation. |
 
 **Réponse**
 
@@ -304,13 +311,13 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
