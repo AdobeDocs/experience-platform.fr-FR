@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 topic: overview
 description: Adobe Experience Platform Privacy Service traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts fondamentaux liés au traitement des demandes d’accès à des informations personnelles concernant les données clients stockées dans le lac de données.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 32%
+source-wordcount: '1272'
+ht-degree: 35%
 
 ---
 
@@ -23,10 +23,10 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[ !Privacy Service DNL]](../privacy-service/home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou supprimer leurs données personnelles.
-* [[ !Service de catalogue DNL]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-* [[ !Service d&#39;identité DNL]](../identity-service/home.md): Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
+* [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [[!DNL Catalog Service]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
@@ -136,6 +136,10 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et les détails du des
 >This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 La section suivante décrit comment effectuer des demandes de confidentialité pour l’ [!DNL Data Lake] utilisation de l’ [!DNL Privacy Service] interface utilisateur ou de l’API.
+
+>[!IMPORTANT]
+>
+>Le temps qu&#39;une demande de protection des renseignements personnels peut prendre pour être traitée ne peut pas être garanti. Si des changements se produisent dans Data Lake alors qu’une demande est en cours de traitement, il n’est pas non plus possible de garantir que ces dossiers sont traités ou non.
 
 ### Utilisation de l’interface utilisateur
 
