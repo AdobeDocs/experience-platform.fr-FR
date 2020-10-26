@@ -5,10 +5,10 @@ title: Principes de base de la composition des schémas
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: 7aac7b717b47466527434024e40d19ae70296e55
 workflow-type: tm+mt
-source-wordcount: '2834'
-ht-degree: 58%
+source-wordcount: '3099'
+ht-degree: 48%
 
 ---
 
@@ -29,7 +29,7 @@ Outre la description de la structure des données, les schémas appliquent des c
 
 Lorsque vous travaillez avec des bases de données relationnelles, les bonnes pratiques consistent à normaliser les données ou à prendre une entité et à la diviser en éléments individuels qui sont ensuite affichés sur plusieurs tableaux. Pour pouvoir lire les données dans leur ensemble ou mettre à jour l’entité, des opérations de lecture et d’écriture doivent être effectuées sur plusieurs tableaux individuels à l’aide de la fonction REJOINDRE.
 
-Grâce aux objets intégrés, les schémas XDM peuvent représenter des données complexes directement et les conserver dans des documents autonomes possédant une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés.
+Grâce aux objets incorporés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. Il n&#39;existe aucune restriction stricte quant au nombre de niveaux de hiérarchie de votre schéma.
 
 ### Schémas et Big Data
 
@@ -42,6 +42,8 @@ Les schémas permettent de résoudre ce problème en permettant l’intégration
 La normalisation est un concept clé derrière [!DNL Experience Platform]. XDM, piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas standard pour la gestion de l’expérience client.
 
 L’infrastructure sur laquelle [!DNL Experience Platform] est construite, appelée [!DNL XDM System]&quot;infrastructure&quot;, facilite les workflows basés sur le schéma et inclut les [!DNL Schema Registry][!DNL Schema Editor]métadonnées de schéma et les schémas de consommation de services. Pour plus d’informations, consultez la [présentation du système XDM](../home.md).
+
+Il y a plusieurs avantages essentiels à la construction et à l&#39;utilisation de schémas dans [!DNL Experience Platform]le secteur. Tout d&#39;abord, les schémas permettent une meilleure gouvernance des données et une meilleure minimisation des données, ce qui est particulièrement important avec la réglementation sur la protection des renseignements personnels. Deuxièmement, la création de schémas avec des composants standard de l&#39;Adobe permet d&#39;obtenir des informations prêtes à l&#39;emploi et d&#39;utiliser les services AI/ML avec un minimum de personnalisations. Enfin, les schémas fournissent une infrastructure pour le partage des données et une orchestration efficace.
 
 ## Planification de votre schéma
 
@@ -135,19 +137,13 @@ Les schémas sont composés à l’aide de la formule suivante :
 
 &amp;ast;Un schéma est composé d’une classe et de zéro, un ou plusieurs mixins. Cela signifie que vous pouvez composer un schéma du jeu de données sans utiliser de mixins.
 
-### Classe
+### Classe {#class}
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrements ou séries temporelles). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
-Une classe détermine également les mixins éligibles à utiliser dans le schéma. Ce sujet est discuté plus en détail dans la section suivante consacrée aux [mixins](#mixin).
+Une classe de schéma détermine quels mixins seront admissibles à l&#39;utilisation dans ce schéma. Cette question est traitée plus en détail dans la section [](#mixin)suivante.
 
-There are standard classes provided with every integration of [!DNL Experience Platform], known as &quot;Industry&quot; classes. Les classes de secteur sont généralement des normes acceptées par le secteur qui s’appliquent à un grand nombre de cas d’utilisation. Examples of Industry classes include the [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] classes provided by Adobe.
-
-[!DNL Experience Platform][!DNL Experience Platform] autorise également les classes « Fournisseur » qui sont des classes définies par les partenaires et rendues disponibles pour tous les clients qui utilisent ce service fournisseur ou l’application dans [!DNL Platform].
-
-There are also classes used to describe more specific use cases for individual organizations within [!DNL Platform], called &quot;Customer&quot; classes. Les classes de client sont définies par une organisation lorsqu’il n’y a pas de classes de secteur ou de fournisseur disponibles pour décrire un cas d’utilisation unique.
-
-For example, a schema representing members of a Loyalty program describes record data about an individual and therefore can be based on the [!DNL XDM Individual Profile] class, a standard Industry class defined by Adobe.
+Adobe fournit deux classes XDM standard (&quot;core&quot;) : [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent]. Outre ces classes de base, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques pour votre entreprise. Les classes personnalisées sont définies par une organisation lorsqu&#39;il n&#39;existe aucune classe de base définie par Adobe disponible pour décrire un cas d&#39;utilisation unique.
 
 ### Mixin {#mixin}
 
@@ -155,15 +151,21 @@ Un mixin est un composant réutilisable qui définit un ou plusieurs champs qui 
 
 Les mixins définissent la ou les classes avec lesquelles ils sont compatibles en fonction du comportement des données qu’ils représentent (enregistrement ou série temporelle). Cela signifie que tous les mixins ne peuvent pas être utilisés pour toutes les classes.
 
-Les mixins ont la même portée et la même définition que les classes : il existe des mixins de secteur, de fournisseur et de client définis par les organisations individuelles utilisant [!DNL Platform]. [!DNL Experience Platform] inclut de nombreux mixins standard de secteur tout en permettant également aux fournisseurs de définir des mixins pour leurs utilisateurs et aux utilisateurs individuels de définir des mixins pour leurs propres concepts spécifiques.
+[!DNL Experience Platform] inclut de nombreux mixins d’Adobe standard tout en permettant aux fournisseurs de définir des mixins pour leurs utilisateurs et aux utilisateurs individuels de définir des mixins pour leurs propres concepts spécifiques.
 
 For example, to capture details such as &quot;[!UICONTROL First Name]&quot; and &quot;[!UICONTROL Home Address]&quot; for your &quot;[!UICONTROL Loyalty Members]&quot; schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as &quot;[!UICONTROL Loyalty Program Level]&quot;) often do not have a pre-defined mixin. Dans ce cas, vous devez définir vos propres mixins pour capturer ces informations.
 
 N’oubliez pas que les schémas sont composés de « zéro, un ou plusieurs » mixins, ce qui signifie que vous pouvez composer un schéma valide sans utiliser de mixins du tout.
 
+Pour une liste de tous les mixins standard actuels, consultez le référentiel [XDM](https://github.com/adobe/xdm/tree/master/components/mixins)officiel.
+
 ### Type de données {#data-type}
 
 Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Tout comme un mixin, un type de données permet l’utilisation cohérente d’une structure à champs multiples, mais avec plus de flexibilité qu’un mixin, car un type de données peut être inclus n’importe où dans un schéma en l’ajoutant comme « type de données » d’un champ.
+
+>[!NOTE]
+>
+>Voir l&#39; [annexe](#mixins-v-datatypes) pour plus d&#39;informations sur les différences entre les mixins et les types de données, ainsi que sur les avantages et les inconvénients de l&#39;utilisation de l&#39;un par rapport à l&#39;autre pour des cas d&#39;utilisation similaires.
 
 [!DNL Experience Platform] fournit un certain nombre de types de données courants dans le [!DNL Schema Registry] cadre de la prise en charge de l’utilisation de modèles standard pour décrire des structures de données communes. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
@@ -177,6 +179,10 @@ Un champ est le bloc de création le plus basique d’un schéma. Les champs app
 * Booléen
 * Tableau
 * Objet
+
+>[!TIP]
+>
+>Consultez l’ [annexe](#objects-v-freeform) pour en savoir plus sur les avantages et les inconvénients de l’utilisation de champs de forme libre par rapport aux champs de type d’objet.
 
 Les plages valides de ces types scalaires peuvent être limitées davantage à certains motifs, formats, minimums/maximums ou valeurs prédéfinies. Grâce à ces contraintes, il est possible de représenter une large plage de types de champ spécifiques, notamment :
 
@@ -250,3 +256,44 @@ The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Ad
 Pour commencer à composer un schéma à l’aide de l’interface utilisateur, suivez le [tutoriel de l’éditeur de schémas](../tutorials/create-schema-ui.md) pour créer le schéma « Loyalty Members » mentionné tout au long de ce document.
 
 To begin using the [!DNL Schema Registry] API, start by reading the [Schema Registry API developer guide](../api/getting-started.md). Après avoir lu le guide de développement, suivez les étapes décrites dans le tutoriel [Création d’un schéma à l’aide de l’API Schema Registry](../tutorials/create-schema-api.md).
+
+## Annexe
+
+La section suivante contient des renseignements supplémentaires sur les principes de la composition des schémas.
+
+### Objets par rapport aux champs de formulaire libre {#objects-v-freeform}
+
+Lors de la conception de vos schémas, certains facteurs clés doivent être pris en compte lors du choix des objets par rapport aux champs de forme libre :
+
+| Objets | Champs de formulaire libre |
+| --- | --- |
+| Augmente l’imbrication | Imbrication moindre ou aucune |
+| Crée des regroupements de champs logiques | Les champs sont placés dans des emplacements ad hoc. |
+
+#### Objets
+
+Les avantages et les inconvénients de l’utilisation d’objets par rapport aux champs de formulaire libre sont répertoriés ci-dessous.
+
+**Avantages**:
+
+* Il est préférable d’utiliser des objets lorsque vous souhaitez créer un regroupement logique de certains champs.
+* Les objets organisent le schéma de manière plus structurée.
+* Les objets aident indirectement à créer une bonne structure de menus dans l’interface utilisateur du créateur de segments. Les champs regroupés dans le schéma sont directement reflétés dans la structure de dossiers fournie dans l’interface utilisateur du créateur de segments.
+
+**Contre**:
+
+* Les champs deviennent plus imbriqués.
+* Lorsque vous utilisez [Adobe Experience Platform Requête Service](../../query-service/home.md), des chaînes de référence plus longues doivent être fournies aux champs de requête imbriqués dans des objets.
+
+#### Champs de formulaire libre
+
+Les avantages et les inconvénients de l’utilisation de champs de forme libre sur des objets sont répertoriés ci-dessous.
+
+**Avantages**:
+
+* Les champs de forme libre sont créés directement sous l’objet racine du schéma (`_tenantId`), ce qui augmente la visibilité.
+* Les chaînes de référence pour les champs de formulaire libre tendent à être plus courtes lors de l’utilisation de Requête Service.
+
+**Contre**:
+
+* L’emplacement des champs de forme libre dans le schéma est ad hoc, ce qui signifie qu’ils apparaissent dans l’ordre alphabétique dans l’éditeur de Schéma. Cela peut rendre les schémas moins structurés et des champs de forme libre similaires peuvent se retrouver très séparés selon leurs noms.
