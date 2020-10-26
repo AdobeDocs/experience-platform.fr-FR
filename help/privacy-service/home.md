@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Adobe Experience Platform Privacy Service
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5d88aca08b7cf1d55e1eed989de6aa514f82e113
+source-git-commit: f3872d433949e6c14c28c6833b8498d4d01b8de3
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 14%
+source-wordcount: '1627'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ Ces décisions peuvent être résumées par les questions suivantes :
    * Pour tirer le meilleur parti de [!DNL Privacy Service]ces données, vous devez avoir une compréhension détaillée des types de données que vous collectez auprès de vos clients et de ceux qui sont assujettis à la réglementation en matière de confidentialité. Consultez la section sur la [détermination des exigences](#requirements) en matière de confidentialité pour en savoir plus.
 1. **Ai-je correctement étiqueté mes données ?**
    * Les données doivent être correctement étiquetées pour que le service puisse déterminer les champs à accéder ou à supprimer pendant les tâches de confidentialité. See the section on [labelling data](#label) for more information.
-1. **Est-ce que je sais à quels identifiants envoyer[!DNL Privacy Service]?**
+1. **Est-ce que je sais à quels identifiants envoyer [!DNL Privacy Service]?**
    * Lors de l’envoi de demandes de confidentialité, des ID de client individuels spécifiques à des applications d’Adobe particulières doivent être fournis. Pour plus d&#39;informations, consultez les sections sur la [fourniture de données](#identity) d&#39;identité et sur la [demande](#requests) de confidentialité.
 1. **Comment effectuer le suivi de mes tâches de confidentialité ?**
    * Une fois que vous avez effectué des demandes de confidentialité, il existe plusieurs options pour suivre leur état et leurs résultats. Pour plus d’informations, voir la section sur la [surveillance des tâches](#monitor) de confidentialité.
@@ -75,10 +75,12 @@ Une fois que vous avez déterminé les besoins en matière de confidentialité d
 >Les sections ci-dessous contiennent des liens vers la documentation qui explique comment effectuer des demandes de confidentialité génériques dans l’API ou l’interface utilisateur. Cependant, selon les [!DNL Experience Cloud] applications utilisées, les champs que vous devez envoyer dans la charge utile de la demande peuvent être différents des exemples illustrés dans ces guides.
 >
 >Au fur et à mesure que vous suivez les guides de l’API ou de l’interface utilisateur, consultez le document sur les applications [](./experience-cloud-apps.md) Privacy Service et Experience Cloud pour obtenir de plus amples informations sur la façon de formater les demandes de confidentialité pour votre ou vos [!DNL Experience Cloud] applications particulières.
+>
+>Il est également important de noter que les demandes de confidentialité sont traitées de manière asynchrone dans les applications Experience Cloud. Une fois qu’une demande est reçue par le Privacy Service, chaque demande peut prendre de quelques minutes à plusieurs semaines pour la terminer. Le temps nécessaire à l’exécution de chaque demande est spécifique à l’application que vous utilisez et la quantité de données à traiter.
 
 #### Utilisation de l’API
 
-L&#39;API du Privacy Service [[ !DNL]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fournit plusieurs points de terminaison pour la création et la gestion des tâches de confidentialité à l&#39;aide des appels d&#39;API RESTful, ce qui vous permet d&#39;approcher par programmation la conformité de la réglementation de confidentialité pour vos [!DNL Experience Cloud] applications. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
+Le [[!DNL Privacy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml) fournit plusieurs points de terminaison pour la création et la gestion des tâches de confidentialité à l’aide des appels d’API RESTful, ce qui vous permet d’approcher par programmation la conformité à la réglementation de confidentialité pour vos [!DNL Experience Cloud] applications. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le [guide de développement de l’API Privacy Service](api/getting-started.md).
 
 #### Utilisation de l’interface utilisateur
 
