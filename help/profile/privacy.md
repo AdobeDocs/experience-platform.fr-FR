@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Traitement de la demande d’accès à des informations personnelles dans Real-time Customer Profile
 topic: overview
 translation-type: tm+mt
-source-git-commit: f7abccb677294e1595fb35c27e03c30eb968082a
+source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 21%
+source-wordcount: '1058'
+ht-degree: 25%
 
 ---
 
@@ -22,9 +22,9 @@ This document covers essential concepts related to processing privacy requests f
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
 
-* [[ !Privacy Service DNL]](home.md): Gère les demandes des clients pour accéder aux applications Adobe Experience Cloud, les exclure de la vente ou supprimer leurs données personnelles.
-* [[ !Service d&#39;identité DNL]](../identity-service/home.md): Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
-* [[ !Profil client en temps réel DNL]](../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Privacy Service]](home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
+* [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
+* [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
@@ -43,6 +43,8 @@ Les sections ci-dessous décrivent comment effectuer des demandes de confidentia
 >Le Privacy Service ne peut traiter [!DNL Profile] les données qu’à l’aide d’une stratégie de fusion qui n’effectue pas d’assemblage d’identité. Si vous utilisez l’interface utilisateur pour vérifier si vos demandes de confidentialité sont en cours de traitement, veillez à utiliser une stratégie avec &quot;[!DNL None]&quot; comme type de raccordement [!UICONTROL d’] ID. En d’autres termes, vous ne pouvez pas utiliser de stratégie de fusion lorsque l’assemblage [!UICONTROL d’] ID est défini sur &quot;Graphiqueprivé&quot;.
 >
 >![](./images/privacy/no-id-stitch.png)
+>
+>Il est également important de noter que le temps qu&#39;une demande de protection des renseignements personnels peut prendre pour être remplie ne peut être garanti. Si des modifications surviennent dans vos [!DNL Profile] données alors qu’une requête est en cours de traitement, il est également impossible de garantir si ces enregistrements sont traités ou non.
 
 ### Utilisation de l’API
 
