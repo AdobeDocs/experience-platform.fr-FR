@@ -5,10 +5,10 @@ title: Tâches de segmentation
 topic: developer guide
 description: Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 39%
+source-wordcount: '1153'
+ht-degree: 35%
 
 ---
 
@@ -96,9 +96,9 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -115,14 +115,25 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -162,6 +173,12 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
 | `segments.segment.id` | ID de la définition de segment. |
 | `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrit dans PQL. |
 | `metrics` | Objet contenant des informations de diagnostic sur la tâche de segment. |
+| `metrics.totalTime` | Objet contenant des informations sur les heures de début et de fin de la tâche de segmentation, ainsi que sur le temps total passé. |
+| `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de la segmentation, ainsi que sur le temps total passé. |
+| `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
+| `metrics.segmentedProfileByNamespaceCounter` | Nombre de profils qualifiés pour chaque espace de nommage d&#39;identité par segment. |
+| `metrics.segmentProfileByStatusCounter` | Nombre de fragments **de** profil pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; - Nombre de nouveaux profils entrés dans le segment.</li><li>&quot;existant&quot; - Nombre de profils qui persistent dans le segment.</li><li>&quot;exited&quot; : nombre de segments de profil qui n&#39;existent plus dans le segment.</li></ul> |
+| `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par stratégie de fusion. |
 
 ## Création d’une tâche de segmentation {#create}
 
