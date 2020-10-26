@@ -5,7 +5,7 @@ title: Syntaxe SQL
 topic: syntax
 description: Ce document présente la syntaxe SQL compatible avec Query Service.
 translation-type: tm+mt
-source-git-commit: 43bebfbe0c0fca57d6e1ed0116e317b03125f175
+source-git-commit: c044194ed22b5e6fcd5e2e2102f3cd4eda45aa84
 workflow-type: tm+mt
 source-wordcount: '2067'
 ht-degree: 91%
@@ -119,7 +119,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 ```
 
 where,
-`target_schema_title` is the title of XDM schema. N&#39;utilisez cette clause que si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête`rowvalidation` CTAS indique si l&#39;utilisateur souhaite une validation au niveau des lignes de tous les nouveaux lots ingérés pour le nouveau jeu de données créé. La valeur par défaut est &quot;false&quot;
+`target_schema_title` is the title of XDM schema. N&#39;utilisez cette clause que si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête`rowvalidation` CTAS indique si l&#39;utilisateur souhaite une validation au niveau des lignes de tous les nouveaux lots ingérés pour le nouveau jeu de données créé. La valeur par défaut est &quot;true&quot;
 
 et `select_query` correspond à une instruction `SELECT`, dont la syntaxe est définie ci-dessus dans le présent document.
 
