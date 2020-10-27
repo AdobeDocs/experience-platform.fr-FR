@@ -5,15 +5,19 @@ title: Mélin IdentityMap
 topic: overview
 description: Ce document fournit un aperçu de la classe de Profil XDM Individuel.
 translation-type: tm+mt
-source-git-commit: fd5bd4134bd35d5d87c79bf1e75bc88c67511b2b
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
 
 # [!UICONTROL Mélin IdentityMap]
+
+>[!NOTE]
+>
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../name-updates.md) mixin.
 
 [!UICONTROL IdentityMap] est un mixin standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le mixin fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur clés par espace de nommage.
 
