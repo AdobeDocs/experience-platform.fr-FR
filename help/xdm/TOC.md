@@ -5,10 +5,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de Data Model (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: 27ce9b6e8608bbfccac25387ba96f998272273c1
+source-git-commit: a091acf1cfc572df7b300a7be6a673b1e7469be5
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 73%
+source-wordcount: '197'
+ht-degree: 72%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 73%
    * Mélanges événements {#event}
       * [ID d’utilisateur final ExperienceEvent](./mixins/event/enduserids.md)
       * [Détails de l’environnement ExperienceEvent](./mixins/event/environment-details.md)
+   * [Mises à jour des noms mixtes](./mixins/name-updates.md)
 * Types des données {#data-types}
    * [Balise](./data-types/beacon.md)
    * [Détails du navigateur](./data-types/browser-details.md)
