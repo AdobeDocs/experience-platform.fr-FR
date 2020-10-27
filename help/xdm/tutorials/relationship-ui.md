@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas
 description: Ce document fournit un didacticiel pour la définition d'une relation entre deux schémas à l'aide de l'éditeur de Schémas dans l'interface utilisateur de l'Experience Platform.
 topic: tutorial
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 34%
