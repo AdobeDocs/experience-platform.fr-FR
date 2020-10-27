@@ -5,9 +5,9 @@ title: Tâches de segmentation
 topic: developer guide
 description: Ce guide fournit des informations pour vous aider à mieux comprendre les tâches de segmentation et inclut des exemples d’appels API pour exécuter des actions de base à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 8c5c3aed4d46c8b3873009ab9f17ff9bca93302c
+source-git-commit: 521b760da850144d7a8e75126453c2aae5c2ce72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1152'
 ht-degree: 35%
 
 ---
@@ -177,7 +177,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de se
 | `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de la segmentation, ainsi que sur le temps total passé. |
 | `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
 | `metrics.segmentedProfileByNamespaceCounter` | Nombre de profils qualifiés pour chaque espace de nommage d&#39;identité par segment. |
-| `metrics.segmentProfileByStatusCounter` | Nombre de fragments **de** profil pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; - Nombre de nouveaux profils entrés dans le segment.</li><li>&quot;existant&quot; - Nombre de profils qui persistent dans le segment.</li><li>&quot;exited&quot; : nombre de segments de profil qui n&#39;existent plus dans le segment.</li></ul> |
+| `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; - Nombre de nouveaux profils entrés dans le segment.</li><li>&quot;existant&quot; - Nombre de profils qui persistent dans le segment.</li><li>&quot;exited&quot; : nombre de segments de profil qui n&#39;existent plus dans le segment.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par stratégie de fusion. |
 
 ## Création d’une tâche de segmentation {#create}
