@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: October 13, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 133aa5ace2567e9380eb970b5737d7327d0c99b2
+source-git-commit: 8f646c26ce73671ef4e427d8cba51091a8884795
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1028'
 ht-degree: 18%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 18%
 - [Real-time Customer Profile](#profile)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+- [Temps jusqu’à la valeur](#time-to-value)
 
 ## Préparation de données {#data-prep}
 
@@ -76,7 +77,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
 
-## Temps jusqu’à la valeur
+## Temps jusqu’à la valeur {#time-to-value}
 
 Adobe Experience Platform permet aux équipes d’opérations marketing de créer une vue de 360 degrés de leurs clients sans avoir besoin d’une grande expertise en ingénierie des données. L&#39;objectif est d&#39;accélérer les équipes et de valoriser par la vélocité des données.
 
@@ -116,4 +117,4 @@ Le lecteur de profil compatible avec les marketeurs avec personnalisation vous p
 
 Garantit la transparence du flux de données et fournit des informations sur l’état du trafic de données dans le système à partir des connecteurs source, ce qui permet d’améliorer le libre-service et d’accélérer les opérations de dépannage.
 
-- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
+- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l&#39;état d&#39;achèvement, la durée d&#39;exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
