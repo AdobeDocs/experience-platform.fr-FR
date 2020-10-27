@@ -5,10 +5,10 @@ title: Système de modèle de données d’expérience (XDM)
 topic: overview
 description: 'La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client. '
 translation-type: tm+mt
-source-git-commit: 1aceddc02a5120b0bf7413db33c2c03d0ab2948c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 60%
+source-wordcount: '1586'
+ht-degree: 61%
 
 ---
 
@@ -109,14 +109,6 @@ Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning an
 With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs powered by machine learning. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées.
 
 For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
-
-### [!DNL Decisioning Service]
-
-[!DNL Decisioning Service] permet de configurer la prise de décision personnalisée par offre dans les applications [!DNL Platform]intégrées. Ces offres peuvent aussi être des recommandations de produits, des composants de contenu pour une expérience web, des scripts de conversation et des actions à prendre.
-
-[!DNL Decisioning Service] exploite [!DNL Real-time Customer Profile] les données et n&#39;est donc compatible qu&#39;avec les jeux de données basés sur les schémas implémentant la [!DNL XDM Individual Profile] classe ou la [!DNL XDM ExperienceEvent] classe.
-
-Pour plus d’informations, consultez la [présentation du service de prise de décision](../decisioning-service/home.md).
 
 ## Étapes suivantes et ressources supplémentaires
 
