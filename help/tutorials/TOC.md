@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Tutoriels Adobe Experience Platform
 breadcrumb-title: Tutoriels sur Platform
 user-guide-description: Commencez rapidement et facilement avec Platform en suivant des didacticiels détaillés, qui couvrent tout, de la préparation de vos données à l'assimilation à l'utilisation d'algorithmes d'apprentissage automatique avancés.
-type: Tutorials
+type: Tutorial
 translation-type: tm+mt
-source-git-commit: 516f5af13df0b96e7995a3079cf2a2ce2146676a
+source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 60%
