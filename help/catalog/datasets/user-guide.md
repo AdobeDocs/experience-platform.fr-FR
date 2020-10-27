@@ -5,10 +5,10 @@ title: Guide d’utilisation des jeux de données
 topic: datasets
 description: Ce guide d'utilisation des jeux de données fournit des instructions sur l'exécution d'actions courantes lors de l'utilisation de jeux de données dans l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 79dca07d3e6ecf998a6278fa49178a7fa8cc0e8c
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 72%
+source-wordcount: '1146'
+ht-degree: 74%
 
 ---
 
@@ -22,11 +22,11 @@ Ce guide d’utilisation fournit des instructions permettant d’exécuter des a
 Ce guide d’utilisation nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de la [!DNL Schema Editor] section dans l’ [!DNL Platform] interface utilisateur.
-* [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[ !Gouvernance des données Adobe Experience Platform DNL]](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
 
 ## Affichage des jeux de données
 
@@ -122,7 +122,7 @@ Vous pouvez supprimer un jeu de données en accédant d’abord à son écran **
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Decisioning Service]) cannot be deleted.
+>Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
