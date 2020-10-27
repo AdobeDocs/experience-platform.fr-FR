@@ -1,19 +1,20 @@
 ---
 product: experience-platform
+solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 7f3d4f0266b58b1327d2b8743538c7fc9b67669b
 workflow-type: tm+mt
 source-wordcount: '119'
-ht-degree: 52%
+ht-degree: 56%
 
 ---
 
 
-# Adobe Experience Platform Web SDK {#edge}
+#  SDK Web d’Adobe Experience Platform{#edge}
 
 * [Présentation du SDK Web](home.md)
 * Notions fondamentales {#fundamentals}
