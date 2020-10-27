@@ -6,17 +6,17 @@ title: Supprimer des flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 10%
+source-wordcount: '448'
+ht-degree: 12%
 
 ---
 
 
 # Supprimer des flux de données
 
-Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des flux de données de l&#39;espace de travail [!UICONTROL Sources] .
+Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des flux de données de l&#39;espace de travail **[!UICONTROL Sources]** .
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 - [[!DNL Experience Data Model] (XDM) Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [[ !Profil client en temps réel DNL]](../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 ## Suppression de flux de données à l’aide de l’interface utilisateur
 
@@ -64,7 +64,6 @@ Après quelques instants, une boîte de confirmation verte s’affiche en bas de
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez accédé à des comptes et flux de données existants à partir de l’espace de travail **[!UICONTROL Sources]** . Les données entrantes peuvent désormais être utilisées par [!DNL Platform] les services en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez réussi à utiliser l&#39;espace de travail **[!UICONTROL Sources]** pour supprimer des flux de données existants.
 
-- [[!DNL Real-time Customer Profile] aperçu](../../../profile/home.md)
-- [[!DNL Data Science Workspace] aperçu](../../../data-science-workspace/home.md)
+Pour obtenir des instructions sur la façon d’effectuer ces opérations par programmation à l’aide de l’ [!DNL Flow Service] API, consultez le didacticiel sur la [suppression de connexions à l’aide de l’API du service de flux.](../../tutorials/api/delete.md)
