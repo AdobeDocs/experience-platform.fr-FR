@@ -5,9 +5,9 @@ title: Classe de Profils individuels XDM
 topic: overview
 description: Ce document fournit un aperçu de la classe de Profil XDM Individuel.
 translation-type: tm+mt
-source-git-commit: b7b57c0b70b1af3a833f0386bc809bb92c9b50f8
+source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,14 @@ La [!DNL XDM Individual Profile] classe elle-même fournit plusieurs valeurs gé
 
 ## mixins compatibles {#mixins}
 
+>[!NOTE]
+>
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../mixins/name-updates.md) mixin.
+
 Adobe fournit plusieurs mixins standard à utiliser avec la [!DNL XDM Individual Profile] classe. Voici une liste des mixins les plus couramment utilisés pour la classe :
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Détails de la personne profil]](../mixins/profile/person-details.md)
-* [[!UICONTROL Détails personnels du profil]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Détails du travail profil]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segmentation des profils]](../mixins/profile/segmentation.md)
+* [[!UICONTROL Détails démographiques]](../mixins/profile/person-details.md)
+* [[!UICONTROL Coordonnées personnelles]](../mixins/profile/personal-details.md)
+* [[!UICONTROL Détails du contact de travail]](../mixins/profile/work-details.md)
+* [[!UICONTROL Détails de l’abonnement au segment]](../mixins/profile/segmentation.md)
