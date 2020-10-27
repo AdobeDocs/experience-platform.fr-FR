@@ -5,10 +5,10 @@ title: Présentation des jeux de données
 topic: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 46%
+source-wordcount: '683'
+ht-degree: 45%
 
 ---
 
@@ -56,13 +56,12 @@ Once datasets have been used to store ingested data, those datasets are then use
 
 Voici une liste des services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour en savoir plus.
 
-* [[ !API d&#39;accès aux données DNL]](../../data-access/home.md): Permet d’accéder au contenu des fichiers stockés dans des jeux de données et de le télécharger.
+* [[!DNL Data Access API]](../../data-access/home.md): Permet d’accéder au contenu des fichiers stockés dans des jeux de données et de le télécharger.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
-* [[ !Profil client en temps réel DNL]](../../profile/home.md): Exploite [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] extrait les données [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Exploite [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] extrait les données [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md)[!DNL Real-time Customer Profile] : permet de créer des segments et de générer des audiences à partir de vos données These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md) : utilise l’apprentissage automatique et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
 * [Service](../../query-service/home.md)de Requête Adobe Experience Platform : Vous permet d&#39;utiliser SQL standard pour requête des données dans [!DNL Experience Platform], de joindre des jeux de données dans les jeux de données [!DNL Data Lake] et de capturer les résultats des requêtes sous la forme d&#39;un nouveau jeu de données à utiliser dans le rapports, [!DNL Data Science Workspace]ou [!DNL Real-time Customer Profile].
-* [Service de prise de décision d’Adobe Experience Platform](../../decisioning-service/home.md)[!DNL Real-time Customer Profile] : exploite pour déterminer le choix le plus probable du client à partir d’un ensemble d’options, en fonction des données comportementales que extrait des jeux de données activés.[!DNL Profile]
 
 ## Étapes suivantes
 
