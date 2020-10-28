@@ -5,15 +5,15 @@ seo-title: Extension DialogTech
 description: L’extension DialogTech est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 seo-description: L’extension DialogTech est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 2dfa46906374151628d46c309df724a59f8dc50e
+source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 90%
+source-wordcount: '522'
+ht-degree: 45%
 
 ---
 
 
-# Extension [!DNL DialogTech] {#dialogtech-extension}
+# [!DNL DialogTech] Extension {#dialogtech-extension}
 
 ## Présentation {#overview}
 
@@ -21,7 +21,7 @@ Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
 [!DNL DialogTech] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de Dialogtech](https://www.dialogtech.com/).
 
-Cette destination est une extension d’Experience Platform Launch. Pour plus d’informations sur le fonctionnement des extensions de Launch dans la plateforme de données clients en temps réel d’Adobe, consultez la [présentation des extensions d’Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
+Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
 ![Extension DialogTech](assets/dialogtech-extension.png)
 
@@ -29,7 +29,7 @@ Cette destination est une extension d’Experience Platform Launch. Pour plus d�
 
 Cette extension est disponible dans le catalogue des destinations pour tous les clients qui ont acheté la plateforme de données clients en temps réel d’Adobe.
 
-Pour utiliser cette extension, vous devez accéder à Experience Platform Launch. Experience Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contactez l’administrateur de votre organisation pour accéder à Launch et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
+Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform Launch.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contact your organization administrator to get access to Platform Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Installation de l’extension {#install-extension}
 
@@ -38,27 +38,27 @@ Pour installer l’ [!DNL DialogTech] extension :
 1. In the [Adobe Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 2. Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 3. Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Voir les [Conditions préalables](#prerequisites).
-4. Dans la fenêtre **[!UICONTROL Sélectionner la propriété Launch disponible]**, sélectionnez la propriété Launch dans laquelle vous souhaitez installer l’extension. Vous pouvez aussi créer une nouvelle propriété dans Launch. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de Launch.
-5. Le workflow vous redirige vers Launch pour terminer l’installation.
+4. In the **[!UICONTROL Select available Platform Launch property]** window, select the Platform Launch property in which you want to install the extension. Vous avez également la possibilité de créer une nouvelle propriété dans le lancement de plate-forme. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Learn about properties in the [Properties page section](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Platform Launch documentation.
+5. Le processus vous conduit au lancement de la plate-forme pour terminer l’installation.
 
-Vous pouvez aussi installer l’extension directement dans l’[interface d’Experience Platform Launch](https://launch.adobe.com/). Consultez la section [Ajout d’une nouvelle extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) de la documentation de Launch.
+You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html#add-a-new-extension) in the Platform Launch documentation.
 
 
 ## Utilisation de l’extension {#how-to-use}
 
-Une fois que vous avez installé l’extension, vous pouvez commencer à configurer des règles pour cette extension directement dans Launch.
+Une fois que vous avez installé l&#39;extension, vous pouvez début la configuration de règles pour celle-ci directement dans le lancement de la plate-forme.
 
-Dans Launch, vous pouvez configurer des règles pour vos extensions installées afin d’envoyer des données d’événement vers la destination de l’extension uniquement dans certains cas. Pour plus d’informations sur la configuration de règles pour vos extensions, consultez la [documentation des règles](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.html).
+Dans le lancement de plate-forme, vous pouvez configurer des règles pour vos extensions installées afin d&#39;envoyer des données de événement à la destination de l&#39;extension uniquement dans certaines situations. Pour plus d’informations sur la configuration de règles pour vos extensions, consultez la [documentation des règles](https://docs.adobe.com/help/fr-FR/launch/using/reference/manage-resources/rules.html).
 
 ## Configuration, mise à niveau et suppression de l’extension {#configure-upgrade-delete}
 
-Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’interface de Launch.
+Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’interface de lancement de plate-forme.
 
 >[!TIP]
 >
->Si l’extension est déjà installée sur l’une de vos propriétés, l’interface de la plateforme de données clients en temps réel d’Adobe affiche toujours **[!UICONTROL Install]** pour l’extension. Démarrez le workflow d’installation comme décrit dans [Installer l’extension](#install-extension) pour accéder à Launch et configurer ou supprimer votre extension.
+>Si l’extension est déjà installée sur l’une de vos propriétés, l’interface de la plateforme de données clients en temps réel d’Adobe affiche toujours **[!UICONTROL Install]** pour l’extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
-Pour mettre à niveau votre extension, consultez la section [Mise à niveau d’extension](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/extension-upgrade.html) dans la documentation de Launch.
+To upgrade your extension, see [Extension upgrade](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
 
 
 
