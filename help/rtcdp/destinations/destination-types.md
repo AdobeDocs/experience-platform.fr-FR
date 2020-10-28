@@ -2,13 +2,13 @@
 keywords: destinations;destination;destination types
 title: Types et catégories de destinations
 seo-title: Types et catégories de destinations
-description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. '
-seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations.
+description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
+seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: b510f715133cc3fed98861f977b3ce9a857a5ced
+source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 93%
+source-wordcount: '591'
+ht-degree: 82%
 
 ---
 
@@ -49,13 +49,13 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 ### Extensions {#extensions}
 
-La plateforme de données clients en temps réel d’Adobe utilise la puissance et la flexibilité d’Experience Platform Launch pour inclure des extensions Launch dans l’interface de la plateforme de données clients en temps réel d’Adobe.
+Adobe CDP en temps réel tire parti de la puissance et de la flexibilité de Adobe Experience Platform Launch pour inclure les extensions de lancement de plate-forme dans l&#39;interface CDP en temps réel de l&#39;Adobe.
 
 >[!TIP]
 >
->Pour plus d’informations sur les extensions Experience Platform Launch, y compris les cas d’utilisation et la manière de les trouver dans l’interface, voir la présentation [des extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md)de lancement.
+>Pour plus d’informations sur les extensions Adobe Experience Platform Launch, y compris les cas d’utilisation et la façon de les trouver dans l’interface, consultez la présentation [des extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md)Adobe Experience Platform Launch.
 
-Les extensions de Launch transfèrent les données d’événement brutes à plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](/help/rtcdp/destinations/gainsight-extension.md) ou l’[extension de voix du client Confirmit](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
+Les extensions de lancement de plateforme transfèrent des données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](/help/rtcdp/destinations/gainsight-extension.md) ou l’[extension de voix du client Confirmit](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
 ![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
