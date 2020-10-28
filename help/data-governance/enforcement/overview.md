@@ -5,10 +5,10 @@ title: Présentation de l’application des stratégies
 topic: enforcement
 description: Une fois les étiquettes d’utilisation des données appliquées aux jeux de données Adobe Experience Platform et les stratégies d’utilisation des données définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur la plate-forme, l’application basée sur les API et l’application automatique.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 83f1392ffab3571ebd91325123fbe7095ad59e28
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 16%
+source-wordcount: '257'
+ht-degree: 17%
 
 ---
 
@@ -29,4 +29,4 @@ Pour savoir comment évaluer l’application des stratégies à l’aide de l’
 
 Certaines applications créées à partir de [!DNL Experience Platform] (par exemple [!DNL Real-time Customer Data Platform]) permettent l’application automatique des stratégies d’utilisation des données. Chaque application conserve sa propre méthode de détection des violations de la politique et fournit des étapes pour résoudre les problèmes.
 
-Consultez la documentation de l&#39;application [!DNL Platform]basée que vous utilisez pour plus d&#39;informations sur l&#39;application automatique de la stratégie d&#39;utilisation des données. Pour plus d&#39;informations sur l&#39;application automatique de la stratégie dans le CDP en temps réel, consultez l&#39;aperçu [de la gouvernance des données du CDP en temps](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance)réel.
+L&#39;application automatique des stratégies dans le CDP en temps réel utilise la lignée de données, la classification des données et les capacités de gestion des stratégies pour évaluer et faire apparaître les violations de stratégies. Pour plus d&#39;informations, consultez la présentation [de la gouvernance des données CDP en temps](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) réel.
