@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Mises à jour des noms mixtes
 topic: overview
 description: Liste de modifications récentes du nom du mixin XDM.
 translation-type: tm+mt
-source-git-commit: 0f36cf30e94c53aad8cdd11174a3656fda32d961
+source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '251'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,6 @@ Le tableau suivant décrit les mixins existants qui ont été mis à jour, ainsi
 
 | Nom précédent | Nom mis à jour |
 | --- | --- |
-| [!UICONTROL Mélangeur Consumer ExperienceEvent] | [!UICONTROL Détails de la consommation de contenu] |
 | [!UICONTROL Mélange de confidentialité du événement d’expérience] | [!UICONTROL Détails de la confidentialité] |
 | [!UICONTROL Détails de l’application ExperienceEvent] | [!UICONTROL Détails de l’application] |
 | [!UICONTROL Détails du canal ExperienceEvent] | [!UICONTROL Détails du canal] |
@@ -44,7 +43,7 @@ Le tableau suivant décrit les mixins existants qui ont été mis à jour, ainsi
 | [!UICONTROL Téléphone profil] | [!UICONTROL Détails du numéro de téléphone] |
 | [!UICONTROL Détails des préférences de profil] | [!UICONTROL Détails des préférences] |
 | [!UICONTROL Confidentialité des profils] | [!UICONTROL Détails de la confidentialité] |
-| [!UICONTROL Détails des notifications Push profil] | [!UICONTROL Détails de la notification Push] |
+| [!UICONTROL Détails des notifications Push profil] | [!UICONTROL Détails du jeton de notification Push] |
 | [!UICONTROL Segmentation des profils] | [!UICONTROL Détails de l’abonnement au segment] |
 | [!UICONTROL Abonnements profils] | [!UICONTROL Détails de l&#39;Abonnement] |
 | [!UICONTROL Détails du travail profil] | [!UICONTROL Détails du contact de travail] |
