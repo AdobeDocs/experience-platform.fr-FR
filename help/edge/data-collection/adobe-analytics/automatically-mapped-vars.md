@@ -5,10 +5,10 @@ description: Découvrez quelles variables sont automatiquement mises en correspo
 seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 8e3bef77b84e40c836a6279a9a3e3901565c9920
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 46%
+source-wordcount: '681'
+ht-degree: 36%
 
 ---
 
@@ -28,11 +28,12 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `commerce.checkouts.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_CHECKOUT, à l’aide du délimiteur `,`. |
 | `commerce.productListAdds.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_AJOUTE, à l’aide du délimiteur `,`. |
 | `commerce.productListRemovals.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_REMOVE, à l’aide du délimiteur `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Sérialisation d’événements. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Sérialisation d’événements. |
-| `commerce.productListViews.id` | `events` | `scView` Sérialisation d’événements. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Sérialisation d’événements. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Sérialisation d’événements. |
+| `commerce.productViews.id` | `events` | (Facultatif) Sérialisation `prodView` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
+| `commerce.productListOpens.id` | `events` | (Facultatif) Sérialisation `scOpen` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
+| `commerce.productListViews.id` | `events` | (Facultatif) Sérialisation `scView` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
+| `commerce.productListAdds.id` | `events` | (Facultatif) Sérialisation `scAdd` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
+| `commerce.productListRemovals.id` | `events` | (Facultatif) Sérialisation `scRemove` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
+| `commerce.checkouts.id` | `events` | (Facultatif) Sérialisation `scCheckout` du événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.checkouts.id` | `events` | `scCheckout` Sérialisation d’événements. |
 | `device.screenHeight` | `s` | Mappage de la résolution d’écran du paramètre de la requête AppMeasurement. |
 | `device.screenWidth` | `s` | Mappage de la résolution d’écran du paramètre de la requête AppMeasurement. |
