@@ -5,10 +5,10 @@ title: Préparation des données en vue de leur utilisation dans les services in
 topic: Intelligent Services
 description: 'Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
 workflow-type: tm+mt
-source-wordcount: '1979'
-ht-degree: 3%
+source-wordcount: '1882'
+ht-degree: 2%
 
 ---
 
@@ -276,81 +276,15 @@ Une fois le jeu de données créé, vous pouvez le trouver dans l’interface ut
 
 ![](images/data-preparation/dataset-location.png)
 
-#### Ajouter une balise d&#39;espace de nommage d&#39;identité Principale au jeu de données
+#### Ajouter les champs d&#39;identité au jeu de données
 
 >[!NOTE]
 >
 >Les prochaines versions de [!DNL Intelligent Services] intégreront le service [d&#39;identité de](../identity-service/home.md) Adobe Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
 
-Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous devez alors ajouter une `primaryIdentityNameSpace` balise au jeu de données. Pour ce faire, vous pouvez adresser une demande de PATCH à l’API du service de catalogue.
+Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous avez la possibilité de définir un champ de schéma comme champ d’identité. Pour définir un champ de schéma en tant que champ d’identité, vue la section relative à la définition des champs d’identité dans le didacticiel [](../xdm/tutorials/create-schema-ui.md#identity-field) IU pour la création d’un schéma à l’aide de l’éditeur de Schéma ou du didacticiel [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
 
 Si vous importez des données à partir d’un fichier CSV local, vous pouvez passer à la section suivante sur le [mappage et l’assimilation des données](#ingest).
-
-Avant de suivre l’exemple d’appel d’API ci-dessous, consultez la section [](../catalog/api/getting-started.md) Prise en main du Guide du développeur du catalogue pour obtenir des informations importantes sur les en-têtes requis.
-
-**Format d’API**
-
-```http
-PATCH /dataSets/{DATASET_ID}
-```
-
-| Paramètre | Description |
-| --- | --- |
-| `{DATASET_ID}` | ID du jeu de données que vous avez créé précédemment. |
-
-**Requête**
-
-En fonction de la source à partir de laquelle vous importez des données, vous devez fournir les valeurs appropriées `primaryIdentityNamespace` `sourceConnectorId` et de balise dans la charge utile de la requête.
-
-La demande suivante ajoute les valeurs de balise appropriées pour l’Audience Manager :
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["mcid"],
-          "sourceConnectorId": ["audiencemanager"],
-        }
-      }'
-```
-
-La demande suivante ajoute les valeurs de balise appropriées pour Analytics :
-
-```shell
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-        "tags": {
-          "primaryIdentityNameSpace": ["aaid"],
-          "sourceConnectorId": ["analytics"],
-        }
-      }'
-```
-
->[!NOTE]
->
->For more information on working with identity namespaces in Platform, see the [identity namespace overview](../identity-service/namespaces.md).
-
-**Réponse**
-
-Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH.
-
-```json
-[
-    "@/dataSets/5ba9452f7de80400007fc52a"
-]
-```
 
 #### Mapper et assimiler des données {#ingest}
 
