@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform
 title: Découverte d’insights avec Customer AI
 topic: Discovering insights
-description: Customer AI fait partie d’Intelligent Services et permet aux spécialistes du marketing de tirer parti d’Adobe Sensei pour anticiper les prochaines actions de vos clients. Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique, en choisissant un algorithme, une formation ou un déploiement.
+description: Ce document sert de guide pour interagir avec les insights d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 0b92346065b7c9615d8aef4c9b13c84e0383b4b9
 workflow-type: tm+mt
-source-wordcount: '1125'
-ht-degree: 89%
+source-wordcount: '1389'
+ht-degree: 55%
 
 ---
 
@@ -48,15 +48,22 @@ Ensuite, la page d’insights de cette instance de service apparaît, proposant 
 
 ### Détails des instances de service
 
-Il existe deux façons d’afficher les détails d’une instance de service. La première est issue du tableau de bord, la seconde de l’instance de service.
+Il existe deux façons de vue des détails de l’instance de service : du tableau de bord ou dans l’instance de service.
 
-Pour afficher les détails depuis le tableau de bord, cliquez sur un conteneur d’instance de service en évitant le lien hypertexte associé au nom. Cela permet d’ouvrir un rail droit qui fournit des détails supplémentaires, tels que la description, la fréquence de notation, l’objectif de prévision et la population admissible. De plus, vous pouvez modifier et supprimer l’instance en cliquant sur **[!UICONTROL Modifier]** ou **[!UICONTROL Supprimer]**.
+Pour vue une vue d’ensemble des détails de l’instance de service dans le tableau de bord, sélectionnez un conteneur d’instance de service, en évitant l’hyperlien associé au nom. Ceci ouvre un rail droit qui fournit des détails supplémentaires. Les contrôles contiennent les éléments suivants :
 
-![rail droit](../images/insights/success-run.png)
+- **[!UICONTROL Modifier]**: La sélection de **[!UICONTROL Modifier]** vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence d’évaluation de l’instance.
+- **[!UICONTROL Cloner]**: Lorsque vous sélectionnez **[!UICONTROL Cloner]** , l’instance de service sélectionnée est copiée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Source]** de données : Lien vers le jeu de données utilisé par cette instance.
+- **[!UICONTROL Fréquence]** d&#39;exécution : Fréquence d’une série de notes et quand.
+- **[!UICONTROL Définition]** de note : Aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+
+![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->En cas d’échec d’une exécution de notation, vous recevez un message d’erreur. Le message d’erreur est répertorié sous les *détails de la dernière exécution* dans le rail droit, qui est visible uniquement en cas d’exécutions ayant échoué.
+>En cas d’échec d’une exécution de notation, vous recevez un message d’erreur. Le message d’erreur est répertorié sous les **détails de la dernière exécution** dans le rail droit, qui est visible uniquement en cas d’exécutions ayant échoué.
 
 ![message d’échec d’exécution](../images/insights/failed-run.png)
 
@@ -72,7 +79,7 @@ Pour modifier une instance, cliquez sur **[!UICONTROL Modifier]** dans la naviga
 
 ![cliquez sur le bouton Modifier](../images/insights/edit-button.png)
 
-La boîte de dialogue de modification s’affiche et vous permet de modifier la *description* et la *fréquence de notation* de l’instance. Pour confirmer vos modifications et fermer la boîte de dialogue, cliquez sur **[!UICONTROL Modifier]** dans le coin en bas à droite.
+La boîte de dialogue Modifier s’affiche, vous permettant de modifier le nom, la description, l’état et la fréquence de notation de l’instance. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![modifier la fenêtre contextuelle](../images/insights/edit-instance.png)
 
@@ -80,15 +87,16 @@ La boîte de dialogue de modification s’affiche et vous permet de modifier la 
 
 Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Cliquer sur **[!UICONTROL Actions supplémentaires]** ouvre un menu déroulant qui vous permet de sélection l’une des opérations suivantes :
 
+- **[!UICONTROL Cloner]**: Si vous sélectionnez **[!UICONTROL Cloner]** , l’instance de service configurée est copiée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
 - **[!UICONTROL Supprimer]** : supprime l’instance.
-- **[!UICONTROL Accéder aux scores]** : en cliquant sur *Accéder aux scores*, vous ouvrez une boîte de dialogue contenant un lien vers le tutoriel sur le [téléchargement des scores pour Customer AI](./download-scores.md). La boîte de dialogue fournit également l’identifiant de jeu de données requis pour effectuer des appels d’API.
+- **[!UICONTROL Scores]** d&#39;accès : La sélection de scores **** Access ouvre une boîte de dialogue fournissant un lien vers les scores de [téléchargement du didacticiel d’API](./download-scores.md) client. Elle fournit également l’ID de jeu de données requis pour effectuer des appels d’API.
 - **[!UICONTROL Afficher l’historique d’exécution]** : fait apparaître une boîte de dialogue contenant une liste des exécutions de notation associées à l’instance de service.
 
 ![actions supplémentaires](../images/insights/more-actions.png)
 
-## Résumé de notation {#scoring-summary}
+## Scoring summary {#scoring-summary}
 
-Le résumé de notation affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible. Les compartiments de propension sont déterminés en fonction de la plage de scores : la propension faible est inférieure à 24, la propension moyenne est comprise entre 25 et 74, et la propension élevée est supérieure à 74. Chaque compartiment a une couleur en fonction de la légende.
+Le résumé du score affiche le nombre total de profils marqués et les classe en compartiments contenant une propension élevée, moyenne et faible. Les compartiments de propension sont déterminés en fonction de la plage de scores : la propension faible est inférieure à 24, la propension moyenne est comprise entre 25 et 74, et la propension élevée est supérieure à 74. Chaque compartiment a une couleur en fonction de la légende.
 
 >[!NOTE]
 >
@@ -96,9 +104,13 @@ Le résumé de notation affiche le nombre total de profils notés et les classe 
 
 ![résumé de notation](../images/insights/scoring-summary.png)
 
+Vous pouvez placer le pointeur de la souris sur n’importe quelle couleur de l’anneau pour vue d’autres informations, telles qu’un pourcentage et le nombre total de profils appartenant à un compartiment.
+
+![](../images/insights/scoring-ring.png)
+
 ## Distribution des scores
 
-La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs présentes sur la carte *Distribution des scores* représentent le type de score de propension généré.
+La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs présentes sur la carte [!UICONTROL Distribution des scores] représentent le type de score de propension généré. Le survol de l’une des distributions de score fournit le nombre exact qui appartient à cette distribution.
 
 ![distribution des scores](../images/insights/distribution-of-scores.png)
 
@@ -108,9 +120,21 @@ Une carte est générée pour chaque compartiment de score, présentant les 10 
 
 ![facteurs d’influence](../images/insights/influential-factors.png)
 
+### Pertes de facteurs influents
+
+Le survol de l’un des principaux facteurs influents ventile les données. Vous obtenez un aperçu des raisons pour lesquelles certains profils appartiennent à un regroupement de propension. Selon le facteur, vous pouvez recevoir des valeurs numériques, catégoriques ou booléennes. L&#39;exemple ci-dessous affiche les valeurs catégoriques par région.
+
+![capture d&#39;écran de la liste déroulante](../images/insights/drilldown.png)
+
+En outre, en utilisant des analyses, vous pouvez comparer un facteur de distribution s’il se produit dans plusieurs groupes de propension et créer des segments plus spécifiques avec ces valeurs. L’exemple suivant illustre le premier cas d’utilisation :
+
+![](../images/insights/drilldown-compare.png)
+
+Vous pouvez constater que les profils ayant une faible propension à la conversion sont moins susceptibles d’avoir effectué une visite récente sur les pages Web adobe.com. Le facteur &quot;Jours depuis la dernière visite Web&quot; ne couvre que 8 %, contre 26 % dans les profils à tendance moyenne. A l’aide de ces chiffres, vous pouvez comparer la distribution dans chaque intervalle du facteur. Ces informations peuvent être utilisées pour déduire que la récence des visites sur le Web n&#39;a pas autant d&#39;influence dans le compartiment à faible propension que dans le compartiment à moyenne propension.
+
 ### Création d’un segment
 
-Cliquer sur le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments de propension faible, moyenne ou élevée vous redirige vers le créateur de segments.
+Selecting the **[!UICONTROL Create Segment]** button in any of the buckets for low, medium, and high propensity redirects you to the segment builder.
 
 >[!NOTE]
 >
