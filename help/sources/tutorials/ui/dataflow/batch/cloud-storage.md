@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 52129cbc597c6bef6f858e581edc0db23b06ad67
 workflow-type: tm+mt
-source-wordcount: '1674'
+source-wordcount: '1790'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-* [[ !Profil client en temps réel DNL]](../../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 De plus, ce didacticiel nécessite que vous disposiez d’un compte d’enregistrement cloud établi. Vous trouverez une liste de didacticiels pour la création de différents comptes d’enregistrement cloud dans l’interface utilisateur dans l’aperçu [des connecteurs](../../../../home.md)source.
 
@@ -54,17 +54,23 @@ Une fois la fenêtre de prévisualisation renseignée, vous pouvez sélectionner
 
 ### Invitation de fichiers Parquet ou JSON
 
-Les formats de fichier pris en charge pour un compte d’enregistrement cloud incluent également JSON et Parquet. Les fichiers JSON et Parquet doivent être compatibles XDM. Pour importer des fichiers JSON ou Parquet, sélectionnez le format de fichier approprié dans le navigateur d’annuaire et appliquez un format de données compatible à partir de l’interface de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Les comptes d’enregistrement Cloud prennent également en charge les fichiers JSON et Parquet. Les fichiers de parquets doivent être compatibles XDM, tandis que les fichiers JSON ne doivent pas nécessairement faire l’objet d’une plainte XDM. Pour importer des fichiers JSON ou Parquet, sélectionnez le format de fichier approprié dans le navigateur d’annuaire et appliquez un format de données compatible à partir de l’interface de droite.
+
+Si le format de données est JSON, une prévisualisation s’affiche, avec des informations sur les données contenues dans le fichier. Dans l’écran prévisualisation, vous pouvez indiquer si le fichier JSON est compatible XDM à l’aide de la liste déroulante **[!UICONTROL compatible]** XDM.
+
+Sélectionnez **[!UICONTROL Suivant]** pour continuer.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
 
 >[!IMPORTANT]
 >
->Contrairement aux types de fichiers délimités, les fichiers au format JSON et Parquet ne sont pas disponibles pour la prévisualisation.
+>Contrairement aux types de fichiers délimités et JSON, les fichiers au format Parquet ne sont pas disponibles pour la prévisualisation.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Mappage des champs de données à un schéma XDM
 
-L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données. Les fichiers source mis en forme dans JSON ou Parquet doivent être compatibles XDM et ne nécessitent pas de configuration manuelle du mappage. Inversement, les fichiers CSV nécessitent de configurer explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper.
+L’étape **[!UICONTROL Mappage]** s’affiche, fournissant une interface interactive permettant de mapper les données source à un [!DNL Platform] jeu de données. Les fichiers source formatés dans Parquet doivent être conformes à XDM et ne nécessitent pas de configuration manuelle du mappage, tandis que les fichiers CSV nécessitent de configurer explicitement le mappage, mais vous permettent de sélectionner les champs de données source à mapper. Les fichiers JSON, s’ils sont marqués comme plainte XDM, ne nécessitent pas de configuration manuelle. Cependant, si elle n’est pas marquée comme compatible XDM, vous devrez configurer explicitement le mappage.
 
 Choisissez un jeu de données dans lequel les données entrantes doivent être assimilées. Vous pouvez soit utiliser un jeu de données existant, soit en créer un nouveau.
 
@@ -94,11 +100,19 @@ The **[!UICONTROL Select schema]** dialog appears. Sélectionnez le schéma à a
 
 Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utiliser les fonctions de mappage pour transformer les données source afin de dériver des valeurs calculées ou calculées. Pour plus d’informations sur les fonctions de mappage et de mappage de données, consultez le didacticiel sur le [mappage des données CSV aux champs](../../../../../ingestion/tutorials/map-a-csv-file.md)de schéma XDM.
 
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
+
+Pour les fichiers JSON, outre le mappage direct des champs à d’autres champs, vous pouvez directement mapper des objets à d’autres objets et tableaux à d’autres tableaux.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
+
+Veuillez noter que vous ne pouvez pas mapper sur différents types. Par exemple, vous ne pouvez pas mapper un objet à un tableau ou un champ à un objet.
+
 >[!TIP]
 >
 >[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
 Sélectionnez des données **[!UICONTROL de]** Prévisualisation pour afficher les résultats de mappage de 100 lignes de données d’exemple au maximum du jeu de données sélectionné.
 
