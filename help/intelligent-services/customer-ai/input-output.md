@@ -5,10 +5,10 @@ title: Entrée et sortie de l’IA client
 topic: Getting started
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans l’IA du client.
 translation-type: tm+mt
-source-git-commit: c30bbaead775e68f869b080e24e18d4a23cda973
+source-git-commit: 0f45f12ca4f43de9489eb609fd541aa2be3bae78
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 33%
+source-wordcount: '824'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ L’IA du client utilise les données du Événement d’expérience du client p
 
 L’IA du client requiert des données historiques pour la formation au modèle, mais la quantité de données requise est basée sur deux éléments clés : fenêtre de résultats et population admissible.
 
-Par défaut, l’API du client recherche un utilisateur qui a eu activité au cours des 120 derniers jours si aucune définition de population éligible n’est fournie lors de la configuration de l’application. Outre la quantité minimale de données du Événement d’expérience du client requise, l’API du client a également besoin d’un nombre minimum de événements de réussite basés sur une définition d’objectif prévue. Actuellement, l’API du client nécessite un minimum de 500 événements de réussite.
+Par défaut, l’API du client recherche un utilisateur qui a eu activité au cours des 120 derniers jours si aucune définition de population éligible n’est fournie lors de la configuration de l’application. En outre, l’IA du client requiert au moins 500 événements qualifiants et 500  non qualifiés (1 000 au total) de données historiques basées sur une définition d’objectif prévue.
 
 Les exemples suivants fournis utilisent une formule simple pour vous aider à déterminer la quantité minimale de données requise. Si vous avez plus que les exigences minimales, votre modèle est susceptible de fournir des résultats plus précis. Si vous disposez de moins de la quantité minimale requise, le modèle échoue car il n&#39;y a pas une quantité suffisante de données pour la formation au modèle.
 
@@ -37,7 +37,7 @@ Longueur minimale des données requises = population admissible + fenêtre de r�
 >
 > 30 est le nombre minimum de jours requis pour la population admissible. Si ce n’est pas le cas, la valeur par défaut est de 120 jours.
 
-Exemples :
+Exemples :
 
 - Vous souhaitez prédire si un client est susceptible d’acheter une montre dans les 30 prochains jours. Vous souhaitez également noter les utilisateurs qui ont une certaine activité Web au cours des 60 derniers jours. Dans ce cas, la longueur minimale des données est de 60 jours + 30 jours. La population éligible est de 60 jours et la fenêtre de résultats est de 30 jours pour un total de 90 jours.
 
