@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel se déroulera en deux temps. Tout d’abord, vous créerez un modèle d’apprentissage automatique à l’aide d’un modèle dans JupyterLab Notebook. Ensuite, vous utiliserez le notebook pour recevoir le workflow dans JupyterLab afin de créer une recette dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: adaa7fbaf78a37131076501c21bf18559c17ed94
 workflow-type: tm+mt
-source-wordcount: '2335'
-ht-degree: 86%
+source-wordcount: '2350'
+ht-degree: 83%
 
 ---
 
@@ -67,10 +67,10 @@ Now that you know the basics for the [!DNL JupyterLab] notebook environment, you
 
 ### Fichier des exigences {#requirements-file}
 
-Le fichier des exigences sert à définir les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. En cas de dépendance, vous pouvez spécifier le numéro de version. Pour consulter d’autres bibliothèques, rendez-vous sur https://anaconda.org. Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
+Le fichier des exigences sert à définir les bibliothèques supplémentaires que vous souhaitez utiliser dans la recette. En cas de dépendance, vous pouvez spécifier le numéro de version. To look for additional libraries, visit [anaconda.org](https://anaconda.org). Pour savoir comment formater le fichier de configuration requise, visitez [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
 
 ```JSON
-python=3.5.2
+python=3.6.7
 scikit-learn
 pandas
 numpy
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus.
+>Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus. De plus, si vous choisissez de créer manuellement un fichier d’environnement, le champ `name` n’est pas autorisé à être remplacé.
 
 ### Fichiers de configuration {#configuration-files}
 
@@ -117,7 +117,7 @@ Les deux prochaines sections traiteront du chargement et de la préparation des 
 
 Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Data can be loaded from files in [!DNL Adobe Experience Platform] using either the [!DNL Platform] SDK (`platform_sdk`), or from external sources using pandas&#39; `read_csv()` or `read_json()` functions.
 
-- [[ !SDK de plate-forme DNL]](#platform-sdk)
+- [[!DNL Platform SDK]](#platform-sdk)
 - [Sources externes](#external-sources)
 
 >[!NOTE]
@@ -148,30 +148,32 @@ df = pd.read_json(data)
 
 Vos données se trouvent maintenant dans l’objet « cadre de données » et peuvent être analysées et manipulées dans la [section suivante](#data-preparation-and-feature-engineering).
 
-### À partir du SDK Data Access (obsolète)
+### A partir du SDK de plate-forme
 
->[!CAUTION]
->
-> `data_access_sdk_python`   n’est plus recommandé, reportez-vous à [Conversion du code Data Access vers SDK Platform](../authoring/platform-sdk.md) pour obtenir un guide sur l’utilisation du chargeur de données `platform_sdk`.
+Vous pouvez charger des données à l’aide du SDK de plate-forme. La bibliothèque peut être importée en haut de la page en incluant la ligne :
 
-Les utilisateurs peuvent charger des données à l’aide du SDK Data Access. La bibliothèque peut être importée en haut de la page en incluant la ligne :
-
-`from data_access_sdk_python.reader import DataSetReader`
+`from platform_sdk.dataset_reader import DatasetReader`
 
 Nous utilisons ensuite la méthode `load()` pour récupérer le jeu de données d’apprentissage à partir de `trainingDataSetId` comme précisé dans notre fichier de configuration (`recipe.conf`).
 
 ```PYTHON
-prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                           user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                           service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+def load(config_properties):
+    print("Training Data Load Start")
 
-df = prodreader.load(data_set_id=configProperties['trainingDataSetId'],
-                     ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    #########################################
+    # Load Data
+    #########################################    
+    client_context = get_client_context(config_properties)
+    
+    dataset_reader = DatasetReader(client_context, config_properties['trainingDataSetId'])
+    
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 >[!NOTE]
 >
->As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from [!DNL Experience Platform]:
+>As mentioned in the [Configuration File section](#configuration-files), the following configuration parameters are set for you when you access data from Experience Platform using `client_context`:
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
@@ -227,46 +229,51 @@ La fonction `load()` doit être complétée avec les jeux de données `train` et
 La procédure de chargement des données pour notation est similaire à celle de chargement des données d’apprentissage de la fonction `split()`. Nous utilisons le SDK Data Access pour charger les données à partir de `scoringDataSetId` dans notre fichier `recipe.conf`.
 
 ```PYTHON
-def load(configProperties):
+def load(config_properties):
 
     print("Scoring Data Load Start")
 
     #########################################
     # Load Data
     #########################################
-    prodreader = DataSetReader(client_id=configProperties['ML_FRAMEWORK_IMS_USER_CLIENT_ID'],
-                               user_token=configProperties['ML_FRAMEWORK_IMS_TOKEN'],
-                               service_token=configProperties['ML_FRAMEWORK_IMS_ML_TOKEN'])
+    client_context = get_client_context(config_properties)
 
-    df = prodreader.load(data_set_id=configProperties['scoringDataSetId'],
-                         ims_org=configProperties['ML_FRAMEWORK_IMS_TENANT_ID'])
+    dataset_reader = DatasetReader(client_context, config_properties['scoringDataSetId'])
+    timeframe = config_properties.get("timeframe")
+    tenant_id = config_properties.get("tenant_id")
 ```
 
 Une fois les données chargées, la préparation des données et la conception des fonctionnalités sont effectuées.
 
 ```PYTHON
-#########################################
-# Data Preparation/Feature Engineering
-#########################################
-df.date = pd.to_datetime(df.date)
-df['week'] = df.date.dt.week
-df['year'] = df.date.dt.year
+    #########################################
+    # Data Preparation/Feature Engineering
+    #########################################
+    if '_id' in dataframe.columns:
+        #Rename columns to strip tenantId
+        dataframe = dataframe.rename(columns = lambda x : str(x)[str(x).find('.')+1:])
+        #Drop id, eventType and timestamp
+        dataframe.drop(['_id', 'eventType', 'timestamp'], axis=1, inplace=True)
 
-df = pd.concat([df, pd.get_dummies(df['storeType'])], axis=1)
-df.drop('storeType', axis=1, inplace=True)
-df['isHoliday'] = df['isHoliday'].astype(int)
+    dataframe.date = pd.to_datetime(dataframe.date)
+    dataframe['week'] = dataframe.date.dt.week
+    dataframe['year'] = dataframe.date.dt.year
 
-df['weeklySalesAhead'] = df.shift(-45)['weeklySales']
-df['weeklySalesLag'] = df.shift(45)['weeklySales']
-df['weeklySalesDiff'] = (df['weeklySales'] - df['weeklySalesLag']) / df['weeklySalesLag']
-df.dropna(0, inplace=True)
+    dataframe = pd.concat([dataframe, pd.get_dummies(dataframe['storeType'])], axis=1)
+    dataframe.drop('storeType', axis=1, inplace=True)
+    dataframe['isHoliday'] = dataframe['isHoliday'].astype(int)
 
-df = df.set_index(df.date)
-df.drop('date', axis=1, inplace=True)
+    dataframe['weeklySalesAhead'] = dataframe.shift(-45)['weeklySales']
+    dataframe['weeklySalesLag'] = dataframe.shift(45)['weeklySales']
+    dataframe['weeklySalesDiff'] = (dataframe['weeklySales'] - dataframe['weeklySalesLag']) / dataframe['weeklySalesLag']
+    dataframe.dropna(0, inplace=True)
 
-print("Scoring Data Load Finish")
+    dataframe = dataframe.set_index(dataframe.date)
+    dataframe.drop('date', axis=1, inplace=True)
 
-return df
+    print("Scoring Data Load Finish")
+
+    return dataframe
 ```
 
 Puisque le but de notre modèle est de prédire les futures ventes hebdomadaires, vous devrez créer un jeu de données de notation servant à évaluer les performances de prédiction du modèle.
