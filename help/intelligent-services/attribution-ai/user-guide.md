@@ -5,10 +5,10 @@ title: Guide d’utilisation d’Attribution AI
 topic: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: 4c1aa1fc5ca1f335dedba47623709d5d2ce12c6e
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 97%
+source-wordcount: '1746'
+ht-degree: 79%
 
 ---
 
@@ -25,7 +25,29 @@ In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in t
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
-La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour. Cliquez sur **Créer une instance** pour commencer.
+La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour.
+
+La mesure **[!UICONTROL Total des événements de conversion marqués]** se trouve dans le coin inférieur droit du conteneur d’instance **** Créer. Cette mesure suit le nombre total de événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
+
+![](./images/user-guide/total_conversions.png)
+
+Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance parmi les instances **[!UICONTROL de]** service existantes. Les contrôles contiennent les informations suivantes :
+
+- **[!UICONTROL Modifier]**: La sélection de **[!UICONTROL Modifier]** vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence d’évaluation de l’instance.
+- **[!UICONTROL Cloner]**: Si vous sélectionnez **[!UICONTROL Cloner]** , l’instance de service sélectionnée est copiée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Source]** de données : Lien vers le jeu de données utilisé par cette instance.
+- **[!UICONTROL Détails]** de la dernière exécution : Ceci s’affiche uniquement en cas d’échec d’une exécution. Les informations sur les raisons pour lesquelles l&#39;exécution a échoué, telles que les codes d&#39;erreur, sont affichées ici.
+
+![](./images/user-guide/side_panel.png)
+
+- **[!UICONTROL Événements]** de conversion : Aperçu rapide des événements de conversion configurés pour cette instance.
+- **[!UICONTROL Fenêtre]** de recherche : Période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact du événement de conversion.
+- **[!UICONTROL Points de contact]**: Liste de tous les points de contact que vous avez définis lors de la création de cette instance.
+
+![](./images/user-guide/side_panel_2.png)
+
+Select **[!UICONTROL Create instance]** to begin.
 
 ![Création d’une instance](./images/user-guide/landing_page.png)
 
@@ -133,7 +155,7 @@ Une fois que vous avez défini tous les points de contact nécessaires, faites d
 
 ## Configuration de la formation et de la notation avancées
 
-La dernière page d’Attribution AI est la page *Avancé* utilisée pour configurer la formation et la notation.
+La dernière page d’Attribution AI est la page **[!UICONTROL Avancé]** utilisée pour configurer la formation et la notation.
 
 ![nouvelle page Avancé](./images/user-guide/advanced_settings.png)
 
@@ -152,6 +174,12 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 >Chaque processus de notation peut prendre jusqu’à 24 heures.
 
 ![icône de l’horloge](./images/user-guide/time_of_day.png)
+
+### Autres colonnes de jeux de données de score (facultatif)
+
+Par défaut, un jeu de données de score est créé pour chaque instance de service dans un schéma standard. Vous pouvez choisir d’ajouter d’autres colonnes en fonction de vos configurations de Événement de conversion et de points de contact à la sortie du jeu de données de score. Début en sélectionnant des colonnes dans votre jeu de données d&#39;entrée, vous pouvez ensuite les faire glisser pour modifier l&#39;ordre en maintenant le bouton gauche de la souris enfoncé sur l&#39;icône du hamburger.
+
+![score ajout de colonne de données](./images/user-guide/Add-score-dataset.png)
 
 ### Modélisation basée sur la région (facultative) {#region-based-modeling-optional}
 
@@ -189,7 +217,7 @@ Une fois que vous avez sélectionné votre période de formation, cliquez sur **
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, consultez la documentation sur le [téléchargement de scores bruts](./download-scores.md).
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading scores](./download-scores.md) documentation.
 
 ## Ressources supplémentaires
 
