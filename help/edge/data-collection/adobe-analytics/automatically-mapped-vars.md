@@ -5,10 +5,10 @@ description: Découvrez quelles variables sont automatiquement mises en correspo
 seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: aa9789768cbcbb13a36c200ef7540c045c30a3fe
+source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 46%
+source-wordcount: '680'
+ht-degree: 36%
 
 ---
 
@@ -21,19 +21,19 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | Mappage des données contextuelles `c.a.appid`AppMeasurement. |
 | `application.launches.value` | `c.a.launches` | Mappage des données contextuelles `c.a.launches` AppMeasurement. |
-| `commerce.checkouts.id` | `events` | `scCheckout` Sérialisation d’événements. |
+| `commerce.checkouts.id` | `events` | `scCheckout` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.checkouts.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_CHECKOUT, à l’aide du délimiteur `,`. |
 | `commerce.order.currencyCode` | `cc` | Mappage du paramètre de requête CURRENCY AppMeasurement. |
 | `commerce.order.purchaseID` | `pi` | Mappage du paramètre de requête PURCHASEID AppMeasurement. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Sérialisation d’événements. |
+| `commerce.productListAdds.id` | `events` | `scAdd` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productListAdds.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_AJOUTE, à l’aide du délimiteur `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Sérialisation d’événements. |
+| `commerce.productListOpens.id` | `events` | `scOpen` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productListOpens.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_OPEN, à l’aide du délimiteur `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Sérialisation d’événements. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productListRemovals.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_REMOVE, à l’aide du délimiteur `,`. |
-| `commerce.productListViews.id` | `events` | `scView` Sérialisation d’événements. |
+| `commerce.productListViews.id` | `events` | `scView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productListViews.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_VUE, à l’aide du délimiteur `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Sérialisation d’événements. |
+| `commerce.productViews.id` | `events` | `prodView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productViews.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PROD_VUE, à l’aide d’un délimiteur `,`. |
 | `commerce.purchases.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PURCHASE, à l’aide du délimiteur `,`. |
 | `device.colorDepth` | `c` | Mappage du paramètre de requête C_COLOR AppMeasurement. |
