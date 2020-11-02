@@ -4,10 +4,10 @@ title: Prévisualisation de profil - API de Profil client en temps réel
 description: Adobe Experience Platform vous permet d'assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans la plate-forme, elles sont stockées dans le magasin de données du Profil. À mesure que le nombre d’enregistrements dans la banque de Profils augmente ou diminue, une tâche d’exemple est exécutée qui comprend des informations sur le nombre de fragments de profil et de profils fusionnés présents dans la banque de données. L'API de Profil vous permet de prévisualisation du dernier exemple réussi, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d'identité.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '1478'
-ht-degree: 6%
+source-wordcount: '1608'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,12 @@ Ces mesures sont également disponibles dans la section [!UICONTROL Profils] de 
 ## Prise en main
 
 The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+
+## Fragments de profil par rapport aux profils fusionnés
+
+Ce guide fait référence à la fois aux &quot;fragments de profil&quot; et aux &quot;profils fusionnés&quot;. Il est important de comprendre la différence entre ces termes avant de procéder.
+
+Chaque profil client individuel est composé de plusieurs fragments de profil qui ont été fusionnés pour former une seule vue du client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre entreprise aura plusieurs fragments de profil liés à ce client unique qui apparaîtront dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans la plate-forme, ils sont fusionnés ensemble (en fonction de la stratégie de fusion) afin de créer un profil unique pour ce client. Par conséquent, il est probable que le nombre total de fragments de profil soit toujours supérieur au nombre total de profils fusionnés, chaque profil étant composé de fragments multiples.
 
 ## Etat du dernier exemple de vue {#view-last-sample-status}
 
