@@ -3,21 +3,27 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 67%
+source-wordcount: '2458'
+ht-degree: 63%
 
 ---
 
 
 # Point de terminaison de la fusion de stratégies
 
-Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API. Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le [guide d’utilisation des stratégies de fusion](../ui/merge-policies.md).
+Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+
+Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre entreprise aura plusieurs fragments de profil liés à ce client unique qui apparaîtront dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans la plate-forme, ils sont fusionnés ensemble afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, un fragment liste le client comme &quot;unique&quot; tandis que les autres listes le client comme &quot;marié&quot;), la stratégie de fusion détermine les informations à inclure dans le profil de la personne.
+
+À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API.
+
+Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le [guide d’utilisation des stratégies de fusion](../ui/merge-policies.md).
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
@@ -738,7 +744,7 @@ Comme les enregistrements sont ingérés dans l&#39;Experience Platform, un horo
 
 Il peut arriver, par exemple, que des données soient renvoyées ou que l’ordre des événements soit correct si les enregistrements sont ingérés dans l’ordre, lorsqu’il est nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système.
 
-Pour utiliser un horodatage personnalisé, le [[ ! DNL External Source Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du `xdm:lastUpdatedDate` champ. Lorsqu’un enregistrement est assimilé à un champ `xdm:lastUpdatedDate` rempli, l’Experience Platform l’utilise pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si elle `xdm:lastUpdatedDate` n’est pas présente ou n’est pas renseignée, la plate-forme continuera à utiliser l’horodatage du système.
+Pour utiliser un horodatage personnalisé, celui-ci [[!DNL External Source System Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du `xdm:lastUpdatedDate` champ. Lorsqu’un enregistrement est assimilé à un champ `xdm:lastUpdatedDate` rempli, l’Experience Platform l’utilise pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si elle `xdm:lastUpdatedDate` n’est pas présente ou n’est pas renseignée, la plate-forme continuera à utiliser l’horodatage du système.
 
 >[!NOTE]
 >
