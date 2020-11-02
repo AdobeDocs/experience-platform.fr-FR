@@ -6,7 +6,7 @@ description: Ce document fournit un tutoriel indiquant comment définir une rela
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 4d9e66a55c265b60ab12070dd5e435c6567b7d0f
 workflow-type: tm+mt
 source-wordcount: '1296'
 ht-degree: 54%
@@ -117,7 +117,7 @@ Within the [!DNL Schema Registry], relationship descriptors work similarly to fo
 >
 >Contrairement au schéma de destination, l&#39;schéma source ne peut pas utiliser son Principale identité comme champ de référence.
 
-Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un `email` champ qui sert d&#39;identité Principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence et doit recevoir un nouveau mixin qui ajoute un nouveau champ au schéma : `favoriteHotel`.
+Dans ce didacticiel, le schéma de destination &quot;[!DNL Hotels]&quot; contient un `hotelId` champ qui sert d&#39;identité Principale du schéma et servira donc également de champ de référence. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence et doit recevoir un nouveau mixin qui ajoute un nouveau champ au schéma : `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -339,7 +339,7 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
 
 ## Création d’un descripteur d’identité de référence {#reference-identity}
 
-Un descripteur d’identité de référence doit être appliqué aux champs du schéma s’ils sont utilisés comme référence par d’autres schémas dans une relation. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `email` field in &quot;[!DNL Hotels]&quot;, `email` must be given a reference identity descriptor.
+Un descripteur d’identité de référence doit être appliqué aux champs du schéma s’ils sont utilisés comme référence par d’autres schémas dans une relation. Since the `favoriteHotel` field in &quot;[!DNL Loyalty Members]&quot; will refer to the `hotelId` field in &quot;[!DNL Hotels]&quot;, `favoriteHotel` must be given a reference identity descriptor.
 
 Créez un descripteur de référence pour le schéma de destination en envoyant une requête POST au point de terminaison `/tenant/descriptors`.
 
@@ -351,7 +351,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-The following request creates a reference descriptor for the `email` field in the destination schema &quot;[!DNL Hotels]&quot;.
+The following request creates a reference descriptor for the `hotelId` field in the destination schema &quot;[!DNL Hotels]&quot;.
 
 ```shell
 curl -X POST \
@@ -365,8 +365,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -387,8 +387,8 @@ Une réponse réussie renvoie les détails du descripteur d’identité que vous
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -423,7 +423,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 
