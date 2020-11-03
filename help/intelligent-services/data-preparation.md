@@ -5,9 +5,9 @@ title: Préparation des données en vue de leur utilisation dans les services in
 topic: Intelligent Services
 description: 'Pour que les services intelligents puissent découvrir des informations issues de vos données de événement marketing, les données doivent être enrichies et conservées de manière sémantique dans une structure standard. Les services intelligents tirent parti des schémas du modèle de données d’expérience (XDM) pour y parvenir. Plus précisément, tous les jeux de données utilisés dans Intelligent Services] doivent être conformes au schéma XDM Consumer ExperienceEvent (CEE). '
 translation-type: tm+mt
-source-git-commit: 3083c50b31746bfd32634278cb55b926bd477b2b
+source-git-commit: 630f3bd0249dc3d0e73ace52c534d5f20ec0f87a
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -278,11 +278,7 @@ Une fois le jeu de données créé, vous pouvez le trouver dans l’interface ut
 
 #### Ajouter les champs d&#39;identité au jeu de données
 
->[!NOTE]
->
->Les prochaines versions de [!DNL Intelligent Services] intégreront le service [d&#39;identité de](../identity-service/home.md) Adobe Experience Platform à leurs capacités d&#39;identification des clients. Par conséquent, les étapes décrites ci-dessous peuvent être modifiées.
-
-Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous avez la possibilité de définir un champ de schéma comme champ d’identité. Pour définir un champ de schéma en tant que champ d’identité, vue la section relative à la définition des champs d’identité dans le didacticiel [](../xdm/tutorials/create-schema-ui.md#identity-field) IU pour la création d’un schéma à l’aide de l’éditeur de Schéma ou du didacticiel [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor)API.
+Si vous importez des données à partir de [!DNL Adobe Audience Manager][!DNL Adobe Analytics], ou d’une autre source externe, vous avez la possibilité de définir un champ de schéma comme champ d’identité. Pour définir un champ de schéma en tant que champ d’identité, vue la section relative à la définition des champs d’identité dans le didacticiel [](../xdm/tutorials/create-schema-ui.md#identity-field) IU ou le didacticiel [](../xdm/tutorials/create-schema-api.md#define-an-identity-descriptor) API pour la création d’un schéma.
 
 Si vous importez des données à partir d’un fichier CSV local, vous pouvez passer à la section suivante sur le [mappage et l’assimilation des données](#ingest).
 
