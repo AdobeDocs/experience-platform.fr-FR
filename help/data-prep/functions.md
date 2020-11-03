@@ -5,9 +5,9 @@ title: Fonctions d’aperçu des données
 topic: overview
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: 16c718c7c653a0cfe4c3dcefddfc5472525e1828
+source-git-commit: 6deb8f5e11b87550601679f06c8445d90fd22709
 workflow-type: tm+mt
-source-wordcount: '3432'
+source-wordcount: '3459'
 ht-degree: 19%
 
 ---
@@ -42,7 +42,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | Concatène les chaînes données. | <ul><li>CHAÎNE : Chaînes qui seront concaténées.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
 | explode | Divise la chaîne sur base d’un regex et renvoie un tableau de parties. Peut éventuellement inclure regex pour fractionner la chaîne. Par défaut, le fractionnement prend la valeur &quot;,&quot;. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à fractionner.</li><li>REGEX : *Facultatif* expression régulière qui peut être utilisée pour fractionner la chaîne.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Renvoie l’emplacement/l’index d’une sous-chaîne. | <ul><li>ENTRÉE : **Obligatoire** Chaîne recherchée.</li><li>SOUS-CHAÎNE : **Obligatoire** Sous-chaîne recherchée dans la chaîne.</li><li>DÉBUT_POSITION : *Facultatif* Emplacement de l’emplacement où début la recherche dans la chaîne.</li><li>OCCURRENCE : *Facultatif* La énième occurrence à rechercher à partir de la position du début. Par défaut, elle est définie sur 1. </li></ul> | instruction(INPUT, SUBSTRING, DÉBUT_POSITION, OCCURRENCE) | instr(&quot;adobe`<span>`.com&quot;, &quot;com&quot;) | 6 |
@@ -51,7 +51,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | lower /<br>lcase | Convertit une chaîne en minuscules. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui sera convertie en minuscules.</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | Convertit une chaîne en majuscules. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui sera convertie en majuscules.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
 | split | Divise une chaîne d’entrée sur un séparateur. | <ul><li>ENTRÉE : **Obligatoire** Chaîne d’entrée qui va être fractionnée.</li><li>SÉPARATEUR : **Obligatoire** Chaîne utilisée pour fractionner l’entrée.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
-| join | Joint une liste d’objets à l’aide du séparateur. | <ul><li>SÉPARATEUR : **Obligatoire** Chaîne qui sera utilisée pour joindre les objets.</li><li>OBJETS : **Obligatoire** Tableau de chaînes qui seront jointes.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", ["Hello", "world"])` | &quot;Hello world&quot; |
+| join | Joint une liste d’objets à l’aide du séparateur. | <ul><li>SÉPARATEUR : **Obligatoire** Chaîne qui sera utilisée pour joindre les objets.</li><li>OBJETS : **Obligatoire** Tableau de chaînes qui seront jointes.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Applique une pression sur le côté gauche d’une chaîne avec l’autre chaîne donnée. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COMPTE : **Obligatoire** Taille de la chaîne à ajouter.</li><li>REMPLISSAGE : **Obligatoire** Chaîne avec laquelle ajouter le remplissage de l’entrée. S’il est nul ou vide, il sera traité comme un espace unique.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Applique une superposition au côté droit d’une chaîne avec l’autre chaîne donnée. | <ul><li>ENTRÉE : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COMPTE : **Obligatoire** Taille de la chaîne à ajouter.</li><li>REMPLISSAGE : **Obligatoire** Chaîne avec laquelle ajouter le remplissage de l’entrée. S’il est nul ou vide, il sera traité comme un espace unique.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
 | left | Récupère les premiers caractères &quot;n&quot; de la chaîne donnée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne pour laquelle vous obtenez les premiers caractères &quot;n&quot;.</li><li>COMPTE : **** ObligatoireCaractères &quot;n&quot; que vous souhaitez obtenir à partir de la chaîne.</li></ul> | left(STRING, COUNT) | left(&quot;abcde&quot;, 2) | &quot;ab&quot; |
@@ -69,7 +69,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | sha1 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 1 (SHA-1). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha1(INPUT, CHARSET) | sha1(&quot;my text&quot;, &quot;UTF-8&quot;) | c3599c11e47719df18a24 &#x200B; 48690840c5dfcce3c80 |
 | sha256 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 256 (SHA-256). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha256(INPUT, CHARSET) | sha256(&quot;my text&quot;, &quot;UTF-8&quot;) | 7330d2b39ca35eaf4cb95fc846c21 &#x200B; ee6a39af698154a83a586ee270a0d372104 |
 | sha512 | Récupère une entrée et génère une valeur de hachage à l’aide de l’algorithme de hachage sécurisé 512 (SHA-512). | <ul><li>ENTRÉE : **Obligatoire** Texte brut à hacher.</li><li>CHARSET : *Facultatif* Nom du jeu de caractères. Les valeurs possibles sont UTF-8, UTF-16, ISO-8859-1 et US-ASCII.</li></ul> | sha512(INPUT, CHARSET) | sha512(&quot;my text&quot;, &quot;UTF-8&quot;) | a3d7e45a0d9be5fd4e4b9a3b8c9c2163c21ef &#x200B; 708bf11b4232bb21d2a8704ada2cdcd7b367dd00 788a89 &#x200B; a5c908cfe377aceb1072a7b386b7d4fd2ff68a8fd24d16 |
@@ -83,7 +83,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | get_url_protocol | Renvoie le protocole à partir de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le protocole doit être extrait.</li></ul> | get_url_protocol(URL) | get_url_protocol(&quot;https://platform.adobe.com/home&quot;) | https |
 | get_url_host | Renvoie l’hôte de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle l&#39;hôte doit être extrait.</li></ul> | get_url_host(URL) | get_url_host(&quot;https://platform.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Renvoie le port de l’URL donnée. Si l’entrée n’est pas valide, elle renvoie null. | <ul><li>URL : **Obligatoire** URL à partir de laquelle le port doit être extrait.</li></ul> | get_url_port(URL) | get_url_port(&quot;sftp://example.com//home/joe/employee.csv&quot;) | 22 |
@@ -97,7 +97,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | now | Récupère l’heure actuelle. |  | now() | now() | `2020-09-23T10:10:24.556-07:00[America/Los_Angeles]` |
 | timestamp | Récupère l’heure Unix actuelle. |  | timestamp() | timestamp() | 1571850624571 |
 | format | Formate la date d’entrée selon un format spécifié. | <ul><li>DATE : **Obligatoire** Date d&#39;entrée, en tant qu&#39;objet ZonedDateTime, à formater.</li><li>FORMAT : **Obligatoire** Format de la date à modifier.</li></ul> | format(DATE, FORMAT) | format(2019-10-23T11:24:00+00:00, &quot;aaaa-MM-jj HH:mm:ss&quot;) | &quot;2019-10-23 11:24:35&quot; |
@@ -118,13 +118,14 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | size_of | Renvoie la taille de l’entrée. | <ul><li>ENTRÉE : **Obligatoire** Objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | is_empty | Vérifie si un objet est vide ou non. | <ul><li>ENTRÉE : **Obligatoire** L&#39;objet que vous essayez de vérifier est vide.</li></ul> | is_empty(INPUT) | `is_empty([1, 2, 3])` | false |
 | array_to_object | Crée une liste d’objets. | <ul><li>ENTRÉE : **Obligatoire** Groupe de paires clé/tableau.</li></ul> | array_to_object(INPUT) | exemple de besoin | exemple de besoin |
 | to_object | Crée un objet basé sur les paires clé/valeur plate données. | <ul><li>ENTRÉE : **Obligatoire** liste plate de paires clé/valeur.</li></ul> | to_object(INPUT) | to_object(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Crée un objet à partir de la chaîne d’entrée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne analysée pour créer un objet.</li><li>VALUE_DELIMITER : *Facultatif* Délimiteur séparant un champ de la valeur. The default delimiter is `:`.</li><li>FIELD_DELIMITER : *Facultatif* Délimiteur séparant les paires valeur-champ. The default delimiter is `,`.</li></ul> | str_to_object(STRING, VALUE_DELIMITER, FIELD_DELIMITER) | str_to_object(&quot;firstName - John | lastName - | téléphone - 123 456 7890&quot;, &quot;-&quot;, &quot; | &quot;) | `{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}` |
 | is_set | Vérifie si l’objet existe dans les données source. | <ul><li>ENTRÉE : **Obligatoire** Chemin à vérifier s&#39;il existe dans les données source.</li></ul> | is_set(INPUT) | is_set(&quot;evars.evar.field1&quot;) | vrai |
+| nullify | Définit la valeur de l’attribut sur `null`. Il doit être utilisé lorsque vous ne souhaitez pas copier le champ dans le schéma de cible. |  | nullify() | nullify() | `null` |
 
 ### Hiérarchies - Tableaux
 
@@ -133,7 +134,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | coalesce | Renvoie le premier objet non nul dans un tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le premier objet non nul.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Récupère le premier élément du tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le premier élément.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Récupère le dernier élément du tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le dernier élément.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
@@ -146,7 +147,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | decode | Étant donné qu’une clé et une liste de paires clé-valeur sont aplaties dans un tableau, la fonction renvoie la valeur si la clé est trouvée ou renvoie une valeur par défaut si elle est présente dans le tableau. | <ul><li>CLÉ : **Obligatoire** Clé à faire correspondre.</li><li>OPTIONS : **Obligatoire** Tableau aplati de paires clé/valeur. Une valeur par défaut peut éventuellement être placée à la fin.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Si le code d&#39;état donné est &quot;ca&quot;, &quot;California&quot;.<br>Si le code d&#39;état donné est &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Si le code d’état ne correspond pas à ce qui suit, &quot;S/O&quot;. |
 | iif | Évalue une expression booléenne donnée et renvoie la valeur spécifiée en fonction du résultat. | <ul><li>BOOLEAN_EXPRESSION : **Obligatoire** expression booléenne en cours d&#39;évaluation.</li><li>TRUE_VALUE : **Obligatoire** Valeur renvoyée si l’expression est évaluée sur true.</li><li>FALSE_VALUE : **Obligatoire** Valeur renvoyée si l’expression prend la valeur false.</li></ul> | iif(EXPRESSION_BOOLEAN, VALUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
@@ -157,7 +158,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | min | Renvoie le minimum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Renvoie le maximum des arguments donnés. Utilise l’ordre naturel. | <ul><li>OPTIONS : **Obligatoire** Un ou plusieurs objets pouvant être comparés les uns aux autres.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
@@ -168,7 +169,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | to_bigint | Convertit une chaîne en un BigInteger. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à convertir en BigInteger.</li></ul> | to_bigint(STRING) | to_bigint(&quot;1000000.34&quot;) | 1000000.34 |
 | to_decimal | Convertit une chaîne en Doublon. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à convertir en Doublon.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
 | to_float | Convertit une chaîne en une chaîne flottante. | <ul><li>CHAÎNE : **Obligatoire** Chaîne à convertir en Float.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
@@ -181,7 +182,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Désérialisez le contenu JSON à partir de la chaîne donnée. | <ul><li>CHAÎNE : **Obligatoire** Chaîne JSON à désérialiser.</li></ul> | json_to_object(STRING) | json_to_object({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}}) | Objet représentant le fichier JSON. |
 
 ### Opérations spéciales
@@ -191,7 +192,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Génère un identifiant pseudo-aléatoire. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fcda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c20633 |
 
 ### Fonctions de l&#39;agent utilisateur
@@ -201,7 +202,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 >Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
-| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+-------- | ----------- | ---------- | -------| ---------- | -------------
 | ua_os_name | Extrait le nom du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name(USER_AGENT) | ua_os_name(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS |
 | ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major(USER_AGENT) | ua_os_version_major(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5 |
 | ua_os_version | Extrait la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version(USER_AGENT) | ua_os_version(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
