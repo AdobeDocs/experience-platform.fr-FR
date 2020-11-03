@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 65%
+source-wordcount: '100'
+ht-degree: 59%
 
 ---
 
@@ -27,9 +27,10 @@ ht-degree: 65%
    * [Etat de l’exemple de prévisualisation ([!DNL Profile] prévisualisation)](api/preview-sample-status.md)
    * [[!DNL Profile] tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
 * Guides de l’interface utilisateur {#ui}
-   * [[!DNL Profile] guide de l&#39;utilisateur](ui/user-guide.md)
+   * [[!DNL Profile] Guide de l’interface](ui/user-guide.md)
    * [[!DNL Profile] personnalisation détaillée](ui/profile-customization.md)
-   * [Guide d’utilisation des stratégies de fusion](ui/merge-policies.md)
+   * [Guide de l’interface utilisateur des stratégies de fusion](ui/merge-policies.md)
+   * [Guide de l’interface utilisateur du schéma d’Union](ui/union-schema.md)
 * Tutoriels {#tutorials}
    * [Ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
    * [Configuration d’un jeu de données [!DNL Profile] & [!DNL Identity] pour le service](tutorials/dataset-configuration.md)
