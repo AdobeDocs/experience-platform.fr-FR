@@ -1,19 +1,29 @@
 ---
-title: Notes de mise à jour du SDK Web Adobe Experience Platform
-seo-title: Notes de mise à jour du SDK Web Adobe Experience Platform
-description: Notes de mise à jour du SDK Web Adobe Experience Platform.
-seo-description: Notes de mise à jour du SDK Web Adobe Experience Platform.
+title: Notes de mise à jour du SDK web Adobe Experience Platform
+seo-title: Notes de mise à jour du SDK web Adobe Experience Platform
+description: Notes de mise à jour du SDK web Adobe Experience Platform.
+seo-description: Notes de mise à jour du SDK web Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 translation-type: tm+mt
-source-git-commit: 738dfe782ee7d6bef06d14910e0c26540b0ec734
+source-git-commit: 77c1e693668bc50a81713d02cfe4b0fabc661404
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
 
 # Notes de mise à jour
+
+## Version 2.3.0
+
+* Prise en charge des nonce Ajoutée pour permettre des stratégies de sécurité du contenu plus strictes.
+* Prise en charge de la personnalisation Ajoutée pour les applications d’une seule page.
+* Amélioration de la compatibilité avec d’autres codes JavaScript sur la page susceptibles de remplacer `window.console` les API.
+* Correctif : `sendBeacon` n’était pas utilisé lorsque `documentUnloading` était défini sur `true` ou lorsque les clics sur les liens étaient automatiquement suivis.
+* Correctif : Un lien ne serait pas automatiquement suivi si l’élément d’ancrage contenait du contenu HTML.
+* Correctif : Certaines erreurs de navigateur contenant une propriété en lecture seule `message` n’ont pas été gérées correctement, d’où une autre erreur exposée au client.
+* Correctif : L’exécution du SDK dans un iframe provoquerait une erreur si la page HTML de l’iframe provenait d’un sous-domaine différent de celui de la page HTML de la fenêtre parent.
 
 ## Version 2.2.0
 
