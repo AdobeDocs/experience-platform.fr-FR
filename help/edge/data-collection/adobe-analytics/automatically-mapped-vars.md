@@ -5,9 +5,9 @@ description: Découvrez quelles variables sont automatiquement mises en correspo
 seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
 keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
 translation-type: tm+mt
-source-git-commit: 3ed89011313006cf627945bf8c75bfd0b87a69bc
+source-git-commit: b81c0c450ddee4b0c0abedfd8ca53c3a599fb3cb
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '674'
 ht-degree: 36%
 
 ---
@@ -91,9 +91,8 @@ Below is a list of variables that the Adobe Experience Platform [!DNL Edge Netwo
 | `placeContext.geo.postalCode` | `zip` | Mappage du paramètre de requête ZIP AppMeasurement. |
 | `placeContext.geo.stateProvince` | `state` | Mappage du paramètre de requête STATE AppMeasurement. |
 | `productlistitems.[N]._[NAME_SPACE].*` | `products` | Paramètre de la requête AppMeasurement Produits Mappage Événements de marchandisage / eVars. |
-| `productlistitems.[N].lineitemid` | `products` | Mappage de la Catégorie Produits du paramètre de la requête AppMeasurement. |
 | `productlistitems.[N].name` | `products` | Mappage du paramètre de la requête AppMeasurement pour le nom des produits. |
-| `productlistitems.[N].pricetotal` | `products` | Paramètre de la requête AppMeasurement Mappage des prix des produits. |
+| `productlistitems.[N].priceTotal` | `products` | Paramètre de la requête AppMeasurement Mappage des prix des produits. |
 | `productlistitems.[N].quantity` | `products` | Mappage de quantité du paramètre de la requête AppMeasurement Produits. |
 | `web.webInteraction.URL` | `pev1` | Mappage PAGE_ÉVÉNEMENT_VAR1 du paramètre de requête AppMeasurement. |
 | `web.webInteraction.name` | `pev2` | Mappage PAGE_ÉVÉNEMENT_VAR2 du paramètre de requête AppMeasurement. |
