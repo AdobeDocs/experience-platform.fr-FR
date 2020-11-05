@@ -5,10 +5,10 @@ description: Le Adobe Experience Platform Web SDK peut fournir et générer des 
 seo-description: Le Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: b10b930dca504b7672eb05bd88ab44d09d9e5c0a
+source-git-commit: 86d819daf26eaf1b46afe76054d475e61720dd27
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 11%
+source-wordcount: '839'
+ht-degree: 10%
 
 ---
 
@@ -56,9 +56,9 @@ Il est important de comprendre la terminologie suivante lorsque vous travaillez 
 
    ![](assets/decision-scope-copy.png)
 
-**Configuration Edge :** Pour plus d&#39;informations, consultez la documentation sur la configuration [des](../../fundamentals/edge-configuration.md) bords.
+* **Configuration Edge :** Pour plus d&#39;informations, consultez la documentation sur la configuration [des](../../fundamentals/edge-configuration.md) bords.
 
-**Identité**: Pour plus d&#39;informations, veuillez lire cette documentation décrivant comment [Platform Web SDK exploite Identity Service](../../identity/overview.md).
+* **Identité**: Pour plus d&#39;informations, veuillez lire cette documentation décrivant comment [Platform Web SDK exploite Identity Service](../../identity/overview.md).
 
 ## Activation de Offer Decisioning
 
@@ -66,7 +66,7 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 
 1. Activation de Adobe Experience Platform dans votre configuration [de](../../fundamentals/edge-configuration.md) bord et cochez la case &quot;Offer Decisioning&quot;
    ![offre-prise de décision-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un guide de début [rapide pour le lancement](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/quick-start.html)).
+2. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un guide de début [rapide pour le lancement](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/quick-start.html)de plateformes.
 3. [Configurez le SDK](../../fundamentals/configuring-the-sdk.md) pour Offer Decisioning. D&#39;autres étapes spécifiques à Offer Decisioning sont présentées ci-dessous.
    * SDK installé autonome
       1. Configurez l’action &quot;sendEvent&quot; avec votre `decisionScopes`
@@ -80,19 +80,19 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
           ]
       })
       ```
-   * Lancement du SDK installé
-      1. [Création d’une propriété Launch](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html)
-      2. [Ajout du code intégré Launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installez et configurez l’extension AEP Web SDK avec la configuration Edge que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Edge Configuration&quot;. Documentation utile sur les [extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html).
+   * Kit SDK installé pour le lancement de plate-forme
+      1. [Créer une propriété de lancement de plate-forme](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/companies-and-properties.html)
+      2. [Ajouter le code incorporé de lancement de plateforme](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installez et configurez l’extension Adobe Experience Platform Web SDK avec la configuration Edge que vous venez de créer en sélectionnant la configuration dans la liste déroulante &quot;Edge Configuration&quot;. Documentation utile sur les [extensions](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Créez les éléments [de](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html)données nécessaires. Au minimum, vous devrez créer un mappage d’identité du SDK Web AEP et un élément de données XDM du SDK Web AEP. (espérons qu’il y aura plus de documentation sur les éléments de données du SDK Web AEP que nous pouvons lier ici)
+      4. Créez les éléments [de](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html)données nécessaires. Au minimum, vous devrez créer une carte d&#39;identité du SDK Web de plate-forme et un élément de données d&#39;objet XDM SDK de plate-forme Web.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Créez vos [règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html).
-         * Ajouter une action Envoyer le Événement du SDK Web AEP et ajouter les éléments appropriés `decisionScopes` à la configuration de cette action
+         * Ajouter une action Envoyer le Événement d&#39;un SDK Web de plate-forme et ajouter les éléments appropriés `decisionScopes` à la configuration de cette action
             ![send-événement-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [Créez et publiez une bibliothèque](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) contenant toutes les règles, éléments de données et extensions appropriés que vous avez configurés.
 
