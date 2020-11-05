@@ -5,9 +5,9 @@ description: Découvrez comment rendre du contenu personnalisé avec le SDK Web 
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: d069b3007265406367ca9de2b85540b2a070cf36
+source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '621'
 ht-degree: 5%
 
 ---
@@ -20,10 +20,6 @@ Adobe Experience Platform [!DNL Web SDK] peut fournir et rendre des expériences
 ## Activation de Adobe Target
 
 Pour l’activer [!DNL Target], vous devez effectuer les opérations suivantes :
-
-1. Activez les jetons de réponse activité.id et experience.id dans l’ [!DNL Target] interface utilisateur.
-
-![cible_reponse_token](./assets/target_response_token.png)
 
 1. Activez la cible dans votre configuration [](../../fundamentals/edge-configuration.md) Edge avec le code client approprié.
 1. Ajoutez l’ `renderDecisions` option à vos événements.
