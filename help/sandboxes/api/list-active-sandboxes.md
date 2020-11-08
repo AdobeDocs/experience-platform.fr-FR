@@ -5,10 +5,10 @@ title: Répertorier les environnements de test actifs de l’utilisateur actuel
 topic: developer guide
 description: Vous pouvez liste les sandbox principaux pour l’utilisateur actuel en adressant une demande de GET au point de terminaison racine.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 91%
+source-wordcount: '345'
+ht-degree: 67%
 
 ---
 
@@ -24,14 +24,18 @@ Vous pouvez répertorier les environnements de test actifs de l’utilisateur ac
 **Format d’API**
 
 ```http
-GET /
+GET /{QUERY_PARAMS}
 ```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats en fonction. See the section on [query parameters](#query) for more information. |
 
 **Requête**
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/sandbox-management/ \
+  https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -84,7 +88,17 @@ Une réponse réussie renvoie une liste des environnements de test actifs de l�
             "createdBy": "{USER_ID}",
             "modifiedBy": "{USER_ID}"
         }
-    ]
+    ],
+    "_page": {
+        "limit": 3,
+        "count": 1
+    },
+    "_links": {
+        "page": {
+            "href": "https://platform.adobe.io:443/data/foundation/sandbox-management/?limit={limit}&offset={offset}",
+            "templated": true
+        }
+    }
 }
 ```
 
@@ -96,3 +110,16 @@ Une réponse réussie renvoie une liste des environnements de test actifs de l�
 | `type` | Le type d’environnement de test : « développement » ou « production ». |
 | `isDefault` | Une propriété booléenne indiquant s’il s’agit de l’environnement de test par défaut de l’organisation. Il s’agit généralement de l’environnement de test de production. |
 | `eTag` | L’identifiant d’une version spécifique de l’environnement de test. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que l’environnement de test est modifié. |
+
+## Utilisation des paramètres de requête {#query}
+
+L’ [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API prend en charge l’utilisation de paramètres de requête pour la page et filtre les résultats lors de l’inscription de sandbox.
+
+>[!NOTE]
+>
+>Les paramètres `limit` et `offset` la requête doivent être spécifiés ensemble. Si vous n&#39;en spécifiez qu&#39;un seul, l&#39;API renvoie une erreur. Si vous n’en spécifiez aucune, la limite par défaut est de 50 et le décalage est de 0.
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `limit` | Nombre maximal d&#39;enregistrements à renvoyer dans la réponse. |
+| `offset` | Nombre d&#39;entités entre le premier enregistrement et le début (décalé) de la liste de réponse. |
