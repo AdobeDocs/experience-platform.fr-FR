@@ -5,10 +5,10 @@ topic: overview
 title: Présentation du contrôle d’accès
 description: Le contrôle d'accès de Adobe Experience Platform est fourni par l'intermédiaire du Adobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 61%
+source-wordcount: '1299'
+ht-degree: 54%
 
 ---
 
@@ -73,7 +73,7 @@ L’autorisation « Gestion des environnements de test » permet aux utilisate
 
 L’onglet Autorisations au sein d’un profil de produit affiche les environnements de test et les autorisations actives pour ce profil :
 
-![](./images/permissions-overview.png)
+![permissions-aperçu](./images/permissions-overview.png)
 
 Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
 
@@ -83,12 +83,19 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès à la lecture, la création, la modification et la suppression des schémas et des ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Affichage des schémas] | Accès en lecture seule aux schémas et aux ressources associées. |
+| [!DNL Data Modeling] | [!UICONTROL Gérer les relations] | Accès à la lecture, à la création, à la modification et à la suppression de relations de schéma. |
+| [!DNL Data Modeling] | [!UICONTROL Gérer les métadonnées d’identité] | Accès à la lecture, à la création, à la modification et à la suppression des métadonnées d’identité pour les schémas. |
 | [!DNL Data Management] | [!UICONTROL Gestion des jeux de données] | Accès à la lecture, la création, la modification et la suppression des jeux de données. Accès en lecture seule aux schémas. |
 | [!DNL Data Management] | [!UICONTROL Affichage des jeux de données] | Accès en lecture seule aux jeux de données et aux schémas. |
 | [!DNL Data Management] | [!UICONTROL Surveillance des données] | Accès en lecture seule à la surveillance des jeux de données et des flux. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des profils] | Accès à la lecture, la création, la modification et la suppression des jeux de données utilisés pour les profils de clients. Accès en lecture seule aux profils disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des profils] | Accès en lecture seule aux profils disponibles. |
+| [!DNL Profile Management] | [!UICONTROL Gestion des segments] | Accès à la lecture, à la création, à la modification et à la suppression de segments. |
+| [!DNL Profile Management] | [!UICONTROL Segments de vue] | Accès en lecture seule aux segments disponibles. |
+| [!DNL Profile Management] | [!UICONTROL Gérer les stratégies de fusion] | Accès à la lecture, à la création, à la modification et à la suppression des stratégies de fusion. |
+| [!DNL Profile Management] | [!UICONTROL Stratégies de fusion de vues] | Accès en lecture seule aux stratégies de fusion disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Exportation de l’audience pour un segment] | Capacité à exporter un segment ciblé évalué vers un jeu de données. |
+| [!DNL Profile Management] | [!UICONTROL Évaluer un segment sur une Audience] | Capacité à générer des profils pour une audience en évaluant une définition de segment. |
 | [!DNL Identities] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
 | [!DNL Identities] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des environnements de test] | Accès à la lecture, la création, la modification et la suppression des environnements de test. |
@@ -100,8 +107,12 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
 | [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Appliquer les étiquettes d’utilisation des données] | Accès à la lecture, à la création et à la suppression des étiquettes d’utilisation. |
+| [!DNL Data Governance] | [!UICONTROL Gérer les stratégies d’utilisation des données] | Accès à la lecture, à la création, à la modification et à la suppression des stratégies d’utilisation des données. |
+| [!DNL Data Governance] | [!UICONTROL Stratégies d’utilisation des données de vue] | Accès en lecture seule pour les stratégies d’utilisation des données appartenant à votre organisation. |
+| [!DNL Query Service] | [!UICONTROL Gérer les Requêtes] | Accès à la lecture, à la création, à la modification et à la suppression de requêtes SQL structurées pour les données de la plate-forme. |
 
-_(*) Cette autorisation requiert des dispositions pour[!DNL Real-time Customer Data Platform]. Pour plus d’informations concernant la plateforme de données clients en temps réel d’Adobe, commencez par lire la[présentation de la plateforme de données clients en temps réel d’Adobe](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/overview.html)._
+_(*) Cette autorisation requiert des dispositions pour [!DNL Real-time Customer Data Platform]. Pour plus d’informations concernant la plateforme de données clients en temps réel d’Adobe, commencez par lire la [présentation de la plateforme de données clients en temps réel d’Adobe](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/overview.html)._
 
 ## Étapes suivantes
 
