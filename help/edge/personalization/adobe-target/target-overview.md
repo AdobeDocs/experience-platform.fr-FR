@@ -5,9 +5,9 @@ description: Découvrez comment rendre du contenu personnalisé avec le SDK Web 
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
 translation-type: tm+mt
-source-git-commit: f08452fa9a6ece93e40ef8ca811530feb0620969
+source-git-commit: f2bd8b89207901e57272a4f56d7f561ac10eb60a
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '626'
 ht-degree: 5%
 
 ---
@@ -31,7 +31,7 @@ Ensuite, vous pouvez également :
 
 ## Utilisation du compositeur d’expérience visuelle Adobe Target
 
-Avec le SDK, vous pouvez utiliser le compositeur d’expérience visuelle normalement à une exception près : vous avez besoin de l&#39;extension [d&#39;assistance du compositeur d&#39;expérience visuelle de](https://docs.adobe.com/content/help/en/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) cible installée et principale.
+Pour utiliser le compositeur d’expérience visuelle avec une implémentation du SDK Web de plate-forme, vous devez installer et activer l’extension d’assistance [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC.
 
 ## Activités du compositeur d’expérience visuelle à rendu automatique
 
