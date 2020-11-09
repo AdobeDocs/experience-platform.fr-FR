@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;;primary identity;primary identity;XDM individual profile;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;best practices
 solution: Experience Platform
 title: Meilleures pratiques pour la modélisation des données dans Adobe Experience Platform
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e15df78978c06da254319d9d394be35c4668caa9
+source-git-commit: 5fe75ab7c939c8437d675212b71229fe3fb70c01
 workflow-type: tm+mt
-source-wordcount: '2477'
+source-wordcount: '2485'
 ht-degree: 2%
 
 ---
@@ -220,7 +220,7 @@ Ce document décrit les instructions générales et les meilleures pratiques rel
 
 * Utilisez une approche descendante en triant vos tableaux de données en catégories de profil, de recherche et de événement avant de construire vos schémas.
 * Il existe souvent de multiples approches et options lorsqu&#39;il s&#39;agit de concevoir des schémas à des fins différentes.
-* Votre modèle de données doit prendre en charge les cas d’utilisation de la segmentation.
+* Votre modèle de données doit prendre en charge les cas d’utilisation de votre entreprise, tels que la segmentation ou l’analyse du parcours client.
 * Rendez vos schémas aussi simples que possible et ajoutez uniquement de nouveaux champs quand cela est absolument nécessaire.
 
 Une fois que vous êtes prêt, consultez le didacticiel sur la [création d’un schéma dans l’interface utilisateur](../tutorials/create-schema-ui.md) pour obtenir des instructions détaillées sur la création d’un schéma, affectez la classe appropriée à l’entité et ajoutez des champs à partir desquels mapper vos données.
