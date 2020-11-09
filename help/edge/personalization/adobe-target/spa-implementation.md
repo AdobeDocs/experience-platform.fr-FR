@@ -5,9 +5,9 @@ description: Découvrez comment rendre du contenu personnalisé avec le SDK Web 
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 485c2e3b0ad7b38a8e4a482cac49c123a744c47b
+source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1671'
 ht-degree: 14%
 
 ---
@@ -223,7 +223,7 @@ Une fois la définition de vos Vues XDM terminée et implémentée`sendEvent()` 
 
 >[!NOTE]
 >
->Pour utiliser le compositeur d’expérience visuelle pour votre SPA, vous devez installer l’extension [d’assistance](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak)Adobe Target VEC pour Chrome.
+>Pour utiliser le compositeur d’expérience visuelle pour votre SPA, vous devez installer et activer [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ### Panneau des modifications
 
