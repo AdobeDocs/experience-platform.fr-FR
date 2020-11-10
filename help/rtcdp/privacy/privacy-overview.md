@@ -5,9 +5,9 @@ seo-title: Confidentialité du profil de données client en temps réel
 description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
 translation-type: tm+mt
-source-git-commit: 1eaadb1877cc5221bf6b0b8eed042287e59155bf
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '360'
 ht-degree: 21%
 
 ---
@@ -31,7 +31,7 @@ Pour plus d’informations, consultez le document sur le [traitement des demande
 
 ## Prise en charge d’IAB TCF 2.0
 
-[!DNL Real-time CDP] fait partie de la liste [du](https://iabeurope.eu/vendor-list-tcf-v2-0/) fournisseur enregistré pour le [!DNL Transparency & Consent Framework] (TCF), telle que définie par le [!DNL Interactive Advertising Bureau] (IAB). Conformément aux exigences de TCF 2.0, [!DNL Real-time CDP] vous permet de collecter des données détaillées sur le consentement des clients et de les intégrer à vos profils clients stockés. Ces données de consentement peuvent ensuite être prises en compte pour déterminer si certains profils sont inclus dans les segments d’audience exportés, selon leur cas d’utilisation.
+[!DNL Real-time CDP] fait partie de la liste [du](https://iabeurope.eu/vendor-list-tcf-v2-0/) fournisseur enregistré pour le [!DNL Transparency & Consent Framework (TCF)], comme l&#39;indique l&#39; [!DNL Interactive Advertising Bureau] IAB. Conformément aux exigences de TCF 2.0, [!DNL Real-time CDP] vous permet de collecter des données détaillées sur le consentement des clients et de les intégrer à vos profils clients stockés. Ces données de consentement peuvent ensuite être prises en compte pour déterminer si certains profils sont inclus dans les segments d’audience exportés, selon leur cas d’utilisation.
 
 Pour plus d’informations, voir la présentation de la prise en charge [IAB TCF 2.0 dans [!DNL Real-time CDP]](./iab/overview.md) la section
 
