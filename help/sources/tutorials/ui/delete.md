@@ -6,9 +6,9 @@ title: Supprimer des flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: cbd9b3ed0cf43d582d734098b9ce58fc074fb375
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '447'
 ht-degree: 12%
 
 ---
@@ -22,7 +22,7 @@ Les connecteurs source de Adobe Experience Platform permettent d’importer des 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model] (XDM) Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
