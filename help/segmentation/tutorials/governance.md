@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’utilisation des données pour les segments ciblés de profils client en temps réel à l’aide d’API.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 44%
+source-wordcount: '1338'
+ht-degree: 51%
 
 ---
 
@@ -22,10 +22,10 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[ !Profil client en temps réel DNL]](../../profile/home.md): [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer les données [!DNL Experience Data Model] (XDM) dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] est un magasin d’entités de recherche générique, qui est utilisé pour gérer [!DNL Experience Data Model (XDM)] les données dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
    - [Stratégies de fusion](../../profile/api/merge-policies.md)[!DNL Real-time Customer Profile] : stratégies utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Merge policies can be configured for [!DNL Data Governance] purposes.
-- [[ !Segmentation DNL]](../home.md): Comment [!DNL Real-time Customer Profile] divise un grand groupe d’individus contenus dans le magasin de profils en groupes plus petits qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
-- [[ !Gouvernance des données DNL]](../../data-governance/home.md): [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données, en utilisant les composants suivants :
+- [[!DNL Segmentation]](../home.md)[!DNL Real-time Customer Profile] : manière dont divise un grand groupe d’individus inclus dans la banque de profils en groupes plus petits partageant des caractéristiques et réagissant de la même manière aux stratégies marketing.
+- [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] fournit l’infrastructure pour l’étiquetage et l’application des données, en utilisant les composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
    - [Stratégies d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
    - [Application des](../../data-governance/enforcement/overview.md)politiques : Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégies.
@@ -35,11 +35,11 @@ The following sections provide additional information that you will need to know
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -385,4 +385,4 @@ Pour plus d’informations, consultez la section sur l’[exportation d’un seg
 
 ## Étapes suivantes
 
-Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d&#39;informations sur [!DNL Data Governance] in [!DNL Experience Platform], veuillez lire la présentation de [[ ! DNL Data Governance]](../../data-governance/home.md).
+Dans ce tutoriel, vous avez cherché les libellés d’utilisation des données associés à un segment ciblé et les avez testés pour détecter des violations de stratégie en fonction d’actions marketing spécifiques. Pour plus d&#39;informations sur [!DNL Data Governance] dans [!DNL Experience Platform], veuillez lire l&#39;aperçu pour [[!DNL Data Governance]](../../data-governance/home.md).
