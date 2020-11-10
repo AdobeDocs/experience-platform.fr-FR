@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur du Profil client en temps réel
 topic: guide
 description: Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez facilement vue n’importe quel schéma d’union au sein de votre organisation et prévisualisation les champs, identités, relations et schémas de contribution pour une classe spécifique. Ce guide fournit des informations détaillées sur la manière de vue et d’explorer les schémas d’union à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: e1fc20a5f791f7628a19c5440db3741c8be3743a
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1023'
-ht-degree: 1%
+source-wordcount: '1022'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 * [[!DNL Real-time Customer Profile]](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Identity Service]](../../identity-service/home.md): Permet [!DNL Real-time Customer Profile] de relier les identités à partir de sources de données disparates au fur et à mesure de leur assimilation [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 ## Présentation des schémas d&#39;union
 
@@ -52,7 +52,7 @@ Vous pouvez explorer le schéma de l’union en faisant défiler la page vers le
 
 ![](../images/union-schema/union-schema-explore.png)
 
-Sélectionnez un champ pour en vue les détails, notamment le nom d’affichage, le type de données, la description, le chemin, la date de création et la date de la dernière modification. Vous pouvez également vue une liste de schémas de contribution contenant le champ que vous avez sélectionné.
+Sélectionnez un champ pour en vue les détails, notamment le nom d’affichage, le type de données, la description, le chemin, la date de création et la date de dernière modification. Vous pouvez également vue une liste de schémas de contribution contenant le champ que vous avez sélectionné.
 
 ![](../images/union-schema/union-schema-explore-field.png)
 
