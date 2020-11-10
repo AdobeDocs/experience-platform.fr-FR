@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte CRM.
 translation-type: tm+mt
-source-git-commit: eb6505bdcad9eee6d7e9674504223ca919f19c34
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '1515'
-ht-degree: 3%
+source-wordcount: '1510'
+ht-degree: 4%
 
 ---
 
@@ -22,10 +22,10 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model] (XDM) Système](../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Didacticiel](../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-* [[ !Profil client en temps réel DNL]](../../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 En outre, ce didacticiel nécessite que vous ayez déjà créé un compte CRM. Vous trouverez une liste de didacticiels pour la création de différents connecteurs CRM dans l’interface utilisateur dans la présentation [des connecteurs](../../../home.md)source.
 
