@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Les données entrantes de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos données de Profil client en temps réel.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 14%
+source-wordcount: '489'
+ht-degree: 16%
 
 ---
 
@@ -22,10 +22,10 @@ Les données entrantes provenant de votre connecteur source peuvent être utilis
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model] (XDM) Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [[ !Profil client en temps réel DNL]](../../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 De plus, ce didacticiel nécessite que vous ayez déjà créé et configuré un connecteur source.  Vous trouverez une liste de didacticiels pour la création de différents connecteurs dans l’interface utilisateur dans l’aperçu [des connecteurs](../../home.md)source.
 
@@ -69,4 +69,4 @@ Avec le schéma et le jeu de données activés pour [!DNL Profile], les données
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez activé avec succès les données entrantes pour [!DNL Profile] la population. Pour plus d’informations, voir la [[!DNL Real-time Customer Profile] présentation](../../../profile/home.md).
+En suivant ce didacticiel, vous avez activé avec succès les données entrantes pour [!DNL Profile] la population. For more information, see the [[!DNL Real-time Customer Profile] overview](../../../profile/home.md).
