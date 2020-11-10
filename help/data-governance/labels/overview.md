@@ -5,9 +5,9 @@ title: Présentation des libellés d’utilisation des données
 topic: labels
 description: La gouvernance des données Adobe Experience Platform vous permet d’appliquer des étiquettes d’utilisation des données aux jeux de données et aux champs, en les classant par catégorie selon les stratégies d’utilisation des données associées. Ce document présente un aperçu des étiquettes d’utilisation des données dans l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 15%
 
 ---
@@ -31,7 +31,7 @@ Outre les étiquettes fournies par Adobe, vous pouvez également définir vos pr
 
 ## Héritage d’étiquette pour les segments d’audience
 
-Tous les segments d’audience créés par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des étiquettes d’utilisation de leurs jeux de données correspondants. Cela permet aux applications créées sur [!DNL Experience Platform] (par exemple [!DNL Real-time Customer Data Platform]) de fournir une application automatique de la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
+Tous les segments d’audience créés par [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) héritent des étiquettes d’utilisation de leurs jeux de données correspondants. Cela permet aux applications créées sur des Experience Platform (par exemple [!DNL Real-time Customer Data Platform]) de fournir une application automatique de la stratégie d’utilisation des données lors de l’activation de segments vers des destinations.
 
 Outre l’héritage d’étiquettes au niveau des jeux de données, les segments héritent par défaut de tous les libellés au niveau des champs de leurs jeux de données associés. Selon la manière dont votre application [!DNL Platform]basée sur le trafic des segments est utilisée, vous pouvez éventuellement spécifier les champs utilisés, ce qui empêche le segment d’hériter des libellés des champs exclus.
 
