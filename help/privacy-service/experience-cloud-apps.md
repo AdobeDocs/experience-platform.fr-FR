@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Applications Privacy Service et Experience Cloud
 topic: overview
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 4cd7b9d3ca542c2fba83d066197b92775c053729
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 68%
+source-wordcount: '555'
+ht-degree: 62%
 
 ---
 
@@ -29,7 +29,7 @@ The following is a list of [!DNL Experience Cloud] applications that are integra
 
 | Application | Accès/suppression | Opposition | Documentation et considérations |
 --- | :---: | :---: | ---
-| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/en/advertising-cloud/all/privacy/ad-cloud-gdpr.html) </li><li>[!DNL Advertising Cloud] tire parti des fonctionnalités d’opposition globales existantes fournies par le centre de traitement des données personnelles d’Adobe. Pour plus d’informations, consultez le guide sur la [création de requêtes de confidentialité des données](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html#opt-out-requests).</li></ul> |
+| Adobe Advertising Cloud | ✓ | ✓ | <ul><li>[Accès/suppression de la documentation pour GDPR](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Accès/suppression de la documentation de l’ACPCP](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Documentation sur l’exclusion de la vente pour l’ACFPC](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] gère les requêtes d’opposition à l’aide de [variables de reporting sur la confidentialité](https://docs.adobe.com/content/help/fr-FR/analytics/admin/data-governance/consent-variables.html).</li></ul> |
 | Adobe Audience Manager | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Documentation sur l’opposition](https://docs.adobe.com/content/help/fr-FR/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | ✓ | ✓ | <ul><li>[Documentation sur l’accès et la suppression](https://docs.campaign.adobe.com/doc/standard/getting_started/fr/ACS_GDPR.html)</li><li>[Documentation sur l’opposition](../segmentation/honoring-opt-outs.md)</li></ul> |
