@@ -5,9 +5,9 @@ title: Se connecter aux destinations de diffusion en continu et activer les donn
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 34bf1c8aba555c5c8a527f4c0162cec4535b1dcf
+source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
 workflow-type: tm+mt
-source-wordcount: '1871'
+source-wordcount: '1870'
 ht-degree: 59%
 
 ---
@@ -265,8 +265,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-* `{CONNECTION_SPEC_ID}` : utilisez l’identifiant de spécification de connexion que vous avez obtenu lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
-* `{AUTHENTICATION_CREDENTIALS}`: renseignez le nom de votre destination de diffusion en continu, par exemple : `Amazon Kinesis authentication credentials` ou `Azure Event Hubs authentication credentials`.
+* `{CONNECTION_SPEC_ID}` : utilisez l’identifiant de spécification de connexion que vous avez obtenu lors de l’étape [Obtention de la liste des destinations disponibles](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
+* `{AUTHENTICATION_CREDENTIALS}`: renseignez le nom de votre destination de diffusion en continu : `Aws Kinesis authentication credentials` ou `Azure EventHub authentication credentials`.
 * `{ACCESS_ID}`: *Pour [!DNL Amazon Kinesis] les connexions.* Votre ID d’accès pour l’enregistrement Amazon Kinesis.
 * `{SECRET_KEY}`: *Pour [!DNL Amazon Kinesis] les connexions.* Votre clé secrète pour votre enregistrement Amazon.
 * `{REGION}`: *Pour [!DNL Amazon Kinesis] les connexions.* Région de votre [!DNL Amazon Kinesis] compte où le CDP en temps réel Adobe diffusera vos données.
@@ -313,7 +313,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "version": "1.0"
     },
     "data": {
-        "format": "json",
+        "format": "json"
     },
     "params": { // use these values for Amazon Kinesis connections
         "stream": "{NAME_OF_DATA_STREAM}", 
@@ -326,7 +326,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape ci-dessus.
-* `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
+* `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md#get-the-list-of-available-destinations).
 * `{NAME_OF_DATA_STREAM}`: *Pour [!DNL Amazon Kinesis] les connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte. Adobe Le CDP en temps réel exportera les données dans ce flux.
 * `{REGION}`: *Pour [!DNL Amazon Kinesis] les connexions.* Région de votre compte Amazon Kinesis dans laquelle le CDP en temps réel de l’Adobe diffusera vos données.
 * `{EVENT_HUB_NAME}`: *Pour [!DNL Azure Event Hubs] les connexions.* Renseignez le [!DNL Azure Event Hub] nom où le CDP en temps réel Adobe diffusera vos données. Pour plus d’informations, voir [Création d’un hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) de événement dans la [!DNL Microsoft] documentation.
@@ -368,20 +368,36 @@ curl -X POST \
 -H 'x-sandbox-name: {SANDBOX_NAME}' \
 -H 'Content-Type: application/json' \
 -d  '{
-   
-        "name": "Create dataflow to Amazon Kinesis/ Azure Event Hubs",
-        "description": "This operation creates a dataflow to Amazon Kinesis/ Azure Event Hubs",
-        "flowSpec": {
-            "id": "{FLOW_SPEC_ID}",
-            "version": "1.0"
+  "name": "Azure Event Hubs",
+  "description": "Azure Event Hubs",
+  "flowSpec": {
+    "id": "{FLOW_SPEC_ID}",
+    "version": "1.0"
+  },
+  "sourceConnectionIds": [
+    "{SOURCE_CONNECTION_ID}"
+  ],
+  "targetConnectionIds": [
+    "{TARGET_CONNECTION_ID}"
+  ],
+  "transformations": [
+    {
+      "name": "GeneralTransform",
+      "params": {
+        "profileSelectors": {
+          "selectors": [
+            
+          ]
         },
-        "sourceConnectionIds": [
-            "{SOURCE_CONNECTION_ID}"
-        ],
-        "targetConnectionIds": [
-            "{TARGET_CONNECTION_ID}"
-        ]
+        "segmentSelectors": {
+          "selectors": [
+            
+          ]
+        }
+      }
     }
+  ]
+}
 ```
 
 * `{FLOW_SPEC_ID}`: L’ID de spécification de flux pour les destinations basées sur un profil est `71471eba-b620-49e4-90fd-23f1fa0174d8`défini. Utilisez cette valeur dans l’appel.
@@ -425,53 +441,29 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'If-Match: "{ETAG}"' \
 --data-raw '[
-    {
-        "op": "add",
-        "path": "/transformations/0/params/segmentSelectors/selectors/-",
-        "value": {
-            "type": "PLATFORM_SEGMENT",
-            "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
-                "id": "{SEGMENT_ID}"
-            }
-        }
-    },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/segmentSelectors/selectors/-",
-        "value": {
-            "type": "PLATFORM_SEGMENT",
-            "value": {
-                "name": "Name of the segment that you are activating",
-                "description": "Description of the segment that you are activating",
-                "id": "{SEGMENT_ID}"
-            }
-        }
-    },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/profileSelectors/selectors/-",
-        "value": {
-            "type": "JSON_PATH",
-            "value": {
-                "operator": "EXISTS",
-                "path": "{PROFILE_ATTRIBUTE}"
-            }
-        }
-    },
-        },
-        {
-        "op": "add",
-        "path": "/transformations/0/params/profileSelectors/selectors/-",
-        "value": {
-            "type": "JSON_PATH",
-            "value": {
-                "operator": "EXISTS",
-                "path": "{PROFILE_ATTRIBUTE}"
-            }
-        }
+  {
+    "op": "add",
+    "path": "/transformations/0/params/segmentSelectors/selectors/-",
+    "value": {
+      "type": "PLATFORM_SEGMENT",
+      "value": {
+        "name": "Name of the segment that you are activating",
+        "description": "Description of the segment that you are activating",
+        "id": "{SEGMENT_ID}"
+      }
     }
+  },
+  {
+    "op": "add",
+    "path": "/transformations/0/params/profileSelectors/selectors/-",
+    "value": {
+      "type": "JSON_PATH",
+      "value": {
+        "operator": "EXISTS",
+        "path": "{PROFILE_ATTRIBUTE}"
+      }
+    }
+  }
 ]
 ```
 
