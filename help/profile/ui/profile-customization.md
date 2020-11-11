@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
+keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile details;details
 title: Personnalisation des détails du profil
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
