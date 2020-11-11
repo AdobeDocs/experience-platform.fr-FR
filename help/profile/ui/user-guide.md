@@ -4,10 +4,10 @@ title: Guide de l’interface utilisateur du Profil client en temps réel
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
 workflow-type: tm+mt
-source-wordcount: '1244'
-ht-degree: 14%
+source-wordcount: '1245'
+ht-degree: 12%
 
 ---
 
@@ -62,7 +62,7 @@ Tout comme la mesure du nombre [de](#profile-count) profils, lorsque l’assimil
 
 ### Fusionner la stratégie
 
-Le sélecteur de stratégies **[!UICONTROL de]** fusion sélectionne automatiquement la stratégie de fusion par défaut pour votre organisation. Si vous ne souhaitez pas utiliser cette stratégie de fusion, vous pouvez sélectionner la stratégie de fusion `X` en regard de la stratégie de fusion par défaut pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner la stratégie]** de fusion, dans laquelle vous pouvez choisir une autre stratégie de fusion. Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez le guide [d’utilisation des stratégies de](merge-policies.md)fusion.
+Le sélecteur de stratégies **[!UICONTROL de]** fusion sélectionne automatiquement la stratégie de fusion par défaut pour votre organisation. Si vous ne souhaitez pas utiliser cette stratégie de fusion, vous pouvez sélectionner la stratégie de fusion `X` en regard de la stratégie de fusion par défaut pour ouvrir la boîte de dialogue **[!UICONTROL Sélectionner la stratégie]** de fusion, dans laquelle vous pouvez choisir une autre stratégie de fusion. Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, consultez le guide [de l’interface utilisateur des stratégies de](merge-policies.md)fusion.
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -98,7 +98,7 @@ Vous pouvez vue des informations supplémentaires relatives à chaque profil en 
 
 ## Stratégies de fusion
 
-Dans le menu **[!UICONTROL Profils]** principal, sélectionnez l’onglet **[!UICONTROL Fusionner les stratégies]** pour vue d’une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, indique s’il s’agit ou non de la stratégie de fusion par défaut, et précise le schéma auquel elle s’applique.
+Dans le menu **[!UICONTROL Profils]** principal, sélectionnez l’onglet **[!UICONTROL Fusionner les stratégies]** pour vue d’une liste de stratégies de fusion appartenant à votre organisation. Chaque stratégie répertoriée affiche son nom, qu’il s’agisse ou non de la stratégie de fusion par défaut et de la classe de schéma à laquelle elle s’applique.
 
 For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
