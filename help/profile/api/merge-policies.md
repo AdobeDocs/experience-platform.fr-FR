@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Fusionner les stratégies - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
 workflow-type: tm+mt
-source-wordcount: '2458'
-ht-degree: 63%
+source-wordcount: '2494'
+ht-degree: 57%
 
 ---
 
@@ -27,7 +27,13 @@ Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-ti
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont réservées à votre organisation IMS, ce qui vous permet de créer différentes stratégies afin de fusionner les schémas comme vous en avez besoin. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] fournit une stratégie de fusion par défaut. Vous pouvez aussi créer une stratégie de fusion pour un schéma spécifique et la marquer comme stratégie par défaut pour votre organisation. Chaque organisation peut avoir plusieurs stratégies de fusion par schéma, mais chaque schéma de ne peut avoir qu’une seule stratégie de fusion par défaut. Toute stratégie de fusion définie comme stratégie par défaut sera utilisée lorsque le nom du schéma est fourni et qu’une stratégie de fusion est requise, mais pas fournie. Lorsque vous définissez une stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut cessera d’être utilisée par défaut.
+Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies pour fusionner des schémas de la manière dont vous avez besoin. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] fournit aux entreprises une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme valeur par défaut pour votre entreprise.
+
+Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par classe de schéma, chaque classe ne peut avoir qu&#39;une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion par défaut est utilisé lorsque le nom de la classe de schéma est fourni et qu’une stratégie de fusion est requise mais pas fournie.
+
+>[!NOTE]
+>
+>Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion existante précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
 
 ### Objet de stratégie de fusion complet
 
@@ -41,7 +47,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -62,7 +68,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette stratégie de fusion. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
 | `attributeMerge` | [Objet de fusion](#attribute-merge) d’attributs indiquant la manière dont la stratégie de fusion attribuera la priorité aux attributs de profil en cas de conflit de données. |
-| `schema` | Objet du [schéma](#schema) sur lequel la stratégie de fusion peut être utilisée. |
+| `schema.name` | Partie de l’ [`schema`](#schema) objet, le champ `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d&#39;informations sur les schémas et les classes, veuillez lire la documentation [](../../xdm/home.md)XDM. |
 | `default` | Valeur booléenne indiquant si cette stratégie de fusion est la valeur par défaut du schéma spécifié. |
 | `version` | [!DNL Platform]Version de la stratégie de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
 | `updateEpoch` | Date de la dernière mise à jour de la stratégie de fusion. |
@@ -132,7 +138,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 * **`dataSetPrecedence`** : Donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
    * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
-**`dataSetPrecedence`Exemple : objet attributeMerge utilisant le type**
+#### Exemple d’objet `attributeMerge` utilisant `dataSetPrecedence` le type
 
 ```json
     "attributeMerge": {
@@ -146,7 +152,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
     }
 ```
 
-**`timestampOrdered`Exemple : objet attributeMerge utilisant le type**
+#### Exemple d’objet `attributeMerge` utilisant `timestampOrdered` le type
 
 ```json
     "attributeMerge": {
@@ -156,7 +162,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
 ### Schéma {#schema}
 
-L’objet schéma spécifie le schéma de modèle de données d’expérience (XDM) pour lequel cette stratégie de fusion est créée.
+L’objet schéma spécifie la classe de schéma Modèle de données d’expérience (XDM) pour laquelle cette stratégie de fusion est créée.
 
 **`schema`Objet**
 
@@ -732,7 +738,7 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster la vue des profils client dans la plate-forme et pour créer des segments d’audience à partir de vos [!DNL Real-time Customer Profile] données. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
 
 ## Annexe
 
