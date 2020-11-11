@@ -5,9 +5,9 @@ title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: d26eaf699a67a1bc7111f5f97da277368fcc4629
 workflow-type: tm+mt
-source-wordcount: '866'
+source-wordcount: '886'
 ht-degree: 57%
 
 ---
@@ -41,7 +41,7 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 [!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de publicité tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
-- [Connecteur [ !DNL Google AdWords]](connectors/advertising/ads.md)
+- [[!DNL Google AdWords]](connectors/advertising/ads.md) connecteur
 
 ### Stockage dans le cloud
 
@@ -91,6 +91,12 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 - [[!DNL Oracle] connecteur](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connecteur](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connecteur](connectors/databases/postgres.md)
+
+### eCommerce
+
+[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de commerce électronique tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Automatisation du marketing
 
