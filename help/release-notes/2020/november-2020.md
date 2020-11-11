@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 49541c94d8f4891286ed3e9a9d314ca32fe1ed1b
+source-git-commit: 5f184de8c20001f7d9a78dab17130ccadb918dfb
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2049'
 ht-degree: 27%
 
 ---
@@ -203,7 +203,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 **Nouvelles sources**
 | Fonction | Description |
 | — | — |
-| [!DNL Shopify] | Vous pouvez maintenant vous connecter [!DNL Shopify] à [!DNL Experience Platform] à l&#39;aide de l&#39; [!DNL Flow Service] API ou de l&#39;interface utilisateur. |
+| [!DNL Shopify] | Vous pouvez maintenant vous connecter [!DNL Shopify] à [!DNL Experience Platform] à l&#39;aide de l&#39; [!DNL Flow Service] API ou de l&#39;interface utilisateur. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
 
 **Fonctionnalités clés**
 
