@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 9e005b0b225e8a643a080fb3d4b014d981748973
+source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '680'
 ht-degree: 9%
 
 ---
@@ -208,4 +208,5 @@ ht-degree: 9%
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
+- [LISTE AUTORISÉE d&#39;adresse IP](ip-address-allow-list.md)
 - [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
