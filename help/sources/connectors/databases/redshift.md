@@ -5,9 +5,9 @@ title: Connecteur de redirection Amazon
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la façon de connecter Amazon Redshift à la plate-forme à l'aide des API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: d3ece56d10b1940a5992906a65a50ffe2f7e4346
+source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '238'
 ht-degree: 11%
 
 ---
@@ -25,35 +25,7 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## LISTE AUTORISÉE d&#39;adresse IP
 
-Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources.
-
-### Région est-américaine
-
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
-
-### Région de l&#39;Europe occidentale
-
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
-
-### Australie-Est
-
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d’informations, consultez la page liste autorisée [d’adresses](../../ip-address-allow-list.md) IP.
 
 La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Amazon Redshift] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
 
