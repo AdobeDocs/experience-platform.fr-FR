@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: d20b558a6f4518be74cd5969c50a5db310370c08
+source-git-commit: d16339d4f9dba29944c942b062ae46b4b979fae5
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '509'
 ht-degree: 83%
 
 ---
@@ -55,6 +55,7 @@ ht-degree: 83%
          * [Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
          * [Extension Google gtag](/help/rtcdp/destinations/gtag-advertising-extension.md)
          * [Extension LinkedIn Insight Tag](/help/rtcdp/destinations/linkedin-extension.md)
+         * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
          * [Extension Pinterest Conversion Tracking](destinations/pinterest-extension.md)
          * [Extension Twitter Universal Website Tag](destinations/twitter-uwt-extension.md)
       * Destinations d’analyse {#analytics-destinations}
