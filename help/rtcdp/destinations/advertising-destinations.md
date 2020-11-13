@@ -5,10 +5,10 @@ seo-title: Destinations publicitaires
 description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 seo-description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
 translation-type: tm+mt
-source-git-commit: 0fa7ca4bb3e8667beae307e1d40f1861805e5270
+source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 75%
+source-wordcount: '225'
+ht-degree: 73%
 
 ---
 
@@ -31,6 +31,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Google Ad Manager](/help/rtcdp/destinations/google-ad-manager-destination.md)
 * [Correspondance client Google](/help/rtcdp/destinations/google-customer-match-destination.md)
 * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
+* [Destination du bureau de commerce](/help/rtcdp/destinations/tradedesk-destination.md)
 
 
 
