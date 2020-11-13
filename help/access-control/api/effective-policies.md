@@ -5,7 +5,7 @@ title: Affichage des stratégies efficaces
 topic: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour la vue de stratégies efficaces à l’aide de l’API contrôle d'accès pour Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 481f093e52c8533d2919504051af9e63704a0f4a
+source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 72%
@@ -95,8 +95,6 @@ permissions/manage-privacy-workflows
 permissions/manage-profile-configs
 permissions/manage-profiles
 permissions/manage-queries
-permissions/manage-schema-identities
-permissions/manage-schema-relationships
 permissions/manage-schemas
 permissions/manage-segments
 permissions/manage-sources
