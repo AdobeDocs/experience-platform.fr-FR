@@ -5,9 +5,9 @@ topic: overview
 title: Présentation du contrôle d’accès
 description: Le contrôle d'accès de Adobe Experience Platform est fourni par l'intermédiaire du Adobe Admin Console. Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test.
 translation-type: tm+mt
-source-git-commit: ccb7286e47aa4cf6356d22f84111b0c0fb30dfa8
+source-git-commit: 205bfb5f3b3fa083f64fc0160ea6bdf7bba74c9b
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1298'
 ht-degree: 54%
 
 ---
@@ -52,8 +52,8 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | Profil de produit | Accès aux environnements de test | Autorisations |
 | --- | --- | --- |
-| Production par défaut - Tous les accès | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
-| Sandbox Administration par défaut | N/A | Fournit un accès uniquement aux autorisations Sandbox Administration. |
+| Accès complet par défaut à la production | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Administrateurs de sandbox | N/A | Fournit un accès uniquement aux autorisations Sandbox Administration. |
 
 ## Environnements de test et autorisations
 
