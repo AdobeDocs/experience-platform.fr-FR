@@ -5,9 +5,9 @@ seo-title: Destination du bureau de commerce
 description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d''annonces publicitaires d''exécuter des reciblages et d''audience de campagnes numériques ciblées à l''échelle de l''affichage, de la vidéo et des sources d''inventaire mobiles. '
 seo-description: Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d'annonces publicitaires d'exécuter des reciblages et d'audience de campagnes numériques ciblées à l'échelle de l'affichage, de la vidéo et des sources d'inventaire mobiles.
 translation-type: tm+mt
-source-git-commit: c9fb63b390d4c7dddcdb35a85710ff664614ad63
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '577'
 ht-degree: 5%
 
 ---
@@ -46,10 +46,10 @@ En tant que spécialiste du marketing, je souhaite pouvoir utiliser des segments
    >[!NOTE]
    >
    >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
-   >
-   >![Activer la destination du bureau de commerce](assets/tradedesk-destination-activate.png)
 
-1. A l’étape [!UICONTROL Authentification] , vous devez entrer les détails de [!DNL The Trade Desk] connexion :
+       ![Activer la destination du bureau de commerce](assets/tradedesk-destination-activate.png)
+   
+2. A l’étape [!UICONTROL Authentification] , vous devez entrer les détails de [!DNL The Trade Desk] connexion :
 
    * **[!UICONTROL Nom]**: Nom par lequel vous reconnaîtrez cette destination dans le futur.
    * **[!UICONTROL Description]**: Description qui vous aidera à identifier cette destination dans le futur.
@@ -67,13 +67,13 @@ En tant que spécialiste du marketing, je souhaite pouvoir utiliser des segments
 
    ![Étape d&#39;authentification du bureau de commerce](assets/tradedesk-destination-authentication.png)
 
-1. Cliquez sur **[!UICONTROL Créer une destination]**. Votre destination est maintenant créée. You can click [!UICONTROL Save &amp; Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
+3. Cliquez sur **[!UICONTROL Créer une destination]**. Votre destination est maintenant créée. You can click [!UICONTROL Save &amp; Exit] if you want to activate segments later, or you can select [!UICONTROL Next] to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
 
 ## Activation des segments {#activate-segments}
 
 Pour obtenir des informations sur le processus d’activation des segments, voir [Activer les profils et les segments à une destination](activate-destinations.md#select-attributes).
 
-Au cours de l’étape de planification [du](activate-destinations.md#segment-schedule) segment, vous devez mapper manuellement vos segments à leur identifiant ou nom convivial correspondant dans la destination.
+À l’étape de planification [](activate-destinations.md#segment-schedule) des segments, vous devez mapper manuellement vos segments à leur identifiant ou nom convivial correspondant dans la destination.
 
 Lors du mappage de segments, nous vous recommandons d’utiliser le nom du [!DNL Platform] segment ou une forme plus courte de celui-ci, afin de faciliter son utilisation. Cependant, l’ID ou le nom du segment dans votre destination ne doit pas nécessairement correspondre à celui de votre [!DNL Platform] compte. Toute valeur que vous insérez dans le champ de mappage est répercutée par la destination.
 
