@@ -5,9 +5,9 @@ seo-title: Destination du bureau de commerce
 description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d''annonces publicitaires d''exécuter des reciblages et d''audience de campagnes numériques ciblées à l''échelle de l''affichage, de la vidéo et des sources d''inventaire mobiles. '
 seo-description: Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d'annonces publicitaires d'exécuter des reciblages et d'audience de campagnes numériques ciblées à l'échelle de l'affichage, de la vidéo et des sources d'inventaire mobiles.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '575'
 ht-degree: 5%
 
 ---
@@ -46,9 +46,9 @@ En tant que spécialiste du marketing, je souhaite pouvoir utiliser des segments
    >[!NOTE]
    >
    >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+   >
+   >![Activer la destination du bureau de commerce](assets/tradedesk-destination-activate.png)
 
-       ![Activer la destination du bureau de commerce](assets/tradedesk-destination-activate.png)
-   
 2. A l’étape [!UICONTROL Authentification] , vous devez entrer les détails de [!DNL The Trade Desk] connexion :
 
    * **[!UICONTROL Nom]**: Nom par lequel vous reconnaîtrez cette destination dans le futur.
