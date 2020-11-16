@@ -5,7 +5,7 @@ seo-title: La destination Microsoft Bing vous aide à envoyer des données de pr
 description: Avec la destination Microsoft Bing, vous pouvez exécuter des campagnes numériques ciblées de reciblage et d'audience sur l'ensemble des campagnes Microsoft Display Advertising.
 seo-description: Avec la destination Microsoft Bing, vous pouvez exécuter des campagnes numériques ciblées de reciblage et d'audience sur l'ensemble des campagnes Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
+source-git-commit: a64f9f1f078d8380cc25c9760eac1699512a5870
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Lors de la configuration de la destination, vous devez fournir les informations 
    >[!NOTE]
    >
    >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
-
-   ![Activer la destination Microsoft Bing](assets/bing-destination-activate.png)
+   >
+   >![Activer la destination Microsoft Bing](assets/bing-destination-activate.png)
 
 1. A l’étape [!UICONTROL Authentification] , vous devez saisir les détails de la connexion de destination :
 
