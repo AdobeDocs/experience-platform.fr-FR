@@ -5,7 +5,7 @@ seo-title: La destination Microsoft Bing vous aide à envoyer des données de pr
 description: Avec la destination Microsoft Bing, vous pouvez exécuter des campagnes numériques ciblées de reciblage et d'audience sur l'ensemble des campagnes Microsoft Display Advertising.
 seo-description: Avec la destination Microsoft Bing, vous pouvez exécuter des campagnes numériques ciblées de reciblage et d'audience sur l'ensemble des campagnes Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: 979256ea975dcc0c1f6c59792b70d6899ee11376
+source-git-commit: 43795e31f4e39dcabeaf6d69529e80cabe9c90c5
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 6%
@@ -50,8 +50,8 @@ Lors de la configuration de la destination, vous devez fournir les informations 
    >[!NOTE]
    >
    >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
-   >
-   >![Activer la destination Microsoft Bing](assets/bing-destination-activate.png)
+
+   ![Activer la destination Microsoft Bing](assets/bing-destination-activate.png)
 
 1. A l’étape [!UICONTROL Authentification] , vous devez saisir les détails de la connexion de destination :
 
@@ -68,7 +68,7 @@ Lors de la configuration de la destination, vous devez fournir les informations 
 
 Pour obtenir des informations sur le processus d’activation des segments, voir [Activer les profils et les segments à une destination](activate-destinations.md#select-attributes).
 
-Au cours de l’étape de planification [du](activate-destinations.md#segment-schedule) segment, vous devez mapper manuellement vos segments à leur identifiant ou nom convivial correspondant dans la destination.
+À l’étape de planification [](activate-destinations.md#segment-schedule) des segments, vous devez mapper manuellement vos segments à leur identifiant ou nom convivial correspondant dans la destination.
 
 Lors du mappage de segments, nous vous recommandons d’utiliser le nom du [!DNL Platform] segment ou une forme plus courte de celui-ci, afin de faciliter son utilisation. Cependant, l’ID ou le nom du segment dans votre destination ne doit pas nécessairement correspondre à celui de votre [!DNL Platform] compte. Toute valeur que vous insérez dans le champ de mappage est répercutée par la destination.
 
