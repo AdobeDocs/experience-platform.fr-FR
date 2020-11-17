@@ -6,10 +6,10 @@ type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 5238d98db0554d34c2b0bcd28b64354f544faa0f
+source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 44%
+source-wordcount: '835'
+ht-degree: 42%
 
 ---
 
@@ -35,6 +35,8 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 - For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+
+Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés sous la section **[!UICONTROL Clé]** . Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64.
 
 À l’étape **[!UICONTROL Configuration]** , saisissez un nom et une description pour votre nouvelle destination, ainsi que le format de fichier des fichiers exportés.
 
