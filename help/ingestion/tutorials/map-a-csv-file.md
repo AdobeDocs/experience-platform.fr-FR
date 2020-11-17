@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Ce didacticiel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 28%
+source-wordcount: '860'
+ht-degree: 17%
 
 ---
 
@@ -24,14 +24,14 @@ En outre, l’annexe du présent tutoriel fournit des informations supplémentai
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
-- [[ ! Modèle de données d’expérience DNL (système XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
-- [[ ! Apport du lot DNL]](../batch-ingestion/overview.md): Méthode par laquelle [!DNL Platform] ingère les données des fichiers de données fournis par l’utilisateur.
+- [[!DNL Experience Data Model (XDM System)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
+- [[!DNL Batch ingestion]](../batch-ingestion/overview.md): Méthode par laquelle [!DNL Platform] ingère les données des fichiers de données fournis par l’utilisateur.
 
 Vous devez également avoir créé un jeu de données dans lequel ingérer vos données CSV pour suivre ce tutoriel. Pour connaître les étapes de création d’un jeu de données dans l’interface utilisateur, consultez le [tutoriel sur l’ingestion de données](./ingest-batch-data.md).
 
 ## Choix d’une destination
 
-Connectez-vous à [[ !DNL Adobe Experience Platform]](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Workflows]** .
+Connectez-vous à [[!DNL Adobe Experience Platform]](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Workflows]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Workflows]** .
 
 Dans l’écran **[!UICONTROL Workflows]** , sélectionnez **[!UICONTROL Mapper le fichier CSV au schéma]** XDM sous la section d’assimilation **[!UICONTROL des]** données, puis sélectionnez **[!UICONTROL Lancement.]**
 
@@ -61,25 +61,29 @@ The **[!UICONTROL Sample data]** section appears once the file is uploaded, show
 
 ## Mappage des champs CSV aux champs de schéma XDM
 
-L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**. Les champs cibles non sélectionnés sont indiqués en rouge. Vous pouvez utiliser l’option de filtre de champs pour restreindre la liste des champs source disponibles.
+L’étape **[!UICONTROL Mappage]** apparaît. Les colonnes du fichier CSV sont répertoriées sous **[!UICONTROL Champ source]**, et les champs de schéma XDM correspondants sont répertoriés sous **[!UICONTROL Champ cible]**.
 
->[!TIP]
->
->[!DNL Platform] fournit des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
+[!DNL Platform] fournit automatiquement des recommandations intelligentes pour les champs à mappage automatique en fonction du schéma de cible ou du jeu de données que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Pour mapper une colonne CSV à un champ XDM, sélectionnez l’icône de schéma en regard du champ de cible correspondant à la colonne.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/mapping.png)
+Pour accepter toutes les valeurs de mappage générées automatiquement, cochez la case &quot;[!UICONTROL Accepter tous les champs]de cible&quot;.
 
-La fenêtre **[!UICONTROL Sélectionner un champ de schéma]** apparaît. Ici, vous pouvez parcourir la structure du schéma XDM et localiser le champ vers lequel vous souhaitez mapper la colonne CSV. Cliquez sur un champ XDM pour le sélectionner, puis sur **[!UICONTROL Sélectionner]**.
+![](../images/tutorials/map-a-csv-file/filled-mapping-with-suggestions.png)
 
-![](../images/tutorials/map-a-csv-file/select-schema-field.png)
+Il arrive que plusieurs recommandations soient disponibles pour le schéma source. Dans ce cas, la carte de mappage affiche la recommandation la plus visible, suivie d’un cercle bleu contenant le nombre de recommandations supplémentaires disponibles. La sélection de l&#39;icône représentant une ampoule affiche la liste des recommandations supplémentaires. Vous pouvez choisir l’une des autres recommandations en cochant la case en regard de la recommandation à laquelle vous souhaitez mapper.
 
-Une fois que vous avez terminé les étapes pour les champs source non mappés restants, l’écran **[!UICONTROL Mappage]** s’affiche de nouveau avec le champ XDM sélectionné qui s’affiche désormais sous Champ **[!UICONTROL de]** Cible.
+![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-![](../images/tutorials/map-a-csv-file/field-mapped.png)
+Vous pouvez également choisir de mapper manuellement votre schéma source à votre schéma de cible. Passez la souris sur le schéma source à mapper, puis sélectionnez l’icône Plus.
 
-Lors du mappage des champs, vous pouvez également inclure des fonctions pour calculer les valeurs en fonction des champs sources d’entrée. Pour plus d’informations, consultez la section relative aux [fonctions de mappage](#mapping-functions) de l’annexe.
+![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
+
+La fenêtre contextuelle de champ **** Associer la source à la cible s’affiche. A partir de là, vous pouvez sélectionner le champ à mapper, puis **[!UICONTROL Enregistrer]** pour ajouter votre nouveau mappage.
+
+![](../images/tutorials/map-a-csv-file/manual-mapping.png)
+
+Si vous souhaitez supprimer l’un des mappages, passez la souris sur ce mappage, puis sélectionnez l’icône Moins.
 
 ### Ajouter le champ calculé
 
@@ -87,7 +91,7 @@ Les champs calculés permettent de créer des valeurs en fonction des attributs 
 
 Sélectionnez le bouton **[!UICONTROL Ajouter le champ]** calculé pour continuer.
 
-![](../images/tutorials/map-a-csv-file/add-calculate-field.png)
+![](../images/tutorials/map-a-csv-file/add-calculated-field.png)
 
 Le panneau **[!UICONTROL Créer un champ]** calculé s’affiche. La boîte de dialogue de gauche contient les champs, fonctions et opérateurs pris en charge dans les champs calculés. Sélectionnez l’un des onglets à début pour ajouter des fonctions, des champs ou des opérateurs à l’éditeur d’expressions.
 
@@ -96,33 +100,23 @@ Le panneau **[!UICONTROL Créer un champ]** calculé s’affiche. La boîte de d
 | Tabulation | Description |
 | --------- | ----------- |
 | Champs | L’onglet Champs liste les champs et les attributs disponibles dans le schéma source. |
-| Fonctions | L&#39;onglet Fonctions liste les fonctions disponibles pour transformer les données. |
+| Fonctions | L&#39;onglet Fonctions liste les fonctions disponibles pour transformer les données. Pour en savoir plus sur les fonctions que vous pouvez utiliser dans les champs calculés, consultez le guide sur l’ [utilisation des fonctions](../../data-prep/functions.md)d’aperçu des données (Mappeur). |
 | Opérateurs | L’onglet opérateurs liste les opérateurs disponibles pour transformer les données. |
 
 Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à l’aide de l’éditeur d’expressions situé au centre. Sélectionnez l’éditeur à début de la création d’une expression.
 
-![](../images/tutorials/map-a-csv-file/expression-editor.png)
+![](../images/tutorials/map-a-csv-file/create-calculated-field.png)
 
 Sélectionnez **[!UICONTROL Enregistrer]** pour continuer.
 
 L’écran de mappage s’affiche à nouveau avec votre nouveau champ source. Appliquez le champ de cible approprié et sélectionnez **[!UICONTROL Terminer]** pour terminer le mappage.
 
-![](../images/tutorials/map-a-csv-file/new-field.png)
+![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
 ## Surveiller votre flux de données
 
 Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d’informations sur la surveillance des flux de données, voir le didacticiel sur la [surveillance des flux](../../ingestion/quality/monitor-data-flows.md)de données en flux continu.
 
-## Utilisation des fonctions de mappage
-
-Pour utiliser une fonction, saisissez-la sous **[!UICONTROL Champ source]** avec la syntaxe et les entrées appropriées.
-
-Par exemple, pour concaténer les champs CSV city et country et les attribuer au champ XDM city, définissez le champ source en tant que `concat(city, ", ", county)`.
-
-![](../images/tutorials/map-a-csv-file/mapping-function.png)
-
-Pour en savoir plus sur le mappage des colonnes aux champs XDM, consultez le guide sur l’ [utilisation des fonctions](../../data-prep/functions.md)d’aperçu des données (Mapper).
-
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. Pour plus d’informations, consultez la présentation du Profil client [[ !DNL en temps réel]](../../profile/home.md) .
+En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the overview for [[!DNL Real-time Customer Profile]](../../profile/home.md) for more information.
