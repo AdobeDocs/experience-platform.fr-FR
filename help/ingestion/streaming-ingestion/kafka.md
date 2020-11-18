@@ -5,10 +5,10 @@ title: Connecteur Kafka
 topic: overview
 description: Le connecteur de flux pour Adobe Experience Platform est basé sur Apache Kafka Connect. Cette bibliothèque peut être utilisée pour diffuser en temps réel des événements JSON depuis les rubriques Kafka de votre centre de données, directement vers Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 48%
+source-wordcount: '177'
+ht-degree: 45%
 
 ---
 
@@ -22,4 +22,4 @@ The stream connector is a sink (one-way) connector, delivering data from [!DNL K
 - Collecte de données authentifiée
 - Messages par lots pour réduire les appels réseau et augmenter le débit
 
-For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). Pour un workflow plus détaillé, veuillez consulter le [guide de développement](https://github.com/adobe/experience-platform-streaming-connect/blob/master/DEVELOPER_GUIDE.md).
+For more information on the [!DNL Kafka] connector, including instructions on how to set up the connector, please read the [getting started guide](https://github.com/adobe/experience-platform-streaming-connect). Pour un workflow plus détaillé, veuillez consulter le [guide de développement](https://www.adobe.com/go/kafka-connector-developer-guide).
