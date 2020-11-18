@@ -1,19 +1,19 @@
 ---
 keywords: airship attributes;airship destination
-title: Destination des attributs du navire de transport aérien
-seo-title: Destination des attributs du navire de transport aérien
+title: Destination des attributs du navire
+seo-title: Destination des attributs du navire
 description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 seo-description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 0e065bbc0917d5009738b4cae890ffd13c0ab154
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 13%
 
 ---
 
 
-# (bêta) [!DNL Airship Attributes] Destination {#airship-attributes-destination}
+# (bêta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -69,7 +69,7 @@ Tirez parti des données de profil collectées dans Adobe Experience Platform po
 
 Tirez parti des attributs de Adobe Experience Platform pour enrichir davantage [!DNL Airship] les profils et les combiner à des données de SDK ou [!DNL Airship] prédictives. Par exemple, un détaillant peut créer un segment avec le statut de fidélité et les données d’emplacement (attributs de la plateforme) et prédire qu’ [!DNL Airship] il générera des données pour envoyer des messages très ciblés aux utilisateurs ayant le statut de fidélité à l’or qui vivent à Las Vegas, NV, et qui ont une forte probabilité de déclenchement.
 
-## Se connecter aux [!DNL Airship] attributs {#connect-airship-attributes}
+## Se connecter à [!DNL Airship Attributes] {#connect-airship-attributes}
 
 1. Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, faites défiler l’écran jusqu’à la catégorie Engagement **** Mobile. Sélectionnez **[!DNL Airship Attributes]**, puis **[!UICONTROL Configurer]**.
 
