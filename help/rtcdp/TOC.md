@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: 2a4d55b2d429fbeb1459a6bd095b0bc39d52917d
+source-git-commit: 8fa7642f90653ba11ad6ff90175a4bb705ae6d80
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 82%
+source-wordcount: '520'
+ht-degree: 81%
 
 ---
 
@@ -102,6 +102,9 @@ ht-degree: 82%
          * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
       * Extensions d’Experience Platform Launch {#launch-extensions}
          * [Présentation des extensions d’Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md)
+      * Destinations mobiles {#mobile}
+         * [Présentation des destinations mobiles](destinations/mobile-destinations.md)
+         * [Destination du braquage](destinations/braze-destination.md)
       * Destinations de personnalisation {#personalization-destinations}
          * [Présentation des destinations de personnalisation](/help/rtcdp/destinations/personalization-destinations.md)
          * [Extension Adobe Target](/help/rtcdp/destinations/adobe-target-extension.md)
