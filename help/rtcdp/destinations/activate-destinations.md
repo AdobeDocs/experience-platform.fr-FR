@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 74f49db15028aa27fc7ee73a79ea236ee42f37e8
+source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
 workflow-type: tm+mt
-source-wordcount: '1583'
-ht-degree: 25%
+source-wordcount: '1768'
+ht-degree: 22%
 
 ---
 
@@ -78,7 +78,19 @@ S&#39;applique à : Destinations marketing par courriel et destinations d’enre
 
 ![Configuration de l’étape](./assets/configure-icon.png)
 
-A l’étape **[!UICONTROL Configurer]** , vous pouvez configurer les noms de fichier pour chaque segment que vous exportez. La configuration du nom de fichier est facultative.
+A l’étape **[!UICONTROL Configurer]** , vous pouvez configurer la planification et les noms de fichier pour chaque segment que vous exportez. La configuration de la planification est obligatoire, mais la configuration du nom de fichier est facultative.
+
+Pour ajouter une planification pour le segment, sélectionnez **[!UICONTROL Créer une planification]**.
+
+![](./assets/activate-destinations/configure-destination-schedule.png)
+
+Une fenêtre contextuelle s’affiche, présentant les options de création de la planification des segments.
+
+- **Exportation** de fichier : Vous avez la possibilité d’exporter des fichiers complets ou des fichiers incrémentiels. L’exportation d’un fichier complet publie un instantané complet de tous les profils admissibles pour ce segment. L’exportation d’un fichier incrémentiel publie le delta des profils qui remplissent les critères pour ce segment depuis la dernière exportation.
+- **Fréquence**: Si l’option **[!UICONTROL Exporter des fichiers]** complets est sélectionnée, vous avez la possibilité d’exporter **[!UICONTROL une fois]** ou **[!UICONTROL quotidiennement]**. Si l’option **[!UICONTROL Exporter des fichiers]** incrémentiels est sélectionnée, vous avez la possibilité d’exporter **[!UICONTROL quotidiennement]** uniquement. Exportation d’un fichier **[!UICONTROL Une fois]** exporte le fichier une seule fois. L’exportation d’un fichier Quotidien **** exporte le fichier tous les jours de la date du début à la date de fin à 12h00 UTC (19h00 HNE) si des fichiers complets sont sélectionnés et à 12h00 HNE (7h00 HNE) si des fichiers incrémentiels sont sélectionnés.
+- **Date**: Si l’option **[!UICONTROL Une fois]** est sélectionnée, vous pouvez sélectionner la date de l’exportation unique. Si l’option **[!UICONTROL Quotidien]** est sélectionnée, vous pouvez sélectionner les dates de début et de fin des exportations.
+
+![](./assets/activate-destinations/export-full-file.png)
 
 Les noms de fichier par défaut se composent du nom de destination, de l’ID de segment et d’un indicateur de date et d’heure. Vous pouvez, par exemple, modifier les noms de fichiers exportés pour faire la distinction entre les différentes campagnes ou pour que le temps d’exportation des données soit annexé aux fichiers.
 
