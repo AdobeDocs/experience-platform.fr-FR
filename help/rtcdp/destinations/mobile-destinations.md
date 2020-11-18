@@ -1,23 +1,22 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Destinations mobiles
-seo-title: Destinations mobiles
-description: Insérer un cas d'utilisation pour les destinations mobiles
-seo-description: Insérer un cas d'utilisation pour les destinations mobiles
+title: Destinations de l’engagement mobile
+seo-title: Destinations de l’engagement mobile
+description: Adobe Experience Platform prend en charge les destinations d’engagement pour mobiles répertoriées ci-dessous.
+seo-description: Adobe Experience Platform prend en charge les destinations d’engagement pour mobiles répertoriées ci-dessous.
 translation-type: tm+mt
-source-git-commit: 6c8084f35c4981b41a5beecd57ce5b3ef4e409d6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
-source-wordcount: '38'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
 
-# Destinations mobiles {#mobile-destinations}
+# Destinations de l’engagement mobile {#mobile-destinations}
 
-Insérer une description pour les destinations mobiles
+[!DNL Adobe Experience Platform] prend actuellement en charge les destinations d’engagement mobiles suivantes :
 
-[!DNL Adobe Experience Platform] prend actuellement en charge les destinations mobiles suivantes :
-
-* Aéronef - insérer un lien vers la page de documentation des Aéronefs
+* [Attributs du navire](airship-attributes-destination.md)
+* [Balises d&#39;avion](airship-tags-destination.md)
 * [Braquer](braze-destination.md)
