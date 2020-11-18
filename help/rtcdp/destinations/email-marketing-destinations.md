@@ -6,9 +6,9 @@ type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 42b694c532f140b51913ba5ceb0aaeacc2263039
+source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '838'
 ht-degree: 42%
 
 ---
@@ -54,7 +54,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## Configuration des noms de fichier
 
-Pour plus d&#39;informations sur les options d&#39;édition des noms de fichier, reportez-vous à l&#39;étape [Configurer](/help/rtcdp/destinations/activate-destinations.md#configure) du didacticiel Activer les destinations.
+Pour plus d&#39;informations sur les options de modification de la planification des segments et du nom de fichier, reportez-vous à l&#39;étape [Configurer](/help/rtcdp/destinations/activate-destinations.md#configure) du didacticiel Activer les destinations.
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
