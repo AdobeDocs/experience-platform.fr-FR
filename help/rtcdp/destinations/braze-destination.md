@@ -5,7 +5,7 @@ seo-title: Destination du braquage
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 seo-description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 9126a9b3a27aa0a0ecefb5d490475423d7840791
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 5%
@@ -57,6 +57,7 @@ En tant que spécialiste du marketing, je souhaite cible les utilisateurs dans u
    >![Activer la destination du braquage](assets/braze-destination-activate.png)
 
 1. A l’étape [!UICONTROL Compte] , vous devez fournir le jeton de votre [!DNL Braze] compte. C&#39;est ta [!DNL Braze][!DNL API] clé. Vous trouverez des instructions détaillées sur la façon d&#39;obtenir votre [!DNL API] clé ici : [Présentation](https://www.braze.com/docs/api/api_key/)de la clé d&#39;API REST. Saisissez le jeton et cliquez sur **[!UICONTROL Se connecter à la destination]**.
+
    ![Étape du compte de destination du braquage](assets/braze-destination-account.png)
 
 1. Cliquez sur **[!UICONTROL Suivant]**.
