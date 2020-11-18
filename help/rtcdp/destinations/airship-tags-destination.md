@@ -5,7 +5,7 @@ seo-title: Destination des balises d'avion
 description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
 seo-description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: f08b90531455cdbeb73deb83eed05ba7a9b19df6
+source-git-commit: 4b1bf5bbce57a22529c5d025c5bae10557400d54
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 14%
@@ -13,7 +13,7 @@ ht-degree: 14%
 ---
 
 
-# (bêta) [!DNL Airship Tags] Destination {#airship-tags-destination}
+# (bêta) [!DNL Airship Tags] destination {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
