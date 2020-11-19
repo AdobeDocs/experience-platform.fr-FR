@@ -2,13 +2,13 @@
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: Extension TMMData
 seo-title: Extension TMMData
-description: L’extension TMMData est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension TMMData est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension TMMData est une destination d’analyse dans la plate-forme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension TMMData est une destination d’analyse dans la plate-forme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 41%
+source-wordcount: '581'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 
 [!DNL TMMData's] La plate-forme Foundation for Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder et fusionner toutes leurs sources de données essentielles - y compris les données internes/externes et en ligne/hors ligne - afin de garantir une analyse croisée des canaux fiable et complète, avec une configuration de campagne automatisée et des importations directes vers l&#39;Adobe et d&#39;autres outils d&#39;analyse et de BI.
 
-[!DNL TMMData] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] est une extension d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
