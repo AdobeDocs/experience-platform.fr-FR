@@ -5,9 +5,9 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement IAB TCF 2.0 avec le SDK Web Experience Platform
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 3f70e7fdd5888018f3814d1446042e96d2e53304
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # Présentation de la structure de transparence et de consentement IAB 2.0
 
-Le Adobe Experience Platform Web SDK (AEP Web SDK) prend en charge Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0). Ce guide présente les exigences de prise en charge d’IAB TCF 2.0 par le biais du SDK Web AEP, en les intégrant à la plateforme de données client en temps réel, à l’Audience Manager, aux Événements d’expérience, au Adobe Analytics et à Experience Edge.
+Adobe Experience Platform Web SDK prend en charge Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0). Ce guide présente les exigences de prise en charge d’IAB TCF 2.0 via Adobe Experience Platform Web SDK en intégration avec la plateforme de données client en temps réel, l’Audience Manager, les Événements d’expérience, Adobe Analytics et Experience Edge.
 
 De plus, les guides suivants sont disponibles pour vous aider à apprendre comment intégrer IAB TCF 2.0 avec et sans Adobe Experience Platform Launch.
 
@@ -24,13 +24,13 @@ De plus, les guides suivants sont disponibles pour vous aider à apprendre comme
 
 ## Prise en main
 
-Pour mettre en oeuvre le SDK Web AEP avec IAB TCF 2.0, vous devez maîtriser le fonctionnement du modèle de données d’expérience (XDM) et des Événements d’expérience. Avant de début, veuillez consulter le document suivant :
+Pour mettre en oeuvre le SDK Web avec IAB TCF 2.0, vous devez maîtriser le fonctionnement du modèle de données d’expérience (XDM) et des Événements d’expérience. Avant de début, veuillez consulter le document suivant :
 
 - [Présentation](../../../xdm/home.md)du système du modèle de données d’expérience (XDM) : La normalisation et l&#39;interopérabilité sont des concepts clés de Adobe Experience Platform. [!DNL Experience Data Model (XDM)], piloté par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
 ## Intégration en temps réel de la plateforme de données clientes
 
-Basée sur Adobe Experience Platform, la plateforme de données clientes en temps réel (CDP en temps réel) permet de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise. Cela vous permet de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel. Pour envoyer des données de consentement au CDP en temps réel par l’intermédiaire du SDK Web AEP, les éléments suivants sont requis :
+Basée sur Adobe Experience Platform, la plateforme de données clientes en temps réel (CDP en temps réel) permet de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise. Cela vous permet de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel. Pour envoyer des données de consentement au CDP en temps réel par l’intermédiaire du SDK, les éléments suivants sont requis :
 
 - Jeu de données basé sur la [!DNL XDM Individual Profile] classe, activé pour une utilisation dans [!DNL Real-time Customer Profile], avec le mixin de confidentialité du Profil.
 - Une configuration de périphérie configurée avec le CDP en temps réel et le jeu de données de profil mentionné ci-dessus.
@@ -45,7 +45,7 @@ Adobe Audience Manager (AAM) comprend la prise en charge d’IAB TCF 2.0, qui vo
 
 >[!TIP]
 >
->Pour l’intégrer à l’Audience Manager via le SDK Web AEP, assurez-vous que vous disposez d’une configuration de périphérie configurée pour le transfert vers Adobe Audience Manager.
+>Pour l&#39;intégrer à l&#39;Audience Manager via Adobe Experience Platform Web SDK, assurez-vous que vous disposez d&#39;une configuration de périphérie configurée pour transférer vers Adobe Audience Manager.
 
 ## Événements d’expérience et intégration Adobe Analytics
 
@@ -58,9 +58,9 @@ Pour recueillir des renseignements sur le consentement des événements, il faut
 
 Pour plus d’informations sur la conversion d’un Événement d’expérience XDM en accès Analytics, début en lisant la documentation d’aperçu [d’](../../data-collection/adobe-analytics/analytics-overview.md) Analytics.
 
-## Intégration du SDK Web AEP
+## Intégration du SDK Web Adobe Experience Platform
 
-Les sections ci-dessous décrivent les principaux points d’intégration entre l’IAB TCF 2.0 et le SDK Web AEP.
+Les sections ci-dessous décrivent les principaux points d’intégration entre IAB TCF 2.0 et Adobe Experience Platform Web SDK.
 
 >[!NOTE]
 >
@@ -68,15 +68,15 @@ Les sections ci-dessous décrivent les principaux points d’intégration entre 
 
 ### Consentement par défaut
 
-Le consentement par défaut est utilisé lorsqu’aucune préférence de consentement n’est déjà enregistrée pour un client. En d’autres termes, les options de consentement par défaut peuvent contrôler le comportement du SDK Web AEP et les modifier en fonction de la région du client.
+Le consentement par défaut est utilisé lorsqu’aucune préférence de consentement n’est déjà enregistrée pour un client. Cela signifie que les options de consentement par défaut peuvent contrôler le comportement du SDK Web Adobe Experience Platform et modifier en fonction de la région du client.
 
-Par exemple, si vous avez un client qui n&#39;est pas dans la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGMD, le consentement par défaut peut être défini sur `pending`. Votre plate-forme de gestion des cloud (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à l’IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut.
+Par exemple, si vous avez un client qui n&#39;est pas dans la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGMD, le consentement par défaut peut être défini sur `pending`. Votre plateforme de gestion de cloud (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut.
 
 Pour plus d’informations sur le consentement par défaut, reportez-vous à la section [de consentement par](../../fundamentals/configuring-the-sdk.md#default-consent) défaut de la documentation de configuration du SDK.
 
 ### Définition du consentement lors de la modification
 
-Le SDK Web AEP comporte une `setConsent` commande qui communique les préférences de consentement de votre client à tous les services d’Adobe à l’aide d’IAB TCF 2.0. Si vous effectuez une intégration avec le CDP en temps réel, cela met à jour le profil de votre client. Si vous vous intégrez à l’Audience Manager, les informations de vos clients sont mises à jour. L’appel de cette méthode définit également un cookie avec une préférence de consentement tout ou rien qui contrôle si les futurs Événements d’expérience sont autorisés à être envoyés. Il est prévu que cette action soit appelée chaque fois que le consentement change. Lors des prochains chargements de page, le cookie de consentement Experience Edge sera lu pour déterminer si des Événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
+Adobe Experience Platform Web SDK comporte une `setConsent` commande qui communique les préférences de consentement de votre client à tous les services d’Adobe à l’aide d’IAB TCF 2.0. Si vous effectuez une intégration avec CDP en temps réel, cela met à jour le profil de votre client. Si vous vous intégrez à l’Audience Manager, les informations de vos clients sont mises à jour. L’appel de cette méthode définit également un cookie avec une préférence de consentement tout ou rien qui contrôle si les futurs Événements d’expérience sont autorisés à être envoyés. Il est prévu que cette action soit appelée chaque fois que le consentement change. Lors des prochains chargements de page, le cookie de consentement Experience Edge sera lu pour déterminer si des Événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
 
 Tout comme l’intégration d’IAB TCF 2.0 de l’Audience Manager, Experience Edge donne son consentement lorsqu’un client a donné son consentement explicite aux fins suivantes :
 
@@ -89,7 +89,7 @@ Pour plus d&#39;informations sur la `setConsent` commande, lisez la documentatio
 
 ### Ajouter le consentement aux Événements d’expérience
 
-Le SDK Web AEP comporte une `sendEvent` commande qui collecte un Événement d’expérience. Si vous effectuez une intégration avec les Événements d’expérience ou Adobe Analytics et souhaitez que les préférences de consentement s’appliquent à chaque Événement d’expérience, vous devez ajouter les informations de consentement à chaque `sendEvent` commande.
+Adobe Experience Platform Web SDK comporte une `sendEvent` commande qui collecte un Événement d’expérience. Si vous effectuez une intégration avec les Événements d’expérience ou Adobe Analytics et souhaitez que les préférences de consentement s’appliquent à chaque Événement d’expérience, vous devez ajouter les informations de consentement à chaque `sendEvent` commande.
 
 Pour plus d&#39;informations sur la `sendEvent` commande, consultez la documentation sur les événements [de](../../fundamentals/tracking-events.md)suivi.
 
