@@ -2,13 +2,13 @@
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: Extension PebblePost
 seo-title: Extension PebblePost
-description: L’extension PebblePost est une destination d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension PebblePost est une destination d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension PebblePost est une destination de courriel dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension PebblePost est une destination de courriel dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 47%
+source-wordcount: '587'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 [!DNL PebblePost's Programmatic Direct Mail®] permet aux spécialistes du marketing numérique de connecter l’intérêt et l’intention en ligne à des supports tangibles hors ligne qui convertissent. Désormais, ces spécialistes peuvent tirer parti des segments de données personnalisés créés dans Adobe pour cibler les consommateurs avec une impression multimédia pertinente, à domicile et plus durable. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
 
-[!DNL PebblePost] est une extension d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] est une extension de courrier électronique dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
