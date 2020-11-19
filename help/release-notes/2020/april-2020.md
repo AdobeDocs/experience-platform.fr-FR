@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '991'
-ht-degree: 60%
+source-wordcount: '972'
+ht-degree: 61%
 
 ---
 
@@ -19,14 +19,14 @@ ht-degree: 60%
 **Date de publication : 8 avril 2020**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
-* [[ ! DNL Intelligent Services]](#intelligent)
+* [[!DNL Intelligent Services]](#intelligent)
 
 Mises à jour des fonctionnalités existantes :
-* [[ ! Modèle de données d’expérience DNL (XDM)]](#xdm)
-* [[ ! Gouvernance des données DNL]](#governance)
-* [[ !Destinations DNL]](#destinations)
-* [[ ! Privacy Service DNL]](#privacy)
-* [[ !Sources DNL]](#sources)
+* [[!DNL Experience Data Model (XDM)]](#xdm)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Intelligent Services] {#intelligent}
 
@@ -37,7 +37,7 @@ Mises à jour des fonctionnalités existantes :
 | Fonctionnalité | Description |
 |---|---|
 | [!DNL Customer AI] | [!DNL Customer AI] permet aux professionnels du marketing de générer des prédictions client au niveau individuel avec des explications. With the help of influential factors, [!DNL Customer AI] can tell you what a customer is likely to do and why. Additionally, marketers can benefit from [!DNL Customer AI] predictions and insights to personalize customer experiences by serving the most appropriate offers and messaging. |
-| [!DNL Attribution AI] | [!DNL Attribution AI] est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. With [!DNL Attribution AI], marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys. |
+| [!DNL Attribution AI] | [!DNL Attribution AI] est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à [!DNL Attribution AI], les professionnels du marketing peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients. |
 
 **Problèmes connus**
 
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez la section [Présentation de la gouvernanc
 
 ## Destinations {#destinations}
 
-Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **Nouvelles destinations**
 
