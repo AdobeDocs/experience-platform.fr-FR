@@ -1,23 +1,23 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Prise en main de la plateforme des données clients en temps réel d’Adobe
-seo-title: Prise en main de la plateforme des données clients en temps réel d’Adobe
-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
-seo-description: Exemple de scénario pour la plateforme des données clients en temps réel d’Adobe
+title: 'Prise en main de la plateforme de données client en temps réel '
+seo-title: 'Prise en main de la plateforme de données client en temps réel '
+description: 'Exemple de scénario pour la plateforme de données client en temps réel '
+seo-description: 'Exemple de scénario pour la plateforme de données client en temps réel '
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2318'
 ht-degree: 89%
 
 ---
 
 
-# Prise en main de la plateforme des données clients en temps réel d’Adobe
+# Prise en main de la plateforme de données client en temps réel 
 
-Ce guide de prise en main vous accompagne tout au long d’un exemple d’implémentation de la plateforme des données clients en temps réel d’Adobe. Vous pouvez l’utiliser comme exemple lors de la configuration de votre propre implémentation. Bien que ce guide présente des exemples spécifiques, il fournit des liens vers des informations supplémentaires que vous pouvez utiliser lors de la création de votre configuration.
+Ce guide de prise en main vous accompagne tout au long d’un exemple de mise en œuvre de la plateforme de données client (CDP) en temps réel Vous pouvez l’utiliser comme exemple lors de la configuration de votre propre implémentation. Bien que ce guide présente des exemples spécifiques, il fournit des liens vers des informations supplémentaires que vous pouvez utiliser lors de la création de votre configuration.
 
-Cet exemple illustre la puissance de la plateforme des données clients en temps réel d’Adobe, optimisée par Adobe Experience Platform, pour :
+Cet exemple illustre la puissance de la plateforme des données clients en temps réel d’Adobe, optimisée par Experience Platform, pour :
 
 * ingérer des données à partir de plusieurs sources ;
 * Les fusionner en un seul [!DNL real-time customer profile]
@@ -121,7 +121,7 @@ Ce contenu personnalisé permet à Sarah de trouver les articles qui l’intére
 
 Sarah change d’activité et quitte le site, mettant fin à sa session. Luma peut utiliser ses données dans Adobe Experience Platform pour l’inciter à revenir sur le site.
 
-La plateforme des données clients en temps réel d’Adobe, optimisée par Adobe Experience Platform, a été conçue pour la gestion de l’expérience client. Elle permet aux entreprises :
+La plateforme des données clients en temps réel d’Adobe, optimisée par  Experience Platform, a été conçue pour la gestion de l’expérience client. Elle permet aux entreprises :
 
 * de simplifier l’intégration et l’activation des données ;
 * de gérer l’utilisation des données connues et inconnues ;
