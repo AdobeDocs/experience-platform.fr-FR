@@ -1,21 +1,21 @@
 ---
 keywords: connect destination;destination connect;how to connect destination
-title: Connexion à une destination dans la plateforme de données clients en temps réel d’Adobe
-seo-title: Connexion à une destination dans la plateforme de données clients en temps réel d’Adobe
+title: Connexion à une destination dans la plateforme de données clientes en temps réel
+seo-title: Connexion à une destination dans la plateforme de données clientes en temps réel
 type: Tutorial
-description: Ce tutoriel répertorie les étapes de connexion à une destination dans la plateforme de données client en temps réel d’Adobe
+description: Ce didacticiel liste les étapes de connexion d’une destination dans la plateforme de données clientes en temps réel.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 100%
+source-wordcount: '122'
+ht-degree: 62%
 
 ---
 
 
 # Comment se connecter à une destination
 
-Suivez les étapes ci-dessous pour vous connecter à une destination dans la plateforme de données client en temps réel d’Adobe :
+Suivez les étapes ci-dessous pour vous connecter à une destination dans la plateforme de données clientes en temps réel :
 
 1. Accédez aux **[!UICONTROL destinations]** depuis la barre de navigation de gauche.
 2. Dans l’onglet [[!UICONTROL Catalogue]](/help/rtcdp/destinations/destinations-workspace.md#catalog), sélectionnez la destination à laquelle vous souhaitez vous connecter.
