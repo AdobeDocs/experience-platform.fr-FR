@@ -2,13 +2,13 @@
 keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
 title: Extension Quantum Metric
 seo-title: Extension Quantum Metric
-description: L’extension Quantum Metric est une destination publicitaire de la plateforme de données clients en temps réel Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Quantum Metric est une destination publicitaire de la plateforme de données clients en temps réel Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Quantum Metric est une destination publicitaire de la plateforme de données clients en temps réel Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Quantum Metric est une destination publicitaire de la plateforme de données clients en temps réel Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 44%
+source-wordcount: '572'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 [!DNL Quantum Metric's] l’intégration à Adobe Launch facilite le déploiement sans code de la balise de collecte de [!DNL Quantum Metric's] données. In addition, this extension offers the ability to capture Launch Data Elements containing useful information from the [!DNL Quantum Metric] API.
 
-[!DNL Quantum Metric] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+[!DNL Quantum Metric] est une extension d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
