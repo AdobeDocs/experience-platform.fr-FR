@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 9436779e91bf82382056acd526671b30b55e11d4
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 30%
+source-wordcount: '862'
+ht-degree: 29%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 30%
 
 **Date de publication : 9 septembre 2020**
 
-Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [[ ! Gouvernance des données DNL]](#governance)
-- [[ !Destinations DNL]](#destinations)
-- [[ ! DNL Observability Insights]](#observability)
-- [[ ! Privacy Service DNL]](#privacy)
-- [[ ! Profil client en temps réel DNL]](#profile)
-- [[ !Service de segmentation DNL]](#segmentation)
-- [[ !Sources DNL]](#sources)
+- [[!DNL Data Governance]](#governance)
+- [[!DNL Destinations]](#destinations)
+- [[!DNL Observability Insights]](#observability)
+- [[!DNL Privacy Service]](#privacy)
+- [[!DNL Real-time Customer Profile]](#profile)
+- [[!DNL Segmentation Service]](#segmentation)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -41,7 +41,7 @@ Pour plus d’informations sur ce service, consultez la [présentation de la gou
 
 ## Destinations {#destinations}
 
-Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **Nouvelles fonctionnalités**
 
@@ -85,7 +85,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences co
 
 For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
 
-## Segmentation Service {#segmentation}
+## Segmentation Service {#segmentation}
 
 Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
 
