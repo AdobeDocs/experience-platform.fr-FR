@@ -1,14 +1,14 @@
 ---
 title: Configuration du SDK
-seo-title: Configuration du SDK Web d’Adobe Experience Platform
+seo-title: Configuration du SDK Web Adobe Experience Platform
 description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 76%
+source-wordcount: '710'
+ht-degree: 74%
 
 ---
 
@@ -85,13 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Lors de la configuration
 | -------- | ------------ | ----------------- |
 | Booléen | Non | `true` |
 
-Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Pour les clics considérés comme des clics sur des liens, les données d’[interaction Web](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) suivantes sont collectées :
-
-| **Propriété** | **Description** |
-| ------------ | ----------------------------------- |
-| Nom du lien | Nom déterminé par le contexte du lien |
-| URL du lien | URL normalisée |
-| Type de lien | Défini sur téléchargement, sortie ou autre |
+Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Voir Suivi [](../data-collection/track-links.md#automaticLinkTracking) automatique des liens pour plus d’informations.
 
 ### `onBeforeEventSend`
 
@@ -153,7 +147,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Booléen | Non | vrai |
 
-Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cela permet de passer à l’utilisation du SDK Web AEP, tandis que certaines parties du site peuvent encore utiliser Visiteur.js. De plus, si l’API du Visiteur est définie sur la page, le SDK requête l’API du Visiteur pour l’ECID. Cela vous permet de créer deux pages de balises avec le SDK Web AEP et d’avoir toujours le même ECID.
+Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cela permet de passer à l’utilisation du SDK Web Adobe Experience Platform alors que certaines parties du site peuvent encore utiliser Visiteur.js. De plus, si l’API du Visiteur est définie sur la page, le SDK requête l’API du Visiteur pour l’ECID. Cela vous permet de créer deux pages de balises avec le SDK Web AEP et d’avoir toujours le même ECID.
 
 ### `thirdPartyCookiesEnabled`
 
