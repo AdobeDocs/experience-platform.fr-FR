@@ -2,13 +2,13 @@
 Keywords: ECID;ecid
 title: Extension du service Experience Cloud ID
 seo-title: Extension du service Experience Cloud ID
-description: L’extension du service Experience Cloud ID est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension du service Experience Cloud ID est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension du service d’ID d’Experience Cloud est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension du service d’ID d’Experience Cloud est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '557'
-ht-degree: 64%
+source-wordcount: '554'
+ht-degree: 56%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 64%
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
-[!DNL Experience Cloud]Le service ID est une extension de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page d’extension du service Experience Cloud ID](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) dans la documentation [!DNL Experience Platform Launch]
+[!DNL Experience Cloud] Le service d’ID est une extension de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page d’extension du service Experience Cloud ID](https://docs.adobe.com/content/help/fr-FR/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) dans la documentation [!DNL Experience Platform Launch]
 
 Cette destination est une [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
