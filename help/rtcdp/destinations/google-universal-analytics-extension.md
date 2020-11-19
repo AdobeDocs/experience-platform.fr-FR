@@ -2,13 +2,13 @@
 keywords: google universal analytics;Google Universal Analytics;Google universal analytics
 title: Extension Google Universal Analytics
 seo-title: Extension Google Universal Analytics
-description: L’extension Google Universal Analytics est une destination Analytics de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Google Universal Analytics est une destination Analytics de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Google Universal Analytics est une destination d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Google Universal Analytics est une destination d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 48%
+source-wordcount: '566'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 [!DNL Google Universal Analytics] vous permet de mesurer votre retour sur investissement publicitaire, ainsi que de suivre vos sites et applications Flash, vidéo et de réseaux sociaux.
 
-[!DNL Google Universal Analytics] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] est une extension d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
