@@ -5,9 +5,9 @@ description: Découvrez comment effectuer le rendu du contenu personnalisé avec
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '236'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # Présentation des options de personnalisation
 
-Le Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../personalization/manage-flicker.md).
 
 ## Rendu automatique du contenu
 
@@ -51,12 +51,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 Cela renverra une liste de décisions en tant qu’objet JSON pour chaque décision.
 
-```javascript
+```json
 {
   "decisions": [
     {
