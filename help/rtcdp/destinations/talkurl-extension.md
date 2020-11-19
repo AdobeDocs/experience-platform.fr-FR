@@ -2,13 +2,13 @@
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
 title: Extension Talk URL Inbox
 seo-title: Talk URL Inbox
-description: L’extension Talk URL Inbox est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Talk URL Inbox est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension de boîte de réception d’URL de discussion est une voix de la destination du client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension de boîte de réception d’URL de discussion est une voix de la destination du client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 49%
+source-wordcount: '581'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 49%
 
 Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et l’apprentissage automatique dans le cloud pour transcrire instantanément vos messages vocaux en insights textuels.
 
-[!DNL Talk URL Inbox] est une extension de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] est la voix de l’extension client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
