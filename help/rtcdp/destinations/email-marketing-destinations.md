@@ -6,9 +6,9 @@ type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 425287d78deebf0113d6cf6350bcb516c99ee995
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '837'
 ht-degree: 42%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 42%
 
 # Destinations de marketing par e-mail {#email-marketing-destinations}
 
-Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. La plateforme de données client en temps réel Adobe s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
+Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. La plateforme de données client en temps réel s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
 
 La plateforme de données client (CDP) en temps réel Adobe doit se connecter à la destination avant de pouvoir envoyer des segments vers des destinations de marketing par e-mail pour vos campagnes.
 
