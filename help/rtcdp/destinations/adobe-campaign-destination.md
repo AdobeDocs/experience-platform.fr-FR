@@ -5,9 +5,9 @@ seo-title: Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 seo-description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 translation-type: tm+mt
-source-git-commit: 67a353c950bef11ccbaa52c49d213f08449baa96
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '617'
 ht-degree: 67%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 67%
 
 Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne. Pour plus d’informations, consultez [À propos d’Adobe Campaign Classic](https://docs.adobe.com/content/help/fr-FR/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html).
 
-Pour envoyer des données de segment à Adobe Campaign, vous devez d’abord [connecter la destination](#connect-destination) dans la plateforme de données clients en temps réel d’Adobe, puis [configurer une importation de données](#import-data-into-campaign) à partir de l’emplacement de stockage dans Adobe Campaign.
+Pour envoyer des données de segment à Campaign, vous devez d’abord [connecter la destination](#connect-destination) dans la plateforme de données clients en temps réel d’Adobe, puis [configurer une importation de données](#import-data-into-campaign) à partir de l’emplacement de stockage dans Adobe Campaign.
 
 ## Type d’exportation {#export-type}
 
