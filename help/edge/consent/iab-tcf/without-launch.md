@@ -1,20 +1,20 @@
 ---
 title: Utilisation d’IAB TCF 2.0 sans Experience Platform Launch
-seo-title: Configuration du consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
+seo-title: Configuration du consentement IAB TCF 2.0 avec Adobe Experience Platform Web SDK
 description: Découvrez comment configurer le consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
 seo-description: Découvrez comment configurer le consentement IAB TCF 2.0 avec le SDK Web Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
 
 
-# Utilisation d’IAB TCF 2.0 avec l’extension Adobe Experience Platform Web SDK
+# Utilisation d’IAB TCF 2.0 avec l’extension SDK Web AEP
 
-Ce guide explique comment intégrer Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0) au Adobe Experience Platform Web SDK sans utiliser d’Experience Platform Launch. Pour un aperçu de l’intégration avec IAB TCF 2.0, consultez la [présentation](./overview.md). Pour un guide sur la façon de s&#39;intégrer à l&#39;Experience Platform Launch, lisez le guide [IAB TCF 2.0 pour Experience Platform Launch](./with-launch.md).
+Ce guide explique comment intégrer Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0) avec Adobe Experience Platform Web SDK sans utiliser d’Experience Platform Launch. Pour un aperçu de l’intégration avec IAB TCF 2.0, consultez la [présentation](./overview.md). Pour un guide sur la façon de s&#39;intégrer à l&#39;Experience Platform Launch, lisez le guide [IAB TCF 2.0 pour Experience Platform Launch](./with-launch.md).
 
 ## Prise en main
 
@@ -58,7 +58,7 @@ Dans cet exemple, la `configure` commande est appelée une fois `tcData` obtenue
 
 ## Utilisation du événement setConsent
 
-L’API TCF 2.0 de l’IAB fournit un événement pour le moment où le consentement est mis à jour par le client. Cela se produit lorsque le client définit initialement ses préférences et lorsque le client met à jour ses préférences.
+L’API IAB TCF 2.0 fournit un événement pour le moment où le consentement est mis à jour par le client. Cela se produit lorsque le client définit initialement ses préférences et lorsque le client met à jour ses préférences.
 
 L’exemple suivant illustre une façon de procéder :
 
@@ -110,4 +110,4 @@ L’autre moyen d’ajouter les informations de consentement à chaque requête 
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension Adobe Experience Platform Web SDK, vous pouvez également choisir de vous intégrer à d’autres solutions d’Adobe telles que Adobe Analytics ou la plateforme de données client en temps réel. Pour plus d’informations, consultez l’aperçu [du Cadre de transparence et de consentement](./overview.md) IAB 2.0.
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension AEP Web SDK, vous pouvez également choisir de vous intégrer à d’autres solutions d’Adobe telles que Adobe Analytics ou la plateforme de données client en temps réel. Pour plus d’informations, consultez l’aperçu [du Cadre de transparence et de consentement](./overview.md) IAB 2.0.
