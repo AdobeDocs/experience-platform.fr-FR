@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5ff73aa1745e78f0026ada2c66908888be5f4498
+source-git-commit: ade9da107ee6dd100a33a7e7e9a20b4335721e0a
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2078'
 ht-degree: 27%
 
 ---
@@ -213,7 +213,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Suppression de connexions | Les connexions par lots contenant des erreurs ou devenues inutiles peuvent maintenant être supprimées à l’aide de l’ [!DNL Flow Service] API et de l’interface utilisateur. Pour plus d’informations, voir le didacticiel sur la [suppression de connexions à l’aide de l’API](../../sources/tutorials/api/delete.md) du service de flux et la [suppression de comptes à l’aide de l’interface utilisateur](../../sources/tutorials/ui/delete-accounts.md). |
 | Mappage hiérarchique | Vous pouvez prévisualisation un fichier source hiérarchique, tel que JSON ou Parquet, pendant le processus d’assimilation des données. Pour plus d’informations, consultez le didacticiel sur la [configuration d’un flux de données pour les connecteurs d’enregistrement cloud dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
 | Prise en charge des API pour le mappage dans les sources de diffusion en continu | Vous pouvez désormais utiliser des API pour exécuter des fonctions de mappage avec des sources de diffusion en continu. |
-| Prise en charge des API pour les délimiteurs personnalisés pour les sources d’enregistrement cloud | Vous pouvez désormais collecter des fichiers délimités par des CSV à l’aide de sources d’enregistrement cloud. Vous pouvez utiliser n’importe quel délimiteur de colonne unique, tel qu’une tabulation, une virgule, une barre verticale, un point-virgule ou un hachage, pour collecter des fichiers plats dans n’importe quel format. Si elle n’est pas fournie, la valeur par défaut est une virgule. |
+| Prise en charge des API pour les délimiteurs personnalisés pour les sources d’enregistrement cloud | Vous pouvez désormais collecter des fichiers délimités par des CSV à l’aide de sources d’enregistrement cloud. Vous pouvez utiliser n’importe quel délimiteur de colonne unique, tel qu’une tabulation, une virgule, une barre verticale, un point-virgule ou un hachage, pour collecter des fichiers plats dans n’importe quel format. |
 | Prise en charge de sandbox pour Adobe Audience Manager Connector | Le connecteur d&#39;Audience Manager est maintenant compatible avec le sandbox. Les utilisateurs peuvent activer le connecteur pour acheminer les jeux de données d’Audience Manager vers le sandbox de leur choix (y compris les sandbox hors production). La configuration est limitée à un sandbox par organisation IMS. |
 | Améliorations de l&#39;environnement | L’assimilation basée sur des fichiers est désormais accessible via le catalogue des sources. |
 
