@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 5aa8dbcd85fa506f90515ce3e01d35993dd99c10
+source-git-commit: d6b603e2918b502635b11fb1aa693a4b4311c125
 workflow-type: tm+mt
-source-wordcount: '2077'
-ht-degree: 26%
+source-wordcount: '2126'
+ht-degree: 25%
 
 ---
 
@@ -122,6 +122,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
+| Mises à jour de l&#39;UX des détails de destination | Le flux de travaux de destination du CDP en temps réel comprend désormais une surveillance intégrée afin que vous puissiez identifier les activations de lot qui ont réussi. Cette fonctionnalité permet aux utilisateurs de résoudre directement les problèmes dans le flux de travaux pour les destinations par lots au moyen d’alertes et d’un tableau de bord de surveillance afin de suivre les erreurs dans le pipeline de traitement. |
 | Champs obligatoires | Les utilisateurs peuvent marquer les champs comme obligatoires, en s’assurant que seuls les champs qui contiennent le champ obligatoire sont exportés. |
 
 <!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
