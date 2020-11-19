@@ -2,13 +2,13 @@
 keywords: branch;branch extension;branch destination
 title: Extension Branch
 seo-title: Extension Branch
-description: L’extension Branch est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Branch est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension de branche est une destination publicitaire dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension de branche est une destination publicitaire dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 45%
+source-wordcount: '536'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Branch fournit des liens et des solutions puissants qui vous aident à acquérir, à engager et à mesurer sur tous les appareils, canaux et plateformes.
 
-Branch est une extension publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité d’extension, consultez la [page des fonctionnalités](https://branch.io/features/) du site web dédié à Branch.
+Branch est une extension de publicité dans la plateforme de données clientes en temps réel. Pour plus d’informations sur la fonctionnalité d’extension, consultez la [page des fonctionnalités](https://branch.io/features/) du site web dédié à Branch.
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
