@@ -2,13 +2,13 @@
 keywords: bizible;bizible extension;bizible destination
 title: Extension Bizible
 seo-title: Extension Bizible
-description: L’extension Bizible est une destination d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Bizible est une destination d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Bizible est une destination de courrier électronique dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Bizible est une destination de courrier électronique dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: d9bf874dbfcc00c0a6e267f1a2e96f1223054825
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 62%
+source-wordcount: '526'
+ht-degree: 56%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 62%
 
 [!DNL Bizible] est une solution d’attribution B2B de pointe qui vous offre une visibilité inégalée sur les données, afin que vous puissiez prendre des décisions intelligentes pour stimuler la croissance.
 
-[!DNL Bizible] est une extension d’e-mail de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] est une extension de courrier électronique dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 Cette destination est une [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Adobe Real-time CDP, see [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
