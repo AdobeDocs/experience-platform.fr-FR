@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0f3a4ba6ad96d2226ae5094fa8b5073152df90f7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '840'
 ht-degree: 60%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 60%
 
 **Date de lancement : 11 mars 2020**
 
-Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [[ ! Gouvernance des données DNL]](#governance)
-* [[ !Ingestion des données DNL]](#ingestion)
-* [[ !Destinations DNL]](#destinations)
-* [[ !Service d&#39;identité DNL]](#identity)
-* [[ !Sources DNL]](#sources)
+* [[!DNL Data Governance]](#governance)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Identity Service]](#identity)
+* [[!DNL Sources]](#sources)
 
 ## [!DNL Data Governance] {#governance}
 
@@ -50,7 +50,7 @@ Adobe Experience Platform [!DNL Data Governance] is a series of strategies and t
 
 For more information about [!DNL Data Governance], see the [Data Governance overview](../../data-governance/home.md).
 
-## Data Ingestion {#ingestion}
+## Ingestion des données {#ingestion}
 
 Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Adobe Experience Platform [!DNL Data Ingestion] provides multiple alternatives for ingesting data including Batch APIs, Streaming APIs, native Adobe connectors, data integration partners, or the Adobe Experience Platform UI.
 
@@ -69,7 +69,7 @@ Pour en savoir plus sur l’ingestion de données dans Platform, consultez la [D
 
 ## Destinations {#destinations}
 
-Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **Nouvelles destinations**
 
