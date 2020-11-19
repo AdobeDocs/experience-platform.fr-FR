@@ -5,10 +5,10 @@ seo-title: Extensions d’Experience Platform Launch
 description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
-source-git-commit: 6bb7bbeaceac8a69641138248a1c41cf9fb3dc63
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 60%
+source-wordcount: '645'
+ht-degree: 55%
 
 ---
 
@@ -31,7 +31,7 @@ To find the Platform Launch extensions in the Adobe Real-time CDP interface, bro
 
 Les extensions de lancement de plateforme transfèrent des données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](/help/rtcdp/destinations/gainsight-extension.md) ou l’[extension de voix du client Confirmit](/help/rtcdp/destinations/confirmit-digital-feedback-extension.md).
 
-Les destinations **Export de profil/segment** dans la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Par exemple, la [destination de stockage dans le cloud Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) ou la [destination publicitaire Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md).
+**Profil/segment Exportez** les destinations dans la plateforme de données clientes en temps réel pour capturer les données du événement, les combiner avec d’autres sources de données, appliquer la segmentation et exporter des segments et des profils qualifiés vers les destinations. Par exemple, la [destination de stockage dans le cloud Amazon S3](/help/rtcdp/destinations/amazon-s3-destination.md) ou la [destination publicitaire Google Display &amp; Video 360](/help/rtcdp/destinations/google-dv360-destination.md).
 
 ![Comparaison entre les extensions d’Experience Platform Launch et d’autres destinations](/help/rtcdp/destinations/assets/launch-and-other-destinations.png)
 
