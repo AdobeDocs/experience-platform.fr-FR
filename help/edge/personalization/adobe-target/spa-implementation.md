@@ -1,13 +1,13 @@
 ---
-title: 'Adobe Target et le kit de développement Web Adobe Experience Platform. '
+title: 'Adobe Target et Adobe Experience Platform Web SDK. '
 seo-title: Adobe Experience Platform Web SDK et utilisation de Adobe Target
 description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 translation-type: tm+mt
-source-git-commit: 8aeeef09602386f219fd8284b332469c04e88ffb
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1669'
 ht-degree: 14%
 
 ---
@@ -25,7 +25,7 @@ Les applications Web modernes, telles que les applications d’une seule page, o
 
 ## Avantages de Platform Web SDK pour SPA
 
-Voici quelques avantages liés à l’utilisation du SDK Web Adobe Experience Platform pour vos applications d’une seule page :
+Voici quelques avantages à l’utilisation du SDK Web Adobe Experience Platform pour vos applications d’une seule page :
 
 * Capacité à mettre en cache toutes les offres au chargement de la page afin de passer de plusieurs appels serveur à un seul appel serveur.
 * Améliorez considérablement l’expérience des utilisateurs de votre site, car les offres sont affichées immédiatement par le cache sans délai lors des appels traditionnels au serveur.
@@ -68,15 +68,15 @@ Les Vues XDM peuvent être exploitées dans Adobe Target pour permettre aux spé
 3. Après avoir défini les Vues XDM, afin de fournir des activités du compositeur d’expérience visuelle AB ou XT, implémentez la `sendEvent()` fonction avec `renderDecisions` la valeur `true` et la Vue XDM correspondante dans votre application d’une seule page. La Vue XDM doit être transmise `xdm.web.webPageDetails.viewName`. Cette étape permet aux spécialistes du marketing d’exploiter le compositeur d’expérience visuelle pour lancer les tests A/B et XT pour ces XDM.
 
    ```javascript
-   alloy("sendEvent",  { 
-     "renderDecisions": true, 
-     "xdm": { 
-       "web": { 
-         "webPageDetails": { 
-            "viewName":"home" 
-         }      
+   alloy("sendEvent", { 
+     "renderDecisions": true, 
+     "xdm": { 
+       "web": { 
+         "webPageDetails": { 
+         "viewName":"home" 
+         }
        } 
-     } 
+     } 
    });
    ```
 
@@ -96,7 +96,7 @@ L’équipe marketing souhaite exécuter des tests A/B sur toute la page d&#39;a
 
 Pour exécuter des tests A/B sur l’ensemble du site d’accueil, `sendEvent()` vous devez appeler avec XDM `viewName` défini sur `home`:
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -109,14 +109,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -137,18 +138,18 @@ L’équipe marketing souhaite personnaliser la deuxième ligne de produits en c
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -177,17 +178,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 Pour personnaliser le contenu du site en fonction des préférences de diffusion sélectionnées, une Vue peut être créée pour chaque préférence de diffusion. Lorsque la Diffusion **** normale est sélectionnée, la Vue peut être nommée &quot;checkout-normal&quot;. If **Express Delivery** is selected, the View can be named &quot;checkout-express&quot;.
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -219,7 +219,7 @@ class Checkout extends Component {
 
 ## Utilisation du compositeur d’expérience visuelle pour un SPA
 
-Une fois la définition de vos Vues XDM terminée et implémentée`sendEvent()` avec ces Vues XDM transmises, le compositeur d’expérience visuelle pourra détecter ces Vues et permettre aux utilisateurs de créer des actions et des modifications pour les activités A/B ou XT.
+Une fois la définition de vos Vues XDM terminée et implémentée `sendEvent()` avec ces Vues XDM transmises, le compositeur d’expérience visuelle pourra détecter ces Vues et permettre aux utilisateurs de créer des actions et des modifications pour les activités A/B ou XT.
 
 >[!NOTE]
 >
