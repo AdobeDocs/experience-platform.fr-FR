@@ -1,13 +1,13 @@
 ---
 keywords: streaming;
-title: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-seo-title: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-description: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-seo-description: La destination HTTP est une destination de plateforme de données client en temps réel Adobe qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
+title: La destination HTTP est une destination de plateforme de données clientes en temps réel qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
+seo-title: La destination HTTP est une destination de plateforme de données clientes en temps réel qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
+description: La destination HTTP est une destination de plateforme de données clientes en temps réel qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
+seo-description: La destination HTTP est une destination de plateforme de données clientes en temps réel qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 translation-type: tm+mt
-source-git-commit: f4840f028bb855e79c0f2ae5c82bc38906a7aaec
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '568'
 ht-degree: 7%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 7%
 
 ## Présentation {#overview}
 
-La [!DNL HTTP] destination est une destination [!DNL Adobe Real-Time Customer Data Platform] de flux continu qui vous permet d’envoyer des données de profil à des [!DNL HTTP] points de terminaison tiers.
+La [!DNL HTTP] destination est une destination [!DNL Real-time Customer Data Platform] de flux continu qui vous permet d’envoyer des données de profil à des [!DNL HTTP] points de terminaison tiers.
 
-Pour envoyer des données de profil aux [!DNL HTTP] points de terminaison, vous devez d’abord vous connecter à la destination dans le [[!DNL Adobe Real-Time Customer Data Platform]](#connect-destination).
+Pour envoyer des données de profil aux [!DNL HTTP] points de terminaison, vous devez d’abord vous connecter à la destination dans le [[!DNL Real-time Customer Data Platform]](#connect-destination).
 
 ## Cas d’utilisation {#use-cases}
 
