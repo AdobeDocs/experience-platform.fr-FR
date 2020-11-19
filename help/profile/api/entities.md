@@ -3,10 +3,10 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Entités - API Profil client en temps réel
 topic: guide
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
 workflow-type: tm+mt
-source-wordcount: '1676'
-ht-degree: 89%
+source-wordcount: '1695'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
 
 ## Accès aux données de profil par identité
 
@@ -911,4 +911,5 @@ Les paramètres suivants sont utilisés dans le chemin des requêtes GET vers le
 | `startTime` | Spécifiez l’heure de début pour filtrer les objets de série temporelle (en millisecondes). | `startTime=1539838505` |
 | `endTime` | Spécifiez l’heure de fin pour filtrer les objets de série temporelle (en millisecondes). | `endTime=1539838510` |
 | `limit` | Valeur numérique spécifiant le nombre maximal d’objets à renvoyer. Valeur par défaut : 1000 | `limit=100` |
+| `property` | Filtres par la valeur de la propriété. Prend en charge les évaluateurs suivants : =, !=, &lt;, &lt;=, >, >=. Peut uniquement être utilisé avec des événements d’expérience, avec au maximum trois propriétés prises en charge. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | Indicateur de fonction permettant d’activer les attributs calculés pour la recherche. Valeur par défaut : false | `withCA=true` |
