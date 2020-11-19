@@ -2,13 +2,13 @@
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Extension Website Feedback de Qualtrics
 seo-title: Extension Website Feedback de Qualtrics
-description: L’extension Website Feedback de Qualtrics est une destination de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Website Feedback de Qualtrics est une destination de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Commentaires du site Web Qualtrics est une destination questionnaire de la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Commentaires du site Web Qualtrics est une destination questionnaire de la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '629'
-ht-degree: 48%
+source-wordcount: '626'
+ht-degree: 42%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 48%
 
 Créez et déployez des messages web de marque et fortement ciblés en quelques minutes grâce à une interface pointer-cliquer intuitive. Les données et les insights que vous rassemblez depuis votre site web sont révélés aux côtés des données des commentaires client sur tous les canaux, vous apportent une vue d’ensemble de votre expérience client, le tout sur une seule et même plateforme.
 
-[!DNL Qualtrics Website Feedback] est une extension de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] est une extension de questionnaire dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
