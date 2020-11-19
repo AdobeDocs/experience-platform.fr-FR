@@ -5,9 +5,9 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement IAB TCF 2.0 avec le SDK Web Experience Platform
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '937'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Pour mettre en oeuvre le SDK Web AEP avec IAB TCF 2.0, vous devez maîtriser le 
 
 ## Intégration en temps réel de la plateforme de données clientes
 
-Basée sur Adobe Experience Platform, la plateforme de données client en temps réel Adobe (CDP en temps réel) vous permet de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise. Cela vous permet de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel. Pour envoyer des données de consentement au CDP en temps réel par l’intermédiaire du SDK Web AEP, les éléments suivants sont requis :
+Basée sur Adobe Experience Platform, la plateforme de données clientes en temps réel (CDP en temps réel) permet de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise. Cela vous permet de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et appareils en temps réel. Pour envoyer des données de consentement au CDP en temps réel par l’intermédiaire du SDK Web AEP, les éléments suivants sont requis :
 
 - Jeu de données basé sur la [!DNL XDM Individual Profile] classe, activé pour une utilisation dans [!DNL Real-time Customer Profile], avec le mixin de confidentialité du Profil.
 - Une configuration de périphérie configurée avec le CDP en temps réel et le jeu de données de profil mentionné ci-dessus.
