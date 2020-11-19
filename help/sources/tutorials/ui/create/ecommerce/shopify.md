@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Shopify à l’aide de l’interface utilisateur de la plate-forme.
 translation-type: tm+mt
-source-git-commit: 918e9fc4eafb21cb40cc475e967aece3018ace87
+source-git-commit: bdd80b15258bf4e3c0dee1e260fd3469c76d5885
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 12%
+source-wordcount: '460'
+ht-degree: 15%
 
 ---
 
@@ -26,7 +26,7 @@ Les connecteurs source de Adobe Experience Platform permettent d’importer des 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model] (XDM) Système](../../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [Système de modèle de données d’expérience (XDM)](../../../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
