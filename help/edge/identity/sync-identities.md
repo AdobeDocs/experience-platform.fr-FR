@@ -5,9 +5,9 @@ description: Découvrez comment synchroniser les identités avec Adobe Audience 
 seo-description: Découvrez comment synchroniser les identités avec Adobe Audience Manager avec le SDK Web Experience Platform
 keywords: audience manager;aam;identities;sync identities;namespace;
 translation-type: tm+mt
-source-git-commit: 290792cd507248c41690c493cc18daaab869db50
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,6 @@ Choisissez vos espaces de nommage dans les Espaces de nommage [](../../identity/
 
 ![Vue de l’interface utilisateur Espaces de nommage](../../assets/edge_namespaceUI_identity-symbol.png)
 
-En tant que client d’Audience Manager, toutes vos sources de données existantes qui utilisent le type d’ID : L&#39;Espace de nommage d&#39;identité est automatiquement associé à plusieurs périphériques. Pour trouver l&#39;Espace de nommage d&#39;identité correspondant à votre source de données d&#39;Audience Manager, connectez-vous au Adobe Experience Platform et accédez à la section Identités.
+En tant que client d’Audience Manager, toutes vos sources de données existantes qui utilisent le type d’ID : L&#39;Espace de nommage d&#39;identité est automatiquement associé à plusieurs périphériques. Pour trouver l&#39;Espace de nommage d&#39;identité correspondant à votre source de données d&#39;Audience Manager, connectez-vous à Adobe Experience Platform et accédez à la section Identités.
 
 Toute nouvelle source [!DNL Audience Manager] de données qui utilise le type d’ID : Un Espace de nommage d&#39;identité est généré sur plusieurs périphériques. Les types d’ID de source de données Cookie et ID de publicité de périphérique ne sont pas pris en charge actuellement. De plus, tout Espace de nommage d&#39;identité créé dans Adobe Experience Platform génère une source de données correspondante, mais notez que la méthode syncIdentity ne prend en charge que les symboles d&#39;identité de l&#39;Espace de nommage. [!DNL Audience Manager]
