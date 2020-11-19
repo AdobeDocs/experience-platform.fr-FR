@@ -2,13 +2,13 @@
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Extension Google gtag
 seo-title: Extension Google gtag
-description: L’extension Google gtag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Google gtag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Google Gtag est une destination publicitaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Google Gtag est une destination publicitaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 48%
+source-wordcount: '589'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 Load Google&#39;s `gtag.js` into your site to send event data to [!DNL Google Analytics], Google Ads, and [!DNL Google Marketing Platform]. Cette extension ajoute uniquement le code gtag à votre site. D’autres extensions Google sont nécessaires pour ajouter des événements et des actions qui utiliseront gtag.
 
-Google gtag est une extension publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
+Google Gtag est une extension de publicité dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
