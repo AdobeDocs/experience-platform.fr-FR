@@ -5,9 +5,9 @@ seo-title: Page de détails des destinations
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 0c2acd79492c474ba664ce32d1592969da71f385
+source-git-commit: ff36899f455848584ab2f5e236812795d2c81681
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '680'
 ht-degree: 18%
 
 ---
@@ -21,7 +21,7 @@ Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez vue et 
 >
 >La page Détails des destinations fait partie de l’espace de travail [!UICONTROL Destinations] dans l’interface utilisateur de la plate-forme. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-Dans l’espace de travail **[!UICONTROL Destinations]** de l’interface utilisateur de la plate-forme, accédez à l’onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination de lot à vue.
+Dans l’espace de travail **[!UICONTROL Destinations]** de l’interface utilisateur de la plate-forme, accédez à l’onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination à vue.
 
 ![](./assets/details-page/select-destination.png)
 
