@@ -5,9 +5,9 @@ description: Découvrez comment prendre en charge les préférences de consentem
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 2e28fda40a135330054c749d73439448a55db52c
+source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '752'
 ht-degree: 63%
 
 ---
@@ -80,7 +80,7 @@ L’utilisateur ayant choisi de ne pas donner son consentement, les promesses qu
 
 >[!NOTE]
 >
->Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  This only applies to the Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
 
 ## Communiquer les préférences de consentement au moyen de la norme TCF de l&#39;IAB
 
