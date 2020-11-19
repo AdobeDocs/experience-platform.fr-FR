@@ -2,13 +2,13 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: Extension LinkedIn Insight Tag
 seo-title: Extension LinkedIn Insight Tag
-description: L’extension LinkedIn Insight Tag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension LinkedIn Insight Tag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension de balise LinkedIn Insight est une destination publicitaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension de balise LinkedIn Insight est une destination publicitaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 45%
+source-wordcount: '552'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 45%
 
 Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting and website demographics features.
 
-[!DNL LinkedIn Insight Tag] est une extension publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité de l’extension, voir [LinkedIn Insight Tag](https://business.linkedin.com/fr-fr/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] est une extension de publicité dans la plateforme de données client en temps réel. Pour plus d’informations sur la fonctionnalité de l’extension, voir [LinkedIn Insight Tag](https://business.linkedin.com/fr-fr/marketing-solutions/insight-tag).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
