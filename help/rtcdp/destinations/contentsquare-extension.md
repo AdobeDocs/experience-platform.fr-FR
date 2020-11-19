@@ -2,13 +2,13 @@
 keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Extension Contentsquare
 seo-title: Extension Contentsquare
-description: L’extension Contentsquare est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Contentsquare est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Contentsquare est une destination d’analyse dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Contentsquare est une destination d’analyse dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 48%
+source-wordcount: '580'
+ht-degree: 42%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 48%
 
 Visualisez les comportements sur la page pour découvrir les raisons pour lesquelles les clients abandonnent et la manière dont vous pouvez vous améliorer. Attribuez des recettes aux éléments d’UX et de contenu pour chaque segment Analytics et chaque test Target. Install the [!DNL Contentsquare] tag, setup custom variables and events. Commencez à collecter des données pour votre analyse UX en quelques clics.
 
-[!DNL Contentsquare] est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
+[!DNL Contentsquare] est une extension d’analyse dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100364.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
