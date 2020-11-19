@@ -2,13 +2,13 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Extension Parse.ly Analytics
 seo-title: Extension Parse.ly Analytics
-description: L’extension Parse.ly Analytics est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Parse.ly Analytics est une destination d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Parse.ly Analytics est une destination d’analyse dans la plate-forme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Parse.ly Analytics est une destination d’analyse dans la plate-forme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 46%
+source-wordcount: '541'
+ht-degree: 39%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 46%
 
 [!DNL Parse.ly Analytics] aide plus de 2 500 entreprises à utiliser les données pour comprendre leur audience en ligne. Cette extension installe un extrait de code JavaScript, qui suit la manière dont les visiteurs interagissent avec le contenu de votre site.
 
-Parse.ly est une extension d’analyse de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez [Parse.ly Analytics](https://www.parse.ly/).
+Parse.ly est une extension d’analyse de la plate-forme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez [Parse.ly Analytics](https://www.parse.ly/).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
