@@ -5,10 +5,10 @@ seo-title: Destinations d’analyse
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 seo-description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 100%
+source-wordcount: '201'
+ht-degree: 94%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 
-Actuellement, la plateforme de données clients en temps réel d’Adobe prend en charge les destinations d’analyse répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
+Actuellement, la plate-forme de données clientes en temps réel prend en charge les destinations d’analyse répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
 
 * [Extension Adform Website Tracking](/help/rtcdp/destinations/adform-extension.md)
 * [Extension Adobe Analytics](/help/rtcdp/destinations/adobe-analytics-extension.md)
