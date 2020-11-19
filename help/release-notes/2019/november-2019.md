@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '1908'
-ht-degree: 76%
+source-wordcount: '1878'
+ht-degree: 74%
 
 ---
 
@@ -18,19 +18,19 @@ ht-degree: 76%
 **Date de publication : 18 novembre 2019**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
-* [[ !Plateforme de données client en temps réel DNL]](#rtcdp)
-* [[ !Destinations DNL]](#destinations)
-* [[ !Sources DNL]](#sources)
+* [[!DNL Real-time Customer Data Platform]](#rtcdp)
+* [[!DNL Destinations]](#destinations)
+* [[!DNL Sources]](#sources)
 
 Mises à jour des fonctionnalités existantes :
-* [[ ! Espace de travail scientifique des données DNL]](#dsw)
-* [[ ! Système de modèle de données d’expérience DNL (XDM)]](#xdm)
-* [[ ! Profil client en temps réel DNL]](#profile)
-* [[ !Service de segmentation DNL]](#segmentation)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Real-time Customer Profile]](#profile)
+* [[!DNL Segmentation Service]](#segmentation)
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Basée sur Adobe Experience Platform, la plateforme de données clients en temps réel d’Adobe aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients avec une prise de décision intelligente tout au long du parcours client. La plateforme de données clients en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
+Basée sur Experience Platform, la plateforme de données clients en temps réel d’Adobe aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients avec une prise de décision intelligente tout au long du parcours client. La plateforme de données clients en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
 
 [!DNL Real-time Customer Data Platform] comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, de sorte que vous puissiez créer des profils et définir des audiences, ainsi que tirer de riches informations tout en étant en mesure d&#39;appliquer des politiques de gouvernance des données strictes.
 
@@ -43,19 +43,19 @@ La plateforme CDP en temps réel vous permet :
 * de générer des informations exploitables et d’adapter les audiences grâce à l’IA et à l’apprentissage automatique optimisés par Adobe Sensei et conçus pour les spécialistes marketing ;
 * de proposer des expériences personnalisées en temps réel sur l’ensemble des canaux et des destinations.
 
-Pour plus d’informations, consultez la [documentation de la plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md).
+For more information, see the [Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 |---|---|
 | Destinations | Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. Pour plus d’informations, consultez [Destinations](#destinations) ci-dessous. |
-| Tableau de bord de mesures de la page d’accueil | La page d’accueil de la plateforme de données clients en temps réel d’Adobe comprend un tableau de bord de mesures affichant des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures de la plateforme de données clients en temps réel](#real-time-customer-data-platform-metrics) ci-dessous. |
+| Tableau de bord de mesures de la page d’accueil | La page d&#39;accueil Plate-forme de données client en temps réel (CDP en temps réel) comprend un tableau de bord de mesures qui affiche des informations sur les profils et les segments. La page d’accueil contient également des liens vers des documents d’apprentissage. Consultez la section sur les [mesures de la plateforme de données clients en temps réel](#real-time-customer-data-platform-metrics) ci-dessous. |
 | Sources | Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client. Pour en savoir plus, consultez la section [Sources](#sources) ci-dessous. |
 
 **[!DNL Real-time Customer Data Platform]metrics**
 
-La page d’accueil de la plateforme de données client (CDP) en temps réel d’Adobe inclut un tableau de bord de mesures et s’affiche lorsque vous vous connectez à la plateforme CDP en temps réel.
+La page d&#39;accueil Plate-forme de données client en temps réel (CDP en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez au CDP en temps réel.
 
 La page d’accueil n’est qu’un des emplacements où les cartes de mesures apparaissent. La plateforme CDP en temps réel fournit des cartes de mesure tout au long de votre expérience. Ces mesures indiquent les données, les profils et les audiences de segments du système.
 
@@ -72,7 +72,7 @@ Pour en savoir plus, consultez la [présentation des mesures de la plateforme de
 La version de novembre permet à la plateforme de données clients en temps réel d’Adobe de prendre en charge les destinations suivantes :
 
 * Publicité: [!DNL Google]
-* Marketing par courriel : adobe campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys][!DNL Oracle Eloqua]
+* Marketing par courriel : Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys][!DNL Oracle Eloqua]
 
 Consultez le [catalogue des destinations](../../rtcdp/destinations/destinations-catalog.md) pour en savoir plus sur chacune des destinations.
 
