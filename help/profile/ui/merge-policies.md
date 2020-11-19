@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Guide de l’interface utilisateur des stratégies de fusion
 topic: guide
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e865bf254a9a3190fcfc053bd83e9968b1a4f7f1
 workflow-type: tm+mt
-source-wordcount: '2667'
+source-wordcount: '2673'
 ht-degree: 9%
 
 ---
@@ -23,11 +23,11 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 ## Prise en main
 
-Ce guide nécessite une bonne compréhension de plusieurs [!DNL Experience Platform] fonctions importantes. Avant de suivre ce guide ou d&#39;utiliser des API de Profil, consultez la documentation relative aux services suivants :
+Ce guide nécessite une bonne compréhension de plusieurs [!DNL Experience Platform] fonctions importantes. Avant de suivre ce guide ou d&#39;utiliser les API de Profil, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-time Customer Profile]](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [Real-time Customer Profile](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Service](../../identity-service/home.md)d&#39;identité Adobe Experience Platform : Permet le Profil client en temps réel en rapprochant les identités de sources de données disparates qui sont absorbées [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [Modèle de données d’expérience (XDM)](../../xdm/home.md)[!DNL Platform] : cadre normalisé selon lequel Experience organise les données d’expérience client.
 
 ## Méthodes de fusion {#merge-methods}
 
