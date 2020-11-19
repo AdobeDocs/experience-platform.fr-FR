@@ -5,9 +5,9 @@ seo-title: Destination Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: c66fb4cf0a414e02ceb58becc9d9b59db3fe987b
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '753'
 ht-degree: 20%
 
 ---
@@ -26,7 +26,7 @@ Vous pouvez utiliser cette destination pour le ciblage des audiences dans [!DNL 
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook] destination, voici deux exemples d’utilisation que les clients de la plate-forme de données client en temps réel Adobe peuvent résoudre à l’aide de cette fonctionnalité.
+Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook] destination, voici deux exemples d’utilisation que les clients de la plate-forme de données clientes en temps réel peuvent résoudre à l’aide de cette fonctionnalité.
 
 
 ### Cas d’utilisation 1
