@@ -2,24 +2,24 @@
 keywords: destinations;destination;destination types
 title: Types et catégories de destinations
 seo-title: Types et catégories de destinations
-description: 'Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
-seo-description: Les destinations d’exportation de profils et de segments de la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
+description: 'Dans la plate-forme de données client en temps réel, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
+seo-description: Dans la plate-forme de données client en temps réel, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: e6276eac05f0a20a668051034e83831002a464f0
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '591'
-ht-degree: 82%
+source-wordcount: '586'
+ht-degree: 61%
 
 ---
 
 
 # Types et catégories de destinations
 
-Lisez cette page pour comprendre les différentes catégories et types de destinations de la plateforme de données clients en temps réel d’Adobe.
+Lisez cette page pour comprendre les différents types et catégories de destination des plateformes de données clientes en temps réel.
 
 ## Types de destinations
 
-Dans la plateforme de données clients en temps réel d’Adobe., nous faisons la distinction entre deux types de destinations : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
+Dans la plate-forme de données client en temps réel, nous distinguons deux types de destination : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
 
 ![Types de destinations](/help/rtcdp/destinations/assets/types-of-destinations.png)
 
@@ -27,7 +27,7 @@ Dans la plateforme de données clients en temps réel d’Adobe., nous faisons l
 
 ### Connexions {#connections}
 
-Les destinations d’**[!UICONTROL exportation de profils]** et d’**[!UICONTROL exportation de segments]** dans la plateforme de données clients en temps réel d’Adobe capturent les données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](/help/profile/home.md), appliquent la segmentation et exportent les segments et les profils qualifiés vers les destinations.
+**[!UICONTROL Exportation]** de profil et **[!UICONTROL segmentation Exportation]** de destinations dans la plate-forme de données clientes en temps réel, capture des données de événement, les combine avec d’autres sources de données pour former le profil [client en temps](/help/profile/home.md)réel, appliquer la segmentation et exporter des segments et des profils qualifiés vers les destinations.
 
 <br> 
 
