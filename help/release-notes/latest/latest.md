@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: b5fa40deb480f264b02a8be56aff2c50e4149cb2
+source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
 workflow-type: tm+mt
-source-wordcount: '2126'
+source-wordcount: '2180'
 ht-degree: 25%
 
 ---
@@ -113,20 +113,18 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | Destination | Description |
 | ----------- | ----------- |
+| Braquer | Braze est une plate-forme d&#39;engagement client complète qui permet d&#39;offrir des expériences pertinentes et mémorables entre les clients et les marques qu&#39;ils aiment. |
 | Microsoft Bing | La destination Microsoft Bing vous permet d’exécuter des campagnes numériques ciblées de reciblage et d’audience dans Microsoft Display Advertising. |
 | Le bureau de commerce | Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d’annonces publicitaires d’exécuter des reciblages et d’audience de campagnes numériques ciblées à l’échelle de l’affichage, de la vidéo et des sources d’inventaire mobiles. |
-
-<!-- | Braze | Braze is a comprehensive customer engagement platform that power relevant and memorable experiences between customers and the brands they love. |  -->
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
 | Mises à jour de l&#39;UX des détails de destination | Le flux de travaux de destination du CDP en temps réel comprend désormais une surveillance intégrée afin que vous puissiez identifier les activations de lot qui ont réussi. Cette fonctionnalité permet aux utilisateurs de résoudre directement les problèmes dans le flux de travaux pour les destinations par lots au moyen d’alertes et d’un tableau de bord de surveillance afin de suivre les erreurs dans le pipeline de traitement. |
+| Chiffrement de fichier | Pour les destinations basées sur des fichiers, les utilisateurs peuvent désormais ajouter un chiffrement à leurs fichiers exportés. |
+| Planification des fichiers | Pour les destinations d’enregistrement basées sur le courrier électronique et le cloud, les utilisateurs peuvent créer une exportation unique ou créer des instantanés quotidiens. |
 | Champs obligatoires | Les utilisateurs peuvent marquer les champs comme obligatoires, en s’assurant que seuls les champs qui contiennent le champ obligatoire sont exportés. |
-
-<!-- | File scheduling | For both email based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
-| File encryption | For file based destinations, users can now add encryption to their exported files. | -->
 
 Pour plus d’informations, reportez-vous à la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md).
 
@@ -202,9 +200,10 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Nouvelles sources**
-| Fonction | Description |
-| — | — |
-| [!DNL Shopify] | Vous pouvez maintenant vous connecter [!DNL Shopify] à [!DNL Experience Platform] à l&#39;aide de l&#39; [!DNL Flow Service] API ou de l&#39;interface utilisateur. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| [!DNL Shopify] | Vous pouvez désormais vous connecter [!DNL Shopify] à [!DNL Experience Platform] à l’aide de l’ [!DNL Flow Service] API ou de l’interface utilisateur. See the [Shopify connector overview](../../sources/connectors/ecommerce/shopify.md) for more information. |
 
 **Fonctionnalités clés**
 
