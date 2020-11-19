@@ -2,13 +2,13 @@
 keywords: foresee;foresee extension;foresee destination
 title: Extension Foresee
 seo-title: Extension Foresee
-description: L’extension Foresee est une destination de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Foresee est une destination de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Foresee est une destination questionnaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Foresee est une destination questionnaire dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 44%
+source-wordcount: '542'
+ht-degree: 38%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 Configure [!DNL ForeSee] product deployments using Experience Platform Launch.
 
-[!DNL Foresee] est une extension de sondage de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
+[!DNL Foresee] est une extension de questionnaire dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
