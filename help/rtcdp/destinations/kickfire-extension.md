@@ -2,13 +2,13 @@
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: Extension KickFire
 seo-title: Extension KickFire
-description: L’extension KickFire est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension KickFire est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 40%
+source-wordcount: '544'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 40%
 
 [!DNL KickFire's] Les informations d&#39;adresse IP et les données de firmographie B2B vous permettent de convertir des adresses IP en sociétés, d&#39;identifier des visiteurs Web anonymes et d&#39;intégrer des données de compte dans votre pile technologique - le tout en fonction d&#39;une adresse IP de société.
 
-[!DNL KickFire] est une extension personnalisée de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
+[!DNL KickFire] est une extension de personnalisation dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
