@@ -2,13 +2,13 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Extension Confirmit Digital Feedback
 seo-title: Extension Confirmit Digital Feedback
-description: L’extension Confirmit Digital Feedback est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Confirmit Digital Feedback est une destination de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Confirmer les commentaires numériques est une voix de la destination du client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Confirmer les commentaires numériques est une voix de la destination du client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 46%
+source-wordcount: '607'
+ht-degree: 38%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 46%
 * Satisfaction globale de la clientèle
 * Et bien plus encore
 
-[!DNL Confirmit] Digital Feedback est une extension de voix du client de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] Les commentaires numériques sont une voix du client dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
