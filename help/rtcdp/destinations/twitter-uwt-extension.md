@@ -2,13 +2,13 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Extension Twitter Universal Website Tag
 seo-title: Extension Twitter Universal Website Tag
-description: L’extension Twitter Universal Website Tag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Twitter Universal Website Tag est une destination publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension de balise de site Web Twitter Universal est une destination publicitaire dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension de balise de site Web Twitter Universal est une destination publicitaire dans la plateforme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 6eabcd70b133051205b669253f280cb92c24412f
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 44%
+source-wordcount: '540'
+ht-degree: 36%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 44%
 
 [!DNL Twitter Universal Website Tag] fournit des actions pour envoyer des balises à la balise Twitter UWT.
 
-[!DNL Twitter Universal Website Tag] est une extension publicitaire de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur la fonctionnalité de l’extension, voir [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] est une extension de publicité dans la plateforme de données client en temps réel. Pour plus d’informations sur la fonctionnalité de l’extension, voir [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
