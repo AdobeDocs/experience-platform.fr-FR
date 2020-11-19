@@ -5,10 +5,10 @@ seo-title: Destinations de réseau social
 description: Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 97%
+source-wordcount: '86'
+ht-degree: 87%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 97%
 
 Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 
-La plateforme de données clients en temps réel d’Adobe prend actuellement en charge les destinations de réseau social suivantes :
+La plateforme de données clientes en temps réel prend actuellement en charge les destinations de réseau social suivantes :
 
 * [Extension Adobe Livefyre](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [[ ! DNL Facebook]](/help/rtcdp/destinations/facebook-destination.md)
+* [[!DNL Facebook]](/help/rtcdp/destinations/facebook-destination.md)
