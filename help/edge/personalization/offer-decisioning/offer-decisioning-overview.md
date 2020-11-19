@@ -5,9 +5,9 @@ description: Adobe Experience Platform Web SDK peut fournir et générer des off
 seo-description: Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
 translation-type: tm+mt
-source-git-commit: a0ede8c7d3088fe80d6ea014b4a4f9f08ee8a7aa
+source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '831'
 ht-degree: 13%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 13%
 
 Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres personnalisées qui sont gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou des API Offer Decisioning.
 
-## Prérequis
+## Conditions préalables 
 
 * L&#39;organisation IMS est activée pour la prise de décision d&#39;arête
 * Offres, Activités créées
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres pe
 
 ## Terminologie
 
-Il est important de comprendre la terminologie suivante lorsque vous travaillez avec Offer Decisioning. <!--For more information and to view additional terms, please visit the [Offer Decisioning glossary](/docs/offer-decisioning/using/get-started/glossary.html)-->.
+Il est important de comprendre la terminologie suivante lorsque vous travaillez avec Offer Decisioning. Pour plus d&#39;informations et pour vue des termes supplémentaires, veuillez visiter le glossaire [](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)Offer Decisioning.
 
 * **Conteneur :** Un conteneur est un mécanisme d&#39;isolation qui permet de séparer les différentes préoccupations. L’ID de conteneur est le premier élément de chemin d’accès pour toutes les API du référentiel. Tous les objets de prise de décision résident dans un conteneur.
 
