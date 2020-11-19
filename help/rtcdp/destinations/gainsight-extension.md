@@ -2,13 +2,13 @@
 keywords: foresee;foresee extension;foresee destination
 title: Extension Gainsight
 seo-title: Extension Gainsight
-description: L’extension Gainsight est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Gainsight est une destination de personnalisation de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Gainsight est une destination de personnalisation dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L’extension Gainsight est une destination de personnalisation dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 511d64d1555151a70bdb9f71e4b50ec461c8a2e7
+source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 47%
+source-wordcount: '555'
+ht-degree: 41%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 47%
 
 [!DNL Gainsight] fournit aux propriétaires de produits les outils nécessaires pour mieux comprendre le comportement des utilisateurs, favoriser l’adoption des produits et recueillir les retours des utilisateurs.
 
-[!DNL Gainsight] est une extension personnalisée de la plateforme de données clients en temps réel d’Adobe. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
+[!DNL Gainsight] est une extension de personnalisation dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Adobe Real-time CDP, see [Adobe Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md).
 
