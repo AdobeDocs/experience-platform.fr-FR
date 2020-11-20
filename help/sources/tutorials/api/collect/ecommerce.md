@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système de commerce électronique tiers et les intégrer à la plate-forme via des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: a9d6c6dda560ec401bdf41319994153e7f2c0572
 workflow-type: tm+mt
 source-wordcount: '1509'
 ht-degree: 18%
@@ -14,7 +14,7 @@ ht-degree: 18%
 ---
 
 
-# Collecte de données de commerce électronique via des connecteurs et des API source
+# Collecte de données eCommerce via des connecteurs et des API source
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
