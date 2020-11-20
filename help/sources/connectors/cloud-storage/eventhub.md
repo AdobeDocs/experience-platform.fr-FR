@@ -5,9 +5,9 @@ title: Connecteur de concentrateurs de Événement Azure
 topic: overview
 description: La documentation ci-dessous fournit des informations sur la façon de connecter les concentrateurs de Événement Azure à la plate-forme à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c0c609e3f385665cf88129def0c69e7d153ce201
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '233'
 ht-degree: 1%
 
 ---
@@ -34,8 +34,7 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 ### Utilisation des API
 
 - [Création d&#39;un connecteur Azure Événement Hubs à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/eventhub.md)
-- [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
-- [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
+- [Collecte de données en flux continu à l’aide de l’API du service de flux](../../tutorials/api/collect/streaming.md)
 
 ### Utilisation de l’interface utilisateur
 
