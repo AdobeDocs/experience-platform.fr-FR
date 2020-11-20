@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 89a807c0adbc3c9e4396adbb96764453034c8ea3
+source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '683'
 ht-degree: 9%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 9%
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
       - [Connecteur de Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connecteur Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
+      - [Connecteur Azure synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
       - [Connecteur Couchbase](connectors/databases/couchbase.md)
       - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
@@ -96,7 +96,7 @@ ht-degree: 9%
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/api/create/databases/spark.md)
          - [Connecteur de Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Connecteur Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Connecteur Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/api/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Connecteur Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -136,6 +136,7 @@ ht-degree: 9%
       - [Collecte de données d’automatisation du marketing](tutorials/api/collect/marketing-automation.md)
       - [Collecte des données de paiement](tutorials/api/collect/payments.md)
       - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
+      - [Collecte de données en flux continu](tutorials/api/collect/streaming.md)
    - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
    - [Création d’une connexion de base de jeux de données à l’aide de l’API du service de flux](tutorials/api/create-dataset-base-connection.md)
    - [Surveillance des flux de données à l’aide de l’API du service de flux](tutorials/api/monitor.md)
@@ -172,7 +173,7 @@ ht-degree: 9%
          - [Apache Hive sur le connecteur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights connector](tutorials/ui/create/databases/spark.md)
          - [Connecteur de Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Connecteur Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Connecteur Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Connecteur d&#39;Enregistrement de table Azure](tutorials/ui/create/databases/ats.md)
          - [Connecteur Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Connecteur de Requête Google Big](tutorials/ui/create/databases/bigquery.md)
