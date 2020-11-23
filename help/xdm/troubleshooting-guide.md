@@ -5,9 +5,9 @@ title: Guide de dépannage du système de modèle de données d’expérience (X
 description: Ce document fournit des réponses aux questions fréquentes sur le système de modèle de données d’expérience (XDM), ainsi qu’un guide de dépannage pour les erreurs courantes.
 topic: troubleshooting
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: e87fcd9f028bc6dedaec0435c4eef54e6aecae2d
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1831'
 ht-degree: 74%
 
 ---
@@ -27,7 +27,7 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 Vous pouvez ajouter des champs à un schéma à l’aide d’un mixin. Chaque mixin est compatible avec une ou plusieurs classes, ce qui permet de l’utiliser dans n’importe quel schéma qui met en œuvre une de ces classes compatibles. Bien qu’Adobe Experience Platform fournisse plusieurs mixins de secteur avec leurs propres champs prédéfinis, vous pouvez ajouter vos propres champs à un schéma en créant de nouveaux mixins à l’aide de l’API ou de l’interface utilisateur.
 
-Pour plus d’informations sur la création de nouveaux mixins dans l’API, consultez le document [Création d’un mixin](api/create-mixin.md) dans le guide de développement de l’API [!DNL Schema Registry] Si vous utilisez l’interface utilisateur, consultez le [tutoriel de l’éditeur de schémas](./tutorials/create-schema-ui.md).
+Pour plus d’informations sur la création de mixins dans l’ [!DNL Schema Registry] API, consultez le guide [des points de terminaison de](api/mixins.md#create)mixin. Si vous utilisez l’interface utilisateur, consultez le [tutoriel de l’éditeur de schémas](./tutorials/create-schema-ui.md).
 
 ### Quelles sont les meilleures utilisations des mixins par rapport aux types de données ?
 
@@ -39,17 +39,17 @@ Les [types de données](./schema/composition.md#data-type) peuvent également fo
 
 All [!DNL Schema Registry] resources (schemas, mixins, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. Lorsqu’un schéma est affiché dans l’API, il se trouve dans les attributs `$id` et `meta:altId` de niveau supérieur.
 
-Pour plus d’informations, consultez la section sur l’[identification des schémas](api/getting-started.md#schema-identification) dans le guide de développement de l’API [!DNL Schema Registry]
+For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API developer guide.
 
 ### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
 
-Breaking changes can be made to a schema as long as it has never been used in the creation of a dataset or enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
+Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [[!DNL Real-time Customer Profile]](../profile/home.md). Once a schema has been used in dataset creation or enabled for use with [!DNL Real-time Customer Profile], the rules of [Schema Evolution](schema/composition.md#evolution) become strictly enforced by the system.
 
 ### Quelle est la taille maximale d’un type de champ long ?
 
 Un type de champ long est un entier dont la taille maximale est de 53 (+1) bits, ce qui lui donne une plage potentielle comprise entre -9007199254740992 et 9007199254740992. Cela est dû à une limitation des possibilités de représentation des entiers longs lors des mises en œuvre de JSON en JavaScript.
 
-Pour plus d’informations sur les types de champ, consultez la section [Définition des types de champ XDM](api/appendix.md#field-types) dans le guide de développement de l’API [!DNL Schema Registry]
+Pour plus d’informations sur les types de champ, voir le document sur les contraintes [de type de champ](./schema/field-constraints.md)XDM.
 
 ### Comment définir les identités pour mon schéma ?
 
@@ -77,7 +77,7 @@ Les identités principales sont facultatives, car les schémas peuvent en avoir 
 
 ### How do I enable a schema for use in [!DNL Real-time Customer Profile]?
 
-Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a &quot;union&quot; tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Les schémas peuvent être utilisés dans [[!DNL Real-time Customer Profile]](../profile/home.md) grâce à l’ajout d’une balise « union », située dans l’attribut `meta:immutableTags` du schéma. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 
@@ -120,7 +120,7 @@ The following is a list of error messages that you may encounter when working wi
 
 Cette erreur s’affiche lorsque le système n’a pas pu trouver une ressource particulière. La ressource a peut-être été supprimée, ou le chemin d’accès dans l’appel API n’est pas valide. Assurez-vous d’avoir saisi un chemin d’accès valide pour votre appel API avant de réessayer. Vous pouvez vérifier que vous avez saisi l’identifiant correct pour la ressource, et que le chemin d’accès comporte le bon espace de noms avec le conteneur approprié (mondial ou client).
 
-For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [schema identification](api/getting-started.md#schema-identification) sections in the [!DNL Schema Registry] developer guide.
+For more information on constructing lookup paths in the API, see the [container](./api/getting-started.md#container) and [resource identification](api/getting-started.md#resource-identification) sections in the [!DNL Schema Registry] developer guide.
 
 ### Le titre doit être unique
 
@@ -149,7 +149,7 @@ Ce message d’erreur s’affiche lorsque vous tentez de créer une ressource av
 }
 ```
 
-Ce message d’erreur s’affiche lorsque vous essayez de créer un nouveau mixin avec des champs dont l’espace de noms est incorrect. Les mixins définis par votre organisation IMS doivent être dotés d’un espace de noms avec un `TENANT_ID` afin d’éviter tout conflit avec d’autres ressources du secteur et des fournisseurs. Vous trouverez des exemples détaillés de structures de données appropriées pour les mixins dans le document de la section sur la [création d’un mixin](api/create-mixin.md) du guide de développement de l’API [!DNL Schema Registry]
+Ce message d’erreur s’affiche lorsque vous essayez de créer un nouveau mixin avec des champs dont l’espace de noms est incorrect. Les mixins définis par votre organisation IMS doivent être dotés d’un espace de noms avec un `TENANT_ID` afin d’éviter tout conflit avec d’autres ressources du secteur et des fournisseurs. Vous trouverez des exemples détaillés de structures de données appropriées pour les mixins dans le guide [des points de terminaison des](./api/mixins.md#create)mixins.
 
 
 ### [!DNL Real-time Customer Profile] erreurs
