@@ -5,9 +5,9 @@ title: 'Gérer les étiquettes d’utilisation des données à l’aide d’API 
 topic: developer guide
 description: L’API Service de dataset vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’API Catalog Service qui gère les métadonnées des jeux de données.
 translation-type: tm+mt
-source-git-commit: 4096a7c1ec2b3640886d3a8c69b578987fe96dd4
+source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1003'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 Ce document décrit la procédure à suivre pour gérer les étiquettes d’utilisation des données à l’aide de l’ [!DNL Policy Service] API et de l’ [!DNL Dataset Service] API.
 
-L&#39;API [[ !DNL Policy Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fournit plusieurs points de terminaison qui vous permettent de créer et de gérer des étiquettes d&#39;utilisation des données pour votre organisation.
+Le [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) fournit plusieurs points de terminaison qui vous permettent de créer et de gérer des étiquettes d’utilisation des données pour votre entreprise.
 
 L’ [!DNL Dataset Service] API vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’ [!DNL Catalog Service] API qui gère les métadonnées des jeux de données.
 
@@ -327,7 +327,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `labels` | Liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au jeu de données. |
-| `optionalLabels` | Liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/look-up-resource.md"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: Liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
+| `optionalLabels` | Liste de tous les champs individuels du jeu de données auxquels vous souhaitez ajouter des étiquettes. Chaque élément de ce tableau doit avoir les propriétés suivantes : <br/><br/>`option`: Objet contenant les attributs [!DNL Experience Data Model] (XDM) du champ. Les trois propriétés suivantes sont requises :<ul><li>id</code>: Valeur URI $id</code> du schéma associé au champ.</li><li>contentType</code>: Type de contenu et numéro de version du schéma. Cette opération doit prendre la forme d’un des en-têtes <a href="../../xdm/api/getting-started.md#accept"></a> Accepter valides pour une demande de recherche XDM.</li><li>schemaPath</code>: Chemin d’accès au champ dans le schéma du jeu de données.</li></ul>`labels`: Liste d’étiquettes d’utilisation des données que vous souhaitez ajouter au champ. |
 
 **Réponse**
 
