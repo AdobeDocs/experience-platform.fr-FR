@@ -5,7 +5,7 @@ title: Contraintes de type de champ XDM
 topic: overview
 description: Référence pour les contraintes de type de champ XDM, y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 translation-type: tm+mt
-source-git-commit: 19167f58fae6fac7d938deb74182d2e19960beb3
+source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 74%
@@ -40,7 +40,7 @@ The table below describes the mapping between each XDM type (`meta:xdmType`) and
 | date-time | type : chaîne<br>format : date-time<br>(RFC 3339, section 5.6) | INT64/TIMESTAMP_MILLIS | TimestampType | java.util.Date | java.util.Date | System.DateTime | Chaîne | timestamp | Entier<br>(unix millis) | int64<br>(unix millis) |
 | map | objet | Groupe annoté MAP<br><br>&lt;<span>key_type</span>> DOIT être STRING<br><br>&lt;<span>value_type</span>> type de valeurs de correspondance | MapType<br><br>&quot;keyType&quot; DOIT être StringType<br><br>&quot;valueType&quot; est le type de valeurs de correspondance. | java.util.Map | Map | --- | objet | objet | map | map&lt;<span>key_type, value_type</span>> |
 
-## Définition des types de champ XDM dans l’API
+## Définition des types de champ XDM dans l’API {#define-fields}
 
 XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. The [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
 
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 Le tableau suivant souligne la mise en forme appropriée pour définir les types de champs scalaires et les types de champs plus spécifiques à l’aide de propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/create-mixin.md) ou [créer un type](../api/create-data-type.md)de données.
+Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/mixins.md#create) ou [créer un type](../api/data-types.md#create)de données.
 
 <table>
   <tr>
