@@ -5,10 +5,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de Data Model (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: 0a5b6bab6a0a11a572a4cd5de95b33f8d61d34bc
+source-git-commit: 321dc16a1296aeb28ba78825f191a0368df16547
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 70%
+source-wordcount: '181'
+ht-degree: 66%
 
 ---
 
@@ -56,18 +56,14 @@ ht-degree: 70%
    * [Interaction POI](./data-types/poi-interaction.md)
    * [Adresse postale](./data-types/postal-address.md)
 * API Schema Registry {#api}
+   * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
-   * [Liste des ressources](api/list-resources.md)
-   * [Recherche d’une ressource](api/look-up-resource.md)
-   * [Mise à jour d’une ressource](api/update-resource.md)
-   * [Remplacement d’une ressource](api/replace-resource.md)
-   * [Suppression d’une ressource](api/delete-resource.md)
-   * [Création d’une classe](api/create-class.md)
-   * [Création d’un mixin](api/create-mixin.md)
-   * [Création d’un type de données](api/create-data-type.md)
-   * [Création d’un schéma](api/create-schema.md)
-   * [Unions](api/unions.md)
+   * [Schémas](api/schemas.md)
+   * [Classes](api/classes.md)
+   * [Mélanges](api/mixins.md)
+   * [Types des données](api/data-types.md)
    * [Descripteurs](api/descriptors.md)
+   * [Unions](api/unions.md)
    * [Schémas ad hoc](api/ad-hoc.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
