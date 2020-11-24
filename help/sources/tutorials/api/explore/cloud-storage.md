@@ -5,19 +5,17 @@ title: Explorez un système d’enregistrement cloud à l’aide de l’API de s
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: 25f1dfab07d0b9b6c2ce5227b507fc8c8ecf9873
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 14%
+source-wordcount: '745'
+ht-degree: 20%
 
 ---
 
 
 # Explorez un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
 
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
-
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour explorer un système d’enregistrement cloud tiers.
+Ce didacticiel utilise l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) pour explorer un système d’enregistrement cloud tiers.
 
 ## Prise en main
 
@@ -28,39 +26,41 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage system using the [!DNL Flow Service] API.
 
-### Obtention d’une connexion de base
+### Obtention d’un ID de connexion
 
-Pour explorer un enregistrement cloud tiers à l’aide [!DNL Platform] d’API, vous devez posséder un identifiant de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
+Pour explorer un enregistrement cloud tiers à l’aide [!DNL Platform] d’API, vous devez posséder un identifiant de connexion valide. Si vous n’avez pas encore de connexion pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Enregistrement Azure Data Lake Gen2](../create/cloud-storage/adls-gen2.md)
+* [Enregistrement de fichier Azure](../create/cloud-storage/azure-file-storage.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
+* [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ### Collecte des valeurs des en-têtes requis
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Explorez votre enregistrement cloud
 
-En utilisant la connexion de base pour votre enregistrement cloud, vous pouvez explorer des fichiers et des répertoires en exécutant des demandes de GET. Lorsque vous effectuez des demandes de GET pour explorer votre enregistrement cloud, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
+L’ID de connexion de votre enregistrement cloud vous permet d’explorer des fichiers et des répertoires en exécutant des demandes de GET. Lorsque vous effectuez des demandes de GET pour explorer votre enregistrement cloud, vous devez inclure les paramètres de requête répertoriés dans le tableau ci-dessous :
 
 | Paramètre | Description |
 | --------- | ----------- |
@@ -72,20 +72,20 @@ Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès au fichier que 
 **Format d’API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{CONNECTION_ID}/explore?objectType=root
+GET /connections/{CONNECTION_ID}/explore?objectType=folder&object={PATH}
 ```
 
 | Paramètre | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | ID d’une connexion de base d’enregistrement cloud. |
+| `{CONNECTION_ID}` | ID de connexion de votre connecteur source d’enregistrement cloud. |
 | `{PATH}` | Chemin d’accès d’un répertoire. |
 
 **Requête**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=folder&object=/some/path/' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -111,27 +111,32 @@ Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dan
 ]
 ```
 
-## inspect de la structure d’un fichier
+## Inspect de la structure d’un fichier
 
-Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, effectuez une demande de GET tout en fournissant le chemin d’accès du fichier en tant que paramètre de requête.
+Pour inspecter la structure du fichier de données à partir de votre enregistrement cloud, effectuez une demande de GET tout en indiquant le chemin d’accès du fichier et saisissez-le comme paramètre de requête.
+
+Vous pouvez inspecter la structure d’un fichier CSV ou TSV en spécifiant un délimiteur personnalisé comme périmètre de requête. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
 
 **Format d’API**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
 ```
 
 | Paramètre | Description |
-| --- | --- |
-| `{BASE_CONNECTION_ID}` | ID d’une connexion de base d’enregistrement cloud. |
-| `{FILE_PATH}` | Chemin d’accès à un fichier. |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | ID de connexion de votre connecteur source d’enregistrement cloud. |
+| `{FILE_PATH}` | Chemin d&#39;accès au fichier que vous souhaitez inspecter. |
 | `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li>DÉLIMITÉ</code>: Valeur séparée par des délimiteurs. Les fichiers DSV doivent être séparés par des virgules.</li><li>JSON</code>: Notation d’objet JavaScript. Les fichiers JSON doivent être compatibles XDM</li><li>PARQUET</code>: Parquet Apache. Les fichiers de parquets doivent être conformes à XDM.</li></ul> |
+| `columnDelimiter` | Valeur d’un caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n’est pas fourni, la valeur par défaut est une virgule `(,)`. |
 
 **Requête**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
