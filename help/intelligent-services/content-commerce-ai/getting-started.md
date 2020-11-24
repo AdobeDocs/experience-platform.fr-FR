@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform
-title: Prise en main de Content and Commerce AI]
+title: Prise en main de Content and Commerce AI
 topic: Getting started
 description: Content and Commerce AI utilise des API d'E/S d'Adobe. Pour appeler les API d'E/S d'Adobe et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
 translation-type: tm+mt
-source-git-commit: 9ee888b02b4a402200ca4fcaed4a59c0a7eb94cd
+source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '576'
 ht-degree: 12%
 
 ---
 
 
-# Getting started with [!DNL Content and Commerce AI]
+# Prise en main de Content and Commerce AI
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Une fois que vous avez configuré votre projet et votre API dans Adobe Developer
 
 ![téléchargement pour postman](./images/add-to-postman.png)
 
-Après avoir téléchargé le fichier, ouvrez Postman et sélectionnez l&#39;icône **d&#39;** engrenage dans le coin supérieur droit pour ouvrir la boîte de dialogue **gérer les environnements** .
+Après avoir téléchargé le fichier, ouvrez Postman et sélectionnez l&#39;icône **d&#39;** engrenage en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements** .
 
 ![icône d&#39;engrenage](./images/select-gear-icon.png)
 
@@ -75,4 +75,4 @@ Une fois que vous disposez de toutes vos informations d’identification, vous �
 
 Pour en savoir plus sur le Cadre d&#39;extensibilité, début en lisant l&#39; [introduction au document d&#39;extensibilité](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) . Ce document décrit les conditions préalables et les exigences de mise en service.
 
-Pour en savoir plus sur la configuration d&#39;un environnement pour [!DNL Content and Commerce AI], consultez le début en lisant le guide de [configuration d&#39;un environnement](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)de développement. Ce document fournit des instructions de configuration qui vous permettent de développer pour le service Asset Compute.
+Pour en savoir plus sur la configuration d&#39;un environnement pour [!DNL Content and Commerce AI], consultez le début en lisant le guide de [configuration d&#39;un environnement](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html)de développement. Ce document fournit des instructions de configuration qui vous permettent de développer pour Asset compute Service.
