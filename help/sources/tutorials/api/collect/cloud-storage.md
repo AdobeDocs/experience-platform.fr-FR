@@ -6,17 +6,15 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
 translation-type: tm+mt
-source-git-commit: b0f6e51a784aec7850d92be93175c21c91654563
+source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1583'
 ht-degree: 17%
 
 ---
 
 
 # Collecte de données d’enregistrement Cloud via les connecteurs et les API source
-
-[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs source et de l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -62,13 +60,17 @@ Pour créer une connexion source, vous devez également définir une valeur d’
 
 Utilisez les valeurs d’énumération suivantes pour les connecteurs basés sur des fichiers :
 
-| Data.format | Valeur maximale |
+| Sur le format des données saisies | Valeur maximale |
 | ----------- | ---------- |
-| Fichiers délimités | `delimited` |
-| Fichiers JSON | `json` |
-| Fichiers de parquet | `parquet` |
+| Délimité | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-Pour tous les connecteurs basés sur une table, utilisez la valeur enum : `tabular`.
+Pour tous les connecteurs basés sur un tableau, définissez la valeur sur `tabular`.
+
+>[!NOTE]
+>
+>Vous pouvez assimiler des fichiers CSV et TSV à l’aide d’un connecteur source d’enregistrement cloud en spécifiant un délimiteur de colonne comme propriété. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule `(,)` est utilisée comme valeur par défaut.
 
 **Format d’API**
 
@@ -88,13 +90,14 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
-            "format": "delimited"
+            "format": "delimited",
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/demo/data7.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
             "connectionSpec": {
@@ -106,7 +109,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `baseConnectionId` | ID de connexion unique du système d’enregistrement cloud tiers auquel vous accédez. |
+| `connectionId` | ID de connexion unique du système d’enregistrement cloud tiers auquel vous accédez. |
+| `data.format` | Valeur d’énumération qui définit l’attribut de format de données. |
+| `data.columnDelimiter` | Vous pouvez utiliser n’importe quel délimiteur de colonne à caractère unique pour collecter des fichiers plats. Cette propriété n’est requise que lors de l’assimilation de fichiers CSV ou TSV. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre système d’enregistrement Cloud tiers spécifique. Consultez l’ [annexe](#appendix) pour une liste d’ID de spécification de connexion. |
 
@@ -126,8 +131,6 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion so
 Pour que les données source soient utilisées dans [!DNL Platform], un schéma de cible doit être créé pour structurer les données source en fonction de vos besoins. Le schéma de cible est ensuite utilisé pour créer un [!DNL Platform] jeu de données dans lequel les données source sont contenues.
 
 Un schéma XDM de cible peut être créé en exécutant une requête de POST sur l&#39;API [de registre du](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)Schéma.
-
-If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **Format d’API**
 
@@ -279,9 +282,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Création d’une connexion à une cible {#target-connection}
 
-Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac de données. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac Data. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’ID de spécification de connexion au lac de données. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez maintenant des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’ID de spécification de connexion à Data Lake. A l’aide de ces identifiants, vous pouvez créer une connexion de cible à l’aide de l’ [!DNL Flow Service] API pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -322,7 +325,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | Le schéma `$id` XDM de la cible. |
 | `params.dataSetId` | ID du jeu de données de cible. |
-| `connectionSpec.id` | ID de spécification de connexion fixe au lac de données. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | ID de spécification de connexion fixe au lac Data. Cet ID est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -403,8 +406,8 @@ Une réponse réussie renvoie les détails du nouveau mappage, y compris son ide
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
