@@ -6,7 +6,7 @@ title: Supprimer des flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 12%
@@ -66,4 +66,4 @@ Après quelques instants, une boîte de confirmation verte s’affiche en bas de
 
 En suivant ce didacticiel, vous avez réussi à utiliser l&#39;espace de travail **[!UICONTROL Sources]** pour supprimer des flux de données existants.
 
-Pour obtenir des instructions sur la façon d’effectuer ces opérations par programmation à l’aide de l’ [!DNL Flow Service] API, consultez le didacticiel sur la [suppression de connexions à l’aide de l’API du service de flux.](../../tutorials/api/delete.md)
+Pour obtenir des instructions sur la façon d’effectuer ces opérations par programmation à l’aide de l’ [!DNL Flow Service] API, consultez le didacticiel sur la [suppression de flux de données à l’aide de l’API du service de flux.](../../tutorials/api/delete-dataflows.md)
