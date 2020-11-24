@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 39e419b78938afd91e3d7471241e377f352214ee
+source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '663'
 ht-degree: 9%
 
 ---
@@ -138,10 +138,11 @@ ht-degree: 9%
       - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
       - [Collecte de données en flux continu](tutorials/api/collect/streaming.md)
    - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
-   - [Création d’une connexion de base de jeux de données à l’aide de l’API du service de flux](tutorials/api/create-dataset-base-connection.md)
-   - [Surveillance des flux de données à l’aide de l’API du service de flux](tutorials/api/monitor.md)
-   - [Mise à jour des informations de connexion à l’aide de l’API du service de flux](tutorials/api/update.md)
-   - [Suppression de connexions à l’aide de l’API du service de flux](tutorials/api/delete.md)
+   - [Créer une connexion à un jeu de données](tutorials/api/create-dataset-base-connection.md)
+   - [Surveiller les flux de données](tutorials/api/monitor.md)
+   - [Mettre à jour les connexions](tutorials/api/update.md)
+   - [Suppression de connexions](tutorials/api/delete.md)
+   - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
 - Didacticiels sur l’interface utilisateur {#ui-tutorials}
    - Création d’un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
