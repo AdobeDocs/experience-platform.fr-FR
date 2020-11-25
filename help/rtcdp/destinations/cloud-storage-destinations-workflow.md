@@ -6,9 +6,9 @@ type: Tutorial
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 7903d6c715747dfc298a5e4a4615d8ecbbe5d359
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '566'
 ht-degree: 54%
 
 ---
@@ -28,7 +28,7 @@ Cette page explique comment vous pouvez vous connecter à des emplacements d’e
    >
    >Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](/help/rtcdp/destinations/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
-2. À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64. <br> Voir destination, [destination,](/help/rtcdp/destinations/amazon-s3-destination.md) destination et destination [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) SFTP [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) Amazon S3 [pour en savoir plus sur les informations d’identification saisies à l’étape](/help/rtcdp/destinations/sftp-destination.md) **Authentification.**
+2. À l’étape **[!UICONTROL Authentification]**, si vous avez auparavant configuré une connexion à votre destination de stockage dans le cloud, sélectionnez **[!UICONTROL Compte existant]**, puis la connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de stockage dans le cloud. Renseignez les informations d’authentification de votre compte et sélectionnez **[!UICONTROL Se connecter à la destination]**. Si vous le souhaitez, dans la section **[!UICONTROL Encryption PGP/GPG]** , vous pouvez joindre votre clé publique au format RSA pour ajouter un chiffrement avec PGP/GPG à vos fichiers exportés. Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64. <br> Voir destination, [destination,](/help/rtcdp/destinations/amazon-s3-destination.md) destination et destination [[!DNL Amazon Kinesis]](/help/rtcdp/destinations/amazon-kinesis-destination.md) SFTP [[!DNL Azure Event Hubs]](/help/rtcdp/destinations/azure-event-hubs-destination.md) Amazon S3 [pour en savoir plus sur les informations d’identification saisies à l’étape](/help/rtcdp/destinations/sftp-destination.md) **Authentification.**
 
    >[!NOTE]
    >
