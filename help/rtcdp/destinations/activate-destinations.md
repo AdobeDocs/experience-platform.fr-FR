@@ -6,10 +6,10 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: bb59d93e016d49a0ebba77af1f90563a8767f072
+source-git-commit: 5928242537acdb1f130a0e8ac1bca3f14c184c6a
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 22%
+source-wordcount: '1722'
+ht-degree: 23%
 
 ---
 
@@ -127,14 +127,6 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >Pour les destinations sociales, vous devez sélectionner l’origine de votre audience à cette étape. Vous ne pouvez passer à l’étape suivante qu’après avoir sélectionné l’une des options de l’image ci-dessous.
 
 ![choix de l’origine des données](./assets/choose-data-origin.png)
-
-### **[!UICONTROL Etape de planification]** {#scheduling}
-
-S&#39;applique à : destinations de marketing par courrier électronique et destinations d’enregistrement dans le cloud
-
-![étape de planification du segment](./assets/scheduling-icon.png)
-
-On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. Ces valeurs ne peuvent pas être modifiées.
 
 ### **[!UICONTROL Étape de sélection des attributs]** {#select-attributes}
 
