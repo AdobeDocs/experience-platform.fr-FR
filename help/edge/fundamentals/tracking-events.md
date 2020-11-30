@@ -5,10 +5,10 @@ description: Découvrez la procédure de suivi des événements du SDK Web d’E
 seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 68%
+source-wordcount: '1331'
+ht-degree: 59%
 
 ---
 
@@ -43,6 +43,35 @@ alloy("sendEvent", {
   }
 });
 ```
+
+Un certain temps peut s’écouler entre l’exécution de la `sendEvent` commande et l’envoi des données au serveur (par exemple, si la bibliothèque du SDK Web n’a pas été entièrement chargée ou si le consentement n’a pas encore été reçu). Si vous avez l’intention de modifier une partie de l’ `xdm` objet après avoir exécuté la `sendEvent` commande, il est vivement recommandé de cloner l’ `xdm` objet avant _d’exécuter la_ `sendEvent` commande. Par exemple :
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+Dans cet exemple, la couche de données est clonée en la sérialisant sur JSON, puis en la désérialisant. Ensuite, le résultat cloné est transmis à la `sendEvent` commande. Cela permet de s’assurer que la `sendEvent` commande dispose d’un instantané de la couche de données telle qu’elle existait lors de l’ `sendEvent` exécution de la commande, de sorte que les modifications ultérieures apportées à l’objet de couche de données d’origine ne soient pas répercutées dans les données envoyées au serveur. Si vous utilisez une couche de données pilotée par un événement, le clonage de vos données est probablement déjà géré automatiquement. Par exemple, si vous utilisez la couche [de données](https://github.com/adobe/adobe-client-data-layer/wiki)du client `getState()` Adobe, laméthode fournit un instantané calculé et cloné de toutes les modifications antérieures. Cela est également géré automatiquement si vous utilisez l’extension de lancement du SDK Web AEP.
 
 >[!NOTE]
 >
