@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: af7eab0599b17be55d5a4c129f7ebaeba91333bc
+source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '847'
 ht-degree: 3%
 
 ---
@@ -98,6 +98,7 @@ La visionneuse de graphiques renvoie une erreur si les conditions préalables su
 - La valeur d&#39;identité n&#39;existe pas dans l&#39;espace de nommage sélectionné.
 - Le graphique comporte moins de deux identités.
 - Le graphique dépasse le maximum de 400 identités.
+- Vous êtes dans un environnement sandbox hors production.
 
 ![à grande grappe](../images/identity-graph-viewer/error-screen.png)
 
