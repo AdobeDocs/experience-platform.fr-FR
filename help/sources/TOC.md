@@ -5,7 +5,7 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 68ed1ceb2f7410bd970fa43c5f0db11b1b8ea388
+source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 9%
@@ -206,7 +206,8 @@ ht-degree: 9%
       - [Configurer un flux de données pour un connecteur de paiement](tutorials/ui/dataflow/payments.md)
       - [Configuration d’un flux de données pour un connecteur de protocole](tutorials/ui/dataflow/protocols.md)
    - [Activer les données entrantes pour renseigner les profils client](tutorials/ui/profile.md)
-   - [Surveiller les comptes et les flux de données](tutorials/ui/monitor.md)
+   - [Surveiller les flux de données](tutorials/ui/monitor.md)
+   - [Mettre à jour les comptes](tutorials/ui/update.md)
    - [Suppression de comptes](tutorials/ui/delete-accounts.md)
    - [Supprimer des flux de données](tutorials/ui/delete.md)
 - [Notifications d’exécution de flux](notifications.md)
