@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour afficher les comptes et flux de données existants à partir de l’espace de travail Sources.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour afficher les flux de données existants à partir de l’espace de travail Sources.
 solution: Experience Platform
-title: Surveiller les comptes et les flux de données
+title: Surveiller les flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 6%
+source-wordcount: '822'
+ht-degree: 8%
 
 ---
 
 
-# Surveiller les comptes et les flux de données dans l’interface utilisateur
+# Surveillance des flux de données dans l’interface utilisateur
 
-Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour afficher les comptes et flux de données existants à partir de l&#39;espace de travail [!UICONTROL Sources] .
+Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour afficher les flux de données existants à partir de l’espace de travail [!UICONTROL Sources] .
 
 ## Prise en main
 
@@ -27,53 +27,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 - [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-## Surveiller les comptes
-
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]** . L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source indique le nombre de comptes et de flux de données existants qui leur sont associés.
-
-Sélectionnez **[!UICONTROL Comptes]** dans l&#39;en-tête supérieur pour vue des comptes existants.
-
-![catalogue](../../images/tutorials/monitor/catalog-accounts.png)
-
-Les pages **[!UICONTROL Comptes]** s&#39;affichent. Cette page contient une liste de comptes consultables, y compris des informations sur leur source, leur nom d&#39;utilisateur, le nombre de flux de données et la date de création.
-
-Sélectionnez l&#39;icône d&#39;entonnoir en haut à gauche pour lancer la fenêtre de tri.
-
-![comptes](../../images/tutorials/monitor/accounts-list.png)
-
-Le panneau de tri vous permet d’accéder aux comptes à partir d’une source spécifique. Sélectionnez la source à utiliser et sélectionnez le compte dans la liste de droite.
-
->[!TIP]
->
-> Utilisez le bouton ![spectre-contrôle](../../images/tutorials/monitor/spectrum-control.png) de la colonne **[!UICONTROL Nom]** pour créer un nouveau flux de données source pour le compte sélectionné.
-
-![comptes-sélectionner](../../images/tutorials/monitor/accounts-sort.png)
-
-De plus, vous pouvez modifier les informations de compte existantes et mettre à jour les informations de connexion de votre compte. Sélectionnez l&#39;icône représentant un crayon pour les informations de compte à modifier.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-Le module **[!UICONTROL Modifier les détails]** du compte s&#39;affiche. Cette page vous permet de mettre à jour les informations de compte et les informations d’identification d’authentification existantes.
-
->[!NOTE]
->
-> La modification des détails du compte est disponible sur tous les connecteurs d’origine par lot.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-Sur la page **[!UICONTROL Comptes]** , vous pouvez vue une liste de flux de données ou de jeux de données de cible existants associés au compte auquel vous avez accédé. Sélectionnez le bouton ellipses (`...`) pour afficher d&#39;autres options disponibles pour le flux de données sélectionné. Ces options sont décrites plus en détail ci-dessous :
-
-| Contrôle | Description |
-| ------- | ----------- |
-| [!UICONTROL Modifier le planning] | Permet de modifier le calendrier d’assimilation du flux de données. |
-| [!UICONTROL Désactiver le flux de données] | Permet de désactiver l&#39;assimilation des données pour le flux de données sélectionné. |
-| [!UICONTROL Supprimer] | Permet de supprimer le flux de données sélectionné. |
-
-![flux de données](../../images/tutorials/monitor/dataflows.png)
-
 ## Surveiller les flux de données
 
-Les flux de données sont accessibles directement à partir de la page **[!UICONTROL Catalogue]** sans afficher **[!UICONTROL les comptes]**. Sélectionnez **[!UICONTROL Flux de données]** dans l&#39;en-tête supérieur pour vue d&#39;une liste de flux de données.
+Connectez-vous à l’interface utilisateur [de l’](https://platform.adobe.com) Experience Platform, puis sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] . Sélectionnez **[!UICONTROL Flux de données]** de l&#39;en-tête supérieur à la vue des flux de données existants.
 
 ![catalogue-flux de données](../../images/tutorials/monitor/catalog-dataflows.png)
 
