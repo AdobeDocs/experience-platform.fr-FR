@@ -5,10 +5,10 @@ title: Se connecter aux destinations de diffusion en continu et activer les donn
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 502d913400a8ddc0132c64253cd30ea9f9fcd239
+source-git-commit: f12b400ca95e23d8e6ac282fafa8f4bb141d703a
 workflow-type: tm+mt
-source-wordcount: '1870'
-ht-degree: 59%
+source-wordcount: '2012'
+ht-degree: 55%
 
 ---
 
@@ -592,6 +592,31 @@ La réponse renvoyée doit inclure dans le paramètre `transformations` les segm
   }
 }
 ```
+
+## Utilisation des collections Postman pour la connexion à des destinations de diffusion en continu  {#collections}
+
+Pour vous connecter aux destinations de diffusion en flux continu décrites dans ce didacticiel d’une manière plus rationnelle, vous pouvez utiliser [[!DNL Postman]](https://www.postman.com/).
+
+[!DNL Postman] est un outil que vous pouvez utiliser pour effectuer des appels d&#39;API et gérer les bibliothèques d&#39;appels et d&#39;environnements prédéfinis.
+
+Pour ce didacticiel spécifique, nous avons inclus les [!DNL Postman] collections suivantes, jointes à cet article :
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+Cliquez [ici](assets/DestinationPostmanCollection.zip) pour télécharger l&#39;archive des collections.
+
+Chaque collection comprend les requêtes nécessaires et les variables d’environnement, pour [!DNL AWS Kinesis]et [!DNL Azure Event Hub], respectivement.
+
+### Utilisation des collections Postman
+
+Pour établir une connexion réussie aux destinations à l’aide des [!DNL Postman] collections jointes, procédez comme suit :
+
+* Download and install [!DNL Postman];
+* [Téléchargez](assets/DestinationPostmanCollection.zip) et décompressez les collections jointes ;
+* Importer les collections de leurs dossiers correspondants dans Postman ;
+* Renseignez les variables d’environnement conformément aux instructions de cet article ;
+* Exécutez les [!DNL API] requêtes de Postman, selon les instructions de cet article.
 
 ## Étapes suivantes
 
