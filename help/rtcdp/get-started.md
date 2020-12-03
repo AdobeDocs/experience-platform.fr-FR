@@ -5,9 +5,9 @@ seo-title: 'Prise en main de la plateforme de données client en temps réel '
 description: 'Exemple de scénario pour la plateforme de données client en temps réel '
 seo-description: 'Exemple de scénario pour la plateforme de données client en temps réel '
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 8369bd517639cc66eeb95a811c3ddf46b8c4c48d
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2317'
 ht-degree: 89%
 
 ---
@@ -237,7 +237,7 @@ Lorsque vous avez ajouté le segment « Personnes abandonnant un panier contena
 
 Cliquez sur **[!UICONTROL Envoyer vers les destinations]**.
 
-Dans la plateforme des données clients en temps réel d’Adobe, Luma peut prendre des mesures en toute transparence sur les segments d’audience pour la personnalisation.\
+Dans la plateforme CDP en temps réel , Luma peut intervenir en toute simplicité sur les segments ciblés afin de les personnaliser.\
 Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer cette destination, qu’il s’agisse de solutions Adobe ou de solutions autres qu’Adobe.
 
 ![image](assets/luma-dest.png)
