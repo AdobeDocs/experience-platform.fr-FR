@@ -5,10 +5,10 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 36707e95a63b6be60d1d7badbe1cdc9d0bc3548c
+source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
 workflow-type: tm+mt
-source-wordcount: '402'
-ht-degree: 72%
+source-wordcount: '399'
+ht-degree: 70%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 72%
    * [Data Science Workspace](https://docs.adobe.com/content/help/fr-FR/experience-platform/data-science-workspace/home.html)
    * [Debugger](https://docs.adobe.com/content/help/fr-FR/debugger/using/experience-cloud-debugger.html)
    * [Débogueur 2.0 (bêta)](https://docs.adobe.com/content/help/fr-FR/debugger/using-v2/experience-cloud-debugger.html)
-   * [Destinations](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/destinations/destinations-overview.html)
+   * [Destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html)
    * [ETL (extraction, transformation, chargement)](https://docs.adobe.com/content/help/fr-FR/experience-platform/etl/home.html)
    * [Identity Service](https://docs.adobe.com/content/help/fr-FR/experience-platform/identity/home.html)
    * [Intelligent Services](https://docs.adobe.com/content/help/fr-FR/experience-platform/intelligent-services/home.html)
@@ -59,7 +59,7 @@ ht-degree: 72%
    * [Schémas (XDM)](https://docs.adobe.com/content/help/fr-FR/experience-platform/xdm/home.html)
    * [Segmentation](https://docs.adobe.com/content/help/fr-FR/experience-platform/segmentation/home.html)
    * [Sources (connecteurs)](https://docs.adobe.com/content/help/en/experience-platform/sources/home.html)
-   * [SDK Web](https://docs.adobe.com/content/help/fr-FR/experience-platform/edge/home.html)
+   * [SDK Web](https://docs.adobe.com/content/help/fr-FR/experience-platform/edge/home.html)
 * Plateforme dans l&#39;écosystème de l&#39;Adobe {#ecosystem}
    * [Services d’application](application-services.md)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
