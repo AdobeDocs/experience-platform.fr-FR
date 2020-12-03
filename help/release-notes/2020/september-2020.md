@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '862'
 ht-degree: 29%
@@ -47,9 +47,9 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Améliorations de l&#39;environnement | Les utilisateurs peuvent accéder aux actions de tableaux intégrés pour accéder plus facilement aux actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. See the [destinations workspace](../../rtcdp/destinations/destinations-workspace.md) document for more information. |
+| Améliorations de l&#39;environnement | Les utilisateurs peuvent accéder aux actions de tableaux intégrés pour accéder plus facilement aux actions Principales, telles que l’ajout de données, la modification de la planification et l’ajout de segments. See the [destinations workspace](../../destinations/ui/destinations-workspace.md) document for more information. |
 
-Pour en savoir plus, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md)
+Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 
@@ -59,7 +59,7 @@ Pour en savoir plus, consultez la [présentation des destinations](../../rtcdp/d
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Notifications de Événement d&#39;E/S Adobe | [!DNL Observability Insights] tire parti des Événements d&#39;E/S d&#39;Adobe pour créer des notifications de événement pour plusieurs services Experience Platform. Les charges de notification sont envoyées à un hook Web configuré que vous pouvez ensuite utiliser pour automatiser d’autres processus en aval. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+| Notifications Événement Adobe I/O | [!DNL Observability Insights] tire parti des Événements Adobe I/O pour créer des notifications de événement pour plusieurs services Experience Platform. Les charges de notification sont envoyées à un hook Web configuré que vous pouvez ensuite utiliser pour automatiser d’autres processus en aval. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
 
 See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
 
