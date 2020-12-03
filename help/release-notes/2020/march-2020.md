@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '838'
 ht-degree: 60%
 
 ---
@@ -77,10 +77,10 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 
 | Destination | Description |
 |--- | ---|
-| Destinations de stockage dans le cloud | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV ou séparés par des tabulations. |
-| Destinations publicitaires | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
+| Destinations de stockage dans le cloud | Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. Vous pouvez ainsi envoyer des audiences et leurs attributs de profils à vos systèmes internes au moyen de fichiers CSV ou séparés par des tabulations. |
+| Destinations publicitaires | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display &amp; Video 360. |
 
-Pour en savoir plus, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md)
+Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 
