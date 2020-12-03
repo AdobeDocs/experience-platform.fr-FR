@@ -5,9 +5,9 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: df165baceaf8dc2b21055201ec78bd392044b938
+source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '910'
 ht-degree: 3%
 
 ---
@@ -93,14 +93,19 @@ Les graphiques d’identité avec de plus grands groupes d’identités sont ég
 
 ## Annexe
 
-La visionneuse de graphiques renvoie une erreur si les conditions préalables suivantes ne sont pas remplies :
+La section suivante fournit des informations supplémentaires sur l’utilisation de la visionneuse de graphiques d’identité.
 
-- La valeur d&#39;identité n&#39;existe pas dans l&#39;espace de nommage sélectionné.
-- Le graphique comporte moins de deux identités.
-- Le graphique dépasse le maximum de 400 identités.
-- Vous êtes dans un environnement sandbox hors production.
+### Présentation des messages d&#39;erreur
 
-![à grande grappe](../images/identity-graph-viewer/error-screen.png)
+Des erreurs peuvent se produire lors de l&#39;accès à la visionneuse de graphiques d&#39;identité. Voici une liste de conditions préalables et de limites à prendre en compte lors de l’utilisation de la visionneuse de graphiques d’identité.
+
+- Une valeur d&#39;identité doit exister dans l&#39;espace de nommage sélectionné.
+- Le lecteur de graphique d&#39;identité requiert au moins deux identités liées à générer.
+- La visionneuse de graphiques d’identité ne peut pas dépasser 400 identités au maximum.
+- Actuellement, le lecteur de graphique d’identité n’est pas accessible dans les sandbox hors production.
+- Actuellement, le lecteur de graphique d’identité ne prend en charge que les données assimilées par lot et n’affiche pas les données assimilées à l’aide de sources de diffusion en continu.
+
+![écran d&#39;erreur](../images/identity-graph-viewer/error-screen.png)
 
 ## Étapes suivantes
 
