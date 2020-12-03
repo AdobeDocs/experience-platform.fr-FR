@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 74%
@@ -65,7 +65,7 @@ Pour en savoir plus, consultez la [présentation des mesures de la plateforme de
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations]Les sont des intégrations prédéfinies avec des plateformes de destination prises en charge par la plateforme de données clients en temps réel d’Adobe, qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md).
+[!DNL Destinations]Les sont des intégrations prédéfinies avec des plateformes de destination prises en charge par la plateforme de données clients en temps réel d’Adobe, qui activent les données vers ces partenaires de manière transparente. Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
 
 **Destinations disponibles**
 
@@ -74,12 +74,12 @@ La version de novembre permet à la plateforme de données clients en temps rée
 * Publicité: [!DNL Google]
 * Marketing par courriel : Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys][!DNL Oracle Eloqua]
 
-Consultez le [catalogue des destinations](../../rtcdp/destinations/destinations-catalog.md) pour en savoir plus sur chacune des destinations.
+Consultez le [catalogue des destinations](../../destinations/catalog/overview.md) pour en savoir plus sur chacune des destinations.
 
 **Limites connues**
 
-* Le contrôle permettant de définir des plannings d’activation personnalisés dans le [flux d’activation](../../rtcdp/destinations/activate-destinations.md#activate-data) (étape de planification) n’est pas disponible dans la version initiale.
-* Il n’existe actuellement aucun moyen de modifier ou de supprimer une configuration de destination. Vous pouvez contourner cette limite en activant ou en désactivant la destination dans le coin supérieur droit de la [page de détails des destinations](../../rtcdp/destinations/destination-details-page.md).
+* Le contrôle permettant de définir des plannings d’activation personnalisés dans le [flux d’activation](../../destinations/ui/activate-destinations.md#activate-data) (étape de planification) n’est pas disponible dans la version initiale.
+* Il n’existe actuellement aucun moyen de modifier ou de supprimer une configuration de destination. Vous pouvez contourner cette limite en activant ou en désactivant la destination dans le coin supérieur droit de la [page de détails des destinations](../../destinations/ui/destination-details-page.md).
 * Aucune validation n’est actuellement en place pour les détails, le chemin ou les informations d’identification du compte lors de la connexion à votre compte de destination ou de stockage. Assurez-vous de saisir les informations d’identification correctes et vérifiez qu’il n’y a pas de fautes d’orthographe ou de frappe.
 * La version initiale n’offre aucun renouvellement des informations d’identification. Une fois qu’un compte a expiré ou doit être actualisé, vous devez créer une nouvelle connexion de destination et remapper les segments précédemment mappés.
 
