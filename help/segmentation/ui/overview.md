@@ -5,10 +5,10 @@ title: Guide de l’utilisateur du service de segmentation
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service fournit une interface utilisateur pour la création et la gestion des définitions de segment.
 translation-type: tm+mt
-source-git-commit: 1aff9329e1ae97caa34a205bbfbbc6f51b54b8fb
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1449'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -24,7 +24,7 @@ Working with segment definitions requires an understanding of the various [!DNL 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] vous permet de diviser les données stockées dans [!DNL Experience Platform] des données relatives à des individus (tels que des clients, des prospects, des utilisateurs ou des organisations) en groupes plus petits.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Permet la création de profils client en faisant le lien entre les identités issues de sources de données disparates et qui sont incorporées dans [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Il est également important de connaître deux termes clés utilisés dans ce document et de comprendre la différence entre eux :
 - **Définition de segment** : ensemble des règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible.
@@ -102,7 +102,7 @@ La section Destinations **** activées affiche les destinations pour lesquelles 
 
 >[!NOTE]
 >
-> Les destinations sont une fonction disponible avec [!DNL Real-time Customer Data Platform]laquelle vous pouvez exporter des données vers des plateformes externes. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). Pour savoir comment activer un segment vers une destination, consultez le [guide d’activation des segments vers une destination](../../rtcdp/destinations/activate-destinations.md).
+> Les destinations sont une fonction disponible avec [!DNL Real-time Customer Data Platform]laquelle vous pouvez exporter des données vers des plateformes externes. For more information on destinations, please read the [destinations overview](../../destinations/home.md). Pour savoir comment activer un segment vers une destination, consultez le [guide d’activation des segments vers une destination](../../destinations/ui/activate-destinations.md).
 
 ### Échantillons de profil
 
