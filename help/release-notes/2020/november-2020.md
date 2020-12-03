@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: 6cf9c88f6dc751a4cc877670a89cc99d1efb1b2a
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 25%
@@ -126,7 +126,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | Planification des fichiers | Pour les destinations d’enregistrement basées sur le courrier électronique et le cloud, les utilisateurs peuvent créer une exportation unique ou créer des instantanés quotidiens. |
 | Champs obligatoires | Les utilisateurs peuvent marquer les champs comme obligatoires, en s’assurant que seuls les champs qui contiennent le champ obligatoire sont exportés. |
 
-Pour plus d’informations, reportez-vous à la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md).
+Pour plus d’informations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## Intelligent Services {#intelligent-services}
 
