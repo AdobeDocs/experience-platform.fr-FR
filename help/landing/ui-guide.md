@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: bde9763aafb4ba32877f7ec14873eeae99760a45
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -37,7 +37,7 @@ La section **[!UICONTROL Profils]** indique le nombre total de personnes ayant d
 
 La section **[!UICONTROL Segments]** affiche le nombre total de segments créés dans votre organisation IMS. Ce numéro est mis à jour lorsqu’un nouveau segment est créé. Vous trouverez plus d’informations sur les segments dans la présentation [du service](../segmentation/home.md)de segmentation.
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. Ce numéro est mis à jour lorsqu’une nouvelle destination est créée. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../rtcdp/destinations/destinations-overview.md)destinations.
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. Ce numéro est mis à jour lorsqu’une nouvelle destination est créée. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../destinations/home.md)destinations.
 
 ### Données récentes
 
@@ -51,7 +51,7 @@ La section Sources **** récentes liste les cinq connecteurs source les plus ré
 
 La section Segments **** récents liste les cinq définitions de segment créées le plus récemment au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’une nouvelle définition de segment est créée. Vous pouvez sélectionner une définition de segment de la liste à la vue plus d&#39;informations sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Vue all]** pour afficher une liste de toutes les définitions de segment créées. Vous trouverez plus d’informations sur les segments dans la présentation [du service](../segmentation/home.md)de segmentation.
 
-La section Destinations **** récentes liste les cinq destinations les plus récemment créées au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination de la liste à la vue plus d&#39;informations sur la destination spécifiée ou sélectionner **[!UICONTROL Vue toutes]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../rtcdp/destinations/destinations-overview.md)destinations.
+La section Destinations **** récentes liste les cinq destinations les plus récemment créées au sein de votre organisation IMS. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination de la liste à la vue plus d&#39;informations sur la destination spécifiée ou sélectionner **[!UICONTROL Vue toutes]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../destinations/home.md)destinations.
 
 ### Apprentissage recommandé
 
@@ -117,7 +117,7 @@ La section **[!UICONTROL Workflows]** présente une liste de workflows à plusie
 
 La section **[!UICONTROL Sources]** vous permet de créer, de mettre à jour et de supprimer des connexions source, ce qui vous permet d&#39;assimiler des données provenant de sources externes dans la plate-forme. Vous trouverez plus d&#39;informations sur les sources dans l&#39;aperçu [des](../sources/home.md)sources.
 
-La section **[!UICONTROL Destinations]** vous permet de créer, de mettre à jour et de supprimer des destinations, ce qui vous permet d’exporter des données de la plate-forme vers de nombreuses destinations externes. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../rtcdp/destinations/destinations-overview.md)destinations.
+La section **[!UICONTROL Destinations]** vous permet de créer, de mettre à jour et de supprimer des destinations, ce qui vous permet d’exporter des données de la plate-forme vers de nombreuses destinations externes. Vous trouverez plus d’informations sur les destinations dans l’aperçu [des](../destinations/home.md)destinations.
 
 ### [!UICONTROL Informations     ]
 
