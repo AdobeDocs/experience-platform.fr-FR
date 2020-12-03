@@ -5,9 +5,9 @@ title: Création de segments client avec des scores prévus
 topic: Create a segment
 description: Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client pour trouver des audiences en fonction de leurs scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments.
 translation-type: tm+mt
-source-git-commit: c5e2ea5daf813bf580a11f0182361197e55c6fe8
+source-git-commit: d29f7c7243ec798abe60fff895b36277996cb4a0
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '308'
 ht-degree: 88%
 
 ---
@@ -41,4 +41,4 @@ Above the left-hand *Fields* column, click the **gear** icon and select a *Merge
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à trouver des audiences basées sur leurs scores de propension à l’aide du Créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](https://docs.adobe.com/content/help/fr-FR/experience-platform/rtcdp/destinations/destinations-overview.html).
+En suivant ce didacticiel, vous avez réussi à trouver des audiences basées sur leurs scores de propension à l’aide du Créateur de segments. Vous pouvez désormais cibler vos audiences en les activant sur les destinations. Pour plus d’informations, consultez [Présentation des destinations](../../../destinations/home.md).
