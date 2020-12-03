@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '972'
-ht-degree: 61%
+source-wordcount: '969'
+ht-degree: 59%
 
 ---
 
@@ -94,14 +94,14 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 
 **Nouvelles destinations**
 
-Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. Voir ci-dessous pour plus de détails :
+Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. Voir ci-dessous pour plus de détails :
 
 | Documentation | Description |
 |--- | ---|
-| [Types et catégories de destination](/help/rtcdp/destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l’interface de la plateforme de données clients en temps réel en temps réel d’Adobe et recommande le moment auquel utiliser chacune de ces destinations. |
-| [Extensions d’Experience Platform Launch](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP. |
+| [Types et catégories de destination](../../destinations/destination-types.md) | Cet article explique la différence entre les connexions et les extensions dans l&#39;interface CDP en temps réel et recommande quand utiliser chacune de ces destinations. |
+| [Extensions d’Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP. |
 
-Pour plus d’informations, reportez-vous à la [présentation des destinations](/help/rtcdp/destinations/destinations-overview.md).
+Pour plus d’informations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
