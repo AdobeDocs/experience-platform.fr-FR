@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 translation-type: tm+mt
-source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
+source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
 workflow-type: tm+mt
-source-wordcount: '894'
-ht-degree: 71%
+source-wordcount: '880'
+ht-degree: 70%
 
 ---
 
@@ -19,10 +19,10 @@ ht-degree: 71%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [[ ! Système de modèle de données d’expérience DNL (XDM)]](#xdm)
-* [[ ! Privacy Service DNL]](#privacy)
-* [[ !Sources DNL]](#sources)
-* [[ !Destinations DNL]](#destinations)
+* [[!DNL Experience Data Model (XDM) System]](#xdm)
+* [[!DNL Privacy Service]](#privacy)
+* [[!DNL Sources]](#sources)
+* [[!DNL Destinations]](#destinations)
 
 ## [!DNL Experience Data Model] Système (XDM) {#xdm}
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur les sources, consultez la [présentation des sour
 
 ## Destinations {#destinations}
 
-Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/overview.md), les destinations sont des intégrations prédéfinies avec des plateformes de destination qui activent les données vers ces partenaires de manière transparente.
+In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **Nouvelles fonctionnalités**
 
@@ -112,4 +112,4 @@ Dans la [plateforme de données clients en temps réel d’Adobe](../../rtcdp/ov
 
 * Aucun
 
-Pour plus d’informations, consultez la [présentation des destinations](../../rtcdp/destinations/destinations-overview.md).
+Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
