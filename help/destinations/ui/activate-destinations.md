@@ -6,7 +6,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données de la plateforme de données client en temps réel en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '1768'
 ht-degree: 22%
@@ -68,7 +68,7 @@ Si vous utilisez un autre identifiant, tel que &quot;Identifiant de récompense&
 
 ![Identifiant de fidélité en tant qu&#39;identité](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans Adobe Experience Platform, conformément aux exigences [!DNL Facebook] de hachage des [](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements)courriers électroniques.
+Sélectionnez `Email_LC_SHA256` comme identité de cible si vous avez haché les adresses électroniques des clients lors de l’assimilation de données dans Adobe Experience Platform, conformément aux exigences [!DNL Facebook] de hachage des [](../catalog/social/facebook.md#email-hashing-requirements)courriers électroniques.
 
 Sélectionnez `Email` comme identité de cible si les adresses électroniques que vous utilisez ne sont pas hachées. Le CDP en temps réel hachera les adresses électroniques pour se conformer aux [!DNL Facebook] exigences.
 
@@ -158,7 +158,7 @@ Les exportations de fichiers varient comme suit, selon qu’ `segmentMembership.
 
 De plus, vous pouvez marquer différents attributs comme obligatoires. Le fait de marquer un attribut comme obligatoire le rend de sorte que le segment exporté doit contenir cet attribut. Par conséquent, il peut être utilisé comme une autre forme de filtrage. Le marquage d’un attribut comme obligatoire **n’est pas** obligatoire.
 
-Il est recommandé que l’un des attributs soit un identifiant [](/help/rtcdp/destinations/email-marketing-destinations.md#identity) unique de votre schéma. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation.
+Il est recommandé que l’un des attributs soit un identifiant [](../../destinations/catalog/email-marketing/overview.md#identity) unique de votre schéma. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation.
 
 >[!NOTE]
 > 
