@@ -5,8 +5,8 @@ topic: guide
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 4%
+source-wordcount: '1192'
+ht-degree: 5%
 
 ---
 
@@ -25,9 +25,9 @@ Adobe Experience Platform fournit une série de garde-fous pour vous aider à é
 
 Il est recommandé de lire la documentation des services Experience Platform suivants avant de tenter de créer des modèles de données à utiliser dans [!DNL Real-time Customer Profile]. L&#39;utilisation des modèles de données et des garde-fous décrits dans le présent document exige une compréhension des divers services Experience Platform liés à la gestion des [!DNL Real-time Customer Profile] entités :
 
-* [[ !Profil client en temps réel DNL]](home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Service](../identity-service/home.md)d&#39;identité Adobe Experience Platform : Prend en charge la création d&#39;une &quot;vue unique du client&quot; en rapprochant les identités de sources de données disparates au fur et à mesure qu&#39;elles sont ingérées [!DNL Platform].
-* [[ ! Modèle de données d’expérience DNL (XDM)]](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
    * [Principes de base de la composition](../xdm/schema/composition.md)des schémas : Cette section présente les schémas et la modélisation des données dans l’Experience Platform.
 * [Service](../segmentation/home.md)de segmentation Adobe Experience Platform : Moteur de segmentation utilisé [!DNL Platform] pour créer des segments d’audience à partir de vos profils clients en fonction du comportement et des attributs des clients.
    * [Segmentation](../segmentation/multi-entity-segmentation.md)multientité : Guide de création de segments qui intègrent des entités de dimension aux données de profil.
@@ -62,7 +62,7 @@ Il est recommandé de respecter les garde-fous suivants lors de la création d&#
 
 | Gardrail | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Nombre de jeux de données recommandés pour contribuer au schéma [!DNL Profile] d&#39;union | 20 | Soft | **Il est recommandé d’utiliser un maximum de 20 jeux de données[!DNL Profile]activés.** Pour activer un autre jeu de données pour [!DNL Profile], un jeu de données existant doit d&#39;abord être supprimé ou désactivé. |
+| Nombre de jeux de données recommandés pour contribuer au schéma [!DNL Profile] d&#39;union | 20 | Soft | **Il est recommandé d’utiliser un maximum de 20 jeux de données [!DNL Profile]activés.** Pour activer un autre jeu de données pour [!DNL Profile], un jeu de données existant doit d&#39;abord être supprimé ou désactivé. |
 | Nombre de relations multientités recommandé | 5 | Soft | **Il est recommandé de définir un maximum de 5 relations multientités entre entités Principales et entités de dimension.** Les correspondances de relations supplémentaires ne doivent pas être effectuées tant qu’une relation existante n’est pas supprimée ou désactivée. |
 | Profondeur JSON maximale pour le champ ID utilisé dans la relation multientité | 4 | Soft | **La profondeur maximale recommandée de JSON pour un champ d’ID utilisé dans les relations multientités est 4.** Cela signifie que dans un schéma fortement imbriqué, les champs qui sont imbriqués à plus de 4 niveaux de profondeur ne doivent pas être utilisés comme champ d’identifiant dans une relation. |
 | Cardinalité de tableau dans un fragment de profil | &lt;=500 | Soft | **La cardinalité optimale de la baie dans un fragment de profil (données horodatées) est &lt;=500.** |
@@ -72,8 +72,8 @@ Il est recommandé de respecter les garde-fous suivants lors de la création d&#
 
 | Gardrail | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Aucune donnée de série chronologique n&#39;est autorisée pour les non-[!DNL XDM Individual Profile] entités | 0 | Hard | **Les données de séries chronologiques ne sont pas autorisées pour les entités non[!DNL XDM Individual Profile]autorisées dans Profil Service.** Si un jeu de données de série chronologique est associé à un autre type d’[!DNL XDM Individual Profile] ID, le jeu de données ne doit pas être activé pour [!DNL Profile]. |
-| Aucune relation imbriquée | 0 | Soft | **Vous ne devez pas créer de relation entre deux non-[!DNL XDM Individual Profile]-schémas.** La possibilité de créer des relations n&#39;est pas recommandée pour les schémas qui ne font pas partie du schéma d&#39; [!DNL Profile] union. |
+| Aucune donnée de série chronologique n&#39;est autorisée pour les non-[!DNL XDM Individual Profile] entités | 0 | Hard | **Les données de séries chronologiques ne sont pas autorisées pour les entités non[!DNL XDM Individual Profile] autorisées dans Profil Service.** Si un jeu de données de série chronologique est associé à un autre type d’[!DNL XDM Individual Profile] ID, le jeu de données ne doit pas être activé pour [!DNL Profile]. |
+| Aucune relation imbriquée | 0 | Soft | **Vous ne devez pas créer de relation entre deux non-[!DNL XDM Individual Profile] -schémas.** La possibilité de créer des relations n&#39;est pas recommandée pour les schémas qui ne font pas partie du schéma d&#39; [!DNL Profile] union. |
 | Profondeur JSON maximale pour le champ ID Principal | 4 | Soft | **La profondeur maximale recommandée pour le champ d’ID Principal est 4.** Cela signifie que dans un schéma fortement imbriqué, vous ne devez pas sélectionner un champ comme identifiant Principal s’il est imbriqué à plus de 4 niveaux. Un champ situé au quatrième niveau imbriqué peut être utilisé comme Principal ID. |
 
 ## Gardiens de taille de données
