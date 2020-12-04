@@ -14,7 +14,7 @@ ht-degree: 57%
 ---
 
 
-#  SDK Web d’Adobe Experience Platform{#edge}
+# SDK web Adobe Experience Platform {#edge}
 
 * [Présentation du SDK Web](home.md)
 * Notions fondamentales {#fundamentals}
