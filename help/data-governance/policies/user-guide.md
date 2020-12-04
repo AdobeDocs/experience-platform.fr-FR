@@ -7,7 +7,7 @@ description: La gouvernance des données d’Adobe Experience Platform fournit u
 translation-type: tm+mt
 source-git-commit: a362b67cec1e760687abb0c22dc8c46f47e766b7
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 39%
 
 ---
@@ -21,11 +21,11 @@ Adobe Experience Platform [!DNL Data Governance] provides a user interface that 
 >
 >Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement. Consultez la section relative à l’ [activation des stratégies](#enable) pour savoir comment procéder dans l’interface utilisateur.
 
-## Conditions préalables
+## Conditions préalables 
 
 This guide requires a working understanding of the following [!DNL Experience Platform] concepts:
 
-- [[ ! Gouvernance des données DNL]](../home.md)
+- [[!DNL Data Governance]](../home.md)
 - [Stratégies d’utilisation des données](./overview.md)
 
 ## Affichage des stratégies d’utilisation des données {#view-policies}
