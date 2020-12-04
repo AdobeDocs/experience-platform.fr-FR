@@ -72,7 +72,7 @@ Longueur minimale de données requise = fenêtre de formation + fenêtre de rech
 >
 > La longueur minimale de données requise pour une application avec des configurations par défaut est la suivante : 2 trimestres (180 jours) + 56 jours = 236 jours.
 
-Exemple :
+Exemple :
 
 - Vous souhaitez attribuer des événements de conversion qui se sont produits au cours des 90 derniers jours (3 mois) et effectuer le suivi de tous les points de contact qui se sont produits dans les 4 semaines précédant le événement de conversion. La durée des données d’entrée doit s’étendre sur les 90 derniers jours + 28 jours (4 semaines). La fenêtre de formation est de 90 jours et la fenêtre de recherche est de 28 jours totalisant 118 jours.
 
