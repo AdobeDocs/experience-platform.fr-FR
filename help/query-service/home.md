@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
 workflow-type: tm+mt
 source-wordcount: '627'
-ht-degree: 30%
+ht-degree: 29%
 
 ---
 
 
-# [!DNL Query Service] aperçu
+# [!DNL Query Service] présentation
 
 Adobe Experience Platform ingère des données à partir de sources diverses. Le grand défi qui attend les spécialistes du marketing : comprendre ces données afin de découvrir des informations sur leurs clients. Adobe Experience Platform [!DNL Query Service] facilitates that by allowing you to use standard SQL to query data in [!DNL Platform]. Using [!DNL Query Service], you can join any dataset in the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-time Customer Profile]. This document provides an overview of the role of [!DNL Query Service] within [!DNL Experience Platform].
 
