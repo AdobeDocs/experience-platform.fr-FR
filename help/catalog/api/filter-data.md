@@ -7,8 +7,8 @@ description: L’API Catalog Service permet de filtrer les données de réponse 
 translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
-source-wordcount: '2084'
-ht-degree: 88%
+source-wordcount: '2077'
+ht-degree: 89%
 
 ---
 
@@ -207,8 +207,8 @@ Quelques limites doivent être prises en compte lors de l’utilisation de balis
 * Les noms de balise sont propres à votre organisation IMS.
 * Les processus Adobe peuvent se servir de balises pour certains comportements. Le préfixe standard « adobe » est ajouté au nom de ces balises. Par conséquent, vous devriez éviter cette pratique lors de la déclaration des noms de balise.
 * The following tag names are reserved for use across [!DNL Experience Platform], and therefore cannot be declared as a tag name for your organization:
-   * `unifiedProfile`: Ce nom de balise est réservé pour que les jeux de données soient assimilés par [[ ! DNL Real-time Customer Profil]](../../profile/home.md).
-   * `unifiedIdentity`: Ce nom de balise est réservé pour que les jeux de données soient assimilés par [[ !DNL Identity Service]](../../identity-service/home.md).
+   * `unifiedProfile` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Real-time Customer Profile]](../../profile/home.md).
+   * `unifiedIdentity` : ce nom de balise est réservé à l’ingestion des jeux de données par [[!DNL Identity Service]](../../identity-service/home.md).
 
 Vous trouverez ci-dessous un exemple de jeu de données contenant une propriété `tags`. Les balises de cette propriété prennent la forme de paires clé-valeur, où chaque valeur de balise apparaît sous la forme d’une matrice contenant une seule chaîne :
 
