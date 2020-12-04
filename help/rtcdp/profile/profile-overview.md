@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: 54df4778a025811504801306120bda78e04281c1
 workflow-type: tm+mt
 source-wordcount: '394'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] aperçu
+# [!DNL Real-time Customer Profile] présentation
 
 [!DNL Real-time Customer Profile] vous permet de visualiser une vue holistique de chaque client en combinant des données provenant de plusieurs canaux, notamment en ligne, hors ligne, CRM et des données tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte d’activité horodaté de chaque interaction client.
 
