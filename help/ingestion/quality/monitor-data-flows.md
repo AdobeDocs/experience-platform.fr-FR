@@ -7,8 +7,8 @@ description: Ce guide d’utilisation fournit des étapes détaillées sur la ma
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 69%
+source-wordcount: '552'
+ht-degree: 70%
 
 ---
 
@@ -25,7 +25,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux de événements reçus en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par le Profil client en temps réel [[ !DNL]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
+La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux de réception des événements en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par [[!DNL Real-time Customer Profile]](../../profile/home.md)et une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
