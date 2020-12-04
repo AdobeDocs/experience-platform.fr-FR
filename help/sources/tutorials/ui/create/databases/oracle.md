@@ -42,7 +42,7 @@ Pour accéder à votre [!DNL Oracle DB] compte [!DNL Platform], vous devez fourn
 | `connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Oracle DB]. Le modèle de chaîne de [!DNL Oracle DB] connexion est le suivant : `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
 | `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL Oracle DB] est `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
+Pour plus d&#39;informations sur la prise en main, consultez [ce document](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199)Oracle.
 
 ## Connecter votre [!DNL Oracle DB] compte
 
@@ -56,7 +56,7 @@ Sous la catégorie **[!UICONTROL Bases de données]** , sélectionnez **[!UICONT
 
 ![catalogue](../../../../images/tutorials/create/oracle/catalog.png)
 
-La page **[!UICONTROL Se connecter à Oracle DB]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à la base de données]** Oracle s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
