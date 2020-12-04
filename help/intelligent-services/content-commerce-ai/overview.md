@@ -54,7 +54,7 @@ La vision globale de l’API Content and Commerce est divisée en trois étapes 
 **Étape 2 : Comprendre le client**
 - Associez les actions du client aux fonctionnalités de contenu.
 - Tirez parti du contenu et des actions pour obtenir les préférences et les affinités du client.
-- ajouter les préférences au profil du client.
+- Ajouter les préférences au profil du client.
 
 **Étape 3 : Activation de l’optimisation d’expérience**
 - Utilisez le profil du client pour offrir des expériences améliorées et personnalisées, en session et pour les expériences suivantes.
