@@ -8,15 +8,15 @@ description: Ce didacticiel porte sur le processus de publication d'un modèle e
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1501'
-ht-degree: 48%
+source-wordcount: '1496'
+ht-degree: 49%
 
 ---
 
 
 # Publication d’un modèle en tant que service (API)
 
-Ce didacticiel porte sur le processus de publication d’un modèle en tant que service à l’aide de l’API d’apprentissage automatique [[ !DNL Sensei]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Ce didacticiel porte sur le processus de publication d’un modèle en tant que service à l’aide du [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Prise en main
 
