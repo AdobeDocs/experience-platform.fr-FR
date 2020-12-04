@@ -8,7 +8,7 @@ description: Git est un système de contrôle de version distribué qui permet d
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '273'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ L&#39; [!DNL Data Science Workspace JupyterLab] environnement est hébergé et n
 
 ## Se connecter [!DNL Git] à l&#39; [!DNL Data Science Workspace JupyterLab Notebooks] environnement
 
-Début en lançant [!DNL Adobe Experience Platform] et en accédant à l&#39; [[ ! DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) .
+Début en lançant [!DNL Adobe Experience Platform] et en accédant à l’ [[!DNL JupyterLabs Notebooks]](https://platform.adobe.com/notebooks/jupyterLab) environnement.
 
 Dans [!DNL JupyterLab], sélectionnez **[!UICONTROL Fichier]** , puis passez la souris sur **[!UICONTROL Nouveau]**. Dans la liste déroulante qui s&#39;affiche, sélectionnez **[!UICONTROL Terminal]**.
 
@@ -60,4 +60,4 @@ Ensuite, cloner le référentiel que vous souhaitez utiliser à l&#39;aide de la
 
 ## Étapes suivantes
 
-Une fois le clonage de votre référentiel terminé, vous pouvez utiliser Git comme vous le feriez normalement sur votre ordinateur local pour collaborer avec d&#39;autres utilisateurs sur des ordinateurs portables. Pour plus d&#39;informations sur ce que vous pouvez faire dans [!DNL JupyterLab], consultez le [[ !DNL JupyterLab User guide]](./overview.md).
+Une fois le clonage de votre référentiel terminé, vous pouvez utiliser Git comme vous le feriez normalement sur votre ordinateur local pour collaborer avec d&#39;autres utilisateurs sur des ordinateurs portables. Pour plus d’informations sur ce que vous pouvez faire dans [!DNL JupyterLab]le site, voir le [[!DNL JupyterLab user guide]](./overview.md).
