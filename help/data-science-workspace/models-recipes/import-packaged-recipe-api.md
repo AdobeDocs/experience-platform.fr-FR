@@ -8,8 +8,8 @@ description: 'Ce tutoriel utilise l’API Sensei Machine Learning pour créer un
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 63%
+source-wordcount: '976'
+ht-degree: 65%
 
 ---
 
@@ -37,7 +37,7 @@ Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;u
 
 - `{DOCKER_URL}` : adresse URL vers une image Docker d’un service intelligent.
 
-Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](../../tutorials/authentication.md) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](../../tutorials/authentication.md) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
 - `{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
