@@ -7,7 +7,7 @@ description: Au fur et à mesure que vous développez votre définition de segme
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '773'
 ht-degree: 27%
 
 ---
@@ -172,7 +172,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide de l&#39;API d&#39;accès au Profil [[ !DNL]](../../profile/api/entities.md). |
+| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l’aide du [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
