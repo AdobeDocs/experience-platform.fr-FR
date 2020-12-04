@@ -17,6 +17,6 @@ ht-degree: 0%
 
 [!DNL Observability Insights] vous permet de vous abonner à des notifications de événement concernant les activités Adobe Experience Platform. They reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed or if a certain milestone within a workflow has been reached.
 
-[!DNL Observability] les notifications utilisent actuellement des Événements d&#39;E/S d&#39;Adobe, qui peuvent être envoyés à un crochet Web configuré pour faciliter l&#39;automatisation efficace de la surveillance des activités. Cependant, les fonctions de notification incluront éventuellement les notifications par courrier électronique et par interface utilisateur.
+[!DNL Observability] les notifications utilisent actuellement les Événements Adobe I/O, qui peuvent être envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace de la surveillance des activités. Cependant, les fonctions de notification incluront éventuellement les notifications par courrier électronique et par interface utilisateur.
 
 Pour commencer à utiliser [!DNL Observability] les notifications, passez au didacticiel sur l&#39; [abonnement aux notifications](./subscribe.md)de Événement d&#39;E/S.
