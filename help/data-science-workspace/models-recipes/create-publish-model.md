@@ -8,7 +8,7 @@ description: Adobe Experience Platform Data Science Workspace vous donne les moy
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1589'
 ht-degree: 81%
 
 ---
@@ -47,10 +47,10 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 * Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 * Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
-   * [[ !Modèle de données d’expérience DNL]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
    * Jeux de données : construction de stockage et de gestion pour les données réelles. Instance instanciée physique d’un [schéma XDM](../../xdm/schema/field-dictionary.md).
    * Lots : les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité.
-   * [!DNL JupyterLab]: [[ !DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
+   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
 
 ## Préparation de vos données {#prepare-your-data}
 
