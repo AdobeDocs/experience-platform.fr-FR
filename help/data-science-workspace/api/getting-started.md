@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: 8f7ce97cdefd4fe79cb806e71e12e936caca3774
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 70%
+ht-degree: 71%
 
 ---
 
 
-# [!DNL Sensei Machine Learning] Guide du développeur d’API
+# Guide du développeur de l’API [!DNL Sensei Machine Learning]
 
 The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
