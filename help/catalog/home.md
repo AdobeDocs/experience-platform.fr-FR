@@ -13,7 +13,7 @@ ht-degree: 47%
 ---
 
 
-# [!DNL Catalog Service]aperçu
+# [!DNL Catalog Service] présentation
 
 [!DNL Catalog Service] est le système d’enregistrement de l’emplacement et de la lignée des données dans Adobe Experience Platform. While all data that is ingested into [!DNL Experience Platform] is stored in the [!DNL Data Lake] as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
