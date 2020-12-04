@@ -3,7 +3,7 @@ keywords: Visual similarity;visual similarity;ccai api
 solution: Experience Platform
 title: similarité visuelle
 topic: Developer guide
-description: Lorsqu’une image est fournie, le service de similarité visuelle recherche automatiquement les images visuellement similaires d’un catalogue.
+description: Le service de similarité visuelle, lorsqu’il fournit une image, recherche automatiquement les images visuellement similaires d’un catalogue.
 translation-type: tm+mt
 source-git-commit: 4f7b5ca50171f4948726c44dbf31025011adf35f
 workflow-type: tm+mt
@@ -19,11 +19,11 @@ ht-degree: 3%
 >
 >[!DNL Content and Commerce AI] est en version bêta. La documentation peut être modifiée.
 
-Lorsqu’une image est fournie, le service de similarité visuelle recherche automatiquement les images visuellement similaires d’un catalogue.
+Le service de similarité visuelle, lorsqu’il fournit une image, recherche automatiquement les images visuellement similaires d’un catalogue.
 
 L&#39;image suivante a été utilisée dans l&#39;exemple de demande illustré dans ce document :
 
-![image test](../images/Query_Image.jpeg)
+![image de test](../images/Query_Image.jpeg)
 
 **Format d’API**
 
@@ -84,7 +84,7 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `content-type` | Permet d’indiquer si l’entrée fait partie du corps de la requête ou si une URL signée est associée à un compartiment S3. La valeur par défaut de cette propriété est `inline`. | Non |
 | `encoding` | Format de fichier de l’image d’entrée. Actuellement, seules les images JPEG et PNG peuvent être traitées. La valeur par défaut de cette propriété est `jpeg`. | Non |
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
-| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le plus faible des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
 | `custom` | Tout paramètre personnalisé à transmettre. | Non |
 | `historic-metadata` | Tableau qui peut être transmis des métadonnées. | Non |
 
