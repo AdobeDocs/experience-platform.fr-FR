@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;content ai;commerce ai;content and
 solution: Experience Platform
 title: Prise en main de Content and Commerce AI
 topic: Getting started
-description: Content and Commerce AI utilise des API d'E/S d'Adobe. Pour appeler les API d'E/S d'Adobe et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
+description: Content and Commerce AI utilise les API Adobe I/O. Pour appeler les API Adobe I/O et l'intégration de la console d'E/S, vous devez d'abord suivre le didacticiel d'authentification.
 translation-type: tm+mt
 source-git-commit: 2be04547b96e1a6c293cc63e782fe1b3259619ba
 workflow-type: tm+mt
@@ -19,13 +19,13 @@ ht-degree: 12%
 >
 >Content and Commerce AI est en version bêta. La documentation peut être modifiée.
 
-[!DNL Content and Commerce AI] utilise les API d&#39;E/S d&#39;Adobe. Pour appeler les API d&#39;E/S d&#39;Adobe et l&#39;intégration de la console d&#39;E/S, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification.
+[!DNL Content and Commerce AI] utilise les API Adobe I/O. Pour appeler les API Adobe I/O et l&#39;intégration de la console d&#39;E/S, vous devez d&#39;abord suivre le didacticiel [d&#39;](../../tutorials/authentication.md)authentification.
 
 Cependant, lorsque vous atteignez l’étape de l’API **** Ajoute, l’API se trouve sous Experience Cloud et non pas Adobe Experience Platform, comme illustré dans la capture d’écran suivante :
 
 ![ajout d’une API de contenu et de commerce](./images/add-api.png)
 
-Le didacticiel d&#39;authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d&#39;API d&#39;E/S d&#39;Adobe, comme indiqué ci-dessous :
+Le didacticiel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API Adobe I/O, comme illustré ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -37,7 +37,7 @@ Une fois que vous avez configuré votre projet et votre API dans Adobe Developer
 
 ![téléchargement pour postman](./images/add-to-postman.png)
 
-Après avoir téléchargé le fichier, ouvrez Postman et sélectionnez l&#39;icône **d&#39;** engrenage en haut à droite pour ouvrir la boîte de dialogue **gérer les environnements** .
+Après avoir téléchargé le fichier, ouvrez Postman et sélectionnez l&#39;icône **d&#39;** engrenage dans le coin supérieur droit pour ouvrir la boîte de dialogue **gérer les environnements** .
 
 ![icône d&#39;engrenage](./images/select-gear-icon.png)
 
@@ -63,7 +63,7 @@ Vous pouvez désormais sélectionner votre environnement dans le menu déroulant
 
 ![example](./images/select-environment.png)
 
-Pour plus d&#39;informations sur l&#39;utilisation des API d&#39;E/S d&#39;Adobe avec Postman, consultez le post Medium sur l&#39; [utilisation de Postman pour l&#39;authentification JWT sur les E/S](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f)d&#39;Adobe.
+Pour plus d&#39;informations sur l&#39;utilisation des API Adobe I/O à l&#39;aide de Postman, consultez le post Medium sur l&#39; [utilisation de Postman pour l&#39;authentification JWT sur Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lecture d’exemples d’appels API
 
