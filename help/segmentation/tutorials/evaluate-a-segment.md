@@ -8,8 +8,8 @@ description: Ce document fournit un tutoriel sur l’évaluation des segments et
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 64%
+source-wordcount: '1535'
+ht-degree: 68%
 
 ---
 
@@ -22,14 +22,14 @@ This document provides a tutorial for evaluating segments and accessing segment 
 
 This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [[ !Service de segmentation Adobe Experience Platform DNL]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
-- [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
 - [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 ### En-têtes requis
 
-Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour passer des appels à des API [!DNL Platform] Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour passer des appels à des API [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
