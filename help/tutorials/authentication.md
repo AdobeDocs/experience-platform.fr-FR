@@ -8,7 +8,7 @@ description: 'Ce document fournit un tutoriel détaillé pour accéder à un com
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '875'
 ht-degree: 43%
 
 ---
@@ -101,7 +101,7 @@ Une fois que vous avez sélectionné [!DNL Experience Platform] l’API à ajout
 
 Une fois l&#39;API ajoutée au projet, la page d&#39;aperçu **du** projet affiche les informations d&#39;identification suivantes requises dans tous les appels aux [!DNL Experience Platform] API :
 
-* `{API_KEY}` (ID client)
+* `{API_KEY}` (Identifiant du client)
 * `{IMS_ORG}` (ID d’organisation)
 
 ![](./images/authentication/api-key-ims-org.png)
