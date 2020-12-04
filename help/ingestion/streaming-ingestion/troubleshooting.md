@@ -7,7 +7,7 @@ description: Ce document répond aux questions les plus fréquentes sur l’inge
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1008'
 ht-degree: 70%
 
 ---
