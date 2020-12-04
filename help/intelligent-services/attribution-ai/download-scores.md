@@ -19,7 +19,7 @@ Ce document sert de guide pour le téléchargement de scores pour Attribution AI
 
 ## Prise en main
 
-attribution ai vous permet de télécharger des partitions au format parquet. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Attribution AI vous permet de télécharger des partitions au format parquet. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
 De plus, pour accéder aux scores d’Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
