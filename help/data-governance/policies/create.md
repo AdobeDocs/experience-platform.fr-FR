@@ -8,8 +8,8 @@ description: L’API Policy Service vous permet de créer et de gérer des strat
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 72%
+source-wordcount: '1201'
+ht-degree: 73%
 
 ---
 
@@ -24,9 +24,9 @@ This document provides a step-by-step tutorial for creating a policy using the [
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies 
 
-* [[ !Gouvernance des données DNL]](../home.md): Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
+* [[!DNL Data Governance]](../home.md): Cadre selon lequel [!DNL Platform] applique la conformité à l’utilisation des données.
 * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
-* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
