@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 64%
+ht-degree: 67%
 
 ---
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats en fonction. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. See the section on [query parameters](#query) for more information. |
 
 **Requête**
 
