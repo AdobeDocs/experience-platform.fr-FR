@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
 workflow-type: tm+mt
 source-wordcount: '831'
-ht-degree: 13%
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->L’utilisation de Offer Decisioning dans Adobe Experience Platform Web SDK est actuellement disponible en accès rapide pour certains utilisateurs. Cette fonctionnalité n&#39;est pas disponible pour toutes les organisations IMS.
+>L’utilisation d’Offer Decisioning dans le SDK web d’Adobe Experience Platform est actuellement possible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations IMS.
 
 Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres personnalisées qui sont gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou des API Offer Decisioning.
 
