@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: bfbf2074a9dcadd809de043d62f7d2ddaa7c7b31
 workflow-type: tm+mt
 source-wordcount: '195'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 66%
 
 **Date de publication : 12 février 2020**
 
-Mises à jour des fonctionnalités existantes dans l’Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 * [Sources](#sources)
 
