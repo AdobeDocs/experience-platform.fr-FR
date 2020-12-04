@@ -8,8 +8,8 @@ description: Adobe Experience Platform vous permet d’utiliser le langage de re
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 66%
+source-wordcount: '807'
+ht-degree: 68%
 
 ---
 
@@ -29,9 +29,9 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 - Un [!DNL Adobe Analytics] jeu de données
 
 - Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
-   - [[ ! Modèle de données d’expérience DNL (XDM) et système XDM]](../../xdm/home.md)
-   - [[ !Service de Requête DNL]](../../query-service/home.md)
-   - [[ !Syntaxe SQL du service de Requête DNL]](../../query-service/sql/overview.md)
+   - [[!DNL Experience Data Model (XDM) and XDM System]](../../xdm/home.md)
+   - [[!DNL Query Service]](../../query-service/home.md)
+   - [[!DNL Query Service SQL Syntax]](../../query-service/sql/overview.md)
    - Adobe Analytics
 
 ## Accès [!DNL JupyterLab] et [!DNL Query Service] {#access-jupyterlab-and-query-service}
