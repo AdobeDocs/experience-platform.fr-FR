@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
@@ -36,6 +36,6 @@ Une fois que vous avez ajouté des étiquettes d’utilisation pour vos données
 
 Segments that are enabled for use in [!DNL Real-time Customer Profile] contain a merge policy ID within their segment definition. Cette stratégie de fusion contient des informations sur les jeux de données à inclure dans le segment, qui à leur tour contiennent les libellés d’utilisation de données applicables. Pour connaître les étapes spécifiques à l’application de la conformité de l’utilisation des données pour un segment ciblé, suivez le [tutoriel sur l’application de la conformité de l’utilisation des données pour les segments](../segmentation/tutorials/governance.md).
 
-## Get started with [!DNL Privacy Service]
+## Prise en main d’[!DNL Privacy Service] 
 
 [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les données personnelles de vos titulaires de données (clients) dans les applications Adobe Experience Cloud. [!DNL Privacy Service] fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications [!DNL Experience Cloud] For instructions showing how to create and monitor [!DNL Privacy Service] jobs, follow the steps provided in the [Privacy Service developer guide](../privacy-service/api/getting-started.md) or the [Privacy Service user guide](../privacy-service/ui/overview.md).
