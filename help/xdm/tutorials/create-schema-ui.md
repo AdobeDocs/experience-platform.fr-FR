@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '3819'
-ht-degree: 17%
+ht-degree: 18%
 
 ---
 
@@ -28,7 +28,7 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 
 Ce tutoriel exige une compréhension pratique des différents aspects de Adobe Experience Platform impliqués dans la création de schémas. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : présentation des schémas XDM et de leurs blocs de création, notamment les classes, les mixins, les types de données et les champs.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
