@@ -12,7 +12,7 @@ ht-degree: 2%
 ---
 
 
-# Questions fréquemment posées
+# Questions fréquemment posées 
 
 Ce forum aux questions comprend les questions souvent posées au sujet de l&#39;Adobe Web SDK.
 
