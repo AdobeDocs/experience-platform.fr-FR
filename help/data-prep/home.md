@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
 source-wordcount: '304'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
 
-# Prép de données
+# Préparation de données
 
 La préparation des données permet aux ingénieurs de données de mapper, de transformer et de valider les données à partir du modèle de données d’expérience (XDM). L’aperçu des données s’affiche sous la forme d’une étape de &quot;mappage&quot; dans les processus d’importation de données, y compris le processus d’importation CSV. Les ingénieurs de données peuvent utiliser l’API Data Prep pour manipuler les données suivantes lors de l’assimilation :
 
