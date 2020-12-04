@@ -7,12 +7,12 @@ translation-type: tm+mt
 source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 16%
+ht-degree: 17%
 
 ---
 
 
-# [!DNL Policy Service] Guide du développeur d’API
+# Guide du développeur de l’API [!DNL Policy Service]
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 
