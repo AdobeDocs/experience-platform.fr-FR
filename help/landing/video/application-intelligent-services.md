@@ -23,7 +23,7 @@ Cette vidéo présente une vue d&#39;ensemble des services applicatifs et intell
 
 * Attribution AI
 * Customer AI
-* Customer Journey Analytics
+* Customer Journey Analytics 
 * Journey Orchestration
 * Plateforme de données clients en temps réel
 
