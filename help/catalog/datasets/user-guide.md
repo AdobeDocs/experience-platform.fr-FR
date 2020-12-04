@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
 workflow-type: tm+mt
 source-wordcount: '1146'
-ht-degree: 74%
+ht-degree: 75%
 
 ---
 
@@ -22,7 +22,7 @@ Ce guide d’utilisation fournit des instructions permettant d’exécuter des a
 Ce guide d’utilisation nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de la [!DNL Schema Editor] section dans l’ [!DNL Platform] interface utilisateur.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
