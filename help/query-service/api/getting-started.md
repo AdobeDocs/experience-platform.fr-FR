@@ -7,8 +7,8 @@ description: Ce guide de développement décrit les étapes à suivre pour effec
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 34%
+source-wordcount: '369'
+ht-degree: 47%
 
 ---
 
@@ -21,9 +21,9 @@ This developer guide provides steps for performing various operations in the Ado
 
 Ce guide nécessite une compréhension pratique des divers services Adobe Experience Platform impliqués dans l’utilisation de la [!DNL Query Service].
 
-- [[ !Service de Requête DNL]](../home.md): Permet de requête des jeux de données et de capturer les requêtes résultantes sous forme de nouveaux jeux de données dans [!DNL Experience Platform].
-- [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-- [[ !Sandbox DNL]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [[!DNL Query Service]](../home.md): Permet de requête des jeux de données et de capturer les requêtes résultantes sous forme de nouveaux jeux de données dans [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 The following sections provide additional information that you will need to know in order to successfully use [!DNL Query Service] using the API.
 
@@ -33,7 +33,7 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Platform] API calls, as shown below:
+Pour lancer des appels aux API [!DNL Experience Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Platform], comme indiqué ci-dessous :
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
