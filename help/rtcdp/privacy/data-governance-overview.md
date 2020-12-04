@@ -5,7 +5,7 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: 66042cb9397b9c7b507fc063f33e92f4f4c381c7
+source-git-commit: 91b60539010318ea8d545bff4e5cc7e2d0aa70fc
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 29%
@@ -41,7 +41,7 @@ Vous pouvez définir des restrictions d’utilisation des données sur une desti
 
 La définition de cas d’utilisation marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des cas d’utilisation marketing appropriés à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
-Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des cas d’utilisation marketing s’affiche à différents moments du processus de configuration. Consultez la documentation [sur les](../destinations/destinations-overview.md#data-governance) destinations pour connaître les étapes de configuration de votre destination particulière.
+Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des cas d’utilisation marketing s’affiche à différents moments du processus de configuration. Consultez la documentation [sur les](../destinations/overview.md) destinations pour connaître les étapes de configuration de votre destination particulière.
 
 ## Gestion des politiques d’utilisation des données  {#policies}
 
@@ -87,7 +87,7 @@ Chaque étape du calendrier ci-dessus représente une entité qui peut contribue
 | Etape de la gamme de données | Rôle dans l&#39;application des politiques |
 | --- | --- |
 | Jeu de données | Les jeux de données contiennent des étiquettes d’utilisation des données (appliquées au niveau du jeu de données ou du champ) qui définissent les cas d’utilisation pour lesquels le jeu de données entier ou des champs spécifiques peuvent être utilisés. Des violations de stratégie se produisent si un jeu de données ou un champ contenant certaines étiquettes est utilisé à des fins restreintes par une stratégie. |
-| Fusionner la stratégie | Les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produiront si vos stratégies de fusion sont configurées de sorte que les jeux de données avec des étiquettes restreintes soient activés pour une destination. Pour plus d’informations, consultez le guide sur les stratégies [de](../../profile/ui/merge-policies.md) fusion. |
+| Fusionner la stratégie | Les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de stratégie se produiront si vos stratégies de fusion sont configurées de sorte que les jeux de données avec des étiquettes restreintes soient activés pour une destination. See the guide on [merge policies](../../profile/ui/merge-policies.md) for more information. |
 | Segment | Les règles de segmentation définissent les attributs à inclure dans les profils client. En fonction des champs inclus par une définition de segment, le segment hérite des étiquettes d’utilisation appliquées pour ces champs. Des violations de stratégie se produiront si vous activez un segment dont les étiquettes héritées sont restreintes par les stratégies applicables de la destination de la cible, en fonction de son cas d’utilisation marketing. |
 | Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une stratégie d’utilisation des données. En d’autres termes, le cas d’utilisation marketing que vous définissez pour une destination détermine les stratégies d’utilisation des données applicables à cette destination. Des violations de stratégie se produiront si vous activez un segment dont les étiquettes d’utilisation sont restreintes par les stratégies applicables de la destination de la cible. |
 
