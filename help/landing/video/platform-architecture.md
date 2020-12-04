@@ -12,13 +12,13 @@ translation-type: tm+mt
 source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
 workflow-type: tm+mt
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 35%
 
 ---
 
 
 # Architecture de base de l&#39;Experience Platform
 
-Cette vidéo présente un diagramme de présentation et explique les Principaux composants de l&#39;Experience Platform.
+Cette vidéo présente un diagramme général et passe en revue les principaux composants d’Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
