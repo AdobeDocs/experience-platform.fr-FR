@@ -6,9 +6,9 @@ title: Mettre à jour les détails du compte dans l’interface utilisateur
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 413687a0d9e790ea3f61a858002e9510216d7c34
+source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '404'
 ht-degree: 13%
 
 ---
