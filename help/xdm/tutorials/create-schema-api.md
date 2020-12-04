@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
 workflow-type: tm+mt
 source-wordcount: '2343'
-ht-degree: 84%
+ht-degree: 85%
 
 ---
 
@@ -24,7 +24,7 @@ This tutorial uses the [!DNL Schema Registry] API to walk you through the steps 
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM) System]](../home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
