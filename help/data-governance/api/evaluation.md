@@ -168,7 +168,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. Pour plus d’informations, consultez le guide sur la [ [!DNL Catalog] liste des objets](../../catalog/api/list-objects.md) . |
+| `entityId` | ID d’un jeu de données par rapport auquel tester l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 
 **Réponse**
 
@@ -416,7 +416,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Type d’entité dont l’ID est indiqué dans la propriété `entityId` frère. Actuellement, la seule valeur acceptée est `dataSet`. |
-| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. Pour plus d’informations, consultez le guide sur la [ [!DNL Catalog] liste des objets](../../catalog/api/list-objects.md) . |
+| `entityId` | ID d’un jeu de données dont les champs doivent être évalués par rapport à l’action marketing. Une liste de jeux de données et de leurs identifiants correspondants peut être obtenue en adressant une demande de GET au point de `/dataSets` terminaison dans l’ [!DNL Catalog Service] API. See the guide on [listing [!DNL Catalog] objects](../../catalog/api/list-objects.md) for more information. |
 | `entityMeta.fields` | Tableau de chemins d’accès à des champs spécifiques dans le schéma du jeu de données, fourni sous la forme de chaînes de pointeur JSON. Consultez la section sur le pointeur [](../../landing/api-fundamentals.md#json-pointer) JSON du guide des fondamentaux de l’API pour plus d’informations sur la syntaxe acceptée pour ces chaînes. |
 
 **Réponse**
