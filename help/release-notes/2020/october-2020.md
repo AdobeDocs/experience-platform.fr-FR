@@ -116,4 +116,4 @@ Le lecteur de profil compatible avec les marketeurs avec personnalisation vous p
 
 Garantit la transparence du flux de données et fournit des informations sur l’état du trafic de données dans le système à partir des connecteurs source, ce qui permet d’améliorer le libre-service et d’accélérer les opérations de dépannage.
 
-- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
+- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l&#39;état d&#39;achèvement, la durée d&#39;exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
