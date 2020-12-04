@@ -91,7 +91,7 @@ Une fois que vous avez effectué des tâches de confidentialité, vous disposez 
 | --- | --- |
 | [!DNL Privacy Service] L’nterface utilisateur | L’ [!DNL Privacy Service] interface utilisateur fournit un tableau de bord de surveillance qui vous permet de vue une représentation visuelle de l’état de toutes les demandes principales. See the [Privacy Service user guide](ui/overview.md) for more information. |
 | [!DNL Privacy Service] API | Vous pouvez contrôler par programmation l’état des tâches de confidentialité en utilisant les points de terminaison de recherche fournis par l’ [!DNL Privacy Service] API. Pour obtenir des instructions détaillées sur l’utilisation de l’API, consultez le guide [du développeur](./api/getting-started.md) Privacy Service. |
-| [!DNL Privacy Events] | [!DNL Privacy Events] exploiter les Événements d&#39;E/S d&#39;Adobe envoyés à un webhook configuré afin de faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Pour plus d’informations, consultez le didacticiel sur l’ [abonnement aux Événements](./privacy-events.md) de confidentialité. |
+| [!DNL Privacy Events] | [!DNL Privacy Events] tirer parti des Événements Adobe I/O envoyés à un webhook configuré afin de faciliter l’automatisation des demandes de travaux. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached. Pour plus d’informations, consultez le didacticiel sur l’ [abonnement aux Événements](./privacy-events.md) de confidentialité. |
 
 ## Étapes suivantes
 
