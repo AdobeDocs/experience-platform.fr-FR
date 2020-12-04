@@ -5,7 +5,7 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 91%
@@ -68,7 +68,7 @@ Pour plus d’informations sur les segments, consultez [Présentation de Segment
 
 La section **[!UICONTROL Destinations]** indique le nombre total de destinations créées pour l’organisation. Ce nombre est mis à jour lors de la création de destinations.
 
-Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
+Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -134,4 +134,4 @@ La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq desti
 
 Cliquez sur une destination pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de destinations.
 
-Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/destinations-overview.md).
+Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
