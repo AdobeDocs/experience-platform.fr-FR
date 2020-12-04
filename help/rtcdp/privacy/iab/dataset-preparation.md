@@ -24,7 +24,7 @@ Plus précisément, deux jeux de données sont nécessaires pour capturer les do
 
 Ce document décrit les étapes à suivre pour configurer ces deux ensembles de données afin de collecter les données de consentement IAB TCF 2.0. Pour une présentation du flux de travail complet à configurer [!DNL Real-time CDP] pour TCF 2.0, consultez la présentation [de la conformité à la norme](./overview.md)IAB TCF 2.0.
 
-## Conditions préalables
+## Conditions préalables 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -80,7 +80,7 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Créer un schéma de consentement basé sur les enregistrements {#profile-schema}
 
-Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail **Schémas**, créez un schéma en fonction de la [!DNL XDM Individual Profile] classe. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
+Dans l’onglet **[!UICONTROL Parcourir]** de l’espace de travail ** Schémas**, créez un schéma en fonction de la [!DNL XDM Individual Profile] classe. Une fois le schéma ouvert dans l’éditeur de Schémas, cliquez sur **[!UICONTROL Ajouter]** sous la section **[!UICONTROL Mélanges]** située sur le côté gauche de la trame.
 
 ![](../assets/iab/add-mixin-profile.png)
 
