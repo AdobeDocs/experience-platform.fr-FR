@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création d’un connecteur source Apache HDFS dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour authentifier un connecteur source Apache Hadoop Distributed File System (ci-après appelé "HDFS") à l’aide de l’interface utilisateur de la plate-forme.
+description: Ce didacticiel décrit les étapes d'authentification d'un connecteur source Apache Hadoop Distributed File System (ci-après appelé "HDFS") à l'aide de l'interface utilisateur de la plate-forme.
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
