@@ -6,9 +6,9 @@ title: Surveiller les flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 12b8ced6705c2b14b50ea237391d9f829c894b99
+source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '819'
 ht-degree: 8%
 
 ---
