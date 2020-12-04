@@ -5,10 +5,10 @@ title: Segmentation par flux
 topic: developer guide
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API de segmentation en flux continu.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '1359'
-ht-degree: 48%
+source-wordcount: '1310'
+ht-degree: 50%
 
 ---
 
@@ -80,20 +80,17 @@ Pour qu’un segment soit évalué à l’aide de la segmentation en flux contin
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
-La section suivante liste des exemples de définition de segment qui **ne seront pas** activés pour la segmentation en flux continu.
+Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les cas suivants :
 
-| Type de requête | Détails |
-| ---------- | ------- | 
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
-| Plusieurs événements faisant référence à un profil | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
-| Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
+- La définition de segment comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).
+- La définition de segment comprend plusieurs entités (requêtes multientités).
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
 | Type de requête | Instruction |
 | ---------- | -------- |
 | Requête événement unique | Il n&#39;y a aucune limite à la fenêtre de recherche en amont. |
-| Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
+| Requête avec historique des événements | <ul><li>La fenêtre de recherche en amont est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Les requêtes comportant au moins un événement négatif sont prises en charge. Cependant, tout le événement **ne peut** être une négation.</li></ul> |
 
 ## Récupérer tous les segments activés pour la segmentation en flux continu
 
