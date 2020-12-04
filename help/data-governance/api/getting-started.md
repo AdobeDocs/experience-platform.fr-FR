@@ -7,8 +7,8 @@ description: L’API Policy Service vous permet de créer et de gérer diverses 
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 25%
+source-wordcount: '427'
+ht-degree: 37%
 
 ---
 
@@ -21,14 +21,14 @@ L’ [!DNL Policy Service] API vous permet de créer et de gérer diverses resso
 
 L&#39;utilisation du guide du développeur nécessite une compréhension pratique des différents [!DNL Experience Platform] services impliqués dans l&#39;utilisation des capacités de gouvernance des données. Before beginning to work with the [!DNL Policy Service API], please review the documentation for the following services:
 
-* [[ !Gouvernance des données DNL]](../home.md): Cadre selon lequel [!DNL Experience Platform] applique la conformité à l’utilisation des données.
-* [[ ! Système de modèle de données d’expérience (XDM) DNL]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-* [[ !Profil client en temps réel DNL]](../../profile/home.md): Fournit un profil de consommation unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Data Governance]](../home.md): Cadre selon lequel [!DNL Experience Platform] applique la conformité à l’utilisation des données.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 ## Lecture d’exemples d’appels API
 
-The [!DNL Policy Service] API documentation provides example API calls to demonstrate how to format your requests. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+The [!DNL Policy Service] API documentation provides example API calls to demonstrate how to format your requests. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ## En-têtes requis
 
