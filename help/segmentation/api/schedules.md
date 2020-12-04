@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obligatoire.** Nom du planning sous forme de chaîne. |
 | `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **Obligatoire lorsque`type`est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `properties.segments` | **Obligatoire lorsque `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plusieurs fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. <br><br>Si cette chaîne n&#39;est pas fournie, un calendrier généré par le système est généré automatiquement. |
 | `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principaux&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
