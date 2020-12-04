@@ -7,8 +7,8 @@ description: Ce document explique comment se connecter à Requête Service à pa
 translation-type: tm+mt
 source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 34%
+source-wordcount: '78'
+ht-degree: 42%
 
 ---
 
@@ -19,10 +19,10 @@ This section explains how to connect to [!DNL Query Service] from a variety of d
 
 Les instructions concernent les clients suivants :
 
-- [[ ! DNL Aqua Data Studio]](./aqua-data-studio.md)
-- [[ !Recherche DNL]](./looker.md)
-- [[ ! DNL Postico (Mac)]](./postico.md)
-- [[ !Power BI DNL (PC)]](./power-bi.md)
-- [[ ! DNL PSQL]](./psql.md)
-- [[ ! DNL RStudio]](./rstudio.md)
-- [[ ! DNL Tableau]](./tableau.md)
+- [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL Looker]](./looker.md)
+- [[!DNL Postico (Mac)]](./postico.md)
+- [[!DNL Power BI (PC)]](./power-bi.md)
+- [[!DNL PSQL]](./psql.md)
+- [[!DNL RStudio]](./rstudio.md)
+- [[!DNL Tableau]](./tableau.md)
