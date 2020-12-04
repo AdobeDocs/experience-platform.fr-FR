@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 8971d373228099d42249d3ec4af13e711323a0cc
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 59%
+ht-degree: 62%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 59%
 
 * [[!DNL Profile] aperçu](home.md)
 * [[!DNL Profile] garde](guardrails.md)
-* [!DNL Profile] Guide du développeur d’API {#api}
+* Guide du développeur de l’API [!DNL Profile]{#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [(Alpha) Attributs calculés](api/computed-attributes.md)
