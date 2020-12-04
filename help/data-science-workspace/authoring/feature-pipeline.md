@@ -7,7 +7,7 @@ description: Adobe Experience Platform vous permet de créer et de créer des pi
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1421'
 ht-degree: 30%
 
 ---
@@ -439,4 +439,4 @@ Une fois la notation terminée, votre pipeline de fonctionnalités doit être op
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-En lisant ce document, vous avez créé un pipeline de fonctionnalités à l&#39;aide du kit de développement de création de modèles, créé une image Docker et utilisé l&#39;URL d&#39;image Docker pour créer un modèle de pipeline de fonctionnalités à l&#39;aide de l&#39; [!DNL Sensei Machine Learning] API. Vous êtes maintenant prêt à continuer à transformer les jeux de données et à extraire les fonctionnalités de données à l&#39;échelle à l&#39;aide de l&#39;API d&#39;apprentissage automatique [[ ! DNL Sensei]](../api/getting-started.md).
+En lisant ce document, vous avez créé un pipeline de fonctionnalités à l&#39;aide du kit de développement de création de modèles, créé une image Docker et utilisé l&#39;URL d&#39;image Docker pour créer un modèle de pipeline de fonctionnalités à l&#39;aide de l&#39; [!DNL Sensei Machine Learning] API. Vous êtes maintenant prêt à continuer à transformer les jeux de données et à extraire les fonctionnalités de données à l’échelle de l’ [[!DNL Sensei Machine Learning API]](../api/getting-started.md)application.
