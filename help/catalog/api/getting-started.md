@@ -7,8 +7,8 @@ description: Ce guide de développement fournit des étapes pour vous aider à c
 translation-type: tm+mt
 source-git-commit: c8e53a25c5b22e8d840658fe26ff47875947a6d0
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 41%
+source-wordcount: '583'
+ht-degree: 55%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 41%
 
 [!DNL Catalog Service] est le système d’enregistrement de l’emplacement et de la lignée des données dans Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données [!DNL Experience Platform], sans avoir à accéder aux données proprement dites. Pour plus d’informations, consultez la [[!DNL Catalog] présentation des ](../home.md).
 
-This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
+Ce guide du développeur décrit les étapes à suivre pour vous aider à démarrer l’API [!DNL Catalog]. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
 ## Conditions préalables 
 
 [!DNL Catalog] effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations au sein de [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
-* [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
 * [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données en temps réel dans à partir de périphériques côté client et côté serveur.
 
@@ -31,11 +31,11 @@ The following sections provide additional information that you will need to know
 
 ## Lecture d’exemples d’appels API
 
-Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ## Collecte des valeurs des en-têtes requis
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
