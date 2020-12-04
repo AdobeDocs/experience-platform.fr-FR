@@ -28,7 +28,7 @@ Once you are signed in, click **[!UICONTROL Privacy UI]**.
 
 ### Connexion depuis [!DNL Experience Platform]
 
-Si vous avez accès à l’interface utilisateur de l’Adobe Experience Platform, vous pouvez également accéder à l’interface [!DNL Privacy Service] utilisateur via l’onglet **[!UICONTROL Demandes]** dans le volet de navigation de gauche.
+Si vous avez accès à l’interface utilisateur de Adobe Experience Platform, vous pouvez également accéder à l’ [!DNL Privacy Service] interface via l’onglet **[!UICONTROL Demandes]** dans le volet de navigation de gauche.
 
 ![](../images/ui-overview/platform.png)
 
