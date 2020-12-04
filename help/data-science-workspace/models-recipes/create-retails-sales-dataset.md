@@ -8,8 +8,8 @@ description: Ce tutoriel vous présente les prérequis et les ressources nécess
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 77%
+source-wordcount: '539'
+ht-degree: 78%
 
 ---
 
@@ -35,7 +35,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    - [dictor](https://pypi.org/project/dictor/)
    - [JWT](https://pypi.org/project/jwt/)
 - Une connaissance concrète des concepts suivants employés dans ce tutoriel :
-   - [[ ! Modèle de données d’expérience DNL (XDM)]](../../xdm/home.md)
+   - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md)
    - [Principes de base de la composition des schémas](../../xdm/schema/field-dictionary.md)
 
 ## Création de jeux de données et de schéma de vente au détail
