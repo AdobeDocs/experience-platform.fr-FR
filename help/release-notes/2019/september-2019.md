@@ -7,8 +7,8 @@ author: ens28527
 translation-type: tm+mt
 source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 54%
+source-wordcount: '532'
+ht-degree: 57%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 54%
 
 **Date de publication : 10 septembre 2019**
 
-Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
+Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-* [[ !Ingestion des données DNL]](#ingestion)
-* [[ ! Espace de travail scientifique des données DNL]](#dsw)
-* [[ !Service de Requête DNL]](#query)
+* [[!DNL Data Ingestion]](#ingestion)
+* [[!DNL Data Science Workspace]](#dsw)
+* [[!DNL Query Service]](#query)
 
 ## [!DNL Data Ingestion] {#ingestion}
 
