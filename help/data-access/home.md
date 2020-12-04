@@ -13,7 +13,7 @@ ht-degree: 21%
 ---
 
 
-# [!DNL Data Access]aperçu
+# [!DNL Data Access] présentation
 
 [!DNL Data Access] prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l&#39;accessibilité des jeux de données assimilés dans [!DNL Experience Platform].
 
