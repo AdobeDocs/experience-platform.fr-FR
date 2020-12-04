@@ -15,7 +15,7 @@ ht-degree: 100%
 
 # Notes de mise à jour d’Adobe Experience Platform {#release-notes}
 
-* [Novembre 2020](latest/latest.md)
+* [Novembre 2020](latest/latest.md)
 * [Octobre 2020](2020/october-2020.md)
 * [Septembre 2020](2020/september-2020.md)
 * [Août 2020](2020/august-2020.md)
