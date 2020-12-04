@@ -308,7 +308,7 @@ Le tableau suivant présente les valeurs acceptées pour `xdm:type`:
 | `social_media` | Contenu des médias sociaux. |
 | `snail_mail` | Messages envoyés par diffusion postale conventionnelle. |
 | `third_party_content` | Contenu ou articles affichés sur votre site Web qui sont fournis par une entité non liée. |
-| `third_party_offers` | offres ou publicités affichées sur votre site Web à partir de services publicitaires provenant d’une entité non liée. |
+| `third_party_offers` | Offres ou publicités affichées sur votre site Web à partir de services publicitaires provenant d’une entité non liée. |
 
 ### Schéma complet [!DNL Privacy Consent] {#full-schema}
 
