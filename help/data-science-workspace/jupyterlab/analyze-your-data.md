@@ -8,8 +8,8 @@ description: Ce tutoriel porte sur l’utilisation des notebooks Jupyter élabor
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 83%
+source-wordcount: '1723'
+ht-degree: 84%
 
 ---
 
@@ -20,9 +20,9 @@ Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein d
 
 Les concepts suivants sont présentés :
 
-- **[!DNL JupyterLab]:** [[ !DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter, et est étroitement intégrée dans [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans [!DNL Adobe Experience Platform].
 - **Lots :** les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
-- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Please use the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
+- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser le [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
 
 ## Exploration de notebooks dans Data Science Workspace
 
