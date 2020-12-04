@@ -5,7 +5,7 @@ seo-title: Présentation de la plateforme de données client en temps réel
 description: Présentation de la plateforme de données client en temps réel
 seo-description: Présentation de la plateforme de données client en temps réel
 translation-type: tm+mt
-source-git-commit: 0232acdc64019b9d93888e8137ef9bc8e114779b
+source-git-commit: 4dfef6649b3ae07593667eb5165dad6bacc8ed2f
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 29%
@@ -38,5 +38,5 @@ La documentation suivante est recommandée pour vous aider à commencer à utili
 * [Envoi de données](sources/sources-overview.md)
 * [Accès aux profils](profile/profile-overview.md)
 * [Création de segments](segmentation/segmentation-overview.md)
-* [Activation de segments vers des destinations](destinations/activate-destinations.md)
+* [Activation de segments vers des destinations](destinations/overview.md)
 * [Définition et application des stratégies de gouvernance des données](privacy/data-governance-overview.md)
