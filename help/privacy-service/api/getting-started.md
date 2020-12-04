@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 23%
+source-wordcount: '759'
+ht-degree: 30%
 
 ---
 
@@ -23,13 +23,13 @@ This guide covers how to use the [!DNL Privacy Service] API. Pour plus d’infor
 
 This guide requires a working understanding the following [!DNL Experience Platform] features:
 
-* [[ !Privacy Service DNL]](../home.md): Fournit une API RESTful et une interface utilisateur qui vous permettent de gérer les requêtes d’accès et de suppression de vos données (clients) sur les applications Adobe Experience Cloud.
+* [[!DNL Privacy Service]](../home.md) : fournit une API RESTful et une interface utilisateur permettant de gérer l’accès et de supprimer les requêtes des propriétaires des données (les clients) dans les applications Adobe Experience Cloud.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à l’API Privacy Service.
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md) in the [!DNL Experience Platform] troubleshooting guide.
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md) dans le guide de dépannage[!DNL Experience Platform].
 
 ## Collecte des valeurs des en-têtes requis
 
