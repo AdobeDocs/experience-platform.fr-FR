@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # S’abonner à [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform [!DNL Privacy Service], qui tirent parti des Événements d&#39;E/S d&#39;Adobe envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
+[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform [!DNL Privacy Service], qui tirent parti des Événements Adobe I/O envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace des demandes d&#39;emploi. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.
 
 Il existe actuellement quatre types de notifications liées au cycle de vie de la tâche de demande d’accès à des informations personnelles :
 
