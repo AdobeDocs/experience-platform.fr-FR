@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
 source-wordcount: '1272'
-ht-degree: 35%
+ht-degree: 36%
 
 ---
 
@@ -25,7 +25,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
 * [[!DNL Catalog Service]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
-* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM) System]](../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
