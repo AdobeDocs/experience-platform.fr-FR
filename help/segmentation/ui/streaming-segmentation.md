@@ -5,10 +5,10 @@ title: Segmentation par flux
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: 578579438ca1d6a7a8c0a023efe2abd616a6dff2
+source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 2%
+source-wordcount: '714'
+ht-degree: 1%
 
 ---
 
@@ -42,20 +42,17 @@ Une requête sera automatiquement évaluée avec la segmentation en flux continu
 | Accès entrant faisant référence à un profil dans une fenêtre de temps relative | Toute définition de segment faisant référence à un seul événement entrant et à un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Plusieurs événements faisant référence à un profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-La section suivante liste des exemples de définition de segment qui **ne seront pas** activés pour la segmentation en flux continu.
+Une définition de segment **ne sera pas** activée pour la segmentation en flux continu dans les cas suivants :
 
-| Type de requête | Détails |
-| ---------- | ------- |
-| Accès entrant faisant référence à un profil dans une fenêtre relative | Définition de segment qui inclut [!DNL Adobe Audience Manager (AAM)] des segments ou des caractéristiques. |
-| Plusieurs événements faisant référence à un profil | Définition de segment qui comprend des segments ou des caractéristiques Adobe Audience Manager (AAM). |
-| Requêtes multientité | Les requêtes multientités **ne sont pas** prises en charge dans leur ensemble par la segmentation en flux continu. |
+- La définition de segment comprend des segments ou des caractéristiques Adobe Audience Manager (AAM).
+- La définition de segment comprend plusieurs entités (requêtes multientités).
 
 En outre, certaines directives s’appliquent lors de la segmentation en flux continu :
 
 | Type de requête | Instruction |
 | ---------- | -------- |
 | Requête événement unique | Il n&#39;y a aucune limite à la fenêtre de recherche en amont. |
-| Requête avec historique des événements | <ul><li>La fenêtre de rétrospective est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Seules les commandes de temps simples (avant et après) entre les événements sont autorisées.</li><li>Les événements individuels **ne peuvent** être annulés. Cependant, toute la requête **peut** être annulée.</li></ul> |
+| Requête avec historique des événements | <ul><li>La fenêtre de recherche en amont est limitée à **un jour**.</li><li>Une condition d’ordre temporel strict **doit** exister entre les événements.</li><li>Les requêtes comportant au moins un événement négatif sont prises en charge. Cependant, tout le événement **ne peut** être une négation.</li></ul> |
 
 Si une définition de segment est modifiée de sorte qu’elle ne réponde plus aux critères de la segmentation en flux continu, elle passe automatiquement de &quot;Diffusion en flux continu&quot; à &quot;Lot&quot;.
 
