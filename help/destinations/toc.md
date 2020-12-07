@@ -2,12 +2,12 @@
 product: experience-platform
 audience: user
 user-guide-title: Guide des destinations
-user-guide-description: Insérez ici la description des destinations.
+user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: eccf962fd9a24e6b5085f706766693ee7e468aea
+source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 30%
+source-wordcount: '429'
+ht-degree: 29%
 
 ---
 
