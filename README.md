@@ -1,21 +1,12 @@
 ---
-source-git-commit: 87d46c0d813cd31408eaed8331677b74fc42dd38
+source-git-commit: b0cc44b33b399eb64122374251840a4298946d80
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '643'
-ht-degree: 66%
+source-wordcount: '509'
+ht-degree: 81%
 
 ---
 # Contribution de contenu
-
-| EXL-PR | EXL | Aperçu | Activer | Publication | Aide |
-|--- |--- |--- |--- |--- |--- |
-| [![État de la création](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![État de la création](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [URL de la prévisualisation](https://experienceleague.corp.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/) | [URL en direct](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=en) | [Guide de création](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
-| Production | Évaluation |
-|---|---|
-| [![État de la création](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![État de la création](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
-| [Produit de sortie](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/home.html) | [Output Stg](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html) |
 
 Nous invitons notre communauté et les employés d’Adobe ne faisant pas partie des équipes de documentation à nous faire part de leurs contributions au contenu.
 
@@ -29,7 +20,7 @@ Consultez le [Guide du contributeur de documents Adobe](https://docs.adobe.com/h
 
 Votre contribution dépend de qui vous êtes et du type de modifications auxquelles vous souhaitez contribuer :
 
-### Modifications mineures ou demandes mineures
+### Modifications mineures  ou demandes mineures
 
 Pour envoyer une requête, cliquez sur le lien **Signaler une issue** dans un article, ce qui ouvre un problème dans GitHub. Saisissez un titre et une description, puis cliquez sur **Envoyer une nouvelle issue**.
 
