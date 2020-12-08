@@ -5,9 +5,9 @@ seo-title: Destination du braquage
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 seo-description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 9380c9c24267f815b788eb51949da13b8c47558f
+source-git-commit: 6b19cfa3c4a5327b6b7543123f631d0355995f09
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -33,6 +33,10 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 * Vous pouvez envoyer n’importe quelle [identité](../../../identity-service/namespaces.md) à la [!DNL Braze] destination tant que vous la mappez à la [!DNL Braze][`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] sont exportés vers [!DNL Braze] sous l’ `AdobeExperiencePlatformSegments` attribut.
+
+>[!NOTE]
+>
+>N’oubliez pas que l’envoi d’attributs personnalisés supplémentaires à [!DNL Braze] peut entraîner une augmentation de la consommation de vos points de [!DNL Braze] données. Consultez votre gestionnaire de [!DNL Braze] compte avant d&#39;envoyer des attributs personnalisés supplémentaires.
 
 ## Cas d’utilisation {#use-cases}
 
