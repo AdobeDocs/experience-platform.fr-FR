@@ -5,9 +5,9 @@ title: Guide de développement de l’API Schema Registry
 description: 'L''API Schéma Registry vous permet de gérer par programmation tous les schémas et les ressources XDM connexes disponibles dans l''Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: d0e5865fddcf2592e9b6d8d4b2747bdceee6bda7
+source-git-commit: 33f9ee45e8dd649d23f9b3b4f03ecf00d8e18fd2
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '961'
 ht-degree: 7%
 
 ---
@@ -33,9 +33,13 @@ Les schémas XDM représentent et valident la structure et le format des donnée
 
 Pour obtenir un guide détaillé sur la création d&#39;un schéma complet dans l&#39;API de registre des Schémas, y compris la création et l&#39;ajout de mixins et de types de données, consultez le didacticiel [sur la création de schémas d&#39;](../tutorials/create-schema-api.md)API.
 
+## Comportements
+
+Les comportements définissent la nature des données qu’un schéma décrit. Chaque classe XDM doit faire référence à un comportement spécifique, dont tous les schémas qui utilisent cette classe hériteront. Consultez le guide [des points de terminaison](./behaviors.md) comportementaux pour savoir comment vue les comportements disponibles dans l&#39;API.
+
 ## Classes
 
-Les classes définissent les aspects comportementaux des données qu&#39;un schéma contiendra (enregistrements ou séries chronologiques). En outre, une classe détermine la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir. Une classe de schéma détermine quels mixins peuvent être utilisés dans ce schéma. Pour plus d’informations sur l’utilisation des classes dans l’API, consultez le guide [des points de terminaison](./classes.md) des classes.
+Une classe définit la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir et détermine quels mixins peuvent être utilisés dans ces schémas. Chaque classe doit être associée à un comportement existant. Pour plus d’informations sur l’utilisation des classes dans l’API, consultez le guide [des points de terminaison](./classes.md) des classes.
 
 ## Mélanges
 
