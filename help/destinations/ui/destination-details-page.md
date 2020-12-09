@@ -5,10 +5,10 @@ seo-title: Page de détails des destinations
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
 workflow-type: tm+mt
-source-wordcount: '680'
-ht-degree: 18%
+source-wordcount: '735'
+ht-degree: 16%
 
 ---
 
@@ -29,6 +29,10 @@ La page de détails de la destination s’affiche, avec les commandes disponible
 
 ![](../assets/ui/details-page/details.png)
 
+De plus, dans l’onglet Parcourir, vous pouvez choisir de supprimer le flux de données sélectionné en sélectionnant l’icône ![corbeille](../assets/ui/details-page/trash-icon.png) . Tout segment activé sur une destination est démappé avant la suppression du flux de données.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Rail droit
 
 Le rail droit affiche les informations de base sur la destination.
@@ -40,6 +44,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail dro
 | Article de rail droit | Description |
 | --- | --- |
 | [!UICONTROL Activer] | Sélectionnez ce contrôle pour modifier les segments mappés à la destination. Pour plus d’informations, consultez le guide sur l’ [activation de segments vers une destination](./activate-destinations.md) . |
+| [!UICONTROL Supprimer] | Vous permet de supprimer ce flux de données et de démapper les segments qui ont été activés auparavant, le cas échéant. |
 | [!UICONTROL Nom de destination] | Ce champ peut être modifié afin de mettre à jour le nom de la destination. |
 | [!UICONTROL Description] | Ce champ peut être modifié pour mettre à jour ou ajouter une description facultative à la destination. |
 | [!UICONTROL Destination] | Représente la plateforme de destination vers laquelle les audiences sont envoyées. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -75,11 +80,11 @@ Pour vue les détails d&#39;une exécution de flux de données particulière, s�
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segments]
+## [!UICONTROL Données d’Activation]
 
-L’onglet [!UICONTROL Segments] affiche une liste de segments qui ont été mappés à la destination, y compris leur date de début et leur date de fin (le cas échéant). Pour vue les détails d’un segment particulier, sélectionnez son nom dans la liste.
+L’onglet Données  d’Activation affiche une liste de segments qui ont été mappés à la destination, y compris leur date de début et leur date de fin (le cas échéant). Pour vue les détails d’un segment particulier, sélectionnez son nom dans la liste.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
