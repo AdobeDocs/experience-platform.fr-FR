@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 0%
+source-wordcount: '1726'
+ht-degree: 1%
 
 ---
 
@@ -143,13 +143,25 @@ La section **[!UICONTROL Services]** vous permet de gérer vos modèles publiés
 
 ### [!UICONTROL Gestion des données]
 
-La section **[!UICONTROL Schémas]** vous permet de créer et de gérer des schémas. Pour en savoir plus sur l&#39;utilisation de la section Schémas, veuillez lire le tutoriel sur la [création d&#39;un schéma](../xdm/tutorials/create-schema-ui.md). Vous trouverez plus d’informations sur le modèle de données d’expérience (XDM) dans l’aperçu [de](../xdm/home.md)XDM.
+La section **[!UICONTROL Schémas]** vous permet de créer et de gérer des schémas de modèle de données d’expérience (XDM). Pour en savoir plus sur les schémas, veuillez lire le tutoriel sur la [création d&#39;un schéma](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
 
-La section **[!UICONTROL Jeu de données]** vous permet de créer et de gérer des jeux de données. Pour plus d&#39;informations sur la section Jeux de données, consultez le guide [d&#39;utilisation](../catalog/datasets/user-guide.md)des jeux de données.
+La section **[!UICONTROL Jeu de données]** vous permet de créer et de gérer des jeux de données. Pour plus d&#39;informations sur les jeux de données, consultez le guide [d&#39;utilisation](../catalog/datasets/user-guide.md)des jeux de données.
 
-La section **[!UICONTROL Requêtes]** vous permet de créer et de gérer des requêtes, de consigner les requêtes SQL effectuées par Requête Service et de vue de vos informations d&#39;identification PostgreSQL. Pour plus d&#39;informations sur la section Requêtes, consultez le guide [d&#39;utilisation de](../query-service/ui/overview.md)Requête Service.
+La section **[!UICONTROL Requêtes]** vous permet de créer et de gérer des requêtes, de consigner des requêtes SQL créées par Adobe Experience Platform Requête Service et de vue de vos informations d&#39;identification PostgreSQL. Pour plus d&#39;informations sur les requêtes, consultez le guide [d&#39;utilisation de](../query-service/ui/overview.md)Requête Service.
 
-La section **[!UICONTROL Surveillance]** vous permet de surveiller l’assimilation par lots et en flux continu. Pour plus d&#39;informations sur la section Surveillance, consultez le guide [d&#39;utilisateur d&#39;assimilation des données de](../ingestion/quality/monitor-data-flows.md)surveillance.
+La section **[!UICONTROL Surveillance]** vous permet de surveiller l’assimilation par lots et en flux continu. Vous trouverez plus d&#39;informations sur la surveillance dans le guide [d&#39;utilisation de l&#39;assimilation des données de](../ingestion/quality/monitor-data-flows.md)surveillance.
+
+### [!UICONTROL Prise de décision]
+
+Offer Decisioning est un service d’application intégré à Adobe Experience Platform. Il vous permet de tirer parti de l’Experience Platform pour offrir à vos clients la meilleure offre et la meilleure expérience possible sur tous les points de contact au bon moment. Pour en savoir plus sur Offer Decisioning, y compris en travaillant avec des [!UICONTROL Offres] et des [!UICONTROL Activités] , consultez la documentation [de](https://experienceleague.adobe.com/docs/offer-decisioning.html)Offer Decisioning.
+
+### [!UICONTROL Administration]
+
+L’interface utilisateur de la plate-forme fournit un tableau de bord par lequel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour y accéder, sélectionnez Utilisation **[!UICONTROL de la]** licence dans la navigation. Pour en savoir plus sur le tableau de bord d’utilisation des licences, consultez le guide [du tableau de bord d’utilisation des](license-usage-dashboard.md)licences.
+
+>[!IMPORTANT]
+>
+>La fonctionnalité de tableau de bord d’utilisation des licences est actuellement en alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 ## Étapes suivantes
 
