@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce didacticiel utilise l’interface utilisateur de l’Experience Platform pour vous guider dans les étapes de composition d’un type de données personnalisé.
 translation-type: tm+mt
-source-git-commit: 9008b49e1eb5e32b0f4cda7049bf873c689f6442
+source-git-commit: bfb65743764b454754ca8ebb01bfe4407833b291
 workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Ce didacticiel décrit les étapes de création et de modification des types de 
 
 Ce didacticiel nécessite une bonne compréhension de XDM System. Reportez-vous à la présentation [de](../home.md) XDM pour une présentation du rôle de XDM dans l&#39;écosystème Experience Platform, ainsi qu&#39;aux [bases de la composition](../schema/composition.md) des schémas pour savoir comment les types de données contribuent aux schémas XDM.
 
-Bien que ce didacticiel ne soit pas obligatoire, il est recommandé de suivre également le didacticiel sur la [composition d’un schéma dans l’interface utilisateur](./-schema-ui.md) pour vous familiariser avec les différentes fonctionnalités du [!DNL Schema Editor].
+Bien que ce didacticiel ne soit pas obligatoire, il est recommandé de suivre également le didacticiel sur la [composition d’un schéma dans l’interface utilisateur](./create-schema-ui.md) pour vous familiariser avec les différentes fonctionnalités du [!DNL Schema Editor].
 
 ## Ouvrez [!DNL Schema Editor] un type de données.
 
