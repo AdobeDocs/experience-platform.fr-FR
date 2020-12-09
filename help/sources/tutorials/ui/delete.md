@@ -1,69 +1,66 @@
 ---
 keywords: Experience Platform;home;popular topics; delete dataflows
-description: Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des flux de données de l’espace de travail Sources.
+description: L’espace de travail sources vous permet de supprimer les flux de données de traitement par lot et de flux continu existants qui contiennent des erreurs ou qui sont devenus obsolètes.
 solution: Experience Platform
 title: Supprimer des flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: e327a3e195d97c0b547608f360c5b0b6a8aded61
+source-git-commit: 7cb5862112c80e386e697aa2bd503abe49f11a3f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 12%
+source-wordcount: '358'
+ht-degree: 6%
 
 ---
 
 
-# Supprimer des flux de données
+# Suppression de flux de données dans l’interface utilisateur
 
-Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des flux de données de l&#39;espace de travail **[!UICONTROL Sources]** .
+L’espace de travail [!UICONTROL Sources] vous permet de supprimer les flux de données de traitement par lot et de diffusion en flux continu existants qui contiennent des erreurs ou qui sont devenus obsolètes.
+
+Ce didacticiel décrit les étapes à suivre pour supprimer des flux de données à l’aide de l’espace de travail [!UICONTROL Sources] .
 
 ## Prise en main
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-   - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Sources](../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
+- [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
-## Suppression de flux de données à l’aide de l’interface utilisateur
+## Supprimer des flux de données
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]** . L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer des comptes et des flux de données. Chaque source indique le nombre de comptes et de flux de données existants qui leur sont associés.
+Dans l’interface [de l’](https://platform.adobe.com)Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] , puis sélectionnez **[!UICONTROL Flux de données dans l’en-tête supérieur.]**
 
-Sélectionnez **[!UICONTROL Flux de données]** pour accéder à la page Flux de **[!UICONTROL données]** .
+![catalogue](../../images/tutorials/delete/catalog.png)
 
-![dataset-flow-activité](../../images/tutorials/delete/dataflows.png)
+The **[!UICONTROL Dataflows]** page appears. Cette page contient une liste de flux de données affichables, y compris des informations sur leur jeu de données de cible, leur source, leur nom de compte et leur date de création.
 
-Une liste de flux de données existants s’affiche. Cette page contient une liste d&#39;informations pouvant être triées pour les flux de données existants, tels que la source, le nom d&#39;utilisateur, l&#39;état d&#39;exécution et la date de dernière exécution. Sélectionnez l’icône **** d’entonnoir située en haut à gauche pour effectuer le tri.
+Sélectionnez l’icône de filtre (icône![de](../../images/tutorials/delete/filter.png)filtre) en haut à gauche pour lancer le panneau de tri.
 
-![flux de données-liste](../../images/tutorials/delete/dataflows-list.png)
+![flux de données](../../images/tutorials/delete/dataflows.png)
 
-Le panneau de tri s’affiche sur le côté gauche de l’écran, avec une liste de sources disponibles.
-Vous pouvez sélectionner plusieurs sources à l’aide de la fonction de tri.
+Le panneau de tri fournit une liste de toutes les sources. Vous pouvez sélectionner plusieurs sources dans la liste pour accéder à une sélection filtrée de flux de données associés aux sources particulières que vous avez sélectionnées.
 
-Sélectionnez la source à laquelle vous souhaitez accéder et localisez le flux de données que vous souhaitez supprimer de la liste des flux de données dans l&#39;interface principale. Dans l’exemple, la source sélectionnée est **[!DNL Azure Blob Storage]** et le nom du flux de données est **[!UICONTROL Client profils data flow]**. Lors de la sélection de plusieurs sources dans le panneau de tri, les flux de données que vous avez créés le plus récemment apparaissent en premier, car la liste est triée par date de création.
+Sélectionnez la source à utiliser pour afficher une liste de ses flux de données existants. Une fois que vous avez identifié le flux de données à supprimer, sélectionnez les ellipses (`...`) en regard de son nom.
 
-Sélectionnez le flux de données que vous souhaitez supprimer.
+![filtre de flux de données](../../images/tutorials/delete/dataflows-filter.png)
 
-![flux de données-tri](../../images/tutorials/delete/dataflows-sort.png)
+Un menu déroulant s&#39;affiche, vous offrant des options pour modifier la planification de votre flux de données, désactiver le flux de données ou le supprimer entièrement.
 
-Le panneau **[!UICONTROL Propriétés]** s&#39;affiche sur le côté droit de l&#39;écran. Il contient des informations concernant le flux de données sélectionné ainsi qu&#39;une option permettant de **[!UICONTROL modifier la planification]**.
-
-Pour supprimer le flux de données, sélectionnez **[!UICONTROL Supprimer]**.
-
-![flux de données-tri](../../images/tutorials/delete/dataflows-properties.png)
-
-Une boîte de dialogue de confirmation finale s’affiche, sélectionnez **[!UICONTROL Supprimer]** pour terminer le processus.
+Sélectionnez **[!UICONTROL Supprimer]** pour supprimer le flux de données.
 
 ![Supprimez](../../images/tutorials/delete/delete.png)
 
-Après quelques instants, une boîte de confirmation verte s’affiche en bas de l’écran pour confirmer une suppression réussie.
+Une boîte de dialogue de confirmation finale s’affiche. Sélectionnez **[!UICONTROL Supprimer]** pour terminer le processus.
+
+![confirm](../../images/tutorials/delete/confirm.png)
+
+Après quelques instants, une boîte de confirmation s’affiche en bas de l’écran pour confirmer une suppression réussie.
 
 ![confirmé](../../images/tutorials/delete/confirmed.png)
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez réussi à utiliser l&#39;espace de travail **[!UICONTROL Sources]** pour supprimer des flux de données existants.
+En suivant ce didacticiel, vous avez réussi à utiliser l&#39;espace de travail [!UICONTROL Sources] pour supprimer un flux de données existant.
 
-Pour obtenir des instructions sur la façon d’effectuer ces opérations par programmation à l’aide de l’ [!DNL Flow Service] API, consultez le didacticiel sur la [suppression de flux de données à l’aide de l’API du service de flux.](../../tutorials/api/delete-dataflows.md)
+Consultez le didacticiel sur la [suppression de flux de données à l’aide de l’API](../../tutorials/api/delete-dataflows.md) du service de flux pour connaître les étapes d’exécution de ces opérations par programmation à l’aide d’appels d’API.
