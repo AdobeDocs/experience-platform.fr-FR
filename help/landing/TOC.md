@@ -5,9 +5,9 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 5761394285e56214fd59e31d530756eed1f5ad08
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '402'
 ht-degree: 70%
 
 ---
@@ -64,6 +64,7 @@ ht-degree: 70%
    * [Services d’application](application-services.md)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
    * [Intégrations de plateformes avec l’Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
+* [Tableau de bord d&#39;utilisation de la licence](license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)
 * [Migration ADLS Gen2](adls2-gen2-migration.md)
 * [Glossaire](glossary.md)
