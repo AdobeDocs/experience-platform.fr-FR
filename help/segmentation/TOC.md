@@ -5,10 +5,10 @@ user-guide-title: Aide d’Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: ff7c2854d45191b27e23df54b3638955b3535e76
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 86%
+source-wordcount: '139'
+ht-degree: 83%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 86%
    - [Recherche de segments](api/segment-search.md)
    - [Segmentation par flux](api/streaming-segmentation.md)
 - Interface utilisateur de segmentation {#ui}
-   - [Présentation](ui/overview.md)
+   - [Guide de l’interface utilisateur de segmentation](ui/overview.md)
+   - [Tableau de bord de segment](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Segmentation par flux](ui/streaming-segmentation.md)
    - [Réfactorisation des contraintes de temps](ui/segment-refactoring.md)
