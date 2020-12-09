@@ -5,7 +5,7 @@ title: Guide de l’utilisateur du créateur de segments de service de segmentat
 topic: ui guide
 description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 52%
@@ -13,7 +13,7 @@ ht-degree: 52%
 ---
 
 
-# [!DNL Segment Builder] guide de l&#39;utilisateur
+# [!DNL Segment Builder] Guide de l’interface
 
 [!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec [!DNL Profile] des éléments de données. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 
