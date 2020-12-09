@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide du système de modèle de données d’expérience (XDM)
-breadcrumb-title: Guide de Data Model (XDM)
+breadcrumb-title: Guide du modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: 465582e0d1503426104a048561b1c8c68e7f55ee
+source-git-commit: d96890fd79acaa09628dbba49ee6930ed4f9d0e6
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 63%
+source-wordcount: '191'
+ht-degree: 60%
 
 ---
 
