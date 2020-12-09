@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: null
+keywords: Experience Platform;home;popular topics;update accounts
+description: Dans certains cas, il peut être nécessaire de mettre à jour les détails d'un compte de sources existantes. L’espace de travail Sources vous permet d’ajouter, de modifier et de supprimer des détails d’une connexion existante par lot ou en flux continu, y compris son nom, sa description et ses informations d’identification.
 solution: Experience Platform
 title: Mettre à jour les détails du compte dans l’interface utilisateur
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 51a09cdced9a21aa785a43d8d9740d70a5fbc46c
+source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '404'
-ht-degree: 13%
+source-wordcount: '442'
+ht-degree: 4%
 
 ---
 
 
 # Mettre à jour les détails du compte dans l’interface utilisateur
 
-Dans certains cas, il peut être nécessaire de mettre à jour les détails d&#39;un compte de sources existantes. L&#39;espace de travail [!UICONTROL Sources] vous permet de modifier, ajouter et supprimer des détails d&#39;un compte, y compris les valeurs de son nom, de sa description et de ses informations d&#39;identification d&#39;authentification.
+Dans certains cas, il peut être nécessaire de mettre à jour les détails d&#39;un compte de sources existantes. L’espace de travail [!UICONTROL Sources] vous permet d’ajouter, de modifier et de supprimer des détails d’une connexion existante par lot ou en flux continu, y compris son nom, sa description et ses informations d’identification.
 
 Ce didacticiel décrit la procédure à suivre pour mettre à jour les détails et les informations d’identification d’un compte existant à partir de l’espace de travail [!UICONTROL Sources] .
 
@@ -24,10 +24,8 @@ Ce didacticiel décrit la procédure à suivre pour mettre à jour les détails 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Experience Data Model (XDM)] Système](../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
-   - [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   - [Didacticiel](../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [Sources](../../home.md): L’Experience Platform DNL permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme.
+- [Sandbox](../../../sandboxes/home.md): DNL Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
 
 ## Mettre à jour les comptes
 
