@@ -4,9 +4,9 @@ title: Guide de l’interface utilisateur du Profil client en temps réel
 topic: guide
 description: Real-time Customer Profile offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur d’Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 295315ab052ff151bea9037567bf2690d705367b
+source-git-commit: b991a767f34f0e318b9ca5092fd4cf099de11e0a
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1304'
 ht-degree: 12%
 
 ---
@@ -26,9 +26,19 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 ## Présentation
 
-Dans l’ [[!DNL Experience Platform] interface utilisateur](http://platform.adobe.com), sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]** . Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
+Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche pour ouvrir l’onglet **[!UICONTROL Aperçu]** . Cet onglet contient des liens vers la documentation et des vidéos pour vous aider à comprendre et à commencer à travailler avec des profils.
 
 ![](../images/user-guide/profiles-overview.png)
+
+### (Alpha) tableau de bord de Profil
+
+>[!IMPORTANT]
+>
+>La fonctionnalité de tableau de bord est actuellement en alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+
+Pour certains utilisateurs, la sélection de **[!UICONTROL Profils]** dans le volet de navigation de gauche et l’ouverture de l’onglet **[!UICONTROL Aperçu]** fournissent un tableau de bord décrivant les mesures clés liées à vos données de Profil.
+
+Pour en savoir plus, consultez le guide [du tableau de bord](profile-dashboard.md)de Profil.
 
 ## Parcourir
 
