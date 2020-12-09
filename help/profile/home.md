@@ -4,9 +4,9 @@ title: Présentation de Real-time Customer Profile
 topic: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: b8d6bd5caf6c6f4d1da218b6ca12cec154d64412
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1844'
 ht-degree: 42%
 
 ---
@@ -24,7 +24,9 @@ La relation entre Real-time Customer Profile et les autres services dans Experie
 
 ### Banque de données de profil
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. En d’autres termes, le [!DNL Profile] magasin est séparé des [!DNL Catalog] données ([!DNL Data Lake]) et [!DNL Identity Service] des données (graphique d’identité).
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. Le [!DNL Profile] magasin est séparé des [!DNL Catalog] données du [!DNL Data Lake] graphique d’identité et des [!DNL Identity Service] données du graphique d’identité.
+
+Le magasin de Profils utilise une infrastructure de base de données Microsoft Azure Cosmos et Platform Data Lake utilise l&#39;enregistrement Microsoft Azure Data Lake.
 
 ### Gardiens de profil
 
@@ -34,7 +36,7 @@ Experience Platform fournit une série de garde-fous pour vous aider à éviter 
 
 [!DNL Real-time Customer Profile] fusionne les données de divers systèmes d’entreprise, puis fournit un accès à ces données sous la forme de profils client avec des événements de séries chronologiques connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux. Les sections suivantes mettent en évidence certains des concepts de base que vous devez comprendre afin de créer et de gérer efficacement des profils au sein de Plateforme.
 
-### Fragments de profil par rapport aux profils fusionnés
+### Fragments de profil par rapport aux profils fusionnés {#profile-fragments-vs-merged-profiles}
 
 Chaque profil client individuel est composé de plusieurs fragments de profil qui ont été fusionnés pour former une seule vue du client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre entreprise aura plusieurs fragments de profil liés à ce client unique qui apparaîtront dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans la plate-forme, ils sont fusionnés ensemble afin de créer un profil unique pour ce client.
 
