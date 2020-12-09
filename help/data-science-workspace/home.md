@@ -5,10 +5,10 @@ title: Présentation de Data Science Workspace
 topic: overview
 description: Ce guide présente un aperçu des concepts clés liés à Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 581d11bdb934f46c53a6703829b4dc470076e195
+source-git-commit: 8b1be4e94c147124fd26f4b877ca807177c9f5ff
 workflow-type: tm+mt
-source-wordcount: '2578'
-ht-degree: 72%
+source-wordcount: '2371'
+ht-degree: 74%
 
 ---
 
@@ -120,35 +120,12 @@ Lorsque vous êtes satisfait de votre recette, il suffit de quelques clics pour 
 
 Les spécialistes des données peuvent tirer parti des nouvelles technologies et des nouveaux jeux de données dès qu’ils sont disponibles via les services Adobe. Grâce à des mises à jour fréquentes, nous nous chargeons d’intégrer les jeux de données et les technologies dans la plateforme, afin que vous n’ayez pas à le faire.
 
-### Contrôle d&#39;accès dans [!DNL Data Science Workspace]
-
-Access control for [!DNL Experience Platform] is administered through the [Adobe Admin Console](https://adminconsole.adobe.com). Cette fonctionnalité exploite les profils de produit dans Admin Console, liant les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
-
->[!IMPORTANT]
->
->In order to use [!DNL Data Science Workspace], the [!UICONTROL &quot;Manage Data Science Workspace&quot;] permission must be enabled.
-
-Le tableau suivant décrit les effets de l’activation ou de la désactivation de cette autorisation :
-
-| Autorisation | Activé | Désactivé |
-|---|---|---|
-| [!DNL Manage Data Science Workspace] | Provides access to all services in [!DNL Data Science Workspace]. | API and UI access to all services within [!DNL Data Science Workspace] are disabled. While disabled, routing to the [!DNL Data Science Workspace] **[!UICONTROL Models]** and **[!UICONTROL Services]** pages are prevented. |
-
 ### Sécurité et tranquillité d’esprit
 
 La protection de vos données est une priorité absolue pour Adobe. Adobe protège vos données à l’aide de processus et de contrôles de sécurité développés pour vous aider à vous conformer aux normes, réglementations et certifications reconnues par le secteur.
 
 La sécurité est intégrée aux logiciels et services dans le cadre d’Adobe SPLC (Secure Product Lifecycle).
 Pour en savoir plus sur la sécurité des données et des logiciels Adobe, la conformité, etc., consultez la page de sécurité à l’adresse https://www.adobe.com/fr/security.html.
-
-### Prise en charge des environnements de test
-
-Sandboxes are virtual partitions within a single instance of [!DNL Experience Platform]. Each [!DNL Platform] instance supports one production sandbox and multiple non-production sandboxes, each maintaining its own library of [!DNL Platform] resources. Les environnements de test hors production vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de test de production. Pour plus d’informations sur les environnements de test, consultez la [présentation des environnements de test](../sandboxes/home.md).
-
-Currently, [!DNL Data Science Workspace] has a couple sandbox limitations:
-
-- Les ressources de calcul sont partagées entre les environnements de test de production et les environnements de test hors production. L’isolation des environnements de test de production devrait être assurée à l’avenir.
-- Scala/[!DNL Spark] and PySpark workloads for both notebooks and recipes are currently only supported in the production sandbox. La prise en charge des environnements de test hors production devrait être assurée à l’avenir.
 
 ## [!DNL Data Science Workspace] en action
 
