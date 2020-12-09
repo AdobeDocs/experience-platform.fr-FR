@@ -4,19 +4,21 @@ solution: Experience Platform
 title: Suppression d’un flux de données à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour supprimer un flux de données à l’aide de l’API de service de flux.
+description: Ce didacticiel décrit les étapes à suivre pour supprimer les flux de données par lot et en flux continu à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ae3e64a5f9a82c0efe3cffeb6d4d425ae2e72bda
+source-git-commit: b63b17f2a7271fc673abc8245a4917c0daca4ef3
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 30%
+source-wordcount: '467'
+ht-degree: 29%
 
 ---
 
 
 # Suppression d’un flux de données à l’aide de l’API du service de flux
 
-Ce didacticiel décrit les étapes à suivre pour supprimer les flux de données créés avec des sources par lot et en flux continu à l’aide du [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Vous pouvez supprimer les flux de données par lot et en flux continu qui contiennent des erreurs ou qui sont devenus obsolètes à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+Ce didacticiel décrit les étapes à suivre pour supprimer les flux de données créés avec des sources par lot et en flux continu utilisant [!DNL Flow Service].
 
 ## Prise en main
 
