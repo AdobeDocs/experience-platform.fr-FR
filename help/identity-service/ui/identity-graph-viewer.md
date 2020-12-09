@@ -5,7 +5,7 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: ef1025dfacc91b13c064db99e6304f2c09abb3d9
+source-git-commit: 7c52760bdceb8d45d76cd22d69241f8c23943674
 workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 3%
@@ -55,7 +55,7 @@ La visionneuse de graphiques d&#39;identité s&#39;affiche. Sur le côté gauche
 
 >[!IMPORTANT]
 >
->Un graphique d’identité requiert au moins deux identités liées à générer, ainsi qu’une paire d’espaces de nommage et d’identifiants valide. Le nombre maximal d’identités pouvant être affichées par la visionneuse de graphiques est de 400. Pour plus d&#39;informations, consultez la section de l&#39; [annexe](#appendix) ci-dessous.
+>Un graphique d’identité requiert au moins deux identités liées à générer, ainsi qu’une paire d’espaces de nommage et d’identifiants valide. Le nombre maximal d’identités pouvant être affichées par la visionneuse de graphiques est de 150. Pour plus d&#39;informations, consultez la section de l&#39; [annexe](#appendix) ci-dessous.
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
@@ -101,7 +101,7 @@ Des erreurs peuvent se produire lors de l&#39;accès à la visionneuse de graphi
 
 - Une valeur d&#39;identité doit exister dans l&#39;espace de nommage sélectionné.
 - Le lecteur de graphique d&#39;identité requiert au moins deux identités liées à générer.
-- La visionneuse de graphiques d’identité ne peut pas dépasser 400 identités au maximum.
+- La visionneuse de graphiques d’identité ne peut pas dépasser 150 identités au maximum.
 - Actuellement, le lecteur de graphique d’identité n’est pas accessible dans les sandbox hors production.
 - Actuellement, le lecteur de graphique d’identité ne prend en charge que les données assimilées par lot et n’affiche pas les données assimilées à l’aide de sources de diffusion en continu.
 
