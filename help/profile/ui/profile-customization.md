@@ -4,7 +4,7 @@ title: Personnalisation des détails du profil
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: 9068d12e60da63a6a2a2ff18c016080ea581104f
+source-git-commit: d05884c87445ec16b0ad44f593cf782b8c80d646
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez vue et interagir avec [!DNL Real-time Customer Profile] des données sous la forme de profils client. Les informations de profil affichées dans l’interface utilisateur ont été fusionnées à partir de plusieurs fragments de profil afin de former une seule vue pour chaque client. Cela inclut des détails tels que les attributs de base, les identités liées et les préférences de canal. Les champs par défaut affichés dans les profils peuvent également être modifiés au niveau de l’organisation pour afficher les [!DNL Profile] attributs préférés. Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données sont affichées dans l’interface utilisateur de la plate-forme. [!DNL Profile]
 
-Pour obtenir un guide complet sur l&#39;interface utilisateur des Profils, veuillez consulter le guide [d&#39;utilisation du](user-guide.md)Profil.
+Pour obtenir un guide complet sur l’interface utilisateur des Profils, consultez le guide [de l’interface utilisateur](user-guide.md)Profil.
 
 ## Réorganiser et redimensionner les cartes {#reorder-and-resize-cards}
 
