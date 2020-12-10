@@ -5,10 +5,10 @@ seo-title: Destination Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 seo-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 34%
+source-wordcount: '663'
+ht-degree: 33%
 
 ---
 
@@ -35,11 +35,13 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 **Exportation** de segments : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
-## Conditions préalables 
+## Conditions préalables
 
 ### Compte [!DNL Google Ads] existant
 
-[!DNL Google] a suspendu toute nouvelle [!DNL Google Ads] intégration avec des fournisseurs tiers. You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Real-time CDP.
+>[!IMPORTANT]
+>
+> [!DNL Google] a abandonné les nouvelles intégrations de [!DNL Google Ads] cookies avec les fournisseurs tiers. Pour exécuter les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation [!DNL Google Ads] consiste à configurer une [!DNL Google Customer Match] intégration. Pour plus d&#39;informations sur la création d&#39;une [!DNL Google Customer Match] intégration, consultez le didacticiel sur la création d&#39;une [[!DNL Google Customer Match]](./google-customer-match.md) connexion.
 
 ### Liste autorisée
 
