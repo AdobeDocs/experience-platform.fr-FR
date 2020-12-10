@@ -5,7 +5,7 @@ title: Qualité d’ingestion des données
 topic: overview
 description: Le document suivant fournit un résumé des contrôles et des comportements de validation pris en charge pour l’assimilation par lots et en flux continu dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 80%
@@ -56,4 +56,4 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
