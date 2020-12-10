@@ -6,7 +6,7 @@ topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: e94272bf9a18595a4efd0742103569a26e4be415
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1142'
 ht-degree: 79%
@@ -453,7 +453,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-flows.md).
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
 
