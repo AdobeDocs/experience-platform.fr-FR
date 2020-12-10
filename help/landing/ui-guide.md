@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
+source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 1%
+source-wordcount: '1737'
+ht-degree: 2%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 1%
 
 Ce guide présente l’utilisation de l’interface utilisateur de Adobe Experience Platform, explique les différents composants utilisés et fournit des liens vers d’autres documents pour plus d’informations.
 
-Pour en savoir plus sur Adobe Experience Platform, veuillez lire la présentation [](./home.md)Experience Platform.
+Pour en savoir plus sur Adobe Experience Platform, veuillez lire la présentation [](home.md)Experience Platform.
 
 ## Ecran d’accueil
 
-Après vous être connecté à Adobe Experience Platform, vous accédez à la page d’ [!UICONTROL accueil] , qui comprend le tableau de bord des mesures, les données récentes et les sections d’apprentissage recommandées.
+Après vous être connecté à Adobe Experience Platform, vous vous trouvez sur la page d’ [!UICONTROL accueil] , qui comprend le tableau de bord [des](#metrics)mesures, les données [](#recent-data)récentes et les sections d’apprentissage [recommandées.](#recommended-learning)
 
 ![](images/user-guide/homepage.png)
 
-### Tableau de bord de mesures
+### Mesures
 
 Le tableau de bord de mesures fournit des cartes qui vous donnent des informations sur les jeux de données, les profils, les segments et les destinations au sein de votre organisation.
 
@@ -63,13 +63,13 @@ La section **[!UICONTROL Apprentissage]** recommandé contient des liens vers un
 
 La barre de navigation supérieure de l’interface utilisateur de la plate-forme affiche l’organisation IMS dans laquelle vous êtes actuellement connecté et fournit plusieurs contrôles importants.
 
-Sur le côté gauche de la barre de navigation se trouve le logo Adobe Experience Platform. Si vous sélectionnez cette option, vous revenez à l’écran d’accueil de l’interface utilisateur de la plate-forme.
+Sur le côté gauche de la barre de navigation se trouve le logo Adobe Experience Platform. Si vous sélectionnez cette option à tout moment, vous revenez à l’écran d’accueil de l’interface utilisateur de la plate-forme.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### Commutateur d&#39;organisation IMS
 
-Le premier élément sur le côté droit de la barre de navigation est le commutateur **Organisation** IMS.
+Le premier élément à droite de la barre de navigation supérieure est le commutateur **Organisation** IMS.
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -79,7 +79,7 @@ Si vous sélectionnez le sélecteur, un menu déroulant des organisations IMS au
 
 ### Changement d’application
 
-L&#39;élément suivant sur la droite est le sélecteur **d&#39;** applications, représenté par l&#39;icône du sélecteur ![d&#39;](./images/user-guide/app-switcher-icon.png) applications. Lorsque vous sélectionnez cette icône, vous pouvez basculer entre Experience Platform, Ressources, Exchange et Lancement.
+L’élément suivant sur le côté droit du haut de la barre de navigation est le sélecteur **d’** applications, représenté par l’icône du sélecteur ![d’](./images/user-guide/app-switcher-icon.png) applications. Lorsque vous sélectionnez cette icône, vous pouvez basculer entre les applications d’Adobe auxquelles votre organisation IMS a accès, telles que Experience Platform, Analytics, Assets et Launch.
 
 ### Aide
 
@@ -89,7 +89,7 @@ L&#39;élément suivant sur la droite est le sélecteur **d&#39;** applications,
 
 ### Notifications et annonces
 
-Après le menu d&#39;aide et d&#39;assistance se trouve la section **** Notifications, qui est représentée par l&#39;icône ![bell/Notifications et Annonces](images/user-guide/notification-icon.png) . L’onglet **[!UICONTROL Notifications]** affiche des informations importantes sur le produit et d’autres mises à jour pertinentes, tandis que l’onglet **[!UICONTROL Annonces]** affiche des notifications sur la maintenance du service.
+Dans la section **** Notifications, qui est représentée par l’icône ![bell/Notifications et Annonces](images/user-guide/notification-icon.png) . L’onglet **[!UICONTROL Notifications]** affiche des informations importantes sur le produit et d’autres mises à jour pertinentes, tandis que l’onglet **[!UICONTROL Annonces]** affiche des informations sur la maintenance du service.
 
 ### Profil utilisateur
 
