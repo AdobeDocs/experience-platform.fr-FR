@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
 translation-type: tm+mt
-source-git-commit: 026007e5f80217f66795b2b53001b6cf5e6d2344
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1583'
+source-wordcount: '1599'
 ht-degree: 17%
 
 ---
@@ -572,6 +572,10 @@ La dernière étape de la collecte des données d’enregistrement de cloud cons
 Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
 Pour planifier une assimilation, vous devez d&#39;abord définir la valeur du temps de début en secondes. Ensuite, vous devez définir la valeur de fréquence sur l’une des cinq options suivantes : `once`, `minute`, `hour`, `day`ou `week`. La valeur d&#39;intervalle désigne la période entre deux ingérations consécutives et la création d&#39;une assimilation ponctuelle ne nécessite pas la définition d&#39;un intervalle. Pour toutes les autres fréquences, la valeur de l’intervalle doit être égale ou supérieure à `15`.
+
+>[!IMPORTANT]
+>
+>Il est fortement recommandé de planifier votre flux de données pour une assimilation unique lors de l’utilisation du connecteur [](../../../connectors/cloud-storage/ftp.md)FTP.
 
 **Format d’API**
 
