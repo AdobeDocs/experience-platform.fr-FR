@@ -5,7 +5,7 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Introduisez vos données dans Platform par lot ou en ingestion continue.
 translation-type: tm+mt
-source-git-commit: da0c65b5afc19e2497816c4b84270f5f5c4617f2
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 95%
@@ -36,7 +36,7 @@ ht-degree: 95%
    - [Diffusion en continu de plusieurs messages](tutorials/streaming-multiple-messages.md)
 - Qualité et contrôle de l’ingestion des données {#quality}
    - [Présentation](quality/overview.md)
-   - [Contrôle des flux de données](quality/monitor-data-flows.md)
+   - [Surveillance de l’ingestion des données](quality/monitor-data-ingestion.md)
    - [Récupérer les diagnostics d&#39;erreur](quality/error-diagnostics.md)
    - [Récupération des lots rejetés](quality/retrieve-failed-batches.md)
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
