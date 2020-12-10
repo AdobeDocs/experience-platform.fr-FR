@@ -5,7 +5,7 @@ title: Guide de l’interface utilisateur Adobe Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 3fc24b996d2c8bdf062e70a1c5e8d8206641cd06
 workflow-type: tm+mt
 source-wordcount: '1726'
 ht-degree: 1%
@@ -149,7 +149,7 @@ La section **[!UICONTROL Jeu de données]** vous permet de créer et de gérer d
 
 La section **[!UICONTROL Requêtes]** vous permet de créer et de gérer des requêtes, de consigner des requêtes SQL créées par Adobe Experience Platform Requête Service et de vue de vos informations d&#39;identification PostgreSQL. Pour plus d&#39;informations sur les requêtes, consultez le guide [d&#39;utilisation de](../query-service/ui/overview.md)Requête Service.
 
-La section **[!UICONTROL Surveillance]** vous permet de surveiller l’assimilation par lots et en flux continu. Vous trouverez plus d&#39;informations sur la surveillance dans le guide [d&#39;utilisation de l&#39;assimilation des données de](../ingestion/quality/monitor-data-flows.md)surveillance.
+La section **[!UICONTROL Surveillance]** vous permet de surveiller l’assimilation par lots et en flux continu. Vous trouverez plus d&#39;informations sur la surveillance dans le guide [d&#39;utilisation de l&#39;assimilation des données de](../ingestion/quality/monitor-data-ingestion.md)surveillance.
 
 ### [!UICONTROL Prise de décision]
 
