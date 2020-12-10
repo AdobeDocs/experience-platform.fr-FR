@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32792.jpg
 translation-type: tm+mt
-source-git-commit: 86d6476877eb7a0413658e476802a1cd8905dcc3
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '105'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Cette vidéo présente un aperçu rapide de l’interface utilisateur Adobe Expe
 
 >[!NOTE]
 >
->L&#39;interface utilisateur de l&#39;Experience Platform est fréquemment mise à jour et peut avoir changé depuis l&#39;enregistrement de cette vidéo.
+>L&#39;interface utilisateur de l&#39;Experience Platform est fréquemment mise à jour et peut avoir changé depuis l&#39;enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, consultez le guide [sur l’interface utilisateur de](../ui-guide.md)Adobe Experience Platform.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
