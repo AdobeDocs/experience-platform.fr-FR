@@ -7,10 +7,10 @@ landing-page-description: Find answers to frequently asked questions and a guide
 topic: getting started
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 4a65d5e31eda3973d3e8e0d8e066692c667934e1
+source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
 workflow-type: tm+mt
-source-wordcount: '1940'
-ht-degree: 75%
+source-wordcount: '1954'
+ht-degree: 74%
 
 ---
 
@@ -25,7 +25,7 @@ Vous trouverez ci-dessous une liste de réponses aux questions les plus fréquem
 
 ## Que sont [!DNL Experience Platform] les API ? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] offre plusieurs API RESTful qui utilisent des requêtes HTTP pour accéder aux [!DNL Platform] ressources. Ces API de service présentent chacune plusieurs points de terminaison et vous permettent d’effectuer des opérations ayant pour but de répertorier (GET), de rechercher (GET), de modifier (PUT et/ou PATCH) et de supprimer (DELETE) des ressources. Pour plus d’informations sur les points de terminaison spécifiques et sur les opérations disponibles pour chaque service, consultez la [documentation de référence sur l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html) sur Adobe I/O.
+[!DNL Experience Platform] offre plusieurs API RESTful qui utilisent des requêtes HTTP pour accéder aux [!DNL Platform] ressources. Ces API de service présentent chacune plusieurs points de terminaison et vous permettent d’effectuer des opérations ayant pour but de répertorier (GET), de rechercher (GET), de modifier (PUT et/ou PATCH) et de supprimer (DELETE) des ressources. Pour plus d’informations sur les points de terminaison spécifiques et sur les opérations disponibles pour chaque service, consultez la [documentation de référence sur l’API](http://www.adobe.com/go/platform-api-reference-en) sur Adobe I/O.
 
 ## Comment formater une requête API ? {#how-do-i-format-an-api-request}
 
@@ -87,19 +87,19 @@ La réponse illustre ce que vous vous attendez à recevoir après un appel réus
 }
 ```
 
-Pour plus d’informations sur un point de terminaison en particulier dans les API de Platform, y compris sur les en-têtes nécessaires et les corps de requêtes, consultez la [documentation de référence sur l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html).
+Pour plus d’informations sur un point de terminaison en particulier dans les API de Platform, y compris sur les en-têtes nécessaires et les corps de requêtes, consultez la [documentation de référence sur l’API](http://www.adobe.com/go/platform-api-reference-en).
 
 ## Quelle est mon organisation IMS ? {#what-is-my-ims-organization}
 
-Une organisation IMS est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. L’identifiant d’organisation IMS (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le place en tant qu’en-tête de toutes les requêtes API. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](../tutorials/authentication.md).
+Une organisation IMS est une représentation Adobe d’un client. Toutes les solutions Adobe sous licence intègrent cette organisation client. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. L’identifiant d’organisation IMS (`x-gw-ims-org-id`) représente l’organisation pour laquelle un appel API devrait être exécuté. Il est donc nécessaire de le place en tant qu’en-tête de toutes les requêtes API. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Où trouver ma clé API ? {#where-can-i-find-my-api-key}
 
-Une clé API doit constituer l’en-tête de toutes les requêtes API. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Dans la console, sous l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique et vous trouverez la clé sous **Informations d’identification client**. For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](../tutorials/authentication.md).
+Une clé API doit constituer l’en-tête de toutes les requêtes API. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Dans la console, sous l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique et vous trouverez la clé sous **Informations d’identification client**. For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Comment obtenir un jeton d’accès ? {#how-do-i-get-an-access-token}
 
-Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisation de tous les appels API. Ils peuvent être générés à l’aide d’une commande `curl`, à condition que vous ayez accès à une intégration pour une organisation IMS. Les jetons d’accès ne sont valides que pendant 24 heures. Après ce délai, un nouveau jeton doit être généré pour continuer à utiliser l’API. Pour plus d’informations sur la génération des jetons d’accès, consultez le [tutoriel sur l’authentification](../tutorials/authentication.md).
+Les jetons d’accès doivent être renseignés dans l’en-tête d’autorisation de tous les appels API. Ils peuvent être générés à l’aide d’une commande `curl`, à condition que vous ayez accès à une intégration pour une organisation IMS. Les jetons d’accès ne sont valides que pendant 24 heures. Après ce délai, un nouveau jeton doit être généré pour continuer à utiliser l’API. Pour plus d’informations sur la génération des jetons d’accès, consultez le [tutoriel sur l’authentification](http://www.adobe.com/go/platform-api-authentication-en).
 
 ## Comment utiliser les paramètres de requête ? {#how-do-i-user-query-parameters}
 
@@ -153,7 +153,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 
 ## Erreurs dans l’en-tête de la requête {#request-header-errors}
 
-All API calls in [!DNL Platform] require specific request headers. Pour connaître les en-têtes nécessaires pour un service en particulier, consultez la [documentation de référence sur l’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html). Pour rechercher les valeurs des en-têtes d’authentification requis, consultez le [tutoriel sur l’authentification](../tutorials/authentication.md). Si l’un de ces en-têtes est absent ou non valide lors d’un appel API, les erreurs suivantes peuvent se produire.
+All API calls in [!DNL Platform] require specific request headers. Pour connaître les en-têtes nécessaires pour un service en particulier, consultez la [documentation de référence sur l’API](http://www.adobe.com/go/platform-api-reference-en). Pour rechercher les valeurs des en-têtes d’authentification requis, consultez le [tutoriel sur l’authentification](http://www.adobe.com/go/platform-api-authentication-en). Si l’un de ces en-têtes est absent ou non valide lors d’un appel API, les erreurs suivantes peuvent se produire.
 
 ### Jeton OAuth absent {#oauth-token-is-missing}
 
@@ -175,7 +175,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête `Authorization` est absen
 }
 ```
 
-Ce message d’erreur s’affiche lorsque le jeton d’accès indiqué dans l’en-tête `Authorization` n’est pas valide. Assurez-vous que le jeton a été saisi correctement ou [générez un nouveau jeton](../tutorials/authentication.md) dans la console Adobe I/O.
+Ce message d’erreur s’affiche lorsque le jeton d’accès indiqué dans l’en-tête `Authorization` n’est pas valide. Assurez-vous que le jeton a été saisi correctement ou [générez un nouveau jeton](http://www.adobe.com/go/platform-api-authentication-en) dans la console Adobe I/O.
 
 ### Clé API requise
 
