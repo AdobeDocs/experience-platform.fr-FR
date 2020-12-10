@@ -6,9 +6,9 @@ topic: tutorial
 type: Tutorial
 description: Ce didacticiel explique comment mapper un fichier CSV à un schéma XDM à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d69d0dd8c5a3d3a5e92cc88e390c079ed46aba32
+source-git-commit: c19360450d7b1f11063683b796774a04f3dbe16c
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 17%
 
 ---
@@ -113,9 +113,9 @@ L’écran de mappage s’affiche à nouveau avec votre nouveau champ source. Ap
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Surveiller votre flux de données
+## Surveillance de l’ingestion des données
 
-Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d’informations sur la surveillance des flux de données, voir le didacticiel sur la [surveillance des flux](../../ingestion/quality/monitor-data-flows.md)de données en flux continu.
+Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données qui y sont ingérées. Pour plus d&#39;informations sur la surveillance de l&#39;assimilation des données, consultez le didacticiel sur la [surveillance de l&#39;assimilation](../../ingestion/quality/monitor-data-ingestion.md)des données.
 
 ## Étapes suivantes
 
