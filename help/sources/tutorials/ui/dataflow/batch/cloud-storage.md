@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 7f24413a99b57e28ca2106214b7eedb5b068b045
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1808'
 ht-degree: 3%
 
 ---
@@ -143,11 +143,11 @@ Indiquez les valeurs de la planification et sélectionnez **[!UICONTROL Suivant]
 
 ### Configuration d’un flux de données d’assimilation unique
 
-Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**. Vous pouvez continuer à apporter des modifications à un jeu de flux de données pour une assimilation de fréquence unique, tant que le début de temps restera dans le futur. Une fois l’heure du début écoulée, la valeur de fréquence unique ne peut plus être modifiée.
+Pour configurer l’assimilation unique, sélectionnez la flèche de la liste déroulante des fréquences et sélectionnez **[!UICONTROL Une fois]**. Vous pouvez continuer à apporter des modifications à un jeu de flux de données pour une assimilation de fréquence unique, tant que le début de temps restera dans le futur. Une fois l’heure du début écoulée, la valeur de fréquence unique ne peut plus être modifiée. **[!UICONTROL L’intervalle]** et le **[!UICONTROL renvoi]** ne sont pas visibles lors de la configuration d’un flux de données d’assimilation unique.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL L’intervalle]** et la **[!UICONTROL Renvoi]** ne sont pas visibles lors d’une assimilation unique.
+>Il est fortement recommandé de planifier votre flux de données pour une assimilation unique lors de l’utilisation du connecteur [](../../../../connectors/cloud-storage/ftp.md)FTP.
 
 Une fois que vous avez fourni les valeurs appropriées à la planification, sélectionnez **[!UICONTROL Suivant]**.
 
