@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: e31e09449b79b8a1600cfb2b162f51c26d482847
+source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '665'
 ht-degree: 9%
 
 ---
@@ -36,8 +36,9 @@ ht-degree: 9%
       - [Connecteur de blocage Azure](connectors/cloud-storage/blob.md)
       - [Connecteur de concentrateurs de Événement Azure](connectors/cloud-storage/eventhub.md)
       - [Connecteur d&#39;Enregistrement de fichiers Azure](connectors/cloud-storage/azure-file-storage.md)
-      - [Connecteur FTP et SFTP](connectors/cloud-storage/ftp-sftp.md)
+      - [Connecteur FTP](connectors/cloud-storage/ftp.md)
       - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
+      - [Connecteur SFTP](connectors/cloud-storage/sftp.md)
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
@@ -82,6 +83,7 @@ ht-degree: 9%
          - [Connecteur Azure Data Lake Enregistrement Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Connecteur de concentrateurs de Événement Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
+         - [Connecteur FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connecteur SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
@@ -160,8 +162,9 @@ ht-degree: 9%
          - [Connecteur de blocage Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Connecteur de concentrateurs de Événement Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Connecteur d&#39;Enregistrement de fichiers Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-         - [Connecteur FTP et SFTP](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+         - [Connecteur FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Connecteur d’Enregistrement Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+         - [Connecteur SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Connecteur Amazon S3 et Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
          - [Connecteur Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
