@@ -5,7 +5,7 @@ title: Dépannage de l’ingestion par flux
 topic: troubleshooting
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion par flux sur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
 source-wordcount: '1008'
 ht-degree: 70%
@@ -59,7 +59,7 @@ Vous pouvez regrouper plusieurs messages dans un payload de requête unique et l
 
 All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. L’état du traitement des lots s’affiche dans le jeu de données dans lequel ils ont été envoyés.
 
-Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’**[!UICONTROL activité du jeu de données]**, qui montre tous les lots envoyés au cours d’une période sélectionnée. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-flows.md).
+Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’**[!UICONTROL activité du jeu de données]**, qui montre tous les lots envoyés au cours d’une période sélectionnée. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-ingestion.md).
 
 If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. Pour plus d’informations, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
