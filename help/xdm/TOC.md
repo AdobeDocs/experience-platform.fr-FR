@@ -5,10 +5,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide du modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: fe316123c3e8925edf75d3519c80a7c85f5bc040
+source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 60%
+source-wordcount: '197'
+ht-degree: 58%
 
 ---
 
@@ -69,6 +69,7 @@ ht-degree: 60%
    * [Schémas ad hoc](api/ad-hoc.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
+   * [Explorez des ressources dans l’interface utilisateur](./tutorials/explore.md)
    * [Création d’un schéma (API)](tutorials/create-schema-api.md)
    * [Création d’un schéma (IU)](tutorials/create-schema-ui.md)
    * [Créer et modifier des types de données (interface utilisateur)](./tutorials/create-data-type.md)
