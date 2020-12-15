@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Extraction des couleurs
 topic: Developer guide
 description: Le service d’extraction des couleurs, lorsqu’on lui donne une image, peut calculer l’histogramme des couleurs de pixels et les trier par couleurs dominantes en compartiments.
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 2%
