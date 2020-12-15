@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
-description: Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour afficher les flux de données existants à partir de l’espace de travail Sources.
+description: Les destinations vous permettent d'activer vos données de Adobe Experience Platform vers d'innombrables partenaires externes. Ce didacticiel fournit des instructions sur la manière de surveiller les flux de données pour vos destinations à l’aide de l’interface utilisateur de l’Experience Platform.
 solution: Experience Platform
 title: Surveiller les flux de données
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 791ad61f2f28da03ef3e5cb5efdd89154e9b1a0b
+source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '426'
 ht-degree: 5%
 
 ---
