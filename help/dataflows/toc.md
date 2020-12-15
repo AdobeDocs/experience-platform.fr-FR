@@ -1,13 +1,13 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Guide des destinations
-user-guide-description: Insérez ici la description des destinations.
+user-guide-title: Guide des flux de données
+user-guide-description: Les flux de données sont une représentation des tâches de données qui déplacent les données entre les plateformes.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '24'
-ht-degree: 16%
+source-wordcount: '31'
+ht-degree: 6%
 
 ---
 
