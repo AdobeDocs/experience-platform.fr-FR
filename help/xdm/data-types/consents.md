@@ -4,7 +4,7 @@ title: Type de données Contenus et Préférences
 description: Le type de données Préférences de confidentialité/marketing (Consentement) est destiné à prendre en charge la collecte des autorisations et préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources issues de vos opérations de données.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 1a4dd167ecd4f4f61ffe26af786b355e4561b30d
+source-git-commit: 640f0be8a297fada0eee10ff80fec3b3142c09b9
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 1%
@@ -18,7 +18,7 @@ Le type de [!DNL Privacy/Marketing Preferences (Consent)] données (ci-après d�
 
 Ce document couvre la structure et l&#39;utilisation prévue des champs fournis par le type de [!DNL Consents & Preferences] données.
 
-## Conditions préalables  {#prerequisites}
+## Conditions préalables {#prerequisites}
 
 Ce document nécessite une compréhension pratique de XDM et de l&#39;utilisation des schémas dans [!DNL Experience Platform]. Veuillez consulter la documentation suivante avant de continuer :
 
@@ -285,7 +285,7 @@ Consultez le didacticiel sur la [création d’un schéma dans l’interface uti
 >
 >Si vous souhaitez envoyer des données de consentement à [!DNL Real-time Customer Profile], vous devez créer un schéma [!DNL Profile]activé basé sur la [!DNL XDM Individual Profile] [!DNL Consents & Preferences] classe contenant le type de données. Le jeu de données que vous créez en fonction de ce schéma doit également être activé pour [!DNL Profile]. Reportez-vous aux didacticiels ci-dessus pour connaître les étapes spécifiques liées aux [!DNL Real-time Customer Profile] exigences des schémas et des jeux de données.
 >
->En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour classer par priorité les ensembles de données qui contiennent les dernières données de consentement et de préférence, afin que les profils clients soient mis à jour correctement. Pour plus d’informations, voir l’aperçu des stratégies [de](../../rtcdp/profile/merge-policies.md) fusion.
+>En outre, vous devez également vous assurer que vos stratégies de fusion sont configurées pour classer par priorité les ensembles de données qui contiennent les dernières données de consentement et de préférence, afin que les profils clients soient mis à jour correctement. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Traitement des modifications du consentement et des préférences
 
@@ -333,4 +333,4 @@ Le tableau suivant présente les valeurs acceptées pour `xdm:preferred`:
 
 ### Schéma complet [!DNL Consents & Preferences] {#full-schema}
 
-Pour vue le schéma complet du type de [!DNL Consents & Preferences] données, reportez-vous au référentiel [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json)officiel.
+Pour vue le schéma complet du type de [!DNL Consents & Preferences] données, reportez-vous au référentiel [XDM](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json)officiel.
