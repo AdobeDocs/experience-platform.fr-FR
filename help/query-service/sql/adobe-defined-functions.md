@@ -5,59 +5,62 @@ title: Fonctions définies par Adobe
 topic: functions
 description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Query Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
 workflow-type: tm+mt
-source-wordcount: '2167'
-ht-degree: 83%
+source-wordcount: '2889'
+ht-degree: 27%
 
 ---
 
 
 # Fonctions définies par Adobe
 
-Adobe-defined functions (ADFs) are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. Il s’agit notamment de fonctions de sessionisation et d’attribution comme celles que l’on trouve dans Adobe Analytics. Consultez la [documentation d’Adobe Analytics](https://docs.adobe.com/content/help/fr-FR/analytics/landing/home.html) pour en savoir plus sur Adobe Analytics et sur les concepts sous-jacents aux fonctions définies par Adobe sur cette page. Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans [!DNL Query Service].
+Les fonctions définies par l&#39;Adobe, appelées ADF, sont des fonctions prédéfinies dans Adobe Experience Platform Requête Service qui permettent d&#39;exécuter des tâches commerciales communes sur des données [!DNL Experience Event]. Il s&#39;agit notamment des fonctions de [sessionisation](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) comme celles qui se trouvent en Adobe Analytics.
 
-## Fonctions de fenêtre
+Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans [!DNL Query Service].
 
-La majeure partie de la logique commerciale exige de rassembler les points de contact d’un client et de les classer par heure. This support is provided by [!DNL Spark] SQL in the form of window functions. Les fonctions de fenêtre font partie du langage SQL standard et sont prises en charge par de nombreux autres moteurs SQL.
+## Fonctions de fenêtre {#window-functions}
+
+La majeure partie de la logique commerciale exige de rassembler les points de contact d’un client et de les classer par heure. Cette prise en charge est fournie par [!DNL Spark] SQL sous la forme de fonctions de fenêtre. Les fonctions de fenêtre font partie du langage SQL standard et sont prises en charge par de nombreux autres moteurs SQL.
 
 Une fonction de fenêtre met à jour une agrégation et renvoie un élément unique pour chaque ligne de votre sous-ensemble classé. `SUM()` est la fonction d’agrégation la plus élémentaire. `SUM()` additionne vos lignes et fournit un total. Si vous appliquez plutôt `SUM()` à une fenêtre, la transformant ainsi en fonction de fenêtre, vous recevez une somme cumulée pour chaque ligne.
 
-The majority of the [!DNL Spark] SQL helpers are window functions that update each row in your window, with the state of that row added.
+La plupart des assistants SQL [!DNL Spark] sont des fonctions de fenêtre qui mettent à jour chaque ligne de votre fenêtre, avec l&#39;état de cette ligne ajouté.
 
-### Spécification
+**Syntaxe de la requête**
 
-Syntaxe : `OVER ([partition] [order] [frame])`
+```sql
+OVER ({PARTITION} {ORDER} {FRAME})
+```
 
-| Paramètre | Description |
-| --- | --- |
-| [partition] | Un sous-groupe de lignes basé sur une colonne ou un champ disponible. Exemple, `PARTITION BY endUserIds._experience.mcid.id` |
-| [order] | Une colonne ou un champ disponible utilisé pour classer le sous-ensemble ou les lignes. Exemple, `ORDER BY timestamp` |
-| [frame] | Un sous-groupe des lignes d’une partition. Exemple, `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| Paramètre | Description | Exemple |
+| --------- | ----------- | ------- |
+| `{PARTITION}` | Sous-groupe de lignes basé sur une colonne ou un champ disponible. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | Une colonne ou un champ disponible utilisé pour classer le sous-ensemble ou les lignes. | `ORDER BY timestamp` |
+| `{FRAME}` | Un sous-groupe des lignes d’une partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionisation
 
-When you are working with [!DNL ExperienceEvent] data originating from a website, mobile application, interactive voice response system, or any other customer interaction channel it helps if events can be grouped around a related period of activity. Généralement, une intention spécifique oriente votre activité, comme la recherche d’un produit, le paiement d’une facture, la vérification du solde d’un compte, le remplissage d’une demande, etc. Ce regroupement permet d’associer les événements pour obtenir plus de contexte sur l’expérience client.
+Lorsque vous travaillez avec des données [!DNL Experience Event] provenant d&#39;un site Web, d&#39;une application mobile, d&#39;un système interactif de réponse vocale ou de tout autre canal d&#39;interaction avec le client, il est utile de regrouper les événements en fonction d&#39;une période d&#39;activité connexe. Généralement, une intention spécifique oriente votre activité, comme la recherche d’un produit, le paiement d’une facture, la vérification du solde d’un compte, le remplissage d’une demande, etc.
 
-Pour plus d’informations sur la sessionisation dans Adobe Analytics, consultez la documentation sur [les sessions adaptées au contexte](https://docs.adobe.com/content/help/fr-FR/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Ce regroupement, ou sessionnalisation des données, permet d’associer les événements pour découvrir un contexte plus large sur l’expérience client.
 
-### Spécification
+Pour plus d&#39;informations sur la session en Adobe Analytics, consultez la documentation sur les [sessions contextuelles](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
-Syntaxe : `SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])`
+**Syntaxe de la requête**
+
+```sql
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `expirationInSeconds` | Nombre de secondes nécessaires entre les événements pour qualifier la fin de la session en cours et le début d’une nouvelle session |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{EXPIRATION_IN_SECONDS}` | Nombre de secondes nécessaires entre les événements pour que la fin de la session en cours soit considérée comme admissible et le début d&#39;une nouvelle session. |
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `timestamp_diff` | Durée en secondes entre l’enregistrement actuel et l’enregistrement précédent |
-| `num` | Un numéro de session unique, en partant de 1, pour la clé définie dans `PARTITION BY` de la fonction de fenêtre. |
-| `is_new` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session |
-| `depth` | Profondeur de l’enregistrement en cours dans la session |
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT 
@@ -73,7 +76,7 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                |       timestamp       |      session       
@@ -91,37 +94,176 @@ LIMIT 10
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `session`. La colonne `session` comprend les composants suivants :
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Paramètres | Description |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
+| `{NUM}` | Numéro de session unique, commençant à 1, pour la clé définie dans la fonction `PARTITION BY` de la fenêtre. |
+| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{DEPTH}` | Profondeur de l’enregistrement actif au sein de la session. |
+
+### SESS_DÉBUT_IF
+
+Cette requête renvoie l’état de la session pour la ligne active, en fonction de l’horodatage actuel et de l’expression donnée et début une nouvelle session avec la ligne active.
+
+**Syntaxe de la requête**
+
+```sql
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{TEST_EXPRESSION}` | Expression à laquelle vous souhaitez comparer les champs des données. Par exemple : `application.launches > 0`. |
+
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
+
+**Exemple de requête**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Résultats**
+
+```console
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `session`. La colonne `session` comprend les composants suivants :
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Paramètres | Description |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
+| `{NUM}` | Numéro de session unique, commençant à 1, pour la clé définie dans la fonction `PARTITION BY` de la fenêtre. |
+| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{DEPTH}` | Profondeur de l’enregistrement actif au sein de la session. |
+
+### SESS_END_IF
+
+Cette requête renvoie l’état de la session pour la ligne en cours, en fonction de l’horodatage actuel et de l’expression donnée, termine la session en cours et début une nouvelle session sur la ligne suivante.
+
+**Syntaxe de la requête**
+
+```sql
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{TEST_EXPRESSION}` | Expression à laquelle vous souhaitez comparer les champs des données. Par exemple : `application.launches > 0`. |
+
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
+
+**Exemple de requête**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Résultats**
+
+```console
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
+(10 rows)
+```
+
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `session`. La colonne `session` comprend les composants suivants :
+
+```sql
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
+```
+
+| Paramètres | Description |
+| ---------- | ------------- |
+| `{TIMESTAMP_DIFF}` | Différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
+| `{NUM}` | Numéro de session unique, commençant à 1, pour la clé définie dans la fonction `PARTITION BY` de la fenêtre. |
+| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{DEPTH}` | Profondeur de l’enregistrement actif au sein de la session. |
+
 ## Attribution
 
-L’association entre les actions du client et le succès est un élément important pour comprendre les facteurs qui influencent l’expérience client. Les fonctions définies par Adobe suivantes prennent en charge la première et la dernière attribution avec des paramètres d’expiration différents.
+L’association des actions des clients à la réussite est un élément important de la compréhension des facteurs qui influencent les expériences des clients. Les adaptateurs ADF suivants prennent en charge l’attribution Première touche et l’attribution Dernière touche avec différents paramètres d’expiration.
 
-Pour plus d’informations sur l’attribution dans Adobe , consultez la [présentation d’Attribution IQ](https://docs.adobe.com/content/help/fr-FR/analytics/analyze/analysis-workspace/panels/attribution.html) dans le guide d’analyse d’Analytics.[!DNL Analytics]
+Pour plus d’informations sur l’attribution en Adobe Analytics, voir [Présentation de l’Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) dans le guide du panneau Attribution [!DNL Analytics].
 
 ### Attribution Première touche
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+Cette requête renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans le jeu de données de cible [!DNL Experience Event]. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
-Cette requête est utile si vous voulez découvrir l’interaction qui a entraîné une série d’actions du client. Dans l’exemple ci-dessous, le code de suivi initial (`em:946426`[!DNL ExperienceEvent]) dans les données se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la première interaction.
+Cette requête est utile si vous voulez découvrir l’interaction qui a entraîné une série d’actions du client. Dans l&#39;exemple ci-dessous, le code de suivi initial (`em:946426`) dans les données [!DNL Experience Event] est attribué à 100 % (`1.0`) la responsabilité des actions client, car il s&#39;agissait de la première interaction.
 
-### Spécification
+**Syntaxe de la requête**
 
-Syntaxe : `ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
 
+Vous trouverez une explication des paramètres dans `OVER()` dans la section [fonctions de fenêtre](#window-functions).
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue` qui correspond à la Première touche dans [!DNL ExperienceEvent] |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | L’attribution de la Première touche exprimée sous forme de crédit fractionnaire |
-
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -135,7 +277,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -153,31 +295,40 @@ LIMIT 10
 (10 rows)
 ```
 
-### Attribution Dernière touche
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `first_touch`. La colonne `first_touch` comprend les composants suivants :
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
-
-Cette requête est utile si vous voulez découvrir l’interaction finale dans une série d’actions du client. In the example shown below, the tracking code in the returned object is the last interaction in each [!DNL ExperienceEvent] record. Chaque code se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la dernière interaction.
-
-### Spécification
-
-Syntaxe : `ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])`
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
+| --------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, qui a été entré comme étiquette dans le FAD. |
+| `{VALUE}` | La valeur de `{CHANNEL_VALUE}` qui correspond à la Première touche dans [!DNL Experience Event] |
+| `{TIMESTAMP}` | Horodatage de l&#39;[!DNL Experience Event] où la première touche s&#39;est produite. |
+| `{FRACTION}` | Attribution de la première touche, exprimée en fraction décimale. |
 
+### Attribution Dernière touche
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue` qui correspond à la Dernière touche dans [!DNL ExperienceEvent] |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the `channelValue` was used |
-| `fraction` | L’attribution de la Dernière touche exprimée sous forme de crédit fractionnaire |
+Cette requête renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans le jeu de données de cible [!DNL Experience Event]. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
-#### Exemple de requête
+Cette requête est utile si vous voulez découvrir l’interaction finale dans une série d’actions du client. Dans l&#39;exemple ci-dessous, le code de suivi de l&#39;objet renvoyé est la dernière interaction dans chaque enregistrement [!DNL Experience Event]. Chaque code se voit attribuer une responsabilité de 100 % (`1.0`) pour les actions du client, puisqu’il s’agissait de la dernière interaction.
+
+**Syntaxe de la requête**
+
+```sql
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
+```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
+
+Vous trouverez une explication des paramètres dans `OVER()` dans la section [fonctions de fenêtre](#window-functions).
+
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -190,7 +341,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -208,32 +359,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `last_touch`. La colonne `last_touch` comprend les composants suivants :
+
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
+
+| Paramètres | Description |
+| ---------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, qui a été entré comme étiquette dans le FAD. |
+| `{VALUE}` | La valeur de `{CHANNEL_VALUE}` qui correspond à la Dernière touche dans [!DNL Experience Event] |
+| `{TIMESTAMP}` | Horodatage du [!DNL Experience Event] où `channelValue` a été utilisé. |
+| `{FRACTION}` | Attribution de la dernière touche, exprimée en fraction décimale. |
+
 ### Attribution Première touche avec condition d’expiration
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+Cette requête renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans le jeu de données de cible [!DNL Experience Event], expirant après ou avant une condition. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
-This query is useful if you want to see what interaction led to a series of customer actions within a portion of the [!DNL ExperienceEvent] dataset determined by a condition of your chosing. Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet) et le code de suivi initial de chaque jour se voit attribuer 100 %(`1.0`) de la responsabilité des actions du client.
+Cette requête est utile si vous souhaitez savoir quelle interaction a conduit à une série d&#39;actions client dans une partie du jeu de données [!DNL Experience Event] déterminé par une condition de votre choix. Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet) et le code de suivi initial de chaque jour se voit attribuer 100 %(`1.0`) de la responsabilité des actions du client.
 
-#### Spécification
+**Syntaxe de la requête**
 
-Syntaxe : `ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
-| `expCondition` | La condition qui détermine le point d’expiration du canal |
-| `expBefore` | La valeur par défaut est `false`. Valeur booléenne indiquant si le canal expire avant ou après que la condition spécifiée soit remplie. Activé principalement pour les conditions d’expiration d’une session (par exemple `sess.depth = 1, true`), afin de garantir que la Première touche n’est pas sélectionnée à partir d’une session précédente. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
+| `{EXP_CONDITION}` | La condition qui détermine le point d’expiration du canal. |
+| `{EXP_BEFORE}` | Valeur booléenne qui indique si le canal expire avant ou après la condition spécifiée, `{EXP_CONDITION}`, est satisfaite. Cette option est principalement activée pour les conditions d’expiration d’une session, afin de s’assurer que la première touche n’est pas sélectionnée à partir d’une session précédente. Par défaut, cette valeur est définie sur `false`. |
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue`[!DNL ExperienceEvent] qui correspond à la Première touche dans avant `expCondition` |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | L’attribution de la Première touche exprimée sous forme de crédit fractionnaire |
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -246,7 +409,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -264,29 +427,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Attribution Première touche avec délai d’expiration
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `first_touch`. La colonne `first_touch` comprend les composants suivants :
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné. Cette requête est utile si vous voulez découvrir l’interaction, dans un intervalle de temps sélectionné, qui a entraîné une action du client. Dans l’exemple ci-dessous, la Première touche renvoyée pour chaque action du client correspond à la première interaction qui a eu lieu au cours des sept jours précédents (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Spécification
+| Paramètres | Description |
+| ---------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, qui a été entré comme étiquette dans le FAD. |
+| `{VALUE}` | Valeur de `CHANNEL_VALUE}` qui est la première touche dans [!DNL Experience Event], avant `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Horodatage de l&#39;[!DNL Experience Event] où la première touche s&#39;est produite. |
+| `{FRACTION}` | Attribution de la première touche, exprimée en fraction décimale. |
 
-Syntaxe : `ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### Attribution Première touche avec expiration
+
+Cette requête renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans le jeu de données de cible [!DNL Experience Event] pour une période spécifiée. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+
+Cette requête est utile si vous voulez découvrir l’interaction, dans un intervalle de temps sélectionné, qui a entraîné une action du client. Dans l’exemple ci-dessous, la Première touche renvoyée pour chaque action du client correspond à la première interaction qui a eu lieu au cours des sept jours précédents (`expTimeout = 86400 * 7`).
+
+**Spécification**
+
+```sql
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
-| `expTimeout` | La fenêtre de temps (en secondes) précédant l’événement du canal dans lequel la requête recherche un événement de Première touche |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
+| `{EXP_TIMEOUT}` | La fenêtre de temps avant le événement du canal, en secondes, pendant laquelle la requête recherche un événement Première touche. |
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue` qui correspond à la Première touche dans l’intervalle `expTimeout` spécifié |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the first touch occured |
-| `fraction` | L’attribution de la Première touche exprimée sous forme de crédit fractionnaire |
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -299,7 +476,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   first_touch                    
@@ -317,30 +494,42 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `first_touch`. La colonne `first_touch` comprend les composants suivants :
+
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
+
+| Paramètres | Description |
+| ---------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, qui a été entré comme étiquette dans le FAD. |
+| `{VALUE}` | La valeur de `CHANNEL_VALUE}` qui correspond à la Première touche dans l’intervalle `{EXP_TIMEOUT}` spécifié. |
+| `{TIMESTAMP}` | Horodatage de l&#39;[!DNL Experience Event] où la première touche s&#39;est produite. |
+| `{FRACTION}` | Attribution de la première touche, exprimée en fraction décimale. |
+
 ### Attribution Dernière touche avec condition d’expiration
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset, expiring after or before a condition. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné. This query is useful if you want to see the last interaction in a series of customer actions within a portion of the [!DNL ExperienceEvent] dataset determined by a condition of your chosing. Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet) et le dernier code de suivi de chaque jour se voit attribuer 100 %(`1.0`) de la responsabilité des actions du client.
+Cette requête renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans le jeu de données de la cible [!DNL Experience Event], expirant après ou avant une condition. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
-#### Spécification
+Cette requête est utile si vous souhaitez voir la dernière interaction dans une série d&#39;actions client dans une partie du jeu de données [!DNL Experience Event] déterminé par une condition de votre choix. Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet) et le dernier code de suivi de chaque jour se voit attribuer 100 %(`1.0`) de la responsabilité des actions du client.
 
-Syntaxe : `ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])`
+**Syntaxe de la requête**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
-| `expCondition` | La condition qui détermine le point d’expiration du canal |
-| `expBefore` | La valeur par défaut est `false`. Valeur booléenne indiquant si le canal expire avant ou après que la condition spécifiée soit remplie. Activé principalement pour les conditions d’expiration d’une session (par exemple `sess.depth = 1, true`), afin de garantir que la Dernière touche n’est pas sélectionnée à partir d’une session précédente. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
+| `{EXP_CONDITION}` | La condition qui détermine le point d’expiration du canal. |
+| `{EXP_BEFORE}` | Valeur booléenne qui indique si le canal expire avant ou après la condition spécifiée, `{EXP_CONDITION}`, est satisfaite. Cette option est principalement activée pour les conditions d’expiration d’une session, afin de s’assurer que la première touche n’est pas sélectionnée à partir d’une session précédente. Par défaut, cette valeur est définie sur `false`. |
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue`[!DNL ExperienceEvent] qui correspond à la Dernière touche dans avant `expCondition` |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the last touch occured |
-| `percentage` | L’attribution de la Dernière touche exprimée sous forme de crédit fractionnaire |
-
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -353,7 +542,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Résultats
+**Exemples de résultats**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -371,29 +560,43 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-### Attribution Dernière touche avec délai d’expiration
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `last_touch`. La colonne `last_touch` comprend les composants suivants :
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL ExperienceEvent] dataset for a specified time period. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné. Cette requête est utile si vous voulez découvrir la dernière interaction dans un intervalle de temps sélectionné. Dans l’exemple ci-dessous, la Dernière touche renvoyée pour chaque action du client correspond à l’interaction finale qui a eu lieu au cours des sept jours suivants (`expTimeout = 86400 * 7`).
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-#### Spécification
+| Paramètres | Description |
+| ---------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, qui a été entré comme étiquette dans le FAD. |
+| `{VALUE}` | Valeur de `{CHANNEL_VALUE}` qui correspond à la dernière touche dans [!DNL Experience Event], avant `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Horodatage de l&#39;[!DNL Experience Event] où s&#39;est produite la dernière touche. |
+| `{FRACTION}` | Attribution de la dernière touche, exprimée en fraction décimale. |
 
-Syntaxe : `ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])`
+### Attribution Dernière touche avec expiration
+
+Cette requête renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans le jeu de données de cible [!DNL Experience Event] pour une période spécifiée. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+
+Cette requête est utile si vous voulez découvrir la dernière interaction dans un intervalle de temps sélectionné. Dans l’exemple ci-dessous, la Dernière touche renvoyée pour chaque action du client correspond à l’interaction finale qui a eu lieu au cours des sept jours suivants (`expTimeout = 86400 * 7`).
+
+**Syntaxe de la requête**
+
+```sql
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données |
-| `channelName` | Un nom convivial à utiliser comme libellé dans l’objet renvoyé |
-| `channelValue` | La colonne ou le champ correspondant au canal cible pour la requête |
-| `expTimeout` | La fenêtre de temps (en secondes) suivant l’événement du canal dans lequel la requête recherche un événement de Dernière touche |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage situé dans le jeu de données. |
+| `{CHANNEL_NAME}` | Libellé de l’objet renvoyé |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête |
+| `{EXP_TIMEOUT}` | La fenêtre de temps après le événement du canal, en secondes, pendant laquelle la requête recherche un événement Dernière touche. |
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `name` | Le `channelName` saisi sous forme de libellé dans la fonction définie par Adobe |
-| `value` | La valeur de `channelValue` qui correspond à la Dernière touche dans l’intervalle `expTimeout` spécifié |
-| `timestamp` | The timestamp of the [!DNL ExperienceEvent] where the last touch occured |
-| `percentage` | L’attribution de la Dernière touche exprimée sous forme de crédit fractionnaire |
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -406,7 +609,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       | trackingcode |                   last_touch                   
@@ -424,30 +627,44 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-## Touche précédente/suivante
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `last_touch`. La colonne `last_touch` comprend les composants suivants :
 
-Il est important de comprendre la façon dont les clients évoluent au sein d’une expérience. Elle peut servir à comprendre le degré d’engagement du client, à confirmer que les étapes visées d’une expérience fonctionnent comme prévu et à identifier les éventuels problèmes affectant le client. Les fonctions définies par Adobe suivantes prennent en charge les affichages de cheminement à partir des relations précédentes et suivantes. Vous pourrez créer la page précédente et la page suivante ou parcourir plusieurs événements pour créer le cheminement.
+```sql
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
+```
 
-### Touche précédente
+| Paramètres | Description |
+| ---------- | ----------- |
+| `{NAME}` | Le `{CHANNEL_NAME}`, entré comme étiquette dans le fichier ADF. |
+| `{VALUE}` | La valeur de `{CHANNEL_VALUE}` qui correspond à la Dernière touche dans l’intervalle `{EXP_TIMEOUT}` spécifié |
+| `{TIMESTAMP}` | Horodatage de l&#39;[!DNL Experience Event] où la dernière touche s&#39;est produite |
+| `{FRACTION}` | Attribution de la dernière touche, exprimée en fraction décimale. |
 
-Détermine la valeur précédente d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, remarquez que la fonction `WINDOW` est configurée avec un cadre de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` paramétrant la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes celles qui la précèdent.
+## Cheminement
 
-#### Spécification
+Le cheminement peut être utilisé pour comprendre la profondeur de l’engagement du client, vérifier que les étapes prévues d’une expérience fonctionnent comme prévu et identifier les points de douleur potentiels qui affectent le client.
 
-Syntaxe : `PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+Les FAD suivants prennent en charge l’établissement de vues de cheminement à partir de leurs relations précédentes et suivantes. Vous pourrez créer des pages précédentes et des pages suivantes, ou parcourir plusieurs événements pour créer le cheminement.
+
+### Page précédente
+
+Détermine la valeur précédente d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Remarquez dans l&#39;exemple que la fonction `WINDOW` est configurée avec un cadre de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` paramétrant l&#39;outil ADF pour examiner la ligne active et toutes les lignes suivantes.
+
+**Syntaxe de la requête**
+
+```sql
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `key` | La colonne ou le champ de l’événement. |
-| `shift` | (facultatif) Le nombre d’événements en dehors de l’événement actuel. La valeur par défaut est 1. |
-| `ingnoreNulls` | Valeur booléenne indiquant si les valeurs `key` nulles doivent être ignorées. La valeur par défaut est `false`. |
+| --------- | ----------- |
+| `{KEY}` | La colonne ou le champ de l’événement. |
+| `{SHIFT}` | (Facultatif) Nombre de événements à l’écart du événement actuel. Par défaut, la valeur est 1. |
+| `{IGNORE_NULLS}` | (Facultatif) Valeur booléenne qui indique si les valeurs null `{KEY}` doivent être ignorées. Par défaut, la valeur est `false`. |
 
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `value` | La valeur basée sur la `key` utilisée dans la fonction définie par Adobe |
-
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
@@ -460,7 +677,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       |                 name                |                    previous_page                    
@@ -478,26 +695,27 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-### Touche suivante
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `previous_page`. La valeur de la colonne `previous_page` est basée sur `{KEY}` utilisée dans le fichier ADF.
 
-Détermine la valeur suivante d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, remarquez que la fonction `WINDOW` est configurée avec un cadre de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` paramétrant la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes celles qui la suivent.
+### Page suivante
 
-#### Spécification
+Détermine la valeur suivante d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Remarquez dans l&#39;exemple que la fonction `WINDOW` est configurée avec un cadre de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` paramétrant l&#39;outil ADF pour examiner la ligne active et toutes les lignes suivantes.
 
-Syntaxe : `NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])`
+**Syntaxe de la requête**
+
+```sql
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `key` | La colonne ou le champ de l’événement |
-| `shift` | (facultatif) Le nombre d’événements en dehors de l’événement actuel. La valeur par défaut est 1. |
-| `ingnoreNulls` | Valeur booléenne indiquant si les valeurs `key` nulles doivent être ignorées. La valeur par défaut est `false`. |
+| --------- | ----------- |
+| `{KEY}` | La colonne ou le champ de l’événement. |
+| `{SHIFT}` | (Facultatif) Nombre de événements à l’écart du événement actuel. Par défaut, la valeur est 1. |
+| `{IGNORE_NULLS}` | (Facultatif) Valeur booléenne qui indique si les valeurs null `{KEY}` doivent être ignorées. Par défaut, la valeur est `false`. |
 
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-| Paramètres d’objet renvoyé | Description |
-| ---------------------- | ------------- |
-| `value` | La valeur basée sur la `key` utilisée dans la fonction définie par Adobe |
-
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
@@ -511,7 +729,7 @@ ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
                 id                 |       timestamp       |                name                 |             previous_page             
@@ -529,27 +747,33 @@ LIMIT 10
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `previous_page`. La valeur de la colonne `previous_page` est basée sur `{KEY}` utilisée dans le fichier ADF.
+
 ## Intervalle
 
-L’intervalle vous permet de découvrir le comportement latent des clients dans une période précédant ou suivant un événement. Examinez les événements qui ont lieu dans les 7 jours qui suivent une campagne ou un autre type d’événement chez tous vos clients.
+L’intervalle de temps vous permet d’explorer le comportement latent des clients au cours d’une certaine période avant ou après la survenue d’un événement.
 
 ### Intervalle depuis la correspondance précédente
 
-Fournit une nouvelle dimension, qui mesure le temps écoulé depuis un incident particulier.
+Cette requête renvoie un nombre représentant l’unité de temps depuis que le événement correspondant précédent a été vu. Si aucun événement correspondant n’a été trouvé, il renvoie null.
 
-#### Spécification
+**Syntaxe de la requête**
 
-Syntaxe : `TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données renseigné sur tous les événements. |
-| `eventDefintion` | Expression permettant de qualifier l’événement précédent. |
-| `timeUnit` | Unité de sortie : jours, heures, minutes et secondes. Les secondes sont la valeur par défaut. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données renseigné sur tous les événements. |
+| `{EVENT_DEFINITION}` | Expression de qualifier le événement précédent. |
+| `{TIME_UNIT}` | Unité de sortie. Valeur possible : jours, heures, minutes et secondes. Par défaut, la valeur est en secondes. |
 
-Sortie : renvoie un nombre représentant l’unité de temps depuis l’affichage de l’événement correspondant précédent ou reste nulle si aucun événement correspondant n’a été trouvé.
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT 
@@ -573,7 +797,7 @@ ORDER BY average_minutes_since_registration
 LIMIT 10
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
              page_name             | average_minutes_since_registration 
@@ -591,23 +815,27 @@ LIMIT 10
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `average_minutes_since_registration`. La valeur de la colonne `average_minutes_since_registration` correspond à la différence de temps entre les événements actuel et précédent. L&#39;unité de temps a été définie précédemment dans `{TIME_UNIT}`.
+
 ### Intervalle jusqu’à la correspondance suivante
 
-Fournit une nouvelle dimension, qui mesure le temps avant qu’un événement particulier ne se produise.
+Cette requête renvoie un nombre négatif représentant l’unité de temps derrière le événement correspondant suivant. Si un événement correspondant est introuvable, la valeur null est renvoyée.
 
-#### Spécification
+**Syntaxe de la requête**
 
-Syntaxe : `TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partition] [order] [frame])`
+```sql
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
+```
 
 | Paramètre | Description |
-| --- | --- |
-| `timestamp` | Champ de date et heure trouvé dans le jeu de données renseigné sur tous les événements. |
-| `eventDefintion` | Expression permettant de qualifier l’événement suivant. |
-| `timeUnit` | Unité de sortie : jours, heures, minutes et secondes. Les secondes sont la valeur par défaut. |
+| --------- | ----------- |
+| `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données renseigné sur tous les événements. |
+| `{EVENT_DEFINITION}` | Expression de qualifier le événement suivant. |
+| `{TIME_UNIT}` | (Facultatif) Unité de sortie. Valeur possible : jours, heures, minutes et secondes. Par défaut, la valeur est en secondes. |
 
-Sortie : renvoie un nombre négatif représentant l’unité de temps avant l’événement correspondant suivant ou reste nulle si aucun événement correspondant n’est trouvé.
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la section des fonctions de la fenêtre [](#window-functions).
 
-#### Exemple de requête
+**Exemple de requête**
 
 ```sql
 SELECT 
@@ -631,7 +859,7 @@ ORDER BY average_minutes_until_order_confirmation DESC
 LIMIT 10
 ```
 
-#### Résultats
+**Résultats**
 
 ```console
              page_name             | average_minutes_until_order_confirmation 
@@ -649,6 +877,14 @@ LIMIT 10
 (10 rows)
 ```
 
+Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la colonne `average_minutes_until_order_confirmation`. La valeur de la colonne `average_minutes_until_order_confirmation` correspond à la différence de temps entre les événements actuel et suivant. L&#39;unité de temps a été définie précédemment dans `{TIME_UNIT}`.
+
 ## Étapes suivantes
 
-Using the functions described here, you can write queries to access your own [!DNL ExperienceEvent] datasets using [!DNL Query Service]. For more information about authoring queries in [!DNL Query Service], see the documentation on [creating queries](../creating-queries/creating-queries.md).
+En utilisant les fonctions décrites ici, vous pouvez écrire des requêtes pour accéder à vos propres jeux de données [!DNL Experience Event] à l&#39;aide de [!DNL Query Service]. Pour plus d&#39;informations sur la création de requêtes dans [!DNL Query Service], consultez la documentation sur [la création de requêtes](../creating-queries/creating-queries.md).
+
+## Ressources supplémentaires
+
+La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. En outre, la vidéo utilise également des exemples impliquant des propriétés individuelles dans un objet XDM, utilisant des fonctions définies par Adobe et utilisant CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
