@@ -6,34 +6,34 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de l’Experience Platform à un serveur FTP (File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 807b3110606daa6b8d42d2f9048668f7c121c8f4
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 28%
+source-wordcount: '565'
+ht-degree: 27%
 
 ---
 
 
-# Création d’un connecteur FTP à l’aide de l’ [!DNL Flow Service] API
+# Créez un connecteur FTP à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
->Le connecteur FTP est en version bêta. Les fonctionnalités et la documentation peuvent faire l’objet de changements. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>Le connecteur FTP est en version bêta. Les fonctionnalités et la documentation peuvent faire l’objet de changements. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Experience Platform] à un serveur FTP (File Transfer Protocol).
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion de [!DNL Experience Platform] à un serveur FTP (File Transfer Protocol).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an FTP server using the [!DNL Flow Service] API.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un serveur FTP à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Collecte des informations d’identification requises
 
-Pour [!DNL Flow Service] se connecter au FTP, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à FTP, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -53,7 +53,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -67,7 +67,7 @@ Une connexion spécifie une source et contient vos informations d’identificati
 
 ### Création d’une connexion FTP à l’aide d’une authentification de base
 
-Pour créer une connexion FTP à l&#39;aide de l&#39;authentification de base, faites une demande de POST à l&#39; [!DNL Flow Service] API tout en fournissant des valeurs pour les `host`, `userName`et `password`la connexion.
+Pour créer une connexion FTP à l&#39;aide de l&#39;authentification de base, faites une demande de POST à l&#39;API [!DNL Flow Service] tout en fournissant des valeurs pour les `host`, `userName` et `password` de votre connexion.
 
 **Format d’API**
 
@@ -76,6 +76,8 @@ POST /connections
 ```
 
 **Requête**
+
+Pour créer une connexion FTP, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande du POST. L&#39;ID de spécification de connexion pour FTP est `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
 
 ```shell
 curl -X POST \
@@ -123,4 +125,4 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion no
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion FTP à l’aide de l’ [!DNL Flow Service] API et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API](../../explore/cloud-storage.md) Flow Service ou [assimiler des données de parquet à l’aide de l’API](../../cloud-storage-parquet.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion FTP à l&#39;aide de l&#39;API [!DNL Flow Service] et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données de parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
