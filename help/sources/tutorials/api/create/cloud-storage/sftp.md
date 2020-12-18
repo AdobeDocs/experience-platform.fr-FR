@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de l’Experience Platform à un serveur SFTP (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 24%
+source-wordcount: '807'
+ht-degree: 23%
 
 ---
 
@@ -29,6 +29,10 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : Experience Platform permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme.
 * [Environnements de test](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
+>[!IMPORTANT]
+>
+>Il est recommandé d’éviter les nouvelles lignes ou les retours chariot lors de l’assimilation d’objets JSON avec une connexion source SFTP. Pour contourner cette restriction, utilisez un seul objet JSON par ligne et plusieurs lignes pour les fichiers suivants.
+
 Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un serveur SFTP à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Collecte des informations d’identification requises
@@ -45,11 +49,11 @@ Pour que [!DNL Flow Service] se connecte au protocole SFTP, vous devez fournir d
 
 ### Lecture d’exemples d’appels API
 
-Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage d’Experience Platform.
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../../../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -65,7 +69,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Création d’une connexion
 
-Une connexion spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion est requise par compte SFTP, car elle peut être utilisée pour créer plusieurs connecteurs source pour importer des données différentes.
+Une connexion spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion est requise, car elle peut être utilisée pour créer plusieurs flux de données afin d’importer des données différentes.
 
 ### Création d’une connexion SFTP à l’aide d’une authentification de base
 
