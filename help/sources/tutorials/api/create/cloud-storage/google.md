@@ -6,39 +6,39 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider tout au long des étapes nécessaires à la connexion d’un Experience Platform à un compte d’Enregistrement Google Cloud.
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 29%
+source-wordcount: '540'
+ht-degree: 27%
 
 ---
 
 
-# Création d’un [!DNL Google Cloud Storage] connecteur à l’aide de l’ [!DNL Flow Service] API
+# Créez un connecteur [!DNL Google Cloud Storage] à l’aide de l’API [!DNL Flow Service].
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes de la connexion [!DNL Experience Platform] à un [!DNL Google Cloud Storage] compte.
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion de [!DNL Experience Platform] à un compte [!DNL Google Cloud Storage].
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un compte d’Enregistrement Google Cloud à l’aide de l’ [!DNL Flow Service] API.
+Les sections suivantes contiennent des informations supplémentaires dont vous aurez besoin pour vous connecter à un compte d’Enregistrement Google Cloud à l’aide de l’API [!DNL Flow Service].
 
 ### Collecte des informations d’identification requises
 
-Pour pouvoir vous connecter [!DNL Flow Service] à votre [!DNL Google Cloud Storage] compte, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] puisse se connecter à votre compte [!DNL Google Cloud Storage], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `accessKeyId` | ID de clé d’accès pour votre [!DNL Google Cloud Storage] compte. |
-| `secretAccessKey` | Clé d’accès secrète pour votre [!DNL Google Cloud Storage] compte. |
+| `accessKeyId` | ID de clé d&#39;accès pour votre compte [!DNL Google Cloud Storage]. |
+| `secretAccessKey` | Clé d&#39;accès secrète pour votre compte [!DNL Google Cloud Storage]. |
 
-Pour plus d’informations sur la prise en main, consultez [ce document](https://cloud.google.com/docs/authentication)Google Cloud.
+Pour plus d’informations sur la prise en main, consultez [ce document Google Cloud](https://cloud.google.com/docs/authentication).
 
 ### Lecture d’exemples d’appels API
 
@@ -48,21 +48,21 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Création d’une connexion
 
-Une connexion spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion est requise par [!DNL Google Cloud Storage] compte, car elle peut être utilisée pour créer plusieurs connecteurs source pour importer des données différentes.
+Une connexion spécifie une source et contient vos informations d’identification pour cette source. Une seule connexion est requise par compte [!DNL Google Cloud Storage], car elle peut être utilisée pour créer plusieurs connecteurs source afin d’importer des données différentes.
 
 **Format d’API**
 
@@ -71,6 +71,8 @@ POST /connections
 ```
 
 **Requête**
+
+Pour créer une connexion [!DNL Google Cloud Storage], l&#39;identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande du POST. L&#39;ID de spécification de connexion pour [!DNL Google Cloud Storage] est `32e8f412-cdf7-464c-9885-78184cb113fd`.
 
 ```shell
 curl -X POST \
@@ -99,9 +101,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | ID de clé d’accès associé à votre [!DNL Google Cloud Storage] compte. |
-| `auth.params.secretAccessKey` | Clé d’accès secret associée à votre [!DNL Google Cloud Storage] compte. |
-| `connectionSpec.id` | ID de spécification de [!DNL Google Cloud Storage] connexion : `32e8f412-cdf7-464c-9885-78184cb113fd` |
+| `auth.params.accessKeyId` | ID de clé d&#39;accès associé à votre compte [!DNL Google Cloud Storage]. |
+| `auth.params.secretAccessKey` | Clé d&#39;accès secrète associée à votre compte [!DNL Google Cloud Storage]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Google Cloud Storage] : `32e8f412-cdf7-464c-9885-78184cb113fd` |
 
 **Réponse**
 
@@ -116,4 +118,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une [!DNL Google Cloud Storage] connexion à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API](../../explore/cloud-storage.md) Flow Service ou [assimiler des données de parquet à l’aide de l’API](../../cloud-storage-parquet.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion [!DNL Google Cloud Storage] à l&#39;aide d&#39;API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données de parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
