@@ -6,41 +6,41 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter un Experience Platform à un enregistrement Azure Blob (ci-après appelé "Blob").
 translation-type: tm+mt
-source-git-commit: d332226541685108b58d88096146ed6048606774
+source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 25%
+source-wordcount: '605'
+ht-degree: 24%
 
 ---
 
 
-# Création d’un [!DNL Azure Blob] connecteur à l’aide de l’ [!DNL Flow Service] API
+# Créez un connecteur [!DNL Azure Blob] à l’aide de l’API [!DNL Flow Service].
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider à travers les étapes de connexion [!DNL Experience Platform] à un [!DNL Azure Blob] (ci-après appelé &quot;Blob&quot;) enregistrement.
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion de [!DNL Experience Platform] à un enregistrement [!DNL Azure Blob] (ci-après appelé &quot;Blob&quot;).
 
-Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le didacticiel [](../../../ui/create/cloud-storage/blob.md) sur l&#39;interface utilisateur du connecteur source Azure Blob fournit des instructions détaillées pour exécuter des actions similaires.
+Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le [didacticiel d&#39;interface utilisateur du connecteur source Azure Blob](../../../ui/create/cloud-storage/blob.md) fournit des instructions détaillées pour exécuter des actions similaires.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully connect to an Blob storage using the [!DNL Flow Service] API.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à un enregistrement Blob à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Collecte des informations d’identification requises
 
-Pour vous connecter [!DNL Flow Service] à votre enregistrement Blob, vous devez fournir des valeurs pour la propriété de connexion suivante :
+Pour que [!DNL Flow Service] puisse se connecter à votre enregistrement Blob, vous devez fournir des valeurs pour la propriété de connexion suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion requise pour accéder aux données dans votre enregistrement Blob. Le modèle de chaîne de connexion Blob est le suivant : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour Blob est : `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
-Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez [ce document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)Azure Blob.
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez [ce document Azure Blob](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 
 ### Lecture d’exemples d’appels API
 
@@ -50,17 +50,17 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
+* `Content-Type: application/json``
 
 ## Création d’une connexion
 
@@ -118,4 +118,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion Blob à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API](../../explore/cloud-storage.md) Flow Service ou [assimiler des données de parquet à l’aide de l’API](../../cloud-storage-parquet.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion Blob à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données de parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
