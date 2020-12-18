@@ -6,32 +6,32 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API Flow Service pour vous guider dans les étapes de connexion d’IBM DB2 (ci-après appelé "DB2") à l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 25%
+source-wordcount: '590'
+ht-degree: 24%
 
 ---
 
 
-# Création d’un connecteur IBM DB2 à l’aide de l’ [!DNL Flow Service] API
+# Créez un connecteur IBM DB2 à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
->Le connecteur IBM DB2 est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+>Le connecteur IBM DB2 est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes de connexion d’IBM DB2 (ci-après appelé &quot;DB2&quot;) à [!DNL Experience Platform].
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion d&#39;IBM DB2 (ci-après appelé &quot;DB2&quot;) à [!DNL Experience Platform].
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Sources](../../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sandbox](../../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully connect to DB2 using the [!DNL Flow Service] API.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à DB2 à l’aide de l’API [!DNL Flow Service].
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -39,9 +39,9 @@ The following sections provide additional information that you will need to know
 | `database` | Nom de la base de données DB2. |
 | `username` | Nom d’utilisateur utilisé pour la connexion à la base de données DB2. |
 | `password` | mot de passe du compte utilisateur que vous avez spécifié pour le nom d’utilisateur. |
-| `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L’ID de spécification de connexion pour DB2 est `09182899-b429-40c9-a15a-bf3ddbc8ced7`défini. |
+| `connectionSpec.id` | Identificateur unique nécessaire pour créer une connexion. L’ID de spécification de connexion pour DB2 est `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à [ce document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html)DB2.
+Pour plus d&#39;informations sur la prise en main, consultez [ce document DB2](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ### Lecture d’exemples d’appels API
 
@@ -51,17 +51,17 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Création d’une connexion
 
@@ -75,7 +75,7 @@ POST /connections
 
 **Requête**
 
-Pour créer une connexion DB2, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande du POST. L’ID de spécification de connexion pour DB2 est `09182899-b429-40c9-a15a-bf3ddbc8ced7`défini.
+Pour créer une connexion DB2, son identifiant de spécification de connexion unique doit être fourni dans le cadre de la demande du POST. L’ID de spécification de connexion pour DB2 est `09182899-b429-40c9-a15a-bf3ddbc8ced7`.
 
 ```shell
 curl -X POST \
@@ -123,4 +123,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion IBM DB2 à l’aide de l’ [!DNL Flow Service] API et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet identifiant dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données à l’aide de l’API](../../explore/database-nosql.md)Flow Service.
+En suivant ce didacticiel, vous avez créé une connexion IBM DB2 à l’aide de l’API [!DNL Flow Service] et obtenu la valeur d’ID unique de la connexion. Vous pouvez utiliser cet identifiant dans le didacticiel suivant lorsque vous apprendrez à [explorer des bases de données à l’aide de l’API Flow Service](../../explore/database-nosql.md).
