@@ -10,19 +10,20 @@ tutorials-title: Tutoriels
 tutorials-url: https://docs.adobe.com/content/help/fr-FR/experience-platform/tutorials/home.html
 git-repo: https://git.corp.adobe.com/AdobeDocs/experience-platform.fr-FR
 solution: Experience Platform
+type: Documentation
 index: true
 translation-type: tm+mt
-source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
+source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Métadonnées pour une utilisation interne
 
-Le fichier metadata.md comprend des métadonnées de niveau référentiel qui sont transmises aux fichiers TOC.md du guide de l’utilisateur dans le référentiel. Si vous souhaitez modifier le contenu du fichier métadata.md pour un guide de l’utilisateur, faites-le dans le fichier TOC.md.
+Le fichier metadata.md comprend des métadonnées de niveau référentiel qui sont transmises aux fichiers TOC.md du guide de l’utilisateur dans le référentiel. Si vous souhaitez modifier le contenu du fichier metadata.md pour un guide de l’utilisateur, faites-le dans le fichier TOC.md.
 
 | métadonnées | utilisation |
 |--- |--- |
