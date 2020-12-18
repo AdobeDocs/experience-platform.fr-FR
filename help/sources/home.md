@@ -5,29 +5,29 @@ title: Présentation des connecteurs source Adobe Experience Platform
 topic: overview
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: 466cb072537cbf462d2c4d8f3ee4b6eccc0199a0
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 57%
+source-wordcount: '926'
+ht-degree: 61%
 
 ---
 
 
 # Présentation des connecteurs source
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources, telles que des applications d’Adobe, des enregistrements basés sur le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de Platform. Le service fournit une interface utilisateur et une API RESTful qui vous permettent de configurer facilement des connexions source à divers fournisseurs de données. Ces connexions source vous permettent d’authentifier vos systèmes tiers, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-With [!DNL Experience Platform], you can centralize data you collect from disparate sources and use the insights gained from it to do more.
+Experience Platform vous permet de centraliser les données que vous collectez de sources disparates et d’utiliser les informations ainsi acquises pour aller plus loin.
 
 ## Types de sources
 
-Sources in [!DNL Experience Platform] are grouped into the following categories:
+Les sources dans Experience Platform sont regroupées dans les catégories suivantes :
 
 ### Applications Adobe
 
-[!DNL Experience Platform] permet d’importer des données à partir d’autres applications d’Adobe, notamment Adobe Analytics, Adobe Audience Manager et [!DNL Experience Platform Launch]. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform permet d’ingérer des données provenant d’autres applications Adobe, notamment Adobe Analytics, Adobe Audience Manager et [!DNL Experience Platform Launch]. Consultez les documents connexes suivants pour plus d’informations :
 
 - [Présentation du connecteur Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
 - [Création d’un connecteur source Adobe Audience Manager dans l’interface utilisateur](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -39,13 +39,13 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### Publicité
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de publicité tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+L’Experience Platform prend en charge l’importation de données à partir d’un système de publicité tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connecteur
 
 ### Stockage dans le cloud
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données insérées peuvent être formatées sous la forme XDM JSON, XDM parquet ou délimitées. Chaque étape du processus est intégrée au workflow des sources à l’aide de l’interface utilisateur. Consultez les documents connexes suivants pour plus d’informations :
 
 - [[!DNL Azure Data Lake Storage Gen2] connecteur](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connecteur](connectors/cloud-storage/blob.md)
@@ -60,21 +60,21 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ### Gestion de la relation client (CRM)
 
-Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. [!DNL Experience Platform] prend en charge l’assimilation de données de gestion de la relation client à partir de [!DNL Microsoft Dynamics 365] et [!DNL Salesforce]. Consultez les documents connexes suivants pour plus d’informations :
+Les systèmes de gestion de la relation client (CRM) fournissent des données qui peuvent aider à établir des relations avec la clientèle, qui à leur tour, favorisent la fidélisation client. L’Experience Platform prend en charge l’assimilation de données de gestion de la relation client à partir de [!DNL Microsoft Dynamics 365] et [!DNL Salesforce]. Consultez les documents connexes suivants pour plus d’informations :
 
 - [[!DNL Microsoft Dynamics] connecteur](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connecteur](connectors/crm/salesforce.md)
 
 ### Réussite des clients
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
+Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. Consultez les documents connexes suivants pour plus d’informations :
 
 - [[!DNL Salesforce Service Cloud] connecteur](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connecteur](connectors/customer-success/servicenow.md)
 
 ### Base de données
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’une base de données tierce. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Amazon Redshift] connecteur](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights] connecteur](connectors/databases/hive.md)
@@ -95,25 +95,25 @@ Les systèmes de gestion de la relation client (CRM) fournissent des données qu
 
 ### eCommerce
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de commerce électronique tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+L’Experience Platform prend en charge l’importation de données à partir d’un système de commerce électronique tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
 ### Automatisation du marketing
 
-[!DNL Experience Platform] prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL HubSpot] connecteur](connectors/marketing-automation/hubspot.md)
 
 ### Paiements
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+L’Experience Platform prend en charge l’importation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL PayPal] connecteur](connectors/payments/paypal.md)
 
 ### Protocoles
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+Experience Platform fournit la prise en charge de l’assimilation de données à partir d’un système de protocoles tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL Generic OData] connecteur](connectors/protocols/odata.md)
 
@@ -133,7 +133,7 @@ Pour plus d’informations sur les autorisations disponibles accordées à l’a
 
 ## Termes et conditions {#terms-and-conditions}
 
-En utilisant l&#39;une des sources étiquetées bêta (&quot;bêta&quot;), Vous reconnaissez que la version bêta est fournie ***&quot;telle quelle&quot; sans aucune garantie***.
+En utilisant l&#39;une des sources étiquetées bêta (&quot;Beta&quot;), Vous reconnaissez par la présente que la version bêta est fournie ***&quot;en l&#39;état&quot; sans garantie d&#39;aucune sorte***.
 
 L&#39;Adobe n&#39;a aucune obligation de maintenir, corriger, mettre à jour, modifier, modifier ou prendre en charge la version bêta. Nous vous conseillons de faire preuve de prudence et de ne pas vous fier de quelque façon que ce soit au bon fonctionnement ou au bon fonctionnement de cette version bêta et/ou du matériel qui l&#39;accompagne. La version bêta est considérée comme une information confidentielle d’Adobe.
 
