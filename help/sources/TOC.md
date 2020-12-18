@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '663'
 ht-degree: 9%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 9%
       - [Connecteur de données Analytics](connectors/adobe-applications/analytics.md)
       - [Connecteur d’Audience Manager](connectors/adobe-applications/audience-manager.md)
       - [Connecteur d’attributs du client](connectors/adobe-applications/customer-attributes.md)
-      - Mappage des champs d’application d’Adobe {#mapping}
+      - Mappage des champs d&#39;application d&#39;Adobe {#mapping}
          - [Champs de mappage Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Champs de mappage des Audiences Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Champs de mapping de ciblage](connectors/adobe-applications/mapping/target.md)
    - Publicité {#advertising}
       - [Connecteur Google AdWords](connectors/advertising/ads.md)
-   - Cloud storage {#cloud-storage}
+   - Enregistrement cloud {#cloud-storage}
       - [Connecteur Amazon](connectors/cloud-storage/kinesis.md)
       - [Connecteur Amazon S3](connectors/cloud-storage/s3.md)
       - [Connecteur Apache HDFS](connectors/cloud-storage/hdfs.md)
@@ -43,7 +43,7 @@ ht-degree: 9%
    - CRM {#crm}
       - [Connecteur Microsoft Dynamics ](connectors/crm/ms-dynamics.md)
       - [Connecteur Salesforce](connectors/crm/salesforce.md)
-   - Réussite du client {#customer-success}
+   - Succès du client {#customer-success}
       - [Connecteur Salesforce Service Cloud](connectors/customer-success/salesforce-service-cloud.md)
       - [Connecteur ServiceNow](connectors/customer-success/servicenow.md)
    - Bases de données {#databases}
@@ -65,17 +65,17 @@ ht-degree: 9%
       - [Connecteur PostgreSQL](connectors/databases/postgres.md)
    - eCommerce {#ecommerce}
       - [Connecteur Shopify](connectors/ecommerce/shopify.md)
-   - Marketing automation {#marketing-automation}
+   - Automatisation du marketing {#marketing-automation}
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
    - Paiements {#payments}
       - [Connecteur PayPal](connectors/payments/paypal.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
 - Tutoriels sur les API {#api-tutorials}
-   - Création d’un connecteur source {#create}
+   - Créer un connecteur source {#create}
       - Publicité {#advertising}
          - [Connecteur Google AdWords](tutorials/api/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - Enregistrement cloud {#cloud-storage}
          - [Amazon](tutorials/api/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -87,10 +87,9 @@ ht-degree: 9%
          - [Connecteur d’Enregistrement Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Connecteur SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
-         - [Connecteur HubSpot](tutorials/api/create/crm/hubspot.md)
          - [Connecteur Microsoft Dynamics ](tutorials/api/create/crm/ms-dynamics.md)
          - [Connecteur Salesforce](tutorials/api/create/crm/salesforce.md)
-      - Réussite du client {#customer-success}
+      - Succès du client {#customer-success}
          - [Connecteur Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [Connecteur ServiceNow](tutorials/api/create/customer-success/servicenow.md)
       - Bases de données {#databases}
@@ -112,7 +111,7 @@ ht-degree: 9%
          - [Connecteur SQL Server](tutorials/api/create/databases/sql-server.md)
       - eCommerce {#ecommerce}
          - [Connecteur Shopify](tutorials/api/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - Automatisation du marketing {#marketing-automation}
          - [Connecteur HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
       - Paiements {#payments}
          - [Connecteur PayPal](tutorials/api/create/payments/paypal.md)
@@ -145,8 +144,8 @@ ht-degree: 9%
    - [Mettre à jour les connexions](tutorials/api/update.md)
    - [Suppression de connexions](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
-- Didacticiels sur l’interface utilisateur {#ui-tutorials}
-   - Création d’un connecteur source {#create}
+- Didacticiels d’interface utilisateur {#ui-tutorials}
+   - Créer un connecteur source {#create}
       - Applications Adobe {#adobe-applications}
          - [Connecteur de données de classifications Adobe Analytics](tutorials/ui/create/adobe-applications/classifications.md)
          - [Connecteur Adobe Analytics](tutorials/ui/create/adobe-applications/analytics.md)
@@ -154,7 +153,7 @@ ht-degree: 9%
          - [Connecteur d’attributs du client](tutorials/ui/create/adobe-applications/customer-attributes.md)
       - Publicité {#create}
          - [Connecteur Google AdWords](tutorials/ui/create/advertising/ads.md)
-      - Cloud storage {#cloud-storage}
+      - Enregistrement cloud {#cloud-storage}
          - [Connecteur Amazon](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Connecteur Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Connecteur Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -169,7 +168,7 @@ ht-degree: 9%
       - CRM {#crm}
          - [Connecteur Microsoft Dynamics ](tutorials/ui/create/crm/dynamics.md)
          - [Connecteur Salesforce](tutorials/ui/create/crm/salesforce.md)
-      - Réussite des clients {#customer-success}
+      - Réussite du client {#customer-success}
          - [Connecteur Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [Connecteur ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
       - Bases de données {#databases}
@@ -191,13 +190,13 @@ ht-degree: 9%
          - [Connecteur PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - eCommerce {#ecommerce}
          - [Connecteur Shopify](tutorials/ui/create/ecommerce/shopify.md)
-      - Marketing automation {#marketing-automation}
+      - Automatisation du marketing {#marketing-automation}
          - [Connecteur HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - Paiements {#payments}
          - [Connecteur PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [Connecteur OData générique](tutorials/ui/create/protocols/odata.md)
-   - Configuration d’un flux de données {#dataflow}
+   - Configurer un flux de données {#dataflow}
       - [Configuration d’un flux de données pour un connecteur de publicité](tutorials/ui/dataflow/advertising.md)
       - [Configuration d’un flux de données pour un connecteur d’enregistrement de cloud par lot](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Configuration d’un flux de données pour un connecteur d’enregistrement cloud en flux continu](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
