@@ -5,7 +5,7 @@ description: 'Découvrez comment configurer le réseau Edge Experience Platform.
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 3%
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 # Configuration du bord
 
-La configuration du SDK Web Adobe Experience Platform est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être gérés sur le client, comme le `edgeDomain`noeud. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, elle `edgeConfigId` est utilisée pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+La configuration du SDK Web Adobe Experience Platform est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être traités sur le client, comme la commande `edgeDomain`. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu&#39;une requête est envoyée au réseau Edge de Adobe Experience Platform, `edgeConfigId` est utilisé pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
-Votre organisation doit être configurée pour cette fonctionnalité. Veuillez contacter votre responsable logiciel certifié (CSM) pour être mis en liste autorisée.
+Votre organisation doit être configurée pour cette fonctionnalité. Veuillez contacter votre responsable de succès client (CSM) pour être mis en liste autorisée.
 
 ## Création d’une configuration Edge
 
@@ -27,19 +27,19 @@ Les configurations Edge peuvent être créées dans l&#39;Adobe [!DNL Experience
 
 >[!NOTE]
 >
->L’outil de configuration des arêtes est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] ou non comme gestionnaire de balises. En outre, les utilisateurs ont besoin des autorisations de développement dans [!DNL Experience Platform Launch]. Pour plus d’informations, reportez-vous à l’article Permissions [](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) utilisateur dans la [!DNL Experience Platform Launch] documentation.
+>L’outil de configuration des arêtes est disponible pour les clients de la liste autorisée, qu’ils utilisent [!DNL Experience Platform Launch] comme gestionnaire de balises. De plus, les utilisateurs ont besoin des autorisations de développement dans [!DNL Experience Platform Launch]. Pour plus d&#39;informations, consultez l&#39;article [Autorisations d&#39;utilisateur](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/admin/user-permissions.html) dans la documentation [!DNL Experience Platform Launch].
 
-Créez une configuration de bord en cliquant sur **[!UICONTROL Nouvelle configuration]** de bord dans la zone supérieure droite de l’écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont détaillés ci-dessous.
+Créez une configuration de bord en cliquant sur **[!UICONTROL Nouvelle configuration de bord]** dans la zone supérieure droite de l&#39;écran. Après avoir fourni un nom et une description, vous êtes invité à définir les paramètres par défaut de chaque environnement. Les paramètres disponibles sont détaillés ci-dessous.
 
-Lors de la création d&#39;une configuration de bord, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut de [!DNL Experience Platform Launch]. Lorsque vous créez une [!DNL Experience Platform Launch] bibliothèque dans un environnement de développement, celle-ci utilise automatiquement l’environnement de développement de votre configuration. Vous pouvez modifier les paramètres d’un environnement à votre convenance.
+Lors de la création d&#39;une configuration de bord, trois environnements sont automatiquement créés avec des paramètres identiques. Ces trois environnements sont *dev*, *stage* et *prod*. Ils correspondent aux trois environnements par défaut dans [!DNL Experience Platform Launch]. Lorsque vous créez une bibliothèque [!DNL Experience Platform Launch] dans un environnement de développement, celle-ci utilise automatiquement l&#39;environnement de développement de votre configuration. Vous pouvez modifier les paramètres d’un environnement à votre convenance.
 
-L’ID utilisé dans le SDK en tant qu’ `edgeConfigId` identifiant composite spécifie la configuration et l’environnement (par exemple, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Si aucun environnement n’est présent dans l’ID composite (par exemple, `stage` dans l’exemple précédent), l’environnement de production est utilisé.
+L’ID utilisé dans le SDK en tant que `edgeConfigId` est un ID composite qui spécifie la configuration et l’environnement (par exemple, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Si aucun environnement n’est présent dans l’ID composite (par exemple, `stage` dans l’exemple précédent), l’environnement de production est utilisé.
 
 Vous trouverez ci-dessous les paramètres disponibles pour chaque environnement de configuration. La plupart des sections peuvent être activées ou désactivées. Lorsque cette option est désactivée, vos paramètres sont enregistrés mais ne sont pas principaux.
 
-## [!UICONTROL Paramètres d&#39;identité]
+##  IdentitySettings
 
-La section d&#39;identité est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL ID Syncs Enabled]&quot; et &quot;ID de Conteneur Sync&quot;.
+La section d&#39;identité est la seule qui est toujours activée. Deux paramètres sont disponibles : &quot;[!UICONTROL ID Syncs Enabled]&quot; et &quot;[!UICONTROL ID du Conteneur de synchronisation des identifiants]&quot;.
 
 ![Section Identité de l’interface utilisateur de configuration](../../assets/edge_configuration_identity.png)
 
@@ -59,15 +59,15 @@ Les paramètres répertoriés ici vous permettent d&#39;envoyer des données à 
 
 ### [!UICONTROL Environnement de test]
 
-Les sandbox sont des emplacements de Adobe Experience Platform qui permettent aux clients d’isoler leurs données et leurs implémentations les unes des autres. Pour plus d’informations sur leur fonctionnement, consultez la documentation [](../../sandboxes/home.md)Sandbox.
+Les sandbox sont des emplacements de Adobe Experience Platform qui permettent aux clients d’isoler leurs données et leurs implémentations les unes des autres. Pour plus de détails sur leur fonctionnement, consultez la [documentation Sandbox](../../sandboxes/home.md).
 
 ### [!UICONTROL Entrée de diffusion en continu]
 
-Une entrée en flux continu est une source HTTP à Adobe Experience Platform. Elles sont créées sous l’onglet &quot;[!UICONTROL Sources]&quot; dans Adobe Experience Platform sous la forme d’une API HTTP.
+Une entrée en flux continu est une source HTTP à Adobe Experience Platform. Elles sont créées sous l&#39;onglet &quot;[!UICONTROL Sources]&quot; dans Adobe Experience Platform sous la forme d&#39;une API HTTP.
 
 ### [!UICONTROL Jeu de données événement]
 
-Les configurations Edge prennent en charge l’envoi de données à des jeux de données ayant un schéma de Événement [!UICONTROL d’]expérience de classe.
+Les configurations Edge prennent en charge l&#39;envoi de données à des jeux de données qui ont un schéma de classe [!UICONTROL Événement d&#39;expérience].
 
 ## Paramètres Adobe Target
 
@@ -81,19 +81,19 @@ Pour configurer Adobe Target, vous devez fournir un code client. Les autres cham
 
 ### [!UICONTROL Code client]
 
-ID unique d’un compte de cible. Pour ce faire, vous pouvez naviguer jusqu’à [!UICONTROL Adobe Target] > [!UICONTROL Configuration]> [!UICONTROL Implémentation] > [!UICONTROL modifier les paramètres en regard du bouton télécharger pour le fichier at.js ou le fichier mbox.js.]
+ID unique d’un compte de cible. Pour ce faire, vous pouvez accéder à [!UICONTROL Adobe Target] > [!UICONTROL Configuration] [!UICONTROL Implémentation] > [!UICONTROL modifier les paramètres] en regard du bouton [!UICONTROL télécharger] pour [!UICONTROL at.js] ou &lt;a1 2/>mbox.js][!UICONTROL 
 
 ### [!UICONTROL Jeton de propriété]
 
-[!DNL Target] permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des informations détaillées dans la section Permissions [](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) Enterprise de la [!DNL Target] documentation.
+[!DNL Target] permet aux clients de contrôler les autorisations en utilisant les propriétés. Vous trouverez des détails dans la section [Autorisations d&#39;entreprise](https://docs.adobe.com/content/help/fr-FR/target/using/administer/manage-users/enterprise/properties-overview.html) de la documentation [!DNL Target].
 
-Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL configuration] > [!UICONTROL Propriétés.]
+Le jeton de propriété se trouve dans [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ### [!UICONTROL ID d’Environnement cible]
 
-[Les Environnements](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) d’Adobe Target vous aident à gérer votre mise en oeuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
+[Les ](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) environnements d’Adobe Target vous aident à gérer votre implémentation à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec chaque environnement.
 
-Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration `dev`, `stage`et `prod` Edge afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements Adobe Target, vous pouvez les utiliser.
+Adobe recommande de définir cette variable différemment pour chacun de vos environnements de configuration de bord `dev`, `stage` et `prod` afin de garder les choses simples. Cependant, si vous avez déjà défini des environnements Adobe Target, vous pouvez les utiliser.
 
 ## Paramètres Adobe Audience Manager
 
@@ -103,15 +103,15 @@ Pour envoyer des données à Adobe Audience Manager, il suffit d’activer cette
 
 ### [!UICONTROL Destinations des cookies activées]
 
-Permet au SDK de partager des informations sur les segments par le biais des destinations [de](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) cookies à partir de [!DNL Audience Manager].
+Permet au SDK de partager des informations de segment via [Destinations de cookies](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) à partir de [!DNL Audience Manager].
 
 ### [!UICONTROL Destinations d’URL activées]
 
-Permet au SDK de partager des informations de segment par le biais des destinations [](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html)URL. Ceux-ci sont configurés dans [!DNL Audience Manager].
+Permet au SDK de partager des informations de segment via [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). Ils sont configurés dans [!DNL Audience Manager].
 
 ## Paramètres Adobe Analytics
 
-Contrôle si les données sont envoyées à Adobe Analytics. Vous trouverez d’autres informations dans la présentation [d’](../data-collection/adobe-analytics/analytics-overview.md)Analytics.
+Contrôle si les données sont envoyées à Adobe Analytics. Pour plus d’informations, voir [Présentation d’Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
 ![Bloc des paramètres Adobe Analytics](../../assets/edge_configuration_aa.png)
 
