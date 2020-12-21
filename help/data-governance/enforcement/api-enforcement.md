@@ -6,23 +6,23 @@ topic: enforcement
 type: Tutorial
 description: Une fois que vous avez créé des libellés d’utilisation pour vos données et des stratégies d’utilisation pour les actions marketing en fonction de ces libellés, vous pouvez utiliser l’API Policy Service pour évaluer si une action marketing effectuée sur un jeu de données ou sur un groupe arbitraire de libellés constitue une violation de la stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 translation-type: tm+mt
-source-git-commit: 00688e271b3c1e3ad1a17ceb6045e3316bd65961
+source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '992'
 ht-degree: 60%
 
 ---
 
 
-# Enforce data usage policies using the [!DNL Policy Service] API
+# Appliquer les stratégies d&#39;utilisation des données à l&#39;aide de l&#39;API [!DNL Policy Service]
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
+Une fois que vous avez créé des étiquettes d&#39;utilisation des données pour vos données et créé des stratégies d&#39;utilisation pour les actions marketing à l&#39;égard de ces étiquettes, vous pouvez utiliser [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) pour évaluer si une action marketing effectuée sur un jeu de données ou un groupe arbitraire d&#39;étiquettes constitue une violation de stratégie. Vous pouvez ensuite configurer vos propres protocoles internes pour gérer les violations de stratégie en fonction de la réponse de l’API.
 
 >[!NOTE]
 >
 >Par défaut, seules les stratégies dont l’état est défini sur `ENABLED` peuvent participer à l’évaluation. Pour autoriser les stratégies `DRAFT` à participer à l’évaluation, vous devez inclure le paramètre de requête `includeDraft=true` au chemin d’accès de la requête.
 
-This document provides steps on how to use the [!DNL Policy Service] API to check for policy violations in different scenarios.
+Ce document décrit la procédure à suivre pour utiliser l&#39;API [!DNL Policy Service] afin de rechercher les violations de stratégie dans différents scénarios.
 
 ## Prise en main
 
@@ -30,8 +30,8 @@ Ce didacticiel nécessite une bonne compréhension des concepts clés suivants l
 
 * [Gouvernance des données](../home.md)[!DNL Platform] : cadre selon lequel applique la conformité d’utilisation des données.
    * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux jeux de données (et/ou aux champs individuels de ces jeux de données), spécifiant les restrictions d’utilisation de ces données.
-   * [Stratégies](../policies/overview.md)d’utilisation des données : Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing qui sont autorisées ou restreintes pour certains jeux d’étiquettes d’utilisation des données.
-* [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+   * [Stratégies](../policies/overview.md) d’utilisation des données : Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing qui sont autorisées ou restreintes pour certains jeux d’étiquettes d’utilisation des données.
+* [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
 Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API , y compris les en-têtes requis et la méthode de lecture d’exemples d’appels API.[!DNL Policy Service]
 
@@ -185,7 +185,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
 | `entityId` | Chaque élément du tableau de payload doit fournir l’identifiant unique d’un jeu de données. |
-| `entityMeta.fields` | (Facultatif) Tableau de chaînes de pointeur [](../../landing/api-fundamentals.md#json-pointer) JSON faisant référence à des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans le tableau participent à l&#39;évaluation. Les champs de schéma qui ne sont pas inclus dans la baie ne participent pas à l&#39;évaluation.<br><br>Si ce champ n&#39;est pas inclus, tous les champs du schéma de jeux de données seront inclus dans l&#39;évaluation. |
+| `entityMeta.fields` | (Facultatif) Tableau de chaînes [JSON Pointer](../../landing/api-fundamentals.md#json-pointer), référençant des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans le tableau participent à l&#39;évaluation. Les champs de schéma qui ne sont pas inclus dans la baie ne participent pas à l&#39;évaluation.<br><br>Si ce champ n&#39;est pas inclus, tous les champs du schéma de jeux de données seront inclus dans l&#39;évaluation. |
 
 **Réponse**
 
@@ -378,4 +378,4 @@ Une réponse positive renvoie l’URL de l’action marketing, les étiquettes d
 
 En lisant ce document, vous avez réussi à rechercher des violations de stratégie lors de l’exécution d’une action marketing sur un jeu de données ou un ensemble d’étiquettes d’utilisation des données. En utilisant les données renvoyées dans les réponses de l’API, vous pouvez configurer des protocoles dans votre application d’expérience de façon à appliquer les violations de stratégie lorsque celles-ci se produisent.
 
-For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+Pour plus d&#39;informations sur la façon dont Platform fournit automatiquement l&#39;application de stratégies pour les segments activés, consultez le guide sur [l&#39;application automatique](./auto-enforcement.md).
