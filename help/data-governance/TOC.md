@@ -5,10 +5,10 @@ user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Plat
 breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen d’étiquettes, d’actions marketing et de stratégies.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 82%
+source-wordcount: '118'
+ht-degree: 77%
 
 ---
 
@@ -27,7 +27,8 @@ ht-degree: 82%
    * [Création de stratégies d’utilisation des données à l’aide de l’API Policy Service](policies/create.md)
 * Application des stratégies {#enforcement}
    * [Présentation de l’application des stratégies](enforcement/overview.md)
-   * [Application des stratégies d’utilisation des données à l’aide de l’API Policy Service](enforcement/api-enforcement.md)
+   * [Application automatique](enforcement/auto-enforcement.md)
+   * [Application basée sur les API](enforcement/api-enforcement.md)
 * Guide de développement de l’API Policy Service{#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
