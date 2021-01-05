@@ -2,13 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Aide du système de modèle de données d’expérience (XDM)
-breadcrumb-title: Guide du modèle de données d’expérience (XDM)
+breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: df763e246cd6930a31402f0a2c94d657159f4fe8
+source-git-commit: 099e88373d945660e7529bbd508e616869fd01da
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 58%
+source-wordcount: '216'
+ht-degree: 59%
 
 ---
 
@@ -21,19 +21,19 @@ ht-degree: 58%
    * [Meilleures pratiques pour la modélisation des données](schema/best-practices.md)
    * [Contraintes de type de champ XDM](schema/field-constraints.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
-   * Cas d&#39;utilisation de schéma {#use-cases}
+   * Cas d&#39;utilisation du schéma {#use-cases}
       * [Type de données Contenus et Préférences](schema/privacy-consent.md)
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Mélanges {#mixins}
-   * Mélanges profils {#profile}
+* Mixins {#mixins}
+   * Mélins de profil {#profile}
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Détails démographiques](./mixins/profile/person-details.md)
       * [Coordonnées personnelles](./mixins/profile/personal-details.md)
       * [Détails de l’abonnement au segment](./mixins/profile/segmentation.md)
       * [Détails du contact de travail](./mixins/profile/work-details.md)
-   * Mélanges événements {#event}
+   * Mélins de événement {#event}
       * [Détails de l’ID d’utilisateur final](./mixins/event/enduserids.md)
       * [Détails de l&#39;Environnement](./mixins/event/environment-details.md)
    * [Mises à jour des noms mixtes](./mixins/name-updates.md)
@@ -56,6 +56,22 @@ ht-degree: 58%
    * [Détails de la publication](./data-types/poi-details.md)
    * [Interaction POI](./data-types/poi-interaction.md)
    * [Adresse postale](./data-types/postal-address.md)
+*  SchemasUI  {#ui}
+   * [Présentation](./ui/overview.md)
+   * [Explorez les ressources XDM](./ui/explore.md)
+   * Créer et modifier des ressources {#resources}
+      * [Schémas](./ui/resources/schemas.md)
+      * [Classes](./ui/resources/classes.md)
+      * [Mélanges](./ui/resources/mixins.md)
+      * [Types des données](./ui/resources/data-types.md)
+   * Définir des champs {#fields}
+      * [Présentation](./ui/fields/overview.md)
+      * [Champs obligatoires](./ui/fields/required.md)
+      * [Champs d’objet](./ui/fields/object.md)
+      * [Champs de tableau](./ui/fields/array.md)
+      * [Champs Enum](./ui/fields/enum.md)
+      * [Champs d’identité](./ui/fields/identity.md)
+      * [Champs de relation](./ui/fields/relationship.md)
 * API Schema Registry {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
@@ -69,10 +85,8 @@ ht-degree: 58%
    * [Schémas ad hoc](api/ad-hoc.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
-   * [Explorez des ressources dans l’interface utilisateur](./tutorials/explore.md)
    * [Création d’un schéma (API)](tutorials/create-schema-api.md)
    * [Création d’un schéma (IU)](tutorials/create-schema-ui.md)
-   * [Créer et modifier des types de données (interface utilisateur)](./tutorials/create-data-type.md)
    * [Définition d’une relation entre deux schémas (API)](tutorials/relationship-api.md)
    * [Définition d’une relation entre deux schémas (IU)](tutorials/relationship-ui.md)
    * [Création d’un schéma ad hoc (API)](tutorials/ad-hoc.md)
