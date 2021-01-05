@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée.
 
-Pour en savoir plus sur la surveillance des flux de données pour les connecteurs source, consultez les flux de données de [surveillance dans le didacticiel des sources](../../../dataflows/ui/monitor-sources.md) .
+Pour en savoir plus sur la surveillance des flux de données pour les connecteurs source, consultez le [tutoriel de surveillance des flux de données dans sources](../../../dataflows/ui/monitor-sources.md).
