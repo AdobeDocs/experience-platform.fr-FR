@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Création d’un schéma
 description: Le point de terminaison /schémas de l'API Schéma Registry vous permet de gérer par programmation les schémas XDM dans votre application d'expérience.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 0b55f18eabcf1d7c5c233234c59eb074b2670b93
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 20%
@@ -15,19 +15,19 @@ ht-degree: 20%
 
 # Point de terminaison des schémas
 
-Un schéma peut être considéré comme le schéma directeur des données que vous souhaitez intégrer à Adobe Experience Platform. Chaque schéma est composé d’une classe et de zéro ou plusieurs mixins. Le `/schemas` point de terminaison de l’ [!DNL Schema Registry] API vous permet de gérer par programmation les schémas dans votre application d’expérience.
+Un schéma peut être considéré comme le schéma directeur des données que vous souhaitez intégrer à Adobe Experience Platform. Chaque schéma est composé d’une classe et de zéro ou plusieurs mixins. Le point de terminaison `/schemas` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les schémas dans votre application d&#39;expérience.
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le guide [de](./getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison API utilisé dans ce guide fait partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
-## Retrieve a list of schemas {#list}
+## Récupérer une liste de schémas {#list}
 
-Vous pouvez liste tous les schémas sous le `global` ou le `tenant` conteneur en adressant une demande de GET à `/global/schemas` ou `/tenant/schemas`, respectivement.
+Vous pouvez liste tous les schémas sous le conteneur `global` ou `tenant` en adressant une demande de GET à `/global/schemas` ou `/tenant/schemas`, respectivement.
 
 >[!NOTE]
 >
->Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d&#39;informations, consultez la section sur les paramètres [de](./appendix.md#query) requête dans le document de l&#39;appendice.
+>Lors de la mise en vente de ressources, le Registre des Schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d&#39;informations, consultez la section [Paramètres de requête](./appendix.md#query) dans le document de l&#39;annexe.
 
 **Format d’API**
 
@@ -38,11 +38,11 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | Conteneur qui héberge les schémas à récupérer : `global` pour les schémas créés par Adobe ou `tenant` pour les schémas appartenant à votre organisation. |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour obtenir une liste des paramètres disponibles, reportez-vous au document [](./appendix.md#query) annexe. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour obtenir une liste des paramètres disponibles, consultez l&#39;[document ](./appendix.md#query) de l&#39;appendice. |
 
 **Requête**
 
-La requête suivante récupère une liste de schémas du `tenant` conteneur, en utilisant un paramètre `orderby` de requête pour trier les résultats selon leur `title` attribut.
+La requête suivante récupère une liste de schémas du conteneur `tenant`, en utilisant un paramètre de requête `orderby` pour trier les résultats selon leur attribut `title`.
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing schemas:
+Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande. Les en-têtes `Accept` suivants sont disponibles pour les schémas de liste :
 
 | En-tête `Accept` | Description |
 | --- | --- |
@@ -63,7 +63,7 @@ The response format depends on the `Accept` header sent in the request. The foll
 
 **Réponse**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each schema. L’utilisation de l’autre `Accept` en-tête (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque schéma. Select the appropriate `Accept` header depending on the information you require in your response.
+La requête ci-dessus utilisait l&#39;en-tête `application/vnd.adobe.xed-id+json` `Accept`. Par conséquent, la réponse ne comprend que les attributs `title`, `$id`, `meta:altId` et `version` pour chaque schéma. L’utilisation de l’autre en-tête `Accept` (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque schéma. Sélectionnez l&#39;en-tête `Accept` approprié en fonction des informations que vous souhaitez obtenir dans votre réponse.
 
 ```json
 {
@@ -108,11 +108,11 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | Conteneur qui héberge le schéma à récupérer : `global` pour un schéma créé par un Adobe ou `tenant` pour un schéma appartenant à votre organisation. |
-| `{SCHEMA_ID}` | Le code `meta:altId` ou URL `$id` du schéma que vous souhaitez rechercher. |
+| `{SCHEMA_ID}` | `meta:altId` ou `$id` codé URL du schéma que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère un schéma spécifié par sa `meta:altId` valeur dans le chemin d’accès.
+La requête suivante récupère un schéma spécifié par sa valeur `meta:altId` dans le chemin d’accès.
 
 ```shell
 curl -X GET \
@@ -124,7 +124,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. All lookup requests require a `version` be included in the `Accept` header. The following `Accept` headers are available:
+Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande. Toutes les requêtes de recherche nécessitent l&#39;inclusion de `version` dans l&#39;en-tête `Accept`. Les en-têtes `Accept` suivants sont disponibles :
 
 | En-tête `Accept` | Description |
 | ------- | ------------ |
@@ -136,7 +136,7 @@ The response format depends on the `Accept` header sent in the request. All look
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+Une réponse réussie renvoie les détails du schéma. Les champs renvoyés dépendent de l&#39;en-tête `Accept` envoyé dans la demande. Testez différents en-têtes `Accept` pour comparer les réponses et déterminer l&#39;en-tête qui convient le mieux à votre cas d&#39;utilisation.
 
 ```json
 {
@@ -193,7 +193,7 @@ Le processus de composition d’un schéma commence par l’affectation d’une 
 
 >[!NOTE]
 >
->L&#39;exemple d&#39;appel ci-dessous n&#39;est qu&#39;un exemple de base de la façon de créer un schéma dans l&#39;API, avec les exigences minimales de composition d&#39;une classe et pas de mixins. Pour obtenir des instructions complètes sur la création d’un schéma dans l’API, y compris sur l’affectation de champs à l’aide de mixins et de types de données, consultez le didacticiel [sur la création de](../tutorials/create-schema-api.md)schémas.
+>L&#39;exemple d&#39;appel ci-dessous n&#39;est qu&#39;un exemple de base de la façon de créer un schéma dans l&#39;API, avec les exigences minimales de composition d&#39;une classe et pas de mixins. Pour obtenir des instructions complètes sur la création d’un schéma dans l’API, y compris sur l’affectation de champs à l’aide de mixins et de types de données, consultez le [didacticiel sur la création de schéma](../tutorials/create-schema-api.md).
 
 **Format d’API**
 
@@ -227,11 +227,11 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `allOf` | Tableau d’objets, chaque objet faisant référence à une classe ou à un mixin dont les champs sont implémentés par le schéma. Chaque objet contient une seule propriété (`$ref`) dont la valeur représente la valeur `$id` de la classe ou du mixin que le nouveau schéma implémentera. Une classe doit être fournie, avec zéro ou plusieurs mixins supplémentaires. Dans l&#39;exemple ci-dessus, l&#39;objet unique du `allOf` tableau est la classe de schéma. |
+| `allOf` | Tableau d’objets, chaque objet faisant référence à une classe ou à un mixin dont les champs sont implémentés par le schéma. Chaque objet contient une propriété unique (`$ref`) dont la valeur représente `$id` de la classe ou du mixin que le nouveau schéma implémentera. Une classe doit être fournie, avec zéro ou plusieurs mixins supplémentaires. Dans l&#39;exemple ci-dessus, l&#39;objet unique du tableau `allOf` est la classe de schéma. |
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui contient les détails du schéma créé, y compris le `$id`, l’`meta:altId` et la `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui contient les détails du schéma créé, y compris le `$id`, l’`meta:altId` et la `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
 
 ```JSON
 {
@@ -266,17 +266,17 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un payload qui cont
 }
 ```
 
-Performing a GET request to [list all schemas](#list) in the tenant container would now include the new schema. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
+L&#39;exécution d&#39;une demande de GET à [liste de tous les schémas](#list) dans le conteneur locataire inclurait désormais le nouveau schéma. Vous pouvez exécuter une requête de recherche [recherche (GET)](#lookup) à l’aide de l’URI `$id` codé en URL pour vue directement le nouveau schéma.
 
-Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [](#patch) PATCH pour ajouter des mixins au schéma `allOf` et aux `meta:extends` baies.
+Pour ajouter des champs supplémentaires à un schéma, vous pouvez effectuer une opération [PATCH](#patch) pour ajouter des mixins aux tableaux `allOf` et `meta:extends` du schéma.
 
 ## Mettre à jour un schéma {#put}
 
-Vous pouvez remplacer un schéma entier par une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d’un schéma par le biais d’une requête de PUT, le corps doit inclure tous les champs requis lors de la [création d’un nouveau schéma](#create) dans une requête de POST.
+Vous pouvez remplacer un schéma entier par une opération de PUT, en réécrivant essentiellement la ressource. Lors de la mise à jour d’un schéma par le biais d’une requête de PUT, le corps doit inclure tous les champs requis lors de la création [d’un nouveau schéma](#create) dans une requête de POST.
 
 >[!NOTE]
 >
->If you only want to update part of a schema instead of replacing it entirely, see the section on [updating a portion of a schema](#patch).
+>Si vous souhaitez uniquement mettre à jour une partie d&#39;un schéma au lieu de la remplacer entièrement, consultez la section [Mise à jour d&#39;une partie d&#39;un schéma](#patch).
 
 **Format d’API**
 
@@ -286,11 +286,11 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Codé `meta:altId` ou URL `$id` du schéma que vous souhaitez réécrire. |
+| `{SCHEMA_ID}` | `meta:altId` ou `$id` codé URL du schéma que vous souhaitez réécrire. |
 
 **Requête**
 
-La requête suivante remplace un schéma existant, en modifiant ses `title`, `description`et `allOf` attributs.
+La requête suivante remplace un schéma existant, en modifiant ses attributs `title`, `description` et `allOf`.
 
 ```SHELL
 curl -X PUT \
@@ -349,13 +349,13 @@ Une réponse réussie renvoie les détails du schéma mis à jour.
 }
 ```
 
-## Update a portion of a schema {#patch}
+## Mettre à jour une partie d&#39;un schéma {#patch}
 
-Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requête de PATCH. Il [!DNL Schema Registry] prend en charge toutes les opérations de correctif JSON standard, y compris `add`, `remove`et `replace`. Pour plus d’informations sur le correctif JSON, voir le guide [des fondamentaux de l’](../../landing/api-fundamentals.md#json-patch)API.
+Vous pouvez mettre à jour une partie d’un schéma à l’aide d’une requête de PATCH. [!DNL Schema Registry] prend en charge toutes les opérations de correctif JSON standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, consultez le [guide des fondamentaux de l’API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a schema using a PUT operation](#put).
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [remplacement d&#39;un schéma à l&#39;aide d&#39;une opération de PUT](#put).
 
 L&#39;une des opérations de PATCH les plus courantes consiste à ajouter des mixins précédemment définis à un schéma, comme le montre l&#39;exemple ci-dessous.
 
@@ -367,13 +367,13 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to update. |
+| `{SCHEMA_ID}` | URI `$id` ou `meta:altId` codés URL du schéma à mettre à jour. |
 
 **Requête**
 
-L’exemple de demande ci-dessous ajoute un nouveau mixin à un schéma en ajoutant la `$id` valeur de ce mixin aux `meta:extends` et `allOf` baies.
+L&#39;exemple de demande ci-dessous ajoute un nouveau mixin à un schéma en ajoutant la valeur `$id` du mixin aux deux tableaux `meta:extends` et `allOf`.
 
-Le corps de la requête prend la forme d&#39;un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l&#39;opération à exécuter (`op`), le champ sur lequel l&#39;opération doit être exécutée (`path`) et les informations à inclure dans cette opération (`value`).
+Le corps de la requête prend la forme d&#39;un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet comprend l’opération à exécuter (`op`), le champ sur lequel l’opération doit être exécutée (`path`) et les informations à inclure dans cette opération (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -440,9 +440,9 @@ La réponse montre que les deux opérations ont été réalisées avec succès. 
 }
 ```
 
-## Enable a schema for use in Real-time Customer Profile {#union}
+## Activer un schéma à utiliser dans le Profil client en temps réel {#union}
 
-Pour qu’un schéma puisse participer au Profil [client en temps](../../profile/home.md)réel, vous devez ajouter une `union` balise au tableau `meta:immutableTags` de schémas. Pour ce faire, vous pouvez faire une demande de PATCH pour le schéma en question.
+Pour qu’un schéma puisse participer au [Profil client en temps réel](../../profile/home.md), vous devez ajouter une balise `union` à la baie de schémas `meta:immutableTags`. Pour ce faire, vous pouvez faire une demande de PATCH pour le schéma en question.
 
 >[!IMPORTANT]
 >
@@ -456,11 +456,11 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable. |
+| `{SCHEMA_ID}` | URI `$id` ou `meta:altId` codés URL du schéma à activer. |
 
 **Requête**
 
-L&#39;exemple de requête ci-dessous ajoute un `meta:immutableTags` tableau à un schéma existant, ce qui lui donne une valeur de chaîne unique de `union` pour l&#39;activer pour l&#39;utiliser dans le Profil.
+L&#39;exemple de requête ci-dessous ajoute un tableau `meta:immutableTags` à un schéma existant, ce qui donne au tableau une valeur de chaîne unique `union` pour l&#39;activer pour une utilisation dans le Profil.
 
 ```SHELL
 curl -X PATCH\
@@ -481,7 +481,7 @@ curl -X PATCH\
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que la `meta:immutableTags` baie a été ajoutée.
+Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que le tableau `meta:immutableTags` a été ajouté.
 
 ```JSON
 {
@@ -523,9 +523,9 @@ Une réponse réussie renvoie les détails du schéma mis à jour, indiquant que
 }
 ```
 
-Vous pouvez maintenant vue l’union de cette classe de schéma pour confirmer que les champs du schéma sont représentés. See the [unions endpoint guide](./unions.md) for more information.
+Vous pouvez maintenant vue l’union de cette classe de schéma pour confirmer que les champs du schéma sont représentés. Pour plus d&#39;informations, consultez le [guide des points de terminaison des unions](./unions.md).
 
-## Suppression d’un schéma {#delete}
+## Supprimer un schéma {#delete}
 
 Il peut parfois être nécessaire de retirer un schéma du Registre des Schémas. Pour ce faire, il effectue une demande de DELETE avec l’ID de schéma fourni dans le chemin d’accès.
 
@@ -537,7 +537,7 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to delete. |
+| `{SCHEMA_ID}` | URI `$id` ou `meta:altId` codés URL du schéma à supprimer. |
 
 **Requête**
 
@@ -554,4 +554,4 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d’envoyer une demande de recherche (GET) au schéma. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the schema has been removed from the Schema Registry.
+Vous pouvez confirmer la suppression en tentant d’envoyer une demande de recherche (GET) au schéma. Vous devez inclure un en-tête `Accept` dans la requête, mais vous devez recevoir l’état HTTP 404 (Non trouvé) car le schéma a été supprimé du Registre du Schéma.
