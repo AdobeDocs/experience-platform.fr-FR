@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
 solution: Experience Platform
 title: Descripteurs
 description: Le point de terminaison /descriptors de l'API de registre de Schéma vous permet de gérer par programmation les descripteurs XDM dans votre application d'expérience.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
+source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 58%
@@ -21,13 +21,13 @@ Les descripteurs de schéma sont des métadonnées au niveau du client, ce qui s
 
 Une ou plusieurs entités de descripteur de schéma peuvent être appliquées à chaque schéma. Chaque entité de descripteur de schéma comprend un descripteur `@type` et le `sourceSchema` auquel il s’applique. Une fois appliqués, ces descripteurs s’appliquent à tous les jeux de données créés à l’aide du schéma.
 
-Le `/descriptors` point de terminaison de l’ [!DNL Schema Registry] API vous permet de gérer par programmation les descripteurs dans votre application d’expérience.
+Le point de terminaison `/descriptors` de l&#39;API [!DNL Schema Registry] vous permet de gérer par programmation les descripteurs dans votre application d&#39;expérience.
 
 ## Prise en main
 
-Le point de terminaison utilisé dans ce guide fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Avant de continuer, consultez le guide [de](./getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l&#39;[[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
-## Retrieve a list of descriptors {#list}
+## Récupérer une liste de descripteurs {#list}
 
 Vous pouvez liste tous les descripteurs définis par votre organisation en adressant une demande de GET à `/tenant/descriptors`.
 
@@ -49,18 +49,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-The response format depends on the `Accept` header sent in the request. Notez que le point de terminaison `/descriptors` utilise des en-têtes différents de tous les autres points de terminaison dans l’API .`Accept`[!DNL Schema Registry]
+Le format de réponse dépend de l&#39;en-tête `Accept` envoyé dans la demande. Notez que le point de terminaison `/descriptors` utilise des en-têtes différents de tous les autres points de terminaison dans l’API .`Accept`[!DNL Schema Registry]
 
 >[!IMPORTANT]
 >
->Les descripteurs nécessitent des `Accept` en-têtes uniques qui remplacent `xed` par `xdm`et offre également une `link` option propre aux descripteurs. The proper `Accept` headers have been included in the examples calls below, but take extra caution to ensure the correct headers are being used when working with descriptors.
+>Les descripteurs nécessitent des en-têtes `Accept` uniques qui remplacent `xed` par `xdm` et offre également une option `link` unique aux descripteurs. Les en-têtes `Accept` appropriés ont été inclus dans les appels d&#39;exemples ci-dessous, mais soyez prudent pour vous assurer que les en-têtes appropriés sont utilisés lors de l&#39;utilisation de descripteurs.
 
 | En-tête `Accept` | Description |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Renvoie un tableau d’identifiants de descripteur |
 | `application/vnd.adobe.xdm-link+json` | Renvoie un tableau de chemins d’API de descripteur |
 | `application/vnd.adobe.xdm+json` | Renvoie un tableau d’objets de descripteurs étendus |
-| `application/vnd.adobe.xdm-v2+json` | Cet `Accept` en-tête doit être utilisé pour utiliser les capacités de pagination. |
+| `application/vnd.adobe.xdm-v2+json` | Cet en-tête `Accept` doit être utilisé pour utiliser les capacités de pagination. |
 
 **Réponse**
 
@@ -96,11 +96,11 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to look up. |
+| `{DESCRIPTOR_ID}` | `@id` du descripteur que vous souhaitez rechercher. |
 
 **Requête**
 
-La requête suivante récupère un descripteur par sa `@id` valeur. Descriptors are not versioned, therefore no `Accept` header is required in the lookup request.
+La requête suivante récupère un descripteur par sa valeur `@id`. Les descripteurs ne sont pas versionnés. Par conséquent, aucun en-tête `Accept` n&#39;est requis dans la demande de recherche.
 
 ```SHELL
 curl -X GET \
@@ -135,13 +135,13 @@ Une réponse réussie renvoie les détails du descripteur, y compris ses `@type`
 }
 ```
 
-## Create a descriptor {#create}
+## Créer un descripteur {#create}
 
-You can create a new descriptor by making a POST request to the `/tenant/descriptors` endpoint.
+Vous pouvez créer un nouveau descripteur en adressant une requête de POST au point de terminaison `/tenant/descriptors`.
 
 >[!IMPORTANT]
 >
->The [!DNL Schema Registry] allows you to define several different descriptor types. Chaque type de descripteur nécessite l’envoi de ses propres champs spécifiques dans le corps de la requête. Voir l&#39; [annexe](#defining-descriptors) pour une liste complète des descripteurs et des champs nécessaires pour les définir.
+>[!DNL Schema Registry] vous permet de définir plusieurs types de descripteurs différents. Chaque type de descripteur nécessite l’envoi de ses propres champs spécifiques dans le corps de la requête. Voir l&#39;[annexe](#defining-descriptors) pour une liste complète des descripteurs et des champs nécessaires pour les définir.
 
 **Format d’API**
 
@@ -151,7 +151,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité dans un champ « adresse électronique » d’un exemple de schéma. This tells [!DNL Experience Platform] to use the email address as an identifier to help stitch together information about the individual.
+La requête suivante définit un descripteur d’identité dans un champ « adresse électronique » d’un exemple de schéma. [!DNL Experience Platform] est ainsi invité à utiliser l’adresse électronique comme identifiant afin de mieux rassembler les informations sur l’individu.
 
 ```SHELL
 curl -X POST \
@@ -175,7 +175,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du nouveau descripteur, y compris son identifiant `@id`. The `@id` is a read-only field assigned by the [!DNL Schema Registry] and used for referencing the descriptor in the API.
+Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du nouveau descripteur, y compris son identifiant `@id`. `@id` est un champ en lecture seule attribué par [!DNL Schema Registry] et utilisé pour référencer le descripteur dans l&#39;API.
 
 ```JSON
 {
@@ -193,7 +193,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du no
 
 ## Mettre à jour un descripteur {#put}
 
-Vous pouvez mettre à jour un descripteur en l’incluant `@id` dans le chemin d’une requête de PUT.
+Vous pouvez mettre à jour un descripteur en incluant `@id` dans le chemin d’une requête de PUT.
 
 **Format d’API**
 
@@ -207,13 +207,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Requête**
 
-Cette requête réécrit essentiellement le descripteur. Le corps de la requête doit donc inclure tous les champs nécessaires pour définir un descripteur de ce type. In other words, the request payload to update (PUT) a descriptor is the same as the payload to [create (POST) a descriptor](#create) of the same type.
+Cette requête réécrit essentiellement le descripteur. Le corps de la requête doit donc inclure tous les champs nécessaires pour définir un descripteur de ce type. En d’autres termes, la charge utile de requête pour mettre à jour (PUT) un descripteur est identique à la charge utile pour [créer (POST) un descripteur](#create) du même type.
 
 >[!IMPORTANT]
 >
->Tout comme pour la création de descripteurs à l’aide de requêtes de POST, chaque type de descripteur nécessite l’envoi de ses propres champs spécifiques dans les charges de requête de PUT. Voir l&#39; [annexe](#defining-descriptors) pour une liste complète des descripteurs et des champs nécessaires pour les définir.
+>Tout comme pour la création de descripteurs à l’aide de requêtes de POST, chaque type de descripteur nécessite l’envoi de ses propres champs spécifiques dans les charges de requête de PUT. Voir l&#39;[annexe](#defining-descriptors) pour une liste complète des descripteurs et des champs nécessaires pour les définir.
 
-L&#39;exemple suivant met à jour un descripteur d&#39;identité pour référencer un autre `xdm:sourceProperty` (`mobile phone`) et remplacer le `xdm:namespace` par `Phone`.
+L&#39;exemple suivant met à jour un descripteur d&#39;identité pour référencer un `xdm:sourceProperty` différent (`mobile phone`) et remplacer `xdm:namespace` par `Phone`.
 
 ```SHELL
 curl -X PUT \
@@ -244,11 +244,11 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et l’identifiant `@
 }
 ```
 
-Performing a [lookup (GET) request](#lookup) to view the descriptor will show that the fields have now been updated to reflect the changes sent in the PUT request.
+L&#39;exécution d&#39;une requête [de recherche (GET)](#lookup) à la vue du descripteur montre que les champs ont maintenant été mis à jour pour refléter les modifications envoyées dans la demande de PUT.
 
-## Suppression d’un descripteur {#delete}
+## Supprimer un descripteur {#delete}
 
-Occasionally you may need to remove a descriptor that you have defined from the [!DNL Schema Registry]. Pour ce faire, effectuez une requête DELETE en référençant l’identifiant `@id` du descripteur que vous souhaitez supprimer.
+Il peut arriver que vous deviez supprimer un descripteur que vous avez défini dans le [!DNL Schema Registry]. Pour ce faire, effectuez une requête DELETE en référençant l’identifiant `@id` du descripteur que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -275,11 +275,11 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-To confirm the descriptor has been deleted, you can perform a [lookup request](#lookup) against the descriptor `@id`. The response returns HTTP status 404 (Not Found) because the descriptor has been removed from the [!DNL Schema Registry].
+Pour confirmer que le descripteur a été supprimé, vous pouvez exécuter une requête de recherche [](#lookup) par rapport au descripteur `@id`. La réponse renvoie l&#39;état HTTP 404 (Introuvable) car le descripteur a été supprimé de [!DNL Schema Registry].
 
 ## Annexe
 
-The following section provides additional information regarding working with descriptors in the [!DNL Schema Registry] API.
+La section suivante fournit des informations supplémentaires sur l&#39;utilisation des descripteurs dans l&#39;API [!DNL Schema Registry].
 
 ### Définition de descripteurs {#defining-descriptors}
 
@@ -287,7 +287,7 @@ Les sections suivantes présentent les types de descripteurs disponibles, y comp
 
 #### Descripteur d’identité
 
-An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; of the &quot;[!UICONTROL sourceSchema]&quot; is an [!DNL Identity] field as described by [Adobe Experience Platform Identity Service](../../identity-service/home.md).
+Un descripteur d&#39;identité signale que le champ &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; est un champ [!DNL Identity] comme décrit par [Service d&#39;identité de Adobe Experience Platform](../../identity-service/home.md).
 
 ```json
 {
@@ -308,13 +308,13 @@ An identity descriptor signals that the &quot;[!UICONTROL sourceProperty]&quot; 
 | `xdm:sourceSchema` | L’URI `$id` du schéma dans lequel le descripteur est défini. |
 | `xdm:sourceVersion` | La version principale du schéma source. |
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
-| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. A list of namespaces can be found using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | La valeur `id` ou `code` de l’espace de noms de l’identité. Une liste d&#39;espaces de nommage peut être trouvée à l&#39;aide de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
 | `xdm:property` | `xdm:id` ou `xdm:code` selon l’espace de noms `xdm:namespace` utilisé. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsqu’elle est définie sur true, le champ est l’identité principale. Les schémas ne peuvent contenir qu’une seule identité principale. |
 
 #### Descripteur de nom convivial
 
-Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. Ils sont particulièrement utiles lorsque vous utilisez des « eVars » et d’autres champs « génériques » auxquels vous souhaitez appliquer des libellés indiquant qu’ils contiennent des informations propres à votre organisation. L’interface utilisateur peut les utiliser pour afficher un nom plus convivial ou pour n’afficher que les champs dont le nom est convivial.
+Les descripteurs de nom conviviaux permettent à un utilisateur de modifier les valeurs `title`, `description` et `meta:enum` des champs du schéma de bibliothèque principal. Ils sont particulièrement utiles lorsque vous utilisez des « eVars » et d’autres champs « génériques » auxquels vous souhaitez appliquer des libellés indiquant qu’ils contiennent des informations propres à votre organisation. L’interface utilisateur peut les utiliser pour afficher un nom plus convivial ou pour n’afficher que les champs dont le nom est convivial.
 
 ```json
 {
@@ -344,7 +344,7 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:sourceProperty` | Le chemin vers la propriété spécifique qui sera l’identité. Le chemin doit commencer et non se terminer par un « / ». N’incluez pas « properties » dans le chemin (par exemple, utilisez « /personalEmail/address » au lieu de « /properties/personalEmail/properties/address ») |
 | `xdm:title` | Le nouveau titre que vous souhaitez afficher pour ce champ, écrit en Casse Titre. |
 | `xdm:description` | Vous pouvez ajouter une description facultative avec le titre. |
-| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l’ [!DNL Experience Platform] interface utilisateur. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la `meta:enum` propriété du champ directement par l’intermédiaire d’une requête de PATCH vers la ressource parente du champ. |
+| `meta:enum` | Si le champ indiqué par `xdm:sourceProperty` est un champ de chaîne, `meta:enum` détermine la liste des valeurs suggérées pour le champ dans l&#39;interface utilisateur [!DNL Experience Platform]. Il est important de noter que `meta:enum` ne déclare pas de énumération ou ne fournit aucune validation de données pour le champ XDM.<br><br>Ceci ne doit être utilisé que pour les champs XDM principaux définis par Adobe. Si la propriété source est un champ personnalisé défini par votre organisation, vous devez modifier la propriété `meta:enum` du champ directement par le biais d&#39;une requête de PATCH à la ressource parente du champ. |
 
 #### Descripteur de relation
 
