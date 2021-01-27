@@ -5,7 +5,7 @@ title: Fonctions définies par Adobe
 topic: functions
 description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Query Service.
 translation-type: tm+mt
-source-git-commit: c95f976efd4a281640d2f47888b34bdd12a6c7a8
+source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
 workflow-type: tm+mt
 source-wordcount: '2889'
 ht-degree: 27%
@@ -667,14 +667,14 @@ Vous trouverez une explication des paramètres de la fonction `OVER()` dans la s
 **Exemple de requête**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Résultats**
@@ -723,7 +723,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
@@ -881,7 +881,7 @@ Pour l&#39;exemple de requête donné, les résultats sont indiqués dans la col
 
 ## Étapes suivantes
 
-En utilisant les fonctions décrites ici, vous pouvez écrire des requêtes pour accéder à vos propres jeux de données [!DNL Experience Event] à l&#39;aide de [!DNL Query Service]. Pour plus d&#39;informations sur la création de requêtes dans [!DNL Query Service], consultez la documentation sur [la création de requêtes](../creating-queries/creating-queries.md).
+En utilisant les fonctions décrites ici, vous pouvez écrire des requêtes pour accéder à vos propres jeux de données [!DNL Experience Event] à l&#39;aide de [!DNL Query Service]. Pour plus d&#39;informations sur la création de requêtes dans [!DNL Query Service], consultez la documentation sur [la création de requêtes](../best-practices/writing-queries.md).
 
 ## Ressources supplémentaires
 
