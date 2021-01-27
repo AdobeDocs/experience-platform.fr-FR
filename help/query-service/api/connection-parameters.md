@@ -5,10 +5,10 @@ title: Guide de développement de Query Service
 topic: connection parameters
 description: Vous pouvez récupérer vos paramètres de connexion pour utiliser le service interactif en faisant une demande de GET au point de terminaison /connection_parameters.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 62%
+source-wordcount: '134'
+ht-degree: 47%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 62%
 
 ## Exemples d’appels API
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l&#39;API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d&#39;API que vous pouvez effectuer à l&#39;aide de l&#39;API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-### Demande de paramètres de connexion pour le service interactif
+### Demander des paramètres de connexion
 
-Vous pouvez récupérer vos paramètres de connexion pour utiliser le [service interactif](../creating-queries/writing-queries.md) en envoyant une requête GET au point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
+Vous pouvez récupérer vos paramètres de connexion en faisant une demande de GET au point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
 
 **Format d’API**
 
