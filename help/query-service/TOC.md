@@ -5,10 +5,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez SQL standard pour créer des requêtes de données dans le lac de données de Platform.
 translation-type: tm+mt
-source-git-commit: e38190aabfa5d36de85e03eb5fb4e76283fb7934
+source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 97%
+source-wordcount: '135'
+ht-degree: 88%
 
 ---
 
@@ -27,14 +27,13 @@ ht-degree: 97%
 - Interface utilisateur de Query Service {#ui}
    - [Présentation de l’interface utilisateur](ui/overview.md)
    - [Guide d’utilisation de Query Editor](ui/user-guide.md)
-- Création de requêtes {#creating-queries}
-   - [Présentation de la création de requêtes](creating-queries/creating-queries.md)
-   - [Jeux de données par rapport aux tableaux et schémas](creating-queries/datasets-and-tables.md)
-   - [Directives générales pour l’exécution des requêtes](creating-queries/writing-queries.md)
-   - [Requêtes ExperienceEvent](creating-queries/experience-event-queries.md)
-   - [Association de jeux de données](creating-queries/joining-datasets.md)
-   - [Dédoublonnage des données](creating-queries/deduplication.md)
-- [Génératon des jeux de données à partir de résultats de requête](creating-queries/create-datasets.md)
+   - [Génératon des jeux de données à partir de résultats de requête](ui/create-datasets.md)
+- Bonnes pratiques {#best-practices}
+   - [Directives générales pour l’exécution des requêtes](best-practices/writing-queries.md)
+   - [Dédoublonnage des données](best-practices/deduplication.md)
+   - [Exemples de requêtes de Événement d’expérience](best-practices/experience-event-queries.md)
+   - [Exemples de requêtes Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Exemples de requêtes Adobe Target](best-practices/adobe-target.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)
@@ -42,10 +41,6 @@ ht-degree: 97%
    - [Fonctions Spark SQL](sql/spark-sql-functions.md)
    - [Commandes des métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
-- Exemples de requêtes {#samples}
-   - [Présentation des exemples de requêtes](sample-queries/overview.md)
-   - [Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Adobe Target](sample-queries/adobe-target.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
