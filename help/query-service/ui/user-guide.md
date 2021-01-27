@@ -5,9 +5,9 @@ title: Guide d’utilisation de Query Editor
 topic: query editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
+source-git-commit: f35443046a3d2bc5101d0fa2a58d07f4b6a31151
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1068'
 ht-degree: 72%
 
 ---
@@ -17,29 +17,29 @@ ht-degree: 72%
 
 [!DNL Query Editor] est un outil interactif fourni par Adobe . Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. [!DNL Query Service][!DNL Experience Platform] [!DNL Query Editor] prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
 
-For more information about the concepts and features of [!DNL Query Service], see the [Query Service overview][query-service-overview]. To learn more about how to navigate the Query Service user interface on [!DNL Platform], see the [Query Service UI overview][query-service-ui].
+Pour plus d&#39;informations sur les concepts et les fonctionnalités de [!DNL Query Service], consultez la [présentation de Requête Service][query-service-overview]. Pour en savoir plus sur la manière de naviguer dans l&#39;interface utilisateur de Requête Service sur [!DNL Platform], consultez la [Présentation de l&#39;interface utilisateur de Requête Service][query-service-ui].
 
 ## Prise en main
 
 [!DNL Query Editor]En se connectant à permet une exécution flexible des requêtes, possible uniquement tant que cette connexion est active.[!DNL Query Service]
 
-### Connecting to [!DNL Query Service]
+### Connexion à [!DNL Query Service]
 
-[!DNL Query Editor] prend quelques secondes pour initialiser et se connecter à [!DNL Query Service] quand il est ouvert. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
+[!DNL Query Editor] prend quelques secondes pour initialiser et se connecter à  [!DNL Query Service] quand il est ouvert. La console vous indique qu’il est connecté, comme illustré ci-dessous. Si vous tentez d’exécuter une requête avant que l’éditeur ne soit connecté, l’exécution est retardée jusqu’à ce que la connexion soit établie.
 
 ![Image](../images/queries/query-editor-overview/initializing-connection.png)
 
-### How queries are run from [!DNL Query Editor]
+### Exécution des requêtes à partir de [!DNL Query Editor]
 
-Queries executed from [!DNL Query Editor] run interactively. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
+Les requêtes exécutées à partir de [!DNL Query Editor] s’exécutent de manière interactive. Cela signifie que la requête sera annulée si vous fermez le navigateur ou quittez l’éditeur. Cela concerne également les requêtes visant à générer des jeux de données à partir de sorties de requête.
 
-## Query authoring using [!DNL Query Editor]
+## Création de requêtes à l’aide de [!DNL Query Editor]
 
-Using [!DNL Query Editor], you can write, execute, and save queries for customer experience data. All queries executed in [!DNL Query Editor], or saved, are available to all users in your organization with access to [!DNL Query Service].
+[!DNL Query Editor] vous permet d’écrire, d’exécuter et d’enregistrer des requêtes pour les données d’expérience client. Toutes les requêtes exécutées dans [!DNL Query Editor], ou enregistrées, sont accessibles à tous les utilisateurs de votre organisation ayant accès à [!DNL Query Service].
 
 ### Accéder aux [!DNL Query Editor]
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Queries]** in the left navigation menu to open the [!DNL Query Service] workspace. Cliquez ensuite sur **[!UICONTROL Créer une requête]** dans la partie supérieure droite de l’écran pour commencer à écrire des requêtes. This link is available from any of the pages in the [!DNL Query Service] workspace.
+Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation de gauche pour ouvrir l&#39;espace de travail [!DNL Query Service]. Cliquez ensuite sur **[!UICONTROL Créer une requête]** dans la partie supérieure droite de l’écran pour commencer à écrire des requêtes. Ce lien est disponible à partir de n&#39;importe quelle page de l&#39;espace de travail [!DNL Query Service].
 
 ![Image](../images/queries/query-editor-overview/create-query.png)
 
@@ -51,7 +51,7 @@ In the [!DNL Experience Platform] UI, click **[!UICONTROL Queries]** in the left
 
 Pour réduire le temps de développement, nous vous recommandons de développer vos requêtes en fixant des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
 
-### Writing tools in [!DNL Query Editor]
+### Outils d&#39;écriture dans [!DNL Query Editor]
 
 - **Mise en surbrillance automatique de la syntaxe :** facilite la lecture et l’organisation SQL.
 
@@ -77,7 +77,7 @@ Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erre
 
 ### Détails de la requête
 
-While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
+Lorsque vous consultez une requête dans [!DNL Query Editor], le panneau **[!UICONTROL Détails de la Requête]** fournit des outils pour gérer la requête sélectionnée.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
@@ -89,21 +89,21 @@ Ce panneau vous permet de générer un jeu de données de sortie directement dep
 
 ### Accès aux requêtes précédentes
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Parcourir]**.
+Toutes les requêtes exécutées à partir de [!DNL Query Editor] sont capturées dans la table Journal. Vous pouvez utiliser la fonctionnalité de recherche dans l’onglet **[!UICONTROL Journal]** pour rechercher des exécutions de requête. Les requêtes enregistrées sont répertoriées dans l’onglet **[!UICONTROL Parcourir]**.
 
 Pour plus d’informations, reportez-vous à la [Présentation de l’interface utilisateur de Query Service][query-service-ui].
 
 >[!NOTE]
 >
->Les requêtes non exécutées ne sont pas enregistrées dans le journal. In order for the query to be available in [!DNL Query Service], it must be run or saved in [!DNL Query Editor].
+>Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans [!DNL Query Service], elle doit être exécutée ou enregistrée dans [!DNL Query Editor].
 
 ## Exécution de requête à l’aide de Query Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and click **Play**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
+Pour exécuter une requête dans [!DNL Query Editor], vous pouvez entrer SQL dans l&#39;éditeur ou charger une requête précédente à partir de l&#39;onglet **[!UICONTROL Journal]** ou **[!UICONTROL Parcourir]**, puis cliquer sur **Lecture**. L’état de l’exécution de la requête s’affiche dans l’onglet **[!UICONTROL Console]** ci-dessous et les données de sortie s’affichent dans l’onglet **[!UICONTROL Résultats]**.
 
 ### Console
 
-La console fournit des informations sur l’état et le fonctionnement de [!DNL Query Service]. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
+La console fournit des informations sur l’état et le fonctionnement de [!DNL Query Service]. La console affiche l&#39;état de la connexion à [!DNL Query Service], les opérations de requête en cours d&#39;exécution et les messages d&#39;erreur qui en résultent.
 
 ![Image](../images/queries/query-editor-overview/console.png)
 
@@ -117,7 +117,7 @@ Une fois la requête terminée, les résultats s’affichent dans l’onglet **[
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
-## Exécution de requêtes avec une vidéo [!DNL Query Service] didacticiel
+## Exécuter des requêtes avec [!DNL Query Service] vidéo didacticiel
 
 La vidéo suivante montre comment exécuter des requêtes dans l’interface Adobe Experience Platform et dans un client PSQL. En outre, l&#39;utilisation de propriétés individuelles dans un objet XDM, l&#39;utilisation de fonctions définies par Adobe et l&#39;utilisation de CREATE TABLE AS SELECT (CTAS) sont démontrées.
 
@@ -125,10 +125,9 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 
 ## Étapes suivantes
 
-Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries][query-service-running-queries]. Pour obtenir un exemple de requête SQL avec des données d’Adobe Analytics et d’Adobe Target, consultez la [référence d’exemples de requête][query-service-sample-queries].
+Maintenant que vous savez quelles fonctionnalités sont disponibles dans [!DNL Query Editor] et comment naviguer dans l&#39;application, vous pouvez début de créer vos propres requêtes directement dans [!DNL Platform]. Pour plus d&#39;informations sur l&#39;exécution de requêtes SQL par rapport à des jeux de données dans [!DNL Data Lake], consultez le guide sur [l&#39;exécution de requêtes][query-service-running-queries].
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
-[query-service-running-queries]: ../creating-queries/creating-queries.md
-[query-service-sample-queries]: ../sample-queries/overview.md
-[query-service-create-datasets]: ../creating-queries/create-datasets.md
+[query-service-running-queries]: ../best-practices/writing-queries.md
+[query-service-create-datasets]: ./create-datasets.md
