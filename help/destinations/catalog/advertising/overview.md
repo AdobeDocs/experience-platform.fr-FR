@@ -1,25 +1,25 @@
 ---
-keywords: advertising destinations;destinations;rtcdp destinations
+keywords: destinations publicitaires ; destinations ; destinations de plateforme
 title: Destinations publicitaires
 seo-title: Destinations publicitaires
-description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
-seo-description: Connectez votre plateforme de données clients en temps réel à une plateforme publicitaire tierce (DSP, Ad Network, SSP, par exemple) et partagez des audiences pseudonymes sur ces plateformes.
+description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple DSP réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
+seo-description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple DSP réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 73%
+source-wordcount: '225'
+ht-degree: 48%
 
 ---
 
 
 # Destinations publicitaires {#advertising-destinations}
 
-Connect your [!DNL Real-time Customer Data Platform] to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
+Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par exemple DSP réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 
 Lors de la connexion à une destination publicitaire, vos audiences sont envoyées sous forme d’identifiants à la plateforme de destination, où elles sont mappées à un identifiant connu par la plateforme de destination.
 
-Actuellement, la plateforme de données clients en temps réel prend en charge les destinations publicitaires répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
+Actuellement, Platform prend en charge les destinations publicitaires répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
 
 ## Connexions
 
