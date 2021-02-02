@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; Schéma design ; map ; Map ; union schéma ; union
 solution: Experience Platform
 title: XDM ExperienceEvent, classe
 topic: overview
 description: Ce document fournit un aperçu de la classe XDM ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: 9e55e9ef6c619a952ca7519ca05dab59da2c573b
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '820'
 ht-degree: 6%
 
 ---
@@ -17,34 +17,34 @@ ht-degree: 6%
 
 [!DNL XDM ExperienceEvent] est une classe XDM standard qui vous permet de créer un instantané horodaté du système lorsqu&#39;un événement spécifique se produit ou qu&#39;un certain ensemble de conditions a été atteint.
 
-Un Événement d’expérience est un enregistrement factuel de ce qui s’est produit, y compris le moment et l’identité de la personne concernée. Les événements peuvent être explicites (actions humaines directement observables) ou implicites (soulevées sans action humaine directe) et sont enregistrés sans agrégation ni interprétation. Pour plus d&#39;informations de haut niveau sur l&#39;utilisation de cette classe dans l&#39;écosystème de la plate-forme, consultez la présentation [de](../home.md#data-behaviors)XDM.
+Un Événement d’expérience est un enregistrement factuel de ce qui s’est produit, y compris le moment et l’identité de la personne concernée. Les événements peuvent être explicites (actions humaines directement observables) ou implicites (soulevées sans action humaine directe) et sont enregistrés sans agrégation ni interprétation. Pour plus d&#39;informations de haut niveau sur l&#39;utilisation de cette classe dans l&#39;écosystème de la plate-forme, consultez la [présentation de XDM](../home.md#data-behaviors).
 
-La [!DNL XDM ExperienceEvent] classe elle-même fournit plusieurs champs liés aux séries chronologiques à un schéma. Les valeurs de certains de ces champs sont automatiquement renseignées lors de l’assimilation des données :
+La classe [!DNL XDM ExperienceEvent] fournit elle-même plusieurs champs relatifs aux séries chronologiques à un schéma. Les valeurs de certains de ces champs sont automatiquement renseignées lors de l’assimilation des données :
 
 <img src="../images/classes/experienceevent.png" width="650" /><br />
 
 | Propriété | Description |
 | --- | --- |
-| `_id` | Identificateur de chaîne unique généré par le système pour le événement. Ce champ permet de suivre l&#39;unicité d&#39;un événement individuel, d&#39;éviter la duplication des données et de rechercher ce événement dans les services en aval. Ce champ étant généré par le système, il ne doit pas être fourni de valeur explicite lors de l’assimilation des données.<br><br>Il est important de distinguer que ce champ ne **représente pas** une identité liée à une personne, mais plutôt l&#39;enregistrement des données proprement dites. Les données d&#39;identité relatives à une personne doivent être reléguées aux champs [d&#39;](../schema/composition.md#identity) identité. |
+| `_id` | Identificateur de chaîne unique généré par le système pour le événement. Ce champ permet de suivre l&#39;unicité d&#39;un événement individuel, d&#39;éviter la duplication des données et de rechercher ce événement dans les services en aval. Ce champ étant généré par le système, il ne doit pas être fourni de valeur explicite lors de l’assimilation des données.<br><br>Il est important de distinguer que ce champ  **ne** représente pas une identité liée à une personne, mais plutôt l&#39;enregistrement des données. Les données d&#39;identité relatives à une personne doivent être reléguées à [champs d&#39;identité](../schema/composition.md#identity). |
 | `eventMergeId` | ID du lot assimilé à l&#39;origine de la création de l&#39;enregistrement. Ce champ est automatiquement renseigné par le système lors de l’assimilation des données. |
-| `eventType` | Chaîne indiquant le Principal type d&#39;événement de l’enregistrement. Les valeurs acceptées et leurs définitions figurent dans la section [de l&#39;](#eventType)annexe. |
-| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour la personne à laquelle le événement s’applique. Ce champ est automatiquement mis à jour par le système lorsque des données d&#39;identité sont saisies. Afin d’utiliser correctement ce champ pour le Profil [client en temps](../../profile/home.md)réel, n’essayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Consultez la section sur les cartes d&#39;identité dans les [bases de la composition](../schema/composition.md#identityMap) des schémas pour plus d&#39;informations sur leur cas d&#39;utilisation. |
-| `timestamp` | Heure à laquelle le événement ou l&#39;observation a eu lieu, selon le format [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `eventType` | Chaîne indiquant le Principal type d&#39;événement de l’enregistrement. Les valeurs acceptées et leurs définitions figurent dans la section [appendice](#eventType). |
+| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espacement de noms pour la personne à laquelle le événement s’applique. Ce champ est automatiquement mis à jour par le système lorsque des données d&#39;identité sont saisies. Afin d’utiliser correctement ce champ pour [Profil client en temps réel](../../profile/home.md), n’essayez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Consultez la section sur les cartes d&#39;identité dans les  [bases de la ](../schema/composition.md#identityMap) composition de schémas pour plus d&#39;informations sur leur cas d&#39;utilisation. |
+| `timestamp` | Heure à laquelle le événement ou l&#39;observation a eu lieu, formatée selon [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
 
 ## mixins compatibles {#mixins}
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../mixins/name-updates.md) mixin.
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../mixins/name-updates.md).
 
-Adobe fournit plusieurs mixins standard à utiliser avec la [!DNL XDM ExperienceEvent] classe. Voici une liste de certains mixins couramment utilisés pour la classe :
+Adobe fournit plusieurs mixins standard à utiliser avec la classe [!DNL XDM ExperienceEvent]. Voici une liste de certains mixins couramment utilisés pour la classe :
 
 * [[!UICONTROL Détails de l’ID d’utilisateur final]](../mixins/event/enduserids.md)
 * [[!UICONTROL Détails de l&#39;Environnement]](../mixins/event/environment-details.md)
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur la classe [!UICONTROL XDM ExperienceEvent] .
+La section suivante contient des informations supplémentaires sur la classe [!UICONTROL XDM ExperienceEvent].
 
 ### Valeurs acceptées pour xdm:eventType {#eventType}
 
@@ -63,7 +63,7 @@ Le tableau suivant présente les valeurs acceptées pour `xdm:eventType`, ainsi 
 | `advertising.starts` | La lecture d&#39;une publicité vidéo numérique a commencé. |
 | `advertising.thirdQuartiles` | Une publicité vidéo numérique a été lue pendant 75 % de sa durée à une vitesse normale. |
 | `web.webpagedetails.pageViews` | Une page Web a reçu une ou plusieurs vues. |
-| `web.webinteraction.linkClicks` | Un lien a reçu un ou plusieurs clics. |
+| `web.webinteraction.linkClicks` | Un lien a été sélectionné une ou plusieurs fois. |
 | `commerce.checkouts` | Un événement de passage en caisse s&#39;est produit pour une liste de produits. Il peut y avoir plusieurs événements de passage en caisse s&#39;il y a plusieurs étapes dans un processus de passage en caisse. S’il existe plusieurs étapes, l’horodatage et la page/expérience référencée pour chaque événement sont utilisés pour identifier chaque événement (étape) individuel, représenté dans l’ordre. |
 | `commerce.productListAdds` | Un produit a été ajouté à la liste de produits ou au panier. |
 | `commerce.productListOpens` | Une nouvelle liste de produits (panier) a été initialisée ou créée. |
