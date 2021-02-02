@@ -1,27 +1,29 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Entités - API Profil client en temps réel
+keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+title: Point de terminaison de l'API Entités (Accès au Profil)
 topic: guide
+type: Documentation
+description: Adobe Experience Platform vous permet d’accéder aux données Real-time Customer Profile à l’aide des API RESTful ou de l’interface utilisateur. Ce guide décrit comment accéder aux entités, plus communément appelées "profils", à l’aide de l’API de Profil.
 translation-type: tm+mt
-source-git-commit: 3287203be574cf95d7e201dc99f681e237d96e67
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 88%
+source-wordcount: '1737'
+ht-degree: 87%
 
 ---
 
 
 # Point de terminaison Entités (accès Profil)
 
-Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile] data using RESTful APIs or the user interface. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. For more information on accessing profiles using the [!DNL Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
+Adobe Experience Platform vous permet d’accéder aux données [!DNL Real-time Customer Profile] à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées « profils », à l’aide de l’API. Pour plus d&#39;informations sur l&#39;accès aux profils à l&#39;aide de l&#39;[!DNL Platform] interface utilisateur, consultez le [Guide de l&#39;utilisateur du Profil](../ui/user-guide.md).
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 ## Accès aux données de profil par identité
 
-You can access a [!DNL Profile] entity by making a GET request to the `/access/entities` endpoint and providing the entity&#39;s identity as a series of query parameters. Cette identité se compose d’une valeur d’identifiant (`entityId`) et de l’espace de noms d’identité (`entityIdNS`).
+Vous pouvez accéder à une entité [!DNL Profile] en adressant une demande de GET au point de terminaison `/access/entities` et en fournissant l&#39;identité de l&#39;entité sous la forme d&#39;une série de paramètres de requête. Cette identité se compose d’une valeur d’identifiant (`entityId`) et de l’espace de noms d’identité (`entityIdNS`).
 
 Les paramètres de requête fournis dans le chemin de la requête spécifient les données auxquelles accéder. Vous pouvez inclure plusieurs paramètres, séparés par des esperluettes (&amp;). Une liste complète de paramètres valides est fournie dans la section des [paramètres de requête](#query-parameters) de l’annexe.
 
@@ -777,7 +779,7 @@ En utilisant ce payload dans le corps de la requête, vous pouvez effectuer une 
 
 ## Accès aux événements de série temporelle dans plusieurs entités de schéma
 
-Vous pouvez accéder à plusieurs entités connectées par le biais d’un descripteur de relation. L’exemple d’appel API suivant part du principe qu’une relation a déjà été définie entre deux schémas. Pour plus d&#39;informations sur les descripteurs de relation, veuillez lire le guide [!DNL Schema Registry] de point de terminaison du guide du développeur [API](../../xdm/api/descriptors.md)descripteurs.
+Vous pouvez accéder à plusieurs entités connectées par le biais d’un descripteur de relation. L’exemple d’appel API suivant part du principe qu’une relation a déjà été définie entre deux schémas. Pour plus d&#39;informations sur les descripteurs de relation, consultez le [!DNL Schema Registry] Guide du développeur d&#39;API [guide du point de terminaison des descripteurs](../../xdm/api/descriptors.md).
 
 Vous pouvez inclure des paramètres de requête dans le chemin de la requête afin de spécifier les données auxquelles accéder. Vous pouvez inclure plusieurs paramètres, séparés par des esperluettes (&amp;). Une liste complète de paramètres valides est fournie dans la section des [paramètres de requête](#query-parameters) de l’annexe.
 
@@ -887,11 +889,11 @@ Les résultats sont paginés lors de la récupération des événements de séri
 
 ## Étapes suivantes
 
-By following this guide you have successfully accessed [!DNL Real-time Customer Profile] data fields, profiles, and time series data. To learn how to access other data resources stored in [!DNL Platform], see the [Data Access overview](../../data-access/home.md).
+En suivant ce guide, vous avez accédé avec succès aux champs de données, aux profils et aux données de séries chronologiques [!DNL Real-time Customer Profile]. Pour savoir comment accéder à d&#39;autres ressources de données stockées dans [!DNL Platform], consultez la [Présentation de l&#39;accès aux données](../../data-access/home.md).
 
 ## Annexe {#appendix}
 
-The following section provides supplemental information regarding accessing [!DNL Profile] data using the API.
+La section suivante fournit des informations supplémentaires sur l&#39;accès aux données [!DNL Profile] à l&#39;aide de l&#39;API.
 
 ### Paramètres de requête {#query-parameters}
 
