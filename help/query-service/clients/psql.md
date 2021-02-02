@@ -1,79 +1,37 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
+keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psqlconnect to requête service ; Requête service ; requête service ;
 solution: Experience Platform
 title: Connexion à PSQL
 topic: connect
-description: 'PSQL est une interface de ligne de commande qui apparaît lorsque vous installez Postgres sur votre machine. Vous pouvez l’installer en suivant ces instructions. '
+description: 'PSQL est une interface de ligne de commande qui vient lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions. '
 translation-type: tm+mt
-source-git-commit: 8ffe7c68c87cacb6b54d9634a5204fa24a9986ac
+source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 57%
+source-wordcount: '244'
+ht-degree: 15%
 
 ---
 
 
-# Connexion à PSQL
+# PSQL
 
-PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. Vous pouvez l’installer en suivant ces instructions.
+PSQL est une interface de ligne de commande qui s&#39;installe lorsque vous installez [!DNL PostgreSQL] sur votre machine. Ce document décrit les étapes de connexion de PSQL à Adobe Experience Platform [!DNL Query Service].
 
-## Installation de Postgres sur Mac
+>[!NOTE]
+>
+> Ce guide suppose que vous avez déjà accès à [!DNL PSQL] et que vous savez comment l&#39;utiliser. Pour plus d&#39;informations sur [!DNL PSQL], consultez la [documentation officielle [!DNL PSQL]] (https://www.postgresql.org/docs/current/app-psql.html).
 
-Ouvrez une fenêtre de terminal et lancez les trois commandes suivantes :
+## Connecter PSQL et [!DNL Query Service]
 
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-```shell
-brew install postgres
-```
-
-```shell
-which psql
-```
-
-Une fois ces commandes lancées, les éléments suivants devraient apparaître :
-
-```shell
-/usr/local/bin/psql
-```
-
-## Install [!DNL Postgres] on a PC
-
-Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
-
-Modifiez votre variable de chemin d’accès :
-
-![Image](../images/clients/psql/path.png)
-
-Add the two lines shown that include &quot;[!DNL Postgres].&quot;
-
-Enregistrez les mises à jour, puis ouvrez une invite de commande et saisissez :
-
-```shell
-psql -V
-```
-
-Vous devriez voir apparaître une ligne similaire à ceci :
-
-```shell
-psql (PostgreSQL) 9.5.14
-```
-
-## Connect PSQL and [!DNL Query Service]
-
-Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page.
-
-Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
+Après avoir installé PSQL sur votre ordinateur, vous êtes prêt à connecter PSQL à Requête Service. Revenez à l&#39;interface utilisateur [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, puis **[!UICONTROL Informations d&#39;identification]**.
 
 ![Image](../images/clients/psql/connect-bi.png)
+
+Sélectionnez l&#39;icône pour copier la section intitulée **[!UICONTROL Commande PSQL]**, puis collez la chaîne de commande dans un terminal ou une fenêtre de ligne de commande avant d&#39;appuyer sur Entrée.
 
 >[!IMPORTANT]
 >
 >Si vous êtes sur un PC, utilisez un éditeur de texte pour supprimer les sauts de ligne dans la chaîne de commande, puis copiez la chaîne. De plus, si vous utilisez la version 12.0 ou supérieure, vous devrez ajouter `PGGSSENCMODE=disable` à votre chaîne de connexion.
-
-Collez la chaîne de commande dans une fenêtre de terminal ou de commande et appuyez sur Entrée.
 
 Vous devriez voir apparaître un résultat similaire à ceci :
 
@@ -85,3 +43,7 @@ all=>
 ```
 
 Si la version qui s’affiche est antérieure à la version 10.5, vous devez télécharger cette version ou une version plus récente.
+
+## Étapes suivantes
+
+Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez utiliser PSQL pour écrire des requêtes. Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide sur les [requêtes en cours d&#39;exécution](../best-practices/writing-queries.md).
