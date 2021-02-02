@@ -5,9 +5,9 @@ user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 breadcrumb-title: Notes de mise à jour de Platform
 user-guide-description: Notes de mise à jour mensuelles pour Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 3892020104e0c195126356ad01f3883ba001a61c
+source-git-commit: cf70b21f3a8c02b25e5acd3be8c8feaa3f52a5e3
 workflow-type: tm+mt
-source-wordcount: '39'
+source-wordcount: '41'
 ht-degree: 100%
 
 ---
@@ -15,18 +15,20 @@ ht-degree: 100%
 
 # Notes de mise à jour d’Adobe Experience Platform {#release-notes}
 
-* [Décembre 2020](latest/latest.md)
-* [Novembre 2020](2020/november-2020.md)
-* [Octobre 2020](2020/october-2020.md)
-* [Septembre 2020](2020/september-2020.md)
-* [Août 2020](2020/august-2020.md)
-* [Juillet 2020](2020/july-2020.md)
-* [Juin 2020](2020/june-2020.md)
-* [Mai 2020](2020/may-2020.md)
-* [Avril 2020](2020/april-2020.md)
-* [Mars 2020](2020/march-2020.md)
-* [Février 2020](2020/february-2020.md)
-* [Janvier 2020](2020/january-2020.md)
+* [Janvier 2021](latest/latest.md)
+* 2020 {#2020}
+   * [Décembre 2020](2020/december-2020.md)
+   * [Novembre 2020](2020/november-2020.md)
+   * [Octobre 2020](2020/october-2020.md)
+   * [Septembre 2020](2020/september-2020.md)
+   * [Août 2020](2020/august-2020.md)
+   * [Juillet 2020](2020/july-2020.md)
+   * [Juin 2020](2020/june-2020.md)
+   * [Mai 2020](2020/may-2020.md)
+   * [Avril 2020](2020/april-2020.md)
+   * [Mars 2020](2020/march-2020.md)
+   * [Février 2020](2020/february-2020.md)
+   * [Janvier 2020](2020/january-2020.md)
 * 2019 {#2019}
    * [Décembre 2019](2019/december-2019.md)
    * [Novembre 2019](2019/november-2019.md)
