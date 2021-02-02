@@ -1,21 +1,21 @@
 ---
-keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
+keywords: destinations ; solutions de cloud d’expériences ; cible ; destination de la cible ; ad cloud ; cloud publicitaire ; gestionnaire des audiences ; destination de la cible adobe ; cible ; destination du gestionnaire d'audiences ;
 title: Destinations Adobe
 seo-title: Destinations Adobe
-description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
-seo-description: Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc
+description: Gérez votre expérience client en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
+seo-description: Gérez votre expérience client en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 57%
+source-wordcount: '243'
+ht-degree: 21%
 
 ---
 
 
 # Destinations Adobe {#adobe-destinations}
 
-Gérez l’expérience de vos clients en connectant vos données dans la plateforme de données clients en temps réel d’Adobe à d’autres solutions Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
+Gérez votre expérience client en connectant vos données dans Adobe Experience Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation marketing, etc.
 
 ## Connexions
 
