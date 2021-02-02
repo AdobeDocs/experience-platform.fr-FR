@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;error diagnostics;retrieve error diagnostics;get error diagnostics;get error;get errors;retrieve errors;
+keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation partielle ; assimilation partielle ; extraction de l'erreur ; extraction de l'erreur ; extraction de l'erreur ; erreur ; assimilation partielle du lot ; assimilation partielle ; assimilation ; assimilation ; diagnostic d'erreur ; récupération des diagnostics d'erreur ; obtention d'erreurs ; obtention d'erreurs ; récupération des erreurs ;
 solution: Experience Platform
 title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
 topic: overview
 description: Ce document fournit des informations sur la surveillance de l'assimilation des lots, la gestion des erreurs d'assimilation partielle des lots, ainsi qu'une référence pour les types d'assimilation partielle des lots.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 38%
+source-wordcount: '936'
+ht-degree: 36%
 
 ---
 
 
 # Récupération des diagnostics d&#39;erreur
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. You can either use batch ingestion, which allows you to insert data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real time.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en flux continu en temps réel.
 
 Ce document fournit des informations sur la surveillance de l&#39;assimilation des lots, la gestion des erreurs d&#39;assimilation partielle des lots, ainsi qu&#39;une référence pour les types d&#39;assimilation partielle des lots.
 
@@ -24,7 +24,7 @@ Ce document fournit des informations sur la surveillance de l&#39;assimilation d
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Méthodes d’envoi des données à [!DNL Experience Platform].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Méthodes d’envoi des données à  [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -32,23 +32,23 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 ## Téléchargement des diagnostics d&#39;erreur {#download-diagnostics}
 
-Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics seront conservés dans un délai [!DNL Platform] de 30 jours.
+Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics seront conservés dans un délai de [!DNL Platform] jusqu&#39;à 30 jours.
 
 ### Fichiers d’entrée de liste {#list-files}
 
@@ -134,14 +134,14 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant `path` des objets détaillant l&#39;emplacement d&#39;enregistrement des diagnostics. La réponse renvoie les `path` objets au format Lignes [](https://jsonlines.org/) JSON.
+Une réponse réussie renvoie des objets JSON contenant des objets `path` détaillant l&#39;emplacement d&#39;enregistrement des diagnostics. La réponse renvoie les objets `path` au format [Lignes JSON](https://jsonlines.org/).
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Retrieve batch ingestion errors {#retrieve-errors}
+## Récupérer les erreurs d&#39;assimilation par lots {#retrieve-errors}
 
 Si les lots contiennent des échecs, vous devez récupérer les informations d’erreur sur ces échecs afin de pouvoir réassimiler les données.
 
@@ -214,7 +214,7 @@ Une réponse positive est renvoyée avec des informations détaillées sur l&#39
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la valeur `inputRecordCount` de la `outputRecordCount`. Cette valeur est générée sur tous les lots, même si elle `errorDiagnostics` est activée. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, même si `errorDiagnostics` est activé. |
 
 **Réponse avec erreurs**
 
@@ -277,8 +277,8 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la valeur `inputRecordCount` de la `outputRecordCount`. Cette valeur est générée sur tous les lots, même si elle `errorDiagnostics` est activée. |
-| `errors.recordCount` | Nombre de lignes qui ont échoué pour le code d’erreur spécifié. Cette valeur est **générée uniquement** si `errorDiagnostics` elle est activée. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, même si `errorDiagnostics` est activé. |
+| `errors.recordCount` | Nombre de lignes qui ont échoué pour le code d’erreur spécifié. Cette valeur est **générée uniquement** si `errorDiagnostics` est activé. |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ Une réponse réussie renvoie une liste des fichiers qui contiennent des erreurs
 }
 ```
 
-Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l’aide du point de terminaison [de récupération des](#retrieve-diagnostics)diagnostics.
+Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l&#39;aide du [point de terminaison de récupération des diagnostics](#retrieve-diagnostics).
 
 Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d’erreur :
 
