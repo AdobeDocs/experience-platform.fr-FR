@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
+keywords: Experience Platform ; accueil ; rubriques populaires ; enregistrement cloud ; enregistrement Cloud
 solution: Experience Platform
 title: Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: 3d104cdf7c97022fe60feafd3587056d378b56bd
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '759'
 ht-degree: 20%
 
 ---
 
 
-# Explorez un système d’enregistrement cloud à l’aide de l’ [!DNL Flow Service] API.
+# Explorez un système d’enregistrement cloud à l’aide de l’API [!DNL Flow Service]
 
-Ce didacticiel utilise l’ [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) pour explorer un système d’enregistrement cloud tiers.
+Ce didacticiel utilise l&#39;[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) pour explorer un système d&#39;enregistrement cloud tiers.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [Sandbox](../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Sources](../../../home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+* [Sandbox](../../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage system using the [!DNL Flow Service] API.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d&#39;enregistrement cloud à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Obtention d’un ID de connexion
 
-Pour explorer un enregistrement cloud tiers à l’aide [!DNL Platform] d’API, vous devez posséder un identifiant de connexion valide. Si vous n’avez pas encore de connexion pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
+Pour explorer un enregistrement cloud tiers à l’aide des API [!DNL Platform], vous devez posséder un identifiant de connexion valide. Si vous n’avez pas encore de connexion pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
 * [Amazon S3](../create/cloud-storage/s3.md)
 * [Azure Blob](../create/cloud-storage/blob.md)
@@ -45,13 +45,13 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -68,7 +68,7 @@ L’ID de connexion de votre enregistrement cloud vous permet d’explorer des f
 | `objectType` | Type d’objet que vous souhaitez explorer. Définissez cette valeur comme suit : <ul><li>`folder`: Explorer un répertoire spécifique</li><li>`root`: Explorez le répertoire racine.</li></ul> |
 | `object` | Ce paramètre n’est requis que lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. |
 
-Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès au fichier que vous souhaitez importer [!DNL Platform]:
+Utilisez l&#39;appel suivant pour trouver le chemin d&#39;accès du fichier que vous souhaitez importer dans [!DNL Platform] :
 
 **Format d’API**
 
@@ -95,7 +95,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dans le répertoire interrogé. Notez la `path` propriété du fichier que vous souhaitez transférer, car vous devez la fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de fichiers et de dossiers trouvés dans le répertoire interrogé. Prenez note de la propriété `path` du fichier que vous souhaitez télécharger, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -130,8 +130,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | --------- | ----------- |
 | `{CONNECTION_ID}` | ID de connexion de votre connecteur source d’enregistrement cloud. |
 | `{FILE_PATH}` | Chemin d&#39;accès au fichier que vous souhaitez inspecter. |
-| `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li>DÉLIMITÉ</code>: Valeur séparée par des délimiteurs. Les fichiers DSV doivent être séparés par des virgules.</li><li>JSON</code>: Notation d’objet JavaScript. Les fichiers JSON doivent être compatibles XDM</li><li>PARQUET</code>: Parquet Apache. Les fichiers de parquets doivent être conformes à XDM.</li></ul> |
-| `columnDelimiter` | Valeur d’un caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n’est pas fourni, la valeur par défaut est une virgule `(,)`. |
+| `{FILE_TYPE}` | Type du fichier. Les types de fichiers pris en charge sont les suivants :<ul><li>DELIMITED</code> : Valeur séparée par des délimiteurs. Les fichiers DSV doivent être séparés par des virgules.</li><li>JSON</code> : Notation d’objet JavaScript. Les fichiers JSON doivent être compatibles XDM</li><li>PARQUET</code> : Parquet Apache. Les fichiers de parquets doivent être conformes à XDM.</li></ul> |
+| `columnDelimiter` | Valeur d’un caractère unique que vous avez spécifiée comme délimiteur de colonne pour inspecter les fichiers CSV ou TSV. Si le paramètre n&#39;est pas fourni, la valeur est par défaut une virgule `(,)`. |
 
 **Requête**
 
@@ -175,4 +175,4 @@ Une réponse réussie renvoie la structure du fichier interrogé, y compris les 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez exploré votre système d’enregistrement de cloud, trouvé le chemin d’accès au fichier que vous souhaitez importer [!DNL Platform]et consulté sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre enregistrement cloud et les importer dans Platform](../collect/cloud-storage.md).
+En suivant ce didacticiel, vous avez exploré votre système d&#39;enregistrement cloud, trouvé le chemin d&#39;accès au fichier que vous souhaitez apporter à [!DNL Platform] et consulté sa structure. Vous pouvez utiliser ces informations dans le didacticiel suivant pour [collecter des données à partir de votre enregistrement cloud et les importer dans Platform](../collect/cloud-storage.md).
