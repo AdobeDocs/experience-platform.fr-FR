@@ -1,26 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Consentement
+title: Point de terminaison du consentement
 topic: developer guide
+description: Découvrez comment gérer les demandes de consentement des clients pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '243'
 ht-degree: 2%
 
 ---
 
 
-# Consentement
+# Point de terminaison du consentement
 
-Certaines réglementations exigeaient un consentement explicite de la part du client avant que ses données personnelles puissent être collectées. Le `/consent` point de terminaison de l’ [!DNL Privacy Service] API vous permet de traiter les demandes de consentement des clients et de les intégrer à votre processus de confidentialité.
+Certains règlements exigent un consentement explicite de la part du client avant que ses données personnelles puissent être collectées. Le point de terminaison `/consent` de l&#39;API [!DNL Privacy Service] vous permet de traiter les demandes de consentement des clients et de les intégrer à votre processus de confidentialité.
 
-Avant d&#39;utiliser ce guide, reportez-vous à la section [prise en main](./getting-started.md) pour obtenir des informations sur les en-têtes d&#39;authentification requis présentés dans l&#39;exemple d&#39;appel d&#39;API ci-dessous.
+Avant d&#39;utiliser ce guide, consultez la section [prise en main](./getting-started.md) pour plus d&#39;informations sur les en-têtes d&#39;authentification requis présentés dans l&#39;exemple d&#39;appel d&#39;API ci-dessous.
 
 ## Traiter une demande de consentement client
 
-Les demandes de consentement sont traitées en adressant une demande de POST au point de `/consent` terminaison.
+Les demandes de consentement sont traitées en adressant une demande de POST au point de terminaison `/consent`.
 
 **Format d’API**
 
@@ -30,7 +31,7 @@ POST /consent
 
 **Requête**
 
-La requête suivante crée une nouvelle tâche de consentement pour les ID d&#39;utilisateur fournis dans la `entities` baie de disques.
+La requête suivante crée une nouvelle tâche de consentement pour les ID utilisateur fournis dans le tableau `entities`.
 
 ```shell
 curl -X POST \
@@ -61,14 +62,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `optOutOfSale` | Lorsqu’elle est définie sur true, indique que les utilisateurs fournis dans le `entities` cadre de la section souhaitent se désabonner de la vente ou du partage de leurs données personnelles. |
-| `entities` | Tableau d’objets indiquant les utilisateurs auxquels s’applique la demande de consentement. Chaque objet contient un tableau `namespace` et un tableau de `values` correspondance entre des utilisateurs individuels et cet espace de nommage. |
-| `nameSpace` | Chaque objet du `entities` tableau doit contenir l&#39;un des espaces de nommage [d&#39;identité](./appendix.md#standard-namespaces) standard reconnus par l&#39;API du Privacy Service. |
-| `values` | Tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace`fichier fourni. |
+| `optOutOfSale` | Lorsqu’elle est définie sur true, indique que les utilisateurs fournis en vertu de `entities` souhaitent s’exclure de la vente ou du partage de leurs données personnelles. |
+| `entities` | Tableau d’objets indiquant les utilisateurs auxquels s’applique la demande de consentement. Chaque objet contient un `namespace` et un tableau de `values` pour faire correspondre des utilisateurs individuels à cet espace de nommage. |
+| `nameSpace` | Chaque objet du tableau `entities` doit contenir l&#39;un des espaces de nommage d&#39;identité [standard ](./appendix.md#standard-namespaces) reconnus par l&#39;API du Privacy Service. |
+| `values` | Tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace` fourni. |
 
 >[!NOTE]
 >
->Pour plus d&#39;informations sur la manière de déterminer les valeurs d&#39;identité du client à envoyer à [!DNL Privacy Service], consultez le guide sur la [fourniture de données](../identity-data.md)d&#39;identité.
+>Pour plus d&#39;informations sur la manière de déterminer les valeurs d&#39;identité du client à envoyer à [!DNL Privacy Service], consultez le guide [fournissant des données d&#39;identité](../identity-data.md).
 
 **Réponse**
 
