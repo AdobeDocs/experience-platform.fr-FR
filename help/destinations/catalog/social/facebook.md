@@ -1,14 +1,14 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
+keywords: extensions facebook;extension facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
 title: Destination Facebook
 seo-title: Destination Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 85e6a65e1407ca60e7b63681c045fadaaa24aef9
+source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 18%
+source-wordcount: '939'
+ht-degree: 15%
 
 ---
 
@@ -17,85 +17,109 @@ ht-degree: 18%
 
 ## Présentation {#overview}
 
-Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
+Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 
-Vous pouvez utiliser cette destination pour le ciblage des audiences dans [!DNL Facebook’s] une famille d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram][!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
+Vous pouvez utiliser cette destination pour le ciblage des audiences dans la famille [!DNL Facebook’s] d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
-![Destination Facebook dans l’interface utilisateur CDP en temps réel](../../assets/catalog/social/facebook/catalog.png)
+![Destination Facebook dans l’interface utilisateur Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
 
 ## Cas d’utilisation
 
-Pour vous aider à mieux comprendre comment et quand utiliser la [!DNL Facebook] destination, voici deux exemples d’utilisation que les clients de la plate-forme de données clientes en temps réel peuvent résoudre à l’aide de cette fonctionnalité.
+Pour vous aider à mieux comprendre comment et quand utiliser la destination [!DNL Facebook], voici deux exemples d&#39;utilisation que les clients de Adobe Experience Platform peuvent résoudre en utilisant cette fonctionnalité.
 
 ### Cas d’utilisation 1
 
-Un détaillant en ligne souhaite atteindre les clients existants par le biais de plateformes sociales et leur montrer des offres personnalisées en fonction de leurs commandes précédentes. Le détaillant en ligne peut assimiler des adresses électroniques de son propre service de gestion de la relation client au CDP en temps réel, créer des segments à partir de ses propres données hors ligne et envoyer ces segments à la plateforme [!DNL Facebook] sociale afin d’optimiser ses dépenses publicitaires.
+Un détaillant en ligne souhaite atteindre les clients existants par le biais de plateformes sociales et leur montrer des offres personnalisées en fonction de leurs commandes précédentes. Le détaillant en ligne peut ingérer des adresses électroniques de sa propre gestion de la relation client vers Adobe Experience Platform, créer des segments à partir de ses propres données hors ligne et envoyer ces segments à la [!DNL Facebook] plate-forme sociale, en optimisant les dépenses publicitaires.
 
 ### Cas d’utilisation no 2
 
 Une compagnie aérienne a différents niveaux de clients (Bronze, Argent et Or) et veut fournir à chacun des niveaux des offres personnalisées via des plateformes sociales. Cependant, tous les clients n’utilisent pas l’application mobile de la compagnie aérienne et certains d’entre eux ne se sont pas connectés au site Web de la société. Les seuls identifiants dont dispose la société à propos de ces clients sont les identifiants d’adhésion et les adresses électroniques.
 
-Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données client de leur gestion de la relation client dans le CDP en temps réel, en utilisant les adresses électroniques comme identifiants.
+Pour les cible sur les réseaux sociaux, ils peuvent intégrer les données client de leur gestion de la relation client dans Adobe Experience Platform, en utilisant les adresses électroniques comme identifiants.
 
-Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d’adhésion et les niveaux de clients associés, pour créer de nouveaux segments d’audience qu’ils peuvent cible à travers la [!DNL Facebook] destination.
+Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;adhésion et les niveaux de clients associés, pour créer de nouveaux segments d&#39;audience qu&#39;ils peuvent cible via la destination [!DNL Facebook].
 
-## Spécifications de destination {#destination-specs}
+## Caractéristiques de la destination {#destination-specs}
 
-### Gouvernance des données pour les [!DNL Facebook] destinations {#data-governance}
+### Gouvernance des données pour les destinations [!DNL Facebook] {#data-governance}
 
 >[!IMPORTANT]
 >
->Les données envoyées à [!DNL Facebook] ne doivent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur les stratégies [de](/help/profile/ui/merge-policies.md)fusion.
+>Les données envoyées à [!DNL Facebook] ne doivent pas inclure d’identités assemblées. Vous êtes responsable du respect de cette obligation et pouvez le faire en vous assurant que les segments sélectionnés pour l’activation n’utilisent pas d’option de raccordement dans leur stratégie de fusion. En savoir plus sur [les stratégies de fusion](/help/profile/ui/merge-policies.md).
 
-### Type d’exportation {#export-type}
+### Type d&#39;exportation {#export-type}
 
-**Exportation** de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination Facebook.
+**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone, etc.) utilisé dans la destination Facebook.
 
 ### Conditions préalables du compte Facebook {#facebook-account-prerequisites}
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-- Your [!DNL Facebook] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
-- The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, reportez-vous à la documentation [Ajouter des partenaires à votre gestionnaire](https://www.facebook.com/business/help/1717412048538897) d’entreprise dans la documentation Facebook.
+- L&#39;autorisation [!DNL Facebook] doit être activée pour votre compte d&#39;utilisateur **[!DNL Manage campaigns]** pour le compte d&#39;annonce que vous prévoyez d&#39;utiliser.
+- Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
    >[!IMPORTANT]
    >
-   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Real-time CDP].
+   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. Ceci est obligatoire pour l’intégration de la [!DNL Adobe Experience Platform].
 - Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
 
-### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
+### Exigences de correspondance d&#39;ID {#id-matching-requirements}
 
-[!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] doivent être masquées des adresses électroniques *hachées* . Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
+[!DNL Facebook] exige qu’aucune information d’identification personnelle (identification personnelle) ne soit envoyée en clair. Par conséquent, les audiences activées pour [!DNL Facebook] peuvent être masquées par des identifiants *hachés*, tels que des adresses électroniques ou des numéros de téléphone.
 
-Pour en savoir plus sur l&#39;assimilation d&#39;adresses électroniques dans l&#39;Experience Platform, consultez la présentation [de l&#39;assimilation par](/help/ingestion/batch-ingestion/overview.md) lot et la présentation [de l&#39;assimilation par](/help/ingestion/streaming-ingestion/overview.md)flux continu.
+En fonction du type d’ID que vous saisissez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes.
+
+#### Exigences de hachage des numéros de téléphone {#phone-number-hashing-requirements}
+
+Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Facebook] :
+
+- **Incorporation de numéros** de téléphone bruts : vous pouvez ingérer des numéros de téléphone bruts au  [!DNL E.164] format  [!DNL Platform], qui seront automatiquement hachés à l&#39;activation. Si vous choisissez cette option, veillez à toujours intégrer vos numéros de téléphone bruts dans l&#39;espace de nommage `Phone_E.164`.
+- **Invitation de numéros** de téléphone hachés : vous pouvez pré-hacher vos numéros de téléphone avant l&#39;assimilation dans  [!DNL Platform]. Si vous choisissez cette option, veillez à toujours intégrer vos numéros de téléphone hachés dans l&#39;espace de nommage `Phone_SHA256`.
+
+>[!NOTE]
+>
+>Les numéros de téléphone saisis dans l&#39;espace de nommage `Phone` ne peuvent pas être activés dans [!DNL Facebook].
+
+
+#### Conditions requises pour le hachage des courriels {#email-hashing-requirements}
+
+Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
+
+Pour en savoir plus sur l’assimilation d’adresses électroniques en Experience Platform, consultez les sections [présentation de l’assimilation par lots](/help/ingestion/batch-ingestion/overview.md) et [présentation de l’assimilation par lots](/help/ingestion/streaming-ingestion/overview.md).
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
-- Rogner tous les espaces de début et de fin de la chaîne de courriel ; exemple : `johndoe@example.com`, non `<space>johndoe@example.com<space>`;
+- Rogner tous les espaces de début et de fin de la chaîne de courriel ; exemple : `johndoe@example.com`, et non `<space>johndoe@example.com<space>`;
 - Lors du hachage des chaînes de courrier électronique, veillez à mettre la chaîne en minuscules en hachage ;
-   - Exemple : `example@email.com`, non `EXAMPLE@EMAIL.COM`;
+   - Exemple : `example@email.com`, et non `EXAMPLE@EMAIL.COM`;
 - Assurez-vous que la chaîne hachée est en minuscules.
-   - Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+   - Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Ne salez pas la chaîne.
 
+Les données des espaces de nommage non hachés sont automatiquement hachées par [!DNL Platform] à l&#39;activation.
 
->[!IMPORTANT]
->
->Si vous choisissez de ne pas hacher les adresses électroniques, le CDP en temps réel le fera pour vous lorsque vous activerez des segments vers [!DNL Facebook]. Dans le processus [d’](../../ui/activate-destinations.md#activate-data) activation (voir étape 5), sélectionnez l’ `Email` option comme illustré ci-dessous pour les adresses *de courriel* brutes et `Email_LC_SHA256` *pour les adresses de courriel hachées.*
+Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation.
+![Transformation du mappage des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-![Hachage sur l’activation](../../assets/common/identity-mapping.png)
+#### Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
+
+Avant de pouvoir utiliser l&#39;espace de nommage `Extern_ID` pour envoyer des données à [!DNL Facebook], veillez à synchroniser vos propres identifiants à l&#39;aide de [!DNL Facebook Pixel]. Consultez la [documentation officielle](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) pour obtenir des informations détaillées.
 
 ## Se connecter à la destination {#connect-destination}
 
-To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](./workflow.md).
+Pour vous connecter à la destination [!DNL Facebook], voir le [Processus d’authentification des destinations de réseau social](./workflow.md).
 
-## Activate segments to [!DNL Facebook] {#activate-segments}
+## Activer les segments dans [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+Pour savoir comment activer des segments dans [!DNL Facebook], voir [Activer les données vers les destinations](../../ui/activate-destinations.md).
+
+À l&#39;étape **[!UICONTROL Planification des segments]**, vous devez fournir l&#39;[!UICONTROL Origine d&#39;audience] lors de l&#39;envoi de segments à [!DNL Facebook Custom Audiences].
+
+![Origine Facebook de l&#39;Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Données exportées {#exported-data}
 
-For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
+Pour [!DNL Facebook], une activation réussie signifie qu&#39;une audience personnalisée [!DNL Facebook] serait créée par programmation dans [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). L’adhésion au segment dans l’audience est ajoutée ou supprimée selon que les utilisateurs sont qualifiés ou disqualifiés pour les segments activés.
 
 >[!TIP]
 >
->L&#39;intégration entre le CDP en temps réel et la prise en charge [!DNL Facebook] des renvois d&#39;audiences historiques. Toutes les qualifications des segments historiques sont envoyées [!DNL Facebook] lorsque vous activez les segments vers la destination.
+>L’intégration entre Adobe Experience Platform et [!DNL Facebook] prend en charge les remplissages d’audiences historiques. Toutes les qualifications des segments historiques sont envoyées à [!DNL Facebook] lorsque vous activez les segments vers la destination.
