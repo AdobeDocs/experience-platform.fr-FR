@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
+source-git-commit: 4a282f8890ace3be7808ffbf018377d792e30cb7
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 80%
+source-wordcount: '109'
+ht-degree: 93%
 
 ---
 
@@ -29,9 +29,6 @@ ht-degree: 80%
 * Confidentialité et gouvernance des données {#privacy}
    * [Présentation de la confidentialité](privacy/privacy-overview.md)
    * [Présentation de la gouvernance des données](privacy/data-governance-overview.md)
-   * Prise en charge d’IAB TCF 2.0 {#iab}
-      * [Prise en charge d’IAB TCF 2.0 dans le CDP en temps réel](privacy/iab/overview.md)
-      * [Créer des jeux de données pour capturer les données de consentement IAB TCF 2.0](privacy/iab/dataset-preparation.md)
 * Profils {#profile}
    * [Présentation du profil](profile/profile-overview.md)
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
