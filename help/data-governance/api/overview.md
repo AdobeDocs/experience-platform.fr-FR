@@ -1,48 +1,49 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Guide de développement de l’API Policy Service
 topic: developer guide
+description: Découvrez comment utiliser l’API Policy Service pour gérer les étiquettes d’utilisation des données et les stratégies dans l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 71678b10c9e137016ea404305b272508b9c8cabe
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 17%
+source-wordcount: '495'
+ht-degree: 16%
 
 ---
 
 
 # Guide du développeur de l’API [!DNL Policy Service]
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+Adobe Experience Platform [!DNL Data Governance] vous permet de gérer les données client et de veiller au respect des réglementations, restrictions et stratégies applicables à l’utilisation des données. Il joue un rôle clé dans [!DNL Experience Platform] à divers niveaux, notamment le catalogage, le lignage des données, l&#39;étiquetage de l&#39;utilisation des données, les stratégies d&#39;utilisation des données et le contrôle de l&#39;utilisation des données pour les actions marketing.
 
-L’ [!DNL Policy Service] API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation les étiquettes et les stratégies d’utilisation des données, ainsi que d’évaluer les actions marketing en cas de violation des stratégies. Ces points de terminaison sont décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le guide [de](./getting-started.md) prise en main pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+L&#39;API [!DNL Policy Service] fournit plusieurs points de terminaison qui vous permettent de gérer par programmation les étiquettes et les stratégies d&#39;utilisation des données, ainsi que d&#39;évaluer les actions marketing en cas de violation des stratégies. Ces points de terminaison sont décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
-Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez la page de permutation [[!DNL Policy Service] des](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)API.
+Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez le [[!DNL Policy Service] swagger d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
 ## Étiquettes
 
-Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Best practices encourage labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available for use in [!DNL Platform]. Vous pouvez créer, vue, modifier et supprimer des étiquettes à l’aide du `/labels` point de terminaison. Pour savoir comment utiliser ce point de terminaison, consultez le guide [des points de terminaison des](./labels.md)étiquettes.
+Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Les meilleures pratiques encouragent l’étiquetage des données dès qu’elles sont ingérées dans [!DNL Experience Platform] ou dès que les données sont disponibles pour être utilisées dans [!DNL Platform]. Vous pouvez créer, vue, modifier et supprimer des étiquettes à l’aide du point de terminaison `/labels`. Pour savoir comment utiliser ce point de terminaison, consultez le [guide des points de terminaison des étiquettes](./labels.md).
 
 ## Actions marketing
 
-Actions marketing (également appelés cas d’utilisation marketing), dans le contexte de la [!DNL Data Governance] structure, sont des actions qu’un utilisateur [!DNL Experience Platform] de données peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Pour plus d’informations sur l’utilisation des actions marketing, voir le guide [des points de terminaison des actions](./marketing-actions.md)marketing.
+Actions marketing (également appelés cas d’utilisation marketing), dans le contexte de la structure [!DNL Data Governance], sont des actions qu’un utilisateur de données [!DNL Experience Platform] peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Pour plus d&#39;informations sur l&#39;utilisation des actions marketing, consultez le [guide du point de terminaison des actions marketing](./marketing-actions.md).
 
 ## Stratégies
 
-Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform]. Une stratégie est définie par les éléments suivants :
+Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter, ou dont vous êtes limité à l’exécution, sur les données dans [!DNL Experience Platform]. Une stratégie est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 1. Étiquette(s) d&#39;utilisation des données pour laquelle l&#39;action est limitée ne peut pas être exécutée
 
-Pour savoir comment gérer les stratégies dans l’API, consultez le guide des points de terminaison des [stratégies.](./policies.md)
+Pour savoir comment gérer les stratégies dans l&#39;API, consultez le [guide des points de terminaison des stratégies](./policies.md).
 
 ## Évaluation
 
-Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Une fois les étiquettes d&#39;utilisation des données appliquées aux [!DNL Platform] jeux de données et les stratégies d&#39;utilisation des données définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données vous permettent de les appliquer et d&#39;empêcher les opérations de données qui constituent des violations de stratégie.
 
-The [!DNL Policy Service] API provides endpoints that allow you to test marketing actions against datasets or arbitrary combinations of data usage labels in order to check if any policy violations occur. En fonction de la réponse de l’API, vous pouvez configurer des protocoles dans votre application d’expérience, afin d’être en conformité avec les stratégies d’utilisation des données. See the [evaluation endpoints guide](./evaluation.md) for more information.
+L&#39;API [!DNL Policy Service] fournit des points de terminaison qui vous permettent de tester des actions marketing par rapport à des jeux de données ou à des combinaisons arbitraires d&#39;étiquettes d&#39;utilisation de données afin de vérifier si des violations de stratégie se produisent. En fonction de la réponse de l’API, vous pouvez configurer des protocoles dans votre application d’expérience, afin d’être en conformité avec les stratégies d’utilisation des données. Pour plus d&#39;informations, consultez le [guide des points de terminaison d&#39;évaluation](./evaluation.md).
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’ [!DNL Policy Service] API, lisez le guide de [prise en main](./getting-started.md) , puis sélectionnez l’un des guides de points de terminaison pour savoir comment utiliser des points de terminaison spécifiques. Pour utiliser des libellés et des stratégies à l’aide de l’ [!DNL Experience Platform] interface utilisateur, reportez-vous au guide [d’utilisation des](../labels/user-guide.md) libellés et au guide [d’utilisation des](../policies/user-guide.md)stratégies, respectivement.
+Pour commencer à lancer des appels à l&#39;aide de l&#39;API [!DNL Policy Service], consultez le guide de prise en main [get started guide](./getting-started.md), puis sélectionnez l&#39;un des guides de points de terminaison pour savoir comment utiliser des points de terminaison spécifiques. Pour utiliser les libellés et les stratégies à l&#39;aide de l&#39;interface utilisateur [!DNL Experience Platform], consultez le [guide de l&#39;utilisateur ](../labels/user-guide.md) et [guide de l&#39;utilisateur des stratégies](../policies/user-guide.md), respectivement.
