@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; exemples de requêtes ; exemple de requête ; adobe cible ;
 solution: Experience Platform
 title: Exemples de requêtes
 topic: queries
@@ -7,8 +7,8 @@ description: Les données issues d’Adobe Target sont transformées en schéma 
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 55%
+source-wordcount: '324'
+ht-degree: 52%
 
 ---
 
