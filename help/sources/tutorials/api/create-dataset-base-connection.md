@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux de connexion de dataset ; service de flux ; connexion au service de flux
 solution: Experience Platform
 title: Création d’une connexion de base de jeux de données Experience Platform à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
 description: Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 30%
+source-wordcount: '736'
+ht-degree: 29%
 
 ---
 
 
-# Création d’une connexion de base de [!DNL Experience Platform] jeux de données à l’aide de l’ [!DNL Flow Service] API
+# Créez une connexion de base de jeux de données [!DNL Experience Platform] à l’aide de l’API [!DNL Flow Service].
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Pour connecter des données provenant d&#39;une source tierce à [!DNL Platform], une connexion de base de jeux de données doit d&#39;abord être établie.
+Pour connecter les données d&#39;une source tierce à [!DNL Platform], une connexion de base de jeux de données doit d&#39;abord être établie.
 
-Ce didacticiel utilise l’ [!DNL Flow Service] API pour vous guider dans les étapes de création d’une connexion de base de jeux de données.
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de création d&#39;une connexion de base de jeux de données.
 
 ## Prise en main
 
@@ -28,12 +28,12 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Système de modèle de données d’expérience (XDM)](../../../xdm/home.md)[!DNL Experience Platform] : cadre normalisé selon lequel organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Guide](../../../xdm/api/getting-started.md)du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
+   * [Guide](../../../xdm/api/getting-started.md) du développeur du registre des schémas : Inclut des informations importantes que vous devez connaître pour pouvoir effectuer des appels à l&#39;API de registre du Schéma. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 * [Service de catalogue](../../../catalog/home.md) : système d’enregistrement de l’emplacement et de la traçabilité des données dans [!DNL Experience Platform].
-* [Importation](../../../ingestion/batch-ingestion/overview.md)par lot : L’API d’assimilation par lot vous permet d’assimiler des données à des fichiers de commandes dans un Experience Platform.
-* [Sandbox](../../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [Importation](../../../ingestion/batch-ingestion/overview.md) par lot : L’API d’assimilation par lot vous permet d’assimiler des données à des fichiers de commandes dans un Experience Platform.
+* [Sandbox](../../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully connect to Data Lake using the [!DNL Flow Service] API.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à Data Lake à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -41,13 +41,13 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -184,7 +184,7 @@ Une réponse réussie renvoie les détails de la connexion de base nouvellement 
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion de base de données à l&#39;aide de l&#39; [!DNL Flow Service] API et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cette connexion de base pour créer une connexion de cible. Les didacticiels suivants décrivent les étapes de création d’une connexion de cible, en fonction de la catégorie du connecteur source que vous utilisez :
+En suivant ce didacticiel, vous avez créé une connexion de base de données à l&#39;aide de l&#39;API [!DNL Flow Service] et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cette connexion de base pour créer une connexion de cible. Les didacticiels suivants décrivent les étapes de création d’une connexion de cible, en fonction de la catégorie du connecteur source que vous utilisez :
 
 * [Enregistrement cloud](./collect/cloud-storage.md)
 * [CRM](./collect/crm.md)
