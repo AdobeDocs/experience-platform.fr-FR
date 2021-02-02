@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
+keywords: Experience Platform ; accueil ; sujets populaires ; Azure Data Lake Enregistrement Gen2 ; enregistrement du lac de données azurées ; Azure Data Lake
 solution: Experience Platform
 title: Création d'un connecteur Gen2 d'Enregistrement Azure Data Lake à l'aide de l'API Flow Service
 topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes permettant de connecter l'Experience Platform à Azure Data Lake Enregistrement Gen2 (ci-après appelé "ADLS Gen2").
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '611'
 ht-degree: 24%
 
 ---
@@ -48,7 +48,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -124,4 +124,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion ADLS Gen2 à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données de parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
+En suivant ce didacticiel, vous avez créé une connexion ADLS Gen2 à l’aide d’API et un identifiant unique a été obtenu dans le corps de la réponse. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données Parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
