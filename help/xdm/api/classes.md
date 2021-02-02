@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de classes ; registre de Schémas ; classe ; classes ; classes ; créer
 solution: Experience Platform
 title: Création d’une classe
 description: Le point de terminaison /classes de l'API Schéma Registry vous permet de gérer par programmation les classes XDM dans votre application d'expérience.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1502'
 ht-degree: 24%
 
 ---
