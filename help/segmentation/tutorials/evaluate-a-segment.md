@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform;home;popular topics;segment evaluation;Segmentation Service;segmentation;Segmentation;evaluate a segment;access segment results;evaluate and access segment;
+keywords: Experience Platform ; accueil ; rubriques populaires ; évaluation des segments ; service de segmentation ; segmentation ; segmentation ; évaluation d’un segment ; résultats du segment d’accès ; évaluation et segment d’accès ;
 solution: Experience Platform
 title: Évaluation d’un segment
 topic: tutorial
 type: Tutorial
 description: Ce document fournit un tutoriel sur l’évaluation des segments et l’accès aux résultats de segmentation à l’aide de l’API Segmentation.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 68%
+source-wordcount: '1560'
+ht-degree: 67%
 
 ---
 
 
 # Évaluation et accès aux résultats de segmentation
 
-This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md).
+Ce document fournit un didacticiel pour évaluer les segments et accéder aux résultats des segments à l&#39;aide de [[!DNL Segmentation API]](../api/getting-started.md).
 
 ## Prise en main
 
-This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce didacticiel nécessite une bonne compréhension des différents services [!DNL Adobe Experience Platform] impliqués dans la création de segments d&#39;audience. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de [!DNL Real-time Customer Profile] données.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des segments d’audience à partir de  [!DNL Real-time Customer Profile] données.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
 ### En-têtes requis
 
-Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](../../tutorials/authentication.md) pour passer des appels à des API [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en) pour passer des appels à des API [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes POST, PUT et PATCH requièrent un en-tête supplémentaire :
 
@@ -53,7 +53,7 @@ Une fois que vous avez développé, testé et enregistré votre définition de s
 
 [L’évaluation planifiée](#scheduled-evaluation) (également appelée « segmentation planifiée ») vous permet de créer un planning récurrent pour exécuter une tâche d’exportation à un moment précis, tandis que l’[évaluation sur demande](#on-demand-evaluation) implique la création d’une tâche de segmentation pour créer immédiatement l’audience. Les étapes à suivre pour chaque type d’évaluation sont décrites ci-dessous.
 
-If you have not yet completed the [create a segment using the Segmentation API](./create-a-segment.md) tutorial or created a segment definition using [Segment Builder](../ui/overview.md), please do so before proceeding with this tutorial.
+Si vous n&#39;avez pas encore terminé la création d&#39;un segment à l&#39;aide du didacticiel de l&#39;API de segmentation](./create-a-segment.md) ou créé une définition de segment à l&#39;aide du [Créateur de segments](../ui/overview.md), faites-le avant de suivre ce didacticiel.[
 
 ## Évaluation planifiée {#scheduled-evaluation}
 
@@ -61,25 +61,25 @@ L’évaluation planifiée permet à votre organisation IMS de créer un plannin
 
 >[!NOTE]
 >
->L’évaluation planifiée peut être activée pour les environnements de test avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. If your organization has more than five merge policies for [!DNL XDM Individual Profile] within a single sandbox environment, you will not be able to use scheduled evaluation.
+>L’évaluation planifiée peut être activée pour les environnements de test avec un maximum de cinq (5) stratégies de fusion pour [!DNL XDM Individual Profile]. Si votre entreprise dispose de plus de cinq stratégies de fusion pour [!DNL XDM Individual Profile] dans un seul environnement de sandbox, vous ne pourrez pas utiliser l’évaluation planifiée.
 
 ### Création d’un planning
 
 En effectuant une requête POST sur le point de terminaison `/config/schedules`, vous pouvez créer un planning et inclure l’heure spécifique à laquelle le planning doit être déclenché.
 
-Vous trouverez des informations plus détaillées sur l&#39;utilisation de ce point de terminaison dans le guide des points de terminaison [planifiés.](../api/schedules.md#create)
+Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le [guide du point de terminaison des planifications](../api/schedules.md#create).
 
 ### Activation d’un planning
 
 Par défaut, un planning est inactif lors de la création, sauf si la propriété `state` est définie sur `active` dans le corps de la requête de création (POST). Vous pouvez activer un planning (définissez `state` sur `active`) en effectuant une requête PATCH sur le point de terminaison `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
 
-Vous trouverez des informations plus détaillées sur l&#39;utilisation de ce point de terminaison dans le guide des points de terminaison [planifiés.](../api/schedules.md#update-state)
+Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le [guide du point de terminaison des planifications](../api/schedules.md#update-state).
 
 ### Mise à jour de l’heure du planning
 
 Vous pouvez mettre à jour l’heure du planning en effectuant une requête PATCH sur le point de terminaison `/config/schedules` et en incluant l’identifiant du planning dans le chemin.
 
-Vous trouverez des informations plus détaillées sur l&#39;utilisation de ce point de terminaison dans le guide des points de terminaison [planifiés.](../api/schedules.md#update-schedule)
+Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le [guide du point de terminaison des planifications](../api/schedules.md#update-schedule).
 
 ## Évaluation sur demande
 
@@ -87,22 +87,22 @@ L’évaluation sur demande vous permet de créer une tâche de segmentation afi
 
 ### Création d’une tâche de segmentation
 
-Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. It references a segment definition, as well as any merge policies controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
+Une tâche de segmentation est un processus asynchrone qui crée un nouveau segment ciblé. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Lorsqu’une tâche de segmentation se termine avec succès, vous pouvez collecter diverses informations sur le segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience.
 
 Vous pouvez créer une tâche de segmentation en exécutant une requête POST sur le point de terminaison `/segment/jobs` dans l’API [!DNL Real-time Customer Profile]
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le guide des points de terminaison des tâches de [segment.](../api/segment-jobs.md#create)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le [guide des points de terminaison des tâches de segment](../api/segment-jobs.md#create).
 
 
 ### Recherche de l’état de la tâche de segmentation
 
 Vous pouvez utiliser l’`id` pour une tâche de segmentation spécifique afin d’effectuer une requête de recherche (GET) pour afficher l’état actuel de la tâche.
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le guide des points de terminaison des tâches de [segment.](../api/segment-jobs.md#get)
+Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le [guide des points de terminaison des tâches de segment](../api/segment-jobs.md#get).
 
 ## Interprétation des résultats de segmentation
 
-Lorsque les tâches de segmentation sont exécutées avec succès, le mappage `segmentMembership` est mis à jour pour chaque profil inclus dans le segment. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont assimilés [!DNL Platform], ce qui permet l’intégration à d’autres solutions, telles que [!DNL Adobe Audience Manager]les solutions.
+Lorsque les tâches de segmentation sont exécutées avec succès, le mappage `segmentMembership` est mis à jour pour chaque profil inclus dans le segment. `segmentMembership` stocke également tous les segments d’audience préévalués qui sont assimilés  [!DNL Platform], ce qui permet l’intégration à d’autres solutions, telles que  [!DNL Adobe Audience Manager]les solutions.
 
 L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregistrement de profil individuel :
 
@@ -142,7 +142,7 @@ Les sections suivantes décrivent ces options de manière plus détaillée.
 
 ## Recherche d’un profil
 
-If you know the specific profile that you would like to access, you can do so using the [!DNL Real-time Customer Profile] API. Toutes les étapes pour accéder aux profils individuels sont disponibles dans le tutoriel sur l’[accès aux données de Real-time Customer Profile à l’aide de l’API Profile](../../profile/api/entities.md).
+Si vous connaissez le profil spécifique auquel vous souhaitez accéder, vous pouvez le faire à l&#39;aide de l&#39;API [!DNL Real-time Customer Profile]. Toutes les étapes pour accéder aux profils individuels sont disponibles dans le tutoriel sur l’[accès aux données de Real-time Customer Profile à l’aide de l’API Profile](../../profile/api/entities.md).
 
 ## Exportation d’un segment {#export}
 
@@ -163,8 +163,8 @@ Le schéma sur lequel repose le jeu de données est l’une des principales cons
 
 Il existe deux manières de créer le jeu de données nécessaire :
 
-- **Utilisation des API :** Les étapes suivantes de ce didacticiel expliquent comment créer un jeu de données qui référence le [!DNL XDM Individual Profile Union Schema] système à l’aide de l’ [!DNL Catalog] API.
-- **Utilisation de l’interface utilisateur :** Pour utiliser l’interface [!DNL Adobe Experience Platform] utilisateur pour créer un jeu de données faisant référence au schéma d’union, suivez les étapes du didacticiel [](../ui/overview.md) IU, puis revenez à ce didacticiel pour passer à la procédure de [génération de profils](#generate-xdm-profiles-for-audience-members)d’audience.
+- **Utilisation des API :** les étapes qui suivent dans ce didacticiel expliquent comment créer un jeu de données qui fait référence à l’ [!DNL XDM Individual Profile Union Schema] utilisation de l’ [!DNL Catalog] API.
+- **Utilisation de l’interface utilisateur :** Pour utiliser l’interface  [!DNL Adobe Experience Platform] utilisateur pour créer un jeu de données qui référence le schéma d’union, suivez les étapes du  [didacticiel de l’interface ](../ui/overview.md) utilisateur, puis revenez à ce didacticiel pour passer à la procédure de  [génération de profils](#generate-xdm-profiles-for-audience-members) d’audience.
 
 Si vous disposez déjà d’un jeu de données compatible et que vous connaissez son identifiant, vous pouvez passer directement à l’étape de [génération de profils](#generate-xdm-profiles-for-audience-members).
 
@@ -216,24 +216,24 @@ Une réponse réussie renvoie un tableau contenant l’identifiant unique et en 
 ] 
 ```
 
-### Génération de profils pour les membres de l’audience {#generate-profiles}
+### Génération de profils pour les membres de l’audience  {#generate-profiles}
 
 Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les membres de l’audience dans le jeu de données, en effectuant une requête POST sur le point de terminaison `/export/jobs` dans l’API et en fournissant l’identifiant du jeu de données et les informations sur les segments que vous souhaitez exporter.[!DNL Real-time Customer Profile]
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le guide des points de terminaison des tâches [d’exportation.](../api/export-jobs.md#create)
+Vous trouverez des informations plus détaillées sur l&#39;utilisation de ce point de terminaison dans le [guide du point de terminaison des tâches d&#39;exportation](../api/export-jobs.md#create).
 
 ### Contrôle de la progression de l’exportation
 
 Lorsqu’une tâche d’exportation est en cours de traitement, vous pouvez contrôler son état en effectuant une requête GET sur le point de terminaison `/export/jobs` et en incluant l’`id` de la tâche d’exportation dans le chemin. La tâche d’exportation est terminée lorsque le champ `status` renvoie la valeur &quot;SUCCEEDED&quot;.
 
-Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans le guide des points de terminaison des tâches [d’exportation.](../api/export-jobs.md#get)
+Vous trouverez des informations plus détaillées sur l&#39;utilisation de ce point de terminaison dans le [guide du point de terminaison des tâches d&#39;exportation](../api/export-jobs.md#get).
 
 ## Étapes suivantes
 
-Once the export has completed successfully, your data is available within the [!DNL Data Lake] in [!DNL Experience Platform]. You can then use the [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Selon la taille du segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
+Une fois l&#39;exportation terminée, vos données sont disponibles dans [!DNL Data Lake] dans [!DNL Experience Platform]. Vous pouvez ensuite utiliser [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) pour accéder aux données à l&#39;aide de `batchId` associé à l&#39;exportation. Selon la taille du segment, les données peuvent se présenter sous forme de blocs et le lot peut être constitué de plusieurs fichiers.
 
-For step-by-step instructions on how to use the [!DNL Data Access] API to access and download batch files, follow the [Data Access tutorial](../../data-access/tutorials/dataset-data.md).
+Pour obtenir des instructions détaillées sur l&#39;utilisation de l&#39;API [!DNL Data Access] pour accéder aux fichiers de commandes et les télécharger, suivez le [didacticiel d&#39;accès aux données](../../data-access/tutorials/dataset-data.md).
 
-Vous pouvez également accéder aux données de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. Using the UI or RESTful API, [!DNL Query Service] allows you to write, validate, and run queries on data within the [!DNL Data Lake].
+Vous pouvez également accéder aux données de segment exportées avec succès à l’aide de [!DNL Adobe Experience Platform Query Service]. En utilisant l&#39;interface utilisateur ou l&#39;API RESTful, [!DNL Query Service] vous permet d&#39;écrire, de valider et d&#39;exécuter des requêtes sur des données dans [!DNL Data Lake].
 
-For more information on how to query audience data, please review the documentation on [[!DNL Query Service]](../../query-service/home.md).
+Pour plus d&#39;informations sur la façon de requête des données d&#39;audience, veuillez consulter la documentation sur [[!DNL Query Service]](../../query-service/home.md).
