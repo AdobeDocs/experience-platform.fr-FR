@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; analytics;classifications
+keywords: Experience Platform ; accueil ; sujets populaires ; analytics;classifications
 description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
 solution: Experience Platform
 title: Création d’un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 6%
+source-wordcount: '659'
+ht-degree: 5%
 
 ---
 
@@ -22,27 +22,27 @@ Ce didacticiel décrit la procédure à suivre pour créer un connecteur de donn
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et à développer des applications d’expérience numérique.
 
-Le connecteur de données des classifications Analytics nécessite que vos données aient été migrées vers la nouvelle [!DNL Classifications] infrastructure d’Adobe Analytics avant d’être utilisées. Pour confirmer l’état de migration de vos données, contactez votre responsable de succès client Adobe.
+Le connecteur de données des classifications Analytics nécessite que vos données aient été migrées vers la nouvelle infrastructure [!DNL Classifications] d’Adobe Analytics avant d’être utilisées. Pour confirmer l’état de migration de vos données, contactez votre responsable de succès client Adobe.
 
 ## Sélectionner vos classifications
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran **[!UICONTROL Catalogue]** affiche les sources disponibles pour créer des connexions entrantes avec. Chaque carte source affiche une option permettant de configurer un nouveau compte ou d’ajouter des données à un compte existant.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail sources. L’écran **[!UICONTROL Catalogue]** affiche les sources disponibles pour créer des connexions entrantes avec. Chaque carte source affiche une option permettant de configurer un nouveau compte ou d’ajouter des données à un compte existant.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie des applications **[!UICONTROL d’]** Adobe, sélectionnez la carte **[!UICONTROL Adobe Analytics]** , puis sélectionnez **[!UICONTROL Ajouter les données]** au début en utilisant les données de classification Analytics.
+Sous la catégorie **[!UICONTROL Adobe applications]**, sélectionnez la carte **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Ajouter les données]** au début d’utilisation des données de classification Analytics.
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-L’étape d’ajout de données **[!UICONTROL à la source]** Analytics s’affiche. Sélectionnez **[!UICONTROL Classifications]** dans l’en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID de dimension, le nom de la suite de rapports et l’identifiant de la suite de rapports.
+L’étape **[!UICONTROL Ajout de données à la source Analytics]** s’affiche. Sélectionnez **[!UICONTROL Classifications]** dans l&#39;en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID de dimension, le nom de la suite de rapports et l&#39;identifiant de la suite de rapports.
 
-Chaque page affiche jusqu’à dix [!DNL Classifications] jeux de données différents parmi lesquels vous pouvez choisir. Sélectionnez **[!UICONTROL Suivant]** en bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de jeux de données que vous avez sélectionnés, ainsi que leurs noms. [!DNL Classifications] Ce panneau vous permet également de supprimer tous les [!DNL Classifications] jeux de données sélectionnés par erreur ou d&#39;effacer toutes les sélections par une seule action.
+Chaque page affiche jusqu&#39;à dix jeux de données [!DNL Classifications] différents parmi lesquels vous pouvez choisir. Sélectionnez **[!UICONTROL Suivant]** en bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de jeux de données [!DNL Classifications] que vous avez sélectionnés, ainsi que leurs noms. Ce panneau vous permet également de supprimer tous les jeux de données [!DNL Classifications] sélectionnés par erreur ou d&#39;effacer toutes les sélections à l&#39;aide d&#39;une seule action.
 
-Vous pouvez sélectionner jusqu’à 30 [!DNL Classifications] jeux de données différents à importer [!DNL Platform].
+Vous pouvez sélectionner jusqu’à 30 jeux de données [!DNL Classifications] différents à importer dans [!DNL Platform].
 
 Une fois que vous avez sélectionné vos [!DNL Classifications] jeux de données, sélectionnez **[!UICONTROL Suivant]** en haut à droite de la page.
 
@@ -50,29 +50,29 @@ Une fois que vous avez sélectionné vos [!DNL Classifications] jeux de données
 
 ## Vérifier vos classifications
 
-L&#39;étape **[!UICONTROL Révision]** s&#39;affiche, vous permettant de revoir vos [!DNL Classifications] jeux de données sélectionnés avant de les créer. Les détails sont regroupés dans les catégories suivantes :
+L&#39;étape **[!UICONTROL Réviser]** s&#39;affiche, ce qui vous permet de revoir vos [!DNL Classifications] jeux de données sélectionnés avant de les créer. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]**: Affiche la plate-forme source et l&#39;état de la connexion.
-* **[!UICONTROL Type]** de données : Affiche le nombre de [!DNL Classifications]personnes sélectionnées.
-* **[!UICONTROL Planification]**: Affiche la fréquence de synchronisation des [!DNL Classifications] données.
+* **[!UICONTROL Connexion]** : Affiche la plate-forme source et l&#39;état de la connexion.
+* **[!UICONTROL Type]** de données : Affiche le nombre de  [!DNL Classifications]personnes sélectionnées.
+* **[!UICONTROL Planification]** : Affiche la fréquence de synchronisation des  [!DNL Classifications] données.
 
-Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accordez un certain temps à la création du flux de données.
+Une fois que vous avez passé en revue votre flux de données, cliquez sur **[!UICONTROL Terminer]** et attendez un certain temps pour que le flux de données soit créé.
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
 ## Surveiller le flux de données de vos classifications
 
-Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran **[!UICONTROL Catalogue]** , sélectionnez **[!UICONTROL Flux de données]** pour vue d’une liste de flux établis associés à votre [!DNL Classifications] compte.
+Une fois que votre flux de données a été créé, vous pouvez surveiller les données qui y sont ingérées. Dans l&#39;écran **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Flux de données]** pour vue une liste de flux établis associés à votre compte [!DNL Classifications].
 
 ![](../../../../images/tutorials/create/classifications/dataflows.png)
 
-L’écran **[!UICONTROL Flux de données]** s’affiche. Cette page contient une liste de flux de données, y compris des informations sur leur nom, leurs données source et leur état d&#39;exécution. Le panneau **[!UICONTROL Propriétés]** , situé à droite, contient des métadonnées relatives au flux de [!DNL Classifications] données.
+L&#39;écran **[!UICONTROL Flux de données]** s&#39;affiche. Cette page contient une liste de flux de données, y compris des informations sur leur nom, leurs données source et leur état d&#39;exécution. Sur la droite se trouve le panneau **[!UICONTROL Propriétés]** qui contient des métadonnées concernant votre flux de données [!DNL Classifications].
 
-Sélectionnez le jeu **[!UICONTROL de données de]** Cible auquel vous souhaitez accéder.
+Sélectionnez le **[!UICONTROL jeu de données de Cible]** auquel vous souhaitez accéder.
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-La page activité **[!UICONTROL des]** jeux de données affiche des informations sur le jeu de données de cible que vous avez sélectionné, y compris des détails sur son statut de lot, son ID de jeu de données et son schéma.
+La page **[!UICONTROL activité des ensembles de données]** affiche des informations sur le jeu de données de cible que vous avez sélectionné, y compris des détails sur son état de lot, son ID de jeu de données et son schéma.
 
 >[!IMPORTANT]
 >
@@ -83,8 +83,8 @@ La page activité **[!UICONTROL des]** jeux de données affiche des informations
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé un connecteur de données de classifications Analytics qui permet d’importer [!DNL Classifications] des données [!DNL Platform]. See the following documents for more information on [!DNL Analytics] and [!DNL Classifications] data:
+En suivant ce didacticiel, vous avez créé un connecteur de données de classifications Analytics qui permet d’importer [!DNL Classifications] des données dans [!DNL Platform]. Pour plus d&#39;informations sur les données [!DNL Analytics] et [!DNL Classifications], consultez les documents suivants :
 
 * [Présentation du connecteur de données Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Création d’un connecteur de données Analytics dans l’interface utilisateur](./analytics.md)
-* [À propos des classifications](https://docs.adobe.com/content/help/fr-FR/analytics/components/classifications/c-classifications.html#)
+* [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
