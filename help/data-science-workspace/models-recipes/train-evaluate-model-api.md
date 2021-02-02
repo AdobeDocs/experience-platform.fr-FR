@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
+keywords: Experience Platform ; formation et évaluation ; Espace de travail de données ; sujets populaires ; API d’apprentissage automatique Sensei
 solution: Experience Platform
 title: Formation et évaluation d’un modèle (API)
 topic: tutorial
 type: Tutorial
 description: Ce didacticiel vous montrera comment créer, former et évaluer un modèle à l'aide d'appels d'API d'apprentissage automatique Sensei.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 98%
+source-wordcount: '1230'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez ce [tutoriel](../../tutorials/authentication.md) pour obtenir l’autorisation d’effectuer des appels API.
+Suivez le [didacticiel d’authentification de l’API Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) pour passer des appels d’API au début.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
