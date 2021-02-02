@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; exemples de requêtes ; exemple de requête ; adobe analytics ;
 solution: Experience Platform
 title: Exemples de requêtes
 topic: queries
@@ -7,8 +7,8 @@ description: Les données des suites de rapports Adobe Analytics sélectionnées
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 60%
+source-wordcount: '1017'
+ht-degree: 59%
 
 ---
 
@@ -215,8 +215,8 @@ Dans les rapports, les commandes, recettes, consultations de produit et ajouts a
 
 | eVar6 (méthode de recherche de produits) | recettes | commandes | consultations de produit | ajouts au panier |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| recherche interne : T-shirt d’été | 19,99 | 1 | 3 | 3 |
-| recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 3 |
+| recherche interne : T-shirt d’été | 19,99 | 1 | 3 | 1 |
+| recherche interne : bonnet d’hiver | 12,99 | 3 | 3 | 3 |
 
 Pour en savoir plus sur l’utilisation de la syntaxe de conversion, consultez la documentation Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
