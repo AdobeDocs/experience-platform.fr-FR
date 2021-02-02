@@ -1,14 +1,14 @@
 ---
-keywords: metrics overview; rtcdp metrics overview
+keywords: aperçu des mesures ; présentation des mesures rtcdp
 title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
 seo-title: Page d’accueil et tableaux de bord de la plateforme de données client en temps réel
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 91%
+source-wordcount: '636'
+ht-degree: 75%
 
 ---
 
@@ -44,13 +44,13 @@ D’autres mesures, par exemple pour les profils et les segments, sont disponibl
 
 ### Jeux de données
 
-The **[!UICONTROL Datasets]** counter shows the number of datasets in the system and the amount of data in [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
+Le compteur **[!UICONTROL Datasets]** affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données.
 
 Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
 ### Profils
 
-The **[!UICONTROL Profiles]** count shows the total number of people with profiles in the [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
+Le **[!UICONTROL nombre de Profils]** indique le nombre total de personnes ayant des profils dans le [!DNL Real-time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale.
 
 Ce compte utilise la [stratégie de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la stratégie de fusion du profil unifié.
 
@@ -74,7 +74,7 @@ Pour plus d’informations sur les destinations, consultez [Présentation des de
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
-There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
+There is also a metric card that shows the percentage of successful records. Select **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
 
 ![image](assets/home-profilerecords-details.PNG)
 
@@ -90,7 +90,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 ![image](assets/home-profile-details.PNG)
 
-Click **[!UICONTROL View profiles]** to see more details about the profile records.
+Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
 For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
@@ -100,7 +100,7 @@ For more information about viewing a specific profile, see [Profile viewer](prof
 
 In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
-The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
+The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
 
@@ -108,7 +108,7 @@ The number of failed profile records is updated hourly. -->
 
 La carte **[!UICONTROL Jeux de données récents]** montre les cinq jeux de données créés le plus récemment dans l’entreprise. Cette liste est mise à jour lors de la création d’un jeu de données.
 
-Cliquez sur un jeu de données pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des jeux de données. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Sélectionnez un jeu de données pour vue les détails de cet élément ou **[!UICONTROL Vue all]** pour afficher la liste des jeux de données. A partir de là, vous pouvez sélectionner une source spécifique pour les détails.
 
 Pour plus d’informations sur les jeux de données, consultez la [présentation des jeux de données](../catalog/datasets/overview.md).
 
@@ -116,7 +116,7 @@ Pour plus d’informations sur les jeux de données, consultez la [présentation
 
 La carte de mesure **[!UICONTROL Sources récentes]** montre les cinq sources créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une source.
 
-Cliquez sur une source pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher la liste des sources. Vous pouvez ensuite cliquer sur une source spécifique pour afficher plus de détails.
+Sélectionnez une source pour vue des détails de cet élément ou **[!UICONTROL Vue all]** pour voir la liste des sources. A partir de là, vous pouvez sélectionner une source spécifique pour les détails.
 
 Pour plus d’informations sur les sources, consultez [Présentation des sources](sources/sources-overview.md).
 
@@ -124,7 +124,7 @@ Pour plus d’informations sur les sources, consultez [Présentation des sources
 
 La carte de mesure **[!UICONTROL Segments récents]** montre les cinq segments créés le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’un segment.
 
-Cliquez sur un segment pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de segments.
+Sélectionnez un segment pour vue les détails de cet élément ou **[!UICONTROL Vue all]** pour afficher des informations sur d&#39;autres segments.
 
 Pour plus d’informations sur les segments, consultez [Présentation de Segmentation Service](segmentation/segmentation-overview.md).
 
@@ -132,6 +132,6 @@ Pour plus d’informations sur les segments, consultez [Présentation de Segment
 
 La carte de mesure **[!UICONTROL Destinations récentes]** montre les cinq destinations créées le plus récemment dans l’organisation. Cette liste est mise à jour lors de la création d’une destination.
 
-Cliquez sur une destination pour afficher les détails de cet élément ou sur **[!UICONTROL Afficher tout]** pour afficher les informations sur plus de destinations.
+Sélectionnez une destination pour vue les détails de cet élément ou **[!UICONTROL Vue all]** pour afficher des informations sur d&#39;autres destinations.
 
 Pour plus d’informations sur les destinations, consultez [Présentation des destinations](destinations/overview.md).
