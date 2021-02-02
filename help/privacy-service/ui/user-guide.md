@@ -1,37 +1,39 @@
 ---
-keywords: Experience Platform;home;popular topics;export;Export
+keywords: Experience Platform ; accueil ; rubriques populaires ; exportation ; Exporter
 solution: Experience Platform
 title: Guide d’utilisation de Privacy Service
 topic: UI guide
+description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes de confidentialité dans diverses applications Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 84%
+source-wordcount: '1090'
+ht-degree: 62%
 
 ---
 
 
-# [!DNL Privacy Service] guide de l&#39;utilisateur
+# [!DNL Privacy Service] Guide de l’utilisateur
 
-This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
+Ce document fournit des étapes pour la création et la gestion des demandes de confidentialité à l&#39;aide de l&#39;interface utilisateur [!DNL Privacy Service].
 
-## Browse the [!DNL Privacy Service] UI dashboard
+## Parcourir le tableau de bord d&#39;interface utilisateur [!DNL Privacy Service]
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: &quot;[!UICONTROL Status Report]&quot; and &quot;[!UICONTROL Job Requests]&quot;. Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
+Le tableau de bord de l&#39;interface utilisateur [!DNL Privacy Service] fournit deux widgets qui vous permettent de vue de l&#39;état de vos tâches de confidentialité : &quot;[!UICONTROL Rapport d&#39;état]&quot; et &quot;[!UICONTROL Demandes d&#39;emploi]&quot;. Le tableau de bord affiche également la réglementation actuellement sélectionnée pour les tâches affichées.
 
 ![Tableau de bord de l’interface utilisateur](../images/user-guide/dashboard.png)
 
 ### Type de réglementation
 
-[!DNL Privacy Service] prend en charge les demandes d&#39;emploi pour quatre types de réglementation :
+[!DNL Privacy Service] prend en charge les demandes d’emploi pour plusieurs règlements de confidentialité :
 
+* Le [!DNL California Consumer Privacy Act] ([!UICONTROL ACCP])
 * L&#39;Union européenne [!DNL General Data Protection Regulation] ([!UICONTROL RGPD])
-* Le [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* Brésil [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
-* Thaïlande [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
+* Thaïlande : [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
+* Brésil : [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* Nouvelle-Zélande [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
 
-Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d’un type de réglementation à l’autre, cliquez sur le menu déroulant **[!UICONTROL Type de réglementation]** et sélectionnez la réglementation souhaitée dans la liste.
+Les tâches pour chaque type de réglementation sont suivies séparément. Pour passer d&#39;un type de régulation à l&#39;autre, sélectionnez le menu déroulant **[!UICONTROL Type de régulation]** et sélectionnez la régulation désirée dans la liste.
 
 ![Liste déroulante de type de réglementation](../images/user-guide/regulation.png)
 
@@ -43,7 +45,7 @@ Lorsque vous modifiez le type de réglementation, le tableau de bord se met à j
 
 Le graphique dans la partie gauche du widget Rapport d’état effectue le suivi des tâches envoyées par rapport à toute tâche pouvant avoir été signalée avec des erreurs. Le graphique dans la partie droite effectue le suivi des tâches proches de la fin du délai de conformité de 30 jours.
 
-Cliquez sur l’un des deux boutons situés au-dessus du graphique pour afficher ou masquer leurs mesures respectives.
+Sélectionnez l’un des deux boutons de bascule situés au-dessus du graphique pour afficher ou masquer leurs mesures respectives.
 
 ![](../images/user-guide/hide-errors.png)
 
@@ -51,13 +53,13 @@ Vous pouvez voir le nombre exact de tâches associées à un point de données d
 
 ![Survol des points de données](../images/user-guide/mouse-over.png)
 
-Pour afficher plus d’informations sur un point de données précis, cliquez sur celui-ci pour afficher les tâches associées dans le widget Requêtes de tâche. Prêtez attention au filtre appliqué juste au-dessus de la liste de tâches.
+Pour vue d’autres détails sur un point de données donné, sélectionnez le point de données en question pour afficher les tâches associées dans le widget Demandes de tâche. Prêtez attention au filtre appliqué juste au-dessus de la liste de tâches.
 
 ![Filtre appliqué à partir du widget](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->Lorsqu’un filtre a été appliqué au widget Requêtes de tâche, vous pouvez le supprimer en cliquant sur le **X** dans le cadre de filtre. Les requêtes de tâche reviennent alors à la liste de suivi par défaut.
+>Lorsqu’un filtre a été appliqué au widget Demandes de travaux, vous pouvez supprimer le filtre en sélectionnant **X** sur la pilule de filtre. Les requêtes de tâche reviennent alors à la liste de suivi par défaut.
 
 ### Requêtes de tâche
 
@@ -71,15 +73,15 @@ Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de reche
 
 ![Options de recherche de Requête de tâche](../images/user-guide/job-search.png)
 
-Pour consulter les détails d’une requête de tâche spécifique, cliquez sur l’identifiant de celle-ci dans la liste pour ouvrir la page **[!UICONTROL Détails de la tâche]**.
+Pour vue les détails d’une demande de travail spécifique, sélectionnez l’ID de travail de la demande dans la liste afin d’ouvrir la page **[!UICONTROL Détails de la tâche]**.
 
 ![Interface utilisateur des Détails de la tâche pour le RGPD](../images/user-guide/job-details.png)
 
-This dialog contains status information about each [!DNL Experience Cloud] solution and its current state in relation to the overall job. Chaque tâche de confidentialité étant asynchrone, la page affiche la date et l’heure de communication (GMT) les plus récentes de chaque solution, car certaines d’entre elles nécessitent plus de temps que les autres pour traiter la requête.
+Cette boîte de dialogue contient des informations d&#39;état sur chaque solution [!DNL Experience Cloud] et son état actuel par rapport à la tâche globale. Chaque tâche de confidentialité étant asynchrone, la page affiche la date et l’heure de communication (GMT) les plus récentes de chaque solution, car certaines d’entre elles nécessitent plus de temps que les autres pour traiter la requête.
 
-Si une solution a fourni des données supplémentaires, elles peuvent être consultées dans cette boîte de dialogue. Vous pouvez consulter ces données en cliquant sur les lignes individuelles de produit.
+Si une solution a fourni des données supplémentaires, elles peuvent être consultées dans cette boîte de dialogue. Vous pouvez vue ces données en sélectionnant des lignes de produit individuelles.
 
-Pour télécharger l’intégralité des données de tâche sous la forme d’un fichier CSV, cliquez sur **[!UICONTROL Exporter au format CSV]** dans le coin supérieur droit de la boîte de dialogue.
+Pour télécharger l’ensemble des données de travail au format CSV, sélectionnez **[!UICONTROL Exporter au format CSV]** dans l’angle supérieur droit de la boîte de dialogue.
 
 ## Création d’une nouvelle requête de tâche de confidentialité
 
@@ -87,7 +89,7 @@ Pour télécharger l’intégralité des données de tâche sous la forme d’un
 >
 >Pour créer une requête de tâche de confidentialité, vous devez fournir des informations d’identité aux clients spécifiques qui souhaitent accéder à leurs données ou les supprimer. Avant de poursuivre la lecture de cette section, consultez le document concernant les [informations d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md).
 
-The [!DNL Privacy Service] UI provides two methods to create new job requests:
+L&#39;interface utilisateur [!DNL Privacy Service] fournit deux méthodes pour créer de nouvelles demandes de travaux :
 
 * [Utilisation du créateur de requêtes](#request-builder)
 * [Chargement d’un fichier JSON](#json)
@@ -98,15 +100,15 @@ Les étapes d’utilisation de chacune de ces méthodes sont décrites dans les 
 
 À l’aide du créateur de requêtes, vous pouvez créer manuellement une nouvelle requête de tâche de confidentialité dans l’interface utilisateur. Il est préférable d’utiliser le créateur de requêtes pour les jeux de requêtes les plus simples et les plus petits, car les requêtes y sont limitées à un seul type d’identifiant par utilisateur. Pour les requêtes plus complexes, il serait plus pertinent de [charger un fichier JSON](#json) à la place.
 
-Pour commencer à utiliser le créateur de requêtes, cliquez sur **[!UICONTROL Créer une requête]** sous le widget Rapport d’état sur le côté droit de l’écran.
+Pour début à l’aide du créateur de requêtes, sélectionnez **[!UICONTROL Créer une requête]** sous le widget Rapport d’état sur la droite de l’écran.
 
-![Cliquez sur Créer une requête](../images/user-guide/create-request.png)
+![Sélectionner une demande de création](../images/user-guide/create-request.png)
 
 La boîte de dialogue **[!UICONTROL Créer une requête]** s’ouvre et affiche les options disponibles pour envoyer une requête de tâche de confidentialité pour le type de réglementation actuellement sélectionné.
 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
-Select the **[!UICONTROL Job Type]** of the request (&quot;Delete&quot; or &quot;Access&quot;) and one or more available products from the list.
+Sélectionnez le **[!UICONTROL type de tâche]** de la demande (&quot;Supprimer&quot; ou &quot;Accès&quot;) et un ou plusieurs produits disponibles à partir de la liste.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
@@ -122,7 +124,7 @@ Lors de l’utilisation du type d’espace de noms personnalisé, vous devez sai
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**.
 
 <img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
 
@@ -132,7 +134,7 @@ La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertori�
 
 Lorsque vous créez des requêtes plus complexes, comme celles qui utilisent plusieurs types d’identifiants pour chaque sujet de données traité, vous pouvez créer une requête en chargeant un fichier JSON.
 
-Cliquez sur la flèche près de **[!UICONTROL Créer une requête]**, sous le widget Rapport d’état dans la partie droite de l’écran. Dans la liste des options qui s’affiche, sélectionnez **[!UICONTROL Charger JSON]**.
+Sélectionnez la flèche en regard de **[!UICONTROL Créer une requête]**, sous le widget Rapport d&#39;état sur la droite de l&#39;écran. Dans la liste des options qui s’affiche, sélectionnez **[!UICONTROL Charger JSON]**.
 
 ![Options de création de requête](../images/user-guide/create-options.png)
 
@@ -140,7 +142,7 @@ La boîte de dialogue **[!UICONTROL Charger JSON]** s’affiche, vous permettant
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Si vous ne disposez d’aucun fichier JSON à charger, cliquez sur **[!UICONTROL Télécharger Adobe-GDPR-Request.json]** pour télécharger un modèle que vous pouvez compléter en fonction des valeurs collectées auprès de vos sujets des données.
+Si vous n’avez pas de fichier JSON à télécharger, sélectionnez **[!UICONTROL Télécharger Adobe-GDPR-Request.json]** pour télécharger un modèle que vous pouvez renseigner en fonction des valeurs que vous avez collectées auprès de vos sujets de données.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
@@ -148,10 +150,10 @@ Si vous ne disposez d’aucun fichier JSON à charger, cliquez sur **[!UICONTROL
 
 Trouvez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le chargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
 
 ### Étapes suivantes
 
-By reading this document, you have learned how to use the [!DNL Privacy Service] UI to create a privacy job, view a job&#39;s details and monitor its processing status, and download the results once it has completed.
+En lisant ce document, vous avez appris à utiliser l&#39;interface utilisateur [!DNL Privacy Service] pour créer une tâche de confidentialité, vue les détails d&#39;une tâche et contrôler son état de traitement, et télécharger les résultats une fois qu&#39;elle est terminée.
 
-For steps on how to perform these operations programmatically using the [!DNL Privacy Service] API, please refer to the [developer guide](../api/getting-started.md).
+Pour savoir comment exécuter ces opérations par programmation à l&#39;aide de l&#39;API [!DNL Privacy Service], consultez le [guide du développeur](../api/getting-started.md).
