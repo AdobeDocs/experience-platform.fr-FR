@@ -5,10 +5,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: c9552b4d3bbb34c81996344f2e8c7cc385c525b6
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
 source-wordcount: '663'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -138,11 +138,11 @@ ht-degree: 9%
       - [Collecte des données de paiement](tutorials/api/collect/payments.md)
       - [Collecte des données de protocole](tutorials/api/collect/protocols.md)
       - [Collecte de données en flux continu](tutorials/api/collect/streaming.md)
-   - [Envoi de données sur le parquet à partir d&#39;un système d&#39;enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
+   - [Envoi de données de parquet à partir d’un système d’enregistrement cloud tiers](tutorials/api/cloud-storage-parquet.md)
    - [Créer une connexion à un jeu de données](tutorials/api/create-dataset-base-connection.md)
    - [Surveiller les flux de données](tutorials/api/monitor.md)
    - [Mettre à jour les connexions](tutorials/api/update.md)
-   - [Suppression de connexions](tutorials/api/delete.md)
+   - [Suppression des connexions](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
 - Didacticiels d’interface utilisateur {#ui-tutorials}
    - Créer un connecteur source {#create}
