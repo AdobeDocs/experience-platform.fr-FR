@@ -1,11 +1,11 @@
 ---
-keywords: rtcdp segments;segment builder rtcdp;rtcdp segment;customer ai rtcdp
+keywords: segments rtcdp ; créateur de segments rtcdp ; segment rtcdp ; client ai rtcdp
 title: IA du client dans la plate-forme de données client en temps réel
 description: Présentation de l’IA du client et de la manière dont elle peut aider à générer des scores pour des résultats spécifiques tels que les conversions ou les roulements.
 translation-type: tm+mt
 source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '304'
 ht-degree: 8%
 
 ---
