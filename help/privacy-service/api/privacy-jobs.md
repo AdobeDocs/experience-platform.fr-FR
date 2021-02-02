@@ -1,32 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Tâches
+title: Point de terminaison des tâches de confidentialité
 topic: developer guide
+description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5d06932cbfe8a04589d33590c363412c054fc9fd
+source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
 workflow-type: tm+mt
-source-wordcount: '1309'
-ht-degree: 70%
+source-wordcount: '1343'
+ht-degree: 68%
 
 ---
 
 
-# Tâches de confidentialité
+# Point de terminaison des tâches de confidentialité
 
-Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels d’API. Plus précisément, il couvre l’utilisation du point de `/job` terminaison dans l’ [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Ce document explique comment utiliser les tâches de confidentialité à l’aide d’appels d’API. Plus précisément, il couvre l’utilisation du point de terminaison `/job` dans l’API [!DNL Privacy Service]. Avant de lire ce guide, reportez-vous à la section [prise en main](./getting-started.md#getting-started) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 >[!NOTE]
 >
->Si vous tentez de gérer les demandes de consentement ou d’exclusion des clients, consultez le guide [du point de terminaison du](./consent.md)consentement.
+>Si vous tentez de gérer les demandes de consentement ou d’exclusion des clients, consultez le [guide du point de terminaison du consentement](./consent.md).
 
 ## Liste de toutes les tâches {#list}
 
-You can view a list of all available privacy jobs within your organization by making a GET request to the `/jobs` endpoint.
+Vous pouvez vue une liste de toutes les tâches de confidentialité disponibles au sein de votre organisation en adressant une demande de GET au point de terminaison `/jobs`.
 
 **Format d’API**
 
-This request format uses a `regulation` query parameter on the `/jobs` endpoint, therefore it begins with a question mark (`?`) as shown below. La réponse est paginée, ce qui vous permet d’utiliser d’autres paramètres de requête (`page` et `size`) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
+Ce format de requête utilise un paramètre de requête `regulation` sur le point de terminaison `/jobs`, de sorte qu’il commence par un point d’interrogation (`?`) comme illustré ci-dessous. La réponse est paginée, ce qui vous permet d’utiliser d’autres paramètres de requête (`page` et `size`) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -37,7 +38,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Accepted values are `gdpr`, `ccpa`, `lgpd_bra`, and `pdpa_tha`. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 
@@ -63,13 +64,13 @@ Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous d
 
 ## Création d’une tâche de confidentialité {#create-job}
 
-Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, supprimer ou exclure de la vente. Once you have the required data, it must be provided in the payload of a POST request to the `/jobs` endpoint.
+Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, supprimer ou exclure de la vente. Une fois que vous disposez des données requises, elles doivent être fournies dans la charge utile d’une demande de POST au point de terminaison `/jobs`.
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications, consultez le guide sur [les applications Privacy Service et Experience Cloud](../experience-cloud-apps.md). Pour obtenir des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les données d’ [identité dans les demandes](../identity-data.md)de confidentialité.
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications, consultez le guide sur [les applications Privacy Service et Experience Cloud](../experience-cloud-apps.md). Pour obtenir des instructions plus générales sur la détermination des identifiants à envoyer à [!DNL Privacy Service], consultez le document sur les [données d&#39;identité dans les demandes de confidentialité](../identity-data.md).
 
-The [!DNL Privacy Service] API supports two kinds of job requests for personal data:
+L&#39;API [!DNL Privacy Service] prend en charge deux types de demandes de travaux pour des données personnelles :
 
 * [Accès et/ou suppression](#access-delete) : accédez (lisez) ou supprimez les données personnelles.
 * [Exclusion de la vente](#opt-out) : marquez les données personnelles comme ne pouvant pas être vendues.
@@ -157,7 +158,7 @@ curl -X POST \
 | `expandIDs` | Une propriété facultative qui, lorsqu’elle est définie sur `true`, représente une optimisation du traitement des identifiants dans les applications (actuellement pris en charge uniquement par [!DNL Analytics]). Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 | `priority` | Une propriété facultative utilisée par Adobe Analytics qui définit la priorité de traitement des requêtes. Les valeurs acceptées sont `normal` et `low`. Si la valeur `priority` est omise, le comportement par défaut est `normal`. |
 | `analyticsDeleteMethod` | Une propriété facultative qui précise la façon dont Adobe Analytics doit traiter les données personnelles. Deux valeurs possibles sont acceptées pour cet attribut : <ul><li>`anonymize` : toutes les données référencées par la collection donnée des identifiants d’utilisateur sont anonymes. Il s’agit du comportement par défaut si `analyticsDeleteMethod` est omis.</li><li>`purge` : l’ensemble des données est complètement supprimé.</li></ul> |
-| `regulation` **(Obligatoire)** | Le règlement de la requête. Doit être l’une des quatre valeurs suivantes : <ul><li>`gdpr`</li><li>`ccpa`</li><li>`lgpd_bra`</li><li>`pdpa_tha`</li></ul> |
+| `regulation` **(Obligatoire)** | La réglementation du travail de protection de la vie privée. Les valeurs suivantes sont acceptées : <ul><li>`gdpr` (Union européenne)</li><li>`ccpa` (Californie)</li><li>`lgpd_bra` (Brésil)</li><li>`nzpa_nzl` (Nouvelle-Zélande)</li><li>`pdpa_tha` (Thaïlande)</li></ul> |
 
 **Réponse**
 
@@ -213,7 +214,7 @@ Lorsque vous avez réussi à soumettre la requête de tâche, vous pouvez passer
 
 ## Vérification de l’état d’une tâche {#check-status}
 
-Vous pouvez récupérer des informations sur une tâche spécifique, comme son état de traitement actuel, en incluant celle-ci `jobId` dans le chemin d’une demande de GET au point de `/jobs` terminaison.
+Vous pouvez récupérer des informations sur une tâche spécifique, comme son état de traitement actuel, en incluant `jobId` dans le chemin d&#39;une demande de GET au point de terminaison `/jobs` de cette tâche.
 
 >[!IMPORTANT]
 >
@@ -227,7 +228,7 @@ GET /jobs/{JOB_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{JOB_ID}` | ID de la tâche que vous souhaitez rechercher. Cet ID est renvoyé sous `jobId` les réponses réussies de l’API pour [créer une tâche](#create-job) et [répertorier toutes les tâches](#list). |
+| `{JOB_ID}` | ID de la tâche que vous souhaitez rechercher. Cet ID est renvoyé sous `jobId` dans les réponses d&#39;API réussies pour [créer une tâche](#create-job) et [répertorier toutes les tâches](#list). |
 
 **Requête**
 
@@ -317,12 +318,12 @@ Une réponse réussie renvoie les détails de la tâche spécifiée.
 
 | Propriété | Description |
 | --- | --- |
-| `productStatusResponse` | Chaque objet du tableau contient des informations sur l&#39;état actuel de la tâche par rapport à une `productResponses` [!DNL Experience Cloud] application spécifique. |
-| `productStatusResponse.status` | Catégorie d’état actuelle de la tâche. Le tableau ci-dessous présente une liste des catégories [d’état](#status-categories) disponibles et leur signification correspondante. |
+| `productStatusResponse` | Chaque objet du tableau `productResponses` contient des informations sur l&#39;état actuel de la tâche par rapport à une application [!DNL Experience Cloud] spécifique. |
+| `productStatusResponse.status` | Catégorie d’état actuelle de la tâche. Voir le tableau ci-dessous pour une liste de [catégories d’état disponibles](#status-categories) et leur signification correspondante. |
 | `productStatusResponse.message` | Statut spécifique de la tâche, correspondant à la catégorie d’état. |
-| `productStatusResponse.responseMsgCode` | Code standard pour les messages de réponse de produit reçus par [!DNL Privacy Service]le client. Les détails du message sont fournis sous `responseMsgDetail`. |
+| `productStatusResponse.responseMsgCode` | Code standard pour les messages de réponse de produit reçus par [!DNL Privacy Service]. Les détails du message sont fournis sous `responseMsgDetail`. |
 | `productStatusResponse.responseMsgDetail` | Une explication plus détaillée de l&#39;état de la tâche. Les messages pour des états similaires peuvent varier d’un produit à l’autre. |
-| `productStatusResponse.results` | Pour certains états, certains produits peuvent renvoyer un `results` objet qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
+| `productStatusResponse.results` | Pour certains états, certains produits peuvent renvoyer un objet `results` qui fournit des informations supplémentaires non couvertes par `responseMsgDetail`. |
 | `downloadURL` | Si l’état de la tâche est `complete`, cet attribut fournit une URL pour télécharger les résultats de la tâche sous la forme d’un fichier ZIP. Vous pouvez télécharger ce fichier pendant 60 jours à compter de l’achèvement de la tâche. |
 
 ### Catégories d&#39;état de la tâche {#status-categories}
@@ -338,8 +339,8 @@ Le tableau suivant liste les différentes catégories possibles de statut profes
 
 >[!NOTE]
 >
->A submitted job might remain in a `processing` state if it has a dependent child job that is still processing.
+>Une tâche envoyée peut rester dans un état `processing` si elle a une tâche enfant à charge qui est en cours de traitement.
 
 ## Étapes suivantes
 
-You now know how to create and monitor privacy jobs using the [!DNL Privacy Service] API. Pour plus d’informations sur la manière de réaliser les mêmes tâches à l’aide de l’interface utilisateur, consultez la [présentation de l’interface utilisateur Privacy Service](../ui/overview.md).
+Vous savez maintenant comment créer et surveiller des tâches de confidentialité à l’aide de l’API [!DNL Privacy Service]. Pour plus d’informations sur la manière de réaliser les mêmes tâches à l’aide de l’interface utilisateur, consultez la [présentation de l’interface utilisateur Privacy Service](../ui/overview.md).
