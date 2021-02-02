@@ -1,21 +1,21 @@
 ---
-keywords: connect destination;destination connect;how to connect destination
-title: Connexion à une destination dans la plateforme de données clientes en temps réel
-seo-title: Connexion à une destination dans la plateforme de données clientes en temps réel
+keywords: connexion à la destination ; connexion à la destination ; connexion à la destination
+title: Connexion à une destination dans Adobe Experience Platform
+seo-title: Connexion à une destination dans Adobe Experience Platform
 type: Tutorial
-description: Ce didacticiel liste les étapes de connexion d’une destination dans la plateforme de données clientes en temps réel.
+description: Ce didacticiel liste les étapes de connexion d'une destination dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 62%
+source-wordcount: '126'
+ht-degree: 60%
 
 ---
 
 
 # Comment se connecter à une destination
 
-Suivez les étapes ci-dessous pour vous connecter à une destination dans la plateforme de données clientes en temps réel :
+Pour vous connecter à une destination Adobe Experience Platform, procédez comme suit :
 
 1. Accédez aux **[!UICONTROL destinations]** depuis la barre de navigation de gauche.
 2. Dans l’onglet [[!UICONTROL Catalogue]](./destinations-workspace.md#catalog), sélectionnez la destination à laquelle vous souhaitez vous connecter.
