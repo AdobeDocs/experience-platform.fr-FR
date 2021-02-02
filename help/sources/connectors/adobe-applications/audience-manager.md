@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
+keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur d’Audience Manager ; gestionnaire d’Audiences ; gestionnaire d’audiences
 solution: Experience Platform
 title: Connecteur d’Audience Manager
 topic: overview
-description: Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère trois catégories de données à la plate-forme.
+description: Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère deux catégories de données à la plate-forme.
 translation-type: tm+mt
-source-git-commit: e51f750dae2a76cd05076edfe8c6423efe949891
+source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 59%
+source-wordcount: '886'
+ht-degree: 47%
 
 ---
 
 
 # Connecteur d’Audience Manager
 
-Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur Audience Manager ingère trois catégories de données vers Platform :
+Le connecteur de données Adobe Audience Manager diffuse les données propriétaires collectées à Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère deux catégories de données à la plate-forme :
 
-- **Données en temps réel :** Données capturées en temps réel sur le serveur de collecte de données d’Audience Manager. Ces données sont utilisées dans Audience Manager pour générer des caractéristiques basées sur des règles et apparaîtront dans Platform dans le temps de latence le plus court.
-- **Données du profil :** L’Audience Manager utilise des données en temps réel et intégrées pour dériver des profils client. Ces profils sont utilisés pour générer des graphiques d’identités et des caractéristiques sur des réalisations de segment.
+- **Données en temps réel :** données capturées en temps réel sur le serveur de collecte de données d’Audience Manager. Ces données sont utilisées dans Audience Manager pour générer des caractéristiques basées sur des règles et apparaîtront dans Platform dans le temps de latence le plus court.
+- **Données de profil :** l’Audience Manager utilise des données en temps réel et intégrées pour générer des profils client. Ces profils sont utilisés pour générer des graphiques d’identités et des caractéristiques sur des réalisations de segment.
 
 Le connecteur Audience Manager associe ces catégories de données à un schéma modèle de données d’expérience (XDM) et les envoie vers Platform. Les données en temps réel sont envoyées sous forme de données XDM ExperienceEvent, tandis que les données de Profil sont envoyées sous forme de Profils individuels XDM.
 
@@ -30,7 +30,7 @@ XDM est une spécification documentée publiquement qui fournit un cadre normali
 
 Le respect des normes XDM permet d’intégrer uniformément les données de l’expérience client, ce qui facilite la diffusion des données et la collecte des informations.
 
-For more information about how XDM is used in Experience Platform, see the [XDM System overview](../../../xdm/home.md). Pour en savoir plus sur la manière dont les profils et les ExperienceEvent de type schéma XDM sont structurés, consultez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
+Pour plus d&#39;informations sur l&#39;utilisation de XDM dans l&#39;Experience Platform, consultez l&#39;[Présentation du système XDM](../../../xdm/home.md). Pour en savoir plus sur la manière dont les profils et les ExperienceEvent de type schéma XDM sont structurés, consultez les [principes de base de la composition des schémas](../../../xdm/schema/composition.md).
 
 ## Exemples de schémas XDM
 
@@ -58,12 +58,14 @@ Par défaut, les jeux de données d&#39;Audience Manager sont désactivés pour 
 
 | Nom du jeu de données | Description |
 | ------------ | ----------- |
-| Audience Manager en temps réel | Ce jeu de données contient les données collectées à la suite d’accès directs aux points de terminaison DCS d’Audience Manager et aux mappages d’identités pour les profils Audience Manager. Conservez ce jeu de données activé pour l’ingestion dans Profile. |
-| Audience Manager Mises à jour du Profil en temps réel | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments d’Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’adhésion aux segments Edge. Conservez ce jeu de données activé pour l’ingestion dans Profile. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer l’activation/désactivation du Profil afin d’assimiler directement les données au Profil. |
-| Audience Manager Devices Data | Les données de l’appareil avec leurs ECID et les réalisations de segment correspondantes rassemblées dans Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer l’activation/désactivation du Profil afin d’assimiler directement les données au Profil. |
-| Audience Manager Device Profile Data | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer l’activation/désactivation du Profil afin d’assimiler directement les données au Profil. |
-| Audience Manager Authenticated Profiles | Ce jeu de données contient des profils authentifiés Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer l’activation/désactivation du Profil afin d’assimiler directement les données au Profil. |
-| Audience Manager Authenticated Profiles Meta Data | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer l’activation/désactivation du Profil afin d’assimiler directement les données au Profil. |
+| aam Temps réel | Ce jeu de données contient les données collectées à la suite d’accès directs aux points de terminaison DCS d’Audience Manager et aux mappages d’identités pour les profils Audience Manager. Conservez ce jeu de données activé pour l’ingestion dans Profile. |
+| aam mises à jour du Profil en temps réel | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments d’Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’adhésion aux segments Edge. Conservez ce jeu de données activé pour l’ingestion dans Profile. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| Données des périphériques AAM | Les données de l’appareil avec leurs ECID et les réalisations de segment correspondantes rassemblées dans Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| Données de Profil de périphérique AAM | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| profils authentifiés AAM | Ce jeu de données contient des profils authentifiés Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| Métadonnées des Profils authentifiés AAM | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| Renvoi de données AAM périphériques | Jeu de données d&#39;importation de données de périphériques antérieures. Il contient des ECID et les réalisations de segments correspondantes agrégées en Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
+| Renvoi de Profils authentifiés AAM | Jeu de données d’importation de données authentifiées antérieures. Contient des profils authentifiés par Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la bascule **[!UICONTROL Profil]** pour assimiler directement les données au Profil. |
 
 ### Connexions
 
