@@ -1,14 +1,14 @@
 ---
-keywords: launch web tags;web tags launch;website tags;web tags;launch;Launch
+keywords: lancement de balises Web ; lancement de balises Web ; balises Web ; balises Web ; lancement ; lancement
 title: Tutoriel Mise en œuvre des balises de site web avec Adobe Launch
 seo-title: Mise en œuvre des balises de site web avec Adobe Launch
 description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 seo-description: Utilisation d’Adobe Launch pour mettre en œuvre des balises de site web dans Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 83%
+source-wordcount: '493'
+ht-degree: 79%
 
 ---
 
@@ -27,15 +27,15 @@ Ce tutoriel explique comment mettre en œuvre les balises de votre site web pour
 
 Ce tutoriel décrit les étapes suivantes :
 
-1. Install the Adobe Experience Platform [!DNL Web SDK] extension.
-1. Create a rule to tell [!DNL Launch] what data to send.
+1. Installez l&#39;extension Adobe Experience Platform [!DNL Web SDK].
+1. Créez une règle pour indiquer [!DNL Launch] quelles données envoyer.
 1. Regrouper l’extension et la règle dans une bibliothèque
 
-## Install the Adobe Experience Platform [!DNL Web SDK] extension
+## Installer l&#39;extension Adobe Experience Platform [!DNL Web SDK]
 
-First, install the Adobe Experience Platform [!DNL Web SDK] extension.
+Installez tout d&#39;abord l&#39;extension Adobe Experience Platform [!DNL Web SDK].
 
-1. In [!DNL Launch], open the **[!UICONTROL Extensions]** tab.
+1. Dans [!DNL Launch], ouvrez l&#39;onglet **[!UICONTROL Extensions]**.
 
    ![image](assets/launch-overview.png)
 
@@ -53,11 +53,11 @@ L’écran de configuration s’ouvre.
    * **ID de configuration :** indiquez l’ID de configuration que votre représentant Adobe vous a remis.
    * **Domaine Edge :** indiquez le domaine Edge que votre représentant Adobe vous a remis.
 
-1. Cliquez sur **[!UICONTROL Enregistrer]** et passez à l’étape suivante.
+1. Sélectionnez **[!UICONTROL Enregistrer]** et passez à l’étape suivante.
 
-## Create a rule to tell [!DNL Launch] what data to send
+## Créez une règle pour indiquer [!DNL Launch] quelles données envoyer.
 
-Next, create a rule to let [!DNL Launch] know what data you want to send to Adobe Experience Platform and when you want to send it.
+Ensuite, créez une règle pour indiquer à [!DNL Launch] quelles données vous souhaitez envoyer à Adobe Experience Platform et quand vous souhaitez les envoyer.
 
 1. Sous l’onglet **[!UICONTROL Règles]**, configurez un événement qui se déclenche sur chaque nouvelle page du site web au chargement de la bibliothèque de [!DNL Launch]
 
@@ -65,13 +65,13 @@ Next, create a rule to let [!DNL Launch] know what data you want to send to Adob
 
 1. Ajoutez une action.
 
-   To configure the action, tell [!DNL Launch] where to find your data layer. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page web. Indiquez le chemin d’accès JavaScript vers l’objet de données.
+   Pour configurer l&#39;action, indiquez [!DNL Launch] où trouver votre couche de données. La couche de données est un objet JavaScript qui existe sur la page et qui est diffusé à partir du même CMS que celui qui effectue le rendu de la page web. Indiquez le chemin d’accès JavaScript vers l’objet de données.
 
    ![image](assets/launch-add-aep-action.png)
 
    L’objet de données que vous envoyez doit être un XDM validé par le schéma utilisé par le jeu de données connecté à votre ID de configuration.
 
-1. Cliquez sur **[!UICONTROL Conserver les modifications]**.
+1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
 
 Pour plus d’informations, consultez [Règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html) dans la documentation de [!DNL Launch]
 
