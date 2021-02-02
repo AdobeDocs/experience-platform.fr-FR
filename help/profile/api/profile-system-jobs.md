@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Tâches du système de profil - API Profil client en temps réel
+keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+title: Point de terminaison de l’API Tâches du système de profil
 topic: guide
+type: Documentation
+description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot du magasin de Profils afin de supprimer les données du Profil client en temps réel qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profil pour créer une tâche système de Profil ou supprimer une requête.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
 workflow-type: tm+mt
-source-wordcount: '1420'
-ht-degree: 66%
+source-wordcount: '1321'
+ht-degree: 64%
 
 ---
 
 
 # Point de terminaison des tâches du système de profil (supprimer des requêtes)
 
-Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du magasin de Profils pour supprimer les données qui ne sont plus nécessaires ou qui ont été ajoutées par erreur. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, also known as a &quot;[!DNL delete request]&quot;, that can also be modified, monitored, or removed if required.
+Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Les données ingérées dans [!DNL Platform] sont stockées dans [!DNL Data Lake] et si les jeux de données ont été activés pour le Profil, ces données sont également stockées dans le magasin de données [!DNL Real-time Customer Profile]. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot de la banque de données Profile pour supprimer les données devenues inutiles ou ajoutées par erreur. Pour ce faire, il faut utiliser l&#39;API [!DNL Real-time Customer Profile] pour créer une tâche système [!DNL Profile], ou `delete request`, qui peut également être modifiée, surveillée ou supprimée si nécessaire.
 
 >[!NOTE]
 >
->If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
+>Si vous tentez de supprimer des jeux de données ou des lots de [!DNL Data Lake], consultez la [Présentation du service de catalogue](../../catalog/home.md) pour plus d&#39;informations.
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API Experience Platform.
 
 ## Affichage des requêtes de suppression
 
 Une requête de suppression est un processus persistant asynchrone, ce qui signifie que votre organisation peut exécuter plusieurs requêtes de suppression simultanément. Pour afficher toutes les requêtes de suppression en cours d’exécution par votre organisation, vous pouvez exécuter une requête GET sur le point de terminaison `/system/jobs`.
 
-Vous pouvez également utiliser des paramètres de requête facultatifs pour filtrer la liste des requêtes de suppression renvoyées dans la réponse. Pour utiliser plusieurs paramètres, séparez chaque paramètre à l’aide d’une esperluette (&amp;).
+Vous pouvez également utiliser des paramètres de requête facultatifs pour filtrer la liste des requêtes de suppression renvoyées dans la réponse. Pour utiliser plusieurs paramètres, séparez chaque paramètre à l’aide d’une esperluette (`&`).
 
 **Format d’API**
 
@@ -38,10 +40,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 | Paramètre | Description |
 |---|---|
-| `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. Exemple : *`start=4`* |
-| `limit` | Limitez le nombre de résultats renvoyés. Exemple : *`limit=10`* |
-| `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. Exemple: ***`page=2`*** |
-| `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant (*`asc`*) ou décroissant (**`desc`**). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=batchId:asc` |
+| `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. Exemple : `start=4` |
+| `limit` | Limitez le nombre de résultats renvoyés. Exemple : `limit=10` |
+| `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. Exemple : `page=2` |
+| `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant (`asc`) ou décroissant (`desc`). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=batchId:asc` |
 
 **Requête**
 
@@ -92,10 +94,10 @@ La réponse comprend un tableau « enfants » avec un objet pour chaque requê
 | Propriété | Description |
 |---|---|
 | `_page.count` | Nombre total de requêtes. Cette réponse a été tronquée pour l’espace. |
-| `_page.next` | If an additional page of results exists, view the next page of results by replacing the ID value in a [lookup request](#view-a-specific-delete-request) with the `"next"` value provided. |
-| `jobType` | Type de tâche en cours de création. In this case, it will always return `"DELETE"`. |
-| `status` | État de la requête de suppression. Possible values are `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An object that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `_page.next` | S’il existe une page supplémentaire de résultats, vue la page suivante de résultats en remplaçant la valeur d’ID dans une requête de recherche [](#view-a-specific-delete-request) par la valeur `"next"` fournie. |
+| `jobType` | Type de tâche en cours de création. Dans ce cas, il renverra toujours `"DELETE"`. |
+| `status` | État de la requête de suppression. Les valeurs possibles sont `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Objet qui comprend le nombre d’enregistrements traités (`"recordsProcessed"`) et la durée en secondes pendant laquelle la demande a été traitée, ou la durée de traitement de la demande (`"timeTakenInSec"`). |
 
 ## Création d’une requête de suppression {#create-a-delete-request}
 
@@ -103,11 +105,7 @@ L’exécution d’une nouvelle requête de suppression se fait par le biais d�
 
 ### Suppression d’un jeu de données
 
-Pour supprimer un jeu de données, l’identifiant du jeu de données doit être inclus dans le corps de la requête POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
-
->[!CAUTION]
->
-> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. Pour plus d’informations, reportez-vous à l’[annexe](#appendix) du présent document.
+Pour supprimer un jeu de données du magasin de Profils, l&#39;ID de jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
 
 **Format d’API**
 
@@ -136,7 +134,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le **`status`** pour la requête au moment de sa création est *`"NEW"`* jusqu’à ce qu’elle commence à être traitée. Le **`dataSetId`** contenu de la réponse doit correspondre au ***`dataSetId`*** envoyé dans la requête.
+Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `status` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. Le `dataSetId` contenu de la réponse doit correspondre au `dataSetId` envoyé dans la requête.
 
 ```json
 {
@@ -163,7 +161,7 @@ Pour supprimer un lot, l’identifiant du lot doit être inclus dans le corps de
 >
 > La raison pour laquelle vous ne pouvez pas supprimer les lots des jeux de données basés sur des schémas d’enregistrement est que les lots de jeux de données de type enregistrement remplacent les enregistrements précédents et ne peuvent donc pas être « défaits » ni supprimés. La seule façon de supprimer l&#39;impact des lots erronés pour les jeux de données basés sur des schémas d&#39;enregistrement consiste à réassimiler le lot avec les données correctes afin de remplacer les enregistrements incorrects.
 
-For more information on record and time series behavior, please review the [section on XDM data behaviors](../../xdm/home.md#data-behaviors) in the [!DNL XDM System] overview.
+Pour plus d&#39;informations sur le comportement des enregistrements et des séries chronologiques, consultez la section [sur les comportements de données XDM](../../xdm/home.md#data-behaviors) dans l&#39;[!DNL XDM System] présentation.
 
 **Format d’API**
 
@@ -192,7 +190,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `"status"` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. Le `"batchId"` contenu de la réponse doit correspondre au `"batchId"` envoyé dans la requête.
+Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `"status"` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. La valeur `"batchId"` de la réponse doit correspondre à la valeur `"batchId"` envoyée dans la demande.
 
 ```json
 {
@@ -254,7 +252,7 @@ curl -X POST \
 
 **Réponse**
 
-La réponse fournit les détails de la requête de suppression, y compris son état mis à jour. L’identifiant de la requête de suppression dans la réponse doit correspondre à celui envoyé dans le chemin de la requête.
+La réponse fournit les détails de la requête de suppression, y compris son état mis à jour. L’ID de la requête de suppression dans la réponse (la valeur `"id"`) doit correspondre à l’ID envoyé dans le chemin de la requête.
 
 ```json
 {
@@ -271,11 +269,11 @@ La réponse fournit les détails de la requête de suppression, y compris son é
 
 | Propriétés | Description |
 |---|---|
-| `jobType` | The type of job being created, in this case it will always return `"DELETE"`. |
-| `status` | État de la requête de suppression. Possible values: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | An array that includes the number of records that have been processed (`"recordsProcessed"`) and the time in seconds that the request has been processing, or how long the request took to complete (`"timeTakenInSec"`). |
+| `jobType` | Le type de travail en cours de création, dans ce cas, il retournera toujours `"DELETE"`. |
+| `status` | État de la requête de suppression. Valeurs possibles : `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Tableau qui comprend le nombre d&#39;enregistrements traités (`"recordsProcessed"`) et le temps en secondes pendant lequel la demande a été traitée, ou le temps nécessaire à la réalisation de la demande (`"timeTakenInSec"`). |
 
-Once the delete request status is `"COMPLETED"` you can confirm that the data has been deleted by attempting to access the deleted data using the Data Access API. Pour savoir comment utiliser l’API Data Access pour accéder aux jeux de données et aux lots, consultez la [documentation sur Data Access](../../data-access/home.md).
+Une fois que l&#39;état de la demande de suppression est `"COMPLETED"`, vous pouvez confirmer que les données ont été supprimées en tentant d&#39;accéder aux données supprimées à l&#39;aide de l&#39;API d&#39;accès aux données. Pour savoir comment utiliser l’API Data Access pour accéder aux jeux de données et aux lots, consultez la [documentation sur Data Access](../../data-access/home.md).
 
 ## Suppression d’une requête de suppression
 
@@ -308,20 +306,4 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. N’oubliez pas qu’une requête de suppression ne peut pas être annulée. Vous devez donc supprimer uniquement les données dont vous êtes sûr que vous n’avez pas besoin et dont vous n’aurez plus jamais besoin.
-
-## Annexe {#appendix}
-
-The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
-
-### Deleting a dataset using the [!DNL Experience Platform] UI
-
-When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, &quot;Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? Utilisez l&#39;API &quot;p[!DNL rofile systems jobs]&quot; pour supprimer ce jeu de données du [!DNL Profile Service].&quot;
-
-Le fait de cliquer sur **[!UICONTROL Supprimer]** dans l’interface utilisateur désactive le jeu de données à des fins d’ingestion, mais NE supprime PAS automatiquement le jeu de données dans le serveur principal. Pour supprimer définitivement le jeu de données, une requête de suppression doit être créée manuellement en suivant les étapes décrites dans ce guide pour [créer une requête de suppression](#create-a-delete-request).
-
-The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
-
-![](../images/delete-profile-dataset.png)
-
-Pour plus d’informations sur l’utilisation des jeux de données, veuillez commencer par lire la [présentation des jeux de données](../../catalog/datasets/overview.md).
+Maintenant que vous connaissez les étapes de suppression des jeux de données et des lots de [!DNL Profile Store] dans [!DNL Experience Platform], vous pouvez supprimer en toute sécurité les données qui ont été ajoutées par erreur ou dont votre organisation n&#39;a plus besoin. N’oubliez pas qu’une requête de suppression ne peut pas être annulée. Vous devez donc supprimer uniquement les données dont vous êtes sûr que vous n’avez pas besoin et dont vous n’aurez plus jamais besoin.
