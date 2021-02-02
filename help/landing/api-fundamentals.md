@@ -1,28 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Principes fondamentaux des API d’Adobe Experience Platform
 topic: getting started
+description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
 translation-type: tm+mt
-source-git-commit: b6d62492a60494deb848a88a9334e3ef20a93919
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '483'
-ht-degree: 59%
+source-wordcount: '506'
+ht-degree: 56%
 
 ---
 
 
 # Principes fondamentaux des API d’Adobe Experience Platform
 
-Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. Ce document apporte un aperçu rapide de ces technologies ainsi que des liens vers de la documentation externe pour vous apporter de plus amples informations.
+Les API Adobe Experience Platform utilisent plusieurs technologies et syntaxes sous-jacentes qui sont importantes à comprendre pour gérer efficacement les ressources [!DNL Platform] JSON. Ce document apporte un aperçu rapide de ces technologies ainsi que des liens vers de la documentation externe pour vous apporter de plus amples informations.
 
 ## JSON Pointer {#json-pointer}
 
-JSON Pointer est une syntaxe de chaîne normalisée ([RFC 6901](https://tools.ietf.org/html/rfc6901)) qui permet d’identifier des valeurs spécifiques dans des documents JSON. Un pointeur JSON est une chaîne de jetons séparés par des caractères `/` qui précisent soit les clés d’objet soit les index de tableau ainsi que les jetons pouvant être une chaîne ou un nombre. JSON Pointer strings are used in many PATCH operations for [!DNL Platform] APIs, as described later in this document. Pour plus d’informations sur JSON Pointer, reportez-vous à la [documentation de présentation de JSON Pointer](https://rapidjson.org/md_doc_pointer.html).
+JSON Pointer est une syntaxe de chaîne normalisée ([RFC 6901](https://tools.ietf.org/html/rfc6901)) qui permet d’identifier des valeurs spécifiques dans des documents JSON. Un pointeur JSON est une chaîne de jetons séparés par des caractères `/` qui précisent soit les clés d’objet soit les index de tableau ainsi que les jetons pouvant être une chaîne ou un nombre. Les chaînes de pointeur JSON sont utilisées dans de nombreuses opérations de PATCH pour les API [!DNL Platform], comme décrit plus loin dans ce document. Pour plus d’informations sur JSON Pointer, reportez-vous à la [documentation de présentation de JSON Pointer](https://rapidjson.org/md_doc_pointer.html).
 
 ### Exemple d’objet de schéma JSON
 
-Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de mixins personnalisés ( `loyaltyLevel`par exemple) sont espacés de noms sous un `_{TENANT_ID}` objet, contrairement aux champs qui ont été ajoutés à l’aide de mixins principaux (par exemple `fullName`).
+Le fichier JSON suivant représente un schéma XDM simplifié dont les champs peuvent être référencés à l’aide de chaînes de pointeur JSON. Notez que tous les champs qui ont été ajoutés à l’aide de mixins personnalisés (tels que `loyaltyLevel`) sont espacés par nom sous un objet `_{TENANT_ID}`, contrairement aux champs qui ont été ajoutés à l’aide de mixins principaux (tels que `fullName`).
 
 ```json
 {
@@ -86,18 +87,18 @@ Le fichier JSON suivant représente un schéma XDM simplifié dont les champs pe
 | JSON Pointer | Est résolu sur |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au `fullName` champ, fournie par un mixin principal.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au `loyaltyLevel` champ, fournie par un mixin personnalisé.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Renvoie une référence au champ `fullName`, fourni par un mixin principal.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Renvoie une référence au champ `loyaltyLevel`, fourni par un mixin personnalisé.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
 >[!NOTE]
 >
->When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
+>Lorsque vous utilisez les attributs `xdm:sourceProperty` et `xdm:destinationProperty` des descripteurs [!DNL Experience Data Model] (XDM), toute clé `properties` doit être **exclue** de la chaîne JSON Pointer. Pour plus d&#39;informations, consultez le [!DNL Schema Registry] sous-guide du développeur d&#39;API sur les [descripteurs](../xdm/api/descriptors.md).
 
 ## Correctif JSON {#json-patch}
 
-There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. Le correctif JSON est un format standardisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) permettant de décrire les modifications apportées à un document JSON. Il vous permet de définir des mises à jour partielles vers JSON sans avoir besoin d’envoyer le document entier dans un corps de requête.
+De nombreuses opérations de PATCH pour les API [!DNL Platform] acceptent les objets de correctif JSON pour leurs charges utiles de demande. Le correctif JSON est un format standardisé ([RFC 6902](https://tools.ietf.org/html/rfc6902)) permettant de décrire les modifications apportées à un document JSON. Il vous permet de définir des mises à jour partielles vers JSON sans avoir besoin d’envoyer le document entier dans un corps de requête.
 
 ### Exemple d’un objet de correctif JSON
 
@@ -108,7 +109,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 }
 ```
 
-* `op` : le type d’opération de correctif. While JSON Patch supports several different operation types, not all PATCH operations in [!DNL Platform] APIs are compatible with every operation type. Les types d’opérations disponibles sont :
+* `op` : le type d’opération de correctif. Bien que le correctif JSON prenne en charge plusieurs types d’opérations différents, toutes les opérations de PATCH dans les API [!DNL Platform] ne sont pas compatibles avec chaque type d’opération. Les types d’opérations disponibles sont :
    * `add`
    * `remove`
    * `replace`
@@ -125,4 +126,4 @@ Le schéma JSON est un format utilisé pour décrire et valider la structure des
 
 ## Étapes suivantes
 
-Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. For more information on working with [!DNL Platform] APIs, including best practices and answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+Ce document a présenté certaines des technologies et syntaxes impliquées dans la gestion des ressources basées sur JSON pour [!DNL Experience Platform]. Pour plus d&#39;informations sur l&#39;utilisation des API [!DNL Platform], y compris les meilleures pratiques et les réponses aux questions fréquentes, consultez le [Guide de dépannage de la plate-forme](troubleshooting.md).
