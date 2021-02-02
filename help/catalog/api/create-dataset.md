@@ -1,25 +1,25 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
+keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Création d’un jeu de données
 topic: developer guide
 description: Ce document explique comment créer un objet de jeu de données dans le catalogue.
 translation-type: tm+mt
-source-git-commit: bf99b08a1093a815687cc06372407949e170a0b3
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 66%
+source-wordcount: '223'
+ht-degree: 57%
 
 ---
 
 
 # Création d’un jeu de données
 
-In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
+Pour créer un jeu de données à l&#39;aide de l&#39;API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l&#39;ID de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` de l&#39;API [!DNL Catalog].
 
 >[!NOTE]
 >
->This document only covers how to create a dataset object in [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
+>Ce document traite uniquement de la création d&#39;un objet de jeu de données dans [!DNL Catalog]. Pour obtenir des instructions complètes sur la création, le remplissage et la surveillance d’un jeu de données, reportez-vous au [tutoriel](../datasets/create.md) suivant.
 
 **Format d’API**
 
@@ -60,7 +60,7 @@ curl -X POST \
 
 >[!NOTE]
 >
-> Cet exemple utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour sa propriété `containerFormat`. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
+>Cet exemple utilise le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/) pour sa propriété `containerFormat`. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md).
 
 **Réponse**
 
