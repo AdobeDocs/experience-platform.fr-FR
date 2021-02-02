@@ -1,13 +1,13 @@
 ---
-keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
+keywords: kickfire ; Kickfire ; extension kickfire ; Kickfire Extension
 title: Extension KickFire
 seo-title: Extension KickFire
-description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension KickFire est une destination de personnalisation dans la plateforme de données clientes en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L'extension KickFire est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+seo-description: L'extension KickFire est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 80db19822551883da272787affb6f7dc9dc3a745
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '534'
 ht-degree: 22%
 
 ---
@@ -19,33 +19,33 @@ ht-degree: 22%
 
 [!DNL KickFire's] Les informations d&#39;adresse IP et les données de firmographie B2B vous permettent de convertir des adresses IP en sociétés, d&#39;identifier des visiteurs Web anonymes et d&#39;intégrer des données de compte dans votre pile technologique - le tout en fonction d&#39;une adresse IP de société.
 
-[!DNL KickFire] est une extension de personnalisation dans la plate-forme de données client en temps réel. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
+[!DNL KickFire] est une extension de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
 
-Cette destination est une extension Adobe Experience Platform Launch. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+Cette destination est une extension Adobe Experience Platform Launch. Pour plus d&#39;informations sur le fonctionnement des extensions de lancement de plateformes dans Platform, voir [Présentation des extensions Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
 ![Extension KickFire](../../assets/catalog/personalization/kickfire/catalog.png)
 
 ## Conditions préalables  {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Real-time CDP.
+Cette extension est disponible dans le catalogue [!DNL Destinations] pour tous les clients qui ont acheté Platform.
 
-Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform Launch.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contact your organization administrator to get access to Platform Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform Launch.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud. Contactez l’administrateur de votre organisation pour accéder à Platform Launch et demandez-lui de vous accorder l’autorisation **[!UICONTROL manage_properties]** afin que vous puissiez installer les extensions.
 
 ## Installation de l’extension {#install-extension}
 
-Pour installer l’ [!DNL KickFire] extension :
+Pour installer l&#39;extension [!DNL KickFire] :
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+Dans l&#39;[interface de plate-forme](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
 Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. Voir les [Conditions préalables](#prerequisites).
+Cliquez sur la destination pour la mettre en évidence, puis sélectionnez **[!UICONTROL Configurer]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, l&#39;autorisation **[!UICONTROL manage_properties]** vous manque. Voir les [Conditions préalables](#prerequisites).
 
-In the **[!UICONTROL Select available Platform Launch property]** window, select the Platform Launch property in which you want to install the extension. Vous avez également la possibilité de créer une nouvelle propriété dans le lancement de plate-forme. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Learn about properties in the [Properties page section](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) of the Platform Launch documentation.
+Dans la fenêtre **[!UICONTROL Sélectionner la propriété de lancement de plate-forme disponible]**, sélectionnez la propriété de lancement de plate-forme dans laquelle vous souhaitez installer l&#39;extension. Vous avez également la possibilité de créer une nouvelle propriété dans le lancement de plate-forme. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Découvrez les propriétés dans la section [Page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation sur le lancement de plate-forme.
 
 Le processus vous conduit au lancement de la plate-forme pour terminer l’installation.
 
-You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) in the Platform Launch documentation.
+Vous pouvez également installer l&#39;extension directement dans l&#39;[interface Adobe Experience Platform Launch](https://launch.adobe.com/). Voir [Ajouter une nouvelle extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) dans la documentation de Platform Launch.
 
 ## Utilisation de l’extension {#how-to-use}
 
@@ -59,6 +59,6 @@ Vous pouvez configurer, mettre à niveau et supprimer des extensions dans l’in
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
+>Si l&#39;extension est déjà installée sur l&#39;une de vos propriétés, l&#39;interface utilisateur de la plate-forme affiche toujours **[!UICONTROL Installer]** pour l&#39;extension. Lancez le processus d&#39;installation comme décrit dans [Installer l&#39;extension](#install-extension) pour accéder au lancement de la plate-forme et configurer ou supprimer votre extension.
 
-To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
+Pour mettre à niveau votre extension, voir [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) dans la documentation Platform Launch.
