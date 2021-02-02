@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
+keywords: Experience Platform ; accueil ; sujets populaires ; Apache Hadoop Distributed File System ; Apache hadoop ; hdfs ; HDFS
 solution: Experience Platform
 title: Création d’un connecteur Apache HDFS à l’aide de l’API Flow Service
 topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes de connexion d’un système de fichiers distribué Apache Hadoop (ci-après appelé "HDFS") à un Experience Platform.
 translation-type: tm+mt
-source-git-commit: fc6449d260ea7b96956689ce6c95c5e8b9002d89
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 26%
+source-wordcount: '573'
+ht-degree: 25%
 
 ---
 
@@ -46,7 +46,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
