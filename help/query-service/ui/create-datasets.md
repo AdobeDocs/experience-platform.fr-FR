@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; générer des jeux de données ; générer un jeu de données ; créer un jeu de données ;
 solution: Experience Platform
 title: Génération des jeux de données à partir de résultats de requête
 topic: queries
@@ -8,8 +8,8 @@ description: 'Query Service permet de créer des jeux de données à partir de l
 translation-type: tm+mt
 source-git-commit: 0ba4e26927cdc96855f35d72a8a6de55f4a34bfa
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 53%
+source-wordcount: '320'
+ht-degree: 50%
 
 ---
 
