@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Phoenix;phoenix
+keywords: Experience Platform ; accueil ; sujets populaires ; Phoenix ; phoenix
 solution: Experience Platform
 title: Création d’un connecteur Phoenix à l’aide de l’API Flow Service
 topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes de connexion d’une base de données Phoenix à un Experience Platform.
 translation-type: tm+mt
-source-git-commit: 36620a229fc8e6e3fa4545bfc775a49bc89935bb
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '651'
 ht-degree: 22%
 
 ---
@@ -55,7 +55,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
