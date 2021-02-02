@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: FAQ sur Privacy Service
+title: Guide de dépannage des Privacy Service
 topic: troubleshooting
+description: Ce document fournit des réponses aux questions fréquentes sur le Privacy Service, ainsi que des informations sur les erreurs courantes de l’API.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '856'
-ht-degree: 48%
+source-wordcount: '884'
+ht-degree: 44%
 
 ---
 
 
 # [!DNL Privacy Service] guide de dépannage
 
-Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
+Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour aider les sociétés à gérer les demandes de confidentialité des données client. Avec [!DNL Privacy Service], vous pouvez envoyer des demandes d&#39;accès et de suppression de données personnelles ou privées sur vos clients, ce qui facilite la conformité automatisée aux réglementations en matière de confidentialité organisationnelle et juridique.
 
-Ce document fournit des réponses aux questions les plus fréquentes sur [!DNL Privacy Service]l’API, ainsi que des informations sur les erreurs fréquemment rencontrées dans l’API.
+Ce document fournit des réponses aux questions fréquentes sur [!DNL Privacy Service], ainsi que des informations sur les erreurs courantes de l&#39;API.
 
 ## Lors de la création de requêtes de confidentialité dans l’API, quelle est la différence entre un utilisateur et un identifiant utilisateur ? {#user-ids}
 
@@ -64,19 +65,19 @@ Le tableau contient deux objets représentant des utilisateurs individuels ident
 Pour plus d’informations sur la fourniture des informations d’identité des utilisateurs, consultez le guide sur les [données d’identité pour les demandes d’accès à des informations personnelles](identity-data.md).
 
 
-## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
+## Puis-je utiliser [!DNL Privacy Service] pour nettoyer les données qui ont été envoyées accidentellement à [!DNL Platform] ?
 
-Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Ces requêtes sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
+Adobe ne prend pas en charge l&#39;utilisation de [!DNL Privacy Service] pour effacer les données qui ont été envoyées accidentellement à un produit. [!DNL Privacy Service] est conçu pour vous aider à remplir vos obligations en matière de requêtes d’accès ou de suppression des titulaires de données (ou consommateurs). Ces requêtes sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. La présentation de demandes qui ne sont pas des demandes d&#39;accès aux données/aux consommateurs ou de suppression a un impact sur tous les clients [!DNL Privacy Service] et sur la capacité de [!DNL Privacy Service] de prendre en charge les délais légaux appropriés.
 
 Veuillez contacter votre gestionnaire de compte (CDM) pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
 
 ## Comment puis-je obtenir des informations sur l’état d’une requête ou d’une tâche de confidentialité ?
 
-You can retrieve details about a particular job by using the [!DNL Privacy Service] API or user interface.
+Vous pouvez récupérer des détails sur une tâche particulière à l’aide de l’API [!DNL Privacy Service] ou de l’interface utilisateur.
 
 ### Utilisation de l’API
 
-To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job&#39;s ID in the request path. Pour plus d’informations, consultez la section relative à la [vérification de l’état d’une tâche](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de [!DNL Privacy Service]
+Pour récupérer l’état d’une tâche particulière à l’aide de l’API [!DNL Privacy Service], envoyez une requête au point de terminaison racine (`GET /`) en utilisant l’ID de la tâche dans le chemin de requête. Pour plus d’informations, consultez la section relative à la [vérification de l’état d’une tâche](api/privacy-jobs.md#check-the-status-of-a-job) dans le guide de développement de [!DNL Privacy Service]
 
 ### Utilisation de l’interface utilisateur
 
@@ -84,7 +85,7 @@ Toutes les requêtes de tâche actives sont répertoriées dans le widget **[!UI
 
 ## Comment télécharger les résultats de tâches de confidentialité terminées ?
 
-The [!DNL Privacy Service] API and user interface both provide methods for downloading the results of completed jobs in ZIP format.
+L&#39;API [!DNL Privacy Service] et l&#39;interface utilisateur fournissent toutes deux des méthodes pour télécharger les résultats des tâches terminées au format ZIP.
 
 ### Utilisation de l’API
 
@@ -94,19 +95,19 @@ Pour plus d’informations, reportez-vous à la section relative à la [recherch
 
 ### Utilisation de l’interface utilisateur
 
-On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Cliquez sur l’identifiant de la tâche pour ouvrir la page Détails de la tâche. Ensuite, cliquez sur **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
+Sur le tableau de bord d&#39;interface utilisateur [!DNL Privacy Service], recherchez la tâche que vous souhaitez télécharger à partir du widget **Demandes de tâche**. Sélectionnez l’ID de la tâche pour ouvrir la page Détails de la tâche. À partir de là, sélectionnez **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
 
 ## Messages d’erreur courants
 
-Le tableau ci-dessous présente quelques erreurs courantes dans [!DNL Privacy Service]le fichier, avec des descriptions pour aider à résoudre leurs problèmes respectifs.
+Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Service], avec des descriptions pour aider à résoudre leurs problèmes respectifs.
 
 | Message d’erreur | Description |
 | --- | --- |
-| ID utilisateur introuvable. | Certains des ID utilisateur fournis dans la demande sont introuvables et ont été ignorés. Assurez-vous d’utiliser les espaces de nommage et les valeurs d’ID corrects dans la charge utile de la demande. Consultez le document sur la [fourniture de données](./identity-data.md) d&#39;identité pour une explication plus détaillée. |
-| Espace de nommage non valide | Un espace de nommage d&#39;identité fourni pour un ID d&#39;utilisateur n&#39;était pas valide. Consultez la section relative aux espaces de nommage [d&#39;identité](./api/appendix.md#standard-namespaces) standard dans l&#39;annexe du guide de [!DNL Privacy Service] développement pour une liste d&#39;espaces de nommage acceptés. Si vous utilisez un espace de nommage personnalisé, veillez à définir la `type` propriété de l’identifiant sur &quot;personnalisé&quot;. |
+| ID utilisateur introuvable. | Certains des ID utilisateur fournis dans la demande sont introuvables et ont été ignorés. Assurez-vous d’utiliser les espaces de nommage et les valeurs d’ID corrects dans la charge utile de la demande. Voir le document sur [la fourniture de données d&#39;identité](./identity-data.md) pour une explication plus détaillée. |
+| Espace de nommage non valide | Un espace de nommage d&#39;identité fourni pour un ID d&#39;utilisateur n&#39;était pas valide. Voir la section [espaces de nommage d&#39;identité standard](./api/appendix.md#standard-namespaces) dans l&#39;annexe du guide du développeur [!DNL Privacy Service] pour une liste d&#39;espaces de nommage acceptés. Si vous utilisez un espace de nommage personnalisé, veillez à définir la propriété `type` de l’identifiant sur &quot;personnalisé&quot;. |
 | Partiellement terminé | La tâche s&#39;est terminée correctement, mais certaines données n&#39;étaient pas applicables à la demande donnée et ont été ignorées. |
 | Les données ne sont pas au format requis. | Une ou plusieurs valeurs de données pour l’application spécifiée étaient incorrectement formatées. Pour plus d’informations, consultez les détails de la tâche. |
-| L&#39;organisation IMS n&#39;a pas été configurée. | Ce message se produit lorsque votre organisation IMS n’a pas été configurée pour [!DNL Privacy Service]. Contactez votre administrateur pour plus d’informations. |
-| L’accès et les autorisations sont requis. | L&#39;accès et les autorisations sont requis pour l&#39;utilisation [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
+| L&#39;organisation IMS n&#39;a pas été configurée. | Ce message se produit lorsque votre organisation IMS n&#39;a pas été configurée pour [!DNL Privacy Service]. Contactez votre administrateur pour plus d’informations. |
+| L’accès et les autorisations sont requis. | L&#39;accès et les autorisations sont nécessaires pour utiliser [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du transfert et de l&#39;archivage des données d&#39;accès. | Lorsque cette erreur se produit, rechargez les données d’accès et réessayez. |
 | La charge de travail a été dépassée pour la limite de taux de document actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi et réessayez. |
