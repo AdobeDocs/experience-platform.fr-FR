@@ -1,14 +1,14 @@
 ---
-keywords: Google ads;google ads;google adwords;Google AdWords;Google Adwords
+keywords: Publicités Google ; publicités Google ; mots-clés Google ; mots-clés Google AdWords ; mots-clés Google
 title: Destination Google Ads
 seo-title: Destination Google Ads
 description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 seo-description: Google Ads, appelé auparavant Google AdWords, est un service de publicité en ligne qui permet aux entreprises faire de la publicité avec paiement par clic sur des recherches textuelles, des affichages graphiques, des vidéos YouTube et des affichages mobiles in-app.
 translation-type: tm+mt
-source-git-commit: 7129a375b1bf4623f78989ed75fcd2bb5dad4a02
+source-git-commit: bb2fc2658d32c59b476dd9d526eb8bc2f055a1af
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 33%
+source-wordcount: '691'
+ht-degree: 30%
 
 ---
 
@@ -21,19 +21,20 @@ ht-degree: 33%
 
 ## Spécifications de la destination
 
-Note the following details that are specific to [!DNL Google Ads] destinations:
+Notez les détails suivants spécifiques aux destinations [!DNL Google Ads] :
 
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
-* Activated audiences are created programmatically in the [!DNL Google] platform.
-* La plateforme CDP en temps réel n’inclut actuellement aucune mesure permettant de valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
+* Vous pouvez envoyer les [identités](../../../identity-service/namespaces.md) suivantes à [!DNL Google Ads] destinations : [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), ID de cookie Google, IDFA, GAID, ID de Roku, ID Microsoft et ID TV Amazon Fire.
+   * Google utilisera [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) pour les utilisateurs de la cible en Californie, ainsi que l’ID de cookie Google pour tous les autres utilisateurs.
+* Les audiences activées sont créées par programmation dans la plate-forme [!DNL Google].
+* La plate-forme n’inclut pas actuellement de mesure pour valider l’activation réussie. Consultez le nombre d’audiences dans Google pour valider l’intégration et comprendre la taille de ciblage des audiences.
 
 >[!IMPORTANT]
 >
->If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’identifiants que vous avez configurées sont transférées au CDP en temps réel.
+>Si vous souhaitez créer votre première destination avec [!DNL Google Ads] et que vous n’avez pas activé la fonctionnalité de synchronisation des identifiants [ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) dans le service d’identification des Experience Cloud par le passé (avec Audience Manager ou d’autres applications), contactez le service de conseil en Adobe ou le service à la clientèle pour activer la synchronisation des identifiants. Si vous aviez précédemment configuré des intégrations Google dans l’Audience Manager, les synchronisations d’ID que vous avez configurées sont transférées à la plateforme.
 
-### Type d’exportation {#export-type}
+### Type d&#39;exportation {#export-type}
 
-**Exportation** de segments : vous exportez tous les membres d’un segment (audience) vers la destination Google.
+**Exportation**  de segment : vous exportez tous les membres d’un segment (audience) vers la destination Google.
 
 ## Conditions préalables
 
@@ -41,20 +42,20 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 >[!IMPORTANT]
 >
-> [!DNL Google] a abandonné les nouvelles intégrations de [!DNL Google Ads] cookies avec les fournisseurs tiers. Pour exécuter les étapes de liste autorisée de la section suivante, vous devez disposer d’une intégration existante avec [!DNL Google Ads]. Par conséquent, l’approche recommandée pour l’utilisation [!DNL Google Ads] consiste à configurer une [!DNL Google Customer Match] intégration. Pour plus d&#39;informations sur la création d&#39;une [!DNL Google Customer Match] intégration, consultez le didacticiel sur la création d&#39;une [[!DNL Google Customer Match]](./google-customer-match.md) connexion.
+> [!DNL Google] a abandonné les nouvelles intégrations de  [!DNL Google Ads] cookies avec des fournisseurs tiers. Pour exécuter les étapes de liste autorisée de la section suivante, vous devez disposer d&#39;une intégration existante avec [!DNL Google Ads]. Par conséquent, l&#39;approche recommandée pour l&#39;utilisation de [!DNL Google Ads] consiste à configurer une intégration [!DNL Google Customer Match]. Pour plus d&#39;informations sur la création d&#39;une intégration [!DNL Google Customer Match], consultez le didacticiel sur la création d&#39;une connexion [[!DNL Google Customer Match]](./google-customer-match.md).
 
 ### Liste autorisée
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première [!DNL Google Ads] destination dans le CDP en temps réel. Please ensure the allow list process described below has been completed by [!DNL Google] before creating a destination.
+>La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Ads] dans Platform. Veuillez vous assurer que le processus de liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
 
-Avant de créer la destination dans le CDP en temps réel, vous devez contacter [!DNL Google Ads] [!DNL Google] pour que l’Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contact [!DNL Google] and provide the following information:
+Avant de créer la destination [!DNL Google Ads] dans Platform, vous devez contacter [!DNL Google] pour que l&#39;Adobe soit mis sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez [!DNL Google] et fournissez les informations suivantes :
 
 * **Identifiant de compte** : il s’agit de l’identifiant de compte d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * **Identifiant client** : il s’agit de l’identifiant client d’Adobe avec [!DNL Google]. Contactez l’assistance clientèle d’Adobe ou votre représentant Adobe pour obtenir cet identifiant.
 * Votre type de compte : **AdWords**
-* **Identifiant** Google AdWords : C&#39;est votre carte d&#39;identité avec [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
+* **Identifiant**  Google AdWords : C&#39;est votre carte d&#39;identité avec  [!DNL Google]. Le format d’identifiant est généralement 123-456-7890.
 
 ## Configurer la destination
 
@@ -64,9 +65,9 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 
 >[!NOTE]
 >
->Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+>Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
-In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination.
+À l’étape **Configuration** du flux de travail de création de destination, renseignez les [!UICONTROL Informations de base] pour la destination.
 
 ![Informations de base de Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
 
@@ -74,12 +75,12 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Type de compte]** : AdWords est la seule option disponible.
 * **[!UICONTROL Identifiant de compte]** : renseignez votre identifiant de compte avec [!DNL Google Ads]. Le format d’identifiant est généralement 123-456-7890.
-* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis par l’Adobe, voir la présentation [des stratégies d’utilisation des](../../../data-governance/policies/overview.md#core-actions)données.
+* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
-## Activate segments to [!DNL Google Ads]
+## Activer les segments dans [!DNL Google Ads]
 
-For instructions on how to activate segments to [!DNL Google Ads], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+Pour savoir comment activer des segments dans [!DNL Google Ads], voir [Activer les données vers les destinations](../../ui/activate-destinations.md).
 
 ## Données exportées
 
-Pour vérifier si les données ont bien été exportées vers la [!DNL Google Ads] destination, vérifiez votre [!DNL Google Ads] compte. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
+Pour vérifier si les données ont bien été exportées vers la destination [!DNL Google Ads], vérifiez votre compte [!DNL Google Ads]. Si l’activation a réussi, les audiences sont renseignées dans votre compte.
