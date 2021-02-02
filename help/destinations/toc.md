@@ -2,12 +2,13 @@
 product: experience-platform
 audience: user
 user-guide-title: Guide des destinations
-user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
+user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
+description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 395a8c2aa7fc89cde04263dbbfb3315318245ef6
+source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 29%
+source-wordcount: '443'
+ht-degree: 32%
 
 ---
 
@@ -19,7 +20,7 @@ ht-degree: 29%
 * Tutoriels sur les API {#api}
    * [Se connecter aux destinations de diffusion en continu (AWS Kinesis et Azure Événement Hubs) et activer les données](./api/streaming-destinations.md)
    * [Se connecter aux destinations de marketing par courrier électronique et activer les données](./api/email-marketing.md)
-* Guides de l’interface utilisateur {#ui}
+* Guides d&#39;interface {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
    * [Page de détails des destinations](./ui/destination-details-page.md)
    * [Connexion à une destination](./ui/connect-destination.md)
@@ -29,7 +30,7 @@ ht-degree: 29%
    * [ (Alpha) destination HTTP](./catalog/http-destination.md)
    * Destinations Adobe {#adobe}
       * [Présentation des destinations Adobe](./catalog/adobe/overview.md)
-      * [Partage de segments Experience Platform](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Partage de segments Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Destinations publicitaires {#advertising}
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Destination Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
@@ -77,12 +78,13 @@ ht-degree: 29%
       * [Workflow de création de destinations de stockage dans le cloud](./catalog/cloud-storage/workflow.md)
       * [Destination Amazon](./catalog/cloud-storage/amazon-kinesis.md)
       * [Destination Amazon S3](./catalog/cloud-storage/amazon-s3.md)
+      * [Destination de l&#39;objet blob Azure](./catalog/cloud-storage/azure-blob.md)
       * [Destination des centres de Événement Azure](./catalog/cloud-storage/azure-event-hubs.md)
       * [Destination SFTP](./catalog/cloud-storage/sftp.md)
-   * Data Management Platform destinations {#data-management}
+   * Destinations de la plateforme de data Management {#data-management}
       * [Présentation des destinations Data Management Platform](./catalog/data-management/overview.md)
       * [Audience Manager DIL destination](./catalog/data-management/aam-dil-extension.md)
-   * Destinations des courriers électroniques {#email}
+   * Destinations de courriel {#email}
       * [Destination Analytics visible](./catalog/email/bizible.md)
       * [Destination du marketing](./catalog/email/marketo.md)
       * [Destination de Marketo Munchkin](./catalog/email/marketo-munchkin.md)
@@ -95,7 +97,7 @@ ht-degree: 29%
       * [Destination du Marketing Cloud Salesforce](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Extensions d’Experience Platform Launch {#launch-extensions}
       * [Présentation des extensions d’Experience Platform Launch](./catalog/launch-extensions/overview.md)
-   * Destinations de l’engagement mobile {#mobile-engagement}
+   * Destinations d’engagement mobile {#mobile-engagement}
       * [Présentation des destinations d’engagement mobiles](./catalog/mobile-engagement/overview.md)
       * [Destination des attributs du navire](./catalog/mobile-engagement/airship-attributes.md)
       * [Destination des balises d&#39;avion](./catalog/mobile-engagement/airship-tags.md)
