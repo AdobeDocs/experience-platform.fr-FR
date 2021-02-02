@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
+keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données
 solution: Experience Platform
-title: Présentation de l’application des stratégies
-topic: enforcement
+title: Application automatique des stratégies
+topic: guide
 description: Ce document décrit comment les stratégies d’utilisation des données sont automatiquement appliquées lors de l’activation de segments vers des destinations dans l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 385084f3de2ebfcbee94d6b0c116dae82f5df764
+source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1128'
 ht-degree: 19%
 
 ---
@@ -49,7 +49,7 @@ Lorsqu’un segment est activé pour la première fois, [!DNL Policy Service] re
 
 Le lignage des données joue un rôle clé dans la manière dont les stratégies sont appliquées dans Platform. En termes généraux, le lignage de données fait référence à l’origine d’un ensemble de données et à ce qui s’y passe (ou où il se déplace) au fil du temps.
 
-Dans le contexte de [!DNL Data Governance], le lignage permet aux libellés d&#39;utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, tels que le Profil client en temps réel et les destinations. Cela permet d&#39;évaluer et d&#39;appliquer les politiques à plusieurs points clés du parcours des données à travers la plate-forme et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de la politique a eu lieu.
+Dans le contexte de [!DNL Data Governance], le lignage permet aux libellés d&#39;utilisation des données de se propager des jeux de données aux services en aval qui utilisent leurs données, tels que le Profil client en temps réel et les destinations. Cela permet d&#39;évaluer et d&#39;appliquer les politiques à plusieurs points clés du parcours des données via la plate-forme et fournit un contexte aux consommateurs de données quant aux raisons pour lesquelles une violation de la politique a eu lieu.
 
 En Experience Platform, l&#39;application des politiques est concernée par la lignée suivante :
 
