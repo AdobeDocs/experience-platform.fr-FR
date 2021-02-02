@@ -1,12 +1,14 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Attributs calculés - API Profil client en temps réel
+keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+title: Point de terminaison de l'API Attributs calculés
 topic: guide
+type: Documentation
+description: 'Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent sur les données du Profil client en temps réel, ce qui signifie que vous pouvez agrégat des valeurs sur tous les enregistrements et événements stockés dans Adobe Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2403'
-ht-degree: 83%
+source-wordcount: '2450'
+ht-degree: 82%
 
 ---
 
@@ -25,13 +27,13 @@ Ce guide vous aidera à mieux comprendre les attributs calculés dans Adobe Expe
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie de l&#39;[API de Profil client en temps réel](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 ## Comprendre les attributs calculés
 
-Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Chaque profil contient des informations importantes liées à une personne, comme ses coordonnées de contact, ses préférences et son historique d’achat, vous offrant une vision à 360 degrés du client.
+Adobe Experience Platform vous permet d&#39;importer et de fusionner facilement des données provenant de plusieurs sources afin de générer [!DNL Real-time Customer Profiles]. Chaque profil contient des informations importantes liées à une personne, comme ses coordonnées de contact, ses préférences et son historique d’achat, vous offrant une vision à 360 degrés du client.
 
-Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
+Certaines des informations collectées dans le profil sont facilement comprises lorsque vous lisez directement les champs de données (par exemple, « prénom ») tandis que d’autres données nécessitent la réalisation de plusieurs calculs ou comptent sur d’autres champs et d’autres valeurs afin de générer les informations (par exemple, « total d’achat depuis le début »). Pour faciliter la compréhension de ces données en un coup d&#39;oeil, [!DNL Platform] vous permet de créer des attributs calculés qui effectuent automatiquement ces références et calculs, renvoyant la valeur dans le champ approprié.
 
 Les attributs calculés incluent la création d’une expression ou « règle » qui agit sur les données entrantes et conserve la valeur obtenue dans un attribut de profil ou dans un événement. Les expressions peuvent être définies de plusieurs manières différentes, ce qui vous permet de préciser qu’une règle n’évalue que les événements entrants, un événement entrant et les données du profil ou un événement entrant, les données du profil et les événements historiques.
 
@@ -39,9 +41,9 @@ Les attributs calculés incluent la création d’une expression ou « règle 
 
 Les cas d’utilisation des attributs calculés peuvent aller de calculs simples à des références très complexes. Voici quelques exemples de cas d’utilisation des attributs calculés :
 
-1. **[!UICONTROL Pourcentages]:** Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
-1. **[!UICONTROL Utilisation]de l&#39;application :** Un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures d’une application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
-1. **[!UICONTROL Valeurs]de durée de vie :** Il peut s’avérer très difficile de rassembler des totaux d’exécution, tels qu’une valeur d’achat à vie pour un client. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
+1. **[!UICONTROL Pourcentages] :** Un attribut calculé simple peut inclure la prise de deux champs numériques sur un enregistrement et leur division pour créer un pourcentage. Par exemple, vous pouvez prendre le nombre total d’e-mails envoyés à un destinataire et le diviser par le nombre d’e-mails que ce destinataire a ouvert. Un simple coup d’œil au champ attribut calculé obtenu donnerait rapidement le pourcentage total d’e-mails ouvert par ce destinataire.
+1. **[!UICONTROL Utilisation] de l’application :** un autre exemple inclut la possibilité d’agrégat du nombre d’ouvertures de l’application par un utilisateur. En suivant le nombre total d’ouvertures de l’application, en fonction des événements d’ouverture individuels, vous pourriez diffuser des offres spéciales ou des messages aux utilisateurs à leur centième ouverture pour encourager un engagement plus approfondi avec votre marque.
+1. **[!UICONTROL Valeurs] de durée de vie : il peut s’avérer très difficile de** rassembler des totaux d’exécution, tels qu’une valeur d’achat sur toute la durée de vie d’un client. Cela nécessite la mise à jour de l’historique total chaque fois qu’un nouvel événement d’achat se produit. Un attribut calculé vous permet de faire ceci beaucoup plus facilement en conservant la valeur de durée de vie dans un champ unique qui est mis à jour automatiquement à chaque événement d’achat réussi associé au client.
 
 ## Configuration d’un attribut calculé
 
@@ -51,19 +53,19 @@ Pour configurer un attribut calculé, vous devez d’abord identifier le champ d
 >
 >Il n’est pas possible d’ajouter des attributs calculés à des champs au sein de mixins définis par Adobe. Le champ doit se trouver dans l’espace de noms `tenant`, ce qui signifie qu’il doit s’agir d’un champ que vous définissez et ajoutez à un schéma.
 
-In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). Nous vous recommandons également de consulter la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation des principes de base de la composition des schémas.
+Pour définir avec succès un champ d&#39;attribut calculé, le schéma doit être activé pour [!DNL Profile] et s&#39;afficher dans le schéma d&#39;union de la classe sur laquelle le schéma est basé. Pour plus d&#39;informations sur les schémas et unions activés pour [!DNL Profile], consultez la section du guide du développeur [!DNL Schema Registry] sur [l&#39;activation d&#39;un schéma pour le Profil et l&#39;affichage des schémas d&#39;union](../../xdm/api/getting-started.md). Nous vous recommandons également de consulter la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation des principes de base de la composition des schémas.
 
-The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. Si vous disposez déjà d’un champ qui se trouve dans l’espace de noms correct dans un schéma activé dans Profile, vous pouvez passer directement à l’étape de [création d’un attribut calculé](#create-a-computed-attribute).
+Le processus de ce didacticiel utilise un schéma [!DNL Profile] et suit les étapes de définition d&#39;un nouveau mixin contenant le champ d&#39;attribut calculé et s&#39;assurant qu&#39;il s&#39;agit de l&#39;espace de nommage correct. Si vous disposez déjà d’un champ qui se trouve dans l’espace de noms correct dans un schéma activé dans Profile, vous pouvez passer directement à l’étape de [création d’un attribut calculé](#create-a-computed-attribute).
 
 ### Affichage d’un schéma
 
-Les étapes qui suivent utilisent l’interface utilisateur d’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
+Les étapes qui suivent utilisent l’interface utilisateur d’Adobe Experience Platform pour localiser un schéma, ajouter un mixin et définir un champ. Si vous préférez utiliser l&#39;API [!DNL Schema Registry], consultez le [Schéma Registry developer guide](../../xdm/api/getting-started.md) pour connaître les étapes de création d&#39;un mixin, d&#39;ajout d&#39;un mixin à un schéma et d&#39;activation d&#39;un schéma pour une utilisation avec [!DNL Real-time Customer Profile].
 
 Dans l’interface utilisateur, cliquez sur **[!UICONTROL Schémas]** dans le rail de gauche et utilisez la barre de recherche dans l’onglet **[!UICONTROL Parcourir]** pour trouver rapidement le schéma que vous souhaitez mettre à jour.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
+Une fois le schéma localisé, cliquez sur son nom pour ouvrir l&#39;[!DNL Schema Editor] où vous pouvez apporter des modifications au schéma.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
@@ -77,7 +79,7 @@ Donnez un nom et une description au mixin, puis cliquez sur **[!UICONTROL Ajoute
 
 ### Ajout d’un champ attribut calculé au schéma
 
-Your new mixin should now appear in the &quot;[!UICONTROL Mixins]&quot; section under &quot;[!UICONTROL Composition]&quot;. Cliquez sur le nom du mixin, ce qui fera apparaître plusieurs boutons **[!UICONTROL Ajouter un champ]** dans la section **[!UICONTROL Structure]** de l’éditeur.
+Votre nouveau mixin doit maintenant apparaître dans la section &quot;[!UICONTROL Mixins]&quot; sous &quot;[!UICONTROL Composition]&quot;. Cliquez sur le nom du mixin, ce qui fera apparaître plusieurs boutons **[!UICONTROL Ajouter un champ]** dans la section **[!UICONTROL Structure]** de l’éditeur.
 
 Sélectionnez **[!UICONTROL Ajouter un champ]** en regard du nom du schéma afin d’ajouter un champ de niveau supérieur. Vous pouvez également ajouter le champ n’importe où dans le schéma que vous préférez.
 
@@ -97,13 +99,13 @@ Une fois que vous avez terminé, cliquez sur **[!UICONTROL Appliquer]** et le no
 
 ![](../images/computed-attributes/Apply.png)
 
-### Enable schema for [!DNL Profile]
+### Activer le schéma pour [!DNL Profile]
 
-Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section **[!UICONTROL Structure]** de l’éditeur pour faire apparaître l’onglet **[!UICONTROL Propriétés du schéma]**. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile].
+Avant de poursuivre, assurez-vous que le schéma a été activé dans [!DNL Profile]. Cliquez sur le nom du schéma dans la section **[!UICONTROL Structure]** de l’éditeur pour faire apparaître l’onglet **[!UICONTROL Propriétés du schéma]**. Si le curseur **[!UICONTROL Profil]** est bleu, le schéma a été activé pour [!DNL Profile].
 
 >[!NOTE]
 >
->Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
+>L&#39;activation d&#39;un schéma pour [!DNL Profile] ne peut pas être annulée. Par conséquent, si vous cliquez sur le curseur une fois qu&#39;il a été activé, vous n&#39;avez pas à risquer de le désactiver.
 
 ![](../images/computed-attributes/Profile.png)
 
@@ -111,7 +113,7 @@ Vous pouvez cliquer à présent sur **[!UICONTROL Enregistrer]** pour enregistre
 
 ### Création d’un attribut calculé {#create-a-computed-attribute}
 
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute.
+Avec votre champ d&#39;attribut calculé identifié et la confirmation que le schéma est activé pour [!DNL Profile], vous pouvez maintenant configurer un attribut calculé.
 
 Commencez par effectuer une requête POST sur le point de terminaison `/config/computedAttributes` avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
 
@@ -154,7 +156,7 @@ curl -X POST \
 | `path` | Le chemin d’accès au champ contenant l’attribut calculé. Ce chemin d’accès se trouve dans l’attribut `properties` du schéma et ne doit PAS inclure le nom du champ. Lors de l’écriture du chemin d’accès, omettez les multiples niveaux des attributs `properties`. |
 | `{TENANT_ID}` | Si vous ne connaissez pas votre identifiant de client, veuillez vous reporter à la procédure de recherche de votre identifiant de client dans le [guide de développement du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Une description de l’attribut calculé. Celle-ci s’avère particulièrement utile si vous avez défini plusieurs attributs calculés, car elle aidera les autres membres de votre organisation IMS à déterminer l’attribut calculé correct à utiliser. |
-| `expression.value` | Expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
+| `expression.value` | Expression [!DNL Profile Query Language] (PQL) valide. Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
 | `schema.name` | La classe sur laquelle le schéma contenant le champ attribut calculé est basé. Par exemple : `_xdm.context.experienceevent` pour un schéma basé sur la classe XDM ExperienceEvent. |
 
 **Réponse**
@@ -475,7 +477,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Expression valide [!DNL Profile Query Language] (PQL). Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
+| `{NEW_EXPRESSION_VALUE}` | Expression [!DNL Profile Query Language] (PQL) valide. Pour plus d’informations sur PQL et les liens vers les requêtes prises en charge, veuillez lire la [présentation de PQL](../../segmentation/pql/overview.md). |
 
 **Réponse**
 
