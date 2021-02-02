@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; guide d'api ; paramètres de connexion ; service de Requête ;
 solution: Experience Platform
 title: Guide de développement de Query Service
 topic: connection parameters
@@ -7,8 +7,8 @@ description: Vous pouvez récupérer vos paramètres de connexion pour utiliser 
 translation-type: tm+mt
 source-git-commit: 648544bc60c0cee8ca8b167118391980b6c33d91
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 47%
+source-wordcount: '147'
+ht-degree: 42%
 
 ---
 
