@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;authenticated streaming connection;streaming connection;create streaming connection;create authenticated streaming connection;streaming ingestion;ingestion;
+keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu authentifiée ; connexion en flux continu ; créer une connexion en flux continu ; créer une connexion en flux continu authentifiée ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Créer une connexion en continu authentifiée
 topic: tutorial
 type: Tutorial
 description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le Profil client et l’identité en temps réel, de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées.
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '650'
-ht-degree: 80%
+source-wordcount: '674'
+ht-degree: 77%
 
 ---
 
 
 # Création d’une connexion en continu authentifiée
 
-Authenticated Data Collection allows Adobe Experience Platform services, such as [!DNL Real-time Customer Profile] and [!DNL Identity], to differentiate between records coming from trusted sources and untrusted sources. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
+La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que [!DNL Real-time Customer Profile] et [!DNL Identity], de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
 
 ## Prise en main
 
@@ -26,7 +26,7 @@ Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que 
 
 Ce tutoriel nécessite également une connaissance pratique de divers services Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organiser les données d’expérience.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API d’ingestion par flux.
@@ -37,19 +37,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -179,7 +179,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé une connexion en continu authentifiée, vous pouvez diffuser des séries temporelles ou enregistrer des données, ce qui vous permet d’ingérer des données dans [!DNL Platform]. To learn how to stream time series data to [!DNL Platform], go to the [streaming time series data tutorial](./streaming-time-series-data.md). To learn how to stream record data to [!DNL Platform], go to the [streaming record data tutorial](./streaming-record-data.md).
+Maintenant que vous avez créé une connexion en continu authentifiée, vous pouvez diffuser des séries temporelles ou enregistrer des données, ce qui vous permet d’ingérer des données dans [!DNL Platform]. Pour savoir comment diffuser des données de série chronologique vers [!DNL Platform], consultez le [didacticiel de données de série chronologique en flux continu](./streaming-time-series-data.md). Pour savoir comment diffuser les données d&#39;enregistrement dans [!DNL Platform], consultez le [didacticiel de données d&#39;enregistrement en flux continu](./streaming-record-data.md).
 
 ## Annexe
 
