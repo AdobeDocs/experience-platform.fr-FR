@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
+keywords: Experience Platform ; accueil ; rubriques populaires ; diffusion en continu ; assimilation en flux continu ; validation de l’assimilation en flux continu ; validation de l’assimilation en flux continu ; validation ; validation synchrone ; validation synchrone ; validation asynchrone ; validation asynchrone ;
 solution: Experience Platform
 title: Validation de l’ingestion par flux
 topic: tutorial
 type: Tutorial
 description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 90%
+source-wordcount: '875'
+ht-degree: 87%
 
 ---
 
@@ -23,7 +23,7 @@ L’ingestion par flux vous permet de charger vos données dans Adobe Experience
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): L&#39;une des méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): L&#39;une des méthodes par lesquelles les données peuvent être envoyées à  [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -31,19 +31,19 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Schema Registry], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -142,7 +142,7 @@ La réponse ci-dessus répertorie le nombre de violations de schéma et en quoi 
 
 ## Validation asynchrone
 
-La validation asynchrone est une méthode de validation qui ne fournit aucun commentaire immédiat. Instead, the data is sent to a failed batch in [!DNL Data Lake] to prevent data loss. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf requête contraire, l’ingestion par flux fonctionne avec le mode de validation asynchrone.
+La validation asynchrone est une méthode de validation qui ne fournit aucun commentaire immédiat. En revanche, les données sont envoyées à un lot en échec dans [!DNL Data Lake] pour éviter toute perte de données. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf requête contraire, l’ingestion par flux fonctionne avec le mode de validation asynchrone.
 
 **Format d’API**
 
@@ -199,7 +199,7 @@ Cette section contient des informations relatives à la signification des diffé
 | ----------- | ------------- |
 | 200 | Réussite. Dans le cas d’une validation synchrone, cela signifie que la réponse a passé les contrôles de validation. Dans le cas d’une validation asynchrone, cela signifie que la réponse a simplement bien reçu le message. Les utilisateurs peuvent identifier l’état du message final en observant le jeu de données. |
 | 400 | Erreur. Une erreur s’est produite avec votre demande. Un message d’erreur contenant plus de détails est reçu des services de validation par flux. |
-| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière dont demander l’accès, consultez ce [tutoriel](../../tutorials/authentication.md) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Erreur. Votre requête n’est pas autorisée, il vous faudra effectuer la requête avec un jeton porteur. Pour plus d’informations sur la manière dont demander l’accès, consultez ce [tutoriel](https://www.adobe.com/go/platform-api-authentication-en) ou cet [article de blog](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Erreur. Une erreur système interne s’est produite. |
 | 501 | Erreur. Cela signifie que la validation synchrone n’est **pas** prise en charge pour cet emplacement. |
 | 503 | Erreur. Le service est actuellement indisponible. Nous conseillons aux clients de réessayer au moins trois fois en utilisant une stratégie de backoff exponentiel. |
