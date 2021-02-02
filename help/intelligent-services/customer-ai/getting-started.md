@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics
+keywords: Experience Platform ; prise en main ; assistance client ; rubriques populaires
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Prise en main de Customer AI
 topic: Getting started
 description: Ce guide fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 78%
+source-wordcount: '571'
+ht-degree: 76%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 78%
 
 Les guides sur Customer AI nécessitent une compréhension pratique des différents services Platform impliqués dans l’utilisation de Customer AI. Avant de commencer, consultez les documents suivants :
 
-- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
+- [Présentation](../../xdm/home.md) du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet  [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
 - [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : ce document présente les schémas XDM ainsi que les blocs de création, les principes et les bonnes pratiques pour la composition de schémas à utiliser dans [!DNL Adobe Experience Platform].
 - [Création de schémas](../../xdm/tutorials/create-schema-ui.md) : ce tutoriel décrit les étapes de la création d’un schéma à l’aide de l’éditeur de schémas dans Experience Platform.
-- [Présentation](../../rtcdp/overview.md)du Profil client en temps réel : La plate-forme de données clientes en temps réel (CDP en temps réel) [!DNL Adobe Experience Platform]intégrée permet aux sociétés de rassembler des données connues et inconnues pour activer les profils clients grâce à une prise de décision intelligente tout au long du parcours client. La plateforme de données clients en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
+- [Présentation](../../rtcdp/overview.md) du Profil client en temps réel : La plate-forme de données clientes en temps réel (CDP en temps réel)  [!DNL Adobe Experience Platform]intégrée permet aux sociétés de rassembler des données connues et inconnues pour activer les profils clients grâce à une prise de décision intelligente sur l’ensemble du parcours client. La plateforme de données clients en temps réel associe plusieurs sources de données d’entreprise pour créer des profils unifiés en temps réel qui peuvent être utilisés pour offrir des expériences client personnalisées et individuelles sur tous les canaux et périphériques.
 - [Présentation de Segmentation Service](../../segmentation/home.md) : la segmentation est le processus consistant à définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre magasin de profils afin d’identifier un groupe de clients potentiels dans votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différents segments, vous pouvez vous concentrer sur les différentes audiences afin de fournir une expérience marketing plus personnalisée.
 - [Guide d’utilisation du créateur de segments](../../segmentation/tutorials/create-a-segment.md) : Platform vous permet de créer des segments et d’y accéder en toute facilité, ainsi que d’utiliser différents blocs de création pour caractériser vos segments avec plus de précision.
 
@@ -28,9 +28,9 @@ Les guides sur Customer AI nécessitent une compréhension pratique des différe
 
 >[!NOTE]
 >
->If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
+>Si vous n&#39;avez pas besoin de télécharger des scores bruts, vous pouvez ignorer cette étape et passer au [guide de configuration](./user-guide/configure.md).
 
-Une combinaison d’appels API est nécessaire pour télécharger les scores de Customer AI. Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Une combinaison d’appels API est nécessaire pour télécharger les scores de Customer AI. Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -50,4 +50,4 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ## Étapes suivantes
 
-Une fois que vous avez suivi les étapes décrites dans le document ci-dessus, consultez la documentation [Entrée et Sortie](./input-output.md) . Ce document donne un bref aperçu des types de données utilisés et produits dans l’IA du client.
+Une fois que vous avez suivi les étapes décrites dans le document ci-dessus, consultez la documentation [Entrée et sortie](./input-output.md). Ce document donne un bref aperçu des types de données utilisés et produits dans l’IA du client.
