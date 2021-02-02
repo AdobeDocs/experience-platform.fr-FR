@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform ; profil ; profil client en temps réel ; résolution des problèmes ; API ; prévisualisation ; exemple
 title: Prévisualisation de profil - API de Profil client en temps réel
-description: Adobe Experience Platform vous permet d'assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans la plate-forme, elles sont stockées dans le magasin de données du Profil. À mesure que le nombre d’enregistrements dans la banque de Profils augmente ou diminue, une tâche d’exemple est exécutée qui comprend des informations sur le nombre de fragments de profil et de profils fusionnés présents dans la banque de données. L'API de Profil vous permet de prévisualisation du dernier exemple réussi, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d'identité.
+description: Grâce aux points de terminaison de l’API de Profil client en temps réel, vous pouvez prévisualisation le dernier échantillon réussi de vos données de Profil, ainsi que la distribution des profils de liste par jeu de données et par espace de nommage d’identité dans Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 47c65ef5bdd083c2e57254189bb4a1f1d9c23ccc
+source-git-commit: fe93a3672f65168744b3a242be7f42012f323544
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1554'
 ht-degree: 5%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Point de terminaison d’état de l’exemple de prévisualisation (prévisualisation de Profil)
 
-Adobe Experience Platform vous permet d&#39;assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans [!DNL Platform]le magasin de données du Profil, elles sont stockées dans celui-ci.
+Adobe Experience Platform vous permet d&#39;assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans [!DNL Platform], elles sont stockées dans le magasin de données du Profil.
 
 Lorsque l&#39;assimilation d&#39;enregistrements dans le magasin de Profils augmente ou diminue le nombre total de profils de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le décompte. L&#39;API Profil vous permet de prévisualisation de la dernière tâche d&#39;exemple réussie, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d&#39;identité.
 
-Ces mesures sont également disponibles dans la section [!UICONTROL Profils] de l’interface utilisateur Experience Platform. Pour plus d&#39;informations sur l&#39;accès aux données de Profil à l&#39;aide de l&#39;interface utilisateur, consultez le guide [[!DNL Profile] ](../ui/user-guide.md)d&#39;utilisation.
+Ces mesures sont également disponibles dans la section [!UICONTROL Profils] de l’interface utilisateur Experience Platform. Pour plus d&#39;informations sur la façon d&#39;accéder aux données de Profil à l&#39;aide de l&#39;interface utilisateur, consultez le [[!DNL Profile] guide de l&#39;utilisateur](../ui/user-guide.md).
 
 ## Prise en main
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie de l&#39;[[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 ## Fragments de profil par rapport aux profils fusionnés
 
@@ -59,7 +59,7 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 
 >[!NOTE]
 >
->Dans cet exemple de réponse, `numRowsToRead` et `totalRows` sont égaux les uns aux autres. Cela peut être le cas en fonction du nombre de profils de votre organisation en Experience Platform. Toutefois, ces deux nombres sont généralement différents, `numRowsToRead` étant donné qu’ils représentent l’échantillon sous la forme d’un sous-ensemble du nombre total de profils (`totalRows`).
+>Dans cet exemple de réponse, `numRowsToRead` et `totalRows` sont égaux les uns aux autres. Cela peut être le cas en fonction du nombre de profils de votre organisation en Experience Platform. Cependant, en règle générale, ces deux nombres sont différents, `numRowsToRead` étant le nombre le plus petit, car il représente l’échantillon sous la forme d’un sous-ensemble du nombre total de profils (`totalRows`).
 
 ```json
 {
@@ -84,7 +84,7 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 | Propriété | Description |
 |---|---|
 | `numRowsToRead` | Nombre total de profils fusionnés dans l’échantillon. |
-| `sampleJobRunning` | Valeur booléenne qui renvoie `true` lorsqu’un exemple de travail est en cours. Fournit de la transparence dans la latence qui survient lorsqu’un fichier de commandes est téléchargé lorsqu’il est effectivement ajouté au magasin de Profils. |
+| `sampleJobRunning` | Valeur booléenne qui renvoie `true` lorsqu&#39;un exemple de travail est en cours. Fournit de la transparence dans la latence qui survient lorsqu’un fichier de commandes est téléchargé lorsqu’il est effectivement ajouté au magasin de Profils. |
 | `cosmosDocCount` | Nombre total de documents dans Cosmos. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans le magasin de Profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d&#39;assimilation par lot réussi. |
@@ -98,7 +98,7 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 
 ## Profil de liste par jeu de données
 
-Pour voir la répartition des profils par jeu de données, vous pouvez exécuter une requête de GET sur le point de `/previewsamplestatus/report/dataset` terminaison.
+Pour voir la distribution des profils par jeu de données, vous pouvez exécuter une requête de GET au point de terminaison `/previewsamplestatus/report/dataset`.
 
 **Format d’API**
 
@@ -113,7 +113,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 **Requête**
 
-La requête suivante utilise le `date` paramètre pour renvoyer le rapport le plus récent pour la date spécifiée.
+La requête suivante utilise le paramètre `date` pour renvoyer le rapport le plus récent pour la date spécifiée.
 
 ```shell
 curl -X GET \
@@ -126,7 +126,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un `data` tableau contenant une liste d&#39;objets de jeu de données. La réponse affichée a été tronquée pour afficher trois jeux de données.
+La réponse comprend un tableau `data` contenant une liste d&#39;objets de jeu de données. La réponse affichée a été tronquée pour afficher trois jeux de données.
 
 >[!NOTE]
 >
@@ -179,21 +179,21 @@ La réponse comprend un `data` tableau contenant une liste d&#39;objets de jeu d
 | Propriété | Description |
 |---|---|
 | `sampleCount` | Nombre total de profils fusionnés échantillonnés avec cet ID de jeu de données. |
-| `samplePercentage` | Pourcentage `sampleCount` du nombre total de profils fusionnés échantillonnés ( `numRowsToRead` valeur renvoyée dans le [dernier état](#view-last-sample-status)de l’échantillon), exprimé au format décimal. |
+| `samplePercentage` | `sampleCount` en pourcentage du nombre total de profils fusionnés échantillonnés (valeur `numRowsToRead` renvoyée dans le [dernier état d’échantillonnage](#view-last-sample-status)), exprimée au format décimal. |
 | `fullIDsCount` | Nombre total de profils fusionnés avec cet ID de jeu de données. |
-| `fullIDsPercentage` | Pourcentage `fullIDsCount` du nombre total de profils fusionnés ( `totalRows` valeur renvoyée dans le [dernier état](#view-last-sample-status)de l’échantillon), exprimé au format décimal. |
+| `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du nombre total de profils fusionnés (la valeur `totalRows` renvoyée dans le [dernier état d’échantillonnage](#view-last-sample-status)), exprimé au format décimal. |
 | `name` | Nom du jeu de données, tel qu’il est fourni lors de la création du jeu de données. |
 | `description` | Description du jeu de données, telle qu’elle est fournie lors de la création du jeu de données. |
 | `value` | ID du jeu de données. |
 | `streamingIngestionEnabled` | Indique si le jeu de données est activé pour l’assimilation en flux continu. |
 | `createdUser` | ID utilisateur de l’utilisateur qui a créé le jeu de données. |
-| `reportTimestamp` | Horodatage du rapport. Si un `date` paramètre a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun `date` paramètre n’est fourni, le rapport le plus récent est renvoyé. |
+| `reportTimestamp` | Horodatage du rapport. Si un paramètre `date` a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun paramètre `date` n&#39;est fourni, le rapport le plus récent est renvoyé. |
 
 
 
 ## Répartition des profils listes par espace de nommage
 
-Vous pouvez exécuter une demande de GET sur le point de terminaison `/previewsamplestatus/report/namespace` pour vue de la ventilation par espace de nommage d&#39;identité sur tous les profils fusionnés de votre magasin de Profils. Les espaces de nommage d&#39;identité sont un composant important du service d&#39;identité Adobe Experience Platform qui sert d&#39;indicateur du contexte auquel se rapportent les données client. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).
+Vous pouvez exécuter une demande de GET au point de terminaison `/previewsamplestatus/report/namespace` pour vue la ventilation par espace de nommage d&#39;identité sur tous les profils fusionnés de votre magasin de Profils. Les espaces de nommage d&#39;identité sont un composant important du service d&#39;identité Adobe Experience Platform qui sert d&#39;indicateur du contexte auquel se rapportent les données client. Pour en savoir plus, consultez la [présentation de l&#39;espace de nommage d&#39;identité](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -212,7 +212,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 **Requête**
 
-La requête suivante ne spécifie aucun `date` paramètre et renvoie donc le rapport le plus récent.
+La requête suivante ne spécifie pas de paramètre `date` et renvoie donc le rapport le plus récent.
 
 ```shell
 curl -X GET \
@@ -225,7 +225,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un `data` tableau, avec des objets individuels contenant les détails de chaque espace de nommage. La réponse affichée a été tronquée pour afficher quatre espaces de nommage.
+La réponse comprend un tableau `data`, avec des objets individuels contenant les détails de chaque espace de nommage. La réponse affichée a été tronquée pour afficher quatre espaces de nommage.
 
 ```json
 {
@@ -278,15 +278,15 @@ La réponse comprend un `data` tableau, avec des objets individuels contenant le
 | Propriété | Description |
 |---|---|
 | `sampleCount` | Nombre total de profils fusionnés échantillonnés dans l’espace de nommage. |
-| `samplePercentage` | Pourcentage `sampleCount` des profils fusionnés échantillonnés ( `numRowsToRead` valeur renvoyée dans le [dernier état](#view-last-sample-status)de l’échantillon), exprimé au format décimal. |
-| `reportTimestamp` | Horodatage du rapport. Si un `date` paramètre a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun `date` paramètre n’est fourni, le rapport le plus récent est renvoyé. |
+| `samplePercentage` | Le `sampleCount` en pourcentage des profils fusionnés échantillonnés (valeur `numRowsToRead` renvoyée dans le [dernier état d&#39;échantillonnage](#view-last-sample-status)), exprimé au format décimal. |
+| `reportTimestamp` | Horodatage du rapport. Si un paramètre `date` a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun paramètre `date` n&#39;est fourni, le rapport le plus récent est renvoyé. |
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de nommage. |
 | `fullIDsCount` | Nombre total de profils fusionnés dans l’espace de nommage. |
-| `fullIDsPercentage` | Pourcentage `fullIDsCount` du total des profils fusionnés ( `totalRows` valeur renvoyée dans le [dernier état](#view-last-sample-status)de l’échantillon), exprimé au format décimal. |
-| `code` | Le `code` pour l&#39;espace de nommage. Vous pouvez le trouver lorsque vous travaillez avec des espaces de nommage à l’aide de l’API [Service d’identité de](../../identity-service/api/list-namespaces.md) Adobe Experience Platform et que vous nommez également le symbole  d’identité dans l’interface utilisateur de l’Experience Platform. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md). |
-| `value` | Valeur `id` de l’espace de nommage. Vous pouvez le trouver lorsque vous travaillez avec des espaces de nommage à l’aide de l’API [](../../identity-service/api/list-namespaces.md)Identity Service. |
+| `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du total des profils fusionnés (la valeur `totalRows` renvoyée dans le [dernier état de l’échantillon](#view-last-sample-status)), exprimé au format décimal. |
+| `code` | `code` pour l&#39;espace de nommage. Vous pouvez le trouver lorsque vous travaillez avec des espaces de nommage à l&#39;aide de l&#39;[API Service d&#39;identité de Adobe Experience Platform](../../identity-service/api/list-namespaces.md) et il est également appelé [!UICONTROL symbole d&#39;identité] dans l&#39;interface utilisateur Experience Platform. Pour en savoir plus, consultez la [présentation de l&#39;espace de nommage d&#39;identité](../../identity-service/namespaces.md). |
+| `value` | Valeur `id` de l’espace de nommage. Vous pouvez le trouver lorsque vous travaillez avec des espaces de nommage à l&#39;aide de l&#39;[API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 ## Étapes suivantes
 
-Vous pouvez également utiliser des estimations et des prévisualisations similaires pour obtenir des informations au niveau du résumé de la vue concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l’utilisation des prévisualisations de segments et des estimations à l’aide de l’ [!DNL Adobe Experience Platform Segmentation Service] API, consultez le guide [des points de terminaison](../../segmentation/api/previews-and-estimates.md)prévisualisations et estimations, qui fait partie du guide du développeur [!DNL Segmentation] d’API.
+Vous pouvez également utiliser des estimations et des prévisualisations similaires pour obtenir des informations au niveau du résumé de la vue concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l&#39;utilisation des prévisualisations de segments et des estimations à l&#39;aide de l&#39;API [!DNL Adobe Experience Platform Segmentation Service], consultez le [guide des points de terminaison des prévisualisations et estimations](../../segmentation/api/previews-and-estimates.md), qui fait partie du guide du développeur d&#39;API [!DNL Segmentation].
 
