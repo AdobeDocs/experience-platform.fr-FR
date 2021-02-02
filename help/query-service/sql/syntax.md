@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
+keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;syntaxe sql;sql;ctas;CTAS;Créer une table comme sélectionner
 solution: Experience Platform
 title: Syntaxe SQL
 topic: syntax
 description: Ce document présente la syntaxe SQL compatible avec Query Service.
 translation-type: tm+mt
-source-git-commit: e02028e9808eab3373143aba7bbc4a115c52746b
+source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 91%
+source-wordcount: '2212'
+ht-degree: 85%
 
 ---
 
 
 # Syntaxe SQL
 
-[!DNL Query Service] permet d’utiliser le langage SQL ANSI standard pour les instructions `SELECT` et autres commandes limitées. This document shows SQL syntax supported by [!DNL Query Service].
+[!DNL Query Service] permet d’utiliser le langage SQL ANSI standard pour les instructions `SELECT` et autres commandes limitées. Ce document affiche la syntaxe SQL prise en charge par [!DNL Query Service].
 
 ## Définition d’une requête SELECT
 
@@ -26,6 +26,7 @@ La syntaxe suivante définit une requête `SELECT` compatible avec [!DNL Query S
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -63,6 +64,30 @@ et `with_query` correspond à :
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### Clause SNAPSHOT
+
+Cette clause peut être utilisée pour lire les données d&#39;une table par incréments en fonction des identifiants d&#39;instantané. Un ID d&#39;instantané est un marqueur de point de contrôle identifié par un nombre, de type Long, sur une table de données chaque fois que des données y sont écrites. La clause SNAPSHOT s&#39;attache à la relation de table à laquelle elle est utilisée.
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+```
+
+#### Exemple
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+Notez qu&#39;une clause SNAPSHOT fonctionne avec un alias de table ou de table mais pas au-dessus d&#39;une sous-requête ou d&#39;une vue. Une clause SNAPHOST fonctionne partout où une requête SELECT peut être appliquée à une table.
 
 ### Clause WHERE ILIKE
 
@@ -118,8 +143,9 @@ La syntaxe suivante définit une requête `CREATE TABLE AS SELECT` (CTAS) compat
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where,
-`target_schema_title` is the title of XDM schema. N&#39;utilisez cette clause que si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête`rowvalidation` CTAS indique si l&#39;utilisateur souhaite une validation au niveau des lignes de tous les nouveaux lots ingérés pour le nouveau jeu de données créé. La valeur par défaut est &quot;true&quot;
+où,
+`target_schema_title` est le titre du schéma XDM. Utilisez cette clause uniquement si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête CTAS.
+`rowvalidation` indique si l&#39;utilisateur souhaite la validation au niveau de la ligne de tous les nouveaux lots ingérés pour le nouveau jeu de données créé. La valeur par défaut est &quot;true&quot;
 
 et `select_query` correspond à une instruction `SELECT`, dont la syntaxe est définie ci-dessus dans le présent document.
 
@@ -135,6 +161,11 @@ Notez que pour une requête CTAS donnée :
 
 1. L’instruction `SELECT` doit posséder un alias pour les fonctions d’agrégation telles que `COUNT`, `SUM`, `MIN`, etc.
 2. L’instruction `SELECT` peut être fournie avec ou sans parenthèses ().
+3. L&#39;instruction `SELECT` peut être fournie avec une clause SNAPSHOT pour lire les deltas incrémentiels dans la table de cibles.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERT INTO
 
@@ -156,6 +187,11 @@ Notez que pour une requête INSERT INTO donnée :
 
 1. L’instruction `SELECT` ne doit pas être mise entre parenthèses ().
 2. Le schéma du résultat de l’instruction `SELECT` doit être conforme à celui de la table définie dans l’instruction `INSERT INTO`.
+3. L&#39;instruction `SELECT` peut être fournie avec une clause SNAPSHOT pour lire les deltas incrémentiels dans la table de cibles.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
@@ -245,7 +281,7 @@ CLOSE { name }
 
 ### COMMIT
 
-No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
+Aucune action n&#39;est effectuée dans [!DNL Query Service] en réponse à l&#39;instruction de transaction de validation.
 
 ```sql
 COMMIT [ WORK | TRANSACTION ]
