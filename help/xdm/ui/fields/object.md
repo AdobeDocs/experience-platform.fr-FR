@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;object;field;
+keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;object;field;
 solution: Experience Platform
 title: Définition d’un champ d’objet dans l’interface utilisateur
 description: Découvrez comment définir un champ de type objet dans l’interface utilisateur de l’Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
