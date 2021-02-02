@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; déduplication de données ; déduplication ;
 solution: Experience Platform
 title: Dédoublonnage des données
 topic: queries
@@ -8,8 +8,8 @@ description: Ce document présente des exemples complets et de sous-sélection d
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 19%
+source-wordcount: '491'
+ht-degree: 18%
 
 ---
 
