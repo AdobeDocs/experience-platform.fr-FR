@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
+keywords: Experience Platform ; accueil ; sujets populaires ; service de requête ; service de Requête ; requêtes d'écriture ; requête d'écriture ;
 solution: Experience Platform
 title: Rédaction de requêtes
 topic: queries
@@ -8,8 +8,8 @@ description: Ce document détaille les informations importantes à connaître po
 translation-type: tm+mt
 source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 54%
+source-wordcount: '970'
+ht-degree: 53%
 
 ---
 
