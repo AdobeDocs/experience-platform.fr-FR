@@ -1,38 +1,38 @@
 ---
-keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
+keywords: Facebook ; facebook ; réseau social ; réseau social ; authentification du réseau social ; authentification du réseau social ; authentification du réseau social
 title: Workflow de destinations de réseau social
 type: Tutorial
 seo-title: Workflow de destinations de réseau social
 description: Instructions de connexion à vos comptes publicitaires de réseau social
 seo-description: Instructions de connexion à vos comptes publicitaires de réseau social
 translation-type: tm+mt
-source-git-commit: f2fdc3b75d275698a4b1e4c8969b1b840429c919
+source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 53%
+source-wordcount: '473'
+ht-degree: 56%
 
 ---
 
 
-# Social Network destinations authentication workflow {#social-network-destinations-workflow}
+# Processus d’authentification des destinations de réseau social {#social-network-destinations-workflow}
 
 ## Processus de création de destinations de réseau social
 
-This tutorial uses [!DNL Facebook] as an example, but the workflow in Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
+Ce didacticiel utilise [!DNL Facebook] comme exemple, mais le flux de travail dans Adobe Experience Platform sera le même pour toutes les destinations de réseau social, une fois de plus ajouté au produit.
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
+Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, faites défiler la catégorie **[!UICONTROL Social]**. Sélectionnez la destination de votre réseau social préférée, puis **[!UICONTROL Configurer]**.
 
 ![Connexion à la destination de réseau social](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
->Si une connexion à cette destination existe déjà, un bouton **[!UICONTROL Activer]** s’affiche sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
+>Si une connexion avec cette destination existe déjà, vous pouvez voir un bouton **[!UICONTROL Activer]** sur la carte de destination. Pour plus d&#39;informations sur la différence entre **[!UICONTROL Activer]** et **[!UICONTROL Configurer]**, consultez la section [Catalogue](../../ui/destinations-workspace.md#catalog) de la documentation de l&#39;espace de travail de destination.
 
 À l’étape **Authentification**, si vous avez auparavant configuré une connexion à votre destination de réseau social, sélectionnez **[!UICONTROL Compte existant]**, puis sélectionnez la connexion existante. Vous pouvez aussi sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination de réseau social. Sélectionnez **[!UICONTROL Se connecter à la destination]** pour atteindre la destination de réseau social sélectionnée afin de vous identifier et de connecter Adobe Experience Cloud à votre compte publicitaire sur le réseau social.
 
 >[!NOTE]
 >
->Le CDP en temps réel prend en charge la validation des informations d’identification dans le processus d’authentification et affiche un message d’erreur si vous saisissez des informations d’identification incorrectes à l’ID de compte de réseau social. Ainsi, vous n’effectuez pas le workflow avec des informations d’identification incorrectes.
+>La plate-forme prend en charge la validation des informations d’identification dans le processus d’authentification et affiche un message d’erreur si vous saisissez des informations d’identification incorrectes à l’identifiant de compte de réseau social. Ainsi, vous n’effectuez pas le workflow avec des informations d’identification incorrectes.
 
 ![Connexion à la destination de réseau social - étape d’authentification](../../assets/catalog/social/workflow/pre-connect.png)
 
@@ -42,14 +42,13 @@ Une fois vos informations d’identification confirmées et la connexion d’Ado
 
 À l’étape **[!UICONTROL Configuration]**, saisissez un [!UICONTROL Nom] et une [!UICONTROL Description] pour votre flux d’activation et saisissez l’[!UICONTROL identifiant de compte] de votre compte publicitaire sur le réseau social.
 
-Cette étape vous permet également de sélectionner tout cas **[!UICONTROL d’utilisation]** marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis par l’Adobe, voir la présentation [des stratégies d’utilisation des](../../../data-governance/policies/overview.md#core-actions)données.
+Cette étape vous permet également de sélectionner n’importe quel **[!UICONTROL cas d’utilisation marketing]** qui doit s’appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les champs ci-dessus.
 
 >[!IMPORTANT]
 >
-> * Le cas d’utilisation de la personnalisation *d’identité* unique pour le marketing est sélectionné par défaut pour les destinations de réseau social et ne peut pas être supprimé.
-> * Pour [!DNL Facebook] les destinations. **[!UICONTROL L’ID]** de compte est votre [!DNL Facebook Ad Account ID]identifiant. Vous pouvez trouver cet identifiant dans le [!DNL Facebook Ads Manager]. Préfixez l’identifiant avec `act_`, comme indiqué ci-dessous :
+> * Pour les destinations [!DNL Facebook]. **[!UICONTROL L’]** ID de compte est votre  [!DNL Facebook Ad Account ID]identifiant. Vous pouvez trouver cet ID dans le [!DNL Facebook Ads Manager]. Préfixez l’identifiant avec `act_`, comme indiqué ci-dessous :
 
 
 ![Connexion à la destination du réseau social - étape de configuration](../../assets/catalog/social/workflow/setup.png)
