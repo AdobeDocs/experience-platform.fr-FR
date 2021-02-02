@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
+keywords: Experience Platform ; accueil ; sujets populaires ; espace de nommage d'identité ; espace de nommage d'identité
 solution: Experience Platform
 title: Guide de dépannage d’Adobe Experience Platform Identity Service
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '2248'
-ht-degree: 87%
+source-wordcount: '2191'
+ht-degree: 85%
 
 ---
 
 
 # Guide de dépannage d’Identity Service
 
-This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service], ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question et dépannage concernant les API [!DNL Platform] en général, consultez le [Guide de dépannage de l&#39;API Adobe Experience Platform](../landing/troubleshooting.md).
 
 Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences numériques percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
 
@@ -41,7 +41,7 @@ Une identité anonyme fait référence à une valeur d’identité ne pouvant pa
 
 Un graphique d’identités privé est un mappage privé des relations entre les identités associées et liées, visible uniquement par votre organisation.
 
-When more than one identity is included in any data ingested from a streaming endpoint or sent to a dataset enabled for [!DNL Identity Service], those identities are linked in the Private Identity Graph. [!DNL Identity Service] utilise ce graphique pour rassembler les identités d’un consommateur ou d’une entité donnée, ce qui permet de combiner les identités et de fusionner les profils.
+Lorsque plusieurs identités sont incluses dans des données ingérées à partir d’un point de terminaison de diffusion en continu ou envoyées à un jeu de données activé pour [!DNL Identity Service], ces identités sont liées dans le graphique d’identité privée. [!DNL Identity Service] utilise ce graphique pour rassembler les identités d’un consommateur ou d’une entité donnée, ce qui permet de combiner les identités et de fusionner les profils.
 
 ## Comment créer plusieurs champs d’identité dans un schéma XDM ?
 
@@ -75,20 +75,7 @@ Pour obtenir des instructions détaillées sur la définition d’un espace de n
 
 ## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
 
-Les espaces de noms standards fournis sont les suivants. Ils peuvent être utilisés par toutes les organisations au sein d’Experience Platform :
-
-| Nom d’affichage | Identifiant | Code | Description |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | Nom hérité : « Adobe AudienceManager » |
-| ECID | 4 | ECID | Alias : « Adobe Marketing Cloud ID », « Adobe Experience Cloud ID », « Adobe Experience Platform ID » |
-| E-mail | 6 | E-mail |  |
-| E-mail (SHA256, minuscules) | 11 | E-mails | Espace de noms standard pour les courriers électroniques préhachés. Les valeurs fournies dans cet espace de noms sont converties en minuscules avant le hachage en SHA-256. |
-| Téléphone | 7 | Téléphone |  |
-| Windows AID | 8 | WAID |  |
-| AdCloud | 411 | AdCloud | Alias : Ad Cloud |
-| Adobe Target | 9 | TNTID | Target ID |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | Identifiant pour les annonceurs |
+Les espaces de nommage d&#39;identité standard sont des espaces de nommage disponibles pour toutes les organisations. Pour obtenir une liste complète des espaces de nommage standard disponibles, reportez-vous à la section [Présentation des espaces de nommage d&#39;identité](./namespaces.md).
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
@@ -136,11 +123,11 @@ Internal solutions|Preferred|Common
 
 ## Dépannage
 
-The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
+La section suivante fournit des suggestions de dépannage pour des codes d&#39;erreur spécifiques et le comportement inattendu que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;API [!DNL Identity Service].
 
 ## [!DNL Identity Service] messages d&#39;erreur
 
-The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
+Voici une liste de messages d&#39;erreur que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;API [!DNL Identity Service].
 
 ### Paramètre de requête obligatoire manquant
 
@@ -209,7 +196,7 @@ Ce message d’erreur s’affiche lorsque vous tentez de récupérer des informa
 }
 ```
 
-Ce message d’erreur s’affiche lorsqu’une valeur non valide est attribuée à un paramètre de requête `graph-type` dans le chemin de requête. See the section on [identity graphs](./home.md) in the [!DNL Identity Service] overview to learn which graph-types are supported.
+Ce message d’erreur s’affiche lorsqu’une valeur non valide est attribuée à un paramètre de requête `graph-type` dans le chemin de requête. Consultez la section [graphes d&#39;identité](./home.md) dans l&#39;[!DNL Identity Service] aperçu pour savoir quels types de graphiques sont pris en charge.
 
 ### Le jeton de service ne possède pas d’étendue valide
 
@@ -233,7 +220,7 @@ Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](../tutorials/authentication.md).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Jeton de service d’autorisation non valide
 
@@ -245,7 +232,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Access token
 }
 ```
 
-Cette erreur indique que votre jeton d’accès n’est pas valide. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](../tutorials/authentication.md).
+Cette erreur indique que votre jeton d’accès n’est pas valide. Les jetons d&#39;accès expirent toutes les 24 heures et doivent être régénérés pour continuer à utiliser les API [!DNL Platform]. Pour obtenir des instructions sur la génération de jetons d’accès, consultez le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Le jeton utilisateur n’a pas de contexte de produit valide
 
@@ -257,7 +244,7 @@ Cette erreur indique que votre jeton d’accès n’est pas valide. Access token
 }
 ```
 
-This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
+Ce message d’erreur s’affiche lorsque votre jeton d&#39;accès n’a pas été généré à partir d’une intégration [!DNL Experience Platform]. Voir le [didacticiel d&#39;authentification](https://www.adobe.com/go/platform-api-authentication-en) pour obtenir des instructions sur la génération de nouveaux jetons d&#39;accès pour une intégration [!DNL Experience Platform].
 
 ### Erreur interne lors de l’obtention du XID natif à partir d’un code d’identité et d’espace de noms
 
@@ -269,9 +256,9 @@ This error message displays when your access token has not been generated from a
 }
 ```
 
-When [!DNL Identity Service] persists an identity, the identity&#39;s ID and associated namespace ID are assigned a unique identifier called an XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche de l’XID pour une valeur d’identifiant et un espace de noms donnés.
+Lorsque [!DNL Identity Service] persiste une identité, l&#39;ID de l&#39;identité et l&#39;ID d&#39;espace de nommage associé se voient attribuer un identifiant unique appelé XID. Ce message s’affiche lorsqu’une erreur se produit lors du processus de recherche de l’XID pour une valeur d’identifiant et un espace de noms donnés.
 
-### The IMS Org is not provisioned for [!DNL Identity Service] usage
+### L&#39;organisation IMS n&#39;est pas configurée pour une utilisation [!DNL Identity Service]
 
 ```json
 {
@@ -293,13 +280,13 @@ Ce message d’erreur s’affiche lorsque votre organisation IMS n’a pas reçu
 }
 ```
 
-This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
+Cette erreur s&#39;affiche lorsqu&#39;une exception inattendue se produit dans l&#39;exécution d&#39;un appel de service [!DNL Platform]. La bonne pratique consiste à programmer vos appels automatisés afin de relancer leurs requêtes à un intervalle de temps donné lors de la réception de cette erreur. Si le problème persiste, contactez votre administrateur système.
 
 ## Codes d’erreur d’ingestion par lots
 
 [!DNL Identity Service] ingère des données d’identité à partir des données d’enregistrement et de série temporelle téléchargées dans à l’aide de la fonction d’ingestion par lots. [!DNL Platform] L’ingestion par lots est un processus asynchrone, vous devez afficher les détails d’un lot pour voir les erreurs. Les erreurs s’accumulent au fur et à mesure que le lot avance, jusqu’à ce que le traitement du lot soit terminé.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Voici une liste de messages d&#39;erreur relatifs à [!DNL Identity Service] que vous pouvez rencontrer lors de l&#39;utilisation de l&#39;[API d&#39;importation de données](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
 ### Schéma XDM inconnu
 
@@ -311,7 +298,7 @@ The following is a list of error messages related to [!DNL Identity Service] you
 }
 ```
 
-[!DNL Identity Service] ne consomme que les identités des données d’enregistrement ou de série chronologique conformes aux [!DNL Profile] classes ou [!DNL ExperienceEvent] aux classes, respectivement. Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
+[!DNL Identity Service] ne consomme que les identités pour les données d’enregistrement ou de série chronologique conformes aux  [!DNL Profile] ou  [!DNL ExperienceEvent] classes, respectivement. Toute tentative d&#39;assimilation de données pour [!DNL Identity Service] qui n&#39;adhère à aucune classe déclenchera cette erreur.
 
 ### Aucune identité valide dans les 100 premières lignes du lot traité
 
