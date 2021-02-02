@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 translation-type: tm+mt
-source-git-commit: 983b357f2f17aad273f0465dc9250240a062dcd2
+source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 54%
+source-wordcount: '111'
+ht-degree: 44%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 54%
 # [!DNL Real-time Customer Profile] {#profile}
 
 * [[!DNL Profile] aperçu](home.md)
+* [Présentation du profil (vidéo)](video/profile-overview.md)
 * [[!DNL Profile] garde](guardrails.md)
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
@@ -22,21 +23,23 @@ ht-degree: 54%
    * [(Alpha) Attributs calculés](api/computed-attributes.md)
    * [Projections de périphérie](api/edge-projections.md)
    * [Entités ([!DNL Profile] accès)](api/entities.md)
-   * [Exportation de tâches ([!DNL Profile] exportation)](api/export-jobs.md)
+   * [Tâches d’exportation ([!DNL Profile] exportation)](api/export-jobs.md)
    * [Stratégies de fusion](api/merge-policies.md)
-   * [Etat de l’exemple de prévisualisation ([!DNL Profile] prévisualisation)](api/preview-sample-status.md)
+   * [État de l’exemple de prévisualisation ([!DNL Profile] prévisualisation)](api/preview-sample-status.md)
    * [[!DNL Profile] tâches système (supprimer des requêtes)](api/profile-system-jobs.md)
-* Guides de l’interface utilisateur {#ui}
+* Guides de l’interface utilisateur du profil {#ui}
    * [[!DNL Profile] Guide de l’interface](ui/user-guide.md)
    * [[!DNL Profile] Tableau de bord](ui/profile-dashboard.md)
    * [[!DNL Profile] personnalisation détaillée](ui/profile-customization.md)
    * [Guide de l’interface utilisateur des stratégies de fusion](ui/merge-policies.md)
+   * [Création de stratégies de fusion (vidéo)](video/create-merge-policies.md)
    * [Guide de l’interface utilisateur du schéma d’Union](ui/union-schema.md)
+   * [Présentation du schéma d’Union (vidéo)](video/union-schemas-overview.md)
 * Tutoriels {#tutorials}
    * [Ajouter les données à [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Configuration d’un jeu de données [!DNL Profile] & [!DNL Identity] pour le service](tutorials/dataset-configuration.md)
+   * [Configuration d’un jeu de données  [!DNL Profile] & [!DNL Identity] pour le service](tutorials/dataset-configuration.md)
    * [Plus de tutoriels](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [[!DNL Profile] guide de dépannage](troubleshooting.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [[!DNL Platform] notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Référence de l’API profil](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
