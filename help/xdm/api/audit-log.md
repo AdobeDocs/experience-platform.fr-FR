@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;audit;audit log;changelog;change log;rpc;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; audit ; journal d’audit ; changelog ; journal de modifications ; rpc ;
 solution: Experience Platform
 title: Guide de point de terminaison du journal d’audit
 description: Le point de terminaison /auditlog de l'API de registre de Schéma vous permet de récupérer une liste chronologique des modifications apportées à une ressource XDM existante.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '396'
 ht-degree: 2%
 
 ---
