@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes d’événement d’expérience ; requête d’événement d’expérience ; requête de Événement d’expérience ;
 solution: Experience Platform
 title: Requêtes du Événement d’expérience
 topic: queries
@@ -8,8 +8,8 @@ description: Le document suivant fournit des exemples de requêtes impliquant de
 translation-type: tm+mt
 source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 63%
+source-wordcount: '310'
+ht-degree: 60%
 
 ---
 
