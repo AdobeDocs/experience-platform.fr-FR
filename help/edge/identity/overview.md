@@ -3,43 +3,51 @@ title: Récupération de l'ID d'Experience Cloud
 seo-title: Adobe Experience Platform Web SDK Récupération de l’ID d’Experience Cloud
 description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
-keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
+keywords: Identité ; Identité propriétaire ; Service d'identité ; Identité tierce ; Migration d'identifiants ; Identifiant Visiteur ; Identité tierce ; Cookies tiersEnabled ; idMigrationEnabled ; getIdentity ; Identité de synchronisation ; Identité de synchronisation ; IdentitéSynchronisée ; EnvoiEvent ; IdentitéMap ; Principal ; Identité Espace de nommage ; Identifiant espace de nommage ; AuthentificationState ; HashEnabled ;
 translation-type: tm+mt
-source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
+source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 4%
+source-wordcount: '921'
+ht-degree: 3%
 
 ---
 
 
 # Identité - Récupération de l&#39;ID d&#39;Experience Cloud
 
-Le SDK Web de Adobe Experience Platform utilise le service [d’identité des](../../identity-service/ecid.md)Adobes. Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
+Adobe Experience Platform Web SDK exploite [Adobe Identity Service](../../identity-service/ecid.md). Ainsi, chaque périphérique dispose d’un identifiant unique qui est conservé sur le périphérique, de sorte que l’activité entre les pages puisse être liée ensemble.
 
 ## Identité de premier niveau
 
-L’ [!DNL Identity Service] utilisateur stocke l’identité dans un cookie dans un domaine propriétaire. Le cookie [!DNL Identity Service] tente de le définir à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, la [!DNL Identity Service] fonction revient à définir des cookies via Javascript. Adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
+[!DNL Identity Service] stocke l&#39;identité dans un cookie dans un domaine propriétaire. [!DNL Identity Service] tente de définir le cookie à l’aide d’un en-tête HTTP sur le domaine. Si cela échoue, le [!DNL Identity Service] revient à définir des cookies via Javascript. Adobe vous recommande de configurer un CNAME pour vous assurer que vos cookies ne seront pas plafonnés par les restrictions ITP côté client.
 
 ## Identité tierce
 
-Il [!DNL Identity Service] peut synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le `thirdPartyCookiesEnabled` paramètre de la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez la valeur `thirdPartyCookiesEnabled` sur false.
+[!DNL Identity Service] permet de synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le paramètre `thirdPartyCookiesEnabled` dans la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez `thirdPartyCookiesEnabled` sur false.
 
 ## Migration des identifiants
 
-Lors de la migration à partir de l’API du Visiteur, vous pouvez également migrer les cookies AMCV existants. Pour activer la migration ECID, définissez le `idMigrationEnabled` paramètre dans la configuration. La migration des identifiants permet les cas d’utilisation suivants :
+Lors de la migration à partir de l’API du Visiteur, vous pouvez également migrer les cookies AMCV existants. Pour activer la migration ECID, définissez le paramètre `idMigrationEnabled` dans la configuration. La migration des identifiants permet les cas d’utilisation suivants :
 
 * Lorsque certaines pages d’un domaine utilisent l’API du Visiteur et que d’autres pages utilisent ce SDK. Pour prendre en charge ce cas, le SDK lit les cookies AMCV existants et écrit un nouveau cookie avec l’ECID existant. En outre, le SDK écrit des cookies AMCV de sorte que si l’ECID est obtenu en premier sur une page instrumentée avec le SDK, les pages suivantes instrumentées avec l’API du Visiteur ont le même ECID.
 * Lorsque le SDK Web Adobe Experience Platform est configuré sur une page qui comporte également une API Visiteur. Pour prendre en charge ce cas, si le cookie AMCV n’est pas défini, le SDK recherche l’API du Visiteur sur la page et l’appelle pour obtenir l’ECID.
-* Lorsque le site entier utilise le SDK Web de Adobe Experience Platform et ne dispose pas d’API de Visiteur, il est utile de migrer les ECID afin que les informations du visiteur de retour soient conservées. Une fois le SDK déployé `idMigrationEnabled` pendant un certain temps afin que la plupart des cookies visiteurs soient migrés, le paramètre peut être désactivé.
+* Lorsque le site entier utilise le SDK Web de Adobe Experience Platform et ne dispose pas d’API de Visiteur, il est utile de migrer les ECID afin que les informations du visiteur de retour soient conservées. Une fois le SDK déployé avec `idMigrationEnabled` pendant un certain temps afin que la plupart des cookies de visiteur soient migrés, le paramètre peut être désactivé.
+
+## Mise à jour des caractéristiques pour la migration
+
+Lorsque des données au format XDM sont envoyées en Audience Manager, ces données doivent être converties en signaux lors de la migration. Vos caractéristiques devront être mises à jour pour refléter les nouvelles clés fournies par XDM. Ce processus est facilité en utilisant l&#39;outil [BAAAM](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) que l&#39;Audience Manager a créé.
+
+## Transfert côté serveur
+
+Si le transfert côté serveur est actuellement activé et que vous utilisez `appmeasurement.js`. et `visitor.js` vous pouvez conserver la fonction de transfert côté serveur activée, ce qui ne provoquera aucun problème. Dans le serveur principal, l’Adobe récupère les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle aucune Audience Manager pour transférer des données. Il n’y a donc aucune collecte de données de doublon. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de terminaison de segmentation sont appelés dans le serveur principal.
 
 ## Récupération de l’ID de Visiteur
 
-Si vous souhaitez utiliser cet identifiant unique, utilisez la `getIdentity` commande. `getIdentity` renvoie l&#39;ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n&#39;ont pas encore d&#39;ECID, cette commande génère un nouvel ECID.
+Si vous souhaitez utiliser cet identifiant unique, utilisez la commande `getIdentity`. `getIdentity` renvoie l&#39;ECID existant pour le visiteur actuel. Pour les nouveaux visiteurs qui n&#39;ont pas encore d&#39;ECID, cette commande génère un nouvel ECID.
 
 >[!NOTE]
 >
->This method is typically used with custom solutions that require reading the [!DNL Experience Cloud] ID. Elle n’est pas utilisée par une mise en œuvre standard.
+>Cette méthode est généralement utilisée avec les solutions personnalisées qui nécessitent la lecture de l&#39;ID [!DNL Experience Cloud]. Elle n’est pas utilisée par une mise en œuvre standard.
 
 ```javascript
 alloy("getIdentity")
@@ -57,15 +65,15 @@ alloy("getIdentity")
 
 >[!NOTE]
 >
->La `syncIdentity` méthode a été supprimée dans la version 2.1.0, en plus de la fonction de hachage. Si vous utilisez la version 2.1.0+ et souhaitez synchroniser les identités, vous pouvez les envoyer directement dans l&#39; `xdm` option de la `sendEvent` commande, sous le `identityMap` champ.
+>La méthode `syncIdentity` a été supprimée dans la version 2.1.0, en plus de la fonction de hachage. Si vous utilisez la version 2.1.0+ et souhaitez synchroniser les identités, vous pouvez les envoyer directement dans l&#39;option `xdm` de la commande `sendEvent`, sous le champ `identityMap`.
 
-En outre, la [!DNL Identity Service] permet de synchroniser vos propres identifiants avec l&#39;ECID à l&#39;aide de la `syncIdentity` commande.
+De plus, la commande [!DNL Identity Service] vous permet de synchroniser vos propres identifiants avec l&#39;ECID à l&#39;aide de la commande `syncIdentity`.
 
 >[!NOTE]
 >
->Il est vivement recommandé de transmettre toutes les identités disponibles à chaque `sendEvent` commande. Cette opération permet de déverrouiller une gamme de cas d’utilisation, y compris la personnalisation. Maintenant que vous pouvez transmettre ces identités dans la `sendEvent` commande, elles peuvent être placées directement dans votre couche de données.
+>Il est vivement recommandé de transmettre toutes les identités disponibles à chaque commande `sendEvent`. Cette opération permet de déverrouiller une gamme de cas d’utilisation, y compris la personnalisation. Maintenant que vous pouvez transmettre ces identités dans la commande `sendEvent`, elles peuvent être placées directement dans votre couche de données.
 
-La synchronisation des identités vous permet d&#39;identifier un périphérique/utilisateur à l&#39;aide de plusieurs identités, de définir leur état d&#39;authentification et de décider quel identifiant est considéré comme Principal. Si aucun identifiant n’a été défini comme `primary`, la valeur par défaut de l’identifiant Principal est `ECID`.
+La synchronisation des identités vous permet d&#39;identifier un périphérique/utilisateur à l&#39;aide de plusieurs identités, de définir leur état d&#39;authentification et de décider quel identifiant est considéré comme Principal. Si aucun identifiant n&#39;a été défini comme `primary`, la valeur par défaut Principale est `ECID`.
 
 ```javascript
 alloy("sendEvent", {
@@ -83,7 +91,7 @@ alloy("sendEvent", {
 });
 ```
 
-Chaque propriété `identityMap` représente des identités appartenant à un espace de nommage [](../../identity-service/namespaces.md)d&#39;identité particulier. Le nom de la propriété doit être le symbole de l&#39;espace de nommage d&#39;identité, que vous trouverez dans l&#39;interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;. La valeur de propriété doit être un tableau d&#39;identités appartenant à cet espace de nommage d&#39;identité.
+Chaque propriété dans `identityMap` représente des identités appartenant à un [espace de nommage d&#39;identité ](../../identity-service/namespaces.md) particulier. Le nom de la propriété doit être le symbole de l&#39;espace de nommage d&#39;identité, que vous trouverez dans l&#39;interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identities]&quot;. La valeur de propriété doit être un tableau d&#39;identités appartenant à cet espace de nommage d&#39;identité.
 
 Chaque objet d&#39;identité du tableau identités est structuré comme suit :
 
