@@ -5,10 +5,10 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 34%
+source-wordcount: '161'
+ht-degree: 29%
 
 ---
 
@@ -32,13 +32,20 @@ ht-degree: 34%
 * API Experience Platform {#platform-apis}
    * [Principes fondamentaux des API](api-fundamentals.md)
    * [DOCUMENTS de référence d’API](http://www.adobe.com/go/platform-api-reference-en)
-   * [Authentification aux API Experience Platform](http://www.adobe.com/go/platform-api-authentication-en)
+   * [Didacticiel sur les API de plateformes d’authentification et d’accès](api-authentication.md)
 * Documentation de la plateforme {#documentation}
    * [Présentation de la documentation](documentation/overview.md)
-* Plateforme dans l&#39;écosystème de l&#39;Adobe {#ecosystem}
+   * [Prise en charge de la langue de documentation](documentation/language-support.md)
+* Plateforme dans l&#39;écosystème d&#39;Adobe {#ecosystem}
    * [Services d’application](application-services.md)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
    * [Intégrations de plateformes avec l’Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
+* Gouvernance, confidentialité et sécurité {#governance-privacy-security}
+   * [Présentation](./governance-privacy-security/overview.md)
+   * Gestion du consentement {#consent}
+      * IAB TCF 2.0 {#iab}
+         * [Présentation](./governance-privacy-security/consent/iab/overview.md)
+         * [Configurer un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
 * [Tableau de bord d&#39;utilisation de la licence](license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)
 * [Migration ADLS Gen2](adls2-gen2-migration.md)
