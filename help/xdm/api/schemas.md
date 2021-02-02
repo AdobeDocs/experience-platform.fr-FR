@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre des schémas ; registre des Schémas ; schéma ; Schéma ; schémas ; Schémas ; créer
 solution: Experience Platform
 title: Création d’un schéma
 description: Le point de terminaison /schémas de l'API Schéma Registry vous permet de gérer par programmation les schémas XDM dans votre application d'expérience.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1386'
-ht-degree: 20%
+source-wordcount: '1418'
+ht-degree: 19%
 
 ---
 
