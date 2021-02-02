@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; compatibilité ; compatibilité ; mode de compatibilité ; mode de compatibilité ; type de champ ; types de champ ;
 solution: Experience Platform
 title: Annexe de développement du registre des schémas
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 51%
+source-wordcount: '767'
+ht-degree: 49%
 
 ---
 
