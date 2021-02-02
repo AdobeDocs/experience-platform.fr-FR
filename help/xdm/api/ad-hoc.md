@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;ad-hoc;ad hoc;adhoc;Ad-hoc;Ad hoc;Adhoc;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; ad hoc ; ad hoc ; ad hoc ; ad hoc ; ad hoc ; Adhoc ;
 solution: Experience Platform
 title: Schémas ad hoc
 description: Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma XDM avec des champs qui ne peuvent être utilisés que par un seul jeu de données. On parle alors de schéma ad hoc.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 21%
+source-wordcount: '146'
+ht-degree: 16%
 
 ---
 
