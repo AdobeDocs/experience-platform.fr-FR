@@ -1,579 +1,530 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Documentation du produit Adobe Experience Platform
+title: Glossaire Adobe Experience Platform
 topic: getting started
+description: Glossaire reprenant la terminologie principale d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 852075bad28a71f94ee914769076542a5347de1c
+source-git-commit: a7ddba7c060e809478427ef3950360ccd67e6c60
 workflow-type: tm+mt
-source-wordcount: '7091'
-ht-degree: 36%
+source-wordcount: '7137'
+ht-degree: 12%
 
 ---
 
 
-# Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
+# Glossaire Adobe Experience Platform {#adobe-experience-platform-glossary}
 
 ## A
 
-**Contrôle d&#39;accès :** {#access-control} Contrôle d&#39;accès pour [!DNL Experience Platform] lier les utilisateurs disposant d’autorisations d’accès et d’environnements de sandbox par le biais de profils de produits à Adobe Admin Console.
+**Contrôle d&#39;accès** : Le contrôle d&#39;accès basé sur les rôles permet aux administrateurs d’attribuer l’accès et les autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données.
 
-**ID de clé d&#39;accès :** Un identifiant de clé d&#39;accès est un identifiant unique associé à une clé d&#39;accès secret [!DNL Amazon] S3. L’identifiant de clé d’accès et la clé d’accès secrète sont utilisés conjointement pour signer les requêtes AWS.
+**ID** de clé d&#39;accès : Un identifiant de clé d&#39;accès est un identifiant unique associé à une clé d&#39;accès secret  [!DNL Amazon] S3. L’ID de clé d’accès et la clé d’accès secrète sont utilisés conjointement pour signer les demandes [!DNL Amazon Web Services] (AWS).
 
-**Action :** Dans [!DNL Adobe Experience Platform Launch]le cas présent, une action est un type spécifique de composant de règle qui définit ce qui doit se produire une fois qu’un événement s’est produit et que les conditions ont été évaluées et transmises.
+**Action** : Dans  [!DNL Platform Launch]le cas présent, une action est un type spécifique de composant de règle qui définit ce qui doit se produire une fois qu’un événement s’est produit et que les conditions ont été évaluées et transmises.
 
-**Activer :** Dans [!DNL Real-time Customer Data Platform], activer désigne l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que [!DNL Oracle Eloqua], [!DNL Google]ou [!DNL Salesforce Marketing Cloud]la destination.
+**Activer** : Activer est l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que  [!DNL Oracle Eloqua],  [!DNL Google] ou  [!DNL Salesforce Marketing Cloud].
 
-**Activité :** En [!DNL Offer Decisioning]effet, une activité est un ensemble d’offres dont le spécialiste du marketing souhaite que le moteur de décision sélectionne la meilleure offre.
+**Activité** : Dans  [!DNL Offer Decisioning], une activité contient la logique qui sous-tend la sélection d’une offre.
 
-**Administrateur :** Une ou plusieurs personnes de votre organisation qui peuvent configurer et personnaliser les autorisations pour l’Experience Platform.
+**Administrateur** : Une ou plusieurs personnes de votre organisation qui peuvent configurer et personnaliser les autorisations d’Experience Platform dans Adobe Admin Console.
 
-**Adobe Admin Console :** Adobe Admin Console fournit un emplacement central pour la gestion des droits des produits Adobes et de l’accès pour votre entreprise. Grâce à la console, les administrateurs peuvent accorder à des groupes d’utilisateurs des autorisations d’accès pour diverses fonctionnalités de la plate-forme, telles que &quot;Gérer les jeux de données&quot;, &quot;Jeu de données de Vue&quot; ou &quot;Gérer les Profils&quot;.
+**Adobe Admin Console** : Adobe Admin Console fournit un emplacement central pour la gestion des droits des produits Adobes et de l’accès pour votre entreprise. Grâce à la console, les administrateurs peuvent accorder à des groupes d’utilisateurs des autorisations d’accès pour diverses fonctionnalités de la plate-forme, telles que &quot;Gérer les jeux de données&quot;, &quot;Jeu de données de Vue&quot; ou &quot;Gérer les Profils&quot;.
 
-**Connecteurs d&#39;Adobe :** Les connecteurs d’Adobe sont des connexions préconfigurées créées par l’Adobe pour permettre aux données d’entrer et de sortir [!DNL Experience Platform]. Les connecteurs sont [!DNL Microsoft Dynamics], [!DNL Salesforce], [!DNL Amazon S3]et [!DNL Azure Blob].
+**Adobe Experience Platform** : Adobe Experience Platform standardise les données et le contenu dans toute l&#39;entreprise, en optimisant les profils en temps réel pour les consommateurs, en permettant la science des données et en accélérant la vitesse de diffusion du contenu afin d&#39;orienter la personnalisation de l&#39;expérience sur le parcours client.
 
-**Adobe Experience Platform :** Adobe Experience Platform normalise les données et le contenu dans l’ensemble de l’entreprise, alimentant les profils consommateurs en temps réel, permettant l’utilisation de la science des données et accélérant la vitesse de diffusion du contenu afin d’orienter la personnalisation de l’expérience tout au long du parcours client.
+**Adobe Experience Platform Launch** :  [!DNL Platform Launch] est un écosystème de gestion des balises et des SDK, intégré aux Experience Platform et aux  [!DNL Experience Cloud] applications. [!DNL Platform Launch] fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyse, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques client.
 
-**Adobe Experience Platform Launch :** [!DNL Platform Launch] est un écosystème de gestion des balises et des SDK, intégré aux [!DNL Experience Platform] applications et aux [!DNL Experience Cloud] applications. [!DNL Platform Launch] fournit des outils permettant de déployer, d’unifier et de gérer les intégrations d’analyse, de marketing et de publicité nécessaires pour alimenter les expériences client pertinentes sur tous les périphériques client.
+**Service** de Requête Adobe Experience Platform : Permet aux analystes de données d’accéder aux événements et profils de requête pour les utiliser dans les analyses et l’apprentissage automatique. Avec Requête Service, les analystes et les scientifiques de données peuvent extraire tous leurs jeux de données stockés dans l&#39;Experience Platform (y compris les données comportementales ainsi que les points de vente, la gestion de la relation client, etc.) et les requête pour répondre à des questions spécifiques sur les données.
 
-**Extensions Adobe Experience Platform Launch :** [!DNL Platform Launch] les extensions permettent la diffusion de données de événement brutes directement vers [!DNL Real-time Customer Data Platform] les destinations. L’installation [!DNL Platform Launch] des extensions nécessite l’accès aux [!DNL Platform Launch] propriétés.
+**Service** de segmentation Adobe Experience Platform : Permet de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le lac de données.
 
-**Service** de Requête Adobe Experience Platform Permet l&#39;utilisation de données SQL standard pour la requête dans l&#39;Experience Platform, l&#39;association de tous les jeux de données dans Data Lake et la capture des résultats de la requête en tant que nouveau jeu de données à utiliser dans rapports, Data Science Workspace ou le Profil client en temps réel.
+**Adobe Intelligent Services** : Les services intelligents tels que l&#39;Attribution AI et l&#39;intelligence artificielle sont des modèles d&#39;apprentissage automatique basés sur l&#39;intelligence artificielle qui sont conçus de manière ciblée et nécessitent l&#39;intervention et le fonctionnement d&#39;un Experience Platform.
 
-**Service** de segmentation Adobe Experience Platform Permet de créer des segments et de générer des audiences à partir de vos données de Profil client en temps réel. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le lac de données.
+**Adobe I/O** : Adobe I/O fait partie de l’Experience Platform et fournit un accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser les plateformes, y compris les API, les événements, la console de développement et des outils utiles.
 
-**Adobe Intelligent Services :** Adobe Sensei est le cadre d’intelligence artificielle qui alimente [!DNL Experience Platform]. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**Adobe Sensei** : Adobe Sensei est le cadre du renseignement qui donne le pouvoir aux Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
-**Adobe I/O :**[!DNL Experience Platform] Adobe I/O fait partie d’Experience Platform et donne accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser Adobe , y compris aux API, aux événements, à la console de développement et aux outils utiles.
+**compartiment** Amazon S3 :  [!DNL Amazon S3] les compartiments sont les conteneurs fondamentaux des données stockées dans l&#39; [!DNL Amazon] écosystème. Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
 
-**Adobe Sensei** : Adobe Sensei est le cadre d’intelligence artificielle qui alimente [!DNL Experience Platform]. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
+**Connecteur** Amazon S3 : Le connecteur  [!DNL Amazon] S3 permet aux clients de l&#39;Experience Platform de se connecter en toute sécurité et d&#39;accéder à leurs données  [!DNL Amazon] S3.
 
-**Compartiment  :**[!DNL Amazon S3] les compartiments S3 sont les conteneurs fondamentaux pour les données stockées dans l’écosystème Amazon. [!DNL Amazon] Les compartiments contiennent des objets, chaque objet est stocké et récupéré à l’aide d’une clé unique attribuée par le développeur.
+**Ajouter une stratégie** d&#39;enregistrement : La stratégie d’enregistrement &quot;annexer&quot; est une option utilisée lors de la spécification de données tierces à assimiler via une connexion et de l’ajout de nouvelles données ou lignes à la fin du jeu de données. Les lignes précédemment ingérées restent intactes et seules les lignes créées depuis la dernière exécution planifiée sont ingérées dans Experience Platform. Toutes les lignes modifiées dans le système source restent inchangées dans Experience Platform.
 
-**Connecteur Amazon S3 :** [!DNL Amazon] Le connecteur S3 permet aux clients de [!DNL Experience Platform] se connecter en toute sécurité et d&#39;accéder à leurs données [!DNL Amazon] S3.
+**Tableau** : Les tableaux sont utilisés pour les éléments triés avec le même type de données.
 
-**Action marketing Analytics :** Action marketing qui utilise les données à des fins d’analyse, telles que la mesure, l’analyse et le rapports de l’utilisation par les clients des sites ou applications de votre entreprise.
+**Intelligence** artificielle : L&#39;intelligence artificielle est une théorie et un développement de systèmes informatiques capables d&#39;exécuter des tâches qui nécessitent normalement l&#39;intelligence humaine, comme la perception visuelle, la reconnaissance vocale, la prise de décision et la traduction entre les langues.
 
-**Ajouter une stratégie d&#39;enregistrement :** La stratégie d’ `Append` enregistrement est une option utilisée lors de la spécification de données tierces à assimiler via une connexion et de l’ajout de toute nouvelle donnée ou ligne à la fin du jeu de données. Les lignes précédemment ingérées restent intactes et seules les lignes créées depuis la dernière exécution planifiée sont ingérées dans [!DNL Experience Platform]. Toutes les lignes modifiées dans le système source restent inchangées dans [!DNL Experience Platform].
+**Attributs** : Les attributs sont des caractéristiques spécifiées qui représentent un profil.
 
-**Gestion du cycle de vie des applications :** La gestion du cycle de vie des applications permet de créer des environnements virtuels distincts pour développer et développer des applications d&#39;expérience numérique.
+**Fusion** d&#39;attribut : Lors de la définition d’une stratégie de fusion à l’aide de l’API Profil client en temps réel, l’ `attributeMerge` objet indique la manière dont la stratégie de fusion attribuera la priorité aux attributs de profil en cas de conflit de données. Cela équivaut à sélectionner une [!UICONTROL méthode de fusion] lors de la définition d&#39;une stratégie de fusion dans l&#39;interface utilisateur de la plate-forme.
 
-**Tableau :** les tableaux sont utilisés pour les éléments triés avec le même type de données.
+**Attribution AI** :  [!DNL Attribution AI] est un service intelligent optimisé par Adobe Sensei qui offre des fonctionnalités d’attribution algorithmique multi-canal sur l’ensemble du cycle de vie du client.
 
-**Intelligence artificielle :** L&#39;intelligence artificielle est une théorie et un développement de systèmes informatiques capables d&#39;exécuter des tâches qui nécessitent normalement l&#39;intelligence humaine, comme la perception visuelle, la reconnaissance vocale, la prise de décision et la traduction entre les langues.
+**Audience** : une audience est l’ensemble des profils ainsi obtenus qui répondent aux critères d’une définition de segment.
 
-**Attributs :** les attributs sont les caractéristiques spécifiées qui représentent un profil.
-
-**Fusion d&#39;attributs :** La fusion d’attributs définit comment une stratégie de fusion donne la priorité à la valeur d’attribut de profil en cas de conflit de données.
-
-** :**[!DNL Attribution AI] Attribution AI est un service d’Adobe Sensei qui offre des fonctionnalités d’attribution algorithmique à plusieurs canaux, tout au long du cycle de vie des clients.
-
-**Audience**: Une taille d’audience ou d’audience est l’ensemble de profils résultant qui répondent aux critères d’une définition de segment.
+**Taille** de l&#39;Audience : Une taille d’audience est le nombre total de profils qui répondent aux critères d’une définition de segment et sont éligibles pour l’adhésion à l’audience.
 
 **Instantané** d&#39;Audience : Un instantané d’audience capture tous les profils qui remplissent les critères de segmentation au moment de la segmentation.
 
-[Haut de page](#adobe-experience-platform-glossary)
-
 ## B
 
-**Renvoi :** Dans [!DNL Real-time Customer Data Platform]les connexions source planifiées, le renvoi permet l’assimilation de données historiques.
+**Renvoi** : Pour les sources planifiées, l’option de renvoi permet l’assimilation de données historiques.
 
-**Période de renvoi :** Il `Backfill period` s’agit d’une option permettant de définir la durée d’importation des données historiques tierces via une connexion. La sélection d’une période de renvoi indéfinie entraîne l’ingestion de l’historique complet des données sources vers [!DNL Experience Platform].
+**Période** de renvoi : La période de renvoi est une option permettant de définir la durée d’importation des données historiques tierces via une connexion source. La sélection d’une période de renvoi &quot;indéfiniment&quot; aura pour effet d’assimiler à l’Experience Platform l’historique complet des données source.
 
-**Lot :** Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité.
+**Lot** : Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble en une seule unité. Les jeux de données sont composés de plusieurs lots.
 
-**ID du lot :** Un identifiant de lot est un identifiant généré par Adobe pour un lot de données.
+**ID** du lot : Un identifiant de lot est un identifiant généré par Adobe pour un lot de données.
 
-**Importation par lot :** L’assimilation de lots permet aux utilisateurs d’assimiler des pétaoctets de données et de les rendre disponibles dans les systèmes d’entreprise. Grâce aux dernières technologies, les utilisateurs peuvent désormais ingérer n’importe quel schéma, XDM ou non, dans [!DNL Experience Platform].
+**Importation** par lot : L’assimilation de lots vous permet d’assimiler des données dans l’Experience Platform sous forme de fichiers de lots. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
 
-**Segmentation par lots :** La segmentation par lots est une alternative à un processus continu de sélection des données et déplace toutes les données de profil à la fois par le biais de définitions de segment afin de produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
+**Segmentation** par lot : La segmentation par lots est une alternative à un processus continu de sélection des données et déplace toutes les données de profil à la fois par le biais de définitions de segment afin de produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
 
-**Créer :** Dans [!DNL Adobe Experience Platform Launch], une compilation est une bibliothèque déployée. La version est un fichier ou un ensemble de fichiers qui contient toutes les configurations et le code nécessaires pour exécuter la logique commerciale contenue dans cette bibliothèque.
+**Créer** : Dans  [!DNL Platform Launch], une compilation est un fichier ou un ensemble de fichiers qui contient toutes les configurations et le code nécessaires à l’exécution de la logique métier contenue dans une bibliothèque, ce qui vous permet de déployer cette bibliothèque sur votre site Web ou dans votre application mobile.
 
-**Outils de veille économique :** L&#39;intelligence d&#39;affaires, également appelée outils de &quot;BI&quot;, est principalement intégrée au [!DNL Experience Platform Query Service]système. Les outils de BI sont des types de programmes d’application qui collectent et traitent de grandes quantités de données non structurées à partir de systèmes internes et externes.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Outils** de veille économique : Les outils de veille économique sont principalement intégrés à  [!DNL Experience Platform Query Service]. Les outils de BI sont des types de programmes d’application qui collectent et traitent de grandes quantités de données non structurées à partir de systèmes internes et externes.
 
 ## C
 
-**Capping :** Dans [!DNL Offer Decisioning]la , le plafonnement est utilisé dans les règles de prise de décision pour définir le nombre de présentations d’une offre. Il existe deux types de majuscules : combien de fois une offre peut être proposée à travers l&#39;audience de cible combinée, également appelée &quot;cap global&quot;, et combien de fois une offre peut être proposée au même utilisateur final, également appelé &quot;cap de Profil&quot;.
+**Recouvrement** : Dans  [!DNL Offer Decisioning]le cas présent, le plafonnement (également appelé plafonnement de fréquence) est utilisé dans les règles de prise de décision pour définir le nombre de présentations d’une offre. Il existe deux types de majuscules : combien de fois une offre peut être proposée pour l’ensemble de l’audience de cible combinée (appelée &quot;cap global&quot;) et combien de fois une offre peut être proposée au même utilisateur final (appelée &quot;cap de Profil&quot;).
 
-**Catalogue :** Dans [!DNL Real-time Customer Data Platform], dans les sources et les destinations, un catalogue est une galerie avec des connexions disponibles aux applications d&#39;Adobe et aux technologies tierces.
+**Catalogue** : Dans le contexte des sources et des destinations, un catalogue est une galerie avec des connexions disponibles aux applications d&#39;Adobe et aux technologies tierces. À ne pas confondre avec [!DNL Catalog Service].
 
-**Classe :** une classe définit le plus petit jeu de champs utilisé pour créer un schéma et constitue le comportement de base qui décrit l’objet métier.
+**[!DNL Catalog Service]**:  [!DNL Catalog Service] (parfois appelé  [!DNL Catalog]) est le système d’enregistrement pour l’emplacement et la lignée des données à l’intérieur de Adobe Experience Platform. Bien que toutes les données ingérées dans l&#39;Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, [!DNL Catalog] contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche, de surveillance et de gouvernance des données.
 
-**Client :** Un client est un outil ou une application externe qui se connecte à [!DNL Query Service] via le protocole Postgres ou l&#39;API HTTP.
+**Classe** : Dans le modèle de données d’expérience (XDM), une classe définit le plus petit ensemble de champs utilisé pour créer un schéma et définit le comportement de base de l’objet métier représenté par le schéma.
 
-**Collection :** En [!DNL Offer Decisioning]effet, les collections sont des sous-ensembles d’offres basés sur des conditions prédéfinies définies par un spécialiste du marketing, telles que la catégorie de l’offre.
+**Client** : Un client est un outil ou une application externe qui se connecte à  [!DNL Query Service] via le protocole PostgreSQL ou l&#39;API HTTP.
 
-**Combinaison avec une action** marketing d’identification personnelle Action marketing qui combine toute information d’identification personnelle (identification personnelle) avec des données anonymes. Les contrats portant sur des données provenant de réseaux publicitaires, de serveurs d’annonces et de fournisseurs de données tiers comportent souvent des interdictions contractuelles spécifiques concernant l’utilisation de ces données à l’aide de données directement identifiables.
+**Collection** : En  [!DNL Offer Decisioning]effet, les collections sont des sous-ensembles d’offres basés sur des conditions prédéfinies définies par un spécialiste du marketing, telles que la catégorie de l’offre.
 
-**Interface de ligne de commande :** Une interface de ligne de commande est un outil de ligne de commande utilisé pour se connecter à [!DNL Query Service] des fins d’exécution de requête brute.
+**Combiner à l’action** marketing d’identification personnelle : Action marketing qui combine des informations d’identification personnelle (PII) avec des données anonymes. Les contrats portant sur des données provenant de réseaux publicitaires, de serveurs d’annonces et de fournisseurs de données tiers comportent souvent des interdictions contractuelles spécifiques concernant l’utilisation de ces données à l’aide de données directement identifiables.
+
+**Interface** de ligne de commande : Une interface de ligne de commande est un outil basé sur le texte qui peut être utilisé pour se connecter  [!DNL Query Service] pour exécuter des requêtes brutes.
 
 **Composition** : une composition est un groupe de composants qui se forment ensemble pour constituer le schéma.
 
-**Connexion :** Une connexion est un pipeline virtuel qui permet aux données d&#39;entrer et de sortir [!DNL Experience Platform]. Les connexions sont désormais remplacées par des sources.
+**Condition** : Dans  [!DNL Platform Launch]le cas présent, une condition est un composant de règle qui évalue une instruction logique devant renvoyer  `true` ou  `false`être renvoyée. Toutes les conditions doivent être évaluées sur `true` et toutes les conditions d’exception doivent être évaluées sur `false` avant l’exécution des actions de la règle.
 
-**Connecteur :** Les connecteurs Adobe Experience Platform Source permettent aux utilisateurs d’assimiler facilement des données provenant de plusieurs sources, ce qui leur permet de structurer, d’étiqueter et d’améliorer les données à l’aide de [!DNL Experience Platform Services]. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+**Console** : Dans  [!DNL Query Service], la console fournit des informations sur l’état et le fonctionnement d’une requête. La console affiche l&#39;état de la connexion à [!DNL Query Service], les opérations de requête en cours d&#39;exécution et les messages d&#39;erreur qui en résultent.
 
-**Condition :** Dans [!DNL Adobe Experience Platform Launch]un cas, une condition est un composant de règle qui évalue une instruction logique qui doit renvoyer `true` ou `false`. Toutes les conditions doivent être évaluées sur `true` et toutes les conditions d’exception doivent être évaluées sur `false` avant l’exécution des actions de la règle.
+**Étiquettes** de contrat (&quot;C&quot;) : Les étiquettes d’utilisation des données de contrat (&quot;C&quot;) sont utilisées pour classer les données qui ont des obligations contractuelles ou qui sont liées aux stratégies de gouvernance des données d’un client.
 
-**Console :** Dans [!DNL Query Service], la console fournit des informations sur l’état et le fonctionnement d’une Requête. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
+**Libellé** du contrat C1 : Une étiquette d’utilisation des données de  `C1` contrat spécifie que les données peuvent uniquement être exportées à partir de Adobe Experience Cloud sous une forme agrégée sans inclure d’identifiants de périphérique ou de particulier. Par exemple, les données provenant des réseaux sociaux.
 
-**Étiquettes &quot;C&quot; des données de contrat :** Les étiquettes de contrat `C` permettent de classer les données qui ont des obligations contractuelles ou qui sont liées aux stratégies de gouvernance des données d’un client.
+**Libellé** du contrat C2 : Une étiquette d’utilisation des données de  `C2` contrat spécifie les données qui ne peuvent pas être exportées vers un tiers. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine. Par exemple, les contrats des réseaux sociaux limitent souvent le transfert des données que vous recevez d’eux. L’étiquette C2 est plus restrictive que la C1, qui ne nécessite que l’agrégation et des données anonymes.
 
-**Libellé du contrat C1 :** Une étiquette d’utilisation des données `C1` de contrat spécifie que les données peuvent uniquement être exportées à partir de Adobe Experience Cloud sous une forme agrégée sans inclure d’identifiants de périphérique ou de particulier. Par exemple, les données provenant des réseaux sociaux.
+**Libellé** du contrat C3 : Une étiquette d&#39;utilisation des données de  `C3` contrat spécifie les données qui ne peuvent pas être combinées ou utilisées autrement avec des informations directement identifiables. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent la combinaison ou l’utilisation de ces données avec des informations directement identifiables. Par exemple, les contrats pour les données provenant des réseaux publicitaires, des serveurs de publicités et des fournisseurs de données tiers incluent souvent des interdictions contractuelles spécifiques sur l’utilisation des données directement identifiables.
 
-**Libellé du contrat C2 :** Une étiquette d’utilisation des données de `C2` contrat spécifie les données qui ne peuvent pas être exportées vers un tiers. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent l’exportation de données à partir de l’endroit où elles ont été collectées à l’origine.  Par exemple, les contrats des réseaux sociaux limitent souvent le transfert des données que vous recevez d’eux. L’étiquette C2 est plus restrictive que la C1, qui ne nécessite que l’agrégation et des données anonymes.
+**Libellé** du contrat C4 : Une étiquette d’utilisation des données de  `C4` contrat spécifie que les données ne peuvent pas être utilisées pour cibler des publicités ou du contenu, sur site ou sur plusieurs sites. L’étiquette C4 est l’étiquette la plus restrictive puisqu’elle englobe les étiquettes C5, C6 et C7.
 
-**Libellé du contrat C3 :** Une étiquette d&#39;utilisation des données `C3` de contrat spécifie les données qui ne peuvent pas être combinées ou utilisées autrement avec des informations directement identifiables. Certains fournisseurs de données ont des clauses dans leurs contrats qui interdisent la combinaison ou l’utilisation de ces données avec des informations directement identifiables.  Par exemple, les contrats pour les données provenant des réseaux publicitaires, des serveurs de publicités et des fournisseurs de données tiers incluent souvent des interdictions contractuelles spécifiques sur l’utilisation des données directement identifiables.
+**Libellé** du contrat C5 : Une étiquette d’utilisation des données de  `C5` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage intersite du contenu ou des publicités intéressant les sites. Le ciblage basé sur l’intérêt, ou la personnalisation, se produit si les trois conditions suivantes sont remplies : Les données collectées sur le site servent à faire des déductions sur l&#39;intérêt d&#39;un utilisateur ; est utilisé dans un autre contexte, tel que sur un autre site ou une autre application ; et est utilisé pour sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
 
-**Libellé du contrat C4 :** Une étiquette d’utilisation des données de `C4` contrat spécifie que les données ne peuvent pas être utilisées pour cibler des publicités ou du contenu, sur site ou sur plusieurs sites. L’étiquette C4 est l’étiquette la plus restrictive puisqu’elle englobe les étiquettes C5, C6 et C7.
+**Libellé** du contrat C6 : Une étiquette d’utilisation des données de  `C6` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage publicitaire sur site. Le ciblage des publicités sur site comprend la sélection et la diffusion des publicités sur les sites Web ou les applications de votre organisation ou pour mesurer la diffusion et l&#39;efficacité de ces publicités. Cela inclut l’utilisation des données collectées sur site sur l’intérêt des utilisateurs pour sélectionner des publicités, traiter les données sur les publicités affichées, le moment et l’endroit où elles ont été affichées et déterminer si les utilisateurs ont pris des mesures en rapport avec la publicité, comme la sélection d’une publicité ou l’achat.
 
-**Libellé du contrat C5 :** Une étiquette d’utilisation des données de `C5` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage intersite basé sur les intérêts du contenu ou des publicités. Le ciblage en fonction des centres d’intérêt, ou personnalisation, se produit si les trois conditions suivantes sont remplies : les données collectées sur un site sont utilisées pour établir des inférences sur les centres d’intérêt d’un utilisateur, elles sont utilisées dans un autre contexte, comme sur un autre site ou une autre application, et elles sont utilisées pour sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
+**Étiquette** de contrat C7 : Une étiquette d’utilisation des données de  `C7` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage du contenu sur site. Le ciblage du contenu sur site comprend la sélection et la diffusion de contenu sur les sites Web ou les applications de votre entreprise ou pour mesurer la diffusion et l’efficacité de ce contenu. Cela inclut les informations collectées précédemment sur l’intérêt des utilisateurs pour la sélection du contenu, le traitement des données sur le contenu affiché, la fréquence ou la durée d’affichage, le moment et l’emplacement d’affichage, ainsi que sur l’action des utilisateurs concernant le contenu, notamment la sélection du contenu.
 
-**Libellé du contrat C6 :** Une étiquette d’utilisation des données de `C6` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage publicitaire sur site. Les données ne peuvent ni être utilisées pour le ciblage des publicités sur site, y compris la sélection et la diffusion de publicités sur les sites web ou les applications de votre organisation, ni pour évaluer la diffusion et l’efficacité de ces publicités.  Cela inclut l’utilisation de données collectées précédemment sur le site sur les centres d’intérêt des utilisateurs pour sélectionner des publicités, pour traiter les données sur les publicités affichées, le moment et l’endroit où elles ont été affichées, et pour savoir si les utilisateurs ont pris des mesures en rapport avec la publicité, comme cliquer sur une publicité ou faire un achat.
+**Étiquette** de contrat C8 : Une étiquette d’utilisation des données de  `C8` contrat indique que les données ne peuvent pas être utilisées pour mesurer les sites Web ou les applications de votre entreprise. Cela ne comprend pas le ciblage basé sur l’intérêt, qui est la collecte d’informations sur votre utilisation de ce service pour personnaliser par la suite le contenu et/ou la publicité dans d’autres contextes.
 
-**Libellé du contrat C7 :** Une étiquette d’utilisation des données de `C7` contrat spécifie que les données ne peuvent pas être utilisées pour le ciblage du contenu sur site.  Les données ne peuvent ni être utilisées pour le ciblage de contenu sur site, y compris la sélection et la diffusion de contenu sur les sites web ou les applications de votre organisation, ni pour évaluer la diffusion et l’efficacité de ce contenu.  Cela inclut les informations précédemment collectées sur l’intérêt des utilisateurs à sélectionner le contenu, traiter les données sur le contenu affiché, la fréquence ou la durée d’affichage, le moment et l’emplacement d’affichage, et si les utilisateurs ont pris des mesures relatives au contenu, notamment en cliquant sur le celui-ci.
+**Libellé** du contrat C9 : Une étiquette d&#39;utilisation des données  `C9` de contrat spécifie que les données ne peuvent pas être utilisées dans les workflows de données scientifiques. Certains contrats prévoient des interdictions explicites sur les données utilisées pour la science des données. Parfois, cela fait partie de conditions qui interdisent l’utilisation de données pour l’intelligence artificielle (IA), l’apprentissage automatique ou la modélisation.
 
-**Étiquette de contrat C8 :** Une étiquette d’utilisation des données de `C8` contrat indique que les données ne peuvent pas être utilisées pour mesurer les sites Web ou les applications de votre entreprise. Les données ne peuvent pas être utilisées pour mesurer, comprendre et générer des rapports sur l’utilisation des sites ou applications de votre organisation par les utilisateurs. Cela ne comprend pas le ciblage basé sur l’intérêt, qui est la collecte d’informations sur votre utilisation de ce service pour personnaliser par la suite le contenu et/ou la publicité dans d’autres contextes.
+**Libellé** du contrat C10 : Une étiquette d&#39;utilisation des données de  `C10` contrat spécifie que les données ne peuvent pas être utilisées pour l&#39;activation d&#39;identité assemblée. Certaines stratégies d’utilisation des données limitent l’utilisation de données d’identité assemblées pour la personnalisation. L&#39;étiquette `C10` est automatiquement appliquée aux segments si leurs stratégies de fusion utilisent l&#39;option &quot;graphique privé&quot;.
 
-**Libellé du contrat C9 :** Une étiquette `C9` d&#39;utilisation des données de contrat spécifie que les données ne peuvent pas être utilisées dans les workflows Data Science. Certains contrats prévoient des interdictions explicites sur les données utilisées pour la science des données.  Parfois, cela fait partie de conditions qui interdisent l’utilisation de données pour l’intelligence artificielle (IA), l’apprentissage automatique ou la modélisation.
+**Colonne** Date de création : La sélection d’une colonne Date de création est une option lors de la spécification de données tierces via une connexion source. Lorsque la stratégie d’enregistrement d’ajout est sélectionnée et que le schéma de jeu de données contient plusieurs champs de date, vous devez choisir l’un des schémas disponibles pour spécifier une colonne de clé Date de création. L’option Date de création n’est pas disponible lorsque la stratégie d’enregistrement de remplacement est sélectionnée.
 
-**Libellé du contrat C10 :** Une étiquette d&#39;utilisation des données de `C10` contrat spécifie que les données ne peuvent pas être utilisées pour l&#39;activation d&#39;identité assemblé. Certaines stratégies d’utilisation des données limitent l’utilisation de données d’identité assemblées pour la personnalisation. Le libellé C10 est automatiquement appliqué aux segments si leurs stratégies de fusion utilisent l’option &quot;graphique privé&quot;.
+**Créer un tableau comme sélection** : Create Table as Select (CTAS) est une commande SQL qui, lorsqu&#39;elle est exécutée dans le cadre d&#39;une requête SQL complète et valide, demande  [!DNL Query Service] de conserver les résultats de la requête dans un jeu de données. Vous pouvez créer un jeu de résultats, remplacer les résultats précédents ou ajouter des résultats précédents.
 
-**Colonne Date de création :** La sélection d’une `Created Date` colonne est une option lors de la spécification de données tierces via une connexion. Lorsque la stratégie d’enregistrement d’ajout est sélectionnée et que le jeu de données contient plusieurs schémas de date, l’utilisateur doit choisir dans le schéma date/heure disponible pour spécifier une colonne `Created Date` clé. L’option `Created Date` n’est pas disponible lorsque la stratégie d’enregistrement de remplacement est sélectionnée.
+**Données** intersites : Les données intersites sont la combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site.
 
-**Create Table as Select :**[!DNL Query Service] Create Table as Select est une commande SQL qui, lorsqu’elle est exécutée dans le cadre d’une requête SQL complète et valide, demande à de conserver les résultats de la requête dans un jeu de données du lac de données. Les options incluent : Créer, Remplacer précédents et Ajouter au précédent.
+**Action** marketing de ciblage sur plusieurs sites : Action marketing qui utilise les données pour le ciblage publicitaire sur plusieurs sites. La combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site, est appelée données intersites. Les données intersites sont généralement collectées et traitées pour faire des inférences sur les intérêts des clients.
 
-**Données intersites :** Les données intersites sont la combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site.
+**Espace de nommage** d&#39;identité personnalisée : Des espaces de nommage d&#39;identité personnalisés peuvent être créés par votre organisation pour représenter les identités d&#39;une organisation ou d&#39;une entreprise spécifique.
 
-**Action** marketing de ciblage intersite Utilise les données pour le ciblage publicitaire intersite. La combinaison de données provenant de plusieurs sites, y compris une combinaison de données sur site et de données hors site ou une combinaison de données provenant de plusieurs sources hors site, est appelée données intersites. Les données intersites sont généralement collectées et traitées afin d’en déduire les intérêts des utilisateurs.
+**Libellés** personnalisés : Les étiquettes d’utilisation de données personnalisées vous permettent de créer et d’appliquer des étiquettes spécifiques aux champs de données qui répondent à des besoins spécifiques de l’entreprise.
 
-**Espace de nommage d&#39;identité personnalisée :** Les espaces de nommage d&#39;identité personnalisés sont des identifiants créés par le client qui représentent les identités d&#39;une organisation ou d&#39;une entreprise spécifique.
-
-**Libellés personnalisés :** Les étiquettes de gouvernance des données personnalisées permettent aux utilisateurs de créer et d’appliquer des étiquettes spécifiques aux champs de données qui répondent à des besoins spécifiques de l’entreprise.
-
-**Customer AI :** Customer AI est un service Adobe Sensei qui enrichit les profils client par des propensions basées sur l’IA et renforce les efforts de segmentation et de ciblage des clients.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**AI** du client : L’IA client est un service intelligent optimisé par Adobe Sensei qui enrichit les profils clients avec des propensions basées sur l’IA et permet la segmentation et le ciblage des clients.
 
 ## D
 
-**Dictionnaire de données :** Dans [!DNL Adobe Experience Platform Launch]un dictionnaire de données, il s’agit d’un ensemble d’éléments de données définis dans une propriété.
+**Dictionnaire** de données : Dans  [!DNL Platform Launch]le cas d’un dictionnaire de données (également appelé mappage de données), il s’agit d’un ensemble d’éléments de données définis dans une propriété.
 
-**Élément de données :** Dans [!DNL Adobe Experience Platform Launch]le cas présent, un élément de données est un pointeur utilisé dans les règles et extensions pour pointer vers un élément de données spécifique existant sur le périphérique client.
+**Élément** de données : Dans  [!DNL Platform Launch]le cas présent, un élément de données est un pointeur utilisé dans les règles et extensions pour pointer vers un élément de données spécifique existant sur le périphérique client.
 
-**Calque de données :** Dans [!DNL Adobe Experience Platform Launch]le cas présent, une couche de données est une structure de données qui existe sur le périphérique client et qui contient des métadonnées sur le contexte dans lequel une page ou un écran est affiché.
+**Extraction** de données : L&#39;assimilation de données est le processus d&#39;ajout de données d&#39;une source à un Experience Platform. Les données peuvent être ingérées dans la plate-forme de différentes manières, y compris la diffusion en continu, les lots ou ajoutées via des connecteurs source.
 
-**Mappage de données :** Le mappage des données est le processus de mappage des champs de données source aux champs de cible liés à la destination.
+**Calque** de données : Dans  [!DNL Platform Launch]le cas présent, une couche de données est une structure de données qui existe sur le périphérique client et qui contient des métadonnées sur le contexte dans lequel une page ou un écran est affiché.
 
-**Gouvernance des données :** La gouvernance des données englobe les stratégies et les technologies utilisées pour s&#39;assurer que les données sont conformes aux règlements et aux politiques de l&#39;organisation en matière d&#39;utilisation des données.
+**Gouvernance** des données : La gouvernance des données englobe les stratégies et les technologies utilisées pour s&#39;assurer que les données sont conformes aux règlements et aux politiques organisationnelles en matière d&#39;utilisation des données.
 
-**Partenaires d’intégration des données :** Les partenaires d&#39;intégration de données simplifient et automatisent le chargement et la transformation de volumes massifs de données de plus de 200 sources vers [!DNL Experience Platform] sans écrire de code.
+**Partenaires** d&#39;intégration des données : Les partenaires d&#39;intégration de données simplifient et automatisent le chargement et la transformation de volumes massifs de données de plus de 200 sources vers l&#39;Experience Platform sans écrire de code.
 
-**Libellés des jeux de données :** Les étiquettes d’utilisation des données peuvent être ajoutées aux jeux de données. Tous les champs de ce jeu de données héritent des libellés du jeu de données.
+**Libellés** des jeux de données : Les étiquettes d’utilisation des données peuvent être ajoutées aux jeux de données. Tous les champs de ce jeu de données héritent des libellés du jeu de données.
 
-** :**[!DNL Data Science Workspace] Data Science Workspace dans permet aux clients de créer des modèles d’apprentissage automatique à l’aide de données dans et les applications Adobe, afin de générer des insights et des prédictions intelligents pour créer des expériences numériques attrayantes pour l’utilisateur final.[!DNL Experience Platform][!DNL Experience Platform]
+**Espace de travail** des sciences de données :  [!DNL Data Science Workspace] dans Experience Platform permet aux clients de créer des modèles d’apprentissage automatique à l’aide de données dans les applications de plateforme et d’Adobe afin de créer des segments intelligents, de générer des aperçus et de fournir des prédictions, ce qui vous permet d’améliorer considérablement les expériences numériques des utilisateurs finaux.
 
-**Source de données :** Une source de données est une origine de données désignée par l’utilisateur. Une source de données peut être une application mobile, des événements d’expérience ou de profil, des événements de profil de sites web ou un système de gestion de la relation client.
+**Source** de données : Une source de données est une origine de données désignée par l’utilisateur. Par exemple, une source de données est une application mobile, un événement de profil et/ou d’expérience, un événement de profil de site Web ou un service de gestion de la relation client.
 
-**Responsable de données :** Le responsable de la gestion, de la surveillance et de l&#39;application des ressources de données d&#39;une organisation est le responsable de l&#39;intendance des données. Un gestionnaire de données assure également la protection et la conservation des politiques de gouvernance des données afin qu’elles soient conformes aux réglementations gouvernementales et aux politiques de l’organisation.
+**Responsable** de données : Le responsable de la gestion, de la surveillance et de l&#39;application des ressources de données d&#39;une organisation est le responsable de l&#39;intendance des données. Un gestionnaire de données veille également à ce que les politiques de gouvernance des données soient préservées et maintenues pour être conformes aux règlements et aux politiques organisationnelles du gouvernement.
 
-**Flux de données :** Un flux de données est un ensemble ou un ensemble de messages qui partagent le même schéma et sont envoyés par la même source.
+**Flux** de données : Un flux de données est un ensemble ou un ensemble de messages qui partagent le même schéma et sont envoyés par la même source.
 
-**Type de données :** Le type de données est un objet réutilisable avec des propriétés dans une représentation hiérarchique.
+**Type** de données : Un type de données est une ressource XDM réutilisable qui définit un champ de type objet contenant plusieurs propriétés dans une représentation hiérarchique.
 
-**Étiquettes d’utilisation des données :** Les étiquettes d’utilisation des données permettent aux utilisateurs de classer les données en catégories qui reflètent les considérations liées à la vie privée et les conditions contractuelles afin de se conformer aux réglementations et aux politiques de l’entreprise. Les étiquettes d’utilisation des données ajoutées à un jeu de données sont héritées ou appliquées à tous les champs de ce jeu de données. Les étiquettes d’utilisation des données peuvent également être appliquées directement aux champs.
+**Étiquettes** d&#39;utilisation des données : Les étiquettes d’utilisation des données vous permettent de classer les données qui reflètent les considérations liées à la vie privée et les conditions contractuelles afin de les rendre conformes aux réglementations et aux stratégies de l’entreprise. Les étiquettes d’utilisation des données ajoutées à un jeu de données sont héritées ou appliquées à tous les champs de ce jeu de données. Les étiquettes d’utilisation des données peuvent également être appliquées directement aux champs.
 
-**Flux de données :** Dans [!DNL Real-time Customer Data Platform]le cas d’un flux de données, il s’agit d’un pipeline virtuel de données entrant [!DNL Platform] d’une source et sortant vers des destinations.
+**Flux** de données : Un flux de données est un pipeline virtuel de données qui s’écoule vers la plate-forme à partir d’une source et vers des destinations.
 
-**Flux de données :** Une exécution de flux de données est un flux de données qui arrive dans l’Experience Platform en fonction d’un calendrier défini par l’utilisateur.
+**Flux de données exécuté** : Une exécution de flux de données est un flux de données qui arrive dans l’Experience Platform en fonction d’un calendrier défini par l’utilisateur.
 
-**Jeu de données :** un jeu de données est une structure de stockage et de gestion utilisée pour la collecte de données (généralement sous la forme d’un tableau) qui contient un schéma (des colonnes) et des champs (des lignes).
+**Jeu de données** : Un jeu de données est un concept d&#39;enregistrement et de gestion pour une collection de données, généralement un tableau, qui contient un schéma (colonnes) et des champs (lignes).
 
-**Identifiant de jeu de données :** identifiant généré par Adobe pour un jeu de données ingéré.
+**ID** du jeu de données : Identificateur généré par l’Adobe pour un jeu de données assimilé.
 
-**Sortie du jeu de données :** La sortie d&#39;un jeu de données fournit un mécanisme permettant de déterminer l&#39;option Créer une table comme sélection qui sera utilisée pour une [!DNL Query Service] exécution particulière.
+**Sortie** du jeu de données : La sortie des jeux de données fournit un mécanisme permettant de déterminer l&#39;option &quot;Créer une table comme sélection&quot; qui sera utilisée pour une  [!DNL Query Service] exécution particulière.
 
-**Colonne Delta :** Dans [!DNL Real-time Customer Data Platform]la colonne delta, vous pouvez sélectionner un champ de données source pour un horodatage d’assimilation incrémentielle.
+**Colonne** Delta : Une colonne delta vous permet de sélectionner un champ de données source pour représenter un horodatage pour l’assimilation incrémentielle.
 
-**Stratégie d&#39;enregistrement Delta :** Il `Delta save strategy` s’agit d’une option permettant d’ingérer des données tierces via une connexion. Cette option permet à l’utilisateur de spécifier que les lignes de données sources nouvelles ou modifiées sont assimilées à [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
+**Stratégie** d&#39;enregistrement Delta : La stratégie d’enregistrement delta est une option permettant d’ingérer des données tierces via une connexion source. Cette option permet à l’utilisateur de spécifier que les lignes de données sources nouvelles ou modifiées sont assimilées à Experience Platform. De nouvelles lignes sont ajoutées à la fin du jeu de données et les lignes modifiées sont mises à jour dans le jeu de données d’Experience Platform.
 
-**Destination :** Dans [!DNL Real-time Customer Data Platform] une destination est un terme général désignant tout point de terminaison, tel qu’une application d’Adobe, une plateforme publicitaire, un service d’enregistrement cloud ou un service marketing, où une audience est activée et diffusée.
+**Descripteur** : Dans le modèle de données d’expérience (XDM), un descripteur est un ensemble supplémentaire de métadonnées liées au schéma qui décrit un comportement spécifique pour un champ. Les descripteurs peuvent être utilisés par les Experience Platform pour comprendre le comportement prévu du schéma, tel que la relation entre deux schémas.
 
-**Catégorie de destination :** Une catégorie de destination est un groupe de destinations présentant des caractéristiques similaires. [!DNL Real-time Customer Data Platform]
+**Destination** : Une destination est un terme général désignant tout point de terminaison, tel qu’une application d’Adobe, une plateforme publicitaire, un service d’enregistrement cloud ou un service marketing, où une audience est activée et diffusée.
 
-**Catalogue de destination :** Un catalogue de destination est une liste de destinations disponibles dans le [!DNL Real-time Customer Data Platform].
+**Catégorie** de destination : Une catégorie de destination est un regroupement de destinations ayant des caractéristiques similaires.
 
-**Règles d&#39;appel direct :** Dans [!DNL Adobe Experience Platform Launch], vous pouvez configurer une règle d’appel direct qui s’exécute lorsqu’elle est appelée directement à partir de la page. Si le chargement de votre page ou votre action sur votre site est très simple, ou s’il est unique et peut exécuter un ensemble spécifique d’instructions à chaque fois (défini [!DNL eVar4] sur X et déclenché [!DNL event2] à chaque fois), vous pouvez alors utiliser une règle d’appel direct. Voir [!DNL Launch] la documentation relative à la création de règles d’appel direct.
+**Catalogue** de destination : Un catalogue de destination est une liste de destinations disponibles dans l’Experience Platform.
 
-**Nom d’affichage :** Le nom d’affichage est un nom convivial d’un champ affiché dans l’interface utilisateur.
+**Règles** d&#39;appel direct : En  [!DNL Platform Launch]effet, une règle d’appel direct est une règle qui s’exécute lorsqu’elle est appelée directement à partir de la page, en contournant les systèmes de détection et de recherche de événement.
 
-[Haut de page](#adobe-experience-platform-glossary)
+**Nom** d&#39;affichage : Dans le modèle de données d’expérience (XDM), un nom d’affichage est un nom convivial pour un champ affiché dans l’interface utilisateur.
 
 ## E
 
-**Offre éligible :** Une offre éligible satisfait aux contraintes définies en amont qui peuvent être offertes de manière cohérente à un profil.
+**Offre** éligible : Une offre éligible peut être proposée de façon cohérente à un profil, car elle répond aux contraintes définies en amont.
 
-**Règles d&#39;éligibilité :** Dans [!DNL Offer Decisioning], les règles d&#39;éligibilité sont appliquées à un profil lié aux contraintes de calendrier, de planification et de plafonnement.
+**Règles d&#39;éligibilité** : Dans  [!DNL Offer Decisioning], les règles d&#39;éligibilité sont appliquées à un profil lié aux contraintes de calendrier, de planification et de plafonnement.
 
-**Action** marketing de ciblage de courriel Action marketing qui utilise les données dans les campagnes de ciblage de courriel.
+**Action** marketing de ciblage des e-mails : Action marketing qui utilise les données dans les campagnes de ciblage par courriel.
 
-**Incorporer le code :** Dans [!DNL Adobe Experience Platform Launch]le cas présent, le code incorporé est une balise de script placée dans le code HTML sur un site ou un environnement. Le code incorporé indique au navigateur où récupérer la version.
+**Incorporer le code** : Dans  [!DNL Platform Launch]le cas présent, le code incorporé est une balise de script placée dans le code HTML sur un site ou un environnement. Le code incorporé indique au navigateur où récupérer la version.
 
-**Énumération :** Une énumération (enum) est une liste de valeurs qui représente les données valides d’un champ.
+**Énumération** : Une énumération (enum) est un champ XDM limité à un ensemble de valeurs prédéfinies.
 
-**Environnement :** Dans [!DNL Adobe Experience Platform Launch], un environnement est un ensemble d&#39;instructions de déploiement qui spécifie la diffusion hôte et le format de fichier d&#39;une build. Une bibliothèque doit être associée à un environnement avant qu’il puisse être créé.
+**Environnement** : Dans  [!DNL Platform Launch], un environnement est un ensemble d&#39;instructions de déploiement qui spécifie la diffusion hôte et le format de fichier d&#39;une build. Une bibliothèque doit être associée à un environnement avant qu’il puisse être créé.
 
-**Diagnostic des erreurs :** Les diagnostics d’erreur permettent de générer des messages d’erreur détaillés pour les lots assimilés. Le seuil d’erreur permet de configurer le pourcentage d’erreurs acceptables avant l’échec du lot entier.
+**Diagnostics** d&#39;erreur : Les diagnostics d’erreur permettent de générer des messages d’erreur détaillés pour les lots assimilés. Le seuil d&#39;erreur permet de configurer le pourcentage d&#39;erreurs acceptables avant l&#39;échec d&#39;un lot.
 
-**Événement** Dans [!DNL Adobe Experience Platform Launch], un événement est un type spécifique de composant de règle, un déclencheur qui se produit sur un périphérique client pour commencer l’exécution d’une règle.
+**Événement** : Dans  [!DNL Platform Launch]le cas d’un événement, il s’agit d’un type spécifique de composant de règle, qui est un déclencheur qui se produit sur un périphérique client pour commencer l’exécution d’une règle.
 
-**Événements :** les événements sont les données de comportement associées à un profil.
+**Entités** de événement : Dans le cadre de la modélisation des données, les entités de événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept dans lequel vous pouvez suivre les modifications au fil du temps. Les entités qui relèvent de cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM ExperienceEvent].
 
-**Modèle de données d’expérience (XDM) :** [!DNL Experience Data Model] (XDM) est le concept d’utilisation de schémas standard pour unifier les données à utiliser avec [!DNL Experience Platform] les applications Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’insights à partir d’énormes quantités de données.
+**Événements** : Les événements sont les données de comportement associées à un profil.
 
-**Expérience :** une expérience est un processus de création d’un modèle formé en entraînant l’instance avec une portion d’échantillon des données de production en direct.
+**Le modèle de données d’expérience (XDM)** [!DNL Experience Data Model]  (XDM) est une structure open source qui utilise des schémas standard pour unifier les données à utiliser avec les applications Experience Platform et Adobe Experience Cloud. XDM normalise la structure des données, et accélère et simplifie le processus d’obtention d’insights à partir d’énormes quantités de données.
 
-**Expériences :** les expériences consistent à appliquer un modèle formé à une petite partie des données de production en direct afin de valider ses performances. Ceci est différent d’un modèle formé testé par rapport à un jeu de données de test d’exclusion. Ceci est également différent du concept d’expérience dans certains frameworks d’apprentissage automatique où cela signifie en fait un exemple de projet de modélisation.
+**Expérience** : Une expérience est le processus de création d’un modèle entraîné en formant l’instance avec une portion d’échantillon des données de production en direct. Ceci est différent d’un modèle formé testé par rapport à un jeu de données de test d’exclusion. Ceci est également différent du concept d&#39;expérience dans certains cadres d&#39;apprentissage automatique où cela signifie en fait un projet de modélisation d&#39;exemple.
 
-**ExperienceEvent :** Un ExperienceEvent est un schéma [!DNL Experience Platform] standard qui capture les observations, y compris le moment et l’identité du sujet concerné. Les événements d’expérience sont des enregistrements factuels de ce qui s’est passé, représentant ce qui s’est passé sans agrégation ni interprétation.
+**Événement** d’expérience : Un Événement d’expérience représente un instantané du système lorsqu’une interaction ou un événement lié à une expérience client se produit. Les Événements d&#39;expérience sont des données factuelles immuables de ce qui s&#39;est passé et représentent ce qui s&#39;est passé sans agrégation ni interprétation. Dans le modèle de données d’expérience (XDM), ce concept est capturé par la classe [!DNL XDM ExperienceEvent].
 
-**Extension :** Dans [!DNL Adobe Experience Platform Launch]le cas présent, une extension est un package de fonctionnalités ajouté à une [!DNL Platform Launch] propriété.  Une extension est généralement axée sur une solution marketing ou analytique spécifique et fournit les outils nécessaires au déploiement de cette technologie dans un environnement client.
+**Extension** : Dans  [!DNL Platform Launch]le cas présent, une extension est un package de fonctionnalités ajouté à une  [!DNL Platform Launch] propriété. Une extension est généralement axée sur une solution marketing ou analytique spécifique et fournit les outils nécessaires au déploiement de cette technologie dans un environnement client.
 
-**Package d’extension :** Dans [!DNL Adobe Experience Platform Launch]un paquet d&#39;extension est un fichier .zip créé et téléchargé par un développeur d&#39;extension qui fournit tout ce dont [!DNL Platform Launch] les utilisateurs ont besoin pour installer l&#39;extension dans leur propriété.  An extension package contains a manifest specifying information about the extension, HTML, and JavaScript needed for end-users to configure the behavior of the [!DNL Platform Launch] extension and the executable JavaScript delivered to the client environment, if required.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Package** d&#39;extension : Dans  [!DNL Platform Launch]un paquet d&#39;extension est un fichier ZIP créé et téléchargé par un développeur d&#39;extension qui fournit tout ce dont  [!DNL Platform Launch] les utilisateurs ont besoin pour installer l&#39;extension dans leur propriété. Un package d&#39;extension contient un manifeste spécifiant des informations sur l&#39;extension, le code HTML/JavaScript nécessaire pour que les utilisateurs finaux puissent configurer le comportement de l&#39;extension [!DNL Platform Launch] et le code JavaScript exécutable livré à l&#39;environnement client (si nécessaire).
 
 ## F
 
-**Offres de secours :** Une offre de secours est l’offre par défaut affichée lorsqu’un utilisateur final n’est éligible à aucune des offres de la collection utilisée.
+**Offres** de secours : Une offre de secours est l’offre par défaut affichée lorsqu’un utilisateur final n’est éligible à aucune des offres de la collection utilisée.
 
-**Mappage des fonctionnalités :** La mise en correspondance des fonctionnalités fait référence au processus de mise en correspondance des fonctionnalités des données dans les fonctions d’entrée et de cible requises par un modèle d’apprentissage automatique.
+**Mappage** des fonctionnalités : La mise en correspondance des fonctionnalités fait référence au processus de mise en correspondance des fonctionnalités des données dans les fonctions d’entrée et de cible requises par un modèle d’apprentissage automatique.
 
-**Champ :** un champ est l’élément de niveau le plus bas d’un jeu de données. Chaque champ a un nom de référence et un type pour identifier le type de données qu’il contient. Les types de champ peuvent être : entier, nombre, chaîne, valeur booléenne et schéma.
+**Champ** : Un champ est l&#39;élément de niveau le plus bas d&#39;un jeu de données, tel que défini par le schéma XDM du jeu de données. Chaque champ a un nom à des fins de référence et un type pour indiquer le type de données qu’il contient. Les types de champ peuvent inclure (sans s’y limiter) des entiers, des nombres, des chaînes, des booléens et des objets.
 
-**Libellés de champ :** Les libellés de champ sont des libellés de gouvernance des données hérités d’un jeu de données ou appliqués directement à un champ.
+**Libellés** des champs : Les libellés de champ sont des libellés de gouvernance des données hérités d’un jeu de données ou appliqués directement à un champ.
 
-**Nom du champ :** Field est le nom utilisé pour référencer le champ dans les requêtes et services.
+**Nom** du champ : Un nom de champ est utilisé pour référencer la valeur d’un champ dans les requêtes et les services en aval.
 
-**Fréquence :** La fréquence détermine la fréquence d’exécution d’une [!DNL Query Service] requête planifiée périodique.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Fréquence** : Dans  [!DNL Query Service]le cas présent, la fréquence détermine la fréquence d’exécution d’une requête planifiée périodique.
 
 ## G
 
-**Géo-barrière :** une géo-barrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière.
+**Géofence** : Une géofence est une limite géographique virtuelle, définie par un GPS ou la technologie RFID, qui permet au logiciel de déclencher une réponse lorsqu&#39;un dispositif portable entre dans une zone particulière ou en sort.
 
-**RGPD (Règlement général sur la protection des données) :** Le règlement général sur la protection des données (RGPD) est un cadre juridique qui établit des lignes directrices pour la collecte et le traitement des informations à caractère personnel des personnes au sein de l&#39;Union européenne (UE). Le RGPD énonce les principes de la gestion des données et les droits des individus et couvre toutes les entreprises qui traitent les données des citoyens de l’UE.
-
-**Étiquette d&#39;utilisation des données GDPR :** L&#39;étiquette d&#39;utilisation des données du RGPD est utilisée pour définir les champs qui peuvent contenir des identifiants personnels à utiliser dans l&#39;accès au RGMD et/ou les demandes de suppression.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**RGPD (Règlement général sur la protection des données)** : Le règlement général sur la protection des données (RGPD) est un cadre juridique qui établit des lignes directrices pour la collecte et le traitement des informations à caractère personnel des personnes au sein de l&#39;Union européenne (UE). Le RGPD énonce les principes de la gestion des données et les droits des individus et couvre toutes les entreprises qui traitent les données des citoyens de l’UE.
 
 ## H
 
-**Hôte :** Dans [!DNL Adobe Experience Platform Launch], un hôte spécifie l’emplacement, le domaine et les informations d’identification d’utilisateur nécessaires pour [!DNL Platform Launch] diffuser une compilation.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Hôte** : Dans  [!DNL Platform Launch], un hôte spécifie l’emplacement, le domaine et les informations d’identification d’utilisateur nécessaires  [!DNL Platform Launch] à la diffusion d’une compilation.
 
 ## I
 
-**Identité :** l’identité est un identifiant, tel qu’un identifiant de cookie, un identifiant d’appareil ou un identifiant de courrier électronique, qui représente de manière unique un client final.
+**Identité** : Une identité est un identifiant qui représente de manière unique un client individuel, tel qu’un ID de cookie, un ID d’appareil ou un ID d’adresse électronique.
 
-**Étiquettes &quot;I&quot; d&#39;identité :** `Identity I` les étiquettes d’utilisation des données permettent de classer les données qui peuvent identifier ou contacter une personne spécifique.
+**Champs** d&#39;identité : Les champs d’identité sont des champs XDM qui sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Une identité Principale unique doit être définie pour que le schéma soit activé pour une utilisation dans le Profil client en temps réel.
 
-**Graphique d&#39;identité :** Le graphique d&#39;identité est une carte des relations entre les identités recoupées et liées, qui se met à jour en temps quasi réel avec l&#39;activité du client.
+**Étiquettes** d&#39;identité (&quot;I&quot;) : Les étiquettes d’utilisation des données d’identité (&quot;I&quot;) sont utilisées pour classer les données qui peuvent identifier ou contacter une personne spécifique.
 
-**Espace de nommage d&#39;identité :** Un espace de nommage d&#39;identité est un identifiant tel que l&#39;ID de cookie, l&#39;ID de périphérique ou l&#39;ID de courrier électronique pour indiquer le contexte d&#39;où proviennent les données et est utilisé pour reconnaître et lier les identités entre [!DNL Experience Cloud].
+**Graphique** d&#39;identité : Un graphique d&#39;identité est une carte des relations entre les identités recoupées et liées qui existent pour un client individuel. Chaque graphique d&#39;identité est mis à jour en temps quasi réel avec l&#39;activité du client. La structure commune des relations d&#39;identité dans vos données est représentée par le [!UICONTROL Graphique privé], qui sert de modèle structurel pour chaque graphique d&#39;identité individuel.
 
-**Service d&#39;identité :** [!DNL Experience Platform Identity Service] L&#39;interface utilisateur permet la création et la gestion de types d&#39;identité afin de permettre la liaison d&#39;identités entre les périphériques et les canaux pour une vue utilisateur complète à partir de [!DNL Real-time Customer Profile].
+**Espace de nommage** d&#39;identité : Un espace de nommage d’identité définit le contexte d’un identifiant tel qu’une adresse électronique ou un identifiant de gestion de la relation client.
 
-**Correspondance d&#39;identité :** L’assemblage d’identité est le processus d’identification des fragments de données et de leur assemblage pour former un enregistrement complet d’un profil.
+**Service** d&#39;identité :  [!DNL Experience Platform Identity Service] permet la création et la gestion de types d&#39;identité, ce qui vous permet de lier les identités des clients entre différents périphériques et canaux. La capacité du service à lier les identités permet au Profil client en temps réel de fournir une représentation complète de chaque client.
 
-**Symbole d&#39;identité :** Un symbole d&#39;identité est l&#39;abréviation d&#39;un espace de nommage d&#39;identité qui peut être utilisé comme référence dans les API.
+**Correspondance** d&#39;identité : L’assemblage d’identité est le processus d’identification des fragments de données et de les assembler pour former un enregistrement de profil complet.
 
-**Valeur d&#39;identité :** La valeur d&#39;identité est une donnée associée à une identité assignée dans le schéma. Lors de la correspondance de données d’enregistrement entre les profils, la valeur d’identité et l’espace de nommage doivent correspondre.
+**Symbole** d&#39;identité : Un symbole d&#39;identité est l&#39;abréviation d&#39;un espace de nommage d&#39;identité qui peut être utilisé comme référence dans les API.
 
-**Libellé d&#39;utilisation des données I1 :** Le libellé `I1` d’utilisation des données permet de classer les données directement identifiables qui peuvent identifier ou contacter une personne spécifique plutôt qu’un périphérique.
+**Valeur** d&#39;identité : Une valeur d&#39;identité, combinée à un espace de nommage d&#39;identité, est un identifiant qui représente un individu, une organisation ou une ressource unique. Lors de la correspondance de données d’enregistrement entre des fragments de profil, l’espace de nommage et la valeur d’identité doivent correspondre.
 
-**Libellé d&#39;utilisation des données I2 :** Le libellé `I2` d&#39;utilisation des données sert à classer les données indirectement identifiables qui peuvent être utilisées en combinaison avec d&#39;autres données pour identifier ou contacter une personne spécifique.
+**Libellé** d&#39;utilisation des données I1 : Le libellé d’utilisation des  `I1` données permet de classer les données qui peuvent directement identifier ou contacter une personne spécifique plutôt qu’un périphérique.
 
-**Ingestion :** L&#39;importation est le processus d&#39;ajout de données d&#39;une source à [!DNL Experience Platform]. Data can be ingested to [!DNL Experience Platform] in a number of ways including streamed, batched, or added via connector.
+**Libellé** d&#39;utilisation des données I2 : L’étiquette d’utilisation des  `I2` données sert à classer les données qui peuvent être utilisées en combinaison avec d’autres données pour identifier indirectement une personne ou la contacter indirectement.
 
-**Calendrier d&#39;importation :** Un calendrier d’assimilation fournit des options temporelles lors de l’assimilation d’une source à [!DNL Experience Platform]une autre.
+**Organisation** IMS : Une organisation IMS (parfois appelée organisation IMS) est le nom utilisé pour identifier une société ou un groupe spécifique au sein d&#39;une société entre des produits Adobes. Les administrateurs peuvent configurer et gérer l’accès et les autorisations des fonctions pour les utilisateurs d’une organisation.
 
-**Fonction d’entrée :** La fonction d’entrée est spécifiée dans le mappage des fonctionnalités et est utilisée par un modèle d’apprentissage automatique pour effectuer des prédictions.
+**Ingestion** : Voir assimilation de données.
 
-**[!DNL Intelligent Services]:** [!DNL Intelligent Services] comme [!DNL Attribution AI] et [!DNL Customer AI] sont l&#39;apprentissage automatique, des modèles conçus de façon ciblée et basés sur l&#39;intelligence artificielle qui nécessitent le [!DNL Experience Platform] fonctionnement et le fonctionnement.
+**Calendrier** d&#39;importation : Un calendrier d’assimilation fournit des options temporelles lors de l’assimilation d’une source à un Experience Platform.
 
-**Ciblage ou personnalisation axé sur l’intérêt :** Le ciblage basé sur l’intérêt, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies : les données collectées sur site servent à faire des inférences sur l’intérêt d’un utilisateur, les données sont utilisées dans un autre contexte, tel que sur un autre site ou une autre application (hors site), et si les données sont utilisées pour sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
+**Fonction** d&#39;entrée : Une fonction d’entrée est spécifiée dans le mappage des fonctionnalités et est utilisée par un modèle d’apprentissage automatique pour faire des prédictions.
 
-[Haut de page](#adobe-experience-platform-glossary)
+**[!DNL Intelligent Services]**:  [!DNL Intelligent Services] tels que  [!DNL Attribution AI] et  [!DNL Customer AI] sont des modèles d&#39;apprentissage automatique basés sur l&#39;intelligence artificielle qui nécessitent l&#39;exécution et le fonctionnement d&#39;Experience Platform (ou d&#39;applications créées sur la plate-forme de données client en temps réel, par exemple).
+
+**Ciblage ou personnalisation** axé sur l’intérêt : Le ciblage basé sur l’intérêt, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies :
+
+1. Les données collectées sur site servent à faire des déductions sur l’intérêt d’un utilisateur.
+1. Les données sont utilisées dans un autre contexte, tel que sur un autre site ou une autre application (hors site).
+1. Les données permettent de sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
 
 ## J
 
-**[!DNL JupyterLab]:** Une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
+**[!DNL JupyterLab]**: Interface Web open source pour Project  [!DNL Jupyter] qui est intégrée dans l’interface utilisateur de la plate-forme.
 
-**[!DNL Jupyter Notebook] :** application web open source qui permet aux utilisateurs de créer et de partager des documents contenant du code en direct, des équations, des visualisations et du texte narratif.
+**[!DNL Jupyter Notebook]**: Intégrés à JupyterLab, les portables Jupyter vous permettent d&#39;effectuer le nettoyage et la transformation des données, la simulation numérique, la modélisation statistique, la visualisation des données, l&#39;apprentissage automatique et plus encore sur vos données Experience Platform dans divers langages tels que Python, Scala et PySpark.
 
 ## K
 
-[Haut de page](#adobe-experience-platform-glossary)
-
 ## L
 
-**Bibliothèque :** Dans [!DNL Adobe Experience Platform Launch]une bibliothèque est un ensemble de logiques métier qui contient des instructions sur le comportement de la [!DNL Platform Launch] bibliothèque sur le périphérique client.
+**Bibliothèque** : Dans  [!DNL Platform Launch]une bibliothèque est un ensemble de logiques métier qui contient des instructions sur le comportement de la  [!DNL Platform Launch] bibliothèque sur le périphérique client.
 
-[Haut de page](#adobe-experience-platform-glossary)
+**Entités** de recherche : Dans le contexte de la modélisation des données, les entités de recherche représentent des concepts qui peuvent être liés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier l&#39;individu. Les entités qui relèvent de cette catégorie doivent être représentées par des schémas basés sur des classes XDM (Experience Data Model) personnalisées.
 
 ## M
 
-**Apprentissage automatique (ML) :** L&#39;apprentissage automatique est le domaine d&#39;étude qui permet aux ordinateurs d&#39;apprendre sans être explicitement programmés.
+**Apprentissage automatique (ML)** : L&#39;apprentissage automatique est le domaine d&#39;étude qui permet aux ordinateurs d&#39;apprendre sans être explicitement programmés.
 
-**Modèle d&#39;apprentissage automatique :** Un modèle d’apprentissage automatique est l’instance d’une recette d’apprentissage automatique qui est formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale. In Adobe [!DNL Data Science Workspace], machine learning models are called recipes.
+**Modèle** d&#39;apprentissage automatique : Un modèle d’apprentissage automatique est l’instance d’une recette d’apprentissage automatique qui est formée à l’aide de données historiques et de configurations pour résoudre un cas d’utilisation commerciale. Dans Adobe Experience Platform Data Science Workspace, les modèles d&#39;apprentissage automatique sont appelés des recettes.
 
-**Mappage :** Dans [!DNL Real-time Customer Data Platform]le cas présent, le mappage des données est le processus de mappage des champs de données source aux champs de cible liés à la destination.
+**Mappage** : Le mappage des données est le processus de mappage des champs de données source aux champs de cible associés dans une destination.
 
-**Action marketing :** Une action marketing, également appelée cas d’utilisation marketing, dans le cadre de la gouvernance des données, est une action entreprise par un utilisateur de [!DNL Experience Platform] données, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
+**Action** marketing : Dans le cadre de la gouvernance des données, une action marketing (également appelée cas d’utilisation marketing) est une action entreprise par un utilisateur de données Experience Platform, pour laquelle il est nécessaire de vérifier les violations des stratégies d’utilisation des données.
 
-**Méthode de fusion :** Une `merge method` option de stratégie de fusion permet de hiérarchiser la fusion des fragments de données. Les options de méthode de fusion sont fusionnées par ordre de priorité du jeu de données ou par horodatage du jeu de données.
+**Méthode** de fusion : Lors de la définition d’une stratégie de fusion à l’aide de l’interface utilisateur de la plate-forme, la méthode de fusion spécifie comment les fragments de données doivent être classés par priorité en cas de conflit. Lorsque vous utilisez l&#39;API Profil client en temps réel pour définir une stratégie de fusion, la méthode de fusion est déterminée à l&#39;aide de l&#39;objet `attributeMerge`.
 
-**Fusionner la stratégie :** Une stratégie de fusion est un ensemble de règles utilisées par [!DNL Profile] pour déterminer comment les données seront hiérarchisées et combinées en une vue unifiée dans certaines conditions.
+**Fusionner la stratégie** : Les stratégies de fusion sont des règles que l’Experience Platform utilise pour déterminer comment les fragments de données client provenant de plusieurs sources seront combinés afin de créer un profil individuel. Lorsqu’un conflit de données se produit, la stratégie de fusion détermine quelles données doivent être prioritaires pour l’inclusion dans le profil.
 
-**Mixin :** un mixin permet aux utilisateurs d’étendre les champs réutilisables qui contiennent des variables définissant un ou plusieurs attributs destinés à être inclus dans un schéma ou ajoutés à une classe.
+**Mixin** : Dans le modèle de données d’expérience (XDM), un mixin permet aux utilisateurs d’étendre les champs réutilisables pour définir un ou plusieurs attributs destinés à être inclus dans un schéma.
 
-**Colonne Date de modification :** La sélection d’une `Modified Date` colonne est une option lors de la spécification de données tierces via une connexion. Lorsque la stratégie d’enregistrement `Delta` est sélectionnée et que le jeu de données contient plusieurs schémas de date, l’utilisateur doit choisir dans le type de schéma date/heure disponible pour spécifier la colonne Date de modification clé. L’option `Modified Date` n’est pas disponible lorsque la stratégie d’enregistrement `Overwrite` est sélectionnée.
-
-**Module :** Dans [!DNL Adobe Experience Platform Launch], un module est un fragment de code JavaScript exécutable fourni par une extension, qui exécute des actions dans un environnement client sans que l’ [!DNL Platform Launch] utilisateur ait à créer une règle.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Module** : Dans  [!DNL Platform Launch], un module est un fragment de code JavaScript exécutable fourni par une extension, qui exécute des actions dans un environnement client sans avoir à créer de règle.
 
 ## N
 
-**Sandbox hors production :** Les sandbox hors production sont une forme de virtualisation des données qui vous permet d&#39;isoler les données des autres sandbox et sont généralement utilisés pour des expériences de développement, des tests ou des essais. Les environnement de test hors production peuvent être réinitialisés et supprimés.
+**Sandbox** de non-production : Les sandbox hors production sont généralement utilisés pour des expériences de développement, des tests ou des essais. Contrairement aux sandbox de production, les sandbox hors production peuvent être réinitialisés et supprimés.
 
-**[!DNL Notebooks]:** [!DNL Notebooks] sont créés à l’aide [!DNL Jupyter Notebook] d’une description de l’analyse, de résultats et peuvent être exécutés pour effectuer l’analyse des données.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**[!DNL Notebooks]**:  [!DNL Notebooks] sont créées à l’aide  [!DNL Jupyter Notebook] et peuvent être exécutées pour effectuer l’analyse des données.
 
 ## O
 
-**Offre :** Une offre est un message marketing auquel des règles peuvent être associées, indiquant qui peut être autorisé à voir l’offre.
+**Offre** : Une offre est un message marketing contenant une proposition commerciale ou commerciale à un client (potentiel). Les Offres ont souvent des règles spécifiques qui déterminent qui peut les voir ou les recevoir.
 
-**[!DNL Offer Decisioning]:** [!DNL Offer Decisioning] permet à un spécialiste du marketing de gérer des règles et des modèles de Propositions d&#39;offre formés lors de l’interaction avec un utilisateur final en fonction des données collectées sur plusieurs canaux et applications.
+**[!DNL Offer Decisioning]**:  [!DNL Offer Decisioning] permet aux spécialistes du marketing de gérer les règles et les modèles de Propositions d&#39;offre formés lors de l’interaction avec les utilisateurs finaux en fonction des données collectées sur plusieurs canaux et applications.
 
-**Bibliothèque d&#39;Offres :** La bibliothèque d’offres est une bibliothèque centrale utilisée pour gérer les offres personnalisées et de secours, les règles de décision et les activités.
+**Bibliothèque** d&#39;Offres : La bibliothèque d’offres est une bibliothèque centrale utilisée pour gérer les offres personnalisées et de secours, les règles de décision et les activités.
 
-**Action** marketing de personnalisation sur site Action marketing qui utilise les données pour la personnalisation du contenu sur site. La personnalisation sur site est toute donnée utilisée pour faire des inférences sur les intérêts des utilisateurs et sert à sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.
+**Action** marketing de personnalisation sur site : Action marketing qui utilise les données pour la personnalisation du contenu sur site. La personnalisation sur site est toute donnée utilisée pour faire des inférences sur les intérêts des utilisateurs et sert à sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.
 
-**Action** marketing de ciblage sur site Action marketing qui utilise des données pour les publicités sur site, y compris la sélection et la diffusion des publicités sur les sites Web ou les applications de votre organisation, ou pour mesurer la diffusion et l&#39;efficacité de ces publicités.
+**Action** marketing de ciblage sur site : Action marketing qui utilise des données pour les publicités sur site, y compris la sélection et la diffusion des publicités sur les sites Web ou les applications de votre entreprise, ou pour mesurer la diffusion et l’efficacité de ces publicités.
 
-**Organisation :** une organisation est le nom utilisé pour identifier une société ou un groupe spécifique au sein d’une société dans les produits Adobe. Les administrateurs peuvent configurer et gérer l’accès et les autorisations des fonctions pour les utilisateurs d’une organisation.
-
-**Remplacer la stratégie d&#39;enregistrement :** La stratégie `Overwrite` d’enregistrement est une option permettant d’ingérer des données tierces via une connexion, où l’utilisateur indique si les données imbriquées seront remplacées selon un calendrier spécifié. [!DNL Experience Platform] ingère le jeu de données spécifié à partir de la source tierce et remplace le jeu de données sur [!DNL Experience Platform].
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Remplacer la stratégie** d&#39;enregistrement : La stratégie d’enregistrement &quot;Remplacer&quot; est une option permettant d’ingérer des données tierces via une connexion, où vous pouvez spécifier si les données imbriquées seront remplacées selon un calendrier spécifié.
 
 ## P
 
-**Ingestion partielle :** l’ingestion partielle permet l’ingestion d’enregistrements valides de données de lot avec un seuil d’erreur spécifié. Les diagnostics d&#39;erreur pour les enregistrements en échec peuvent être téléchargés ou l&#39;accès dans l&#39;aperçu de l&#39;exécution du flux de données de surveillance ou de sources.
+**Importation** partielle : L&#39;assimilation partielle permet l&#39;assimilation d&#39;enregistrements valides de données de lot dans un seuil d&#39;erreur spécifié. Les diagnostics d&#39;erreur pour les enregistrements en échec peuvent être téléchargés ou accessibles dans [!UICONTROL Surveillance] ou [!UICONTROL Sources] aperçu de l&#39;exécution des flux de données.
 
-**Dossiers de parquets :** Un fichier Parquet est un format de fichier d&#39;enregistrement à colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
+**Dossiers** de parquets : Un fichier Parquet est un format de fichier d&#39;enregistrement à colonnes avec des structures de données imbriquées complexes. Des fichiers parquet sont nécessaires pour ajouter des données à un jeu de données de schéma.
 
-**Offres personnalisées :** Une offre personnalisée est un message marketing personnalisable basé sur des règles d&#39;éligibilité et des contraintes.
+**Offres** personnalisées : Une offre personnalisée est un message marketing personnalisable basé sur des règles d&#39;éligibilité et des contraintes.
 
-**Emplacements :** Un emplacement correspond à l’emplacement ou au contexte dans lequel une offre s’affiche pour un utilisateur final.
+**Emplacements** : un emplacement est l’endroit ou le contexte dans lequel apparaît une offre pour un utilisateur final.
 
-**Espace de travail** Stratégies Permet aux responsables de données de vue et de gérer les étiquettes personnalisées et de base de votre organisation.
+**Espace de travail** Stratégies : Espace de travail dans l’interface utilisateur de la plate-forme qui permet aux responsables de la gestion des données de vue et de gérer les étiquettes et les stratégies d’utilisation des données pour votre entreprise.
 
-**Politique :** une politique d’utilisation des données est une règle qui spécifie les actions marketing qui sont restreintes en fonction de l’application de libellés d’utilisation des données sur les données dans [!DNL Experience Platform].
+**Stratégie** : Une stratégie d’utilisation des données est une règle qui spécifie les actions marketing qui sont restreintes en fonction de l’application des étiquettes d’utilisation appliquées aux données de la plateforme.
 
-**Application des** stratégies Permet d’appliquer des stratégies d’utilisation des données avec des actions marketing appliquées afin d’empêcher les opérations de données qui constituent des violations des stratégies au sein d’une organisation.
+**Application des** politiques : Permet d’appliquer des stratégies d’utilisation des données à l’aide d’actions marketing appliquées afin d’empêcher les opérations de données qui constituent des violations de stratégies au sein d’une organisation.
 
-**Clé de Principal :** Une clé Principale est une désignation dans un schéma pour identifier de façon unique tous les enregistrements.
+**Clé** Principal : Une clé Principale est une désignation dans un schéma pour identifier de façon unique tous les enregistrements.
 
-**Priorité :** Dans [!DNL Offer Decisioning], la priorité est utilisée pour classer les offres qui répondent à toutes les contraintes, telles que l’éligibilité, le calendrier et le plafonnement.
+**Priorité** : Dans  [!DNL Offer Decisioning], la priorité est utilisée pour classer les offres qui répondent à toutes les contraintes, telles que l’éligibilité, le calendrier et le plafonnement.
 
-**Graphique d’identités privé :** un graphique d’identités privé est un mappage privé des relations entre les identités associées et liées, visible uniquement par votre organisation et créé en fonction de vos données propriétaires.
+**Graphique** d&#39;identité privée : Le graphique d&#39;identité privée (parfois appelé graphique privé) est une carte privée des relations entre les identités recoupées et liées, construite sur la base de vos données propriétaires et visible uniquement par votre organisation. Il n&#39;existe qu&#39;un seul graphique privé pour chaque organisation et sert de modèle structurel pour les graphiques d&#39;identité individuels générés pour chaque client qui interagit avec votre marque.
 
-**Profil du produit :** Les profils de produits permettent aux administrateurs d’accorder à l’utilisateur l’accès à l’ensemble ou à un sous-ensemble de services associés à [!DNL Experience Platform].
+**Profil** du produit : Les profils de produits permettent aux administrateurs d’accorder à l’utilisateur l’accès à l’ensemble ou à un sous-ensemble de services associés à l’Experience Platform.
 
-**sandbox de production :** Un sandbox de production permettant d&#39;isoler les données virtuelles sur la plate-forme qui ne peuvent pas être réinitialisées ou supprimées.
+**Sandbox** de production : Un sandbox de production est un sandbox destiné à être utilisé dans votre environnement de production. Contrairement aux sandbox hors production, les sandbox de production ne peuvent pas être réinitialisés ni supprimés.
 
-**Profil :** {#profile} À ne pas confondre avec le Profil [client en temps](#rtcp)réel, un profil est la sortie de [!DNL Identity Service] données et [!DNL Real-time Customer Profile] de données, en prenant des données de profil imbriquées avec des champs d&#39;identité et en construisant une représentation d&#39;une personne.
+**Profil** : À ne pas confondre avec le Profil client en temps réel en tant que service, un profil est une représentation complète d&#39;un client individuel, construite à partir de données d&#39;enregistrement fusionnées et de séries chronologiques provenant de sources multiples.
 
-**Données du profil :** Les données de profil sont des données ingérées sous la classe de Profil XDM Individuel. Ces données décrivent généralement les attributs du client, par opposition aux données de événement.
+**Accès** au profil : Le point de  `/entities` terminaison de l’API Profil client en temps réel vous permet d’accéder aux données d’enregistrement et aux événements de séries chronologiques dans le magasin de données de Profil. Voir aussi : Entités de profil
 
-**Exportation de profil :** [!DNL Profile] export est l&#39;un des deux types de destinations dans [!DNL Real-time Customer Data Platform]. [!DNL Profile] export génère un fichier contenant des profils et des attributs, utilise des données d’identification personnelle brutes avec le courrier électronique et est utilisé pour l’intégration avec les plateformes de marketing et d’automatisation du courrier électronique.
+**Données** du profil : Les données de profil se rapportent à toutes les données qui se trouvent dans le magasin de données de Profil.
 
-**Fragment de profil :** Un fragment de profil est l’information de profil d’une seule identité sur la liste des identités qui existent pour un utilisateur particulier.
+**Stockage** de données de profil : Le magasin de données de Profil (parfois appelé le magasin de Profils) est un système d’enregistrement de données distinct du lac de données, utilisé par le Profil client en temps réel pour créer et stocker des profils.
 
-**Identifiant de profil :** un identifiant de profil est un identifiant généré automatiquement, associé à un type d’identité et qui représente un profil.
+**Entités** de profil : Les entités de profil représentent des attributs relatifs à une personne, généralement un client. Les entités qui relèvent de cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM Individual Profile]. Voir aussi : Accès aux profils
 
-**Propriété :** Dans [!DNL Adobe Experience Platform Launch]un cas, une propriété est un conteneur pour tout ce qui est nécessaire pour déployer un ensemble de balises.
+**Exportation** de profil :  [!DNL Profile] export est l’un des deux types de destinations en Experience Platform. [!DNL Profile] export génère un fichier contenant des profils et des attributs et utilise des données d’identification personnelle brutes avec le courrier électronique afin de les intégrer aux plateformes de marketing et d’automatisation du courrier électronique.
 
-[Haut de page](#adobe-experience-platform-glossary)
+**Fragment** de profil : Un fragment de profil est l&#39;information de profil d&#39;une seule identité sur la liste des identités qui existent pour un client particulier.
+
+**ID** du profil : Un ID de profil est un identifiant généré automatiquement associé à un type d&#39;identité et représente un profil.
+
+**Propriété** : Dans  [!DNL Platform Launch]un cas, une propriété est un conteneur pour tout ce qui est nécessaire pour déployer un ensemble de balises.
 
 ## Q
 
-**Requête :** une requête est une demande de données provenant de tables de base de données.
+**Requête** : Les requêtes sont des demandes de données provenant de tables de base de données.
 
-**Éditeur de requêtes :** l’éditeur de requêtes est un outil permettant le codage, la validation et l’envoi d’instructions SQL dans [!DNL Query Service].
-
-**Requête Service pour Adobe Experience Platform :** [!DNL Experience Platform Query Service] permet aux analystes de données d’effectuer des requêtes [!DNL ExperienceEvents] et des fichiers XDM pour les utiliser dans les analyses et l’apprentissage automatique. With [!DNL Query Service], data scientists and analysts will be able to pull all of their datasets stored in [!DNL Experience Platform] – including behavioral data as well as point-of-sale (POS), customer relationship management (CRM), and more – and query those datasets to answer specific questions about the data.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Éditeur** de requête : Requête Editor est un outil permettant d&#39;écrire, de valider et d&#39;envoyer des instructions SQL dans  [!DNL Query Service].
 
 ## R
 
-**Plate-forme de données client en temps réel :** L&#39;Adobe [!DNL Real-time Customer Data Platform] rassemble des données clients connues et inconnues afin de créer des profils clients de confiance avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel tout au long du parcours client numérique.
+**Plate-forme** de données client en temps réel :  [!DNL Real-time Customer Data Platform] rassemble des données clients connues et inconnues afin de créer des profils clients fiables avec une intégration simplifiée, une segmentation intelligente et une activation en temps réel sur le parcours client numérique.
 
-**Profil client en temps réel :**{#rtcp} À ne pas confondre avec un [profil](#profile)générique, [!DNL Real-time Customer Profile]souvent appelé &quot;Profil&quot;, est un magasin d&#39;entités de recherche générique qui fusionne les données de divers actifs de données d&#39;entreprise, puis fournit l&#39;accès à ces données sous la forme de profils de clients individuels et de événements de séries chronologiques connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
+**Profil** client en temps réel : Le Profil client en temps réel (parfois appelé Profil) offre une vue holistique de chaque client en combinant des données provenant de plusieurs canaux, notamment en ligne, hors ligne, CRM et tiers. Profil vous permet de consolider vos données client en profils individuels offrant des comptes interactifs horodatés pour chaque interaction client.
 
-**Recette :** une recette est le terme utilisé par Adobe pour désigner une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente un apprentissage automatique spécifique, un algorithme d’intelligence artificielle ou un ensemble d’algorithmes, une logique de traitement et la configuration nécessaires pour créer et exécuter un modèle formé et ainsi aider à résoudre des problèmes d’entreprise spécifiques.
+**Recette** : Une recette est le terme Adobe d&#39;une spécification de modèle et est un conteneur de niveau supérieur représentant des processus d&#39;apprentissage automatique spécifiques, des algorithmes d&#39;IA, la logique de traitement et les paramètres de configuration nécessaires pour créer et exécuter un modèle formé et aider ainsi à résoudre des problèmes commerciaux spécifiques.
 
-**Enregistrement :** il s’agit de données qui persistent sous forme de lignes dans un jeu de données.
+**Enregistrer** : Un enregistrement est une donnée qui persiste sous forme de lignes dans un jeu de données.
 
-**Périodicité :** Une périodicité définit si une [!DNL Query Service] requête doit être exécutée une seule fois ou de manière récurrente.
+**Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 
-**Représentation :** Dans [!DNL Offer Decisioning]un canal, une représentation est une information utilisée, telle que l’emplacement ou la langue, pour afficher une offre.
+**Périodique** : Dans  [!DNL Query Service]le cas présent, une périodicité définit si une requête doit être exécutée une seule fois ou sur une base récurrente.
 
-**Ressource :** Dans [!DNL Adobe Experience Platform Launch]un terme générique, une ressource fait référence aux options que l’ [!DNL Platform Launch] utilisateur peut configurer dans l’environnement client, y compris les extensions, les éléments de données et les règles.
+**Représentation** : Dans  [!DNL Offer Decisioning]un cas, une représentation est une information utilisée par un canal pour afficher une offre, telle que l’emplacement ou la langue.
 
-**Contrôle d&#39;accès basé sur les rôles :** Le contrôle d&#39;accès basé sur les rôles permet aux administrateurs d’attribuer l’accès et les autorisations aux utilisateurs de [!DNL Experience Platform]. Permissions include the ability to view and/or use [!DNL Experience Platform] features, such as creating sandboxes, defining schemas, and managing datasets.
+**Ressource** : Dans  [!DNL Platform Launch]un environnement client, une ressource est un terme générique qui fait référence aux options que l’ [!DNL Platform Launch] utilisateur peut configurer dans l’ client, y compris les extensions, les éléments de données et les règles.
 
-**Règle :** Dans [!DNL Adobe Experience Platform Launch]un cas, une règle est un ensemble de composants de règle définissant un ensemble spécifique de événements, de conditions et d’actions qui doivent être regroupés logiquement.
+**Contrôle d&#39;accès** basé sur les rôles : Le contrôle d&#39;accès basé sur les rôles permet aux administrateurs d’attribuer l’accès et les autorisations aux utilisateurs d’Experience Platform. Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Experience Platform, telles que la création d’environnements de test, la définition de schémas et la gestion des jeux de données.
 
-**Composant de règle :** Dans [!DNL Adobe Experience Platform Launch], les composants de règle sont les événements, les conditions et les actions qui constituent une règle.
+**Règle** : Dans  [!DNL Platform Launch]un cas, une règle est un ensemble de composants définissant un ensemble spécifique de événements, de conditions et d’actions qui doivent être regroupés logiquement.
 
-**Runtime :** Runtime spécifie un environnement d’exécution pour une recette d’apprentissage automatique. [!DNL Python], R, [!DNL Spark], PySpark et Tensorflow permettent d&#39;entrer une URL vers une image de docker pour une source de recettes.
+**Composant** de règle : Dans  [!DNL Platform Launch], les composants de règle sont les événements, les conditions et les actions qui constituent une règle.
 
-[Haut de page](#adobe-experience-platform-glossary)
+**Exécution** : L’exécution spécifie un environnement d’exécution pour une recette d’apprentissage automatique. [!DNL Python], R,  [!DNL Spark]PySpark et Tensorflow vous permettent de saisir une URL vers une image Docker pour une source de recettes.
 
 ## S
 
-**Exemples de données :** Les données d’exemple sont la prévisualisation d’un fichier de données, généralement les 100 premières lignes, qui permet à un chercheur en données de déterminer quel schéma ou quelles données se trouvent dans le fichier de données.
+**Exemples de données** : L’exemple de données est la prévisualisation d’un fichier de données, généralement les 100 premières lignes, qui fournit à un chercheur en données ou une idée du schéma ou des données qu’il contient.
 
-**Environnement de test :** un environnement de test est une forme d’isolation des données virtuelles au sein d’une organisation d’utilisateurs sur [!DNL Experience Platform].
+**Sandbox** : Un sandbox est une construction virtuelle qui partitionne une instance de plateforme unique en un environnement virtuel distinct, afin d&#39;aider à développer et à développer des applications d&#39;expérience numérique.
 
-**Réinitialisation du sandbox :** Une réinitialisation de sandbox supprime toutes les données, y compris les données, les profils et les segments dans un sandbox. Les réinitialisations de sandbox peuvent affecter les données connectées à des destinations internes ou externes.
+**Sandbox reset** : Une réinitialisation de sandbox supprime toutes les données, y compris les données, les profils et les segments dans un sandbox. Les réinitialisations de sandbox peuvent affecter les données connectées à des destinations internes ou externes.
 
-**Interrupteur de sandbox :** Le contrôle sandbox dans [!DNL Experience Platform] permet aux utilisateurs de naviguer entre les sandbox auxquels ils ont accès. Le fait de changer d’environnement de test modifie tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
+**Interrupteur** sandbox : Le contrôle sandbox Switch dans l’Experience Platform permet aux utilisateurs de naviguer entre les sandbox auxquels ils ont accès. Le fait de changer d’environnement de test modifie tout le contenu et peut modifier l’accès aux fonctionnalités en fonction des autorisations.
 
-**Planification :** Une planification est une spécification définie par l’utilisateur concernant la fréquence ou la cadence d’assimilation des données d’une source de données tierce à un Adobe [!DNL Experience Platform].
+**Planification** : Une planification est une spécification définie par l’utilisateur concernant la fréquence ou la cadence d’assimilation des données d’une source de données tierce à Adobe Experience Platform.
 
-**Notation :** la notation est le processus de génération d’informations à partir de données en utilisant un modèle formé.
+**Scoring** : Le score est le processus de génération d’informations à partir de données à l’aide d’un modèle formé.
 
-**Schéma :** Un schéma est constitué d&#39;une classe et d&#39;un mixin facultatif et est utilisé pour créer des jeux de données et des flux de données. Un schéma inclut des attributs comportementaux, un horodatage, une identité, des définitions d’attributs et des relations.
+**Schéma** : Un schéma est un ensemble de règles qui représentent et valident la structure et le format des données. Un schéma est constitué d&#39;une classe et d&#39;un ou de plusieurs mixins facultatifs et est utilisé pour créer des jeux de données et des séries de données. Un schéma peut inclure des attributs comportementaux, des horodatages, des identités, des définitions d’attributs, des relations, etc.
 
-**descripteur de schéma :** Un descripteur de schéma est une métadonnée supplémentaire liée au schéma qui décrit le comportement qui peut être utilisé pour [!DNL Experience Platform] comprendre le comportement de schéma prévu, tel que la relation entre deux schémas.
+**Bibliothèque** de schémas : La bibliothèque de Schémas contient des ressources XDM standard mises à disposition par Adobe, ainsi que des ressources personnalisées définies par votre organisation.
 
-**Clé d&#39;accès secrète :** Une clé d’accès secrète est une clé [!DNL Amazon] S3 utilisée conjointement avec l’ID de clé d’accès pour signer les demandes AWS.
+**Registre** des schémas : Le registre des Schémas fournit une interface utilisateur et une API RESTful utilisées pour vue et gérer toutes les ressources liées au schéma dans la bibliothèque de Schémas.
 
-**Segment :** un segment est un ensemble de règles qui incluent des attributs et des données d’événement qui permettent à un certain nombre de profils devenir une audience.
+**Clé** d&#39;accès secrète : Une clé d’accès secrète est une clé  [!DNL Amazon] S3 utilisée conjointement avec l’ID de clé d’accès pour signer les requêtes AWS.
 
-**Créateur de segments :** [!DNL Segment Builder] est l’environnement de développement visuel utilisé pour créer des définitions de segment et sert de composant commun à toutes les applications utilisant [!DNL Segmentation Service] le [!DNL Experience Platform].
+**Segment** : Un segment est un ensemble de règles qui incluent des attributs et des données de événement qui permettent à un certain nombre de profils de devenir une audience.
 
-**Définition de segment :** Une définition de segment est le jeu de règles utilisé pour décrire les principales caractéristiques ou le comportement d’une audience de cible. Une fois conceptualisées, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres de l’audience admissibles à un segment.
+**Créateur** de segments : Il  [!DNL Segment Builder] s’agit d’un environnement de développement visuel utilisé pour créer des définitions de segment. Il sert de composant commun à toutes les applications utilisant le service de segmentation des Experience Platform.
 
-**Méthode d’évaluation des segments :** Une évaluation planifiée de segments permet de planifier de manière récurrente l’exécution d’une tâche d’exportation à un moment donné, tandis qu’une évaluation à la demande implique la création d’une tâche de segment pour créer immédiatement l’audience.
+**Définition** de segment : Une définition de segment est le jeu de règles utilisé pour décrire les principales caractéristiques ou le comportement d’une audience de cible. Une fois conceptualisées, les règles décrites dans une définition de segment sont utilisées pour déterminer les membres de l’audience admissibles à un segment.
 
-**Exportation de segments :** L’exportation de segments est l’un des deux types de destinations dans [!DNL Real-time Customer Data Platform]. Avec l’exportation de segments, vous pouvez envoyer les profils qui remplissent les conditions requises et qui ont été mappés à la destination. Elle utilise les identifiants de segment et d’utilisateur, ainsi que les données pseudonymes, et s’intègre généralement aux réseaux sociaux et aux autres plateformes cible de médias numériques.
+**Méthode** d&#39;évaluation des segments : Il existe deux méthodes d’évaluation des segments : planifié et à la demande. L’évaluation planifiée permet d’établir un calendrier récurrent pour l’exécution d’une tâche d’exportation à un moment précis, tandis que l’évaluation à la demande implique la création d’une tâche de segment pour créer immédiatement l’audience.
 
-**ID de segment :** Un ID de segment est un identifiant généré automatiquement associé à un segment.
+**Exportation** de segments : L’exportation de segments est l’un des deux types de destinations dans l’Experience Platform. Avec l’exportation de segments, vous pouvez envoyer les profils qui remplissent les conditions requises et qui ont été mappés à la destination. Elle utilise les identifiants de segment et d’utilisateur, ainsi que les données pseudonymes, et s’intègre généralement aux réseaux sociaux et aux autres plateformes cible de médias numériques.
 
-**Appartenance au segment :** L’appartenance au segment affiche le segment auquel un profil fait actuellement partie.
+**ID** de segment : Un ID de segment est un identifiant généré automatiquement associé à un segment.
 
-**Règles de segmentation :** Les règles de segmentation indiquent où et comment l’utilisateur définit ce que les profils qualifient pour le segment.
+**Appartenance** au segment : L’appartenance à un segment affiche le ou les segments auxquels un profil fait actuellement partie.
 
-**Type de segment :** Il existe deux types de segments : L’un est un segment qui se met à jour dynamiquement avec [!DNL Experience Platform] les modifications de données, et l’autre est un instantané d’audience qui capture toutes les règles de segment de réunion de profils, et celles-ci ne changent pas.
+**Règles** de segmentation : Les règles de segmentation définissent les conditions qui déterminent si un profil est admissible pour un segment.
 
-**Segmentation :** la segmentation consiste à diviser un grand groupe de clients, de prospects ou de consommateurs en groupes plus petits, qui partagent des attributs similaires et réagissent de la même manière aux stratégies marketing.
+**Segmentation** : La segmentation consiste à diviser un grand groupe de clients, de prospects ou de consommateurs en groupes plus petits qui partagent des attributs similaires et réagissent de la même manière à des stratégies marketing spécifiques.
 
-**Sensei ML Framework :** Sensei ML Framework est un cadre unifié d&#39;apprentissage automatique à travers l&#39;Adobe qui utilise les données [!DNL Experience Platform] pour donner aux scientifiques des données les moyens de développer des services de renseignement pilotés par l&#39;apprentissage automatique d&#39;une manière plus rapide, évolutive et réutilisable.
+**Sensei ML Framework** : Sensei ML Framework est un cadre unifié d&#39;apprentissage automatique (ML) qui exploite les données Experience Platform pour permettre aux chercheurs en données de développer des services de renseignement pilotés par ML d&#39;une manière plus rapide, évolutive et réutilisable.
 
-**Libellés sensibles :** Les libellés &quot;S&quot; sensibles sont utilisés pour classer les données jugées sensibles, par exemple les différents types de données comportementales ou géographiques que vous souhaitez marquer comme sensibles.
+**Étiquettes** sensibles (&quot;S&quot;) : Les libellés sensibles (&quot;S&quot;) sont utilisés pour classer les données jugées sensibles, par exemple les différents types de données comportementales ou géographiques à marquer comme sensibles.
 
-**Services :** cadre puissant permettant de rendre opérationnels les services d’intelligence artificielle et d’apprentissage automatique, grâce à l’utilisation d’Adobe Intelligent Services. Services offre des expériences client personnalisées en temps réel ou rendent opérationnels des services intelligents personnalisés.
+**Services** : Un cadre puissant pour rendre opérationnels les services d&#39;IA et de ML en exploitant les services intelligents Adobes. Services offre des expériences client personnalisées en temps réel ou rendent opérationnels des services intelligents personnalisés.
 
-**Action** marketing de personnalisation d’identité unique Action marketing qui utilise les données pour la personnalisation de contenu sur site. La personnalisation sur site est toute donnée utilisée pour faire des inférences sur les intérêts des utilisateurs et sert à sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
+**Action** marketing de personnalisation d&#39;identité unique : Action marketing qui utilise les données pour la personnalisation du contenu sur site. La personnalisation sur site est toute donnée utilisée pour faire des inférences sur les intérêts des utilisateurs et sert à sélectionner le contenu ou les publicités qui sont diffusés en fonction de ces inférences.
 
-**Étiquette d&#39;utilisation des données S1 :** Un libellé `S1` d’utilisation des données est utilisé pour classer les données spécifiant la latitude et la longitude qui peuvent être utilisées pour déterminer l’emplacement précis d’un périphérique.
+**Étiquette** d&#39;utilisation des données S1 : Un libellé d’utilisation des  `S1` données est utilisé pour classer les données spécifiant la latitude et la longitude qui peuvent être utilisées pour déterminer l’emplacement précis d’un périphérique.
 
-**Étiquette d&#39;utilisation des données S2 :** Un libellé `S2` d’utilisation des données est utilisé pour classer les données qui peuvent être utilisées pour déterminer une zone de géo-barrière définie de manière générale.
+**Étiquette** d&#39;utilisation des données S2 : Un libellé d’utilisation des  `S2` données est utilisé pour classer les données qui peuvent être utilisées pour déterminer une zone de géofence définie de manière générale.
 
-**Source :** La source est un terme général pour tout connecteur d’entrée dans le [!DNL Real-time Customer Data Platform].
+**Source** : Une source est un terme général pour tout connecteur d’entrée dans la plate-forme. Voir aussi : Connecteur source
 
-**Attribut source :** Un attribut source est un champ du jeu de données source.  Les attributs sources sont mappés aux champs de schémas sources.
+**Attribut** source : Un attribut source est un champ du jeu de données source. Les attributs sources sont mappés aux champs de schémas sources.
 
-**Catalogue source :** Un catalogue source est une liste de sources disponibles dans le [!DNL Real-time Customer Data Platform].
+**Catalogue** source : Le catalogue source est la liste des connecteurs source disponibles dans l’Experience Platform.
 
-**Catégorie source :** Une catégorie source est un regroupement de sources [!DNL Real-time Customer Data Platform] présentant des caractéristiques similaires.
+**Catégorie** source : Une catégorie source est un groupement de sources présentant des caractéristiques similaires.
 
-**Connecteur source :** Les connecteurs Adobe Experience Platform Source permettent aux utilisateurs d’assimiler facilement des données provenant de plusieurs sources, ce qui leur permet de structurer, d’étiqueter et d’améliorer les données à l’aide de [!DNL Experience Platform Services]. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
+**Connecteur** source : Les connecteurs de source (également appelés sources) permettent aux utilisateurs d’assimiler facilement des données provenant de plusieurs sources, ce qui permet de structurer, d’étiqueter et d’améliorer les données à l’aide de services Experience Platform. Les données peuvent être ingérées à partir de différentes sources, comme le stockage dans le cloud, les logiciels tiers et les systèmes de gestion de la relation client.
 
-**Connexion en flux continu :** Une connexion en flux continu est un point de terminaison unique fourni par l’Adobe et lié à l’organisation IMS d’un client pour diffuser des données dans [!DNL Experience Platform].
+**Connexion** en flux continu : Une connexion en flux continu est un point de terminaison unique fourni par l’Adobe et lié à l’organisation IMS d’un client pour diffuser des données dans l’Experience Platform.
 
-**Espace de nommage d&#39;identité standard :** Les espaces de nommage d&#39;identité standard sont des identifiants prédéfinis d&#39;Adobe, y compris les solutions standard d&#39;Adobe et d&#39;industrie utilisées pour identifier les utilisateurs.
+**Espace de nommage** d&#39;identité standard : Les espaces de nommage d&#39;identité standard sont des espaces de nommage d&#39;identité prédéfinis fournis par l&#39;Adobe, qui représentent des solutions standard couramment utilisées pour identifier les clients.
 
-**Schéma standard :** Les schémas standard sont composés de classes et de mixins et sont destinés à être réutilisés.
+**Prise en charge** en flux continu : L’assimilation en flux continu vous permet d’envoyer des données en temps réel à l’Experience Platform à partir d’appareils côté client et serveur.
 
-**Prise en charge en flux continu :** L’assimilation en flux continu fournit aux utilisateurs une méthode d’envoi en temps réel de données depuis les périphériques client et serveur [!DNL Experience Platform] .
+**Segmentation** en flux continu : La segmentation en flux continu est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
 
-**Segmentation en flux continu :** La segmentation en flux continu est un processus continu de sélection des données qui met à jour les segments en réponse à l’activité des utilisateurs. Une fois qu’un segment a été créé et enregistré, la définition de segment est appliquée aux données d’entrée [!DNL Real-time Customer Profile]. Les ajouts et les suppressions de segments sont traités régulièrement, ce qui vous permet de vous assurer que votre ciblage d’audience reste pertinent.
-
-**Symbole :** Un symbole est l&#39;abréviation d&#39;un espace de nommage d&#39;identité qui peut être utilisé comme référence dans les API.
-
-**Vue du système :**[!DNL Real-time Customer Profile] la vue du système est une représentation visuelle des jeux de données sources qui transitent par vers les destinations.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Vue** système : La Vue système est une représentation visuelle des jeux de données source qui circulent  [!DNL Real-time Customer Profile] vers les destinations.
 
 ## T
 
-**Fonctionnalités de la cible :** La fonction de cible est spécifiée dans le mappage des fonctionnalités est la fonction prédite par un modèle.
+**Fonctionnalités** de la cible : Dans le mappage des fonctionnalités, une fonction de cible est la fonction prédite par un modèle.
 
-**Modèle formé :** Un modèle formé représente la sortie exécutable d&#39;un processus de formation de modèle, dans lequel un ensemble de données de formation a été appliqué à l&#39;instance de modèle. Un modèle formé conserve une référence au service web intelligent qui est créé à partir de celui-ci. Le modèle formé est adapté à la notation et à la création d’un service web intelligent. Les modifications apportées à un modèle formé peuvent être suivies comme une nouvelle version.
+**Données** de série chronologique : Les données de séries chronologiques fournissent un instantané du système au moment où une action a été entreprise, directement ou indirectement, par un sujet enregistré.
 
-**Jeton :** un jeton est un type de sécurité d’authentification à deux facteurs qui peut être utilisé pour autoriser l’utilisation de services informatiques avec [!DNL Query Service].
+**Modèle** formé : Un modèle formé représente la sortie exécutable d&#39;un processus de formation de modèle, dans lequel un ensemble de données de formation a été appliqué à l&#39;instance de modèle. Un modèle formé conserve une référence au service web intelligent qui est créé à partir de celui-ci. Un modèle de formation est adapté à la notation et à la création d&#39;un service web intelligent.
 
-**Type :** le type est la classe de problème d’apprentissage automatique pour laquelle une recette est conçue, utilisée après l’entraînement pour aider à personnaliser l’évaluation de la session d’entraînement.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Jeton** : Un jeton est un type de sécurité d’authentification à deux facteurs qui peut être utilisé pour autoriser l’utilisation de services informatiques avec  [!DNL Query Service].
 
 ## U
 
-**Schéma Union :** Un schéma d’union est une consolidation des schémas qui ont été activés pour [!DNL Real-time Customer Profile].
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Schéma** Union : Un schéma d’union est une consolidation des schémas qui partagent la même classe et ont été activés pour  [!DNL Real-time Customer Profile]. Plusieurs schémas d&#39;union peuvent exister pour une organisation, mais il ne peut y avoir qu&#39;un seul schéma d&#39;union par classe.
 
 ## V
 
-[Haut de page](#adobe-experience-platform-glossary)
-
 ## W
-
-[Haut de page](#adobe-experience-platform-glossary)
 
 ## X
 
-**Modèle de données d’expérience (XDM) :**[!DNL Experience Platform] XDM est le concept d’utilisation de schémas standard pour unifier les données en vue de les utiliser avec et les applications Adobe Experience Cloud. XDM est une spécification officielle utilisée pour représenter toutes les données d’expérience client dans un langage unique ou un modèle de données standard. Elle normalise la structure des données et accélère et simplifie le processus d’obtention d’insights à partir de très grandes quantités de données.
+**XDM** : Voir Modèle de données d’expérience (XDM).
 
-**Événement de décision XDM :** un événement de décision sert à recueillir des observations sur le résultat et le contexte d’une activité de décision ; y compris des renseignements sur la façon dont la décision a été prise, le moment où elle a eu lieu, les options proposées (choisies) et l’état contextuel qui a influé sur la décision ou qui a pu être observé pendant le processus de décision. Les événements de décision récoltent également l’identifiant de proposition, un identifiant unique global qui peut être utilisé pour corréler la décision à d’autres événements. Les événements de décision sont non seulement liés aux événements d’expérience qui ont influé sur une décision, mais aussi aux événements d’expérience qui sont une réponse directe à une proposition. On s’attend à ce que les applications référencent l’identifiant de proposition dans chaque événement d’expérience qui a été influencé par les propositions. L’historique proposition-réponse d’un profil individuel est conservé à l’aide des identifiants de proposition.
+**Événement** de décision XDM : Le Événement de décision XDM est une classe fondée sur des séries chronologiques qui permet de recueillir des observations sur le résultat et le contexte d&#39;une activité de décision. Cela comprend des renseignements sur la façon dont la décision a été prise, le moment où elle a été prise, les options proposées (et choisies) et l&#39;état contextuel qui a influé sur la décision ou qui a pu être observé pendant le processus de décision.
 
-**XDM ExperienceEvent :** un ExperienceEvent est un enregistrement factuel de ce qui s’est passé, y compris le moment et l’identité de la personne impliquée. Les événements d’expérience peuvent être explicites (actions humaines directement observables) ou implicites (obtenus sans action humaine directe), et sont enregistrés sans agrégation ni interprétation. Ils sont essentiels à l’analyse du domaine temporel, car ils permettent l’observation et l’analyse des changements qui surviennent dans une période donnée, et la comparaison entre plusieurs périodes pour suivre les tendances.
+**XDM ExperienceEvent** : XDM ExperienceEvent est une classe basée sur des séries chronologiques utilisée pour capturer l&#39;état du système lorsqu&#39;un événement (ou un ensemble de événements) s&#39;est produit, y compris le moment et l&#39;identité du sujet concerné. Voir aussi : Événement d’expérience
 
-**XDM  :**[!DNL Individual Profile] un schéma XDM Individual Profile forme une représentation singulière des attributs et des intérêts des individus identifiés et partiellement identifiés. Les profils moins identifiés peuvent contenir uniquement des signaux comportementaux anonymes, tels que des cookies de navigateur, tandis que les profils hautement identifiés peuvent contenir des informations personnelles détaillées, telles que le nom, la date de naissance, l’emplacement et l’adresse électronique. À mesure qu’un profil se développe, il devient un solide référentiel d’informations personnelles, d’informations d’identification, de coordonnées et de préférences de communication pour une personne.
+**Profil** XDM individuel : XDM  [!DNL Individual Profile] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses électroniques.
 
-**Système XDM :**[!DNL Experience Platform] le système XDM est l’infrastructure, la sémantique des données et le workflow dans , optimisé par des schémas standard.
-
-[Haut de page](#adobe-experience-platform-glossary)
+**Système** XDM : Le système XDM représente le cadre qui rend opérationnels les schémas XDM pour les utiliser dans les services Experience Platform en aval.
 
 ## Y
 
-[Haut de page](#adobe-experience-platform-glossary)
-
 ## Z
-
-[Haut de page](#adobe-experience-platform-glossary)
