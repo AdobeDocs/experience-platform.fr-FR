@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;descriptor;Descriptor;descriptors;Descriptors;identity;Identity;friendly name;Friendly name;alternatedisplayinfo;reference;Reference;relationship;Relationship
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; descripteur ; descripteurs ; descripteurs ; identité ; identité ; nom convivial ; nom convivial ; référence ; référence ; relation ; relation
 solution: Experience Platform
 title: Descripteurs
 description: Le point de terminaison /descriptors de l'API de registre de Schéma vous permet de gérer par programmation les descripteurs XDM dans votre application d'expérience.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '1569'
-ht-degree: 58%
+source-wordcount: '1611'
+ht-degree: 57%
 
 ---
 
