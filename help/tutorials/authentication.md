@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;Authenticate;access
+keywords: Experience Platform;accueil;rubriques populaires;Authentification;accès
 solution: Experience Platform
 title: Authentification et accès aux API Experience Platform
 topic: tutorial
 type: Tutorial
 description: 'Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform. '
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 43%
+source-wordcount: '882'
+ht-degree: 42%
 
 ---
 
 
-# Authenticate and access [!DNL Experience Platform] APIs
+# Authentifier et accéder aux [!DNL Experience Platform] API
 
-This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs.
+Ce document fournit un didacticiel détaillé permettant d’accéder à un compte de développeur Adobe Experience Platform afin d’invoquer les API [!DNL Experience Platform].
 
 ## Authentification pour effectuer des appels API
 
@@ -27,7 +27,7 @@ Ce tutoriel décrit les étapes de l’authentification par la création d’un 
 
 ## Conditions préalables
 
-In order to successfully make calls to [!DNL Experience Platform] APIs, you require the following:
+Pour réussir à appeler les API [!DNL Experience Platform], vous devez disposer des éléments suivants :
 
 * Une organisation IMS ayant accès à Adobe Experience Platform
 * Un compte Adobe ID enregistré
@@ -39,17 +39,17 @@ Les sections suivantes décrivent les étapes à suivre pour créer un Adobe ID 
 
 Si vous ne possédez pas d’Adobe ID, vous pouvez en créer un en suivant les étapes suivantes :
 
-1. Accédez à la Console développeur [d&#39;Adobe](https://console.adobe.io)
-2. Cliquez sur **[!UICONTROL Créer un compte]**
+1. Accédez à [Adobe Developer Console](https://console.adobe.io)
+2. Sélectionnez **[!UICONTROL créer un nouveau compte]**.
 3. Suivez le processus d’inscription
 
-## Become a developer and user for [!DNL Experience Platform] for an organization
+## Devenir développeur et utilisateur pour [!DNL Experience Platform] pour une organisation
 
 Avant de créer des intégrations sur Adobe I/O, votre compte doit disposer des autorisations de développeur pour un produit dans une organisation IMS. Dans Admin Console, vous trouverez des informations détaillées sur les comptes de développeurs dans le [document d’assistance](https://helpx.adobe.com/fr/enterprise/using/manage-developers.html) pour la gestion des développeurs.
 
 **Obtenir un accès en tant que développeur**
 
-Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization&#39;s products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
+Contactez un administrateur [!DNL Admin Console] de votre organisation pour vous ajouter en tant que développeur pour l’un des produits de votre organisation en utilisant [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
 ![](images/authentication/assign-developer.png)
 
@@ -61,7 +61,7 @@ Une fois que vous avez été nommé en tant que développeur, vous disposez de d
 
 **Obtenir un accès en tant qu’utilisateur**
 
-Your [!DNL Admin Console] administrator must also add you to the product as a user.
+Votre administrateur [!DNL Admin Console] doit également vous ajouter au produit en tant qu’utilisateur.
 
 ![](images/authentication/assign-users.png)
 
@@ -73,7 +73,7 @@ Tout comme le processus d’ajout d’un développeur, l’administrateur doit v
 
 >[!NOTE]
 >
->Si vous suivez ce document du guide [du développeur](../privacy-service/api/getting-started.md)Privacy Service, vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques à [!DNL Privacy Service].
+>Si vous suivez ce document du [guide du développeur Privacy Service](../privacy-service/api/getting-started.md), vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques à [!DNL Privacy Service].
 
 A l’aide d’Adobe Developer Console, vous devez générer les trois informations d’identification d’accès suivantes :
 
@@ -81,25 +81,25 @@ A l’aide d’Adobe Developer Console, vous devez générer les trois informati
 * `{API_KEY}`
 * `{ACCESS_TOKEN}`
 
-Vous `{IMS_ORG}` devez générer votre fichier une seule fois et vous pouvez le réutiliser dans les prochains appels `{API_KEY}` [!DNL Platform] d’API. Cependant, votre `{ACCESS_TOKEN}` est temporaire et doit être régénéré toutes les 24 heures.
+Vos `{IMS_ORG}` et `{API_KEY}` n&#39;ont besoin d&#39;être générés qu&#39;une seule fois et peuvent être réutilisés dans les prochains appels d&#39;API [!DNL Platform]. Cependant, votre `{ACCESS_TOKEN}` est temporaire et doit être régénéré toutes les 24 heures.
 
 Les étapes sont décrites en détail ci-dessous.
 
 ### Configuration ponctuelle
 
-Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr) and sign in with your Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) vide dans la documentation de la Console développeur d&#39;Adobes.
+Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) et connectez-vous avec votre Adobe ID. Suivez ensuite les étapes décrites dans le didacticiel sur la [création d&#39;un projet vide](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) dans la documentation de la Console développeur de l&#39;Adobe.
 
-Une fois que vous avez créé un nouveau projet, cliquez sur **[!UICONTROL Ajouter l’API]** dans l’écran Présentation **du** projet.
+Après avoir créé un nouveau projet, sélectionnez **[!UICONTROL Ajouter l&#39;API]** dans l&#39;écran **Présentation du projet**.
 
 ![](images/authentication/add-api-button.png)
 
-L’écran **Ajouter une API** s’affiche. Cliquez sur l’icône de produit pour Adobe Experience Platform, puis sélectionnez API **** Experience Platform avant de cliquer sur **[!UICONTROL Suivant]**.
+L&#39;écran **Ajouter une API** s&#39;affiche. Sélectionnez l’icône de produit pour Adobe Experience Platform, puis **[!UICONTROL API Experience Platform]** avant de sélectionner **[!UICONTROL Suivant]**.
 
 ![](images/authentication/add-platform-api.png)
 
-Une fois que vous avez sélectionné [!DNL Experience Platform] l’API à ajouter au projet, suivez les étapes décrites dans le didacticiel sur l’ [ajout d’une API à un projet à l’aide d’un compte de service (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (à partir de l’étape &quot;Configurer l’API&quot;) pour terminer le processus.
+Une fois que vous avez sélectionné [!DNL Experience Platform] comme API à ajouter au projet, suivez les étapes décrites dans le didacticiel sur [l&#39;ajout d&#39;une API à un projet à l&#39;aide d&#39;un compte de service (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (à partir de l&#39;étape &quot;Configurer l&#39;API&quot;) pour terminer le processus.
 
-Une fois l&#39;API ajoutée au projet, la page d&#39;aperçu **du** projet affiche les informations d&#39;identification suivantes requises dans tous les appels aux [!DNL Experience Platform] API :
+Une fois l&#39;API ajoutée au projet, la page **Présentation du projet** affiche les informations d&#39;identification suivantes requises dans tous les appels aux API [!DNL Experience Platform] :
 
 * `{API_KEY}` (Identifiant du client)
 * `{IMS_ORG}` (ID d’organisation)
@@ -108,13 +108,13 @@ Une fois l&#39;API ajoutée au projet, la page d&#39;aperçu **du** projet affic
 
 ### Authentification pour chaque session
 
-Les dernières informations d’identification requises que vous devez rassembler sont les `{ACCESS_TOKEN}`vôtres. Contrairement aux valeurs pour `{API_KEY}` et `{IMS_ORG}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser [!DNL Platform] les API.
+Les dernières informations d’identification requises que vous devez rassembler sont votre `{ACCESS_TOKEN}`. Contrairement aux valeurs de `{API_KEY}` et `{IMS_ORG}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API [!DNL Platform].
 
-Pour générer un nouveau jeton `{ACCESS_TOKEN}`JWT, suivez les étapes pour [générer un jeton](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) JWT dans le guide d’informations d’identification de la Console développeur.
+Pour générer un nouveau `{ACCESS_TOKEN}`, suivez les étapes pour [générer un jeton JWT](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/credentials.md) dans le guide d&#39;identification de la Console développeur.
 
 ## Tester les informations d’accès
 
-Une fois que vous avez rassemblé les trois informations d’identification requises, vous pouvez effectuer l’appel d’API suivant. Cet appel liste toutes les classes [!DNL Experience Data Model] (XDM) dans le `global` conteneur du registre du Schéma :
+Une fois que vous avez rassemblé les trois informations d’identification requises, vous pouvez effectuer l’appel d’API suivant. Cet appel liste toutes les classes [!DNL Experience Data Model] (XDM) dans le conteneur `global` du registre de Schémas :
 
 **Format d’API**
 
@@ -161,6 +161,6 @@ Si votre réponse est similaire à celle illustrée ci-dessous, vos informations
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez rassemblé et testé avec succès vos informations d’identification d’accès pour [!DNL Platform] les API. Vous pouvez désormais suivre l’exemple d’appels d’API fourni dans toute la [documentation](../landing/documentation/overview.md).
+En lisant ce document, vous avez rassemblé et testé avec succès vos informations d’identification d’accès pour les API [!DNL Platform]. Vous pouvez désormais suivre l&#39;exemple d&#39;appels d&#39;API fourni dans la [documentation](../landing/documentation/overview.md).
 
-Outre les valeurs d’authentification que vous avez rassemblées dans ce didacticiel, de nombreuses [!DNL Platform] API requièrent également un élément valide `{SANDBOX_NAME}` à fournir en-tête. Pour plus d’informations, consultez la [présentation des environnements de test](../sandboxes/home.md).
+Outre les valeurs d&#39;authentification que vous avez rassemblées dans ce didacticiel, de nombreuses API [!DNL Platform] nécessitent également un `{SANDBOX_NAME}` valide pour être fournies en tant qu&#39;en-tête. Pour plus d’informations, consultez la [présentation des environnements de test](../sandboxes/home.md).
