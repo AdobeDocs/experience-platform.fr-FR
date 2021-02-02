@@ -1,33 +1,35 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Fusionner les stratégies - API Profil client en temps réel
+keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+title: Point de terminaison de l’API de fusion de stratégies
 topic: guide
+type: Documentation
+description: 'Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Lorsque ces données sont regroupées, les stratégies de fusion sont les règles utilisées par Plateforme pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer une vue unifiée. '
 translation-type: tm+mt
-source-git-commit: 6bfc256b50542e88e28f8a0c40cec7a109a05aa6
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '2494'
-ht-degree: 57%
+source-wordcount: '2560'
+ht-degree: 54%
 
 ---
 
 
 # Point de terminaison de la fusion de stratégies
 
-Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view.
+Adobe Experience Platform vous permet de rassembler des fragments de données provenant de plusieurs sources et de les combiner afin d’obtenir une vue complète de chacun de vos clients. Lorsque ces données sont regroupées, les stratégies de fusion sont les règles que [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer une vue unifiée.
 
 Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre entreprise aura plusieurs fragments de profil liés à ce client unique qui apparaîtront dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans la plate-forme, ils sont fusionnés ensemble afin de créer un profil unique pour ce client. Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, un fragment liste le client comme &quot;unique&quot; tandis que les autres listes le client comme &quot;marié&quot;), la stratégie de fusion détermine les informations à inclure dans le profil de la personne.
 
 À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des stratégies de fusion, gérer des stratégies existantes et définir une stratégie de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API.
 
-Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le [guide d’utilisation des stratégies de fusion](../ui/merge-policies.md).
+Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, consultez le [guide d’interface utilisateur des stratégies de fusion](../ui/merge-policies.md).
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 ## Composants des stratégies de fusion {#components-of-merge-policies}
 
-Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies pour fusionner des schémas de la manière dont vous avez besoin. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] fournit aux entreprises une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme valeur par défaut pour votre entreprise.
+Les stratégies de fusion sont privées à votre organisation IMS, ce qui vous permet de créer différentes stratégies pour fusionner des schémas de la manière dont vous avez besoin. Toute API accédant aux données [!DNL Profile] nécessite une stratégie de fusion, bien qu&#39;une stratégie par défaut soit utilisée si elle n&#39;est pas explicitement fournie. [!DNL Platform] fournit aux entreprises une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion pour une classe de schéma de modèle de données d’expérience (XDM) spécifique et la marquer comme valeur par défaut pour votre entreprise.
 
 Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par classe de schéma, chaque classe ne peut avoir qu&#39;une seule stratégie de fusion par défaut. Tout jeu de stratégies de fusion par défaut est utilisé lorsque le nom de la classe de schéma est fourni et qu’une stratégie de fusion est requise mais pas fournie.
 
@@ -67,8 +69,8 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 | `name` | Nom convivial par lequel la stratégie de fusion peut être identifiée dans les affichages en liste. |
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette stratégie de fusion. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
-| `attributeMerge` | [Objet de fusion](#attribute-merge) d’attributs indiquant la manière dont la stratégie de fusion attribuera la priorité aux attributs de profil en cas de conflit de données. |
-| `schema.name` | Partie de l’ [`schema`](#schema) objet, le champ `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d&#39;informations sur les schémas et les classes, veuillez lire la documentation [](../../xdm/home.md)XDM. |
+| `attributeMerge` | [Attribut ](#attribute-merge) mergeobject indiquant la manière dont la stratégie de fusion attribuera la priorité aux attributs de profil en cas de conflit de données. |
+| `schema.name` | Dans l&#39;objet [`schema`](#schema), le champ `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d&#39;informations sur les schémas et les classes, consultez la [documentation XDM](../../xdm/home.md). |
 | `default` | Valeur booléenne indiquant si cette stratégie de fusion est la valeur par défaut du schéma spécifié. |
 | `version` | [!DNL Platform]Version de la stratégie de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une stratégie de fusion est mise à jour. |
 | `updateEpoch` | Date de la dernière mise à jour de la stratégie de fusion. |
@@ -97,7 +99,7 @@ L’objet de stratégie de fusion complet est un ensemble de préférences contr
 
 ### Graphique d’identités {#identity-graph}
 
-[Adobe Experience Platform Identity Service](../../identity-service/home.md) gère les graphiques d&#39;identité utilisés globalement et pour chaque organisation sur [!DNL Experience Platform]. L’attribut `identityGraph` de la stratégie de fusion définit la manière de déterminer les identités associées pour un utilisateur.
+[Adobe Experience Platform Identity ](../../identity-service/home.md) Service gère les graphiques d&#39;identité utilisés dans le monde entier et pour chaque organisation  [!DNL Experience Platform]. L’attribut `identityGraph` de la stratégie de fusion définit la manière de déterminer les identités associées pour un utilisateur.
 
 **Objet identityGraph**
 
@@ -122,7 +124,7 @@ Où `{IDENTITY_GRAPH_TYPE}` peut prendre une de ces valeurs :
 
 ### Fusion d’attributs {#attribute-merge}
 
-Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit d&#39;attributs de profil et la priorité doit être spécifiée. A l’aide `attributeMerge`de cette option, vous pouvez spécifier les attributs de profil à prioriser dans le événement d’un conflit de fusion entre des jeux de données de type Valeur clé (données d’enregistrement).
+Un fragment de profil correspond aux informations de profil d’une seule identité de la liste d’identités qui existe pour un utilisateur particulier. Lorsque le type de graphique d&#39;identité utilisé génère plusieurs identités, il existe un risque de conflit d&#39;attributs de profil et la priorité doit être spécifiée. `attributeMerge` permet de spécifier les attributs de profil à prioriser dans le événement d&#39;un conflit de fusion entre des jeux de données de type Valeur clé (données d&#39;enregistrement) et Données d&#39;enregistrement.
 
 **Objet attributeMerge**
 
@@ -134,11 +136,11 @@ Un fragment de profil correspond aux informations de profil d’une seule identi
 
 Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
-* **`timestampOrdered`**: (par défaut) Attribuez la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire. `timestampOrdered` prend également en charge les horodatages personnalisés qui sont prioritaires lors de la fusion de fragments de profil dans ou entre des jeux de données. Pour en savoir plus, consultez la section Annexe sur l’ [utilisation d’horodatages](#custom-timestamps)personnalisés.
+* **`timestampOrdered`**: (par défaut) Attribuez la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire. `timestampOrdered` prend également en charge les horodatages personnalisés qui sont prioritaires lors de la fusion de fragments de profil dans ou entre des jeux de données. Pour en savoir plus, voir la section Annexe sur [l&#39;utilisation d&#39;horodatages personnalisés](#custom-timestamps).
 * **`dataSetPrecedence`** : Donner la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont arrivés. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
-   * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
+   * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, un  `order` tableau doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
-#### Exemple d’objet `attributeMerge` utilisant `dataSetPrecedence` le type
+#### Exemple d&#39;objet `attributeMerge` utilisant le type `dataSetPrecedence`
 
 ```json
     "attributeMerge": {
@@ -152,7 +154,7 @@ Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
     }
 ```
 
-#### Exemple d’objet `attributeMerge` utilisant `timestampOrdered` le type
+#### Exemple d&#39;objet `attributeMerge` utilisant le type `timestampOrdered`
 
 ```json
     "attributeMerge": {
@@ -182,11 +184,11 @@ Où la valeur de `name` est le nom de la classe XDM sur laquelle repose le sché
     }
 ```
 
-Pour en savoir plus sur XDM et travailler avec des schémas en Experience Platform, lisez d&#39;abord l&#39;aperçu [du système](../../xdm/home.md)XDM.
+Pour en savoir plus sur XDM et travailler avec des schémas en Experience Platform, lisez tout d&#39;abord [Présentation du système XDM](../../xdm/home.md).
 
 ## Accès aux stratégies de fusion {#access-merge-policies}
 
-Using the [!DNL Real-time Customer Profile] API, the `/config/mergePolicies` endpoint allows you perform a lookup request to view a specific merge policy by its ID, or access all of the merge policies in your IMS Organization, filtered by specific criteria. Vous pouvez également utiliser le `/config/mergePolicies/bulk-get` point de terminaison pour récupérer plusieurs stratégies de fusion à l’aide de leur ID. Les étapes d&#39;exécution de chacun de ces appels sont décrites dans les sections suivantes.
+En utilisant l&#39;API [!DNL Real-time Customer Profile], le point de terminaison `/config/mergePolicies` vous permet d&#39;effectuer une demande de recherche pour vue d&#39;une stratégie de fusion spécifique par son identifiant, ou d&#39;accéder à toutes les stratégies de fusion de votre organisation IMS, filtrées selon des critères spécifiques. Vous pouvez également utiliser le point de terminaison `/config/mergePolicies/bulk-get` pour récupérer plusieurs stratégies de fusion en fonction de leurs ID. Les étapes d&#39;exécution de chacun de ces appels sont décrites dans les sections suivantes.
 
 ### Accès à une stratégie de fusion unique par identifiant
 
@@ -240,7 +242,7 @@ Pour en savoir plus sur chacun des éléments qui constituent une stratégie de 
 
 ### Récupérer plusieurs stratégies de fusion à l’aide de leur ID
 
-Vous pouvez récupérer plusieurs stratégies de fusion en adressant une requête de POST au point de `/config/mergePolicies/bulk-get` terminaison et en incluant les ID des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
+Vous pouvez récupérer plusieurs stratégies de fusion en adressant une requête de POST au point de terminaison `/config/mergePolicies/bulk-get` et en incluant les ID des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
 
 **Format d’API**
 
@@ -738,7 +740,7 @@ Une requête de suppression réussie renvoie un état HTTP 200 (OK) et un corps
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster la vue des profils client dans la plate-forme et pour créer des segments d’audience à partir de vos [!DNL Real-time Customer Profile] données. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
+Maintenant que vous savez comment créer et configurer des stratégies de fusion pour votre entreprise, vous pouvez les utiliser pour ajuster la vue des profils client dans la plateforme et pour créer des segments d&#39;audience à partir de vos données [!DNL Real-time Customer Profile]. Consultez l’[aide d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md) pour commencer à définir et à utiliser des segments.
 
 ## Annexe
 
@@ -746,23 +748,23 @@ Cette section fournit des informations supplémentaires sur l’utilisation des 
 
 ### Utilisation d’horodatages personnalisés {#custom-timestamps}
 
-Comme les enregistrements sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque `timestampOrdered` est sélectionné comme `attributeMerge` type pour une stratégie de fusion, les profils sont fusionnés en fonction de l’horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
+Comme les enregistrements sont ingérés dans l&#39;Experience Platform, un horodatage système est obtenu au moment de l&#39;assimilation et ajouté à l&#39;enregistrement. Lorsque `timestampOrdered` est sélectionné comme type `attributeMerge` pour une stratégie de fusion, les profils sont fusionnés en fonction de l&#39;horodatage système. En d’autres termes, la fusion est effectuée en fonction de l’horodatage du moment où l’enregistrement a été ingéré dans la plate-forme.
 
 Il peut arriver, par exemple, que des données soient renvoyées ou que l’ordre des événements soit correct si les enregistrements sont ingérés dans l’ordre, lorsqu’il est nécessaire de fournir un horodatage personnalisé et que la stratégie de fusion respecte l’horodatage personnalisé plutôt que l’horodatage système.
 
-Pour utiliser un horodatage personnalisé, celui-ci [[!DNL External Source System Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du `xdm:lastUpdatedDate` champ. Lorsqu’un enregistrement est assimilé à un champ `xdm:lastUpdatedDate` rempli, l’Experience Platform l’utilise pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si elle `xdm:lastUpdatedDate` n’est pas présente ou n’est pas renseignée, la plate-forme continuera à utiliser l’horodatage du système.
+Pour utiliser un horodatage personnalisé, [[!DNL External Source System Audit Details Mixin]](#mixin-details) doit être ajouté à votre schéma de Profil. Une fois ajouté, l’horodatage personnalisé peut être renseigné à l’aide du champ `xdm:lastUpdatedDate`. Lorsqu&#39;un enregistrement est assimilé au champ `xdm:lastUpdatedDate` renseigné, l&#39;Experience Platform utilise ce champ pour fusionner des enregistrements ou des fragments de profil dans et entre des jeux de données. Si `xdm:lastUpdatedDate` n&#39;est pas présent ou n&#39;est pas renseigné, Platform continuera à utiliser l&#39;horodatage système.
 
 >[!NOTE]
 >
->Vous devez vous assurer que l’ `xdm:lastUpdatedDate` horodatage est renseigné lors de l’envoi d’un PATCH sur le même enregistrement.
+>Vous devez vous assurer que l&#39;horodatage `xdm:lastUpdatedDate` est renseigné lors de l&#39;envoi d&#39;un PATCH sur le même enregistrement.
 
-Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API de registre de Schéma, y compris sur la façon d&#39;ajouter des mixins aux schémas, consultez le [didacticiel pour créer un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
+Pour obtenir des instructions détaillées sur l&#39;utilisation des schémas à l&#39;aide de l&#39;API Schéma Registry, y compris sur la façon d&#39;ajouter des mixins aux schémas, consultez le [didacticiel de création d&#39;un schéma à l&#39;aide de l&#39;API](../../xdm/tutorials/create-schema-api.md).
 
-Pour utiliser des horodatages personnalisés à l’aide de l’interface utilisateur, reportez-vous à la section relative à l’ [utilisation d’horodatages](../ui/merge-policies.md#custom-timestamps) personnalisés dans le guide [d’utilisation des stratégies de](../ui/merge-policies.md)fusion.
+Pour utiliser des horodatages personnalisés à l’aide de l’interface utilisateur, reportez-vous à la section [en utilisant des horodatages personnalisés](../ui/merge-policies.md#custom-timestamps) dans le [guide de l’utilisateur des stratégies de fusion](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] détails {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] détails  {#mixin-details}
 
-L’exemple suivant montre comment afficher les champs correctement renseignés dans le [!DNL External Source System Audit Details Mixin]. Le mixin JSON complet peut également être visualisé dans le référentiel [XDM (Experience Data Model)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) public sur GitHub.
+L&#39;exemple suivant montre les champs correctement renseignés dans [!DNL External Source System Audit Details Mixin]. Le mixin JSON complet peut également être visualisé dans le rapport [Modèle de données d’expérience publique (XDM)](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) sur GitHub.
 
 ```json
 {
