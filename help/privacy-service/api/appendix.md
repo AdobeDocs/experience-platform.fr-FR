@@ -1,24 +1,27 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Qualificateurs et espaces de noms d’identité acceptés
+title: Annexe du guide du développeur d'API Privacy Service
 topic: developer guide
+description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5b32c1955fac4f137ba44e8189376c81cdbbfc40
+source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 87%
+source-wordcount: '498'
+ht-degree: 80%
 
 ---
 
 
 # Annexe
 
+Les sections suivantes contiennent des informations supplémentaires sur l’utilisation de l’API Adobe Experience Platform Privacy Service.
+
 ## Espaces de noms d’identité standard {#standard-namespaces}
 
-All identities that are sent to [!DNL Privacy Service] must be provided under a specific identity namespace. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
+Toutes les identités envoyées à [!DNL Privacy Service] doivent être fournies sous un espace de nommage d&#39;identité spécifique. Les espaces de noms d’identité sont des composants [Adobe Experience Platform Identity Service](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
-The following table outlines several commonly used, pre-defined identity types made available by [!DNL Experience Platform], along with their associated `namespace` values:
+Le tableau suivant présente plusieurs types d&#39;identité prédéfinis couramment utilisés, rendus disponibles par [!DNL Experience Platform], ainsi que les valeurs `namespace` associées :
 
 | Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -49,8 +52,8 @@ Lors de la spécification d’une valeur `namespace`[!DNL Privacy Service] dans 
 | integrationCode | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
 | namespaceId | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
 | unregistered | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |
-| analytics | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
-| target | A custom namespace understood internally by [!DNL Target], not in the namespace service. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| analytics | Espace de nommage personnalisé mappé en interne dans [!DNL Analytics], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
+| target | Espace de nommage personnalisé compris en interne par [!DNL Target], et non dans le service d’espace de nommage. Il est transmis directement comme indiqué dans la requête d’origine, sans identifiant d’espace de noms. |
 
 ## Valeurs de produit acceptées
 
