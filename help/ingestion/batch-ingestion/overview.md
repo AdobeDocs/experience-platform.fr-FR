@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
+keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation des données ; lot ; lot ; activer le jeu de données ; aperçu de l'assimilation par lot ; aperçu de l'assimilation par lot ;
 solution: Experience Platform
 title: Présentation de l’ingestion par lots
 topic: overview
-description: L’API Batch Ingestion vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots. Les données en cours d’ingestion peuvent être les données du profil d’un fichier plat dans un système CRM (par exemple un fichier parquet) ou des données conformes à un schéma connu dans le registre Experience Data Model (XDM).
+description: L’API Batch Ingestion vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (tel qu’un fichier Parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 85%
+source-wordcount: '1216'
+ht-degree: 79%
 
 ---
 
 
 # [!DNL Batch Ingestion] présentation
 
-The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+L&#39;API [!DNL Batch Ingestion] vous permet d&#39;assimiler des données dans Adobe Experience Platform sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil d&#39;un fichier plat dans un système de gestion de la relation client (par exemple un fichier Parquet), ou les données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
 La [référence de l’API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fournit des informations supplémentaires sur ces appels d’API.
 
@@ -25,7 +25,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Utilisation de l’API
 
-The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
+L&#39;API [!DNL Data Ingestion] vous permet d&#39;assimiler des données sous forme de lots (une unité de données composée d&#39;un ou plusieurs fichiers à assimiler en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
 
 1. Création d’un nouveau filtre.
 2. Chargez des fichiers vers un jeu de données spécifique qui correspond au schéma XDM des données.
@@ -35,8 +35,8 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 ### [!DNL Data Ingestion] conditions préalables
 
 - Les données à charger doivent être au format Parquet ou JSON.
-- Jeu de données créé dans le [[!DNL Catalog services]](../../catalog/home.md).
-- Le contenu du fichier parquet doit correspondre à un sous-ensemble du schéma du jeu de données en cours de chargement.
+- Jeu de données créé dans [[!DNL Catalog services]](../../catalog/home.md).
+- Le contenu du fichier Parquet doit correspondre à un sous-ensemble du schéma du jeu de données dans lequel il est chargé.
 - Obtenez votre jeton d’accès unique après l’authentification.
 
 ### Bonnes pratiques d’ingestion par lots
@@ -52,19 +52,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -131,7 +131,7 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Toute
 
 >[!NOTE]
 >
->Les exemples ci-dessous utilisent le format de fichier [parquet](https://parquet.apache.org/documentation/latest/). Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](./api-overview.md).
+>Les exemples ci-dessous utilisent le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/). Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](./api-overview.md).
 
 ### Chargement de petits fichiers
 
@@ -238,7 +238,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signalement de la fin du lot
 
-Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]DataSetFile de pour les fichiers terminés et les associe au lot généré ci-dessus. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
+Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]DataSetFile de pour les fichiers terminés et les associe au lot généré ci-dessus. Le lot [!DNL Catalog] est ensuite marqué comme réussi, ce qui déclenche des flux en aval pour assimiler les données disponibles.
 
 **Requête**
 
