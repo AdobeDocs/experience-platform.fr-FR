@@ -1,20 +1,20 @@
 ---
-keywords: rtcdp destinations;destinations rtcdp;real time customer data platform destinations
+keywords: destinations rtcdp ; destinations rtcdp ; destinations de plate-forme de données client en temps réel ; destinations
 title: Présentation des destinations
 seo-title: Destinations dans Adobe Experience Platform
-description: Ce document fournit un aperçu des destinations dans la plateforme de données clientes en temps réel
-seo-description: Ce document fournit un aperçu des destinations dans la plateforme de données clientes en temps réel
+description: Ce document fournit un aperçu des destinations dans Adobe Experience Platform
+seo-description: Ce document fournit un aperçu des destinations dans Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: cd7b4abe042a822d13e758b25d3a481d5cb6989b
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 48%
+source-wordcount: '106'
+ht-degree: 26%
 
 ---
 
 
 # Présentation des destinations
 
-Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent l’activation transparente des données provenant de la plateforme des données clients en temps réel. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
-For a more detailed overview of destinations, including a list of available destinations and links to tutorials, please read the [destinations documentation](../../destinations/home.md).
+Pour un aperçu plus détaillé des destinations, y compris une liste des destinations disponibles et des liens vers des didacticiels, consultez la [documentation sur les destinations](../../destinations/home.md).
