@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;create dataset
 solution: Experience Platform
 title: Création d’un jeu de données à l’aide d’API
 topic: datasets
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 86%
+source-wordcount: '1268'
+ht-degree: 82%
 
 ---
 
@@ -21,11 +21,11 @@ Ce document décrit les étapes générales pour créer un jeu de données à l�
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Importation](../../ingestion/batch-ingestion/overview.md)par lot : [!DNL Experience Platform] vous permet d’assimiler des données sous forme de fichiers de commandes.
+* [Importation](../../ingestion/batch-ingestion/overview.md) par lot :  [!DNL Experience Platform] vous permet d’assimiler des données sous forme de fichiers de commandes.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to the [!DNL Platform] APIs.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour pouvoir invoquer les API [!DNL Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -33,19 +33,19 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -61,9 +61,9 @@ Ces définitions standard permettent d’interpréter les données de manière c
 
 Ce tutoriel commence là où le [tutoriel de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) se termine, en utilisant le schéma des membres du programme de fidélité créé pendant ce tutoriel.
 
-If you have not completed the [!DNL Schema Registry] tutorial, please start there and continue with this dataset tutorial only once you have composed the necessary schema.
+Si vous n&#39;avez pas terminé le didacticiel [!DNL Schema Registry], veuillez y début et continuer avec ce tutoriel de dataset seulement une fois que vous avez composé le schéma nécessaire.
 
-The following call can be used to view the Loyalty Members schema you created during the [!DNL Schema Registry] API tutorial:
+L&#39;appel suivant peut être utilisé pour vue du schéma Membres de fidélité que vous avez créé lors du didacticiel de l&#39;API [!DNL Schema Registry] :
 
 **Format d’API**
 
@@ -215,7 +215,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Ce tutoriel utilise le format de fichier [parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
+>Ce didacticiel utilise le format de fichier [Apache Parquet](https://parquet.apache.org/documentation/latest/) pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 
@@ -295,7 +295,7 @@ Une réponse réussie renvoie un état HTTP 201 (Créé) et un objet de répons
 
 ## Transfert de fichiers dans un lot
 
-Une fois le nouveau lot créé pour le transfert, vous pouvez désormais transférer des fichiers dans le jeu de données spécifique. Il est important que vous vous rappeliez que lorsque vous avez défini le jeu de données, vous avez choisi parquet comme format de fichier. Par conséquent, les fichiers que vous transférez doivent être dans ce format.
+Une fois le nouveau lot créé pour le transfert, vous pouvez désormais transférer des fichiers dans le jeu de données spécifique. Il est important de se souvenir que lorsque vous avez défini le jeu de données, vous avez spécifié le format de fichier comme Parquet. Par conséquent, les fichiers que vous transférez doivent être dans ce format.
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ Un fichier transféré renvoie un corps de réponse vide et un état HTTP 200 (
 
 ## Signalement de la fin du lot
 
-Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Signaling completion causes the service to create [!DNL Catalog] `DataSetFile` entries for the uploaded files and associate them with the batch generated previously. The [!DNL Catalog] batch is marked successful, which triggers any downstream flows that can then work on the now available data.
+Après avoir transféré tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Si la signature est terminée, le service crée des entrées [!DNL Catalog] `DataSetFile` pour les fichiers téléchargés et les associe au lot généré précédemment. Le lot [!DNL Catalog] est marqué comme réussi, ce qui déclenche tout flux en aval qui peut alors fonctionner sur les données désormais disponibles.
 
 **Format d’API**
 
