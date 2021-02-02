@@ -1,27 +1,29 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Projections Edge - API Profil client en temps réel
+keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API
+title: Points de terminaison de l’API de projection Edge
 topic: guide
+type: Documentation
+description: Adobe Experience Platform vous permet de proposer des expériences coordonnées, cohérentes et personnalisées à vos clients sur plusieurs canaux en temps réel, en rendant les données appropriées facilement disponibles et mises à jour en continu au fur et à mesure des changements. Pour ce faire, il utilise des arêtes, un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
 workflow-type: tm+mt
-source-wordcount: '1900'
-ht-degree: 86%
+source-wordcount: '1961'
+ht-degree: 83%
 
 ---
 
 
 # Configurations de projection Edge et points de terminaison de destination
 
-Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
+Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Ce guide fournit des instructions détaillées sur l&#39;utilisation de l&#39;API [!DNL Real-time Customer Profile] pour utiliser les projections de bord, y compris les destinations et les configurations.
 
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le guide [de](getting-started.md) prise en main pour obtenir des liens vers la documentation connexe, un guide pour lire les exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute [!DNL Experience Platform] API.
+Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 >[!NOTE]
 >
->Requests that contain a payload (POST, PUT, PATCH) require a `Content-Type` header. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le bon format `Content-Type` pour chaque demande.
+>Les requêtes qui contiennent une charge utile (POST, PUT, PATCH) nécessitent un en-tête `Content-Type`. Plusieurs `Content-Type` sont utilisés dans ce document. Veuillez prêter une attention particulière aux en-têtes des exemples d’appels afin de vous assurer que vous utilisez le `Content-Type` correct pour chaque demande.
 
 ## Destinations de projection
 
@@ -330,7 +332,7 @@ La requête de suppression renvoie un état HTTP 204 (Pas de contenu) et un cor
 
 ## Configurations de projection
 
-Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Rather than projecting a complete [!DNL Experience Data Model] (XDM) schema to the edge, a projection provides only specific data, or fields, from the schema. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
+Les configurations de projection fournissent des informations concernant les données disponibles pour chaque périphérie. Plutôt que de projeter un schéma complet [!DNL Experience Data Model] (XDM) sur le bord, une projection ne fournit que des données spécifiques, ou champs, du schéma. Votre organisation peut définir plus d’une configuration de projection pour chaque schéma XDM.
 
 ### Liste de toutes les configurations de projection
 
@@ -355,7 +357,7 @@ GET /config/projections?schemaName={SCHEMA_NAME}&name={PROJECTION_NAME}
 
 **Requête**
 
-La requête suivante liste toutes les configurations de projection associées à la classe de [!DNL Experience Data Model] schéma [!DNL XDM Individual Profile]. For more information on XDM and its role within [!DNL Platform], please begin by reading the [XDM System overview](../../xdm/home.md).
+La requête suivante liste toutes les configurations de projection associées à la classe de schéma [!DNL Experience Data Model], [!DNL XDM Individual Profile]. Pour plus d&#39;informations sur XDM et son rôle dans [!DNL Platform], veuillez commencer par lire l&#39;[Présentation du système XDM](../../xdm/home.md).
 
 ```shell
 curl -X GET \
@@ -436,7 +438,7 @@ POST /config/projections?schemaName={SCHEMA_NAME}
 
 >[!NOTE]
 >
->The POST request to create a configuration requires a specific `Content-Type` header, as shown below. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
+>La demande du POST pour créer une configuration requiert un en-tête `Content-Type` spécifique, comme illustré ci-dessous. L’utilisation d’un en-tête `Content-Type` incorrect entraîne un état HTTP 415 (Unsupported Media Type).
 
 ```shell
 curl -X POST \
@@ -648,4 +650,4 @@ Renvoie uniquement les valeurs des champs `type` et `city` pour chaque élément
 
 ## Étapes suivantes
 
-This guide has shown you the steps involved in order to configure projections and destinations, including how to properly format the `selector` parameter. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
+Ce guide décrit les étapes nécessaires à la configuration des projections et des destinations, y compris la manière de formater correctement le paramètre `selector`. Vous pouvez désormais créer de nouvelles destinations de projection et de nouvelles configurations spécifiques aux besoins de votre entreprise.
