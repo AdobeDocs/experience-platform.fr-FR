@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
+keywords: Experience Platform ; importer la recette empaquetée ; Espace de travail de données ; rubriques populaires ; recettes ; api ; apprentissage automatique sensei ; créer un moteur
 solution: Experience Platform
 title: Importation d’une recette empaquetée (API)
 topic: tutorial
 type: Tutorial
 description: 'Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, aussi appelé recette dans l’interface utilisateur. '
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 65%
+source-wordcount: '997'
+ht-degree: 64%
 
 ---
 
 
 # Importation d’une recette empaquetée (API)
 
-This tutorial uses the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface.
+Ce didacticiel utilise [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour créer un [moteur](../api/engines.md), également appelé Recette dans l’interface utilisateur.
 
-Before getting started, it is important to note that Adobe Experience Platform [!DNL Data Science Workspace] uses different terms to refer to similar elements within the API and UI. Les termes de l’API sont utilisés dans ce tutoriel et le tableau suivant décrit les termes corrélés :
+Avant de commencer, il est important de noter que Adobe Experience Platform [!DNL Data Science Workspace] utilise des termes différents pour faire référence à des éléments similaires dans l&#39;API et l&#39;interface utilisateur. Les termes de l’API sont utilisés dans ce tutoriel et le tableau suivant décrit les termes corrélés :
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | ---- | ---- |
@@ -27,7 +27,7 @@ Before getting started, it is important to note that Adobe Experience Platform [
 | Formation et évaluation | [Expérience](../api/experiments.md) |
 | Service | [MLService](../api/mlservices.md) |
 
-Un moteur contient des algorithmes d’apprentissage automatique et une logique pour résoudre des problèmes spécifiques. The diagram below provides a visualization showing the API workflow in [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle d’apprentissage automatique.
+Un moteur contient des algorithmes d’apprentissage automatique et une logique pour résoudre des problèmes spécifiques. Le diagramme ci-dessous fournit une visualisation présentant le flux de travail de l&#39;API dans [!DNL Data Science Workspace]. Ce tutoriel se concentre sur la création d’un moteur, le cerveau d’un modèle d’apprentissage automatique.
 
 ![](../images/models-recipes/import-package-api/engine_hierarchy_api.png)
 
@@ -37,7 +37,7 @@ Ce didacticiel nécessite un fichier de recette empaqueté sous la forme d&#39;u
 
 - `{DOCKER_URL}` : adresse URL vers une image Docker d’un service intelligent.
 
-Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](../../tutorials/authentication.md) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour suivre ce tutoriel, vous devez avoir terminé le tutoriel [Authentification à Adobe Experience ](https://www.adobe.com/go/platform-api-authentication-en) afin d’effectuer avec succès des appels vers les API Platform. [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
 - `{IMS_ORG}` : vos informations d’identification d’organisation IMS, qui se trouvent dans votre intégration unique d’Adobe Experience Platform.
@@ -89,12 +89,12 @@ curl -X POST \
 
 | Propriété | Description |
 | -------  | ----------- |
-| `engine.name` | Nom souhaité pour le moteur. The Recipe corresponding to this Engine will inherit this value to be displayed in [!DNL Data Science Workspace] user interface as the Recipe&#39;s name. |
-| `engine.description` | Description facultative du moteur. The Recipe corresponding to this Engine will inherit this value to be displayed in [!DNL Data Science Workspace] user interface as the Recipe&#39;s description. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de description. |
-| `engine.type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. When a Docker URL is provided to create an Engine, `type` is either `Python`, `R`, `PySpark`, `Spark` (Scala), or `Tensorflow`. |
-| `artifacts.default.image.location` | Your `{DOCKER_URL}` goes here. A complete Docker URL has the following structure: `your_docker_host.azurecr.io/docker_image_file:version` |
+| `engine.name` | Nom souhaité pour le moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur [!DNL Data Science Workspace] en tant que nom de la Recette. |
+| `engine.description` | Description facultative du moteur. La Recette correspondant à ce moteur héritera de cette valeur à afficher dans l&#39;interface utilisateur [!DNL Data Science Workspace] comme description de la Recette. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de description. |
+| `engine.type` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu&#39;une URL Docker est fournie pour créer un moteur, `type` est soit `Python`, `R`, `PySpark`, `Spark` (Scala), soit `Tensorflow`. |
+| `artifacts.default.image.location` | Votre `{DOCKER_URL}` va ici. Une URL Docker complète possède la structure suivante : `your_docker_host.azurecr.io/docker_image_file:version` |
 | `artifacts.default.image.name` | Nom supplémentaire du fichier image Docker. Ne supprimez pas cette propriété, laissez une chaîne vide pour cette valeur si vous choisissez de ne pas fournir de nom de fichier image Docker supplémentaire. |
-| `artifacts.default.image.executionType` | Type d&#39;exécution de ce moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. When a Docker URL is provided to create an Engine, `executionType` is either `Python`, `R`, `PySpark`, `Spark` (Scala), or `Tensorflow`. |
+| `artifacts.default.image.executionType` | Type d&#39;exécution de ce moteur. Cette valeur correspond à la langue dans laquelle l’image Docker a été développée. Lorsqu&#39;une URL Docker est fournie pour créer un moteur, `executionType` est soit `Python`, `R`, `PySpark`, `Spark` (Scala), soit `Tensorflow`. |
 
 **Request PySpark**
 
@@ -172,7 +172,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L&#39;exemple de réponse suivant est pour un [!DNL Python] moteur. Les `executionType` clés et `type` les clés changent en fonction du POST fourni.
+Une réponse réussie renvoie un payload contenant les détails du nouveau moteur, y compris son identifiant unique (`id`). L&#39;exemple de réponse suivant est pour un moteur [!DNL Python]. Les clés `executionType` et `type` changent en fonction du POST fourni.
 
 ```json
 {
