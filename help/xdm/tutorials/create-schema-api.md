@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre des schémas ; registre des Schémas ; schéma ; Schéma ; schémas ; Schémas ; créer
 solution: Experience Platform
 title: Création d’un schéma à l’aide de l’API Schema Registry
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout au long des étapes de composition d’un schéma à l’aide d’une classe standard.
 translation-type: tm+mt
-source-git-commit: 097fe219e0d64090de758f388ba98e6024db2201
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '2343'
-ht-degree: 85%
+source-wordcount: '2373'
+ht-degree: 83%
 
 ---
 
 
-# Create a schema using the [!DNL Schema Registry] API
+# Création d’un schéma à l’aide de l’API [!DNL Schema Registry]
 
-Le [!DNL Schema Registry] est utilisé pour accéder au [!DNL Schema Library] dans Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
+[!DNL Schema Registry] est utilisé pour accéder à [!DNL Schema Library] dans Adobe Experience Platform. Le [!DNL Schema Library] contient des ressources mises à votre disposition par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
-This tutorial uses the [!DNL Schema Registry] API to walk you through the steps to compose a schema using a standard class. If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor Tutorial](create-schema-ui.md) provides step-by-step instructions for performing similar actions in the schema editor.
+Ce didacticiel utilise l&#39;API [!DNL Schema Registry] pour vous guider dans les étapes de composition d&#39;un schéma à l&#39;aide d&#39;une classe standard. Si vous préférez utiliser l&#39;interface utilisateur dans [!DNL Experience Platform], le [didacticiel de l&#39;éditeur de Schémas](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l&#39;éditeur de schémas.
 
 ## Prise en main
 
@@ -27,7 +27,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
 Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête Accept et à ses valeurs possibles).
 
@@ -41,7 +41,7 @@ Un schéma peut être considéré comme le plan directeur des données que vous 
 
 Le processus de composition du schéma commence par la sélection d’une classe. La classe définit les principaux aspects comportementaux des données (enregistrement ou série temporelle), ainsi que les champs minimaux requis pour décrire les données qui seront ingérées.
 
-The schema you are making in this tutorial uses the [!DNL XDM Individual Profile] class. [!DNL XDM Individual Profile] est une classe standard fournie par l’Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
+Le schéma que vous créez dans ce didacticiel utilise la classe [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] est une classe standard fournie par l’Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
 
 Pour attribuer une classe, un appel API est effectué pour créer (POST) un nouveau schéma dans le conteneur du client. Cet appel inclut la classe que le schéma va implémenter. Chaque schéma ne peut mettre en œuvre qu’une seule classe.
 
@@ -53,7 +53,7 @@ POST /tenant/schemas
 
 **Requête**
 
-La requête doit inclure un attribut `allOf` qui fait référence à la clé `$id` d’une classe. Cet attribut définit la « classe de base » que le schéma va mettre en œuvre. In this example, the base class is the [!DNL XDM Individual Profile] class. La clé `$id`[!DNL XDM Individual Profile] de la classe est utilisée comme valeur du champ `$ref` dans le tableau `allOf` ci-dessous.
+La requête doit inclure un attribut `allOf` qui fait référence à la clé `$id` d’une classe. Cet attribut définit la « classe de base » que le schéma va mettre en œuvre. Dans cet exemple, la classe de base est la classe [!DNL XDM Individual Profile]. La clé `$id`[!DNL XDM Individual Profile] de la classe est utilisée comme valeur du champ `$ref` dans le tableau `allOf` ci-dessous.
 
 ```SHELL
 curl -X POST \
@@ -77,7 +77,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau schéma, y compris les clés `$id`, `meta:altIt`, et `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau schéma, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
 
 ```JSON
 {
@@ -260,7 +260,7 @@ Vous pouvez désormais ajouter un autre mixin standard en répétant les étapes
 
 >[!TIP]
 >
->Il est utile de passer en revue tous les mixins disponibles afin de mieux connaître les champs inclus dans chacun d’entre eux. Vous pouvez répertorier (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « client », en ne renvoyant que les mixins dont le champ « meta:intendedToExtend » correspond à la classe que vous utilisez. In this case, it is the [!DNL XDM Individual Profile] class, so the [!DNL XDM Individual Profile] `$id` is used:
+>Il est utile de passer en revue tous les mixins disponibles afin de mieux connaître les champs inclus dans chacun d’entre eux. Vous pouvez répertorier (GET) tous les mixins disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs « global » et « client », en ne renvoyant que les mixins dont le champ « meta:intendedToExtend » correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile], de sorte que [!DNL XDM Individual Profile] `$id` est utilisé :
 
 ```http
 GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
@@ -344,7 +344,7 @@ Le schéma Loyalty Members doit désormais contenir trois valeurs `$ref` dans le
 
 Le schéma Loyalty Members doit saisir les informations propres au programme de fidélité. Ces informations ne figurent dans aucun des mixins standard.
 
-The [!DNL Schema Registry] accounts for this by allowing you to define your own mixins within the tenant container. Ces mixins sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
+Le [!DNL Schema Registry] en tient compte en vous permettant de définir vos propres mixins dans le conteneur locataire. Ces mixins sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation IMS.
 
 Afin de créer (POST) un nouveau mixin, votre requête doit inclure un champ `meta:intendedToExtend` contenant la clé `$id` de la ou des classes de base avec lesquelles le mixin est compatible, ainsi que les propriétés que le mixin va inclure.
 
@@ -419,7 +419,7 @@ curl -X POST\
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau mixin, y compris les clés `$id`, `meta:altIt`, et `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau mixin, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
 
 ```JSON
 {
@@ -756,7 +756,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau type de données, y compris les clés `$id`, `meta:altIt`, et `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau type de données, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par [!DNL Schema Registry].
 
 ```JSON
 {
@@ -956,9 +956,9 @@ L’exécution d’une requête GET pour consulter le schéma indique maintenant
 
 ### Définition d’un descripteur d’identité
 
-Schemas are used for ingesting data into [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-time Customer Profile]](../../profile/home.md)[!DNL Experience Platform] et d’autres services afin de fournir une vue d’ensemble de chaque client individuel.
+Les schémas sont utilisés pour importer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-time Customer Profile]](../../profile/home.md)[!DNL Experience Platform] et d’autres services afin de fournir une vue d’ensemble de chaque client individuel.
 
-Fields that are commonly marked as &quot;Identity&quot; include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/fr-FR/id-service/using/home.html), CRM ID, or other unique ID fields.
+Les champs généralement identifiés comme &quot;Identité&quot; sont les suivants : adresse électronique, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), ID de gestion de la relation client ou autres champs d’ID uniques.
 
 Tenez compte des identifiants uniques propres à votre organisation, dans la mesure où ils peuvent aussi représenter de bons champs d’identité.
 
@@ -974,7 +974,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité sur le champ « loyaltyId ». This tells [!DNL Experience Platform] to use the unique loyalty program member identifier (in this case, the member&#39;s email address) to help stitch together information about the individual.
+La requête suivante définit un descripteur d’identité sur le champ « loyaltyId ». [!DNL Experience Platform] est ainsi invité à utiliser l&#39;identifiant unique du membre du programme de fidélité (dans ce cas, l&#39;adresse électronique du membre) pour réunir les informations relatives à l&#39;individu.
 
 ```SHELL
 curl -X POST \
@@ -997,11 +997,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->You can list available &quot;xdm:namespace&quot; values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
+>Vous pouvez liste les valeurs &quot;xdm:espace de nommage&quot; disponibles ou en créer de nouvelles, à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
 
 **Réponse**
 
-Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau descripteur, y compris la clé `@id`. The `@id` is a read-only field assigned by the [!DNL Schema Registry] and is used for referencing the descriptor in the API.
+Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau descripteur, y compris la clé `@id`. `@id` est un champ en lecture seule attribué par [!DNL Schema Registry] et utilisé pour référencer le descripteur dans l&#39;API.
 
 ```JSON
 {
@@ -1017,11 +1017,11 @@ Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un c
 }
 ```
 
-## Enable schema for use in [!DNL Real-time Customer Profile] {#profile}
+## Activer le schéma pour une utilisation dans [!DNL Real-time Customer Profile] {#profile}
 
 En ajoutant la balise « union » à l’attribut `meta:immutableTags`, vous pouvez activer le schéma Loyalty Members pour qu’il soit utilisé par [!DNL Real-time Customer Profile].
 
-For more information on working with union views, see the section on [unions](../api/unions.md) in the [!DNL Schema Registry] developer guide.
+Pour plus d&#39;informations sur l&#39;utilisation des vues d&#39;union, consultez la section [unions](../api/unions.md) du guide du développeur [!DNL Schema Registry].
 
 ### Ajout de la balise « union »
 
@@ -1105,7 +1105,7 @@ La réponse indique que l’opération a été effectuée correctement, et que l
 
 ### Liste des schémas dans une union
 
-You have now successfully added your schema to the [!DNL XDM Individual Profile] union. Afin d’obtenir une liste de tous les schémas qui font partie d’une même union, vous pouvez effectuer une requête GET en utilisant les paramètres de requête pour filtrer la réponse.
+Vous avez maintenant ajouté votre schéma à l&#39;union [!DNL XDM Individual Profile]. Afin d’obtenir une liste de tous les schémas qui font partie d’une même union, vous pouvez effectuer une requête GET en utilisant les paramètres de requête pour filtrer la réponse.
 
 En utilisant le paramètre de requête `property`, vous pouvez spécifier que seuls les schémas contenant un champ `meta:immutableTags` qui a une `meta:class` égale à la clé `$id` de la classe doivent être renvoyés.[!DNL XDM Individual Profile]
 
@@ -1117,7 +1117,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Requête**
 
-The example request below returns all schemas that are part of the [!DNL XDM Individual Profile] union.
+L&#39;exemple de requête ci-dessous renvoie tous les schémas qui font partie de l&#39;union [!DNL XDM Individual Profile].
 
 ```SHELL
 curl -X GET \
@@ -1185,7 +1185,7 @@ Les informations suivantes complètent le tutoriel sur l’API.
 
 Dans ce tutoriel, un schéma est composé pour décrire les membres d’un programme de fidélité dans la vente au détail.
 
-The schema implements the [!DNL XDM Individual Profile] class and combines multiple mixins; bringing in information about the loyalty members using the standard &quot;Person Details&quot; and &quot;Personal Details&quot; mixins, as well as through a &quot;Loyalty Details&quot; mixin that is defined during the tutorial.
+Le schéma implémente la classe [!DNL XDM Individual Profile] et combine plusieurs mixins ; l’introduction d’informations sur les membres de fidélité à l’aide des mixins &quot;Détails de la personne&quot; et &quot;Détails personnels&quot; standard, ainsi qu’à l’aide d’un mixin &quot;Détails de fidélité&quot; défini dans le didacticiel.
 
 Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
 
