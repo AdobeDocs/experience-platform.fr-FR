@@ -1,31 +1,31 @@
 ---
-keywords: destinations;destination;destination types
+keywords: destinations;destination;types de destination
 title: Types et catégories de destinations
 seo-title: Types et catégories de destinations
-description: 'Dans la plate-forme de données client en temps réel, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
-seo-description: Dans la plate-forme de données client en temps réel, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers les destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
+description: 'Dans Adobe Experience Platform, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers des destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
+seo-description: Dans Adobe Experience Platform, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers des destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 61%
+source-wordcount: '581'
+ht-degree: 62%
 
 ---
 
 
 # Types et catégories de destinations
 
-Lisez cette page pour comprendre les différents types et catégories de destination des plateformes de données clientes en temps réel.
+Lisez cette page pour comprendre les différents types et catégories de destinations Adobe Experience Platform.
 
 ## Types de destinations
 
-Dans la plate-forme de données client en temps réel, nous distinguons deux types de destination : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
+Dans Adobe Experience Platform, nous faisons la distinction entre deux types de destination : les connexions et les extensions. Il existe deux types de destinations de connexion : les destinations d’exportation de profils et les destinations d’exportation de segments.
 
 ![Types de destinations](./assets/destination-types/types-of-destinations.png)
 
 ### Connexions {#connections}
 
-**[!UICONTROL Exportation]** de profil et **[!UICONTROL segmentation Exportation]** de destinations dans la plate-forme de données clientes en temps réel, capture des données de événement, les combine avec d’autres sources de données pour former le Profil [client en temps](../profile/home.md)réel, appliquer la segmentation et exporter des segments et des profils qualifiés vers des destinations.
+**[!UICONTROL Profil]** Exportations et  **[!UICONTROL segments]** Exportations dans Adobe Experience Platform capture les données du événement, les combine avec d’autres sources de données pour former le Profil [ client en temps ](../profile/home.md)réel, appliquer la segmentation et exporter des segments et des profils qualifiés vers des destinations.
 
 #### Destinations d’exportation de profils
 
@@ -33,7 +33,7 @@ Les destinations d’exportation de profils génèrent un fichier contenant des 
 
 #### Destinations d’exportation de segments
 
-Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Advertising destinations such as [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
+Les destinations d’exportation de segments envoient les profils et les segments pour lesquels ils sont qualifiés vers des plateformes de destination. Ces destinations utilisent des identifiants de segment ou d’utilisateur. Les destinations publicitaires telles que [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) ou [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sont des exemples de ces types de destinations.
 
 #### Destinations d’exportation de segments et de profils : présentation vidéo
 
@@ -43,11 +43,11 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 
 ### Extensions {#extensions}
 
-Le CDP en temps réel tire parti de la puissance et de la flexibilité d&#39;Adobe Experience Platform Launch pour inclure les extensions de lancement de plate-forme dans l&#39;interface CDP en temps réel.
+Platform tire parti de la puissance et de la flexibilité d’Adobe Experience Platform Launch pour inclure les extensions Platform Launch dans l’interface Platform.
 
 >[!TIP]
 >
->Pour plus d’informations sur les extensions Adobe Experience Platform Launch, y compris les cas d’utilisation et la façon de les trouver dans l’interface, consultez la présentation [des extensions](./catalog/launch-extensions/overview.md)Adobe Experience Platform Launch.
+>Pour plus d&#39;informations sur les extensions Adobe Experience Platform Launch, y compris les cas d&#39;utilisation et la façon de les trouver dans l&#39;interface, consultez la [présentation des extensions Adobe Experience Platform Launch](./catalog/launch-extensions/overview.md).
 
 Les extensions de lancement de plateforme transfèrent des données de événement brutes vers plusieurs types de destinations. Considérez les extensions comme un type de destination **Transfert d’événement**. Il s’agit d’un type d’intégration aux plateformes de destination plus simple et qui ne transfère que les données d’événement brutes. Par exemple, l’[extension de personnalisation Gainsight](./catalog/personalization/gainsight.md) ou l’[extension de voix du client Confirmit](./catalog/voice/confirmit-digital-feedback.md).
 
