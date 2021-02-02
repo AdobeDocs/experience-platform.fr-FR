@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
+keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RGD ; APCCP ; APC ; APP ; APP ; Pdpa ; LGPD ; lgpd ; faq ; FAQ ; réglementation ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; confidentialité ; confidentialité ;
 solution: Experience Platform
 title: FAQ sur la réglementation de la confidentialité
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions les plus fréquemment posées sur les réglementations en matière de protection des renseignements personnels et leur mise en oeuvre à Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: b36e6c4e92d6591f87c2cc4f5e1e607056b0957c
+source-git-commit: 00904291ab7e2f119d3886b5aae9be50d4e8bd2b
 workflow-type: tm+mt
-source-wordcount: '1578'
-ht-degree: 36%
+source-wordcount: '1599'
+ht-degree: 35%
 
 ---
 
@@ -19,7 +19,7 @@ Ce document fournit des réponses aux questions les plus fréquemment posées su
 
 >[!NOTE]
 >
->Definitions for the various terms used in this document can be found in the [privacy regulation terminology](terminology.md) guide.
+>Les définitions des différents termes utilisés dans ce document se trouvent dans le [guide de la terminologie de la réglementation de la protection des renseignements personnels](terminology.md).
 
 ## Questions générales
 
@@ -27,7 +27,7 @@ Les questions suivantes portent sur toutes les règles de protection des renseig
 
 ### Quelles sont les répercussions des réglementations prises en charge en matière de confidentialité ?
 
-Les règlements sur la [protection des renseignements personnels appuyés par l&#39;Experience Cloud](./overview.md) s&#39;appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans le cadre des règlements respectifs, quel que soit le lieu géographique de l&#39;organisation.
+La [réglementation sur la protection de la vie privée appuyée par l&#39;Experience Cloud](./overview.md) s&#39;applique à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives de la réglementation, quel que soit le lieu géographique de l&#39;organisation.
 
 ### Que signifie la notion de données personnelles ?
 
@@ -55,19 +55,19 @@ Bien que les règlements sur la protection des renseignements personnels couvren
 
 Le **contrôleur des données** est l’entité qui détermine les finalités, conditions et moyens du traitement des données personnelles, tandis que l’**entité de traitement des données** est une entité qui traite les données personnelles pour le compte du contrôleur des données.
 
-Un contrôleur **** de données est la personne ou l&#39;organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l&#39;utilisation ou la divulgation de données à caractère personnel. Un processeur **de** données est la personne ou l&#39;organisation qui opère en relation avec la collecte, l&#39;utilisation ou la divulgation des données à caractère personnel et la direction du contrôleur de données.
+Un **contrôleur de données** est la personne ou l&#39;organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l&#39;utilisation ou la divulgation de données à caractère personnel. Un **processeur de données** est la personne ou l&#39;organisation qui opère en relation avec la collecte, l&#39;utilisation ou la divulgation des données à caractère personnel et la direction du contrôleur de données.
 
 ### Quelle est la différence entre le consentement explicite et le consentement univoque du sujet des données ?
 
-**Le consentement** explicite se rapporte à une norme de consentement qui implique une indication précise, informée et sans ambiguïté des souhaits de la personne concernée sous forme orale ou écrite. En d&#39;autres termes, la personne concernée doit littéralement et explicitement dire &quot;je consens&quot; ou &quot;je suis d&#39;accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
+**Il** y a lieu de considérer explicitement une norme de consentement prévoyant une indication précise, informée et sans ambiguïté des souhaits de la personne concernée, sous forme orale ou écrite. En d&#39;autres termes, la personne concernée doit littéralement et explicitement dire &quot;je consens&quot; ou &quot;je suis d&#39;accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
 
-**Le consentement** non ambigu (implicite) fait référence à un consentement qui n&#39;a pas été explicitement donné par la personne concernée, mais qui n&#39;en est pas moins sans ambiguïté. Par exemple, pendant le processus d&#39;inscription à un site Web de société, un avis est donné qu&#39;en fournissant une adresse électronique, la personne concernée consent à recevoir des courriels sur des offres spéciales. Si la personne concernée lit l&#39;avis, la discrimination positive à l&#39;égard de la saisie de son courriel est suffisante pour être considérée comme un consentement sans ambiguïté.
+**Il** s&#39;agit d&#39;un consentement sans ambiguïté (implicite) qui n&#39;a pas été explicitement donné par la personne concernée, mais qui n&#39;en est pas moins sans ambiguïté. Par exemple, pendant le processus d&#39;inscription à un site Web de société, un avis est donné qu&#39;en fournissant une adresse électronique, la personne concernée consent à recevoir des courriels sur des offres spéciales. Si la personne concernée lit l&#39;avis, la discrimination positive à l&#39;égard de la saisie de son courriel est suffisante pour être considérée comme un consentement sans ambiguïté.
 
 Pour de nombreuses réglementations comme le RGPD, un consentement explicite est nécessaire pour traiter des données personnelles sensibles, où rien de moins que &quot;opt-in&quot; ne suffira. Toutefois, pour les données non sensibles, le consentement explicite (implicite) est acceptable.
 
 ### Les personnes âgées de moins d&#39;un certain âge peuvent-elles donner leur consentement ?
 
-Tous les règlements relatifs à la protection des renseignements personnels stipulent que si une personne concernée a moins d&#39;un certain âge, elle ne peut légalement consentir à la collecte de ses données personnelles. Dans certains cas, le titulaire de la responsabilité parentale peut donner son consentement à cette personne, mais pas tous. Le tableau suivant liste l&#39;âge minimum pour que les personnes concernées puissent donner leur propre consentement à chaque règlement, avec des notes pour plus d&#39;informations :
+De nombreuses réglementations sur la protection des renseignements personnels stipulent que si une personne concernée a moins d&#39;un certain âge, elle ne peut légalement consentir à la collecte de ses données personnelles. Dans certains cas, le titulaire de la responsabilité parentale peut donner son consentement à cette personne, mais pas tous. Le tableau suivant liste l&#39;âge minimum pour que les personnes concernées puissent donner leur propre consentement à chaque règlement, avec des notes pour plus d&#39;informations :
 
 | Réglementation | Âge du consentement | Notes |
 | --- | --- | --- |
@@ -75,6 +75,8 @@ Tous les règlements relatifs à la protection des renseignements personnels sti
 | RGPD (Union européenne) | 16 | <ul><li>Certains États membres de l&#39;UE peuvent prévoir à cette fin une loi pour un âge inférieur, mais pas inférieur à 13 ans.</li><li>Le consentement parental doit être fourni pour toutes les personnes dont l&#39;âge est inférieur à la limite d&#39;âge.</li></ul> |
 | LGPD (Brésil) | 13 | <ul><li>Le consentement parental doit être fourni pour toutes les personnes dont l&#39;âge est inférieur à la limite d&#39;âge.</li><li>Le consentement peut être donné par une personne physique âgée de 13 à 18 ans, pour autant que le traitement de ses données à caractère personnel soit effectué dans leur intérêt supérieur.</li></ul> |
 | PDPA (Thaïlande) | 10 | <ul><li>Le consentement parental doit être fourni pour toutes les personnes dont l&#39;âge est inférieur à la limite d&#39;âge.</li></ul> |
+
+<!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
 ### Combien de jours une entreprise a-t-elle pour répondre à la demande d’un client souhaitant consulter ou supprimer des informations personnelles ?
 
@@ -86,6 +88,8 @@ En supposant que l&#39;entreprise ait recueilli des renseignements personnels et
 | RGPD (Union européenne) | 30 jours | Si la demande est complexe ou si de nombreuses demandes ont été faites par la même personne concernée, la demande peut être prolongée à 60 jours. |
 | LGPD (Brésil) | 15 jours |  |
 | PDPA (Thaïlande) | 30 jours | Si une société ne peut pas répondre à la demande d&#39;une personne concernée dans le délai de conformité, la société disposera de 30 jours supplémentaires à compter de la date à laquelle elle n&#39;a pas été en mesure de répondre par écrit à la personne concernée. |
+
+<!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
 ### Mon entreprise doit-elle nommer un délégué à la protection des données ?
 
@@ -101,17 +105,11 @@ Si les opérations de données de votre organisation relèvent des juridictions 
 
 ### Comment puis-je prendre en charge les demandes de protection de la vie privée des consommateurs si je tiens à jour des données couvertes par la réglementation sur la protection de la vie privée ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet de soumettre des demandes de protection de la vie privée des consommateurs à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation des ](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les consommateurs qui relèvent des juridictions légales appropriées, Adobe Experience Platform Privacy Service vous permet de soumettre des demandes de protection de la vie privée des consommateurs à des applications Experience Cloud compatibles. Pour plus d’informations, consultez [[!DNL Privacy Service] aperçu des ](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
 >L’autorité de régulation californienne donnera prochainement des indications supplémentaires sur les types de données concernés par les demandes de protection de la vie privée des clients.
-
-### Adobe propose-t-il d’autres outils pouvant être utiles pour répondre aux exigences de la CCPA ?
-
-Les applications Adobe Experience Cloud fournissent des fonctionnalités de gestion et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des entreprises. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d’accès basés sur les rôles, l’obscurcissement de l’adresse IP et les fonctions de hachage.
-
-Adobe a reçu diverses certifications pour ses pratiques en matière de confidentialité et de sécurité, telles qu’une certification ISO 27001 et une validation RGPD de TrustArc.
 
 ## Questions relatives à l&#39;ACCP
 
@@ -129,6 +127,12 @@ En tant que Fournisseur de services, Adobe collecte et traite des informations p
 Compte tenu de cette relation et du libellé du contrat de l&#39;Adobe, les divulgations à l&#39;Adobe ne seraient probablement pas considérées comme une &quot;vente&quot; pour laquelle les entreprises devraient fournir un avis et demander leur consentement.
 
 Cependant, les services Adobe peuvent être utilisés pour activer certains partages et transferts de données vers des tiers. Ces transferts de tiers pourraient être considérés comme une &quot;vente&quot; et nécessiter légalement la divulgation et le consentement. Les clients doivent se rapprocher de leur service juridique pour examiner des cas d’utilisation spécifiques afin d’évaluer les exigences applicables.
+
+### Adobe propose-t-il d’autres outils pouvant être utiles pour répondre aux exigences de la CCPA ?
+
+Les applications Adobe Experience Cloud fournissent des fonctionnalités de gestion et de gouvernance qui peuvent être utiles pour les besoins de confidentialité des entreprises. Parmi ces outils figurent l’étiquetage de l’utilisation des données, les contrôles d’accès basés sur les rôles, l’obscurcissement de l’adresse IP et les fonctions de hachage.
+
+Adobe a reçu diverses certifications pour ses pratiques en matière de confidentialité et de sécurité, telles qu’une certification ISO 27001 et une validation RGPD de TrustArc.
 
 ## Questions relatives au RDPR
 
