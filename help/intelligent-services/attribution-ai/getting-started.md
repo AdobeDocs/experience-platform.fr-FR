@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;getting started;attribution ai;popular topics
+keywords: Experience Platform ; prise en main ; attribution de l’aide ; rubriques populaires
 solution: Experience Platform, Intelligent Services
 title: Prise en main d’Attribution AI
 topic: Getting started
 description: Les guides ci-dessous nécessitent une compréhension des différents services impliqués dans l’utilisation d’Attribution AI. Avant de commencer les didacticiels, veuillez consulter les documents suivants.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 81%
+source-wordcount: '538'
+ht-degree: 80%
 
 ---
 
 
 # Prise en main d’Attribution AI
 
-The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. Avant de commencer les tutoriels, veuillez consulter les documents suivants :
+Les guides suivants exigent une compréhension des différents services [!DNL Adobe Experience Platform] liés à l&#39;utilisation d&#39;Attribution AI. Avant de commencer les tutoriels, veuillez consulter les documents suivants :
 
-- [Présentation](../../xdm/home.md)du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
+- [Présentation](../../xdm/home.md) du système du modèle de données d’expérience (XDM) : XDM est le cadre fondateur qui permet  [!DNL Adobe Experience Cloud], propulsé par un Experience Platform, de transmettre le bon message à la bonne personne, au bon canal, exactement au bon moment. La méthodologie sur laquelle Experience Platform repose, à savoir le système XDM, rend les schémas de modèles de données d’expérience opérationnels pour qu’ils soient utilisés par les services de Platform.
 - [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : ce document présente les schémas XDM ainsi que les blocs de création, les principes et les bonnes pratiques pour la composition de schémas à utiliser dans [!DNL Adobe Experience Platform].
 - [Création de schémas](../../xdm/tutorials/create-schema-ui.md) : ce tutoriel décrit les étapes de la création d’un schéma à l’aide de l’éditeur de schémas dans Experience Platform.
 
@@ -33,9 +33,9 @@ Attribution AI nécessite des jeux de données pour se conformer au schéma d’
 
 >[!NOTE]
 >
->If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
+>Si vous n’avez pas besoin de télécharger des scores bruts, vous pouvez ignorer cette étape et passer aux [étapes suivantes](#next-steps).
 
-Le téléchargement des scores d’Attribution AI s’effectue par le biais d’une combinaison d’appels d’API. Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Le téléchargement des scores d’Attribution AI s’effectue par le biais d’une combinaison d’appels d’API. Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
