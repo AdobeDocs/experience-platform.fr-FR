@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Guide des plateformes de données client en temps réel
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 translation-type: tm+mt
-source-git-commit: 6043ecb8e32dec70b7eaf7695a266d797f97b9f4
+source-git-commit: de2f4b16677ec6e820903b1e586213a132b126be
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '126'
 ht-degree: 80%
 
 ---
@@ -40,6 +40,7 @@ ht-degree: 80%
 * Segments {#segmentation}
    * [Présentation de la segmentation](segmentation/segmentation-overview.md)
    * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
+   * [Customer AI](segmentation/customer-ai.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
    * [Implémentation des balises de site web avec Adobe Launch](sources/launch.md)
