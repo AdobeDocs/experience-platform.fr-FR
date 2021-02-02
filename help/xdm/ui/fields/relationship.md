@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;relationship;field;
+keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;relation;field;
 solution: Experience Platform
 title: Définir un champ de relation dans l’interface utilisateur
 description: Découvrez comment définir un champ de relation dans l’interface utilisateur de l’Experience Platform.
@@ -7,7 +7,7 @@ topic: user guide
 translation-type: tm+mt
 source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
