@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
+keywords: Experience Platform ; accueil ; rubriques populaires ; activer le jeu de données ; Dataset ; dataset
 solution: Experience Platform
 title: Guide d’utilisation des jeux de données
 topic: datasets
 description: Ce guide d'utilisation des jeux de données fournit des instructions sur l'exécution d'actions courantes lors de l'utilisation de jeux de données dans l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1c00456ee06c1fc09c8e4ce070c90255f51811e1
+source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 75%
+source-wordcount: '1143'
+ht-degree: 73%
 
 ---
 
@@ -24,13 +24,13 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 * [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Éditeur](../../xdm/tutorials/create-schema-ui.md)de schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de la [!DNL Schema Editor] section dans l’ [!DNL Platform] interface utilisateur.
+   * [Éditeur](../../xdm/tutorials/create-schema-ui.md) de schéma : Découvrez comment créer vos propres schémas XDM personnalisés à l’aide de l’ [!DNL Schema Editor] interface  [!DNL Platform] utilisateur.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Veiller au respect des réglementations, restrictions et stratégies relatives à l’utilisation des données client.
 
 ## Affichage des jeux de données
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Datasets]** in the left-navigation to open the **[!UICONTROL Datasets]** dashboard. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
+Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Datasets]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Datasets]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
 ![](../images/datasets/user-guide/browse_datasets.png)
 
@@ -49,7 +49,7 @@ Dans la fenêtre de prévisualisation, l’affichage hiérarchique du schéma po
 
 ![](../images/datasets/user-guide/preview_dataset.png)
 
-For more robust methods to access your data, [!DNL Experience Platform] provides downstream services such as [!DNL Query Service] and [!DNL JupyterLab] to explore and analyze data. Consultez les documents suivants pour plus d’informations :
+Pour des méthodes plus robustes d&#39;accès à vos données, [!DNL Experience Platform] fournit des services en aval tels que [!DNL Query Service] et [!DNL JupyterLab] pour explorer et analyser les données. Consultez les documents suivants pour plus d’informations :
 
 * [Présentation de Query Service](../../query-service/home.md)
 * [Guide d’utilisation de JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -65,7 +65,7 @@ Sur l’écran suivant, les deux options de création d’un nouveau jeu de donn
 * [Créer un jeu de données à partir d’un schéma](#schema)
 * [Créer un jeu de données à partir d’un fichier CSV](#csv)
 
-### Création d’un jeu de données à partir d’un schéma existant {#schema}
+### Création d’un jeu de données à partir d’un schéma existant  {#schema}
 
 Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur **[!UICONTROL Créer un jeu de données à partir d’un schéma]** pour créer un nouveau jeu de données vide.
 
@@ -79,7 +79,7 @@ L’étape **[!UICONTROL Configurer le jeu de données]** apparaît. Ajoutez un 
 
 ![](../images/datasets/user-guide/configure_dataset_schema.png)
 
-### Création d’un jeu de données à partir d’un fichier CSV {#csv}
+### Création d’un jeu de données à partir d’un fichier CSV  {#csv}
 
 Lorsque vous créez un jeu de données à l’aide d’un fichier CSV, un schéma ad hoc est créé pour fournir une structure au jeu de données qui correspond au fichier CSV fourni. Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur la case intitulée **[!UICONTROL Créer un jeu de données à partir d’un fichier CSV]**.
 
@@ -104,13 +104,15 @@ Chaque jeu de données a la possibilité d’enrichir les profils clients des do
 * Le schéma comporte au moins un attribut défini comme propriété d’identité.
 * Le schéma comporte au moins une propriété d’identité définie comme identité principale.
 
-For more information on enabling a schema for [!DNL Profile], see the [Schema Editor user guide](../../xdm/tutorials/create-schema-ui.md).
+Pour plus d&#39;informations sur l&#39;activation d&#39;un schéma pour [!DNL Profile], consultez le [Guide de l&#39;utilisateur de l&#39;Éditeur de Schémas](../../xdm/tutorials/create-schema-ui.md).
 
 Pour activer un jeu de données dans Profile, accédez à son écran **[!UICONTROL Activité du jeu de données]** et cliquez sur le bouton de basculement **[!UICONTROL Profil]** au sein de la colonne **[!UICONTROL Propriétés]**. Une fois activées, les données ingérées dans le jeu de données seront également utilisées pour générer les profils clients.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+>[!NOTE]
+>
+>Si un jeu de données contient déjà des données et est ensuite activé pour [!DNL Profile], les données existantes ne sont pas automatiquement utilisées par [!DNL Profile]. Une fois qu&#39;un jeu de données est activé pour [!DNL Profile], il est recommandé de réassimiler toutes les données existantes pour qu&#39;elles contribuent aux profils du client.
 
-If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have them populate customer profiles.
+![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
 ## Gestion et application de la gouvernance des données sur un jeu de données
 
@@ -122,7 +124,7 @@ Vous pouvez supprimer un jeu de données en accédant d’abord à son écran **
 
 >[!NOTE]
 >
->Datasets created and utilized by Adobe applications and services (such as Adobe Analytics, Adobe Audience Manager, or [!DNL Offer Decisioning]) cannot be deleted.
+>Les jeux de données créés et utilisés par les applications et services d&#39;Adobe (tels que Adobe Analytics, Adobe Audience Manager ou [!DNL Offer Decisioning]) ne peuvent pas être supprimés.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
@@ -132,11 +134,13 @@ Une boîte de confirmation s’affiche alors. Cliquez sur **[!UICONTROL Supprime
 
 ## Suppression d’un jeu de données activé par Profile
 
-If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. Pour supprimer complètement le jeu de données ainsi que les données de profil et d’identité qu’il fournit, vous devez effectuer une requête de suppression supplémentaire. For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as &quot;delete requests&quot;](../../profile/api/profile-system-jobs.md).
+Si un jeu de données est activé pour [!DNL Profile], la suppression de ce jeu de données par l&#39;intermédiaire de l&#39;interface utilisateur le supprime à la fois de Data Lake et du magasin de Profils dans Platform.
+
+Vous pouvez supprimer un jeu de données du magasin [!DNL Profile] uniquement (en laissant les données dans Data Lake) à l’aide de l’API Profil client en temps réel. Pour plus d&#39;informations, consultez le [profil system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 
 ## Surveillance de l’ingestion des données
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Monitoring]** in the left-navigation. Le tableau de bord **[!UICONTROL Surveillance]** vous permet de consulter les états des données entrantes soit depuis le lot soit depuis l’ingestion par flux. Pour afficher les états de lots individuels, cliquez sur **[!UICONTROL Lot de bout en bout]** ou sur **[!UICONTROL Diffusion en continu de bout en bout]**. Le tableau de bord répertorie toutes les exécutions de lot ou d’ingestion par flux, notamment celles réussies, en échec ou toujours en cours. Chaque liste fournit des détails sur le lot, notamment l’identifiant de lot, le nom du jeu de données cibles et le nombre d’enregistrements ingérés. If the target dataset is enabled for [!DNL Profile], the number of ingested identity and profile records is also displayed.
+Dans l&#39;interface utilisateur [!DNL Experience Platform], cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Le tableau de bord **[!UICONTROL Surveillance]** vous permet de consulter les états des données entrantes soit depuis le lot soit depuis l’ingestion par flux. Pour afficher les états de lots individuels, cliquez sur **[!UICONTROL Lot de bout en bout]** ou sur **[!UICONTROL Diffusion en continu de bout en bout]**. Le tableau de bord répertorie toutes les exécutions de lot ou d’ingestion par flux, notamment celles réussies, en échec ou toujours en cours. Chaque liste fournit des détails sur le lot, notamment l’identifiant de lot, le nom du jeu de données cibles et le nombre d’enregistrements ingérés. Si le jeu de données de cible est activé pour [!DNL Profile], le nombre d&#39;enregistrements d&#39;identité et de profil assimilés s&#39;affiche également.
 
 ![](../images/datasets/user-guide/batch_listing.png)
 
@@ -150,7 +154,7 @@ Si vous souhaitez supprimer le lot, vous pouvez le faire en cliquant sur **[!UIC
 
 ## Étapes suivantes
 
-This user guide provided instructions for performing common actions when working with datasets in the [!DNL Experience Platform] user interface. For steps on performing common [!DNL Platform] workflows involving datasets, please refer to the following tutorials:
+Ce guide d&#39;utilisateur fournit des instructions sur l&#39;exécution d&#39;actions courantes lors de l&#39;utilisation de jeux de données dans l&#39;[!DNL Experience Platform] interface utilisateur. Pour connaître les étapes à suivre pour exécuter des workflows [!DNL Platform] courants impliquant des jeux de données, consultez les didacticiels suivants :
 
 * [Création d’un jeu de données à l’aide d’API](create.md)
 * [Interrogation des données d’un jeu de données à l’aide de l’API Data Access](../../data-access/home.md)
