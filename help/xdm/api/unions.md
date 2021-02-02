@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; union ; Union ; unions ; Unions ; abonnement de segment ; événements de série de temps ;
 solution: Experience Platform
 title: Unions
 description: Le point de terminaison /unions de l'API Schéma Registry vous permet de gérer par programmation les schémas d'union XDM dans votre application d'expérience.
@@ -7,8 +7,8 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 53%
+source-wordcount: '910'
+ht-degree: 51%
 
 ---
 
