@@ -1,6 +1,9 @@
 ---
-source-git-commit: 1c79978cfbd5beb0561e336cddf1461686f73882
-translation-type: ht
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+workflow-type: tm+mt
+translation-type: tm+mt
+source-wordcount: '296'
+ht-degree: 97%
 
 ---
 # Contribution
@@ -11,11 +14,13 @@ Vous trouverez ci-dessous un recueil de directives à respecter lorsque vous con
 
 ## Code de conduite
 
-Ce projet respecte le [Code de conduite](code-of-conduct.md) Adobe. En participant, vous êtes tenu de respecter ce code. Veuillez signaler tout comportement inacceptable à [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Ce projet respecte le [Code de conduite](code-of-conduct.md) Adobe. En participant, vous êtes tenu de respecter ce code.
+
+Veuillez signaler tout comportement inacceptable à [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Guide du contributeur pour la documentation
 
-Consultez le [Guide du contributeur](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consultez le [Guide du contributeur](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
 
 ## Une question ?
 
@@ -23,7 +28,11 @@ Commencez par soumettre un problème. Les validateurs existants à ce projet s�
 
 ## Contrat de licence du contributeur
 
-Toutes les contributions tierces à ce projet doivent être accompagnées d’un contrat de licence de contributeur signé. Cela donne à Adobe l’autorisation de redistribuer vos contributions dans le cadre du projet. [Signez notre contrat de licence du contributeur](http://opensource.adobe.com/cla.html). Vous ne devez envoyer un contrat de licence du contributeur Adobe qu’une seule fois. Par conséquent, si vous en avez déjà envoyé un, vous pouvez poursuivre !
+Toutes les contributions tierces à ce projet doivent être accompagnées d’un contrat de licence de contributeur signé. Cela donne à Adobe l’autorisation de redistribuer vos contributions dans le cadre du projet.
+
+[Signez notre contrat de licence du contributeur](http://opensource.adobe.com/cla.html).
+
+Vous ne devez envoyer un contrat de licence du contributeur Adobe qu’une seule fois. Par conséquent, si vous en avez déjà envoyé un, vous pouvez poursuivre !
 
 ## Révisions du code
 
@@ -40,4 +49,4 @@ Nous apprécions les contributions de notre communauté ! Si vous souhaitez all
 
 ## Problèmes de sécurité
 
-Les problèmes de sécurité ne doivent pas être signalés dans cet analyseur d’anomalies. Soulevez plutôt [un problème auprès de nos experts en sécurité.](https://helpx.adobe.com/fr/security/alertus.html)
+Les problèmes de sécurité ne doivent pas être signalés dans cet analyseur d’anomalies. Soulevez plutôt [un problème auprès de nos experts en sécurité.](https://helpx.adobe.com/fr/security/alertus.html).
