@@ -1,68 +1,68 @@
 ---
-keywords: email;Email;e-mail;email destinations
+keywords: e-mail ; e-mail ; e-mail ; destinations de courriel
 title: Destinations de marketing par e-mail
 seo-title: Destinations de marketing par e-mail
 type: Tutorial
 description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 seo-description: Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail.
 translation-type: tm+mt
-source-git-commit: 0bb1622895b1e0f97fc47b5c61d456bc369746c8
+source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 40%
+source-wordcount: '811'
+ht-degree: 35%
 
 ---
 
 
 # Destinations de marketing par e-mail {#email-marketing-destinations}
 
-Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. La plateforme de données client en temps réel s’intègre aux ESP en vous permettant d’activer des segments vers des destinations de marketing par e-mail.
+Les fournisseurs de service de messagerie électronique (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Adobe Experience Platform s’intègre aux services de messagerie instantanée en vous permettant d’activer des segments vers des destinations de marketing par courrier électronique.
 
-Pour envoyer des segments aux destinations de marketing par courriel pour vos campagnes, le CDP en temps réel doit d’abord se connecter à la destination.
+Pour envoyer des segments aux destinations de marketing par courriel pour vos campagnes, la plateforme doit d’abord se connecter à la destination.
 
 La connexion aux destinations de marketing par e-mail est un processus en trois étapes. Chaque étape est décrite plus loin dans cette page.
 
-Dans le flux de connexion à la destination, décrit dans la section ci-dessous, connectez-vous à Amazon S3 ou SFTP. La plateforme CDP en temps réel exporte vos segments sous forme de fichiers `.csv` ou `.txt` et les diffuse sur l’emplacement de votre choix. Planifiez l’importation des données dans la plateforme de marketing par e-mail à partir de l’emplacement de stockage activé dans la plateforme CDP en temps réel. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles de destinations individuelles.
+Dans le flux de connexion à la destination, décrit dans la section ci-dessous, connectez-vous à Amazon S3 ou SFTP. La plate-forme exporte vos segments sous la forme de fichiers `.csv` ou `.txt` et les diffuse à l’emplacement souhaité. Planifiez l’importation de vos données dans votre plateforme de marketing par courrier électronique à partir de l’emplacement d’enregistrement activé dans la plate-forme. Le processus d’importation des données varie pour chaque partenaire. Pour plus d’informations, consultez les articles de destinations individuelles.
 
 ## Configurer la destination {#connect-destination}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the email marketing destination that you want to connect to, then select **[!UICONTROL Configure]**.
+Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez la destination marketing par courriel à laquelle vous souhaitez vous connecter, puis **[!UICONTROL Configurer]**.
 
 ![Se connecter à la destination](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. Dans le sélecteur de type **** Connexion, vous pouvez choisir entre Amazon S3, SFTP avec mot de passe ou SFTP avec clé SSH. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
+À l’étape **[!UICONTROL Authentification]**, si vous aviez précédemment configuré une connexion à votre destination marketing par courriel, sélectionnez **[!UICONTROL Compte existant]** et sélectionnez votre connexion existante. Vous pouvez également sélectionner **[!UICONTROL Nouveau compte]** pour configurer une nouvelle connexion à votre destination marketing par courrier électronique. Dans le sélecteur **[!UICONTROL Type de connexion]**, vous pouvez choisir entre Amazon S3, SFTP avec mot de passe ou SFTP avec clé SSH. Renseignez les informations ci-dessous, en fonction du type de connexion, puis sélectionnez **[!UICONTROL Se connecter]**.
 
-- For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key.
-- For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
-- For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
+- Pour les connexions **S3**, vous devez fournir votre identifiant de clé d&#39;accès Amazon et votre clé d&#39;accès secret.
+- Pour les connexions **SFTP avec mot de passe**, vous devez fournir le domaine, le port, le nom d’utilisateur et le mot de passe pour votre serveur SFTP.
+- Pour les connexions **SFTP avec la clé SSH**, vous devez fournir le domaine, le port, le nom d&#39;utilisateur et la clé SSH pour votre serveur SFTP.
 
-Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés sous la section **[!UICONTROL Clé]** . Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64.
+Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés sous la section **[!UICONTROL Clé]**. Notez que cette clé publique **doit** être écrite en tant que chaîne codée Base64.
 
-À l’étape **[!UICONTROL Configuration]** , saisissez un nom et une description pour votre nouvelle destination, ainsi que le format de fichier des fichiers exportés.
+À l&#39;étape **[!UICONTROL Configuration]**, entrez un nom et une description pour votre nouvelle destination, ainsi que le format de fichier des fichiers exportés.
 
 Si vous avez sélectionné Amazon S3 en tant qu’option d’enregistrement à l’étape précédente, insérez le nom du compartiment et le chemin d’accès au dossier dans la destination de l’enregistrement cloud où les fichiers seront distribués. Pour l’option enregistrement SFTP, insérez le chemin d’accès au dossier dans lequel les fichiers seront distribués.
 
-Cette étape vous permet également de sélectionner tout cas d’utilisation marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation marketing, voir la page Gouvernance des [données dans le CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) en temps réel. Pour plus d’informations sur les cas d’utilisation marketing définis par l’Adobe, voir la présentation [des stratégies d’utilisation des](../../../data-governance/policies/overview.md#core-actions)données.
+Cette étape vous permet également de sélectionner tout cas d’utilisation marketing à appliquer à cette destination. Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Etape de configuration du courrier électronique](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
-## Sélectionner les membres de segment à inclure dans vos exportations de destination {#select-segments}
+## Sélectionnez les membres de segment à inclure dans vos exportations de destination {#select-segments}
 
-On the **[!UICONTROL Select Segments]** page, select which segments to send to the destination. Pour en savoir plus sur les champs des sections ci-dessous.
+Sur la page **[!UICONTROL Sélectionner segments]**, sélectionnez les segments à envoyer à la destination. Pour en savoir plus sur les champs des sections ci-dessous.
 
 ![Sélectionner des segments](../../assets/common/email-select-segments.png)
 
 ## Configuration des noms de fichier
 
-Pour plus d&#39;informations sur les options de modification de la planification des segments et du nom de fichier, reportez-vous à l&#39;étape [Configurer](../../ui/activate-destinations.md#configure) du didacticiel Activer les destinations.
+Pour plus d&#39;informations sur les options de modification de la planification des segments et du nom de fichier, consultez l&#39;étape [Configurer](../../ui/activate-destinations.md#configure) du didacticiel Activer les destinations.
 
-## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
+## Sélectionner des attributs : sélectionnez les champs de schéma à utiliser comme attributs de destination dans vos fichiers exportés {#destination-attributes}
 
 Au cours de cette étape, vous sélectionnez les champs à exporter vers les destinations marketing par courriel, ainsi que le marquage des champs obligatoires.
 
 ![Attributs de destination](../../assets/catalog/email-marketing/overview/recommended-attributes.png)
 
-Pour plus d&#39;informations sur cette étape, reportez-vous à l&#39;étape [Sélectionner des attributs](../../ui/activate-destinations.md#select-attributes) du didacticiel Activer les destinations.
+Pour plus d&#39;informations sur cette étape, consultez l&#39;étape [Sélectionner des attributs](../../ui/activate-destinations.md#select-attributes) du didacticiel Activer les destinations.
 
 ### Identité {#identity}
 
