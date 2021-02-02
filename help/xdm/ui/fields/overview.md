@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field;
+keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;field;
 solution: Experience Platform
 title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
 workflow-type: tm+mt
-source-wordcount: '1241'
-ht-degree: 5%
+source-wordcount: '1311'
+ht-degree: 4%
 
 ---
 
@@ -57,7 +57,7 @@ Vous pouvez également fournir au champ une **[!UICONTROL Description]** lisible
 
 >[!NOTE]
 >
->Selon le **[!UICONTROL type]** que vous avez sélectionné pour le champ, d&#39;autres contrôles de configuration peuvent apparaître dans le rail de droite. Pour plus d’informations sur ces contrôles, voir la section [propriétés de champ spécifiques au type](#type-specific-properties).
+>Selon le **[!UICONTROL type]** que vous avez sélectionné pour le champ, d&#39;autres contrôles de configuration peuvent apparaître dans le rail de droite. Pour plus d&#39;informations sur ces contrôles, consultez la section [propriétés de champ spécifiques au type](#type-specific-properties).
 >
 >Le rail droit fournit également des cases à cocher pour la désignation de types de champs spéciaux. Pour plus d&#39;informations, consultez la section sur les [types de champs spéciaux](#special).
 
@@ -81,15 +81,15 @@ Lors de la définition d’un nouveau champ, d’autres options de configuration
 
 | Propriété de champ | Types compatibles | Description |
 | --- | --- | --- |
-| [!UICONTROL Valeur par défaut] | [!UICONTROL Chaîne],  [!UICONTROL Doublon],  [!UICONTROL Long],  [!UICONTROL Entier], Short, , Octet, Booléen]][!UICONTROL [!UICONTROL  | Valeur par défaut qui sera affectée à ce champ si aucune autre valeur n’est fournie lors de l’assimilation. Cette valeur doit être conforme au type sélectionné dans le champ. |
+| [!UICONTROL Valeur par défaut] | [!UICONTROL Chaîne],  [!UICONTROL Doublon],  [!UICONTROL Long],  [!UICONTROL Entier], Short, , Octet, Booléen][!UICONTROL  | Valeur par défaut qui sera affectée à ce champ si aucune autre valeur n’est fournie lors de l’assimilation. Cette valeur doit être conforme au type sélectionné dans le champ. |
 | [!UICONTROL Modèle] | [!UICONTROL Chaîne] | Expression [régulière](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) à laquelle la valeur de ce champ doit se conformer pour être acceptée lors de l&#39;assimilation. |
 | [!UICONTROL Format] | [!UICONTROL Chaîne] | Effectuez une sélection dans une liste de formats prédéfinis pour les chaînes auxquelles la valeur doit se conformer. Les formats disponibles sont les suivants : <ul><li>[[!UICONTROL date-heure]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-référence]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointeur]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longueur minimale] | [!UICONTROL Chaîne] | Nombre minimum de caractères que doit contenir la chaîne pour que la valeur soit acceptée lors de l’assimilation. |
 | [!UICONTROL Longueur maximale] | [!UICONTROL Chaîne] | Nombre maximal de caractères que doit contenir la chaîne pour que la valeur soit acceptée lors de l’assimilation. |
-| [!UICONTROL Valeur minimale] | [!UICONTROL Double] | Valeur minimale pour que le Doublon soit accepté lors de l&#39;assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, la valeur est acceptée. |
-| [!UICONTROL Valeur maximale] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, la valeur est acceptée. |
-| [!UICONTROL Valeur minimale exclusive] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, elle est rejetée. |
-| [!UICONTROL Valeur maximale exclusive] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, elle est rejetée. |
+| [!UICONTROL Valeur minimale] | [!UICONTROL Double] | Valeur minimale pour que le Doublon soit accepté lors de l&#39;assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l&#39;utilisation de cette contrainte, la contrainte &quot;[!UICONTROL Valeur minimale exclusive]&quot; doit rester vide. |
+| [!UICONTROL Valeur maximale] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, la valeur est acceptée. Lors de l&#39;utilisation de cette contrainte, la contrainte &quot;[!UICONTROL Valeur maximale exclusive]&quot; doit rester vide. |
+| [!UICONTROL Valeur minimale exclusive] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, elle est rejetée. Lors de l&#39;utilisation de cette contrainte, la contrainte &quot;[!UICONTROL Valeur minimale]&quot; (non exclusive) doit rester vide. |
+| [!UICONTROL Valeur maximale exclusive] | [!UICONTROL Doublon] | Valeur maximale pour le Doublon à accepter lors de l’assimilation. Si la valeur assimilée correspond exactement à celle saisie ici, elle est rejetée. Lors de l&#39;utilisation de cette contrainte, la contrainte &quot;[!UICONTROL Valeur maximale]&quot; (non exclusive) doit rester vide. |
 
 ## Types de champ spéciaux {#special}
 
