@@ -3,12 +3,12 @@ title: Présentation d’Offer Decisioning
 seo-title: Offer Decisioning et Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 seo-description: Adobe Experience Platform Web SDK peut fournir et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
-keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
+keywords: Prise de décision des offres ; prise de décision ; SDK Web ; SDK Web de plateforme ; offres personnalisées ; diffuser des offres ; diffusion des offres ; personnalisation des offres ;
 translation-type: tm+mt
-source-git-commit: 5f90f238a8845cc7bf07d54b89c5c6ccff40469a
+source-git-commit: 05049025bdfc67af4d811e90218bf6e2613fab51
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 16%
+source-wordcount: '875'
+ht-degree: 15%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres personnalisées qui sont gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou des API Offer Decisioning.
 
-## Conditions préalables 
+## Conditions préalables
 
 * L&#39;organisation IMS est activée pour la prise de décision d&#39;arête
 * Offres, Activités créées
@@ -29,7 +29,7 @@ Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des offres pe
 
 ## Terminologie
 
-Il est important de comprendre la terminologie suivante lorsque vous travaillez avec Offer Decisioning. Pour plus d&#39;informations et pour vue des termes supplémentaires, veuillez visiter le glossaire [](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html)Offer Decisioning.
+Il est important de comprendre la terminologie suivante lorsque vous travaillez avec Offer Decisioning. Pour plus d&#39;informations et pour vue des termes supplémentaires, veuillez consulter le [glossaire Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Conteneur :** Un conteneur est un mécanisme d&#39;isolation qui permet de séparer les différentes préoccupations. L’ID de conteneur est le premier élément de chemin d’accès pour toutes les API du référentiel. Tous les objets de prise de décision résident dans un conteneur.
 
@@ -52,24 +52,24 @@ Il est important de comprendre la terminologie suivante lorsque vous travaillez 
 
    >[!TIP]
    >
-   >Vous pouvez copier la valeur de la portée de la décision depuis la page Aperçu **de l’** Activité de l’interface utilisateur.
+   >Vous pouvez copier la valeur de l’étendue de la décision à partir de la page **Aperçu de l’Activité** de l’interface utilisateur.
 
    ![](assets/decision-scope-copy.png)
 
-* **Configuration Edge :** Pour plus d&#39;informations, consultez la documentation sur la configuration [des](../../fundamentals/edge-configuration.md) bords.
+* **Configuration Edge :** pour plus d’informations, consultez la documentation sur la  [configuration ](../../fundamentals/edge-configuration.md) Edge.
 
-* **Identité**: Pour plus d&#39;informations, veuillez lire cette documentation décrivant comment [Platform Web SDK exploite Identity Service](../../identity/overview.md).
+* **Identité** : Pour plus d&#39;informations, veuillez lire cette documentation décrivant comment  [Platform Web SDK exploite Identity Service](../../identity/overview.md).
 
 ## Activation de Offer Decisioning
 
 Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 
-1. Activation de Adobe Experience Platform dans votre configuration [de](../../fundamentals/edge-configuration.md) bord et cochez la case &quot;Offer Decisioning&quot;
+1. Activation de Adobe Experience Platform dans votre configuration [edge](../../fundamentals/edge-configuration.md) et cochez la case &quot;Offer Decisioning&quot;
    ![offre-prise de décision-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un guide de début [rapide pour le lancement](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/quick-start.html)de plateformes.
-3. [Configurez le SDK](../../fundamentals/configuring-the-sdk.md) pour Offer Decisioning. D&#39;autres étapes spécifiques à Offer Decisioning sont présentées ci-dessous.
+2. Suivez les instructions pour [installer le SDK](../../fundamentals/installing-the-sdk.md) (le SDK peut être installé seul ou via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Voici un [guide de début rapide pour le lancement de la plateforme ](https://docs.adobe.com/content/help/fr-FR/launch/using/intro/get-started/quick-start.html).
+3. [Configurez le ](../../fundamentals/configuring-the-sdk.md) SDK pour Offer Decisioning. D&#39;autres étapes spécifiques à Offer Decisioning sont présentées ci-dessous.
    * SDK installé autonome
-      1. Configurez l’action &quot;sendEvent&quot; avec votre `decisionScopes`
+      1. Configurez l&#39;action &quot;sendEvent&quot; avec votre `decisionScopes`
 
       ```javascript
       alloy("sendEvent", {
@@ -87,19 +87,19 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-      4. Créez les éléments [de](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html)données nécessaires. Au minimum, vous devrez créer une carte d&#39;identité du SDK Web de plate-forme et un élément de données d&#39;objet XDM SDK de plate-forme Web.
+      4. Créez les [éléments de données](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/data-elements.translate.html) nécessaires. Au minimum, vous devrez créer une carte d&#39;identité du SDK Web de plate-forme et un élément de données d&#39;objet XDM SDK de plate-forme Web.
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       5. Créez vos [règles](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/manage-resources/rules.translate.html).
-         * Ajouter une action Envoyer le Événement d&#39;un SDK Web de plate-forme et ajouter les éléments appropriés `decisionScopes` à la configuration de cette action
+         * Ajouter une action Envoyer le Événement d&#39;un SDK Web de plate-forme et ajouter le `decisionScopes` correspondant à la configuration de cette action
             ![send-événement-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
-      6. [Créez et publiez une bibliothèque](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) contenant toutes les règles, éléments de données et extensions appropriés que vous avez configurés.
+      6. [Créez et publiez une ](https://docs.adobe.com/content/help/fr-FR/launch/using/reference/publish/libraries.html) bibliothèque contenant toutes les règles, éléments de données et extensions appropriés que vous avez configurés.
 
 
 ## Exemples de demandes et de réponses
 
-### Une `decisionScopes` valeur
+### Une valeur `decisionScopes`
 
 **Requête**
 
@@ -130,8 +130,8 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 
 | Propriété | Obligatoire | Description | Limites | Exemple |
 |---|---|---|---|---|
-| `identityMap` | Oui | Reportez-vous à cette documentation [du service](../../identity/overview.md)d&#39;identité. | Une identité par demande. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Oui | Tableau de chaînes codées Base64 de JSON contenant les identifiants d’activité et de placement. | Maximum 30 `decisionScopes` par demande. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `identityMap` | Oui | Consultez cette [documentation Identity Service](../../identity/overview.md). | Une identité par demande. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
+| `decisionScopes` | Oui | Tableau de chaînes codées Base64 de JSON contenant les identifiants d’activité et de placement. | Maximum 30 `decisionScopes` par requête. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Réponse**
 
@@ -144,10 +144,19 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
         {
           "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
           "items": [
             {
               "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "etag": "1",
               "data": {
                 "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
@@ -174,6 +183,8 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 | Propriété | Description | Exemple |
 |---|---|---|
 | `scope` | Portée de la décision qui a abouti aux offres proposées. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `activity.id` | ID unique de l’activité d’offre. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
+| `placement.id` | ID unique de l’emplacement de l’offre. | `"id": "xcore:offer-placement:1175009612b0100c"` |
 | `items.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `schema` | Schéma du contenu associé à l&#39;offre proposée. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
 | `data.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
@@ -183,7 +194,7 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 | `deliveryUrl` | Contenu de l’image associé à l’offre proposée au format d’une URL. | `"deliveryURL": "https://image.jpeg"` |
 | `characteristics` | Caractéristiques associées à l’offre proposée au format d’un objet JSON. | `"characteristics": { "foo": "bar", "foo1": "bar1" }` |
 
-### Plusieurs `decisionScopes` valeurs
+### Plusieurs valeurs `decisionScopes`
 
 **Requête**
 
@@ -216,8 +227,8 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 
 | Propriété | Obligatoire | Description | Limites | Exemple |
 |---|---|---|---|---|
-| `identityMap` | Oui | Reportez-vous à cette documentation [du service](../../identity/overview.md)d&#39;identité. | Une identité par demande. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Oui | Tableau de chaînes codées Base64 de JSON contenant les identifiants d’activité et de placement. | Maximum 30 `decisionScopes` par demande. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
+| `identityMap` | Oui | Consultez cette [documentation Identity Service](../../identity/overview.md). | Une identité par demande. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
+| `decisionScopes` | Oui | Tableau de chaînes codées Base64 de JSON contenant les identifiants d’activité et de placement. | Maximum 30 `decisionScopes` par requête. | `"decisionScopes":["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==", "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ=="` |
 
 **Réponse**
 
@@ -228,67 +239,62 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
     {
       "payload": [
         {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MTEyMyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDExMjMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381123",
+            "etag": "1"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b01123",
+            "etag": "3"
+          },
           "items": [
             {
-              "id": "xcore:personalized-offer:124cc332095cfa74",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "id": "xcore:personalized-offer:11e36d4a22954123",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
+              "etag": "2",
               "data": {
-                "id": "xcore:personalized-offer:124cc332095cfa74",
-                "format": "text/html",
+                "id": "xcore:personalized-offer:11e36d4a22954123",
+                "format": "text/text",
                 "language": [
-                  "en-US"
+                  "en"
                 ],
-                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
+                "content": "20% Off on shipping",
+                "characteristics": {
+                  "foo2": "bar2"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
+          "items": [
+            {
+              "id": "xcore:personalized-offer:11e36d4a2295415d",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
+              "etag": "1",
+              "data": {
+                "id": "xcore:personalized-offer:11e36d4a2295415d",
+                "format": "image/png",
+                "language": [
+                  "en"
+                ],
+                "deliveryURL": "https://image.jpeg",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
                 }
-              }
-            }
-          ]
-        }
-      ],
-      "payload": [
-        {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ==",
-          "items": [
-            {
-              "id": "xcore:personalized-offer:235fe313094cdb75",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
-              "data": {
-                "id": "xcore:personalized-offer:235fe313094cdb75",
-                "format": "text/text",
-                "language": [
-                  "en-US"
-                ],
-                "content": "20% Off on shipping",
-                "characteristics": {
-                  "foo2": "bar2",
-                  "foo3": "bar3"
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "payload": [
-        {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyYzkxMzg1Mjc2MDE4YyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMzMxZjU2MTYyYWEyZjcifQ==",
-          "items": [
-            {
-              "id": "xcore:personalized-offer:312de312095cda65",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
-              "data": {
-                "id": "xcore:personalized-offer:312de312095cda65",
-                "format": "image/png",
-                "language": [
-                  "en-US"
-                ],
-                "deliveryURL": "https://image.jpeg"
               }
             }
           ]
@@ -304,10 +310,12 @@ Pour activer Offer Decisioning, vous devez effectuer les étapes suivantes :
 | Propriété | Description | Exemple |
 |---|---|---|
 | `scope` | Portée de la décision qui a abouti aux offres proposées. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `items.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `schema` | Schéma du contenu associé à l&#39;offre proposée. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
-| `format` | Format du contenu associé à l&#39;offre proposée. | `"format": "text/html"` |
+| `activity.id` | ID unique de l’activité d’offre. | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
+| `placement.id` | ID unique de l’emplacement de l’offre. | `"xcore:offer-placement:1175009612b01123"` |
+| `items.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `schema` | Schéma du contenu associé à l&#39;offre proposée. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"` |
+| `data.id` | ID de l’offre proposée. | `"id": "xcore:personalized-offer:11e36d4a22954123"` |
+| `format` | Format du contenu associé à l&#39;offre proposée. | `"format": "text/text"` |
 | `language` | Tableau de langues associées au contenu de l&#39;offre proposée. | `"language": [ "en-US" ]` |
 | `content` | Contenu associé à l’offre proposée au format d’une chaîne. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |
 | `deliveryUrl` | Contenu de l’image associé à l’offre proposée au format d’une URL. | `"deliveryURL": "https://image.jpeg"` |
