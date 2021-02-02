@@ -1,23 +1,29 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
+keywords: Experience Platform ; accueil ; thèmes populaires ; service de Requête ; service de requête ; RStudio ; studio ; connexion au service de requête ;
 solution: Experience Platform
 title: Connexion à RStudio
 topic: connect
 description: Ce document décrit les étapes à suivre pour connecter RStudio à Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: 9fbb6b829cd9ddec30f22b0de66874be7710e465
+source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 70%
+source-wordcount: '272'
+ht-degree: 39%
 
 ---
 
 
-# Connexion à [!DNL RStudio]
+# [!DNL RStudio]
 
-Ce document décrit les étapes à suivre pour connecter RStudio à Adobe Experience Platform [!DNL Query Service].
+Ce document passe en revue les étapes de connexion de [!DNL RStudio] à Adobe Experience Platform [!DNL Query Service].
 
-Après avoir installé [!DNL RStudio], sur l&#39;écran *Console* qui s&#39;affiche, vous devez d&#39;abord préparer votre script R à utiliser [!DNL PostgreSQL].
+>[!NOTE]
+>
+> Ce guide suppose que vous avez déjà accès à [!DNL RStudio] et que vous savez comment l&#39;utiliser. Vous trouverez plus d&#39;informations sur [!DNL RStudio] dans la [documentation officielle [!DNL RStudio] ](https://rstudio.com/products/rstudio/).
+
+## Connexion de [!DNL RStudio] à [!DNL Query Service]
+
+Après avoir installé [!DNL RStudio], dans l&#39;écran **[!DNL Console]** qui s&#39;affiche, vous devez d&#39;abord préparer votre script R à utiliser [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -46,13 +52,13 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de la base de données ainsi que les informations d’identification de connexion, consultez la [page des informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], cliquez sur **[!UICONTROL Requêtes]**, puis sur **[!UICONTROL Informations d’identification]**.
+>Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de la base de données ainsi que les informations d’identification de connexion, consultez la [page des informations d’identification sur Platform](https://platform.adobe.com/query/configuration). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, puis **[!UICONTROL Informations d’identification]**.
 
-## Étapes suivantes
+## Rédaction de requêtes
 
 Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez écrire des requêtes pour exécuter et modifier des instructions SQL. Par exemple, vous pouvez utiliser `dbGetQuery(con, sql)` pour exécuter des requêtes, où `sql` est la requête SQL que vous souhaitez exécuter.
 
-La requête suivante utilise un jeu de données contenant [ExperienceEvents](../best-practices/experience-event-queries.md) et crée un histogramme des pages vues d’un site web en fonction de la hauteur d’écran d’un appareil.
+La requête suivante utilise un jeu de données contenant [Événements d’expérience](../best-practices/experience-event-queries.md) et crée un histogramme des vues de page d’un site Web, en fonction de la hauteur d’écran du périphérique.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -87,4 +93,6 @@ df_pageviews
 7 600-699 3097040
 ```
 
-Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, veuillez lire le [guide relatif aux requêtes en cours d’exécution](../best-practices/writing-queries.md).
+## Étapes suivantes
+
+Pour plus d&#39;informations sur la façon d&#39;écrire et d&#39;exécuter des requêtes, veuillez lire le guide sur les [requêtes en cours d&#39;exécution](../best-practices/writing-queries.md).
