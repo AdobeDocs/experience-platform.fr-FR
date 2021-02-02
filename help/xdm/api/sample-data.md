@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;sampledata;sample data;rpc;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; données d’exemple ; rpc ;
 solution: Experience Platform
 title: Exemple de guide de point de terminaison de données
 description: Le point de terminaison /sampledata de l'API de registre de Schéma vous permet de générer des données d'exemple mappées à la structure de tout schéma XDM existant.
@@ -7,7 +7,7 @@ topic: developer guide
 translation-type: tm+mt
 source-git-commit: eb5e34dc3b48a6fe0757635cad1df08caa68b019
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '319'
 ht-degree: 2%
 
 ---
