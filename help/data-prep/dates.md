@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; date ; fonctions de date ; dates ;
 solution: Experience Platform
 title: Fonctions de date
 topic: overview
 description: Ce document présente les fonctions de date utilisées avec l’aperçu des données.
 translation-type: tm+mt
-source-git-commit: 1f9833c06a3423c334edb8aa7e441adfd74be0f2
+source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 18%
+source-wordcount: '411'
+ht-degree: 17%
 
 ---
 
@@ -53,8 +53,8 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 | Symbole | Signification | Présentation | Exemple |
 | ------ | ------- | ------------ | ------- |
 | G | L&#39;ère | Texte | AD; Anno Domini; A |
-| Y | Année, basée sur la semaine ISO | Nombre | 1996; 96 |
-| y | L&#39;année | Nombre | 2004; 04 |
+| Y | Année, basée sur la semaine ISO | Nombre | 1996 ; 96 |
+| y | L&#39;année | Nombre | 2004 ; 04 |
 | M/L | Mois de l&#39;année | Nombre/Texte | 7 ; 07 ; Jul ; juillet ; J |
 | w | Semaine de l’année | Nombre | 27 |
 | W | Semaine du mois | Nombre | 3 |
@@ -80,4 +80,4 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 
 **Exemple**
 
-L’expression `date(orderDate, 'yyyy-MM-dd')` convertira la `orderDate` valeur &quot;31 décembre 2020&quot; en la valeur datetime &quot;2020-12-31&quot;.
+L’expression `date(orderDate, "yyyy-MM-dd")` convertira une valeur `orderDate` de &quot;31 décembre 2020&quot; en une valeur datetime de &quot;2020-12-31&quot;.
