@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
+keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données de séries chronologiques ; données de séries chronologiques de flux ;
 solution: Experience Platform
 title: Diffusion par flux de données de série temporelle
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 80%
+source-wordcount: '1234'
+ht-degree: 79%
 
 ---
 
 
 # Diffusion par flux de données de série temporelle vers Adobe Experience Platform
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
+Ce didacticiel vous aidera à commencer à utiliser les API d&#39;assimilation en flux continu, qui font partie des [!DNL Data Ingestion Service] API Adobe Experience Platform.
 
 ## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel [!DNL Platform] organiser les données d’expérience.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organiser les données d’expérience.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
@@ -36,19 +36,19 @@ Ce guide fournit des exemples d’appels API pour démontrer comment formater vo
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform] sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
+>Pour plus d&#39;informations sur les sandbox dans [!DNL Platform], consultez la [documentation d&#39;aperçu de sandbox](../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 
@@ -56,7 +56,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Composition d’un schéma basé sur la classe XDM ExperienceEvent
 
-To create a dataset, you will first need to create a new schema that implements the [!DNL XDM ExperienceEvent] class. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
+Pour créer un jeu de données, vous devez d&#39;abord créer un nouveau schéma qui implémente la classe [!DNL XDM ExperienceEvent]. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
 **Format d’API**
 
@@ -249,7 +249,7 @@ Une fois que vous avez créé votre schéma, vous devez créer un jeu de donnée
 
 >[!NOTE]
 >
->This dataset will be enabled for **[!DNL Real-time Customer Profile]** and **[!DNL Identity]** by setting the appropriate tags.
+>Ce jeu de données sera activé pour **[!DNL Real-time Customer Profile]** et **[!DNL Identity]** en définissant les balises appropriées.
 
 **Format d’API**
 
@@ -401,7 +401,7 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
 
 **Réponse**
 
-An successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
+Une réponse réussie renvoie l&#39;état HTTP 200 avec les détails du [!DNL Profile] nouvellement diffusé.
 
 ```json
 {
@@ -423,11 +423,11 @@ An successful response returns HTTP status 200 with details of the newly streame
 
 ## Récupération des données de série temporelle que vous venez d’ingérer
 
-To validate the previously ingested records, you can use the [[!DNL Profile Access API]](../../profile/api/entities.md) to retrieve the time series data. Vous pouvez le faire en envoyant une requête GET au point de terminaison `/access/entities` et en utilisant des paramètres de requête facultatifs. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;).
+Pour valider les enregistrements précédemment assimilés, vous pouvez utiliser [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données de la série chronologique. Vous pouvez le faire en envoyant une requête GET au point de terminaison `/access/entities` et en utilisant des paramètres de requête facultatifs. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (&amp;).
 
 >[!NOTE]
 >
->Si l’ID de stratégie de fusion n’est pas défini et que le ou `schema.name` est `relatedSchema.name` défini, `_xdm.context.profile`récupère [!DNL Profile Access] **** toutes les identités liées.
+>Si l&#39;ID de stratégie de fusion n&#39;est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] récupère **toutes** les identités associées.
 
 **Format d’API**
 
@@ -525,6 +525,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
+En lisant ce document, vous comprenez maintenant comment ingérer des données d&#39;enregistrement dans [!DNL Platform] à l&#39;aide de connexions en flux continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez début à surveiller vos données imbriquées par le biais de l&#39;interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
