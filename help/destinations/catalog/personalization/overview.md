@@ -1,13 +1,13 @@
 ---
-keywords: personalization;Personalization
+keywords: personnalisation ; Personnalisation
 title: Destinations de personnalisation
 seo-title: Destinations de personnalisation
 description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
 seo-description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
 translation-type: tm+mt
-source-git-commit: 3486aa053be903a3844bbc79a957699b18b30a74
+source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '170'
 ht-degree: 94%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
 
-Actuellement, le CDP en temps réel prend en charge les destinations de personnalisation répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
+Actuellement, Platform prend en charge les destinations de personnalisation répertoriées ci-dessous. Pour en savoir plus sur la connexion à ces destinations, consultez les liens suivants :
 
 * [Extension Adobe Target](./adobe-target.md)
 * [Extension Adobe Target v2](./adobe-target-v2.md)
