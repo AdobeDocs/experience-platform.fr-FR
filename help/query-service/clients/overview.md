@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;popular topics;Query service;query service;connect;connect to query service;aqua data studio;Aqua Data Studio;Looker;looker;Postico;postico;Power BI;power bi;psql;rstudio;PSQL;RStudio;Tableau;tableau;
+keywords: Experience Platform ; accueil ; sujets populaires ; service de Requête ; service de requête ; connexion ; connexion au service de requête ; studio de données aqua ; studio de données aqua ; studio de données Aqua ; observateur ; Postico ; postico ; Power BI ; power bi ; psql ; studio ; PSQL ; RStudio ; Tableau ; tableau ; tableau ;
 solution: Experience Platform
 title: Connexion des clients à Query Service
 topic: connect
 description: Ce document explique comment se connecter à Requête Service à partir de diverses applications clientes de bureau et comment vérifier ces connexions.
 translation-type: tm+mt
-source-git-commit: 37356db1666b0c800119b1e254940ad72550848a
+source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 42%
+source-wordcount: '112'
+ht-degree: 29%
 
 ---
 
 
-# Connect clients to [!DNL Query Service]
+# Connecter les clients à [!DNL Query Service]
 
-This section explains how to connect to [!DNL Query Service] from a variety of desktop client applications and how to verify those connections. [!DNL Query Service] utilise le protocole , c’est pourquoi les instructions de cette section expliquent comment utiliser les outils et les pilots pour se connecter et écrire des requêtes.[!DNL Postgres][!DNL Postgres]
+Cette section explique comment se connecter à [!DNL Query Service] à partir de diverses applications clientes de bureau et comment vérifier ces connexions. [!DNL Query Service] utilise le protocole , c’est pourquoi les instructions de cette section expliquent comment utiliser les outils et les pilots pour se connecter et écrire des requêtes.[!DNL PostgreSQL][!DNL PostgreSQL]
 
 Les instructions concernent les clients suivants :
 
