@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre des schémas ; registre des Schémas ;
 solution: Experience Platform
 title: Guide de développement de l’API Schema Registry
 description: 'L''API Schéma Registry vous permet de gérer par programmation tous les schémas et les ressources XDM connexes disponibles dans l''Experience Platform. '
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 7%
+ht-degree: 4%
 
 ---
 
@@ -63,19 +63,19 @@ Pour savoir comment vue des unions dans l&#39;API de registre des Schémas, cons
 
 L&#39;API Schéma Registry vous permet de transférer et de partager des ressources XDM entre des sandbox et des organisations IMS. Pour tout schéma, mixin ou type de données, vous pouvez générer une charge utile d’exportation contenant la structure de la ressource et les ressources dépendantes. Cette charge utile peut ensuite être utilisée pour importer la ressource dans un sandbox de destination et une organisation IMS.
 
-Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez la [référence de l&#39;API de registre de Schéma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Pour plus d&#39;informations sur l&#39;utilisation de ces points de terminaison, consultez le [guide des points de terminaison export/import](./export-import.md).
 
 ## Sample data
 
 Vous pouvez générer des données d’exemple pour n’importe quel schéma spécifié dans la bibliothèque de Schémas. L&#39;objet de réponse renvoyé peut alors être utilisé comme source d&#39;assimilation de données.
 
-Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez la [référence de l&#39;API de registre de Schéma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Pour plus d’informations sur l’utilisation de ce point de terminaison, consultez le [guide des points de terminaison de données d’exemple](./sample-data.md).
 
 ## Journal d’audit
 
 Le registre des Schémas tient un journal de toutes les modifications apportées à une ressource (classe, mixin, type de données ou schéma) entre différentes mises à jour. Vous pouvez récupérer le journal d&#39;une ressource particulière en fournissant ses `$id` ou `meta:altId` dans le chemin d&#39;une demande de GET vers ce point de terminaison.
 
-Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez la [référence de l&#39;API de registre de Schéma](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Pour plus d&#39;informations sur l&#39;utilisation de ce point de terminaison, consultez le [guide du point de terminaison du journal d&#39;audit](./audit-log.md).
 
 ## Étapes suivantes
 
