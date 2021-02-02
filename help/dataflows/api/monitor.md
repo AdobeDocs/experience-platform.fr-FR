@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
+keywords: Experience Platform ; accueil ; rubriques populaires ; flux de données de surveillance ; api du service de flux ; service de flux
 solution: Experience Platform
 title: Surveiller les flux et les exécutions
 topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 3fb5879ea636d4059a6b42e2f98742ff7df0397c
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '719'
 ht-degree: 20%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 20%
 
 # Surveillance des flux de données à l’aide de l’API du service de flux
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc. De plus, l&#39;Experience Platform permet l&#39;activation des données par des partenaires externes.
+Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc. De plus, l&#39;Experience Platform permet l&#39;activation des données par des partenaires externes.
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources et destinations prises en charge sont connectables.
 
-Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide du [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+Ce didacticiel décrit les étapes de surveillance des données d’exécution de flux afin de vérifier l’exhaustivité, les erreurs et les mesures à l’aide de [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Prise en main
 
-Ce didacticiel nécessite que vous disposiez de la valeur ID d’un flux de données valide. Si vous ne disposez pas d’un ID de flux de données valide, sélectionnez votre connecteur de choix dans la vue d’ensemble [des](../../sources/home.md) sources ou dans la vue d’ensemble [des](../../destinations/catalog/overview.md) destinations et suivez les étapes décrites avant de tenter ce didacticiel.
+Ce didacticiel nécessite que vous disposiez de la valeur ID d’un flux de données valide. Si vous ne disposez pas d’un ID de flux de données valide, sélectionnez le connecteur de votre choix dans le [aperçu des sources](../../sources/home.md) ou [aperçu des destinations](../../destinations/catalog/overview.md) et suivez les étapes décrites avant de tenter ce didacticiel.
 
 Ce didacticiel nécessite également une bonne compréhension des composants suivants de Adobe Experience Platform :
 
-- [Destinations](../../destinations/home.md): Les destinations sont des intégrations préétablies avec les applications couramment utilisées qui permettent l’activation transparente des données de la plate-forme pour les campagnes marketing inter-canaux, les campagnes par courriel, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Sources](../../sources/home.md): [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [Destinations](../../destinations/home.md) : Les destinations sont des intégrations préétablies avec les applications couramment utilisées qui permettent l’activation transparente des données de la plate-forme pour les campagnes marketing inter-canaux, les campagnes par courriel, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Sources](../../sources/home.md) :  [!DNL Experience Platform] permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de  [!DNL Platform] services.
+- [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
-The following sections provide additional information that you will need to know in order to successfully monitor flow runs using the [!DNL Flow Service] API.
+Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour surveiller les exécutions de flux à l&#39;aide de l&#39;API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -40,13 +40,13 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -56,7 +56,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exécutions du flux de surveillance
 
-Une fois que vous avez effectué un flux de données, exécutez une demande de GET à l’ [!DNL Flow Service] API.
+Une fois que vous avez effectué un flux de données, exécutez une demande de GET à l&#39;API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -66,7 +66,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FLOW_ID}` | Valeur unique `id` du flux de données à surveiller. |
+| `{FLOW_ID}` | Valeur `id` unique du flux de données à surveiller. |
 
 **Requête**
 
@@ -197,9 +197,9 @@ Une réponse réussie renvoie des détails sur votre exécution de flux, y compr
 | `sizeSummary` | Volume des données en octets. |
 | `recordSummary` | Nombre d’enregistrements des données. |
 | `fileSummary` | Le fichier compte les données. |
-| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple, `manifest` est seulement une partie de l&#39;&quot;Activité de promotion&quot; et est donc incluse avec l&#39; `extensions` objet. |
+| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple, `manifest` n&#39;est qu&#39;une partie de &quot;l&#39;Activité de promotion&quot; et est donc inclus avec l&#39;objet `extensions`. |
 | `statusSummary` | Indique si l’exécution du flux est une réussite ou un échec. |
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez récupéré des mesures et des informations d’erreur sur votre flux de données à l’aide de l’ [!DNL Flow Service] API. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre calendrier d’assimilation, pour suivre son état et ses taux d’assimilation. Pour plus d&#39;informations sur la façon de surveiller les flux de données pour les sources, veuillez lire les flux de données de [surveillance pour les sources à l&#39;aide du didacticiel de l&#39;interface](../ui/monitor-sources.md) utilisateur. Pour plus d&#39;informations sur la façon de surveiller les flux de données pour les destinations, veuillez lire les flux de données de [surveillance pour les destinations à l&#39;aide du didacticiel de l&#39;interface](../ui/monitor-destinations.md) utilisateur.
+En suivant ce didacticiel, vous avez récupéré des mesures et des informations d’erreur sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre calendrier d’assimilation, pour suivre son état et ses taux d’assimilation. Pour plus d&#39;informations sur la façon de surveiller les flux de données pour les sources, veuillez lire le [flux de données de surveillance pour les sources à l&#39;aide du didacticiel de l&#39;interface utilisateur](../ui/monitor-sources.md). Pour plus d&#39;informations sur la façon de surveiller les flux de données pour les destinations, consultez le [didacticiel de surveillance des flux de données pour les destinations à l&#39;aide de l&#39;interface utilisateur](../ui/monitor-destinations.md).
