@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
+keywords: Experience Platform ; accueil ; rubriques populaires ; SFTP ; sftp ; Protocole de transfert de fichiers sécurisé ; protocole de transfert de fichiers sécurisé
 solution: Experience Platform
 title: Création d’un connecteur SFTP à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de l’Experience Platform à un serveur SFTP (Secure File Transfer Protocol).
 translation-type: tm+mt
-source-git-commit: c88b9400144f511ef456fd5fdc968a5a6b7a3dc0
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '826'
 ht-degree: 23%
 
 ---
@@ -53,7 +53,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../../../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -189,4 +189,4 @@ Une réponse réussie renvoie l&#39;identifiant unique (`id`) de la connexion no
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez créé une connexion SFTP à l&#39;aide de l&#39;API [!DNL Flow Service] et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données de parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
+En suivant ce didacticiel, vous avez créé une connexion SFTP à l&#39;aide de l&#39;API [!DNL Flow Service] et obtenu la valeur d&#39;ID unique de la connexion. Vous pouvez utiliser cet ID de connexion pour [explorer les enregistrements de cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md) ou [assimiler des données Parquet à l’aide de l’API Flow Service](../../cloud-storage-parquet.md).
