@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;greenplum;Greenplum
+keywords: Experience Platform ; accueil ; sujets populaires ; greenplum ; Greenplum
 solution: Experience Platform
 title: Création d’un connecteur GreenPlum à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes nécessaires à la connexion de GreenPlum à l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9092c3d672967d3f6f7bf7116c40466a42e6e7b1
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '552'
 ht-degree: 26%
 
 ---
@@ -46,7 +46,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](../../../../../tutorials/authentication.md). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
