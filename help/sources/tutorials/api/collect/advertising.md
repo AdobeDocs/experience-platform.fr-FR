@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; publicité ; mots-clés Google ; publicité
 solution: Experience Platform
 title: Collecte de données publicitaires via les connecteurs et les API source
 topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les importer dans la plate-forme par le biais des connecteurs source et de l’API du service de flux.
 translation-type: tm+mt
-source-git-commit: 90a7e49033afe3bc348225df0688e17dbf842a15
+source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1513'
 ht-degree: 22%
 
 ---
@@ -39,7 +39,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](../../../../tutorials/authentication.md). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
+Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
