@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
+keywords: Experience Platform ; attribution ai ; notes d’accès ; rubriques populaires ; téléchargements ; scores d’attribution ai ; exportation ; Exporter
 solution: Experience Platform, Intelligent Services
 title: Accès aux scores dans Attribution AI
 topic: Accessing scores
 description: Ce document sert de guide pour le téléchargement de scores pour Attribution AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 70%
+source-wordcount: '1056'
+ht-degree: 69%
 
 ---
 
@@ -19,13 +19,13 @@ Ce document sert de guide pour le téléchargement de scores pour Attribution AI
 
 ## Prise en main
 
-Attribution AI vous permet de télécharger des partitions au format parquet. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Attribution AI vous permet de télécharger des partitions au format Parquet. Ce didacticiel nécessite que vous ayez lu et terminé le téléchargement de la section scores Attribution AI du guide [Prise en main](./getting-started.md).
 
-De plus, pour accéder aux scores d’Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores d’Attribution AI, vous devez disposer d’une instance de service avec un état d’exécution réussi. Pour créer une instance de service, consultez le [guide de l’utilisateur Attribution AI](./user-guide.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Chercher l’identifiant de votre jeu de données {#dataset-id}
 
-Within your service instance for Attribution AI insights, click the *More actions* dropdown in the top-right navigation then select **[!UICONTROL Access scores]**.
+Dans votre instance de service pour obtenir des informations sur les Attributions AI, cliquez sur la liste déroulante *Autres actions* dans le volet de navigation supérieur droit, puis sélectionnez **[!UICONTROL scores d’accès]**.
 
 ![actions supplémentaires](./images/download-scores/more-actions.png)
 
@@ -35,7 +35,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer d&#39;autres lots, augmentez le nombre du paramètre de `limit` requête à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
+En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. D&#39;autres paramètres de requête sont utilisés pour cet appel d&#39;API afin de renvoyer le dernier lot réussi au lieu d&#39;une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête `limit` à la quantité souhaitée à renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -59,11 +59,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur Key de l’objet renvoyé est the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur Key de l&#39;objet renvoyé est l&#39;identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 >[!NOTE]
 >
-> L’ `tags` objet a été reformé pour être lisible dans la réponse suivante.
+> L&#39;objet `tags` a été reformé dans la réponse suivante afin d&#39;être lisible.
 
 ```json
 {
@@ -166,7 +166,7 @@ Une réponse réussie renvoie un payload contenant un objet `_links`. L’objet 
 }
 ```
 
-## Récupération de vos fichiers {#retrieving-your-files}
+## Récupération de vos fichiers  {#retrieving-your-files}
 
 À l’aide de la valeur `href` obtenue à l’étape précédente comme appel API, effectuez une nouvelle requête GET pour récupérer votre répertoire de fichiers.
 
@@ -261,11 +261,11 @@ La réponse télécharge le fichier que vous avez demandé dans votre répertoir
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-Les partitions téléchargées seront en parquet et auront besoin soit d&#39;un lecteur de [!DNL Spark]coquillages, soit d&#39;un lecteur de parquet pour vue les partitions. Pour l’affichage des scores bruts, vous pouvez utiliser des outils [en](https://github.com/apache/parquet-mr/tree/master/parquet-tools)parquet. Les outils de parquets peuvent analyser les données avec [!DNL Spark].
+Les partitions téléchargées seront au format Parquet et auront besoin soit d&#39;un [!DNL Spark]-shell, soit d&#39;un lecteur de parquet pour les vues. Pour l’affichage des scores bruts, vous pouvez utiliser [les outils Parquet Apache](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Les outils de parquets peuvent analyser les données avec [!DNL Spark].
 
 ## Étapes suivantes
 
-Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Pour plus d&#39;informations sur les résultats obtenus, veuillez consulter la documentation sur les entrées et les extrants [de l&#39;](./input-output.md) attrition AI.
+Ce document décrit les étapes requises pour télécharger les scores Attribution AI. Pour plus d&#39;informations sur les résultats de la note, veuillez consulter la [documentation sur les entrées et sorties de l&#39;API d&#39;attributs](./input-output.md).
 
 ## Accès aux scores à l’aide du Snowflake
 
