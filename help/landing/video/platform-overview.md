@@ -9,9 +9,9 @@ doc-type: video
 activity: understand
 thumbnail: 32797.jpg
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
 workflow-type: tm+mt
-source-wordcount: '53'
+source-wordcount: '55'
 ht-degree: 7%
 
 ---
@@ -19,6 +19,8 @@ ht-degree: 7%
 
 # Présentation d’Adobe Experience Platform
 
-Cette vidéo présente un aperçu rapide de ce qu&#39;est un Experience Platform et des défis commerciaux qu&#39;il rencontre. Pour en savoir plus, consultez la documentation [d’aperçu de l’](../home.md)Experience Platform.
+Cette vidéo présente brièvement l&#39;Experience Platform et présente quelques-uns des défis commerciaux qu&#39;il doit relever.
+
+Pour en savoir plus, lisez tout d&#39;abord [présentation de l&#39;Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
