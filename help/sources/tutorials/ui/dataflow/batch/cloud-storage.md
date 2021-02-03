@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d'une source dans un jeu de données de la plateforme. Ce didacticiel décrit la procédure à suivre pour configurer un nouveau flux de données à l’aide de votre compte d’enregistrement cloud.
 translation-type: tm+mt
-source-git-commit: 4e85dc702cda5c6c495a6f7fb70453b7897baa36
+source-git-commit: 2d1b49d774d04e7befbcc1c9e5417ee82323634a
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1898'
 ht-degree: 3%
 
 ---
@@ -108,7 +108,7 @@ Selon vos besoins, vous pouvez choisir de mapper directement les champs ou utili
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-Pour les fichiers JSON, outre le mappage direct des champs à d’autres champs, vous pouvez directement mapper des objets à d’autres objets et tableaux à d’autres tableaux.
+Pour les fichiers JSON, outre le mappage direct des champs à d’autres champs, vous pouvez directement mapper des objets à d’autres objets et tableaux à d’autres tableaux. Vous pouvez également prévisualisation et mapper des types de données complexes tels que des tableaux dans des fichiers JSON à l’aide d’un connecteur source d’enregistrement de cloud.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
