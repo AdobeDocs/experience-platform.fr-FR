@@ -2,11 +2,11 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; interface utilisateur ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; explorer ; classe ; mixin ; type de données ; schéma ;
 solution: Experience Platform
 title: Explorez les ressources XDM dans l’interface utilisateur.
-description: Découvrez comment explorer les schémas, classes, mixins et types de données existants dans l’interface utilisateur Experience Platform.
+description: Découvrez comment explorer les schémas, classes, mixins et types de données existants dans l’interface utilisateur de l’Experience Platform.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 912d02477febdafa4a53aebc83bc3a93b0f84f09
+source-git-commit: 6246e623a711bff06eefe5d5954719d69df921c3
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
