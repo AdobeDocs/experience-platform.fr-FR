@@ -6,9 +6,9 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à Google AdWords.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '622'
 ht-degree: 23%
 
 ---
@@ -39,12 +39,12 @@ Pour que [!DNL Flow Service] puisse se connecter à AdWords, vous devez fournir 
 
 | **Informations d’identification** | **Description** |
 | -------------- | --------------- |
-| ID client client client | ID client du compte AdWords. |
-| Jeton de développement | Jeton de développeur associé au compte de gestionnaire. |
-| Actualiser le jeton | Jeton d’actualisation obtenu à partir de [!DNL Google] pour autoriser l’accès à AdWords. |
-| Identifiant du client | ID client de l&#39;application [!DNL Google] utilisée pour acquérir le jeton d&#39;actualisation. |
-| Client secret | Le secret client de l&#39;application [!DNL Google] utilisée pour acquérir le jeton d&#39;actualisation. |
-| ID de spécification de connexion | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL Google AdWords] est : `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | ID client du compte AdWords. |
+| `developerToken` | Jeton de développeur associé au compte de gestionnaire. |
+| `refreshToken` | Jeton d’actualisation obtenu à partir de [!DNL Google] pour autoriser l’accès à AdWords. |
+| `clientId` | ID client de l&#39;application [!DNL Google] utilisée pour acquérir le jeton d&#39;actualisation. |
+| `clientSecret` | Le secret client de l&#39;application [!DNL Google] utilisée pour acquérir le jeton d&#39;actualisation. |
+| `connectionSpec` | Identificateur unique nécessaire pour créer une connexion. L&#39;ID de spécification de connexion pour [!DNL Google AdWords] est : `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 Pour plus d&#39;informations sur ces valeurs, consultez ce [document Google AdWords](https://developers.google.com/adwords/api/docs/guides/authentication).
 
