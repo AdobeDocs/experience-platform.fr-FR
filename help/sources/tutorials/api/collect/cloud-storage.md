@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
 workflow-type: tm+mt
 source-wordcount: '1621'
 ht-degree: 21%
@@ -90,7 +90,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -109,7 +109,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `connectionId` | ID de connexion unique du système d’enregistrement cloud tiers auquel vous accédez. |
+| `baseConnectionId` | ID de connexion unique du système d’enregistrement cloud tiers auquel vous accédez. |
 | `data.format` | Valeur d’énumération qui définit l’attribut de format de données. |
 | `data.columnDelimiter` | Vous pouvez utiliser n’importe quel délimiteur de colonne à caractère unique pour collecter des fichiers plats. Cette propriété n’est requise que lors de l’assimilation de fichiers CSV ou TSV. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
