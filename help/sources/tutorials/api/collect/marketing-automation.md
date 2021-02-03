@@ -6,7 +6,7 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système d’automatisation marketing et les amener à la plate-forme par le biais des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 22%
@@ -87,7 +87,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -104,7 +104,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `connectionId` | ID de connexion unique du système d’automatisation marketing tiers auquel vous accédez. |
+| `baseConnectionId` | ID de connexion unique du système d’automatisation marketing tiers auquel vous accédez. |
 | `params.path` | Chemin d’accès au fichier source auquel vous accédez. |
 | `connectionSpec.id` | ID de spécification de connexion de votre système d’automatisation marketing. |
 
