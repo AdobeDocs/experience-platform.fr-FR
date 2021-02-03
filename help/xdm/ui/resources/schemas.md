@@ -5,7 +5,7 @@ title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 3aa838509e4e24c57508e7411b0ffcf135fbcf04
+source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 1%
@@ -81,7 +81,7 @@ Cochez la case en regard du nom du mixin à ajouter au schéma. Vous pouvez sél
 >
 >Pour tout mixin répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![](../../images/ui/resources/schemas/info-icon.png)) pour vue une brève description du type de données capturées par le mixin. Vous pouvez également sélectionner l’icône de prévisualisation (![](../../images/ui/resources/schemas/preview-icon.png)) pour vue de la structure des champs fournis par le mixin avant de décider de l’ajouter au schéma.
 
-Une fois que vous avez fini de choisir le mixin, sélectionnez **[!UICONTROL Ajouter le mixin]** pour les ajouter au schéma.
+Une fois que vous avez choisi vos mixins, sélectionnez **[!UICONTROL Ajouter le mixin]** pour les ajouter au schéma.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
