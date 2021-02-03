@@ -5,9 +5,9 @@ title: Explorez un système de gestion de la relation client à l’aide de l’
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer les systèmes CRM.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '589'
 ht-degree: 25%
 
 ---
@@ -28,9 +28,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Les sections suivantes fournissent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système de gestion de la relation client à l&#39;aide de l&#39;API [!DNL Flow Service].
 
-### Obtention d’une connexion de base
+### Création d’un ID de connexion
 
-Pour explorer votre système de gestion de la relation client à l&#39;aide des API [!DNL Platform], vous devez posséder un ID de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour le système de gestion de la relation client que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
+Pour explorer votre système de gestion de la relation client à l&#39;aide des API [!DNL Platform], vous devez posséder un ID de connexion valide. Si vous n’avez pas encore de connexion au système de gestion de la relation client que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
 * [Microsoft Dynamics ](../create/crm/ms-dynamics.md)
 * [Salesforce](../create/crm/salesforce.md)
@@ -43,21 +43,21 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://www.adobe.com/go/platform-api-authentication-en). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Flow Service], sont isolées dans des sandbox virtuels spécifiques. Toutes les requêtes d&#39;API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l&#39;opération aura lieu :
 
-* x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
 
-* Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Explorez vos tableaux de données
 
-La connexion de base de votre système de gestion de la relation client vous permet d’explorer vos tableaux de données en exécutant des requêtes de GET. Utilisez l&#39;appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou assimiler dans [!DNL Platform].
+L’ID de connexion de votre système de gestion de la relation client vous permet d’explorer vos tableaux de données en exécutant des requêtes de GET. Utilisez l&#39;appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou assimiler dans [!DNL Platform].
 
 **Format d’API**
 
@@ -73,7 +73,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -129,7 +129,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
