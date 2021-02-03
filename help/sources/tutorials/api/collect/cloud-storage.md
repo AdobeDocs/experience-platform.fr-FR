@@ -6,10 +6,10 @@ topic: overview
 type: Tutorial
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
 translation-type: tm+mt
-source-git-commit: 64627592b873a48b9cb58ef911e049869a2c21fb
+source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
 workflow-type: tm+mt
-source-wordcount: '1621'
-ht-degree: 21%
+source-wordcount: '1639'
+ht-degree: 20%
 
 ---
 
@@ -341,6 +341,10 @@ Une réponse réussie renvoie l&#39;identifiant unique de la nouvelle connexion 
 ## Créer un mappage {#mapping}
 
 Pour que les données source soient assimilées à un jeu de données de cible, elles doivent d’abord être mises en correspondance avec le schéma de cible auquel adhère le jeu de données de cible. Pour ce faire, il effectue une demande de POST au service de conversion avec des mappages de données définis dans la charge utile de la demande.
+
+>[!TIP]
+>
+>Vous pouvez mapper des types de données complexes tels que des tableaux dans des fichiers JSON à l’aide d’un connecteur source d’enregistrement cloud.
 
 **Format d’API**
 
