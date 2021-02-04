@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;export jobs;api;
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; tâches d’exportation ; api ;
 solution: Experience Platform
 title: Exporter le point de terminaison des tâches
 topic: developer guide
@@ -7,7 +7,7 @@ description: Les tâches d’exportation sont des processus asynchrones utilisé
 translation-type: tm+mt
 source-git-commit: 783fa7ff0c22143a21c4f666c956c8b4d956189e
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1678'
 ht-degree: 34%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 34%
 
 # Exporter le point de terminaison des tâches
 
-Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le `/export/jobs` point de terminaison dans l’API de segmentation Adobe Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
+Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres de segments d’audience dans les jeux de données. Vous pouvez utiliser le point de terminaison `/export/jobs` dans l’API de segmentation Adobe Experience Platform, qui vous permet de récupérer, de créer et d’annuler par programmation des tâches d’exportation.
 
 >[!NOTE]
 >
->Ce guide porte sur l&#39;utilisation des tâches d&#39;exportation dans le [!DNL Segmentation API]secteur. Pour plus d’informations sur la gestion des tâches d’exportation pour [!DNL Real-time Customer Profile] les données, voir le guide sur les tâches d’ [exportation dans l’API de Profil.](../../profile/api/export-jobs.md)
+>Ce guide porte sur l&#39;utilisation des tâches d&#39;exportation dans le [!DNL Segmentation API]. Pour plus d&#39;informations sur la gestion des tâches d&#39;exportation pour les données [!DNL Real-time Customer Profile], consultez le guide sur les tâches d&#39;exportation [dans l&#39;API de Profil](../../profile/api/export-jobs.md).
 
 ## Prise en main
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 ## Récupération d’une liste de tâches d’exportation {#retrieve-list}
 
@@ -31,7 +31,7 @@ Vous pouvez récupérer une liste de toutes les tâches d’exportation pour vot
 
 **Format d’API**
 
-Le `/export/jobs` point de terminaison prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point de terminaison `/export/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /export/jobs
@@ -199,10 +199,10 @@ La réponse suivante renvoie l’état HTTP 200 avec une liste de travaux d’ex
 
 | Propriété | Description |
 | -------- | ----------- |
-| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. La valeur &quot;false&quot; signifie que tous les ID de segment sont exportés dans un seul ID de lot. La valeur &quot;true&quot; signifie qu’un ID de segment est exporté dans un ID de lot. **Remarque :** La définition de la valeur sur true peut affecter les performances d’exportation par lot.</li></ul> |
+| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. La valeur &quot;false&quot; signifie que tous les ID de segment sont exportés dans un seul ID de lot. La valeur &quot;true&quot; signifie qu’un ID de segment est exporté dans un ID de lot. **Remarque : la** définition de la valeur sur true peut affecter les performances d’exportation par lot.</li></ul> |
 | `fields` | Une liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
-| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment vers lequel les profils seront exportés.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;. Une valeur &quot;réalisé&quot; signifie que le profil entre dans le segment. Une valeur &quot;existant&quot; signifie que le profil continue d’être présent dans le segment. La valeur &quot;exit&quot; signifie que le profil quitte le segment.</li></ul> |
+| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment vers lequel les profils seront exportés.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné  `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le  `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;. Une valeur &quot;réalisé&quot; signifie que le profil entre dans le segment. Une valeur &quot;existant&quot; signifie que le profil continue d’être présent dans le segment. La valeur &quot;exit&quot; signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |
 | `metrics.totalTime` | Champ indiquant la durée totale d’exécution de la tâche d’exportation. |
 | `metrics.profileExportTime` | Champ indiquant le temps nécessaire à l’exportation des profils. |
@@ -286,11 +286,11 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `filter.segmentQualificationTime.startTime` | Début de qualification des segments pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de début pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
 | `filter.segmentQualificationTime.endTime` | Heure de fin de qualification de segment pour un ID de segment pour un état donné. Si elle n’est pas fournie, aucun filtre ne sera appliqué à l’heure de fin pour une qualification d’identifiant du segment. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). |
 | `filter.fromIngestTimestamp ` | Limite les profils exportés à inclure uniquement ceux qui ont été mis à jour après cet horodatage. La date et l’heure doivent être fournies au format [RFC 3339](https://tools.ietf.org/html/rfc3339). <ul><li>`fromIngestTimestamp` pour les **profils**, le cas échéant : inclut tous les profils fusionnés dans lesquels la date et l’heure mises à jour et fusionnées sont supérieures à la date et l’heure données. Prend en charge l’opérande `greater_than`.</li><li>`fromIngestTimestamp` pour les **événements** : tous les événements ingérés après cette date et cette heure seront exportés en fonction du résultat du profil obtenu. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li> |
-| `filter.emptyProfiles` | Valeur booléenne indiquant si un filtre doit être appliqué aux profils vides. Les profils peuvent contenir des enregistrements de profil, des enregistrements ExperienceEvent ou les deux. Les profils sans enregistrement de profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. To export all profiles in the profile store, including the &quot;emptyProfiles&quot;, set the value of `emptyProfiles` to `true`. If `emptyProfiles` is set to `false`, only profiles with profile records in the store are exported. By default, if `emptyProfiles` attribute is not included, only profiles containing profile records are exported. |
+| `filter.emptyProfiles` | Valeur booléenne indiquant si un filtre doit être appliqué aux profils vides. Les profils peuvent contenir des enregistrements de profil, des enregistrements ExperienceEvent ou les deux. Les profils sans enregistrement de profil et seuls les enregistrements ExperienceEvent sont appelés &quot;profils vides&quot;. Pour exporter tous les profils de la banque de profils, y compris les &quot;profils vides&quot;, définissez la valeur `emptyProfiles` sur `true`. Si `emptyProfiles` est défini sur `false`, seuls les profils contenant des enregistrements de profil dans la boutique sont exportés. Par défaut, si l&#39;attribut `emptyProfiles` n&#39;est pas inclus, seuls les profils contenant des enregistrements de profil sont exportés. |
 | `additionalFields.eventList` | Contrôle les champs de événement de séries chronologiques exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`fields` : contrôlent les champs à exporter.</li><li>`filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`filter.fromIngestTimestamp`: Filtres les événements de série chronologique à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li><li>`filter.toIngestTimestamp`: Filtres l’horodatage à ceux qui ont été ingérés avant l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
-| `destination` | **(Obligatoire)** Informations relatives aux données exportées :<ul><li>`datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`segmentPerBatch`: *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur &quot;false&quot;. La valeur &quot;false&quot; exporte tous les ID de segment dans un seul ID de lot. La valeur &quot;true&quot; exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur sur &quot;true&quot; peut affecter les performances d’exportation par lot.</li></ul> |
+| `destination` | **(Obligatoire)** Informations relatives aux données exportées :<ul><li>`datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`segmentPerBatch`:  *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur &quot;false&quot;. La valeur &quot;false&quot; exporte tous les ID de segment dans un seul ID de lot. La valeur &quot;true&quot; exporte un ID de segment dans un ID de lot. Notez que la définition de la valeur sur &quot;true&quot; peut affecter les performances d’exportation par lot.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
-| `evaluationInfo.segmentation` | *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, prend par défaut la valeur `false`. Une valeur de `true` indique que la segmentation doit être effectuée sur la tâche d’exportation. |
+| `evaluationInfo.segmentation` | *(Facultatif)* Valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur  `false`. La valeur `true` indique que la segmentation doit être effectuée sur la tâche d’exportation. |
 
 **Réponse**
 
@@ -359,7 +359,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
 | -------- | ----------- |
 | `id` | Valeur générée par le système en lecture seule identifiant la tâche d’exportation qui vient d’être créée. |
 
-Sinon, si `destination.segmentPerBatch` la valeur était définie sur `true`, l’ `destination` objet ci-dessus aurait un `batches` tableau, comme illustré ci-dessous :
+Si `destination.segmentPerBatch` avait été défini sur `true`, l&#39;objet `destination` ci-dessus aurait un tableau `batches`, comme illustré ci-dessous :
 
 ```json
     "destination": {
@@ -384,7 +384,7 @@ Sinon, si `destination.segmentPerBatch` la valeur était définie sur `true`, l�
 
 ## Récupération d’une tâche d’exportation spécifique {#get}
 
-You can retrieve detailed information about a specific export job by making a GET request to the `/export/jobs` endpoint and providing the ID of the export job you wish to retrieve in the request path.
+Vous pouvez récupérer des informations détaillées sur une tâche d&#39;exportation spécifique en adressant une demande de GET au point de terminaison `/export/jobs` et en indiquant l&#39;ID de la tâche d&#39;exportation que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -469,10 +469,10 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. A value of `false` means all the segment IDs were into a single batch ID. Une valeur de `true` signifie qu’un ID de segment est exporté dans un ID de lot.</li></ul> |
+| `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: ID du jeu de données dans lequel les données ont été exportées.</li><li>`segmentPerBatch`: Valeur booléenne qui indique si les ID de segment sont consolidés ou non. La valeur `false` signifie que tous les ID de segment se trouvaient dans un seul ID de lot. La valeur `true` signifie qu’un identifiant de segment est exporté dans un identifiant de lot.</li></ul> |
 | `fields` | Une liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
-| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment pour les profils à exporter.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;.  Une valeur &quot;réalisé&quot; signifie que le profil entre dans le segment. Une valeur &quot;existant&quot; signifie que le profil continue d’être présent dans le segment. La valeur &quot;exit&quot; signifie que le profil quitte le segment.</li></ul> |
+| `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: ID de segment pour les profils à exporter.</li><li>`segmentNs`: Segmenter l’espace de nommage pour l’élément donné  `segmentID`.</li><li>`status`: Tableau de chaînes fournissant un filtre d’état pour le  `segmentID`. Par défaut, `status` possède la valeur `["realized", "existing"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : &quot;réalisé&quot;, &quot;existant&quot; et &quot;exité&quot;.  Une valeur &quot;réalisé&quot; signifie que le profil entre dans le segment. Une valeur &quot;existant&quot; signifie que le profil continue d’être présent dans le segment. La valeur &quot;exit&quot; signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |
 | `metrics.totalTime` | Champ indiquant la durée totale d’exécution de la tâche d’exportation. |
 | `metrics.profileExportTime` | Champ indiquant le temps nécessaire à l’exportation des profils. |
@@ -480,7 +480,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Annulation ou suppression d’une tâche d’exportation spécifique {#delete}
 
-You can request to delete the specified export job by making a DELETE request to the `/export/jobs` endpoint and providing the ID of the export job you wish to delete in the request path.
+Vous pouvez demander la suppression de la tâche d’exportation spécifiée en adressant une requête de DELETE au point de terminaison `/export/jobs` et en indiquant l’identifiant de la tâche d’exportation que vous souhaitez supprimer dans le chemin de requête.
 
 **Format d’API**
 
@@ -490,7 +490,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | The `id` of the export job you want to delete. |
+| `{EXPORT_JOB_ID}` | `id` de la tâche d&#39;exportation à supprimer. |
 
 **Requête**
 
