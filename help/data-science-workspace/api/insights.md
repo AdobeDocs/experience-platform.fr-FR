@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; informations ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Insights
 topic: Developer guide
@@ -7,13 +7,13 @@ description: Les insights contiennent des mesures qui permettent à un scientifi
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '512'
+ht-degree: 97%
 
 ---
 
 
-# Insights
+# Informations
 
 Les insights contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 
