@@ -5,9 +5,9 @@ title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les bases de la création et de la modification de schémas dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: e9df977272524b6aba516982e93f3128d1b9278b
+source-git-commit: babe47cc864d9f79eee28989ca8b658350b9d790
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1321'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Pour modifier un schéma existant, sélectionnez l&#39;onglet **[!UICONTROL Parc
 >
 >Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche du schéma. Pour plus d&#39;informations, consultez le guide [exploration des ressources XDM](../explore.md).
 
-Une fois que vous avez sélectionné un schéma, le [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la trame. Vous pouvez désormais [ajouter des mixins](#add-mixins) au schéma ou [modifier des mixins personnalisés ](./mixins.md#edit) existants si le schéma en utilise un.
+Une fois que vous avez sélectionné un schéma, le [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la trame. Vous pouvez désormais [ajouter des mixins](#add-mixins) au schéma, [modifier les noms d’affichage des champs](#display-names) ou [modifier les mixins personnalisés existants](./mixins.md#edit) si le schéma en utilise un.
 
 ## Ajout de mixins à un schéma {#add-mixins}
 
@@ -116,6 +116,22 @@ Pour terminer le processus, sélectionnez **[!UICONTROL Enregistrer]** pour enre
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 Le schéma est désormais activé pour une utilisation dans le Profil client en temps réel. Lorsque la plate-forme intègre des données dans des jeux de données basés sur ce schéma, ces données seront incorporées dans vos données de Profil fusionnées.
+
+## Modifier les noms d&#39;affichage des champs de schéma {#display-names}
+
+Une fois que vous avez affecté une classe et ajouté des mixins à un schéma, vous pouvez modifier les noms d&#39;affichage de n&#39;importe quel champ de schéma, que ces champs aient été fournis par des ressources XDM standard ou personnalisées.
+
+>[!NOTE]
+>
+>N’oubliez pas que les noms d’affichage des champs appartenant à des classes standard ou des mixins ne peuvent être modifiés que dans le contexte d’un schéma spécifique. En d’autres termes, la modification du nom d’affichage d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent la même classe ou mixin associée.
+
+Pour modifier le nom d’affichage d’un champ de schéma, sélectionnez le champ dans la trame. Dans le rail de droite, indiquez le nouveau nom sous **[!UICONTROL Nom d’affichage]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Sélectionnez **[!UICONTROL Appliquer]** dans le rail de droite et la trame se met à jour pour afficher le nouveau nom d&#39;affichage du champ. Sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications au schéma.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Modifier une classe de schéma {#change-class}
 
