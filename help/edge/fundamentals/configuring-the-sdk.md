@@ -3,12 +3,12 @@ title: Configuration du SDK
 seo-title: Configuration du SDK Web Adobe Experience Platform
 description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configuration;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 74%
+source-wordcount: '738'
+ht-degree: 72%
 
 ---
 
@@ -75,7 +75,7 @@ Domaine utilisé pour interagir avec les services d’Adobe. Cette valeur est ut
 | -------- | ------------ | ----------------- |
 | Chaîne | Oui | Aucune |
 
-Your assigned [!DNL Experience Cloud] organization ID.  Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
+ID d&#39;organisation [!DNL Experience Cloud] que vous avez attribué.  Lors de la configuration de plusieurs instances dans une page, vous devez configurer un `orgId` différent pour chaque instance.
 
 ## Collecte de données
 
@@ -85,7 +85,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  Lors de la configuration
 | -------- | ------------ | ----------------- |
 | Booléen | Non | `true` |
 
-Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Voir Suivi [](../data-collection/track-links.md#automaticLinkTracking) automatique des liens pour plus d’informations.
+Indique si les données associées aux clics sur les liens doivent être automatiquement collectées. Voir [Suivi automatique des liens](../data-collection/track-links.md#automaticLinkTracking) pour plus d’informations.
 
 ### `onBeforeEventSend`
 
@@ -93,7 +93,7 @@ Indique si les données associées aux clics sur les liens doivent être automat
 | -------- | ------------ | ----------------- |
 | Fonction | Non | () => non définie |
 
-Définissez cette option pour configurer un rappel appelé pour chaque événement juste avant son envoi.  Un objet avec le champ `xdm` est envoyé dans le rappel.  Modify the `xdm` object to change what is sent.  Dans le rappel, les données de l’objet `xdm` sont déjà transmises dans la commande d’événement et les informations collectées automatiquement.  Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
+Définissez cette option pour configurer un rappel appelé pour chaque événement juste avant son envoi.  Un objet avec le champ `xdm` est envoyé dans le rappel.  Modifiez l&#39;objet `xdm` pour modifier ce qui est envoyé.  Dans le rappel, les données de l’objet `xdm` sont déjà transmises dans la commande d’événement et les informations collectées automatiquement.  Pour plus d’informations sur le minutage de ce rappel et pour obtenir un exemple, voir [Modification globale des événements](tracking-events.md#modifying-events-globally).
 
 ## Options de confidentialité
 
@@ -129,7 +129,7 @@ Si, par exemple, votre page web contient un élément ayant un ID `container` do
 | -------- | ------------ | ----------------- |
 | Booléen | Non | `true` |
 
-Enables [!DNL Audience Manager] cookie destinations, which allows the setting of cookies based on segment qualification.
+Active les destinations de cookie [!DNL Audience Manager], ce qui permet la définition de cookies en fonction de la qualification du segment.
 
 ### `urlDestinationsEnabled`
 
@@ -137,7 +137,7 @@ Enables [!DNL Audience Manager] cookie destinations, which allows the setting of
 | -------- | ------------ | ----------------- |
 | Booléen | Non | `true` |
 
-Enables [!DNL Audience Manager] URL destinations, which allows the firing of URLs based on segment qualification.
+Active les destinations URL [!DNL Audience Manager], ce qui permet de déclencher des URL en fonction de la qualification des segments.
 
 ## Options d’identité
 
