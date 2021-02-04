@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
+keywords: Experience Platform ; accueil ; rubriques populaires ; autorisations de contrôle d'accès ; types de ressources de contrôle d'accès ; api de contrôle d'accès
 solution: Experience Platform
 title: Liste des noms des autorisations et des types de ressources
 topic: developer guide
@@ -7,8 +7,8 @@ description: Le contrôle d’accès dans Adobe Experience Platform vous permet 
 translation-type: tm+mt
 source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 75%
+source-wordcount: '199'
+ht-degree: 69%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 75%
 
 Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point de terminaison `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API pour [afficher des stratégies efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
-Une autorisation est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. A resource type is a policy that enables read, write, and/or delete capabilities for a specific type of [!DNL Platform] resource (such as datasets or schemas).
+Une autorisation est une stratégie gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs stratégies de type ressource. Un type de ressource est une stratégie qui active des fonctionnalités de lecture, d&#39;écriture et/ou de suppression pour un type spécifique de ressource [!DNL Platform] (par exemple, des jeux de données ou des schémas).
 
 **Format d’API**
 
