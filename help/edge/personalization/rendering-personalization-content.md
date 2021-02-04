@@ -3,11 +3,11 @@ title: Rendu du contenu personnalisé
 seo-title: Rendu du contenu personnalisé avec le SDK Web d’Adobe Experience Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web d’Experience Platform
-keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+keywords: personnalisation ; renderDecision ; sendEvent ; DecisionScopes ; result.Decision ;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '241'
 ht-degree: 23%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # Présentation des options de personnalisation
 
-Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités de [gestion du scintillement](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] prend en charge l’interrogation des solutions de personnalisation à l’Adobe, y compris Adobe Target. Il existe deux modes de personnalisation : récupération du contenu qui peut être rendu automatiquement et du contenu que le développeur doit rendre. Le SDK fournit également des fonctionnalités permettant de [gérer le scintillement](../personalization/manage-flicker.md).
 
 ## Rendu automatique du contenu
 
@@ -41,7 +41,7 @@ Le rendu du contenu personnalisé est asynchrone. Il ne doit donc pas y avoir d�
 
 ## Rendu manuel du contenu
 
-Vous pouvez demander la liste des décisions à renvoyer en tant que promesse sur la `sendEvent` commande en spécifiant l&#39; `decisionScopes` option. Une portée est une chaîne qui permet à la solution de personnalisation de savoir quelle décision vous souhaitez prendre.
+Vous pouvez demander la liste des décisions à renvoyer en tant que promesse sur la commande `sendEvent` en spécifiant l&#39;option `decisionScopes`. Une portée est une chaîne qui permet à la solution de personnalisation de savoir quelle décision vous souhaitez prendre.
 
 ```javascript
 alloy("sendEvent",{
@@ -97,4 +97,4 @@ Cela renverra une liste de décisions en tant qu’objet JSON pour chaque décis
 
 ### Récupérer le contenu automatique
 
-Si vous souhaitez que les décisions `result.decisions` de rendu automatique soient incluses et que l’option NOT have Alloy les génère automatiquement, vous pouvez définir `renderDecisions` sur `false`et inclure la portée spéciale `__view__`.
+Si vous souhaitez que `result.decisions` inclue les décisions à rendu automatique et que l&#39;option d&#39;attribution ne les génère pas automatiquement, vous pouvez définir `renderDecisions` sur `false` et inclure la portée spéciale `__view__`.
