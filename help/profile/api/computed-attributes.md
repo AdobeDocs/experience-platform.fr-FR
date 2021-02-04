@@ -55,7 +55,7 @@ Pour configurer un attribut calculé, vous devez d’abord identifier le champ d
 
 Pour définir avec succès un champ d&#39;attribut calculé, le schéma doit être activé pour [!DNL Profile] et s&#39;afficher dans le schéma d&#39;union de la classe sur laquelle le schéma est basé. Pour plus d&#39;informations sur les schémas et unions activés pour [!DNL Profile], consultez la section du guide du développeur [!DNL Schema Registry] sur [l&#39;activation d&#39;un schéma pour le Profil et l&#39;affichage des schémas d&#39;union](../../xdm/api/getting-started.md). Nous vous recommandons également de consulter la [section relative aux unions](../../xdm/schema/composition.md) dans la documentation des principes de base de la composition des schémas.
 
-Le processus de ce didacticiel utilise un schéma [!DNL Profile] et suit les étapes de définition d&#39;un nouveau mixin contenant le champ d&#39;attribut calculé et s&#39;assurant qu&#39;il s&#39;agit de l&#39;espace de nommage correct. Si vous disposez déjà d’un champ qui se trouve dans l’espace de noms correct dans un schéma activé dans Profile, vous pouvez passer directement à l’étape de [création d’un attribut calculé](#create-a-computed-attribute).
+Le processus de ce didacticiel utilise un schéma [!DNL Profile] et suit les étapes de définition d’un nouveau mixin contenant le champ d’attribut calculé et s’assurant qu’il s’agit de l’espace de nommage correct. Si vous disposez déjà d’un champ qui se trouve dans l’espace de noms correct dans un schéma activé dans Profile, vous pouvez passer directement à l’étape de [création d’un attribut calculé](#create-a-computed-attribute).
 
 ### Affichage d’un schéma
 
