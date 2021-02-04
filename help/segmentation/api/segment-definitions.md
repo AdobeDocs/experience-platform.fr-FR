@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; définition de segment ; définitions de segment ; api ; API ;
 solution: Experience Platform
 title: Définitions de segment
 topic: developer guide
@@ -7,21 +7,21 @@ description: Ce guide fournit des informations pour vous aider à mieux comprend
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 51%
+source-wordcount: '1079'
+ht-degree: 50%
 
 ---
 
 
 # Point de terminaison des définitions de segment
 
-Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+Adobe Experience Platform vous permet de créer des segments définissant un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles du segment en fonction des conditions liées à tout enregistrement ou toute série de données chronologiques que vous fournissez à [!DNL Real-time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
 
 ## Prise en main
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 ## Obtention d’une liste de définitions de segment {#list}
 
@@ -29,7 +29,7 @@ Vous pouvez obtenir une liste de toutes les définitions de segment de votre org
 
 **Format d’API**
 
-Le `/segment/definitions` point de terminaison prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les définitions de segment disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point de terminaison `/segment/definitions` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez toutes les définitions de segment disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /segment/definitions
@@ -43,7 +43,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `start` | Spécifie le décalage de début pour les définitions de segment renvoyées. | `start=4` |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. | `limit=20` |
 | `page` | Indique à partir de quelle page commencent les résultats des définitions de segment. | `page=5` |
-| `sort` | Indique le champ de tri des résultats. Is written in the following format: `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | Indique le champ de tri des résultats. Est écrit au format suivant : `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Indique si la définition de segment est activée dans le flux. | `evaluationInfo.continuous.enabled=true` |
 
 **Requête**
@@ -251,7 +251,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 ## Récupération d’une définition de segment spécifique {#get}
 
-You can retrieve detailed information about a specific segment definition by making a GET request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to retrieve in the request path.
+Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une demande de GET au point de terminaison `/segment/definitions` et en indiquant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -261,7 +261,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | The `id` value of the segment definition you want to retrieve. |
+| `{SEGMENT_ID}` | Valeur `id` de la définition de segment à récupérer. |
 
 **Requête**
 
@@ -331,9 +331,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | `description` | Une description lisible par l’utilisateur de la définition. |
 | `evaluationInfo` | Objet généré par le système qui indique le type d’évaluation, de traitement par lot, continu (également appelé flux continu) ou synchrone, auquel la définition de segment sera associée. |
 
-## Récupération en masse des définitions de segment {#bulk-get}
+## Récupérer en bloc les définitions de segment {#bulk-get}
 
-Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de `/segment/definitions/bulk-get` terminaison et en fournissant les `id` valeurs des définitions de segment dans le corps de la requête.
+Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de terminaison `/segment/definitions/bulk-get` et en fournissant les valeurs `id` des définitions de segment dans le corps de la requête.
 
 **Format d’API**
 
@@ -466,7 +466,7 @@ Une réponse réussie renvoie l’état HTTP 207 avec les définitions de segmen
 
 ## Suppression d’une définition de segment spécifique {#delete}
 
-You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
+Vous pouvez demander de supprimer une définition de segment spécifique en adressant une requête de DELETE au point de terminaison `/segment/definitions` et en indiquant l’identifiant de la définition de segment que vous souhaitez supprimer dans le chemin de requête.
 
 **Format d’API**
 
@@ -494,7 +494,7 @@ Une réponse réussie renvoie un état HTTP 200 sans message.
 
 ## Mise à jour d’une définition de segment spécifique
 
-Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de `/segment/definitions` terminaison et en indiquant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin de la requête.
+Vous pouvez mettre à jour une définition de segment spécifique en envoyant une requête de PATCH au point de terminaison `/segment/definitions` et en indiquant l’identifiant de la définition de segment que vous souhaitez mettre à jour dans le chemin de requête.
 
 **Format d’API**
 
@@ -504,7 +504,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | The `id` value of the segment definition you want to update. |
+| `{SEGMENT_ID}` | Valeur `id` de la définition de segment à mettre à jour. |
 
 **Requête**
 
@@ -587,4 +587,4 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les définitions de segment. Pour plus d’informations sur la création d’un segment, consultez le didacticiel [Création d’un segment](../tutorials/create-a-segment.md) .
+Après avoir lu ce guide, vous comprenez mieux comment fonctionnent les définitions de segment. Pour plus d&#39;informations sur la création d&#39;un segment, consultez le [didacticiel de création d&#39;un segment](../tutorials/create-a-segment.md).
