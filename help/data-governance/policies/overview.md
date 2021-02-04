@@ -21,7 +21,7 @@ Ce document fournit un aperçu général des stratégies d’utilisation des don
 
 ## Actions marketing {#marketing-actions}
 
-Les actions marketing (également appelées cas d’utilisation marketing) dans le contexte de la structure de gouvernance des données sont des actions qu’un utilisateur de données [!DNL Experience Platform] peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
+Les actions marketing (également appelées cas d’utilisation marketing) dans le cadre de la gouvernance des données sont des actions qu’un utilisateur de données [!DNL Experience Platform] peut entreprendre, pour lesquelles votre entreprise souhaite limiter l’utilisation des données. Ainsi, une stratégie d’utilisation des données est définie par les éléments suivants :
 
 1. Une action marketing spécifique
 2. Étiquette(s) d&#39;utilisation des données pour laquelle l&#39;action est limitée ne peut pas être exécutée
