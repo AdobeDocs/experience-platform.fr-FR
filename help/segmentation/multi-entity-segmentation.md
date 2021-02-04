@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; segmentation ; service de segments ; segments ; segments ; plusieurs entités ; segmentation multientités ; segments multientités ; segments multientités ;
 solution: Experience Platform
 title: Segmentation d’entités multiples
 topic: overview
@@ -7,25 +7,25 @@ description: La segmentation d’entités multiples est la capacité à élargir
 translation-type: tm+mt
 source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 16%
+source-wordcount: '672'
+ht-degree: 15%
 
 ---
 
 
 # Segmentation d’entités multiples
 
-La segmentation multientité est une fonction avancée disponible dans le cadre de Adobe Experience Platform [!DNL Segmentation Service]. Cette fonctionnalité vous permet d’étendre [!DNL Real-time Customer Profile] les données avec d’autres données &quot;non-personnes&quot; (également appelées &quot;entités de dimension&quot;) que votre entreprise peut définir, telles que les données relatives aux produits ou aux magasins. La segmentation multientité offre une flexibilité lors de la définition de segments d’audience en fonction de données pertinentes pour vos besoins commerciaux uniques et peut être effectuée sans avoir l’expertise requise pour interroger les bases de données. Avec la segmentation multientité, vous pouvez ajouter des données clés à vos segments sans avoir à apporter de modifications coûteuses aux flux de données ou attendre une fusion de données dorsales.
+La segmentation multientité est une fonction avancée disponible dans le cadre de Adobe Experience Platform [!DNL Segmentation Service]. Cette fonctionnalité vous permet d&#39;étendre les [!DNL Real-time Customer Profile] données avec des données &quot;non-personnes&quot; supplémentaires (également appelées &quot;entités de dimension&quot;) que votre entreprise peut définir, telles que les données liées aux produits ou aux magasins. La segmentation multientité offre une flexibilité lors de la définition de segments d’audience en fonction de données pertinentes pour vos besoins commerciaux uniques et peut être effectuée sans avoir l’expertise requise pour interroger les bases de données. Avec la segmentation multientité, vous pouvez ajouter des données clés à vos segments sans avoir à apporter de modifications coûteuses aux flux de données ou attendre une fusion de données dorsales.
 
 ## Prise en main
 
 La segmentation multientité nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans la segmentation. Avant de poursuivre avec ce guide, veuillez consulter la documentation suivante :
 
 * [[!DNL Real-time Customer Profile]](../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
-   * [Gardiens](../profile/guardrails.md)de profil : Meilleures pratiques pour la création de modèles de données pris en charge par [!DNL Profile].
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments à partir de [!DNL Real-time Customer Profile] données.
+   * [Gardiens](../profile/guardrails.md) de profil : Meilleures pratiques pour la création de modèles de données pris en charge par  [!DNL Profile].
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des segments à partir de  [!DNL Real-time Customer Profile] données.
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
-   * [Principes de base de la composition](../xdm/schema/composition.md#union)des schémas : Découvrez les meilleures pratiques pour composer des schémas à utiliser en Experience Platform.
+   * [Principes de base de la composition](../xdm/schema/composition.md#union) des schémas : Découvrez les meilleures pratiques pour composer des schémas à utiliser en Experience Platform.
 
 ## Cas d’utilisation
 
@@ -41,7 +41,7 @@ Il est souvent complexe de créer et de qualifier des utilisateurs dans des segm
 
 ## Création de segments à plusieurs entités
 
-Pour créer un segment à plusieurs entités, vous devez d’abord définir des relations entre les schémas avant d’utiliser l’interface utilisateur de l’ [!DNL Segmentation] API ou du créateur de segments pour créer la définition de segment.
+Pour créer un segment à plusieurs entités, vous devez d’abord définir des relations entre les schémas avant d’utiliser l’API [!DNL Segmentation] ou l’interface utilisateur du créateur de segments pour créer la définition de segment.
 
 ### Définir des relations
 
@@ -61,4 +61,4 @@ Une fois que vous avez défini les relations XDM nécessaires, vous pouvez comme
 
 ## Évaluer et accéder aux segments à plusieurs entités
 
-Après avoir créé un segment, vous pouvez évaluer les résultats du segment et y accéder à l’aide de l’API de segmentation. L’évaluation d’un segment à plusieurs entités est très similaire à l’évaluation d’un segment standard. Ce processus ne peut être effectué qu’à l’aide de l’API de segmentation. Pour obtenir un guide détaillé sur l’utilisation de l’API pour évaluer les segments et y accéder, consultez le didacticiel [d’évaluation et d’accès aux segments](./tutorials/evaluate-a-segment.md) .
+Après avoir créé un segment, vous pouvez évaluer les résultats du segment et y accéder à l’aide de l’API de segmentation. L’évaluation d’un segment à plusieurs entités est très similaire à l’évaluation d’un segment standard. Ce processus ne peut être effectué qu’à l’aide de l’API de segmentation. Pour obtenir un guide détaillé sur l’utilisation de l’API pour évaluer les segments et y accéder, consultez le [didacticiel d’évaluation et d’accès aux segments](./tutorials/evaluate-a-segment.md).
