@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;comparison functions;comparison;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;comparaison fonctions;comparaison ;
 solution: Experience Platform
 title: Fonctions de comparaison
 topic: developer guide
@@ -7,15 +7,15 @@ description: Fonctions de comparaison sont utilisées pour comparer différentes
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 91%
+source-wordcount: '325'
+ht-degree: 86%
 
 ---
 
 
 # Fonctions de comparaison
 
-Les fonctions de comparaison sont utilisées pour comparer les différentes expressions et valeurs, renvoyant `true` ou `false` en conséquence. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Les fonctions de comparaison sont utilisées pour comparer les différentes expressions et valeurs, renvoyant `true` ou `false` en conséquence. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Est égal à
 
