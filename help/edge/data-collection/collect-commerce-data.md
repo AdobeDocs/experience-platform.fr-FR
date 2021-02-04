@@ -3,12 +3,12 @@ title: Produits
 seo-title: Prise en charge des produits avec le SDK Web d’Adobe Experience Platform
 description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
 seo-description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
-keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
+keywords: produits;commerce;mesures;mesure;order;cartAbandons;passages en caisse;productListAdds;productListOpen;productListRemovals;productListReouvertures;productListViews;productViews;purchase;saveForLaters;currencyCode;paiements;paiementAmount;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
 source-git-commit: c34cd52301d812655c85d4e1bca42049204f9403
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 99%
+source-wordcount: '1338'
+ht-degree: 97%
 
 ---
 
@@ -64,7 +64,7 @@ L’objet de commerce dispose également d’un champ spécial pour la collecte 
 |---|---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) |  |  | Devise [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) pour le total de la commande. |
 | [payments[paymentItems]](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpayments) |  |  | Liste des paiements dans une commande. [paymentItem](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#payment-item-schema) comprend ce qui suit. |
-|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) pour ce mode de paiement. |
+|  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) pour ce mode de paiement. |
 |  | [paymentAmount](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymentamount) | Fortement recommandé | Valeur du paiement dans le code de devise spécifié. |
 |  | [paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype) | Fortement recommandé | Type de paiement (par exemple, `credit_card`, `gift_card`, `paypal`). Voir la liste des [valeurs connues](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values) pour obtenir des détails. |
 |  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | Facultatif | Identifiant unique pour cette transaction de paiement. |
@@ -116,7 +116,7 @@ La liste de produits indique quels produits sont liés à l’action corresponda
 
 | **Champ** | **Recommandation** | **Description** |
 |---|---|---|
-| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) pour le produit. Cette valeur n’est utile que lorsque vous pouvez avoir des produits avec des codes de devise différents et lorsqu’elle est applicable. Par exemple, en cas d’achat ou d’ajout au panier. |
+| [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) pour le produit. Cette valeur n’est utile que lorsque vous pouvez avoir des produits avec des codes de devise différents et lorsqu’elle est applicable. Par exemple, en cas d’achat ou d’ajout au panier. |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Fortement recommandé | Ne doit être défini que le cas échéant. Par exemple, il peut ne pas être possible d’effectuer une définition sur `productView`, car différentes variantes du produit peuvent avoir des prix différents, mais sur `productListAdds`. |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Fortement recommandé | Identifiant XDM du produit. |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Fortement recommandé | Méthode utilisée par le visiteur pour ajouter un produit à la liste. Défini avec des mesures `productListAdds` et ne doit être utilisé que lorsqu’un produit est ajouté à la liste. Par exemple, `add to cart button`, `quick add` et `upsell`. |
