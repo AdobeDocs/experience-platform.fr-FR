@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace;Namespace;namespaces;Namespaces;identity namespace;Identity namespace;identity;Identity
+keywords: Experience Platform ; accueil ; sujets populaires ; espace de nommage ; Espace de nommage ; espaces de nommage ; Espaces de nommage ; espace de nommage d'identité ; espace de nommage d'identité ; identité ; identité
 solution: Experience Platform
 title: Création d’un espace de noms personnalisé
 topic: API guide
@@ -7,15 +7,15 @@ description: À l’aide de l’API Identity Namespace, vous pouvez créer un es
 translation-type: tm+mt
 source-git-commit: 3376d6cace9ab196f457e2bf7b84cde06693103c
 workflow-type: tm+mt
-source-wordcount: '95'
-ht-degree: 81%
+source-wordcount: '110'
+ht-degree: 70%
 
 ---
 
 
 # Création d’un espace de noms personnalisé
 
-Using the [!DNL Identity Namespace] API, you can create a custom identity namespace that will be available only to your organization.
+L&#39;API [!DNL Identity Namespace] vous permet de créer un espace de nommage d&#39;identité personnalisé qui ne sera disponible que pour votre organisation.
 
 Pour obtenir des recommandations sur la création d’espaces de noms personnalisés, reportez-vous à aux [questions fréquentes sur Identity Service](../troubleshooting-guide.md).
 
