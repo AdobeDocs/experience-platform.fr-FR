@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;delete an object;catalog service;api
+keywords: Experience Platform ; accueil ; rubriques populaires ; supprimer un objet ; service de catalogue ; api
 solution: Experience Platform
 title: Suppression d’un objet
 topic: developer guide
@@ -7,15 +7,15 @@ description: Vous pouvez supprimer un objet Catalogue en fournissant son identif
 translation-type: tm+mt
 source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 64%
+source-wordcount: '201'
+ht-degree: 61%
 
 ---
 
 
 # Suppression d’un objet
 
-You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request.
+Vous pouvez supprimer un objet [!DNL Catalog] en indiquant son identifiant dans le chemin d’une requête de DELETE.
 
 >[!WARNING]
 >
@@ -29,11 +29,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Le `DELETE /batches/{ID}` point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser l&#39;API [d&#39;importation de](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch)lot.
+>Le point de terminaison `DELETE /batches/{ID}` a été abandonné. Pour supprimer un lot, vous devez utiliser l&#39;[API d&#39;importation par lot](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be deleted. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d&#39;objet [!DNL Catalog] à supprimer. Les objets valides sont : <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -61,4 +61,4 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et un tableau contenant l�
 
 >[!NOTE]
 >
->If no [!DNL Catalog] objects match the ID provided in your request, you may still receive an HTTP Status Code 200, but the response array will be empty.
+>Si aucun objet [!DNL Catalog] ne correspond à l&#39;ID fourni dans votre requête, vous pouvez toujours recevoir un code d&#39;état HTTP 200, mais le tableau de réponses sera vide.
