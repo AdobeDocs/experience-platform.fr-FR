@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
+keywords: Experience Platform ; guide de l’utilisateur ; assistance client ; rubriques populaires ; configurer l’instance ; créer l’instance ;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Configuration d’une instance d’API client
 topic: Instance creation
@@ -7,7 +7,7 @@ description: Intelligent Services fournit Customer AI en tant que service Adobe 
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1296'
 ht-degree: 35%
 
 ---
@@ -21,21 +21,21 @@ Intelligent Services fournit Customer AI en tant que service Adobe Sensei simple
 
 ## Configuration de votre instance {#set-up-your-instance}
 
-In the Platform UI, select **[!UICONTROL Services]** in the left navigation. Le navigateur **[!UICONTROL Services]** apparaît et affiche tous les services disponibles. In the container for Customer AI, select **[!UICONTROL Open]**.
+Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche tous les services disponibles. Dans le conteneur de l’API client, sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
-L’interface utilisateur **Customer AI** s’affiche et affiche toutes les instances de service.
+L&#39;interface utilisateur **Customer AI** s&#39;affiche et affiche toutes vos instances de service.
 
-- La mesure **[!UICONTROL Total profils notés]** se trouve dans le coin inférieur droit du conteneur d’instance **** Créer. Cette mesure suit le nombre total de profils marqués par l’IA du client pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
+- Vous pouvez trouver la mesure **[!UICONTROL Nombre total de profils marqués]** située dans le coin inférieur droit du conteneur **[!UICONTROL Créer une instance]**. Cette mesure suit le nombre total de profils marqués par l’IA du client pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
 
 ![](../images/user-guide/total-profiles.png)
 
-Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance parmi les instances **[!UICONTROL de]** service existantes. Les contrôles contiennent les éléments suivants :
+Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance de vos instances **[!UICONTROL Service existantes]**. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]**: La sélection de **[!UICONTROL Modifier]** vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence d’évaluation de l’instance.
-- **[!UICONTROL Cloner]**: Si vous sélectionnez **[!UICONTROL Cloner]** , la configuration de l’instance de service sélectionnée est copiée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Modifier]** : Le fait de sélectionner  **** Modifier vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence d’évaluation de l’instance.
+- **[!UICONTROL Cloner]** : La sélection de  **** Clonecopies copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Supprimer]** : Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
 - **[!UICONTROL Source]** de données : Lien vers le jeu de données utilisé par cette instance.
 - **[!UICONTROL Détails]** de la dernière exécution : Ceci s’affiche uniquement en cas d’échec d’une exécution. Les informations sur les raisons de l’échec de l’exécution, telles que les codes d’erreur, s’affichent ici.
 - **[!UICONTROL Définition]** de note : Aperçu rapide de l’objectif que vous avez configuré pour cette instance.
@@ -58,49 +58,49 @@ Vous trouverez ci-dessous des informations importantes sur les valeurs que vous 
 
 - Par défaut, les scores de propension sont générés pour tous les profils, sauf si une population éligible est spécifiée. Vous pouvez spécifier une population éligible en définissant des conditions pour inclure ou exclure des profils en fonction des événements.
 
-Provide the required values and then select **[!UICONTROL Next]**.
+Indiquez les valeurs requises, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../images/user-guide/setup.png)
 
 ### Définition d’un objectif {#define-a-goal}
 
-The **[!UICONTROL Define goal]** step appears and it provides an interactive environment for you to visually define a prediction goal. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
+L’étape **[!UICONTROL Définir l’objectif]** s’affiche et fournit un environnement interactif vous permettant de définir visuellement un objectif de prédiction. Un objectif est composé d’un ou de plusieurs événements, où l’occurrence de chaque événement est basée sur la condition qu’il contient. L’objectif d’une instance de Customer AI est de déterminer la probabilité d’atteindre l’objectif au cours d’une période donnée.
 
-Pour créer un objectif, sélectionnez **[!UICONTROL Entrer le nom]** du champ et sélectionnez un champ dans la liste déroulante. Sélectionnez la deuxième entrée et sélectionnez une clause pour la condition événement, puis indiquez la valeur de cible pour terminer le événement. Additional events can be configured by selecting **[!UICONTROL Add event]**. Lastly, complete the goal by applying a prediction time frame in number of days, then select **[!UICONTROL Next]**.
+Pour créer un objectif, sélectionnez **[!UICONTROL Entrer le nom du champ]** et sélectionnez un champ dans la liste déroulante. Sélectionnez la deuxième entrée et sélectionnez une clause pour la condition événement, puis indiquez la valeur de cible pour terminer le événement. Vous pouvez configurer d&#39;autres événements en sélectionnant **[!UICONTROL événement d&#39;Ajoute]**. Enfin, terminez l’objectif en appliquant une période de prédiction en nombre de jours, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![](../images/user-guide/goal.png)
 
 #### Se produira et ne se produira pas
 
-Lors de la définition de votre objectif, vous avez la possibilité de sélectionner **[!UICONTROL Se produira]** ou **[!UICONTROL Ne se produira]** pas. Si vous sélectionnez **[!UICONTROL Cette option se produit]** , les conditions de événement que vous définissez doivent être remplies pour que les données de événement d’un client soient incluses dans l’interface utilisateur des statistiques.
+Lors de la définition de votre objectif, vous avez la possibilité de sélectionner **[!UICONTROL Se produira]** ou **[!UICONTROL ne se produira pas]**. La sélection de **[!UICONTROL Se produit]** signifie que les conditions de événement que vous définissez doivent être remplies pour que les données de événement d&#39;un client soient incluses dans l&#39;interface utilisateur des statistiques.
 
-Par exemple, si vous souhaitez configurer une application pour prédire si un client effectuera un achat, vous pouvez sélectionner **[!UICONTROL Se produira]** , suivi de **[!UICONTROL Tout]** , puis entrer **commerce.achats.id** et **existe en tant qu’opérateur.**
+Par exemple, si vous souhaitez configurer une application pour prédire si un client effectuera un achat, vous pouvez sélectionner **[!UICONTROL Se produira]** suivi de **[!UICONTROL Tous]**, puis entrer **commerce.purchase.id** et **existe** en tant qu&#39;opérateur.
 
 ![se produira](../images/user-guide/occur.png)
 
-Cependant, il peut arriver que vous souhaitiez prédire si un certain événement ne se produira pas dans un certain délai. Pour configurer un objectif avec cette option, sélectionnez **[!UICONTROL Ne se produira]** pas dans la liste déroulante de niveau supérieur.
+Cependant, il peut arriver que vous souhaitiez prédire si un certain événement ne se produira pas dans un certain délai. Pour configurer un objectif avec cette option, sélectionnez **[!UICONTROL Ne se produira pas]** dans la liste déroulante de niveau supérieur.
 
-Par exemple, si vous souhaitez prédire quels clients sont moins engagés et ne pas consulter la page de connexion à votre compte au cours du mois suivant, Sélectionnez **[!UICONTROL Ne se produira]** pas, suivi de **[!UICONTROL Tout]** , puis saisissez **web.webInteraction.URL** et **[!UICONTROL est égal comme opérateur avec account-login comme valeur.]******
+Par exemple, si vous souhaitez prédire quels clients sont moins engagés et ne pas consulter la page de connexion à votre compte au cours du mois suivant, Sélectionnez **[!UICONTROL Ne se produira pas]** suivi de **[!UICONTROL Tous]**, puis entrez **web.webInteraction.URL** et **[!UICONTROL est égal]** comme opérateur avec **account-login** comme valeur.
 
 ![ne se produira pas](../images/user-guide/not-occur.png)
 
 #### Tout et n’importe lequel des
 
-Dans certains cas, vous pouvez vouloir prédire si une combinaison de événements se produira et, dans d’autres cas, vous pouvez prédire l’occurrence d’un événement à partir d’un ensemble prédéfini. Pour prédire si un client aura une combinaison de événements, sélectionnez l’option **[!UICONTROL Tout]** dans la liste déroulante de second niveau sur la page **[!UICONTROL Définir l’objectif]** .
+Dans certains cas, vous pouvez vouloir prédire si une combinaison de événements se produira et, dans d’autres cas, vous pouvez prédire l’occurrence d’un événement à partir d’un ensemble prédéfini. Pour prédire si un client aura une combinaison de événements, sélectionnez l&#39;option **[!UICONTROL Tous]** dans la liste déroulante de deuxième niveau de la page **[!UICONTROL Définir l&#39;objectif]**.
 
-Par exemple, vous pouvez vouloir prédire si un client achète un produit particulier. Cet objectif de prédiction est défini par deux conditions : a `commerce.order.purchaseID` existe **et la valeur** est `productListItems.SKU` **** égale à une valeur spécifique.
+Par exemple, vous pouvez vouloir prédire si un client achète un produit particulier. Cet objectif de prédiction est défini par deux conditions : a `commerce.order.purchaseID` **existe** et `productListItems.SKU` **est égal à** une valeur spécifique.
 
 ![Tous les exemples](../images/user-guide/all-of.png)
 
-Pour prédire si un client aura un événement d’un ensemble donné, vous pouvez utiliser l’option **[!UICONTROL N’importe lequel des]** .
+Pour prédire si un client aura un événement d&#39;un ensemble donné, vous pouvez utiliser l&#39;option **[!UICONTROL N&#39;importe lequel de]**.
 
-Vous pouvez, par exemple, prévoir si un client visite une certaine URL ou une page Web portant un nom particulier. Cet objectif de prédiction est défini par deux conditions : `web.webPageDetails.URL` **débuts avec** une valeur particulière et `web.webPageDetails.name` débuts avec **** une valeur particulière.
+Vous pouvez, par exemple, prévoir si un client visite une certaine URL ou une page Web portant un nom particulier. Cet objectif de prédiction est défini par deux conditions : `web.webPageDetails.URL` **débuts avec** une valeur particulière et `web.webPageDetails.name` **débuts avec** une valeur particulière.
 
 ![N’importe quel exemple](../images/user-guide/any-of.png)
 
 ### Configuration d’un planning *(facultatif)* {#configure-a-schedule}
 
-The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed.
+L&#39;étape **[!UICONTROL Advanced]** s&#39;affiche. Cette étape facultative vous permet de configurer un calendrier pour automatiser les exécutions de prédiction, de définir des exclusions de prédiction pour filtrer certains événements ou de sélectionner **[!UICONTROL Terminer]** si rien n&#39;est nécessaire.
 
 Configurez un planning de notation en configurant la **[!UICONTROL Fréquence de notation]**. Les opérations de prédiction automatisées peuvent être planifiées pour une exécution hebdomadaire ou mensuelle.
 
@@ -108,11 +108,11 @@ Configurez un planning de notation en configurant la **[!UICONTROL Fréquence de
 
 Sous la configuration du planning, vous pouvez définir des exclusions de prédiction afin d’empêcher que des événements répondant à certaines conditions soient évalués lors de la génération de scores. Cette fonctionnalité peut être utilisée pour filtrer les entrées de données non pertinentes.
 
-To exclude certain events, select **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then select **[!UICONTROL Remove Container]**.
+Pour exclure certains événements, sélectionnez **[!UICONTROL Ajouter l’exclusion]** et définissez le événement de la même manière que la définition de l’objectif. Pour supprimer une exclusion, sélectionnez les ellipses (**[!UICONTROL ...]**) en haut à droite du conteneur de événement, puis sélectionnez **[!UICONTROL Supprimer le Conteneur]**.
 
 ![](../images/user-guide/exclusion.png)
 
-Exclude events as needed and then select **[!UICONTROL Finish]** to create the instance.
+Exclure les événements si nécessaire, puis sélectionnez **[!UICONTROL Terminer]** pour créer l’instance.
 
 ![](../images/user-guide/advanced.png)
 
@@ -126,7 +126,7 @@ En suivant cette section, vous avez configuré une instance de Customer AI et ex
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce didacticiel, vous avez correctement configuré une instance de l’IA du client et généré des scores de propension. Vous pouvez désormais choisir d’utiliser le créateur de segments pour [créer des segments de clients avec des scores](./create-segment.md) prédits ou [découvrir des statistiques avec l’IA](./discover-insights.md)du client.
+En suivant ce didacticiel, vous avez correctement configuré une instance de l’IA du client et généré des scores de propension. Vous pouvez désormais choisir d’utiliser le créateur de segments pour [créer des segments de clients avec des scores prédits](./create-segment.md) ou [découvrir des statistiques avec l’IA du client](./discover-insights.md).
 
 ## Ressources supplémentaires
 
