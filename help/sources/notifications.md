@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics; notifications
+keywords: Experience Platform ; accueil ; sujets populaires ; notifications
 description: Avec les Événements Adobe I/O, vous pouvez vous abonner aux événements et utiliser des hameçons Web pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur la réussite de l'exécution de flux ou les erreurs qui ont contribué à l'échec de l'exécution.
 solution: Experience Platform
 title: Notifications d’exécution de flux
@@ -7,7 +7,7 @@ topic: overview
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '787'
 ht-degree: 5%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 # Notifications d’exécution de flux
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates au sein de  [!DNL Platform]. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
 Avec Adobe I/O Événements, vous pouvez vous abonner à des événements et utiliser des hameçons Web pour recevoir des notifications concernant l’état de vos exécutions de flux. Ces notifications contiennent des informations sur la réussite de l&#39;exécution de flux ou les erreurs qui ont contribué à l&#39;échec de l&#39;exécution.
 
@@ -25,19 +25,19 @@ Ce document décrit la procédure à suivre pour s’abonner à des événements
 
 ## Prise en main
 
-Ce didacticiel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n&#39;avez pas encore configuré de connexion source, début en visitant l&#39;aperçu [des](./home.md) sources pour configurer la source de votre choix avant de revenir à ce guide.
+Ce didacticiel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n&#39;avez pas encore configuré de connexion source, début en visitant [source overview](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
 
-Ce document nécessite également une bonne compréhension des hameçons Web et de la façon de connecter un hameçon Web d&#39;une application à une autre. Reportez-vous à la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) pour une introduction aux hameçons Web.
+Ce document nécessite également une bonne compréhension des hameçons Web et de la façon de connecter un hameçon Web d&#39;une application à une autre. Consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) pour une présentation des hameçons Web.
 
 ## Enregistrement d’un hook Web pour les notifications d’exécution de flux
 
-Pour recevoir des notifications d&#39;exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre [!DNL Experience Platform] intégration.
+Pour recevoir des notifications d&#39;exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre intégration [!DNL Experience Platform].
 
-Suivez le didacticiel sur les [tonotifications [!DNL I/O Event] ](../observability/notifications/subscribe.md) d’abonnement pour obtenir des instructions détaillées sur la façon d’y parvenir.
+Suivez le didacticiel sur [l&#39;abonnement aux  [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) pour obtenir des instructions détaillées sur la façon d&#39;y parvenir.
 
 >[!IMPORTANT]
 >
->Au cours du processus d’abonnement, veillez à sélectionner les notifications **[!UICONTROL de]** plateforme en tant que fournisseur de événement, puis sélectionnez les abonnements de événement suivants :
+>Au cours du processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications de plateforme]** comme fournisseur de événement et à sélectionner les abonnements de événement suivants :
 >
 >* **[!UICONTROL L&#39;exécution de flux de la source Experience Platform a réussi]**
 >* **[!UICONTROL Échec de l&#39;exécution du flux de la source Experience Platform]**
@@ -47,15 +47,15 @@ Suivez le didacticiel sur les [tonotifications [!DNL I/O Event] ](../observabili
 
 Une fois votre webhook connecté et votre abonnement d’événement terminé, vous pouvez début recevoir des notifications d’exécution de flux via le tableau de bord webhook.
 
-Une notification renvoie des informations telles que le nombre de tâches d’assimilation exécutées, la taille du fichier et les erreurs. Une notification renvoie également une charge utile associée à votre flux exécuté au format JSON. La charge utile de réponse peut être classée en tant que `sources_flow_run_success` ou `sources_flow_run_failure`.
+Une notification renvoie des informations telles que le nombre de tâches d’assimilation exécutées, la taille du fichier et les erreurs. Une notification renvoie également une charge utile associée à votre flux exécuté au format JSON. La charge utile de réponse peut être classée en `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->Si l’assimilation partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des intégrations réussies et en échec est marqué comme `sources_flow_run_success` uniquement si le nombre d’erreurs est inférieur au pourcentage de seuil d’erreur défini pendant le processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la charge utile de retour.
+>Si l’assimilation partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des intégrations réussies et en échec ne sera marqué comme `sources_flow_run_success` que si le nombre d’erreurs est inférieur au pourcentage de seuil d’erreur défini au cours du processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la charge utile de retour.
 
 ### Réussite
 
-Une réponse réussie renvoie un ensemble de `metrics` caractéristiques d’une exécution de flux spécifique et `activities` qui décrit comment les données sont transformées.
+Une réponse réussie renvoie un ensemble de `metrics` qui définissent les caractéristiques d&#39;une exécution de flux spécifique et `activities` qui décrivent comment les données sont transformées.
 
 ```json
 {
@@ -314,11 +314,11 @@ La réponse suivante est un exemple d’échec de l’exécution du flux, avec u
 
 >[!NOTE]
 >
->Consultez l&#39; [annexe](#errors) pour plus d&#39;informations sur les messages d&#39;erreur.
+>Pour plus d&#39;informations sur les messages d&#39;erreur, consultez l&#39;[annexe](#errors).
 
 ## Étapes suivantes
 
-Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d’informations sur les exécutions de flux et les sources, voir l’aperçu [des](./home.md)sources.
+Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d&#39;informations sur les exécutions de flux et les sources, consultez l&#39;[aperçu des sources](./home.md).
 
 ## Annexe
 
@@ -326,9 +326,9 @@ Les sections suivantes contiennent des informations supplémentaires sur l’uti
 
 ### Présentation des messages d&#39;erreur {#errors}
 
-Des erreurs d&#39;embouteillage peuvent se produire lorsque des données sont copiées à partir de la source ou lorsque les données copiées sont traitées vers [!DNL Platform]la source. Consultez le tableau ci-dessous pour en savoir plus sur les erreurs spécifiques.
+Des erreurs d&#39;importation peuvent se produire lorsque des données sont copiées à partir de la source ou lorsque les données copiées sont traitées dans [!DNL Platform]. Consultez le tableau ci-dessous pour en savoir plus sur les erreurs spécifiques.
 
 | Erreur | Description |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Une erreur s&#39;est produite lors de la copie des données à partir d&#39;une source. |
-| `CONNECTOR-2001-500` | Une erreur s&#39;est produite lors du traitement des données copiées vers [!DNL Platform]. Cette erreur peut concerner l’analyse, la validation ou la transformation. |
+| `CONNECTOR-2001-500` | Une erreur s&#39;est produite lors du traitement des données copiées dans [!DNL Platform]. Cette erreur peut concerner l’analyse, la validation ou la transformation. |
