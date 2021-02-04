@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment builder;Segment builder
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Créateur de segments ; Créateur de segments
 solution: Experience Platform
 title: Guide de modification du créateur de segments de service de segmentation
 topic: ui guide
@@ -7,7 +7,7 @@ description: 'Le créateur de segments offre un vaste espace de travail qui vous
 translation-type: tm+mt
 source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 13%
 
 ---
