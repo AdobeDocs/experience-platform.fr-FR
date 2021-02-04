@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;workflow
+keywords: Experience Platform;accueil;rubriques populaires;workflow
 solution: Experience Platform
 title: Adobe Experience Platform Query Service
 topic: overview
@@ -7,8 +7,8 @@ description: Ces tutoriels ont été conçus pour compléter les informations co
 translation-type: tm+mt
 source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 79%
+source-wordcount: '181'
+ht-degree: 76%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Nous avons récemment déplacé les tutoriels d’Adobe Experience Platform. To find a tutorial, select the correct [!DNL Platform] area from the left-navigation. Prenez quelques instants pour mettre à jour les signets existants.
+>Nous avons récemment déplacé les tutoriels d’Adobe Experience Platform. Pour trouver un didacticiel, sélectionnez la zone [!DNL Platform] appropriée dans la barre de navigation de gauche. Prenez quelques instants pour mettre à jour les signets existants.
 
-Adobe Experience Platform est la première plateforme de gestion de l’expérience client personnalisable. Grâce à ses profils clients en temps réel, à son intelligence continue et à son architecture ouverte et extensible, elle propose des expériences personnalisées à grande échelle. Get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials for everything from preparing your data for ingestion to advanced machine learning algorithms.
+Adobe Experience Platform est la première plateforme de gestion de l’expérience client personnalisable. Grâce à ses profils clients en temps réel, à son intelligence continue et à son architecture ouverte et extensible, elle propose des expériences personnalisées à grande échelle. Commencez avec [!DNL Platform] rapidement et facilement en suivant avec des didacticiels pas à pas pour tout, de la préparation de vos données à l&#39;assimilation à des algorithmes d&#39;apprentissage automatique avancés.
 
 Ces tutoriels ont été conçus pour compléter les informations contenues dans la [documentation d’Experience Platform](../landing/documentation/overview.md). Pour obtenir de meilleurs résultats, gardez les documents à portée de main pendant que vous suivez les tutoriels. Par ailleurs, si vous rencontrez des erreurs au cours des tutoriels, consulter le [guide de dépannage d’Adobe Experience Platform](../landing/troubleshooting.md) ou les guides des différentes fonctionnalités pour obtenir de l’aide.
