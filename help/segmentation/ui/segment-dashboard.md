@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
+keywords: Experience Platform ; profil ; segment ; segments ; segmentation ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord de segment ; tableau de bord
 title: Tableau de bord de segment
 description: 'Ce guide décrit le tableau de bord de segments disponible dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
@@ -7,13 +7,13 @@ type: Documentation
 translation-type: tm+mt
 source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '741'
 ht-degree: 1%
 
 ---
 
 
-# (Alpha) tableau de bord de segment {#segment-dashboard}
+# (Alpha) tableau de bord de segments {#segment-dashboard}
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur vos segments, telles qu’elles sont capturées au cours d’un instantané quotidien. Ce guide décrit comment accéder au tableau de bord de segments et l’utiliser dans l’interface utilisateur et fournit plus d’informations sur les visualisations affichées dans le tableau de bord.
 
-Pour un aperçu de toutes les fonctionnalités du service de segmentation Adobe Experience Platform dans l’interface utilisateur de la plate-forme, consultez le guide [de l’interface utilisateur du service de](overview.md)segmentation.
+Pour un aperçu de toutes les fonctionnalités du service de segmentation Adobe Experience Platform dans l’interface utilisateur de la plate-forme, consultez le [Guide de l’interface utilisateur du service de segmentation](overview.md).
 
 ## Données du tableau de bord de segments
 
@@ -41,17 +41,17 @@ Pour accéder au tableau de bord de segments dans l’interface utilisateur de l
 
 ### Sélectionner un segment
 
-Pour sélectionner un segment à vue dans le tableau de bord, choisissez le sélecteur de boîte de dialogue de la zone de texte **[!UICONTROL Sélectionner le segment]** .
+Pour sélectionner un segment à vue dans le tableau de bord, choisissez le sélecteur de boîte de dialogue de la zone de texte **[!UICONTROL Sélectionner le segment]**.
 
 ![](../images/ui/segment-dashboard/select-segment.png)
 
 >[!NOTE]
 >
->Si un segment est déjà sélectionné, utilisez le `X` pour supprimer le segment en premier, puis le sélecteur de boîte de dialogue s’affiche.
+>Si un segment est déjà sélectionné, utilisez `X` pour supprimer le segment en premier, puis le sélecteur de boîte de dialogue s&#39;affiche.
 >
 >![](../images/ui/segment-dashboard/remove-segment.png)
 
-La boîte de dialogue **[!UICONTROL Sélectionner le segment]** s’ouvre, vous permettant de choisir le segment à vue. Après avoir choisi le segment de votre choix, utilisez **[!UICONTROL Sélectionner]** pour revenir au tableau de bord.
+La boîte de dialogue **[!UICONTROL Sélectionner le segment]** s&#39;ouvre et vous permet de choisir le segment à vue. Après avoir choisi le segment de votre choix, utilisez **[!UICONTROL Sélectionner]** pour revenir au tableau de bord.
 
 ![](../images/ui/segment-dashboard/select-segment-dialog.png)
 
@@ -59,7 +59,7 @@ La boîte de dialogue **[!UICONTROL Sélectionner le segment]** s’ouvre, vous 
 
 Après avoir sélectionné un segment, la zone de texte de la stratégie de fusion est automatiquement renseignée avec la stratégie de fusion associée à ce segment.
 
-Pour en savoir plus sur la création de segments dans l’Experience Platform, consultez le guide [de l’interface utilisateur du créateur de](segment-builder.md)segments. Pour plus d’informations sur les stratégies de fusion, veuillez commencer par lire l’aperçu [du Profil client en temps](../../profile/home.md)réel.
+Pour en savoir plus sur la création de segments dans l’Experience Platform, consultez le [Guide de l’interface utilisateur du créateur de segments](segment-builder.md). Pour plus d&#39;informations sur les stratégies de fusion, veuillez commencer par lire la [Présentation du Profil client en temps réel](../../profile/home.md).
 
 ![](../images/ui/segment-dashboard/merge-policy.png)
 
@@ -78,27 +78,27 @@ Experience Platform fournit plusieurs widgets que vous pouvez utiliser pour visu
 
 ### [!UICONTROL Taille du segment] {#segment-size}
 
-Le widget Taille **** de segment affiche le nombre total de profils fusionnés dans le segment sélectionné au moment où l&#39;instantané a été pris. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de Profil afin de fusionner des fragments de profil pour former un seul profil pour chaque individu du segment.
+Le widget **[!UICONTROL Taille du segment]** affiche le nombre total de profils fusionnés dans le segment sélectionné au moment où l&#39;instantané a été pris. Ce nombre est le résultat de l’application de la stratégie de fusion de segments à vos données de Profil afin de fusionner des fragments de profil pour former un seul profil pour chaque individu du segment.
 
-Pour plus d’informations sur les fragments et les profils fusionnés, veuillez commencer par lire la présentation [du Profil client en temps](../home.md)réel.
+Pour plus d’informations sur les fragments et les profils fusionnés, veuillez commencer par lire la [Présentation du Profil client en temps réel](../home.md).
 
 ![](../images/ui/segment-dashboard/segment-size.png)
 
 ### [!UICONTROL Profils par espace de nommage] {#profiles-by-namespace}
 
-Le widget **[!UICONTROL Profils par espace de nommage]** affiche la ventilation des espaces de nommage sur tous les profils fusionnés du segment sélectionné. Le nombre total de profils par espace de nommage [!UICONTROL d’] ID (en d’autres termes, en additionnant les valeurs affichées pour chaque espace de nommage) est généralement supérieur au nombre total de profils dans le segment car un profil peut être associé à plusieurs espaces de nommage. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de nommage peuvent être associés à ce client.
+Le widget **[!UICONTROL Profils par espace de nommage]** affiche la ventilation des espaces de nommage sur tous les profils fusionnés du segment sélectionné. Le nombre total de profils par [!UICONTROL espace de nommage d’ID] (en d’autres termes, l’ajout des valeurs affichées pour chaque espace de nommage) est généralement supérieur au nombre total de profils dans le segment car un profil peut être associé à plusieurs espaces de nommage. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de nommage peuvent être associés à ce client.
 
-Pour en savoir plus sur les espaces de nommage d&#39;identité, consultez la documentation [du service d&#39;identité de](../../identity-service/home.md)Adobe Experience Platform.
+Pour en savoir plus sur les espaces de nommage d&#39;identité, consultez la [documentation du service d&#39;identité Adobe Experience Platform](../../identity-service/home.md).
 
 ![](../images/ui/segment-dashboard/profiles-by-namespace.png)
 
 ## Tableaux de bord supplémentaires
 
-L’interface utilisateur de la plate-forme fournit des tableaux de bord supplémentaires pour l’affichage d’instantanés de vos données dans l’Experience Platform. Ces tableaux de bord incluent le Profil client en temps réel et l’utilisation [!UICONTROL de la]licence. Pour plus d’informations sur ces tableaux de bord supplémentaires, sélectionnez l’un des liens suivants :
+L’interface utilisateur de la plate-forme fournit des tableaux de bord supplémentaires pour l’affichage d’instantanés de vos données dans l’Experience Platform. Ces tableaux de bord incluent le Profil client en temps réel et [!UICONTROL l’utilisation de la licence]. Pour plus d’informations sur ces tableaux de bord supplémentaires, sélectionnez l’un des liens suivants :
 
 * [[!DNL Profile] Tableau de bord](../../profile/ui/profile-dashboard.md)
-* [[!UICONTROL Tableau de bord d&#39;utilisation] des licences](../../landing/license-usage-dashboard.md)
+* [[!UICONTROL Tableau de bord ] utilisé pour la licence](../../landing/license-usage-dashboard.md)
 
 ## Étapes suivantes
 
-En suivant ce document, vous devez maintenant pouvoir localiser le tableau de bord de segments et sélectionner un segment à vue. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des segments dans l’interface utilisateur de l’Experience Platform, consultez le guide [de l’interface utilisateur de](overview.md)Segmentation Service.
+En suivant ce document, vous devez maintenant pouvoir localiser le tableau de bord de segments et sélectionner un segment à vue. Vous devez également comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des segments dans l’interface utilisateur de l’Experience Platform, consultez le [Guide de l’interface utilisateur du service de segmentation](overview.md).
