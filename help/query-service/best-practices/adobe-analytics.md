@@ -215,8 +215,8 @@ Dans les rapports, les commandes, recettes, consultations de produit et ajouts a
 
 | eVar6 (méthode de recherche de produits) | recettes | commandes | consultations de produit | ajouts au panier |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| recherche interne : T-shirt d’été | 19,99 | 1 | 3 | 1 |
-| recherche interne : bonnet d’hiver | 12,99 | 3 | 3 | 3 |
+| recherche interne : T-shirt d’été | 19,99 | 1 | 1 | 1 |
+| recherche interne : bonnet d’hiver | 12,99 | 3 | 1 | 1 |
 
 Pour en savoir plus sur l’utilisation de la syntaxe de conversion, consultez la documentation Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
