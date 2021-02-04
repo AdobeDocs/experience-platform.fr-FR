@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; segment ; adhésion à un segment ; adhésion à un segment ; conception de Schéma ; carte ; carte ;
 solution: Experience Platform
 title: Mélange des détails de l’appartenance à un segment
 topic: overview
@@ -7,23 +7,23 @@ description: Ce document présente un aperçu du mixin Détails de l’appartena
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '406'
 ht-degree: 1%
 
 ---
 
 
-# [!UICONTROL Mélange des détails] de l’abonnement au segment
+# [!UICONTROL Segmenter les ] détails de l&#39;adhésion mixin
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../name-updates.md) mixin.
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../name-updates.md).
 
-[!UICONTROL Les détails] d’appartenance au segment sont un mixin standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le mixin fournit un champ de mappage unique qui capture les informations concernant l’appartenance au segment, y compris les segments auxquels appartient la personne, l’heure de la dernière qualification et le moment où l’appartenance est valide jusqu’à la date de validité de l’adhésion.
+[!UICONTROL Appartenance à un segment ] Détail d&#39;un mixin standard pour la  [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md). Le mixin fournit un champ de mappage unique qui capture les informations concernant l’appartenance au segment, y compris les segments auxquels appartient la personne, l’heure de la dernière qualification et le moment où l’appartenance est valide jusqu’à la date de validité de l’adhésion.
 
 >[!WARNING]
 >
->Bien que le `segmentMembership` champ doive être ajouté manuellement à votre schéma de profil à l’aide de ce mixin, vous ne devez pas essayer de renseigner ou de mettre à jour ce champ manuellement. Le système met automatiquement à jour le `segmentMembership` mappage pour chaque profil à mesure que les tâches de segmentation sont exécutées.
+>Bien que le champ `segmentMembership` doive être ajouté manuellement à votre schéma de profil à l&#39;aide de ce mixin, vous ne devez pas essayer de renseigner ou de mettre à jour ce champ manuellement. Le système met automatiquement à jour la carte `segmentMembership` pour chaque profil au fur et à mesure que les tâches de segmentation sont exécutées.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -31,7 +31,7 @@ ht-degree: 1%
 | --- | --- | --- |
 | `segmentMembership` | Carte | Objet map qui décrit les appartenances aux segments de la personne. La structure de cet objet est décrite en détail ci-dessous. |
 
-Voici un exemple `segmentMembership` de mappage que le système a renseigné pour un profil particulier. Les adhésions aux segments sont triées par espace de nommage, comme indiqué par les clés de niveau racine de l’objet. En retour, les clés individuelles sous chaque espace de nommage représentent les ID des segments dont le profil est membre. Chaque objet de segment contient plusieurs sous-champs qui fournissent des détails supplémentaires sur l’appartenance :
+Voici un exemple de mappage `segmentMembership` que le système a renseigné pour un profil particulier. Les adhésions aux segments sont triées par espace de nommage, comme indiqué par les clés de niveau racine de l’objet. En retour, les clés individuelles sous chaque espace de nommage représentent les ID des segments dont le profil est membre. Chaque objet de segment contient plusieurs sous-champs qui fournissent des détails supplémentaires sur l’appartenance :
 
 ```json
 {
@@ -76,7 +76,7 @@ Voici un exemple `segmentMembership` de mappage que le système a renseigné pou
 | `xdm:lastQualificationTime` | Horodatage de la dernière qualification de ce profil pour le segment. |
 | `xdm:validUntil` | Horodatage indiquant à quel moment l’appartenance au segment ne doit plus être considérée comme valide. |
 | `xdm:status` | Indique si l’appartenance au segment a été réalisée dans le cadre de la demande en cours. Les valeurs suivantes sont acceptées : <ul><li>`existing`: Le profil faisait déjà partie du segment avant la demande et continue à en faire partie.</li><li>`realized`: Le profil entre le segment dans le cadre de la demande en cours.</li><li>`exited`: Le profil quitte le segment dans le cadre de la demande en cours.</li></ul> |
-| `xdm:payload` | Certains abonnements de segment incluent une charge utile qui décrit les valeurs supplémentaires directement liées à l’appartenance. Une seule charge utile d’un type donné peut être fournie pour chaque abonnement. `xdm:payloadType` indique le type de charge utile (`boolean`, `number`, `propensity`ou `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
+| `xdm:payload` | Certains abonnements de segment incluent une charge utile qui décrit les valeurs supplémentaires directement liées à l’appartenance. Une seule charge utile d’un type donné peut être fournie pour chaque abonnement. `xdm:payloadType` indique le type de charge utile (`boolean`,  `number`,  `propensity` ou  `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
 
 Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
 
