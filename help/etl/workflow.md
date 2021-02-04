@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
+keywords: Experience Platform;accueil;rubriques populaires;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
 title: Workflow ETL
 topic: overview
@@ -7,8 +7,8 @@ description: Différents outils d’extraction, de transformation et de chargeme
 translation-type: tm+mt
 source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '202'
-ht-degree: 90%
+source-wordcount: '213'
+ht-degree: 85%
 
 ---
 
@@ -35,11 +35,11 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image4.png)
 
-### Figure 4 - New Transformation UI, selecting [!DNL Experience Platform] Connection:
+### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de la connexion [!DNL Experience Platform] :
 
 ![](images/image5.png)
 
-### Figure 5 - Browsing for source [!DNL Experience Platform] Datasets:
+### Figure 5 - Recherche de jeux de données source [!DNL Experience Platform] :
 
 ![](images/image6.png)
 
@@ -59,7 +59,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image10.png)
 
-### Figure 10 - Définition du jeu de données de cible [!DNL Experience Data Model] (XDM) :
+### Figure 10 - Définition du jeu de données de la cible [!DNL Experience Data Model] (XDM) :
 
 ![](images/image11.png)
 
