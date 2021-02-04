@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
+keywords: Experience Platform ; accueil ; rubriques populaires ; trouver un sandbox ; rechercher un sandbox
 solution: Experience Platform
 title: Recherche d’un environnement de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez rechercher un sandbox individuel en effectuant une requ
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 90%
+source-wordcount: '237'
+ht-degree: 86%
 
 ---
 
