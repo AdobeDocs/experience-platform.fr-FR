@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Customer Attributes connector
+keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur d’attributs du client
 solution: Experience Platform
 title: Connecteur Attributs du client
 topic: overview
@@ -7,8 +7,8 @@ description: La documentation ci-dessous fournit des informations sur la façon 
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 38%
+source-wordcount: '129'
+ht-degree: 35%
 
 ---
 
