@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform ; recette de recommandation de produit ; Espace de travail des données ; rubriques populaires ; recettes ; recette de précréation
 solution: Experience Platform
 title: Recette des recommandations de produits
 topic: overview
@@ -7,8 +7,8 @@ description: La recette des recommandations de produits vous permet d’apporter
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 100%
+source-wordcount: '477'
+ht-degree: 97%
 
 ---
 
