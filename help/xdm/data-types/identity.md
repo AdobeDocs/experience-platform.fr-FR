@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identity;datatype;data-type;data type;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; identité ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données d'identité
 topic: overview
@@ -7,22 +7,22 @@ description: Ce document présente un aperçu du type de données XDM d'identit�
 translation-type: tm+mt
 source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 11%
+source-wordcount: '283'
+ht-degree: 10%
 
 ---
 
 
-# [!UICONTROL Type de données d&#39;identité]
+# [!UICONTROL Type ] Identitydata
 
-[!UICONTROL Identity] est un type de données XDM standard qui permet de distinguer clairement les personnes qui interagissent avec des expériences numériques. L&#39;identité est établie par un fournisseur d&#39;identité, qui est lui-même référencé dans un `namespace` attribut. Dans chaque `namespace`cas, l&#39;identité est unique.
+[!UICONTROL L’] identification est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences numériques. L&#39;identité est établie par un fournisseur d&#39;identité, qui est lui-même référencé dans un attribut `namespace`. Dans chaque `namespace`, l&#39;identité est unique.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de nommage associé à l’ `id` attribut fourni. |
-| `authenticatedState` | Chaîne | État authentifié pour cette identité au moment du Événement d’expérience observé. Consultez l&#39; [annexe](#authenticatedState) pour connaître les valeurs et les définitions acceptées. |
+| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de nommage associé à l’attribut `id` fourni. |
+| `authenticatedState` | Chaîne | État authentifié pour cette identité au moment du Événement d’expérience observé. Voir l&#39;[annexe](#authenticatedState) pour connaître les valeurs et les définitions acceptées. |
 | `id` | Chaîne | L&#39;identité du consommateur dans l&#39;espace de nommage associé. |
 | `primary` | Booléen | Indique s’il s’agit de l’identité Principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité Principale. |
 | `xid` | Chaîne | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. |
@@ -34,11 +34,11 @@ Pour plus d’informations sur le mixin, consultez le référentiel XDM public :
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Identité] .
+La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Identity].
 
 ## Valeurs acceptées pour authenticatedState {#authenticatedState}
 
-Le tableau suivant présente les valeurs acceptées pour `authenticatedState` et leur signification associée :
+Le tableau suivant décrit les valeurs acceptées pour `authenticatedState` et leur signification associée :
 
 | Valeur | Description |
 | --- | --- |
