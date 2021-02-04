@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform ; accueil ; rubriques populaires ; sandbox de liste
 solution: Experience Platform
 title: Liste des types d’environnements de test pris en charge
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez récupérer une liste de types de sandbox pris en charg
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 69%
+source-wordcount: '75'
+ht-degree: 62%
 
 ---
 
