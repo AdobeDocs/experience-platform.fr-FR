@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
+keywords: Experience Platform ; accueil ; rubriques populaires ; Qualité des données ; Qualité ; Qualité ; Validation prise en charge ; Validation ; Validation prise en charge ;
 solution: Experience Platform
 title: Qualité d’ingestion des données
 topic: overview
@@ -7,8 +7,8 @@ description: Le document suivant fournit un résumé des contrôles et des compo
 translation-type: tm+mt
 source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 80%
+source-wordcount: '318'
+ht-degree: 77%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform fournit des garanties bien définies d’exhaustivité
 
 ## Comportements de validation pris en charge
 
-Both batch and streaming ingestion prevent failed data from going downstream by moving bad data for retrieval and analysis in [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
+L’assimilation par lot et en flux continu empêche les données en panne de se rendre en aval en déplaçant les données incorrectes pour récupération et analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
 
 ### Ingestion par lots
 
@@ -56,4 +56,4 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).
+Pour plus d&#39;informations sur la façon dont [!DNL Platform] surveille et valide les données, consultez la [documentation sur les flux de données de surveillance](./monitor-data-ingestion.md).
