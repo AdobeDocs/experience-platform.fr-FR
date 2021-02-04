@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real-time Machine Learning;node reference;
+keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ; référence au noeud ;
 solution: Experience Platform
 title: Guide de référence des noeuds d’apprentissage automatique en temps réel
 topic: Nodes reference
@@ -7,7 +7,7 @@ description: Un noeud est l’unité fondamentale dont les graphiques sont form�
 translation-type: tm+mt
 source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '680'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Le guide suivant décrit les bibliothèques de noeuds prises en charge pour l’
 
 ## Découverte de noeuds à utiliser dans votre pipeline ML
 
-Copiez le code suivant dans un [!DNL Python] bloc-notes pour vue tous les noeuds disponibles pour l&#39;utilisation.
+Copiez le code suivant dans un bloc-notes [!DNL Python] pour vue de tous les noeuds disponibles pour l&#39;utilisation.
 
 ```python
 from pprint import pprint
@@ -83,9 +83,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Le noeud Pandas suivant vous permet d’importer n’importe quelle `pd.DataFrame` méthode ou fonction générale de niveau supérieur pandas. Pour en savoir plus sur les méthodes Pandas, consultez la documentation [sur les méthodes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)Pandas. Pour plus d&#39;informations sur les fonctions de niveau supérieur, consultez le guide de référence de l&#39;API [Pandas pour les fonctions](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html)générales.
+Le noeud Pandas suivant vous permet d’importer toute méthode `pd.DataFrame` ou toute fonction générale pandas de niveau supérieur. Pour en savoir plus sur les méthodes Pandas, consultez la [documentation sur les méthodes Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Pour plus d&#39;informations sur les fonctions de niveau supérieur, consultez le [Guide de référence de l&#39;API Pandas pour les fonctions générales](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Le noeud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d’une chaîne dans les paramètres, puis pour entrer les paramètres sous la forme d’une fonction de mappage. L’exemple ci-dessous effectue cette opération en utilisant `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois la carte en place, vous avez la possibilité de la définir `inplace` en tant que `True` ou `False`. Définissez `inplace` la variable comme `True` ou `False` selon si vous souhaitez appliquer ou non la transformation. Par défaut, `"inplace": False` crée une colonne. La prise en charge d’un nouveau nom de colonne est définie pour être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Spécifiez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple, `device` est spécifié.
+Le noeud ci-dessous utilise `"import": "map"` pour importer le nom de la méthode sous la forme d&#39;une chaîne dans les paramètres, puis en entrant les paramètres sous la forme d&#39;une fonction de mappage. L&#39;exemple ci-dessous effectue cette opération en utilisant `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}`. Une fois la carte en place, vous avez la possibilité de définir `inplace` comme `True` ou `False`. Définissez `inplace` comme `True` ou `False` en fonction de l&#39;application ou non de la transformation. Par défaut, `"inplace": False` crée une nouvelle colonne. La prise en charge d’un nouveau nom de colonne est définie pour être ajoutée dans une version ultérieure. La dernière ligne `cols` peut être un nom de colonne unique ou une liste de colonnes. Spécifiez les colonnes sur lesquelles vous souhaitez appliquer la transformation. Dans cet exemple, `device` est spécifié.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -128,12 +128,12 @@ msg6 = model_train.process(msg5)
 | mode | Train/test (chaîne). |
 | model_path | Chemin d&#39;accès au modèle d&#39;enregistrement local au format unique. |
 | params.model | Chemin d&#39;importation absolu du modèle (chaîne), par exemple : `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Les hyperparamètres du modèle, consultez la documentation de l’API [sklearn (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) pour plus d’informations. |
+| params.model_params | Pour plus d’informations, consultez la documentation [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). |
 | node_instance.process(data_message_from_previous_node) | La méthode `process()` prend DataMsg du noeud précédent et applique la transformation. Cela dépend du noeud actif utilisé. |
 
 ### Split
 
-Utilisez le noeud suivant pour fractionner votre dataframe en train et tester en passant `train_size` ou `test_size`. Cette opération renvoie une base de données avec un index multiple. Vous pouvez accéder aux jeux de données de train et de test à l&#39;aide de l&#39;exemple suivant, `msg5.data.xs(“train”)`.
+Utilisez le noeud suivant pour fractionner votre dataframe en train et tester en transmettant `train_size` ou `test_size`. Cette opération renvoie une base de données avec un index multiple. Vous pouvez accéder aux noms de données de train et de test à l&#39;aide de l&#39;exemple suivant, `msg5.data.xs(“train”)`.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +142,4 @@ msg5 = splitter.process(msg4)
 
 ## Étapes suivantes
 
-L’étape suivante consiste à créer des noeuds à utiliser pour marquer un modèle d’apprentissage automatique en temps réel. Pour plus d&#39;informations, consultez le guide [d&#39;utilisation du bloc-notes](./rtml-authoring-notebook.md)d&#39;apprentissage automatique en temps réel.
+L’étape suivante consiste à créer des noeuds à utiliser pour marquer un modèle d’apprentissage automatique en temps réel. Pour plus d&#39;informations, consultez le [Guide d&#39;utilisation du bloc-notes d&#39;apprentissage automatique en temps réel](./rtml-authoring-notebook.md).
