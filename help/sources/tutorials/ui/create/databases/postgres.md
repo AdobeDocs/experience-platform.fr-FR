@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
+keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; PostgreSQL
 solution: Experience Platform
 title: Création d’un connecteur source PostgreSQL dans l’interface utilisateur
 topic: overview
@@ -8,58 +8,58 @@ description: Ce didacticiel décrit les étapes à suivre pour créer un connect
 translation-type: tm+mt
 source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 15%
+source-wordcount: '477'
+ht-degree: 14%
 
 ---
 
 
-# Create a [!DNL PostgreSQL] source connector in the UI
+# Créer un connecteur source [!DNL PostgreSQL] dans l’interface utilisateur
 
 >[!NOTE]
 >
-> Le [!DNL PostgreSQL] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../../../home.md#terms-and-conditions) sources.
+> Le connecteur [!DNL PostgreSQL] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
-Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL PostgreSQL] (ci-après dénommé &quot;PSQL&quot;) à l’aide de l’ [!DNL Platform] interface utilisateur.
+Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL PostgreSQL] (ci-après dénommé &quot;PSQL&quot;) à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
 ## Prise en main
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel [!DNL Experience Platform] organiser les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel  [!DNL Experience Platform] organiser les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
-   * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md)sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
+   * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md) sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-Si vous disposez déjà d’une connexion PSQL valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur la [configuration d’un flux de données](../../dataflow/databases.md).
+Si vous disposez déjà d’une connexion PSQL valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur [la configuration d’un flux de données](../../dataflow/databases.md).
 
 ### Collecte des informations d’identification requises
 
-Pour accéder à votre compte PSQL le [!DNL Platform], vous devez fournir la valeur suivante :
+Pour accéder à votre compte PSQL sur [!DNL Platform], vous devez fournir la valeur suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion associée à votre compte PSQL. Le modèle de chaîne de connexion PSQL est le suivant : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
 
-Pour plus d&#39;informations sur la prise en main, consultez ce document [](https://www.postgresql.org/docs/9.2/app-psql.html)PSQL.
+Pour plus d&#39;informations sur la prise en main, consultez ce [document PSQL](https://www.postgresql.org/docs/9.2/app-psql.html).
 
 ## Connecter votre compte PSQL
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte PSQL à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]** . L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie **[!UICONTROL Bases de données]** , sélectionnez Base de données **** PostgreSQL. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur PSQL.
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL PostgreSQL DB]**. Si vous utilisez ce connecteur pour la première fois, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter les données]** pour créer un connecteur PSQL.
 
 ![](../../../../images/tutorials/create/psql/catalog.png)
 
-La page **[!UICONTROL Se connecter à PSQL]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à PSQL]** s&#39;affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification PSQL. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** , puis accordez un peu de temps à la nouvelle connexion pour établir.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire d’entrée qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification PSQL. Une fois terminé, sélectionnez **[!UICONTROL Se connecter]**, puis accordez un certain temps à la nouvelle connexion pour établir.
 
 ![](../../../../images/tutorials/create/psql/connect.png)
 
@@ -71,4 +71,4 @@ Pour connecter un compte existant, sélectionnez le compte PSQL avec lequel vous
 
 ## Étapes suivantes
 
-En suivant ce didacticiel, vous avez établi une connexion à votre compte PSQL. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour y importer [!DNL Platform]](../../dataflow/databases.md)des données.
+En suivant ce didacticiel, vous avez établi une connexion à votre compte PSQL. Vous pouvez maintenant passer au didacticiel suivant et [configurer un flux de données pour importer des données dans  [!DNL Platform]](../../dataflow/databases.md).
