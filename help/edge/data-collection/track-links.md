@@ -3,11 +3,11 @@ title: Suivi des liens avec Adobe Analytics
 seo-title: Liaison du suivi à Adobe Analytics avec le SDK Web Adobe Experience Platform
 description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
 seo-description: Découvrez comment envoyer des données de lien vers l'Adobe Analytics avec le SDK Web Experience Platform
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;vues de page;suivi des liens;liens;suivi des liens;clicCollection;clic collection;clic collection;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Suivi des liens
 
-Les liens peuvent être définis manuellement ou suivis [automatiquement](#automaticLinkTracking). Le suivi manuel est effectué en ajoutant les détails sous la `web.webInteraction` partie du schéma. Il existe trois variables obligatoires :
+Les liens peuvent être définis manuellement ou suivis [automatiquement](#automaticLinkTracking). Le suivi manuel est effectué en ajoutant les détails sous la partie `web.webInteraction` du schéma. Il existe trois variables obligatoires :
 
 * `web.webInteraction.name`
 * `web.webInteraction.type`
@@ -46,7 +46,7 @@ Le type de lien peut être l’une des trois valeurs suivantes :
 
 ## Suivi automatique des liens {#automaticLinkTracking}
 
-Par défaut, le kit SDK Web capture, étiquette et enregistre les clics sur les balises de lien éligibles. Les clics sont capturés à l’aide d’un écouteur de événement de [capture](https://www.w3.org/TR/uievents/#capture-phase) de clics attaché au document.
+Par défaut, le kit SDK Web capture, étiquette et enregistre les clics sur les balises de lien éligibles. Les clics sont capturés avec un écouteur de événement de clics [capture](https://www.w3.org/TR/uievents/#capture-phase) attaché au document.
 
 Le suivi automatique des liens peut être désactivé en [configurant](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) le SDK Web.
 
@@ -54,9 +54,9 @@ Le suivi automatique des liens peut être désactivé en [configurant](../fundam
 clickCollectionEnabled: false
 ```
 
-### Quelles balises remplissent les critères du suivi des liens ?{#qualifyingLinks}
+### Quelles balises sont admissibles pour le suivi des liens ?{#qualifyingLinks}
 
-Le suivi automatique des liens est effectué pour les balises d’ancrage `A` et `AREA` . Cependant, ces balises ne sont pas prises en compte pour le suivi des liens si elles disposent d’un `onclick` gestionnaire associé.
+Le suivi automatique des liens est effectué pour les balises d&#39;ancrage `A` et `AREA`. Cependant, ces balises ne sont pas prises en compte pour le suivi des liens si elles comportent un gestionnaire `onclick` associé.
 
 ### Comment les liens sont-ils étiquetés ?{#labelingLinks}
 
@@ -66,6 +66,6 @@ Les liens sont étiquetés comme lien de téléchargement si la balise d’ancra
 downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"
 ```
 
-Les liens sont étiquetés comme lien de sortie si le domaine de la cible des liens diffère de celui `window.location.hostname`en cours.
+Les liens sont étiquetés comme lien de sortie si le domaine de cible de liens diffère de l’élément `window.location.hostname` actuel.
 
 Les liens qui ne sont pas considérés comme des liens de téléchargement ou de sortie sont étiquetés comme &quot;autres&quot;.
