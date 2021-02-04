@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
+keywords: Experience Platform;accueil;rubriques populaires;Google AdWords;google adwords
 solution: Experience Platform
 title: Connecteur Google AdWords
 topic: overview
@@ -7,8 +7,8 @@ description: La documentation ci-dessous fournit des informations sur la connexi
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 10%
+source-wordcount: '229'
+ht-degree: 9%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 10%
 
 >[!NOTE]
 >
->Le [!DNL Google AdWords] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
+>Le connecteur [!DNL Google AdWords] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de publicité tiers. Les fournisseurs de publicités sont notamment pris en charge [!DNL Google AdWords].
+[!DNL Experience Platform] prend en charge l’importation de données à partir d’un système de publicité tiers. [!DNL Google AdWords] est pris en charge par les fournisseurs de publicité.
 
 ## LISTE AUTORISÉE d&#39;adresse IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d’informations, consultez la page liste autorisée [d’adresses](../../ip-address-allow-list.md) IP.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
 
-## Se connecter [!DNL Google AdWords] à [!DNL Platform]
+## Connecter [!DNL Google AdWords] à [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google AdWords] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL Google AdWords] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
 ### Utilisation des API
 
