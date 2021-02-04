@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
+keywords: Experience Platform ; accueil ; rubriques populaires ; comptes de surveillance ; flux de données de surveillance ; flux de données ; destinations
 description: Les destinations vous permettent d'activer vos données de Adobe Experience Platform vers d'innombrables partenaires externes. Ce didacticiel fournit des instructions sur la manière de surveiller les flux de données pour vos destinations à l’aide de l’interface utilisateur de l’Experience Platform.
 solution: Experience Platform
 title: Surveiller les flux de données
@@ -8,7 +8,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 12a6682b6e28e656899aee5c38d3bb4a84bcdd2f
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '437'
 ht-degree: 5%
 
 ---
@@ -22,12 +22,12 @@ Les destinations vous permettent d&#39;activer vos données de Adobe Experience 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Destinations](../../destinations/home.md): Les destinations sont des intégrations préétablies avec les applications couramment utilisées qui permettent l’activation transparente des données de la plate-forme pour les campagnes marketing inter-canaux, les campagnes par courriel, la publicité ciblée et de nombreux autres cas d’utilisation.
-- [Sandbox](../../sandboxes/home.md): [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [Destinations](../../destinations/home.md) : Les destinations sont des intégrations préétablies avec les applications couramment utilisées qui permettent l’activation transparente des données de la plate-forme pour les campagnes marketing inter-canaux, les campagnes par courriel, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
 ## Surveiller les flux de données
 
-Dans l’espace de travail **[!UICONTROL Destinations]** de l’interface utilisateur de la plate-forme, accédez à l’onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination à vue.
+Dans l&#39;espace de travail **[!UICONTROL Destinations]** de l&#39;interface utilisateur de la plate-forme, accédez à l&#39;onglet **[!UICONTROL Parcourir]** et sélectionnez le nom d&#39;une destination que vous souhaitez vue.
 
 ![](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -37,17 +37,17 @@ Pour plus d’informations sur les états, voir le tableau suivant :
 
 | État | Description |
 | ------ | ----------- |
-| Activé | L’ `Enabled` état indique qu’un flux de données est principal et qu’il ingère des données selon le calendrier prévu. |
-| Désactivé | L’ `Disabled` état indique qu’un flux de données est inactif et n’ingère aucune donnée. |
-| En cours de traitement | L’ `Processing` état indique qu’un flux de données n’est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
-| Erreur | L’ `Error` état indique que le processus d’activation d’un flux de données a été interrompu. |
+| Activé | L&#39;état `Enabled` indique qu&#39;un flux de données est principal et qu&#39;il ingère des données selon le calendrier indiqué. |
+| Désactivé | L&#39;état `Disabled` indique qu&#39;un flux de données est inactif et n&#39;ingère aucune donnée. |
+| En cours de traitement | L&#39;état `Processing` indique qu&#39;un flux de données n&#39;est pas encore principal. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
+| Erreur | L&#39;état `Error` indique que le processus d&#39;activation d&#39;un flux de données a été perturbé. |
 
 ## [!UICONTROL Exécutions de flux de données]
 
-L’onglet Exécutions [!UICONTROL de flux de] données fournit des données de mesure sur vos exécutions de flux de données vers des destinations de lot. Une liste d’exécutions individuelles et de leurs mesures particulières s’affiche, ainsi que les totaux suivants pour les enregistrements de profil :
+L&#39;onglet [!UICONTROL Flux de données] fournit des données de mesure sur vos flux de données s&#39;exécutant vers des destinations de lot. Une liste d’exécutions individuelles et de leurs mesures particulières s’affiche, ainsi que les totaux suivants pour les enregistrements de profil :
 
-- **[!UICONTROL Enregistrements de profil activés]**: Nombre total d&#39;enregistrements de profil créés ou mis à jour pour l&#39;activation.
-- **[!UICONTROL Enregistrements de profil ignorés]**:  Nombre total d’enregistrements de profil qui sont ignorés pour activation en fonction des sorties de profil ou des attributs manquants.
+- **[!UICONTROL Enregistrements de profil activés]** : Nombre total d&#39;enregistrements de profil créés ou mis à jour pour l&#39;activation.
+- **[!UICONTROL Enregistrements de profil ignorés]** : Nombre total d’enregistrements de profil qui sont ignorés pour activation en fonction des sorties de profil ou des attributs manquants.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
