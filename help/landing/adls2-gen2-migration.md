@@ -12,14 +12,14 @@ Adobe Experience Platform migre vers le lac de données Gen2. Il s’agit d’un
 
 ## Impact utilisateur
 
-Pendant que l&#39;Adobe migre le lac Data de Gen1 à Gen 2, les utilisateurs pourront **lire** à partir du lac Data, mais toutes les capacités qui **écrivent** dans le lac Data seront affectées. Voici une liste des capacités affectées :
+Pendant que l&#39;Adobe migre le lac Data du Gen1 au Gen 2, les utilisateurs pourront **lire** à partir du lac Data, mais toutes les capacités que **écrire** dans le lac Data seront affectées. Voici une liste des capacités affectées :
 
-- **Sources**: Les données provenant des sources et de divers workflows d&#39;assimilation des données seront retardées. Les utilisateurs verront leurs données une fois la migration terminée.
-- **Requête Service**: Les utilisateurs peuvent effectuer des requêtes mais ne pourront pas écrire la sortie de la requête dans un jeu de données.
-- **Profil** client en temps réel : Les données ingérées dans le magasin de Profils par ingestion par **lot** ne seront pas disponibles pendant la migration. Cependant, les données ingérées par **flux continu** par assimilation seront disponibles pendant la migration. En outre, les exportations de Profil ne seront pas disponibles pendant la migration.
+- **Sources** : Les données provenant des sources et de divers workflows d&#39;assimilation des données seront retardées. Les utilisateurs verront leurs données une fois la migration terminée.
+- **Requête Service** : Les utilisateurs peuvent effectuer des requêtes mais ne pourront pas écrire la sortie de la requête dans un jeu de données.
+- **Profil** client en temps réel : Les données ingérées dans le magasin de Profils par  **** ingestion de lots ne seront pas disponibles pendant la migration. Cependant, les données ingérées par **diffusion en flux continu** ingestion seront disponibles pendant la migration. En outre, les exportations de Profil ne seront pas disponibles pendant la migration.
 - **Espace de travail** des sciences de données : Les écritures issues de Data Science Workspace échoueront.
-- **Service** de segmentation : Les Audiences dérivées de la segmentation par **lot** ne peuvent pas être activées pendant la migration. Les Audiences dérivées de la segmentation **en flux continu** ne seront pas affectées.
-- **Customer Journey Analytics**: Les données des rapports des Customer Journey Analytics peuvent être obsolètes et ne seront pas actualisées pendant la migration, car les lots ne sont pas ingérés dans Data Lake.
+- **Service** de segmentation : Les Audiences dérivées de la  **** segmentation par lots ne peuvent pas être activées pendant la migration. Les Audiences dérivées de la segmentation **streaming** ne seront pas affectées.
+- **Customer Journey Analytics** : Les données des rapports des Customer Journey Analytics peuvent être obsolètes et ne seront pas actualisées pendant la migration, car les lots ne sont pas ingérés dans Data Lake.
 
 ## Communication avec les utilisateurs de la plate-forme
 
