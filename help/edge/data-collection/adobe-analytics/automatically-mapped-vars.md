@@ -3,19 +3,19 @@ title: Variables mappées automatiquement en Adobe Analytics
 seo-title: Variables automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Adobe Experience Platform
 description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
 seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
-keywords: adobe analytics;variables;analytics;automatic map;automatically mapped;
+keywords: adobe analytics ; variables ; analytics ; carte automatique ; mappage automatique ;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 36%
+source-wordcount: '683'
+ht-degree: 35%
 
 ---
 
 
-# Variables automatically mapped in [!DNL Analytics]
+# Les variables sont automatiquement mises en correspondance dans [!DNL Analytics]
 
-Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into [!DNL Analytics].
+Voici une liste de variables que Adobe Experience Platform Edge Network mappe automatiquement dans [!DNL Analytics].
 
 | Chemin d’accès au champ XDM | [!DNL Analytics Query String] / En-tête HTTP | Description |
 | ---------- | ------------------------- | ----------------------------------------- |
@@ -34,7 +34,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `commerce.productListViews.id` | `events` | `scView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
 | `commerce.productListViews.value` | `events` | Correspondance du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec la conversion COMMERCE_SC_VUE, à l’aide du délimiteur `,`. |
 | `commerce.productViews.id` | `events` | `prodView` Sérialisation par événement. Si ce champ est exclu (c’est-à-dire pour les événements non sérialisés), le système génère et affecte sa propre valeur d’ID à l’entité. |
-| `commerce.productViews.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PROD_VUE, à l’aide d’un délimiteur `,`. |
+| `commerce.productViews.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PROD_VUE, à l’aide du délimiteur `,`. |
 | `commerce.purchases.value` | `events` | Mappage du paramètre de requête AppMeasurement ÉVÉNEMENT_LISTE_FULL avec conversion COMMERCE_PURCHASE, à l’aide du délimiteur `,`. |
 | `device.colorDepth` | `c` | Mappage du paramètre de requête C_COLOR AppMeasurement. |
 | `device.screenHeight` | `s` | Mappage de la résolution d’écran du paramètre de la requête AppMeasurement. |
@@ -68,7 +68,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | Mappage des données contextuelles `a.media.name` AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | Mappage des données contextuelles `c.a.media.show` AppMeasurement. |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Mappage des données contextuelles `c.a.media.type` AppMeasurement avec conversion VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement context data `c.a.media.type` mapping with conversion VIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | Mappage des données contextuelles AppMeasurement `c.a.media.type` avec la conversion VIDEO_SHOW_TYPE. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | Mappage des données contextuelles `c.a.media.length`AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | Données contextuelles AppMeasurement. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | Mappage des données contextuelles `c.a.media.channel`AppMeasurement. |
@@ -96,7 +96,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `productlistitems.[N].quantity` | `products` | Mappage de quantité du paramètre de la requête AppMeasurement Produits. |
 | `web.webInteraction.URL` | `pev1` | Mappage PAGE_ÉVÉNEMENT_VAR1 du paramètre de requête AppMeasurement. |
 | `web.webInteraction.name` | `pev2` | Mappage PAGE_ÉVÉNEMENT_VAR2 du paramètre de requête AppMeasurement. |
-| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` à `pe=lnk_o`; `web.webInteraction.type=download` à `pe=lnk_d`; `web.webInteraction.type=exit` to `pe=lnk_e` |
+| `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` à  `pe=lnk_o`;  `web.webInteraction.type=download` à  `pe=lnk_d`;  `web.webInteraction.type=exit` to  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | Mappage du paramètre de requête PAGE_URL AppMeasurement. |
 | `web.webPageDetails.errorPage` | `pageType` | Mappage du paramètre de requête AppMeasurement PAGE_TYPE_FULL avec la conversion ERROR_PAGE_TYPE. |
 | `web.webPageDetails.homePage` | `hp` | Mappage du paramètre de requête HOMEPAGE AppMeasurement avec conversion BOOLEAN_TO_YN. |
