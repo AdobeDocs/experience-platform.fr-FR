@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
+keywords: Experience Platform ; formation et évaluation ; Espace de travail des données ; sujets populaires ; créer un modèle ; créer une session de formation
 solution: Experience Platform
 title: Formation et évaluation d’un modèle (interface utilisateur)
 topic: tutorial
@@ -8,8 +8,8 @@ description: Dans Adobe Experience Platform Data Science Workspace, un modèle d
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1038'
-ht-degree: 95%
+source-wordcount: '1055'
+ht-degree: 94%
 
 ---
 
@@ -22,7 +22,7 @@ Ce tutoriel décrit les étapes à suivre pour créer, former et évaluer un mod
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recette, suivez le tutoriel [Importation d’une recette empaquetée dans l’interface utilisateur](./import-packaged-recipe-ui.md) avant de continuer.
 
@@ -50,7 +50,7 @@ Ce tutoriel nécessite une recette existante. Si vous ne possédez aucune recett
 1. Dans Adobe Experience Platform, cliquez sur le lien **[!UICONTROL Modèles]** situé dans la colonne de navigation de gauche pour tous les modèles existants. Recherchez et cliquez sur le nom du modèle à former.
    ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. For Models created using the [!DNL Data Science Workspace] user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
+2. Toutes les sessions de formation existantes ainsi que leur état actuel sont répertoriées. Pour les modèles créés à l&#39;aide de l&#39;interface utilisateur [!DNL Data Science Workspace], une série de formations est automatiquement générée et exécutée à l&#39;aide des configurations par défaut et du jeu de données de formation d&#39;entrée.
    ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Créez une nouvelle opération de formation en cliquant sur **[!UICONTROL Former]** près du coin supérieur droit de la page d’aperçu du modèle.
