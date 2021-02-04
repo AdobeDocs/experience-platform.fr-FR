@@ -3,19 +3,19 @@ title: Installation du SDK Web Adobe Experience Platform
 seo-title: Installation du SDK Web d’Adobe Experience Platform
 description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
 seo-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform
-keywords: web sdk installation;installing web sdk;internet explorer;promise;
+keywords: installation du sdk web ; installation du sdk web ; internet explorer ; promettre ;
 translation-type: tm+mt
 source-git-commit: 1b5ee9b1f9bdc7835fa8de59020b3eebb4f59505
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 65%
+source-wordcount: '632'
+ht-degree: 64%
 
 ---
 
 
 # Installation du SDK {#installing-the-sdk}
 
-La méthode préférée pour utiliser le SDK Web de Adobe Experience Platform est via [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Recherchez `AEP Web SDK` dans le catalogue des extensions, installez-les, puis configurez l&#39;extension.
+La méthode préférée pour utiliser le SDK Web de Adobe Experience Platform est l’utilisation de [Adobe Experience Platform Launch](http://launch.adobe.com/fr). Recherchez `AEP Web SDK` dans le catalogue d&#39;extensions, installez-les, puis configurez l&#39;extension.
 
 Adobe Experience Platform Web SDK est également disponible sur un CDN que vous pouvez utiliser. Vous pouvez référencer ce fichier ou le télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans une version réduite et non réduite. La version non réduite est utile pour le débogage.
 
@@ -28,7 +28,7 @@ Par exemple :
 
 ## Ajouter le code {#adding-the-code}
 
-The first step in implementing Adobe Experience Platform [!DNL Web SDK] is to copy and paste the following &quot;base code&quot; as high as possible in the `<head>` tag of your HTML:
+La première étape de l&#39;implémentation de Adobe Experience Platform [!DNL Web SDK] consiste à copier et coller le &quot;code de base&quot; suivant le plus haut possible dans la balise `<head>` de votre code HTML :
 
 ```markup
 <script>
@@ -62,11 +62,11 @@ Ce code de base, en plus de créer une fonction globale, charge également le co
 
 ## Prise en charge d’Internet Explorer {#support-internet-explore}
 
-Ce SDK utilise des promesses, ce qui est une méthode de communication de l’achèvement des tâches asynchrones. The [Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Ce SDK utilise des promesses, ce qui est une méthode de communication de l’achèvement des tâches asynchrones. L’implémentation [Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilisée par le SDK est prise en charge en mode natif par tous les navigateurs de cible, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez avoir `window.Promise` [polyrempli](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Pour déterminer si `window.Promise` est déjà polyfillé :
 
-1. Open your website in [!DNL Internet Explorer].
+1. Ouvrez votre site Web dans [!DNL Internet Explorer].
 1. Ouvrez la console de débogage du navigateur.
 1. Saisissez `window.Promise` dans la console, puis appuyez sur Entrée.
 
@@ -86,7 +86,7 @@ Cela charge un script qui s’assure que `window.Promise` est une implémentatio
 
 ## Chargement synchrone du fichier JavaScript {#loading-javascript-synchronously}
 
-As explained in the section [Adding the code](#adding-the-code), the base code you have copied and pasted into your website&#39;s HTML loads an external file with additional code. Ce code supplémentaire contient les fonctionnalités de base du SDK. Toute commande que vous tentez d’exécuter pendant le chargement de ce fichier est mise en file d’attente, puis traitée une fois le fichier chargé. Cette méthode d’installation est la plus performante.
+Comme expliqué dans la section [Ajoutant le code](#adding-the-code), le code de base que vous avez copié et collé dans le code HTML de votre site Web charge un fichier externe avec du code supplémentaire. Ce code supplémentaire contient les fonctionnalités de base du SDK. Toute commande que vous tentez d’exécuter pendant le chargement de ce fichier est mise en file d’attente, puis traitée une fois le fichier chargé. Cette méthode d’installation est la plus performante.
 
 Dans certaines circonstances, toutefois, vous pouvez vouloir charger le fichier de manière synchrone \(des informations supplémentaires sur ces circonstances seront documentées ultérieurement\). Cela empêche le reste du HTML d’être analysé et rendu par le navigateur jusqu’à ce que le fichier externe ait été chargé et exécuté. Ce délai supplémentaire avant l’affichage du contenu principal pour les utilisateurs est généralement déconseillé, mais peut être pertinent en fonction des circonstances.
 
