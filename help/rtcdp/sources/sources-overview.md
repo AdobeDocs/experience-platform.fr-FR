@@ -1,5 +1,5 @@
 ---
-keywords: rtcdp sources;sources rtcdp;real time customer data platform sources
+keywords: rtcdp sources ; sources rtcdp ; sources de plate-forme de données client en temps réel
 title: Présentation des sources
 seo-title: Sources dans Adobe Experience Platform
 description: Ce document présente les sources dans la plateforme de données client en temps réel
@@ -7,8 +7,8 @@ seo-description: Ce document présente les sources dans la plateforme de donnée
 translation-type: tm+mt
 source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 100%
+source-wordcount: '109'
+ht-degree: 90%
 
 ---
 
