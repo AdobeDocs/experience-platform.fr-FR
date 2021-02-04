@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlservices;sensei machine learning api
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; mlservices ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Services
 topic: Developer guide
@@ -7,8 +7,8 @@ description: Un MLService est un modèle formé publié qui permet à votre orga
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 100%
+source-wordcount: '887'
+ht-degree: 98%
 
 ---
 
@@ -107,7 +107,7 @@ Une réponse réussie renvoie un payload contenant les détails du MLService nou
 }
 ```
 
-## Obtention d’une liste de MLServices {#retrieve-a-list-of-mlservices}
+## Obtention d’une liste de MLServices  {#retrieve-a-list-of-mlservices}
 
 Vous pouvez récupérer une liste de MLServices en exécutant une requête GET unique. Pour filtrer les résultats plus facilement, vous pouvez spécifier les paramètres de requête dans le chemin d’accès de la requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
@@ -166,7 +166,7 @@ Une réponse réussie renvoie une liste de MLService et leurs informations, y co
 }
 ```
 
-## Récupération d’un MLService spécifique {#retrieve-a-specific-mlservice}
+## Récupération d’un MLService spécifique  {#retrieve-a-specific-mlservice}
 
 Vous pouvez récupérer les détails d’une expérience spécifique en exécutant une requête GET qui inclut l’identifiant de MLService souhaité dans le chemin de la requête.
 
@@ -210,7 +210,7 @@ Une réponse réussie renvoie un payload contenant les détails du MLService dem
 }
 ```
 
-## Mise à jour d’un MLService {#update-an-mlservice}
+## Mise à jour d’un MLService  {#update-an-mlservice}
 
 Vous pouvez mettre à jour un MLService existant en écrasant ses propriétés par le biais d’une requête PUT qui inclut l’identifiant du MLService cible dans le chemin d’accès à la requête et en fournissant un payload JSON contenant des propriétés mises à jour.
 
