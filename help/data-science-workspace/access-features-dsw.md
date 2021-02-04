@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;Data Science Workspace;popular topics;access control;sandbox;intelligence pack;dsw features;dsw access;Adobe Experience Platform Intelligence;intelligence;aep intelligence package
+keywords: Experience Platform ; accueil ; Espace de travail des sciences de données ; sujets populaires ; contrôle d'accès ; sandbox ; intelligence pack ; fonctionnalités dsw ; dsw access ; Adobe Experience Platform Intelligence ; intelligence ; package de renseignement aep
 solution: Experience Platform
 title: Accès et fonctionnalités à l’espace de travail Data Science
 topic: Access and features for data science workspace
@@ -7,8 +7,8 @@ description: 'Le document suivant décrit les autorisations de Data Science Work
 translation-type: tm+mt
 source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 27%
+source-wordcount: '644'
+ht-degree: 26%
 
 ---
 
@@ -19,15 +19,15 @@ Le document suivant décrit les autorisations de Data Science Workspace et l’a
 
 ![Onglets DSW](./images/access/platform-tabs.png)
 
-- **Ordinateurs portables :** Fournit un environnement de développement interactif ([JupyterLab](./jupyterlab/overview.md)) pour explorer, analyser et modéliser vos données sur l’Experience Platform.
-- **Modèles :** Fournit des outils utilisés pour créer, publier et stocker des recettes et des modèles d’apprentissage automatique avancés. Pour plus d’informations, consultez le didacticiel [Création et publication d’un modèle](./models-recipes/create-publish-model.md) d’apprentissage automatique.
-- **Services :** Contient à la fois des services fournis par l’Adobe tels que [Intelligent Services](../intelligent-services/home.md) et tous les services personnalisés que vous avez créés avec Data Science Workspace.
+- **Ordinateurs portables :** fournit un environnement de développement interactif ([JupyterLab](./jupyterlab/overview.md)) pour explorer, analyser et modéliser vos données sur l’Experience Platform.
+- **Modèles :** fournit des outils utilisés pour créer, publier et stocker des recettes et des modèles d’apprentissage automatique avancés. Pour plus d&#39;informations, consultez le [didacticiel de création et de publication d&#39;un modèle d&#39;apprentissage automatique](./models-recipes/create-publish-model.md).
+- **Services :** contient à la fois des services fournis par l’Adobe, tels que des  [services ](../intelligent-services/home.md) intelligents, et tous les services personnalisés que vous avez créés avec Data Science Workspace.
 
 Pourquoi ne vois-je que l&#39;onglet Services ?
 
 - Votre organisation peut uniquement avoir droit à la plate-forme de données client en temps réel (RTCDP), qui comprend l’API client du service intelligent.
 
-Si vous ne parvenez pas à afficher l’un des onglets **Data Science** et souhaitez utiliser les fonctionnalités de Data Science Workspace, contactez votre administrateur de société pour vérifier si vous disposez d’une licence Adobe Experience Platform Intelligence.
+Si vous ne parvenez pas à afficher l&#39;un des onglets **Data Science** et souhaitez utiliser les fonctionnalités de Data Science Workspace, contactez votre administrateur de société pour vérifier si vous disposez d&#39;une licence Adobe Experience Platform Intelligence.
 
 ## Ajout du package Adobe Experience Platform Intelligence
 
@@ -58,7 +58,7 @@ Pour utiliser Data Science Workspace, l’autorisation « Gestion de Data Scien
 
 | Autorisation | Activé | Désactivé |
 |---|---|---|
-| Gestion de Data Science Workspace | Permet d’accéder à tous les services de Data Science Workspace. | L’accès à l’API et à l’interface utilisateur à tous les services de l’espace de travail Data Science est désactivé. Lorsque cette option est désactivée, la sélection des pages **Ordinateurs portables**, **Modèles** et **Services** n’est pas autorisée. <li>L’accès aux **Services** peut encore être disponible via la plateforme de données client en temps réel (RTCDP).</li> |
+| Gestion de Data Science Workspace | Permet d’accéder à tous les services de Data Science Workspace. | L’accès à l’API et à l’interface utilisateur à tous les services de l’espace de travail Data Science est désactivé. Bien que désactivé, la sélection des pages **Notebooks**, **Models** et **Services** est évitée. <li>L&#39;accès aux **services** peut encore être disponible via la plateforme de données client en temps réel (RTCDP).</li> |
 
 ## Prise en charge des environnements de test
 
@@ -72,4 +72,4 @@ Actuellement, Data Science Workspace présente la limite de sandbox suivante :
 
 Ce document décrit les différents types d’accès et fonctionnalités disponibles dans Data Science Workspace.
 
-Pour en savoir plus sur l’espace de travail des sciences de données, par exemple un flux de travail complet au quotidien, lisez tout d’abord la documentation de la Présentation [de l’espace de travail des sciences de](./walkthrough.md) données. For more general information, visit the [Data Science Workspace overview](./home.md).
+Pour en savoir plus sur Data Science Workspace, par exemple un flux de travail complet au jour le jour, lisez tout d&#39;abord la documentation [Data Science Workspace. ](./walkthrough.md) Pour obtenir des informations plus générales, consultez la section [Présentation de Data Science Workspace](./home.md).
