@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
+keywords: Experience Platform ; accueil ; services intelligents ; sujets populaires ; service intelligent ; service intelligent
 solution: Experience Platform, Intelligent Services
 title: Présentation des services intelligents
 topic: Intelligent Services overview
@@ -7,15 +7,15 @@ description: Intelligent Services permet aux analystes et spécialistes du marke
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 78%
+source-wordcount: '502'
+ht-degree: 77%
 
 ---
 
 
 # Présentation des services intelligents
 
-Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et de l’apprentissage automatique dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. En outre, les spécialistes du marketing peuvent activer les prédictions dans les applications [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] et tierces.
 
 La vidéo suivante est conçue pour vous aider à comprendre les services intelligents. À l’aide d’exemples d’utilisation commerciale, cette vidéo explique un flux de travail de haut niveau et décrit les fonctionnalités d’Attribution AI et d’IA du client.
 
@@ -23,7 +23,7 @@ La vidéo suivante est conçue pour vous aider à comprendre les services intell
 
 ## Avantages des services intelligents
 
-Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Certains des avantages des services intelligents sont répertoriés ci-dessous.
+Les services intelligents, construits sur [!DNL Adobe Experience Platform], permettent aux spécialistes du marketing responsables de l&#39;expérience client d&#39;accéder à l&#39;IA en tant que service, ce qui permet à n&#39;importe qui de prédire le comportement des clients, de mesurer l&#39;impact d&#39;une campagne ou d&#39;assurer un meilleur retour sur investissement. Certains des avantages des services intelligents sont répertoriés ci-dessous.
 
 ### Une vitesse de mise sur le marché rentable
 
@@ -53,7 +53,7 @@ Une fois que la formation et la notation avec les modèles sont terminées, les 
 
 ### Actions
 
-Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
+Enfin, vous pouvez décider des actions à entreprendre avec les prédictions, telles que la consommation d’informations, l’activation d’applications dans [!DNL Adobe Experience Cloud] et la création de tableaux de bord personnalisés.
 
 ## Étapes suivantes
 
