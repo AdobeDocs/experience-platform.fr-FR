@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;delete sandbox
+keywords: Experience Platform ; accueil ; rubriques populaires ; supprimer un sandbox
 solution: Experience Platform
 title: Suppression d’un environnement de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez supprimer un sandbox en effectuant une requête DELETE 
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 81%
+source-wordcount: '110'
+ht-degree: 76%
 
 ---
 
