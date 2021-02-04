@@ -1,5 +1,5 @@
 ---
-keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance
+keywords: gestion des données rtcdp ; gestion des données rtcdp ; gestion des données client en temps réel
 title: Présentation de la gouvernance des données
 seo-title: Gouvernance des données sur la plateforme des données clients en temps réel
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
@@ -7,7 +7,7 @@ seo-description: 'La gouvernance des données vous permet de gérer les données
 translation-type: tm+mt
 source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '707'
 ht-degree: 40%
 
 ---
