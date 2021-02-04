@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;keyword extraction;Keyword extraction
+keywords: Experience Platform ; prise en main ; contenu ai ; commerce ai ; contenu et commerce ai ; extraction de mots-clés ; extraction de mots-clés
 solution: Experience Platform, Intelligent Services
 title: Extraction des mots-clés
 topic: Developer guide
@@ -7,7 +7,7 @@ description: Le service d'extraction de mots-clés, lorsqu'il reçoit un documen
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1075'
 ht-degree: 4%
 
 ---
@@ -39,7 +39,7 @@ Les entités nommées reconnues par [!DNL Content and Commerce AI] sont réperto
 
 >[!NOTE]
 >
->Si vous prévoyez de traiter des fichiers PDF, passez aux instructions relatives à l’extraction [du mot-clé](#pdf-extraction) PDF dans ce document. En outre, la prise en charge d’autres types de fichiers, tels que docx, ppt et amd xml, est définie pour être publiée ultérieurement.
+>Si vous prévoyez de traiter des fichiers PDF, passez aux instructions relatives à l&#39;[extraction de mot-clé PDF](#pdf-extraction) dans ce document. En outre, la prise en charge d’autres types de fichiers, tels que docx, ppt et amd xml, est définie pour être publiée ultérieurement.
 
 **Format d’API**
 
@@ -78,7 +78,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur les paramètres d
 
 >[!CAUTION]
 >
->`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Pour le service d&#39;extraction de mots-clés, l&#39; `analyzer_id` ID est :
+>`analyzer_id` détermine lequel  [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous disposez du `analyzer_id` approprié avant de faire votre demande. Pour le service d&#39;extraction de mots-clés, l&#39;ID `analyzer_id` est :
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -114,21 +114,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | ID [!DNL Sensei] de service sous lequel votre demande est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
+| `analyzer_id` | ID de service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
 | `application-id` | ID de l’application créée. | Oui |
-| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du `data` tableau. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées de l’intérieur `data`. | Oui |
+| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tout paramètre transmis dans le cadre de ce tableau remplace les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées à partir de `data`. | Oui |
 | `language` | Langue du texte de saisie. La valeur par défaut est `en`. | Non |
 | `content-type` | Permet d’indiquer si l’entrée fait partie du corps de la requête ou si une URL signée est associée à un compartiment S3. La valeur par défaut de cette propriété est `inline`. | Oui |
-| `encoding` | Format de codage du texte d’entrée. Cela peut être `utf-8` ou `utf-16`. La valeur par défaut de cette propriété est `utf-8`. | Non |
+| `encoding` | Format de codage du texte d’entrée. Il peut s’agir de `utf-8` ou `utf-16`. La valeur par défaut de cette propriété est `utf-8`. | Non |
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
-| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
-| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Consultez l’ [annexe](#appendix) pour plus d’informations sur les paramètres personnalisés. | Non |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;il est utilisé conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Pour plus d&#39;informations sur les paramètres personnalisés, consultez l&#39;[annexe](#appendix). | Non |
 | `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si elle n’est pas transmise, un identifiant généré automatiquement est attribué. | Non |
 | `content` | Contenu utilisé par le service d&#39;extraction de mots-clés. Le contenu peut être du texte brut (type de contenu &quot;intégré&quot;). <br> Si le contenu est un fichier sur S3 (&#39;s3-bucket&#39; content-type), transmettez l’URL signée. Lorsque le contenu fait partie du corps de la requête, la liste des éléments de données ne doit comporter qu’un seul objet. Si plusieurs objets sont transmis, seul le premier objet est traité. | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits dans le `response` tableau.
+Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits dans le tableau `response`.
 
 ```json
 {
@@ -228,9 +228,9 @@ Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits da
 }
 ```
 
-## EXTRACTION de mot-clé PDF {#pdf-extraction}
+## EXTRACTION du mot-clé PDF {#pdf-extraction}
 
-Le service d’extraction de mots-clés prend en charge les fichiers PDF. Toutefois, vous devez utiliser un nouvel AnalyzerID pour les fichiers PDF et modifier le type de document en PDF. Consultez l’exemple ci-dessous pour plus d’informations.
+Le service d’extraction de mots-clés prend en charge les fichiers PDF. Cependant, vous devez utiliser un nouvel AnalyzerID pour les fichiers PDF et modifier le type de document en PDF. Consultez l’exemple ci-dessous pour plus d’informations.
 
 **Format d’API**
 
@@ -244,7 +244,7 @@ La requête suivante extrait les mots-clés d’un document PDF en fonction des 
 
 >[!CAUTION]
 >
->`analyzer_id` détermine lequel [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous en avez le bon `analyzer_id` avant de faire votre demande. Pour l’extraction du mot-clé PDF, l’ `analyzer_id` ID est :
+>`analyzer_id` détermine lequel  [!DNL Sensei Content Framework] est utilisé. Veuillez vérifier que vous disposez du `analyzer_id` approprié avant de faire votre demande. Pour l’extraction du mot-clé PDF, l’ID `analyzer_id` est :
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -276,21 +276,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Propriété | Description | Obligatoire |
 | --- | --- | --- |
-| `analyzer_id` | ID [!DNL Sensei] de service sous lequel votre demande est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
+| `analyzer_id` | ID de service [!DNL Sensei] sous lequel votre requête est déployée. Cet identifiant détermine lequel des [!DNL Sensei Content Frameworks] est utilisé. Pour les services personnalisés, contactez l’équipe d’API Content and Commerce pour configurer un identifiant personnalisé. | Oui |
 | `application-id` | ID de l’application créée. | Oui |
-| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tous les paramètres transmis dans le cadre de ce tableau remplacent les paramètres globaux spécifiés en dehors du `data` tableau. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées de l’intérieur `data`. | Oui |
-| `language` | Langue de saisie. The default value is `en` (english). | Non |
+| `data` | Tableau contenant un objet JSON avec chaque objet du tableau représentant un document. Tout paramètre transmis dans le cadre de ce tableau remplace les paramètres globaux spécifiés en dehors du tableau `data`. Toutes les autres propriétés décrites ci-dessous dans ce tableau peuvent être remplacées à partir de `data`. | Oui |
+| `language` | Langue de saisie. La valeur par défaut est `en` (anglais). | Non |
 | `content-type` | Permet d’indiquer le type de contenu d’entrée. Il doit être défini sur `file`. | Oui |
 | `encoding` | Format de codage de l’entrée. Il doit être défini sur `pdf`. D’autres types de codage sont définis pour être pris en charge ultérieurement. | Oui |
 | `threshold` | Seuil de score (0 à 1) au-dessus duquel les résultats doivent être renvoyés. Utilisez la valeur `0` pour renvoyer tous les résultats. La valeur par défaut de cette propriété est `0`. | Non |
-| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;elle est utilisée conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
-| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Consultez l’ [annexe](#appendix) pour plus d’informations sur les paramètres personnalisés. | Non |
+| `top-N` | Nombre de résultats à renvoyer (ne peut pas être un entier négatif). Utilisez la valeur `0` pour renvoyer tous les résultats. Lorsqu&#39;il est utilisé conjointement avec `threshold`, le nombre de résultats renvoyés est le moins élevé des deux limites définies. La valeur par défaut de cette propriété est `0`. | Non |
+| `custom` | Tout paramètre personnalisé à transmettre. Cette propriété requiert un objet JSON valide pour fonctionner. Pour plus d&#39;informations sur les paramètres personnalisés, consultez l&#39;[annexe](#appendix). | Non |
 | `content-id` | ID unique de l’élément de données renvoyé dans la réponse. Si elle n’est pas transmise, un identifiant généré automatiquement est attribué. | Non |
 | `content` | Il doit être défini sur `file`. | Oui |
 
 **Réponse**
 
-Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits dans le `response` tableau.
+Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits dans le tableau `response`.
 
 ```json
 {
@@ -359,11 +359,11 @@ Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits da
 }
 ```
 
-Pour plus d’informations et un exemple sur l’utilisation de l’extraction PDF contenant des instructions sur la configuration, le déploiement et l’intégration avec le service AEM cloud. Visitez le référentiel [github du travailleur d’extraction PDF](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI.
+Pour plus d’informations et un exemple sur l’utilisation de l’extraction PDF contenant des instructions sur la configuration, le déploiement et l’intégration avec le service AEM cloud. Visitez le [référentiel github de l’extraction PDF CCAI](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Annexe {#appendix}
 
-Le tableau suivant contient les paramètres disponibles qui peuvent être utilisés dans `custom`.
+Le tableau suivant contient les paramètres disponibles qui peuvent être utilisés à partir de `custom`.
 
 | Nom | Description | Obligatoire |
 | --- | --- | --- |
