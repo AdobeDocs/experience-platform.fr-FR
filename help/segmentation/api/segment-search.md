@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;segmentation;segmentation service;troubleshooting;API;seg;segment;Segment;search;segment search;
+keywords: Experience Platform;segmentation;service de segmentation;dépannage;API;seg;segment;Segment;search;segment search;segment search;
 title: Point de terminaison de la recherche de segments
 topic: guide
 description: La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Ce guide fournit des informations qui vous aideront à mieux comprendre la recherche de segments et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
 translation-type: tm+mt
 source-git-commit: 59cf089a8bf7ce44e7a08b0bb1d4562f5d5104db
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1192'
 ht-degree: 45%
 
 ---
@@ -20,7 +20,7 @@ Ce guide fournit des informations qui vous aideront à mieux comprendre la reche
 
 ## Prise en main
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 Outre les en-têtes requis décrits dans la section Prise en main, toutes les requêtes envoyées au point de terminaison Recherche de segment nécessitent l’en-tête supplémentaire suivant :
 
@@ -40,7 +40,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Paramètres | Description |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHÉMA} représente la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} représente une requête conforme à la mise en oeuvre par Microsoft de la syntaxe [ de recherche de ](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l&#39;[appendice](#appendix) du présent document. |
 
 **Requête**
 
@@ -101,8 +101,8 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Obligatoire)** Où {SCHÉMA} contient la valeur de classe de schéma associée aux objets de recherche. Actuellement, seul `_xdm.context.segmentdefinition` est pris en charge. |
 | `namespace={NAMESPACE}` | **(Obligatoire)** Où {ESPACE DE NOMMAGE} contient l&#39;espace de nommage dans lequel vous souhaitez effectuer une recherche. |
-| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à l&#39;implémentation par Microsoft de la syntaxe [de recherche de](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. A more detailed explanation can be found in the [appendix](#appendix) of this document. |
-| `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche au dossier désigné, spécifié avec {ENTITY_ID}. |
+| `s={SEARCH_TERM}` | *(Facultatif)* Où {SEARCH_TERM} contient une requête conforme à la mise en oeuvre par Microsoft de la syntaxe [ de recherche de ](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax)Lucene. Si aucun terme de recherche n’est spécifié, tous les enregistrements associés à `schema.name` seront renvoyés. Vous trouverez une explication plus détaillée dans l&#39;[appendice](#appendix) du présent document. |
+| `entityId={ENTITY_ID}` | *(Facultatif)* Limite votre recherche au sein du dossier désigné, spécifié avec {ENTITY_ID}. |
 | `limit={LIMIT}` | *(Facultatif)* Où {LIMIT} représente le nombre de résultats de recherche à renvoyer. La valeur par défaut est 50. |
 | `page={PAGE}` | *(Facultatif)* Où {PAGE} représente le numéro de page utilisé pour paginer les résultats de la requête recherchée. Veuillez noter que le numéro de page est début à **0**. |
 
@@ -262,4 +262,4 @@ Le tableau suivant liste les détails du fonctionnement des requêtes de recherc
 | &quot;hotel airport&quot;\~5 | Recherche de proximité. Ce type de recherche permet de rechercher des termes proches les uns des autres dans un document. Par exemple, l’expression `"hotel airport"~5` trouvera les termes « hotel » et « airport » à moins de 5 mots l’un de l’autre dans un document. |
 | `/a[0-9]+b$/` | Recherche avec expressions régulières. Ce type de recherche trouve une correspondance basée sur le contenu entre les barres obliques « / », comme indiqué dans la classe RegExp. Par exemple, pour rechercher des documents contenant « motel » ou « hotel », spécifiez `/[mh]otel/`. Les recherches avec expressions régulières sont comparées à des mots uniques. |
 
-Pour obtenir une documentation plus détaillée sur la syntaxe des requêtes, veuillez lire la [documentation sur la syntaxe Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax).
+Pour obtenir une documentation plus détaillée sur la syntaxe des requêtes, veuillez lire la [documentation sur la syntaxe Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax).
