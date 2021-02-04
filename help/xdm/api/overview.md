@@ -19,7 +19,7 @@ ht-degree: 4%
 
 L’API de registre de Schémas fournit plusieurs points de terminaison qui vous permettent de gérer par programmation tous les schémas et les ressources XDM (Experience Data Model) connexes disponibles dans Platform. Cela inclut les solutions définies par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications.
 
-Ces points de terminaison sont décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+Ces points de terminaison sont décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
 >[!IMPORTANT]
 >
