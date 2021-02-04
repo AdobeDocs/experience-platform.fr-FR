@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
+keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psql ; service de Requête ; service de requête ; métadonnées ; commandes ; commandes de métadonnées ;
 solution: Experience Platform
 title: Commandes de métadonnées
 topic: metadata
@@ -7,8 +7,8 @@ description: Liste de commandes PSQL actuellement prises en charge pour interrog
 translation-type: tm+mt
 source-git-commit: c5d3be4706ca6d6a30e203067db6ddc894b9bfb4
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 96%
+source-wordcount: '324'
+ht-degree: 91%
 
 ---
 
