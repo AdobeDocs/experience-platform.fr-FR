@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;datatype;data-type;data type;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; géo ; type de données ; type de données ; type de données ;
 solution: Experience Platform
 title: Type de données géographiques
 topic: overview
@@ -7,15 +7,15 @@ description: Ce document présente un aperçu du type de données de Géo XDM.
 translation-type: tm+mt
 source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 39%
+source-wordcount: '196'
+ht-degree: 36%
 
 ---
 
 
-# [!UICONTROL Type de données géo]
+# [!UICONTROL Type de ] géodonnées
 
-[!UICONTROL Geo] est un type de données XDM standard qui décrit la zone géographique où un événement a été observé.
+ Geois est un type de données XDM standard qui décrit la zone géographique où un événement a été observé.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
