@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data
+keywords: Experience Platform ; accueil ; rubriques populaires ; filtre ; Filtrer ; Filtrer les données ; Filtrer les données
 solution: Experience Platform
 title: Liste des objets
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez récupérer une liste de tous les objets disponibles d�
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 58%
+source-wordcount: '240'
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be listed. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type de l&#39;objet [!DNL Catalog] à répertorier. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données de Catalog](filter-data.md). |
 
 **Requête**
@@ -44,11 +44,11 @@ curl -X GET \
 
 **Réponse**
 
-A successful response returns a list of [!DNL Catalog] objects in the form of key-value pairs, filtered by the query parameters provided in the request. For each key-value pair, the key represents a unique identifier for the [!DNL Catalog] object in question, which can then be used in another call to [view that specific object](look-up-object.md) for more details.
+Une réponse réussie renvoie une liste d&#39;objets [!DNL Catalog] sous la forme de paires clé-valeur, filtrée par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l&#39;objet [!DNL Catalog] en question, qui peut ensuite être utilisé dans un autre appel à [vue cet objet spécifique](look-up-object.md) pour plus de détails.
 
 >[!NOTE]
 >
->If a returned object does not contain one or more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {
