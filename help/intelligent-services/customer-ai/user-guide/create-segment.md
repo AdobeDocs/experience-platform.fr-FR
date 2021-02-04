@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;insights;customer ai;popular topics;customer ai segments
+keywords: Experience Platform ; informations ; assistance client ; rubriques populaires ; segments d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Création de segments client avec des scores prévus
 topic: Create a segment
@@ -7,8 +7,8 @@ description: Lorsqu’une opération de prédiction se termine, les scores de pr
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '308'
-ht-degree: 88%
+source-wordcount: '318'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ Sous la colonne de droite *Propriétés du segment*, indiquez un nom pour le seg
 
 ![](../images/user-guide/properties.png)
 
-Above the left-hand *Fields* column, click the **gear** icon and select a *Merge policy* from the drop-down. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
+Au-dessus de la colonne de gauche *Champs*, cliquez sur l&#39;icône **engrenage** et sélectionnez une *stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
 
 ![](../images/user-guide/merge_policy.png)
 
