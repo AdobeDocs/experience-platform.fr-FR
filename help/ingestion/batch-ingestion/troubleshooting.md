@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
+keywords: Experience Platform ; accueil ; rubriques populaires ; données imbriquées ; dépannage ; faq ; Ingestion ; assimilation par lots ; assimilation par lots ;
 solution: Experience Platform
 title: Guide de dépannage de l'importation par lot
 topic: troubleshooting
@@ -7,15 +7,15 @@ description: 'Cette documentation vous aidera à répondre aux questions fréque
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 88%
+source-wordcount: '1416'
+ht-degree: 87%
 
 ---
 
 
 # Guide de dépannage de l’ingestion par lots
 
-This documentation will help answer frequently asked questions regarding Adobe Experience Platform [!DNL Batch Data Ingestion] APIs.
+Cette documentation vous aidera à répondre aux questions fréquentes sur les API Adobe Experience Platform [!DNL Batch Data Ingestion].
 
 ## Appels API par lots
 
@@ -184,7 +184,7 @@ Au cours de son cycle de vie, un lot peut passer par les états suivants :
 | État | Données écrites au format maître | Description |
 | ------ | ---------------------- | ----------- |
 | Abandonné |  | Le client n’a pas terminé le lot dans le délai prévu. |
-| Interrompu |  | The client has explicitly called, via the [!DNL Batch Data Ingestion] APIs, an abort operation for the specified batch. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
+| Interrompu |  | Le client a explicitement appelé, via les API [!DNL Batch Data Ingestion], une opération d&#39;abandon pour le lot spécifié. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
 | Actif/Réussite | x | Le lot a été promu de l’évaluation au format maître. Il est désormais disponible pour la consommation en aval. **Remarque :** Actif et Réussite sont interchangeables. |
 | Archivé |  | Le lot a été archivé dans un stockage hors ligne. |
 | Échoué/Échec |  | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Une erreur exploitable est enregistrée, ainsi que le lot, pour permettre aux clients de corriger et de renvoyer les données. **Remarque :** Échoué et Échec sont interchangeables. |
@@ -206,7 +206,7 @@ Lorsqu’un lot se trouve dans l’état « Nouvelle tentative », cela signif
 
 ### En quoi consiste l’état « Bloqué » d’un lot ?
 
-When a batch is in &quot;Stalled&quot;, it means that [!DNL Data Ingestion Services] is experiencing difficulty ingesting the batch and all retries have been exhausted.
+Lorsqu’un lot est &quot;bloqué&quot;, cela signifie que [!DNL Data Ingestion Services] éprouve des difficultés à ingérer le lot et que toutes les Reprises ont été épuisées.
 
 ### En quoi consiste l’état « Chargement » d’un lot ?
 
@@ -241,7 +241,7 @@ Une fois les erreurs corrigées, le lot peut à nouveau être chargé.
 
 ### Comment supprimer les lots ?
 
-Instead of deleting directly from [!DNL Catalog], batches should be removed using either method provided below:
+Au lieu de supprimer directement de [!DNL Catalog], les lots doivent être supprimés en utilisant l&#39;une ou l&#39;autre des méthodes fournies ci-dessous :
 
 1. Si le lot est en cours, il doit être abandonné.
 2. Si le lot est passé au format maître, son format doit être rétabli.
@@ -252,11 +252,11 @@ Les mesures suivantes sont disponibles pour les lots à l’état Actif/Réussit
 
 | Mesure | Description |
 | ------ | ----------- |
-| inputByteSize | The total number of bytes staged for [!DNL Data Ingestion Services] to process. |
-| inputRecordSize | The total number of rows staged for [!DNL Data Ingestion Services] to process. |
-| outputByteSize | Nombre total d’octets sortis par [!DNL Data Ingestion Services] vers [!DNL Data Lake]. |
-| outputRecordSize | Nombre total de lignes générées par [!DNL Data Ingestion Services] à [!DNL Data Lake]. |
-| partitionCount | The total number of partitions written into [!DNL Data Lake]. |
+| inputByteSize | Nombre total d’octets mis en scène pour [!DNL Data Ingestion Services] à traiter. |
+| inputRecordSize | Nombre total de lignes intermédiaires à traiter pour [!DNL Data Ingestion Services]. |
+| outputByteSize | Nombre total d&#39;octets sortis par [!DNL Data Ingestion Services] à [!DNL Data Lake]. |
+| outputRecordSize | Nombre total de lignes renvoyées par [!DNL Data Ingestion Services] à [!DNL Data Lake]. |
+| partitionCount | Nombre total de partitions écrites dans [!DNL Data Lake]. |
 
 ### Pourquoi les mesures ne sont-elles pas disponibles pour certains lots ?
 
