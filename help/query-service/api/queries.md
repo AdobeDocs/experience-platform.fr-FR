@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; guide d'api ; requêtes ; requête ; service de Requête ;
 solution: Experience Platform
 title: Guide de développement de Query Service
 topic: queries
@@ -7,8 +7,8 @@ description: Les sections suivantes décrivent les appels que vous pouvez effect
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 97%
+source-wordcount: '676'
+ht-degree: 95%
 
 ---
 
