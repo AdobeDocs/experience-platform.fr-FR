@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Sandbox;sandbox
+keywords: Experience Platform;accueil;rubriques populaires;Sandbox;sandbox
 solution: Experience Platform
 title: Création d’un environnement de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez créer un nouveau sandbox en envoyant une requête POST
 translation-type: tm+mt
 source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 90%
+source-wordcount: '158'
+ht-degree: 86%
 
 ---
 
