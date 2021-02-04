@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data type;data types;Data types;Data type;Segmentation data types;Segmentation;segmentation;Segmentation Service;Segmentation service data types;
+keywords: Experience Platform ; accueil ; rubriques populaires ; type de données ; types de données ; types de données ; type de données ; type de données ; type de données de segmentation ; segmentation ; segmentation ; service de segmentation ; types de données du service de segmentation ;
 solution: Experience Platform
 title: Types de données du service de segmentation Adobe Experience Platform
 topic: overview
@@ -7,15 +7,15 @@ description: Tous les types de données XDM sont pris en charge dans Segmentatio
 translation-type: tm+mt
 source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 67%
+source-wordcount: '503'
+ht-degree: 64%
 
 ---
 
 
-# Types de données [!DNL Segmentation Service] pris en charge par Adobe Experience Platform
+# Adobe Experience Platform [!DNL Segmentation Service] prend en charge les types de données
 
-All XDM data types are supported within [!DNL Segmentation Service]. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
+Tous les types de données XDM sont pris en charge dans [!DNL Segmentation Service]. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 
 ## Données de chaîne
 
@@ -35,12 +35,12 @@ Les données de date vous permettent d’attribuer un contexte temporel à vos d
 
 | Exemple de champ | Instructions en fonction de la date | Chronologie |
 | ------------- | ------------------------ | --------- |
-| person.firstPurchase | `today`, `yesterday`, `this month`, `this year` | En fonction du jour où le segment a été créé. |
+| person.firstPurchase | `today`,  `yesterday`,  `this month`,  `this year` | En fonction du jour où le segment a été créé. |
 | person.lastPurchase | `in last`, `during`, `before`, `after`, `within` | En fonction d’une semaine ou d’un mois donné. |
 
 ## Événements Experience
 
-As an Adobe Experience Platform schema, [!DNL XDM ExperienceEvents] record explicit and implicit customer interactions with [!DNL Platform]-integrated applications, including a snapshot of the system at the time the interaction took place. [!DNL ExperienceEvents] sont des dossiers de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
+En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistre les interactions client explicites et implicites avec les applications intégrées [!DNL Platform], y compris un instantané du système au moment de l&#39;interaction. [!DNL ExperienceEvents] sont des dossiers de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
 
 Comme le montre le tableau ci-dessous, les données d’événement sont générées à l’aide de mots-clés qui aident à affiner le comportement des événements et à spécifier des attributs d’événement.
 
@@ -55,11 +55,11 @@ Comme le montre le tableau ci-dessous, les données d’événement sont génér
 
 Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attribut au nouveau segment.
 
-Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, les sources supplémentaires étant activées à l’avenir. Pour plus d&#39;informations sur l&#39;utilisation des audiences Adobe Audience Manager avec la plate-forme, consultez le guide de partage des [audiences dans la documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)Adobe Audience Manager.
+Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, les sources supplémentaires étant activées à l’avenir. Pour plus d&#39;informations sur l&#39;utilisation des audiences Adobe Audience Manager avec la plate-forme, consultez le [guide de partage d&#39;audiences dans la documentation Adobe Audience Manager](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
 
 ### Partage de segments
 
-Les segments créés dans Platform peuvent être utilisés dans d’autres services [principaux](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html)Adobe Experience Cloud. Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les segments créés dans Platform peuvent être utilisés dans d’autres [services principaux de Adobe Experience Cloud](https://docs.adobe.com/content/help/fr-FR/core-services/interface/experience-cloud.html). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 
