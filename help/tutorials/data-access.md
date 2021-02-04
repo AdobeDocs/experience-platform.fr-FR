@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;access data sources;data access;spark sdk;python sdk
+keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux sources de données ; accès aux données ; spark sdk ; python sdk
 solution: Experience Platform
 title: Tutoriels sur l’accès aux données
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform permet aux utilisateurs de découvrir les
 translation-type: tm+mt
 source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 57%
+source-wordcount: '154'
+ht-degree: 52%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 57%
 
 Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l&#39;accessibilité des jeux de données assimilés dans l&#39;Experience Platform.
 
-To learn more, begin by reading the [Data Access overview](../data-access/home.md).
+Pour en savoir plus, lisez tout d&#39;abord [Data Access overview](../data-access/home.md).
 
 ## Requête de données d’un jeu de données à l’aide de l’API d’accès aux données
 
@@ -32,4 +32,4 @@ L’API Data Access soutient Adobe Experience Platform en fournissant aux utilis
 - Téléchargement du contenu partiel d’un fichier.
 - Configuration de la pagination des réponses de l’API.
 
-To get started, follow the [Data Access API tutorial](../data-access/tutorials/dataset-data.md).
+Pour commencer, suivez le [didacticiel sur l&#39;API d&#39;accès aux données](../data-access/tutorials/dataset-data.md).
