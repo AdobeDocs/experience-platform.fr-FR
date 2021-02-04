@@ -17,7 +17,7 @@ ht-degree: 83%
 
 - [Présentation](home.md)
 - [Types de données de segmentation](data-types.md)
-- Guide du développeur d’API de segmentation {#api}
+- Guide du développeur d&#39;API de segmentation {#api}
    - [Présentation](api/overview.md)
    - [Prise en main](api/getting-started.md)
    - [Tâches d’exportation](api/export-jobs.md)
