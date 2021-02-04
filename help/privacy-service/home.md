@@ -44,7 +44,7 @@ En fonction de la nature de votre entreprise et des juridictions sous lesquelles
 
 Pour plus d&#39;informations sur les différentes réglementations légales en matière de confidentialité que [!DNL Privacy Service] gère les demandes, y compris les termes clés et les réponses aux questions les plus fréquentes, consultez la [documentation sur les réglementations en matière de confidentialité](./regulations/overview.md).
 
-Si vos opérations de données relèvent de l’une des réglementations prises en charge, consultez leur documentation pour obtenir des informations importantes, telles que les droits de confidentialité spécifiques qu’ils accordent à vos clients, et des fenêtres de conformité pour répondre aux demandes de confidentialité. Ces informations doivent être prises en compte pour déterminer comment intégrer [!DNL Privacy Service] dans votre système de gestion de la relation client, et comment les clients doivent interagir avec votre site Web pour faire des demandes de confidentialité.
+Si vos opérations de données relèvent de l’une des réglementations prises en charge, consultez leur documentation pour obtenir des informations importantes, telles que les droits de confidentialité spécifiques qu’ils accordent à vos clients, et des fenêtres de conformité pour répondre aux demandes de confidentialité. Ces informations doivent être prises en compte pour déterminer comment intégrer [!DNL Privacy Service] dans votre système de gestion de la relation client et comment les clients doivent interagir avec votre site Web afin de faire des demandes de confidentialité.
 
 En plus des règlements juridiques, toute norme organisationnelle ou industrielle applicable à votre organisation doit également être prise en compte lors de la prise de ces décisions.
 
