@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
 solution: Experience Platform
 title: Gestion des détails et des services supplémentaires pour un profil de produit
 topic: user guide
@@ -7,8 +7,8 @@ description: Ce document couvre les étapes nécessaires à la gestion des déta
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 68%
+source-wordcount: '213'
+ht-degree: 66%
 
 ---
 
@@ -27,7 +27,7 @@ Cliquez sur **[!UICONTROL Services]** pour accéder à la page **[!UICONTROL Ser
 
 ![services-page](../images/services-page.png)
 
-Le menu **[!UICONTROL Services]** vous permet de modifier l’accès d’un profil aux services supplémentaires de qui ont été initialement configurés lors de la création du profil. [!DNL Platform] Depending on your [!DNL Platform] subscription, these services can include:
+Le menu **[!UICONTROL Services]** vous permet de modifier l’accès d’un profil aux services supplémentaires de qui ont été initialement configurés lors de la création du profil. [!DNL Platform] Selon votre abonnement [!DNL Platform], ces services peuvent inclure :
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
