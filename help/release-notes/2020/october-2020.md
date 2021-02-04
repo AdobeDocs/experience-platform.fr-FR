@@ -31,25 +31,25 @@ La préparation des données permet aux ingénieurs de données de mapper, de tr
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| `is_set` fonction | La `is_set` fonction vous permet de vérifier la présence d’un attribut dans les données source. `is_set` peut être utilisé en combinaison avec `is_empty` pour vérifier à la fois la présence de l&#39;attribut et la présence de la valeur dans l&#39;attribut. |
-| `get_values` fonction | La `get_values` fonction vous permet d&#39;obtenir les valeurs de la carte d&#39;entrée pour une clé donnée. |
+| `is_set` fonction | La fonction `is_set` permet de vérifier la présence d&#39;un attribut dans les données source. `is_set` peut être utilisé en combinaison avec  `is_empty` pour vérifier à la fois la présence de l&#39;attribut et la présence de la valeur dans l&#39;attribut. |
+| `get_values` fonction | La fonction `get_values` vous permet d&#39;obtenir les valeurs de la carte d&#39;entrée pour une clé donnée. |
 
-For more information, please read the [Data Prep overview](../../data-prep/home.md).
+Pour plus d&#39;informations, veuillez lire le [Aperçu de l&#39;aperçu de l&#39;aperçu de l&#39;aperçu de l&#39;aperçu des données](../../data-prep/home.md).
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte d’activité horodaté de chaque interaction client.
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. [!DNL Real-time Customer Profile] permet de visualiser une vue holistique de chaque client qui combine des données provenant de plusieurs canaux, y compris des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider vos données client disparates en une vue unifiée offrant un compte d’activité horodaté de chaque interaction client.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Ajouts à l’API de prévisualisation de profil | L&#39;API Profil prévisualisation (`/previewsamplestatus`) permet désormais de vue d&#39;une ventilation du nombre total de fragments de profil dans votre organisation IMS, ainsi que de vue de la distribution de fragments de profil entre espaces de nommage d&#39;identité. |
+| Ajouts à l’API de prévisualisation de profil | L&#39;API de prévisualisation de Profil (`/previewsamplestatus`) permet désormais de vue d&#39;une ventilation des fragments de profil totaux dans votre organisation IMS, ainsi que de vue de la distribution des fragments de profil entre espaces de nommage d&#39;identité. |
 | Mises à jour de vue schéma Union | Dans l’interface utilisateur de l’Experience Platform, les utilisateurs peuvent plus facilement trouver des informations concernant tous les schémas et jeux de données contribuant au schéma d’union, ainsi que des attributs de surface clés tels que les champs d’identité et de relation. Ces mises à jour permettent de résoudre les problèmes et de vérifier que les profils sont correctement configurés, que les identités sont correctement assemblées et que les données ont été correctement ingérées. |
 
-For more information on [!DNL Real-time Customer Profile], including tutorials and best practices for working with [!DNL Profile] data, please read the [Real-time Customer Profile overview](../../profile/home.md).
+Pour plus d&#39;informations sur [!DNL Real-time Customer Profile], y compris des didacticiels et les meilleures pratiques pour travailler avec les données [!DNL Profile], consultez la [Présentation du Profil client en temps réel](../../profile/home.md).
 
 ## Segmentation Service {#segmentation}
 
-Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+Adobe Experience Platform Segmentation Service fournit une interface utilisateur et une API RESTful qui vous permettent de créer des segments et de générer des audiences à partir de vos données [!DNL Real-time Customer Profile]. Ces segments sont configurés et gérés de manière centralisée sur [!DNL Platform], ce qui les rend facilement accessibles par toute application d&#39;Adobe.
 
 [!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
 
@@ -59,11 +59,11 @@ Adobe Experience Platform Segmentation Service provides a user interface and RES
 | ------- | ----------- |
 | Suppression des limites de segmentation en flux continu | La limite de sept jours pour la période de consultation a été supprimée. |
 
-For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md)
+Pour plus d&#39;informations sur [!DNL Segmentation Service], consultez la [Présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -71,12 +71,12 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge de l’authentification SSH pour SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Platform] l’aide des clés SSH RSA/DSA Open SSH. See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
-| Améliorations de l&#39;environnement | Vous pouvez activer votre jeu de données pendant [!DNL Profile] le processus d&#39;assimilation des données. Pour plus d’informations, consultez le didacticiel sur le flux de travail [des flux de données](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Cloud enregistrement. |
+| Prise en charge de l’authentification SSH pour SFTP | Vous pouvez connecter votre compte SFTP à [!DNL Platform] à l&#39;aide des clés SSH RSA/DSA Open SSH. Pour plus d&#39;informations, consultez l&#39;[aperçu SFTP](../../sources/connectors/cloud-storage/sftp.md). |
+| Améliorations de l&#39;environnement | Vous pouvez activer votre jeu de données pour [!DNL Profile] pendant le processus d&#39;assimilation des données. Pour plus d&#39;informations, consultez le didacticiel [processus de flux de données d&#39;enregistrement cloud](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).
 
-## Temps jusqu’à la valeur {#time-to-value}
+## Temps jusqu&#39;à la valeur {#time-to-value}
 
 Adobe Experience Platform permet aux équipes d’opérations marketing de créer une vue de 360 degrés de leurs clients sans avoir besoin d’une grande expertise en ingénierie des données. L&#39;objectif est d&#39;accélérer les équipes et de valoriser par la vélocité des données.
 
@@ -116,4 +116,4 @@ Le lecteur de profil compatible avec les marketeurs avec personnalisation vous p
 
 Garantit la transparence du flux de données et fournit des informations sur l’état du trafic de données dans le système à partir des connecteurs source, ce qui permet d’améliorer le libre-service et d’accélérer les opérations de dépannage.
 
-- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l&#39;état d&#39;achèvement, la durée d&#39;exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
+- Surveillez toutes les exécutions de flux et consultez une vue détaillée de chaque exécution, y compris l’état d’achèvement, la durée d’exécution, la liste des fichiers traités, les erreurs et les diagnostics exploitables.
