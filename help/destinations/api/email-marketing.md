@@ -257,7 +257,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant que vous avez obtenu à l’étape précédente.
-* `{CONNECTION_SPEC_ID}`: Utilisez l&#39;ID de spécification de connexion pour  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Utilisez l&#39;identifiant de spécification de connexion pour  [!DNL Unified Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Réponse**
 
@@ -585,7 +585,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}` : utilisez le flux de données obtenu à l’étape précédente.
 * `{ETAG}` : utilisez l’etag obtenu à l’étape précédente.
-* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL API du service de segmentation]** dans le menu de navigation de gauche, puis recherchez l&#39;opération `GET /segment/definitions` dans **[!UICONTROL Définitions de segment]**.
+* `{SEGMENT_ID}` : indiquez l’identifiant du segment que vous souhaitez exporter vers cette destination. Pour récupérer les ID de segment pour les segments que vous souhaitez activer, accédez à **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, sélectionnez **[!UICONTROL Segmentation Service API]** dans le menu de navigation de gauche et recherchez l&#39;opération `GET /segment/definitions` dans **[!UICONTROL Segment Definitions]**.
 * `{PROFILE_ATTRIBUTE}` : par exemple, `"person.lastName"`
 
 **Réponse**
