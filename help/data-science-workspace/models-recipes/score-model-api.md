@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
+keywords: Experience Platform ; Score a model ; Data Science Workspace ; sujets populaires ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Notation d’un modèle (API)
 topic: tutorial
@@ -8,8 +8,8 @@ description: Ce didacticiel vous montrera comment tirer parti des API d'apprenti
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 96%
+source-wordcount: '543'
+ht-degree: 93%
 
 ---
 
