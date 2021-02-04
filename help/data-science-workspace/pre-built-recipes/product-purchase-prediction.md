@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform ; recette d'achat de produit ; Espace de travail de données ; rubriques populaires ; recettes ; recette de précréation
 solution: Experience Platform
 title: Recette d’achat de produit
 topic: overview
@@ -7,8 +7,8 @@ description: La recette de prédiction d’achat de produit vous permet de prév
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 100%
+source-wordcount: '396'
+ht-degree: 96%
 
 ---
 
