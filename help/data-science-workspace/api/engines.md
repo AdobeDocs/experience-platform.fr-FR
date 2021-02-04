@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; moteurs ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Moteurs
 topic: Developer guide
@@ -7,8 +7,8 @@ description: Les moteurs sont le fondement des modèles d’apprentissage automa
 translation-type: tm+mt
 source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
 workflow-type: tm+mt
-source-wordcount: '1147'
-ht-degree: 71%
+source-wordcount: '1162'
+ht-degree: 70%
 
 ---
 
@@ -21,7 +21,7 @@ Les moteurs sont le fondement des modèles d’apprentissage automatique dans Da
 
 >[!TIP]
 >
->Si vous n&#39;avez pas d&#39;URL Docker, consultez les fichiers source du [package dans un didacticiel de recette](../models-recipes/package-source-files-recipe.md) pour découvrir comment créer une URL hôte Docker étape par étape.
+>Si vous n&#39;avez pas d&#39;URL Docker, consultez le didacticiel [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) pour obtenir une présentation détaillée de la création d&#39;une URL d&#39;hôte Docker.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Demande de PySpark/Scala**
 
-Lors d&#39;une demande de recettes PySpark, le `executionType` et `type` est &quot;PySpark&quot;. Lors d&#39;une demande de recettes Scala, le `executionType` et `type` est &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
+Lors d&#39;une demande de recettes PySpark, `executionType` et `type` sont &quot;PySpark&quot;. Lors d&#39;une demande de recettes Scala, les `executionType` et `type` sont &quot;Spark&quot;. L’exemple de recette Scala suivant utilise Spark :
 
 ```shell
 curl -X POST \
@@ -171,7 +171,7 @@ Une réponse réussie renvoie un payload contenant les détails du nouveau moteu
 }
 ```
 
-## Création d’un moteur de pipeline de fonctionnalités à l’aide des URL du Docker {#feature-pipeline-docker}
+## Création d&#39;un moteur de pipeline de fonctionnalités à l&#39;aide des URL Docker {#feature-pipeline-docker}
 
 Vous pouvez créer un moteur de pipeline de fonctionnalités en exécutant une requête de POST tout en fournissant ses métadonnées et une URL Docker qui référence une image Docker.
 
@@ -222,11 +222,11 @@ curl -X POST \
 | `artifacts.default.image.location` | Emplacement de l&#39;image Docker. Seul le Dockerhub Azure ACR ou Public (non authentifié) est pris en charge. |
 | `artifacts.default.image.executionType` | Type d’exécution du moteur. Cette valeur correspond à la langue dans laquelle l&#39;image du Docker est construite. Il peut s’agir de &quot;Spark&quot; ou de &quot;PySpark&quot;. |
 | `artifacts.default.image.packagingType` | Type d&#39;emballage du moteur. Cette valeur doit être définie sur `docker`. |
-| `artifacts.default.defaultMLInstanceConfigs` | Paramètres de votre fichier `pipeline.json` de configuration. |
+| `artifacts.default.defaultMLInstanceConfigs` | Vos paramètres de fichier de configuration `pipeline.json`. |
 
 **Réponse**
 
-A successful response returns a payload containing the details of the newly created feature pipeline Engine including its unique identifier (`id`). L’exemple de réponse suivant est pour un moteur de pipeline de fonctionnalités PySpark.
+Une réponse réussie renvoie une charge utile contenant les détails du nouveau moteur de pipeline de fonctionnalités créé, y compris son identifiant unique (`id`). L’exemple de réponse suivant est pour un moteur de pipeline de fonctionnalités PySpark.
 
 ```json
 {
