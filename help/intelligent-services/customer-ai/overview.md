@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
+keywords: Experience Platform ; présentation ; assistance client ; rubriques populaires ; présentation de l’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Présentation de Customer AI
 topic: Customer AI overview
 description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème d’apprentissage automatique ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
-landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
+landing-page-description: Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle.
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 86%
+source-wordcount: '554'
+ht-degree: 85%
 
 ---
 
@@ -37,7 +37,7 @@ Customer AI n’est pas conçu pour certaines utilisations :
 
 - Customer AI ne doit pas être utilisé pour prédire la tarification dynamique, ni le prix auquel le client va effectuer un achat.
 - Customer AI ne peut pas déterminer si une offre va inciter un client à acheter un article. Bien que vous puissiez décider d’envoyer des réductions basées sur des scores de propension, cela n’est pas nécessairement la meilleure façon de convertir ces clients.
-- Customer AI n’est pas un outil de recommandation de produits. If you have thousands of SKUs, do not use Customer AI as a proxy for a real product recommendations solution like [!DNL Adobe Target].
+- Customer AI n’est pas un outil de recommandation de produits. Si vous disposez de milliers de SKU, n’utilisez pas l’API client comme proxy pour une solution de recommandations de produits réelle telle que [!DNL Adobe Target].
 - Customer AI ne peut pas déterminer à quel stade du parcours d’achat se trouve le client, par exemple s’il est en phase de « sensibilisation », de « considération », d’« achat » ou de « rétention ».
 - N’utilisez pas Customer AI pour identifier les clients susceptibles d’acheter un produit qui sera lancé ultérieurement. Certains événement de succès doivent s’être produits pour que Customer AI puisse correctement former l’algorithme d’apprentissage automatique sur vos données.
 
@@ -51,4 +51,4 @@ Customer AI analyse les données d’événement d’expérience existantes pour
 
 ## Étapes suivantes
 
-Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’IA du client. If you already have all your credentials and data ready, visit  [configuring a Customer AI instance](./user-guide/configure.md). Il décrit les étapes à suivre pour utiliser l’IA du client.
+Vous pouvez commencer par suivre le [guide de prise en main](./getting-started.md). Ce guide vous guide tout au long de la configuration de toutes les conditions préalables requises pour l’IA du client. Si vous disposez déjà de toutes vos informations d’identification et données, consultez la page [configuration d’une instance d’API client](./user-guide/configure.md). Il décrit les étapes à suivre pour utiliser l’IA du client.
