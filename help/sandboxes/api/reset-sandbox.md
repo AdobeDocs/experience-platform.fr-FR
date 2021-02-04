@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;reset sandbox
+keywords: Experience Platform ; accueil ; rubriques populaires ; réinitialiser le sandbox
 solution: Experience Platform
 title: Réinitialisation d’un environnement de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Les environnements de test de développement disposent d’une fonc
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 87%
+source-wordcount: '163'
+ht-degree: 84%
 
 ---
 
