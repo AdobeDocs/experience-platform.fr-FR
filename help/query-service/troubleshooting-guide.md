@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; guide de dépannage ; faq ; dépannage ;
 solution: Experience Platform
 title: Guide de résolution des problèmes d’Adobe Experience Platform Query Service
 topic: troubleshooting
@@ -7,8 +7,8 @@ description: Ce document contient des informations sur les codes d'erreur couran
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 91%
+source-wordcount: '181'
+ht-degree: 85%
 
 ---
 
@@ -35,5 +35,5 @@ ht-degree: 91%
 | **42P01** Query | Table introuvable | La table spécifiée dans la requête est introuvable |
 | **42P07** Query | La table existe | La table porte déjà le même nom (CREATE TABLE) |
 | **53400** Query | LIMIT dépasse la valeur maximale | L’utilisateur a spécifié une clause LIMIT supérieure à 100 000 |
-| **53400** Query | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
+| **53400** Requête | Délai d’expiration de la déclaration | La déclaration soumise en direct a duré plus de 10 minutes au maximum |
 | **08P01** N/A | Type de message non pris en charge | Type de message non pris en charge |
