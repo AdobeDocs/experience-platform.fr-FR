@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;update sandbox
+keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour sandbox
 solution: Experience Platform
 title: Mise à jour d’un environnement de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 72%
+source-wordcount: '127'
+ht-degree: 68%
 
 ---
 
