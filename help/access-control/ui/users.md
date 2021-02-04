@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
 solution: Experience Platform
 title: Gestion des utilisateurs pour un profil de produits
 topic: user guide
@@ -7,8 +7,8 @@ description: Ce document vous montre comment gérer les utilisateurs d’un prof
 translation-type: tm+mt
 source-git-commit: f8d13b305a61f8606c4fa1ceee6d4518b5d83fda
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 72%
+source-wordcount: '206'
+ht-degree: 69%
 
 ---
 
@@ -37,4 +37,4 @@ L’onglet **[!UICONTROL Utilisateurs]** du profil de produit réapparaît, et l
 
 ## Étapes suivantes
 
-Now that you have learned how to control access to [!DNL Platform] features through the [!DNL Admin Console], see the appendix section in the [access control overview](../home.md) to learn more about each individual permission and the [!DNL Platform] functionalities they grant access to.
+Maintenant que vous avez appris à contrôler l&#39;accès aux fonctionnalités [!DNL Platform] par l&#39;intermédiaire de [!DNL Admin Console], reportez-vous à la section de l&#39;annexe [Présentation du contrôle d&#39;accès](../home.md) pour en savoir plus sur chaque autorisation individuelle et les fonctionnalités [!DNL Platform] auxquelles ils donnent accès.
