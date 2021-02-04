@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
+keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; recherche d’objets multiples ; api
 solution: Experience Platform
 title: Recherche de plusieurs objets
 topic: developer guide
@@ -7,19 +7,19 @@ description: Si vous souhaitez afficher plusieurs objets spécifiques au lieu d�
 translation-type: tm+mt
 source-git-commit: b791e9e060d7686e8fc264c445bbfd1e01ff5987
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 60%
+source-wordcount: '235'
+ht-degree: 58%
 
 ---
 
 
 # Recherche de plusieurs objets
 
-If you wish to view several specific objects, rather than making one request per object, [!DNL Catalog] provides a simple shortcut for requesting multiple objects of the same type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
+Si vous souhaitez vue plusieurs objets spécifiques, plutôt que d&#39;effectuer une requête par objet, [!DNL Catalog] fournit un raccourci simple pour demander plusieurs objets du même type. Vous pouvez utiliser une requête GET unique pour renvoyer plusieurs objets spécifiques en incluant une liste d’identifiants séparés par des virgules.
 
 >[!NOTE]
 >
->Even when requesting specific [!DNL Catalog] objects, it is still best practice to `properties` query parameter to return only the properties you need.
+>Même lorsque vous demandez des objets [!DNL Catalog] spécifiques, il est recommandé au paramètre de requête `properties` de renvoyer uniquement les propriétés dont vous avez besoin.
 
 **Format d’API**
 
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d&#39;objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{ID}` | Un identifiant de l’un des objets spécifiques que vous souhaitez récupérer. |
 
 **Requête**
@@ -52,7 +52,7 @@ Une réponse réussie renvoie une liste des jeux de données spécifiés contena
 
 >[!NOTE]
 >
->If a returned object does not contain one ore more of the requested properties indicated by the `properties` query, the response returns only the requested properties that it does include, as shown in ***`Sample Dataset 3`*** and ***`Sample Dataset 4`*** below.
+>Si un objet renvoyé ne contient pas un ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées qu&#39;elle inclut, comme indiqué dans ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {
