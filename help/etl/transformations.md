@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
+keywords: Experience Platform;accueil;rubriques populaires;etl;ETL;etl transformations;ETL
 solution: Experience Platform
 title: Exemple de transformations ETL
 topic: overview
@@ -7,8 +7,8 @@ description: Cet article présente les exemples de transformations qu’un déve
 translation-type: tm+mt
 source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 90%
+source-wordcount: '493'
+ht-degree: 88%
 
 ---
 
@@ -21,7 +21,7 @@ Cet article présente les exemples de transformations qu’un développeur ETL (
 
 ### Exemples de fichiers
 
-Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
+Des exemples de fichiers CSV et JSON sont disponibles à partir de la référence ETL [!DNL GitHub] repo publique gérée par l’Adobe :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -59,7 +59,7 @@ Les exigences de mappage des données CRM sont décrites dans le tableau suivant
 | CRMID | identityMap.CRMID[{&quot;id&quot;:x, primary:false}] | Copie en tant que chaîne dans le tableau CRMID dans identityMap et définit Primary comme false |
 | ECID | identityMap.ECID[{&quot;id&quot;:x, primary: false}] | Copie en tant que chaîne à la première entrée dans le tableau ECID dans identityMap et définit Primary comme false |
 | LOYALTYID | identityMap.LOYALTYID[{&quot;id&quot;:x, primary:true}] | Copie en tant que chaîne dans le tableau LOYALTYID dans identityMap et définit Primary comme true |
-| ECID2 | identityMap.ECID[{&quot;id&quot;:x, primary:false}] | Copie en tant que chaîne à la seconde entrée dans le tableau ECID dans identityMap et définit Primary sur false |
+| ECID2 | identityMap.ECID[{&quot;id&quot;:x, Principal:false}] | Copie en tant que chaîne à la seconde entrée dans le tableau ECID dans identityMap et définit Primary sur false |
 | PHONE | homePhone.number | Copie en tant que chaîne |
 | STREET | homeAddress.street1 | Copie en tant que chaîne |
 | CITY | homeAddress.city | Copie en tant que chaîne |
@@ -178,7 +178,7 @@ La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit corre
 
 ### Exemple de cadre de données
 
-The structure of the following example dataframe has been mapped to a schema that implements the [!DNL XDM Individual Profile] class, and contains the most common fields associated with schemas of that type.
+La structure de l&#39;exemple de base de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [
