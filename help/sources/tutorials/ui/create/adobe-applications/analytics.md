@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
+keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur source Analytics ; Connecteur Analytics ; Source Analytics ; Analytics
 solution: Experience Platform
 title: Création d’un connecteur source Adobe Analytics dans l’interface utilisateur
 topic: overview
@@ -8,7 +8,7 @@ description: Ce didacticiel décrit les étapes à suivre pour créer un connect
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '803'
 ht-degree: 15%
 
 ---
@@ -28,11 +28,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Créer une connexion source avec Adobe Analytics
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) , puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail sources. L’écran **Catalogue** affiche les sources disponibles pour créer des connexions entrantes avec, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l&#39;espace de travail sources. L’écran **Catalogue** affiche les sources disponibles avec lesquelles créer des connexions entrantes, et chaque source affiche le nombre de comptes et de flux de jeux de données existants qui leur sont associés.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de l’écran. Vous pouvez également trouver la source spécifique avec laquelle vous souhaitez travailler à l’aide de l’option de recherche.
 
-Sous la catégorie des applications **[!UICONTROL d’]** Adobe, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d’informations sur le côté droit de l’écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
+Sous la catégorie **[!UICONTROL Adobe applications]**, sélectionnez **[!UICONTROL Adobe Analytics]** pour afficher une barre d&#39;informations sur le côté droit de l&#39;écran. La barre d’informations fournit une brève description de la source sélectionnée ainsi que des options permettant de se connecter à la source ou à la vue de sa documentation. Pour vue des comptes existants, sélectionnez **[!UICONTROL Comptes]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -54,46 +54,46 @@ Dans la liste des suites de rapports disponibles, sélectionnez celle que vous s
 
 ### Nommer votre flux de données
 
-L’étape détaillée **[!UICONTROL du flux de]** jeux de données s’affiche, où vous devez fournir un nom et une description facultative du flux de jeux de données. Select **[!UICONTROL Next]** when finished.
+L&#39;étape **[!UICONTROL Détail du flux de l&#39;ensemble de données]** s&#39;affiche, où vous devez fournir un nom et une description facultative du flux de l&#39;ensemble de données. Sélectionnez **[!UICONTROL Suivant]** une fois terminé.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
 ### Vérifier le flux de vos jeux de données
 
-L’étape **[!UICONTROL Révision]** s’affiche, ce qui vous permet de revoir votre nouveau flux de jeux de données liés à Analytics avant de le créer. Les détails de la connexion sont regroupés par catégorie, notamment :
+L’étape **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de revoir votre nouveau flux de jeux de données liés à Analytics avant de le créer. Les détails de la connexion sont regroupés par catégorie, notamment :
 
-* **[!UICONTROL Connexion]**: Affiche le type de connexion source et la suite de rapports sélectionnée.
+* **[!UICONTROL Connexion]** : Affiche le type de connexion source et la suite de rapports sélectionnée.
 * **[!UICONTROL Attribuer des champs]** de jeu de données et de mappage : Lors de la création d’autres connecteurs source, ce conteneur indique dans quel jeu de données les données source sont imbriquées, y compris le schéma auquel adhère le jeu de données. Le schéma de sortie et le jeu de données sont automatiquement configurés pour les flux de jeux de données Analytics.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
 ### Surveiller le flux de vos jeux de données
 
-Une fois le flux de votre jeu de données créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran **[!UICONTROL Catalogue]** , sélectionnez Flux **[!UICONTROL de]** données pour vue d’une liste de flux établis associés à votre compte Analytics.
+Une fois le flux de votre jeu de données créé, vous pouvez surveiller les données qui y sont ingérées. Dans l’écran **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Flux de dataset]** pour vue une liste de flux établis associés à votre compte Analytics.
 
 ![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
 
-L’écran Flux **de** données s’affiche. Cette page contient une paire de flux de jeux de données, y compris des informations sur leur nom, leurs données source, leur heure de création et leur état.
+L&#39;écran **Flux de données** s&#39;affiche. Cette page contient une paire de flux de jeux de données, y compris des informations sur leur nom, leurs données source, leur heure de création et leur état.
 
 Le connecteur instancie deux flux de jeux de données. L’un représente les données de renvoi et l’autre les données actives. Les données de renvoi ne sont pas configurées pour le Profil, mais sont envoyées au lac de données pour des utilisations analytiques et scientifiques des données.
 
-Pour plus d’informations sur le renvoi, les données actives et leurs latences respectives, voir l’aperçu [du connecteur de données](../../../../connectors/adobe-applications/analytics.md)Analytics.
+Pour plus d’informations sur le renvoi, les données actives et leurs latences respectives, voir [Présentation du connecteur de données Analytics](../../../../connectors/adobe-applications/analytics.md).
 
 Sélectionnez le flux de jeux de données que vous souhaitez vue à partir de la liste.
 
 ![](../../../../images/tutorials/create/analytics/backfill.png)
 
-La page activité **des** jeux de données s&#39;affiche. Cette page affiche le taux de messages consommés sous forme de graphique. Sélectionnez Gouvernance *des* données dans l’en-tête supérieur pour accéder aux champs d’étiquetage.
+La page **activité des jeux de données** s&#39;affiche. Cette page affiche le taux de messages consommés sous forme de graphique. Sélectionnez *Gouvernance des données* dans l&#39;en-tête supérieur pour accéder aux champs d&#39;étiquetage.
 
 ![](../../../../images/tutorials/create/analytics/batches.png)
 
-Vous pouvez vue les étiquettes héritées d’un flux de données à partir de l’écran de gouvernance *des* données. Pour accéder à des libellés spécifiques, sélectionnez le bouton Modifier en haut à droite.
+Vous pouvez vue les étiquettes héritées d&#39;un flux de données à partir de l&#39;écran *Gouvernance des données*. Pour accéder à des libellés spécifiques, sélectionnez le bouton Modifier en haut à droite.
 
 ![](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The **Edit governance labels** panel appears. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
+Le panneau **Modifier les étiquettes de gouvernance** s&#39;affiche. Cet écran vous permet d&#39;accéder et de modifier le contrat, l&#39;identité et les étiquettes sensibles d&#39;un flux de données.
 
-Pour plus d’informations sur la manière d’étiqueter les données provenant d’Analytics, consultez le guide [des étiquettes d’utilisation des](../../../../../data-governance/labels/user-guide.md)données.
+Pour plus d’informations sur la manière d’étiqueter les données provenant d’Analytics, consultez le [guide des étiquettes d’utilisation des données](../../../../../data-governance/labels/user-guide.md).
 
 ![](../../../../images/tutorials/create/analytics/labels.png)
 
@@ -110,7 +110,7 @@ La vidéo suivante est destinée à vous aider à comprendre comment ingérer de
 
 >[!WARNING]
 >
-> L’ [!DNL Platform] interface utilisateur affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
+> L&#39;interface utilisateur [!DNL Platform] affichée dans la vidéo suivante est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
