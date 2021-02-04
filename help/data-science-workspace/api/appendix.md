@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ;
 solution: Experience Platform
 title: Annexe
 topic: Developer guide
@@ -7,19 +7,19 @@ description: Les sections suivantes fournissent des informations de référence 
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 85%
+source-wordcount: '323'
+ht-degree: 83%
 
 ---
 
 
 # Annexe
 
-The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
+Les sections suivantes contiennent des informations de référence sur diverses fonctionnalités de l&#39;API [!DNL Sensei Machine Learning].
 
 ## Paramètres de requête pour la récupération de ressources {#query}
 
-The [!DNL Sensei Machine Learning] API provides support for query parameters with retrieving assets. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+L&#39;API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête lors de la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
