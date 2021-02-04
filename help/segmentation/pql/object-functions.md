@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;object functions;object;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;object fonctions;object;
 solution: Experience Platform
 title: Fonctions d’objet
 topic: developer guide
@@ -7,15 +7,15 @@ description: Le langage de requête de profil (PQL) offre des fonctions pour fac
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '120'
-ht-degree: 82%
+source-wordcount: '137'
+ht-degree: 72%
 
 ---
 
 
 # Fonctions d’objet
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour simplifier l’interaction avec les objets. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour simplifier l’interaction avec les objets. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Fonction isNull
 
