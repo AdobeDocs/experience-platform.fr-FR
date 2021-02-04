@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
+keywords: Experience Platform ; accueil ; rubriques populaires ; Paypal ; paypal ; PayPal ; PayPal
 solution: Experience Platform
 title: Connecteur PayPal
 topic: overview
@@ -7,35 +7,35 @@ description: La documentation ci-dessous fournit des informations sur la connexi
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 12%
+source-wordcount: '230'
+ht-degree: 11%
 
 ---
 
 
-# (Bêta) [!DNL PayPal] Connecteur
+# (Bêta) [!DNL PayPal] connecteur
 
 >[!NOTE]
 >
->Le [!DNL PayPal] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
+>Le connecteur [!DNL PayPal] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
+Adobe Experience Platform permet l’assimilation de données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’importation de données à partir d’une application de paiement tierce. Les prestataires de services de paiement sont notamment pris en charge [!DNL PayPal].
+[!DNL Experience Platform] prend en charge l’importation de données à partir d’une application de paiement tierce. [!DNL PayPal] est l&#39;assistance pour les fournisseurs de paiements.
 
 ## LISTE AUTORISÉE d&#39;adresse IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d’informations, consultez la page liste autorisée [d’adresses](../../ip-address-allow-list.md) IP.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL PayPal] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL PayPal] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
-## Se connecter [!DNL PayPal] à [!DNL Platform] l’aide des API
+## Connectez [!DNL PayPal] à [!DNL Platform] à l’aide d’API.
 
 - [Création d’un connecteur PayPal à l’aide de l’API du service de flux](../../tutorials/api/create/payments/paypal.md)
 - [Explorez une application de paiement à l’aide de l’API de service de flux](../../tutorials/api/explore/payments.md)
 - [Collecte de données à partir d’une application de paiement à l’aide de l’API de service de flux](../../tutorials/api/collect/payments.md)
 
-## Se connecter [!DNL PayPal] à [!DNL Platform] l’aide de l’interface utilisateur
+## Connectez [!DNL PayPal] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
 - [Création d’un connecteur source PayPal dans l’interface utilisateur](../../tutorials/ui/create/payments/paypal.md)
 - [Configuration d’un flux de données pour un connecteur de paiements dans l’interface utilisateur](../../tutorials/ui/dataflow/payments.md)
