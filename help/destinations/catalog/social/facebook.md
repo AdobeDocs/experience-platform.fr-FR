@@ -5,10 +5,10 @@ seo-title: Destination Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: d0b6225a726c13e2b77ea0f61446ea489df81e69
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 15%
+source-wordcount: '963'
+ht-degree: 14%
 
 ---
 
@@ -16,6 +16,10 @@ ht-degree: 15%
 # [!DNL Facebook] Destination
 
 ## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>La migration des clients vers la nouvelle expérience de configuration de destination est actuellement en cours. Vous pourriez rencontrer des difficultés pour accéder à la page de configuration de destination en ce moment.
 
 Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 
