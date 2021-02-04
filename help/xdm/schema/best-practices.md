@@ -75,7 +75,7 @@ Si vous souhaitez analyser la manière dont certains attributs d&#39;une entité
 | --- | --- | --- | --- | --- |
 | 1234567 | Addition | 275098 | 2 | 1er octobre, 10h32 |
 | 1234567 | Supprimer | 275098 | 1 | 1er octobre, 10h33 |
-| 1234567 | Addition | 486502 | 1 | 1er octobre, 10:41 |
+| 1234567 | Addition | 486502 | 3 | 1er octobre, 10:41 |
 | 1234567 | Addition | 910482 | 5 | 3 octobre, 14:15 |
 
 #### Cas d’utilisation de la segmentation
@@ -161,35 +161,35 @@ La deuxième approche consisterait à utiliser des schémas de événement pour 
 
 * La segmentation devient plus complexe pour le cas d’utilisation prévu d’origine (identifiant l’état des abonnements les plus récents des clients). Le segment a désormais besoin d’une logique supplémentaire pour marquer le dernier événement d’abonnement d’un client afin de vérifier son état.
 
-## Création de schémas en fonction de vos entités classées
+## Créer des schémas en fonction de vos entités catégorisées
 
-Une fois que vous avez trié vos entités en catégories de profils, de recherches et d&#39;événements, vous pouvez commencer à convertir votre modèle de données en schémas XDM. À des fins de démonstration, l&#39;exemple de modèle de données présenté ci-dessus a été trié en catégories appropriées dans le diagramme suivant :
+Une fois que vous avez trié vos entités en catégories de profil, de recherche et de événement, vous pouvez début convertir votre modèle de données en schémas XDM. À des fins de démonstration, l’exemple de modèle de données présenté précédemment a été trié en catégories appropriées dans le diagramme suivant :
 
 <img src="../images/best-practices/erd-sorted.png" width="800"><br>
 
-La catégorie dans laquelle une entité a été triée doit déterminer la classe XDM sur laquelle vous basez son schéma. Pour réitérer :
+La catégorie sous laquelle une entité a été triée doit déterminer la classe XDM sur laquelle vous basez son schéma. Pour répéter :
 
 * Les entités de profil doivent utiliser la classe [!DNL XDM Individual Profile].
-* Les entités d&#39;événement doivent utiliser la classe [!DNL XDM ExperienceEvent].
+* Les entités de événement doivent utiliser la classe [!DNL XDM ExperienceEvent].
 * Les entités de recherche doivent utiliser des classes XDM personnalisées définies par votre organisation.
 
 >[!NOTE]
 >
->Bien que les entités d&#39;événement soient presque toujours représentées par des schémas distincts, les entités des catégories de profil ou de recherche peuvent être combinées dans un schéma XDM unique, en fonction de leur cardinalité.
+>Bien que les entités de événement soient presque toujours représentées par des schémas distincts, les entités du profil ou des catégories de recherche peuvent être combinées dans un seul schéma XDM, selon leur cardinalité.
 >
->Par exemple, comme l&#39;entité Customers a une relation un-à-un avec l&#39;entité LoyaltyAccounts, le schéma de l&#39;entité Customers peut également inclure un objet `LoyaltyAccount` pour contenir les champs de fidélité appropriés pour chaque client. Toutefois, si la relation est de un à plusieurs, l’entité qui représente le &quot;nombre&quot; peut être représentée par un schéma distinct ou un tableau d’attributs de profil, en fonction de sa complexité.
+>Par exemple, puisque l&#39;entité Clients entretient une relation personnalisée avec l&#39;entité LoyaltyComptes, le schéma de l&#39;entité Clients peut également inclure un objet `LoyaltyAccount` contenant les champs de fidélité appropriés pour chaque client. Cependant, si la relation est de un à plusieurs, l&#39;entité qui représente le &quot;nombre&quot; peut être représentée par un schéma distinct ou un ensemble d&#39;attributs de profil, selon sa complexité.
 
-Les sections ci-dessous fournissent des conseils généraux sur la construction de schémas basés sur votre ERD.
+Les sections ci-dessous fournissent des conseils généraux sur la construction de schémas en fonction de votre DRE.
 
-### Adopter une approche itérative de modélisation
+### Adopter une approche de modélisation itérative
 
-Les [règles d&#39;évolution du schéma](./composition.md#evolution) stipulent que seules des modifications non destructives peuvent être apportées aux schémas une fois qu&#39;ils ont été implémentés. En d’autres termes, une fois que vous avez ajouté un champ à un schéma et que des données ont été assimilées à ce champ, le champ ne peut plus être supprimé. Il est donc essentiel d&#39;adopter une approche itérative de modélisation lors de la création initiale de vos schémas, en commençant par une mise en oeuvre simplifiée qui gagne progressivement en complexité au fil du temps.
+Les [règles de l&#39;évolution des schémas](./composition.md#evolution) dictent que seuls des changements non destructifs peuvent être apportés aux schémas une fois qu&#39;ils ont été mis en oeuvre. En d’autres termes, une fois que vous avez ajouté un champ à un schéma et que des données ont été ingérées sur ce champ, le champ ne peut plus être supprimé. Il est donc essentiel d&#39;adopter une approche de modélisation itérative lors de la création initiale de vos schémas, en commençant par une mise en oeuvre simplifiée qui gagne progressivement en complexité au fil du temps.
 
-Si vous ne savez pas si un champ particulier est nécessaire pour l’inclure dans un schéma, il est recommandé de l’exclure. S’il est déterminé par la suite que le champ est nécessaire, il peut toujours être ajouté à la prochaine itération du schéma.
+Si vous ne savez pas si un champ particulier est nécessaire pour être inclus dans un schéma, la meilleure pratique consiste à l’exclure. S’il est déterminé par la suite que le champ est nécessaire, il peut toujours être ajouté à la prochaine itération du schéma.
 
 ### Champs d’identité
 
-Dans l’Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu&#39;un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité Principale doit être définie pour que le schéma puisse être activé pour une utilisation dans [!DNL Real-time Customer Profile]. Consultez la section [champs d&#39;identité](./composition.md#identity) dans les bases de la composition des schémas pour plus d&#39;informations sur le cas d&#39;utilisation de ces champs.
+Dans l’Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler les informations sur les clients individuels provenant de plusieurs sources de données. Bien qu&#39;un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité Principale doit être définie pour que le schéma puisse être activé pour une utilisation dans [!DNL Real-time Customer Profile]. Consultez la section [champs d&#39;identité](./composition.md#identity) dans les bases de la composition des schémas pour plus d&#39;informations sur le cas d&#39;utilisation de ces champs.
 
 Lors de la conception de vos schémas, toute clé Principale dans vos tables de base de données relationnelles sera probablement candidate pour des identités Principales. Les autres exemples de champs d&#39;identité applicables sont les adresses électroniques des clients, les numéros de téléphone, les ID de compte et [ECID](../../identity-service/ecid.md).
 
