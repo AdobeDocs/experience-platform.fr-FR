@@ -96,7 +96,7 @@ Pour enregistrer votre nouvelle carte, vous devez d&#39;abord fournir un **[!UIC
 
 ![](../images/profile-customization/profiles-edit-new-widget-with-fields.png)
 
-Après l’enregistrement, vous êtes renvoyé à l’onglet **[!UICONTROL Détails]** dans lequel vos nouvelles cartes et attributs sont visibles.
+Après l’enregistrement, vous revenez à l’onglet **[!UICONTROL Détail]** où sont visibles votre nouvelle carte et vos attributs.
 
 ![](../images/profile-customization/profiles-detail-new-widget.png)
 
