@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;schedule a model;Data Science Workspace;popular topics;schedule scoring;schedule training
+keywords: Experience Platform ; planifier un modèle ; Espace de travail des données ; rubriques populaires ; programmer la notation ; programmer la formation
 solution: Experience Platform
 title: Planification d’un modèle (interface utilisateur)
 topic: tutorial
@@ -8,15 +8,15 @@ description: Adobe Experience Platform Data Science Workspace vous permet de con
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 81%
+source-wordcount: '547'
+ht-degree: 79%
 
 ---
 
 
 # Planification d’un modèle (interface utilisateur)
 
-Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
+Adobe Experience Platform [!DNL Data Science Workspace] vous permet de configurer des exécutions planifiées de notation et de formation sur un service d’apprentissage automatique. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 
 Ce tutoriel décrit les étapes à suivre pour configurer les plannings de formation et de notation sur un service existant au moyen de la [!UICONTROL Galerie de services]. Il est composé des sections principales suivantes :
 
@@ -25,7 +25,7 @@ Ce tutoriel décrit les étapes à suivre pour configurer les plannings de forma
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite un service déjà existant. Si vous ne disposez pas d’un service accessible, vous pouvez en créer un à l’aide du tutoriel [Publication de votre modèle en tant que service dans l’interface utilisateur](./publish-model-service-ui.md).
 
@@ -33,7 +33,7 @@ Ce tutoriel nécessite un service déjà existant. Si vous ne disposez pas d’u
 
 Vous pouvez configurer la notation du modèle de sorte que le processus soit automatisé sur une base planifiée. Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour configurer et appliquer un planning de notation :
 
-1. In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!DNL Service Gallery]**. Recherchez le service sur lequel vous souhaitez planifier des opérations de notation et cliquez sur **[!UICONTROL Ouvrir]** pour afficher la page de **Présentation** correspondante.
+1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à **[!DNL Service Gallery]**. Recherchez le service sur lequel vous souhaitez planifier des opérations de notation et cliquez sur **[!UICONTROL Ouvrir]** pour afficher la page de **Présentation** correspondante.
    ![](../images/models-recipes/schedule/click_to_open.png)
 
 2. La page de présentation affiche les informations de notation du service. Cliquez sur le lien **[!UICONTROL Mettre à jour le planning]** pour configurer un planning de notation.
@@ -46,7 +46,7 @@ Vous pouvez configurer la notation du modèle de sorte que le processus soit aut
    ![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
 
 
-## Configuration d’une formation planifiée {#configure-scheduled-training}
+## Configuration d’une formation planifiée  {#configure-scheduled-training}
 
 La configuration des opérations de formation planifiées sur un service garantit que le modèle d’apprentissage automatique est mis à jour selon les schémas de données les plus récents. Chaque fois qu’une opération de formation planifiée se termine, le modèle formé qui en résulte est utilisé pour mettre le service en œuvre jusqu’à la prochaine opération de formation planifiée.
 
@@ -66,4 +66,4 @@ Une fois un service créé, vous pouvez suivre les étapes ci-dessous pour confi
 
 ## Étapes suivantes
 
-By following this tutorial, you have successfully scheduled automated training and scoring runs on a Service, and completed the [!DNL Data Science Workspace] tutorial UI workflow. Si vous ne l’avez pas déjà fait, pensez à [recommencer le tutoriel](./create-retails-sales-dataset.md) et suivez le workflow d’API pour créer, former, noter et publier un modèle.
+En suivant ce didacticiel, vous avez planifié avec succès des exécutions de formation et de notation automatisées sur un service et terminé le processus d&#39;interface utilisateur du didacticiel [!DNL Data Science Workspace]. Si vous ne l’avez pas déjà fait, pensez à [recommencer le tutoriel](./create-retails-sales-dataset.md) et suivez le workflow d’API pour créer, former, noter et publier un modèle.
