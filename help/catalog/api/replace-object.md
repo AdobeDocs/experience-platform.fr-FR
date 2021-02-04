@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;api;replace an object
+keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; api ; remplacer un objet
 solution: Experience Platform
 title: Remplacement d’un objet
 topic: developer guide
@@ -7,19 +7,19 @@ description: Vous pouvez remplacer les contenus d’un objet Catalog à l’aide
 translation-type: tm+mt
 source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 68%
+source-wordcount: '171'
+ht-degree: 64%
 
 ---
 
 
 # Remplacement d’un objet
 
-You can overwrite the contents of a [!DNL Catalog] object using a PUT request, wherein the entire resource is replaced with the request payload.
+Vous pouvez remplacer le contenu d&#39;un objet [!DNL Catalog] à l&#39;aide d&#39;une requête de PUT, dans laquelle la ressource entière est remplacée par la charge utile de la requête.
 
 >[!NOTE]
 >
->If you only need to update a few specific fields within a [!DNL Catalog] object, using a PATCH request may be more efficient.
+>Si vous devez uniquement mettre à jour quelques champs spécifiques dans un objet [!DNL Catalog], l&#39;utilisation d&#39;une requête de PATCH peut s&#39;avérer plus efficace.
 
 **Format d’API**
 
@@ -29,7 +29,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be replaced. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d&#39;objet [!DNL Catalog] à remplacer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
