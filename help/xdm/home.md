@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience event;Mixins;mixins;mixin;Mixin;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema library;Schema Library;schema;record data;time series;time-series
+keywords: Experience Platform ; accueil ; rubriques populaires ; XDM ; système XDM ; profil individuel XDM ; XDM ExperienceEvent ; XDM Experience Événement ; experienceEvent ; experience événement ; mixins ; mixins ; mixin ; Mixin ; Experience événement ; XDM Experience Événement ; XDM ExperienceEvent ; experienceEvent ; experience;XDM ExperienceEvent;XDM Experienceevenet;Experience data model ; Experience data model;modèle de données;modèle de données;registre de schémas;registre de Schémas;bibliothèque de ;bibliothèque de Schéma;schéma bibliothèque de ;schéma ; enregistrement de données;série de temps;série de temps
 solution: Experience Platform
 title: Présentation du système XDM
 topic: overview
@@ -7,8 +7,8 @@ description: 'La normalisation et l’interopérabilité sont les concepts clés
 translation-type: tm+mt
 source-git-commit: b0b2f0c5aa91a5aeb5836d9795a580ccc69e3e17
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 60%
+source-wordcount: '1642'
+ht-degree: 57%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 60%
 
 La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
-XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. It provides common structures and definitions for any application to use to communicate with [!DNL Platform] services. L’adhésion aux normes XDM permet d’intégrer toutes les données d’expérience client dans une représentation commune afin de fournir des informations de manière plus rapide et intégrée. Vous pouvez obtenir des insights précieux à partir des actions des clients, définir des audiences de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
+XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Il fournit des structures et des définitions communes pour toute application à utiliser pour communiquer avec les services [!DNL Platform]. L’adhésion aux normes XDM permet d’intégrer toutes les données d’expérience client dans une représentation commune afin de fournir des informations de manière plus rapide et intégrée. Vous pouvez obtenir des insights précieux à partir des actions des clients, définir des audiences de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
-XDM is the foundational framework that allows Adobe Experience Cloud, powered by [!DNL Experience Platform], to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which [!DNL Experience Platform] is built, XDM System, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services.
+XDM est le cadre fondateur qui permet à Adobe Experience Cloud, propulsé par [!DNL Experience Platform], de transmettre le bon message à la bonne personne, sur le bon canal, exactement au bon moment. La méthodologie sur laquelle [!DNL Experience Platform] est construit, XDM System, rend opérationnels [!DNL Experience Data Model] schémas pour les services [!DNL Platform].
 
 Ce document offre une vue d’ensemble du rôle du système XDM dans [!DNL Experience Platform].
 
@@ -27,26 +27,26 @@ Ce document offre une vue d’ensemble du rôle du système XDM dans [!DNL Exper
 
 [!DNL Experience Platform] utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit.
 
-Before data can be ingested into [!DNL Platform], a schema must be composed to describe the data&#39;s structure and provide constraints to the type of data that can be contained within each field. Les schémas se composent d’une classe de base et de zéro ou plusieurs mixins.
+Avant que les données puissent être ingérées dans [!DNL Platform], un schéma doit être composé pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d’une classe de base et de zéro ou plusieurs mixins.
 
 Pour plus d’informations sur le modèle de composition de schémas, y compris sur les principes de conception et les bonnes pratiques, consultez les [bases de la composition de schémas](schema/composition.md).
 
 ### [!DNL Schema Registry] et [!DNL Schema Library]
 
-The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry-standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. L’interface utilisateur et l’API du registre des schémas peuvent aussi être utilisées pour créer et gérer de nouveaux schémas et ressources propres à votre organisation.
+**[!DNL Schema Registry]** fournit une interface utilisateur et une API RESTful à partir de laquelle vous pouvez vue et gérer toutes les ressources liées au schéma dans le Adobe Experience Platform **[!DNL Schema Library]**. [!DNL Schema Library] contient des ressources standard mises à votre disposition par Adobe, ainsi que des ressources provenant de [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications. L’interface utilisateur et l’API du registre des schémas peuvent aussi être utilisées pour créer et gérer de nouveaux schémas et ressources propres à votre organisation.
 
-For a comprehensive guide to the major operations available in the [!DNL Schema Registry], see the [Schema Registry developer guide](api/getting-started.md).
+Pour un guide complet des principales opérations disponibles dans le [!DNL Schema Registry], consultez le [Schéma Registry developer guide](api/getting-started.md).
 
 ## Comportements de données dans le système XDM {#data-behaviors}
 
-Data intended for use in [!DNL Experience Platform] is grouped into two behavior types:
+Les données destinées à être utilisées dans [!DNL Experience Platform] sont regroupées en deux types de comportement :
 
 * **Enregistrer les données** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
 * **Données de série temporelle** : fournissent un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
 
 Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique.
 
-Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time-series data, respectively. Ces classes sont décrites plus en détail ci-dessous.
+Bien que vous puissiez définir vos propres classes dans [!DNL Schema Registry], il est recommandé d&#39;utiliser les classes préférées **[!DNL XDM Individual Profile]** et **[!DNL XDM ExperienceEvent]** pour les données d&#39;enregistrement et de série chronologique, respectivement. Ces classes sont décrites plus en détail ci-dessous.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -66,57 +66,57 @@ Bien qu’il ne soit pas facile de classer tous les événements de toutes les s
 
 ![Parcours client ExperienceEvent](images/overview/experience-event-journey.png)
 
-## XDM schemas and [!DNL Experience Platform] services
+## Schémas XDM et services [!DNL Experience Platform]
 
-[!DNL Experience Platform] est indépendante du schéma, ce qui signifie que tout schéma conforme à la norme XDM est disponible pour être utilisé par [!DNL Platform] les services. The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
+[!DNL Experience Platform] est indépendante du schéma, ce qui signifie que tout schéma conforme à la norme XDM est disponible pour être utilisé par  [!DNL Platform] les services. Les modalités d&#39;utilisation des schémas des différents services [!DNL Platform] sont décrites plus en détail ci-dessous.
 
-### [!DNL Catalog Service], [!DNL Data Ingestion] &amp; [!DNL Data Lake]
+### [!DNL Catalog Service],  [!DNL Data Ingestion] &amp;  [!DNL Data Lake]
 
-[!DNL Catalog Service] est le système d&#39;enregistrement des [!DNL Experience Platform] actifs et de leurs schémas connexes. [!DNL Catalog] ne correspond pas aux fichiers ou répertoires contenant des données, mais aux métadonnées et descriptions de ces fichiers et répertoires.
+[!DNL Catalog Service] est le système d&#39;enregistrement des  [!DNL Experience Platform] actifs et de leurs schémas connexes. [!DNL Catalog] ne correspond pas aux fichiers ou répertoires contenant des données, mais aux métadonnées et descriptions de ces fichiers et répertoires.
 
-[!DNL Catalog] les données sont stockées dans le [!DNL Data Lake], un magasin de données très granulaire contenant toutes les données gérées par [!DNL Platform], quel que soit l’origine ou le format de fichier.
+[!DNL Catalog] les données sont stockées dans le  [!DNL Data Lake], un magasin de données très granulaire contenant toutes les données gérées par  [!DNL Platform], quel que soit l’origine ou le format de fichier.
 
-To begin ingesting data into [!DNL Experience Platform], a dataset is created using [!DNL Catalog Service]. Le jeu de données fait référence à un schéma XDM décrivant la structure des données à ingérer. If a dataset is created without a schema, [!DNL Experience Platform] will derive an &quot;observed schema&quot; by inspecting the type and content of ingested data fields. Datasets are then tracked in [!DNL Catalog] and stored in the [!DNL Data Lake] alongside the schemas and observed schemas on which they are based.
+Pour commencer à ingérer des données dans [!DNL Experience Platform], un jeu de données est créé à l&#39;aide de [!DNL Catalog Service]. Le jeu de données fait référence à un schéma XDM décrivant la structure des données à ingérer. Si un jeu de données est créé sans schéma, [!DNL Experience Platform] obtient un &quot;schéma observé&quot; en examinant le type et le contenu des champs de données assimilés. Les jeux de données sont ensuite suivis dans [!DNL Catalog] et stockés dans [!DNL Data Lake] à côté des schémas et des schémas observés sur lesquels ils sont basés.
 
-For more information on [!DNL Catalog], see the [Catalog Service overview](../catalog/home.md). Pour plus d’informations sur Adobe Experience Platform Data Ingestion, consultez la [présentation de Data Ingestion](../ingestion/home.md).
+Pour plus d&#39;informations sur [!DNL Catalog], consultez la [Présentation du service de catalogue](../catalog/home.md). Pour plus d’informations sur Adobe Experience Platform Data Ingestion, consultez la [présentation de Data Ingestion](../ingestion/home.md).
 
 ### [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] allows you to use standard SQL to query [!DNL Experience Platform] data to support many different use cases.
+Adobe Experience Platform [!DNL Query Service] vous permet d&#39;utiliser des données SQL standard pour la requête [!DNL Experience Platform] afin de prendre en charge de nombreux cas d&#39;utilisation différents.
 
-After a schema has been composed and a dataset has been created which references that schema, data is then ingested and stored in the [!DNL Data Lake]. Using [!DNL Query Service], you can join any datasets in the [!DNL Data Lake] and capture the query results as a new dataset for use in reporting, machine learning, or for ingestion into [!DNL Real-time Customer Profile].
+Une fois qu&#39;un schéma a été composé et qu&#39;un jeu de données a été créé qui fait référence à ce schéma, les données sont ensuite assimilées et stockées dans le [!DNL Data Lake]. [!DNL Query Service] vous permet de joindre n&#39;importe quel jeu de données dans [!DNL Data Lake] et de capturer les résultats de la requête sous la forme d&#39;un nouveau jeu de données à utiliser dans le rapports, l&#39;apprentissage automatique ou pour l&#39;assimilation dans [!DNL Real-time Customer Profile].
 
-To learn more about [!DNL Query Service], please see the [Query Service introduction](../query-service/home.md).
+Pour en savoir plus sur [!DNL Query Service], consultez l&#39;introduction [Requête Service](../query-service/home.md).
 
 ### [!DNL Real-time Customer Profile]
 
 Real-time Customer Profile fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes ainsi que des comptes horodatés exploitables d’événements impliquant les personnes concernées par l’un des systèmes que vous utilisez avec [!DNL Experience Platform].
 
-[!DNL Real-time Customer Profile] consomme des données au format schéma en fonction des [!DNL XDM Individual Profile] ou [!DNL XDM ExperienceEvent] classes et répond aux requêtes en fonction de ces données. [!DNL Profile] ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
+[!DNL Real-time Customer Profile] utilise des données au format schéma basées sur les  [!DNL XDM Individual Profile] ou  [!DNL XDM ExperienceEvent] classes et répond aux requêtes basées sur ces données. [!DNL Profile] ne prend pas en charge l’utilisation de schémas basés sur d’autres classes.
 
-[!DNL Profile] conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées à l’aide d’une « vue d’union ». Une vue d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  When composing a schema using the UI or API, you can enable the schema for use with [!DNL Real-time Customer Profile] and tag it for inclusion in the union view. Le schéma balisé participe alors à la définition de schéma transmise à [!DNL Profile].
+[!DNL Profile] conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées à l’aide d’une « vue d’union ». Une vue d’union agrège les champs de tous les schémas qui mettent en œuvre la même classe dans un seul et même schéma.  Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou de l’API, vous pouvez activer le schéma pour l’utiliser avec [!DNL Real-time Customer Profile] et le marquer pour l’inclure dans la vue d’union. Le schéma balisé participe alors à la définition de schéma transmise à [!DNL Profile].
 
-As [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent] data is ingested and managed by [!DNL Catalog], it triggers [!DNL Real-time Customer Profile] to begin ingesting data that has been enabled for its use. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
+Comme les données [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent] sont ingérées et gérées par [!DNL Catalog], [!DNL Real-time Customer Profile] commence à ingérer les données qui ont été activées pour leur utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
-[!DNL XDM Individual Profile]Les données permettent d’informer et d’autonomiser les actions sur les canaux ou sur les intégrations de solutions Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données sont utilisées pour alimenter l’apprentissage automatique. The [!DNL Real-time Customer Profile] API can also be used to enrich the functionality of third-party solutions, CRMs, and proprietary solutions.
+[!DNL XDM Individual Profile]Les données permettent d’informer et d’autonomiser les actions sur les canaux ou sur les intégrations de solutions Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données sont utilisées pour alimenter l’apprentissage automatique. L&#39;API [!DNL Real-time Customer Profile] peut également être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions de gestion de la relation client et des solutions propriétaires.
 
 Pour plus d’informations, consultez la [présentation de Real-time Customer Profile](../profile/home.md).
 
 ### [!DNL Data Science Workspace]
 
-Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to gain insights from data stored within [!DNL Experience Platform]. [!DNL Data Science Workspace] permet aux spécialistes des données de créer des recettes basées sur des données XDM Individual et concernant les clients et leurs activités, ce qui facilite les prédictions telles que la propension d’achat et les offres recommandées que l’individu est susceptible d’apprécier et de saisir.[!DNL Profile][!DNL XDM ExperienceEvent]
+Adobe Experience Platform [!DNL Data Science Workspace] utilise l&#39;apprentissage automatique et l&#39;intelligence artificielle pour obtenir des informations sur les données stockées dans [!DNL Experience Platform]. [!DNL Data Science Workspace] permet aux spécialistes des données de créer des recettes basées sur des données XDM Individual et concernant les clients et leurs activités, ce qui facilite les prédictions telles que la propension d’achat et les offres recommandées que l’individu est susceptible d’apprécier et de saisir.[!DNL Profile][!DNL XDM ExperienceEvent]
 
-With [!DNL Data Science Workspace], data scientists can easily create intelligent services APIs powered by machine learning. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées.
+Avec [!DNL Data Science Workspace], les chercheurs en données peuvent facilement créer des API de services intelligents alimentées par l&#39;apprentissage automatique. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences numériques ciblées et personnalisées.
 
-For more information on using [!DNL Experience Platform] data to power insights, see the [Data Science Workspace overview](../data-science-workspace/home.md).
+Pour plus d&#39;informations sur l&#39;utilisation des données [!DNL Experience Platform] pour obtenir des informations sur la puissance, consultez l&#39;[Présentation de Data Science Workspace](../data-science-workspace/home.md).
 
 ## Étapes suivantes et ressources supplémentaires
 
-Now that you better understand the role of schemas throughout [!DNL Experience Platform], you are ready to start composing your own. Pour continuer à compléter votre apprentissage, début en lisant la documentation suggérée et regardez la vidéo ci-dessous.
+Maintenant que vous comprenez mieux le rôle des schémas tout au long de [!DNL Experience Platform], vous êtes prêt à vous début à composer les vôtres. Pour continuer à compléter votre apprentissage, début en lisant la documentation suggérée et regardez la vidéo ci-dessous.
 
-To learn design principles and best practices for composing schemas to be used with [!DNL Experience Platform], begin by reading the [basics of schema composition](schema/composition.md). Pour obtenir des instructions étape par étape sur la création d’un schéma, consultez les tutoriels sur la création d’un schéma [à l’aide de l’API](tutorials/create-schema-api.md) ou [de l’interface utilisateur](tutorials/create-schema-ui.md).
+Pour découvrir les principes de conception et les meilleures pratiques de composition des schémas à utiliser avec [!DNL Experience Platform], commencez par lire les [bases de la composition des schémas](schema/composition.md). Pour obtenir des instructions étape par étape sur la création d’un schéma, consultez les tutoriels sur la création d’un schéma [à l’aide de l’API](tutorials/create-schema-api.md) ou [de l’interface utilisateur](tutorials/create-schema-ui.md).
 
-Pour mieux comprendre [!DNL XDM System] in [!DNL Experience Platform], regardez la vidéo suivante :
+Pour mieux comprendre [!DNL XDM System] dans [!DNL Experience Platform], regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
 
