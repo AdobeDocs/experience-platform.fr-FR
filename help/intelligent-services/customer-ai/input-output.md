@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
+keywords: Experience Platform ; prise en main ; assistance client ; rubriques populaires ; entrée d’assistance client ; sortie d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Entrée et sortie de l’IA client
 topic: Getting started
@@ -7,8 +7,8 @@ description: Le document suivant décrit les différentes entrées et sorties ut
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 34%
+source-wordcount: '838'
+ht-degree: 33%
 
 ---
 
@@ -19,7 +19,7 @@ Le document suivant décrit les différentes entrées et sorties utilisées dans
 
 ## Données d’entrée d’API client
 
-L’IA du client utilise les données du Événement d’expérience du client pour calculer les scores de propension. Pour plus d’informations sur le Événement d’expérience utilisateur, reportez-vous à la section [Préparer les données à utiliser dans la documentation](../data-preparation.md)d’Intelligent Services.
+L’IA du client utilise les données du Événement d’expérience du client pour calculer les scores de propension. Pour plus d&#39;informations sur le Événement d&#39;expérience client, consultez la section [Préparer les données à utiliser dans la documentation d&#39;Intelligent Services](../data-preparation.md).
 
 ### Données historiques
 
@@ -68,4 +68,4 @@ Le tableau ci-dessous décrit les différents attributs trouvés dans les sortie
 
 ## Étapes suivantes {#next-steps}
 
-Une fois vos données préparées et vos informations d’identification et schémas en place, début en suivant le guide [Configurer une instance](./user-guide/configure.md) d’API client. Ce guide vous guide tout au long de la création d’une instance pour l’IA du client.
+Une fois vos données préparées et vos informations d’identification et schémas en place, début en suivant le guide [Configurer une instance d’API client](./user-guide/configure.md). Ce guide vous guide tout au long de la création d’une instance pour l’IA du client.
