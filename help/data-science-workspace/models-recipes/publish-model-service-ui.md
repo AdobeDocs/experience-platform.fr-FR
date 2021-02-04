@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
+keywords: Experience Platform ; publier un modèle ; Espace de travail des données ; rubriques populaires ; noter un service
 solution: Experience Platform
 title: Publication d’un modèle en tant que service (interface utilisateur)
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform Data Science Workspace vous permet de pub
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 92%
+source-wordcount: '469'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Platform Data Science Workspace vous permet de publier un modè
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite un modèle existant avec une opération de formation réussie. Si vous ne disposez pas d’un modèle publiable, suivez le tutoriel [Formation et notation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 
@@ -39,7 +39,7 @@ Si vous préférez publier un modèle à l’aide des API Sensei Machine Learnin
 5. Cliquez sur **[!UICONTROL Terminer]** pour créer le service et revenez à la **[!UICONTROL Galerie de services]** afin d’afficher tous les services disponibles, y compris le service nouvellement créé.
    ![](../images/models-recipes/publish-model/service_gallery.png)
 
-## Notation à l’aide d’un service {#access-a-service}
+## Notation à l’aide d’un service  {#access-a-service}
 
 1. Dans Adobe Experience Platform, cliquez sur l’onglet **[!UICONTROL Services]** situé dans la colonne de navigation de gauche pour accéder à la **[!UICONTROL Galerie de services]**. Recherchez le service à utiliser, puis cliquez sur **[!UICONTROL Noter]**.
    ![](../images/models-recipes/publish-model/click_to_score.png)
@@ -49,7 +49,7 @@ Si vous préférez publier un modèle à l’aide des API Sensei Machine Learnin
    ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. Lorsqu’un service est créé, il hérite des configurations de notation par défaut. Vous pouvez revoir ces configurations et les ajuster selon les besoins en double-cliquant sur les valeurs. Lorsque vous trouvez les configurations satisfaisantes, cliquez sur **[!UICONTROL Terminer]** pour lancer l’opération de notation.
    ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur de **[!UICONTROL score]** est mis à jour.
+5. Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, l’en-tête **[!UICONTROL Le plus récent]** du conteneur **[!UICONTROL Scoring]** sera mis à jour.
    ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Étapes suivantes {#next-steps}
