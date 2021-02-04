@@ -23,7 +23,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -31,11 +31,11 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Prise en charge des API pour SaaS - systèmes de service | New source connectors for [!DNL Salesforce Service Cloud] API and [!DNL ServiceNow] API. |
-| Prise en charge des API pour SaaS - systèmes marketing | New source connectors for [!DNL HubSpot] API. |
-| API support for [!DNL NoSQL] database systems | Nouveaux connecteurs source pour [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL][!DNL PostgreSQL]et [!DNL SQL Server] API. |
-| Prise en charge de l’API pour les systèmes de stockage dans le cloud | New source connectors for [!DNL Azure Data Lake Service Gen 2] API and [!DNL Google Cloud Storage] API. |
-| Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | New source connector for [!DNL Google Cloud Storage] in the UI. |
+| Prise en charge des API pour SaaS - systèmes de service | Nouveaux connecteurs source pour les API [!DNL Salesforce Service Cloud] et [!DNL ServiceNow]. |
+| Prise en charge des API pour SaaS - systèmes marketing | Nouveaux connecteurs source pour l&#39;API [!DNL HubSpot]. |
+| Prise en charge des API pour les systèmes de base de données [!DNL NoSQL] | Nouveaux connecteurs source pour les API [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL], [!DNL PostgreSQL] et [!DNL SQL Server]. |
+| Prise en charge de l’API pour les systèmes de stockage dans le cloud | Nouveaux connecteurs source pour les API [!DNL Azure Data Lake Service Gen 2] et [!DNL Google Cloud Storage]. |
+| Prise en charge de l’interface utilisateur pour les systèmes de stockage dans le cloud | Nouveau connecteur source pour [!DNL Google Cloud Storage] dans l’interface utilisateur. |
 
 **Problèmes connus**
 
