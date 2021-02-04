@@ -48,7 +48,7 @@ ht-degree: 57%
       * [Présentation d’Offer Decisioning](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consentement {#consent}
    * [Prise en charge du consentement](consent/supporting-consent.md)
-   * Cadre de transparence et de consentement IAB 2.0 {#iab-tcf}
+   * Cadre de transparence et de consentement du CCI 2.0 {#iab-tcf}
       * [Présentation](consent/iab-tcf/overview.md)
       * [Intégration avec Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
       * [Intégrer sans Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
