@@ -3,12 +3,12 @@ title: Informations collectées automatiquement
 seo-title: Informations automatiquement collectées par le SDK Web d’Adobe Experience Platform
 description: Description de chaque information collectée automatiquement par Adobe Experience Cloud SDK
 seo-description: Description de chaque information collectée automatiquement par Adobe Experience Cloud SDK
-keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+keywords: collecter des informations ; contexte ; configurer ; périphérique ; hauteur de l’écran ; orientation de l’écran ; orientation de l’écran ; largeur d’écran ; largeur d’écran ; environnement ; hauteur de la fenêtre d’affichage ; hauteur de la fenêtre d’affichage ; largeur de la fenêtre d’affichage ; détails de l’écran ; détails de l’implémentation ; détails de l’implémentation ; nom ; version ; contexte local ; heure locale ; local ; local;décalage du fuseau horaire local;horodatage;web;url;webPageDetails;web PageDetails;webReferrer;web Parrain;paysage;portrait;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '385'
-ht-degree: 84%
+source-wordcount: '434'
+ht-degree: 74%
 
 ---
 
