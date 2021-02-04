@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;date and time functions;datetime functions;datetime;date;time;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;date and time fonctions;datetime;date;time;time;
 solution: Experience Platform
 title: Fonctions de date et d’heure
 topic: developer guide
@@ -7,15 +7,15 @@ description: Fonctions de date et d’heure sont utilisées pour effectuer des o
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 91%
+source-wordcount: '507'
+ht-degree: 87%
 
 ---
 
 
 # Fonctions de date et d’heure
 
-Fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs au sein [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs comprises dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Current month
 
