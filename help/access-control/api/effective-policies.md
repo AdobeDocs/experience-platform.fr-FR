@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;effective policies;access control api
+keywords: Experience Platform ; accueil ; thèmes populaires ; stratégies efficaces ; api contrôle d'accès
 solution: Experience Platform
 title: Affichage des stratégies efficaces
 topic: developer guide
@@ -7,8 +7,8 @@ description: Le contrôle d’accès dans Adobe Experience Platform vous permet 
 translation-type: tm+mt
 source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 72%
+source-wordcount: '319'
+ht-degree: 70%
 
 ---
 
@@ -25,7 +25,7 @@ POST /acl/effective-policies
 
 **Requête**
 
-The following requests retrieves information about the &quot;[!UICONTROL Manage Datasets]&quot; permission and access to the &quot;[!UICONTROL schemas]&quot; resource type for the current user.
+Les requêtes suivantes récupèrent des informations sur l&#39;autorisation &quot;[!UICONTROL Gérer les jeux de données]&quot; et l&#39;accès au type de ressource &quot;[!UICONTROL schémas]&quot; pour l&#39;utilisateur actuel.
 
 ```shell
 curl -X POST \
@@ -66,11 +66,11 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-This document covered how to make calls to the [!DNL Access Control] API to return information on active permissions and related policies for resource types. For more information about access control for [!DNL Experience Platform], see the [access control overview](../home.md).
+Ce document décrit comment appeler l&#39;API [!DNL Access Control] pour renvoyer des informations sur les autorisations principales et les stratégies associées pour les types de ressources. Pour plus d&#39;informations sur le contrôle d&#39;accès pour [!DNL Experience Platform], consultez la [présentation du contrôle d&#39;accès](../home.md).
 
 ## Annexe
 
-This section provides supplemental information for using the [!DNL Access Control] API.
+Cette section fournit des informations supplémentaires sur l&#39;utilisation de l&#39;API [!DNL Access Control].
 
 ### Autorisations et types de ressources acceptés
 
