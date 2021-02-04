@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; mixin ; enduserids ; utilisateur final ; ids ; id ;
 solution: Experience Platform
 title: Mélangeur Détails de l’ID utilisateur final
 topic: overview
@@ -7,19 +7,19 @@ description: Ce document présente un aperçu du mixin Détails de l’ID d’ut
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '196'
 ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Mélange des détails] d’ID d’utilisateur final
+# [!UICONTROL ID utilisateur final ] Détailsmixin
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../name-updates.md) mixin.
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../name-updates.md).
 
-[!UICONTROL Les détails] d&#39;identification de l&#39;utilisateur final sont un mélange standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilisé pour décrire les informations d&#39;identité d&#39;une personne dans plusieurs applications d&#39;Adobe. Le mixin fournit un objet de niveau racine, qui contient lui-même un `endUserIDs` `_experience` champ en lecture seule dont les valeurs sont automatiquement mises à jour au fur et à mesure de l’assimilation des données.
+[!UICONTROL ID utilisateur final ] Détail d&#39;un mixin standard pour la  [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md), utilisé pour décrire les informations d&#39;identité d&#39;une personne dans plusieurs applications d&#39;Adobe. Le mixin fournit un objet de niveau racine `endUserIDs`, qui contient lui-même un champ `_experience` en lecture seule dont les valeurs sont automatiquement mises à jour au fur et à mesure que les données sont ingérées.
 
 <img src="../../images/mixins/enduserids.png" width="700" /><br />
 
