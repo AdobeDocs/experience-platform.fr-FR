@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
+keywords: Experience Platform ; accueil ; sujets populaires ; confidentialité des données sur les lacs ; espaces de nommage d'identité ; confidentialité ; données sur le lac
 solution: Experience Platform
 title: Traitement des demandes d’accès à des informations personnelles dans le lac de données
 topic: overview
@@ -7,48 +7,48 @@ description: Adobe Experience Platform Privacy Service traite les demandes d’a
 translation-type: tm+mt
 source-git-commit: 066337419431db24bde0a8d0d30b85132d08f43c
 workflow-type: tm+mt
-source-wordcount: '1272'
-ht-degree: 36%
+source-wordcount: '1285'
+ht-degree: 35%
 
 ---
 
 
 # Traitement de la demande de confidentialité dans [!DNL Data Lake]
 
-Adobe Experience Platform [!DNL Privacy Service] traite les demandes d’accès, de opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et de confidentialité de l’entreprise.
+Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients d&#39;accès, de opt-out de vente ou de suppression de leurs données personnelles, conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
-This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
+Ce document couvre les concepts essentiels liés au traitement des demandes de confidentialité pour les données client stockées dans [!DNL Data Lake].
 
 ## Prise en main
 
-It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
+Il est recommandé de bien comprendre les services [!DNL Experience Platform] suivants avant de lire ce guide :
 
 * [[!DNL Privacy Service]](../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
-* [[!DNL Catalog Service]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
+* [[!DNL Catalog Service]](home.md): Système d’enregistrement pour l’emplacement et le lignage des données dans  [!DNL Experience Platform]. Fournit une API qui peut être utilisée pour mettre à jour les métadonnées des jeux de données.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Identity Service]](../identity-service/home.md) : résout le problème fondamental de la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 
 ## Compréhension des espaces de noms d’identité {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
+Adobe Experience Platform [!DNL Identity Service] relie les données d&#39;identité des clients entre les systèmes et les périphériques. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse électronique (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
 [!DNL Identity Service] conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
-For more information about identity namespaces in [!DNL Experience Platform], see the [identity namespace overview](../identity-service/namespaces.md).
+Pour plus d&#39;informations sur les espaces de nommage d&#39;identité dans [!DNL Experience Platform], consultez la [présentation de l&#39;espace de nommage d&#39;identité](../identity-service/namespaces.md).
 
 ## Ajouter des données d&#39;identité aux jeux de données
 
-Lors de la création de demandes de confidentialité pour les [!DNL Data Lake]clients, des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur d’identité dans leur schéma XDM associé.
+Lors de la création de requêtes de confidentialité pour [!DNL Data Lake], des valeurs d&#39;identité valides (et leurs espaces de nommage associés) doivent être fournies pour chaque client afin de localiser ses données et de les traiter en conséquence. Par conséquent, tous les jeux de données qui font l’objet de demandes de confidentialité doivent contenir un descripteur d’identité dans leur schéma XDM associé.
 
 >[!NOTE]
 >
 >Les jeux de données basés sur des schémas qui ne prennent pas en charge les métadonnées des descripteurs d’identité (tels que les jeux de données ad hoc) ne peuvent pas actuellement être traités dans les demandes de confidentialité.
 
-Cette section décrit les étapes à suivre pour ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données existant. Si vous disposez déjà d’un jeu de données avec un descripteur d’identité, vous pouvez passer à la section [](#nested-maps)suivante.
+Cette section décrit les étapes à suivre pour ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données existant. Si vous disposez déjà d’un jeu de données avec un descripteur d’identité, vous pouvez passer à la section [suivante](#nested-maps).
 
 >[!IMPORTANT]
 >
->Lorsque vous décidez des champs de schéma à définir en tant qu’identités, gardez à l’esprit les [limites de l’utilisation de champs](#nested-maps)de type mappage imbriqués.
+>Lorsque vous décidez des champs de schéma à définir en tant qu’identités, gardez à l’esprit les [limites de l’utilisation de champs de type de mappage imbriqués](#nested-maps).
 
 Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un schéma de jeux de données :
 
@@ -57,19 +57,19 @@ Il existe deux méthodes pour ajouter un descripteur d&#39;identité à un sché
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans l&#39;interface [!DNL Experience Platform ]utilisateur, l&#39;espace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ](../xdm/tutorials/create-schema-ui.md#identity-field) d&#39;identité dans le [!DNL Schema Editor] didacticiel.
+Dans l&#39;interface utilisateur [!DNL Experience Platform ], l&#39;espace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur d&#39;identité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ d&#39;identité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le didacticiel [!DNL Schema Editor].
 
-Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs d’identité, vous pouvez passer à la section suivante lors de l’ [envoi des demandes](#submit)de confidentialité.
+Une fois que vous avez défini les champs appropriés du schéma comme champs d’identité, vous pouvez passer à la section suivante sur [l’envoi de demandes de confidentialité](#submit).
 
 ### Utilisation de l’API {#identity-api}
 
 >[!NOTE]
 >
->Cette section suppose que vous connaissez la valeur d&#39;ID URI unique du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à l’aide de l’ [!DNL Catalog Service] API. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section pour [répertorier](./api/list-objects.md) ou [rechercher](./api/look-up-object.md) des objets [!DNL Catalog] pour trouver votre jeu de données. L&#39;ID de schéma se trouve sous `schemaRef.id`
+>Cette section suppose que vous connaissez la valeur d&#39;ID URI unique du schéma XDM de votre jeu de données. Si vous ne connaissez pas cette valeur, vous pouvez la récupérer à l’aide de l’API [!DNL Catalog Service]. Après avoir lu la section [prise en main](./api/getting-started.md) du guide du développeur, suivez les étapes décrites dans la section [énumération](./api/list-objects.md) ou [recherche d&#39;objets ](./api/look-up-object.md) [!DNL Catalog] pour trouver votre jeu de données. L&#39;ID de schéma se trouve sous `schemaRef.id`
 >
-> Cette section comprend des appels à l&#39;API de registre du Schéma. Pour obtenir des informations importantes sur l’utilisation de l’API, y compris la connaissance de votre concept `{TENANT_ID}` et du concept de conteneur, consultez la section [prise en main](../xdm/api/getting-started.md) du guide du développeur.
+> Cette section comprend des appels à l&#39;API de registre du Schéma. Pour obtenir des informations importantes sur l&#39;utilisation de l&#39;API, y compris la connaissance de votre `{TENANT_ID}` et du concept de conteneur, consultez la section [prise en main](../xdm/api/getting-started.md) du guide du développeur.
 
-Vous pouvez ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données en envoyant une requête de POST au point de `/descriptors` terminaison dans l&#39; [!DNL Schema Registry] API.
+Vous pouvez ajouter un descripteur d&#39;identité au schéma XDM d&#39;un jeu de données en envoyant une requête de POST au point de terminaison `/descriptors` de l&#39;API [!DNL Schema Registry].
 
 **Format d’API**
 
@@ -107,7 +107,7 @@ curl -X POST \
 | `xdm:sourceSchema` | ID URI unique du schéma XDM de votre jeu de données. |
 | `xdm:sourceVersion` | Version du schéma XDM spécifiée dans `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | Chemin d’accès au champ de schéma auquel le descripteur est appliqué. |
-| `xdm:namespace` | L&#39;un des espaces de nommage [d&#39;identité](../privacy-service/api/appendix.md#standard-namespaces) standard reconnus par [!DNL Privacy Service]ou un espace de nommage personnalisé défini par votre organisation. |
+| `xdm:namespace` | L&#39;un des [espaces de nommage d&#39;identité standard](../privacy-service/api/appendix.md#standard-namespaces) reconnus par [!DNL Privacy Service], ou un espace de nommage personnalisé défini par votre organisation. |
 | `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, selon l’espace de nommage utilisé sous `xdm:namespace`. |
 | `xdm:isPrimary` | Une valeur booléenne facultative. Lorsque la valeur est true, cela indique que le champ est une identité Principale. Les schémas ne peuvent contenir qu’une seule identité principale. La valeur par défaut est false si elle n’est pas incluse. |
 
@@ -133,9 +133,9 @@ Une réponse réussie renvoie l’état HTTP 201 (Créé) et les détails du des
 
 >[!NOTE]
 >
->This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
+>Cette section explique comment formater les demandes de confidentialité pour [!DNL Data Lake]. Il est vivement recommandé de consulter la documentation [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) ou [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) pour connaître les étapes complètes de l’envoi d’une tâche de confidentialité, y compris la manière de formater correctement les données d’identité utilisateur envoyées dans les charges de demande.
 
-La section suivante décrit comment effectuer des demandes de confidentialité pour l’ [!DNL Data Lake] utilisation de l’ [!DNL Privacy Service] interface utilisateur ou de l’API.
+La section suivante décrit comment effectuer des demandes de confidentialité pour [!DNL Data Lake] à l&#39;aide de l&#39;interface utilisateur ou de l&#39;API [!DNL Privacy Service].
 
 >[!IMPORTANT]
 >
@@ -149,11 +149,11 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. IDs for the [!DNL Data Lake] must use &quot;unregistered&quot; for their `type` value, and a `namespace` value that matches one the [privacy labels](#privacy-labels) that have been added to applicable datasets.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants de [!DNL Data Lake] doivent utiliser &quot;non inscrit&quot; pour leur valeur `type` et une valeur `namespace` qui correspond à l&#39;une des [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
 
-En outre, le tableau `include` du payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. When making requests to the [!DNL Data Lake], the array must include the value `aepDataLake`.
+En outre, le tableau `include` du payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lorsque vous envoyez des requêtes à [!DNL Data Lake], le tableau doit inclure la valeur `aepDataLake`.
 
-The following request creates a new privacy job for the [!DNL Data Lake], using the unregistered &quot;email_label&quot; namespace. It also includes the product value for the [!DNL Data Lake] in the `include` array:
+La demande suivante crée une nouvelle tâche de confidentialité pour [!DNL Data Lake], à l&#39;aide de l&#39;espace de nommage &quot;email_label&quot; non enregistré. Il inclut également la valeur de produit pour [!DNL Data Lake] dans la baie `include` :
 
 ```shell
 curl -X POST \
@@ -196,19 +196,19 @@ curl -X POST \
 
 ## Traitement des demandes de suppression
 
-When [!DNL Experience Platform] receives a delete request from [!DNL Privacy Service], [!DNL Platform] sends confirmation to [!DNL Privacy Service] that the request has been received and affected data has been marked for deletion. The records are then removed from the [!DNL Data Lake] within seven days. During that seven-day window, the data is soft-deleted and is therefore not accessible by any [!DNL Platform] service.
+Lorsque [!DNL Experience Platform] reçoit une demande de suppression de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] que la demande a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite supprimés du [!DNL Data Lake] dans un délai de sept jours. Pendant cette période de sept jours, les données sont supprimées à l&#39;écran et ne sont donc accessibles à aucun service [!DNL Platform].
 
-In future releases, [!DNL Platform] will send confirmation to [!DNL Privacy Service] after data has been physically deleted.
+Dans les prochaines versions, [!DNL Platform] enverra une confirmation à [!DNL Privacy Service] une fois les données physiquement supprimées.
 
 ## Étapes suivantes
 
-By reading this document, you have been introduced to the important concepts involved with processing privacy requests for the [!DNL Data Lake]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
+En lisant ce document, vous avez été initié aux concepts importants liés au traitement des demandes de confidentialité pour le [!DNL Data Lake]. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
 
 Consultez le document à propos du [traitement des requêtes de confidentialité pour Real-time Customer ](../profile/privacy.md) afin de connaître les étapes du traitement des demandes d’accès à des informations personnelles pour la banque de profils.[!DNL Profile]
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires pour le traitement des demandes de confidentialité dans le [!DNL Data Lake].
+La section suivante contient des informations supplémentaires pour le traitement des demandes de confidentialité dans [!DNL Data Lake].
 
 ### Étiquetage des champs imbriqués de type map {#nested-maps}
 
