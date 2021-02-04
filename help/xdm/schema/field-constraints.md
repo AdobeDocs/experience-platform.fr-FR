@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; type de données ; conception de schéma ; type de données ; type de données ; type de données ; type de données ; schémas ; Schémas ; conception de Schéma ; carte ; carte ;
 solution: Experience Platform
 title: Contraintes de type de champ XDM
 topic: overview
@@ -7,8 +7,8 @@ description: Référence pour les contraintes de type de champ XDM, y compris le
 translation-type: tm+mt
 source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
 workflow-type: tm+mt
-source-wordcount: '994'
-ht-degree: 74%
+source-wordcount: '1027'
+ht-degree: 71%
 
 ---
 
@@ -19,18 +19,18 @@ Les types de champs XDM que vous sélectionnez pour vos schémas limitent les ty
 
 ## Prise en main
 
-Avant d&#39;utiliser ce guide, veuillez examiner les [bases de la composition](./composition.md) des schémas pour une introduction aux schémas, classes et mixins XDM.
+Avant d&#39;utiliser ce guide, veuillez consulter les [bases de la composition des schémas](./composition.md) pour une introduction aux schémas, classes et mixins XDM.
 
-Si vous prévoyez de définir vos propres types de champs, il est vivement recommandé de début avec le guide [de développement du registre des](../api/getting-started.md) Schémas pour savoir comment créer des mixins et des types de données pour inclure vos champs personnalisés dans.
+Si vous prévoyez de définir vos propres types de champs, il est vivement recommandé de début avec le [guide du développeur du registre de Schémas](../api/getting-started.md) pour savoir comment créer des mixins et des types de données pour inclure vos champs personnalisés dans.
 
 ## Faire correspondre les types XDM à d’autres formats
 
-The table below describes the mapping between each XDM type (`meta:xdmType`) and other serialization formats.
+Le tableau ci-dessous décrit le mappage entre chaque type XDM (`meta:xdmType`) et les autres formats de sérialisation.
 
 | Type XDM<br>(meta:xdmType) | JSON<br>(schéma JSON) | Parquet<br>(type/annotation) | [!DNL Spark] SQL | Java | Scala | .NET | CosmosDB | MongoDB | Aerospike | Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | string | type : chaîne | BYTE_ARRAY/UTF8 | StringType | java.lang.String | Chaîne | System.String | Chaîne | string | Chaîne | string |
-| nombre | type : nombre | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Nombre | double | Double | double |
+| nombre | type : nombre | DOUBLE | DoubleType | java.lang.Double | Double | System.Double | Nombre | double | Doublon | doublon |
 | long | type : entier<br>maximum : 2^53+1<br>minimum : -2^53+1 | INT64 | LongType | java.lang.Long | Long | System.Int64 | Nombre | long | Entier | int64 |
 | int | type : entier<br>maximum : 2^31<br>minimum : -2^31 | INT32/INT_32 | IntegerType | java.lang.Integer | Int | System.Int32 | Nombre | int | Entier | int32 |
 | court | type : entier<br>maximum : 2^15<br>minimum : -2^15 | INT32/INT_16 | ShortType | java.lang.Short | Court | System.Int16 | Nombre | int | Entier | int32 |
@@ -42,7 +42,7 @@ The table below describes the mapping between each XDM type (`meta:xdmType`) and
 
 ## Définition des types de champ XDM dans l’API {#define-fields}
 
-XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards and basic field types, with additional constraints for field names which are enforced by [!DNL Experience Platform]. The [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
+Les schémas XDM sont définis à l&#39;aide des normes [Schéma JSON](https://json-schema.org/) et des types de champs de base, avec des contraintes supplémentaires pour les noms de champs qui sont appliqués par [!DNL Experience Platform]. L&#39;[Schéma Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) vous permet de définir d&#39;autres types de champs en utilisant des formats et des contraintes facultatives. Les types de champ XDM sont exposés par l&#39;attribut de niveau champ, `meta:xdmType`.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ XDM schemas are defined using [JSON Schema](https://json-schema.org/) standards 
 
 Le tableau suivant souligne la mise en forme appropriée pour définir les types de champs scalaires et les types de champs plus spécifiques à l’aide de propriétés facultatives. Pour plus d’informations sur les propriétés facultatives et les mots-clés spécifiques au type, consultez la [documentation des schémas JSON](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/mixins.md#create) ou [créer un type](../api/data-types.md#create)de données.
+Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de code fourni pour générer votre demande d’API pour [créer un mixin](../api/mixins.md#create) ou [créer un type de données](../api/data-types.md#create).
 
 <table>
   <tr>
@@ -209,7 +209,7 @@ Pour commencer, recherchez le type de champ souhaité et utilisez l’exemple de
     </td>
   </tr>
   <tr>
-    <td>date-time</td>
+    <td>date-heure</td>
     <td>type : chaîne<br/>format : date-time</td>
     <td>
       <pre class="JSON language-JSON hljs">
