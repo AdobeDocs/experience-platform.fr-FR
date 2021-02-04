@@ -1,5 +1,5 @@
 ---
-keywords: Experience Cloud;getting started;content and commerce ai;popular topics;Intelligent Services;ccai
+keywords: Experience Cloud ; prise en main ; contenu et commerce ; rubriques populaires ; Services intelligents ; cai
 solution: Experience Cloud, Intelligent Services, Experience Platform
 title: Présentation de Content and Commerce AI
 topic: Content and Commerce AI
@@ -7,7 +7,7 @@ description: Content and Commerce AI est un ensemble de services d’IA qui vous
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '419'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Le contenu est un composant essentiel de ces expériences. Pour mieux répondre 
 
 | Type de contenu | Fonctionnalités | Présentation des fonctionnalités |
 | --- | --- | --- |
-| Texte | - extraction des mots-clés et des entités <br>- Classifications personnalisées | - Extraire automatiquement les mots-clés et les balises des documents d’entreprise et des pages Web à l’aide d’un service d’IA prêt à l’emploi. <br> - Nommer automatiquement les documents ou pages Web d&#39;une entreprise par taxonomie d&#39;entreprise à l&#39;aide d&#39;un service basé sur des modèles d&#39;IA personnalisés. |
+| Texte | - extraction des mots-clés et des entités <br> - Classifications personnalisées | - Extraire automatiquement les mots-clés et les balises des documents d’entreprise et des pages Web à l’aide d’un service d’IA prêt à l’emploi. <br> - Nommer automatiquement les documents ou pages Web d&#39;une entreprise par taxonomie d&#39;entreprise à l&#39;aide d&#39;un service basé sur des modèles d&#39;IA personnalisés. |
 | Images | - Recommandations visuelles <br> - extraction des couleurs | - Offrir aux consommateurs des recommandations visuellement similaires, optimisées par un modèle d&#39;IA développé sur des caractéristiques de produit intuitives (conception, couleur, forme). <br> - Extrait précisément les couleurs dominantes (étiquettes et valeurs hexadécimales) et leur poids à partir d&#39;une image de produit. |
 
 ## Comprendre le contenu et le commerce AI
