@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;user guide;attribution ai;popular topics;region
+keywords: Experience Platform ; guide de l’utilisateur ; attribution ai ; rubriques populaires ; région
 solution: Experience Platform, Intelligent Services
 title: Guide d’utilisation d’Attribution AI
 topic: User guide
@@ -7,7 +7,7 @@ description: Ce document sert de guide pour interagir avec Attribution AI dans l
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1755'
 ht-degree: 79%
 
 ---
@@ -21,21 +21,21 @@ Ce document sert de guide pour interagir avec Attribution AI dans l’interface 
 
 ## Création d’une instance
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
+Dans l&#39;interface utilisateur [!DNL Adobe Experience Platform], cliquez sur **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur d’Attribution AI, cliquez sur **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](./images/user-guide/open_Attribution_ai.png)
 
 La page de service d’Attribution AI s’affiche. Cette page répertorie les instances de service d’Attribution AI et affiche les informations les concernant, notamment le nom de l’instance, les événements de conversion, la fréquence à laquelle l’instance est exécutée et l’état de la dernière mise à jour.
 
-La mesure **[!UICONTROL Total des événements de conversion marqués]** se trouve dans le coin inférieur droit du conteneur d’instance **** Créer. Cette mesure suit le nombre total de événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
+Vous pouvez trouver la mesure **[!UICONTROL événements de conversion totaux marqués]** située dans le coin inférieur droit du conteneur **[!UICONTROL Créer une instance]**. Cette mesure suit le nombre total de événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de sandbox et toutes les instances de service supprimées.
 
 ![](./images/user-guide/total_conversions.png)
 
-Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance parmi les instances **[!UICONTROL de]** service existantes. Les contrôles contiennent les informations suivantes :
+Les instances de service peuvent être modifiées, clonées et supprimées à l’aide des commandes situées sur le côté droit de l’interface utilisateur. Pour afficher ces contrôles, sélectionnez une instance de vos instances **[!UICONTROL Service existantes]**. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Modifier]**: La sélection de **[!UICONTROL Modifier]** vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence d’évaluation de l’instance.
-- **[!UICONTROL Cloner]**: Si vous sélectionnez **[!UICONTROL Cloner]** , l’instance de service sélectionnée est copiée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Modifier]** : Le fait de sélectionner  **** Modifier vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description, l’état et la fréquence d’évaluation de l’instance.
+- **[!UICONTROL Cloner]** : La sélection de  **** Clonecopies copie l’instance de service sélectionnée. Vous pouvez ensuite modifier le processus pour effectuer des ajustements mineurs et le renommer en tant que nouvelle instance.
+- **[!UICONTROL Supprimer]** : Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
 - **[!UICONTROL Source]** de données : Lien vers le jeu de données utilisé par cette instance.
 - **[!UICONTROL Détails]** de la dernière exécution : Ceci s’affiche uniquement en cas d’échec d’une exécution. Les informations sur les raisons pour lesquelles l&#39;exécution a échoué, telles que les codes d&#39;erreur, sont affichées ici.
 
@@ -43,11 +43,11 @@ Les instances de service peuvent être modifiées, clonées et supprimées à l�
 
 - **[!UICONTROL Événements]** de conversion : Aperçu rapide des événements de conversion configurés pour cette instance.
 - **[!UICONTROL Fenêtre]** de recherche : Période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact du événement de conversion.
-- **[!UICONTROL Points de contact]**: Liste de tous les points de contact que vous avez définis lors de la création de cette instance.
+- **[!UICONTROL Points de contact]** : Liste de tous les points de contact que vous avez définis lors de la création de cette instance.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Select **[!UICONTROL Create instance]** to begin.
+Sélectionnez **[!UICONTROL Créer une instance]** pour commencer.
 
 ![Création d’une instance](./images/user-guide/landing_page.png)
 
@@ -105,7 +105,7 @@ Si vous avez besoin de plusieurs conversions, cliquez sur **Ajouter une conversi
 
 ![ajouter une conversion](./images/user-guide/add_conversion.png)
 
-### Définition de l’intervalle de recherche en amont {#lookback-window}
+### Définition de l’intervalle de recherche en amont  {#lookback-window}
 
 Une fois la conversion définie, vous devez confirmer votre intervalle de recherche en amont. En utilisant les touches fléchées ou en cliquant sur la valeur par défaut (56), indiquez le nombre de jours avant votre événement de conversion à partir duquel vous souhaitez inclure des points de contact. Les points de contact sont définis à l’étape suivante.
 
@@ -201,7 +201,7 @@ Pour finir, saisissez le code pays dans le menu déroulant **[!UICONTROL Saisir 
 
 ![région](./images/user-guide/region-based.png)
 
-### Période de formation {#training-window}
+### Période de formation  {#training-window}
 
 Pour vous assurer d’obtenir le modèle le plus précis possible, il est important de former votre modèle avec des données historiques qui représentent votre entreprise. Par défaut, le modèle est formé à l’aide de 2 trimestres (6 mois) de données sur les événements de conversion. Sélectionnez le menu déroulant pour modifier la valeur par défaut. Vous pouvez opter pour une formation basée sur un à quatre trimestres de données (3 à 12 mois).
 
@@ -217,7 +217,7 @@ Une fois que vous avez sélectionné votre période de formation, cliquez sur **
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). Additionally, if you wish to download your scoring results, visit the [downloading scores](./download-scores.md) documentation.
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger vos résultats de score, consultez la [documentation de téléchargement des scores](./download-scores.md).
 
 ## Ressources supplémentaires
 
