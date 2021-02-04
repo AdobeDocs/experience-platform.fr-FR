@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
+keywords: Experience Platform ; accueil ; sujets populaires ; accès aux données ; sdk python ; api d'accès aux données ; lire python ; écrire python
 solution: Experience Platform
 title: Accès aux données à l'aide de Python
 topic: tutorial
@@ -8,7 +8,7 @@ description: Le document suivant contient des exemples sur la façon d'accéder 
 translation-type: tm+mt
 source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '412'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Accès aux données à l&#39;aide de Python
 
-Le document suivant contient des exemples d’accès aux données à l’aide de Python pour une utilisation dans Data Science Workspace. Pour plus d&#39;informations sur l&#39;accès aux données à l&#39;aide des blocs-notes JupyterLab, consultez la documentation sur l&#39;accès aux [données des blocs-notes](../jupyterlab/access-notebook-data.md) JupyterLab.
+Le document suivant contient des exemples d’accès aux données à l’aide de Python pour une utilisation dans Data Science Workspace. Pour plus d&#39;informations sur l&#39;accès aux données à l&#39;aide des blocs-notes JupyterLab, consultez la [documentation relative à l&#39;accès aux données des blocs-notes JupyterLab](../jupyterlab/access-notebook-data.md).
 
 ## Lecture d’un jeu de données
 
@@ -55,7 +55,7 @@ partitions = dataset.get_partitions_info()
 
 La clause DISTINCT vous permet de récupérer toutes les valeurs distinctes au niveau de la ligne/colonne, en supprimant toutes les valeurs de duplicata de la réponse.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la `distinct()` fonction :
+Vous trouverez ci-dessous un exemple d&#39;utilisation de la fonction `distinct()` :
 
 ```python
 df = dataset_reader.select(['column-a']).distinct().read()
@@ -87,9 +87,9 @@ df = dataset_reader.where(experience_ds['timestamp'].gt(87879779797).And(experie
 
 ### Clause ORDER BY
 
-La clause ORDER BY permet de trier les résultats reçus selon une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Pour ce faire, utilisez la `sort()` fonction.
+La clause ORDER BY permet de trier les résultats reçus selon une colonne spécifiée dans un ordre spécifique (croissant ou décroissant). Pour ce faire, utilisez la fonction `sort()`.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la `sort()` fonction :
+Vous trouverez ci-dessous un exemple d&#39;utilisation de la fonction `sort()` :
 
 ```python
 df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
@@ -99,7 +99,7 @@ df = dataset_reader.sort([('column_1', 'asc'), ('column_2', 'desc')])
 
 La clause LIMIT vous permet de limiter le nombre d&#39;enregistrements reçus du jeu de données.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la `limit()` fonction :
+Vous trouverez ci-dessous un exemple d&#39;utilisation de la fonction `limit()` :
 
 ```python
 df = dataset_reader.limit(100).read()
@@ -109,7 +109,7 @@ df = dataset_reader.limit(100).read()
 
 La clause OFFSET vous permet de sauter des lignes du début au début de renvoyer des lignes d’un point ultérieur. En combinaison avec LIMIT, vous pouvez l’utiliser pour itérer des lignes dans des blocs.
 
-Vous trouverez ci-dessous un exemple d’utilisation de la `offset()` fonction :
+Vous trouverez ci-dessous un exemple d&#39;utilisation de la fonction `offset()` :
 
 ```python
 df = dataset_reader.offset(100).read()
@@ -138,7 +138,7 @@ Pour les tâches à exécution plus longue, vous devrez peut-être stocker des �
 
 >[!NOTE]
 >
->Les chemins d’accès aux données **ne sont pas** stockés. Vous devez stocker le chemin d’accès correspondant à ses données respectives.
+>Les chemins d’accès aux données sont **non** stockés. Vous devez stocker le chemin d’accès correspondant à ses données respectives.
 
 ### Écrire dans l&#39;espace utilisateur
 
@@ -160,4 +160,4 @@ my_df = user_helper.read(path=<path_to_directory>, ref_dataset_id=<ref_dataset_i
 
 ## Étapes suivantes
 
-Adobe Experience Platform Data Science Workspace fournit un exemple de recette qui utilise les exemples de code ci-dessus pour lire et écrire des données. Pour en savoir plus sur l&#39;utilisation de Python pour accéder à vos données, consultez le référentiel [Python GitHub de](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail)Data Science Workspace.
+Adobe Experience Platform Data Science Workspace fournit un exemple de recette qui utilise les exemples de code ci-dessus pour lire et écrire des données. Si vous souhaitez en savoir plus sur l&#39;utilisation de Python pour accéder à vos données, consultez le [référentiel Python GitHub de Data Science Workspace](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/python/retail).
