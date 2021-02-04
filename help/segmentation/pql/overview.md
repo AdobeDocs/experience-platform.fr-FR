@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;PQL;pql;profile query language
+keywords: Experience Platform;accueil;rubriques populaires;PQL;pql;profil requête language
 solution: Experience Platform
 title: Présentation du langage de requête de profil (PQL)
 topic: developer guide
@@ -7,15 +7,15 @@ description: Ce guide présente un aperçu général de PQL, couvre les instruct
 translation-type: tm+mt
 source-git-commit: 9bd893820c7ab60bf234456fdd110fb2fbe6697c
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 91%
+source-wordcount: '715'
+ht-degree: 90%
 
 ---
 
 
 # [!DNL Profile Query Language] Présentation (PQL)
 
-[!DNL Profile Query Language] (PQL) est un langage de requête compatible [!DNL Experience Data Model] (XDM) conçu pour prendre en charge la définition et l’exécution de requêtes de segmentation pour [!DNL Real-time Customer Profile] les données.
+[!DNL Profile Query Language] (PQL) est un langage de requête compatible  [!DNL Experience Data Model] (XDM) conçu pour prendre en charge la définition et l’exécution de requêtes de segmentation pour  [!DNL Real-time Customer Profile] les données.
 
 Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 
@@ -63,11 +63,11 @@ PQL prend en charge les types littéraux suivants :
 | ------- | ---------- | ------- |
 | Chaîne | Un type de données composé de caractères entourés par des guillemets doubles. | `"pizza"`, `"jobs"`, `"antidisestablishmentarianism"` |
 | Booléen | Un type de données qui est soit vrai soit faux. | `true`, `false` |
-| Entier | Un type de données représentant un nombre entier. Ce nombre peut être positif, négatif ou nul. | `-201`, `0`, `412` |
-| Double | Un type de données représentant n’importe quel nombre réel. Ce nombre peut être positif, négatif ou nul. | `-51.24`, `3.14`, `0.6942058` |
+| Entier | Un type de données représentant un nombre entier. Ce nombre peut être positif, négatif ou nul. | `-201`,  `0`,  `412` |
+| Double | Un type de données représentant n’importe quel nombre réel. Ce nombre peut être positif, négatif ou nul. | `-51.24`,  `3.14`,  `0.6942058` |
 | Date | Un type de données pouvant être utilisé pour créer des dates en fonction de l’année, du mois et du jour comme paramètres entiers. Celui-ci a la forme `date(year, month, day)` | `date(2020, 3, 14)` |
-| Tableau | Un type de données composé d’un groupe d’autres valeurs littérales. Elle utilise des crochets pour regrouper et des virgules pour délimiter les différentes valeurs. <br> **Remarque :** vous ne pouvez pas accéder directement aux propriétés des éléments d’un tableau. C’est pourquoi, si vous devez accéder à une propriété d’un tableau, la méthode prise en charge est `select X from array where X.item = ...`. <br> PQL réserve le terme `xEvent` pour faire référence à un tableau d’événements d’expérience associés à un profil. | `[1, 4, 7]`, `["US", "CA"]` |
-| Références de temps relatives | Termes réservés pouvant être utilisés pour former des références de date et heure et d’intervalle de temps. <ul><li>maintenant, aujourd’hui, hier, demain</li><li>ceci, précédent, suivant</li><li>avant, après, depuis</li><li>milliseconde(s), seconde(s), minute(s), heure(s), jour(s), semaine(s), mois, année(s), décennie(s), siècle(s), millénaire(s)</li></ul> | `X.timestamp occurs before today`, `X.timestamp occurs last month`, `X.timestamp occurs <= 3 days before now` |
+| Tableau | Un type de données composé d’un groupe d’autres valeurs littérales. Elle utilise des crochets pour regrouper et des virgules pour délimiter les différentes valeurs. <br> **Remarque :** vous ne pouvez pas accéder directement aux propriétés des éléments d’un tableau. C’est pourquoi, si vous devez accéder à une propriété d’un tableau, la méthode prise en charge est `select X from array where X.item = ...`. <br> PQL réserve le terme `xEvent` pour faire référence à un tableau d’événements d’expérience associés à un profil. | `[1, 4, 7]`,  `["US", "CA"]` |
+| Références de temps relatives | Termes réservés pouvant être utilisés pour former des références de date et heure et d’intervalle de temps. <ul><li>maintenant, aujourd’hui, hier, demain</li><li>ceci, précédent, suivant</li><li>avant, après, depuis</li><li>milliseconde(s), seconde(s), minute(s), heure(s), jour(s), semaine(s), mois, année(s), décennie(s), siècle(s), millénaire(s)</li></ul> | `X.timestamp occurs before today`,  `X.timestamp occurs last month`,  `X.timestamp occurs <= 3 days before now` |
 
 
 ## Fonctions PQL
@@ -81,7 +81,7 @@ Le tableau suivant décrit les différentes catégories des fonctions PQL prises
 | Tableau, liste et ensemble | Utilisé pour interagir avec des tableaux, des listes et des ensembles. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de tableau, de liste et d’ensemble](./array-functions.md). |
 | Map | Utilisé pour interagir avec des maps. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de mappage](./map-functions.md). |
 | Chaîne | Utilisé pour interagir avec des chaînes. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions de chaîne](./string-functions.md). |
-| Objet | Utilisé pour interagir avec des objets. More information about these functions can be found in the [object functions document](./object-functions.md). |
+| Objet | Utilisé pour interagir avec des objets. Pour plus d&#39;informations sur ces fonctions, consultez le document [fonctions objet ](./object-functions.md). |
 | Arithmétique | Utilisé pour réaliser des fonctions arithmétiques de base sur des éléments PQL. Vous trouverez plus d’informations sur ces fonctions dans la [documentation consacrée aux fonctions arithmétiques](./arithmetic-functions.md) |
 | Agrégation | Utilisé pour combiner les résultats d’un tableau en un résultat unique. Vous trouverez plus d’informations sur les fonctions d’agrégation dans la [documentation consacrée aux fonctions d’agrégation](./aggregation-functions.md). |
 | Date et heure | Utilisé en association avec les objets date, heure et date-heure. Vous trouverez plus d’informations sur ces fonctions dans la [documentation des fonctions de date/d’heure](./datetime-functions.md). |
@@ -91,4 +91,4 @@ Le tableau suivant décrit les différentes catégories des fonctions PQL prises
 
 ## Étapes suivantes
 
-Now that you&#39;ve learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. Pour plus d’informations sur la segmentation, veuillez lire la [présentation de la segmentation](../home.md).
+Maintenant que vous avez appris à utiliser [!DNL Profile Query Language], vous pouvez utiliser PQL lors de la création et de la modification de segments. Pour plus d’informations sur la segmentation, veuillez lire la [présentation de la segmentation](../home.md).
