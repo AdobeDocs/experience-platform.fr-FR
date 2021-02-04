@@ -5,9 +5,9 @@ seo-title: Destination de la correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 seo-description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 3837f00ff8b950e1f7642a9ffb5d194388dcab28
+source-git-commit: 4e3b7e5ad440cae1ce15e5ecb2c9bd53863a445a
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1502'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 4%
 # Destination de la correspondance client Google
 
 ## Présentation {#overview}
+
+>[!IMPORTANT]
+>
+>La migration des clients vers la nouvelle expérience de configuration de destination est actuellement en cours. Vous pourriez rencontrer des difficultés pour accéder à la page de configuration de destination en ce moment.
 
 [Les ](https://support.google.com/google-ads/answer/6379332?hl=en) correspondances clients de Google vous permettent d&#39;utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, par exemple :  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] et  [!DNL YouTube].
 
