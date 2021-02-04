@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
+keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; prép de données ; préparation des données ; préparation des données ; préparation des données ;
 solution: Experience Platform
 title: Fonctions de mappage
 topic: overview
@@ -7,7 +7,7 @@ description: Ce document présente l’aperçu des données dans Adobe Experienc
 translation-type: tm+mt
 source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '333'
 ht-degree: 2%
 
 ---
@@ -29,7 +29,7 @@ La préparation de données applique également plusieurs validations de donnée
 
 Un mappage est une association d’un attribut d’entrée ou d’un champ calculé à un attribut XDM. Un attribut unique peut être mappé à plusieurs attributs XDM en créant des mappages individuels.
 
-Pour en savoir plus sur les différentes fonctions de mappage, veuillez lire le guide [des fonctions de](./functions.md)mappage.
+Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md).
 
 ## Jeu de mappages
 
@@ -37,4 +37,4 @@ Un ensemble de mappages qui transforment un schéma en un autre est collectiveme
 
 ## Étapes suivantes
 
-Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le guide [des fonctions de](./functions.md)mappage. Pour en savoir plus sur les différentes chaînes de date et heure, veuillez lire le guide [](./dates.md)chaînes de date.
+Ce document couvrait les bases de la préparation des données à Adobe Experience Platform. Pour en savoir plus sur les différentes fonctions de mappage, consultez le [guide des fonctions de mappage](./functions.md). Pour en savoir plus sur les différentes chaînes datetime, consultez le [guide des chaînes de date](./dates.md).
