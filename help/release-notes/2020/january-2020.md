@@ -24,9 +24,9 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 * [[!DNL Sources]](#sources)
 * [[!DNL Destinations]](#destinations)
 
-## [!DNL Experience Data Model] Système (XDM) {#xdm}
+## [!DNL Experience Data Model] Système (XDM)  {#xdm}
 
-Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
+La normalisation et l&#39;interopérabilité sont les concepts clés qui sous-tendent [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
 XDM est une spécification documentée publiquement conçue pour améliorer la puissance des expériences numériques. Elle fournit des structures et des définitions communes à toutes les applications pour communiquer avec des services sur Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
 
@@ -34,38 +34,38 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Restrictions liées au type de champ pour les champs de hiérarchie égale | Une fois qu’un champ XDM a été défini comme un certain type, tous les autres champs du même nom et de la même hiérarchie doivent utiliser le même type de champ, quelles que soient les classes ou les mixins dans lesquels ils sont utilisés. For example, if a mixin for the XDM [!DNL Profile] class contains a `profile.age` field of type &quot;integer&quot;, a similar mixin for XDM [!DNL ExperienceEvent] cannot have a `profile.age` field of type &quot;string&quot;. Pour utiliser un type de champ différent, le champ doit appartenir à une hiérarchie différente de celle précédemment définie (par exemple, `profile.person.age`). Cette fonctionnalité est destinée à prévenir les conflits lorsque les schémas sont rassemblés dans une union. Bien que la contrainte n’affecte pas les schémas existants de façon rétroactive, il est vivement recommandé de vérifier vos schémas à la recherche d’éventuels conflits de type de champ et de les modifier si nécessaire. |
+| Restrictions liées au type de champ pour les champs de hiérarchie égale | Une fois qu’un champ XDM a été défini comme un certain type, tous les autres champs du même nom et de la même hiérarchie doivent utiliser le même type de champ, quelles que soient les classes ou les mixins dans lesquels ils sont utilisés. Par exemple, si un mixin pour la classe XDM [!DNL Profile] contient un champ `profile.age` de type &quot;integer&quot;, un mixin similaire pour XDM [!DNL ExperienceEvent] ne peut pas avoir de champ `profile.age` de type &quot;string&quot;. Pour utiliser un type de champ différent, le champ doit appartenir à une hiérarchie différente de celle précédemment définie (par exemple, `profile.person.age`). Cette fonctionnalité est destinée à prévenir les conflits lorsque les schémas sont rassemblés dans une union. Bien que la contrainte n’affecte pas les schémas existants de façon rétroactive, il est vivement recommandé de vérifier vos schémas à la recherche d’éventuels conflits de type de champ et de les modifier si nécessaire. |
 | Validation de champ sensible à la casse | Les champs personnalisés de même niveau doivent porter des noms différents, indépendamment de la casse. Par exemple, si vous ajoutez un champ personnalisé nommé « E-mail », vous ne pouvez pas ajouter au même niveau un autre champ personnalisé nommé « e-mail ». |
 
 **Problèmes connus**
 
 * Aucun
 
-To learn more about working with XDM using the [!DNL Schema Registry] API and [!DNL Schema Editor] user interface, please read the [XDM System documentation](../../xdm/home.md).
+Pour en savoir plus sur l&#39;utilisation de XDM à l&#39;aide de l&#39;API [!DNL Schema Registry] et de l&#39;interface utilisateur [!DNL Schema Editor], consultez la [documentation du système XDM](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande. Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help you manage these data requests from your customers. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez envoyer des demandes d&#39;accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui vous permet de respecter automatiquement les réglementations légales et de confidentialité de l&#39;entreprise.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 |--- | ---|
-| [!DNL Privacy Service] recomposition | The formerly named &quot;GDPR Service&quot; has been rebranded to [!DNL Privacy Service] as the service has grown to support other regulations in addition to GDPR. |
-| Nouveaux points de terminaison de l’API | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`. |
-| Nouvelle propriété `regulation` requise | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Les valeurs acceptées sont `gdpr` et `ccpa`. |
-| Prise en charge de [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepte désormais les demandes d’accès/de suppression d’Adobe [!DNL Primetime Authentication], en utilisant `primetimeAuthentication` comme valeur de produit. |
+| [!DNL Privacy Service] recomposition | Le service appelé auparavant &quot;Service RGMD&quot; a été renommé [!DNL Privacy Service], car il a grandi pour appuyer d&#39;autres règlements en plus du RGMD. |
+| Nouveaux points de terminaison de l’API | Le chemin de base de l&#39;API [!DNL Privacy Service] a été mis à jour de `/data/privacy/gdpr` à `/data/core/privacy/jobs`. |
+| Nouvelle propriété `regulation` requise | Lors de la création de nouvelles tâches dans l&#39;API [!DNL Privacy Service], une propriété `regulation` doit être fournie dans la charge utile de la demande pour indiquer la réglementation sous laquelle effectuer le suivi de la tâche. Les valeurs acceptées sont `gdpr` et `ccpa`. |
+| Prise en charge de [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepte désormais les demandes d’accès/de suppression provenant d’Adobe  [!DNL Primetime Authentication],  `primetimeAuthentication` en utilisant comme valeur de produit. |
 | Améliorations de l’interface utilisateur de Privacy Service | Pages de suivi des tâches distinctes pour les règlements RGPD et CCPA. Nouvelle **liste déroulante de type de règlement **pour basculer entre les données de suivi pour le RGPD et l&#39;ACCP. |
 
 **Problèmes connus**
 
 * Aucun
 
-For more information about [!DNL Privacy Service], please start by reading the [Privacy Service overview](../../privacy-service/home.md).
+Pour plus d&#39;informations sur [!DNL Privacy Service], veuillez début en lisant la [présentation du Privacy Service](../../privacy-service/home.md).
 
 ## Sources {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
 [!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur les sources, consultez la [présentation des sour
 
 ## Destinations {#destinations}
 
-In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+Dans [CDP en temps réel](../../rtcdp/overview.md), les destinations sont des intégrations préétablies avec les plateformes de destination qui activent les données à ces partenaires de manière transparente.
 
 **Nouvelles fonctionnalités**
 
