@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
+keywords: Experience Platform ; accueil ; rubriques populaires ; mappage des Audiences Manager ; mappage du gestionnaire d’audiences
 solution: Experience Platform
 title: Champ de mappage Audience Manager
 topic: overview
@@ -7,8 +7,8 @@ description: Les tableaux ci-dessous contiennent les mappages entre les champs d
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 97%
+source-wordcount: '162'
+ht-degree: 90%
 
 ---
 
