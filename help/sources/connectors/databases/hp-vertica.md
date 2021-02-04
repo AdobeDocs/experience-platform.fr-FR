@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;HP Vertica;hp vertica
+keywords: Experience Platform ; accueil ; rubriques populaires ; HP Vertica ; hp vertica
 solution: Experience Platform
 title: Connecteur HP Vertica
 topic: overview
@@ -7,35 +7,35 @@ description: La documentation ci-dessous fournit des informations sur la façon 
 translation-type: tm+mt
 source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
 
 
-# (Bêta) [!DNL HP Vertica] Connecteur
+# (Bêta) [!DNL HP Vertica] connecteur
 
 >[!NOTE]
 >
->Le [!DNL HP Vertica] connecteur est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez l’aperçu [des](../../home.md#terms-and-conditions) sources.
+>Le connecteur [!DNL HP Vertica] est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../home.md#terms-and-conditions).
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
+Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données comprend [!DNL HP Vertica].
+Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou Data Warehouse. La prise en charge des fournisseurs de base de données inclut [!DNL HP Vertica].
 
 ## LISTE AUTORISÉE d&#39;adresse IP
 
-Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d’informations, consultez la page liste autorisée [d’adresses](../../ip-address-allow-list.md) IP.
+Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas d’adresses IP spécifiques à votre région à votre liste autorisée, des erreurs ou des performances risquent d’apparaître lors de l’utilisation de sources. Pour plus d&#39;informations, consultez la page [liste autorisée d&#39;adresse IP](../../ip-address-allow-list.md).
 
-La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL HP Vertica] à [!DNL Platform] l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la façon de se connecter [!DNL HP Vertica] à [!DNL Platform] à l&#39;aide d&#39;API ou de l&#39;interface utilisateur :
 
-## Se connecter [!DNL HP Vertica] à [!DNL Platform] l’aide des API
+## Connectez [!DNL HP Vertica] à [!DNL Platform] à l’aide d’API.
 
 - [Création d’un connecteur HP Vertica à l’aide de l’API Flow Service](../../tutorials/api/create/databases/hp-vertica.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
-## Se connecter [!DNL HP Vertica] à [!DNL Platform] l’aide de l’interface utilisateur
+## Connectez [!DNL HP Vertica] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
 - [Création d’un connecteur source HP Vertica dans l’interface utilisateur](../../tutorials/ui/create/databases/hp-vertica.md)
 - [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
