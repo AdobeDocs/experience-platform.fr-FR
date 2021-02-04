@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
+keywords: Experience Platform ; recette de vente au détail ; Espace de travail des sciences de données ; rubriques populaires ; recettes ; recette de précréation
 solution: Experience Platform
 title: Recette Ventes au détail
 topic: overview
@@ -7,8 +7,8 @@ description: La recette Ventes au détail vous fournit des prévisions de ventes
 translation-type: tm+mt
 source-git-commit: 7615476c4b728b451638f51cfaa8e8f3b432d659
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 100%
+source-wordcount: '585'
+ht-degree: 97%
 
 ---
 
