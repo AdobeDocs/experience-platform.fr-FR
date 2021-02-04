@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;target mapping;Target mapping
+keywords: Experience Platform ; accueil ; rubriques populaires ; mapping de ciblage ; Mapping de ciblage
 solution: Experience Platform
 title: Champ de mapping de ciblage
 topic: overview
@@ -7,8 +7,8 @@ description: Le tableau suivant décrit les champs d’un schéma de Événement
 translation-type: tm+mt
 source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 93%
+source-wordcount: '471'
+ht-degree: 91%
 
 ---
 
