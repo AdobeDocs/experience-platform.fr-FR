@@ -22,7 +22,7 @@ ht-degree: 0%
 Cette vidéo présente quatre cas d&#39;utilisation clés de l&#39;Experience Platform :
 
 * Plate-forme de données client en temps réel
-* Intelligence de voyage du client
+* Informations sur le parcours client
 * Diffusion et expérience entre canaux
 * Développement d&#39;applications d&#39;expérience client
 
