@@ -15,7 +15,7 @@ ht-degree: 74%
 # Observability Insights {#observability}
 
 * [Présentation d’Observability Insights](home.md)
-* Guide du développeur de l’API Observability Insights {#api}
+* Guide du développeur de l&#39;API Observability Insights {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Mesures](api/metrics.md)
