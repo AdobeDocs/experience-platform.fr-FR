@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
+keywords: Experience Platform ; modèle d’apprentissage automatique ; Espace de travail des données ; rubriques populaires ; créer et publier un modèle
 solution: Experience Platform
 title: Guide pas-à-pas de création et de publication d’un modèle d’apprentissage automatique
 topic: tutorial
@@ -8,8 +8,8 @@ description: Adobe Experience Platform Data Science Workspace vous donne les moy
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1589'
-ht-degree: 81%
+source-wordcount: '1604'
+ht-degree: 80%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 81%
 
 Imaginons que vous possédez un site web de vente en ligne. Lorsque vos clients achètent sur votre site web de vente en ligne, vous souhaitez leur présenter des recommandations de produits personnalisées afin d’exposer une variété d’autres produits proposés par votre entreprise. Au cours de l’existence de votre site web, vous avez continuellement rassemblé des données clients et souhaitez utiliser ces données d’une manière ou d’une autre pour générer des recommandations de produits personnalisées.
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fournit les moyens d&#39;atteindre votre objectif à l&#39;aide de la Recette [](../pre-built-recipes/product-recommendations.md)du produit prédéfinie Recommendations. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] fournit les moyens d&#39;atteindre votre objectif à l&#39;aide de la Recette [ ](../pre-built-recipes/product-recommendations.md)du produit prédéfinie Recommendations. Suivez ce tutoriel pour découvrir comment accéder à vos données de vente au détail et les comprendre, créer et optimiser un modèle d’apprentissage automatique et générer des insights dans [!DNL Data Science Workspace].
 
-This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers the following steps for creating a machine learning Model:
+Ce didacticiel reflète le flux de travail de [!DNL Data Science Workspace] et décrit les étapes suivantes pour créer un modèle d’apprentissage automatique :
 
 1. [Préparation de vos données](#prepare-your-data)
 2. [Création de votre modèle](#author-your-model)
@@ -33,7 +33,7 @@ This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers
 
 Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
-* Accès à [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+* Accès à [!DNL Adobe Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 * Ressources d’activation. Contactez le représentant de votre compte pour que les éléments suivants soient mis en service.
    * Recette des recommandations
@@ -44,21 +44,21 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
    * Valeurs de publication du jeu de données favori
    * Schéma du jeu de données favori
 
-* Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+* Téléchargez les trois fichiers [!DNL Jupyter Notebook] requis à partir du [référentiel  [!DNL Git] public d&#39;Adobe](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), qui seront utilisés pour démontrer le flux de travaux [!DNL JupyterLab] dans [!DNL Data Science Workspace].
 
 * Une connaissance concrète des concepts clés suivants employés dans ce tutoriel :
-   * [[!DNL Experience Data Model]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
+   * [[!DNL Experience Data Model]](../../xdm/home.md): Effort de normalisation mené par l’Adobe pour définir des schémas standard tels que  [!DNL Profile] et ExperienceEvent, pour la gestion de l’expérience client.
    * Jeux de données : construction de stockage et de gestion pour les données réelles. Instance instanciée physique d’un [schéma XDM](../../xdm/schema/field-dictionary.md).
    * Lots : les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité.
-   * [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project [!DNL Jupyter] et est étroitement intégrée dans [!DNL Experience Platform].
+   * [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est une interface web open-source pour Project  [!DNL Jupyter] et est étroitement intégrée dans  [!DNL Experience Platform].
 
 ## Préparation de vos données {#prepare-your-data}
 
-Pour créer un modèle d’apprentissage automatique qui recommande des produits personnalisés à vos clients, vous devez analyser les achats précédents de clients sur votre site web. This section explores how this data is ingested into [!DNL Platform] through [!DNL Adobe Analytics], and how that data is transformed into a Feature dataset to be used by your machine learning Model.
+Pour créer un modèle d’apprentissage automatique qui recommande des produits personnalisés à vos clients, vous devez analyser les achats précédents de clients sur votre site web. Cette section explique comment ces données sont ingérées dans [!DNL Platform] à [!DNL Adobe Analytics] et comment ces données sont transformées en un jeu de données de fonctionnalités à utiliser par votre modèle d&#39;apprentissage automatique.
 
 ### Exploration des données et compréhension des schémas
 
-1. Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et cliquez sur **[!UICONTROL Jeux de données]** pour faire la liste de tous les jeux de données existants et sélectionnez le jeu de données à explorer. In this case, the [!DNL Analytics] dataset **Golden Data Set postValues**.
+1. Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com/) et cliquez sur **[!UICONTROL Jeux de données]** pour faire la liste de tous les jeux de données existants et sélectionnez le jeu de données à explorer. Dans ce cas, le jeu de données [!DNL Analytics] **Golden Data Set postValues**.
    ![](../images/models-recipes/model-walkthrough/datasets_110.png)
 2. Cliquez sur **[!UICONTROL Prévisualiser le jeu de données]** près du coin supérieur droit pour examiner les enregistrements d’exemples, puis cliquez sur **[!UICONTROL Fermer]**.
    ![](../images/models-recipes/model-walkthrough/golden_data_set_110.png)
@@ -70,27 +70,27 @@ Les autres jeux de données ont été préremplis avec des lots à des fins d’
 | Nom du jeu de données | Schéma | Description |
 | ----- | ----- | ----- |
 | Valeurs de publication du jeu de données favori | Schéma du jeu de données favori | [!DNL Analytics]Données source de votre site web |
-| Jeu de données d’entrée des recommandations | Schéma d’entrée des recommandations | The [!DNL Analytics] data is transformed into a training dataset using a feature pipeline. Ces données sont utilisées pour former le modèle d’apprentissage automatique de recommandations de produits. `itemid` et `userid` correspondent à un produit acheté par ce client. |
+| Jeu de données d’entrée des recommandations | Schéma d’entrée des recommandations | Les données [!DNL Analytics] sont transformées en un jeu de données d’identification à l’aide d’un pipeline de fonctionnalités. Ces données sont utilisées pour former le modèle d’apprentissage automatique de recommandations de produits. `itemid` et `userid` correspondent à un produit acheté par ce client. |
 | Jeu de données de sortie des recommandations | Schéma de sortie des recommandations | Le jeu de données pour lequel les résultats de notation sont stockés contient la liste des produits recommandés pour chaque client. |
 
 ## Création de votre modèle {#author-your-model}
 
-The second component of the [!DNL Data Science Workspace] lifecycle involves authoring Recipes and Models. La recette des recommandations de produits est conçue pour générer des recommandations de produits à grande échelle en utilisant les données d’achats antérieurs et l’apprentissage automatique.
+Le deuxième composant du cycle de vie [!DNL Data Science Workspace] implique la création de Recettes et de Modèles. La recette des recommandations de produits est conçue pour générer des recommandations de produits à grande échelle en utilisant les données d’achats antérieurs et l’apprentissage automatique.
 
 Les recettes sont la base d’un modèle puisqu’elles contiennent des algorithmes d’apprentissage automatique et une logique conçue pour résoudre des problèmes spécifiques. Plus important encore, les recettes vous permettent de démocratiser l’apprentissage automatique au sein de votre organisation, en permettant à d’autres utilisateurs d’accéder à un modèle pour des cas d’utilisation variés sans devoir coder.
 
 ### Exploration de la recette des recommandations de produits
 
-1. In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top to view a list of available Recipes for your organization.
+1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** dans la partie supérieure pour vue une liste de recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Recherchez et ouvrez la **[!UICONTROL recette de recommandations]** fournie en cliquant sur son nom.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3. Dans le rail de droite, cliquez sur **[!UICONTROL Schéma d’entrée des recommandations]** pour afficher le schéma qui alimente la recette. The schema fields &quot;[!UICONTROL itemId]&quot; and &quot;[!UICONTROL userId]&quot; correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
+3. Dans le rail de droite, cliquez sur **[!UICONTROL Schéma d’entrée des recommandations]** pour afficher le schéma qui alimente la recette. Les champs de schéma &quot;[!UICONTROL itemId]&quot; et &quot;[!UICONTROL userId]&quot; correspondent à un produit acheté ([!UICONTROL interactionType]) par ce client à un moment spécifique ([!UICONTROL horodatage]). Suivez les mêmes étapes pour consulter le **[!UICONTROL Schéma de sortie des recommandations]**.
    ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 Vous avez maintenant examiné les schémas d’entrée et de sortie requis par la recette des recommandations de produits. Vous pouvez maintenant passer à la section suivante pour savoir comment créer, entraîner et évaluer un modèle de recommandations de produits.
 
-## Formation et évaluation de votre modèle {#train-and-evaluate-your-model}
+## Formation et évaluation de votre modèle  {#train-and-evaluate-your-model}
 
 Maintenant que vos données sont préparées et que la recette est prête à être utilisée, vous pouvez créer, entraîner et évaluer votre modèle d’apprentissage automatique.
 
@@ -98,7 +98,7 @@ Maintenant que vos données sont préparées et que la recette est prête à êt
 
 Un modèle est une instance de recette qui permet l’entraînement et l’évaluation de données à grande échelle.
 
-1. In [!DNL Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then click **[!UICONTROL Recipes]** at the top of the page to display a list of all available Recipes for your organization..
+1. Dans [!DNL Adobe Experience Platform], accédez à **[!UICONTROL Modèles]** dans la colonne de navigation de gauche, puis cliquez sur **[!UICONTROL Recettes]** en haut de la page pour afficher une liste de toutes les recettes disponibles pour votre organisation.
    ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2. Recherchez et ouvrez la **[!UICONTROL recette de recommandations]** fournie en cliquant sur son nom, en entrant sur la page de présentation de la recette. Cliquez sur **[!UICONTROL Créer un modèle]**, soit à partir du centre (s’il n’existe aucun modèle), soit en haut à droite de la page de présentation de la recette.
    ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
@@ -115,7 +115,7 @@ Vous pouvez choisir d’attendre la fin de la session d’entraînement ou conti
 
 1. Sur la page de **présentation du modèle**, cliquez sur **[!UICONTROL Entraîner]** près du coin supérieur droit pour créer une session d’entraînement. Sélectionnez le même jeu de données d’entrée que celui utilisé lors de la création du modèle, puis cliquez sur **[!UICONTROL Suivant]**.
    ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2. La page de **configuration** s’affiche. Here you can configure the training run&#39;s &quot;[!UICONTROL num_recommendations]&quot; value, also known as a Hyperparameter. Un modèle entraîné et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de la session d’entraînement.
+2. La page de **configuration** s’affiche. Vous pouvez ici configurer la valeur &quot;[!UICONTROL num_recommendations]&quot; de la série de formations, également appelée Hyperparamètre. Un modèle entraîné et optimisé utilisera les hyperparamètres les plus performants en fonction des résultats de la session d’entraînement.
 
    Les hyperparamètres ne peuvent pas être appris. Par conséquent, ils doivent être attribués avant les sessions d’entraînement. L’ajustement d’hyperparamètres peut modifier la précision du modèle entraîné. L’optimisation d’un modèle étant un processus itératif, il peut être nécessaire de procéder à plusieurs sessions d’entraînement avant d’effectuer une évaluation satisfaisante.
 
@@ -137,7 +137,7 @@ Chaque fois qu’une session d’entraînement se termine, vous pouvez afficher 
 3. Vous pouvez voir le jeu de données, les schémas et les paramètres de configuration utilisés pour chaque session d’entraînement sur le rail droit.
 4. Revenez à la page Modèle et identifiez les sessions d’entraînement les plus performantes en observant leurs mesures d’évaluation.
 
-## Exploitation de votre modèle {#operationalize-your-model}
+## Exploitation de votre modèle  {#operationalize-your-model}
 
 La dernière étape du workflow Data Science consiste à rendre opérationnel votre modèle afin de recueillir et d’exploiter les insights de votre banque de données.
 
@@ -166,4 +166,4 @@ Une fois l’opération de notation terminée, vous serez en mesure de prévisua
 
 Bien joué, vous avez généré avec succès des recommandations de produits.
 
-This tutorial introduced you to the workflow of [!DNL Data Science Workspace], demonstrating how raw unprocessed data can be turned into useful information through machine learning. To learn more about using the [!DNL Data Science Workspace], continue to the next guide on [creating the retail sales schema and dataset](./create-retails-sales-dataset.md).
+Ce didacticiel vous a présenté le flux de travail de [!DNL Data Science Workspace], qui montre comment les données brutes non traitées peuvent être transformées en informations utiles par l&#39;apprentissage automatique. Pour en savoir plus sur l&#39;utilisation du [!DNL Data Science Workspace], consultez le guide suivant sur la création du [schéma de vente au détail et du jeu de données](./create-retails-sales-dataset.md).
