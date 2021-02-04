@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;product profile
+keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
 solution: Experience Platform
 title: Création d’un profil de produits
 topic: user guide
@@ -7,8 +7,8 @@ description: Ce document couvre les étapes nécessaires à la création d'un no
 translation-type: tm+mt
 source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 79%
+source-wordcount: '253'
+ht-degree: 77%
 
 ---
 
@@ -19,13 +19,13 @@ Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL 
 
 ![new-profile-button](../images/new-profile-button.png)
 
-The **[!UICONTROL Create New Profile]** dialog appears, prompting you to enter a profile name and description for the new profile. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
+La boîte de dialogue **[!UICONTROL Créer un nouveau Profil]** s&#39;affiche, vous invitant à entrer un nom de profil et une description pour le nouveau profil. Si vous souhaitez que le nom d’affichage du profil soit différent, désélectionnez l’option **[!UICONTROL Identique au nom de profil]** et saisissez le nom d’affichage dans la zone de texte qui s’affiche. Sous **[!UICONTROL Notifications utilisateur]**, vous pouvez activer ou désactiver la notification par courrier électronique des utilisateurs lorsqu’ils sont ajoutés ou supprimés du profil.
 
 Lorsque vous avez terminé, cliquez sur **[!UICONTROL Suivant]**.
 
 ![new-profile-details](../images/new-profile-details.png)
 
-The next screen prompts you to choose which [!DNL Platform] services to include in the profile. Cliquez sur le bouton près d’un service pour désactiver celui-ci. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Terminé]**.
+L’écran suivant vous invite à choisir les services [!DNL Platform] à inclure dans le profil. Cliquez sur le bouton près d’un service pour désactiver celui-ci. Si un service est désactivé, toutes les fonctionnalités qui y sont associées ne seront pas disponibles pour les utilisateurs affectés à ce profil de produit. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Terminé]**.
 
 ![new-profile-services](../images/new-profile-services.png)
 
