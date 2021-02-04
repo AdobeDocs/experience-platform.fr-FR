@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list identities;list cluster
+keywords: Experience Platform ; accueil ; rubriques populaires ; identités de liste ; grappe de listes
 solution: Experience Platform
 title: Répertorier les identités d’un cluster
 topic: API guide
@@ -7,8 +7,8 @@ description: Les identités qui sont liées dans un graphique d’identités, et
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '347'
-ht-degree: 100%
+source-wordcount: '356'
+ht-degree: 97%
 
 ---
 
