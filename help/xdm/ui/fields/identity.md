@@ -43,16 +43,16 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-La zone de travail est mise à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d’empreinte digitale (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme identité. Dans le rail de gauche, le champ d’identité est désormais répertorié sous le nom de la classe ou du mixin qui fournit le champ au schéma.
+Le canevas se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d&#39;empreinte digitale (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme une identité. Dans le rail de gauche, le champ d&#39;identité est désormais répertorié sous le nom de la classe ou du mixin qui fournit le champ au schéma.
 
-Comme tous les champs d’identité sont obligatoires par défaut, le champ est désormais répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés comme requis.
+Comme tous les champs d&#39;identité sont obligatoires par défaut, le champ est désormais répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d&#39;identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés comme requis.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
-Si vous avez défini une identité principale pour le schéma, vous pouvez maintenant passer à [activer le schéma pour l&#39;utiliser dans le profil client en temps réel](../resources/schemas.md#profile).
+Si vous avez défini une identité Principale pour le schéma, vous pouvez maintenant passer à [activer le schéma pour l&#39;utiliser dans le Profil client en temps réel](../resources/schemas.md#profile).
 
 ## Étapes suivantes
 
-Ce guide explique comment définir un champ d’identité dans l’interface utilisateur. Lorsque des données sont assimilées à l’aide de ce schéma, les graphiques d’identité de vos clients sont mis à jour pour refléter les champs d’identité du schéma. Consultez le guide de l&#39;[afficheur de graphiques d&#39;identité](../../../identity-service/ui/identity-graph-viewer.md) pour savoir comment explorer le graphique privé de votre entreprise dans l&#39;interface utilisateur.
+Ce guide explique comment définir un champ d&#39;identité dans l&#39;interface utilisateur. À mesure que les données sont ingérées à l’aide de ce schéma, les graphiques d’identité du client sont mis à jour pour refléter les champs d’identité du schéma. Consultez le guide de la [visionneuse de graphiques d&#39;identité](../../../identity-service/ui/identity-graph-viewer.md) pour savoir comment explorer le graphique privé de votre entreprise dans l&#39;interface utilisateur.
 
-Pour savoir comment définir d&#39;autres types de champs XDM dans l&#39;[!DNL Schema Editor], consultez la présentation sur la [définition de champs dans l&#39;interface utilisateur](./overview.md#special).
+Consultez l&#39;aperçu sur [la définition des champs dans l&#39;interface utilisateur](./overview.md#special) pour savoir comment définir d&#39;autres types de champs XDM dans [!DNL Schema Editor].
