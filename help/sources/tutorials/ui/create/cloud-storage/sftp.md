@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp
+keywords: Experience Platform ; accueil ; rubriques populaires ; SFTP ; sftp
 solution: Experience Platform
 title: Création d’un connecteur source SFTP dans l’interface utilisateur
 topic: overview
@@ -8,7 +8,7 @@ description: Ce didacticiel décrit la procédure à suivre pour créer un conne
 translation-type: tm+mt
 source-git-commit: 0d0d3aa4213f3a8252de82c47eef6e9caa4d3e9e
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '702'
 ht-degree: 8%
 
 ---
