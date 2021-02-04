@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;namespace list;list namespace
+keywords: Experience Platform ; accueil ; sujets populaires ; liste d'espace de nommage ; espace de nommage liste
 solution: Experience Platform
 title: Répertorier les espaces de noms disponibles
 topic: API guide
@@ -7,8 +7,8 @@ description: Liste de tous les espaces de nommage disponibles.
 translation-type: tm+mt
 source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 59%
+source-wordcount: '81'
+ht-degree: 53%
 
 ---
 
@@ -34,7 +34,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Namespaces with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; are standard namespaces, while those with a &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; are namespaces that your organization has created.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les Espaces de nommage dont la valeur &quot;[!UICONTROL custom]&quot; est &quot;[!UICONTROL false]&quot; sont des espaces de nommage standard, tandis que ceux dont la valeur &quot;[!UICONTROL custom]&quot; est &quot;[!UICONTROL true]&quot; sont des espaces de nommage créés par votre organisation.
 
 >[!NOTE]
 >
