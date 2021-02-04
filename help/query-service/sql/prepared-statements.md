@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;prepared statements;prepared;sql;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; instructions préparées ; préparé ; sql ;
 solution: Experience Platform
 title: Instructions préparées
 topic: prepared statements
@@ -7,15 +7,15 @@ description: Dans SQL, les instructions préparées sont utilisées pour modéli
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 93%
+source-wordcount: '378'
+ht-degree: 90%
 
 ---
 
 
 # Instructions préparées
 
-Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de continuer à analyser une requête à l’infini.
+Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform [!DNL Query Service] prend en charge les instructions préparées en utilisant une requête paramétrée. Vous pouvez l’utiliser pour optimiser les performances, car vous n’aurez plus besoin de continuer à analyser une requête à l’infini.
 
 ## Utilisation d’instructions préparées
 
@@ -108,7 +108,7 @@ Lors de l’appel, les résultats sont exactement les mêmes que précédemment�
 
 | identifiant | prénom | nom | date de naissance | adresse électronique | ville | pays |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
+| 1 0000 | alexander | davis | 15/09/1993 | exemple@exemple.com | Vancouver | Canada |
 | 10001 | antoine | dubois | 14/03/1967 | exemple2@exemple.com | Paris | France |
 | 10002 | kyoko | sakura | 26/11/1999 | exemple3@exemple.com | Tokyo | Japon |
 | 10003 | linus | pettersson | 03/06/1982 | exemple4@exemple.com | Stockholm | Suède |
