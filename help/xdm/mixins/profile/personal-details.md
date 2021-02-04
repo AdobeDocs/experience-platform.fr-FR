@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
+keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; détails personnels ; conception de Schéma ; mixin ; Mixin ;
 solution: Experience Platform
 title: Mélangeur Coordonnées personnelles
 topic: overview
@@ -7,19 +7,19 @@ description: Ce document présente un aperçu du mixin Coordonnées personnelles
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 10%
+source-wordcount: '152'
+ht-degree: 9%
 
 ---
 
 
-# [!UICONTROL Mélange des détails] de contact personnel
+# [!UICONTROL Coordonnées personnelles ] Détailsmixin
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../name-updates.md) mixin.
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../name-updates.md).
 
-[!UICONTROL Les coordonnées] personnelles sont un mélange standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit les coordonnées d&#39;une personne.
+[!UICONTROL Coordonnées personnelles ] Détail d&#39;un mélange standard pour la  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) classe qui décrit les coordonnées d&#39;une personne.
 
 <img src="../../images/mixins/profile-personal-details.png" width="700" /><br />
 
