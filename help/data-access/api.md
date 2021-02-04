@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
+keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; sdk python ; sdk spark ; api d’accès aux données ; exportation ; Exporter
 solution: Experience Platform
 title: Guide du développeur d'accès aux données
 topic: developer guide
@@ -7,15 +7,15 @@ description: L’API Data Access soutient Adobe Experience Platform en fournissa
 translation-type: tm+mt
 source-git-commit: 172710c62b6f60de74e05364edb1191fbba0ff64
 workflow-type: tm+mt
-source-wordcount: '512'
-ht-degree: 86%
+source-wordcount: '528'
+ht-degree: 83%
 
 ---
 
 
 # Guide du développeur d&#39;accès aux données
 
-The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
+L&#39;API d&#39;accès aux données prend en charge Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur la détectabilité et l&#39;accessibilité des jeux de données assimilés dans [!DNL Experience Platform].
 
 ![Data Access sur Experience Platform](images/Data_Access_Experience_Platform.png)
 
@@ -204,7 +204,7 @@ Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichier
 
 ## Accès aux contenus d’un fichier
 
-The [!DNL Data Access] API can also be used to access the contents of a file. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
+L&#39;API [!DNL Data Access] peut également être utilisée pour accéder au contenu d&#39;un fichier. Vous pouvez ensuite l’utiliser pour télécharger les contenus vers une source externe.
 
 **Format d’API**
 
@@ -241,4 +241,4 @@ Pour consulter d’autres exemples, veuillez vous reporter au [tutoriel d’acc�
 
 ## Abonnement aux événements d’ingestion de données
 
-[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l&#39;abonnement via la Console [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur l&#39; [abonnement aux notifications](../ingestion/quality/subscribe-events.md) d&#39;assimilation de données.
+[!DNL Platform] rend des événements spécifiques à forte valeur ajoutée disponibles pour l&#39;abonnement via la Console  [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui_fr). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d&#39;informations, consultez le didacticiel sur [l&#39;abonnement aux notifications d&#39;assimilation de données](../ingestion/quality/subscribe-events.md).
