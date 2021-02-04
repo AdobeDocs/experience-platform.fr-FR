@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; modèles de requête ; guide d'api ; modèles ; service de Requête ;
 solution: Experience Platform
 title: Guide de développement de Query Service
 topic: query templates
@@ -7,8 +7,8 @@ description: La documentation suivante présente les différents appels d’API 
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '659'
-ht-degree: 91%
+source-wordcount: '673'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 91%
 
 ## Exemples d’appels API
 
-Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Maintenant que vous savez quels en-têtes utiliser, vous êtes prêt à commencer à lancer des appels à l&#39;API [!DNL Query Service]. Les sections suivantes décrivent les différents appels d&#39;API que vous pouvez effectuer à l&#39;aide de l&#39;API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de modèles de requête
 
