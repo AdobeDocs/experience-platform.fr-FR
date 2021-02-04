@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;analyze data notebooks
+keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; rubriques populaires ; analyser les blocs-notes de données
 solution: Experience Platform
 title: Analyse de vos données à l’aide de notebooks
 topic: tutorial
@@ -8,8 +8,8 @@ description: Ce tutoriel porte sur l’utilisation des notebooks Jupyter élabor
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 84%
+source-wordcount: '1735'
+ht-degree: 83%
 
 ---
 
@@ -20,31 +20,31 @@ Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein d
 
 Les concepts suivants sont présentés :
 
-- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans [!DNL Adobe Experience Platform].
+- **[!DNL JupyterLab]:** [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) est l&#39;interface web de nouvelle génération pour Project Jupyter et est étroitement intégrée dans  [!DNL Adobe Experience Platform].
 - **Lots :** les jeux de données sont constitués de lots. Un lot est un ensemble de données collectées sur une période donnée et traitées ensemble comme une seule unité. De nouveaux lots sont créés lorsque des données sont ajoutées à un jeu de données.
-- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser le [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide.
+- **SDK Data Access (obsolète) :** le SDK Data Access est désormais obsolète. Veuillez utiliser le guide [[!DNL Platform SDK]](../authoring/platform-sdk.md).
 
 ## Exploration de notebooks dans Data Science Workspace
 
 Dans cette section, nous explorons les données qui ont été précédemment intégrées au schéma de ventes au détail.
 
-Data Science Workspace allows users to create [!DNL Jupyter Notebooks] through the [!DNL JupyterLab] platform where they can create and edit machine learning workflows. [!DNL JupyterLab] est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents de notebooks par le biais d’un navigateur web. Ces notebooks peuvent contenir à la fois du code exécutable et des éléments de texte enrichi. For our purposes, we will use Markdown for analysis description and executable [!DNL Python] code to perform data exploration and analysis.
+Data Science Workspace permet aux utilisateurs de créer [!DNL Jupyter Notebooks] via la plate-forme [!DNL JupyterLab] où ils peuvent créer et modifier des workflows d’apprentissage automatique. [!DNL JupyterLab] est un outil de collaboration serveur-client qui permet aux utilisateurs de modifier des documents de notebooks par le biais d’un navigateur web. Ces notebooks peuvent contenir à la fois du code exécutable et des éléments de texte enrichi. Pour nos besoins, nous utiliserons Markdown pour la description de l&#39;analyse et le code exécutable [!DNL Python] pour effectuer l&#39;exploration et l&#39;analyse des données.
 
 ### Sélection de votre espace de travail
 
-When launching [!DNL JupyterLab], we are presented with a web-based interface for Jupyter Notebooks. Selon le type de notebook sélectionné, un noyau correspondant sera lancé.
+Lors du lancement de [!DNL JupyterLab], une interface Web est présentée pour les portables Jupyter. Selon le type de notebook sélectionné, un noyau correspondant sera lancé.
 
-Lors de la comparaison des environnements à utiliser, il faut tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec , la limite de RAM pour les utilisateurs réguliers est de 2 Go. [!DNL Python] Les utilisateurs avancés sont eux limités à 20 Go de RAM. If dealing with larger computations, it would make sense to use [!DNL Spark] which offers 1.5 TB that is shared with all notebook instances.
+Lors de la comparaison des environnements à utiliser, il faut tenir compte des limites de chaque service. Par exemple, si nous utilisons la bibliothèque [pandas](https://pandas.pydata.org/) avec , la limite de RAM pour les utilisateurs réguliers est de 2 Go. [!DNL Python] Les utilisateurs avancés sont eux limités à 20 Go de RAM. S&#39;il s&#39;agit de calculs plus volumineux, il serait logique d&#39;utiliser [!DNL Spark] qui offre 1,5 To et qui est partagé avec toutes les instances d&#39;ordinateur portable.
 
 Par défaut, la recette Tensorflow fonctionne dans un cluster GPU et Python s’exécute dans un cluster CPU.
 
 ### Création d’un nouveau filtre
 
-In the [!DNL Adobe Experience Platform] UI, click on the Data Science tab in the top menu to take you to the Data Science Workspace. From this page, click on the [!DNL JupyterLab] tab which will open the [!DNL JupyterLab] launcher. Vous devriez voir une page similaire à celle-ci.
+Dans l&#39;interface utilisateur [!DNL Adobe Experience Platform], cliquez sur l&#39;onglet Data Science dans le menu supérieur pour accéder à Data Science Workspace. Dans cette page, cliquez sur l&#39;onglet [!DNL JupyterLab] qui ouvre le lanceur [!DNL JupyterLab]. Vous devriez voir une page similaire à celle-ci.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher.png)
 
-In our tutorial, we will be using [!DNL Python] 3 in the Jupyter Notebook to show how to access and explore the data. Sur la page du lanceur, vous trouverez des notebooks d’exemple. We will be using the Retail Sales recipe for [!DNL Python] 3.
+Dans notre tutoriel, nous utiliserons [!DNL Python] 3 dans le carnet Jupyter pour montrer comment accéder aux données et les explorer. Sur la page du lanceur, vous trouverez des notebooks d’exemple. Nous utiliserons la recette Ventes au détail pour [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -56,11 +56,11 @@ La recette Ventes au détail constitue un exemple autonome qui utilise le même 
 >
 >Le paramètre `data_access_sdk_python` est obsolète et n’est plus recommandé. Consultez le tutoriel de [conversion du SDK Data Access vers SDK Platform](../authoring/platform-sdk.md) pour convertir votre code. Les étapes décrites ci-dessous s’appliquent également à ce tutoriel.
 
-We will go over accessing data internally from [!DNL Adobe Experience Platform] and data externally. Nous passerons par la bibliothèque `data_access_sdk_python` pour accéder aux données internes telles que les jeux de données et les schémas XDM. For external data, we will use the pandas [!DNL Python] library.
+Nous allons passer en revue l&#39;accès aux données en interne à partir de [!DNL Adobe Experience Platform] et aux données en externe. Nous passerons par la bibliothèque `data_access_sdk_python` pour accéder aux données internes telles que les jeux de données et les schémas XDM. Pour les données externes, nous utiliserons la bibliothèque pandas [!DNL Python].
 
 #### Données externes
 
-Une fois le notebook Ventes au détail ouvert, cherchez l’en-tête « Charger les données ». The following [!DNL Python] code uses pandas&#39; `DataFrame` data structure and the [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) function to read the CSV hosted on [!DNL Github] into the DataFrame:
+Une fois le notebook Ventes au détail ouvert, cherchez l’en-tête « Charger les données ». Le code [!DNL Python] suivant utilise la structure de données pandas&#39; `DataFrame` et la fonction [read_csv()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html#pandas.read_csv) pour lire le fichier CSV hébergé sur [!DNL Github] dans DataFrame :
 
 ![](../images/jupyterlab/analyze-data/read_csv.png)
 
@@ -74,7 +74,7 @@ Enfin, nous pouvons avoir un aperçu de l’apparence de nos données. Nous pouv
 
 #### [!DNL Experience Platform] data
 
-Now, we will go over accessing [!DNL Experience Platform] data.
+Nous allons maintenant passer en revue l&#39;accès aux données [!DNL Experience Platform].
 
 ##### Par identifiant du jeu de données
 
@@ -92,7 +92,7 @@ Nous pouvons maintenant cliquer avec le bouton droit sur le jeu de données `Ret
 
 >[!TIP]
 >
->Refer to the [[!DNL Platform SDK]](../authoring/platform-sdk.md) guide to convert your code.
+>Consultez le guide [[!DNL Platform SDK]](../authoring/platform-sdk.md) pour convertir votre code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -102,7 +102,7 @@ df = reader.load(data_set_id="xxxxxxxx", ims_org="xxxxxxxx@AdobeOrg")
 df.head()
 ```
 
-If you are working on other kernels other than [!DNL Python], please refer to [this page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) to access data on the [!DNL Adobe Experience Platform].
+Si vous travaillez sur d&#39;autres noyaux autres que [!DNL Python], veuillez consulter [cette page](https://github.com/adobe/acp-data-services-dsw-reference/wiki/Accessing-Data-on-the-Platform) pour accéder aux données de [!DNL Adobe Experience Platform].
 
 Sélectionnez la cellule exécutable, puis cliquez sur le bouton de lecture dans la barre d’outils pour exécuter le code exécutable. La sortie pour `head()` sera un tableau comprenant les clés de votre jeu de données sous forme de colonnes et les n premières lignes du jeu de données. `head()` accepte un argument entier pour spécifier le nombre de lignes à générer. Par défaut, cette valeur est définie sur 5.
 
@@ -128,7 +128,7 @@ Maintenant que vos données sont accessibles, intéressons-nous aux données ell
 
 #### Résumé statistique
 
-We can leverage [!DNL Python's] pandas library to get the data type of each attribute. La sortie de l’appel suivant nous donnera des informations sur le nombre d’entrées et le type de données pour chacune des colonnes :
+Nous pouvons exploiter la bibliothèque [!DNL Python's] pandas pour obtenir le type de données de chaque attribut. La sortie de l’appel suivant nous donnera des informations sur le nombre d’entrées et le type de données pour chacune des colonnes :
 
 ```PYTHON
 df.info()
@@ -156,7 +156,7 @@ Ici, nous avons 22 boutiques `storeType` `A`, 17 boutiques `storeType` `B` et 
 
 #### Visualisation des données
 
-Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les compléter par des visualisations, afin de rendre les choses plus claires et d’identifier plus facilement les motifs. Les graphiques servent également à transmettre les résultats à une audience. Some [!DNL Python] libraries which are useful for visualization include:
+Maintenant que nous connaissons les valeurs de notre DataFrame, nous voulons les compléter par des visualisations, afin de rendre les choses plus claires et d’identifier plus facilement les motifs. Les graphiques servent également à transmettre les résultats à une audience. Voici quelques bibliothèques [!DNL Python] utiles pour la visualisation :
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -196,7 +196,7 @@ Notez la diagonale de 1 au centre. Elle indique que lorsqu’une variable est co
 
 ## Étapes suivantes
 
-This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Plus précisément, nous avons réalisé les actions suivantes :
+Ce didacticiel explique comment créer un nouveau bloc-notes Jupyter dans Data Science Workspace et comment accéder aux données à l&#39;extérieur ainsi qu&#39;à partir de [!DNL Adobe Experience Platform]. Plus précisément, nous avons réalisé les actions suivantes :
 - Création d’un nouveau notebook Jupyter
 - Accès aux jeux de données et aux schémas
 - Exploration des jeux de données
