@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;mlinstances;sensei machine learning api
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; mlinstances ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Instances MLInstances
 topic: Developer guide
@@ -7,8 +7,8 @@ description: Une instance MLInstance correspond à l’association d’un moteur
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 100%
+source-wordcount: '616'
+ht-degree: 97%
 
 ---
 
