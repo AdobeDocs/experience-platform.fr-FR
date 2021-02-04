@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;list sandboxes
+keywords: Experience Platform ; accueil ; rubriques populaires ; sandbox de liste
 solution: Experience Platform
 title: Liste de tous les environnements de test
 topic: developer guide
@@ -7,8 +7,8 @@ description: Pour liste de tous les sandbox appartenant à votre organisation IM
 translation-type: tm+mt
 source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 67%
+source-wordcount: '316'
+ht-degree: 65%
 
 ---
 
@@ -25,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Pour plus d&#39;informations, consultez la section [Paramètres de requête](#query). |
 
 **Requête**
 
@@ -130,11 +130,11 @@ Une réponse réussie renvoie une liste d’environnements de test appartenant �
 
 ## Utilisation des paramètres de requête {#query}
 
-L’ [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API prend en charge l’utilisation de paramètres de requête pour la page et filtre les résultats lors de l’inscription de sandbox.
+L’API [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) prend en charge l’utilisation de paramètres de requête sur la page et filtre les résultats lors de la mise en liste des sandbox.
 
 >[!NOTE]
 >
->Les paramètres `limit` et `offset` la requête doivent être spécifiés ensemble. Si vous n&#39;en spécifiez qu&#39;un seul, l&#39;API renvoie une erreur. Si vous n’en spécifiez aucune, la limite par défaut est de 50 et le décalage est de 0.
+>Les paramètres de requête `limit` et `offset` doivent être spécifiés ensemble. Si vous n&#39;en spécifiez qu&#39;un seul, l&#39;API renvoie une erreur. Si vous n’en spécifiez aucune, la limite par défaut est de 50 et le décalage est de 0.
 
 | Paramètre | Description |
 | --------- | ----------- |
