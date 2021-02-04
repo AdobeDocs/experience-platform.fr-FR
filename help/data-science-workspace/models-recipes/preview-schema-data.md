@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
+keywords: Experience Platform ; données de schéma de prévisualisation ; Espace de travail des sciences de données ; sujets populaires
 solution: Experience Platform
 title: Prévisualisation des schémas et des jeux de données
 topic: tutorial
@@ -8,8 +8,8 @@ description: Le document suivant décrit la prévisualisation des schémas et de
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 73%
+source-wordcount: '237'
+ht-degree: 70%
 
 ---
 
@@ -32,10 +32,10 @@ Une fois le script de bootstrap du tutoriel [Création du schéma et du jeu de d
 
 ## Étapes suivantes
 
-You have now successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
+Vous avez maintenant saisi avec succès des données d&#39;exemple Ventes au détail dans [!DNL Experience Platform] à l&#39;aide du script d&#39;amorçage fourni.
 
 Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
 - [Analysez vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
-   - Use Jupyter notebooks in [!DNL Data Science Workspace] to access, explore, visualize, and understand your data.
+   - Utilisez les blocs-notes Jupyter dans [!DNL Data Science Workspace] pour accéder, explorer, visualiser et comprendre vos données.
 - [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
-   - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.
+   - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette important.
