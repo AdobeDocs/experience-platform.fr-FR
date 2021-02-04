@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ; expériences ; api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Expériences
 topic: Developer guide
@@ -7,8 +7,8 @@ description: Le développement et la formation de modèle se déroulent au nivea
 translation-type: tm+mt
 source-git-commit: 194a29124949571638315efe00ff0b04bff19303
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 100%
+source-wordcount: '780'
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ Une réponse réussie renvoie un payload contenant les détails de l’expérien
 }
 ```
 
-## Création et exécution d’une exécution de formation ou de notation {#experiment-training-scoring}
+## Création et exécution d’une exécution de formation ou de notation  {#experiment-training-scoring}
 
 Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST ainsi qu’en fournissant un identifiant d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de notation ne peuvent être créées que si elles sont associées à une exécution de formation réussie. La création réussie d’une exécution de formation initie la procédure de formation du modèle, tandis que son achèvement réussi génère un modèle formé. La génération de modèles formés remplace les modèles qui existaient auparavant, de sorte qu’une expérience ne peut utiliser qu’un seul modèle formé à un moment donné.
 
