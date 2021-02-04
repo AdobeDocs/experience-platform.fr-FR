@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
+keywords: 'Experience Platform ; prise en main ; attribution ; rubriques populaires ; attribution : entrée d’ai ; attribution : sortie d’ai ;'
 solution: Experience Platform, Intelligent Services
 title: Entrée et sortie Attribution AI
 topic: Input and Output data for Attribution AI
@@ -7,7 +7,7 @@ description: Le document suivant décrit les différents apports et extrants uti
 translation-type: tm+mt
 source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
 workflow-type: tm+mt
-source-wordcount: '2075'
+source-wordcount: '2089'
 ht-degree: 16%
 
 ---
@@ -15,17 +15,17 @@ ht-degree: 16%
 
 # [!DNL Attribution AI] entrée et sortie
 
-Le document suivant décrit les différents apports et extrants utilisés dans [!DNL Attribution AI].
+Le document suivant décrit les différentes entrées et sorties utilisées dans [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] données d’entrée
 
-[!DNL Attribution AI] utilise [!DNL Consumer Experience Event] les données pour calculer les scores algorithmiques. Pour plus d’informations sur [!DNL Consumer Experience Event]cette solution, reportez-vous à la section [Préparation des données à utiliser dans la documentation](../data-preparation.md)relative aux services intelligents.
+[!DNL Attribution AI] utilise  [!DNL Consumer Experience Event] les données pour calculer les scores algorithmiques. Pour plus d&#39;informations sur [!DNL Consumer Experience Event], reportez-vous à la section [Préparer les données à utiliser dans la documentation des services intelligents](../data-preparation.md).
 
 Toutes les colonnes du schéma [!DNL Consumer Experience Event] (CEE) ne sont pas obligatoires pour l’Attribution AI.
 
 >[!NOTE]
 >
-> Les 9 colonnes suivantes sont obligatoires, d’autres colonnes sont facultatives, mais recommandées/nécessaires si vous souhaitez utiliser les mêmes données pour d’autres solutions d’Adobe telles que [!DNL Customer AI] et [!DNL Journey AI].
+> Les 9 colonnes suivantes sont obligatoires, les colonnes supplémentaires sont facultatives, mais recommandées/nécessaires si vous souhaitez utiliser les mêmes données pour d&#39;autres solutions d&#39;Adobe telles que [!DNL Customer AI] et [!DNL Journey AI].
 
 | Colonnes obligatoires | Nécessaire pour |
 | --- | --- |
@@ -60,7 +60,7 @@ Les colonnes ci-dessous ne sont pas obligatoires, mais il est recommandé de les
 
 Attribution AI nécessite des données historiques comme entrée pour la formation au modèle. La durée des données requises est principalement déterminée par deux facteurs clés : fenêtre de formation et fenêtre de rappel. Les entrées avec des fenêtres de formation plus courtes sont plus sensibles aux tendances récentes, tandis que des fenêtres de formation plus longues permettent de produire des modèles plus stables et précis. Il est important de modéliser l&#39;objectif avec des données historiques qui représentent le mieux vos objectifs commerciaux.
 
-Les événements de conversion des filtres de la configuration [de la fenêtre de](./user-guide.md#training-window) formation sont définis pour être inclus pour la formation de modèle en fonction du temps d’occurrence. Actuellement, la période minimale de formation est de 1 quart (90 jours). The [lookback window](./user-guide.md#lookback-window) provides a time frame indicating how many days prior to the conversion event touchpoints related to this conversion event should be included. Ces deux concepts déterminent ensemble la quantité de données d’entrée (mesurées en jours) requise pour une application.
+Les événements de conversion des filtres [configuration de la fenêtre de formation](./user-guide.md#training-window) sont définis pour être inclus pour la formation des modèles en fonction du temps d’occurrence. Actuellement, la période minimale de formation est de 1 quart (90 jours). La [fenêtre de recherche](./user-guide.md#lookback-window) fournit une période indiquant le nombre de jours avant que les points de contact du événement de conversion liés à ce événement de conversion ne soient inclus. Ces deux concepts déterminent ensemble la quantité de données d’entrée (mesurées en jours) requise pour une application.
 
 Par défaut, Attribution AI définit la fenêtre de formation comme les deux derniers trimestres (6 mois) et la fenêtre de recherche en amont comme 56 jours. En d&#39;autres termes, le modèle tiendra compte de tous les événements de conversion définis qui se sont produits au cours des 2 derniers trimestres et recherchera tous les points de contact qui se sont produits dans les 56 jours précédant le ou les événements de conversion associés.
 
@@ -87,9 +87,9 @@ Attribution AI génère les résultats suivants :
 
 ![](./images/input-output/schema_output.gif)
 
-### Score granulaire brut {#raw-granular-scores}
+### scores granulaires bruts {#raw-granular-scores}
 
-Attribution AI génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section sur l’ [affichage des chemins](#raw-score-path)de score brut. Pour télécharger les scores à l’aide de l’API, consultez les scores de [téléchargement dans le document Attribution AI](./download-scores.md) .
+Attribution AI génère des scores d’attribution au niveau le plus granulaire possible afin que vous puissiez les découper et les découper en fonction de n’importe quelle colonne de score. Pour vue ces scores dans l’interface utilisateur, lisez la section [Affichage des chemins de score bruts](#raw-score-path). Pour télécharger les scores à l’aide de l’API, consultez le document [téléchargement des scores dans Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -104,48 +104,48 @@ Le tableau suivant décrit les champs de schéma dans l’exemple de sortie des 
 | --- | --- | --- |
 | horodatage (DateTime) | False | Heure à laquelle un événement de conversion ou une observation s’est produit. <br> **Exemple :** 2020-06-09T00:01:51.000Z |
 | identityMap (Map) | True | identityMap de l’utilisateur similaire au format CEE XDM. |
-| eventType (chaîne) | True | The primary event type for this time-series record. <br> **Exemple :** &quot;Commande&quot;, &quot;Achat&quot;, &quot;Visite&quot; |
-| eventMergeId (chaîne) | True | ID permettant de corréler ou de fusionner plusieurs [!DNL Experience Events] ensembles qui sont essentiellement le même événement ou qui doivent être fusionnés. Le producteur de données doit l&#39;indiquer avant l&#39;assimilation. <br> **Exemple :** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| eventType (chaîne) | True | Type d&#39;événement Principal de cet enregistrement de série chronologique. <br> **Exemple :** &quot;Commande&quot;, &quot;Achat&quot;, &quot;Visite&quot; |
+| eventMergeId (chaîne) | True | ID permettant de corréler ou de fusionner plusieurs [!DNL Experience Events] ensemble qui sont essentiellement le même événement ou qui doivent être fusionnés. Le producteur de données doit l&#39;indiquer avant l&#39;assimilation. <br> **Exemple :** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
 | _id (chaîne) | False | Identificateur unique du événement de la série chronologique. <br> **Exemple :** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-| _locataireId (objet) | False | Conteneur d’objet de niveau supérieur correspondant à votre ID de tentant. <br> **Exemple :** _atsdsnrmsv2 |
-| your_schéma_name (Object) | False | Score la ligne avec le événement de conversion tous les événements de point de contact qui y sont associés et leurs métadonnées. <br> **Exemple :** Scores Attribution AI - Nom du modèle__2020 |
+| _locataireId (objet) | False | Conteneur d&#39;objet de niveau supérieur correspondant à votre ID de tentant. <br> **Exemple :** _atsdsnrmsv2 |
+| your_schéma_name (Object) | False | Score la ligne avec le événement de conversion tous les événements de point de contact qui y sont associés et leurs métadonnées. <br> **Exemple : Scores** Attribution AI - Nom du modèle__2020 |
 | segmentation (chaîne) | True | Segment de conversion tel que la géosegmentation sur lequel le modèle est construit. En cas d’absence de segments, le segment est identique à conversionName. <br> **Exemple :** ORDER_US |
-| conversionName (chaîne) | True | Nom de la conversion configurée lors de la configuration. <br> **Exemple :** Commande, Piste, Visite |
+| conversionName (chaîne) | True | Nom de la conversion configurée lors de la configuration. <br> **Exemple :** Ordre, Piste, Visite |
 | conversion (objet) | False | Colonnes de métadonnées de conversion. |
-| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple :** Adobe Analytics |
+| dataSource (chaîne) | True | Identification globale unique d’une source de données. <br> **Exemple:** Adobe Analytics |
 | eventSource (chaîne) | True | Source à laquelle le événement s’est produit. <br> **Exemple :** Adobe.com |
-| eventType (chaîne) | True | The primary event type for this time-series record. <br> **Exemple :** Ordre |
-| geo (chaîne) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Exemple :** US |
-| priceTotal (Doublon) | True | Recettes obtenues par la conversion <br> **Exemple :** 99,9 |
+| eventType (chaîne) | True | Type d&#39;événement Principal de cet enregistrement de série chronologique. <br> **Exemple:** Ordre |
+| geo (chaîne) | True | Emplacement géographique où la conversion a été fournie `placeContext.geo.countryCode`. <br> **Exemple :** US |
+| priceTotal (Doublon) | True | Recettes obtenues par le biais de la conversion <br> **Exemple :** 99.9 |
 | product (String) | True | Identifiant XDM du produit lui-même. <br> **Exemple :** RX 1080 ti |
-| productType (chaîne) | True | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette vue de produits. <br> **Exemple :** Gpus |
+| productType (chaîne) | True | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette vue de produits. <br> **Exemple:** Gpus |
 | quantité (entier) | True | Quantité achetée pendant la conversion. <br> **Exemple :** 1 1080 ti |
 | receiveTimestamp (DateTime) | True | Horodatage reçu de la conversion. <br> **Exemple :** 2020-06-09T00:01:51.000Z |
-| skuId (chaîne) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Exemple :** MJ-03-XS-Black |
+| skuId (chaîne) | True | Unité de gestion des stocks (SKU), identifiant unique d&#39;un produit défini par le fournisseur. <br> **Exemple :** MJ-03-XS-Black |
 | horodatage (DateTime) | True | Horodatage de la conversion. <br> **Exemple :** 2020-06-09T00:01:51.000Z |
 | passThrough (objet) | True | Jeu de données Score supplémentaire Colonnes spécifiées par l’utilisateur lors de la configuration du modèle. |
-| commerce_order_purchaseCity (chaîne) | True | Colonne du jeu de données Score supplémentaire. <br> **Exemple :** ville : San Jose |
+| commerce_order_purchaseCity (chaîne) | True | Colonne du jeu de données Score supplémentaire. <br> **Exemple:** ville : San Jose |
 | customerProfile (objet) | False | Détails d’identité de l’utilisateur utilisé pour créer le modèle. |
 | identity (objet) | False | Contient les détails de l’utilisateur utilisé pour créer le modèle, tels que `id` et `namespace`. |
-| id (chaîne) | True | Identifiant de l’utilisateur tel que l’ID de cookie ou AAID ou MCID, etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
-| espace de nommage (chaîne) | True | Espace de nommage d&#39;identité utilisé pour construire les chemins et par conséquent le modèle. <br> **Exemple :** aaid |
+| id (chaîne) | True | ID d&#39;identité de l&#39;utilisateur, tel que l&#39;ID de cookie ou AAID ou MCID, etc. <br> **Exemple :** 17348762725408656344688320891369597404 |
+| espace de nommage (chaîne) | True | Espace de nommage d&#39;identité utilisé pour construire les chemins et par conséquent le modèle. <br> **Exemple:** aid |
 | touchpointsDetail (tableau d’objets) | True | Liste des détails du point de contact menant à la conversion ordonnée par l’occurrence du point de contact ou l’horodatage. |
 | touchpointName (chaîne) | True | Nom du point de contact configuré lors de la configuration. <br> **Exemple :** PAID_SEARCH_CLICK |
-| scores (Objet) | True | Contribution du point de contact à cette conversion en tant que score. Pour plus d’informations sur les scores produits dans cet objet, voir la section scores [d’attribution](#aggregated-attribution-scores) agrégés. |
-| touchPoint (objet) | True | Métadonnées du point de contact. Pour plus d&#39;informations sur les scores produits dans cet objet, consultez la section scores [](#aggregated-scores) agrégés. |
+| scores (Objet) | True | Contribution du point de contact à cette conversion en tant que score. Pour plus d’informations sur les scores générés dans cet objet, voir la section [scores d’attribution agrégés](#aggregated-attribution-scores). |
+| touchPoint (objet) | True | Métadonnées du point de contact. Pour plus d&#39;informations sur les scores produits dans cet objet, consultez la section [scores agrégés](#aggregated-scores). |
 
-### Affichage des chemins d’accès aux scores bruts (interface utilisateur) {#raw-score-path}
+### Affichage des chemins de score brut (IU) {#raw-score-path}
 
-Vous pouvez vue le chemin d’accès à vos scores bruts dans l’interface utilisateur. Début en sélectionnant **[!UICONTROL Schémas]** dans l’interface utilisateur de la plate-forme, puis en recherchant et en sélectionnant votre schéma de scores AI d’attribution dans l’onglet **[!UICONTROL Parcourir]** .
+Vous pouvez vue le chemin d’accès à vos scores bruts dans l’interface utilisateur. Début en sélectionnant **[!UICONTROL Schémas]** dans l’interface utilisateur de la plate-forme, puis en recherchant et en sélectionnant votre schéma de scores AI d’attribution dans l’onglet **[!UICONTROL Parcourir]**.
 
 ![Choisissez votre schéma](./images/input-output/schemas_browse.png)
 
-Ensuite, sélectionnez un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur. L’onglet Propriétés **[!UICONTROL du]** champ s’ouvre. Dans les propriétés **** de champ se trouve le champ de chemin qui correspond à vos scores bruts.
+Ensuite, sélectionnez un champ dans la fenêtre **[!UICONTROL Structure]** de l’interface utilisateur, l’onglet **[!UICONTROL Propriétés du champ]** s’ouvre. Dans **[!UICONTROL Les propriétés de champ]** se trouve le champ de chemin qui correspond à vos scores bruts.
 
 ![Choisir un Schéma](./images/input-output/field_properties.png)
 
 
-### Scores d’attribution agrégés {#aggregated-attribution-scores}
+### scores d’attribution agrégés {#aggregated-attribution-scores}
 
 Les scores agrégés peuvent être téléchargés au format CSV depuis l’interface utilisateur de la plate-forme si la période est inférieure à 30 jours.
 
@@ -171,7 +171,7 @@ Consultez le tableau ci-dessous pour plus de détails sur chacun de ces scores d
 
 **Référence du score brut (scores d’attribution)**
 
-Le tableau ci-dessous mappe les scores d’attribution aux scores bruts. Si vous souhaitez télécharger vos scores bruts, consultez la documentation sur le [téléchargement dans Attribution AI](./download-scores.md) .
+Le tableau ci-dessous mappe les scores d’attribution aux scores bruts. Si vous souhaitez télécharger vos scores bruts, consultez la documentation [téléchargeant les scores dans Attribution AI](./download-scores.md).
 
 | Scores d’attribution | Colonne de référence de score brut |
 | --- | --- |
@@ -189,24 +189,24 @@ Les scores agrégés peuvent être téléchargés au format CSV depuis l’inter
 
 | Nom de la colonne | Contrainte | Nullable | Description |
 | --- | --- | --- | --- |
-| customerevents_date (DateTime) | Format défini par l&#39;utilisateur et fixe | False | Date du Événement client au format AAAA-MM-JJ. <br> **Exemple**: 2016-05-02 |
-| mediatouchpoints_date (DateTime) | Format défini par l&#39;utilisateur et fixe | True | Date du point de contact multimédia au format AAAA-MM-JJ <br> **Exemple**: 21/04/2017 |
-| segment (chaîne) | Calculé | False | Segment de conversion tel que la géosegmentation sur lequel le modèle est construit. En cas d’absence de segments, le segment est identique à la variable conversion_scope. <br> **Exemple**: ORDER_AMER |
-| conversion_scope (chaîne) | Défini par l&#39;utilisateur | False | Nom de la conversion tel que configuré par l’utilisateur. <br> **Exemple**: ORDER |
-| touchpoint_scope (chaîne) | Défini par l&#39;utilisateur | True | Nom du point de contact tel que configuré par l’utilisateur. <br> **Exemple**: PAID_SEARCH_CLICK |
-| product (String) | Défini par l&#39;utilisateur | True | The XDM identifier of the product. <br> **Exemple**: CC |
-| product_type (chaîne) | Défini par l&#39;utilisateur | True | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette vue de produits. <br> **Exemple**: gpus, ordinateurs portables |
-| geo (chaîne) | Défini par l&#39;utilisateur | True | The geographic location where the conversion was delivered (placeContext.geo.countryCode) <br> **Exemple**: US |
-| événement_type (chaîne) | Défini par l&#39;utilisateur | True | The primary event type for this time-series record <br> **Exemple**: Conversion payante |
-| media_type (chaîne) | ENUM | False | Indique si le type de média est payé, détenu ou gagné. <br> **Exemple**: PAYÉ, PROPRIÉTAIRE |
-| canal (chaîne) | ENUM | False | Propriété `channel._type` utilisée pour fournir une classification approximative des canaux avec des propriétés similaires dans [!DNL Consumer Experience Event] XDM. <br> **Exemple**: RECHERCHE |
-| action (chaîne) | ENUM | False | La `mediaAction` propriété est utilisée pour fournir un type d’action multimédia de événement d’expérience. <br> **Exemple**: CLICK |
-| campaign_group (chaîne) | Défini par l&#39;utilisateur | True | Nom du groupe de campagnes dans lequel plusieurs campagnes sont regroupées, par exemple &quot;50 %_DISCOUNT&quot;. <br> **Exemple**: COMMERCIAL |
-| campaign_name (chaîne) | Défini par l&#39;utilisateur | True | Nom de la campagne utilisée pour identifier la campagne marketing telle que &#39;50%_DISCOUNT_USA&#39; ou &#39;50%_DISCOUNT_ASIA&#39;. <br> **Exemple**: La vente de Thanksgiving |
+| customerevents_date (DateTime) | Format défini par l&#39;utilisateur et fixe | False | Date du Événement client au format AAAA-MM-JJ. <br> **Exemple** : 2016-05-02 |
+| mediatouchpoints_date (DateTime) | Format défini par l&#39;utilisateur et fixe | True | Date Media Touchpoint au format AAAA-MM-JJ <br> **Exemple** : 21/04/2017 |
+| segment (chaîne) | Calculé | False | Segment de conversion tel que la géosegmentation sur lequel le modèle est construit. En cas d’absence de segments, le segment est identique à la variable conversion_scope. <br> **Exemple** : ORDER_AMER |
+| conversion_scope (chaîne) | Défini par l&#39;utilisateur | False | Nom de la conversion tel que configuré par l’utilisateur. <br> **Exemple** : ORDER |
+| touchpoint_scope (chaîne) | Défini par l&#39;utilisateur | True | Nom du point de contact tel que configuré par l’utilisateur <br> **Exemple** : PAID_SEARCH_CLICK |
+| product (String) | Défini par l&#39;utilisateur | True | Identificateur XDM du produit. <br> **Exemple** : CC |
+| product_type (chaîne) | Défini par l&#39;utilisateur | True | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette vue de produits. <br> **Exemple** : gpus, ordinateurs portables |
+| geo (chaîne) | Défini par l&#39;utilisateur | True | Emplacement géographique où la conversion a été livrée (placeContext.geo.countryCode) <br> **Exemple** : US |
+| événement_type (chaîne) | Défini par l&#39;utilisateur | True | Type d&#39;événement Principal de cet enregistrement de série chronologique <br> **Exemple** : Conversion payante |
+| media_type (chaîne) | ENUM | False | Indique si le type de média est payé, détenu ou gagné. <br> **Exemple** : PAYÉ, PROPRIÉTAIRE |
+| canal (chaîne) | ENUM | False | La propriété `channel._type` utilisée pour fournir une classification approximative des canaux avec des propriétés similaires dans [!DNL Consumer Experience Event] XDM. <br> **Exemple** : RECHERCHE |
+| action (chaîne) | ENUM | False | La propriété `mediaAction` est utilisée pour fournir un type d&#39;action multimédia de événement d&#39;expérience. <br> **Exemple** : CLICK |
+| campaign_group (chaîne) | Défini par l&#39;utilisateur | True | Nom du groupe de campagnes dans lequel plusieurs campagnes sont regroupées, par exemple &quot;50 %_DISCOUNT&quot;. <br> **Exemple** : COMMERCIAL |
+| campaign_name (chaîne) | Défini par l&#39;utilisateur | True | Nom de la campagne utilisée pour identifier la campagne marketing telle que &#39;50%_DISCOUNT_USA&#39; ou &#39;50%_DISCOUNT_ASIA&#39;. <br> **Exemple** : La vente de Thanksgiving |
 
 **Référence du score brut (agrégé)**
 
-Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souhaitez télécharger vos scores bruts, consultez la documentation sur le [téléchargement dans Attribution AI](./download-scores.md) . Pour vue des chemins d’accès aux scores bruts depuis l’interface utilisateur, consultez la section sur l’ [affichage des chemins d’accès aux](#raw-score-path) scores bruts dans ce document.
+Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souhaitez télécharger vos scores bruts, consultez la documentation [téléchargeant les scores dans Attribution AI](./download-scores.md). Pour vue des chemins de score brut dans l’interface utilisateur, consultez la section [Affichage des chemins de score brut](#raw-score-path) dans ce document.
 
 | Nom de la colonne | Colonne de référence Note brute |
 | --- | --- |
@@ -228,4 +228,4 @@ Le tableau ci-dessous mappe les scores agrégés aux scores bruts. Si vous souha
 
 ## Étapes suivantes {#next-steps}
 
-Once you have prepared your data and have all your credentials and schemas in place, start by following the [Attribution AI user guide](./user-guide.md). Ce guide vous guide tout au long de la création d’une instance pour Attribution AI.
+Une fois que vous avez préparé vos données et que tous vos schémas et informations d’identification sont en place, début en suivant le [guide d’utilisateur Attribution AI](./user-guide.md). Ce guide vous guide tout au long de la création d’une instance pour Attribution AI.
