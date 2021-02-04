@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;string fonctions;string;
 solution: Experience Platform
 title: Fonctions de chaîne
 topic: developer guide
@@ -7,15 +7,15 @@ description: Le langage de requête de profil (PQL) offre des fonctions pour fac
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 97%
+source-wordcount: '783'
+ht-degree: 95%
 
 ---
 
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre les fonctions pour rendre l&#39;interaction avec les chaînes plus simple. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offre les fonctions pour rendre l&#39;interaction avec les chaînes plus simple. Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Like
 
