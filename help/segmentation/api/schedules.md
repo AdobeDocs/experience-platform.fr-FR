@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; planifications ; calendrier ; api ; API ;
 solution: Experience Platform
 title: Plannings
 topic: developer guide
@@ -7,19 +7,19 @@ description: Les calendriers sont un outil qui permet d'exécuter automatiquemen
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 47%
+source-wordcount: '1201'
+ht-degree: 46%
 
 ---
 
 
 # Point de terminaison des calendriers
 
-Les calendriers sont un outil qui permet d&#39;exécuter automatiquement des tâches de segmentation par lots une fois par jour. Vous pouvez utiliser le `/config/schedules` point de terminaison pour récupérer une liste de planifications, créer une nouvelle planification, récupérer les détails d&#39;une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
+Les calendriers sont un outil qui permet d&#39;exécuter automatiquement des tâches de segmentation par lots une fois par jour. Vous pouvez utiliser le point de terminaison `/config/schedules` pour récupérer une liste de planifications, créer une nouvelle planification, récupérer les détails d&#39;une planification spécifique, mettre à jour une planification spécifique ou supprimer une planification spécifique.
 
 ## Prise en main
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 ## Obtention d’une liste de plannings {#retrieve-list}
 
@@ -27,7 +27,7 @@ Vous pouvez obtenir une liste de tous les plannings de votre organisation IMS en
 
 **Format d’API**
 
-Le `/config/schedules` point de terminaison prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez tous les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point de terminaison `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est fortement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point de terminaison sans paramètres, vous récupérerez tous les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /config/schedules
@@ -142,7 +142,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Obligatoire.** Nom du planning sous forme de chaîne. |
 | `type` | **Obligatoire.** Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | **Obligatoire lorsque `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `properties.segments` | **Obligatoire lorsque  `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. Les tâches ne peuvent être planifiées qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier une tâche pour qu’elle s’exécute plusieurs fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. <br><br>Si cette chaîne n&#39;est pas fournie, un calendrier généré par le système est généré automatiquement. |
 | `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principaux&quot; et &quot;inactifs&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
@@ -176,7 +176,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre nouv
 
 ## Récupération d’un planning spécifique {#get}
 
-You can retrieve detailed information about a specific schedule by making a GET request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to retrieve in the request path.
+Vous pouvez récupérer des informations détaillées sur une planification spécifique en adressant une demande de GET au point de terminaison `/config/schedules` et en indiquant l&#39;identifiant de la planification que vous souhaitez récupérer dans le chemin de requête.
 
 **Format d’API**
 
@@ -186,7 +186,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the schedule you want to retrieve. |
+| `{SCHEDULE_ID}` | Valeur `id` de la planification que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -235,15 +235,15 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 0 0 1 * * » signifie que ce planning sera exécuté à minuit le premier de chaque mois. |
 | `state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont `active` et `inactive`. Par défaut, l’état est défini sur `inactive`. |
 
-## Update details for a specific schedule {#update}
+## Mettre à jour les détails d&#39;un calendrier spécifique {#update}
 
-Vous pouvez mettre à jour une planification spécifique en envoyant une requête de PATCH au point de `/config/schedules` terminaison et en indiquant l&#39;identifiant de la planification que vous tentez de mettre à jour dans le chemin de la demande.
+Vous pouvez mettre à jour une planification spécifique en envoyant une requête de PATCH au point de terminaison `/config/schedules` et en indiquant l&#39;identifiant de la planification que vous tentez de mettre à jour dans le chemin de requête.
 
-La demande de PATCH vous permet de mettre à jour l&#39; [état](#update-state) ou le calendrier [](#update-schedule) cron pour une planification individuelle.
+La demande du PATCH vous permet de mettre à jour [état](#update-state) ou [calendrier cron](#update-schedule) pour une planification individuelle.
 
 ### Mise à jour de l’état du planning {#update-state}
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état de la planification. Pour mettre à jour l’état, vous déclarez la `path` propriété comme `/state` et définissez la `value` propriété sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation sur le correctif [](http://jsonpatch.com/) JSON.
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état de la planification. Pour mettre à jour l’état, vous déclarez la propriété `path` comme `/state` et définissez `value` sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation [Correctif JSON](http://jsonpatch.com/).
 
 **Format d’API**
 
@@ -253,7 +253,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
+| `{SCHEDULE_ID}` | Valeur `id` de la planification que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -275,16 +275,16 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. In this case, since you are updating the schedule&#39;s state, you need to set the value of `path` to &quot;/state&quot;. |
+| `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l&#39;état de la planification, vous devez définir la valeur `path` sur &quot;/state&quot;. |
 | `value` | Valeur mise à jour de l&#39;état de la planification. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactive&quot; pour activer ou désactiver la planification. |
 
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 204 (No Content).
 
-### Mise à jour du calendrier cron {#update-schedule}
+### Mettre à jour la planification cron {#update-schedule}
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour la planification cron. Pour mettre à jour la planification, vous déclarez la `path` propriété comme `/schedule` et définissez la `value` propriété sur une planification cron valide. Pour plus d’informations sur le correctif JSON, consultez la documentation sur le correctif [](http://jsonpatch.com/) JSON. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour la planification cron. Pour mettre à jour la planification, vous déclarez la propriété `path` comme `/schedule` et définissez `value` sur une planification cron valide. Pour plus d’informations sur le correctif JSON, consultez la documentation [Correctif JSON](http://jsonpatch.com/). Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **Format d’API**
 
@@ -294,7 +294,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the schedule you want to update. |
+| `{SCHEDULE_ID}` | Valeur `id` de la planification que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -316,7 +316,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Propriété | Description |
 | -------- | ----------- |
-| `path` | Chemin d’accès de la valeur à mettre à jour. In this case, since you are updating the cron schedule, you need to set the value of `path` to `/schedule`. |
+| `path` | Chemin d’accès de la valeur à mettre à jour. Dans ce cas, puisque vous mettez à jour la planification cron, vous devez définir la valeur `path` sur `/schedule`. |
 | `value` | Valeur mise à jour de la planification cron. Cette valeur doit se présenter sous la forme d’un planning cron. Dans cet exemple, le planning se déroulera le deuxième jour de chaque mois. |
 
 **Réponse**
@@ -325,7 +325,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 
 ## Suppression d’un planning spécifique
 
-You can request to delete a specific schedule by making a DELETE request to the `/config/schedules` endpoint and providing the ID of the schedule you wish to delete in the request path.
+Vous pouvez demander la suppression d&#39;un calendrier spécifique en adressant une requête DELETE au point de terminaison `/config/schedules` et en indiquant l&#39;identifiant de la planification que vous souhaitez supprimer dans le chemin de requête.
 
 **Format d’API**
 
@@ -335,7 +335,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | The `id` value of the schedule you want to delete. |
+| `{SCHEDULE_ID}` | Valeur `id` de la planification à supprimer. |
 
 **Requête**
 
