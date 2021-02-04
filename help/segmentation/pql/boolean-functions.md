@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
+keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;boolean fonctions;boolean;
 solution: Experience Platform
 title: Fonctions booléennes
 topic: developer guide
@@ -7,15 +7,15 @@ description: Fonctions booléennes sont utilisés pour exécuter une logique boo
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 84%
+source-wordcount: '253'
+ht-degree: 78%
 
 ---
 
 
 # Fonctions booléennes
 
-Fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments de [!DNL Profile Query Language] (PQL).  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
+Fonctions booléennes sont utilisés pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d&#39;informations sur les autres fonctions PQL dans le [[!DNL Profile Query Language] overview](./overview.md).
 
 ## And
 
