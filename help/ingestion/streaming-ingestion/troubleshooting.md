@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;troubleshooting;streaming ingestion troubleshooting;streaming ingestion faq;faq;
+keywords: Experience Platform ; accueil ; rubriques populaires ; flux continu ; assimilation en flux continu ; dépannage ; dépannage de l’assimilation en flux continu ; flux d’assimilation faq ; faq ;
 solution: Experience Platform
 title: Dépannage de l’ingestion par flux
 topic: troubleshooting
@@ -7,17 +7,17 @@ description: Ce document répond aux questions les plus fréquentes sur l’inge
 translation-type: tm+mt
 source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 70%
+source-wordcount: '1024'
+ht-degree: 69%
 
 ---
 
 
 # Guide de dépannage de l’ingestion par flux
 
-Ce document répond aux questions les plus fréquentes sur l’ingestion par flux sur Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquentes sur l’ingestion par flux sur Adobe Experience Platform. Pour toute question ou dépannage concernant d&#39;autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], consultez le [guide de dépannage Experience Platform](../../landing/troubleshooting.md).
 
-Adobe Experience Platform [!DNL Data Ingestion] provides RESTful APIs that you can use to ingest data into [!DNL Experience Platform]. Les données ingérées sont utilisées pour mettre à jour les profils clients individuels quasiment en temps réel, ce qui vous permet de proposer des expériences personnalisées et pertinentes sur plusieurs canaux. Pour en savoir plus sur le service et les différentes méthodes d’ingestion, consultez la [présentation de Data Ingestion](../home.md). Pour savoir comment utiliser les API d’ingestion par flux, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
+Adobe Experience Platform [!DNL Data Ingestion] fournit des API RESTful que vous pouvez utiliser pour assimiler des données dans [!DNL Experience Platform]. Les données ingérées sont utilisées pour mettre à jour les profils clients individuels quasiment en temps réel, ce qui vous permet de proposer des expériences personnalisées et pertinentes sur plusieurs canaux. Pour en savoir plus sur le service et les différentes méthodes d’ingestion, consultez la [présentation de Data Ingestion](../home.md). Pour savoir comment utiliser les API d’ingestion par flux, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).
 
 ## FAQ
 
@@ -25,19 +25,19 @@ Voici une liste de réponses aux questions fréquentes sur l’ingestion par flu
 
 ### Comment savoir que le payload que j’envoie est correctement formaté ?
 
-[!DNL Data Ingestion] utilise [!DNL Experience Data Model] (XDM) des schémas pour valider le format des données entrantes. L’envoi de données non conformes à la structure d’un schéma XDM prédéfini entraîne l’échec de l’ingestion. For more information on XDM and its use in [!DNL Experience Platform], see the [XDM System overview](../../xdm/home.md).
+[!DNL Data Ingestion] utilise  [!DNL Experience Data Model] (XDM) des schémas pour valider le format des données entrantes. L’envoi de données non conformes à la structure d’un schéma XDM prédéfini entraîne l’échec de l’ingestion. Pour plus d&#39;informations sur XDM et son utilisation dans [!DNL Experience Platform], consultez la [Présentation du système XDM](../../xdm/home.md).
 
 L’ingestion par flux prend en charge deux modes de validation : synchrone et asynchrone. Chaque méthode de validation gère les données ayant échoué différemment.
 
 La **validation synchrone** doit être utilisée pendant votre processus de développement. Les enregistrements dont la validation a échoué sont ignorés et renvoient un message d’erreur expliquant pourquoi ils ont échoué (par exemple : « Format de message XDM non valide »).
 
-La **validation asynchrone** doit être utilisée en production. Any malformed data that does not pass validation is sent to the [!DNL Data Lake] as a failed batch file, where it can be retrieved later for further analysis.
+La **validation asynchrone** doit être utilisée en production. Toute donnée incorrecte qui ne réussit pas la validation est envoyée à [!DNL Data Lake] en tant que fichier de commandes en échec, où elle peut être récupérée ultérieurement pour analyse ultérieure.
 
 Pour plus d’informations sur la validation synchrone et asynchrone, consultez la [présentation de la validation de l’ingestion par flux](../quality/streaming-validation.md). Pour savoir comment afficher des lots dont la validation a échoué, reportez-vous au guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
 ### Puis-je valider un payload de requête avant de l’envoyer à [!DNL Platform]?
 
-Les payloads de requête ne peuvent être évalués qu’après avoir été envoyés à [!DNL Platform]. Lors d’une validation synchrone, les payloads valides renvoient des objets JSON renseignés, tandis que les payloads non valides renvoient des messages d’erreur. During asynchronous validation, the service detects and sends any malformed data to the [!DNL Data Lake] where it can later be retrieved for analysis. Pour plus d’informations, consultez la [présentation de la validation de l’ingestion par flux](../quality/streaming-validation.md).
+Les payloads de requête ne peuvent être évalués qu’après avoir été envoyés à [!DNL Platform]. Lors d’une validation synchrone, les payloads valides renvoient des objets JSON renseignés, tandis que les payloads non valides renvoient des messages d’erreur. Lors de la validation asynchrone, le service détecte et envoie toutes les données incorrectes à [!DNL Data Lake] où elles peuvent être récupérées ultérieurement pour analyse. Pour plus d’informations, consultez la [présentation de la validation de l’ingestion par flux](../quality/streaming-validation.md).
 
 ### Que se passe-t-il lorsque la validation synchrone est demandée sur une périphérie qui ne la prend pas en charge ?
 
@@ -45,11 +45,11 @@ Lorsque la validation synchrone n’est pas prise en charge pour l’emplacement
 
 ### Comment puis-je m&#39;assurer que les données ne sont collectées qu&#39;à partir de sources fiables ?
 
-[!DNL Experience Platform] prend en charge la collecte de données sécurisées. Lorsque la collecte de données authentifiées est activée, les clients doivent envoyer un jeton JSON Web Token (JWT) et leur ID d’organisation IMS en tant qu’en-têtes de requête. For more information on how to send authenticated data to [!DNL Platform], please see the guide on [authenticated data collection](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] prend en charge la collecte de données sécurisées. Lorsque la collecte de données authentifiées est activée, les clients doivent envoyer un jeton JSON Web Token (JWT) et leur ID d’organisation IMS en tant qu’en-têtes de requête. Pour plus d&#39;informations sur la façon d&#39;envoyer des données authentifiées à [!DNL Platform], consultez le guide sur la [collecte de données authentifiées](../tutorials/create-authenticated-streaming-connection.md).
 
-### What is the latency for streaming data to [!DNL Real-time Customer Profile]?
+### Quelle est la latence de diffusion des données en flux continu vers [!DNL Real-time Customer Profile] ?
 
-Streamed events are generally reflected in [!DNL Real-time Customer Profile] in under 60 seconds. Les latences réelles peuvent varier en raison du volume de données, de la taille du message et des limitations de bande passante.
+Les événements en flux continu sont généralement reflétés dans [!DNL Real-time Customer Profile] en moins de 60 secondes. Les latences réelles peuvent varier en raison du volume de données, de la taille du message et des limitations de bande passante.
 
 ### Puis-je inclure plusieurs messages dans la même requête d’API ?
 
@@ -57,15 +57,15 @@ Vous pouvez regrouper plusieurs messages dans un payload de requête unique et l
 
 ### Comment savoir si les données que j’envoie sont reçues ?
 
-All data that is sent to [!DNL Platform] (successfully or otherwise) is stored as batch files before being persisted in datasets. L’état du traitement des lots s’affiche dans le jeu de données dans lequel ils ont été envoyés.
+Toutes les données envoyées à [!DNL Platform] (avec succès ou autrement) sont stockées sous forme de fichiers de commandes avant d’être conservées dans les jeux de données. L’état du traitement des lots s’affiche dans le jeu de données dans lequel ils ont été envoyés.
 
-Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’**[!UICONTROL activité du jeu de données]**, qui montre tous les lots envoyés au cours d’une période sélectionnée. For more information about using [!DNL Experience Platform] to monitor data streams, see the guide on [monitoring streaming data flows](../quality/monitor-data-ingestion.md).
+Vous pouvez vérifier si les données ont bien été ingérées en vérifiant l’activité du jeu de données à l’aide de l’[interface utilisateur d’Experience Platform](https://platform.adobe.com). Cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour afficher une liste de jeux de données. Sélectionnez le jeu de données vers lequel vous effectuez une diffusion par flux à partir de la liste affichée pour ouvrir la page d’**[!UICONTROL activité du jeu de données]**, qui montre tous les lots envoyés au cours d’une période sélectionnée. Pour plus d&#39;informations sur l&#39;utilisation de [!DNL Experience Platform] pour surveiller les flux de données, consultez le guide [surveillance des flux de données en flux continu](../quality/monitor-data-ingestion.md).
 
-If your data failed to ingest and you want to recover it from [!DNL Platform], you can retrieve the failed batches by sending their IDs to the [!DNL Data Access API]. Pour plus d’informations, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
+Si l&#39;importation de vos données a échoué et que vous souhaitez les récupérer à partir de [!DNL Platform], vous pouvez récupérer les lots en échec en envoyant leurs identifiants à [!DNL Data Access API]. Pour plus d’informations, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
 ### Pourquoi mes données en diffusion continue ne sont-elles pas disponibles dans le lac de données ?
 
-There are a variety of reasons why batch ingestion may fail to reach the [!DNL Data Lake], such as invalid formatting, missing data, or system errors. To determine why your batch failed, you must retrieve the batch using the [!DNL Data Ingestion Service API] and view its details. Pour obtenir des instructions détaillées sur la récupération d’un lot en échec, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
+Il existe plusieurs raisons pour lesquelles l&#39;assimilation par lot peut ne pas atteindre [!DNL Data Lake], telles qu&#39;une mise en forme non valide, des données manquantes ou des erreurs système. Pour déterminer pourquoi votre lot a échoué, vous devez récupérer le lot à l&#39;aide de [!DNL Data Ingestion Service API] et en vue les détails. Pour obtenir des instructions détaillées sur la récupération d’un lot en échec, consultez le guide sur la [récupération des lots en échec](../quality/retrieve-failed-batches.md).
 
 ### Comment analyser la réponse renvoyée pour la requête d’API ?
 
@@ -95,10 +95,10 @@ Le fichier JSON suivant est un exemple d’objet de réponse pour une requête d
 }
 ```
 
-### Why are my sent messages not being received by [!DNL Real-time Customer Profile]?
+### Pourquoi mes messages envoyés ne sont-ils pas reçus par [!DNL Real-time Customer Profile] ?
 
-If [!DNL Real-time Customer Profile] rejects a message, it is most likely due to incorrect identity information. Cela peut être le résultat d’une valeur ou d’un espace de noms d’identité non valide.
+Si [!DNL Real-time Customer Profile] rejette un message, il est très probable qu&#39;il soit dû à des informations d&#39;identité incorrectes. Cela peut être le résultat d’une valeur ou d’un espace de noms d’identité non valide.
 
 Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
 
-You can use the [[!DNL Experience Platform UI]](https://platform.adobe.com) to see more information on why a message failed ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Diffusion en continu de bout en bout]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.
+Vous pouvez utiliser [[!DNL Experience Platform UI]](https://platform.adobe.com) pour obtenir plus d’informations sur les raisons pour lesquelles un message n’a pas été assimilé. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Diffusion en continu de bout en bout]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.
