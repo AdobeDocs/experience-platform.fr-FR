@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts
+keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour les comptes
 description: Dans certains cas, il peut être nécessaire de mettre à jour les détails d'un compte de sources existantes. L’espace de travail Sources vous permet d’ajouter, de modifier et de supprimer des détails d’une connexion existante par lot ou en flux continu, y compris son nom, sa description et ses informations d’identification.
 solution: Experience Platform
 title: Mettre à jour les détails du compte dans l’interface utilisateur
@@ -8,7 +8,7 @@ type: Tutorial
 translation-type: tm+mt
 source-git-commit: 9b48bc1426e6259ea0b2cf9b420b55b92712f7c2
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '449'
 ht-degree: 4%
 
 ---
