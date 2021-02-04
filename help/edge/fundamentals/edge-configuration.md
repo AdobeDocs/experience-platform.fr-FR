@@ -3,12 +3,12 @@ title: Configuration Edge
 seo-title: Configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
-keywords: configuration;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuration;edge;edge configuration id;Environnement Settings;edgeConfigId;identity;id sync enabled;ID Sync Conteneur ID;Sandbox;Streaming Inlet;Événement Dataset;cible;code client;jeton de propriété;ID d'Environnement de Cible;Destinations de cookies;URL Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
 source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 3%
+source-wordcount: '924'
+ht-degree: 2%
 
 ---
 
