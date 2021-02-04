@@ -5,10 +5,10 @@ title: Adobe Experience Platform Identity Service
 topic: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: 7c9c81492df9333945ac62602f10b6097296d62b
+source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
 workflow-type: tm+mt
-source-wordcount: '905'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -100,7 +100,7 @@ La section suivante fournit des informations supplémentaires sur l’utilisatio
 Des erreurs peuvent se produire lors de l&#39;accès à la visionneuse de graphiques d&#39;identité. Voici une liste de conditions préalables et de limites à prendre en compte lors de l’utilisation de la visionneuse de graphiques d’identité.
 
 - Une valeur d&#39;identité doit exister dans l&#39;espace de nommage sélectionné.
-- Le lecteur de graphique d&#39;identité requiert au moins deux identités liées à générer.
+- Le lecteur de graphique d&#39;identité requiert au moins deux identités liées à générer. Il est possible qu’il n’y ait qu’une seule valeur d’identité et aucune identité liée, et dans ce cas, la valeur n’existerait que dans le lecteur [!DNL Profile].
 - La visionneuse de graphiques d’identité ne peut pas dépasser 150 identités au maximum.
 
 ![écran d&#39;erreur](../images/identity-graph-viewer/error-screen.png)
