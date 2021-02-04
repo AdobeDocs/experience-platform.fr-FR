@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; Schéma design ; mixin ; mixin ; environnement ; détails environnement ;
 solution: Experience Platform
 title: Mélange Détails de l’Environnement
 topic: overview
@@ -7,19 +7,19 @@ description: Ce document présente un aperçu du mixin Détails de l’Environne
 translation-type: tm+mt
 source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '198'
 ht-degree: 4%
 
 ---
 
 
-# [!UICONTROL Mélange Détails] de l’Environnement
+# [!UICONTROL Environnement ] Detailsmixin
 
 >[!NOTE]
 >
->Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document sur les mises à jour [des noms de](../name-updates.md) mixin.
+>Les noms de plusieurs mixins ont changé. Pour plus d’informations, consultez le document [Mises à jour du nom de mixin](../name-updates.md).
 
-[!UICONTROL Détails] de l’Environnement est un mixin standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/individual-profile.md) utilisée pour capturer des informations concernant les détails d’environnement liés à un Événement d’expérience, tels que les détails du périphérique, les informations du navigateur, l’heure locale et d’autres informations géographiques.
+[!UICONTROL Les ] détails de l’Environnement sont un mixin standard pour la  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) classe utilisée pour capturer des informations concernant les détails de l’environnement liés à un Événement d’expérience, tels que les détails du périphérique, les informations du navigateur, l’heure locale et d’autres informations géographiques.
 
 <img src="../../images/mixins/environment-details.png" width="500" /><br />
 
