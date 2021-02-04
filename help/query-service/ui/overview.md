@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
+keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête ; éditeur de requêtes ; éditeur de Requêtes ; éditeur de Requêtes ;
 solution: Experience Platform
 title: Guide de l’interface utilisateur d’Adobe Experience Platform Query Service
 topic: guide
@@ -7,23 +7,23 @@ description: Adobe Experience Platform Query Service présente une interface uti
 translation-type: tm+mt
 source-git-commit: d2f098cb9e4aaf5beaad02173a22a25a87a43756
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 67%
+source-wordcount: '633'
+ht-degree: 65%
 
 ---
 
 
 # [!DNL Query Service] guide
 
-The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. Pour accéder à l’interface utilisateur d’[Adobe Experience Platform][platform-ui], sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche.
+Le Adobe Experience Platform [!DNL Query Service] fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, des vues de requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs au sein de votre organisation IMS. Pour accéder à l’interface utilisateur d’[Adobe Experience Platform][platform-ui], sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche.
 
 ## [!DNL Query Editor]
 
-The [!DNL Query Editor] enables you to write and execute queries without using an external client. Click **[!UICONTROL Create Query]** to open the [!DNL Query Editor] and create a new query. You can also access the [!DNL Query Editor] by selecting a query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tabs. Selecting a previously executed or saved query will open the [!DNL Query Editor] and display the SQL for the selected query.
+[!DNL Query Editor] vous permet d&#39;écrire et d&#39;exécuter des requêtes sans utiliser de client externe. Cliquez sur **[!UICONTROL Créer une Requête]** pour ouvrir [!DNL Query Editor] et créer une nouvelle requête. Vous pouvez également accéder à [!DNL Query Editor] en sélectionnant une requête dans les onglets **[!UICONTROL Log]** ou **[!UICONTROL Parcourir]**. La sélection d&#39;une requête précédemment exécutée ou enregistrée ouvre [!DNL Query Editor] et affiche le code SQL pour la requête sélectionnée.
 
 ![Image](../images/queries/ui-overview/overview.png)
 
-[!DNL Query Editor] fournit un espace de modification dans lequel vous pouvez commencer à saisir une requête. Au fur et à mesure que vous tapez, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms des champs dans les tables. When finished writing your query, click the **Play** button to run the query. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que fait actuellement , indiquant le moment où une requête a été renvoyée. [!DNL Query Service] L’onglet **[!UICONTROL Résultat]**, en regard de la Console, affiche les résultats de la requête. See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
+[!DNL Query Editor] fournit un espace de modification dans lequel vous pouvez commencer à saisir une requête. Au fur et à mesure que vous tapez, l’éditeur complète automatiquement les mots réservés SQL, les tables et les noms des champs dans les tables. Lorsque vous avez terminé d’écrire votre requête, cliquez sur le bouton **Lecture** pour exécuter la requête. L’onglet **[!UICONTROL Console]** situé sous l’éditeur indique ce que fait actuellement , indiquant le moment où une requête a été renvoyée. [!DNL Query Service] L’onglet **[!UICONTROL Résultat]**, en regard de la Console, affiche les résultats de la requête. Consultez le [guide de l’éditeur de Requêtes][query-editor] pour plus d’informations sur l’utilisation de [!DNL Query Editor].
 
 ![Image](../images/queries/ui-overview/query-editor.png)
 
@@ -35,9 +35,9 @@ L’onglet **[!UICONTROL Parcourir]** affiche les requêtes enregistrées par le
 
 | Colonne | Description |
 | --- | --- |
-| Nom | Nom de la requête créée par l’utilisateur. You can click on the name to open the query in the [!DNL Query Editor]. Vous pouvez également utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
+| Nom | Nom de la requête créée par l’utilisateur. Vous pouvez cliquer sur le nom pour ouvrir la requête dans [!DNL Query Editor]. Vous pouvez également utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
 | SQL | Premiers caractères de la requête SQL. Placez le pointeur de la souris sur le code pour afficher la requête entière. |
-| Modifié par | Dernier utilisateur à avoir modifié la requête. Any user in your organization with access to [!DNL Query Service] can modify queries. |
+| Modifié par | Dernier utilisateur à avoir modifié la requête. Tout utilisateur de votre organisation ayant accès à [!DNL Query Service] peut modifier des requêtes. |
 | Dernière modification | Date et heure de la dernière modification apportée à la requête, dans le fuseau horaire du navigateur. |
 
 ## Journal
@@ -48,7 +48,7 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 | Colonne | Description |
 | --- | --- |
-| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. Clicking on the name opens the [!DNL Query Editor], allowing you to edit the query. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
+| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. Cliquez sur le nom pour ouvrir la [!DNL Query Editor], ce qui vous permet de modifier la requête. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
 | **[!UICONTROL Créée par]** | Nom de la personne qui a créé la requête. |
 | **[!UICONTROL client]** | Client utilisé pour la requête. |
 | **[!UICONTROL Jeu de données]** | Jeu de données d’entrée utilisé par la requête. Cliquez sur le jeu de données pour accéder à l’écran des détails du jeu de données d’entrée. |
@@ -64,7 +64,7 @@ L’onglet **[!UICONTROL Informations d’identification]** affiche vos informat
 
 ## Étapes suivantes
 
-Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!DNL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!DNL Query Editor], see the [Query Editor user guide][query-editor].
+Maintenant que vous connaissez [!DNL Query Service] l&#39;interface utilisateur de [!DNL Platform], vous pouvez accéder à [!DNL Query Editor] au début de création de vos propres projets de requête à partager avec d&#39;autres utilisateurs de votre organisation. Pour plus d&#39;informations sur la création et l&#39;exécution de requêtes dans [!DNL Query Editor], consultez le [Guide de l&#39;utilisateur de l&#39;éditeur de Requêtes][query-editor].
 
 [platform-ui]: https://platform.adobe.com
 [query-editor]: user-guide.md
