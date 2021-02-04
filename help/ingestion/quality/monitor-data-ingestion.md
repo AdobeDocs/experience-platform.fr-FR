@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
+keywords: Experience Platform ; accueil ; rubriques populaires ; surveillance ; surveillance ; flux de données ; surveillance ; analyse ; assimilation de données ; assimilation de données ; enregistrements de vues ; lots de vues ;
 solution: Experience Platform
 title: Surveillance de l’ingestion des données
 topic: overview
@@ -7,15 +7,15 @@ description: Ce guide d’utilisation fournit des étapes détaillées sur la ma
 translation-type: tm+mt
 source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
 workflow-type: tm+mt
-source-wordcount: '552'
-ht-degree: 70%
+source-wordcount: '571'
+ht-degree: 67%
 
 ---
 
 
 # Surveillance de l’ingestion des données
 
-L’ingestion des données vous permet d’ingérer vos données dans Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real-time.
+L’ingestion des données vous permet d’ingérer vos données dans Adobe Experience Platform. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer vos données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’assimiler vos données à [!DNL Platform] à l’aide de points de terminaison en flux continu en temps réel.
 
 Ce guide d’utilisation fournit des étapes détaillées sur la manière de surveiller vos données au sein de l’interface utilisateur d’Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Dans l’[interface utilisateur d’Experience Platform](https://platform.adobe.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux de réception des événements en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par [[!DNL Real-time Customer Profile]](../../profile/home.md)et une liste détaillée des données entrantes.
+La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux de événements reçus en flux continu par [!DNL Platform], un graphique qui affiche le taux de événements en flux continu qui ont été traités avec succès par [[!DNL Real-time Customer Profile]](../../profile/home.md), ainsi qu&#39;une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -37,7 +37,7 @@ Le graphique du bas montre le taux de événements en flux continu traités avec
 
 >[!NOTE]
 >
->Pour que les données s’affichent sur ce graphique, elles doivent être **explicitement** activées pour [!DNL Profile]. Pour savoir comment activer la diffusion en continu des données pour [!DNL Profile], consultez le guide [d’utilisation des jeux de](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile)données.
+>Pour que les données s’affichent sur ce graphique, les données doivent être **explicitement** activées pour [!DNL Profile]. Pour savoir comment activer les données en flux continu pour [!DNL Profile], consultez le [guide d&#39;utilisateur des jeux de données](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -61,7 +61,7 @@ De plus, les enregistrements en échec fournissent des informations sur les erre
 
 ## Surveillance de l’ingestion des données du lot de bout en bout
 
-In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu.
+Dans le [[!DNL Experience Platform UI]](https://platform.adobe.com), cliquez sur **[!UICONTROL Surveillance]** dans le menu de navigation de gauche.
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
