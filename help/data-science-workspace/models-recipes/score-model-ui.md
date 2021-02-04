@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
+keywords: Experience Platform ; score d’un modèle ; Espace de travail des données ; rubriques populaires ; ui ; exécution de score ; résultats de score
 solution: Experience Platform
 title: Notation d’un modèle (interface utilisateur)
 topic: tutorial
@@ -8,21 +8,21 @@ description: 'La notation dans Adobe Experience Platform Data Science Workspace 
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 91%
+source-wordcount: '624'
+ht-degree: 89%
 
 ---
 
 
 # Notation d’un modèle (interface utilisateur)
 
-Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
+Le score dans Adobe Experience Platform [!DNL Data Science Workspace] peut être obtenu en alimentant les données d&#39;entrée dans un modèle existant. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 
-This tutorial demonstrates the steps required to score a Model in the [!DNL Data Science Workspace] user interface.
+Ce didacticiel présente les étapes requises pour marquer un modèle dans l&#39;interface utilisateur [!DNL Data Science Workspace].
 
 ## Prise en main
 
-Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
+Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n&#39;avez pas accès à une organisation IMS dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
 Ce tutoriel nécessite un modèle formé. Si vous ne disposez pas d’un modèle formé, suivez le tutoriel [Formation et évaluation d’un modèle dans l’interface utilisateur](./train-evaluate-model-ui.md) avant de poursuivre.
 
