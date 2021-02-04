@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;date range
+keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
 title: Présentation des notifications d'observation
 topic: overview
@@ -7,7 +7,7 @@ description: Observability Insights vous permet de vous abonner à des notificat
 translation-type: tm+mt
 source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 0%
 
 # [!DNL Observability] présentation des notifications
 
-[!DNL Observability Insights] vous permet de vous abonner à des notifications de événement concernant les activités Adobe Experience Platform. They reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed or if a certain milestone within a workflow has been reached.
+[!DNL Observability Insights] vous permet de vous abonner à des notifications de événement concernant les activités Adobe Experience Platform. Elles réduisent ou éliminent le besoin de consulter l&#39;[[!DNL Observability Insights] API](../api/overview.md) afin de vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint.
 
 [!DNL Observability] les notifications utilisent actuellement les Événements Adobe I/O, qui peuvent être envoyés à un webhook configuré pour faciliter l&#39;automatisation efficace de la surveillance des activités. Cependant, les fonctions de notification incluront éventuellement les notifications par courrier électronique et par interface utilisateur.
 
-Pour commencer à utiliser [!DNL Observability] les notifications, passez au didacticiel sur l&#39; [abonnement aux notifications](./subscribe.md)de Événement d&#39;E/S.
+Pour commencer à utiliser les notifications [!DNL Observability], passez au didacticiel sur [l&#39;abonnement aux notifications de Événement d&#39;E/S](./subscribe.md).
