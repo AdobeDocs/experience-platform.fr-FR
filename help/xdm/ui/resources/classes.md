@@ -5,10 +5,10 @@ title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: 5bf729197de53e9d24675c8a1d0455e807fb90c5
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 8%
+source-wordcount: '886'
+ht-degree: 7%
 
 ---
 
@@ -53,9 +53,9 @@ Vous pouvez désormais début [l&#39;ajout de champs à la classe](#add-fields),
 
 >[!NOTE]
 >
->Seules les classes personnalisées définies par votre organisation peuvent être modifiées.
+>Seules les classes personnalisées définies par votre organisation peuvent être entièrement modifiées et personnalisées. Pour les classes de base définies par Adobe, seuls les noms d’affichage de leurs champs peuvent être modifiés dans le contexte de schémas individuels. Pour plus d&#39;informations, consultez la section [modification des noms d&#39;affichage pour les champs de schéma](./schemas.md#display-names).
 >
->De plus, une fois qu&#39;une classe a été enregistrée et utilisée dans l&#39;assimilation de données, seules des modifications additifs peuvent être apportées par la suite. Pour plus d&#39;informations, consultez les [règles d&#39;évolution des schémas](../../schema/composition.md#evolution).
+>Une fois qu&#39;une classe personnalisée a été enregistrée et utilisée dans l&#39;assimilation de données, seules des modifications supplémentaires peuvent être apportées par la suite. Pour plus d&#39;informations, consultez les [règles d&#39;évolution des schémas](../../schema/composition.md#evolution).
 
 Pour modifier une classe existante, sélectionnez l&#39;onglet **[!UICONTROL Parcourir]**, puis sélectionnez le nom d&#39;un schéma qui utilise la classe à modifier.
 
