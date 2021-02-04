@@ -3,12 +3,12 @@ title: Prise en charge du consentement
 seo-title: Prise en charge des préférences de consentement du SDK Web d’Adobe Experience Platform
 description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
 seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
-keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+keywords: consentement ; defaultConsent ; consentement par défaut ; setConsent ; mélange de confidentialité des Profils ; mélange de confidentialité des Événements d’expérience ; mélange de confidentialité ;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 63%
+source-wordcount: '766'
+ht-degree: 62%
 
 ---
 
@@ -80,11 +80,11 @@ L’utilisateur ayant choisi de ne pas donner son consentement, les promesses qu
 
 >[!NOTE]
 >
->Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  This only applies to Adobe Experience Platform [!DNL Web SDK] and NOT other Adobe JavaScript libraries.
+>Actuellement, le SDK ne prend en charge que l’usage `general`. Bien que nous prévoyions de créer un ensemble plus riche d’usages ou de catégories qui devront correspondre aux différentes capacités et offres de produits Adobe, l’implémentation actuelle s’effectue sur la base du « tout ou rien ».  Ceci s’applique uniquement à Adobe Experience Platform [!DNL Web SDK] et NON à d’autres bibliothèques JavaScript d’Adobe.
 
 ## Communiquer les préférences de consentement au moyen de la norme TCF de l&#39;IAB
 
-Le SDK prend en charge l’enregistrement des préférences de consentement d’un utilisateur fournies par le biais de la norme Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). La chaîne de consentement peut être définie à l’aide de la même `setConsent` commande que ci-dessus :
+Le SDK prend en charge l’enregistrement des préférences de consentement d’un utilisateur fournies par le biais de la norme Interactive Advertising Bureau Europe (IAB) Transparency and Consent Framework (TCF). La chaîne de consentement peut être définie à l’aide de la même commande `setConsent` que ci-dessus :
 
 ```javascript
 alloy("setConsent", {
@@ -97,7 +97,7 @@ alloy("setConsent", {
 });
 ```
 
-Lorsque le consentement est défini de cette manière, le Profil client en temps réel est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi de événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet XDM du événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, le Mélange de confidentialité [Experience Événement](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) doit être ajouté au schéma Experience Événement.
+Lorsque le consentement est défini de cette manière, le Profil client en temps réel est mis à jour avec les informations de consentement. Pour que cela fonctionne, le schéma XDM du profil doit contenir le [mélange de confidentialité du Profil](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md). Lors de l’envoi de événements, les informations de consentement IAB doivent être ajoutées manuellement à l’objet XDM du événement. Le SDK n’inclut pas automatiquement les informations de consentement dans les événements. Pour envoyer les informations de consentement dans les événements, le [Mélange de confidentialité du Événement d’expérience](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) doit être ajouté au schéma du Événement d’expérience.
 
 ## Envoi des deux normes dans une seule requête
 
@@ -126,5 +126,5 @@ Après avoir communiqué les préférences de l’utilisateur au SDK à l’aide
 
 ## Synchronisation des identités lors de la définition du consentement
 
-Lorsque le consentement par défaut est en attente, il `setConsent` peut s’agir de la première demande qui est émise et qui établit l’identité. C’est pourquoi il peut s’avérer important de synchroniser les identités lors de la première requête. La carte d&#39;identité peut être ajoutée à `setConsent` la commande comme dans la `sendEvent` commande. Voir [Récupération de l’ID d’Experience Cloud](../identity/overview.md)
+Lorsque le consentement par défaut est en attente, `setConsent` peut être la première requête à être envoyée et à établir l&#39;identité. C’est pourquoi il peut s’avérer important de synchroniser les identités lors de la première requête. La carte d&#39;identité peut être ajoutée à la commande `setConsent`, tout comme dans la commande `sendEvent`. Voir [Récupération de l’ID d’Experience Cloud](../identity/overview.md).
 
