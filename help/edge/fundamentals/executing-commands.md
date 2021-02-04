@@ -3,12 +3,12 @@ title: Exécution des commandes
 seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
-keywords: Executing commands;commandName;Promises;getLibraryInfo;response objects;consent;
+keywords: Exécution des commandes ; commandName ; Promises ; getLibraryInfo ; objets response ; consentement ;
 translation-type: tm+mt
 source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 75%
+source-wordcount: '428'
+ht-degree: 73%
 
 ---
 
@@ -67,7 +67,7 @@ alloy("commandName", options)
 
 ### Objets de réponse
 
-Toutes les promesses retournées par les commandes sont résolues avec un `result` objet. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations de bibliothèque sont transmises sous la forme d’une propriété de l’objet result dans la commande suivante.
+Toutes les promesses renvoyées par les commandes sont résolues avec un objet `result`. L’objet result contient des données en fonction de la commande et du consentement de l’utilisateur. Par exemple, les informations de bibliothèque sont transmises sous la forme d’une propriété de l’objet result dans la commande suivante.
 
 ```js
 alloy("getLibraryInfo")
