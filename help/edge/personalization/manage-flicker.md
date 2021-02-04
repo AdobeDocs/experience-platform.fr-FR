@@ -3,12 +3,12 @@ title: Gestion de Flicker pour les expériences personnalisées
 seo-title: Adobe Experience Platform Web SDK gestion du scintillement
 description: Découvrez comment gérer le scintillement sur les expériences des utilisateurs
 seo-description: Découvrez comment gérer le scintillement à l’aide des propriétés Experience Platform Web SDK
-keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
+keywords: cible ; scintillement ; prehideStyle ; asynchrone ; asynchrone ;
 translation-type: tm+mt
 source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 76%
+source-wordcount: '496'
+ht-degree: 75%
 
 ---
 
@@ -27,7 +27,7 @@ La fonctionnalité de gestion des scintillements comporte quelques phases :
 
 Au cours de la phase de prémasquage, le SDK utilise l’option de configuration `prehidingStyle` pour créer une balise de style HTML et l’ajouter au modèle DOM afin de s’assurer que de grandes parties de la page sont masquées. Si vous ne savez pas quelles parties de la page seront personnalisées, il est recommandé de définir `prehidingStyle` sur `body { opacity: 0 !important }`. La page entière est ainsi masquée. Toutefois, cela a pour inconvénient d&#39;entraîner une dégradation des performances de rendu des pages signalées par des outils tels que Lighthouse, Web Page Tests, etc. Pour optimiser les performances de rendu des pages, il est recommandé de définir `prehidingStyle` sur une liste d’éléments de conteneurs qui contiennent les parties de la page à personnaliser.
 
-Assuming you have an HTML page like the one below and you know that only `bar` and `bazz` container elements will be ever personalized:
+En supposant que vous ayez une page HTML telle que celle ci-dessous, vous savez que seuls les éléments de conteneur `bar` et `bazz` seront personnalisés :
 
 ```html
 <html>
