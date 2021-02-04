@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;catalog;object lookup;api
+keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; recherche d’objet ; api
 solution: Experience Platform
 title: Recherche d’un objet
 topic: developer guide
@@ -7,15 +7,15 @@ description: 'Si vous connaissez l’identifiant unique d’un objet Catalog sp�
 translation-type: tm+mt
 source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 81%
+source-wordcount: '163'
+ht-degree: 77%
 
 ---
 
 
 # Recherche d’un objet
 
-If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object&#39;s details.
+Si vous connaissez l&#39;identifiant unique d&#39;un objet [!DNL Catalog] spécifique, vous pouvez exécuter une demande de GET pour vue des détails de cet objet.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | The type of [!DNL Catalog] object to be retrieved. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Type d&#39;objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | L’identifiant de l’objet spécifique que vous souhaitez récupérer. |
 
 **Requête**
