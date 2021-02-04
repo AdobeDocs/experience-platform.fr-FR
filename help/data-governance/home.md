@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;DULE;dule
+keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
 solution: Experience Platform
 title: Gouvernance des données d’Adobe Experience Platform
 topic: overview
@@ -7,7 +7,7 @@ description: La gouvernance des données d’Adobe Experience Platform vous perm
 translation-type: tm+mt
 source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1345'
 ht-degree: 70%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 70%
 
 # [!DNL Data Governance] présentation
 
-L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. It is therefore important to ensure that your data operations within [!DNL Platform] are compliant with data usage policies.
+L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s&#39;assurer que vos opérations de données dans [!DNL Platform] sont conformes aux règles d&#39;utilisation des données.
 
-Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
+Adobe Experience Platform [!DNL Data Governance] vous permet de gérer les données client et de veiller au respect des réglementations, restrictions et stratégies applicables à l’utilisation des données. Il joue un rôle clé dans [!DNL Experience Platform] à divers niveaux, notamment le catalogage, le lignage des données, l&#39;étiquetage de l&#39;utilisation des données, les stratégies d&#39;utilisation des données et le contrôle de l&#39;utilisation des données pour les actions marketing.
 
 ## Rôles de la gouvernance des données
 
@@ -45,9 +45,9 @@ Les professionnels du marketing sont le point de terminaison de la gouvernance d
 
 ## [!DNL Data Governance] cadre
 
-The [!DNL Data Governance] framework simplifies and streamlines the process of categorizing data and creating data usage policies. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
+La structure [!DNL Data Governance] simplifie et rationalise le processus de catégorisation des données et de création de stratégies d&#39;utilisation des données. Une fois les libellés de données appliqués et les stratégies d’utilisation des données en place, vous pouvez évaluer les actions marketing permettant d’assurer la bonne utilisation des données.
 
-There are three key elements to the [!DNL Data Governance] framework: Labels, Policies, and Enforcement.
+La structure [!DNL Data Governance] comporte trois éléments clés : Étiquettes, politiques et application de la loi.
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
 1. **Stratégies :** décrivent le ou les types d’actions marketing que vous êtes autorisé à effectuer ou non sur certaines données.
@@ -57,7 +57,7 @@ There are three key elements to the [!DNL Data Governance] framework: Labels, Po
 
 [!DNL Data Governance] permet aux responsables de données d’appliquer des étiquettes d’utilisation au niveau du jeu de données et des champs afin de classer les données en fonction du type de stratégies appliquées.
 
-The [!DNL Data Governance] framework includes predefined data usage labels that can be used to categorize data in three ways:
+La structure [!DNL Data Governance] comprend des étiquettes d&#39;utilisation de données prédéfinies qui peuvent être utilisées pour classer les données de trois manières :
 
 ![Catégorie des libellés d’utilisation des données](./images/overview/label-categories.png)
 
@@ -69,35 +69,35 @@ The [!DNL Data Governance] framework includes predefined data usage labels that 
 >
 >Consultez le guide sur les [libellés d’utilisation des données pris en charge](labels/reference.md) pour obtenir la liste complète des libellés disponibles ainsi que des définitions de chaque type de libellé.
 
-Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Best practice encourages labeling data as soon as it is ingested into [!DNL Experience Platform], or as soon as data becomes available in [!DNL Platform].
+Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. Il est recommandé d’étiqueter les données dès qu’elles sont ingérées dans [!DNL Experience Platform] ou dès que les données sont disponibles dans [!DNL Platform].
 
-Pour plus d’informations, voir la présentation des étiquettes [d’utilisation des](./labels/overview.md) données.
+Pour plus d&#39;informations, consultez l&#39;aperçu des [étiquettes d&#39;utilisation des données](./labels/overview.md).
 
 ## Stratégies d’utilisation des données
 
-Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].
+Des stratégies d’utilisation des données doivent être mises en œuvre pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé à exécuter, ou dont vous êtes limité à l’exécution, sur les données dans [!DNL Experience Platform].
 
-Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. If there is a policy in place saying that specific types of data, such as Personally Identifiable Information (PII), cannot be exported and an &quot;I&quot; label (Identity data) has been applied to the dataset, you will receive a response from the [!DNL Policy Service] telling you that a data usage policy has been violated.
+Un exemple d’action marketing peut être le souhait d’exporter un jeu de données vers un service tiers. Si une stratégie indique que des types spécifiques de données, tels que les informations d’identification personnelle (PII), ne peuvent pas être exportés et qu’une étiquette &quot;I&quot; (données d’identité) a été appliquée au jeu de données, vous recevrez une réponse de la part de [!DNL Policy Service] vous indiquant qu’une stratégie d’utilisation des données a été violée.
 
-Once data usage labels have been applied, data stewards can create policies using the [!DNL Policy Service] API or the [!DNL Experience Platform] user interface.
+Une fois les étiquettes d’utilisation des données appliquées, les responsables de données peuvent créer des stratégies à l’aide de l’API [!DNL Policy Service] ou de l’interface utilisateur [!DNL Experience Platform].
 
 >[!IMPORTANT]
 >
 >Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application de la loi, vous devez l’activer manuellement.
 
-Pour plus d’informations sur les stratégies d’utilisation des données et les actions marketing, voir l’aperçu [des](./policies/overview.md)stratégies.
+Pour plus d&#39;informations sur les stratégies d&#39;utilisation des données et les actions marketing, consultez la [présentation des stratégies](./policies/overview.md).
 
 ## Étapes suivantes
 
-This document provided a high-level introduction to [!DNL Data Governance] and the[!DNL Data Governance] framework. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
+Ce document a fourni une introduction de haut niveau à [!DNL Data Governance] et au cadre[!DNL Data Governance]. Vous pouvez désormais poursuivre en consultant le [guide d’utilisation des libellés d’utilisation des données](labels/user-guide.md) et commencer à ajouter des libellés d’utilisation à vos données d’expérience.
 
 ## Annexe
 
-The following section provides additional information regarding [!DNL Data Governance].
+La section suivante fournit des informations supplémentaires sur [!DNL Data Governance].
 
 ### [!DNL Data Governance] terminologie
 
-The following table outlines key terms related to [!DNL Data Governance] and the[!DNL Data Governance] framework.
+Le tableau suivant décrit les termes clés liés à [!DNL Data Governance] et à la structure [!DNL Data Governance].
 
 | Terme | Définition |
 |---|---|
@@ -111,16 +111,16 @@ The following table outlines key terms related to [!DNL Data Governance] and the
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
 | **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
 | **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également connu sous le nom de personnalisation, se produit si les trois conditions suivantes sont rassemblées : les données collectées sur site sont utilisées pour établir des inférences sur les intérêts d’un utilisateur, elles sont utilisées dans un autre contexte, par exemple sur un autre site ou sur une autre application (hors site) ou elles sont utilisées pour sélectionner le contenu ou les publicités diffusées en fonction de ces inférences. |
-| **Action marketing** | A marketing action, in the context of the data governance framework, is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies |
+| **Action marketing** | Une action marketing, dans le cadre de la gouvernance des données, est une action entreprise par un [!DNL Experience Platform] utilisateur de données, pour laquelle il est nécessaire de vérifier les violations des stratégies d&#39;utilisation des données. |
 | **Stratégie** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit le type d’actions marketing que vous pouvez effectuer ou non sur des données spécifiques. |
 | **Étiquettes Sensibles** | Les étiquettes Sensibles « S » sont utilisées pour catégoriser les données que vous et votre entreprise considérez comme sensibles. |
 
 ## Ressources supplémentaires
 
-La vidéo suivante est destinée à vous aider à comprendre la [!DNL Data Governance] structure.
+La vidéo suivante est destinée à vous aider à comprendre la structure [!DNL Data Governance].
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-La vidéo suivante présente diverses [!DNL Data Governance] fonctionnalités de l’Experience Platform.
+La vidéo suivante présente diverses fonctionnalités [!DNL Data Governance] de l&#39;Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
