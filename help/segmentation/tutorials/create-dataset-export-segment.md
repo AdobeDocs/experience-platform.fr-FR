@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
+keywords: Experience Platform ; accueil ; rubriques populaires ; Service de segmentation ; segmentation ; Segmentation ; créer un jeu de données ; exporter un segment d'audience ; exporter un segment ;
 solution: Experience Platform
 title: Création d’un jeu de données pour l’exportation d’un segment ciblé
 topic: tutorial
@@ -8,8 +8,8 @@ description: Ce tutoriel décrit les étapes nécessaires à la création d’un
 translation-type: tm+mt
 source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 60%
+source-wordcount: '773'
+ht-degree: 58%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 60%
 
 [!DNL Adobe Experience Platform] vous permet de segmenter facilement les profils client en audiences selon des attributs spécifiques. Une fois les segments créés, vous pouvez exporter cette audience vers un jeu de données où il sera possible d’y accéder et de la manipuler. Pour que l’exportation soit réussie, le jeu de données doit être correctement configuré.
 
-This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the [!DNL Experience Platform] UI.
+Ce didacticiel décrit les étapes nécessaires à la création d&#39;un jeu de données qui peut être utilisé pour exporter un segment d&#39;audience à l&#39;aide de l&#39;interface utilisateur [!DNL Experience Platform].
 
-Ce tutoriel est directement lié aux étapes décrites dans le tutoriel portant sur l’[évaluation et l’accès aux résultats de segmentation](./evaluate-a-segment.md). The evaluating a segment tutorial provides steps for creating a dataset using the [!DNL Catalog Service] API, whereas this tutorial outlines steps to create a dataset using the [!DNL Experience Platform] UI.
+Ce tutoriel est directement lié aux étapes décrites dans le tutoriel portant sur l’[évaluation et l’accès aux résultats de segmentation](./evaluate-a-segment.md). Le didacticiel d’évaluation d’un segment décrit les étapes à suivre pour créer un jeu de données à l’aide de l’API [!DNL Catalog Service], tandis que ce didacticiel décrit les étapes à suivre pour créer un jeu de données à l’aide de l’interface utilisateur [!DNL Experience Platform].
 
 ## Prise en main
 
-Pour exporter un segment, le jeu de données doit être basé sur le [!DNL XDM Individual Profile Union Schema]. A union schema is a system-generated, read-only schema that aggregates the fields of all schemas that share the same class, in this case that is the [!DNL XDM Individual Profile] class. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/schema/composition.md#union).
+Pour exporter un segment, le jeu de données doit être basé sur [!DNL XDM Individual Profile Union Schema]. Un schéma d&#39;union est un schéma généré par le système et en lecture seule qui agrégat les champs de tous les schémas qui partagent la même classe, dans ce cas c&#39;est la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur la vue d’union des schémas, consultez la [section Real-time Customer Profile du guide de développement du registre des schémas](../../xdm/schema/composition.md#union).
 
 Pour visualiser les schémas d’union dans l’interface utilisateur, cliquez sur **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
@@ -33,7 +33,7 @@ Pour visualiser les schémas d’union dans l’interface utilisateur, cliquez s
 
 ## Espace de travail des jeux de données
 
-The datasets workspace within the [!DNL Experience Platform] UI allows you to view and manage all of the datasets that your IMS organization has made, as well as create new ones.
+L&#39;espace de travail des jeux de données dans l&#39;interface utilisateur [!DNL Experience Platform] vous permet de vue et de gérer tous les jeux de données créés par votre organisation IMS, ainsi que de en créer de nouveaux.
 
 Pour afficher l’espace de travail des jeux de données, cliquez sur **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche, puis cliquez sur l’onglet **[!UICONTROL Parcourir]**. L&#39;espace de travail des jeux de données contient une liste de jeux de données, y compris des colonnes indiquant le nom, la création (date et heure), la source, le schéma et l&#39;état du dernier lot, ainsi que la date et l&#39;heure de la dernière mise à jour du jeu de données. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 
@@ -55,7 +55,7 @@ Sur l’écran **[!UICONTROL Créer un jeu de données]**, cliquez sur **[!UICON
 
 ## Sélection du schéma d’union XDM Individual Profile
 
-To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the &quot;[!UICONTROL XDM Individual Profile]&quot; schema with a type of &quot;[!UICONTROL Union]&quot; on the **[!UICONTROL Select Schema]** screen.
+Pour sélectionner le [!DNL XDM Individual Profile Union Schema] à utiliser dans votre jeu de données, recherchez le schéma &quot;[!UICONTROL Profil individuel XDM]&quot; avec un type de &quot;[!UICONTROL Union]&quot; sur l’écran **[!UICONTROL Sélectionner un Schéma]**.
 
 Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, puis cliquez sur **[!UICONTROL Suivant]** dans le coin supérieur droit.
 
@@ -63,7 +63,7 @@ Sélectionnez le bouton radio près de **[!UICONTROL XDM Individual Profile]**, 
 
 ## Configuration d’un jeu de données
 
-On the **[!UICONTROL Configure Dataset]** screen, you will be required to give your dataset a name and may also provide a description of the dataset.
+Dans l&#39;écran **[!UICONTROL Configurer le jeu de données]**, vous devrez donner un nom à votre jeu de données et peut également fournir une description du jeu de données.
 
 **Remarques sur les noms des jeux de données :**
 - Les noms des jeux de données doivent être courts et descriptifs afin qu’ils puissent être facilement retrouvés par la suite dans la bibliothèque.
@@ -78,7 +78,7 @@ Une fois que le jeu de données possède un nom et une description, cliquez sur 
 
 Un jeu de données vide a désormais été créé et vous avez été renvoyé à l’onglet **[!UICONTROL Activité du jeu de données]** dans l’espace de travail des jeux de données. **** Vous devriez voir le nom du jeu de données dans le coin supérieur gauche de l’espace de travail, ainsi qu’une notification indiquant « Aucun lot n’a été ajouté ». Cela est normal puisque vous n’avez encore ajouté aucun lot à ce jeu de données.
 
-On the right-hand side of the Datasets workspace you will see the **[!UICONTROL Info]** tab containing information related to your new dataset such as dataset ID, name, description, table name, schema, streaming, and source. The **[!UICONTROL Info]** tab also includes information about when the dataset was created and its last modified date.
+L&#39;onglet **[!UICONTROL Informations]** situé à droite de l&#39;espace de travail Datasets contient des informations relatives à votre nouveau jeu de données, telles que l&#39;ID, le nom, la description, le nom de la table, le schéma, la diffusion en continu et la source. L&#39;onglet **[!UICONTROL Info]** contient également des informations sur le moment où le jeu de données a été créé et sa date de dernière modification.
 
 Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cette valeur est indispensable pour terminer le workflow d’exportation du segment ciblé.
 
@@ -86,6 +86,6 @@ Prêtez attention à l’**[!UICONTROL identifiant du jeu de données]** : cett
 
 ## Étapes suivantes
 
-Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
+Maintenant que vous avez créé un jeu de données basé sur [!DNL XDM Individual Profile Union Schema], vous pouvez utiliser l&#39;ID de jeu de données pour continuer le didacticiel [évaluation et accès aux résultats du segment](./evaluate-a-segment.md).
 
-At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.
+Pour l&#39;instant, veuillez revenir au didacticiel d&#39;évaluation des résultats des segments et prendre connaissance de l&#39;étape [génération de profils pour les membres d&#39;audience](./evaluate-a-segment.md#generate-profiles) du processus d&#39;exportation d&#39;un segment.
