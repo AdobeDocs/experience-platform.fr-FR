@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
+keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; prévisualisations ; estimations ; prévisualisations et estimations ; estimations et prévisualisations ; api ; API ;
 solution: Experience Platform
 title: Prévisualisations et estimations des points de terminaison
 topic: developer guide
@@ -7,19 +7,19 @@ description: Au fur et à mesure que vous développez votre définition de segme
 translation-type: tm+mt
 source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 27%
+source-wordcount: '792'
+ht-degree: 26%
 
 ---
 
 
 # Prévisualisations et estimations des points de terminaison
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.** **Les estimations** fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur.
+Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d&#39;estimation et de prévisualisation dans [!DNL Adobe Experience Platform] pour vue des informations de synthèse afin de vous assurer que vous isolez l&#39;audience attendue. **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.** **Les** estimations fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur.
 
 ## Prise en main
 
-The endpoints used in this guide are part of the [!DNL Adobe Experience Platform Segmentation Service] API. Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
+Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL Adobe Experience Platform Segmentation Service]. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes que vous devez connaître pour pouvoir invoquer l&#39;API, y compris les en-têtes requis et pour savoir comment lire des exemples d&#39;appels d&#39;API.
 
 ## Comment sont générées les estimations
 
@@ -76,7 +76,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | L’expression PQL qui servira à effectuer la requête sur les données. |
 | `predicateType` | Type de prédicat pour l&#39;expression de requête sous `predicateExpression`. Actuellement, la seule valeur acceptée pour cette propriété est `pql/text`. |
-| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
+| `predicateModel` | Le nom du schéma [!DNL Experience Data Model] (XDM) sur lequel reposent les données du profil. |
 
 **Réponse**
 
@@ -97,9 +97,9 @@ Une réponse réussie renvoie un état HTTP 201 (Created) avec les détails de 
 | `state` | L’état actuel de la tâche de prévisualisation. Lors de sa création initiale, il sera à l’état &quot;NOUVEAU&quot;. Par la suite, il sera à l’état &quot;EN COURS&quot; jusqu’à ce que le traitement soit terminé, puis devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `previewId` | ID de la tâche de prévisualisation, à utiliser à des fins de recherche lors de l’affichage d’une estimation ou d’une prévisualisation, comme indiqué dans la section suivante. |
 
-## Récupérer les résultats d’une prévisualisation spécifique {#get-preview}
+## Récupérer les résultats d&#39;une prévisualisation spécifique {#get-preview}
 
-You can retrieve detailed information about a specific preview by making a GET request to the `/preview` endpoint and providing the preview ID in the request path.
+Vous pouvez récupérer des informations détaillées sur une prévisualisation spécifique en adressant une demande de GET au point de terminaison `/preview` et en indiquant l’identifiant de prévisualisation dans le chemin d’accès de la demande.
 
 **Format d’API**
 
@@ -109,7 +109,7 @@ GET /preview/{PREVIEW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | The `previewId` value of the preview you want to retrieve. |
+| `{PREVIEW_ID}` | Valeur `previewId` de la prévisualisation à récupérer. |
 
 **Requête**
 
@@ -172,11 +172,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l’aide du [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide de [[!DNL Profile Access API]](../../profile/api/entities.md). |
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
-Une fois que vous avez créé une tâche de prévisualisation, vous pouvez l’utiliser `previewId` `/estimate` dans le chemin d’une demande de GET vers le point de terminaison vers les informations statistiques de la vue sur la définition de segment, y compris la taille estimée de l’audience, l’intervalle de fiabilité et l’écart type d’erreur.
+Une fois que vous avez créé une tâche de prévisualisation, vous pouvez utiliser `previewId` dans le chemin d&#39;une demande de GET vers le point de terminaison `/estimate` pour obtenir des informations statistiques sur la définition de segment, y compris la taille estimée de l&#39;audience, l&#39;intervalle de fiabilité et l&#39;écart type d&#39;erreur.
 
 **Format d’API**
 
@@ -186,7 +186,7 @@ GET /estimate/{PREVIEW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Une tâche d’estimation n’est déclenchée que lorsqu’une tâche de prévisualisation est créée et que les deux tâches partagent la même valeur d’ID à des fins de recherche. Plus précisément, il s’agit de la `previewId` valeur renvoyée lors de la création de la tâche de prévisualisation. |
+| `{PREVIEW_ID}` | Une tâche d’estimation n’est déclenchée que lorsqu’une tâche de prévisualisation est créée et que les deux tâches partagent la même valeur d’ID à des fins de recherche. Plus précisément, il s’agit de la valeur `previewId` renvoyée lors de la création de la tâche de prévisualisation. |
 
 **Requête**
 
@@ -231,4 +231,4 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment utiliser les prévisualisations et les estimations. Pour en savoir plus sur les autres points de terminaison [!DNL Segmentation Service] API, consultez la présentation [du guide du développeur](./overview.md)Segmentation Service.
+Après avoir lu ce guide, vous comprenez mieux comment utiliser les prévisualisations et les estimations. Pour en savoir plus sur les autres [!DNL Segmentation Service] points de terminaison de l&#39;API, consultez le [Guide du développeur du service de segmentation](./overview.md).
