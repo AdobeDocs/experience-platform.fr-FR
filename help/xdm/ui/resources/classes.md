@@ -93,6 +93,6 @@ Vous pouvez modifier la classe du schéma à tout moment au cours du processus d
 
 ## Étapes suivantes
 
-Ce document décrit comment créer et modifier des classes à l’aide de l’interface utilisateur de la plate-forme. Pour plus d&#39;informations sur les fonctionnalités de l&#39;espace de travail [!UICONTROL Schémas], consultez la présentation de l&#39;espace de travail [[!UICONTROL Schémas]](../overview.md).
+Ce document décrit comment créer et modifier des classes à l’aide de l’interface utilisateur de la plateforme. Pour plus d&#39;informations sur les fonctionnalités de l&#39;espace de travail [!UICONTROL Schémas], consultez la présentation de l&#39;espace de travail [[!UICONTROL Schémas]](../overview.md).
 
 Pour savoir comment gérer les classes à l&#39;aide de l&#39;API [!DNL Schema Registry], consultez le guide du point de terminaison [classes](../../api/classes.md).
