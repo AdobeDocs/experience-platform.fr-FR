@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
+keywords: Experience Platform ; optimize ; model ; Data Science Workspace ; sujets populaires ; informations sur les modèles
 solution: Experience Platform
 title: Optimisation d’un modèle
 topic: tutorial
@@ -8,15 +8,15 @@ description: Model Insights Framework fournit aux analystes de données des outi
 translation-type: tm+mt
 source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 89%
+source-wordcount: '1260'
+ht-degree: 88%
 
 ---
 
 
 # Optimisation d&#39;un modèle à l&#39;aide de la structure Model Insights
 
-The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
+Le cadre d&#39;analyse de modèle fournit aux scientifiques des données des outils [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d&#39;apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus d’apprentissage automatique et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme d’apprentissage automatique afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 
 ## Que sont les mesures ?
 
@@ -101,19 +101,19 @@ Une fois définie dans la recette, l’étape suivante consiste à l’activer d
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-In the [!DNL Data Science Workspace], the user would be able to see the insights in the &quot;Evaluation Metrics&quot; tab in the experiment page.
+Dans le [!DNL Data Science Workspace], l&#39;utilisateur peut voir les informations de l&#39;onglet &quot;Mesures d&#39;évaluation&quot; de la page de l&#39;expérience.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
-As of now, there are no default evaluation metrics for [!DNL Python] or [!DNL Tensorflow]. Thus, to get the evaluation metrics for [!DNL Python] or [!DNL Tensorflow], you will need to create a custom evaluation metric. Pour ce faire, mettez en œuvre la classe `Evaluator`.
+À ce jour, il n’existe aucune mesure d’évaluation par défaut pour [!DNL Python] ou [!DNL Tensorflow]. Par conséquent, pour obtenir les mesures d’évaluation pour [!DNL Python] ou [!DNL Tensorflow], vous devez créer une mesure d’évaluation personnalisée. Pour ce faire, mettez en œuvre la classe `Evaluator`.
 
 #### Mesures d’évaluation personnalisées pour [!DNL Python]
 
 Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être mises en œuvre pour l’évaluateur : `split()` et `evaluate()`.
 
-For [!DNL Python], these methods would be defined in [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) for the `Evaluator` class. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
+Pour [!DNL Python], ces méthodes seraient définies dans [évaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la classe `Evaluator`. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
 
-Creating evaluation metrics in [!DNL Python] requires the user to implement the `evaluate()` and `split()` methods.
+La création de mesures d&#39;évaluation dans [!DNL Python] exige que l&#39;utilisateur implémente les méthodes `evaluate()` et `split()`.
 
 La méthode `evaluate()` renvoie l’objet de mesure qui contient un tableau d’objets de mesure avec les propriétés `name`, `value` et `valueType`.
 
@@ -123,7 +123,7 @@ La méthode `split()` doit renvoyer un cadre de données de formation et de test
 
 #### Mesures d’évaluation personnalisées pour Tensorflow
 
-For [!DNL Tensorflow], similar to [!DNL Python], the methods `evaluate()` and `split()` in the `Evaluator` class will need to be implemented. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
+Pour [!DNL Tensorflow], comme [!DNL Python], les méthodes `evaluate()` et `split()` de la classe `Evaluator` devront être implémentées. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -158,7 +158,7 @@ Les données sont d’abord chargées dans un jeu de données à partir d’une 
 
 ## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
+[!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme d’apprentissage automatique de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 --- | --- | ---
