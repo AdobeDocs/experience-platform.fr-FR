@@ -4,7 +4,7 @@ title: Générer des exemples de données pour un Schéma XDM dans l’interface
 description: Découvrez comment générer des données JSON d’exemple en fonction d’un schéma existant dans l’interface utilisateur de Adobe Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 87497ef8a0ebf8de8b6c2dff1650c0b982299e8a
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Pour importer des données dans Adobe Experience Platform, le format et la struc
 
 Pour tout schéma défini dans l’interface utilisateur de l’Experience Platform, vous pouvez générer un exemple d’objet JSON conforme à la structure du schéma. Cet objet peut servir de modèle pour toute donnée ingérée dans des jeux de données qui utilisent le schéma en question.
 
-Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Sous l&#39;onglet **[!UICONTROL Parcourir]**, recherchez le schéma pour lequel vous souhaitez générer des données d&#39;exemple. Sélectionnez-la dans la liste et les mises à jour du rail de droite pour afficher des détails sur le schéma. À partir de là, sélectionnez **[!UICONTROL Télécharger le fichier exemple].**
+Dans l’interface utilisateur de la plate-forme, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche. Sous l&#39;onglet **[!UICONTROL Parcourir]**, recherchez le schéma pour lequel vous souhaitez générer des données d&#39;exemple. Sélectionnez-la dans la liste et les mises à jour du rail de droite pour afficher des détails sur le schéma. À partir de là, sélectionnez **[!UICONTROL Télécharger le fichier exemple]**.
 
 ![](../images/ui/sample/sample-data.png)
 
