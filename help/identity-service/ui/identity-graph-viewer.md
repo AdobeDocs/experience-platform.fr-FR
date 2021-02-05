@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; visualiseur de graphiques d'identité ; visualiseur de graphiques d'identité ; visionneuse de graphiques ; visionneuse de graphiques ; espace de nommage d'identité ; espace de nommage d'identité ; identité ; identité ; service d'identité ; service d'identité
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Présentation de la visionneuse de graphiques d’identité
 topic: tutorial
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: 22685a8519529ba7afb7e50262ea4d40a450b382
+source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '946'
+ht-degree: 2%
 
 ---
 
 
-# (bêta) Visionneuse de graphiques d’identité
+# (bêta) Présentation du lecteur de graphique d’identité
 
 >[!NOTE]
 >
@@ -108,3 +108,9 @@ Des erreurs peuvent se produire lors de l&#39;accès à la visionneuse de graphi
 ## Étapes suivantes
 
 En lisant ce document, vous avez appris à explorer les graphiques d’identité de vos clients dans l’interface utilisateur de la plate-forme. Pour plus d&#39;informations sur les identités dans Platform, consultez la [Présentation du service d&#39;identité](../home.md).
+
+## Ressources supplémentaires
+
+La vidéo suivante est destinée à vous aider à comprendre le lecteur de graphique d&#39;identité.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
