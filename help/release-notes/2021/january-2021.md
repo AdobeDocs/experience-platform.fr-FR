@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 74325dcfe9d7b117e3f812d88e0c4a980d44ef53
+source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 39%
 
 ---
@@ -38,6 +38,12 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation 
 ## Destinations {#destinations}
 
 [!DNL Destinations] sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] est la solution d&#39;enregistrement d&#39;objets de Microsoft pour le cloud. |
 
 **Nouvelles fonctionnalités**
 
