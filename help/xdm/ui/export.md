@@ -5,7 +5,7 @@ description: Découvrez comment exporter un schéma existant vers un autre sandb
 topic: user guide
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2d6e833db7cd79135e6da4c68c9dca8cbed09ce4
+source-git-commit: 8d6916890a94300dc68d018d56579df9616c177c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
@@ -205,11 +205,11 @@ Cette opération copie une charge JSON dans le Presse-papiers, générée en fon
 
 La charge utile prend la forme d&#39;un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le mixin personnalisé &quot;[!DNL Loyalty details]&quot; et le schéma &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l&#39;exportation, car elles sont disponibles dans tous les sandbox et les organismes IMS.
 
-Notez que chaque instance de l’ID de client de votre organisation s’affiche sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la charge utile. Ces espaces réservés seront automatiquement remplacés par la valeur d&#39;ID de locataire appropriée en fonction de l&#39;emplacement d&#39;exportation du schéma à l&#39;étape suivante.
+Notez que chaque instance de l’ID de client de votre organisation s’affiche sous la forme `<XDM_TENANTID_PLACEHOLDER>` dans la charge utile. Ces espaces réservés seront automatiquement remplacés par la valeur d&#39;ID de locataire appropriée en fonction de l&#39;endroit où vous importez le schéma à l&#39;étape suivante.
 
 ## Importer la ressource à l&#39;aide de l&#39;API
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une demande de POST au point de terminaison `/import` de l’API de registre de Schéma. Consultez la section sur [l&#39;importation d&#39;une ressource XDM dans l&#39;API](../api/export-import.md#import) pour plus d&#39;informations sur la configuration de l&#39;appel pour envoyer le schéma à l&#39;organisation IMS et au sandbox appropriés.
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une demande de POST au point de terminaison `/import` de l’API de registre de Schéma. Consultez la section sur [l&#39;importation d&#39;une ressource XDM dans l&#39;API](../api/export-import.md#import) pour plus d&#39;informations sur la configuration de l&#39;appel pour envoyer le schéma à l&#39;organisation et au sandbox IMS de votre choix.
 
 ## Étapes suivantes
 
