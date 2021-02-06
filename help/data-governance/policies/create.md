@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; stratégie d’utilisation des données
 solution: Experience Platform
-title: Création d’une stratégie d’utilisation des données
+title: Création d’une stratégie d’utilisation des données dans l’API
 topic: policies
 type: Tutorial
 description: L’API Policy Service vous permet de créer et de gérer des stratégies d’utilisation des données afin de déterminer les actions marketing à entreprendre par rapport aux données qui contiennent certains libellés d’utilisation des données. Ce document fournit un tutoriel détaillé sur la création d’une stratégie à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 55a54463e918fc62378c660ef17f36e2ede471e0
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 73%
+source-wordcount: '1219'
+ht-degree: 72%
 
 ---
 
@@ -24,8 +24,8 @@ Ce document fournit un didacticiel détaillé pour la création d’une stratég
 
 Ce tutoriel nécessite une compréhension pratique des concepts clés suivants, qui sont impliqués dans la création et l’évaluation des stratégies 
 
-* [[!DNL Data Governance]](../home.md): Cadre selon lequel  [!DNL Platform] applique la conformité à l’utilisation des données.
-* [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
+* [Gouvernance](../home.md) des données Adobe Experience Platform : Cadre selon lequel  [!DNL Platform] applique la conformité à l’utilisation des données.
+   * [Libellés d’utilisation des données](../labels/overview.md) : les libellés d’utilisation des données sont appliqués aux champs de données XDM, spécifiant les restrictions d’accès à ces données.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Sandbox](../../sandboxes/home.md) :  [!DNL Experience Platform] fournit des sandbox virtuels qui partitionnent une  [!DNL Platform] instance unique en environnements virtuels distincts pour aider à développer et à développer des applications d&#39;expérience numérique.
 
