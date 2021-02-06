@@ -1,17 +1,17 @@
 ---
 keywords: stratégies de fusion rtcdp ; rtcdp stratégies de fusion
-title: Stratégies de fusion dans la plateforme CDP en temps réel
+title: Fusionner les stratégies dans la plateforme de données clientes en temps réel
 description: Utilisation de stratégies de fusion dans la plateforme de données client en temps réel
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 55%
+source-wordcount: '157'
+ht-degree: 47%
 
 ---
 
 
-# Stratégies de fusion dans la plateforme CDP en temps réel
+# Fusionner les stratégies dans la plateforme de données clientes en temps réel
 
 Basé sur Adobe Experience Platform, [!DNL Real-time Customer Data Platform] vous permet de rassembler des données à partir de plusieurs sources et de les combiner afin de voir une vue complète de chacun de vos clients. Lorsque ces données sont regroupées, les stratégies de fusion sont les règles que [!DNL Platform] utilise pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer cette vue unifiée.
 
