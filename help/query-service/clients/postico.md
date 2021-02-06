@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de Requête ; service de requête ; postico ; Postico ; connexion au service de requête ;
 solution: Experience Platform
-title: Connexion à Postico
+title: Connecter Postico au service de Requête
 topic: connect
 description: Ce document contient le lien permettant d’installer le client de sauvegarde Postico pour Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 17%
+source-wordcount: '253'
+ht-degree: 16%
 
 ---
 
 
-# [!DNL Postico]
+# Connectez [!DNL Postico] à Requête Service (Mac)
 
 Ce document décrit les étapes de connexion de [!DNL Postico] à Adobe Experience Platform [!DNL Query Service].
 
@@ -22,8 +22,6 @@ Ce document décrit les étapes de connexion de [!DNL Postico] à Adobe Experien
 > Ce guide suppose que vous avez déjà accès à [!DNL Postico] et que vous savez comment naviguer dans son interface. Vous trouverez plus d&#39;informations sur [!DNL Postico] dans la [documentation officielle [!DNL Postico] ](https://eggerapps.at/postico/docs).
 > 
 > De plus, [!DNL Postico] est **uniquement** disponible sur les périphériques macOS.
-
-## Connecter [!DNL Postico] au service de Requête
 
 Pour connecter [!DNL Postico] à Requête Service, ouvrez [!DNL Postico] et sélectionnez **[!DNL New Favorite]**.
 
