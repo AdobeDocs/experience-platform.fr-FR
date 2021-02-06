@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
-title: Présentation des notifications d'observation
+title: Présentation des notifications d'observabilité
 topic: overview
 description: Observability Insights vous permet de vous abonner à des notifications événements concernant les activités Adobe Experience Platform. Elles réduisent ou éliminent le besoin de consulter l’API Observability Insights pour vérifier si une tâche est terminée ou si un certain jalon dans un flux de travail a été atteint.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
