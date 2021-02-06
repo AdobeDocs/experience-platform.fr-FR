@@ -5,10 +5,10 @@ title: Connecteur Kafka
 topic: overview
 description: Le connecteur de flux pour Adobe Experience Platform est basé sur Apache Kafka Connect. Cette bibliothèque peut être utilisée pour diffuser en temps réel des événements JSON depuis les rubriques Kafka de votre centre de données, directement vers Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7fc7f0e525d994904dc71b1eb7136f11c05d5672
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '186'
-ht-degree: 43%
+ht-degree: 41%
 
 ---
 
