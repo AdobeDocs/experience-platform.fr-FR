@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Apache Spark ; apache spark ; Azure HDInsights ; azure hdinsights ; azure hdinsights
 solution: Experience Platform
-title: Apache Spark sur Azure HDInsights connector
+title: Apache Spark sur Azure HDInsights Source Connector Overview
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Apache Spark sur Azure HDInsights à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Apache Spark sur Azure HDInsights à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 10%
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Apache Spark] sur [!DNL Azure HDInsights] à [!DNL Platform] à l&#39;aide d&#39;API.
 
-- [Création d&#39;un Apache Spark sur le connecteur Azure HDInsights à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/databases/spark.md)
+- [Création d&#39;un Apache Spark sur une connexion source Azure HDInsights à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/databases/spark.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL Apache Spark] sur [!DNL Azure HDInsights] à [!DNL Platform] à l&#39;aide de l&#39;interface utilisateur.
 
-- [Création d&#39;un Apache Spark sur le connecteur source Azure HDInsights dans l&#39;interface utilisateur](../../tutorials/ui/create/databases/spark.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d&#39;un Apache Spark sur une connexion source Azure HDInsights dans l&#39;interface utilisateur](../../tutorials/ui/create/databases/spark.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
