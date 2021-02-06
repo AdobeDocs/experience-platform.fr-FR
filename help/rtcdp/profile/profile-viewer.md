@@ -1,19 +1,19 @@
 ---
 keywords: profils de vue rtcdp ; vue de profil rtcdp ; profils rtcdp
-title: Affichage de profils sur la plateforme CDP en temps réel
+title: Affichage des profils dans la plate-forme de données client en temps réel
 seo-title: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
 description: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
 seo-description: Affichage des données du profil client en temps réel sur la plateforme de données client en temps réel
 translation-type: tm+mt
-source-git-commit: 15323134f0c626cad2c4e90b3e1c0662cf7e57dd
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 70%
+source-wordcount: '183'
+ht-degree: 63%
 
 ---
 
 
-# Affichage de profils sur la plateforme CDP en temps réel
+# Affichage des profils dans la plate-forme de données client en temps réel
 
 [!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Chaque profil étant agrégé en fonction des données introduites dans le système depuis diverses sources, chaque profil devient un compte d’activité horodaté et exploitable de chaque interaction de votre client avec votre marque.
 
