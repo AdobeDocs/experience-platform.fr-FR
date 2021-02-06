@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api du service d'identité ; guide du développeur du service d'identité ; région
 solution: Experience Platform
-title: Prise en main
+title: Guide de l'API du service d'identité
 topic: API guide
-description: 'Adobe Experience Platform Identity Service gère l’identification inter-appareils, inter-canaux et en temps quasi réel de vos clients, dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform. '
+description: L'API Identity Service permet aux développeurs de gérer l'identification inter-périphériques, entre canaux et quasi en temps réel de vos clients à l'aide de graphiques d'identité Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '759'
-ht-degree: 74%
+source-wordcount: '769'
+ht-degree: 69%
 
 ---
 
 
-# Guide du développeur de l’API [!DNL Identity Service]
+# [!DNL Identity Service] Guide de l’API
 
 Adobe Experience Platform [!DNL Identity Service] gère l&#39;identification inter-périphériques, entre canaux et quasi en temps réel de vos clients dans ce qu&#39;on appelle un graphique d&#39;identité au sein de Adobe Experience Platform.
 
