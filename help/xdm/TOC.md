@@ -5,9 +5,9 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Utilisez les classes et les mixins d’Experience Data Model (XDM) pour normaliser les données d’expérience.
 translation-type: tm+mt
-source-git-commit: c82ad393ecaa46d01596dbba06f5fc756711bc31
+source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '236'
 ht-degree: 58%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 58%
    * [Application](./data-types/application.md)
    * [Balise](./data-types/beacon.md)
    * [Détails du navigateur](./data-types/browser-details.md)
+   * [Commerce](./data-types/commerce.md)
    * [Contenus et préférences](./data-types/consents.md)
    * [Appareil](./data-types/device.md)
    * [Adresse électronique](./data-types/email-address.md)
@@ -50,6 +51,8 @@ ht-degree: 58%
    * [Forme géographique](./data-types/geo-shape.md)
    * [Identité](./data-types/identity.md)
    * [Mesure](./data-types/measure.md)
+   * [Commande](./data-types/order.md)
+   * [Article de paiement](./data-types/payment-item.md)
    * [Personne](./data-types/person.md)
    * [Nom de la personne](./data-types/person-name.md)
    * [Numéro de téléphone](./data-types/phone-number.md)
@@ -95,10 +98,10 @@ ht-degree: 58%
    * [Schémas ad hoc](api/ad-hoc.md)
    * [Annexe](api/appendix.md)
 * Tutoriels {#tutorials}
-   * [Création d’un schéma (API)](tutorials/create-schema-api.md)
    * [Création d’un schéma (IU)](tutorials/create-schema-ui.md)
-   * [Définition d’une relation entre deux schémas (API)](tutorials/relationship-api.md)
+   * [Création d’un schéma (API)](tutorials/create-schema-api.md)
    * [Définition d’une relation entre deux schémas (IU)](tutorials/relationship-ui.md)
+   * [Définition d’une relation entre deux schémas (API)](tutorials/relationship-api.md)
    * [Création d’un schéma ad hoc (API)](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
