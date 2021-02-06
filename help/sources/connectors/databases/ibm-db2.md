@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; IBM DB2 ; ibm db2 ; DB2 ; db2
 solution: Experience Platform
-title: Connecteur IBM DB2
+title: Présentation d’IBM DB2 Source Connector
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion d’IBM DB2 à la plate-forme à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de connecter 
 
 ## Connectez IBM DB2 à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur IBM DB2 à l’aide de l’API Flow Service](../../tutorials/api/create/databases/ibm-db2.md)
+- [Création d’une connexion source IBM DB2 à l’aide de l’API Flow Service](../../tutorials/api/create/databases/ibm-db2.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez IBM DB2 à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source IBM DB2 dans l’interface utilisateur](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source IBM DB2 dans l’interface utilisateur](../../tutorials/ui/create/databases/ibm-db2.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
