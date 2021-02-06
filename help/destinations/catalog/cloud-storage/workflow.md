@@ -1,22 +1,19 @@
 ---
 keywords: destination de l’enregistrement cloud ; enregistrement cloud
-title: Processus des destinations de stockage dans le cloud
-seo-title: Processus des destinations de stockage dans le cloud
+title: Création d’une destination d’Enregistrement Cloud
 type: Tutorial
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 52%
+source-wordcount: '534'
+ht-degree: 49%
 
 ---
 
 
-# Workdlow de création de destinations de stockage dans le cloud
-
-## Présentation
+# Création d’une destination d’enregistrement cloud
 
 Cette page explique comment vous pouvez vous connecter à des emplacements d’enregistrement cloud dans Adobe Experience Platform.
 
