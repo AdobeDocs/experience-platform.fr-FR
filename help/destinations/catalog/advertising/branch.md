@@ -1,21 +1,17 @@
 ---
 keywords: branche ; extension de branche ; destination de branche
-title: Extension Branch
-seo-title: Extension Branch
+title: Destination de l'extension de branche
 description: L'extension de branche est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension de branche est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 27%
+source-wordcount: '498'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Branch] Extension {#branch-extension}
-
-## Présentation {#overview}
 
 Branch fournit des liens et des solutions puissants qui vous aident à acquérir, à engager et à mesurer sur tous les appareils, canaux et plateformes.
 
