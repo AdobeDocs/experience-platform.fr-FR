@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation ; ingest batch data ; tutoriel ; assimilation par lot ; tutoriel ; ui guide ;
 solution: Experience Platform
-title: Ingestion de données dans Adobe Experience Platform
+title: Envoi de données dans l’Experience Platform
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers de commandes sous la forme de fichiers Parquet ou de données conformes à un schéma connu de modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1322'
 ht-degree: 54%
 
 ---
