@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; Power BI ; alimentation ; connexion au service de requête ;
 solution: Experience Platform
-title: Connexion de Power BI
+title: Connexion de Power BI à Query Service
 topic: connect
 description: Ce document passe par les étapes de connexion de Power BI avec Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '466'
 ht-degree: 6%
 
 ---
 
 
-# [!DNL Power BI]
+# Connectez [!DNL Power BI] à Requête Service (PC)
 
 Ce document décrit les étapes de connexion de Power BI au service de Requête Adobe Experience Platform.
 
@@ -22,8 +22,6 @@ Ce document décrit les étapes de connexion de Power BI au service de Requête 
 > Ce guide suppose que vous avez déjà accès à [!DNL Power BI] et que vous savez comment naviguer dans son interface. Vous trouverez plus d&#39;informations sur [!DNL Power BI] dans la [documentation officielle [!DNL Power BI] ](https://docs.looker.com/).
 >
 > De plus, le Power BI est **uniquement** disponible sur les périphériques Windows.
-
-## Configurer [!DNL Power BI]
 
 Après avoir installé Power BI, vous devrez installer `Npgsql`, un package de pilotes .NET pour PostgreSQL. Pour plus d&#39;informations sur Npgsql, consultez la [documentation Npgsql](https://www.npgsql.org/doc/index.html).
 
