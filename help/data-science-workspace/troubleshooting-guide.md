@@ -5,10 +5,10 @@ title: Guide de dépannage de Data Science Workspace
 topic: Troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: 045ad186efac59317635439a05b9d24e703c9859
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '925'
-ht-degree: 34%
+ht-degree: 33%
 
 ---
 
