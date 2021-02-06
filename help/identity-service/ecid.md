@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;ECID;ecid
 solution: Experience Platform
-title: Adobe Experience Platform ECID
+title: Présentation de l'ECID
 topic: overview
 description: L'identificateur d'Experience Cloud (ECID) est le module côté client qui permet d'accéder à la gestion des identités et qui remplit trois fonctions Principales.
 translation-type: tm+mt
-source-git-commit: 45f2423741ad993765408a9f60e2df6238671b9f
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 77%
+source-wordcount: '186'
+ht-degree: 76%
 
 ---
 
