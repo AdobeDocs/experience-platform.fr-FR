@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour sandbox
 solution: Experience Platform
-title: Mise à jour d’un environnement de test
+title: Mise à jour d’un sandbox dans l’API
 topic: developer guide
 description: Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en exécutant une requête de PATCH qui inclut le nom du sandbox dans le chemin de la requête et la propriété à mettre à jour dans la charge utile de la requête.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 68%
+source-wordcount: '133'
+ht-degree: 60%
 
 ---
 
 
-# Mise à jour d’un environnement de test
+# Mise à jour d’un sandbox dans l’API
 
 Vous pouvez mettre à jour un ou plusieurs champs d’un environnement de test en effectuant une requête PATCH incluant le `name` de l’environnement de test dans le chemin de requête et la propriété à mettre à jour dans le payload de la requête.
 
