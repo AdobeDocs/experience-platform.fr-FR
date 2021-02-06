@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête
 solution: Experience Platform
-title: Guide de développement de Query Service
+title: Guide de l'API requête Service
 topic: query templates
-description: Ce guide de développement décrit les étapes à suivre pour effectuer diverses opérations dans l’API Adobe Experience Platform Query Service.
+description: L’API Requête Service permet aux développeurs de requête de leurs données Adobe Experience Platform à l’aide de SQL standard. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 45%
+source-wordcount: '395'
+ht-degree: 38%
 
 ---
 
 
-# [!DNL Query Service] guide du développeur
+# [!DNL Query Service] Guide de l’API
 
 Ce guide du développeur décrit les étapes à suivre pour effectuer diverses opérations dans l&#39;API Adobe Experience Platform [!DNL Query Service].
 
