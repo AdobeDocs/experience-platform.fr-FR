@@ -1,19 +1,19 @@
 ---
 keywords: Présentation de l'administration rtcdp ; présentation de l'administration
-title: Présentation de l’administration
+title: Présentation de l’administration des plateformes de données clientes en temps réel
 seo-title: Présentation de l’administration de la plateforme CDP en temps réel
 description: 'Ce document présente les fonctionnalités d’administration de la plateforme de données client en temps réel, optimisée par Adobe Experience Platform. '
 seo-description: description seo
 translation-type: tm+mt
-source-git-commit: 690ddbd92f0a2e4e06b988e761dabff399cd2367
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 59%
+source-wordcount: '288'
+ht-degree: 55%
 
 ---
 
 
-# Présentation de l’administration de la plateforme CDP en temps réel
+# Présentation de l’administration de la plate-forme de données clientes en temps réel
 
 Ce document présente les fonctionnalités d&#39;administration de [!DNL Real-time Customer Data Platform], optimisé par Adobe Experience Platform.
 
