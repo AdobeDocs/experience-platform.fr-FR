@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; profil ; segment ; segments ; segmentation ; interface utilisateur ; interface utilisateur ; personnalisation ; tableau de bord de segment ; tableau de bord
-title: Tableau de bord de segment
+title: Guide de l’interface utilisateur du Tableau de bord de segments
 description: 'Ce guide décrit le tableau de bord de segments disponible dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 type: Documentation
 translation-type: tm+mt
-source-git-commit: 63758450276d47e7e0eddeb047779222cb80a3e2
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '743'
 ht-degree: 1%
 
 ---
