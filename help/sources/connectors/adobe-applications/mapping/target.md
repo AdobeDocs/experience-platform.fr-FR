@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapping de ciblage ; Mapping de ciblage
 solution: Experience Platform
-title: Champ de mapping de ciblage
+title: Mappage des données de Événement Adobe Target vers XDM
 topic: overview
-description: Le tableau suivant décrit les champs d’un schéma de Événement d’expérience (*XDM ExperienceEvent field*) et les champs de Cible correspondants auxquels ils doivent être mappés (champ Demande de Cible). Des notes supplémentaires pour certains mappages sont également fournies.
+description: Découvrez comment mapper des champs de événement Adobe Target à un schéma de modèle de données d’expérience (XDM) pour une utilisation dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '462'
 ht-degree: 91%
 
 ---
 
 
-# Champs de mapping de ciblage
+# Mappages de champs de mapping de ciblage
 
 Adobe Experience Platform vous permet d’ingérer des données Adobe Target par le biais du connecteur source cible. Lors de l’utilisation du connecteur, toutes les données des champs cibles doivent être mappées avec les champs de [modèle de données d’expérience (XDM)](../../../../xdm/home.md) associés à la classe XDM ExperienceEvent.
 
