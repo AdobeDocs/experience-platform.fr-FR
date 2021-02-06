@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; comportement ; comportement ; comportements ; comportements ; comportements ;
 solution: Experience Platform
-title: Guide du point de terminaison des comportements
+title: Point de terminaison de l'API Comportements
 description: Le point de terminaison /comportements de l'API de registre de Schéma vous permet de récupérer tous les comportements disponibles dans le conteneur global.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
