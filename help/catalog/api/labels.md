@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; étiquettes d’utilisation des données ; service de catalogue
 solution: Experience Platform
-title: Libellés d’utilisation des données
+title: Étiquettes d’utilisation des données dans l’API du service de jeux de données
 topic: developer guide
-description: L’API du service de catalogue fournit des points de terminaison pour gérer les étiquettes d’utilisation des données pour les jeux de données.
+description: L’API Service de dataset fournit des points de terminaison pour gérer les étiquettes d’utilisation des données pour les jeux de données.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 8%
+source-wordcount: '85'
+ht-degree: 0%
 
 ---
 
 
-# Libellés d’utilisation des données
+# Étiquettes d’utilisation des données dans l’API du service de jeux de données
 
-L&#39;API [!DNL Catalog Service] fournit des points de terminaison pour gérer les étiquettes d&#39;utilisation des données pour les jeux de données. Pour obtenir des instructions sur la façon d’appeler ces points de terminaison, consultez le guide sur la [gestion des étiquettes d’utilisation des données à l’aide de l’API](../../data-governance/labels/overview.md) dans la documentation Adobe Experience Platform [!DNL Data Governance].
+L&#39;API [!DNL Dataset Service] fournit des points de terminaison distincts de l&#39;API du service de catalogue pour gérer les étiquettes d&#39;utilisation des données pour les jeux de données. Pour obtenir des instructions sur la façon d’appeler ces points de terminaison, consultez le guide sur la [gestion des étiquettes d’utilisation des données à l’aide de l’API](../../data-governance/labels/dataset-api.md) dans la documentation Adobe Experience Platform [!DNL Data Governance].
