@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Apache HDFS ; HDFS ; hdfs
 solution: Experience Platform
-title: Création d’un connecteur source Apache HDFS dans l’interface utilisateur
+title: Création d’une connexion source Apache HDFS dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes d'authentification d'un connecteur source Apache Hadoop Distributed File System (ci-après appelé "HDFS") à l'aide de l'interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source Apache Hadoop Distributed File System à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '492'
 ht-degree: 9%
 
 ---
 
 
-# Créer un connecteur source HDFS [!DNL Apache] dans l&#39;interface utilisateur
+# Créer une connexion source [!DNL Apache] HDFS dans l&#39;interface utilisateur
 
 >[!NOTE]
 >
