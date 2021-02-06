@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; exécuter des requêtes planifiées ; exécuter des requêtes planifiées ; service de Requête ; requêtes planifiées ; requête programmée ;
 solution: Experience Platform
-title: Guide de développement de Query Service
+title: Point de terminaison de l’API des exécutions de Requêtes planifiées
 topic: runs for scheduled queries
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Requête Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '695'
-ht-degree: 89%
+source-wordcount: '696'
+ht-degree: 88%
 
 ---
 
 
-# Exécutions pour les requêtes planifiées
+# Point de terminaison d’exécution de la requête planifiée
 
 ## Exemples d’appels API
 
