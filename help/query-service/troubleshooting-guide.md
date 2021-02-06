@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; guide de dépannage ; faq ; dépannage ;
 solution: Experience Platform
-title: Guide de résolution des problèmes d’Adobe Experience Platform Query Service
+title: Guide de dépannage de requête Service
 topic: troubleshooting
 description: Ce document contient des informations sur les codes d'erreur courants que vous rencontrez et les causes possibles.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 85%
+source-wordcount: '177'
+ht-degree: 82%
 
 ---
 
 
-# Erreurs et résolution des problèmes
+# [!DNL Query Service] Guide de dépannage
 
 ## Erreurs de l’API REST
 
