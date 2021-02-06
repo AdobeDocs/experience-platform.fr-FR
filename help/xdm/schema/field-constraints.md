@@ -5,7 +5,7 @@ title: Contraintes de type de champ XDM
 topic: overview
 description: Référence pour les contraintes de type de champ XDM, y compris les autres formats de sérialisation auxquels elles peuvent être associées et comment définir vos propres types de champ dans l’API.
 translation-type: tm+mt
-source-git-commit: e92294b9dcea37ae2a4a398c9d3397dcf5aa9b9e
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 71%
