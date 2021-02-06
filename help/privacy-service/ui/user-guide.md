@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; exportation ; Exporter
 solution: Experience Platform
-title: Guide d’utilisation de Privacy Service
+title: Gérer les tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 topic: UI guide
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes de confidentialité dans diverses applications Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 62%
+source-wordcount: '1100'
+ht-degree: 61%
 
 ---
 
 
-# [!DNL Privacy Service] Guide de l’utilisateur
+# Gérer les tâches de confidentialité dans l’interface utilisateur du Privacy Service
 
 Ce document fournit des étapes pour la création et la gestion des demandes de confidentialité à l&#39;aide de l&#39;interface utilisateur [!DNL Privacy Service].
 
