@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences des données ; sujets populaires ; espace de travail des sciences des données ; sciences des données
 solution: Experience Platform
-title: Guide de développement de l’API Sensei Machine Learning
+title: Guide de l'API d'apprentissage automatique Sensei
 topic: Developer guide
-description: Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’API Sensei Machine Learning et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de Data Science Workspace.
+description: L’API d’apprentissage automatique Sensei permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources de l’espace de travail Data Science. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 65%
+source-wordcount: '243'
+ht-degree: 50%
 
 ---
 
 
-# Guide du développeur de l’API [!DNL Sensei Machine Learning]
+# [!DNL Sensei Machine Learning] Guide de l’API
 
 L&#39;API [!DNL Sensei Machine Learning] fournit un mécanisme permettant aux chercheurs de données d&#39;organiser et de gérer les services d&#39;apprentissage automatique, de l&#39;intégration des algorithmes à l&#39;expérimentation en passant par le déploiement des services.
 
