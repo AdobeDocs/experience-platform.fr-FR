@@ -5,10 +5,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Science Workspace
 breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 84%
+source-wordcount: '233'
+ht-degree: 79%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 84%
 * [Accès et fonctionnalités à l’espace de travail Data Science](access-features-dsw.md)
 * [Présentation détaillée de Data Science Workspace](walkthrough.md)
 * Notebooks JupyterLab {#jupyterlab}
-   * [Guide d’utilisation de JupyterLab](jupyterlab/overview.md)
+   * [Présentation](jupyterlab/overview.md)
    * [Accès aux données](jupyterlab/access-notebook-data.md)
    * [Analyse de vos données](jupyterlab/analyze-your-data.md)
    * [Service de requête](jupyterlab/query-service.md)
@@ -37,7 +37,7 @@ ht-degree: 84%
 * Apprentissage automatique en temps réel (Alpha) {#real-time-machine-learning}
    * [Présentation](real-time-machine-learning/home.md)
    * [Prise en main](real-time-machine-learning/getting-started.md)
-   * [Guide de l&#39;utilisateur du bloc-notes RTML Authoring](real-time-machine-learning/rtml-authoring-notebook.md)
+   * [Gérer les blocs-notes](real-time-machine-learning/rtml-authoring-notebook.md)
    * [Guide de référence du noeud](real-time-machine-learning/node-reference.md)
 * Recettes préconfigurées {#pre-built-recipes}
    * [Recette des recommandations de produits](pre-built-recipes/product-recommendations.md)
@@ -46,11 +46,11 @@ ht-degree: 84%
 * Création de modèles {#authoring}
    * [SDK de création de modèles](authoring/sdk.md)
    * [Création d’un pipeline de fonctionnalités](authoring/feature-pipeline.md)
-   * [Guide du SDK de Platform (Python)](authoring/platform-sdk.md)
+   * [Création de modèles à l’aide du SDK de plate-forme (Python)](authoring/platform-sdk.md)
    * [Accès aux données Python](authoring/python.md)
    * [Accès aux données Spark](authoring/spark.md)
 * Tutoriels sur les modèles et les recettes {#models-recipes}
-   * [Guide pas-à-pas de création et de publication d’un modèle d’apprentissage automatique](models-recipes/create-publish-model.md)
+   * [Création et publication d’un modèle d’apprentissage automatique](models-recipes/create-publish-model.md)
    * [Création de jeux de données et de schéma de ventes au détail](models-recipes/create-retails-sales-dataset.md)
    * [Prévisualisation des schémas et des jeux de données](models-recipes/preview-schema-data.md)
    * [Regroupement des fichiers source dans une recette](models-recipes/package-source-files-recipe.md)
