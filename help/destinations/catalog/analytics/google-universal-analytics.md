@@ -1,21 +1,17 @@
 ---
 keywords: Google Universal Analytics ; Google Universal Analytics ; Google Universal Analytics
-title: Extension Google Universal Analytics
-seo-title: Extension Google Universal Analytics
+title: Destination de l’extension Google Universal Analytics
 description: L’extension Google Universal Analytics est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Google Universal Analytics est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 30%
+source-wordcount: '528'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Google Universal Analytics] Extension {#google-universal-analytics-extension}
-
-## Présentation {#overview}
 
 [!DNL Google Universal Analytics] vous permet de mesurer votre retour sur investissement publicitaire, ainsi que de suivre vos sites et applications Flash, vidéo et de réseaux sociaux.
 
