@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Apache Cassandra ; apache cassandra ; Cassandra ; cassandra
 solution: Experience Platform
-title: Création d’un connecteur Apache Cassandra à l’aide de l’API Flow Service
+title: Création d’une connexion à la source Apache Cassandra à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes permettant de connecter Apache Cassandra (ci-après appelée "Cassandra") à un Experience Platform.
+description: Découvrez comment connecter Apache Cassandra à Adobe Experience Platform à l’aide de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '620'
 ht-degree: 25%
 
 ---
 
 
-# Créez un connecteur [!DNL Apache Cassandra] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Apache Cassandra] à l’aide de l’API [!DNL Flow Service].
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
