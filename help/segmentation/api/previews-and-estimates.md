@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; prévisualisations ; estimations ; prévisualisations et estimations ; estimations et prévisualisations ; api ; API ;
 solution: Experience Platform
-title: Prévisualisations et estimations des points de terminaison
+title: Points de terminaison de l'API prévisualisations et estimations
 topic: developer guide
-description: Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour obtenir des informations de niveau récapitulatif sur la vue afin de vous assurer que vous isolez l’audience attendue.
+description: Les points de terminaison prévisualisations et estimations de l’API Service de segmentation Adobe Experience Platform vous permettent de vue des informations de niveau récapitulatif afin de vous assurer que vous isolez l’audience attendue dans vos segments.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '793'
 ht-degree: 26%
 
 ---
