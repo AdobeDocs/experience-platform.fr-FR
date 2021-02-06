@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; mixin ; enduserids ; utilisateur final ; ids ; mises à jour ;
 solution: Experience Platform
-title: Mises à jour des noms mixtes
+title: Mises à jour des noms de mixin
 topic: overview
 description: Liste de modifications récentes du nom du mixin XDM.
 translation-type: tm+mt
-source-git-commit: 4f50926a9c5bc02255bd62c51cca13fc9094a9e8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 2%
