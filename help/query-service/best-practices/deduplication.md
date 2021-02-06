@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; déduplication de données ; déduplication ;
 solution: Experience Platform
-title: Dédoublonnage des données
+title: Déduplication de données dans Requête Service
 topic: queries
 type: Tutorial
 description: Ce document présente des exemples complets et de sous-sélection de requêtes pour dédupliquer trois cas d’utilisation courants Événements d’expérience, achats et mesures.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '494'
 ht-degree: 18%
 
 ---
