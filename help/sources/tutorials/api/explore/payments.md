@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; paiement
 solution: Experience Platform
-title: Explorez un système de paiement à l’aide de l’API du service de flux
+title: Explorer un système de paiement à l’aide de l’API du service de flux
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer les applications de paiement.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 25%
