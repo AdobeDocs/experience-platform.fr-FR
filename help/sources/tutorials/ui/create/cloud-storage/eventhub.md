@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; concentrateurs de Événement Azure ; concentrateurs de Événements ; concentrateurs de événements azurés
 solution: Experience Platform
-title: Création d'un connecteur source Azure Événement Hubs dans l'interface utilisateur
+title: Création d'une connexion à la source des concentrateurs de Événement Azure dans l'interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes d'authentification d'un connecteur source Azure Événement Hubs (ci-après dénommé "Événement Hubs") à l'aide de l'interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source Azure Événement Hubs à l'aide de l'interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '496'
 ht-degree: 11%
 
 ---
 
 
-# Créer un connecteur source [!DNL Azure Event Hubs] dans l’interface utilisateur
+# Créer une connexion source [!DNL Azure Event Hubs] dans l’interface utilisateur
 
 >[!NOTE]
 >
