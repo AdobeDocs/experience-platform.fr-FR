@@ -1,9 +1,9 @@
 ---
 keywords: RTCDP ; CDP ; Plate-forme de données client en temps réel ; plate-forme de données client en temps réel ; cdp en temps réel ; cdp ; rtcdp
-title: 'Prise en main de la plateforme de données client en temps réel '
+title: Prise en main de la plateforme de données clientes en temps réel
 description: Utilisez ce scénario type comme exemple lors de la configuration de votre implémentation de la plateforme de données clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '2326'
 ht-degree: 84%
