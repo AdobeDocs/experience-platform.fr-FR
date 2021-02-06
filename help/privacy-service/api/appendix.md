@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Annexe du guide du développeur d'API Privacy Service
+title: Annexe du Guide de l’API Privacy Service
 topic: developer guide
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API du Privacy Service.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '501'
 ht-degree: 80%
 
 ---
 
 
-# Annexe
+# Annexe du guide de l’API Privacy Service
 
 Les sections suivantes contiennent des informations supplémentaires sur l’utilisation de l’API Adobe Experience Platform Privacy Service.
 
