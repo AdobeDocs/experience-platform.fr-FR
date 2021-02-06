@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; identités de liste ; grappe de listes
 solution: Experience Platform
-title: Répertorier les identités d’un cluster
+title: Liste de toutes les identités dans une grappe
 topic: API guide
 description: Les identités qui sont liées dans un graphique d’identités, et ce quel que soit l’espace de noms, sont considérées comme faisant partie du même « cluster » dans ce graphique d’identités. Les options ci-dessous permettent d’accéder à tous les membres du cluster.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 97%
+source-wordcount: '359'
+ht-degree: 95%
 
 ---
 
