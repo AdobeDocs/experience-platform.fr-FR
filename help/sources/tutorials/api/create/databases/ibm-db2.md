@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; IBM DB2 ; IBM ; ibm db2 ; db2 ; DB2
 solution: Experience Platform
-title: Création d’un connecteur IBM DB2 à l’aide de l’API Flow Service
+title: Création d’une connexion à la source IBM DB2 à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API Flow Service pour vous guider dans les étapes de connexion d’IBM DB2 (ci-après appelé "DB2") à l’Experience Platform.
+description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 23%
+source-wordcount: '598'
+ht-degree: 24%
 
 ---
 
 
-# Créez un connecteur IBM DB2 à l’aide de l’API [!DNL Flow Service].
+# Création d’une connexion source IBM DB2 à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
