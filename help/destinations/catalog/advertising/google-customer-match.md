@@ -1,21 +1,17 @@
 ---
 keywords: correspondance client Google ; correspondance client Google ; correspondance client Google ; correspondance client Google
-title: Destination de la correspondance client Google
-seo-title: Destination de la correspondance client Google
+title: Destination de la connexion de correspondance client Google
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
-seo-description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1474'
+ht-degree: 4%
 
 ---
 
 
-# Destination de la correspondance client Google
-
-## Présentation {#overview}
+# Connexion Google Customer Match
 
 >[!IMPORTANT]
 >
@@ -143,7 +139,7 @@ Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les
 
 ![Connexion à la correspondance client Google - étape d’authentification](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, voir la section suivante, [Activer les segments à [!DNL Google Customer Match]](#activate-segments), pour le reste du flux de travail.
+Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, consultez la section suivante, [Activer les segments à [!DNL Google Customer Match]](#activate-segments), pour le reste du flux de travail.
 
 ## Activer les segments dans [!DNL Google Customer Match] {#activate-segments}
 
