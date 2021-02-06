@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; mixin ; enduserids ; utilisateur final ; ids ; id ;
 solution: Experience Platform
-title: Mélangeur Détails de l’ID utilisateur final
+title: Mélange de détails d’ID d’utilisateur final
 topic: overview
 description: Ce document présente un aperçu du mixin Détails de l’ID d’utilisateur final.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 6%
