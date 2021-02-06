@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
-title: Adobe Experience Platform Observability Insights
+title: Présentation des statistiques d'observabilité
 topic: overview
-description: Observability Insights est une API RESTful qui vous permet d’afficher les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
+description: Adobe Experience Platform Observability Insights est une API RESTful qui vous permet d’exposer les mesures clés sur les activités de plateformes. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
 translation-type: tm+mt
-source-git-commit: dc491ff523416a34cc01afc9d7ce3af715f2b607
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 23%
+source-wordcount: '223'
+ht-degree: 10%
 
 ---
 
 
-# Présentation d’Adobe Experience Platform Observability Insights
+# [!DNL Observability Insights] présentation
 
-[!DNL Observability Insights] vous permet de surveiller les activités sur Adobe Experience Platform à l’aide de mesures statistiques et de notifications de événement. Ce document présente un aperçu des différentes fonctionnalités fournies par le service, ainsi que des liens vers d’autres documents pour plus de détails.
+Adobe Experience Platform [!DNL Observability Insights] vous permet de surveiller les activités de la plate-forme en utilisant des mesures statistiques et des notifications de événement. Ce document présente un aperçu des différentes fonctionnalités fournies par le service, ainsi que des liens vers d’autres documents pour plus de détails.
 
 ## [!DNL Observability Insights] API
 
