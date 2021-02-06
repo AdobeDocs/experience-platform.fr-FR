@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; réinitialiser le sandbox
 solution: Experience Platform
-title: Réinitialisation d’un environnement de test
+title: Réinitialisation d’un sandbox dans l’API
 topic: developer guide
 description: Les environnements de test de développement disposent d’une fonctionnalité de réinitialisation supprimant toutes les ressources de l’environnement de test autres que celles par défaut. Vous pouvez réinitialiser un sandbox en faisant une requête de PUT qui inclut le nom du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 84%
+source-wordcount: '169'
+ht-degree: 77%
 
 ---
 
 
-# Réinitialisation d’un environnement de test
+# Réinitialisation d’un sandbox dans l’API
 
 Les environnements de test de développement disposent d’une fonctionnalité de réinitialisation supprimant toutes les ressources de l’environnement de test autres que celles par défaut. Vous pouvez réinitialiser un environnement de test en effectuant une requête PUT comprenant le `name` de l’environnement de test dans le chemin d’accès de la requête.
 
