@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; modèle d’apprentissage automatique ; Espace de travail des données ; Profil client en temps réel ; rubriques populaires ; informations d’apprentissage automatique
 solution: Experience Platform
-title: Enrichissement de Real-time Customer Profile avec des insights d’apprentissage automatique
+title: Enrichir le Profil client en temps réel grâce à des connaissances d'apprentissage automatique
 topic: tutorial
 type: Tutorial
-description: Ce document fournit un guide sur la manière d’enrichir le Profil client en temps réel avec des informations apprises par la machine.
+description: Ce document fournit un guide sur la manière d’enrichir le Profil client en temps réel avec des informations d’apprentissage automatique.
 translation-type: tm+mt
-source-git-commit: 62e6bb7e72637b06808ff87dc21f40af2c4e2d45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 29%
+source-wordcount: '640'
+ht-degree: 27%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 29%
 
 Adobe Experience Platform [!DNL Data Science Workspace] fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prédictions et des statistiques sur les données. Lorsque des informations d’apprentissage automatique sont ingérées dans un jeu de données [!DNL Profile] activé, ces mêmes données sont également assimilées à des enregistrements [!DNL Profile] qui peuvent ensuite être segmentés à l’aide de [!DNL Adobe Experience Platform Segmentation Service]. À mesure que les données de profil et de série temporelle sont ingérées, Real-time Customer Profile décide automatiquement d’inclure ou d’exclure ces données des segments par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque.
 
-Ce document fournit des liens vers des didacticiels qui vous permettent d&#39;enrichir [!DNL Real-time Customer Profile] vos connaissances acquises par la machine.
+Ce document fournit des liens vers des didacticiels qui vous permettent d&#39;enrichir [!DNL Real-time Customer Profile] vos connaissances d&#39;apprentissage automatique.
 
 ## Prise en main
 
