@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Salesforce ; salesforce
 solution: Experience Platform
-title: Création d’un connecteur Salesforce à l’aide de l’API du service de flux
+title: Création d’une connexion à la source Salesforce à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API de service de flux pour vous guider tout au long des étapes de connexion de la plate-forme à un compte Salesforce pour la collecte de données de gestion de la relation client.
+description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '570'
-ht-degree: 25%
+source-wordcount: '565'
+ht-degree: 26%
 
 ---
 
 
-# Créez un connecteur [!DNL Salesforce] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Salesforce] à l’aide de l’API [!DNL Flow Service].
 
 Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion de [!DNL Platform] à un compte [!DNL Salesforce] pour la collecte de données de gestion de la relation client.
+Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les étapes de connexion de [!DNL Platform] à un compte [!DNL Salesforce] à l&#39;aide de l&#39;API de service de flux.
 
 ## Prise en main
 
