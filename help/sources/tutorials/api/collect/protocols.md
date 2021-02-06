@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte de données de protocole ; données de protocole
 solution: Experience Platform
-title: Collecte de données de protocoles via des connecteurs et des API source
+title: Collecte de données de protocoles à l’aide de connecteurs et d’API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de protocoles et les intégrer à la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d'une application de protocoles et les intégrer à la plate-forme à l'aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 478c73935d674ef4eb40511cc562b27df77f58c8
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 22%
@@ -14,7 +14,7 @@ ht-degree: 22%
 ---
 
 
-# Collecte de données de protocoles via des connecteurs et des API source
+# Collecte de données de protocoles à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application de protocole tierce et les importer dans Adobe Experience Platform par le biais des connecteurs source et de l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
