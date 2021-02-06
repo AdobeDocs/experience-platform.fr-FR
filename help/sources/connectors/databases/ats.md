@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de table Azure ; enregistrement de table azur ; ATS ; ats
 solution: Experience Platform
-title: Connecteur d'Enregistrement de table Azure
+title: Présentation du connecteur source d'Enregistrement Azure Table
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Azure Table Enregistrement à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Azure Table Enregistrement à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 10%
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Azure Table Storage] à [!DNL Platform] à l’aide d’API.
 
-- [Création d&#39;un connecteur d&#39;Enregistrement de table Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/databases/ats.md)
+- [Création d&#39;une connexion à la source d&#39;Enregistrement Azure Table à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/databases/ats.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL Azure Table Storage] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d&#39;un connecteur source d&#39;Enregistrement Azure Table dans l&#39;interface utilisateur](../../tutorials/ui/create/databases/ats.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source d&#39;Enregistrement Azure Table dans l&#39;interface utilisateur](../../tutorials/ui/create/databases/ats.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
