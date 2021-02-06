@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; recette de vente au détail ; Espace de travail de données ; rubriques populaires ; recettes
 solution: Experience Platform
-title: Création de jeux de données et de schéma de vente au détail
+title: Créer un Schéma de vente au détail et un jeu de données
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels Data Science Workspace d’Adobe Experience Platform. Une fois que vous aurez terminé, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation IMS sur Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 75%
+ht-degree: 70%
 
 ---
 
@@ -111,7 +111,7 @@ Une fois l’exécution du script de bootstrap terminée, il est possible d’af
 Vous avez également correctement assimilé des données d&#39;exemple Ventes au détail dans [!DNL Experience Platform] à l&#39;aide du script d&#39;amorçage fourni.
 
 Pour continuer à travailler sur les données ingérées, procédez de la façon suivante :
-- [Analysez vos données à l’aide des notebooks Jupyter](../jupyterlab/analyze-your-data.md)
-   - Utilisez les notebooks Jupyter dans Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
+- [Analyse de vos données à l’aide des ordinateurs portables Jupyter](../jupyterlab/analyze-your-data.md)
+   - Utilisez les portables Jupyter de Data Science Workspace pour accéder à vos données, les explorer, les visualiser et les comprendre.
 - [Regroupez les fichiers source dans une recette](./package-source-files-recipe.md)
    - Suivez ce tutoriel pour apprendre à importer votre propre modèle dans [!DNL Data Science Workspace] en regroupant les fichiers source dans un fichier Recette important.
