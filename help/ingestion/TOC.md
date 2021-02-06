@@ -5,10 +5,10 @@ user-guide-title: Aide d’Adobe Experience Platform Data Ingestion
 breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Introduisez vos données dans Platform par lot ou en ingestion continue.
 translation-type: tm+mt
-source-git-commit: cfdaf72b7f4bf190877006ccd4cc6a7fd014adc2
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 95%
+source-wordcount: '121'
+ht-degree: 91%
 
 ---
 
@@ -34,13 +34,13 @@ ht-degree: 95%
    - [Diffusion en continu des données d’enregistrement](tutorials/streaming-record-data.md)
    - [Diffusion en continu des données de séries temporelles](tutorials/streaming-time-series-data.md)
    - [Diffusion en continu de plusieurs messages](tutorials/streaming-multiple-messages.md)
-- Qualité et contrôle de l’ingestion des données {#quality}
+- Qualité et surveillance des données{#quality}
    - [Présentation](quality/overview.md)
    - [Surveillance de l’ingestion des données](quality/monitor-data-ingestion.md)
    - [Récupérer les diagnostics d&#39;erreur](quality/error-diagnostics.md)
    - [Récupération des lots rejetés](quality/retrieve-failed-batches.md)
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
-   - [Abonnement aux événements d’ingestion de données](quality/subscribe-events.md)
+   - [Notifications d’ingestion de données](quality/subscribe-events.md)
 - [Connecteurs source](source-connectors.md)
 - [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
