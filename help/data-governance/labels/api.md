@@ -5,7 +5,7 @@ title: 'Gérer les étiquettes d’utilisation des données à l’aide d’API 
 topic: developer guide
 description: L’API Service de dataset vous permet d’appliquer et de modifier des étiquettes d’utilisation pour les jeux de données. Il fait partie des fonctionnalités de catalogue de données Adobe Experience Platform, mais est distinct de l’API Catalog Service qui gère les métadonnées des jeux de données.
 translation-type: tm+mt
-source-git-commit: 4b5e116d221e6689f95c8da0c54ef3af6827adc1
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 8%
