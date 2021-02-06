@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; thèmes populaires ; système d'automatisation marketing ; collecte de données d'automatisation marketing
 solution: Experience Platform
-title: Collecte de données d’automatisation marketing par le biais des connecteurs et des API source
+title: Collecte de données d’automatisation du marketing à l’aide des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système d’automatisation marketing et les amener à la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système d’automatisation marketing et les importer dans Adobe Experience Platform à l’aide de connecteurs et d’API source.
 translation-type: tm+mt
-source-git-commit: a9a4bbbd7128043596ebab45d12bdd6954554537
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1538'
 ht-degree: 22%
 
 ---
 
 
-# Collecte de données d’automatisation marketing par le biais des connecteurs et des API source
+# Collecte de données d’automatisation marketing à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système d’automatisation marketing tiers et les intégrer à la plate-forme via les connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
