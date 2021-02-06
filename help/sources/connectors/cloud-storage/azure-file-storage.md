@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement de fichiers Azure ; enregistrement de fichiers azurés
 solution: Experience Platform
-title: Connecteur d'Enregistrement de fichiers Azure
+title: Présentation du connecteur source d'Enregistrement de fichiers Azure
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Azure File Enregistrement à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Azure File Enregistrement à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
@@ -44,11 +44,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d&#39;un connecteur d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Création d&#39;une connexion source d&#39;Enregistrement de fichiers Azure à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d&#39;un connecteur source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d&#39;une connexion source d&#39;Enregistrement de fichiers Azure dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
