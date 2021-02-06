@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; HP Vertica ; hp vertica
 solution: Experience Platform
-title: Connecteur HP Vertica
+title: Présentation du connecteur source HP Vertica
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter HP Vertica à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter HP Vertica à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 0%
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL HP Vertica] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur HP Vertica à l’aide de l’API Flow Service](../../tutorials/api/create/databases/hp-vertica.md)
+- [Création d’une connexion source HP Vertica à l’aide de l’API Flow Service](../../tutorials/api/create/databases/hp-vertica.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL HP Vertica] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source HP Vertica dans l’interface utilisateur](../../tutorials/ui/create/databases/hp-vertica.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source HP Vertica dans l’interface utilisateur](../../tutorials/ui/create/databases/hp-vertica.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
