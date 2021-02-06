@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;syntaxe sql;sql;ctas;CTAS;Créer une table comme sélectionner
 solution: Experience Platform
-title: Syntaxe SQL
+title: Syntaxe SQL dans Requête Service
 topic: syntax
-description: Ce document présente la syntaxe SQL compatible avec Query Service.
+description: Ce document affiche la syntaxe SQL prise en charge par Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: 14cb1d304fd8aad2ca287f8d66ac6865425db4c5
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2212'
-ht-degree: 85%
+source-wordcount: '2221'
+ht-degree: 84%
 
 ---
 
 
-# Syntaxe SQL
+# Syntaxe SQL dans Requête Service
 
 [!DNL Query Service] permet d’utiliser le langage SQL ANSI standard pour les instructions `SELECT` et autres commandes limitées. Ce document affiche la syntaxe SQL prise en charge par [!DNL Query Service].
 
