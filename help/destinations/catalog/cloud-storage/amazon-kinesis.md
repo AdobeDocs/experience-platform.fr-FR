@@ -1,25 +1,21 @@
 ---
 keywords: Amazon Kinesis ; destination de la kinesis ; kinesis
-title: Destination Amazon
-seo-title: Destination Amazon
+title: Destination de la connexion Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
-seo-description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: a78dd4b95896387aa1daa022c9e1d5a6cf978448
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '451'
 ht-degree: 7%
 
 ---
 
 
-# (Beta) [!DNL Amazon Kinesis] destination
+# (Beta) [!DNL Amazon Kinesis] connexion
 
 >[!IMPORTANT]
 >
 >La destination [!DNL Amazon Kinesis] dans Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
-
-## Présentation {#overview}
 
 Le service [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] vous permet de collecter et de traiter de vastes flux d&#39;enregistrements de données en temps réel.
 
