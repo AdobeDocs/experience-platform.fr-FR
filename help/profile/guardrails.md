@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; résolution des problèmes ; garde-fous ; directives ; limite ; entité ; Principale ; entité de dimension ;
-title: Gardiens d’Experience Platform pour les données de Profil client en temps réel
+title: Garanties pour les données de Profil client en temps réel
 solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
 description: 'Adobe Experience Platform fournit une série de garde-fous pour vous aider à éviter de créer des modèles de données que le Profil client en temps réel ne peut pas prendre en charge. Ce document décrit les meilleures pratiques et les contraintes à garder à l’esprit lors de la modélisation des données de Profil. '
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1456'
 ht-degree: 5%
 
 ---
 
 
-# [!DNL Platform] garde  [!DNL Real-time Customer Profile]
+# Gardiens des données [!DNL Real-time Customer Profile]
 
 [!DNL Real-time Customer Profile] fournit des profils individuels qui vous permettent de fournir des expériences personnalisées sur plusieurs canaux en fonction d’informations comportementales et d’attributs du client. Pour atteindre ce ciblage, [!DNL Profile] et le moteur de segmentation de Adobe Experience Platform utilisent un modèle de données hybrides fortement dénormalisé qui offre une nouvelle approche de développement des profils clients. L’utilisation de ce modèle de données hybride rend extrêmement important que les données collectées soient modélisées correctement. Bien que le magasin de données [!DNL Profile] qui gère les données de profil ne soit pas un magasin relationnel, [!DNL Profile] permet l&#39;intégration à des entités de petite dimension afin de créer des segments de manière simplifiée et intuitive. Cette intégration est connue sous le nom de segmentation multientité.
 
