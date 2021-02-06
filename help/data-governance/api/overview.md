@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Guide de développement de l’API Policy Service
+title: Guide de l'API de service de stratégie
 topic: developer guide
-description: Découvrez comment utiliser l’API Policy Service pour gérer les étiquettes d’utilisation des données et les stratégies dans l’Experience Platform.
+description: L’API Policy Service permet aux développeurs de gérer les étiquettes d’utilisation des données et les stratégies dans l’Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 16%
+source-wordcount: '504'
+ht-degree: 14%
 
 ---
 
 
-# Guide du développeur de l’API [!DNL Policy Service]
+# [!DNL Policy Service] Guide de l’API
 
 Adobe Experience Platform [!DNL Data Governance] vous permet de gérer les données client et de veiller au respect des réglementations, restrictions et stratégies applicables à l’utilisation des données. Il joue un rôle clé dans [!DNL Experience Platform] à divers niveaux, notamment le catalogage, le lignage des données, l&#39;étiquetage de l&#39;utilisation des données, les stratégies d&#39;utilisation des données et le contrôle de l&#39;utilisation des données pour les actions marketing.
 
