@@ -1,14 +1,14 @@
 ---
 keywords: classification de texte ; classification de texte
 solution: Experience Platform, Intelligent Services
-title: Point de terminaison de l’API de classification de texte
+title: Classification de texte dans l’API d’API Content and Commerce
 topic: Developer guide
 description: Lorsqu’un fragment de texte est fourni, le service de classification de texte peut le classifier en une ou plusieurs étiquettes. La classification peut être à libellé unique, à libellé multiple ou hiérarchique.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
