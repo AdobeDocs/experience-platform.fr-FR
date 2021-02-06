@@ -1,14 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Paypal ; paypal ; PayPal ; PayPal
 solution: Experience Platform
-title: Connecteur PayPal
-topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de PayPal à la plate-forme à l'aide des API ou de l'interface utilisateur.
+title: Présentation du connecteur de source PayPal
+description: Découvrez comment connecter PayPal à Adobe Experience Platform à l'aide des API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '230'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -31,11 +30,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL PayPal] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur PayPal à l’aide de l’API du service de flux](../../tutorials/api/create/payments/paypal.md)
+- [Création d’une connexion à la source PayPal à l’aide de l’API du service de flux](../../tutorials/api/create/payments/paypal.md)
 - [Explorez une application de paiement à l’aide de l’API de service de flux](../../tutorials/api/explore/payments.md)
 - [Collecte de données à partir d’une application de paiement à l’aide de l’API de service de flux](../../tutorials/api/collect/payments.md)
 
 ## Connectez [!DNL PayPal] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source PayPal dans l’interface utilisateur](../../tutorials/ui/create/payments/paypal.md)
-- [Configuration d’un flux de données pour un connecteur de paiements dans l’interface utilisateur](../../tutorials/ui/dataflow/payments.md)
+- [Créer une connexion à la source PayPal dans l&#39;interface utilisateur](../../tutorials/ui/create/payments/paypal.md)
+- [Configuration d’un flux de données pour une connexion aux paiements dans l’interface utilisateur](../../tutorials/ui/dataflow/payments.md)
