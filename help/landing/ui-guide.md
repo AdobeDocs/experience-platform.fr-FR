@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Adobe Experience Platform ; guide de l'utilisateur ; guide de l'interface utilisateur ; guide de l'interface utilisateur de la plate-forme ; introduction à la plate-forme ; tableau de bord ;
 solution: Experience Platform
-title: Guide de l’interface utilisateur Adobe Experience Platform
+title: Présentation de l’interface utilisateur Experience Platform
 topic: ui guide
 description: 'Adobe Experience Platform '
 translation-type: tm+mt
-source-git-commit: 852792c1288cf7b4815fb0afb742046d7a595da2
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
