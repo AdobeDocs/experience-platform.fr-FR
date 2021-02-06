@@ -1,13 +1,13 @@
 ---
 keywords: similarité visuelle ; similarité visuelle ; api cai
 solution: Experience Platform, Intelligent Services
-title: similarité visuelle
+title: Similarité visuelle dans l’API d’API Content and Commerce AI
 topic: Developer guide
 description: Le service de similarité visuelle, lorsqu’il fournit une image, recherche automatiquement les images visuellement similaires d’un catalogue.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '510'
 ht-degree: 3%
 
 ---
