@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
-title: Connecteur OData générique
+title: Présentation générique du connecteur source OData
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de Generic OData à Platform à l’aide d’API ou de l’interface utilisateur.
+description: Apprenez à connecter des OData génériques à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 7%
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Generic OData] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur OData générique à l’aide de l’API du service de flux](../../tutorials/api/create/protocols/odata.md)
+- [Création d’une connexion source OData générique à l’aide de l’API du service de flux](../../tutorials/api/create/protocols/odata.md)
 - [Explorez une application de protocoles à l’aide de l’API du service de flux](../../tutorials/api/explore/protocols.md)
 - [Collecte de données à partir d’une application de protocoles à l’aide de l’API Flow Service](../../tutorials/api/collect/protocols.md)
 
 ## Connectez [!DNL Generic OData] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source OData générique dans l’interface utilisateur](../../tutorials/ui/create/protocols/odata.md)
-- [Configuration d’un flux de données pour un connecteur de protocole dans l’interface utilisateur](../../tutorials/ui/dataflow/protocols.md)
+- [Création d’une connexion source OData générique dans l’interface utilisateur](../../tutorials/ui/create/protocols/odata.md)
+- [Configuration d’un flux de données pour une connexion aux protocoles dans l’interface utilisateur](../../tutorials/ui/dataflow/protocols.md)
