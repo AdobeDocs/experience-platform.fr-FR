@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Connecteur d’attributs du client
 solution: Experience Platform
-title: Connecteur Attributs du client
+title: Présentation du connecteur source des attributs du client
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter les attributs du client à la plate-forme à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur
 translation-type: tm+mt
-source-git-commit: 6934bfeee84f542558894bbd4ba5759891cd17f3
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '130'
 ht-degree: 35%
 
 ---
@@ -19,8 +19,8 @@ Adobe Experience Platform permet d’ingérer des données à partir de sources 
 
 L’Experience Platform fournit une assistance pour l’importation des données du profil Attributs du client dans Adobe Experience Platform.
 
-La documentation ci-dessous fournit des informations sur la façon de connecter les attributs du client à la plate-forme à l’aide des API ou de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion des attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur :
 
 ## Connexion des attributs du client à la plate-forme à l’aide de l’interface utilisateur
 
-- [Création d’un connecteur source Attributs du client dans l’interface utilisateur](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Création d’une connexion source Attributs du client dans l’interface utilisateur](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
