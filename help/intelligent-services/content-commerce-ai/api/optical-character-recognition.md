@@ -1,13 +1,13 @@
 ---
 keywords: OCR ; présence de texte ; reconnaissance optique de caractères
 solution: Experience Platform, Intelligent Services
-title: Reconnaissance optique des caractères
+title: Présence de texte et reconnaissance de caractères optiques
 topic: Developer guide
-description: Le service Visibilité de texte / Reconnaissance optique de caractères (OCR), lorsqu’une image est donnée, peut indiquer si du texte est présent dans l’image. Si du texte est présent, la reconnaissance optique des caractères peut renvoyer le texte.
+description: Dans l’API Content and Commerce AI, le service Text Presence / Optical Character Recognition (OCR) peut indiquer si du texte est présent dans une image donnée. Si du texte est présent, la reconnaissance optique des caractères peut renvoyer le texte.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '525'
 ht-degree: 4%
 
 ---
