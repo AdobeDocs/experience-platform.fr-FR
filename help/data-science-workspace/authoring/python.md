@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; accès aux données ; sdk python ; api d'accès aux données ; lire python ; écrire python
 solution: Experience Platform
-title: Accès aux données à l'aide de Python
+title: Accès aux données à l'aide de Python dans Data Science Workspace
 topic: tutorial
 type: Tutorial
 description: Le document suivant contient des exemples sur la façon d'accéder aux données en Python pour les utiliser dans Data Science Workspace.
 translation-type: tm+mt
-source-git-commit: fcb4088ecac76d10b0cb69b04ad55167f5cdac3e
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
 
 
-# Accès aux données à l&#39;aide de Python
+# Accès aux données à l&#39;aide de Python dans Data Science Workspace
 
 Le document suivant contient des exemples d’accès aux données à l’aide de Python pour une utilisation dans Data Science Workspace. Pour plus d&#39;informations sur l&#39;accès aux données à l&#39;aide des blocs-notes JupyterLab, consultez la [documentation relative à l&#39;accès aux données des blocs-notes JupyterLab](../jupyterlab/access-notebook-data.md).
 
