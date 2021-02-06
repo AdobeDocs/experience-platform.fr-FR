@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;cs;CS;client success system
 solution: Experience Platform
-title: Explorez un système de succès client à l’aide de l’API Flow Service
+title: Explorez un système de réussite client à l’aide de l’API du service de flux
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer les systèmes de succès client (CS).
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 25%
