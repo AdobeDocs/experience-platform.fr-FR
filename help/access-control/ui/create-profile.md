@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
 solution: Experience Platform
-title: Création d’un profil de produits
+title: Créer un nouveau Profil de produits dans Adobe Admin Console
 topic: user guide
 description: Ce document couvre les étapes nécessaires à la création d'un nouveau profil de produits dans le Adobe Admin Console. Pour commencer la création d’un profil, accédez à l’onglet Profil de produits et cliquez sur Nouveau profil.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 77%
+source-wordcount: '261'
+ht-degree: 70%
 
 ---
 
 
-# Création d’un profil de produits
+# Créer un nouveau profil de produits dans Adobe Admin Console
 
 Pour commencer la création d’un profil, accédez à l’onglet **[!UICONTROL Profil de produits]** et cliquez sur **[!UICONTROL Nouveau profil]**.
 
