@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Service de segmentation ; segmentation ; Segmentation ; créer un jeu de données ; exporter un segment d'audience ; exporter un segment ;
 solution: Experience Platform
-title: Création d’un jeu de données pour l’exportation d’un segment ciblé
+title: Création d’un jeu de données pour l’exportation d’un segment d’Audience
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes nécessaires à la création d’un jeu de données qui peut être utilisé pour exporter un segment ciblé à l’aide de l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: fce215edb99cccc8be0109f8743c9e56cace2be0
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
 source-wordcount: '773'
-ht-degree: 58%
+ht-degree: 57%
 
 ---
 
