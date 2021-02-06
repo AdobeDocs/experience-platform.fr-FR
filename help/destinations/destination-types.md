@@ -2,18 +2,17 @@
 keywords: destinations;destination;types de destination
 title: Types et catégories de destinations
 seo-title: Types et catégories de destinations
-description: 'Dans Adobe Experience Platform, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers des destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations. '
-seo-description: Dans Adobe Experience Platform, les destinations d’exportation de Profil/segment capturent les données de événement, les combinent à d’autres sources de données, appliquent la segmentation et exportent des segments et des profils qualifiés vers des destinations. Les extensions Experience Platform Launch transfèrent des données de événement brutes vers plusieurs types de destinations.
+description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 62%
+source-wordcount: '514'
+ht-degree: 70%
 
 ---
 
 
-# Types et catégories de destinations
+# Types et catégories de destination
 
 Lisez cette page pour comprendre les différents types et catégories de destinations Adobe Experience Platform.
 
