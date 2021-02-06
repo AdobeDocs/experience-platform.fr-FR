@@ -1,21 +1,17 @@
 ---
 keywords: kickfire ; Kickfire ; extension kickfire ; Kickfire Extension
-title: Extension KickFire
-seo-title: Extension KickFire
+title: Destination de l'extension KickFire
 description: L'extension KickFire est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension KickFire est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 22%
+source-wordcount: '507'
+ht-degree: 19%
 
 ---
 
 
 # [!DNL KickFire] Extension {#kickfire-extension}
-
-## Présentation {#overview}
 
 [!DNL KickFire's] Les informations d&#39;adresse IP et les données de firmographie B2B vous permettent de convertir des adresses IP en sociétés, d&#39;identifier des visiteurs Web anonymes et d&#39;intégrer des données de compte dans votre pile technologique - le tout en fonction d&#39;une adresse IP de société.
 
