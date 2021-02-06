@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Connecteurs source Adobe Experience Platform
+title: Connecteurs source
 topic: overview
 description: Les connexions source vous permettent d’authentifier vos systèmes d’enregistrement et vos services de gestion de la relation client, de définir les heures d’exécution pour l’assimilation et de gérer le débit d’assimilation des données.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 61%
+source-wordcount: '135'
+ht-degree: 59%
 
 ---
 
