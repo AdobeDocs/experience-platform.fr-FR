@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion à la source de données
 solution: Experience Platform
-title: Envoi de données de parquet à partir d’un système d’enregistrement cloud tiers à l’aide de l’API Flow Service
+title: Envoi de données de parquet à partir d’un système d’Enregistrement de cloud tiers à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API de service de flux pour vous guider dans les étapes d’assimilation des données de parquet à partir d’un système d’enregistrement cloud tiers.
+description: Ce didacticiel utilise l’API Flow Service pour vous guider à travers les étapes d’assimilation des données Apache Parquet à partir d’un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1101'
 ht-degree: 20%
 
 ---
