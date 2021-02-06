@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; api ; remplacer un objet
 solution: Experience Platform
-title: Remplacement d’un objet
+title: Remplacer un objet de catalogue
 topic: developer guide
 description: Vous pouvez remplacer les contenus d’un objet Catalog à l’aide d’une requête PUT, dans lequel l’intégralité des ressources est remplacée par le payload de la requête.
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 64%
+source-wordcount: '173'
+ht-degree: 60%
 
 ---
 
 
-# Remplacement d’un objet
+# Remplacement d’un objet Catalogue
 
 Vous pouvez remplacer le contenu d&#39;un objet [!DNL Catalog] à l&#39;aide d&#39;une requête de PUT, dans laquelle la ressource entière est remplacée par la charge utile de la requête.
 
