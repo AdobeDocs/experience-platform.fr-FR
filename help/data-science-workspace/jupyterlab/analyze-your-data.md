@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform ; JupyterLab ; blocs-notes ; Espace de travail des données ; rubriques populaires ; analyser les blocs-notes de données
 solution: Experience Platform
-title: Analyse de vos données à l’aide de notebooks
+title: Analyse de vos données à l'aide de portables
 topic: tutorial
 type: Tutorial
-description: Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein de Data Science Workspace pour accéder à vos données, les explorer et les visualiser.
+description: Ce didacticiel se concentre sur l’utilisation des ordinateurs portables Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1735'
-ht-degree: 83%
+ht-degree: 79%
 
 ---
 
 
 # Analyse de vos données à l’aide de notebooks
 
-Ce tutoriel porte sur l’utilisation des notebooks Jupyter élaborés au sein de Data Science Workspace pour accéder à vos données, les explorer et les visualiser. À la fin de ce tutoriel, vous maîtriserez certaines des fonctionnalités que proposent les notebooks Jupyter dans le but de mieux comprendre vos données.
+Ce didacticiel se concentre sur l’utilisation des ordinateurs portables Jupyter, construits dans Data Science Workspace, pour accéder à vos données, les explorer et les visualiser. D&#39;ici la fin de ce tutoriel, vous devriez avoir une bonne connaissance de certaines des fonctionnalités de l&#39;offre des portables Jupyter pour mieux comprendre vos données.
 
 Les concepts suivants sont présentés :
 
@@ -197,7 +197,7 @@ Notez la diagonale de 1 au centre. Elle indique que lorsqu’une variable est co
 ## Étapes suivantes
 
 Ce didacticiel explique comment créer un nouveau bloc-notes Jupyter dans Data Science Workspace et comment accéder aux données à l&#39;extérieur ainsi qu&#39;à partir de [!DNL Adobe Experience Platform]. Plus précisément, nous avons réalisé les actions suivantes :
-- Création d’un nouveau notebook Jupyter
+- Créer un nouveau portable Jupyter
 - Accès aux jeux de données et aux schémas
 - Exploration des jeux de données
 
