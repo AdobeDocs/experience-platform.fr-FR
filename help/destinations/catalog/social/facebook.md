@@ -1,21 +1,17 @@
 ---
 keywords: extensions facebook;extension facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
-title: Destination Facebook
-seo-title: Destination Facebook
+title: Destination de l'extension Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
-seo-description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 38b2bfd93bda85cf87dde4e0345ca9c11e419c2f
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '952'
+ht-degree: 12%
 
 ---
 
 
-# [!DNL Facebook] Destination
-
-## Présentation {#overview}
+# [!DNL Facebook] extension
 
 >[!IMPORTANT]
 >
