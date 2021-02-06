@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation ; guide du développeur ; guide de l’api ; téléchargement ; ingest Parquet ; ingest json ;
 solution: Experience Platform
-title: Guide du développeur d'importation par lots
+title: Guide de l'API d'importation par lot
 topic: developer guide
 description: Ce document présente de manière exhaustive l’utilisation des API d’ingestion par lots.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '2698'
 ht-degree: 89%
@@ -13,7 +13,7 @@ ht-degree: 89%
 ---
 
 
-# Guide de développement de l’ingestion par lots
+# Guide de l&#39;API d&#39;assimilation de lot
 
 Ce document présente de manière exhaustive l’utilisation des [API d’ingestion par lots](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
