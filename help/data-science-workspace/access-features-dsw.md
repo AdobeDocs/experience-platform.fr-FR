@@ -5,7 +5,7 @@ title: Accès et fonctionnalités à l’espace de travail Data Science
 topic: Access and features for data science workspace
 description: 'Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités. '
 translation-type: tm+mt
-source-git-commit: 40181fc9b1b08c2e21f806caae76b8af0ec9e5e6
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 26%
