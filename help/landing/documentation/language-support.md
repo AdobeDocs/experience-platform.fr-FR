@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; CJA ; analyse de parcours ; analyse de parcours client ; orchestration de campagne ; orchestration ; parcours client ; parcours ; orchestration de parcours ; capacité ; région
 solution: Experience Platform
-title: Prise en charge de la langue de la documentation Experience Platform
+title: Prise en charge de la langue de la documentation de l’Experience Platform
 topic: getting started
 description: Adobe Experience Platform permet aux entreprises de centraliser et de standardiser les données client avant d'appliquer la science des données et l'apprentissage automatique pour améliorer considérablement la conception et la diffusion d'expériences riches et personnalisées.
 translation-type: tm+mt
-source-git-commit: 96600567bb4965a1611e2b9a7cd6cb49298a567f
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
