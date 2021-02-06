@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud ; google ; Google ; Google
 solution: Experience Platform
-title: Création d’un connecteur d’Enregistrement Google Cloud à l’aide de l’API du service de flux
+title: Création d’une connexion à la source d’Enregistrement Google Cloud à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider tout au long des étapes nécessaires à la connexion d’un Experience Platform à un compte d’Enregistrement Google Cloud.
+description: Découvrez comment connecter Adobe Experience Platform à un compte d’Enregistrement Google Cloud à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 26%
 
 ---
 
 
-# Créez un connecteur [!DNL Google Cloud Storage] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Google Cloud Storage] à l’aide de l’API [!DNL Flow Service].
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
