@@ -1,21 +1,17 @@
 ---
 keywords: Awin Advertiser, mastertag extension ; mastertag ; Awin ; awin ; AWIN
-title: Extension Awin Advertiser Mastertag
-seo-title: Extension Awin Advertiser Mastertag
+title: Awin Advertiser Mastertag Extension Destination
 description: L'extension Awin Advertiser Mastertag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Awin Advertiser Mastertag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 39%
+source-wordcount: '518'
+ht-degree: 37%
 
 ---
 
 
 # [!DNL Awin Advertiser Mastertag] Extension {#awin-mastertag-extension}
-
-## Présentation {#overview}
 
 [!DNL MasterTag] est une bibliothèque JavaScript contenant toutes les fonctions requises pour la solution de suivi Awin et doit être annexée inconditionnellement à chaque page du site, y compris la page de confirmation, mais à l&#39;exclusion de toute page qui affiche ou traite les informations de paiement.
 
