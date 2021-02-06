@@ -1,19 +1,18 @@
 ---
 keywords: destinations ; destination ; page des détails des destinations ; page des détails des destinations ; page des détails des destinations
-title: Page de détails des destinations
-seo-title: Page de détails des destinations
+title: Vue des détails d'une destination dans l'interface utilisateur
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: 8ac368081c37ca5bfc2cc3382774a912e8ad68eb
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 16%
+source-wordcount: '749'
+ht-degree: 15%
 
 ---
 
 
-# Page de détails des destinations
+# Vue des détails d’une destination
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez vue et surveiller les attributs et les activités de vos destinations. Ces détails comprennent le nom et l’ID de la destination, les contrôles permettant d’activer ou de désactiver les destinations, etc. Les détails des destinations par lot incluent également des mesures pour les enregistrements de profil activés et un historique des exécutions de flux de données.
 
