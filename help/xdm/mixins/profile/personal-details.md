@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; détails personnels ; conception de Schéma ; mixin ; Mixin ;
 solution: Experience Platform
-title: Mélangeur Coordonnées personnelles
+title: Mixage des coordonnées personnelles
 topic: overview
 description: Ce document présente un aperçu du mixin Coordonnées personnelles.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 9%
