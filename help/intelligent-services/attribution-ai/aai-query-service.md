@@ -1,19 +1,19 @@
 ---
 keywords: informations ; attribution ai ; attribution ai ; informations d’identification Ai ; service de requête AAI ; requêtes d’attribution ; scores d’attribution
 solution: Intelligent Services, Experience Platform
-title: Guide de début rapide du service de Requête AAI
+title: Analyse des scores d’attribution à l’aide de Requête Service
 topic: Attribution AI queries
-description: Ce document fournit un guide et des modèles pour l’utilisation de Requête Service afin d’analyser vos scores d’attribution.
+description: Découvrez comment utiliser Adobe Experience Platform Requête Service pour analyser les scores Attribution AI.
 translation-type: tm+mt
-source-git-commit: 32d49c9244414afeb2729ef44eb364fb2c609380
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
 
-# Guide de début rapide de Adobe Experience Platform Requête Service pour l’analyse des scores d’attribution
+# Analyse des scores d’attribution à l’aide de Requête Service
 
 Chaque ligne des données représente une conversion, dans laquelle les informations des points de contact connexes sont stockées sous la forme d&#39;un tableau de structures sous la colonne `touchpointsDetail`.
 
@@ -21,7 +21,7 @@ Chaque ligne des données représente une conversion, dans laquelle les informat
 | ---------------------- | ------ |
 | Nom du point de contact | `touchpointsDetail. touchpointName` |
 | Canal du point de contact | `touchpointsDetail.touchPoint.mediaChannel` |
-| Scores algorithmiques AAI de point de contact | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Score algorithmique d’Attribution AI de point de contact | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Recherche des chemins de données
 
