@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; IdentityMap ; Schéma design ; map ; Map ; union schéma ; union
 solution: Experience Platform
-title: Mélin IdentityMap
+title: Mélange IdentityMap
 topic: overview
 description: Ce document fournit un aperçu de la classe de Profil XDM Individuel.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
