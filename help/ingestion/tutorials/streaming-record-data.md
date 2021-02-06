@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données d'enregistrement ; données d'enregistrement de flux ;
 solution: Experience Platform
-title: Diffusion en continu des données d’enregistrement
+title: Diffusion en continu des données d'enregistrement à l'aide des API d'importation en flux continu
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 78%
+source-wordcount: '1163'
+ht-degree: 77%
 
 ---
 
 
-# Diffuser en continu des données d’enregistrement vers Adobe Experience Platform
+# Diffusion en continu des données d&#39;enregistrement à l&#39;aide des API d&#39;importation en flux continu
 
 Ce didacticiel vous aidera à commencer à utiliser les API d&#39;assimilation en flux continu, qui font partie des [!DNL Data Ingestion Service] API Adobe Experience Platform.
 
