@@ -5,10 +5,10 @@ user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clients en temps réel.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 29%
+source-wordcount: '159'
+ht-degree: 32%
 
 ---
 
@@ -30,12 +30,12 @@ ht-degree: 29%
    * [Guide de l’interface utilisateur des workflows](workflows.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
 * API Experience Platform {#platform-apis}
+   * [Authentification et accès aux API Platform](api-authentication.md)
    * [Principes fondamentaux des API](api-fundamentals.md)
    * [DOCUMENTS de référence d’API](http://www.adobe.com/go/platform-api-reference-en)
-   * [Didacticiel sur les API de plateformes d’authentification et d’accès](api-authentication.md)
 * Documentation de la plateforme {#documentation}
-   * [Présentation de la documentation](documentation/overview.md)
-   * [Prise en charge de la langue de documentation](documentation/language-support.md)
+   * [Présentation](documentation/overview.md)
+   * [Prise en charge des langues](documentation/language-support.md)
 * Plateforme dans l&#39;écosystème d&#39;Adobe {#ecosystem}
    * [Services d’application](application-services.md)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
@@ -48,6 +48,6 @@ ht-degree: 29%
          * [Configurer un jeu de données pour capturer les données de consentement et de préférence](./governance-privacy-security/consent/iab/dataset.md)
 * [Tableau de bord d&#39;utilisation de la licence](license-usage-dashboard.md)
 * [Guide de dépannage](troubleshooting.md)
-* [Migration ADLS Gen2](adls2-gen2-migration.md)
+* [Migration des lacs de données Gen2](adls2-gen2-migration.md)
 * [Glossaire](glossary.md)
 * [Notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
