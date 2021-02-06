@@ -6,10 +6,10 @@ topic: tutorial
 type: Tutorial
 description: Data Ingestion comprend l’ingestion par lots, l’ingestion par flux et l’ingestion à l’aide de connecteurs de sources.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 51%
+ht-degree: 49%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 51%
 
 Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les professionnels du marketing à mieux comprendre le comportement de leurs clients. L&#39;Adobe [!DNL Experience Platform Data Ingestion] représente les méthodes multiples par lesquelles [!DNL Platform] ingère des données provenant de ces sources, ainsi que la façon dont ces données sont conservées dans le lac Data pour être utilisées par [!DNL Platform services] en aval. [!DNL Data Ingestion] comprend l’ingestion par lots, l’ingestion par flux et l’ingestion à l’aide de connecteurs de sources. Pour en savoir plus, lisez la [présentation de Data Ingestion](../ingestion/home.md) ou accédez directement à la [documentation sur les sources](../sources/home.md).
 
-## Création d’un connecteur de sources dans l’interface utilisateur et l’API
+## Création d’une connexion source dans l’interface utilisateur et l’API
 
 Les connecteurs de source vous permettent d’assimiler des données provenant de plusieurs sources, où elles peuvent ensuite être étiquetées, structurées et améliorées à l’aide de [!DNL Platform services]. Pour commencer à créer un connecteur source, consultez l&#39;[aperçu des sources](../sources/home.md).
 
