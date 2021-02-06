@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Amazon S3 ; Blob Azure
 solution: Experience Platform
-title: Création d’un connecteur source Azure Blob ou Amazon S3 dans l’interface utilisateur
+title: Créer une connexion source Azure Blob ou Amazon S3 dans l'interface utilisateur
 topic: overview
 type: Tutorial
-description: 'Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. '
+description: Découvrez comment créer une connexion source Azure Blob ou Amazon S3 à l'aide de l'interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 8%
+ht-degree: 0%
 
 ---
 
 
-# Créez un connecteur source [!DNL Azure Blob] ou [!DNL Amazon] S3 dans l’interface utilisateur.
+# Créez une connexion source [!DNL Azure Blob] ou [!DNL Amazon] S3 dans l’interface utilisateur.
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée.
 
