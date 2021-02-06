@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
-title: Guide du développeur de l’API Observability Insights
+title: Guide de l’API Observability Insights
 topic: developer guide
-description: Observability Insights est une API RESTful qui vous permet d’afficher les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
+description: Observability Insights est une API RESTful qui permet aux développeurs d’exposer les mesures d’observabilité clés de Adobe Experience Platform. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
 translation-type: tm+mt
-source-git-commit: c5455dc0812b251483170ac19506d7c60ad4ecaa
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 32%
+source-wordcount: '159'
+ht-degree: 19%
 
 ---
 
 
-# Guide du développeur de l’API [!DNL Observability Insights]
+# [!DNL Observability Insights] Guide de l’API
 
 L&#39;API [!DNL Observability Insights] fournit un point de terminaison qui vous permet de récupérer et de surveiller par programmation les données de mesure pour différentes fonctionnalités Adobe Experience Platform. Ce point de terminaison est décrit ci-dessous. Consultez le guide des points de terminaison pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
