@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;enum;field;
 solution: Experience Platform
-title: Définition d’un champ d’énumération dans l’interface utilisateur
+title: Définition des champs Enum dans l’interface utilisateur
 description: Découvrez comment définir un champ d’énumération dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
 
 
-# Définition d’un champ d’énumération dans l’interface utilisateur
+# Définition des champs d’énumération dans l’interface utilisateur
 
 Dans le modèle de données d’expérience (XDM), un champ d’énumération représente un champ limité à une liste prédéfinie de valeurs acceptables.
 
