@@ -1,19 +1,17 @@
 ---
 keywords: personnalisation ; Personnalisation
-title: Destinations de personnalisation
-seo-title: Destinations de personnalisation
+title: Présentation des destinations de personnalisation
 description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
-seo-description: Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 94%
+source-wordcount: '132'
+ht-degree: 90%
 
 ---
 
 
-# Destinations de personnalisation {#personalization-destinations}
+# Présentation des destinations de personnalisation {#personalization-destinations}
 
 Les plateformes de personnalisation collectent des données et des informations issues de comportements individuels. Ces plateformes peuvent aider les professionnels du marketing à naviguer dans des données anonymes, en diffusant des offres ou des publicités vers des prospects en fonction de leurs activités antérieures dans le cadre de segments ciblés avec des habitudes similaires.
 
