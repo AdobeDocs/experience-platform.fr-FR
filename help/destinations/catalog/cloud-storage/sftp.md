@@ -1,21 +1,17 @@
 ---
 keywords: SFTP;sftp
-title: Destination SFTP
-seo-title: Destination SFTP
+title: Destination de la connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
-seo-description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 47%
+source-wordcount: '185'
+ht-degree: 38%
 
 ---
 
 
-# Destination SFTP
-
-## Présentation
+# Connexion SFTP
 
 Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Experience Platform.
 
