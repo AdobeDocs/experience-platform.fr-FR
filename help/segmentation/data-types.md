@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; type de données ; types de données ; types de données ; type de données ; type de données ; type de données de segmentation ; segmentation ; segmentation ; service de segmentation ; types de données du service de segmentation ;
 solution: Experience Platform
-title: Types de données du service de segmentation Adobe Experience Platform
+title: Types de données pris en charge dans le service de segmentation
 topic: overview
-description: Tous les types de données XDM sont pris en charge dans Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
+description: Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 translation-type: tm+mt
-source-git-commit: 17ef6c1c6ce58db2b65f1769edf719b98d260fc6
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 64%
+source-wordcount: '514'
+ht-degree: 61%
 
 ---
 
 
-# Adobe Experience Platform [!DNL Segmentation Service] prend en charge les types de données
+# Types de données pris en charge dans le service de segmentation
 
-Tous les types de données XDM sont pris en charge dans [!DNL Segmentation Service]. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
+Tous les types de données de modèle de données d’expérience (XDM) sont pris en charge dans Adobe Experience Platform Segmentation Service. Les règles qui constituent une définition de segment sont contextualisées par les types de données suivantes.
 
 ## Données de chaîne
 
