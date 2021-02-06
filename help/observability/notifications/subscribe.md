@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; plage de dates
 solution: Experience Platform
-title: S’abonner aux notifications Événement Adobe I/O
+title: S’abonner aux notifications de Événement Adobe I/O
 topic: developer guide
 description: Ce document décrit la procédure à suivre pour s’abonner aux notifications Adobe I/O événement pour les services Adobe Experience Platform. Des informations de référence sur les types d'événement disponibles sont également fournies, ainsi que des liens vers d'autres documents sur la façon d'interpréter les données de événement renvoyées pour chaque  [!DNL Platform] service applicable.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 4%
