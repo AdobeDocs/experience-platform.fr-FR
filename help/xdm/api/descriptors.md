@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; registre de Schémas ; descripteur ; descripteurs ; descripteurs ; identité ; identité ; nom convivial ; nom convivial ; référence ; référence ; relation ; relation
 solution: Experience Platform
-title: Descripteurs
+title: Point de terminaison de l'API descripteurs
 description: Le point de terminaison /descriptors de l'API de registre de Schéma vous permet de gérer par programmation les descripteurs XDM dans votre application d'expérience.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1611'
-ht-degree: 57%
+source-wordcount: '1613'
+ht-degree: 56%
 
 ---
 
