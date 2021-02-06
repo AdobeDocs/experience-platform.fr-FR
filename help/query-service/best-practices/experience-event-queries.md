@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requêtes d’événement d’expérience ; requête d’événement d’expérience ; requête de Événement d’expérience ;
 solution: Experience Platform
-title: Requêtes du Événement d’expérience
+title: Exemples de Requêtes pour les Événements d’expérience
 topic: queries
 type: Tutorial
-description: Le document suivant fournit des exemples de requêtes impliquant des Événements d’expérience.
+description: Le document suivant fournit des exemples de requêtes impliquant des Événements d’expérience dans Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: 5348ea4fb381f938ef635077c04cbff69c1b1a45
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 60%
+source-wordcount: '320'
+ht-degree: 58%
 
 ---
 
 
-# [!DNL Experience Event] requêtes
+# Exemples de requêtes pour [!DNL Experience Events]
 
 Outre les requêtes SQL standard, Adobe Experience Platform [!DNL Query Service] prend en charge l&#39;écriture de requêtes à l&#39;aide de [!DNL Experience Events]. Les Événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané immuable et non agrégé du système lorsqu’un utilisateur interagit avec un site Web ou un service et peut donc être utilisé pour l’analyse du domaine temporel.
 
