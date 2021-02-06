@@ -5,15 +5,15 @@ seo-title: Page d’accueil et tableaux de bord de la plateforme de données cli
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 seo-description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 75%
 
 ---
 
 
-# [!DNL Real-time Customer Data Platform] présentation des mesures
+# [!DNL Real-time Customer Data Platform] page d&#39;accueil et tableaux de bord
 
 La page d&#39;accueil Plate-forme de données client en temps réel (CDP en temps réel), qui comprend un tableau de bord de mesures, s’affiche lorsque vous vous connectez au CDP en temps réel.
 
