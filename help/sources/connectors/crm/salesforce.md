@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma crm;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
-title: Connecteur Salesforce
+title: Présentation du connecteur source Salesforce
 topic: overview
-description: L’Experience Platform prend en charge l’assimilation de données à partir d’un système de gestion de la relation client tiers. Salesforce prend en charge les fournisseurs de gestion de la relation client.
+description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 12%
+ht-degree: 8%
 
 ---
 
@@ -27,11 +27,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Salesforce] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur Salesforce à l’aide de l’API du service de flux](../../tutorials/api/create/crm/salesforce.md)
+- [Création d’une connexion source Salesforce à l’aide de l’API de service de flux](../../tutorials/api/create/crm/salesforce.md)
 - [Explorez un système de gestion de la relation client à l’aide de l’API du service de flux](../../tutorials/api/explore/crm.md)
 - [Collecte de données CRM à l’aide de l’API du service de flux](../../tutorials/api/collect/crm.md)
 
 ## Connectez [!DNL Salesforce] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/salesforce.md)
-- [Configuration d’un flux de données pour un connecteur CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)
+- [Création d’une connexion source Salesforce dans l’interface utilisateur](../../tutorials/ui/create/crm/salesforce.md)
+- [Configuration d’un flux de données pour une connexion CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)
