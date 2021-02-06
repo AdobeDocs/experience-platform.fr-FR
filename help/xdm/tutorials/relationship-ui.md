@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; IU ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; éditeur de schémas ; éditeur de Schémas ; schéma ; Schéma ; schémas ; Schémas ; créer ; relation ; référence ; référence ;
 solution: Experience Platform
-title: Définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas
+title: Définir une relation entre deux Schémas à l’aide de l’éditeur de Schéma
 description: Ce document fournit un didacticiel pour la définition d'une relation entre deux schémas à l'aide de l'éditeur de Schémas dans l'interface utilisateur de l'Experience Platform.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 33%
+source-wordcount: '945'
+ht-degree: 32%
 
 ---
 
