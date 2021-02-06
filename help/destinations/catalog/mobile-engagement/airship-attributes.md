@@ -1,25 +1,21 @@
 ---
 keywords: attributs du navire de transport aérien ; destination du navire de transport aérien
-title: Destination des attributs du navire
-seo-title: Destination des attributs du navire
+title: Destination de la connexion des attributs du navire
 description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
-seo-description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1205'
 ht-degree: 13%
 
 ---
 
 
-# (Bêta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
+# (Bêta) [!DNL Airship Attributes] connexion {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >La destination [!DNL Airship Attributes] de Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
-
-## Présentation {#overview}
 
 [!DNL Airship] est la principale plate-forme d’engagement des clients, qui vous aide à fournir à vos utilisateurs un message personnalisé et significatif à chaque étape du cycle de vie des clients.
 
