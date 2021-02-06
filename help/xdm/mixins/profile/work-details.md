@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; mixins ; détails du travail ; travail profil ;
 solution: Experience Platform
-title: Mélangeur Détails du contact professionnel
+title: Mixage des détails des contacts professionnels
 topic: overview
 description: Ce document fournit une vue d’ensemble du mixin Coordonnées de travail.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
