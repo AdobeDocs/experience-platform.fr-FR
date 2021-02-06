@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;DULE;dule
 solution: Experience Platform
-title: Gouvernance des données d’Adobe Experience Platform
+title: Présentation de la gouvernance des données
 topic: overview
 description: La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux stratégies applicables à l’utilisation des données. Elle joue un rôle clé dans Experience Platform à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’utilisation des données et le contrôle de l’utilisation des données lors d’activités marketing
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
 source-wordcount: '1345'
 ht-degree: 70%
@@ -13,7 +13,7 @@ ht-degree: 70%
 ---
 
 
-# [!DNL Data Governance] présentation
+# Présentation de la gouvernance des données
 
 L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux professionnels du marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s&#39;assurer que vos opérations de données dans [!DNL Platform] sont conformes aux règles d&#39;utilisation des données.
 
