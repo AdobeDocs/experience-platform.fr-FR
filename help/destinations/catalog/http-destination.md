@@ -1,25 +1,21 @@
 ---
 keywords: diffusion en continu ;
-title: La destination HTTP est une destination Adobe Experience Platform qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-seo-title: La destination HTTP est une destination Adobe Experience Platform qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-description: La destination HTTP est une destination Adobe Experience Platform qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
-seo-description: La destination HTTP est une destination Adobe Experience Platform qui vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
+title: Destination de la connexion HTTP
+description: La destination HTTP dans Adobe Experience Platform vous permet d’envoyer des données de profil à des points de terminaison HTTP tiers.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '488'
 ht-degree: 8%
 
 ---
 
 
-# (Alpha) [!DNL HTTP] Destination
+# (Alpha) [!DNL HTTP] connexion
 
 >[!IMPORTANT]
 >
 >La destination [!DNL HTTP] dans Platform est actuellement en alpha. La documentation et les fonctionnalités peuvent changer.
-
-## Présentation {#overview}
 
 La destination [!DNL HTTP] est une destination de diffusion en flux continu [!DNL Adobe Experience Platform] qui vous permet d’envoyer des données de profil à des points de terminaison tiers [!DNL HTTP].
 
