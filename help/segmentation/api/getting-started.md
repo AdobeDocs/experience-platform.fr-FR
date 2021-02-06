@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; api ;
 solution: Experience Platform
-title: Guide de développement de Segmentation Service
+title: Prise en main de l’API du service de segmentation
 topic: developer guide
 description: La documentation suivante fournit des informations supplémentaires dont vous avez besoin pour travailler avec l’API de segmentation.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 31%
+source-wordcount: '329'
+ht-degree: 30%
 
 ---
 
 
-# Prise en main de [!DNL Segmentation Service] {#getting-started}
+# Prise en main de l’API du service de segmentation {#getting-started}
 
 Adobe Experience Platform [!DNL Segmentation Service] vous permet de créer des segments et de générer des audiences dans Adobe Experience Platform à partir de vos données [!DNL Real-time Customer Profile].
 
