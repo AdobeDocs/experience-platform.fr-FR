@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Créateur de segments ; Créateur de segments
 solution: Experience Platform
-title: Guide de modification du créateur de segments de service de segmentation
+title: Guide des contraintes de temps de segmentation refactorisées
 topic: ui guide
 description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: beacce03136e1620ff57fb549f335d2199bb6001
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 13%
