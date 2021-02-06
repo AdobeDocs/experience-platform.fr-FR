@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; planifier un modèle ; Espace de travail des données ; rubriques populaires ; programmer la notation ; programmer la formation
 solution: Experience Platform
-title: Planification d’un modèle (interface utilisateur)
+title: Planification d’un modèle dans l’interface utilisateur de Data Science Workspace
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous permet de configurer des exécutions planifiées de notation et de formation sur un service d’apprentissage automatique. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 79%
+source-wordcount: '557'
+ht-degree: 76%
 
 ---
 
 
-# Planification d’un modèle (interface utilisateur)
+# Planification d’un modèle dans l’interface utilisateur de Data Science Workspace
 
 Adobe Experience Platform [!DNL Data Science Workspace] vous permet de configurer des exécutions planifiées de notation et de formation sur un service d’apprentissage automatique. L’automatisation du processus de formation et de notation peut aider à maintenir et à améliorer l’efficacité d’un service avec le temps en suivant les motifs de vos données.
 
