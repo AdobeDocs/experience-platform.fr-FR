@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation de données ; données assimilées ; diffusion en continu ; présentation ; assimilation en flux continu ; latence ; latence en flux continu ;
 solution: Experience Platform
-title: Présentation de la fonction d’ingestion par flux d’Adobe Experience Platform
+title: Présentation de la gestion en flux continu
 topic: overview
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 31%
+source-wordcount: '283'
+ht-degree: 29%
 
 ---
 
