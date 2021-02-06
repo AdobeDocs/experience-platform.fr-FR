@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; sdk python ; sdk spark ; api d’accès aux données
 solution: Experience Platform
-title: Présentation de Data Access
+title: Présentation de l’accès aux données
 topic: overview
-description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l'accessibilité des jeux de données assimilés dans l'Experience Platform.
+description: L'accès aux données prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et l'accessibilité des jeux de données de plateformes assimilées.
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 19%
+source-wordcount: '185'
+ht-degree: 18%
 
 ---
 
