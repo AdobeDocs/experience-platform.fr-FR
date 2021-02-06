@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; protection des données ; chiffrement des données ; lac
 solution: Experience Platform
-title: Protection des données dans Adobe Experience Platform
+title: Protection des données au Adobe Experience Platform
 topic: data protection
 description: Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans un compte Microsoft Azure Data Lake isolé, propre à votre organisation. Le diagramme de flux de processus suivant illustre comment les données sont ingérées, traitées, chiffrées et conservées par l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '187'
-ht-degree: 35%
+ht-degree: 32%
 
 ---
 
