@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ;
 solution: Experience Platform
-title: Prise en main de l’apprentissage automatique en temps réel
+title: Prise en main de l'apprentissage automatique en temps réel
 topic: Getting started
 description: Le document suivant décrit les étapes requises pour créer un modèle d’apprentissage automatique en temps réel dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Pour utiliser l&#39;apprentissage automatique en temps réel, vous devez avoir accès à une organisation configurée avec Adobe Experience Platform et [!DNL Data Science Workspace]. De plus, vous devez disposer d’un jeu de données complet pour la formation et la notation.
 
-Les guides pour l&#39;apprentissage automatique en temps réel exigent une compréhension pratique des cahiers Python 3, [Jupyter](../jupyterlab/overview.md), de la science des données et de l&#39;apprentissage automatique.
+Les guides pour l&#39;apprentissage automatique en temps réel exigent une compréhension pratique de Python 3, [Portables Jupyter](../jupyterlab/overview.md), de la science des données et de l&#39;apprentissage automatique.
 
 **Termes clés:**
 
