@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;field;
 solution: Experience Platform
-title: Définition des champs XDM dans l’interface utilisateur
+title: Définition de champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 70b3ad788dd78c6100782869e3065cc17a54ece1
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
@@ -57,7 +57,7 @@ Vous pouvez également fournir au champ une **[!UICONTROL Description]** lisible
 
 >[!NOTE]
 >
->Selon le **[!UICONTROL type]** que vous avez sélectionné pour le champ, d&#39;autres contrôles de configuration peuvent apparaître dans le rail de droite. Pour plus d&#39;informations sur ces contrôles, consultez la section [propriétés de champ spécifiques au type](#type-specific-properties).
+>Selon le **[!UICONTROL type]** que vous avez sélectionné pour le champ, d&#39;autres contrôles de configuration peuvent apparaître dans le rail de droite. Pour plus d’informations sur ces contrôles, voir la section [propriétés de champ spécifiques au type](#type-specific-properties).
 >
 >Le rail droit fournit également des cases à cocher pour la désignation de types de champs spéciaux. Pour plus d&#39;informations, consultez la section sur les [types de champs spéciaux](#special).
 
