@@ -1,21 +1,17 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
-title: Extension Google gtag
-seo-title: Extension Google gtag
+title: Destination de l'extension Google
 description: L'extension Google Gtag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Google Gtag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 31%
+source-wordcount: '553'
+ht-degree: 29%
 
 ---
 
 
 # Extension Google gtag {#gtag-advertising-extension}
-
-## Présentation {#overview}
 
 Chargez Google `gtag.js` dans votre site pour envoyer des données de événement à [!DNL Google Analytics], Google Publicités et [!DNL Google Marketing Platform]. Cette extension ajoute uniquement le code gtag à votre site. D’autres extensions Google sont nécessaires pour ajouter des événements et des actions qui utiliseront gtag.
 
