@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Azure ; Azure ; Azure File Enregistrement ; Azure File enregistrement
 solution: Experience Platform
-title: Création d'un connecteur d'Enregistrement de fichiers Azure à l'aide de l'API Flow Service
+title: Création d'une connexion à la source d'Enregistrement de fichiers Azure à l'aide de l'API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l'API Flow Service pour vous guider à travers les étapes de connexion de l'Enregistrement de fichiers Azure à l'Experience Platform.
+description: Découvrez comment connecter Azure File Enregistrement à Adobe Experience Platform à l'aide de l'API Flow Service.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 24%
+source-wordcount: '587'
+ht-degree: 25%
 
 ---
 
 
-# Créez un connecteur [!DNL Azure File Storage] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Azure File Storage] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
