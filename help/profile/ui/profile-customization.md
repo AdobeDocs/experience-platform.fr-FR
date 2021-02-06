@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; interface utilisateur ; interface utilisateur ; personnalisation ; détails du profil ; détails
-title: Personnalisation des Profils de Vue dans l’interface utilisateur
+title: Personnalisation des détails du profil dans l’interface utilisateur
 description: 'Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données du Profil client en temps réel sont affichées dans l’interface utilisateur de Adobe Experience Platform. '
 topic: guide
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
