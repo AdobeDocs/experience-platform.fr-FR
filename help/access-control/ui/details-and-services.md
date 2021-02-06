@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; profil de produit
 solution: Experience Platform
-title: Gestion des détails et des services supplémentaires pour un profil de produit
+title: Gérer les détails et les services supplémentaires pour un Profil de produits
 topic: user guide
 description: Ce document couvre les étapes nécessaires à la gestion des détails et des services supplémentaires pour un profil de produits dans le Adobe Admin Console. Vous pouvez configurer les détails d’un profil et accéder aux services supplémentaires à partir du menu Paramètres du profil.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '213'
-ht-degree: 66%
+ht-degree: 61%
 
 ---
 
