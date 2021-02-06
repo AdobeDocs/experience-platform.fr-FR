@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; flux continu ; assimilation ; flux multiple de messages ; messages multiples ;
 solution: Experience Platform
-title: Diffusion de plusieurs messages en flux continu dans une requête HTTP unique
+title: Envoyer plusieurs messages dans une seule requête HTTP
 topic: tutorial
 type: Tutorial
 description: Ce document fournit un didacticiel pour l’envoi de plusieurs messages à Adobe Experience Platform dans une seule requête HTTP à l’aide de l’assimilation en flux continu.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
 
-# Envoi de plusieurs messages dans une requête HTTP unique
+# Envoyer plusieurs messages dans une seule requête HTTP
 
 Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsque cette fonctionnalité est utilisée correctement, regrouper plusieurs messages au sein d’une requête unique est une excellente manière d’optimiser les données envoyées vers [!DNL Experience Platform].
 
@@ -25,7 +25,7 @@ Ce document fournit un didacticiel pour l’envoi de plusieurs messages à [!DNL
 Ce tutoriel nécessite une compréhension professionnelle d’Adobe Experience Platform [!DNL Data Ingestion]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
 - [Présentation](../home.md) de l&#39;importation de données : Couvre les concepts de base de  [!DNL Experience Platform Data Ingestion]cette méthode, y compris les méthodes d’assimilation et les connecteurs de données.
-- [Présentation](../streaming-ingestion/overview.md) de l&#39;assimilation en flux continu : Flux de travaux et blocs de création d’assimilation de flux continu, tels que les connexions en flux continu, les jeux de données  [!DNL XDM Individual Profile]et  [!DNL XDM ExperienceEvent].
+- [Présentation](../streaming-ingestion/overview.md) de l&#39;assimilation en flux continu : Flux de travaux et blocs de création d’assimilation en flux continu, tels que les connexions en flux continu, les jeux de données  [!DNL XDM Individual Profile]et  [!DNL XDM ExperienceEvent].
 
 Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience ](https://www.adobe.com/go/platform-api-authentication-en) afin de passer avec succès des appels aux API Platform. [!DNL Platform] Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
 
