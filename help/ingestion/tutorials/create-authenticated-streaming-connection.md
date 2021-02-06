@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu authentifiée ; connexion en flux continu ; créer une connexion en flux continu ; créer une connexion en flux continu authentifiée ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
-title: Créer une connexion en continu authentifiée
+title: Créer une connexion de diffusion en continu authentifiée
 topic: tutorial
 type: Tutorial
 description: La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que le Profil client et l’identité en temps réel, de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '674'
-ht-degree: 77%
+ht-degree: 76%
 
 ---
 
 
-# Création d’une connexion en continu authentifiée
+# Créer une connexion en continu authentifiée
 
 La collecte de données authentifiées permet aux services Adobe Experience Platform, tels que [!DNL Real-time Customer Profile] et [!DNL Identity], de faire la distinction entre les enregistrements provenant de sources approuvées et les sources non approuvées. Les clients qui souhaitent envoyer des informations d’identification personnelle (PII) peuvent le faire en envoyant des jetons d’accès dans le cadre de la demande POST.
 
