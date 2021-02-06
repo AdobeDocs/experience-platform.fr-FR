@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; données d’enregistrement en mode cloud ; données en flux continu ; flux continu
 solution: Experience Platform
-title: Collecte de données en flux continu via les connecteurs et les API source
+title: Collecte de données en flux continu à l’aide des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener dans la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Collecte de données en flux continu via les connecteurs et les API source
+# Collecte de données en flux continu à l’aide des connecteurs et des API source
 
 [!DNL Flow Service] est utilisée pour collecter et centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
