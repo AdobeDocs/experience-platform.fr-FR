@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; OData générique ; données génériques
 solution: Experience Platform
-title: Création d’un connecteur OData générique à l’aide de l’API du service de flux
+title: Création d’une connexion source OData générique à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de Generic OData à l’Experience Platform.
+description: Découvrez comment connecter des OData génériques à Adobe Experience Platform à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '546'
 ht-degree: 27%
 
 ---
 
 
-# Créez un connecteur [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
