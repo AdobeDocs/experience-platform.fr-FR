@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; enum ; Principale identity ; Principale identité ; profil individuel XDM ; événement d’expérience ; Événement d’expérience XDM ; XDM ExperienceEvent ; experienceEvent ; experienceEvent ; événement d’expérience ; XDM Experienceevenet;schéma conception de  ; meilleures pratiques
 solution: Experience Platform
-title: Meilleures pratiques pour la modélisation des données dans Adobe Experience Platform
+title: Bonnes Pratiques Pour La Modélisation Des Données
 topic: overview
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2507'
 ht-degree: 2%
 
 ---
 
 
-# Meilleures pratiques pour la modélisation des données dans Adobe Experience Platform
+# Meilleures pratiques pour la modélisation des données
 
 [!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En respectant les normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune qui vous permet d’obtenir des informations précieuses sur les actions client, de définir les audiences client par le biais de segments et d’exprimer les attributs client à des fins de personnalisation.
 
