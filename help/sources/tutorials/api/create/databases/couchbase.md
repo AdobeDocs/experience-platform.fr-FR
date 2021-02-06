@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; couchbase ; Couchbase
 solution: Experience Platform
-title: Création d’un connecteur Couchbase à l’aide de l’API du service de flux
+title: Création d’une connexion à la source Couchbase à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de Couchbase à l’Experience Platform.
+description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '527'
 ht-degree: 27%
 
 ---
 
 
-# Créez un connecteur [!DNL Couchbase] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Couchbase] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ ht-degree: 27%
 
 [!DNL Flow Service] sert à collecter et à centraliser les données client provenant de diverses sources disparates pour les importer dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
 
-Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de [!DNL Couchbase] à [!DNL Experience Platform].
+Découvrez comment vous connecter à [!DNL Couchbase] [!DNL Experience Platform].
 
 ## Prise en main
 
