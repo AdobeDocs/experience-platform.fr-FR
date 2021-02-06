@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Création d’un connecteur Salesforce Service Cloud à l’aide de l’API du service de flux
+title: Création d’une connexion à la source du service Salesforce Cloud à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API de service de flux pour vous guider dans les étapes permettant de connecter l’Experience Platform à Salesforce Service Cloud (ci-après dénommé "SSC").
+description: Découvrez comment connecter Adobe Experience Platform à Salesforce Service Cloud à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '594'
 ht-degree: 24%
 
 ---
 
 
-# Créez un connecteur [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Salesforce Service Cloud] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
