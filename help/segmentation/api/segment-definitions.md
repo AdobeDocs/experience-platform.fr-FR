@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; définition de segment ; définitions de segment ; api ; API ;
 solution: Experience Platform
-title: Définitions de segment
+title: Point de terminaison de l’API Définitions de segment
 topic: developer guide
-description: Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels d’API pour exécuter des actions de base à l’aide de l’API.
+description: Le point de terminaison des définitions de segment dans l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre entreprise.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1080'
 ht-degree: 50%
 
 ---
