@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; supprimer un sandbox
 solution: Experience Platform
-title: Suppression d’un environnement de test
+title: Suppression d’un sandbox dans l’API
 topic: developer guide
 description: Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le nom du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '110'
-ht-degree: 76%
+source-wordcount: '116'
+ht-degree: 67%
 
 ---
 
 
-# Suppression d’un environnement de test
+# Suppression d’un sandbox dans l’API
 
 Vous pouvez supprimer un environnement de test en effectuant une requête DELETE qui inclut le `name` de l’environnement de test dans le chemin de la requête.
 
