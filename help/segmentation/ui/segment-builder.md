@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Service de segmentation ; segmentation ; service de segmentation ; guide d’utilisateur ; guide d’ui ; guide d’ui de segmentation ; créateur de segments ; Créateur de segments ;
 solution: Experience Platform
-title: Guide de l’utilisateur du créateur de segments de service de segmentation
+title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
-description: 'Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
+description: 'Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: 761a212abc407fac5bc59c6f5a57c6c17c932230
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '1795'
-ht-degree: 52%
+source-wordcount: '1800'
+ht-degree: 51%
 
 ---
 
