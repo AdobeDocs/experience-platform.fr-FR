@@ -1,19 +1,17 @@
 ---
 keywords: destinations ; solutions de cloud d’expériences ; cible ; destination de la cible ; ad cloud ; cloud publicitaire ; gestionnaire des audiences ; destination de la cible adobe ; cible ; destination du gestionnaire d'audiences ;
-title: Destinations Adobe
-seo-title: Destinations Adobe
+title: Présentation des destinations d'Adobe
 description: Gérez votre expérience client en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
-seo-description: Gérez votre expérience client en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 21%
+source-wordcount: '219'
+ht-degree: 22%
 
 ---
 
 
-# Destinations Adobe {#adobe-destinations}
+# Présentation des destinations Adobe {#adobe-destinations}
 
 Gérez votre expérience client en connectant vos données dans Adobe Experience Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation marketing, etc.
 
