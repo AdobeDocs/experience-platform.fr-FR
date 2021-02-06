@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Data Explorer Azure ; explorateur de données azur ; explorateur de données ; Data Explorer
 solution: Experience Platform
-title: Création d'un connecteur source de Data Explorer Azure dans l'interface utilisateur
+title: Création d'une connexion à la source du Data Explorer Azure dans l'interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source de Data Explorer Azure (ci-après dénommé "Data Explorer") à l'aide de l'interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source Azure Data Explorer à l'aide de l'interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '512'
 ht-degree: 11%
 
 ---
 
 
-# Créer un connecteur source [!DNL Azure Data Explorer] dans l’interface utilisateur
+# Créer une connexion source [!DNL Azure Data Explorer] dans l’interface utilisateur
 
 >[!NOTE]
 >
