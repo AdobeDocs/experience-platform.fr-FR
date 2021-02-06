@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; collecter le succès client ; succès client
 solution: Experience Platform
-title: Collecte de données à partir d’un système de succès client via des connecteurs et des API source
+title: Collecte de données à partir d’un système de réussite client à l’aide de connecteurs et d’API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client et les intégrer à la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client et les intégrer à la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 85a715a6a56c0a885cb6f5b63c1a90ba81479862
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1541'
 ht-degree: 17%
@@ -14,7 +14,7 @@ ht-degree: 17%
 ---
 
 
-# Collecte de données à partir d’un système de succès client via des connecteurs et des API source
+# Collecte de données à partir d’un système de succès client à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de succès client tiers et les intégrer à [!DNL Platform] via les connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
