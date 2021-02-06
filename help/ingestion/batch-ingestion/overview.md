@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation des données ; lot ; lot ; activer le jeu de données ; aperçu de l'assimilation par lot ; aperçu de l'assimilation par lot ;
 solution: Experience Platform
-title: Présentation de l’ingestion par lots
+title: Présentation de l'importation par lots
 topic: overview
-description: L’API Batch Ingestion vous permet d’ingérer des données dans Adobe Experience Platform sous forme de fichiers de lots. Les données ingérées peuvent être les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (tel qu’un fichier Parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
+description: L'API d'assimilation des données Adobe Experience Platform vous permet d'assimiler des données dans la plate-forme sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil provenant d’un fichier plat dans un système de gestion de la relation client (tel qu’un fichier Parquet) ou les données conformes à un schéma connu dans le registre du modèle de données d’expérience (XDM).
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 79%
+source-wordcount: '1222'
+ht-degree: 77%
 
 ---
 
 
-# [!DNL Batch Ingestion] présentation
+# Présentation de l&#39;assimilation par lots
 
-L&#39;API [!DNL Batch Ingestion] vous permet d&#39;assimiler des données dans Adobe Experience Platform sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil d&#39;un fichier plat dans un système de gestion de la relation client (par exemple un fichier Parquet), ou les données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
+L&#39;API d&#39;assimilation des données Adobe Experience Platform vous permet d&#39;assimiler des données dans la plate-forme sous forme de fichiers de commandes. Les données ingérées peuvent être les données de profil d&#39;un fichier plat dans un système de gestion de la relation client (par exemple un fichier Parquet), ou les données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
 La [référence de l’API Data Ingestion](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) fournit des informations supplémentaires sur ces appels d’API.
 
