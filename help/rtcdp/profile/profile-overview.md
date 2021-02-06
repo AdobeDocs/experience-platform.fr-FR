@@ -1,14 +1,14 @@
 ---
 keywords: profil rtcdp ; profils rtcdp ; identités rtcdp ; stratégies de fusion rtcdp ; profil client en temps réel
-title: Présentation du profil client en temps réel
+title: Présentation du Profil client en temps réel
 seo-title: Profil client en temps réel sur la plateforme de données client en temps réel
-description: Cette section présente la manière dont la plateforme de données client en temps réel vous permet de générer des expériences coordonnées, cohérentes et pertinentes pour vos clients à l’aide du profil client en temps réel.
+description: Découvrez comment la plate-forme de données client en temps réel vous permet de proposer à vos clients des expériences coordonnées, cohérentes et pertinentes à l’aide de Profils clients en temps réel.
 seo-description: Plateforme de données client en temps réel, profil, données, expériences, canaux
 translation-type: tm+mt
-source-git-commit: 54df4778a025811504801306120bda78e04281c1
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 45%
+source-wordcount: '404'
+ht-degree: 39%
 
 ---
 
