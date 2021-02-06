@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; champs de mappage ; fonctions de mappage ;
 solution: Experience Platform
-title: Fonctions d’aperçu des données
+title: Fonctions de mappage des préférences de données
 topic: overview
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: bfcb1924e40b67c0af41dc789b5ff0bf8e8366e1
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '3597'
+source-wordcount: '3599'
 ht-degree: 18%
 
 ---
 
 
-# Fonctions d’aperçu des données
+# Fonctions de mappage de la préparation de données
 
 Les fonctions d’aperçu de données peuvent être utilisées pour calculer et calculer des valeurs en fonction de ce qui est entré dans les champs source.
 
