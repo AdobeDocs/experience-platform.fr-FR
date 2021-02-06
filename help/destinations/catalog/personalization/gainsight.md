@@ -1,21 +1,17 @@
 ---
 keywords: prévoir ; prévoir l'extension ; prévoir la destination
-title: Extension Gainsight
-seo-title: Extension Gainsight
+title: Destination de l'extension Gainsight
 description: L'extension Gainsight est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Gainsight est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '544'
-ht-degree: 30%
+source-wordcount: '517'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Gainsight] Extension {#gainsight-extension}
-
-## Présentation {#overview}
 
 [!DNL Gainsight] fournit aux propriétaires de produits les outils nécessaires pour mieux comprendre le comportement des utilisateurs, favoriser l’adoption des produits et recueillir les retours des utilisateurs.
 
