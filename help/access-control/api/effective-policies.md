@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; thèmes populaires ; stratégies efficaces ; api contrôle d'accès
 solution: Experience Platform
-title: Affichage des stratégies efficaces
+title: Point de terminaison de l’API Stratégies efficaces
 topic: developer guide
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour la vue de stratégies efficaces à l’aide de l’API contrôle d'accès pour Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 8967a820ab19bceb2be69f37e3399ed99f0b8e72
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 70%
+source-wordcount: '320'
+ht-degree: 68%
 
 ---
 
 
-# Affichage des stratégies efficaces
+# Point final des politiques efficaces
 
 Pour afficher des stratégies efficaces pour l’utilisateur actuel, envoyez une requête POST au point de terminaison `/acl/effective-policies` dans l’API [!DNL Access Control] Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
 
