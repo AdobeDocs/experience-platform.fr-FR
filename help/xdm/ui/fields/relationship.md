@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;relation;field;
 solution: Experience Platform
-title: Définir un champ de relation dans l’interface utilisateur
+title: Définir des champs de relation dans l'interface utilisateur
 description: Découvrez comment définir un champ de relation dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
 
-# Définir un champ de relation dans l’interface utilisateur
+# Définition des champs de relation dans l’interface utilisateur
 
 Dans le modèle de données d’expérience (XDM), un [schéma d’union](../../schema/composition.md#union) est une vue unifiée de tous les schémas appartenant à la même classe qui ont également été activés pour [Profil client en temps réel](../../../profile/home.md). Le schéma d’union est exploité par Profil afin de construire une représentation complète d’un client à partir de données d’expérience disparates.
 
