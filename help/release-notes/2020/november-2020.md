@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '2180'
 ht-degree: 25%
@@ -103,7 +103,7 @@ Data Science Workspace utilise l’apprentissage automatique et l’intelligence
 | ------- | ----------- |
 | [!DNL JupyterLab] Modèle Créateur de recettes | Mise à jour de l&#39;utilisation et des versions du bloc-notes pour déterminer les exigences de la recette. [!DNL Python] L&#39;image de base d&#39;exécution ML a été mise à jour pour utiliser  [!DNL Python] 3.6.7 et un  [!DNL Conda] environnement exclusivement. |
 
-Pour plus d&#39;informations, veuillez lire le document sur [la création d&#39;une recette à l&#39;aide de cahiers Jupyter](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+Pour plus d&#39;informations, veuillez lire le document sur [la création d&#39;une recette à l&#39;aide de Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Service {#destinations}
 
