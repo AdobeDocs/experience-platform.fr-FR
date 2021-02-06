@@ -1,21 +1,17 @@
 ---
 keywords: Amazon S3;S3 destination;s3;amazon s3
-title: Destination Amazon S3
-seo-title: Destination Amazon S3
+title: Destination de la connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
-seo-description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV ou séparés par des tabulations depuis Adobe Experience Platform vers vos propres compartiments S3.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 26%
+source-wordcount: '223'
+ht-degree: 14%
 
 ---
 
 
-# [!DNL Amazon S3] destination
-
-## Présentation
+# [!DNL Amazon S3] connexion
 
 Créez une connexion sortante en direct à votre enregistrement S3 [!DNL Amazon Web Services] (AWS) pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations depuis Adobe Experience Platform dans vos propres compartiments S3.
 
