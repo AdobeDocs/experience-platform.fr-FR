@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; importer la recette empaquetée ; Espace de travail de données ; rubriques populaires ; recettes ; api ; apprentissage automatique sensei ; créer un moteur
 solution: Experience Platform
-title: Importation d’une recette empaquetée (API)
+title: Importer une recette compressée à l'aide de l'API d'apprentissage automatique Sensei
 topic: tutorial
 type: Tutorial
 description: 'Ce tutoriel utilise l’API Sensei Machine Learning pour créer un moteur, aussi appelé recette dans l’interface utilisateur. '
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 64%
+source-wordcount: '1007'
+ht-degree: 62%
 
 ---
 
 
-# Importation d’une recette empaquetée (API)
+# Importer une recette assemblée à l&#39;aide de l&#39;API d&#39;apprentissage automatique Sensei
 
 Ce didacticiel utilise [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour créer un [moteur](../api/engines.md), également appelé Recette dans l’interface utilisateur.
 
