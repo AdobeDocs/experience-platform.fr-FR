@@ -1,21 +1,17 @@
 ---
 keywords: prévoir ; prévoir l'extension ; prévoir la destination
-title: Extension Foresee
-seo-title: Extension Foresee
+title: Destination de l'extension Foresee
 description: L'extension Foresee est une destination questionnaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Foresee est une destination questionnaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 27%
+source-wordcount: '504'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL Foresee] Extension {#foresee-extension}
-
-## Présentation {#overview}
 
 Configurez les déploiements de produits [!DNL ForeSee] à l’aide de l’Experience Platform Launch.
 
