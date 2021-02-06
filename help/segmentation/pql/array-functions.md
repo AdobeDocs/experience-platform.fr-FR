@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;array fonctions;array;
 solution: Experience Platform
-title: Fonctions de tableau, de liste et d’ensemble
+title: Tableau, Liste et définition des fonctions PQL
 topic: developer guide
 description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 94%
+source-wordcount: '767'
+ht-degree: 93%
 
 ---
 
