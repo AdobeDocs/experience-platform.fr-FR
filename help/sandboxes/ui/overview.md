@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; présentation du sandbox
 solution: Experience Platform
-title: Présentation de l’interface utilisateur des environnements de test
+title: Présentation de l’interface utilisateur de Sandbox
 topic: user guide
 description: Adobe Experience Platform fournit des environnements de test virtuels qui partitionnent une instance unique de Platform en environnements virtuels séparés et isolés. Vous trouverez l’interface utilisateur des environnements de test dans l’interface utilisateur d’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
