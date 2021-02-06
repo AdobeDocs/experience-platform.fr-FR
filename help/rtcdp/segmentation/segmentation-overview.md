@@ -1,13 +1,13 @@
 ---
 keywords: segmentation ; segmentation rtcdp ; segmentation des plateformes de données client en temps réel
-title: Présentation du service de segmentation
-seo-title: Service de segmentation de la plateforme de données client en temps réel
+title: Service de segmentation dans la plate-forme de données client en temps réel
+seo-title: Service de segmentation dans la plate-forme de données client en temps réel
 description: La plateforme CDP en temps réel repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 translation-type: tm+mt
-source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 37%
+source-wordcount: '544'
+ht-degree: 35%
 
 ---
 
