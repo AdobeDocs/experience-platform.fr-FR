@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; informations ; attribution de l’accès ; rubriques populaires ; attribution des informations
 solution: Intelligent Services, Experience Platform
-title: Découverte des insights dans Attribution AI
+title: Découvrez les statistiques d'Attribution AI
 topic: Attribution AI insights
 description: Ce document sert de guide pour interagir avec les insights des instances de service dans l’interface utilisateur Adobe Intelligent Services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1656'
-ht-degree: 50%
+ht-degree: 49%
 
 ---
 
 
-# Découverte des insights dans Attribution AI
+# Découvrir les informations d&#39;Attribution AI
 
 Les instances de service Attribution AI fournissent des insights qui peuvent être utilisés pour prendre et mesurer des décisions marketing liées aux performances marketing et au retour sur investissement. La sélection d’une instance de service fournit des visualisations et des filtres pour vous aider à comprendre l’impact de chaque interaction client au cours de chacune des phases du parcours client.
 
