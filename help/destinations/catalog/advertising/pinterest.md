@@ -1,21 +1,17 @@
 ---
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pinterest Conversion Tracking
-title: Extension Pinterest Conversion Tracking
-seo-title: Extension Pinterest Conversion Tracking
+title: Destination de l'extension de suivi des conversions Pinterest
 description: L'extension de suivi des conversions Pinterest est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension de suivi des conversions Pinterest est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 31%
+source-wordcount: '536'
+ht-degree: 29%
 
 ---
 
 
 # [!DNL Pinterest Conversion Tracking] Extension {#pinterest-extension}
-
-## Présentation {#overview}
 
 Effectuez le suivi des actions des visiteurs sur votre site web après la consultation de votre Pin promu. Mesurez le retour sur dépenses publicitaires et créez des audiences ciblées. En savoir plus [ici](https://ads.pinterest.com/).
 
