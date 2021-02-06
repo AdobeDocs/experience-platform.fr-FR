@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation partielle ; assimilation partielle ; extraction de l'erreur ; extraction de l'erreur ; assimilation par lots partielle ; assimilation par lots partielle ; assimilation partielle ; assimilation ; assimilation ;
 solution: Experience Platform
-title: Présentation de l'assimilation par lots partielle
+title: Présentation partielle de l'importation par lots
 topic: overview
 description: Ce document fournit un tutoriel pour la gestion de l’ingestion par lots partielle.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 42%
