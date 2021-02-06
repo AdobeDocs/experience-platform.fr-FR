@@ -5,7 +5,7 @@ title: Prise en main de l’API Observability Insights
 topic: developer guide
 description: L’API Observability Insights vous permet de récupérer des données de mesure pour différentes fonctionnalités Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant de tenter d'appeler l'API Observability Insights.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 24%
