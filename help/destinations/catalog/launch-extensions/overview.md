@@ -1,19 +1,17 @@
 ---
 keywords: extensions de lancement ; extension de lancement ; destinations de lancement ; extensions de lancement de plate-forme ; extension de lancement de plate-forme ; destinations de lancement de plate-forme
-title: Extensions d’Experience Platform Launch
-seo-title: Extensions d’Experience Platform Launch
-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
-seo-description: Launch représente la nouvelle génération des fonctionnalités de gestion des balises d’Adobe. Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
+title: Destinations de l’extension Adobe Experience Platform Launch
+description: Adobe Experience Platform Launch est la prochaine génération de fonctionnalités de gestion des balises issues de l’Adobe. Platform Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 52%
+source-wordcount: '617'
+ht-degree: 46%
 
 ---
 
 
-# Extensions pour Adobe Experience Platform Launch {#overview.md}
+# Extensions pour Adobe Experience Platform Launch
 
 Adobe Experience Platform Launch est la prochaine génération de fonctionnalités de gestion des balises issues de l’Adobe. Platform Launch offre aux clients un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.  Platform Launch est une fonctionnalité gratuite intégrée à Adobe Experience Cloud.
 
