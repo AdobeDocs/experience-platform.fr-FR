@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Microsoft Dynamics;microsoft dynamic;Dynamics;Dynamics;dynamic
 solution: Experience Platform
-title: Création d’un connecteur source Microsoft Dynamics dans l’interface utilisateur
+title: Création d'une connexion Microsoft Dynamics Source dans l'interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Microsoft Dynamics (ci-après appelé "Dynamics") à l'aide de l'interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source Microsoft Dynamics à l'aide de l'interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 4241e00fd444969e5a40c8b34dd7786b1a3c6dcb
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 9%
+source-wordcount: '596'
+ht-degree: 10%
 
 ---
 
 
-# Créer un connecteur source [!DNL Microsoft Dynamics] dans l’interface utilisateur
+# Créer une connexion source [!DNL Microsoft Dynamics] dans l’interface utilisateur
 
-Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Microsoft Dynamics] (ci-après dénommé &quot;[!DNL Dynamics]&quot;) à l’aide de l’interface utilisateur de la plate-forme.
+Ce didacticiel décrit les étapes à suivre pour créer une connexion source [!DNL Microsoft Dynamics] (ci-après appelée &quot;[!DNL Dynamics]&quot;) à l’aide de l’interface utilisateur Adobe Experience Platform.
 
 ## Prise en main
 
