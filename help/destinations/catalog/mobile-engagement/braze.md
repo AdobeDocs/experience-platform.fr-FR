@@ -1,25 +1,21 @@
 ---
 keywords: mobile ; braquer; messagerie ;
-title: Destination du braquage
-seo-title: Destination du braquage
+title: Destination de la connexion au braquage
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
-seo-description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
 
 
-# (Beta) [!DNL Braze] destination
+# (Beta) [!DNL Braze] connexion
 
 >[!IMPORTANT]
 >
 >La destination du braze à Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
-
-## Présentation {#overview}
 
 La destination [!DNL Braze] vous aide à envoyer des données de profil à [!DNL Braze].
 
