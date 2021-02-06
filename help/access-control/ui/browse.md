@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Parcourir l’espace de travail du contrôle d’accès
+title: Sélectionner un Profil de produits pour modifier les autorisations de Contrôle d'accès
 topic: user guide
 description: Ce document décrit les étapes nécessaires pour parcourir l’espace de travail contrôle d'accès. Afin de configurer le contrôle d’accès à Experience Platform via Adobe Admin Console, vous devez être administrateur d’une organisation IMS disposant d’un abonnement à Experience Platform.
 translation-type: tm+mt
-source-git-commit: 34cfcaac276bf2645a0365a0dfa71c4ead6e2ecb
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 76%
+source-wordcount: '315'
+ht-degree: 70%
 
 ---
 
 
-# Parcourir l’espace de travail du contrôle d’accès
+# Sélectionner un profil de produits pour gérer ses autorisations de contrôle d&#39;accès
 
 Pour configurer le contrôle d&#39;accès pour [!DNL Experience Platform] par l&#39;intermédiaire du Adobe Admin Console, vous devez être un administrateur pour une organisation IMS qui a un abonnement pour [!DNL Experience Platform]. Bien qu’Adobe prenne en charge des hiérarchies d’administrateurs flexibles pour les organisations IMS, vous devez disposer de droits d’administrateur système, d’administrateur produit, ou d’administrateur de profil de produit pour configurer le contrôle d’accès. Pour en savoir plus, consultez l’article d’Adobe Help Center sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html).
 
