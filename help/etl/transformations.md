@@ -5,7 +5,7 @@ title: Exemple de transformations ETL
 topic: overview
 description: Cet article présente les exemples de transformations qu’un développeur ETL (extraction, transformation et chargement) peut rencontrer.
 translation-type: tm+mt
-source-git-commit: f4a4e65a087313dc4e2414f999e021e3f6e17137
+source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 88%
