@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; BigQuery ; bigquery ; Google BigQuery ; google bigquery
 solution: Experience Platform
-title: Connecteur Google BigQuery
+title: Présentation du connecteur de source Google BigQuery
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de Google BigQuery à la plate-forme à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter Google BigQuery à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '248'
-ht-degree: 14%
+ht-degree: 11%
 
 ---
 
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Google BigQuery] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur Google BigQuery à l’aide de l’API du service de flux](../../tutorials/api/create/databases/bigquery.md)
+- [Création d’une connexion source Google BigQuery à l’aide de l’API du service de flux](../../tutorials/api/create/databases/bigquery.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL Google BigQuery] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
