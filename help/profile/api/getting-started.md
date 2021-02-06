@@ -5,9 +5,9 @@ topic: guide
 type: Documentation
 description: Le guide de prise en main de l’API de Profil décrit les concepts clés et les fonctionnalités de base que vous devez connaître pour utiliser les points de terminaison de l’API de Profil client en temps réel afin d’effectuer des opérations CRUD de base sur les données de Profil.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 31%
 
 ---
