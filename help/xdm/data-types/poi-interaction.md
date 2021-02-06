@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; champs ; schémas ; Schémas ; point d’intérêt ; point d’intérêt ; type de données ; type de données ; type de données ; type de données ;
 solution: Experience Platform
-title: Type de données d’interaction Point d’intérêt
+title: Type de données d’interaction Point ciblé
 topic: overview
 description: Ce document présente un aperçu du type de données XDM de l’interaction Point ciblé.
 translation-type: tm+mt
-source-git-commit: 032adc72db7f094b268f14e8f7d48810830a84e4
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 3%
