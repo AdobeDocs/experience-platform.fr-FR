@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Point de terminaison des tâches de confidentialité
+title: Point de terminaison de l’API Tâches de confidentialité
 topic: developer guide
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1344'
 ht-degree: 68%
 
 ---
