@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Application des stratégies ; Application automatique ; Application basée sur les API ; gouvernance des données
 solution: Experience Platform
-title: Présentation de l’application des stratégies
+title: Présentation de l'application des stratégies
 topic: guide
 description: Une fois les étiquettes d’utilisation des données appliquées aux jeux de données Adobe Experience Platform et les stratégies d’utilisation des données définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie. Il existe deux méthodes d’application des stratégies fournies par les fonctionnalités de gouvernance des données sur la plate-forme, l’application basée sur les API et l’application automatique.
 translation-type: tm+mt
-source-git-commit: acc4fa59a4808ed9a32c2aaf664039e0d12dc1d8
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 12%
+source-wordcount: '237'
+ht-degree: 10%
 
 ---
 
 
 # Présentation de l’application des stratégies
 
-Une fois les étiquettes d&#39;utilisation des données appliquées aux [!DNL Platform] jeux de données et les stratégies d&#39;utilisation des données définies pour les actions marketing sur ces étiquettes, les capacités [!DNL Data Governance] vous permettent d&#39;appliquer ces stratégies et d&#39;empêcher les opérations de données qui constituent des violations de stratégie.
+Une fois que les étiquettes d’utilisation des données ont été appliquées aux jeux de données et que les stratégies d’utilisation des données ont été définies pour les actions marketing par rapport à ces étiquettes, les fonctionnalités de gouvernance des données de Adobe Experience Platform vous permettent d’appliquer ces stratégies et d’empêcher les opérations de données qui constituent des violations de stratégie.
 
 Les fonctions [!DNL Data Governance] de [!DNL Platform] offrent deux méthodes d&#39;application des politiques : Application de la loi basée sur les API et application automatique.
 
