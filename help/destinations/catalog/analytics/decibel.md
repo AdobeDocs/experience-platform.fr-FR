@@ -1,21 +1,17 @@
 ---
 keywords: extension décibel ; décibel ; destination décibel
-title: Extension Decibel
-seo-title: Extension Decibel
+title: Destination de l'extension de décibels
 description: L’extension decibel est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension decibel est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 29%
+source-wordcount: '521'
+ht-degree: 27%
 
 ---
 
 
 # [!DNL Decibel] Extension {#decibel-extension}
-
-## Présentation {#overview}
 
 Déployez rapidement et en toute simplicité [!DNL Decibel] sur vos propriétés Web. D’autres configurations avancées peuvent également être déployées à l’aide de règles grâce aux actions proposées par l’extension.
 
