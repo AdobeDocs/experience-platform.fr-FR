@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;object;field;
 solution: Experience Platform
-title: Définition d’un champ d’objet dans l’interface utilisateur
+title: Définition des champs d’objet dans l’interface utilisateur
 description: Découvrez comment définir un champ de type objet dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
 
-# Définition d’un champ d’objet dans l’interface utilisateur
+# Définition des champs d’objet dans l’interface utilisateur
 
 Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes, mixins et types de données de modèle de données d’expérience (XDM) personnalisés. Pour organiser et imbriquer des champs associés dans des ressources XDM personnalisées, vous pouvez définir des champs de type objet qui peuvent contenir des sous-champs supplémentaires.
 
