@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; date ; fonctions de date ; dates ;
 solution: Experience Platform
-title: Fonctions de date
+title: Fonctions de date d’aperçu des données
 topic: overview
 description: Ce document présente les fonctions de date utilisées avec l’aperçu des données.
 translation-type: tm+mt
-source-git-commit: 28c13101be37c5c7680c5d46005509bfd122018f
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 17%
+source-wordcount: '415'
+ht-degree: 16%
 
 ---
 
 
-# Fonctions de date
+# Fonctions de date d’aperçu des données
 
 Data Prep prend en charge les fonctions de date, à la fois sous forme de chaînes et d’objets datetime.
 
