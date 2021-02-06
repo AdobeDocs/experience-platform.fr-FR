@@ -1,21 +1,17 @@
 ---
 keywords: Extension de mesure quantique ; Mesure quantique ; Mesure quantique ; Mesure quantique
-title: Extension Quantum Metric
-seo-title: Extension Quantum Metric
+title: Destination de l'extension de mesure quantique
 description: L’extension de mesure quantique est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension de mesure quantique est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '536'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL Quantum Metric] Extension {#quantum-metric-extension}
-
-## Présentation {#overview}
 
 [!DNL Quantum Metric's] l’intégration à Adobe Launch facilite le déploiement sans code de la balise de collecte de  [!DNL Quantum Metric's] données. En outre, cette extension offre la capacité de capturer les éléments de données de lancement contenant des informations utiles de l&#39;API [!DNL Quantum Metric].
 
