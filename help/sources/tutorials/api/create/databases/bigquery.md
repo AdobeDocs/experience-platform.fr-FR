@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Création d’un connecteur Google BigQuery à l’aide de l’API du service de flux
+title: Création d’une connexion à la source Google BigQuery à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à Google BigQuery (ci-après appelé "BigQuery").
+description: Découvrez comment connecter Adobe Experience Platform à Google BigQuery à l’aide de l’API du service de flux.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '616'
 ht-degree: 23%
 
 ---
 
 
-# Créez un connecteur [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
