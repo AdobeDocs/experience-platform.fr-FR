@@ -1,21 +1,17 @@
 ---
 keywords: D&B Visiteur Intelligence ; D&amp ; B ; visiteur Intelligence Extension
-title: Extension D&B Visitor Intelligence
-seo-title: Extension D&B Visitor Intelligence
+title: Destination de l'extension d'intelligence Visiteur D&B
 description: L'extension D&B Visiteur Intelligence est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension D&B Visiteur Intelligence est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 27%
+source-wordcount: '501'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL D&B Visitor Intelligence] Extension {#dnb-extension}
-
-## Présentation {#overview}
 
 Analysez les visiteurs anonymes et convertissez-les en prospects.
 
