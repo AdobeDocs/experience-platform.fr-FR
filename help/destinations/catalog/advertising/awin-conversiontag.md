@@ -1,21 +1,17 @@
 ---
 keywords: Extension de balise de conversion Awin Advertiser ; balise de conversion ; Awin ; awin ; AWIN
-title: Extension Awin Advertiser Conversion Tag
-seo-title: Extension Awin Advertiser Conversion Tag
+title: Destination de l’extension de balise de conversion d’Awin Advertiser
 description: L’extension de balise de conversion Awin Advertiser est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension de balise de conversion Awin Advertiser est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 46%
+source-wordcount: '529'
+ht-degree: 44%
 
 ---
 
 
 # Extension Awin Advertiser Conversion Tag {#awin-conversiontag-extension}
-
-## Présentation {#overview}
 
 Conversion Tag est la déclaration de l’objet JavaScript AWIN.Tracking.Sale qui est réalisé sur la page de confirmation pour informer le Mastertag qu’une conversion a eu lieu. À la suite de cela, les requêtes de suivi nécessaires seront réalisées.
 
