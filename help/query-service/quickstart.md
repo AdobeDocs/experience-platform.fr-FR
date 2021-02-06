@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête
 solution: Experience Platform
-title: Guide de démarrage rapide d’Adobe Experience Platform Query Service
+title: Guide de démarrage rapide de Adobe Experience Platform Requête Service
 topic: quickstart
-description: Guide de démarrage rapide pour Adobe Experience Platform Requête Service.
+description: Guide de démarrage rapide de Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: 1b398e479137a12bcfc3208d37472aae3d6721e1
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 60%
+ht-degree: 53%
 
 ---
 
