@@ -1,21 +1,17 @@
 ---
 keywords: Advertising Cloud ; extension publiccloud ; destination de cloud publicitaire
-title: Extension Adobe Advertising Cloud
-seo-title: Extension Adobe Advertising Cloud
+title: Destination de l'extension Adobe Advertising Cloud
 description: L'extension Adobe Advertising Cloud est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Adobe Advertising Cloud est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 37%
+source-wordcount: '465'
+ht-degree: 34%
 
 ---
 
 
 # Extension Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
-
-## Présentation {#overview}
 
 Il s’agit de l’extension [!DNL Advertising Cloud] permettant d’implémenter les balises de conversion et de segment [!DNL Advertising Cloud] pour les DSP et les recherches (DCO n’est pas pris en charge actuellement).
 
