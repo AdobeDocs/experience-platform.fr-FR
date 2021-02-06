@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; guide de l’utilisateur ; attribution ai ; rubriques populaires ; région
 solution: Experience Platform, Intelligent Services
-title: Guide d’utilisation d’Attribution AI
+title: Guide de l’interface utilisateur Attribution AI
 topic: User guide
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '1755'
-ht-degree: 79%
+ht-degree: 78%
 
 ---
 
 
-# Guide d’utilisation d’Attribution AI
+# Guide de l’interface utilisateur Attribution AI
 
 Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les professionnels du marketing peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
 
