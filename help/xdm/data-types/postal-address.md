@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;adresse;xdm:address;datatype;data-type;data type;data type;
 solution: Experience Platform
-title: Type de données d’adresse postale
+title: Type de données d'adresse postale
 topic: overview
 description: Ce document présente un aperçu du type de données XDM d’adresse postale.
 translation-type: tm+mt
-source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 22%
