@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; schéma ; Schéma ; schémas ; Schémas ; relation ; descripteur de relation ; descripteur de relation ; identité de référence ; identité de référence ;
 solution: Experience Platform
-title: Définition d’une relation entre deux schémas à l’aide de l’API Schema Registry
+title: Définir une relation entre deux Schémas à l'aide de l'API de registre de Schéma
 description: Ce document fournit un tutoriel indiquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '1337'
-ht-degree: 53%
+ht-degree: 52%
 
 ---
 
