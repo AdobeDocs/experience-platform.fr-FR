@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; supprimer un objet ; service de catalogue ; api
 solution: Experience Platform
-title: Suppression d’un objet
+title: Suppression d’un objet dans l’API
 topic: developer guide
 description: Vous pouvez supprimer un objet Catalogue en fournissant son identifiant dans le chemin d’accès d’une requête DELETE.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 61%
+source-wordcount: '207'
+ht-degree: 56%
 
 ---
 
 
-# Suppression d’un objet
+# Suppression d’un objet dans l’API
 
 Vous pouvez supprimer un objet [!DNL Catalog] en indiquant son identifiant dans le chemin d’une requête de DELETE.
 
