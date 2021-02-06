@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; notifications d’assimilation de données ; notifications ; événements d’abonnement ; événements d’état d’assimilation de données ; événements d’état ; abonnement ; notifications d’état ;
 solution: Experience Platform
-title: Abonnement aux événements d’ingestion de données
+title: Notifications d'importation de données
 topic: overview
 description: Pour faciliter le suivi du processus d'assimilation, Adobe Experience Platform permet de s'abonner à un ensemble de événements publiés à chaque étape du processus, en vous informant de l'état des données ingérées et de toute erreur éventuelle.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 29%
 
 ---
