@@ -5,7 +5,7 @@ title: Création et modification de mixins dans l’interface utilisateur
 description: Découvrez comment créer et modifier des mixins dans l’interface utilisateur de l’Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: cf74c7922271035474c7f10534692983add48616
+source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
 workflow-type: tm+mt
 source-wordcount: '704'
 ht-degree: 5%
