@@ -5,10 +5,10 @@ user-guide-title: Aide du contrôle d’accès dans Adobe Experience Platform
 breadcrumb-title: Guide du contrôle d’accès
 user-guide-description: Tirez parti des profils de produits d’Adobe Admin Console pour lier les utilisateurs aux autorisations et aux environnements de test.
 translation-type: tm+mt
-source-git-commit: 4e358fda1c8f7aebe57a009a146b8b73cf88e169
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 96%
+source-wordcount: '98'
+ht-degree: 92%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 96%
 * [Présentation du contrôle d’accès](home.md)
 * Interface utilisateur du contrôle d’accès {#ui}
    * [Présentation](ui/overview.md)
-   * [Parcourir l’espace de travail du contrôle d’accès](ui/browse.md)
+   * [Sélectionner un profil de produit](ui/browse.md)
    * [Gestion des autorisations d’un profil de produit](ui/permissions.md)
    * [Gestion des détails et des services supplémentaires pour un profil de produit](ui/details-and-services.md)
    * [Création d’un profil de produit](ui/create-profile.md)
