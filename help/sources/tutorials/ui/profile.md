@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; activer les données entrantes ; renseigner le profil ; renseigner rtcp ; profil unifié renseigné
 solution: Experience Platform
-title: Activer les données source entrantes pour renseigner les profils client
+title: Activer les données source entrantes pour renseigner les Profils clients dans l’interface utilisateur
 topic: overview
 type: Tutorial
 description: Les données entrantes de votre connecteur source peuvent être utilisées pour enrichir et renseigner vos données de Profil client en temps réel.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '507'
 ht-degree: 16%
 
 ---
