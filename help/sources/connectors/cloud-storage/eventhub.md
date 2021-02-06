@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; concentrateurs de Événement Azure ; concentrateurs de événements azurés ; concentrateurs de Événements ; concentrateurs de événements
 solution: Experience Platform
-title: Connecteur de concentrateurs de Événement Azure
+title: Présentation du connecteur source Azure Événement Hubs
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter les concentrateurs de Événement Azure à la plate-forme à l'aide d'API ou de l'interface utilisateur.
+description: Apprenez à connecter Azure Événement Hubs à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -33,10 +33,10 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d&#39;un connecteur Azure Événement Hubs à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/eventhub.md)
+- [Créer une connexion source Azure Événement Hubs à l&#39;aide de l&#39;API Flow Service](../../tutorials/api/create/cloud-storage/eventhub.md)
 - [Collecte de données en flux continu à l’aide de l’API du service de flux](../../tutorials/api/collect/streaming.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d&#39;un connecteur source Azure Événement Hubs dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/eventhub.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Créer une connexion source Azure Événement Hubs dans l&#39;interface utilisateur](../../tutorials/ui/create/cloud-storage/eventhub.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
