@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; attributs du client
 solution: Experience Platform
-title: Création d’un connecteur source d’attributs du client dans l’interface utilisateur
+title: Création d’une connexion à la source des attributs du client dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source dans l’interface utilisateur afin de collecter les données du profil des attributs du client dans Adobe Experience Platform.
+description: Découvrez comment créer une connexion source dans l’interface utilisateur pour collecter des données de profil d’attributs du client dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '377'
 ht-degree: 6%
 
 ---
 
 
-# Création d’un connecteur source d’attributs du client dans l’interface utilisateur
+# Création d’une connexion source Attributs du client dans l’interface utilisateur
 
-Ce didacticiel décrit les étapes à suivre pour créer un connecteur source dans l’interface utilisateur afin de collecter les données du profil des attributs du client dans Adobe Experience Platform. Pour plus d&#39;informations sur les attributs du client, consultez le [document d&#39;aperçu](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+Ce didacticiel décrit les étapes à suivre pour créer une connexion source dans l’interface utilisateur afin de collecter les données du profil Attributs du client dans Adobe Experience Platform. Pour plus d&#39;informations sur les attributs du client, consultez le [document d&#39;aperçu](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Création d’une connexion source
 
