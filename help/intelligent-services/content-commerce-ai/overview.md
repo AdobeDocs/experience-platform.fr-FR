@@ -1,11 +1,11 @@
 ---
 keywords: Experience Cloud ; prise en main ; contenu et commerce ; rubriques populaires ; Services intelligents ; cai
 solution: Experience Cloud, Intelligent Services, Experience Platform
-title: Présentation de Content and Commerce AI
+title: Présentation de l’API de contenu et de commerce
 topic: Content and Commerce AI
 description: Content and Commerce AI est un ensemble de services d’IA qui vous permet d’extraire des fonctions intelligentes de votre contenu, d’organiser, de rationaliser le flux de contenu et de fournir à vos clients des expériences personnalisées plus efficaces.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
