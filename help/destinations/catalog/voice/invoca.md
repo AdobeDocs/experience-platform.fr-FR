@@ -1,21 +1,17 @@
 ---
 keywords: Invoca;invoca
-title: Extension Invoca Tags
-seo-title: Extension Invoca Tags
+title: Destination de l'extension Balises d'appel
 description: L’extension Balises d’appel est une voix de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Balises d’appel est une voix de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 27%
+source-wordcount: '536'
+ht-degree: 25%
 
 ---
 
 
 # [!DNL Invoca Tags] Extension {#invoca-extension}
-
-## Présentation {#overview}
 
 [!DNL Invoca] introduit des données d’appel et des informations vocales dans le parcours client numérique. Grâce à [!DNL Invoca’s] la plate-forme de renseignement d&#39;appel, les spécialistes du marketing disposent enfin d&#39;analyses pour mesurer les résultats des appels et lier les conversions hors ligne à la dépense numérique.
 
