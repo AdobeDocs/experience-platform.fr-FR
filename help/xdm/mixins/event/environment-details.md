@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; XDM ; ExperienceEvent ; champs ; schémas ; Schémas ; Schéma design ; mixin ; mixin ; environnement ; détails environnement ;
 solution: Experience Platform
-title: Mélange Détails de l’Environnement
+title: Mélange des détails de l'Environnement
 topic: overview
 description: Ce document présente un aperçu du mixin Détails de l’Environnement ExperienceEvent.
 translation-type: tm+mt
-source-git-commit: f9d8021643e72e3fbb5315b54a19815dcdaaa702
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 4%
