@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; HDFS ; hdfs ; Apache HDFS ; apache hdfs
 solution: Experience Platform
-title: Connecteur HDFS
+title: Présentation du connecteur source Apache HDFS
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Apache HDFS à la plate-forme à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Apache HDFS à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '381'
 ht-degree: 3%
 
 ---
@@ -42,11 +42,11 @@ La documentation ci-dessous fournit des informations sur la façon de connecter 
 
 ### Utilisation des API
 
-- [Création d’un connecteur HDFS à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Création d’une connexion source HDFS à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source Apache HDFS dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’une connexion source Apache HDFS dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
