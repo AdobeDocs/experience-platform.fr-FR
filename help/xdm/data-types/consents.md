@@ -4,7 +4,7 @@ title: Type de données Contenus et Préférences
 description: Le type de données Préférences de confidentialité/marketing (Consentement) est destiné à prendre en charge la collecte des autorisations et préférences des clients générées par les plateformes de gestion du consentement (CMP) et d’autres sources issues de vos opérations de données.
 topic: guide
 translation-type: tm+mt
-source-git-commit: caebdcd48e03bd8b91da624532569b55d8696fb4
+source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
 workflow-type: tm+mt
 source-wordcount: '2040'
 ht-degree: 1%
