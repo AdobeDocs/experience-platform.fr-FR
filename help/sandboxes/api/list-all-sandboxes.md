@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; sandbox de liste
 solution: Experience Platform
-title: Liste de tous les environnements de test
+title: Sandbox de liste dans l’API
 topic: developer guide
 description: Pour liste de tous les sandbox appartenant à votre organisation IMS (principal ou non), envoyez une demande de GET au point de terminaison /sandbox.
 translation-type: tm+mt
-source-git-commit: 6326b3072737acf30ba2aee7081ce28dc9627a9a
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 65%
+source-wordcount: '320'
+ht-degree: 63%
 
 ---
 
 
-# Liste de tous les environnements de test
+# sandbox de liste dans l’API
 
 Pour répertorier tous les environnements de test appartenant à votre organisation IMS (actifs ou non), effectuez une requête GET vers le point de terminaison `/sandboxes`.
 
