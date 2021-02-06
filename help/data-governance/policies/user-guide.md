@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; guide de l’utilisateur de la stratégie d’utilisation des données
 solution: Experience Platform
-title: Guide d’utilisation des stratégies de données
+title: Gérer les stratégies d’utilisation des données dans l’interface utilisateur
 topic: policies
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l’espace de travail Stratégies de l’interface utilisateur de l’Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 34%
+source-wordcount: '772'
+ht-degree: 31%
 
 ---
 
 
-# Guide d’utilisation des stratégies de données
+# Gestion des stratégies d’utilisation des données dans l’interface utilisateur
 
 Adobe Experience Platform [!DNL Data Governance] fournit une interface utilisateur qui vous permet de créer et de gérer des stratégies d’utilisation des données. Ce document présente un aperçu des actions que vous pouvez effectuer dans l&#39;espace de travail **Stratégies** de l&#39;interface utilisateur [!DNL Experience Platform].
 
@@ -28,7 +28,7 @@ Ce guide nécessite une compréhension pratique des concepts [!DNL Experience Pl
 - [[!DNL Data Governance]](../home.md)
 - [Stratégies d’utilisation des données](./overview.md)
 
-## Affichage des stratégies d’utilisation des données {#view-policies}
+## Vue des stratégies existantes {#view-policies}
 
 Dans l&#39;interface utilisateur [!DNL Experience Platform], sélectionnez **[!UICONTROL Stratégies]** pour ouvrir l&#39;espace de travail **[!UICONTROL Stratégies]**. Dans l’onglet **[!UICONTROL Parcourir]**, vous pouvez voir une liste des stratégies disponibles, y compris leurs libellés associés, les actions marketing et les états.
 
@@ -38,7 +38,7 @@ Sélectionnez une stratégie répertoriée pour en vue la description et le type
 
 ![](../images/policies/policy-details.png)
 
-## Création d’une stratégie d’utilisation des données personnalisée  {#create-policy}
+## Créer une stratégie personnalisée {#create-policy}
 
 Pour créer une stratégie d&#39;utilisation des données personnalisée, sélectionnez **[!UICONTROL Créer une stratégie]** dans le coin supérieur droit de l&#39;onglet **[!UICONTROL Parcourir]** de l&#39;espace de travail **[!UICONTROL Stratégies]**.
 
@@ -68,7 +68,7 @@ L’onglet **[!UICONTROL Parcourir]** réapparaît et affiche désormais la nouv
 
 ![](../images/policies/created-policy.png)
 
-## Activation ou désactivation d’une stratégie d’utilisation des données {#enable}
+## Activer ou désactiver une stratégie {#enable}
 
 Toutes les stratégies d’utilisation des données (y compris les stratégies de base fournies par l’Adobe) sont désactivées par défaut. Pour qu’une stratégie individuelle soit prise en compte pour l’application, vous devez l’activer manuellement par le biais de l’API ou de l’interface utilisateur.
 
