@@ -1,19 +1,17 @@
 ---
 keywords: destination de l’enregistrement cloud ; enregistrement cloud
-title: Destinations de stockage dans le cloud
-seo-title: Destinations de stockage dans le cloud
-description: Platform peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
-seo-description: Platform peut diffuser vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
+title: Présentation des destinations d’Enregistrement Cloud
+description: Adobe Experience Platform peut distribuer vos segments sous forme de fichiers de données à vos emplacements d’enregistrement cloud Amazon S3, AWS Kinesis, Azure Événement Hubs ou SFTP.
 translation-type: tm+mt
-source-git-commit: b348a5493b13112291dd8e9234d457ff8c694147
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 32%
+source-wordcount: '161'
+ht-degree: 34%
 
 ---
 
 
-# Destinations de stockage dans le cloud {#cloud-storage-destinations}
+# Présentation des destinations de stockage dans le cloud {#cloud-storage-destinations}
 
 Adobe Experience Platform peut distribuer vos segments sous forme de fichiers de données vers vos emplacements d’enregistrement Cloud. Vous pouvez ainsi envoyer des audiences et leurs attributs de profil à vos systèmes internes, au moyen de fichiers CSV ou délimités par des tabulations pour [!DNL Amazon S3] et SFTP. Pour les destinations [!DNL AWS Kinesis] et [!DNL Azure Event Hubs], les données sont diffusées en flux continu en dehors de l’Experience Platform au format JSON.
 
