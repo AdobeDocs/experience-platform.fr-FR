@@ -5,10 +5,10 @@ user-guide-title: Aide sur la gouvernance des données d’Adobe Experience Plat
 breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen d’étiquettes, d’actions marketing et de stratégies.
 translation-type: tm+mt
-source-git-commit: d139eed4768384412a17b62037ed41c06c2941bd
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 77%
+source-wordcount: '98'
+ht-degree: 65%
 
 ---
 
@@ -17,19 +17,19 @@ ht-degree: 77%
 
 * [Présentation de la gouvernance des données](home.md)
 * Libellés d’utilisation des données {#labels}
-   * [Présentation des libellés d’utilisation des données](labels/overview.md)
-   * [Étiquettes d’utilisation des données de base](labels/reference.md)
-   * [Gérer les étiquettes d’utilisation des données dans l’interface utilisateur](labels/user-guide.md)
-   * [Gérer les libellés des jeux de données et des champs à l’aide d’API](labels/dataset-api.md)
+   * [Présentation](labels/overview.md)
+   * [Glossaire des étiquettes](labels/reference.md)
+   * [Gestion des libellés dans l’interface utilisateur](labels/user-guide.md)
+   * [Gestion des libellés des jeux de données à l’aide des API](labels/dataset-api.md)
 * Stratégies d’utilisation des données {#policies}
-   * [Présentation des stratégies d’utilisation des données](policies/overview.md)
-   * [Guide d’utilisation des stratégies de données](policies/user-guide.md)
-   * [Création de stratégies d’utilisation des données à l’aide de l’API Policy Service](policies/create.md)
+   * [Présentation](policies/overview.md)
+   * [Gérer les stratégies dans l’interface utilisateur](policies/user-guide.md)
+   * [Création d’une stratégie dans l’API](policies/create.md)
 * Application des stratégies {#enforcement}
-   * [Présentation de l’application des stratégies](enforcement/overview.md)
+   * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
-* Guide de développement de l’API Policy Service{#api}
+* API Service de stratégie {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Étiquettes](api/labels.md)
