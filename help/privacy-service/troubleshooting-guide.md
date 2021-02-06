@@ -5,7 +5,7 @@ title: Guide de dépannage des Privacy Service
 topic: troubleshooting
 description: Ce document fournit des réponses aux questions fréquentes sur le Privacy Service, ainsi que des informations sur les erreurs courantes de l’API.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '884'
 ht-degree: 44%
