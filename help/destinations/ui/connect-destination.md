@@ -1,19 +1,18 @@
 ---
 keywords: connexion à la destination ; connexion à la destination ; connexion à la destination
 title: Connexion à une destination dans Adobe Experience Platform
-seo-title: Connexion à une destination dans Adobe Experience Platform
 type: Tutorial
 description: Ce didacticiel liste les étapes de connexion d'une destination dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 60%
+source-wordcount: '117'
+ht-degree: 64%
 
 ---
 
 
-# Comment se connecter à une destination
+# Connexion à une destination
 
 Pour vous connecter à une destination Adobe Experience Platform, procédez comme suit :
 
