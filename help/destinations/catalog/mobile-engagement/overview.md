@@ -1,19 +1,17 @@
 ---
 keywords: messagerie mobile ; destinations de messagerie mobile ; Braze ; Aéronef
-title: Destinations de l’engagement mobile
-seo-title: Destinations de l’engagement mobile
-description: Adobe Experience Platform prend en charge les destinations d’engagement pour mobiles répertoriées ci-dessous.
-seo-description: Adobe Experience Platform prend en charge les destinations d’engagement pour mobiles répertoriées ci-dessous.
+title: Présentation des destinations Mobile Engagement
+description: Découvrez les différentes destinations d’engagement mobile prises en charge par Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: c24676970629f5a39297001357f8af40895533d9
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '39'
 ht-degree: 0%
 
 ---
 
 
-# Destinations d’engagement mobile {#mobile-destinations}
+# Présentation des destinations d’engagement mobiles {#mobile-destinations}
 
 [!DNL Adobe Experience Platform] prend actuellement en charge les destinations d’engagement mobiles suivantes :
 
