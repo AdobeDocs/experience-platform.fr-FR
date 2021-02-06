@@ -1,21 +1,17 @@
 ---
 keywords: DoubleClick Floodlight;DoubleClick inondation extension;doubleclick;doubleclick;crudlight
-title: Extension DoubleClick Floodlight (bêta)
-seo-title: Extension DoubleClick Floodlight (bêta)
+title: Destination de l’extension DoubleClick Floodlight (bêta)
 description: L'extension DoubleClick Floodlight (Beta) est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension DoubleClick Floodlight (Beta) est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 23%
+source-wordcount: '517'
+ht-degree: 20%
 
 ---
 
 
 # [!DNL DoubleClick Floodlight] (bêta) extension
-
-## Présentation {#overview}
 
 Cette extension permet le déploiement rapide et facile des balises [!DNL DoubleClick Floodlight] en utilisant le format traditionnel de projecteur (et non la balise de site globale). Remarque : cette extension est actuellement en version bêta.
 
