@@ -5,7 +5,7 @@ title: Type de données géographiques
 topic: overview
 description: Ce document présente un aperçu du type de données de Géo XDM.
 translation-type: tm+mt
-source-git-commit: 6a7967ac9e652c7e73fd713e89a9079287cf0ae5
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 36%
