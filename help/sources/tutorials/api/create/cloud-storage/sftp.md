@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; SFTP ; sftp ; Protocole de transfert de fichiers sécurisé ; protocole de transfert de fichiers sécurisé
 solution: Experience Platform
-title: Création d’un connecteur SFTP à l’aide de l’API du service de flux
+title: Création d’une connexion à la source SFTP à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de l’Experience Platform à un serveur SFTP (Secure File Transfer Protocol).
+description: Découvrez comment connecter Adobe Experience Platform à un serveur SFTP (Secure File Transfer Protocol) à l’aide de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '823'
 ht-degree: 23%
 
 ---
 
 
-# Créez un connecteur SFTP à l’aide de l’API [!DNL Flow Service].
+# Création d’une connexion source SFTP à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
