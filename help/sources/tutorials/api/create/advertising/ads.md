@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;adwords de google;Google AdWords;adwords
 solution: Experience Platform
-title: Création d’un connecteur Google AdWords à l’aide de l’API du service de flux
+title: Création d’une connexion à la source Google AdWords à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à Google AdWords.
+description: Découvrez comment connecter Adobe Experience Platform à Google AdWords à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '619'
 ht-degree: 23%
 
 ---
 
 
-# Créez un connecteur [!DNL Google AdWords] à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion source [!DNL Google AdWords] à l’aide de l’API [!DNL Flow Service].
 
 >[!NOTE]
 >
