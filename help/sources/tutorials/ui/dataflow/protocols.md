@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur de protocole
 solution: Experience Platform
-title: Configuration d’un flux de données pour un connecteur de protocole dans l’interface utilisateur
+title: Configuration d’un flux de données pour une connexion à la source du protocole dans l’interface utilisateur
 topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Adobe Experience Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de protocoles.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1463'
 ht-degree: 4%
 
 ---
 
 
-# Configuration d’un flux de données pour un connecteur de protocole dans l’interface utilisateur
+# Configuration d’un flux de données pour une connexion au protocole dans l’interface utilisateur
 
 Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un jeu de données Adobe Experience Platform. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de protocoles.
 
