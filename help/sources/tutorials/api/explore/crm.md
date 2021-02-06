@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;CRM;crm;crm flow service
 solution: Experience Platform
-title: Explorez un système de gestion de la relation client à l’aide de l’API du service de flux
+title: Explorez un système CRM à l’aide de l’API du service de flux
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer les systèmes CRM.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 25%
