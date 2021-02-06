@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation par lots ; assimilation par lots ; assimilation partielle ; assimilation partielle ; extraction de l'erreur ; extraction de l'erreur ; extraction de l'erreur ; erreur ; assimilation partielle du lot ; assimilation partielle ; assimilation ; assimilation ; diagnostic d'erreur ; récupération des diagnostics d'erreur ; obtention d'erreurs ; obtention d'erreurs ; récupération des erreurs ;
 solution: Experience Platform
-title: Présentation de l’ingestion par lots partielle d’Adobe Experience Platform
+title: Récupération des diagnostics d'erreur de gestion des données
 topic: overview
 description: Ce document fournit des informations sur la surveillance de l'assimilation des lots, la gestion des erreurs d'assimilation partielle des lots, ainsi qu'une référence pour les types d'assimilation partielle des lots.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
 source-wordcount: '936'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
 
-# Récupération des diagnostics d&#39;erreur
+# Récupération des diagnostics d&#39;erreur d&#39;assimilation des données
 
 Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en flux continu en temps réel.
 
