@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; prép de données ; préparation des données ; préparation des données ; préparation des données ;
 solution: Experience Platform
-title: Fonctions de mappage
+title: Aperçu de l’aperçu de l’aperçu des données d’aperçu
 topic: overview
 description: Ce document présente l’aperçu des données dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: db38f0666f5c945461043ad08939ebda52c21855
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# Préparation de données
+# Présentation de l’Aperçu de l’Aperçu des données
 
 La préparation des données permet aux ingénieurs de données de mapper, de transformer et de valider les données à partir du modèle de données d’expérience (XDM). L’aperçu des données s’affiche sous la forme d’une étape de &quot;mappage&quot; dans les processus d’importation de données, y compris le processus d’importation CSV. Les ingénieurs de données peuvent utiliser l’API Data Prep pour manipuler les données suivantes lors de l’assimilation :
 
