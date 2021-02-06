@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; données d’enregistrement cloud
 solution: Experience Platform
-title: Collecte de données d’enregistrement Cloud via les connecteurs et les API source
+title: Collecte de données d’Enregistrement Cloud à l’aide des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs et API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: c168a1b597a1ac2d85a8b896f3b6a8d213fcb1ae
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 20%
@@ -14,7 +14,7 @@ ht-degree: 20%
 ---
 
 
-# Collecte de données d’enregistrement Cloud via les connecteurs et les API source
+# Collecte de données d’enregistrement cloud à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un enregistrement cloud tiers et les amener à la plate-forme par le biais des connecteurs source et de l’[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
