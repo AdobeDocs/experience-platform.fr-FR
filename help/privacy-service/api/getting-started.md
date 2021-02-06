@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Guide de développement de Privacy Service
-description: Utilisez l’API RESTful pour gérer les données personnelles des propriétaires de données dans les applications Adobe Experience Cloud
+title: Guide de l’API Privacy Service
+description: L’API du Privacy Service permet aux développeurs de créer et de gérer les demandes de clients d’accéder à leurs données personnelles ou de les supprimer dans des applications Experience Cloud, conformément aux règles légales de confidentialité. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 5d1b22253f2b382bef83e30a4295218ba6b85331
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 30%
+source-wordcount: '795'
+ht-degree: 26%
 
 ---
 
 
-# [!DNL Privacy Service] guide du développeur
+# [!DNL Privacy Service] Guide de l’API
 
 Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur qui vous permettent de gérer (d&#39;accéder et de supprimer) les données personnelles de vos personnes de données (clients) à travers les applications Adobe Experience Cloud. [!DNL Privacy Service] fournit aussi un mécanisme central d’audit et de connexion qui vous permet d’accéder à l’état et aux résultats des tâches impliquant des applications [!DNL Experience Cloud]
 
