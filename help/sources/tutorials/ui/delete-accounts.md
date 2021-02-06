@@ -2,19 +2,19 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; supprimer des comptes
 description: Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des comptes de l'espace de travail Sources.
 solution: Experience Platform
-title: Suppression de comptes
+title: Suppression de comptes de connexion source dans l’interface utilisateur
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '455'
 ht-degree: 12%
 
 ---
 
 
-# Suppression de comptes
+# Suppression de comptes de connexion source
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour supprimer des comptes de l&#39;espace de travail **[!UICONTROL Sources]**.
 
