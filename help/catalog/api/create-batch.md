@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; créer un lot ; service catalogue ; api
 solution: Experience Platform
-title: Création d’un jeu de données
+title: Création d’un lot dans l’API
 topic: developer guide
-description: Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. A l’aide de la valeur id d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête de POST au point de terminaison /batches de l’API Catalog.
+description: Vous pouvez créer un lot en envoyant une requête de POST au point de terminaison /batches de l’API Catalogue.
 translation-type: tm+mt
-source-git-commit: 14f99c23cd82894fee5eb5c4093b3c50b95c52e8
+source-git-commit: 8a213ac0ef1ac0f9c42e4b880b24157d28878bf1
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 73%
+source-wordcount: '117'
+ht-degree: 70%
 
 ---
 
