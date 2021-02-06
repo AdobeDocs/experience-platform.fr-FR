@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; fichiers source du package ; Espace de travail des données ; rubriques populaires ; Docker ; image du dossier
 solution: Experience Platform
-title: Regroupement des fichiers source dans une recette
+title: compresser les fichiers source dans une recette
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel explique comment regrouper les fichiers source fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans Adobe Experience Platform Data Science Workspace en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 50%
