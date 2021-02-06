@@ -5,10 +5,10 @@ title: Schémas ad hoc
 description: Dans des circonstances spécifiques, il peut être nécessaire de créer un schéma XDM avec des champs qui ne peuvent être utilisés que par un seul jeu de données. On parle alors de schéma ad hoc.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '146'
-ht-degree: 16%
+ht-degree: 15%
 
 ---
 
