@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Protocole de transfert de fichiers ; protocole de transfert de fichiers
 solution: Experience Platform
-title: Création d’un connecteur FTP à l’aide de l’API du service de flux
+title: Création d’une connexion à la source FTP à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider à travers les étapes de connexion de l’Experience Platform à un serveur FTP (File Transfer Protocol).
+description: Découvrez comment connecter Adobe Experience Platform à un serveur FTP (File Transfer Protocol) à l’aide de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '577'
 ht-degree: 26%
 
 ---
 
 
-# Créez un connecteur FTP à l’aide de l’API [!DNL Flow Service].
+# Créez une connexion à la source FTP à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
