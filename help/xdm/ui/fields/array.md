@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;XDM system;experience data model;ui;workspace;array;field;
 solution: Experience Platform
-title: Définir un champ de tableau dans l’interface utilisateur
+title: Définition des champs d'un tableau dans l'interface utilisateur
 description: Découvrez comment définir un champ de tableau dans l'interface utilisateur de l'Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 
-# Définir un champ de tableau dans l’interface utilisateur
+# Définition des champs de tableau dans l’interface utilisateur
 
 Lors de la définition d’un champ de modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez désigner ce champ comme tableau.
 
