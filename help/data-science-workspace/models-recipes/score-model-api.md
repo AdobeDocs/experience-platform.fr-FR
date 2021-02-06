@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; Score a model ; Data Science Workspace ; sujets populaires ; api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Notation d’un modèle (API)
+title: Score d'un modèle à l'aide de l'API d'apprentissage automatique Sensei
 topic: tutorial
 type: Tutorial
 description: Ce didacticiel vous montrera comment tirer parti des API d'apprentissage automatique Sensei pour créer une expérience et une exécution d'expérience.
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 93%
+source-wordcount: '549'
+ht-degree: 91%
 
 ---
 
 
-# Notation d’un modèle (API)
+# Score d’un modèle à l’aide de [!DNL Sensei Machine Learning API]
 
 Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour une liste détaillée de la documentation sur les API, voir [ce document](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
 
