@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur d’Audience Manager ; gestionnaire d’Audiences ; gestionnaire d’audiences
 solution: Experience Platform
-title: Connecteur d’Audience Manager
+title: Présentation du connecteur de source d'Audience Manager
 topic: overview
-description: Le connecteur de données Adobe Audience Manager diffuse des données propriétaires collectées dans Adobe Audience Manager vers Adobe Experience Platform. Le connecteur d’Audience Manager ingère deux catégories de données à la plate-forme.
+description: Le connecteur source Adobe Audience Manager diffuse les données propriétaires collectées en Audience Manager à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b88c358d128ba2016c9449fefc8862bd503c4aa5
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '886'
-ht-degree: 47%
+source-wordcount: '875'
+ht-degree: 45%
 
 ---
 
