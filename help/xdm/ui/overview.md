@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données ; ui ; espace de travail ;
 solution: Experience Platform
-title: Présentation de l’espace de travail schémas
+title: Présentation de l’interface utilisateur des schémas
 description: Cette présentation porte sur les principales fonctionnalités de l'espace de travail Schémas en Experience Platform.
 topic: user guide
 translation-type: tm+mt
-source-git-commit: 2e20403122e65d28f04114af9b7e8d41874f76e2
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 2%
@@ -13,7 +13,7 @@ ht-degree: 2%
 ---
 
 
-# [!UICONTROL Présentation de ] Schemasworkspace
+# [!UICONTROL Présentation de ] SchemasUI
 
 L’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adobe Experience Platform vous permet de gérer les ressources du modèle de données d’expérience (XDM), y compris les schémas, les classes, les mixins et les types de données. Vous pouvez vue et explorer les ressources de base fournies par Adobe, et créer des ressources et des schémas personnalisés pour votre organisation.
 
