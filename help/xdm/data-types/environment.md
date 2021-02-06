@@ -5,7 +5,7 @@ title: Type de données d'Environnement
 topic: overview
 description: Ce document présente un aperçu du type de données XDM Environnement.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 14%
