@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; prise en main ; assistance client ; rubriques populaires ; entrée d’assistance client ; sortie d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Entrée et sortie de l’IA client
+title: Entrée et sortie dans l’API client
 topic: Getting started
 description: Le document suivant décrit les différentes entrées et sorties utilisées dans l’IA du client.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '840'
 ht-degree: 33%
 
 ---
 
 
-# Entrée et sortie de l’IA client
+# Entrée et sortie dans l’API client
 
 Le document suivant décrit les différentes entrées et sorties utilisées dans l’IA du client.
 
