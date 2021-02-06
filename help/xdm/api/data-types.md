@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de types de données ; Schéma d’enregistrement ; type de données ; type de données ; types de données ; créer
 solution: Experience Platform
-title: Création d’un type de données
+title: Point de terminaison de l’API Types de données
 description: Le point de terminaison /datatypes de l'API Schéma Registry vous permet de gérer par programmation les types de données XDM dans votre application d'expérience.
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 12%
