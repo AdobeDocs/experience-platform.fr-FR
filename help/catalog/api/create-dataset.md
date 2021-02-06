@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;dataset;Dataset;create dataset;create dataset;create dataset;enable dataset
 solution: Experience Platform
-title: Création d’un jeu de données
+title: Création d’un jeu de données dans l’API
 topic: developer guide
-description: Ce document explique comment créer un objet de jeu de données dans le catalogue.
+description: Ce document explique comment créer un objet de jeu de données dans l’API du service de catalogue.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 57%
+source-wordcount: '232'
+ht-degree: 53%
 
 ---
 
 
-# Création d’un jeu de données
+# Création d’un jeu de données dans l’API
 
 Pour créer un jeu de données à l&#39;aide de l&#39;API [!DNL Catalog], vous devez connaître la valeur `$id` du schéma [!DNL Experience Data Model] (XDM) sur lequel le jeu de données sera basé. Une fois que vous disposez de l&#39;ID de schéma, vous pouvez créer un jeu de données en envoyant une requête de POST au point de terminaison `/datasets` de l&#39;API [!DNL Catalog].
 
