@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; dépannage ; contrôle d'accès
 solution: Experience Platform
-title: Guide de dépannage du contrôle d’accès
+title: Guide de dépannage des contrôles d'accès
 topic: troubleshooting guide
 description: Ce document répond aux questions fréquentes sur le contrôle d’accès dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 28b733a16b067f951a885c299d59e079f0074df8
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 69%
+ht-degree: 68%
 
 ---
 
