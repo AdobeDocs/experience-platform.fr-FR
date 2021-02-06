@@ -1,19 +1,19 @@
 ---
 keywords: gouvernance des données rtcdp ; gestion des données rtcdp ; gestion des données client en temps réel ; gestion des données de profil ; respect de la vie privée rtcdp ; respect de la vie privée rtcdp
-title: Confidentialité du profil de données client en temps réel
-seo-title: Confidentialité du profil de données client en temps réel
-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
-seo-description: Le profil de données client en temps réel vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
+title: Confidentialité dans la plateforme de données client en temps réel
+seo-title: Confidentialité dans la plateforme de données client en temps réel
+description: La plate-forme de données clientes en temps réel vous permet de rationaliser le processus de gestion de vos données en conformité avec les règles de confidentialité.
+seo-description: La plate-forme de données clientes en temps réel vous permet de rationaliser le processus de gestion de vos données en conformité avec les règles de confidentialité.
 translation-type: tm+mt
-source-git-commit: 49c984a60fd699706eec508ec1d786340df40b57
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 19%
+source-wordcount: '390'
+ht-degree: 6%
 
 ---
 
 
-# Confidentialité dans [!DNL Real-time CDP]
+# Confidentialité dans la plateforme de données client en temps réel
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) aide les spécialistes du marketing à rassembler les données de plusieurs systèmes d’entreprise, ce qui leur permet de mieux identifier, comprendre et impliquer leurs clients. Adobe considère la confidentialité des données des clients comme un principe de conception fondamental et fournit divers contrôles pour aider les spécialistes marketing à gérer la confidentialité des données de leurs clients.
 
