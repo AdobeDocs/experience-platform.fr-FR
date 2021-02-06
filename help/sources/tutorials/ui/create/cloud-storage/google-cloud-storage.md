@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud ; GCS ; gcs
 solution: Experience Platform
-title: Connecteur source de l’Enregistrement Google Cloud (IU)
+title: Création d’une connexion à la source d’Enregistrement Google Cloud dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source d’Enregistrement Google Cloud (ci-après dénommé "GCS") à l’aide de l’interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion à la source de l’Enregistrement Google Cloud à l’aide de l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '561'
 ht-degree: 11%
 
 ---
 
 
-# Créer un connecteur source [!DNL Google Cloud Storage] dans l’interface utilisateur
+# Créer une connexion source [!DNL Google Cloud Storage] dans l’interface utilisateur
 
 Les connecteurs source de Adobe Experience Platform permettent d’importer des données provenant de l’extérieur sur une base planifiée. Ce didacticiel décrit les étapes à suivre pour créer un connecteur source [!DNL Google Cloud Storage] (ci-après dénommé &quot;GCS&quot;) à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
