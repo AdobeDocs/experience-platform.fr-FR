@@ -1,12 +1,12 @@
 ---
 keywords: activer la destination ; activer les destinations ; activer les données
-title: Activation de profils et de segments vers une destination
+title: Activation de Profils et de segments vers une destination
 type: Tutorial
 seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 15%
