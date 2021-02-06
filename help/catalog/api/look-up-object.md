@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; catalogue ; recherche d’objet ; api
 solution: Experience Platform
-title: Recherche d’un objet
+title: Rechercher un objet de catalogue
 topic: developer guide
 description: 'Si vous connaissez l’identifiant unique d’un objet Catalog spécifique, vous pouvez exécuter une requête GET pour afficher les détails de cet objet. '
 translation-type: tm+mt
-source-git-commit: dd1f508b93e8eac14e3c41fac9d8f49769d08f46
+source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 77%
+source-wordcount: '165'
+ht-degree: 71%
 
 ---
 
 
-# Recherche d’un objet
+# Rechercher un objet Catalogue
 
 Si vous connaissez l&#39;identifiant unique d&#39;un objet [!DNL Catalog] spécifique, vous pouvez exécuter une demande de GET pour vue des détails de cet objet.
 
