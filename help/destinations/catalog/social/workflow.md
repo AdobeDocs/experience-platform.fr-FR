@@ -1,22 +1,18 @@
 ---
 keywords: Facebook ; facebook ; réseau social ; réseau social ; authentification du réseau social ; authentification du réseau social ; authentification du réseau social
-title: Workflow de destinations de réseau social
+title: Création d’une destination de réseau social
 type: Tutorial
-seo-title: Workflow de destinations de réseau social
-description: Instructions de connexion à vos comptes publicitaires de réseau social
-seo-description: Instructions de connexion à vos comptes publicitaires de réseau social
+description: Découvrez comment vous connecter à vos comptes publicitaires de réseaux sociaux à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: d1aa2c825cd679d593cf97d84506058482a7fe8f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 56%
+source-wordcount: '460'
+ht-degree: 52%
 
 ---
 
 
-# Processus d’authentification des destinations de réseau social {#social-network-destinations-workflow}
-
-## Processus de création de destinations de réseau social
+# Créer une destination de réseau social {#social-network-destinations-workflow}
 
 Ce didacticiel utilise [!DNL Facebook] comme exemple, mais le flux de travail dans Adobe Experience Platform sera le même pour toutes les destinations de réseau social, une fois de plus ajouté au produit.
 
