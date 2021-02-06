@@ -1,19 +1,17 @@
 ---
 keywords: destinations Analytics ; destination Analytics
-title: Destinations d’analyse
-seo-title: Destinations d’analyse
+title: Présentation des destinations Analytics
 description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
-seo-description: Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 93%
+source-wordcount: '169'
+ht-degree: 89%
 
 ---
 
 
-# Destinations d’analyse {#analytics-destinations}
+# Présentation des destinations d’analyse {#analytics-destinations}
 
 Les destinations d’analyse effectuent le suivi de la manière dont les visiteurs interagissent avec le contenu de votre site et collectent des données afin de comprendre le comportement de votre audience. Ces plateformes vous fournissent des insights uniques sur l’engagement et la conversion de vos visiteurs les plus précieux.
 
