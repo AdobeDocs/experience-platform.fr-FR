@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; rubriques populaires ; moteurs ; api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Moteurs
+title: Point de terminaison de l'API Moteurs
 topic: Developer guide
 description: Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1162'
-ht-degree: 70%
+source-wordcount: '1165'
+ht-degree: 69%
 
 ---
 
 
-# Moteurs
+# Point de terminaison des moteurs
 
 Les moteurs sont le fondement des modèles d’apprentissage automatique dans Data Science Workspace. Ils contiennent des algorithmes d’apprentissage automatique qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
 
