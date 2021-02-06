@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Collecte de données eCommerce ; Données eCommerce
 solution: Experience Platform
-title: Collecte de données eCommerce via des connecteurs et des API source
+title: Collecte de données eCommerce à l’aide des connecteurs source et des API
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système de commerce électronique tiers et les intégrer à la plate-forme via des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un système de commerce électronique tiers et les importer dans la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 18%
@@ -14,7 +14,7 @@ ht-degree: 18%
 ---
 
 
-# Collecte de données eCommerce via des connecteurs et des API source
+# Collecte de données eCommerce à l’aide de connecteurs et d’API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d&#39;un système **[!UICONTROL eCommerce]** tiers et les intégrer dans [!DNL Platform] par l&#39;intermédiaire des connecteurs source et de l&#39;[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
