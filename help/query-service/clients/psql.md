@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; PSQL ; psqlconnect to requête service ; Requête service ; requête service ;
 solution: Experience Platform
-title: Connexion à PSQL
+title: Connecter PSQL à Requête Service
 topic: connect
 description: 'PSQL est une interface de ligne de commande qui vient lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions. '
 translation-type: tm+mt
-source-git-commit: bc1bbdddd75b11ac180b5e6faa391fd74e5f7e02
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 15%
+source-wordcount: '247'
+ht-degree: 13%
 
 ---
 
 
-# PSQL
+# Connecter PSQL à Requête Service
 
 PSQL est une interface de ligne de commande qui s&#39;installe lorsque vous installez [!DNL PostgreSQL] sur votre machine. Ce document décrit les étapes de connexion de PSQL à Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Ce guide suppose que vous avez déjà accès à [!DNL PSQL] et que vous savez comment l&#39;utiliser. Pour plus d&#39;informations sur [!DNL PSQL], consultez la [documentation officielle [!DNL PSQL]] (https://www.postgresql.org/docs/current/app-psql.html).
-
-## Connecter PSQL et [!DNL Query Service]
 
 Après avoir installé PSQL sur votre ordinateur, vous êtes prêt à connecter PSQL à Requête Service. Revenez à l&#39;interface utilisateur [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, puis **[!UICONTROL Informations d&#39;identification]**.
 
