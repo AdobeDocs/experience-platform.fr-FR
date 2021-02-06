@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; présentation ; Espace de travail des sciences de données ; sujets populaires
 solution: Experience Platform
-title: Présentation détaillée de Data Science Workspace
+title: Présentation de l'espace de travail Data Science
 topic: Walkthrough
 description: Ce document fournit une présentation détaillée d’Adobe Experience Platform Data Science Workspace. Plus précisément, le processus général par lequel un chercheur de données doit résoudre un problème à l’aide de l’apprentissage automatique.
 translation-type: tm+mt
-source-git-commit: 0d76b14599bc6b6089f9c760ef6a6be3a19243d4
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 33%
