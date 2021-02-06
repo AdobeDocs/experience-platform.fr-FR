@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Point de terminaison du consentement
+title: Point de terminaison de l’API de consentement
 topic: developer guide
 description: Découvrez comment gérer les demandes de consentement des clients pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 2%
 
 ---
