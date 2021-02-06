@@ -1,19 +1,17 @@
 ---
 keywords: Blob Azure ; Blob destination;s3;azure blob destination
-title: Destination de l'objet blob Azure
-seo-title: Destination de l'objet blob Azure
+title: Destination de la connexion à l'objet blob Azure
 description: Créez une connexion sortante en direct à votre enregistrement Azure Blob pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations à partir de Adobe Experience Platform.
-seo-description: Créez une connexion sortante en direct à votre enregistrement Azure Blob pour exporter périodiquement des fichiers de données CSV ou délimités par des tabulations à partir de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 739c7cb55f943675d5ee63d81bba58a2b250c814
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '477'
 ht-degree: 12%
 
 ---
 
 
-# Créer une destination [!DNL Azure Blob] dans l’interface utilisateur
+# [!DNL Azure Blob] connexion
 
 [!DNL Azure Blob] (ci-après dénommés &quot;[!DNL Blob]&quot;) est la solution d&#39;enregistrement d&#39;objets de Microsoft pour le cloud. Ce didacticiel décrit les étapes à suivre pour créer une destination [!DNL Blob] à l&#39;aide de l&#39;interface utilisateur [!DNL Platform].
 
