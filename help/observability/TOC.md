@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Guide des insights d’observabilité
 user-guide-description: Surveillez les activités dans Platform grâce aux mesures statistiques et aux notifications d’événements.
 translation-type: tm+mt
-source-git-commit: 72b2172bbcc8613a2030b4784270321c3933f6aa
+source-git-commit: 92e3edaba5793d18e826d3e3f3151ba8a51fce53
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 74%
+source-wordcount: '53'
+ht-degree: 77%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 74%
 # Observability Insights {#observability}
 
 * [Présentation d’Observability Insights](home.md)
-* Guide du développeur de l&#39;API Observability Insights {#api}
+* API Observability Insights {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Mesures](api/metrics.md)
