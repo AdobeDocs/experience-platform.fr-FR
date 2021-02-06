@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;crm;CRM
 solution: Experience Platform
-title: Collecte de données de gestion de la relation client via les connecteurs et les API source
+title: Collecte de données de gestion de la relation client via des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les amener à la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’un système de gestion de la relation client tiers et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 21%
@@ -14,7 +14,7 @@ ht-degree: 21%
 ---
 
 
-# Collecte de données de gestion de la relation client via les connecteurs et les API source
+# Collecte de données de gestion de la relation client à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer des données d’un logiciel de gestion de la relation client tiers et les importer dans Adobe Experience Platform via des connecteurs source et l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
