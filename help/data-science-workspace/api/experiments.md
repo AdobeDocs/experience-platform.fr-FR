@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ; expériences ; api d’apprentissage automatique sensei
 solution: Experience Platform
-title: Expériences
+title: Point de terminaison de l’API d’expériences
 topic: Developer guide
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 translation-type: tm+mt
-source-git-commit: 194a29124949571638315efe00ff0b04bff19303
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 98%
+source-wordcount: '783'
+ht-degree: 97%
 
 ---
 
 
-# Expériences
+# Point de terminaison des expériences
 
 Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 
@@ -70,7 +70,7 @@ Une réponse réussie renvoie un payload contenant les détails de l’expérien
 }
 ```
 
-## Création et exécution d’une exécution de formation ou de notation  {#experiment-training-scoring}
+## Création et exécution d’une exécution de formation ou de notation {#experiment-training-scoring}
 
 Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST ainsi qu’en fournissant un identifiant d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de notation ne peuvent être créées que si elles sont associées à une exécution de formation réussie. La création réussie d’une exécution de formation initie la procédure de formation du modèle, tandis que son achèvement réussi génère un modèle formé. La génération de modèles formés remplace les modèles qui existaient auparavant, de sorte qu’une expérience ne peut utiliser qu’un seul modèle formé à un moment donné.
 
