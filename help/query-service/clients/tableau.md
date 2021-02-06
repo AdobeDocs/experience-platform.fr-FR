@@ -1,27 +1,25 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; tableau ; Tableau ; service de requête ; service de Requête ; connexion au service de requête ;
 solution: Experience Platform
-title: Connexion à Tableau
+title: Connexion de Tableau à Requête Service
 topic: connect
 description: Ce document passe en revue les étapes de connexion de Tableau à Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: eac93f3465fa6ce4af7a6aa783cf5f8fb4ac9b9b
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 13%
+source-wordcount: '213'
+ht-degree: 11%
 
 ---
 
 
-# [!DNL Tableau]
+# Connecter [!DNL Tableau] au service de Requête
 
 Ce document décrit les étapes de connexion de Tableau à Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > Ce guide suppose que vous avez déjà accès à [!DNL Tableau] et que vous savez comment naviguer dans son interface. Vous trouverez plus d&#39;informations sur [!DNL Tableau] dans la [documentation officielle [!DNL Tableau] ](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
-
-## Connecter [!DNL Tableau] à la plate-forme
 
 Pour connecter [!DNL Tableau] à [!DNL Query Service], ouvrez [!DNL Tableau], et dans la section **[!DNL To a Server]** sélectionnez **[!DNL More]** suivi de **[!DNL PostgreSQL]**
 
