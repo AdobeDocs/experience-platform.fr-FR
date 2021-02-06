@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Google AdWords;google adwords
 solution: Experience Platform
-title: Connecteur Google AdWords
+title: Présentation du connecteur de source Google AdWords
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de Google AdWords à la plate-forme à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter Google AdWords à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 9%
@@ -33,11 +33,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d’un connecteur Google AdWords à l’aide de l’API du service de flux](../../tutorials/api/create/advertising/ads.md)
+- [Création d’une connexion source Google AdWords à l’aide de l’API du service de flux](../../tutorials/api/create/advertising/ads.md)
 - [Explorez un système de publicité à l’aide de l’API du service de flux](../../tutorials/api/explore/advertising.md)
 - [Collecte de données publicitaires à l’aide de l’API du service de flux](../../tutorials/api/collect/advertising.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source Google AdWords dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
-- [Configuration d’un flux de données pour un connecteur de publicité dans l’interface utilisateur](../../tutorials/ui/dataflow/advertising.md)
+- [Création d’une connexion source Google AdWords dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
+- [Configuration d’un flux de données pour une connexion publicitaire dans l’interface utilisateur](../../tutorials/ui/dataflow/advertising.md)
