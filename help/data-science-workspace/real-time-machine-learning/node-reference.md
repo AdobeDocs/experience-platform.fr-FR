@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; guide du développeur ; Espace de travail des données ; sujets populaires ; apprentissage automatique en temps réel ; référence au noeud ;
 solution: Experience Platform
-title: Guide de référence des noeuds d’apprentissage automatique en temps réel
+title: Référence du noeud d’apprentissage automatique en temps réel
 topic: Nodes reference
 description: Un noeud est l’unité fondamentale dont les graphiques sont formés. Chaque noeud exécute une tâche spécifique et peut être chaîné ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche exécutée par un noeud représente une opération sur les données d’entrée, telle qu’une transformation de données ou de schéma, ou une inférence d’apprentissage automatique. Le noeud envoie la valeur transformée ou déduite au(x) noeud(s) suivant(s).
 translation-type: tm+mt
-source-git-commit: 9ba229195892245d29fb4f17b9f2e5cd6c6ea567
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '678'
 ht-degree: 1%
 
 ---
 
 
-# Guide de référence des noeuds d’apprentissage automatique en temps réel (Alpha)
+# Référence du noeud d&#39;apprentissage automatique en temps réel (Alpha)
 
 >[!IMPORTANT]
 >
