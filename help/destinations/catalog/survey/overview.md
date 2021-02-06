@@ -1,19 +1,17 @@
 ---
 keywords: Destinations du questionnaire ; questionnaire ; prévoir ; intime ; questionnaires d’interception Web ; qualtrics
-title: Destinations d’enquête
-seo-title: Destinations d’enquête
-description: Les plateformes de questionnaires détectent les événements de questionnaire, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec la plate-forme.
-seo-description: Les plateformes de questionnaires détectent les événements de questionnaire, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec la plate-forme.
+title: Présentation des destinations de questionnaire
+description: Les plateformes de questionnaires détectent les événements de questionnaire, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '89'
+ht-degree: 32%
 
 ---
 
 
-# Destinations d’enquête {#survey-destinations}
+# Présentation des destinations d’enquête {#survey-destinations}
 
 Les plateformes de questionnaires détectent les événements de questionnaire, capturent les commentaires des clients en temps réel au moyen d’éléments de données et partagent les données avec Adobe Experience Platform.
 
