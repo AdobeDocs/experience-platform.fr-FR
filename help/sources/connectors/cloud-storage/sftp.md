@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; SFTP ; sftp
 solution: Experience Platform
-title: Connecteur SFTP
+title: Présentation du connecteur de source SFTP
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion d’un serveur SFTP à la plate-forme à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter un serveur SFTP à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 2%
@@ -48,11 +48,11 @@ La documentation ci-dessous fournit des informations sur la connexion d&#39;un s
 
 ### Utilisation des API
 
-- [Création d’un connecteur SFTP à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Création d’une connexion source SFTP à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source SFTP dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’une connexion source SFTP dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/sftp.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
