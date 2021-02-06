@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; FTP ; ftp
 solution: Experience Platform
-title: Création d’un connecteur source FTP dans l’interface utilisateur
+title: Création d’une connexion à la source FTP dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP à l’aide de l’interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source FTP à l’aide de l’interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e28a3ec2d4330f0e9f3895e0236c9ebea2ef2776
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 12%
@@ -14,13 +14,13 @@ ht-degree: 12%
 ---
 
 
-# Création d’un connecteur source FTP dans l’interface utilisateur
+# Création d’une connexion à la source FTP dans l’interface utilisateur
 
 >[!NOTE]
 >
 >Le connecteur FTP est en version bêta. Pour plus d&#39;informations sur l&#39;utilisation de connecteurs bêta, consultez l&#39;[Présentation des sources](../../../../home.md#terms-and-conditions).
 
-Ce didacticiel décrit la procédure à suivre pour créer un connecteur source FTP à l’aide de l’interface utilisateur de la plate-forme.
+Ce didacticiel décrit les étapes à suivre pour créer une connexion à la source FTP à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
