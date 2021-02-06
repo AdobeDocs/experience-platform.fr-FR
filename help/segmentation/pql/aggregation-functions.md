@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;segmentation;Segmentation;Segmentation Service;pql;PQL;Profil Requête Language;agrégation fonctions;agrégation;
 solution: Experience Platform
-title: Fonctions d’agrégation
+title: Fonctions d’agrégation PQL
 topic: developer guide
-description: 'Fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux PQL (Profil Requête Language) afin de former une seule valeur de synthèse. '
+description: 'Les fonctions d’agrégation sont utilisées pour grouper plusieurs valeurs dans des tableaux PQL (langue de requête de profil) afin de former une seule valeur de résumé. '
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 73%
+source-wordcount: '244'
+ht-degree: 80%
 
 ---
 
