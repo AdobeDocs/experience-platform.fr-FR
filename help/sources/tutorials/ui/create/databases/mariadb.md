@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Maria DB ; maria db
 solution: Experience Platform
-title: Création d’un connecteur source MariaDB dans l’interface utilisateur
+title: Création d’une connexion à la source MariaDB dans l’interface utilisateur
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour créer un connecteur source Maria DB à l’aide de l’interface utilisateur de la plate-forme.
+description: Découvrez comment créer une connexion source Maria DB à l’aide de l’interface utilisateur Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f86f7483e7e78edf106ddd34dc825389dadae26a
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 16%
+source-wordcount: '432'
+ht-degree: 14%
 
 ---
 
 
-# Créer un connecteur source [!DNL MariaDB] dans l’interface utilisateur
+# Créer une connexion source [!DNL MariaDB] dans l’interface utilisateur
 
 >[!NOTE]
 >
