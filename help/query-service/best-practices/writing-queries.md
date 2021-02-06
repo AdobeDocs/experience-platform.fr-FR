@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; service de requête ; service de Requête ; requêtes d'écriture ; requête d'écriture ;
 solution: Experience Platform
-title: Rédaction de requêtes
+title: Directives générales pour l'exécution des Requêtes dans le service Requête
 topic: queries
 type: Tutorial
 description: Ce document détaille les informations importantes à connaître pour la rédaction de requêtes dans Adobe Experience Platform Query Service.
 translation-type: tm+mt
-source-git-commit: e2c648829bb3268ab319da934f5cc6cc811290b3
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '970'
-ht-degree: 53%
+source-wordcount: '976'
+ht-degree: 52%
 
 ---
 
