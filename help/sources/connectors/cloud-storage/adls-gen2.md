@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Azure Data Lake Enregistrement Gen2 ; ADLS-Gen2 ; adls gen2 ; ADLS Gen2
 solution: Experience Platform
-title: Connecteur Azure Data Lake Enregistrement Gen2
+title: Présentation du connecteur source Azure Data Lake Enregistrement Gen2
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Azure Data Lake Enregistrement Gen2 à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter Azure Data Lake Enregistrement Gen2 à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 3%
@@ -40,11 +40,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d’un connecteur ADLS-Gen2 à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/adls-gen2.md)
+- [Création d’une connexion source ADLS-Gen2 à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/adls-gen2.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ## Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source ADLS-Gen2 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’une connexion source ADLS-Gen2 dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
