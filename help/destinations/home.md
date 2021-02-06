@@ -2,13 +2,13 @@
 keywords: destinations;adobe experience platform;platform;destinations overview;activate data;activate; activate;
 title: Présentation des destinations
 seo-title: Présentation des destinations
-description: Activez les données de Platform vers des destinations pour les campagnes marketing cross-canal, les emails, les publicités ciblées, et bien plus encore.
+description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour des campagnes marketing inter-canaux, des courriels, des publicités ciblées, etc.
 seo-description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les Destinations dans la Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: 32eae2ed782e46941bb21e3aca62c6bce68cde1e
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 43%
+source-wordcount: '493'
+ht-degree: 40%
 
 ---
 
