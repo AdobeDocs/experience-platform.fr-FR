@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; requête
 solution: Experience Platform
-title: Adobe Experience Platform Query Service
+title: Présentation du service requête
 topic: overview
 description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: 23516c66a67ae5663dcf90a40ccba98bfd266ab0
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 29%
+source-wordcount: '635'
+ht-degree: 28%
 
 ---
 
