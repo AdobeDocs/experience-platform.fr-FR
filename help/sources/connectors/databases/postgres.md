@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; PostgreSQL ; postgresql
 solution: Experience Platform
-title: Connecteur PostgreSQL
+title: Présentation du connecteur source PostgreSQL
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de PostgreSQL à Platform à l'aide d'API ou de l'interface utilisateur.
+description: Découvrez comment connecter PostgreSQL à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '242'
-ht-degree: 26%
+ht-degree: 22%
 
 ---
 
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL PostgreSQL] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur PostgreSQL à l’aide de l’API Flow Service](../../tutorials/api/create/databases/postgres.md)
+- [Création d’une connexion source PostgreSQL à l’aide de l’API Flow Service](../../tutorials/api/create/databases/postgres.md)
 - [Exploration d’un système de base de données à l’aide de l’API du service de flux](../../tutorials/api/explore/database-nosql.md)
 - [Collecte de données à partir d’une base de données à l’aide de l’API du service de flux](../../tutorials/api/collect/database-nosql.md)
 
 ## Connectez [!DNL PostgreSQL] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source PostgreSQL dans l’interface utilisateur](../../tutorials/ui/create/databases/postgres.md)
-- [Configuration d’un flux de données pour un connecteur de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source PostgreSQL dans l’interface utilisateur](../../tutorials/ui/create/databases/postgres.md)
+- [Configuration d’un flux de données pour une connexion à une base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
