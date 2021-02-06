@@ -1,21 +1,17 @@
 ---
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
-title: Extension LinkedIn Insight Tag
-seo-title: Extension LinkedIn Insight Tag
+title: Destination de l’extension de balise LinkedIn Insight
 description: L’extension de balise LinkedIn Insight est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension de balise LinkedIn Insight est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 26%
+source-wordcount: '515'
+ht-degree: 23%
 
 ---
 
 
 # [!DNL LinkedIn Insight Tag] Extension {#linkedin-insights-extension}
-
-## Présentation {#overview}
 
 Installez [!DNL LinkedIn Insight Tag] pour utiliser les fonctionnalités de suivi de conversion, de reciblage et de démographie du site Web.
 
