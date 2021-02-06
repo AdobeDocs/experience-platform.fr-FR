@@ -1,19 +1,17 @@
 ---
 keywords: balises d'avion ; destination du navire
-title: Destination des balises d'avion
-seo-title: Destination des balises d'avion
+title: Destination de la connexion des balises d'avion
 description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
-seo-description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 95f57f9d1b3eeb0b16ba209b9774bd94f5758009
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1197'
 ht-degree: 13%
 
 ---
 
 
-# (Bêta) [!DNL Airship Tags] destination {#airship-tags-destination}
+# (Bêta) [!DNL Airship Tags] connexion {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
