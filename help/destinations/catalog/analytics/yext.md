@@ -1,21 +1,17 @@
 ---
 keywords: Suivi des conversions de texte ; texte ; texte ; suivi des conversions de texte
-title: Extension Yext Conversion Tracking
-seo-title: Extension Yext Conversion Tracking
+title: Destination de l'extension de suivi des conversions de texte
 description: L’extension de suivi des conversions Yext est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension de suivi des conversions Yext est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 27%
+source-wordcount: '527'
+ht-degree: 24%
 
 ---
 
 
 # [!DNL Yext Conversion Tracking] Extension {#yext-extension}
-
-## Présentation {#overview}
 
 L&#39;extension [!DNL Yext Conversion Tracking] vous permet de mesurer les conversions qui peuvent être attribuées à votre utilisation des produits Yext.
 
