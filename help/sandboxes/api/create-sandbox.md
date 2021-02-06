@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Sandbox;sandbox
 solution: Experience Platform
-title: Création d’un environnement de test
+title: Création d’un sandbox dans l’API
 topic: developer guide
 description: Vous pouvez créer un nouveau sandbox en envoyant une requête POST au point de terminaison `/sandbox`.
 translation-type: tm+mt
-source-git-commit: c081a7521be9715ca32d35504922a70767924fd7
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 86%
+source-wordcount: '164'
+ht-degree: 79%
 
 ---
 
 
-# Création d’un environnement de test
+# Création d’un sandbox dans l’API
 
 Vous pouvez créer un nouvel environnement de test en effectuant une requête POST au point de terminaison `/sandboxes`.
 
