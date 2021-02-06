@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RGD ; APCCP ; APC ; APP ; APP ; APP ; Pdpa ; LGPD ; lgpd ; aperçu ; aperçu ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; respect de la vie privée ; respect de la vie privée ;
 solution: Experience Platform
-title: Terminologie de la réglementation de la confidentialité
+title: Terminologie du Règlement sur la protection des renseignements personnels
 topic: troubleshooting
 description: Ce document fournit des définitions des termes clés liés à la réglementation sur la protection des renseignements personnels appuyée par Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 714b071bfa68ad0796afad25525b62b42bd56b3f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 12%
@@ -13,7 +13,7 @@ ht-degree: 12%
 ---
 
 
-# Terminologie de la réglementation de la confidentialité
+# Terminologie des règles de confidentialité
 
 Ce document fournit des définitions des termes clés liés à la réglementation sur la protection des renseignements personnels appuyée par Adobe Experience Cloud.
 
