@@ -1,21 +1,17 @@
 ---
 keywords: twitter ; Twitter ; balise de site Web Twitter universel ; balise de site Web Twitter universel ; balise de Twitter UWT ; Twitter uwt ; twitter uwt
-title: Extension Twitter Universal Website Tag
-seo-title: Extension Twitter Universal Website Tag
+title: Destination de l’extension de balise de site Web Twitter Universal
 description: L’extension Twitter Universal Website Tag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Twitter Universal Website Tag est une destination publicitaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '541'
-ht-degree: 24%
+source-wordcount: '508'
+ht-degree: 21%
 
 ---
 
 
 # [!DNL Twitter Universal Website Tag] Extension {#twitter-uwt-extension}
-
-## Présentation {#overview}
 
 [!DNL Twitter Universal Website Tag] fournit des actions pour envoyer des balises à la balise Twitter UWT.
 
