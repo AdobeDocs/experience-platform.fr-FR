@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Point de terminaison des étiquettes
+title: Point de terminaison de l’API Libellés
 topic: developer guide
 description: Découvrez comment gérer les étiquettes d’utilisation des données dans l’Experience Platform à l’aide de l’API Policy Service.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '510'
 ht-degree: 6%
 
 ---
