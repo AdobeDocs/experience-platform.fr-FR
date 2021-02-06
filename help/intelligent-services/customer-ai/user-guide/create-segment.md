@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; informations ; assistance client ; rubriques populaires ; segments d’assistance client
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Création de segments client avec des scores prévus
+title: Créer des segments de clients avec des scores prédits
 topic: Create a segment
 description: Lorsqu’une opération de prédiction se termine, les scores de propension prévus sont automatiquement utilisés par les Profils. L’enrichissement des profils avec les scores Customer AI permet de créer des segments client pour trouver des audiences en fonction de leurs scores de propension. Cette section décrit les étapes à suivre pour créer des segments à l’aide du créateur de segments.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '318'
-ht-degree: 85%
+ht-degree: 83%
 
 ---
 
