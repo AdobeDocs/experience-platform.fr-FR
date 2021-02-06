@@ -1,25 +1,25 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre des schémas ; registre des Schémas ;
 solution: Experience Platform
-title: Guide de développement de l’API Schema Registry
-description: 'L''API Schéma Registry vous permet de gérer par programmation tous les schémas et les ressources XDM connexes disponibles dans l''Experience Platform. '
+title: Guide de l'API du registre de schémas
+description: L’API Schéma Registry permet aux développeurs de gérer par programmation tous les schémas et les ressources XDM (Experience Data Model) associées dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 44a727f6ce4c2b90aa010379583c7c4d3ebd011c
+source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 4%
+source-wordcount: '973'
+ht-degree: 3%
 
 ---
 
 
-# Guide du développeur de l’API [!DNL Schema Registry]
+# [!DNL Schema Registry] Guide de l’API
 
 [!DNL Schema Registry] est utilisé pour accéder à la bibliothèque de Schémas dans Adobe Experience Platform, fournissant une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources de bibliothèque disponibles sont accessibles.
 
 L’API de registre de Schémas fournit plusieurs points de terminaison qui vous permettent de gérer par programmation tous les schémas et les ressources XDM (Experience Data Model) connexes disponibles dans Platform. Cela inclut les solutions définies par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications.
 
-Ces points de terminaison sont décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+Ces points de terminaison sont décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
 >[!IMPORTANT]
 >
