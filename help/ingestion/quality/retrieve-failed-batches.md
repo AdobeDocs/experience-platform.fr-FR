@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; récupérer les lots en échec ; lots en échec ; assimiler des lots ; assimiler des lots ; lots en échec ; obtenir des lots en échec ; obtenir des lots en échec ; télécharger des lots en échec ; télécharger des lots en échec ;
 solution: Experience Platform
-title: Récupération des lots en échec
+title: Récupération de lots ayant échoué à l’aide de l’API d’accès aux données
 topic: tutorial
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API Data Ingestion.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 79%
+source-wordcount: '652'
+ht-degree: 76%
 
 ---
 
 
-# Récupération des lots en échec à l’aide de l’API
+# Récupération de lots ayant échoué à l’aide de l’API d’accès aux données
 
 Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser l’assimilation par lot, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que les fichiers CSV), ou l’assimilation en flux continu, qui vous permet d’insérer leurs données dans [!DNL Platform] à l’aide de points de terminaison en flux continu en temps réel.
 
