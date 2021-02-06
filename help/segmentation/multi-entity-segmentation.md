@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; segmentation ; service de segments ; segments ; segments ; plusieurs entités ; segmentation multientités ; segments multientités ; segments multientités ;
 solution: Experience Platform
-title: Segmentation d’entités multiples
+title: Présentation de la segmentation multientité
 topic: overview
 description: La segmentation d’entités multiples est la capacité à élargir les données de profil grâce à des données supplémentaires basées sur les produits, les magasins et d’autres classes hors profil. Une fois connectées, les données des classes supplémentaires deviennent disponibles comme si elles étaient des données natives du schéma Profile.
 translation-type: tm+mt
-source-git-commit: 4dd5a91146b116953ba180e3f39d24b4e1ec289e
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '674'
 ht-degree: 15%
 
 ---
 
 
-# Segmentation d’entités multiples
+# Présentation de la segmentation multientité
 
 La segmentation multientité est une fonction avancée disponible dans le cadre de Adobe Experience Platform [!DNL Segmentation Service]. Cette fonctionnalité vous permet d&#39;étendre les [!DNL Real-time Customer Profile] données avec des données &quot;non-personnes&quot; supplémentaires (également appelées &quot;entités de dimension&quot;) que votre entreprise peut définir, telles que les données liées aux produits ou aux magasins. La segmentation multientité offre une flexibilité lors de la définition de segments d’audience en fonction de données pertinentes pour vos besoins commerciaux uniques et peut être effectuée sans avoir l’expertise requise pour interroger les bases de données. Avec la segmentation multientité, vous pouvez ajouter des données clés à vos segments sans avoir à apporter de modifications coûteuses aux flux de données ou attendre une fusion de données dorsales.
 
