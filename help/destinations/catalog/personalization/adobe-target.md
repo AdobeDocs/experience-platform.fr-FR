@@ -1,21 +1,17 @@
 ---
 keywords: extension de la cible ; cible
-title: Extension Adobe Target
-seo-title: Extension Adobe Target
+title: Destination de l’extension Adobe Target
 description: L'extension Adobe Target est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L'extension Adobe Target est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 46%
+source-wordcount: '511'
+ht-degree: 44%
 
 ---
 
 
 # Extension Adobe Target {#adobe-target-extension}
-
-## Présentation {#overview}
 
 Adobe Target est la solution d’Adobe Experience Cloud qui fournit tout ce dont vous avez besoin pour personnaliser l’expérience de vos clients afin de maximiser les recettes de vos sites web et mobiles, de vos applications, de vos médias sociaux et d’autres canaux numériques.
 
