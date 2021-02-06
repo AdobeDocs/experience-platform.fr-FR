@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; identités ; historique des grappes
 solution: Experience Platform
-title: Obtention de l’historique des clusters d’une identité
+title: Obtenir l'historique de cluster d'une identité
 topic: API guide
 description: Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. Identity Service offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
 source-wordcount: '337'
-ht-degree: 97%
+ht-degree: 95%
 
 ---
 
