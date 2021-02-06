@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Enregistrement Google Cloud ; enregistrement Google Cloud
 solution: Experience Platform
-title: Connecteur d’Enregistrement Google Cloud
+title: Présentation du connecteur de source d’Enregistrement Google Cloud
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de l’Enregistrement Google Cloud à la plate-forme à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter Google Cloud Enregistrement à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '568'
-ht-degree: 4%
+ht-degree: 2%
 
 ---
 
@@ -58,11 +58,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d’un connecteur d’Enregistrement Google Cloud à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/google.md)
+- [Création d’une connexion à la source d’Enregistrement Google Cloud à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/google.md)
 - [Explorez un système d’enregistrement cloud à l’aide de l’API de service de flux.](../../tutorials/api/explore/cloud-storage.md)
 - [Collecte de données d’enregistrement Cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source Google Cloud Storage dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Création d’une connexion à la source d’Enregistrement Google Cloud dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
