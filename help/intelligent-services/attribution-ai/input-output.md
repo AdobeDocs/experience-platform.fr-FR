@@ -1,19 +1,19 @@
 ---
 keywords: 'Experience Platform ; prise en main ; attribution ; rubriques populaires ; attribution : entrée d’ai ; attribution : sortie d’ai ;'
 solution: Experience Platform, Intelligent Services
-title: Entrée et sortie Attribution AI
+title: Entrée et sortie dans Attribution AI
 topic: Input and Output data for Attribution AI
 description: Le document suivant décrit les différents apports et extrants utilisés dans l'Attribution AI.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2091'
 ht-degree: 16%
 
 ---
 
 
-# [!DNL Attribution AI] entrée et sortie
+# Entrée et sortie dans [!DNL Attribution AI]
 
 Le document suivant décrit les différentes entrées et sorties utilisées dans [!DNL Attribution AI].
 
@@ -72,7 +72,7 @@ Longueur minimale de données requise = fenêtre de formation + fenêtre de rech
 >
 > La longueur minimale de données requise pour une application avec des configurations par défaut est la suivante : 2 trimestres (180 jours) + 56 jours = 236 jours.
 
-Exemple :
+Exemple :
 
 - Vous souhaitez attribuer des événements de conversion qui se sont produits au cours des 90 derniers jours (3 mois) et effectuer le suivi de tous les points de contact qui se sont produits dans les 4 semaines précédant le événement de conversion. La durée des données d’entrée doit s’étendre sur les 90 derniers jours + 28 jours (4 semaines). La fenêtre de formation est de 90 jours et la fenêtre de recherche est de 28 jours totalisant 118 jours.
 
