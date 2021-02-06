@@ -1,25 +1,21 @@
 ---
 keywords: JW player ; jw player ; JW Player ; jw extension ; JW extension ; JW extension
-title: Extension JW Player Analytics (BETA)
-seo-title: Extension JW Player Analytics (BETA)
-description: L’extension BÊTA (JW Player Analytics) est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension BÊTA (JW Player Analytics) est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+title: Destination de l’extension JW Player Analytics (bêta)
+description: L’extension JW Player Analytics (bêta) est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 29%
+source-wordcount: '545'
+ht-degree: 22%
 
 ---
 
 
-# [!DNL JW Player Analytics] (BETA) extension  {#jw-player-analytics-extension}
-
-## Présentation {#overview}
+# [!DNL JW Player Analytics] (bêta) extension  {#jw-player-analytics-extension}
 
 Cette extension installe l&#39;adaptateur [!DNL JW Player] pour connecter [!DNL JW Player] événements à l&#39;analyse vidéo Adobe. Exploitez la puissance d’Adobe Video Analytics pour obtenir des informations détaillées sur les habitudes de visionnage de vidéos de vos clients.
 
-[!DNL JW Player Analytics] (BETA) est une extension d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
+[!DNL JW Player Analytics] (bêta) est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
 
 Cette destination est une extension Adobe Experience Platform Launch. Pour plus d&#39;informations sur le fonctionnement des extensions de lancement de plateformes dans Platform, voir [Présentation des extensions Adobe Experience Platform Launch](../launch-extensions/overview.md).
 
@@ -33,7 +29,7 @@ Pour utiliser cette extension, vous devez accéder à Adobe Experience Platform 
 
 ## Installation de l’extension {#install-extension}
 
-Pour installer l&#39;extension [!DNL JW Player Analytics] (BETA) :
+Pour installer l&#39;extension [!DNL JW Player Analytics] (bêta) :
 
 Dans l&#39;[interface de plate-forme](http://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
@@ -45,7 +41,7 @@ Dans la fenêtre **[!UICONTROL Sélectionner la propriété de lancement de plat
 
 Le processus vous conduit au lancement de la plate-forme pour terminer l’installation.
 
-Pour plus d’informations sur les options de configuration de l’extension, consultez la [page concernant l’extension JW Player Analytics (BETA)](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) dans Adobe Exchange.
+Pour plus d’informations sur les options de configuration de l’extension, voir la [page d’extension Analyses du lecteur JW (bêta)](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html) dans Adobe Exchange.
 
 Vous pouvez également installer l&#39;extension directement dans l&#39;[interface Adobe Experience Platform Launch](https://launch.adobe.com/). Voir [Ajouter une nouvelle extension](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html?lang=en#add-a-new-extension) dans la documentation de Platform Launch.
 
