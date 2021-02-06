@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; Salesforce Service Cloud ; salesforce service cloud
 solution: Experience Platform
-title: Connecteur Salesforce Service Cloud
+title: Présentation du connecteur de source Salesforce Service Cloud
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la connexion de Salesforce Service Cloud à la plate-forme à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter Salesforce Service Cloud à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: e0a0b7fc28b8cc85c5140d3840e06e5c7078c307
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 11%
+ht-degree: 7%
 
 ---
 
@@ -31,11 +31,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Salesforce Service Cloud ]à [!DNL Platform] à l&#39;aide d&#39;API.
 
-- [Création d’un connecteur Salesforce Service Cloud à l’aide de l’API du service de flux](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Création d’une connexion à la source Salesforce Service Cloud à l’aide de l’API de service de flux](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Explorez un système de succès client à l’aide de l’API Flow Service](../../tutorials/api/explore/customer-success.md)
 - [Collecte de données à partir d’un système de succès client à l’aide de l’API Flow Service](../../tutorials/api/collect/customer-success.md)
 
 ## Connectez [!DNL Salesforce Service Cloud] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source Salesforce Service Cloud dans l’interface utilisateur](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Configuration du flux de données pour un connecteur de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)
+- [Création d’une connexion source Salesforce Service Cloud dans l’interface utilisateur](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+- [Configuration du flux de données pour une connexion de succès client dans l’interface utilisateur](../../tutorials/ui/dataflow/customer-success.md)
