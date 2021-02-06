@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation en flux continu ; Segmentation ; Service de segmentation ; service de segmentation ; guide d'interface ;
 solution: Experience Platform
-title: Segmentation par flux
+title: Guide de l’interface utilisateur de segmentation en flux continu
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: 2bd4b773f7763ca408b55e3b0e2d0bbe9e7b66ba
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
