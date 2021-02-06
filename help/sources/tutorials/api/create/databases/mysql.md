@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; MySQL ; mysql
 solution: Experience Platform
-title: Création d’un connecteur MySQL à l’aide de l’API du service de flux
+title: Création d’une connexion à la source MySQL à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Ce didacticiel utilise l’API du service de flux pour vous guider dans les étapes de connexion de l’Experience Platform à MySQL.
+description: Découvrez comment connecter Adobe Experience Platform à MySQL à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '580'
 ht-degree: 25%
 
 ---
 
 
-# Création d’un connecteur MySQL à l’aide de l’API [!DNL Flow Service]
+# Création d’une connexion source MySQL à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
