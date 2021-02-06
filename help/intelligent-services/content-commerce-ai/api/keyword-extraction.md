@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; prise en main ; contenu ai ; commerce ai ; contenu et commerce ai ; extraction de mots-clés ; extraction de mots-clés
 solution: Experience Platform, Intelligent Services
-title: Extraction des mots-clés
+title: Extraction de mots-clés dans l’API d’API Content and Commerce
 topic: Developer guide
 description: Le service d'extraction de mots-clés, lorsqu'il reçoit un document de texte, extrait automatiquement les mots-clés ou les expressions-clés qui décrivent le mieux le sujet du document. Afin d'extraire des mots-clés, une combinaison d'algorithmes de reconnaissance d'entité nommée (NER) et d'extraction de mot-clé non supervisée est utilisée.
 translation-type: tm+mt
-source-git-commit: de16ebddd8734f082f908f5b6016a1d3eadff04c
+source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1082'
 ht-degree: 4%
 
 ---
@@ -230,7 +230,7 @@ Une réponse réussie renvoie un objet JSON contenant des mots-clés extraits da
 
 ## EXTRACTION du mot-clé PDF {#pdf-extraction}
 
-Le service d’extraction de mots-clés prend en charge les fichiers PDF. Cependant, vous devez utiliser un nouvel AnalyzerID pour les fichiers PDF et modifier le type de document en PDF. Consultez l’exemple ci-dessous pour plus d’informations.
+Le service d’extraction de mots-clés prend en charge les fichiers PDF. Toutefois, vous devez utiliser un nouvel AnalyzerID pour les fichiers PDF et modifier le type de document en PDF. Consultez l’exemple ci-dessous pour plus d’informations.
 
 **Format d’API**
 
