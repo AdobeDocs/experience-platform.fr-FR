@@ -5,7 +5,7 @@ title: Création d’un jeu de données à l’aide d’API
 topic: datasets
 description: Ce document décrit les étapes générales pour créer un jeu de données à l’aide des API d’Adobe Experience Platform et pour renseigner le jeu de données à l’aide d’un fichier.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '1268'
 ht-degree: 82%
