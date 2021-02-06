@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Amazon ; amazon kinesis ; Kinesis ; kinesis
 solution: Experience Platform
-title: Connecteur Amazon
+title: Présentation du connecteur source Amazon
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Kinesis à la plate-forme à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter Amazon Kinesis à Adobe Experience Platform à à l’aide des API ou de l’interface utilisateur.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 1%
@@ -33,10 +33,10 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ### Utilisation des API
 
-- [Création d’un connecteur Amazon Kinesis à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Création d’une connexion source Amazon à l’aide de l’API du service de flux](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Collecte de données en flux continu à l’aide de l’API du service de flux](../../tutorials/api/collect/streaming.md)
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’un connecteur source Amazon dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configuration d’un flux de données pour un connecteur d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Création d’une connexion source Amazon dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Configuration d’un flux de données pour une connexion d’enregistrement cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
