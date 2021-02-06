@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; commerce électronique ; commerce électronique
 solution: Experience Platform
-title: Explorer une connexion eCommerce à l’aide de l’API de service de flux
+title: Exploration d’une connexion au commerce électronique à l’aide de l’API du service de flux
 topic: overview
 description: Ce didacticiel utilise l’API Flow Service pour explorer les connexions eCommerce.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 25%
