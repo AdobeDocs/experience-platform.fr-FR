@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; modèles de requête ; guide d'api ; modèles ; service de Requête ;
 solution: Experience Platform
-title: Guide de développement de Query Service
+title: Point de terminaison de l'API des modèles de requête
 topic: query templates
 description: La documentation suivante présente les différents appels d’API que vous pouvez effectuer à l’aide de modèles de requête pour l’API Requête Service.
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '673'
-ht-degree: 90%
+source-wordcount: '674'
+ht-degree: 89%
 
 ---
 
 
-# Modèles de requête
+# Point de terminaison des modèles de requête
 
 ## Exemples d’appels API
 
