@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; analytics;classifications
-description: Ce didacticiel décrit la procédure à suivre pour créer un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
+description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer des données de classification dans Adobe Experience Platform.
 solution: Experience Platform
-title: Création d’un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur
+title: Création d’une connexion source Adobe Analytics pour les données des classifications dans l’interface utilisateur
 topic: overview
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '660'
 ht-degree: 5%
 
 ---
 
 
-# Création d’un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur
+# Création d’une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
 
-Ce didacticiel décrit la procédure à suivre pour créer un connecteur de données de classifications Adobe Analytics dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
+Ce didacticiel décrit les étapes à suivre pour créer une connexion de source de données de classifications Adobe Analytics dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
 
 ## Prise en main
 
@@ -86,5 +86,5 @@ La page **[!UICONTROL activité des ensembles de données]** affiche des informa
 En suivant ce didacticiel, vous avez créé un connecteur de données de classifications Analytics qui permet d’importer [!DNL Classifications] des données dans [!DNL Platform]. Pour plus d&#39;informations sur les données [!DNL Analytics] et [!DNL Classifications], consultez les documents suivants :
 
 * [Présentation du connecteur de données Analytics](../../../../connectors/adobe-applications/analytics.md)
-* [Création d’un connecteur de données Analytics dans l’interface utilisateur](./analytics.md)
+* [Création d’une connexion aux données Analytics dans l’interface utilisateur](./analytics.md)
 * [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
