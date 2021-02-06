@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data-type;data type;
 solution: Experience Platform
-title: Type de données d'adresse électronique
+title: Type de données d'adresse de courriel
 topic: overview
 description: Ce document présente un aperçu du type de données XDM d'adresse électronique.
 translation-type: tm+mt
-source-git-commit: f5bddb39c16eb25e85297f56e331d3aa51510eb9
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 1%
