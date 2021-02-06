@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; liste d'espace de nommage ; espace de nommage liste
 solution: Experience Platform
-title: Répertorier les espaces de noms disponibles
+title: Espaces de nommage d'identité disponibles pour la liste
 topic: API guide
 description: Liste de tous les espaces de nommage disponibles.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 53%
+source-wordcount: '83'
+ht-degree: 44%
 
 ---
 
 
-# Répertorier les espaces de noms disponibles
+# Espaces de nommage d&#39;identité liste disponibles
 
 **Format d’API**
 
