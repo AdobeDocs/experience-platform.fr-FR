@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; accès aux données ; api d’accès aux données ; accès aux données de requête
 solution: Experience Platform
-title: Présentation de Data Access
+title: Données des ensembles de données de vue à l’aide de l’API d’accès aux données
 topic: tutorial
 type: Tutorial
-description: Ce document propose un tutoriel détaillé qui explique comment localiser, accéder et télécharger les données stockées dans un jeu de données à l’aide de l’API Data Access d’Adobe Experience Platform. Certaines des fonctionnalités uniques de l’API Data Access vous seront également présentées comme la pagination et les téléchargements partiels.
+description: Découvrez comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API d’accès aux données de Adobe Experience Platform. Certaines des fonctionnalités uniques de l’API Data Access vous seront également présentées comme la pagination et les téléchargements partiels.
 translation-type: tm+mt
-source-git-commit: 2940f030aa21d70cceeedc7806a148695f68739e
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '1400'
-ht-degree: 74%
+source-wordcount: '1398'
+ht-degree: 72%
 
 ---
 
 
-# Données du jeu de données de requête à l’aide de l’API [!DNL Data Access]
+# Données du jeu de données de vue à l’aide de l’API [!DNL Data Access]
 
 Ce document fournit un didacticiel détaillé qui explique comment localiser, accéder et télécharger des données stockées dans un jeu de données à l’aide de l’API [!DNL Data Access] de Adobe Experience Platform. Vous serez également familiarisé avec certaines des fonctionnalités uniques de l&#39;API [!DNL Data Access], telles que la pagination et les téléchargements partiels.
 
