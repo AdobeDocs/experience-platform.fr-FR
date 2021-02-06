@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; thèmes populaires ; système publicitaire ; système publicitaire
 solution: Experience Platform
-title: Explorez un système de publicité à l’aide de l’API du service de flux
+title: Exploration d’un système de publicité à l’aide de l’API du service de flux
 topic: overview
 description: Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables. Ce didacticiel utilise l’API Flow Service pour explorer les systèmes de publicité.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 23%
