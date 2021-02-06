@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; Didacticiel ; présentation ; Espace de travail des sciences des données ; sujets populaires
-title: Création d’un pipeline de fonctionnalités
+title: Création d’un tuyau de fonction à l’aide du SDK de création de modèle
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform vous permet de créer et de créer des pipelines de fonctions personnalisées pour effectuer l'ingénierie de fonctions à l'échelle via le cadre d'exécution Sensei Machine Learning Framework. Ce document décrit les différentes classes d’un pipeline de fonctionnalités et fournit un didacticiel détaillé pour la création d’un pipeline de fonctionnalités personnalisées à l’aide du SDK de création de modèles dans PySpark.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1441'
 ht-degree: 30%
 
 ---
 
 
-# Création d’un pipeline de fonctionnalités
+# Création d’un pipeline de fonctionnalités à l’aide du SDK de création de modèles
 
 >[!IMPORTANT]
 >
