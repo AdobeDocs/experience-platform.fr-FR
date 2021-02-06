@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; base de données ; base de données ; base de données tierce
 solution: Experience Platform
-title: Collecte de données à partir d’une base de données via des connecteurs et des API source
+title: Collecte de données à partir d’une base de données à l’aide des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d'une base de données et les importer dans la plate-forme par le biais des connecteurs et des API source.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer des données d’une base de données et les importer dans la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: ddf5be2f30bc347a881bdcbc6b880f087c03e263
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 21%
@@ -14,7 +14,7 @@ ht-degree: 21%
 ---
 
 
-# Collecte de données à partir d’une base de données via des connecteurs et des API source
+# Collecte de données à partir d’une base de données à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer des données d&#39;une base de données tierce et les importer dans Platform via des connecteurs source et l&#39;[[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
