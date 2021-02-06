@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; shopify ; Shopify ;
 solution: Experience Platform
-title: Connecteur Shopify
+title: Présentation du connecteur source Shopify
 topic: overview
-description: La documentation ci-dessous fournit des informations sur la façon de connecter Shopify à Platform à l’aide d’API ou de l’interface utilisateur.
+description: Découvrez comment connecter Shopify à Adobe Experience Platform à l'aide d'API ou de l'interface utilisateur.
 translation-type: tm+mt
-source-git-commit: b31b7dc04d32129ba5522e1b0d3e52a213347a40
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 10%
@@ -27,11 +27,11 @@ La documentation ci-dessous fournit des informations sur la façon de se connect
 
 ## Connectez [!DNL Shopify] à [!DNL Platform] à l’aide d’API.
 
-- [Création d’un connecteur Shopify à l’aide de l’API du service de flux](../../tutorials/api/create/ecommerce/shopify.md)
+- [Création d’une connexion source Shopify à l’aide de l’API du service de flux](../../tutorials/api/create/ecommerce/shopify.md)
 - [Explorer une connexion eCommerce à l’aide de l’API de service de flux](../../tutorials/api/explore/ecommerce.md)
 - [Collecte de données eCommerce à l’aide de l’API de service de flux](../../tutorials/api/collect/ecommerce.md)
 
 ## Connectez [!DNL Shopify] à [!DNL Platform] à l’aide de l’interface utilisateur.
 
-- [Création d’un connecteur source Shopify dans l’interface utilisateur](../../tutorials/ui/create/ecommerce/shopify.md)
-- [Configuration d’un flux de données pour un connecteur de commerce électronique dans l’interface utilisateur](../../tutorials/ui/dataflow/ecommerce.md)
+- [Création d’une connexion source Shopify dans l’interface utilisateur](../../tutorials/ui/create/ecommerce/shopify.md)
+- [Configuration d’un flux de données pour une connexion eCommerce dans l’interface utilisateur](../../tutorials/ui/dataflow/ecommerce.md)
