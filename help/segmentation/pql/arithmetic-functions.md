@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; pql ; PQL ; Profil Requête Language ; fonctions arithmétiques ; arithmétique ;
 solution: Experience Platform
-title: Fonctions arithmétiques
+title: Fonctions arithmétiques PAL
 topic: developer guide
-description: Fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans le langage PQL (Profil Requête Language).
+description: Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans le langage de requête de profil (PQL).
 translation-type: tm+mt
-source-git-commit: 4b2df39b84b2874cbfda9ef2d68c4b50d00596ac
+source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
 workflow-type: tm+mt
-source-wordcount: '259'
-ht-degree: 79%
+source-wordcount: '260'
+ht-degree: 83%
 
 ---
 
