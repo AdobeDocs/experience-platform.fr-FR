@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; trouver un sandbox ; rechercher un sandbox
 solution: Experience Platform
-title: Recherche d’un environnement de test
+title: Recherche d’un sandbox dans l’API
 topic: developer guide
 description: Vous pouvez rechercher un sandbox individuel en effectuant une requête de GET qui inclut la propriété name du sandbox dans le chemin de la requête.
 translation-type: tm+mt
-source-git-commit: 0af537e965605e6c3e02963889acd85b9d780654
+source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 86%
+source-wordcount: '243'
+ht-degree: 80%
 
 ---
 
 
-# Recherche d’un environnement de test
+# Recherche d’un sandbox dans l’API
 
 Vous pouvez rechercher un environnement de test individuel en effectuant une requête GET comprenant la propriété `name` de l’environnement de test dans le chemin de requête.
 
