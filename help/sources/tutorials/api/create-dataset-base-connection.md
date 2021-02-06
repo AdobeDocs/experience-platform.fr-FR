@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux de connexion de dataset ; service de flux ; connexion au service de flux
 solution: Experience Platform
-title: Création d’une connexion de base de jeux de données Experience Platform à l’aide de l’API du service de flux
+title: Création d’une connexion de base de données Adobe Experience Platform à l’aide de l’API du service de flux
 topic: overview
 type: Tutorial
-description: Le service de flux permet de collecter et de centraliser les données client provenant de diverses sources disparates à Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les sources prises en charge sont connectables.
+description: Découvrez comment utiliser l’API du service de flux pour créer une connexion de base de jeux de données à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 29%
+source-wordcount: '721'
+ht-degree: 30%
 
 ---
 
