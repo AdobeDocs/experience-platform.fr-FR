@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; Didacticiels d’API ; API de destinations de diffusion en continu ; Plateforme
 solution: Experience Platform
-title: Se connecter aux destinations de diffusion en continu et activer les données
+title: Se connecter à des destinations de diffusion en continu et activer des données à l’aide d’appels d’API
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
 topic: tutorial
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: d1f357659313aba0811b267598deda9770d946a1
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '2018'
+source-wordcount: '2021'
 ht-degree: 54%
 
 ---
