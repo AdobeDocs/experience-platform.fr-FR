@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; CJA ; analyse de parcours ; analyse de parcours client ; orchestration de campagne ; orchestration ; parcours client ; parcours ; orchestration de parcours ; capacité ; région
 solution: Experience Platform
-title: Présentation d’Adobe Experience Platform
+title: Présentation d’Adobe Experience Platform
 topic: getting started
 description: Adobe Experience Platform permet aux entreprises de centraliser et de standardiser les données client avant d'appliquer la science des données et l'apprentissage automatique pour améliorer considérablement la conception et la diffusion d'expériences riches et personnalisées.
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 35%
