@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteur eCommerce ; commerce électronique
 solution: Experience Platform
-title: Configuration d’un flux de données pour un connecteur de commerce électronique dans l’interface utilisateur
+title: Configuration d’un flux de données pour une connexion à la source de commerce électronique dans l’interface utilisateur
 topic: overview
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source dans un  [!DNL Platform] jeu de données. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte de commerce électronique.
 translation-type: tm+mt
-source-git-commit: 4696bcb17427bb50549a315294baf7fbd87ac01d
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1317'
 ht-degree: 4%
 
 ---
 
 
-# Configuration d’un flux de données pour un connecteur de commerce électronique dans l’interface utilisateur
+# Configuration d’un flux de données pour une connexion eCommerce dans l’interface utilisateur
 
 Un flux de données est une tâche planifiée qui récupère et ingère des données d&#39;une source dans un jeu de données [!DNL Platform]. Ce didacticiel décrit les étapes à suivre pour configurer un nouveau flux de données à l’aide de votre compte **[!UICONTROL eCommerce]**.
 
