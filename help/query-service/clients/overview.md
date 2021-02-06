@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; service de Requête ; service de requête ; connexion ; connexion au service de requête ; studio de données aqua ; studio de données aqua ; studio de données Aqua ; observateur ; Postico ; postico ; Power BI ; power bi ; psql ; studio ; PSQL ; RStudio ; Tableau ; tableau ; tableau ;
 solution: Experience Platform
-title: Connexion des clients à Query Service
+title: Connexion des clients au service de Requête
 topic: connect
 description: Ce document explique comment se connecter à Requête Service à partir de diverses applications clientes de bureau et comment vérifier ces connexions.
 translation-type: tm+mt
-source-git-commit: 5c5ea35dbed85518f7925bd13a2280cae6215927
+source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
 workflow-type: tm+mt
 source-wordcount: '112'
-ht-degree: 29%
+ht-degree: 25%
 
 ---
 
