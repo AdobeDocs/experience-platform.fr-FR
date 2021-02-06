@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;service de Requête;fonctions définies par adobe;sql;
 solution: Experience Platform
-title: Fonctions définies par Adobe
+title: Fonctions SQL définies par Adobe dans Requête Service
 topic: functions
-description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Query Service.
+description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Adobe Experience Platform Requête Service.
 translation-type: tm+mt
-source-git-commit: e15229601d35d1155fc9a8ab9296f8c41811ebf9
+source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
 workflow-type: tm+mt
-source-wordcount: '2902'
-ht-degree: 27%
+source-wordcount: '2913'
+ht-degree: 26%
 
 ---
 
 
-# Fonctions définies par Adobe
+# Fonctions SQL définies par Adobe dans Requête Service
 
 Les fonctions définies par l&#39;Adobe, appelées ADF, sont des fonctions prédéfinies dans Adobe Experience Platform Requête Service qui permettent d&#39;exécuter des tâches commerciales communes sur des données [!DNL Experience Event]. Il s&#39;agit notamment des fonctions de [sessionisation](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) comme celles qui se trouvent en Adobe Analytics.
 
