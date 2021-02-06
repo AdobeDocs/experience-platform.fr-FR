@@ -1,21 +1,17 @@
 ---
 keywords: Confirmer les commentaires numériques ; confirmer l’extension ; confirmer
-title: Extension Confirmit Digital Feedback
-seo-title: Extension Confirmit Digital Feedback
+title: Confirmer la destination de l'extension de commentaires numérique
 description: L’extension Confirmer les commentaires numériques est une option de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension Confirmer les commentaires numériques est une option de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '597'
-ht-degree: 28%
+source-wordcount: '563'
+ht-degree: 26%
 
 ---
 
 
-# Extension [!DNL Confirmit Digital Feedback]
-
-## Présentation {#overview}
+# [!DNL Confirmit Digital Feedback] extension
 
 [!DNL Confirmit Digital Feedback] vous aide à transformer le trafic de votre site Web en informations en temps réel. Grâce à [!DNL Confirmit], des questionnaires non intrusifs et très ciblés peuvent être affichés en fonction de vos besoins, ce qui encourage les visiteurs à fournir des commentaires, tels que :
 
