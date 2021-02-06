@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; api ; API ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; registre de schémas ; compatibilité ; compatibilité ; mode de compatibilité ; mode de compatibilité ; type de champ ; types de champ ;
 solution: Experience Platform
-title: Annexe de développement du registre des schémas
+title: Annexe du Guide de l'API du registre des schémas
 description: Ce document fournit des informations supplémentaires relatives au travail avec l’API Schema Registry.
 topic: developer guide
 translation-type: tm+mt
-source-git-commit: 1f18bf7367addd204f3ef8ce23583de78c70b70c
+source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 49%
+source-wordcount: '772'
+ht-degree: 48%
 
 ---
 
 
-# Annexe
+# Annexe du guide de l&#39;API du registre de schémas
 
 Ce document fournit des informations supplémentaires sur l&#39;utilisation de l&#39;API [!DNL Schema Registry].
 
