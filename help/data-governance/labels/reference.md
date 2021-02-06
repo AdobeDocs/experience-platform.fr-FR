@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; gouvernance des données ; api de l’étiquette d’utilisation des données ; api du service de stratégie ; étiquettes d’utilisation des données prises en charge ; étiquettes de contrat ; étiquettes d’identité ; étiquettes sensibles
 solution: Experience Platform
-title: Étiquettes d’utilisation des données de base
+title: Glossaire des étiquettes d’utilisation des données
 topic: labels
 description: Ce document décrit toutes les étiquettes d’utilisation des données actuellement prises en charge par Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 00010d38a5d05800aeac9af8505093fee3593b45
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 81%
@@ -13,7 +13,7 @@ ht-degree: 81%
 ---
 
 
-# Étiquettes d’utilisation des données de base
+# Libellés d’utilisation des données
 
 Les libellés d’utilisation des données vous permettent de classer les jeux de données et les champs en fonction des stratégies d’utilisation qui s’appliquent à ces données. La gouvernance des données de Adobe Experience Platform fournit plusieurs étiquettes d’utilisation des données de base prêtes à l’emploi que vous pouvez utiliser pour début de catégoriser vos données.
 
