@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
-title: Gouvernance, confidentialité et sécurité à Adobe Experience Platform
+title: Présentation de la gouvernance, de la confidentialité et de la sécurité
 topic: overview
-description: Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
+description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance les données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 translation-type: tm+mt
-source-git-commit: 6ec317dd790b6ad77d8181c1398934f9636c5f5f
+source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '811'
 ht-degree: 18%
 
 ---
