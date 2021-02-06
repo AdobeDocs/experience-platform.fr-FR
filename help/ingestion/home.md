@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation des données ; emplacement des données ; emplacement des données ; Data Management ; data Management ; lignage ; lignage ; lot ; lot ; données assimilées
 solution: Experience Platform
-title: Présentation d’Adobe Experience Platform Data Ingestion
+title: Présentation de l'importation de données
 topic: overview
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 translation-type: tm+mt
-source-git-commit: 6e4a3ebe84c82790f58f8ec54e6f72c2aca0b7da
+source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 52%
+source-wordcount: '460'
+ht-degree: 51%
 
 ---
 
