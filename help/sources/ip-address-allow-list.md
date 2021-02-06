@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; adresse ip ; adresses ip ; liste autorisée d'adresse ip ; liste autorisée
 description: Les adresses IP doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source.
 solution: Experience Platform
-title: LISTE AUTORISÉE d'adresse IP
+title: LISTE AUTORISÉE d'adresses IP pour les connexions source
 topic: overview
 translation-type: tm+mt
-source-git-commit: a812ad3b130c5998013688dcda522e7d20ae578f
+source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
