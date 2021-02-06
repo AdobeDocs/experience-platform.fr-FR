@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de requête ; service de Requête ; spark sql ; Spark sql ; spark ; spark sql fonctions ; fonctions ;
 solution: Experience Platform
-title: Fonctions Spark SQL
+title: Fonctions Spark SQL dans Requête Service
 topic: spark sql functions
 description: Cette documentation contient des informations sur les fonctions Spark SQL qui étendent les fonctionnalités SQL.
 translation-type: tm+mt
-source-git-commit: 019de34c5e4ac53d38887752e893733f843dd22f
+source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
 workflow-type: tm+mt
-source-wordcount: '3890'
+source-wordcount: '3893'
 ht-degree: 2%
 
 ---
