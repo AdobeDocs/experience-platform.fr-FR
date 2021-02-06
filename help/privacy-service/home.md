@@ -1,19 +1,19 @@
 ---
 keywords: 'Experience Platform ; accueil ; sujets populaires ; GDPR ; gdpr ; ccpa : CCPA ; pdpa ; PDPA ; pdpa_that ; PDPA_THA ; lgpd ; LGPD ; lgpd_bra ; LGPD_BRA ;'
 solution: Experience Platform
-title: Présentation d’Adobe Experience Platform Privacy Service
+title: Présentation du Privacy Service
 topic: overview
 description: Privacy Service vous permet de faciliter la conformité automatisée aux règles de confidentialité légales dans vos opérations de données Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 5dad1fcc82707f6ee1bf75af6c10d34ff78ac311
+source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
 workflow-type: tm+mt
-source-wordcount: '1400'
+source-wordcount: '1394'
 ht-degree: 10%
 
 ---
 
 
-# Présentation de [!DNL Privacy Service] Adobe Experience Platform
+# [!DNL Privacy Service] présentation
 
 Pour offrir de meilleures expériences client, vous devez collecter et stocker les données personnelles de vos clients. Lorsque vous utilisez ces données, il est important de comprendre et de respecter la confidentialité de vos clients. Les nouvelles réglementations légales et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles et de les supprimer de vos banques de données sur demande.
 
@@ -44,7 +44,7 @@ En fonction de la nature de votre entreprise et des juridictions sous lesquelles
 
 Pour plus d&#39;informations sur les différentes réglementations légales en matière de confidentialité que [!DNL Privacy Service] gère les demandes, y compris les termes clés et les réponses aux questions les plus fréquentes, consultez la [documentation sur les réglementations en matière de confidentialité](./regulations/overview.md).
 
-Si vos opérations de données relèvent de l’une des réglementations prises en charge, consultez leur documentation pour obtenir des informations importantes, telles que les droits de confidentialité spécifiques qu’ils accordent à vos clients, et des fenêtres de conformité pour répondre aux demandes de confidentialité. Ces informations doivent être prises en compte pour déterminer comment intégrer [!DNL Privacy Service] dans votre système de gestion de la relation client et comment les clients doivent interagir avec votre site Web afin de faire des demandes de confidentialité.
+Si vos opérations de données relèvent de l’une des réglementations prises en charge, consultez leur documentation pour obtenir des informations importantes, telles que les droits de confidentialité spécifiques qu’ils accordent à vos clients, et des fenêtres de conformité pour répondre aux demandes de confidentialité. Ces informations doivent être prises en compte pour déterminer comment intégrer [!DNL Privacy Service] dans votre système de gestion de la relation client, et comment les clients doivent interagir avec votre site Web pour faire des demandes de confidentialité.
 
 En plus des règlements juridiques, toute norme organisationnelle ou industrielle applicable à votre organisation doit également être prise en compte lors de la prise de ces décisions.
 
