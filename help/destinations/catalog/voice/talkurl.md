@@ -1,21 +1,17 @@
 ---
 keywords: Boîte de réception URL de présentation ; boîte de réception URL de présentation ; boîte de réception URL de présentation ; boîte de réception URL de présentation ; URL de présentation ; URL de présentation ; URL de présentation
-title: Extension Talk URL Inbox
-seo-title: Talk URL Inbox
+title: Destination de l'extension de boîte de réception d'URL de présentation
 description: L’extension de boîte de réception d’URL de discussion est une voix de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
-seo-description: L’extension de boîte de réception d’URL de discussion est une voix de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 7aadb4b7e7c36b659490d155ad4cfa7ef0a24306
+source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 30%
+source-wordcount: '550'
+ht-degree: 28%
 
 ---
 
 
 # [!DNL Talk URL Inbox] Extension {#talk-url-extension}
-
-## Présentation {#overview}
 
 Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et l’apprentissage automatique dans le cloud pour transcrire instantanément vos messages vocaux en insights textuels.
 
