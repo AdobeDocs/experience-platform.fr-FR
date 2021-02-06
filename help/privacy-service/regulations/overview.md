@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RGD ; APCCP ; APC ; APP ; APP ; APP ; Pdpa ; LGPD ; lgpd ; aperçu ; aperçu ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; respect de la vie privée ; respect de la vie privée ;
 solution: Experience Platform
-title: Présentation des règles de confidentialité
+title: Aperçu du Règlement sur la protection des renseignements personnels
 topic: troubleshooting
 description: Ce document donne un aperçu des différentes réglementations sur la protection des renseignements personnels prises en charge par Adobe Experience Cloud.
 translation-type: tm+mt
-source-git-commit: 238a9200e4b43d41335bed0efab079780b252717
+source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 18%
