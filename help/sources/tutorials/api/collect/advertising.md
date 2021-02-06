@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform ; accueil ; rubriques populaires ; service de flux ; publicité ; mots-clés Google ; publicité
 solution: Experience Platform
-title: Collecte de données publicitaires via les connecteurs et les API source
+title: Collecte de données publicitaires à l’aide des connecteurs et des API source
 topic: overview
 type: Tutorial
-description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les importer dans la plate-forme par le biais des connecteurs source et de l’API du service de flux.
+description: Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les intégrer à la plate-forme à l’aide des connecteurs source et de l’API Flow Service.
 translation-type: tm+mt
-source-git-commit: 48a5dcfe5679e360da1e33f6021dc1229b92948f
+source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
 workflow-type: tm+mt
 source-wordcount: '1513'
 ht-degree: 22%
@@ -14,7 +14,7 @@ ht-degree: 22%
 ---
 
 
-# Collecte de données publicitaires via les connecteurs et les API source
+# Collecte de données publicitaires à l’aide des connecteurs et des API source
 
 Ce didacticiel décrit les étapes à suivre pour récupérer les données d’une application publicitaire tierce et les importer dans Adobe Experience Platform par le biais des connecteurs source et de l’API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
