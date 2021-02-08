@@ -3,19 +3,27 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; 
 solution: Experience Platform
 title: Points de terminaison de l'API prévisualisations et estimations
 topic: developer guide
-description: Les points de terminaison prévisualisations et estimations de l’API Service de segmentation Adobe Experience Platform vous permettent de vue des informations de niveau récapitulatif afin de vous assurer que vous isolez l’audience attendue dans vos segments.
+description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour vue les informations de synthèse afin de vous assurer que vous isolez l’audience attendue.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: eba6de210dcbc12b829b09ba6e7083d342517ba2
 workflow-type: tm+mt
-source-wordcount: '793'
-ht-degree: 26%
+source-wordcount: '949'
+ht-degree: 18%
 
 ---
 
 
 # Prévisualisations et estimations des points de terminaison
 
-Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d&#39;estimation et de prévisualisation dans [!DNL Adobe Experience Platform] pour vue des informations de synthèse afin de vous assurer que vous isolez l&#39;audience attendue. **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.** **Les** estimations fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur.
+Au fur et à mesure que vous développez une définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour vue des informations de synthèse afin de vous assurer que vous isolez l’audience que vous attendez.
+
+* **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.**
+
+* **Les** estimations fournissent des informations statistiques sur une définition de segment, telles que la taille d’audience estimée, l’intervalle de confiance et l’écart-type d’erreur.
+
+>[!NOTE]
+>
+>Pour accéder à des mesures similaires liées aux données du Profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de nommage spécifiques ou la banque de données de Profil dans son ensemble, consultez le [guide de point de terminaison prévisualisation de profil (exemple d&#39;état de prévisualisation)](../../profile/api/preview-sample-status.md), qui fait partie du guide de développement d&#39;API de Profil.
 
 ## Prise en main
 
@@ -23,11 +31,10 @@ Les points de terminaison utilisés dans ce guide font partie de l&#39;API [!DNL
 
 ## Comment sont générées les estimations
 
-La façon dont l’échantillonnage des données est déclenché dépend de la méthode d’assimilation.
+Lorsque l&#39;ingestion d&#39;enregistrements dans le magasin de Profils augmente ou diminue le nombre total de profils de plus de 5 %, une tâche d&#39;échantillonnage est déclenchée pour mettre à jour le nombre. La façon dont l’échantillonnage des données est déclenché dépend de la méthode d’assimilation :
 
-Pour l’assimilation par lot, le magasin de profils est automatiquement analysé toutes les quinze minutes afin de déterminer si un nouveau lot a été correctement assimilé depuis l’exécution de la dernière tâche d’échantillonnage. Si tel est le cas, le magasin de profils est ensuite analysé pour voir s&#39;il y a eu au moins 5 % de changement dans le nombre d&#39;enregistrements. Si ces conditions sont remplies, une nouvelle tâche d’échantillonnage est déclenchée.
-
-Pour l’assimilation en flux continu, le magasin de profils est automatiquement analysé toutes les heures afin de déterminer s’il y a eu au moins 5 % de changement dans le nombre d’enregistrements. Si cette condition est remplie, une nouvelle tâche d’échantillonnage est déclenchée.
+* **Importation par lot :** Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le décompte.
+* **assimilation en flux continu :** Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte.
 
 La taille d’échantillon de l’analyse dépend du nombre total d’entités présentes dans votre magasin de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
@@ -76,7 +83,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | L’expression PQL qui servira à effectuer la requête sur les données. |
 | `predicateType` | Type de prédicat pour l&#39;expression de requête sous `predicateExpression`. Actuellement, la seule valeur acceptée pour cette propriété est `pql/text`. |
-| `predicateModel` | Le nom du schéma [!DNL Experience Data Model] (XDM) sur lequel reposent les données du profil. |
+| `predicateModel` | Nom de la classe de schéma [!DNL Experience Data Model] (XDM) sur laquelle reposent les données du profil. |
 
 **Réponse**
 
@@ -172,7 +179,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 | Propriété | Description |
 | -------- | ----------- |
-| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide de [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | Liste d’identifiants d’entité, ainsi que de leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l&#39;aide du [point de terminaison de l&#39;API d&#39;accès au profil](../../profile/api/entities.md). |
 
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
@@ -206,17 +213,27 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -226,9 +243,10 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 | Propriété | Description |
 | -------- | ----------- |
-| `state` | L’état actuel de la tâche de prévisualisation. Affichera « RUNNING » jusqu’à la fin du traitement, et deviendra alors « RESULT_READY » ou « FAILED ». |
-| `_links.preview` | Lorsque l’état actuel de la tâche de prévisualisation affiche « RESULT_READY », cet attribut fournit une URL pour afficher l’estimation. |
+| `estimatedNamespaceDistribution` | Tableau d’objets indiquant le nombre de profils dans le segment ventilé par espace de nommage d’identité. Le nombre total de profils par espace de nommage (additionnant les valeurs affichées pour chaque espace de nommage) peut être supérieur à la mesure Nombre de profils, car un profil peut être associé à plusieurs espaces de nommage. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de nommage sont associés à ce client individuel. |
+| `state` | L’état actuel de la tâche de prévisualisation. L’état sera &quot;EN COURS&quot; jusqu’à ce que le traitement soit terminé, puis devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
+| `_links.preview` | Si `state` est &quot;RESULT_READY&quot;, ce champ fournit une URL pour vue de l&#39;estimation. |
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous comprenez mieux comment utiliser les prévisualisations et les estimations. Pour en savoir plus sur les autres [!DNL Segmentation Service] points de terminaison de l&#39;API, consultez le [Guide du développeur du service de segmentation](./overview.md).
+Après avoir lu ce guide, vous devez mieux comprendre comment utiliser les prévisualisations et les estimations à l’aide de l’API de segmentation. Pour savoir comment accéder aux mesures liées à vos données de Profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de nommage spécifiques ou la banque de données de Profil dans son ensemble, consultez le [guide de la prévisualisation de profil (`/previewsamplestatus`) ](../../profile/api/preview-sample-status.md).
