@@ -5,10 +5,10 @@ description: Découvrez comment rendre du contenu personnalisé avec le SDK Web 
 seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: cible ; adobe cible ; xdm vues ; vues ; applications d’une seule page ; SPA;SPA cycle de vie ; côté client ; test AB ; AB ; Ciblage d’expérience ; XT ; VEC
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '1689'
-ht-degree: 14%
+source-wordcount: '1688'
+ht-degree: 12%
 
 ---
 
@@ -33,7 +33,7 @@ Voici quelques avantages à l’utilisation du SDK Web Adobe Experience Platform
 
 ## Vues XDM et applications d’une seule page
 
-Le VEC de Adobe Target pour les applications SPA tire profit d’un nouveau concept nommé Vues : un groupe logique d’éléments visuels qui, ensemble, forment une expérience pour application d’une seule page. Par conséquent, une application d’une seule page peut être considérée comme une transition par le biais de Vues, plutôt que d’URL, en fonction des interactions de l’utilisateur. Une Vue peut généralement représenter un site entier ou des éléments visuels regroupés dans un site.
+Le Adobe Target VEC pour SPA tire parti d&#39;un concept appelé Vues : un groupe logique d’éléments visuels qui forment ensemble une expérience SPA. Par conséquent, une application d’une seule page peut être considérée comme une transition par le biais de Vues, plutôt que d’URL, en fonction des interactions de l’utilisateur. Une Vue peut généralement représenter un site entier ou des éléments visuels regroupés dans un site.
 
 Pour expliquer plus en détail les Vues, l&#39;exemple suivant utilise un site de commerce électronique en ligne hypothétique implémenté dans React pour explorer des exemples de Vues.
 
