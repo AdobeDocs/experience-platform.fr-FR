@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; résolution des problèmes ; API ; prévisualisation ; exemple
-title: Point de terminaison de l'API d'état d'profil
-description: Grâce aux points de terminaison de l’API de Profil client en temps réel, vous pouvez prévisualisation le dernier échantillon réussi de vos données de Profil, ainsi que la distribution des profils de liste par jeu de données et par espace de nommage d’identité dans Adobe Experience Platform.
+title: Point de terminaison de l’API de l’exemple de statut de prévisualisation (Prévisualisation de Profil)
+description: À l’aide de l’exemple de point de terminaison d’état de la prévisualisation, qui fait partie de l’API Profil client en temps réel, vous pouvez prévisualisation le dernier échantillon réussi de vos données de Profil, ainsi que la distribution des profils de liste par jeu de données et par espace de nommage d’identité dans Adobe Experience Platform.
 topic: guide
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5266c393b034d1744134522cf1769304f39733da
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 5%
+source-wordcount: '1655'
+ht-degree: 4%
 
 ---
 
@@ -16,13 +16,20 @@ ht-degree: 5%
 
 Adobe Experience Platform vous permet d&#39;assimiler des données client provenant de plusieurs sources afin de créer des profils unifiés robustes pour chaque client. Les données activées pour le Profil client en temps réel étant ingérées dans [!DNL Platform], elles sont stockées dans le magasin de données du Profil.
 
-Lorsque l&#39;assimilation d&#39;enregistrements dans le magasin de Profils augmente ou diminue le nombre total de profils de plus de 5 %, une tâche est déclenchée pour mettre à jour le nombre. Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte. Pour l&#39;assimilation par lot, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le décompte. L&#39;API Profil vous permet de prévisualisation de la dernière tâche d&#39;exemple réussie, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d&#39;identité.
+Lorsque l&#39;ingestion d&#39;enregistrements dans le magasin de Profils augmente ou diminue le nombre total de profils de plus de 5 %, une tâche d&#39;échantillonnage est déclenchée pour mettre à jour le nombre. La façon dont l’échantillon est déclenché dépend du type d’ingestion utilisé :
+
+* Pour **les workflows de données en flux continu**, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d&#39;augmentation ou de diminution a été atteint. Si tel est le cas, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
+* Pour **l&#39;assimilation par lot**, dans les 15 minutes suivant l&#39;assimilation réussie d&#39;un lot dans le magasin de Profils, si le seuil de 5 % d&#39;augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le décompte. L&#39;API Profil vous permet de prévisualisation de la dernière tâche d&#39;exemple réussie, ainsi que de la distribution de profil de liste par jeu de données et par espace de nommage d&#39;identité.
 
 Ces mesures sont également disponibles dans la section [!UICONTROL Profils] de l’interface utilisateur Experience Platform. Pour plus d&#39;informations sur la façon d&#39;accéder aux données de Profil à l&#39;aide de l&#39;interface utilisateur, consultez le [[!DNL Profile] guide de l&#39;utilisateur](../ui/user-guide.md).
 
+>[!NOTE]
+>
+>Il existe des points de terminaison d’estimation et de prévisualisation disponibles dans le cadre de l’API Adobe Experience Platform Segmentation Service qui vous permettent de vue des informations de niveau récapitulatif concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l&#39;utilisation de la prévisualisation de segments et des points de terminaison d&#39;estimation, consultez le [guide des points de terminaison des prévisualisations et des estimations](../../segmentation/api/previews-and-estimates.md), qui fait partie du guide du développeur d&#39;API [!DNL Segmentation].
+
 ## Prise en main
 
-Le point de terminaison API utilisé dans ce guide fait partie de l&#39;[[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
+Le point de terminaison API utilisé dans ce guide fait partie de l&#39;[[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d&#39;appels d&#39;API dans ce document et des informations importantes concernant les en-têtes requis nécessaires pour passer des appels à toute API [!DNL Experience Platform].
 
 ## Fragments de profil par rapport aux profils fusionnés
 
@@ -89,7 +96,7 @@ La réponse comprend les détails de la dernière tâche exemple réussie qui a 
 | `totalFragmentCount` | Nombre total de fragments de profil dans le magasin de Profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d&#39;assimilation par lot réussi. |
 | `streamingDriven` | *Ce champ est obsolète et ne contient aucune signification pour la réponse.* |
-| `totalRows` | Nombre total de profils fusionnés dans la plateforme Experience, également appelé &quot;nombre de profils&quot;. |
+| `totalRows` | Nombre total de profils fusionnés en Experience Platform, également appelé &quot;nombre de profils&quot;. |
 | `lastBatchId` | Dernier identifiant d&#39;assimilation par lot. |
 | `status` | État du dernier échantillon. |
 | `samplingRatio` | Ratio des profils fusionnés échantillonnés (`numRowsToRead`) par rapport au total des profils fusionnés (`totalRows`), exprimé en pourcentage au format décimal. |
@@ -189,8 +196,6 @@ La réponse comprend un tableau `data` contenant une liste d&#39;objets de jeu d
 | `createdUser` | ID utilisateur de l’utilisateur qui a créé le jeu de données. |
 | `reportTimestamp` | Horodatage du rapport. Si un paramètre `date` a été fourni pendant la demande, le rapport renvoyé correspond à la date fournie. Si aucun paramètre `date` n&#39;est fourni, le rapport le plus récent est renvoyé. |
 
-
-
 ## Répartition des profils listes par espace de nommage
 
 Vous pouvez exécuter une demande de GET au point de terminaison `/previewsamplestatus/report/namespace` pour vue la ventilation par espace de nommage d&#39;identité sur tous les profils fusionnés de votre magasin de Profils. Les espaces de nommage d&#39;identité sont un composant important du service d&#39;identité Adobe Experience Platform qui sert d&#39;indicateur du contexte auquel se rapportent les données client. Pour en savoir plus, consultez la [présentation de l&#39;espace de nommage d&#39;identité](../../identity-service/namespaces.md).
@@ -288,5 +293,4 @@ La réponse comprend un tableau `data`, avec des objets individuels contenant le
 
 ## Étapes suivantes
 
-Vous pouvez également utiliser des estimations et des prévisualisations similaires pour obtenir des informations au niveau du résumé de la vue concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l&#39;utilisation des prévisualisations de segments et des estimations à l&#39;aide de l&#39;API [!DNL Adobe Experience Platform Segmentation Service], consultez le [guide des points de terminaison des prévisualisations et estimations](../../segmentation/api/previews-and-estimates.md), qui fait partie du guide du développeur d&#39;API [!DNL Segmentation].
-
+Maintenant que vous savez comment prévisualisation des données d’exemple dans le magasin de Profils, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API du service de segmentation pour vue des informations de niveau récapitulatif concernant vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue dans votre segment. Pour en savoir plus sur l’utilisation des prévisualisations de segments et des estimations à l’aide de l’API de segmentation, consultez le [guide des points de terminaison de la prévisualisation et de l’estimation](../../segmentation/api/previews-and-estimates.md).
