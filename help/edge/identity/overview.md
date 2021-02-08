@@ -5,9 +5,9 @@ description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 seo-description: Découvrez comment obtenir l’identifiant Adobe Experience Cloud.
 keywords: Identité ; Identité propriétaire ; Service d'identité ; Identité tierce ; Migration d'identifiants ; Identifiant Visiteur ; Identité tierce ; Cookies tiersEnabled ; idMigrationEnabled ; getIdentity ; Identité de synchronisation ; Identité de synchronisation ; IdentitéSynchronisée ; EnvoiEvent ; IdentitéMap ; Principal ; Identité Espace de nommage ; Identifiant espace de nommage ; AuthentificationState ; HashEnabled ;
 translation-type: tm+mt
-source-git-commit: 60945f7f3a87568b82d968692cc7a6e07593fa01
+source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform Web SDK exploite [Adobe Identity Service](../../identi
 
 ## Identité tierce
 
-[!DNL Identity Service] permet de synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première demande d’un visiteur (par exemple, une personne sans ECID) sera envoyée à demdex.net. Cela ne sera fait que sur les navigateurs qui l’autorisent (Chrome, par exemple) et qui est contrôlé par le paramètre `thirdPartyCookiesEnabled` dans la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez `thirdPartyCookiesEnabled` sur false.
+[!DNL Identity Service] permet de synchroniser un identifiant avec un domaine tiers (demdex.net) pour activer le suivi sur plusieurs sites. Lorsque cette option est activée, la première requête d’un visiteur (par exemple, une personne sans ECID) est envoyée à demdex.net. Cette opération ne sera effectuée que sur les navigateurs qui l’autorisent (tels que Chrome) et est contrôlée par le paramètre `thirdPartyCookiesEnabled` dans la configuration. Si vous souhaitez désactiver cette fonctionnalité ensemble, définissez `thirdPartyCookiesEnabled` sur false.
 
 ## Migration des identifiants
 
