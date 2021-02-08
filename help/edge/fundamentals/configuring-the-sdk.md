@@ -5,9 +5,9 @@ description: Découvrez la procédure de configuration du SDK Web d’Experience
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configuration;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '740'
 ht-degree: 72%
 
 ---
@@ -66,6 +66,7 @@ Indique si le débogage doit être activé. La définition de cette configuratio
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ------------------ |
 | Chaîne | Non | `beta.adobedc.net` |
+| Chaîne | Non | `omtrdc.net` |
 
 Domaine utilisé pour interagir avec les services d’Adobe. Cette valeur est utilisée uniquement si vous disposez d’un domaine propriétaire (CNAME) qui effectue des requêtes proxy vers l’infrastructure Adobe Edge.
 
