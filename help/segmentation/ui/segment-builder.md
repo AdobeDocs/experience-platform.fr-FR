@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 description: 'Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 51%
+source-wordcount: '1928'
+ht-degree: 47%
 
 ---
 
@@ -100,6 +100,22 @@ Vous pouvez également vue une version basée sur un code d&#39;une règle cré�
 La vue de code fournit un bouton qui vous permet de copier la valeur du segment à utiliser dans les appels d’API. Pour obtenir la dernière version du segment, veillez à enregistrer vos dernières modifications dans le segment.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Fonctions d’agrégation
+
+Une agrégation dans [!DNL Segment Builder] est un calcul sur un groupe d&#39;attributs XDM dont le type de données est un nombre (doublon ou entier). Les quatre fonctions d’agrégation prises en charge dans le créateur de segments sont SUM, MOYENNE, MIN et MAX.
+
+Pour créer une fonction d&#39;agrégation, sélectionnez un événement dans le rail de gauche, puis insérez-le dans le conteneur [!UICONTROL Événements].
+
+![](../images/ui/segment-builder/select-event.png)
+
+Après avoir placé le événement dans le conteneur des Événements, sélectionnez l’icône des ellipses (...), puis **[!UICONTROL Agrégat]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+L’agrégation est maintenant ajoutée. Vous pouvez désormais sélectionner la fonction d’agrégation, choisir l’attribut à agrégat, la fonction d’égalité, ainsi que la valeur. Pour l’exemple ci-dessous, ce segment peut être inclus dans tout profil dont la somme des valeurs achetées est supérieure à 100 USD, même si chaque achat individuel est inférieur à 100 USD.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Conteneurs
 
