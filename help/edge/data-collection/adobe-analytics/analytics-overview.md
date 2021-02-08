@@ -5,10 +5,10 @@ description: Découvrez comment envoyer des données à Adobe Analytics avec le 
 seo-description: Découvrez comment envoyer des données à Adobe Analytics avec le SDK Web d’Experience Platform
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 translation-type: tm+mt
-source-git-commit: db742119d8f169817080f1fd4e0dc08a0f0faa47
+source-git-commit: 723711ee0c2b7b5ca4aea617a81241dbebbc839c
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 81%
+source-wordcount: '207'
+ht-degree: 77%
 
 ---
 
@@ -23,7 +23,7 @@ Adobe Analytics récupère automatiquement les données que vous envoyez si une 
 
 ## Données mappées automatiquement
 
-Le Adobe Experience Platform [!DNL Edge Network] mappe automatiquement de nombreuses variables XDM. La liste complète des variables mappées automatiquement se trouve [ici](automatically-mapped-vars.md).
+Le Adobe Experience Platform [!DNL Edge Network] mappe automatiquement de nombreuses variables XDM. La liste complète de ces variables est [ici](automatically-mapped-vars.md).
 
 ## Données mappées manuellement
 
