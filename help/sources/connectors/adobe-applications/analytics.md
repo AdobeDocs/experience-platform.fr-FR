@@ -5,7 +5,7 @@ title: Connecteur de source Adobe Analytics pour les données d’une suite de r
 topic: overview
 description: Ce document fournit un aperçu d’Analytics et décrit les cas d’utilisation des données Analytics.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: e480ce789c849db24713da312345ea3162e617a6
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 46%
@@ -49,7 +49,7 @@ Pour obtenir des informations détaillées sur le mappage des champs qui se prod
 | -------------- | ---------------- |
 | Nouvelles données à [!DNL Real-time Customer Profile] (A4T **non** activé) | &lt; 2 minutes |
 | Nouvelles données à [!DNL Real-time Customer Profile] (A4T **est** activé) | &lt; 15 minutes |
-| Nouvelles données pour le lac de données | &lt; 45 minutes |
+| Nouvelles données pour le lac de données | &lt; 90 minutes |
 | Renvoi des données (13 mois de données ou 10 milliards d’événements, selon la valeur la plus faible) | &lt; 4 semaines |
 
 >[!NOTE]
