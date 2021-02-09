@@ -5,9 +5,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par email, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document liste la table des matières pour les destinations Adobe Experience Platform
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f98fb81fee57151e6424355f64bccb29c5669dad
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '339'
 ht-degree: 51%
 
 ---
@@ -129,3 +129,4 @@ ht-degree: 51%
       * [Balises d’appel](./catalog/voice/invoca.md)
       * [Medallia](./catalog/voice/medallia.md)
       * [Talk URL Inbox](./catalog/voice/talkurl.md)
+* [Notes de mise à jour de la plateforme](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
