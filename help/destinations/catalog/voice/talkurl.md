@@ -1,11 +1,11 @@
 ---
 keywords: Boîte de réception URL de présentation ; boîte de réception URL de présentation ; boîte de réception URL de présentation ; boîte de réception URL de présentation ; URL de présentation ; URL de présentation ; URL de présentation
-title: Destination de l'extension de boîte de réception d'URL de présentation
+title: Extension Talk URL Inbox
 description: L’extension de boîte de réception d’URL de discussion est une voix de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 28%
 
 ---
