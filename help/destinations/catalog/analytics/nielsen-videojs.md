@@ -1,12 +1,12 @@
 ---
 keywords: Nielsen VideoJS Player Handler ; nielsen video js player ; nielsen videojs player ; Nielsen ; nielsen ; nielsen ; Nielsen videojs player ; Nielsen Digital SDK ; nielsen digital sdk
-title: Destination de l’extension du gestionnaire du lecteur vidéo Nielsen VideoJS
+title: Extension Nielsen VideoJS Player Handler
 description: L’extension Nielsen VideoJS Player Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '614'
-ht-degree: 33%
+source-wordcount: '613'
+ht-degree: 34%
 
 ---
 
