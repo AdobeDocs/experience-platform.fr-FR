@@ -1,11 +1,11 @@
 ---
 keywords: extensions facebook;extension facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
-title: Destination de l'extension Facebook
+title: Extension Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '951'
 ht-degree: 12%
 
 ---
