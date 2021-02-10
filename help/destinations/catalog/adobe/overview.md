@@ -3,10 +3,10 @@ keywords: destinations ; solutions de cloud d’expériences ; cible ; destinati
 title: Présentation des destinations Adobe
 description: Gérez votre expérience client en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 24%
+source-wordcount: '220'
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ Gérez votre expérience client en connectant vos données dans Adobe Experience
 
 Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et Catégories de destination.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Connexion Adobe Campaign](../email-marketing/adobe-campaign.md)
 
 ## Extensions
 
