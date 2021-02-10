@@ -1,12 +1,12 @@
 ---
 keywords: Questionnaires Intercept QuestionPro ; questionnaires intercept questionpro ; QuestionPro ; questionpro
-title: Destination de l'extension Intercept Questionnaires QuestionPro
+title: Extension Intercept Surveys de QuestionPro
 description: L'extension Intercept Questionnaires de QuestionPro est une destination questionnaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 24%
+source-wordcount: '531'
+ht-degree: 25%
 
 ---
 
