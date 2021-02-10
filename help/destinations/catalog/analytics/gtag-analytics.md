@@ -1,12 +1,12 @@
 ---
 keywords: Google Global Site Tag;gtag;google gtag;google extension;google gtag extension;GTAG
-title: Destination de l’extension de balise de site globale Google
+title: Extension Google Global Site Tag
 description: L’extension Google Global Site Tag est une destination d’analyse à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 25%
+source-wordcount: '526'
+ht-degree: 26%
 
 ---
 
