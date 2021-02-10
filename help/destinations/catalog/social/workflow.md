@@ -1,10 +1,10 @@
 ---
 keywords: Facebook ; facebook ; réseau social ; réseau social ; authentification du réseau social ; authentification du réseau social ; authentification du réseau social
-title: Création d’une destination de réseau social
+title: Créer une destination de réseau social
 type: Tutorial
 description: Découvrez comment vous connecter à vos comptes publicitaires de réseaux sociaux à Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 52%
