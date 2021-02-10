@@ -1,11 +1,11 @@
 ---
 keywords: Confirmer les commentaires numériques ; confirmer l’extension ; confirmer
-title: Confirmer la destination de l'extension de commentaires numérique
+title: Extension Confirmit Digital Feedback
 description: L’extension Confirmer les commentaires numériques est une option de la destination du client à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '562'
 ht-degree: 26%
 
 ---
