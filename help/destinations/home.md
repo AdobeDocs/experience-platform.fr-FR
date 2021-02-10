@@ -5,10 +5,10 @@ seo-title: Présentation des destinations
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour des campagnes marketing inter-canaux, des courriels, des publicités ciblées, etc.
 seo-description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les Destinations dans la Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 40%
+ht-degree: 38%
 
 ---
 
@@ -43,7 +43,7 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 
 Pour plus d’informations, consultez la [présentation des types et catégories de destination](./destination-types.md).
 
-## Destinations et contrôles d’accès  {#access-controls}
+## Destinations et contrôles d&#39;accès {#access-controls}
 
 La fonctionnalité de destinations dans Platform fonctionne avec les autorisations de contrôle d&#39;accès Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas.
 
