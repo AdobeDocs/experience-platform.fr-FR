@@ -1,11 +1,11 @@
 ---
 keywords: balises d'avion ; destination du navire
-title: Destination de la connexion des balises d'avion
+title: Connexion aux balises d'avion
 description: Transmettez en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant que balises d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1196'
 ht-degree: 13%
 
 ---
