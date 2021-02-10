@@ -1,12 +1,12 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Web Commentaires;Qualtrics Web feedback;Qualtrics Web feedback;Qualtricks webfeedback feedback
-title: Destination de l’extension d’évaluation du site Web Qualice
+title: Extension Website Feedback de Qualtrics
 description: L'extension Commentaires du site Web Qualtrics est une destination questionnaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 29%
+source-wordcount: '589'
+ht-degree: 30%
 
 ---
 
