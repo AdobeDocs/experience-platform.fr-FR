@@ -1,11 +1,11 @@
 ---
 keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; adobe campaign ; campaign
-title: Destination de la connexion Adobe Campaign
+title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 41%
 
 ---
