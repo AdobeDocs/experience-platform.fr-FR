@@ -1,11 +1,11 @@
 ---
 keywords: extension de la cible ; cible ; cible v2 ; cible v2 extension
-title: Destination de l’extension Adobe Target v2
+title: Extension Adobe Target v2
 description: L’extension Adobe Target v2 est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '530'
 ht-degree: 47%
 
 ---
