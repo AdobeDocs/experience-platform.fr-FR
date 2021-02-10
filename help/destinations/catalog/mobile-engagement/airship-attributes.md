@@ -1,11 +1,11 @@
 ---
 keywords: attributs du navire de transport aérien ; destination du navire de transport aérien
-title: Destination de la connexion des attributs du navire
+title: Connexion aux attributs du navire
 description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1204'
 ht-degree: 13%
 
 ---
