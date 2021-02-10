@@ -1,11 +1,11 @@
 ---
 keywords: destination de l’enregistrement cloud ; enregistrement cloud
-title: Création d’une destination d’Enregistrement Cloud
+title: Création d’une destination d’enregistrement cloud
 type: Tutorial
 description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 seo-description: Instructions pour se connecter aux emplacements de stockage dans le cloud
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 49%
