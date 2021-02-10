@@ -1,9 +1,9 @@
 ---
-keywords: extensions facebook;extension facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
-title: Extension Facebook
+keywords: connexion facebook;connexion facebook;destinations facebook;facebook;instagram;messenger;facebook messenger Messenger
+title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 12%
@@ -11,7 +11,7 @@ ht-degree: 12%
 ---
 
 
-# [!DNL Facebook] extension
+# [!DNL Facebook] connexion
 
 >[!IMPORTANT]
 >
