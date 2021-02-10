@@ -1,11 +1,11 @@
 ---
 keywords: mobile ; braquer; messagerie ;
-title: Destination de la connexion au braquage
+title: Connexion au frein
 description: Braze est une plate-forme d'engagement client complète qui permet d'offrir des expériences pertinentes et mémorables entre les clients et les marques qu'ils aiment.
 translation-type: tm+mt
-source-git-commit: f4095a90ff70e8d054bae4f3b0f884552ffd30df
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '931'
 ht-degree: 5%
 
 ---
