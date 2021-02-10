@@ -5,10 +5,10 @@ seo-title: Présentation des destinations
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour des campagnes marketing inter-canaux, des courriels, des publicités ciblées, etc.
 seo-description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les Destinations dans la Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: fc0813b457f039c0f0fa965df2d1100170424d23
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
 source-wordcount: '493'
-ht-degree: 38%
+ht-degree: 35%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 38%
 
 ## Destinations et sources {#destinations-and-sources}
 
-L’une des fonctionnalités de base de Platform consiste à ingérer vos données propriétaires et à les activer en fonction de vos besoins professionnels. Utilisez les sources pour importer des données dans la plate-forme et les destinations pour exporter des données de la plate-forme.
+L’une des fonctionnalités de base de Platform consiste à ingérer vos données propriétaires et à les activer en fonction de vos besoins professionnels. Utilisez [sources](../sources/home.md) pour importer des données dans la plate-forme et les destinations pour exporter des données à partir de la plate-forme.
 
 ## Étapes des destinations {#steps}
 
 * Choisissez dans un [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
-* Utilisez les **[!UICONTROL destinations]** pour [activer](./ui/activate-destinations.md) et envoyer des profils ou des segments aux plateformes d’automatisation marketing, de publicité numérique, etc.
+* Utilisez les destinations pour [activer](./ui/activate-destinations.md) et envoyer des profils ou des segments aux plateformes d’automatisation marketing, aux plateformes de publicité numérique, etc.
 * Planifiez régulièrement des exportations de données vers les destinations de votre choix.
 
 ## Commandes {#controls}
