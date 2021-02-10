@@ -1,12 +1,12 @@
 ---
 keywords: InMoment;intime;Intime;launch integration
-title: Destination de l’extension InMoment
+title: Extension InMoment
 description: L’extension InMoment est une destination questionnaire à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 27%
+source-wordcount: '537'
+ht-degree: 28%
 
 ---
 
