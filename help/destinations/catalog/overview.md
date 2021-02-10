@@ -1,19 +1,19 @@
 ---
 keywords: Catalogue;catalogue
-title: Catalogue des destinations
-seo-title: Catalogue des destinations
-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
-seo-description: Le catalogue des destinations offre une liste des destinations disponibles et prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
+title: Présentation du catalogue des destinations
+seo-title: Présentation du catalogue des destinations
+description: Le catalogue Destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
+seo-description: Le catalogue Destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 82%
+source-wordcount: '177'
+ht-degree: 65%
 
 ---
 
 
-# Catalogue des destinations 
+# Présentation du catalogue des destinations
 
 Le catalogue de destinations fournit une liste des plateformes de destination disponibles prêtes à recevoir des données. Ces plateformes de destination incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, des extensions Experience Platform, et bien plus encore.
 
