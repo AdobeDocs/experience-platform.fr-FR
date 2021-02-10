@@ -1,11 +1,11 @@
 ---
 keywords: gestionnaire de publicités Google ; publicité Google ; doubleclick ; DoubleClick AdX ; DoubleClick ; Google Ad Manager ; Google Ad Manager
-title: Destination de la connexion Google Ad Manager
+title: Connexion à Google Ad Manager
 description: 'Google Ad Manager, anciennement appelé DoubleClick for Publishers ou DoubleClick AdX, est une plateforme de service publicitaire de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, par le biais de vidéos et dans des applications mobiles.  '
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '675'
 ht-degree: 34%
 
 ---
