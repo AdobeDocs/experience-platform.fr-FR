@@ -5,10 +5,10 @@ seo-title: Présentation du catalogue des destinations
 description: Le catalogue Destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 seo-description: Le catalogue Destinations fournit une liste des destinations disponibles prêtes à recevoir des données. Ces destinations incluent des solutions Adobe, des plateformes publicitaires, d’enquête et de marketing par e-mail, et bien plus encore.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 62%
+source-wordcount: '198'
+ht-degree: 61%
 
 ---
 
@@ -29,6 +29,7 @@ Vous pouvez activer vos données dans différentes catégories de destination de
 - [Présentation des destinations de stockage dans le cloud](./cloud-storage/overview.md)
 - [Présentation des destinations DMP (data Management Platform)](./data-management/overview.md)
 - [Présentation des destinations du marketing par email](./email-marketing/overview.md)
+- [Présentation des destinations d’engagement mobiles](./mobile-engagement/overview.md)
 - [Présentation des destinations de personnalisation](./personalization/overview.md)
 - [Présentation des destinations de réseau social](./social/overview.md)
 - [Présentation des destinations d’enquête](./survey/overview.md)
