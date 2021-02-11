@@ -3,9 +3,9 @@ keywords: publicité ; le bureau de commerce ;
 title: Connexion au bureau de commerce
 description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d''annonces publicitaires d''exécuter des reciblages et d''audience de campagnes numériques ciblées à l''échelle de l''affichage, de la vidéo et des sources d''inventaire mobiles. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '540'
 ht-degree: 5%
 
 ---
@@ -50,7 +50,6 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 * **[!UICONTROL Nom]** : Nom par lequel vous reconnaîtrez cette destination dans le futur.
 * **[!UICONTROL Description]** : Description qui vous aidera à identifier cette destination dans le futur.
 * **[!UICONTROL ID]** du compte : Votre ID [!DNL Trade Desk] de compte.
-* **[!UICONTROL Secret]** client : Le  `clientSecret` paramètre utilisé dans les informations d’identification du  [!DNL OAuth2] client.
 * **[!UICONTROL Emplacement]** du serveur : Demandez à votre  [!DNL The Trade Desk] représentant quel serveur régional vous devriez utiliser. Voici les serveurs régionaux disponibles :
 
    * **[!UICONTROL Europe]**
