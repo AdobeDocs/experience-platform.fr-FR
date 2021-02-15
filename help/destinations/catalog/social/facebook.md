@@ -3,10 +3,10 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
 workflow-type: tm+mt
-source-wordcount: '951'
-ht-degree: 12%
+source-wordcount: '1001'
+ht-degree: 11%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->La migration des clients vers les nouvelles versions de destination est actuellement en cours. Tant que la migration n’est pas terminée, vous ne verrez que les [!UICONTROL E-MAIL] et [!UICONTROL E-MAIL_LC_SHA_256] identités disponibles pour cette destination.
+>Nous migrons actuellement les clients vers la nouvelle version de cette destination, [!DNL Facebook Custom Audience].
+>
+> Les instructions de cet article s&#39;appliquent aux deux versions, avec la remarque suivante : pendant que cette migration est en cours, vous ne verrez que la version actuelle de la destination [!DNL Facebook] dans l’interface utilisateur, où vous pouvez uniquement utiliser les identités [!UICONTROL EMAIL] et [!UICONTROL EMAIL_LC_SHA_256] pour l’activation.
 
 Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 
@@ -55,7 +57,7 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les ID d&#39;
 
 Avant d’envoyer vos segments ciblés à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-- L&#39;autorisation [!DNL Facebook] doit être activée pour votre compte d&#39;utilisateur **[!DNL Manage campaigns]** pour le compte d&#39;annonce que vous prévoyez d&#39;utiliser.
+- L&#39;autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte d&#39;utilisateur [!DNL Facebook] pour le compte d&#39;annonce que vous prévoyez d&#39;utiliser.
 - Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d&#39;informations, consultez [Ajouter des partenaires à votre gestionnaire d&#39;entreprise](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
    >[!IMPORTANT]
    >
@@ -95,9 +97,12 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
    - Exemple : `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, et non `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Ne salez pas la chaîne.
 
-Les données des espaces de nommage non hachés sont automatiquement hachées par [!DNL Platform] à l&#39;activation.
+>[!NOTE]
+>
+>Les données des espaces de nommage non hachés sont automatiquement hachées par [!DNL Platform] à l&#39;activation.
+> Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation.
+> L&#39;option **[!UICONTROL Appliquer la transformation]** s&#39;affiche uniquement lorsque vous sélectionnez des attributs comme champs source. Elle ne s’affiche pas lorsque vous choisissez des espaces de nommage.
 
-Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hachage automatiquement les données sur l’activation.
 ![Transformation du mappage des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Utilisation d’espaces de nommage personnalisés {#custom-namespaces}
