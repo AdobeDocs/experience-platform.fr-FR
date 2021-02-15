@@ -6,7 +6,7 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
 source-wordcount: '2141'
 ht-degree: 15%
@@ -60,7 +60,7 @@ S&#39;applique à : destinations sociales et destination publicitaire Google Cus
 
 Pour les destinations sociales, vous devez sélectionner des attributs source ou des espaces de nommage d’identité à mapper en tant qu’identités de cible dans la destination.
 
-#### Exemple : activation des données d&#39;audience dans [!DNL Facebook] {#example-facebook}
+#### Exemple : activation des données d&#39;audience dans [!DNL Facebook Custom Audience] {#example-facebook}
 
 Il s&#39;agit d&#39;un exemple de mappage d&#39;identité correct lors de l&#39;activation des données d&#39;audience dans [!DNL Facebook].
 
