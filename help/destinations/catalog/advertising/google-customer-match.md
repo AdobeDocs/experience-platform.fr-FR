@@ -3,9 +3,9 @@ keywords: correspondance client Google ; correspondance client Google ; correspo
 title: Connexion Google Customer Match
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
 workflow-type: tm+mt
-source-wordcount: '1470'
+source-wordcount: '1498'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->La migration des clients vers les nouvelles versions de destination est actuellement en cours. Tant que la migration n’est pas terminée, vous ne verrez que les [!UICONTROL E-MAIL] et [!UICONTROL E-MAIL_LC_SHA_256] identités disponibles pour cette destination.
+>Nous migrons actuellement les clients vers la nouvelle version de cette destination.
+>
+> Les instructions de cet article s&#39;appliquent aux deux versions, avec la remarque suivante : pendant que cette migration est en cours, vous ne verrez que la version actuelle de la destination [!DNL Google Customer Match] dans l’interface utilisateur, où vous pouvez uniquement utiliser les identités [!UICONTROL EMAIL] et [!UICONTROL EMAIL_LC_SHA_256] pour l’activation.
 
 [Les ](https://support.google.com/google-ads/answer/6379332?hl=en) correspondances clients de Google vous permettent d&#39;utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, par exemple :  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] et  [!DNL YouTube].
 
@@ -139,7 +141,7 @@ Sélectionnez **[!UICONTROL Créer la destination]** après avoir renseigné les
 
 ![Connexion à la correspondance client Google - étape d’authentification](../../assets/catalog/advertising/google-customer-match/authentication.png)
 
-Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, voir la section suivante, [Activer les segments à [!DNL Google Customer Match]](#activate-segments), pour le reste du flux de travail.
+Votre destination est maintenant créée. Vous pouvez sélectionner **[!UICONTROL Enregistrer et quitter]** si vous souhaitez activer les segments ultérieurement. Sélectionnez **[!UICONTROL Suivant]** pour poursuivre le workflow et choisir les segments à activer. Dans les deux cas, consultez la section suivante, [Activer les segments à [!DNL Google Customer Match]](#activate-segments), pour le reste du flux de travail.
 
 ## Activer les segments dans [!DNL Google Customer Match] {#activate-segments}
 
