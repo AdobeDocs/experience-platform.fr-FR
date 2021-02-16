@@ -6,10 +6,10 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 translation-type: tm+mt
-source-git-commit: b7e8a1a72ed199440748f570f13ea844f3276682
+source-git-commit: 090050d89c628d82ebe1da6625a2ef1f2adf3e6c
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 54%
+source-wordcount: '149'
+ht-degree: 52%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 54%
    * [Extension SDK Web](extension/web-sdk-extension.md)
    * [Types d’actions](extension/action-types.md)
    * [Types d’éléments de données](extension/data-element-types.md)
+   * [Notes de mise à jour de l’extension SDK Web](extension/web-sdk-ext-release-notes.md)
 * [Notes de mise à jour](release-notes.md)
 * [Questions fréquentes](web-sdk-faq.md)
 * [Publications de blog](blog-posts.md)
