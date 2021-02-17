@@ -5,10 +5,10 @@ title: Guide de l’interface utilisateur du créateur de segments
 topic: ui guide
 description: 'Le créateur de segments de l’interface utilisateur Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de Profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. '
 translation-type: tm+mt
-source-git-commit: 8fc1c5414f38e84ed1700ee95b1c382007ff2c27
+source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
 workflow-type: tm+mt
-source-wordcount: '1928'
-ht-degree: 47%
+source-wordcount: '1896'
+ht-degree: 48%
 
 ---
 
@@ -163,7 +163,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 >
 >Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de segments.
 
-## Étapes suivantes et ressources supplémentaires {#next-steps}
+## Étapes suivantes {#next-steps}
 
 Le créateur de segments offre un flux de travail riche qui vous permet d’isoler les audiences commercialisables des données [!DNL Real-time Customer Profile]. Après avoir lu ce guide, vous devriez maintenant pouvoir :
 
@@ -173,16 +173,4 @@ Le créateur de segments offre un flux de travail riche qui vous permet d’isol
 - activer toutes les définitions de segment pour la segmentation planifiée ;
 - activer des définitions de segment spécifiques pour la segmentation par flux.
 
-Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos ci-dessous. Pour en savoir plus sur les autres parties de l&#39;interface utilisateur [!DNL Segmentation Service], consultez le [[!DNL Segmentation Service] guide d&#39;utilisateur](./overview.md).
-
->[!WARNING]
->
-> L&#39;interface utilisateur [!DNL Platform] affichée dans les vidéos suivantes est obsolète. Reportez-vous à la documentation ci-dessus pour obtenir les dernières captures d&#39;écran et fonctionnalités de l&#39;interface utilisateur.
-
-**Création d’un segment:**
-
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
-
-**Créez un segment dynamique :**
-
->[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)
+Pour en savoir plus sur [!DNL Segmentation Service], veuillez continuer à lire la documentation et compléter votre apprentissage en regardant les vidéos connexes. Pour en savoir plus sur les autres parties de l&#39;interface utilisateur [!DNL Segmentation Service], consultez le [[!DNL Segmentation Service] guide d&#39;utilisateur](./overview.md).
