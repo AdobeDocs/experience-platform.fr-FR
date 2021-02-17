@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des segments et générez des audiences à partir de vos données de profil client en temps réel.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 88%
+source-wordcount: '152'
+ht-degree: 78%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 88%
    - [Tableau de bord de segment](ui/segment-dashboard.md)
    - [Créateur de segments](ui/segment-builder.md)
    - [Segmentation par flux](ui/streaming-segmentation.md)
+   - [Segmentation en flux continu (vidéo)](video/streaming-segmentation-overview.md)
    - [Réfactorisation des contraintes de temps](ui/segment-refactoring.md)
 - [Respect du droit d’opposition](honoring-opt-outs.md)
 - [Segmentation d’entités multiples](multi-entity-segmentation.md)
@@ -51,6 +52,9 @@ ht-degree: 88%
    - [Fonctions diverses](pql/misc-functions.md)
 - Tutoriels {#tutorials}
    - [Création d’un segment](tutorials/create-a-segment.md)
+   - [Création d’un segment (vidéo)](video/create-segment.md)
+   - [Création d’un segment dynamique (vidéo)](video/create-a-dynamic-segment.md)
+   - [Création d’un segment à plusieurs entités (vidéo)](video/create-multi-entity-segments.md)
    - [Évaluation d’un segment](tutorials/evaluate-a-segment.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
