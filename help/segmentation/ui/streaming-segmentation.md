@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de segmentation en flux continu
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '769'
 ht-degree: 1%
 
 ---
@@ -75,12 +75,6 @@ Pour plus d’informations sur l’évaluation du dernier segment, sélectionnez
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 Pour plus d&#39;informations sur les définitions de segment, consultez la section précédente sur [les détails de la définition de segment](#segment-details).
-
-## Démo vidéo de segmentation en flux continu
-
-La vidéo suivante est destinée à vous aider à comprendre la segmentation en flux continu. Il présente un exemple d&#39;expérience client suivi d&#39;une visite rapide des principales fonctionnalités de l&#39;interface [!DNL Platform].
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Étapes suivantes
 
