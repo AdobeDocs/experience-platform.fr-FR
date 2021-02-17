@@ -5,9 +5,9 @@ title: Guide de l’interface utilisateur de segmentation en flux continu
 topic: ui guide
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer la segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données arrivent dans la plate-forme, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segmentation peuvent désormais être évaluées lorsque les données sont transmises à la plate-forme, ce qui signifie que l’appartenance à un segment est tenue à jour sans exécuter les tâches de segmentation planifiées.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '802'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,9 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation par lot ne seront pas évaluées par la segmentation en flux continu et seront évaluées en même temps que la tâche segmentée programmée de nuit.
+>La segmentation en flux continu ne peut être utilisée que pour évaluer les données diffusées en continu dans la plate-forme. En d’autres termes, les données ingérées par assimilation par lot ne seront pas évaluées par la segmentation en flux continu et seront évaluées avec la tâche de segment programmée de nuit.
+>
+>De plus, les segments évalués avec la segmentation en flux continu peuvent dériver entre l’adhésion idéale et l’adhésion réelle si le segment est basé sur un autre segment qui est évalué à l’aide de la segmentation par lot. Par exemple, si le segment A est basé sur le segment B et que le segment B est évalué à l’aide de la segmentation par lot, puisque le segment B n’est mis à jour que toutes les 24 heures, le segment A s’éloigne davantage des données réelles jusqu’à ce qu’il se resynchronise avec la mise à jour du segment B.
 
 ## Types de requête de segmentation en flux continu
 
