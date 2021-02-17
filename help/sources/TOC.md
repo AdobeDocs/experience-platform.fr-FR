@@ -5,10 +5,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 16%
+source-wordcount: '557'
+ht-degree: 17%
 
 ---
 
@@ -117,6 +117,8 @@ ht-degree: 16%
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/api/create/protocols/odata.md)
+      - Diffusion en continu {#streaming}
+         - API HTTP [ ](tutorials/api/create/streaming/http.md)
    - Exploration des données {#explore}
       - [Explorer les données publicitaires](tutorials/api/explore/advertising.md)
       - [Explorer les données d’enregistrement de cloud](tutorials/api/explore/cloud-storage.md)
@@ -196,6 +198,8 @@ ht-degree: 16%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
+      - Diffusion en continu {#streaming}
+         - API HTTP [ ](tutorials/ui/create/streaming/http.md)
    - Configurer un flux de données {#dataflow}
       - [Flux de données de connexion publicitaire](tutorials/ui/dataflow/advertising.md)
       - [Flux de données de connexion d’enregistrement de cloud de lot](tutorials/ui/dataflow/batch/cloud-storage.md)
