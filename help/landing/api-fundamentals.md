@@ -5,7 +5,7 @@ title: Principes de base de l’API Experience Platform
 topic: getting started
 description: Ce document donne un bref aperçu de certaines technologies et syntaxes sous-jacentes impliquées dans les API Experience Platform.
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 54%
@@ -120,7 +120,7 @@ De nombreuses opérations de PATCH pour les API [!DNL Platform] acceptent les ob
 
 En fonction du type d’opération indiqué dans `op`, l’objet du correctif JSON peut nécessiter des propriétés supplémentaires. Pour plus d’informations sur les différentes opérations de correctif JSON et leur syntaxe obligatoire, reportez-vous à la [documentation du correctif JSON](http://jsonpatch.com/).
 
-## Schéma JSON
+## Schéma JSON {#json-schema}
 
 Le schéma JSON est un format utilisé pour décrire et valider la structure des données JSON. [Le modèle de données d’expérience (XDM)](../xdm/home.md) tire parti des fonctionnalités du schéma JSON pour imposer des contraintes sur la structure et le format des données d’expérience client ingérées. Pour plus d’informations sur le schéma JSON, consultez la [documentation officielle](https://json-schema.org/).
 
