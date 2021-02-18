@@ -1,19 +1,17 @@
 ---
-title: Exécution des commandes
-seo-title: Exécution des commandes du SDK Web d’Adobe Experience Platform
+title: Exécuter les commandes du SDK Web Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
-seo-description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
-keywords: Exécution des commandes ; commandName ; Promises ; getLibraryInfo ; objets response ; consentement ;
+keywords: Exécuter les commandes ; commandName ; Promises ; getLibraryInfo ; objets response ; consentement ;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 73%
+source-wordcount: '417'
+ht-degree: 70%
 
 ---
 
 
-# Exécution des commandes
+# Exécuter les commandes
 
 Une fois le code de base implémenté sur votre page web, vous pouvez commencer à exécuter des commandes à l’aide du SDK. Il n’est pas nécessaire d’attendre que le fichier externe (alliage.js) soit chargé à partir du serveur avant d’exécuter les commandes. Si le chargement du SDK n’est pas terminé, les commandes sont mises en file d’attente et traitées dès que possible par le SDK.
 
