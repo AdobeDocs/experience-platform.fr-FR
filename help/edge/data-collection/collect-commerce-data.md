@@ -1,19 +1,17 @@
 ---
-title: Produits
-seo-title: Prise en charge des produits avec le SDK Web d’Adobe Experience Platform
-description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
-seo-description: Découvrez comment ajouter des données si vous disposez de produits ou d’un panier d’achat avec le SDK Web Experience Platform
+title: Collecte d’informations commerciales et de produits à l’aide du SDK Web Adobe Experience Platform
+description: Découvrez comment ajouter des données liées à des produits ou à un panier à l’aide du Adobe Experience Platform Web SDK.
 keywords: produits;commerce;mesures;mesure;order;cartAbandons;passages en caisse;productListAdds;productListOpen;productListRemovals;productListReouvertures;productListViews;productViews;purchase;saveForLaters;currencyCode;paiements;paiementAmount;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 translation-type: tm+mt
-source-git-commit: c34cd52301d812655c85d4e1bca42049204f9403
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 97%
+source-wordcount: '1321'
+ht-degree: 95%
 
 ---
 
 
-# Collecte du commerce et des produits
+# Collecte d’informations sur le commerce et les produits
 
 Si votre site contient des produits, il s’agit d’un ensemble par défaut d’éléments que vous souhaiterez peut-être envoyer pour activer les fonctionnalités essentielles d’Adobe. Bien qu’il s’agisse d’une suggestion, un ensemble très solide de données est fourni dès le départ.
 
@@ -67,7 +65,7 @@ L’objet de commerce dispose également d’un champ spécial pour la collecte 
 |  | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) pour ce mode de paiement. |
 |  | [paymentAmount](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymentamount) | Fortement recommandé | Valeur du paiement dans le code de devise spécifié. |
 |  | [paymentType](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype) | Fortement recommandé | Type de paiement (par exemple, `credit_card`, `gift_card`, `paypal`). Voir la liste des [valeurs connues](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmpaymenttype-known-values) pour obtenir des détails. |
-|  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | Facultatif | Identifiant unique pour cette transaction de paiement. |
+|  | [transactionID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/paymentitem.schema.md#xdmtransactionid) | Facultatif | ID unique pour cette transaction de paiement. |
 | [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpricetotal) |  | Fortement recommandé | Total de cette commande une fois toutes les remises et taxes appliquées. |
 | [purchaseID](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseid) |  | Fortement recommandé | Identifiant unique attribué par le vendeur pour cet achat. |
 | [purchaseOrderNumber](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/data/order.schema.md#xdmpurchaseordernumber) |  | Facultatif | Identifiant unique attribué par l’acheteur pour cet achat. |
