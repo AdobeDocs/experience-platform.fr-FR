@@ -1,14 +1,12 @@
 ---
-title: Interaction avec plusieurs propriétés
-seo-title: Interaction avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
-seo-description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform
+title: Interaction avec plusieurs propriétés dans le SDK Web Adobe Experience Platform
+description: Découvrez comment interagir avec plusieurs propriétés du SDK Web d’Adobe Experience Platform.
 keywords: plusieurs propriétés ; configure;sendEvent;edgeConfigId;orgId ;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 85%
+source-wordcount: '245'
+ht-degree: 78%
 
 ---
 
