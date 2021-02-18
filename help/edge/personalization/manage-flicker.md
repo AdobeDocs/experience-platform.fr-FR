@@ -1,14 +1,12 @@
 ---
-title: Gestion de Flicker pour les expériences personnalisées
-seo-title: Adobe Experience Platform Web SDK gestion du scintillement
-description: Découvrez comment gérer le scintillement sur les expériences des utilisateurs
-seo-description: Découvrez comment gérer le scintillement à l’aide des propriétés Experience Platform Web SDK
+title: Gestion de Flicker pour les expériences personnalisées à l’aide du SDK Web Adobe Experience Platform
+description: Découvrez comment utiliser le Adobe Experience Platform Web SDK pour gérer le scintillement sur les expériences des utilisateurs.
 keywords: cible ; scintillement ; prehideStyle ; asynchrone ; asynchrone ;
 translation-type: tm+mt
-source-git-commit: e0f992eafbb973fa1c48acc3b165788137d143a4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 75%
+source-wordcount: '492'
+ht-degree: 76%
 
 ---
 
