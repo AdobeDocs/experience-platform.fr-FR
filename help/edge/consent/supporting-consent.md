@@ -1,19 +1,17 @@
 ---
-title: Prise en charge du consentement
-seo-title: Prise en charge des préférences de consentement du SDK Web d’Adobe Experience Platform
-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
-seo-description: Découvrez comment prendre en charge les préférences de consentement avec le SDK Web d’Experience Platform
+title: Prise en charge des préférences de consentement des clients à l’aide du SDK Web Adobe Experience Platform
+description: Découvrez comment prendre en charge les préférences de consentement avec le Adobe Experience Platform Web SDK.
 keywords: consentement ; defaultConsent ; consentement par défaut ; setConsent ; mélange de confidentialité des Profils ; mélange de confidentialité des Événements d’expérience ; mélange de confidentialité ;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '766'
-ht-degree: 62%
+source-wordcount: '760'
+ht-degree: 58%
 
 ---
 
 
-# Prise en charge du consentement
+# Prise en charge des préférences de consentement du client
 
 Pour respecter la confidentialité des utilisateurs, vous pouvez leur demander leur consentement avant d’autoriser le SDK à utiliser des données spécifiques à ceux-ci à certains usages. Actuellement, le SDK permet aux utilisateurs de donner ou de refuser leur consentement uniquement pour tous les usages, mais Adobe espère prochainement offrir un contrôle plus précis sur des usages spécifiques.
 
