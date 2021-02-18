@@ -1,14 +1,12 @@
 ---
-title: Suivi des événements
-seo-title: Suivi des événements du SDK Web d’Adobe Experience Platform
-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
-seo-description: Découvrez la procédure de suivi des événements du SDK Web d’Experience Platform
+title: Suivi des Événements à l’aide du SDK Web Adobe Experience Platform
+seo-description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 51a846124f71012b2cb324cc1469ec7c9753e574
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1342'
-ht-degree: 58%
+source-wordcount: '1334'
+ht-degree: 57%
 
 ---
 
