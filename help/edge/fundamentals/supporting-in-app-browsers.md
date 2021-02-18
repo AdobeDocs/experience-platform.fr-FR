@@ -1,14 +1,12 @@
 ---
-title: Prise en charge des navigateurs intégrés aux applications
-seo-title: Prise en charge des navigateurs intégrés aux applications avec le SDK Web d’Adobe Experience Platform
-description: Découvrez comment prendre en charge les navigateurs intégrés aux applications avec le SDK Web d’Experience Platform
-seo-description: Découvrez comment prendre en charge les navigateurs intégrés aux applications avec le SDK Web d’Experience Platform
+title: Prise en charge des navigateurs intégrés aux applications avec le Adobe Experience Platform Web SDK
+description: Découvrez comment prendre en charge les navigateurs intégrés à l’application avec le SDK Web de Adobe Experience Platform.
 keywords: navigateurs in-app ; navigateurs ;
 translation-type: tm+mt
-source-git-commit: 8c256b010d5540ea0872fa7e660f71f2903bfb04
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 86%
+source-wordcount: '112'
+ht-degree: 66%
 
 ---
 
