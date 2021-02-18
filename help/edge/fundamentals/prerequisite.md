@@ -1,13 +1,11 @@
 ---
 title: Conditions préalables à l’utilisation du SDK Web Adobe Experience Platform
-seo-title: Conditions préalables à l’utilisation du SDK Web Adobe Experience Platform
-description: Conditions préalables à l’utilisation du SDK Web Adobe Experience Platform
-seo-description: Conditions préalables à l’utilisation du SDK Web Adobe Experience Platform
+description: Découvrez les conditions préalables à l’utilisation du SDK Web de Adobe Experience Platform.
 keywords: Domaine propriétaire ; CNAME ; schéma ; créer un schéma ; lancement ; extension sdk web aep ; extension ; id de configuration ; outil de configuration ; élément de données ; créer un élément de données ; objet XDM ; sendEvent ; envoyer le Événement ;
 translation-type: tm+mt
-source-git-commit: a19b4384e2ea64eb9ab5f0f5443fd329ec44a2a0
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '270'
 ht-degree: 2%
 
 ---
