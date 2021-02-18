@@ -1,19 +1,17 @@
 ---
-title: Configuration Edge
-seo-title: Configuration Edge pour le SDK Web Experience Platform
+title: Création d’une configuration Edge pour le SDK Web Experience Platform
 description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
-seo-description: 'Découvrez comment configurer le réseau Edge Experience Platform. '
 keywords: configuration;edge;edge configuration id;Environnement Settings;edgeConfigId;identity;id sync enabled;ID Sync Conteneur ID;Sandbox;Streaming Inlet;Événement Dataset;cible;code client;jeton de propriété;ID d'Environnement de Cible;Destinations de cookies;URL Destinations;Analytics Settings Blockreport suite id;
 translation-type: tm+mt
-source-git-commit: 94b3faf3157f4e1f4e46b6055914a04883dc44fa
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '916'
 ht-degree: 2%
 
 ---
 
 
-# Configuration du bord
+# Création d’une configuration de bord
 
 La configuration du SDK Web Adobe Experience Platform est fractionnée en deux emplacements. La commande [configure](configuring-the-sdk.md) du SDK contrôle les éléments qui doivent être traités sur le client, comme la commande `edgeDomain`. La configuration edge gère toutes les autres configurations pour le SDK. Lorsqu&#39;une requête est envoyée au réseau Edge de Adobe Experience Platform, `edgeConfigId` est utilisé pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
