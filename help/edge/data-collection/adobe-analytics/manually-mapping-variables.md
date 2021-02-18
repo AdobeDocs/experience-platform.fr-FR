@@ -1,14 +1,13 @@
 ---
-title: Mappage manuel des variables dans Adobe Analytics
-seo-title: Mappage manuel des variables en Adobe Analytics avec le SDK Web
-description: Comment mapper manuellement des variables dans Adobe Analytics à l’aide de règles de traitement
+title: Mappage manuel des variables Adobe Analytics dans le SDK Web Adobe Experience Platform
+description: Découvrez comment mapper manuellement des variables en Adobe Analytics à l’aide de règles de traitement dans le SDK Web Experience Platform.
 seo-description: Mappage manuel de variables dans Adobe Analytics à l’aide de règles de traitement avec le SDK Web
 keywords: adobe analytics ; analytics ; variables ; variables de mappage ; variables de mappage ; variables de mappage ; contextData ; données contextuelles ; règles de traitement ; règles ; xdm ; schéma ;
 translation-type: tm+mt
-source-git-commit: 206b5addd6baf5a120b469b21313ee86ac1fe53b
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 34%
+source-wordcount: '405'
+ht-degree: 33%
 
 ---
 
