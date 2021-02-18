@@ -1,19 +1,17 @@
 ---
-title: 'Adobe Target et Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK et utilisation de Adobe Target
+title: Utilisation de Adobe Target avec la plate-forme Web SDK
 description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
-seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: cible;adobe cible;activité.id;experience.id;renderDecision;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;audiences;Decision;scope;schéma;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '632'
 ht-degree: 4%
 
 ---
 
 
-# [!DNL Target] Présentation
+# Utilisation de Adobe Target avec la plate-forme Web SDK
 
 Adobe Experience Platform [!DNL Web SDK] peut fournir et générer des expériences personnalisées gérées dans Adobe Target sur le canal Web. Vous pouvez utiliser un éditeur WYSIWYG, appelé [compositeur d’expérience visuelle](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou une interface non visuelle, le [compositeur d’expérience d’après les formulaires](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), pour créer, activer et fournir vos activités et expériences de personnalisation.
 
