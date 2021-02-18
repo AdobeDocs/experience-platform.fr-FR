@@ -1,13 +1,12 @@
 ---
-title: Variables mappées automatiquement en Adobe Analytics
-seo-title: Variables automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Adobe Experience Platform
+title: Variables Adobe Analytics mappées automatiquement dans le kit de développement Web Adobe Experience Platform
 description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
-seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le SDK Web Experience Platform
+seo-description: Découvrez quelles variables sont automatiquement mises en correspondance en Adobe Analytics avec le kit de développement Web Adobe Experience Platform.
 keywords: adobe analytics ; variables ; analytics ; carte automatique ; mappage automatique ;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '681'
 ht-degree: 35%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 35%
 
 # Les variables sont automatiquement mises en correspondance dans [!DNL Analytics]
 
-Voici une liste de variables que Adobe Experience Platform Edge Network mappe automatiquement dans [!DNL Analytics].
+Vous trouverez ci-dessous une liste de variables que Adobe Experience Platform Edge Network mappe automatiquement dans Adobe Analytics.
 
 | Chemin d’accès au champ XDM | [!DNL Analytics Query String] / En-tête HTTP | Description |
 | ---------- | ------------------------- | ----------------------------------------- |
