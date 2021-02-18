@@ -1,21 +1,19 @@
 ---
-title: 'Adobe Target et Adobe Experience Platform Web SDK. '
-seo-title: Adobe Experience Platform Web SDK et utilisation de Adobe Target
-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
-seo-description: Découvrez comment rendre du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
+title: Mise en oeuvre d’applications d’une seule page pour le SDK Web Adobe Experience Platform
+description: Découvrez comment créer une mise en oeuvre d’application d’une seule page (SPA) du kit Adobe Experience Platform Web SDK à l’aide de Adobe Target.
 keywords: cible ; adobe cible ; xdm vues ; vues ; applications d’une seule page ; SPA;SPA cycle de vie ; côté client ; test AB ; AB ; Ciblage d’expérience ; XT ; VEC
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1688'
+source-wordcount: '1665'
 ht-degree: 12%
 
 ---
 
 
-# Mise en œuvre d’une application d’une seule page
+# Implémentation d’applications d’une seule page
 
-Adobe Experience Platform Web SDK fournit des fonctionnalités riches qui permettent à votre entreprise d’exécuter la personnalisation sur des technologies de nouvelle génération côté client, telles que les applications d’une seule page (SPA).
+Adobe Experience Platform Web SDK fournit des fonctionnalités riches qui permettent à votre entreprise d’exécuter la personnalisation sur des technologies client de prochaine génération, telles que les applications d’une seule page (SPA).
 
 Les sites Web traditionnels fonctionnaient sur des modèles de navigation « page à page », appelés également applications multi-pages dans lesquelles les conceptions de site Web étaient étroitement couplées à des URL et les transitions d’une page Web à une autre nécessitaient un chargement de page.
 
@@ -25,7 +23,7 @@ Les applications Web modernes, telles que les applications d’une seule page, o
 
 ## Avantages de Platform Web SDK pour SPA
 
-Voici quelques avantages à l’utilisation du SDK Web Adobe Experience Platform pour vos applications d’une seule page :
+Voici quelques avantages liés à l’utilisation du SDK Web de Adobe Experience Platform pour vos applications d’une seule page :
 
 * Capacité à mettre en cache toutes les offres au chargement de la page afin de passer de plusieurs appels serveur à un seul appel serveur.
 * Améliorez considérablement l’expérience des utilisateurs de votre site, car les offres sont affichées immédiatement par le cache sans délai lors des appels traditionnels au serveur.
@@ -64,7 +62,7 @@ Le concept de Vue peut être étendu bien plus loin que cela. Ce ne sont là que
 Les Vues XDM peuvent être exploitées dans Adobe Target pour permettre aux spécialistes du marketing d’exécuter des tests A/B et XT sur SPA via le compositeur d’expérience visuelle. Pour ce faire, vous devez exécuter les étapes suivantes afin de terminer la configuration unique d’un développeur :
 
 1. Installer [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
-2. Déterminez toutes les Vues XDM de votre application d&#39;une seule page que vous souhaitez personnaliser.
+2. Déterminez toutes les Vues XDM de votre application d’une seule page que vous souhaitez personnaliser.
 3. Après avoir défini les Vues XDM, afin de fournir des activités du compositeur d’expérience visuelle AB ou XT, implémentez la fonction `sendEvent()` avec `renderDecisions` définie sur `true` et la Vue XDM correspondante dans votre application d’une seule page. La Vue XDM doit être transmise dans `xdm.web.webPageDetails.viewName`. Cette étape permet aux spécialistes du marketing d’exploiter le compositeur d’expérience visuelle pour lancer les tests A/B et XT pour ces XDM.
 
    ```javascript
