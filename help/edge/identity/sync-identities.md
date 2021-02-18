@@ -1,19 +1,18 @@
 ---
-title: Synchronisation des identités avec l’Audience Manager et le Adobe Experience Platform
-seo-title: Synchronisation des identités avec l’Audience Manager et Adobe Experience Platform avec Adobe Experience Platform Web SDK
-description: Découvrez comment synchroniser les identités avec Adobe Audience Manager avec le SDK Web Experience Platform
+title: Synchronisation des identités entre l’Audience Manager et Adobe Experience Platform à l’aide du SDK Web de la plate-forme
+description: Découvrez comment synchroniser les identités entre l'Audience Manager et Adobe Experience Platform à l'aide du SDK Web de la plate-forme
 seo-description: Découvrez comment synchroniser les identités avec Adobe Audience Manager avec le SDK Web Experience Platform
 keywords: gestionnaire d'audiences ; aam ; identités ; identités synchronisées ; espace de nommage ;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
 
-# Synchronisation des identités
+# Synchronisation des identités entre l’Audience Manager et l’Experience Platform
 
 Adobe Experience Platform Web SDK prend en charge la possibilité de déclarer les ID de client et leurs états d’authentification via la commande [sendEvent](./overview.md#syncing-identities).
 
