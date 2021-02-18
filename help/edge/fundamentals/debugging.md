@@ -1,14 +1,12 @@
 ---
-title: Débogage
-seo-title: Débogage du SDK Web d’Adobe Experience Platform
-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
-seo-description: Découvrez comment activer/désactiver le débogage du SDK Web d’Experience Platform
+title: Débogage dans le SDK Web Adobe Experience Platform
+description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk Web ; débogage ; configuration ; commande ; configuration ; commande de débogage ; edgeConfigId ; setDebug ; debugEnabled ; debug ;
 translation-type: tm+mt
-source-git-commit: f63c897dd1a8a8ad9ef7ac025bf05b22265ea95a
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 89%
+source-wordcount: '392'
+ht-degree: 84%
 
 ---
 
