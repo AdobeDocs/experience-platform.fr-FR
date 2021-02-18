@@ -1,21 +1,19 @@
 ---
-title: Informations collectées automatiquement
-seo-title: Informations automatiquement collectées par le SDK Web d’Adobe Experience Platform
-description: Description de chaque information collectée automatiquement par Adobe Experience Cloud SDK
-seo-description: Description de chaque information collectée automatiquement par Adobe Experience Cloud SDK
+title: Informations collectées automatiquement dans le SDK Web Adobe Experience Platform
+description: Présentation de chaque élément d’informations que le kit Adobe Experience Platform SDK collecte automatiquement.
 keywords: collecter des informations ; contexte ; configurer ; périphérique ; hauteur de l’écran ; orientation de l’écran ; orientation de l’écran ; largeur d’écran ; largeur d’écran ; environnement ; hauteur de la fenêtre d’affichage ; hauteur de la fenêtre d’affichage ; largeur de la fenêtre d’affichage ; détails de l’écran ; détails de l’implémentation ; détails de l’implémentation ; nom ; version ; contexte local ; heure locale ; local ; local;décalage du fuseau horaire local;horodatage;web;url;webPageDetails;web PageDetails;webReferrer;web Parrain;paysage;portrait;
 translation-type: tm+mt
-source-git-commit: 0928dd3eb2c034fac14d14d6e53ba07cdc49a6ea
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 74%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 
 
 # Informations collectées automatiquement
 
-Adobe Experience Platform Web SDK collecte automatiquement un certain nombre d’informations sans configuration particulière. Toutefois, ces informations peuvent être désactivées si nécessaire à l’aide de l’option `context` de la commande `configure`. [Voir Configuration du SDK](../fundamentals/configuring-the-sdk.md). Vous trouverez ci-dessous la liste de ces informations. Le nom entre parenthèses indique la chaîne à utiliser lors de la configuration du contexte.
+Le Adobe Experience Platform Web SDK collecte automatiquement un certain nombre d’informations sans configuration particulière. Toutefois, ces informations peuvent être désactivées si nécessaire à l’aide de l’option `context` de la commande `configure`. [Voir Configuration du SDK](../fundamentals/configuring-the-sdk.md). Vous trouverez ci-dessous la liste de ces informations. Le nom entre parenthèses indique la chaîne à utiliser lors de la configuration du contexte.
 
 ## Appareil (`device`)
 
