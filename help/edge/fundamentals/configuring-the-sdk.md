@@ -1,19 +1,18 @@
 ---
-title: Configuration du SDK
-seo-title: Configuration du SDK Web Adobe Experience Platform
-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
+title: Configuration du SDK Web Adobe Experience Platform
+description: Découvrez comment configurer le SDK Web de Adobe Experience Platform.
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
-keywords: configuration;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Activé ; idMigrationEnabled ; thirdPartyCookiesEnabled ;
 translation-type: tm+mt
-source-git-commit: 3ac00fda2c0a43437fb212dcba7e98c63503b9c4
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 72%
+source-wordcount: '741'
+ht-degree: 70%
 
 ---
 
 
-# Configuration du SDK
+# Configuration de Platform Web SDK
 
 La configuration du SDK est effectuée à l’aide de la commande `configure`.
 
