@@ -1,12 +1,10 @@
 ---
-title: FAQ sur le SDK Web
-seo-title: FAQ sur le SDK Web Adobe Experience Platform
-description: Questions fréquentes sur Adobe Experience Platform Web SDK
-seo-description: Questions fréquentes sur Adobe Experience Platform Web SDK
+title: FAQ sur le SDK Web Adobe Experience Platform
+description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f4f0b00dfd324f69aa2b4348740f6e767e86a6de
+source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1804'
 ht-degree: 2%
 
 ---
@@ -14,7 +12,7 @@ ht-degree: 2%
 
 # Questions fréquemment posées 
 
-Ce forum aux questions comprend les questions souvent posées au sujet de l&#39;Adobe Web SDK.
+Ce guide fournit des réponses aux questions fréquemment posées au sujet du SDK Web de Adobe Experience Platform.
 
 ## Qu’est-ce que le SDK Web Adobe Experience Platform ?
 
@@ -138,7 +136,7 @@ Oui, Adobe Experience Platform Web SDK fournit une fonctionnalité de migration 
 
 Non. Vous pouvez télécharger vous-même le fichier `alloy.js`.
 
-Cependant :
+Toutefois :
 
 * Le SDK Web de Adobe Experience Platform nécessite un identifiant de configuration Experience Edge pour que le réseau Edge puisse identifier le flux et déterminer ce qu’il faut faire avec les données. Cet identifiant est créé dans l’Experience Platform Launch. Cela ne signifie pas que vous devez utiliser l’Experience Platform Launch pour créer des propriétés ou déployer le code JavaScript, mais vous devez utiliser l’Experience Platform Launch pour créer un ID de configuration.
 
