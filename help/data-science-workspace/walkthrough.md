@@ -203,7 +203,7 @@ Dans cette section, vous déclarez tous les algorithmes dans un tableau appelé 
 
 ![](./images/walkthrough/training_scoring.png)
 
-Pour le score, vous prenez la différence moyenne en pourcentage entre les `weeklySalesAhead` prédites et les valeurs réelles dans les données `y_test`. Puisque vous souhaitez minimiser la différence entre votre prédiction et le résultat réel, le régresseur d&#39;augmentation du rayonnement est le modèle le plus performant.
+Pour le score, vous prenez la différence moyenne en pourcentage entre les `weeklySalesAhead` prédites et les valeurs réelles dans les données `y_test`. Puisque vous souhaitez minimiser la différence entre votre prévision et le résultat réel, le régresseur d’augmentation du rayonnement est le modèle le plus performant.
 
 #### Visualisation des prédictions
 
