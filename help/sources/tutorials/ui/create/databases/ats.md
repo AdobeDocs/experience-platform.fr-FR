@@ -31,7 +31,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Didacticiel](../../../../../xdm/tutorials/create-schema-ui.md) sur l’éditeur de schéma : Découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de Schémas.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 
-Si vous disposez déjà d’une connexion ATS valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur [la configuration d’un flux de données](../../dataflow/databases.md).
+Si vous disposez déjà d&#39;une connexion ATS valide, vous pouvez ignorer le reste de ce document et passer au didacticiel sur [la configuration d&#39;un flux de données](../../dataflow/databases.md).
 
 ### Collecte des informations d’identification requises
 
