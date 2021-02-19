@@ -209,7 +209,7 @@ Notez que chaque instance de l’ID de client de votre organisation s’affiche 
 
 ## Importer la ressource à l&#39;aide de l&#39;API
 
-Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une demande de POST au point de terminaison `/import` de l’API de registre de Schéma. Consultez la section sur [l&#39;importation d&#39;une ressource XDM dans l&#39;API](../api/export-import.md#import) pour plus d&#39;informations sur la configuration de l&#39;appel pour envoyer le schéma à l&#39;organisation et au sandbox IMS de votre choix.
+Une fois que vous avez copié le fichier JSON d’exportation pour le schéma, vous pouvez l’utiliser comme charge utile pour une demande de POST au point de terminaison `/import` de l’API de registre de Schéma. Voir la section sur l&#39;[importation d&#39;une ressource XDM dans l&#39;API](../api/export-import.md#import) pour plus d&#39;informations sur la configuration de l&#39;appel pour envoyer le schéma à l&#39;organisation IMS et au sandbox de votre choix.
 
 ## Étapes suivantes
 
