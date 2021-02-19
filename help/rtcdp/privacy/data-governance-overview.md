@@ -5,9 +5,9 @@ seo-title: Gouvernance des données sur la plateforme des données clients en te
 description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 seo-description: 'La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 40%
 
 ---
@@ -31,17 +31,17 @@ Le CDP en temps réel est construit sur Adobe Experience Platform et la majorit�
 
 Pour plus d’informations sur l’utilisation des libellés d’utilisation des données, consultez le [Guide de l’utilisateur des libellés d’utilisation des données](../../data-governance/labels/overview.md) pour Adobe Experience Platform.
 
-## Configurer des cas d&#39;utilisation marketing pour les destinations {#destinations}
+## Configurer des actions marketing pour les destinations {#destinations}
 
-Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des cas d’utilisation marketing (également appelés actions marketing) pour cette destination. Un cas d’utilisation marketing pour une destination indique l’intention des données qui seront exportées vers cette destination.
+Vous pouvez définir des restrictions d’utilisation des données sur une destination en définissant des actions marketing (également appelées cas d’utilisation marketing) pour cette destination. Une action marketing pour une destination indique l’intention des données qui seront exportées vers cette destination.
 
 >[!NOTE]
 >
 >Pour plus d&#39;informations sur les actions marketing et leur utilisation dans les stratégies d&#39;utilisation des données, consultez la [présentation des stratégies d&#39;utilisation des données](../../data-governance/policies/overview.md) dans la documentation [!DNL Experience Platform].
 
-La définition de cas d’utilisation marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des cas d’utilisation marketing appropriés à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
+La définition d’actions marketing sur les destinations vous permet de vous assurer que tous les profils ou segments envoyés vers ces destinations sont conformes aux stratégies d’utilisation des données. Par conséquent, vous devez ajouter des actions marketing appropriées à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
-Les cas d’utilisation marketing ne peuvent être sélectionnés que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des cas d’utilisation marketing s’affiche à différents moments du processus de configuration. Consultez la [documentation relative aux destinations](../destinations/overview.md) pour savoir comment configurer votre destination particulière.
+Les actions marketing ne peuvent être sélectionnées que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, l’opportunité de configurer des actions marketing s’affiche à différents moments du processus de configuration. Consultez la [documentation relative aux destinations](../destinations/overview.md) pour savoir comment configurer votre destination particulière.
 
 ## Gestion des politiques d’utilisation des données   {#policies}
 
