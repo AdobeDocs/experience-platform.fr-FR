@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; mixins ; détails du travail ; travail profil ;
+keywords: Experience Platform ; accueil ; thèmes populaires ; schéma ; Schéma ; XDM ; profil individuel ; champs ; schémas ; Schémas ; conception de Schéma ; mixin ; détails du travail ; travail profil ;
 solution: Experience Platform
 title: Mixage des détails des contacts professionnels
 topic: overview
