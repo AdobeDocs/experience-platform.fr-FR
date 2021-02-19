@@ -184,7 +184,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
-| `entityId` | Chaque élément du tableau de payload doit fournir l’identifiant unique d’un jeu de données. |
+| `entityId` | Chaque élément du tableau de payload doit fournir l’ID unique d’un jeu de données. |
 | `entityMeta.fields` | (Facultatif) Tableau de chaînes [JSON Pointer](../../landing/api-fundamentals.md#json-pointer), référençant des champs spécifiques dans le schéma du jeu de données. Si ce tableau est inclus, seuls les champs contenus dans le tableau participent à l&#39;évaluation. Les champs de schéma qui ne sont pas inclus dans la baie ne participent pas à l&#39;évaluation.<br><br>Si ce champ n&#39;est pas inclus, tous les champs du schéma de jeux de données seront inclus dans l&#39;évaluation. |
 
 **Réponse**
