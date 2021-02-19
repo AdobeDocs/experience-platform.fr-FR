@@ -13,7 +13,7 @@ ht-degree: 35%
 
 # Extension Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
 
-Il s’agit de l’extension [!DNL Advertising Cloud] permettant d’implémenter les balises de conversion et de segment [!DNL Advertising Cloud] pour les DSP et les recherches (DCO n’est pas pris en charge actuellement).
+Il s’agit de l’extension [!DNL Advertising Cloud] permettant d’implémenter les balises de conversion et de segment [!DNL Advertising Cloud] pour les DSP et les recherches (DCO n’est pas actuellement pris en charge).
 
 Adobe Advertising Cloud est une extension de publicité à Adobe Experience Platform.
 
