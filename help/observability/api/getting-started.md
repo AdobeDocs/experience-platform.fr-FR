@@ -19,7 +19,7 @@ L&#39;API [!DNL Observability Insights] vous permet de récupérer des données 
 
 ## Lecture d’exemples d’appels API
 
-La documentation de l&#39;API [!DNL Observability Insights] fournit des exemples d&#39;appels d&#39;API pour montrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, consultez la section sur la manière de lire des exemples d&#39;appels d&#39;API dans le [guide de dépannage Experience Platform](../../landing/troubleshooting.md).
+La documentation de l&#39;API [!DNL Observability Insights] fournit des exemples d&#39;appels d&#39;API pour montrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d&#39;informations sur les conventions utilisées dans la documentation pour les exemples d&#39;appels d&#39;API, consultez la section sur la façon de lire des exemples d&#39;appels d&#39;API dans le [guide de dépannage Experience Platform](../../landing/troubleshooting.md).
 
 ## En-têtes requis
 
