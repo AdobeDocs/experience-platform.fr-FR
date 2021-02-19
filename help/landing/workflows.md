@@ -33,7 +33,7 @@ Le flux de travail **[!UICONTROL Importer la recette]** vous permet d&#39;import
 
 Le flux de travail **[!UICONTROL Créer un modèle]** vous permet de créer un modèle d’apprentissage automatique. Pour plus d&#39;informations sur ce processus, consultez le [didacticiel de formation et d&#39;évaluation du modèle](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-Le processus **[!UICONTROL Publier un modèle en tant que service]** permet de publier un modèle créé en tant que service pouvant être noté. Vous trouverez plus d&#39;informations sur ce flux de travaux dans le didacticiel de [publication d&#39;un modèle en tant que service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Le processus **[!UICONTROL Publier un modèle en tant que service]** permet de publier un modèle créé en tant que service pouvant être noté. Vous trouverez plus d&#39;informations sur ce flux de travail dans le didacticiel de [publication d&#39;un modèle en tant que service](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ## Étapes suivantes
 
