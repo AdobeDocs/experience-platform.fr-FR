@@ -3,9 +3,9 @@ keywords: 'publicité ; bing; '
 title: Connexion Microsoft Bing
 description: Avec la destination de la connexion Microsoft Bing, vous pouvez exécuter le reciblage et l'audience de campagnes numériques ciblées dans Microsoft Display Advertising.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '454'
 ht-degree: 6%
 
 ---
@@ -54,7 +54,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 * **[!UICONTROL Nom]** : Nom par lequel vous reconnaîtrez cette destination dans le futur.
 * **[!UICONTROL Description]** : Description qui vous aidera à identifier cette destination dans le futur.
 * **[!UICONTROL ID]** du compte : Votre  [!DNL Bing Ads CID].
-* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation du marketing, voir la [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md) page. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing définis par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Action]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Authentification de destination Microsoft Bing](../../assets/catalog/advertising/bing/authentication.png)
 
