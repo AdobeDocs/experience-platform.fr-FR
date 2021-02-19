@@ -3,10 +3,10 @@ keywords: e-mail ; e-mail ; e-mail ; destinations e-mail ; adobe campaign ; camp
 title: Connexion Adobe Campaign
 description: Adobe Campaign est un ensemble de solutions qui permet de personnaliser les campagnes et de les diffuser via tous vos canaux en ligne et hors ligne.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 41%
+source-wordcount: '713'
+ht-degree: 37%
 
 ---
 
@@ -47,6 +47,7 @@ Dans **[!UICONTROL Informations de base]**, renseignez les informations pertinen
 - **[!UICONTROL Chemin]** du dossier : Indiquez le chemin d’accès à l’emplacement de votre enregistrement où Platform déposera vos données d’exportation au format CSV ou tabulé.
 - **[!UICONTROL Conteneur]** :  *Pour les connexions* Blob. Conteneur contenant l’objet Blob dans lequel se trouve le chemin d’accès du dossier.
 - **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+- **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Informations de base sur Campaign](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
