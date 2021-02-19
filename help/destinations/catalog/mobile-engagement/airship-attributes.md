@@ -3,9 +3,9 @@ keywords: attributs du navire de transport aérien ; destination du navire de tr
 title: Connexion aux attributs du navire
 description: Transmettre en toute transparence les données d'Audience d'Adobe au navire de transport aérien en tant qu'attributs d'Audience pour le ciblage au sein du navire de transport aérien.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1201'
 ht-degree: 13%
 
 ---
@@ -89,7 +89,7 @@ Une fois vos informations d’identification confirmées et que Adobe Experience
 
 À l&#39;étape **[!UICONTROL Authentification]**, entrez **[!UICONTROL Nom]** et **[!UICONTROL Description]** pour votre flux d&#39;activation.
 
-Cette étape vous permet également de sélectionner le centre de données des États-Unis ou de l&#39;Union européenne, en fonction du centre de données [!DNL Airship] qui s&#39;applique à cette destination. Enfin, sélectionnez un ou plusieurs cas d’utilisation marketing pour lesquels les données seront exportées vers la destination. Vous pouvez choisir parmi les cas d’utilisation marketing définis par l’Adobe ou créer les vôtres. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
+Cette étape vous permet également de sélectionner le centre de données des États-Unis ou de l&#39;Union européenne, en fonction du centre de données [!DNL Airship] qui s&#39;applique à cette destination. Enfin, sélectionnez une ou plusieurs **[!UICONTROL actions marketing]** pour lesquelles les données seront exportées vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer les vôtres. Pour plus d&#39;informations sur les actions marketing, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 Sélectionnez **[!UICONTROL Créer une destination]** après avoir rempli les champs ci-dessus.
 
