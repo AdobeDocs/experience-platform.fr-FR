@@ -70,7 +70,7 @@ Une réponse réussie renvoie un payload contenant les détails de l’expérien
 }
 ```
 
-## Création et exécution d’une exécution de formation ou de notation {#experiment-training-scoring}
+## Création et exécution d’une exécution de formation ou de notation  {#experiment-training-scoring}
 
 Vous pouvez créer des exécutions de formation ou de notation en exécutant une requête POST ainsi qu’en fournissant un identifiant d’expérience valide et en spécifiant la tâche d’exécution. Les exécutions de notation ne peuvent être créées que si elles sont associées à une exécution de formation réussie. La création réussie d’une exécution de formation initie la procédure de formation du modèle, tandis que son achèvement réussi génère un modèle formé. La génération de modèles formés remplace les modèles qui existaient auparavant, de sorte qu’une expérience ne peut utiliser qu’un seul modèle formé à un moment donné.
 
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant les détails de l’exécution qui vient d’être créée, y compris les paramètres de formation ou d’évaluation par défaut hérités et l’identifiant unique de l’exécution (`{RUN_ID}`).
+Une réponse réussie renvoie un payload contenant les détails de l’exécution qui vient d’être créée, y compris les paramètres de formation ou d’évaluation par défaut hérités et l’ID unique de l’exécution (`{RUN_ID}`).
 
 ```json
 {
