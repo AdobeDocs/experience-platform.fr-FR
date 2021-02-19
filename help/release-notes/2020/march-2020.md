@@ -86,13 +86,13 @@ Pour en savoir plus, consultez la [présentation des destinations](../../destina
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform [!DNL Identity Service] vous aide à mieux vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et impactées en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous aide à mieux vue de votre client et de son comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et impactées en temps réel.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Graphique privé amélioré | La fonctionnalité Graphique privé a été améliorée afin de réduire la latence de génération de graphiques d&#39;un traitement par lots hebdomadaire à un graphique actualisé quotidien, ce qui permet à [!DNL Identity Service] clients d&#39;accéder à des graphiques d&#39;identité et des liens d&#39;identité plus à jour. |
+| Graphique privé amélioré | La fonctionnalité Graphique privé a été améliorée afin de réduire la latence de génération de graphiques d&#39;un traitement par lots hebdomadaire à un graphique actualisé quotidiennement, ce qui permet à [!DNL Identity Service] clients d&#39;accéder à des graphiques d&#39;identité et des liens d&#39;identité plus à jour. |
 
 **Problèmes connus**
 
