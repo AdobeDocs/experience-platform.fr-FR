@@ -27,7 +27,7 @@ Le tableau suivant décrit les champs d’un schéma d’événement d’expéri
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Un identifiant de requête unique |
 | **`dataSource`** |  | Configuré sur « 1 » pour tous les clients. |
-| `dataSource._id` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | L’identifiant unique de cette source de données. Fourni par la personne ou le système qui a créé la source de données. |
+| `dataSource._id` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | L’ID unique de cette source de données. Fourni par la personne ou le système qui a créé la source de données. |
 | `dataSource.code` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Un raccourci vers la valeur @id complète. Vous pouvez utiliser au moins un code ou une valeur @id. Parfois, ce code est appelé code d’intégration de la source de données. |
 | `dataSource.tags` | Une valeur générée par le système qui ne peut pas être transmise avec la requête. | Les balises servent à indiquer la façon dont les alias représentés par une source de données spécifique doivent être interprétés par les applications utilisant ces alias.<br><br>Exemples :<br><ul><li>`isAVID` : sources de données représentant les identifiants de visiteurs Analytics.</li><li>`isCRSKey` : sources de données représentant des alias qui doivent être utilisés comme clés dans CRS.</li></ul>Les balises sont définies lors de la création de la source de données, mais elles sont également incluses dans les messages de pipeline lors du référencement d’une source de données spécifique. |
 | **`timestamp`** | Date et heure d’événement |
