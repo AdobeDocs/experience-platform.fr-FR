@@ -50,7 +50,7 @@ Une fois que vous avez sélectionné vos [!DNL Classifications] jeux de données
 
 ## Vérifier vos classifications
 
-L&#39;étape **[!UICONTROL Réviser]** s&#39;affiche, ce qui vous permet de revoir vos [!DNL Classifications] jeux de données sélectionnés avant de les créer. Les détails sont regroupés dans les catégories suivantes :
+L&#39;étape **[!UICONTROL Réviser]** s&#39;affiche, ce qui vous permet de vérifier vos [!DNL Classifications] jeux de données sélectionnés avant de les créer. Les détails sont regroupés dans les catégories suivantes :
 
 * **[!UICONTROL Connexion]** : Affiche la plate-forme source et l&#39;état de la connexion.
 * **[!UICONTROL Type]** de données : Affiche le nombre de  [!DNL Classifications]personnes sélectionnées.
