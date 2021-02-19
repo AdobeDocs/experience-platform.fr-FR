@@ -29,7 +29,7 @@ Le profil accepte à la fois les données **record** et **séries chronologiques
 
 Comme tous les services de plate-forme, le Profil exige que ses données soient structurées sémantiquement sous un schéma de modèle de données d’expérience (XDM). À son tour, ce schéma doit avoir une **identité Principale** définie et être activé pour utilisation dans le Profil.
 
-Si XDM ne vous est pas familier, début avec l&#39;[présentation XDM](../xdm/home.md) pour en savoir plus. Consultez ensuite le guide de l&#39;utilisateur XDM pour savoir comment [définir des champs d&#39;identité](../xdm/tutorials/create-schema-ui.md#identity-field) et [activer un schéma pour Profil](../xdm/tutorials/create-schema-ui.md#profile).
+Si XDM ne vous est pas familier, début avec l&#39;[aperçu XDM](../xdm/home.md) pour en savoir plus. Consultez ensuite le guide de l&#39;utilisateur XDM pour savoir comment [définir des champs d&#39;identité](../xdm/tutorials/create-schema-ui.md#identity-field) et [activer un schéma pour Profil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Où les données de Profil sont-elles stockées ?
 
