@@ -41,7 +41,7 @@ Les comportements définissent la nature des données qu’un schéma décrit. C
 
 Une classe définit la structure de base des propriétés communes que tous les schémas basés sur cette classe doivent contenir et détermine quels mixins peuvent être utilisés dans ces schémas. Chaque classe doit être associée à un comportement existant. Pour plus d&#39;informations sur l&#39;utilisation des classes dans l&#39;API, reportez-vous au [guide des points de terminaison des classes](./classes.md).
 
-## Mélanges
+## Mixins
 
 Les mixins sont des composants réutilisables qui définissent un ou plusieurs champs qui représentent un concept particulier, tel qu’une personne individuelle, une adresse postale ou un environnement de navigateur Web. Les mixins sont destinés à être inclus dans un schéma qui implémente une classe compatible, en fonction du comportement des données qu&#39;ils représentent (enregistrement ou séries chronologiques). Consultez le [guide des points de terminaison des mixins](./mixins.md) pour savoir comment utiliser les mixins dans l’API.
 
