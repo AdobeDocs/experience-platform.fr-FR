@@ -3,10 +3,10 @@ keywords: Amazon Kinesis ; destination de la kinesis ; kinesis
 title: Connexion Amazon
 description: Créez une connexion sortante en temps réel vers votre enregistrement Kinesis Amazon pour diffuser les données de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 7%
+source-wordcount: '510'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 7%
 
 Le service [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] vous permet de collecter et de traiter de vastes flux d&#39;enregistrements de données en temps réel.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Amazon Kinesis] enregistrement de diffusion de données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel à votre [!DNL Amazon Kinesis] enregistrement de diffusion de données à partir de Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Amazon Kinesis], consultez la [documentation Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Pour vous connecter à [!DNL Amazon Kinesis] à l&#39;aide d&#39;appels d&#39;API, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
@@ -55,6 +55,7 @@ Pour les destinations [!DNL Amazon Kinesis], saisissez les informations suivante
 * **Nom** : Attribuez un nom à votre connexion.  [!DNL Amazon Kinesis]
 * **Description** : Fournissez une description de votre connexion à  [!DNL Amazon Kinesis].
 * **stream** : Indiquez le nom d’un flux de données existant dans votre  [!DNL Amazon Kinesis] compte. La plate-forme exportera les données vers ce flux.
+* **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Champs d’entrée dans l’étape d’authentification](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
