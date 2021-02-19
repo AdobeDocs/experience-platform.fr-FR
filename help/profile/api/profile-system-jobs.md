@@ -252,7 +252,7 @@ curl -X POST \
 
 **Réponse**
 
-La réponse fournit les détails de la requête de suppression, y compris son état mis à jour. L’ID de la requête de suppression dans la réponse (la valeur `"id"`) doit correspondre à l’ID envoyé dans le chemin de la requête.
+La réponse fournit les détails de la requête de suppression, y compris son état mis à jour. L&#39;ID de la requête de suppression dans la réponse (la valeur `"id"`) doit correspondre à l&#39;ID envoyé dans le chemin de la requête.
 
 ```json
 {
