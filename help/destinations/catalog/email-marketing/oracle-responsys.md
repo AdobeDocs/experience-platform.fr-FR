@@ -3,10 +3,10 @@ keywords: e-mail ; e-mail ; e-mail ; destinations de courriel ; destination de l
 title: Connexion Oracle Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 61%
+source-wordcount: '608'
+ht-degree: 50%
 
 ---
 
@@ -38,8 +38,10 @@ Pour les connexions **[!UICONTROL SFTP avec clé SSH]**, vous devez fournir le d
 À l’étape **[!UICONTROL Configuration]**, renseignez les informations pertinentes pour votre destination, comme illustré ci-dessous :
 - **[!UICONTROL Nom]** : choisissez un nom pertinent pour votre destination.
 - **[!UICONTROL Description]** : saisissez une description pour votre destination.
+- **[!UICONTROL Nom]** du compartiment : Votre compartiment Amazon S3, où Platform dépose l’exportation des données. Votre saisie doit comporter entre 3 et 63 caractères. Doit commencer et se terminer par une lettre ou un numéro. Ne doit contenir que des lettres minuscules, des chiffres ou des tirets ( - ). Ne doit pas être formaté en tant qu’adresse IP (par exemple, 192.100.1.1).
 - **[!UICONTROL Chemin]** du dossier : Indiquez le chemin d’accès à l’emplacement de votre enregistrement où Platform déposera vos données d’exportation au format CSV ou tabulé.
 - **[!UICONTROL Format du fichier]** : **CSV** ou **séparé par des tabulations**. Sélectionnez le format du fichier à exporter vers l’emplacement de stockage.
+- **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Informations de base de Responsys](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
