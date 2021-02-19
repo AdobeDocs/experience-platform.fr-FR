@@ -208,7 +208,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l’identifiant unique et en lecture seule généré par le système du jeu de données que vous venez de créer. Un identifiant de jeu de données correctement configuré est nécessaire pour exporter les membres de l’audience.
+Une réponse réussie renvoie un tableau contenant l’ID unique et en lecture seule généré par le système du jeu de données que vous venez de créer. Un identifiant de jeu de données correctement configuré est nécessaire pour exporter les membres de l’audience.
 
 ```json
 [
