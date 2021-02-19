@@ -5,10 +5,10 @@ title: Présentation des flux de données
 topic: overview
 description: Ce document introduit les flux de données, en exprimant leur utilisation dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 6%
+source-wordcount: '238'
+ht-degree: 5%
 
 ---
 
@@ -17,8 +17,19 @@ ht-degree: 6%
 
 Au Adobe Experience Platform, les données sont ingérées à partir d&#39;une grande variété de sources, analysées dans l&#39;Experience Platform et activées vers une grande variété de destinations. La plate-forme facilite le processus de suivi de ce flux de données potentiellement non linéaire en fournissant de la transparence avec les flux de données.
 
-Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs source vers les jeux de données de cible, vers Identity et Profil Service, ainsi que vers les destinations.
+## Utilisation des flux de données
+
+Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données de cible, où elles sont ensuite utilisées par Identity Service et le Profil client en temps réel avant d’être finalement activées vers les destinations.
+
+Pour en savoir plus sur l’utilisation des flux de données dans les connecteurs source, consultez l’[aperçu des sources](../sources/home.md).
+
+## Préparation des données
+
+La préparation des données permet aux ingénieurs de données de mapper, de transformer et de valider les données à partir du modèle de données d’expérience (XDM).
+
+Pour en savoir plus sur la préparation des données après leur assimilation, consultez la [Présentation de la préparation des données](../data-prep/home.md).
 
 ## Surveillance des flux de données
 
-Les flux de données de surveillance peuvent être effectués à l’aide des API de plateforme ou de l’interface utilisateur de plateforme. Pour savoir comment surveiller les flux de données à l&#39;aide de l&#39;API, consultez le [didacticiel sur l&#39;API de surveillance des flux de données](./api/monitor.md). Pour savoir comment surveiller les flux de données dans l&#39;interface utilisateur de la plate-forme, veuillez lire le [didacticiel de suivi des flux de données pour les sources](./ui/monitor-sources.md) ou le [didacticiel de suivi des flux de données pour les destinations](./ui/monitor-destinations.md).
+Les flux de données de surveillance peuvent être effectués à l’aide des API de plateforme ou de l’interface utilisateur de plate-forme. Pour savoir comment surveiller les flux de données à l&#39;aide de l&#39;API, consultez le [didacticiel sur l&#39;API de surveillance des flux de données](./api/monitor.md). Pour savoir comment surveiller les flux de données dans l&#39;interface utilisateur de la plate-forme, consultez les didacticiels [surveillance des flux de données pour les sources](./ui/monitor-sources.md) et [surveillance des flux de données pour les destinations](./ui/monitor-destinations.md).
+
