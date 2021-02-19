@@ -16,7 +16,7 @@ ht-degree: 26%
 
 [!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
-L&#39;API [!DNL Real-time Customer Profile] comprend plusieurs points de terminaison, décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+L&#39;API [!DNL Real-time Customer Profile] comprend plusieurs points de terminaison, décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
 Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez la [swagger de référence d’API de Profil client en temps réel ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
