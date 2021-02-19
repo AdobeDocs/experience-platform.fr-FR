@@ -46,7 +46,7 @@ Les sections ci-dessous décrivent comment effectuer des demandes de confidentia
 >
 >![](./images/privacy/no-id-stitch.png)
 >
->Il est également important de noter que le temps qu&#39;une demande de protection des renseignements personnels peut prendre pour être remplie ne peut être garanti. Si des modifications se produisent dans vos données [!DNL Profile] alors qu&#39;une requête est en cours de traitement, il n&#39;est pas non plus garanti que ces enregistrements sont ou non traités.
+>Il est également important de noter que le temps qu&#39;une demande de protection des renseignements personnels peut mettre à exécution ne peut être garanti. Si des modifications se produisent dans vos données [!DNL Profile] alors qu&#39;une requête est en cours de traitement, il n&#39;est pas non plus garanti que ces enregistrements sont ou non traités.
 
 ### Utilisation de l’API
 
