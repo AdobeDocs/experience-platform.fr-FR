@@ -3,9 +3,9 @@ keywords: Destination du hub de événement Azure ; hub de événement azure ; e
 title: (bêta) Connexion Azure Événement Hubs
 description: Créez une connexion sortante en temps réel à votre enregistrement Azure Événement Hubs pour diffuser les données de l'Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '546'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 6%
 
 [!DNL Azure Event Hubs] est une plate-forme de diffusion de données massives et un service d’assimilation de événements. Il peut recevoir et traiter des millions de événements par seconde. Les données envoyées à un hub de événement peuvent être transformées et stockées à l’aide de n’importe quel fournisseur d’analyses en temps réel ou de cartes de traitement par lot/d’enregistrement.
 
-Vous pouvez créer une connexion sortante en temps réel vers votre [!DNL Azure Event Hubs] enregistrement de diffusion de données à partir de Adobe Experience Platform.
+Vous pouvez créer une connexion sortante en temps réel à votre [!DNL Azure Event Hubs] enregistrement de diffusion de données à partir de Adobe Experience Platform.
 
 * Pour plus d&#39;informations sur [!DNL Azure Event Hubs], consultez la [documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Pour vous connecter à [!DNL Azure Event Hubs] à l&#39;aide d&#39;appels d&#39;API, consultez le [didacticiel sur l&#39;API de destinations de diffusion en continu](../../api/streaming-destinations.md).
@@ -55,6 +55,7 @@ Pour les destinations [!DNL Azure Event Hubs], saisissez les informations suivan
 * **[!UICONTROL Nom]** : Renseignez le nom de la connexion à  [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]** : Fournissez une description de la connexion.  Exemples : &quot;Clients Premium&quot;, &quot;Hommes intéressés par le kitesurf&quot;.
 * **[!UICONTROL eventHubName]** : Attribuez un nom au flux jusqu’à votre  [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Actions]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Données requises à l’étape de configuration](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
