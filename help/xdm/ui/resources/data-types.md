@@ -95,7 +95,7 @@ Début en suivant les étapes nécessaires pour ajouter [un champ à une classe]
 
 Lorsque vous créez un champ de type objet avec plusieurs sous-champs dans [!DNL Schema Editor], vous pouvez convertir ce champ en un type de données afin d’utiliser la même structure de champ dans une autre classe ou mixin.
 
-Pour convertir un champ de type objet en type de données, sélectionnez le champ dans la trame. Avant de convertir le champ, assurez-vous que **[!UICONTROL Nom d’affichage]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
+Pour convertir un champ de type objet en type de données, sélectionnez le champ dans la trame. Avant de convertir le champ, assurez-vous que le **[!UICONTROL nom d’affichage]** est descriptif des données que l’objet contiendra, car il deviendra le nom du type de données. Lorsque vous êtes prêt à convertir le champ, sélectionnez **[!UICONTROL Convertir en nouveau type de données]** dans le rail de droite.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
