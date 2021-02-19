@@ -306,7 +306,7 @@ Une réponse réussie renvoie un tableau contenant l&#39;ID du jeu de données n
 
 Une connexion de cible représente la connexion à la destination où se trouvent les données saisies. Pour créer une connexion de cible, vous devez fournir l’identifiant de spécification de connexion fixe associé au lac Data. Cet identifiant de spécification de connexion est : `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’ID de spécification de connexion au lac de données. L&#39;API [!DNL Flow Service] vous permet de créer une connexion de cible en spécifiant ces identifiants ainsi que le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma de cible d’un jeu de données de cible et de l’identifiant de spécification de connexion au lac de données. L&#39;API [!DNL Flow Service] vous permet de créer une connexion de cible en spécifiant ces identifiants ainsi que le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
