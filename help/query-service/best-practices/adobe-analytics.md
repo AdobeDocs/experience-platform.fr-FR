@@ -17,7 +17,7 @@ ht-degree: 58%
 
 Les données des suites de rapports Adobe Analytics sélectionnées sont transformées en données conformes à la classe [!DNL XDM ExperienceEvent] et ingérées dans Adobe Experience Platform en tant que jeux de données.
 
-Ce document décrit un certain nombre de cas d&#39;utilisation où Adobe Experience Platform [!DNL Query Service] utilise ces données, y compris les requêtes d&#39;exemple qui devraient fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage à [!DNL Experience Events], consultez la documentation relative au [mappage des champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md).
+Ce document décrit un certain nombre de cas d&#39;utilisation où Adobe Experience Platform [!DNL Query Service] utilise ces données, y compris les requêtes d&#39;exemple qui doivent fonctionner avec vos jeux de données Adobe Analytics. Pour plus d’informations sur le mappage à [!DNL Experience Events], consultez la documentation relative au [mappage des champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md).
 
 ## Prise en main
 
@@ -215,8 +215,8 @@ Dans les rapports, les commandes, recettes, consultations de produit et ajouts a
 
 | eVar6 (méthode de recherche de produits) | recettes | commandes | consultations de produit | ajouts au panier |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| recherche interne : T-shirt d’été | 19,99 | 1 | 3 | 1 |
-| recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 3 |
+| recherche interne : T-shirt d’été | 19,99 | 1 | 1 | 1 |
+| recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 1 |
 
 Pour en savoir plus sur l’utilisation de la syntaxe de conversion, consultez la documentation Adobe Analytics sur [l’implémentation d’eVars à l’aide de la syntaxe de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
