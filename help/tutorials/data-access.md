@@ -20,7 +20,7 @@ Data Access prend en charge Adobe Experience Platform en fournissant aux utilisa
 
 Pour en savoir plus, lisez tout d&#39;abord [Data Access overview](../data-access/home.md).
 
-## Requête de données d’un jeu de données à l’aide de l’API d’accès aux données
+## Requête d’un jeu de données à l’aide de l’API d’accès aux données
 
 L’API Data Access soutient Adobe Experience Platform en fournissant aux utilisateurs une interface RESTful axée sur le référencement et l’accessibilité des jeux de données ingérés dans Experience Platform.
 
