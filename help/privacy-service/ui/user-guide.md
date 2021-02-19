@@ -73,7 +73,7 @@ Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de reche
 
 ![Options de recherche de Requête de tâche](../images/user-guide/job-search.png)
 
-Pour vue les détails d’une demande de travail spécifique, sélectionnez l’ID de travail de la demande dans la liste afin d’ouvrir la page **[!UICONTROL Détails de la tâche]**.
+Pour vue les détails d’une demande de travail particulière, sélectionnez l’ID de travail de la demande dans la liste afin d’ouvrir la page **[!UICONTROL Détails de la tâche]**.
 
 ![Interface utilisateur des Détails de la tâche pour le RGPD](../images/user-guide/job-details.png)
 
