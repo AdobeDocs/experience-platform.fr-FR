@@ -83,7 +83,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l’identifiant unique, en lecture seule, généré par le système, du nouveau jeu de données créé. Un identifiant de jeu de données correctement configuré est nécessaire pour exporter des données Profile avec succès.
+Une réponse réussie renvoie un tableau contenant l’ID unique, en lecture seule, généré par le système, du nouveau jeu de données créé. Un identifiant de jeu de données correctement configuré est nécessaire pour exporter des données Profile avec succès.
 
 ```json
 [
