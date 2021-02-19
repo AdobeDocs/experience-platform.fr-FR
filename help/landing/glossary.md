@@ -277,7 +277,7 @@ ht-degree: 12%
 
 **Libellé** d&#39;utilisation des données I1 : Le libellé d’utilisation des  `I1` données permet de classer les données qui peuvent directement identifier ou contacter une personne spécifique plutôt qu’un périphérique.
 
-**Libellé** d&#39;utilisation des données I2 : L’étiquette d’utilisation des  `I2` données sert à classer les données qui peuvent être utilisées en combinaison avec d’autres données pour identifier indirectement une personne ou la contacter indirectement.
+**Libellé** d&#39;utilisation des données I2 : L’étiquette d’utilisation des  `I2` données sert à classifier les données qui peuvent être utilisées en combinaison avec d’autres données pour identifier indirectement ou contacter une personne spécifique.
 
 **Organisation** IMS : Une organisation IMS (parfois appelée organisation IMS) est le nom utilisé pour identifier une société ou un groupe spécifique au sein d&#39;une société entre des produits Adobes. Les administrateurs peuvent configurer et gérer l’accès et les autorisations des fonctions pour les utilisateurs d’une organisation.
 
