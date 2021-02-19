@@ -270,7 +270,7 @@ Dans la section **[!UICONTROL Structure]** de l’éditeur, sélectionnez le cha
 >
 >Chaque schéma ne peut contenir qu’un seul champ d’identité principal. Une fois qu&#39;un champ de schéma a été défini comme identité Principale, vous recevrez un message d&#39;erreur si vous tentez par la suite de définir un autre champ d&#39;identité dans le schéma comme Principal.
 
-Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste des espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
+Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste d&#39;espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
