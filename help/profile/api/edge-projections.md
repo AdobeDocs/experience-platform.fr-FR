@@ -27,7 +27,7 @@ Le point de terminaison API utilisé dans ce guide fait partie du [[!DNL Real-ti
 
 ## Destinations de projection
 
-Vous pouvez acheminer une projection vers une ou plusieurs périphéries en précisant les emplacements vers lesquels les données doivent être envoyées. Chaque destination de projection créée possède un identifiant unique qui est ensuite utilisé pour créer la configuration de projection.
+Vous pouvez acheminer une projection vers une ou plusieurs périphéries en précisant les emplacements vers lesquels les données doivent être envoyées. Chaque destination de projection créée possède un ID unique qui est ensuite utilisé pour créer la configuration de projection.
 
 ### Liste de toutes les destinations
 
@@ -106,7 +106,7 @@ La réponse inclut un tableau `projectionDestinations` qui contient les détails
 | Propriété | Description |
 |---|---|
 | `_links.self.href` | Au niveau supérieur, correspond au chemin d’accès utilisé pour effectuer la requête GET. Au sein de chaque objet de destination, ce chemin d’accès peut être utilisé dans une requête GET pour rechercher directement les détails d’une destination spécifique. |
-| `id` | Au sein de chaque objet de destination, l’`"id"` affiche l’identifiant unique généré par le système et en lecture seule de la destination. Cet identifiant est utilisé lorsque vous faites référence à une destination spécifique et que vous créez des configurations de projection. |
+| `id` | Au sein de chaque objet de destination, l’`"id"` affiche l’ID unique généré par le système et en lecture seule de la destination. Cet identifiant est utilisé lorsque vous faites référence à une destination spécifique et que vous créez des configurations de projection. |
 
 Pour plus d’informations concernant les attributs d’une destination individuelle, veuillez consulter la section de [création d’une destination](#create-a-destination) qui suit.
 
@@ -155,7 +155,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la destination de périphérie que vous venez de créer, y compris l’identifiant unique généré par le système et en lecture seule (`id`).
+Une réponse réussie renvoie les détails de la destination de périphérie que vous venez de créer, y compris l’ID unique généré par le système et en lecture seule (`id`).
 
 ```json
 {
@@ -181,7 +181,7 @@ Une réponse réussie renvoie les détails de la destination de périphérie que
 
 ### Affichage d’une destination
 
-Si vous connaissez l’identifiant unique d’une destination de projection, vous pouvez réaliser une requête de recherche pour en afficher les détails. Vous pouvez effectuer ceci à l’aide d’une requête GET sur le point de terminaison `/config/destinations` et inclure l’identifiant de la destination dans le chemin d’accès de la requête.
+Si vous connaissez l’ID unique d’une destination de projection, vous pouvez réaliser une requête de recherche pour en afficher les détails. Vous pouvez effectuer ceci à l’aide d’une requête GET sur le point de terminaison `/config/destinations` et inclure l’identifiant de la destination dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -191,7 +191,7 @@ GET /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez afficher. |
+| `{DESTINATION_ID}` | L’ID unique de la destination de projection que vous souhaitez afficher. |
 
 **Requête**
 
@@ -242,7 +242,7 @@ PUT /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez mettre à jour. |
+| `{DESTINATION_ID}` | L’ID unique de la destination de projection que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -312,7 +312,7 @@ DELETE /config/destinations/{DESTINATION_ID}
 
 | Paramètre | Description |
 |---|---|
-| `{DESTINATION_ID}` | L’identifiant unique de la destination de projection que vous souhaitez supprimer. |
+| `{DESTINATION_ID}` | L’ID unique de la destination de projection que vous souhaitez supprimer. |
 
 
 **Requête**
