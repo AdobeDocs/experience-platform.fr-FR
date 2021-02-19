@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; notifications d’assimilation de données ; notifications ; événements d’abonnement ; événements d’état d’assimilation de données ; événements d’état ; abonnement ; notifications d’état ;
+keywords: Experience Platform ; accueil ; rubriques populaires ; notifications d'assimilation de données ; notifications ; événements d'abonnement ; événements d'état d'assimilation de données ; événements d'état ; abonnement ; notifications d'état ;
 solution: Experience Platform
 title: Notifications d'importation de données
 topic: overview
