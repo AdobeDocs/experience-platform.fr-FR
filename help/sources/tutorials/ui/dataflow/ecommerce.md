@@ -40,7 +40,7 @@ Vous pouvez utiliser l&#39;option **[!UICONTROL Rechercher]** en haut de la page
 
 >[!NOTE]
 >
->L’option de données de source de recherche est disponible pour tous les connecteurs de source basés sur des tabulations, à l’exception des connecteurs Analytics, Classifications, Événements centraux et Kinesis.
+>L’option de données de source de recherche est disponible pour tous les connecteurs de source basés sur des tabulations, à l’exception des connecteurs Analytics, Classifications, Événements Hubs et Kinesis.
 
 Une fois que vous avez trouvé les données source, sélectionnez le répertoire, puis **[!UICONTROL Suivant]**.
 
