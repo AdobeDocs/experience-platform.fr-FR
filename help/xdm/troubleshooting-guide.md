@@ -35,7 +35,7 @@ Les [mixins](./schema/composition.md#mixin) sont des composants qui définissent
 
 Les [types de données](./schema/composition.md#data-type) peuvent également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux mixins, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes.
 
-### Quel est l’identifiant unique d’un schéma ?
+### Qu’est-ce que l’ID unique d’un schéma ?
 
 Toutes les ressources [!DNL Schema Registry] (schémas, mixins, types de données, classes) ont un URI qui agit comme un identifiant unique à des fins de référence et de recherche. Lorsqu’un schéma est affiché dans l’API, il se trouve dans les attributs `$id` et `meta:altId` de niveau supérieur.
 
