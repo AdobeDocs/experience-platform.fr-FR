@@ -129,7 +129,7 @@ La section **[!UICONTROL Identités]** vous permet de créer et de gérer des es
 
 ### [!UICONTROL Confidentialité]
 
-La section **[!UICONTROL Stratégies]** vous permet de créer et de gérer des stratégies d&#39;utilisation des données. Pour en savoir plus sur l&#39;utilisation de la section Stratégies, consultez le [guide d&#39;utilisation des stratégies d&#39;utilisation des données](../data-governance/policies/user-guide.md). Pour plus d&#39;informations sur les stratégies d&#39;utilisation des données, consultez la [présentation des stratégies d&#39;utilisation des données](../data-governance/policies/overview.md).
+La section **[!UICONTROL Stratégies]** vous permet de créer et de gérer des stratégies d&#39;utilisation des données. Pour en savoir plus sur l&#39;utilisation de la section Stratégies, consultez le [guide d&#39;utilisation des stratégies d&#39;utilisation des données](../data-governance/policies/user-guide.md). Vous trouverez plus d&#39;informations sur les stratégies d&#39;utilisation des données dans le [aperçu des stratégies d&#39;utilisation des données](../data-governance/policies/overview.md).
 
 La section **[!UICONTROL Demandes]** vous permet de créer et de gérer des demandes de confidentialité. Veuillez noter que vous devez être placé sur la liste autorisée pour avoir accès à l&#39;interface utilisateur du Privacy Service. Pour en savoir plus sur l&#39;utilisation de la section Demandes, veuillez lire le [guide de l&#39;utilisateur Privacy Service](../privacy-service/ui/user-guide.md). Vous trouverez plus d&#39;informations sur le Privacy Service dans le [aperçu du Privacy Service](../privacy-service/home.md).
 
@@ -147,7 +147,7 @@ La section **[!UICONTROL Schémas]** vous permet de créer et de gérer des sch�
 
 La section **[!UICONTROL Datasets]** permet de créer et de gérer des jeux de données. Pour plus d&#39;informations sur les jeux de données, consultez le [guide d&#39;utilisateur des jeux de données](../catalog/datasets/user-guide.md).
 
-La section **[!UICONTROL Requêtes]** vous permet de créer et de gérer des requêtes, de consigner les requêtes SQL effectuées par Adobe Experience Platform Requête Service et de vue de vos informations d&#39;identification PostgreSQL. Pour plus d&#39;informations sur les requêtes, consultez le [Guide de l&#39;utilisateur de Requête Service](../query-service/ui/overview.md).
+La section **[!UICONTROL Requêtes]** vous permet de créer et de gérer des requêtes, de consigner des requêtes SQL créées par Adobe Experience Platform Requête Service et de vue de vos informations d&#39;identification PostgreSQL. Pour plus d&#39;informations sur les requêtes, consultez le [Guide de l&#39;utilisateur de Requête Service](../query-service/ui/overview.md).
 
 La section **[!UICONTROL Surveillance]** permet de surveiller l’assimilation par lot et en flux continu. Pour plus d&#39;informations sur la surveillance, consultez le [guide de l&#39;utilisateur d&#39;assimilation des données de surveillance](../ingestion/quality/monitor-data-ingestion.md).
 
@@ -157,7 +157,7 @@ Offer Decisioning est un service d’application intégré à Adobe Experience P
 
 ### [!UICONTROL Administration]
 
-L’interface utilisateur de la plate-forme fournit un tableau de bord par lequel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour y accéder, sélectionnez **[!UICONTROL Utilisation de la licence]** dans la barre de navigation. Pour en savoir plus sur le tableau de bord d&#39;utilisation des licences, consultez le [guide du tableau de bord d&#39;utilisation des licences](license-usage-dashboard.md).
+L’interface utilisateur de la plate-forme fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur l’utilisation des licences de votre entreprise, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour y accéder, sélectionnez **[!UICONTROL Utilisation de la licence]** dans la barre de navigation. Pour en savoir plus sur le tableau de bord d&#39;utilisation des licences, consultez le [guide du tableau de bord d&#39;utilisation des licences](license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
