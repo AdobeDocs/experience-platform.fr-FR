@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RGD ; APCCP ; APC ; APP ; APP ; APP ; Pdpa ; LGPD ; lgpd ; aperçu ; aperçu ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; respect de la vie privée ; respect de la vie privée ;
+keywords: Experience Platform ; accueil ; sujets populaires ; RGD ; RGD ; RPCG ; APCCP ; APCP ; APP ; APP ; APP ; Pdpa ; LGPD ; lgpd ; aperçu ; aperçu ; réglementation ; réglementation ; réglementation ; réglementation ; respect de la vie privée ; confidentialité ; confidentialité ;
 solution: Experience Platform
 title: Terminologie du Règlement sur la protection des renseignements personnels
 topic: troubleshooting
