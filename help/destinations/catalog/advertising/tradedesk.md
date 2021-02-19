@@ -3,9 +3,9 @@ keywords: publicité ; le bureau de commerce ;
 title: Connexion au bureau de commerce
 description: 'Le Trade Desk est une plate-forme en libre-service permettant aux acheteurs d''annonces publicitaires d''exécuter des reciblages et d''audience de campagnes numériques ciblées à l''échelle de l''affichage, de la vidéo et des sources d''inventaire mobiles. '
 translation-type: tm+mt
-source-git-commit: ad025630cbae5c220f5bbd7f55cad70620b6f335
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '534'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
 >
 >![Activer la destination du bureau de commerce](../../assets/catalog/advertising/tradedesk/activate.png)
 
-À l’étape [!UICONTROL Authentification], vous devez saisir les détails de connexion [!DNL The Trade Desk] :
+À l’étape [!UICONTROL Authentification], vous devez saisir les détails de la connexion [!DNL The Trade Desk] :
 
 * **[!UICONTROL Nom]** : Nom par lequel vous reconnaîtrez cette destination dans le futur.
 * **[!UICONTROL Description]** : Description qui vous aidera à identifier cette destination dans le futur.
@@ -59,7 +59,7 @@ Dans **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, sélectionnez 
    * **[!UICONTROL Amérique du Nord Ouest]**
    * **[!UICONTROL Amérique latine]**
 
-* **[!UICONTROL Cas]** d’utilisation marketing : Les cas d’utilisation marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des cas d’utilisation marketing définis par Adobe ou créer votre propre cas d’utilisation marketing. Pour plus d’informations sur les cas d’utilisation du marketing, voir la [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md) page. Pour plus d&#39;informations sur les cas d&#39;utilisation marketing définis par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Action]** marketing : Les actions marketing indiquent l’intention d’exporter les données vers la destination. Vous pouvez choisir parmi des actions marketing définies par Adobe ou créer votre propre action marketing. Pour plus d’informations sur les actions marketing, voir la page [Gouvernance des données dans Adobe Experience Platform](../../../data-governance/policies/overview.md). Pour plus d&#39;informations sur les actions marketing définies par l&#39;Adobe, consultez la [Présentation des stratégies d&#39;utilisation des données](../../../data-governance/policies/overview.md).
 
 ![Étape d&#39;authentification du bureau de commerce](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
