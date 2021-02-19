@@ -5,9 +5,9 @@ seo-title: Présentation des destinations
 description: Découvrez comment activer les données Adobe Experience Platform vers des destinations pour des campagnes marketing inter-canaux, des courriels, des publicités ciblées, etc.
 seo-description: Les destinations sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les Destinations dans la Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing par canal, les campagnes par courriel, les publicités ciblées et de nombreux autres cas d’utilisation.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 35%
 
 ---
@@ -53,12 +53,12 @@ Pour plus d’informations sur les contrôles d’accès, consultez le [Guide de
 
 La gouvernance des données est appliquée pour les destinations de plateformes par le biais :
 
-* *Utilisation marketing* que vous pouvez sélectionner dans le processus de création de destinations ;
-* *Règles* d’utilisation des données qui limitent l’activation des données contenant certaines étiquettes d’utilisation vers des destinations présentant certains cas d’utilisation marketing.
+* *Actions marketing* que vous pouvez sélectionner dans le processus de création de destinations ;
+* *Règles d’utilisation* des données qui limitent l’activation des données contenant certaines étiquettes d’utilisation vers des destinations avec certaines actions marketing.
 
-Voir [!DNL Data Governance] dans la documentation de la plate-forme pour plus d&#39;informations sur [les cas d&#39;utilisation marketing](../data-governance/policies/overview.md) et [la résolution des violations de stratégie de données](../data-governance/enforcement/auto-enforcement.md).
+Voir [!DNL Data Governance] dans la documentation de la plate-forme pour plus d&#39;informations sur [les actions marketing](../data-governance/policies/overview.md) et [la résolution des violations de la stratégie de données](../data-governance/enforcement/auto-enforcement.md).
 
-Pour plus d&#39;informations sur la sélection des cas d&#39;utilisation marketing dans le flux de travail de création de destination, consultez les pages suivantes pour les différents types de destination dans la plate-forme :
+Pour plus d&#39;informations sur la sélection des actions marketing dans le flux de travail de création de destination, consultez les pages suivantes pour les différents types de destination dans la plate-forme :
 
 * [Destinations publicitaires - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Destinations publicitaires - Publicités Google](./catalog/advertising/google-ads-destination.md)
