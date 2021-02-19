@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences de données ; sujets populaires ; espace de travail des sciences de données ; science des données
+keywords: Experience Platform ; guide du développeur ; point de terminaison ; Espace de travail des sciences des données ; sujets populaires ; espace de travail des sciences des données ; sciences des données
 solution: Experience Platform
 title: Guide de l'API d'apprentissage automatique Sensei
 topic: Developer guide
