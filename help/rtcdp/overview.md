@@ -15,7 +15,7 @@ ht-degree: 27%
 
 # Présentation de la plateforme de données client en temps réel 
 
-Basée sur Adobe Experience Platform, la plateforme de données clientes en temps réel (CDP en temps réel) permet aux sociétés de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et périphériques en temps réel.
+Basée sur Adobe Experience Platform, la plateforme de données client en temps réel (CDP en temps réel) permet aux sociétés de rassembler des données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils clients qui peuvent être utilisés pour fournir des expériences client personnalisées sur tous les canaux et périphériques en temps réel.
 
 Le CDP en temps réel comprend des outils de gouvernance des données, de gestion des identités, de segmentation avancée et de science des données, de sorte que vous puissiez créer des profils et définir des audiences, et en tirer de riches informations tout en étant en mesure d&#39;appliquer des politiques de gouvernance des données strictes.
 
