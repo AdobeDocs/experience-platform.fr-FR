@@ -52,7 +52,7 @@ De nouvelles destinations vous permettent d’activer vos données Adobe Experie
 
 | Fonctionnalité | Description |
 |------- | -----------|
-| Editeur de nom de fichier personnalisé | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud, ce qui vous permet de modifier le nom des fichiers exportés. Pour plus d&#39;informations, consultez l&#39;[ étape de configuration](../../destinations/ui/activate-destinations.md#configure) dans le processus d&#39;activation. |
+| Editeur de nom de fichier personnalisé | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud afin de modifier le nom des fichiers exportés. Pour plus d&#39;informations, consultez l&#39;[ étape de configuration](../../destinations/ui/activate-destinations.md#configure) dans le processus d&#39;activation. |
 | Attributs recommandés | Mettez à jour le processus d’activation des données pour les destinations de marketing par courrier électronique et les destinations d’enregistrement cloud qui affichent les attributs recommandés à ajouter aux fichiers exportés. Pour plus d&#39;informations, reportez-vous à l&#39;[étape de sélection des attributs](../../destinations/ui/activate-destinations.md#select-attributes) dans le processus d&#39;activation. |
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
