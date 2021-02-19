@@ -434,7 +434,7 @@ Une réponse réussie renvoie une charge utile contenant un objet json avec une 
 
 ## Récupérer un modèle transcodé spécifique {#retrieve-transcoded-model}
 
-Vous pouvez récupérer un modèle transcodé spécifique en exécutant une demande de GET avec votre `{MODEL_ID}` et l&#39;id d&#39;un modèle transcodé.
+Vous pouvez récupérer un modèle transcodé spécifique en effectuant une demande de GET avec votre `{MODEL_ID}` et l&#39;ID d&#39;un modèle transcodé.
 
 **Format d’API**
 
