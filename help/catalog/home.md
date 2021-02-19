@@ -49,7 +49,7 @@ Pour plus d’informations, consultez la [Présentation de l’ingestion de donn
 
 ## [!DNL Catalog] objets
 
-Comme indiqué dans la section précédente, [!DNL Catalog] suit les métadonnées de plusieurs types de ressources et d&#39;opérations qui sont utilisées par d&#39;autres services [!DNL Platform]. [!DNL Catalog] conserve son propre magasin d’&quot;objets&quot; qui encapsule ces métadonnées. [!DNL Catalog]Les objets sont des représentations interrogeables des données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.[!DNL Platform]
+Comme indiqué dans la section précédente, [!DNL Catalog] suit les métadonnées de plusieurs types de ressources et d&#39;opérations utilisées par d&#39;autres services [!DNL Platform]. [!DNL Catalog] conserve son propre magasin d’&quot;objets&quot; qui encapsule ces métadonnées. [!DNL Catalog]Les objets sont des représentations interrogeables des données de qui vous permettent de rechercher, surveiller et étiqueter vos données sans avoir à accéder aux données elles-mêmes.[!DNL Platform]
 
 Le tableau suivant décrit les différents types d&#39;objet pris en charge par [!DNL Catalog] :
 
