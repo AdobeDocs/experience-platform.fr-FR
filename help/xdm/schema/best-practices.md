@@ -75,7 +75,7 @@ Si vous souhaitez analyser la manière dont certains attributs d&#39;une entité
 | --- | --- | --- | --- | --- |
 | 1234567 | Addition | 275098 | 2 | 1er octobre, 10h32 |
 | 1234567 | Supprimer | 275098 | 1 | 1er octobre, 10h33 |
-| 1234567 | Addition | 486502 | 3 | 1er octobre, 10:41 |
+| 1234567 | Addition | 486502 | 1 | 1er octobre, 10:41 |
 | 1234567 | Addition | 910482 | 5 | 3 octobre, 14:15 |
 
 #### Cas d’utilisation de la segmentation
