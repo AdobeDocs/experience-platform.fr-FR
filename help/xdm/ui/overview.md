@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
 source-wordcount: '292'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,7 @@ L&#39;espace de travail [!UICONTROL Schémas] fournit des outils puissants pour 
 
 * [Schémas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
-* [Mélanges](./resources/mixins.md)
+* [Mixins](./resources/mixins.md)
 * [Types des données](./resources/data-types.md)
 
 ## Définition des champs XDM
