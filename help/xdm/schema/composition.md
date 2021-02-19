@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; enum ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; identité Principale ; identité Principale ; profil individuel XDM ; champs XDM ; type de données enum ; événement d'expérience XDM ; Expérience XDM ; événement d'expérience ; événement d'expérience ; événement d'expérience ; événement XDM événement;schéma conception;classe;classe;classes;classes;classes;classes;classes;type de données;type de données;type de données;schéma type de données;Schéma Événements;Schéma;carte d'identité;carte d'identité;carte d'identité;carte d'identité;conception de ;carte;carte d'; d'
+keywords: Experience Platform ; accueil ; rubriques populaires ; schéma ; Schéma ; enum ; mixin ; Mixin ; mixins ; mixins ; type de données ; types de données ; types de données ; type de données ; identité Principale ; identité Principale ; profil individuel XDM ; champs XDM ; type de données enum ; événement d'expérience XDM ; Expérience XDM ; événement d'expérience ; événement d'expérience ; événement d'expérience ; événement XDM événement;schéma conception;classe;classe;classes;classes;classes;classes;classes;type de données;type de données;type de données;type de données;schéma de données;Schéma ; Événements;carte d'identité;carte d'identité;carte d'identité;carte d'identité;carte d';carte d'; d'
 solution: Experience Platform
 tiTle: Basics of Schema Composition
 topic: overview
@@ -182,7 +182,7 @@ Un champ est le bloc de création le plus basique d’un schéma. Les champs app
 
 >[!TIP]
 >
->Voir l&#39;[annexe](#objects-v-freeform) pour plus d&#39;informations sur les avantages et les inconvénients de l&#39;utilisation de champs de forme libre sur les champs de type d&#39;objet.
+>Voir l&#39;[annexe](#objects-v-freeform) pour plus d&#39;informations sur les avantages et les inconvénients de l&#39;utilisation de champs de forme libre par rapport aux champs de type d&#39;objet.
 
 Les plages valides de ces types scalaires peuvent être limitées davantage à certains motifs, formats, minimums/maximums ou valeurs prédéfinies. Grâce à ces contraintes, il est possible de représenter une large plage de types de champ spécifiques, notamment :
 
