@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: b735e5f7eb8d1f0526d8786430c844b4d36fa09d
 workflow-type: tm+mt
 source-wordcount: '236'
-ht-degree: 58%
+ht-degree: 59%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 58%
    * Créer et modifier des ressources {#resources}
       * [Schémas](./ui/resources/schemas.md)
       * [Classes](./ui/resources/classes.md)
-      * [Mélanges](./ui/resources/mixins.md)
+      * [Mixins](./ui/resources/mixins.md)
       * [Types des données](./ui/resources/data-types.md)
    * Définir des champs {#fields}
       * [Présentation](./ui/fields/overview.md)
