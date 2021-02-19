@@ -304,7 +304,7 @@ write_tracker <- dataset_writer$write(df, file_format='json')
 
 ### Filtrer [!DNL ExperienceEvent] données {#r-filter}
 
-Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un bloc-notes R, vous devez indiquer l&#39;ID du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une plage de temps spécifique à l&#39;aide d&#39;opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
+Pour accéder à un jeu de données [!DNL ExperienceEvent] et le filtrer dans un bloc-notes R, vous devez indiquer l&#39;identifiant du jeu de données (`{DATASET_ID}`) ainsi que les règles de filtrage qui définissent une plage de temps spécifique à l&#39;aide d&#39;opérateurs logiques. Lorsqu’un intervalle de temps est défini, toute pagination spécifiée est ignorée et le jeu de données complet est pris en compte.
 
 Une liste d’opérateurs de filtrage est décrite ci-dessous :
 
