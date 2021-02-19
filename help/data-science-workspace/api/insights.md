@@ -261,7 +261,7 @@ Une réponse réussie renvoie un payload incluant un `{INSIGHT_ID}` et tous les 
 
 | Propriété | Description |
 | --- | --- |
-| `insightId` | L’identifiant unique créé pour cet insight spécifique en cas de requête POST réussie. |
+| `insightId` | L’ID unique créé pour cet insight spécifique en cas de requête POST réussie. |
 
 ## Récupération d’une liste de mesures par défaut pour les algorithmes
 
