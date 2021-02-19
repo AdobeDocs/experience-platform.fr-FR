@@ -202,7 +202,7 @@ Voici une liste des paramètres de configuration acceptés pour les solutions Ad
 
 | Paramètre | Description |
 | --- | --- |
-| `aamUUIDCookieName` | Nom du cookie propriétaire contenant l’identifiant unique de l’utilisateur renvoyé par Adobe Audience Manager. |
+| `aamUUIDCookieName` | Nom du cookie propriétaire contenant l’ID d’utilisateur unique renvoyé par Adobe Audience Manager. |
 
 **Adobe ID Service (ECID)**
 
