@@ -23,7 +23,7 @@ Au fur et à mesure que vous développez une définition de segment, vous pouvez
 
 >[!NOTE]
 >
->Pour accéder à des mesures similaires liées aux données du Profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de nommage spécifiques ou la banque de données de Profil dans son ensemble, consultez le [guide de point de terminaison prévisualisation de profil (exemple d&#39;état de prévisualisation)](../../profile/api/preview-sample-status.md), qui fait partie du guide de développement d&#39;API de Profil.
+>Pour accéder à des mesures similaires liées aux données du Profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de nommage spécifiques ou la banque de données de Profil dans son ensemble, consultez le [guide de point de terminaison prévisualisation de profil (exemple d’état de prévisualisation)](../../profile/api/preview-sample-status.md), qui fait partie du guide de développement d’API de Profil.
 
 ## Prise en main
 
