@@ -107,7 +107,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 
 ### Paiements
 
-L’Experience Platform prend en charge l’importation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
+L’Experience Platform prend en charge l’assimilation de données à partir d’un système de paiement tiers. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
 - [[!DNL PayPal] connecteur](connectors/payments/paypal.md)
 
