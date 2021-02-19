@@ -95,7 +95,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}/
 }
 ```
 
-Le tableau `"data"` contient une liste de tous les fichiers au sein d’un lot spécifique. Chaque fichier renvoyé possède son propre identifiant unique (`{FILE_ID}`) contenu dans le champ `"dataSetFileId"`. Vous pouvez ensuite utiliser cet identifiant unique pour accéder au fichier ou le télécharger.
+Le tableau `"data"` contient une liste de tous les fichiers au sein d’un lot spécifique. Chaque fichier renvoyé possède son propre ID unique (`{FILE_ID}`) contenu dans le champ `"dataSetFileId"`. Vous pouvez ensuite utiliser cet ID unique pour accéder au fichier ou le télécharger.
 
 | Propriété | Description |
 | -------- | ----------- |
