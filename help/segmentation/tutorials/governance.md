@@ -231,7 +231,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `entityType` | Chaque élément du tableau de payload doit indiquer le type d’entité en cours de définition. Dans ce cas d’utilisation, la valeur sera toujours « dataSet ». |
-| `entityID` | Chaque élément du tableau de payload doit fournir l’identifiant unique d’un jeu de données. |
+| `entityID` | Chaque élément du tableau de payload doit fournir l’ID unique d’un jeu de données. |
 
 **Réponse**
 
