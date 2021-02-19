@@ -119,4 +119,4 @@ Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. Ces données peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile]. Pour plus d&#39;informations, consultez l&#39;aperçu de [[!DNL Real-time Customer Profile]](../../profile/home.md).
+En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. Ces données peuvent désormais être utilisées par des services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile]. Pour plus d&#39;informations, consultez l&#39;aperçu de [[!DNL Real-time Customer Profile]](../../profile/home.md).
