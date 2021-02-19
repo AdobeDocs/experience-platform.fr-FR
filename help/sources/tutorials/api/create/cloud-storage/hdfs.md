@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform ; accueil ; sujets populaires ; Apache Hadoop Distributed File System ; Apache hadoop ; hdfs ; HDFS
+keywords: Experience Platform ; accueil ; sujets populaires ; Système de fichiers distribué Apache Hadoop ; Apache hadoop ; hdfs ; HDFS
 solution: Experience Platform
 title: Création d’une connexion source Apache HDFS à l’aide de l’API du service de flux
 topic: overview
