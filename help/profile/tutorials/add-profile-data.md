@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform ; profil ; profil client en temps réel ; dépannage ; API ; activer le profil ; Activer le profil
 title: Ajouter les données au Profil client en temps réel
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel décrit les étapes nécessaires à l’ajout de données dans Real-time Customer Profile.
 translation-type: tm+mt
 source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 55%
+source-wordcount: '382'
+ht-degree: 54%
 
 ---
 
