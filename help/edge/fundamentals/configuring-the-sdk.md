@@ -4,7 +4,7 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Activé ; idMigrationEnabled ; thirdPartyCookiesEnabled ;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 70%
@@ -60,7 +60,7 @@ Indique si le débogage doit être activé. La définition de cette configuratio
 | Validation synchrone | Valide les données collectées par rapport au schéma et renvoie une erreur dans la réponse sous le libellé suivant : `collect:error OR success` |
 | Journalisation de la console | Permet l’affichage des messages de débogage dans la console JavaScript du navigateur. |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ------------------ |
@@ -141,7 +141,7 @@ Active les destinations URL [!DNL Audience Manager], ce qui permet de déclenche
 
 ## Options d’identité
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Type** | **Obligatoire** | **Valeur par défaut** |
 | -------- | ------------ | ----------------- |
