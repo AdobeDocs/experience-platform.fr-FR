@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: fca0de86630252ab31a49df1ebbc03f13955e8d2
+source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 43%
+source-wordcount: '682'
+ht-degree: 39%
 
 ---
 
@@ -19,7 +19,24 @@ ht-degree: 43%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
+- [Flux de données](#dataflows)
 - [Système de modèle de données d’expérience (XDM)](#xdm)
+- [Identity Service](#identity)
+- [Sources](#sources)
+
+## Flux de données {#dataflows}
+
+Au Adobe Experience Platform, les données sont ingérées à partir d&#39;une grande variété de sources, analysées dans l&#39;Experience Platform et activées vers une grande variété de destinations. La plate-forme facilite le processus de suivi de ce flux de données potentiellement non linéaire en fournissant de la transparence avec les flux de données.
+
+Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données de cible, où elles sont ensuite utilisées par [!DNL Identity Service] et [!DNL Real-time Customer Profile] avant d&#39;être finalement activées sur [!DNL Destinations].
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Nouveau tableau de bord de surveillance | Vous pouvez désormais utiliser le tableau de bord de surveillance pour une transparence entre services et des informations exploitables pour les ingérations de données source. Le nouveau tableau de bord de surveillance fournit une vue complète des données traitées de [!DNL Data Lake] à [!DNL Identity Service] et à [!DNL Profile], tout en vous permettant de surveiller les taux d&#39;assimilation, les réussites et les échecs. Pour plus d’informations, consultez le didacticiel sur [la surveillance des flux de données source dans l’interface utilisateur](../../dataflows/ui/monitor-sources.md). |
+
+Pour des informations plus générales sur les flux de données, consultez l&#39;[aperçu des flux de données](../../dataflows/home.md).
 
 ## Système de modèle de données d’expérience (XDM) {#xdm}
 
@@ -34,3 +51,32 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 | Interface utilisateur de recherche mise à niveau | Les fonctionnalités de recherche améliorées sont désormais disponibles dans l&#39;onglet [!UICONTROL Parcourir] de l&#39;espace de travail [!UICONTROL Schémas] et dans la boîte de dialogue de sélection de mixin de [!DNL Schema Editor].<br><br>Lors de la recherche d’un terme précédemment, les résultats incluent uniquement les ressources XDM dont le nom correspond à la requête de recherche. Désormais, outre les ressources dont le nom correspond à la requête, les ressources contenant des attributs individuels qui correspondent au terme seront également incluses. Cela vous permet de rechercher des ressources XDM en fonction des attributs qu&#39;elles contiennent plutôt que par nom de ressource.<br><br>Pour plus d’informations, consultez les documents sur l’ [exploration des ](../../xdm/ui/explore.md) ressources XDM et la  [gestion des ](../../xdm/ui/resources/schemas.md) schémas dans l’interface utilisateur. |
 
 Pour plus d&#39;informations sur XDM, consultez la section [Présentation du système XDM](../../xdm/home.md).
+
+## Identity Service {#identity}
+
+Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
+
+Adobe Experience Platform [!DNL Identity Service] vous aide à mieux vue de votre client et de son comportement en rapprochant les identités entre les périphériques et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et impactées en temps réel.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Graphique d’identités lecteur | La visionneuse de graphiques d’identité vous permet de valider et de visualiser les identités assemblées ensemble dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d&#39;informations, consultez le [document du lecteur de graphique d&#39;identité](../../identity-service/ui/identity-graph-viewer.md). |
+
+Pour plus d&#39;informations générales sur [!DNL Identity Service], consultez la [Présentation du service d&#39;identité](../../identity-service/home.md).
+
+## Sources {#sources}
+
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+
+**Nouvelles sources**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [!DNL Google PubSub] | Vous pouvez désormais vous connecter à [!DNL Google PubSub] à [!DNL Experience Platform] à l&#39;aide de l&#39;API [!DNL Flow Service] ou de l&#39;interface utilisateur. Pour plus d&#39;informations, consultez l&#39;[[!DNL Google PubSub] aperçu du connecteur](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | Vous pouvez désormais vous connecter à [!DNL Oracle Object Storage] à [!DNL Experience Platform] à l&#39;aide de l&#39;API [!DNL Flow Service] ou de l&#39;interface utilisateur. Pour plus d&#39;informations, consultez l&#39;[[!DNL Oracle Object Storage] aperçu du connecteur](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
+
+Pour plus d&#39;informations générales sur les sources, consultez l&#39;[aperçu des sources](../../sources/home.md).
