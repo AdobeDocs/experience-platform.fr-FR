@@ -5,10 +5,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 17%
+source-wordcount: '572'
+ht-degree: 16%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 17%
       - [Connecteur FTP](connectors/cloud-storage/ftp.md)
       - [Connecteur d’Enregistrement Google Cloud](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
+      - [Enregistrement d&#39;objet Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Connecteur SFTP](connectors/cloud-storage/sftp.md)
       - [Connecteur Amazon S3 et Azure Blob](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -87,6 +88,7 @@ ht-degree: 17%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Enregistrement Google Cloud](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
+         - [Enregistrement d&#39;objet Oracle](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics ](tutorials/api/create/crm/ms-dynamics.md)
@@ -168,6 +170,7 @@ ht-degree: 17%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Enregistrement Google Cloud](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
+         - [Enregistrement d&#39;objet Oracle](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 et blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
