@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; enregistrement cloud ; enregistrement Cloud
 solution: Experience Platform
 title: Exploration d’un système d’Enregistrements à forte intensité à l’aide de l’API du service de flux
-topic: overview
+topic: aperçu
 description: Ce didacticiel utilise l’API Flow Service pour explorer un système d’enregistrement cloud tiers.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 20%
 
 ---
@@ -30,14 +30,15 @@ Les sections suivantes fournissent des informations supplémentaires dont vous a
 
 Pour explorer un enregistrement cloud tiers à l’aide des API [!DNL Platform], vous devez posséder un identifiant de connexion valide. Si vous n’avez pas encore de connexion pour l’enregistrement que vous souhaitez utiliser, vous pouvez en créer une à l’aide des didacticiels suivants :
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Enregistrement Azure Data Lake Gen2](../create/cloud-storage/adls-gen2.md)
-* [Enregistrement de fichier Azure](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Lecture d’exemples d’appels API
 
