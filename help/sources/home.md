@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connecteurs source ; connecteur source ; sources ; sources de données ; source de données ; connexion à la source de données
 solution: Experience Platform
 title: Présentation des connecteurs source
-topic: overview
+topic: aperçu
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, des bases de données, etc.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '942'
 ht-degree: 58%
 
 ---
@@ -56,6 +56,7 @@ Les sources de stockage dans le cloud peuvent introduire vos propres données da
 - [[!DNL Azure File Storage] connecteur](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] connecteur](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connecteur](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] connecteur](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] connecteur](connectors/cloud-storage/sftp.md)
 
 ### Gestion de la relation client (CRM)
