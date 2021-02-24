@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données d'enregistrement ; données d'enregistrement de flux ;
 solution: Experience Platform
 title: Diffusion en continu des données d'enregistrement à l'aide des API d'importation en flux continu
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1165'
 ht-degree: 77%
 
 ---
@@ -264,7 +264,7 @@ Une réponse réussie renvoie un état HTTP 201 et un tableau contenant l’ide
 ]
 ```
 
-## Ingestion de données d’enregistrement vers la connexion en continu
+## Ingestion de données d’enregistrement vers la connexion en continu {#ingest-data}
 
 Une fois le jeu de données et la connexion en continu en place, vous pouvez ingérer des enregistrements JSON au format XDM pour ingérer des données d’enregistrement dans [!DNL Platform].
 
