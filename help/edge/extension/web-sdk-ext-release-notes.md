@@ -3,10 +3,10 @@ title: Notes de mise à jour de l’extension SDK Web Adobe Experience Platform
 description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 seo-description: SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '988'
-ht-degree: 94%
+source-wordcount: '990'
+ht-degree: 89%
 
 ---
 
@@ -33,7 +33,7 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 #### Correctifs
 
-* Lorsque les clients tentaient de créer un objet XDM à partir de schémas sandbox, ils se heurtaient à des problèmes d’authentification. L’API qui appelle AEP prend désormais en charge les environnements, de sorte que les utilisateurs ne reçoivent que les schémas qu’ils sont autorisés à modifier.
+* Lorsque les clients tentaient de créer un objet XDM à partir de schémas sandbox, ils se heurtaient à des problèmes d’authentification. L’API qui appelle la plate-forme est maintenant au courant des environnements, de sorte que les utilisateurs ne reçoivent que les schémas qu’ils ont accès pour les modifier.
 
 #### Fonctionnalités
 
@@ -62,7 +62,7 @@ Contient la version 2.3.0 de la bibliothèque SDK Web Adobe Experience Platfo
 * Prise en charge du remplacement de l’identifiant de jeu de données dans l’action `sendEvent`.
 * Ajout d’un nouvel élément de données de type `IdentityMap` qui peut être utilisé pour renseigner l’entrée `identityMap` dans l’élément de données de l’objet XDM (qui est maintenant activé) et dans l’action `setConsent`.
 * Prise en charge de la transmission d’une carte d’identité dans l’action `setConsent`.
-* Prise en charge du choix d’une sandbox AEP dans l’élément de données de l’objet XDM.
+* Prise en charge du choix d’un sandbox de plateforme dans l’élément de données d’objet XDM.
 
 
 ## 26 mai 2020
@@ -92,7 +92,7 @@ Ces décisions ne sont renvoyées par la commande `sendEvent` que si `renderDeci
 * Correction d’un problème en raison duquel l’ID de fusion des événements était réinitialisé chaque fois que l’élément de données était référencé.
 * L’action `setCustomerIds` a été renommée `syncIdentity`.
 * Ajout d’une commande `getIdentity`. Pour l’instant, elle ne peut être consommée que via du Custom Code (code personnalisé).
-* L’activation du débogage à l’aide de `_satellite` active maintenant le débogage dans le SDK Web AEP.
+* L’activation du débogage à l’aide de `_satellite` active désormais le débogage dans le SDK Web de Adobe Experience Platform.
 * Ajout de la prise en charge des valeurs saisies dans l’objet XDM : Booléens, Nombres et Décimales.
 
 ## 16 mars 2020
@@ -169,7 +169,7 @@ Ces décisions ne sont renvoyées par la commande `sendEvent` que si `renderDeci
 * Création de l’extension.
 * Prise en charge ECID sans appel réseau ou bibliothèque supplémentaires.
 * Prise en charge de l’inclusion.
-* Prise en charge de l’envoi de XDM vers AEP.
+* Prise en charge de l’envoi de XDM à la plate-forme
 * Prise en charge des domaines propriétaires.
 * Collecte automatique du contexte du navigateur.
 * Entièrement open source ([extension](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy)).
