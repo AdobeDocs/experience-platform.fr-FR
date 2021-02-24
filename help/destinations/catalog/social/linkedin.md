@@ -3,7 +3,7 @@ keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin
 title: Connexion des Audiences mises en correspondance Linkedin
 description: Activez des profils pour vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 ---
 
 
-# [!DNL LinkedIn Matched Audience] connexion
+# [!DNL LinkedIn Matched Audiences] connexion
 
 Activez des profils pour vos campagnes [!DNL LinkedIn] pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés et des identifiants mobiles.
 
