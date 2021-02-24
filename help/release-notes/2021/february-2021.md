@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 9f7d7ae9c721d1ce7abf0dc7d3eaff18eed09d6f
+source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 39%
+source-wordcount: '770'
+ht-degree: 36%
 
 ---
 
@@ -19,12 +19,25 @@ ht-degree: 39%
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
-- [Flux de données](#dataflows)
-- [Système de modèle de données d’expérience (XDM)](#xdm)
-- [Identity Service](#identity)
-- [Sources](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## Flux de données {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace utilise l’apprentissage automatique et l’intelligence artificielle pour créer des informations à partir de vos données. Intégré à Adobe Experience Platform, Data Science Workspace vous aide à obtenir des prévisions en utilisant votre contenu et des ressources de données de l’ensemble des solutions Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Ordinateur portable JupyterLab EDA | Le bloc-notes Python de l&#39;analyse de données exploratoires (EDA) est maintenant disponible en Jupyterlab. Ce bloc-notes est conçu pour vous aider à découvrir des schémas dans les données, à vérifier l&#39;intégrité des données et à résumer les données pertinentes pour les modèles prédictifs. Pour plus d&#39;informations, consultez le didacticiel [consacré à l&#39;exploration des données Web pour les modèles prédictifs](../../data-science-workspace/jupyterlab/eda-notebook.md). |
+
+Pour plus d’informations sur l’Espace de travail des sciences de données, consultez l’[Présentation de l’Espace de travail des sciences de données](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
 
 Au Adobe Experience Platform, les données sont ingérées à partir d&#39;une grande variété de sources, analysées dans l&#39;Experience Platform et activées vers une grande variété de destinations. La plate-forme facilite le processus de suivi de ce flux de données potentiellement non linéaire en fournissant de la transparence avec les flux de données.
 
@@ -38,7 +51,7 @@ Les flux de données sont une représentation des tâches de données qui dépla
 
 Pour des informations plus générales sur les flux de données, consultez l&#39;[aperçu des flux de données](../../dataflows/home.md).
 
-## Système de modèle de données d’expérience (XDM) {#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 La normalisation et l&#39;interopérabilité sont les concepts clés qui sous-tendent [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), piloté par l’Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 
@@ -52,7 +65,7 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 
 Pour plus d&#39;informations sur XDM, consultez la section [Présentation du système XDM](../../xdm/home.md).
 
-## Identity Service {#identity}
+## [!DNL Identity Service] {#identity}
 
 Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
@@ -66,7 +79,7 @@ Adobe Experience Platform [!DNL Identity Service] vous aide à mieux vue de votr
 
 Pour plus d&#39;informations générales sur [!DNL Identity Service], consultez la [Présentation du service d&#39;identité](../../identity-service/home.md).
 
-## Sources {#sources}
+## [!DNL Sources] {#sources}
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
