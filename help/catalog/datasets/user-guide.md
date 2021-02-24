@@ -5,9 +5,9 @@ title: Guide de l'interface utilisateur des jeux de données
 topic: datasets
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 73%
 
 ---
@@ -97,7 +97,7 @@ L’étape **[!UICONTROL Ajouter les données]** apparaît. Chargez le fichier C
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Activation d’un jeu de données pour Real-time Customer Profile
+## Activation d’un jeu de données pour Real-time Customer Profile {#enable-profile}
 
 Chaque jeu de données a la possibilité d’enrichir les profils clients des données qu’ils ingèrent. Pour ce faire, le schéma auquel le jeu de données adhère doit être compatible avec [!DNL Real-time Customer Profile]. Un schéma compatible répond aux critères suivants :
 
