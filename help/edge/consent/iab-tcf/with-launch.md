@@ -1,24 +1,24 @@
 ---
-title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide du lancement de la plate-forme et de l’extension Platform Web SDK
+title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de la plate-forme Web SDK Extension
 description: Découvrez comment configurer le consentement IAB TCF 2.0 avec Adobe Experience Platform Launch et l’extension Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform Launch et de l’extension Platform Web SDK
+# Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de l’extension Platform Web SDK
 
-Adobe Experience Platform Web SDK prend en charge Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0). Ce guide vous explique comment configurer une propriété Adobe Experience Platform Launch pour envoyer des informations de consentement IAB TCF 2.0 à l’Adobe à l’aide de l’extension AEP Web SDK pour Experience Platform Launch.
+Adobe Experience Platform Web SDK prend en charge Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0). Ce guide vous explique comment configurer une propriété Adobe Experience Platform Launch pour envoyer des informations de consentement IAB TCF 2.0 à l’Adobe à l’aide de l’extension Adobe Experience Platform Web SDK pour Experience Platform Launch.
 
 Si vous ne souhaitez pas utiliser d&#39;Experience Platform Launch, veuillez consulter le guide sur [l&#39;utilisation d&#39;IAB TCF 2.0 sans Experience Platform Launch](./without-launch.md).
 
 ## Prise en main
 
-Pour utiliser IAB TCF 2.0 avec Experience Platform Launch et l&#39;extension AEP Web SDK, vous devez disposer d&#39;un schéma XDM et d&#39;un jeu de données.
+Pour utiliser IAB TCF 2.0 avec Experience Platform Launch et l&#39;extension Platform Web SDK, vous devez disposer d&#39;un schéma XDM et d&#39;un jeu de données.
 
 En outre, ce guide vous demande de bien comprendre le SDK Web de Adobe Experience Platform. Pour une actualisation rapide, consultez la [présentation du SDK Web de Adobe Experience Platform](../../home.md) et la [documentation sur les questions fréquentes](../../web-sdk-faq.md).
 
@@ -120,7 +120,7 @@ addEventListener();
 
 Ce code est identique au code personnalisé précédent, sauf que les événements `useractioncomplete` et `tcloaded` sont tous deux gérés. Le [code personnalisé précédent](#consent-code-1) ne se déclenche que lorsque le client choisit ses préférences pour la première fois. Ce code se déclenche également lorsque le client a déjà choisi ses préférences. Par exemple, au second chargement de page.
 
-Ajoutez une action &quot;Envoyer le Événement&quot; à partir de l’extension AEP Web SDK. Dans le champ XDM, choisissez l’élément de données XDM que vous avez créé dans la section précédente.
+Ajoutez une action &quot;Envoyer le Événement&quot; à partir de l&#39;extension Platform Web SDK. Dans le champ XDM, choisissez l’élément de données XDM que vous avez créé dans la section précédente.
 
 ## Envoi d’autres événements avec des informations de consentement IAB TCF 2.0
 
@@ -128,4 +128,4 @@ Lorsque des événements sont déclenchés après le Événement d’expérience
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension AEP Web SDK, vous pouvez également choisir de vous intégrer à d’autres solutions d’Adobe telles que Adobe Analytics ou la plateforme de données client en temps réel. Pour plus d&#39;informations, consultez la [présentation du Cadre de transparence et de consentement IAB 2.0](./overview.md).
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l&#39;extension Platform Web SDK, vous pouvez également choisir de vous intégrer à d&#39;autres solutions d&#39;Adobe telles que Adobe Analytics ou la plate-forme de données client en temps réel. Pour plus d&#39;informations, consultez la [présentation du Cadre de transparence et de consentement IAB 2.0](./overview.md).
