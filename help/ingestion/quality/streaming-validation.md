@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; diffusion en continu ; assimilation en flux continu ; validation de l’assimilation en flux continu ; validation de l’assimilation en flux continu ; validation ; validation synchrone ; validation synchrone ; validation asynchrone ; validation asynchrone ;
 solution: Experience Platform
 title: Validation de l'envoi en flux continu
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: 'L’ingestion par flux vous permet de charger vos données dans Adobe Experience Platform à l’aide de points de terminaison en continu en temps réel. Les API d’ingestion par flux prennent en charge deux modes de validation : synchrone et asynchrone.'
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 87%
+source-wordcount: '898'
+ht-degree: 85%
 
 ---
 
@@ -66,6 +66,10 @@ La validation synchrone est une méthode de validation qui fournit des commentai
 La validation synchrone n’est pas activée par défaut. Pour l’activer, vous devez transmettre le paramètre de requête facultatif `synchronousValidation=true` lorsque vous effectuez des appels API. De plus, la validation synchrone est actuellement disponible uniquement si le point de terminaison de votre flux se trouve sur le centre de données VA7.
 
 Si un message échoue au cours de la validation synchrone, le message ne sera pas écrit vers la file d’attente de sortie, qui fournit des commentaires immédiats pour les utilisateurs.
+
+>[!NOTE]
+>
+>Il est possible que les modifications apportées au schéma ne soient pas immédiatement disponibles, car les modifications sont mises en cache. L&#39;actualisation du cache peut prendre jusqu&#39;à quinze minutes.
 
 **Format d’API**
 
