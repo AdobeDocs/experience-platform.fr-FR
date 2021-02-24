@@ -2,10 +2,10 @@
 title: Extension SDK Web Adobe Experience Platform Présentation
 description: En savoir plus sur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 L’extension Adobe Experience Platform Web SDK envoie des données au Adobe Experience Cloud à partir de propriétés web, via Adobe Experience Platform Edge Network. L’extension SDK Web Adobe Experience Platform permet la diffusion en flux continu de données dans la plateforme, la synchronisation des identités, l’accord préalable et la collecte automatique de données contextuelles.
 
-## Configurer l’extension SDK Web AEP
+## Configurez l’extension
 
 Cette section fournit une référence pour les options disponibles pendant la configuration de l’extension SDK Web Adobe Experience Platform.
 
@@ -47,11 +47,11 @@ En cas d’erreur avec l’extension, l’erreur est consignée par défaut dans
 
 ### **[!UICONTROL Activer l’inclusion]**
 
-Si **[!UICONTROL l’option d’inclusion]** est activée, l’extension AEP Web SDK peut contenir des accès jusqu’à ce que l’inclusion soit reçue. L’extension expose une action permettant de définir les préférences de l’inclusion.
+Si **[!UICONTROL Activer l’inclusion]** est activé, l’extension peut contenir les accès jusqu’à ce que l’inclusion soit reçue. L’extension expose une action permettant de définir les préférences de l’inclusion.
 
 ### **[!UICONTROL Activer la migration ECID]**
 
-L’extension SDK Web AEP utilise un nouveau cookie pour stocker l’identifiant ECID. Ce paramètre assure la compatibilité entre le nouveau cookie et l’ancien cookie à des fins de migration. Adobe recommande vivement de l’activer, sauf si aucun visiteur existant ne dispose d’un ECID.
+L’extension Platform Web SDK utilise un nouveau cookie pour stocker l’ECID. Ce paramètre assure la compatibilité entre le nouveau cookie et l’ancien cookie à des fins de migration. Adobe recommande vivement de l’activer, sauf si aucun visiteur existant ne dispose d’un ECID.
 
 ### **[!UICONTROL Utiliser des cookies tiers]**
 
