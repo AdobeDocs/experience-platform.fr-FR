@@ -4,10 +4,10 @@ description: Découvrez comment configurer le SDK Web de Adobe Experience Platfo
 seo-description: Découvrez la procédure de configuration du SDK Web d’Experience Platform
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environnement;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehideStyle;opacity;cookieDestinationsEnabled;urlDestinations Activé ; idMigrationEnabled ; thirdPartyCookiesEnabled ;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 70%
+source-wordcount: '743'
+ht-degree: 69%
 
 ---
 
@@ -147,7 +147,7 @@ Active les destinations URL [!DNL Audience Manager], ce qui permet de déclenche
 | -------- | ------------ | ----------------- |
 | Booléen | Non | vrai |
 
-Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cela permet de passer à l’utilisation du SDK Web Adobe Experience Platform alors que certaines parties du site peuvent encore utiliser Visiteur.js. De plus, si l’API du Visiteur est définie sur la page, le SDK requête l’API du Visiteur pour l’ECID. Cela vous permet de créer deux pages de balises avec le SDK Web AEP et d’avoir toujours le même ECID.
+Si la valeur est true, le SDK lit et définit les anciens cookies AMCV. Cela permet de passer à l’utilisation du SDK Web Adobe Experience Platform alors que certaines parties du site peuvent encore utiliser Visiteur.js. De plus, si l’API du Visiteur est définie sur la page, le SDK requête l’API du Visiteur pour l’ECID. Cela vous permet d’utiliser deux pages de balises avec le SDK Web Adobe Experience Platform et d’avoir toujours le même ECID.
 
 ### `thirdPartyCookiesEnabled`
 
