@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; sujets populaires ; espace de nommage ; Espace de nommage ; Espaces de nommage ; espaces de nommage ; espace de nommage d'identité ; espace de nommage d'identité ; identité ; identité ; service d'identité ; service d'identité
 solution: Experience Platform
 title: Présentation de l'Espace de nommage d'identité
-topic: overview
+topic: aperçu
 description: 'Les espaces de noms d’identité sont des composants d’Identity Service qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent la valeur "name@email.com" en tant qu’adresse électronique ou "443522" en tant qu’identifiant CRM numérique. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 22%
 
 ---
@@ -84,7 +84,7 @@ Sélectionnez un espace de nommage pour afficher des informations plus spécifiq
 
 ![](./images/browse-namespaces.png)
 
-## Gestion des espaces de nommage personnalisés
+## Gestion des espaces de nommage personnalisés {#manage-namespaces}
 
 Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de noms personnalisés. Les espaces de nommage personnalisés peuvent être créés à l’aide de l’API [[!DNL Identity Service]](./api/create-custom-namespace.md) ou via l’interface utilisateur.
 
