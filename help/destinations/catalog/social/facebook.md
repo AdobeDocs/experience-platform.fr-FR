@@ -3,7 +3,7 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 11%
@@ -86,7 +86,7 @@ Il existe deux méthodes pour activer les numéros de téléphone dans [!DNL Fac
 
 Vous pouvez choisir de hacher les adresses électroniques avant de les importer dans Adobe Experience Platform, ou vous pouvez choisir de travailler avec les adresses électroniques en clair dans l&#39;Experience Platform et de faire en sorte que notre algorithme les hache sur l&#39;activation.
 
-Pour en savoir plus sur l’assimilation d’adresses électroniques en Experience Platform, consultez les sections [présentation de l’assimilation par lots](/help/ingestion/batch-ingestion/overview.md) et [présentation de l’assimilation par lots](/help/ingestion/streaming-ingestion/overview.md).
+Pour en savoir plus sur l’assimilation d’adresses électroniques dans l’Experience Platform, consultez les sections [présentation de l’assimilation par lots](/help/ingestion/batch-ingestion/overview.md) et [présentation de l’assimilation en flux continu](/help/ingestion/streaming-ingestion/overview.md).
 
 Si vous choisissez de hacher vous-même les adresses électroniques, veillez à respecter les exigences suivantes :
 
