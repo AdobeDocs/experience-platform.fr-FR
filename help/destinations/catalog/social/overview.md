@@ -3,10 +3,10 @@ keywords: réseau social ; destinations des réseaux sociaux ; Livefyre ; facebo
 title: Présentation des destinations de réseau social
 description: Avec les destinations de réseau social, vous pouvez activer les profils de vos campagnes pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 75%
+source-wordcount: '76'
+ht-degree: 71%
 
 ---
 
@@ -19,3 +19,4 @@ Adobe Experience Platform prend actuellement en charge les destinations de rése
 
 - [Extension Adobe Livefyre](./adobe-livefyre.md)
 - [[!DNL Facebook]  extension](./facebook.md)
+- [Connexion d’Audience mise en correspondance LinkedIn](./linkedin.md)
