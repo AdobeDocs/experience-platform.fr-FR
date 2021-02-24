@@ -5,23 +5,25 @@ title: Présentation de la visionneuse de graphiques d’identité
 topic: didacticiel
 description: Un graphique d'identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 3%
 
 ---
 
 
-# (bêta) Présentation du lecteur de graphique d’identité
-
->[!NOTE]
->
->Le lecteur de graphique d’identité est actuellement en version bêta. Ses caractéristiques peuvent être modifiées.
+# Présentation du lecteur de graphique d’identité
 
 Un graphique d&#39;identité est une carte des relations entre différentes identités pour un client particulier, qui vous permet de visualiser comment votre client interagit avec votre marque sur différents canaux. Tous les graphiques d&#39;identité des clients sont gérés et mis à jour collectivement par Adobe Experience Platform Identity Service en temps quasi réel, en réponse à l&#39;activité des clients.
 
 La visionneuse de graphiques d’identité de l’interface utilisateur de la plate-forme vous permet de visualiser et de mieux comprendre les identités des clients qui sont assemblées, et de quelles manières. Le lecteur de contenu vous permet de faire glisser et d’interagir différentes parties du graphique, ce qui vous permet d’examiner les relations d’identité complexes, de déboguer plus efficacement et de bénéficier d’une transparence accrue dans la manière dont les informations sont utilisées.
+
+## Tutoriel vidéo
+
+La vidéo suivante est destinée à vous aider à comprendre le lecteur de graphique d&#39;identité.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Prise en main
 
@@ -50,6 +52,20 @@ Sélectionnez l’espace de nommage que vous souhaitez utiliser et cliquez sur *
 Une fois que vous avez sélectionné un espace de nommage, saisissez sa valeur correspondante pour un client particulier dans la zone de texte **[!UICONTROL Valeur d’identité]** et sélectionnez **[!UICONTROL Vue]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Accès à la visionneuse de graphiques d&#39;identité à partir de jeux de données
+
+Vous pouvez également accéder à la visionneuse de graphiques d’identité à l’aide de l’interface des jeux de données. Dans la page Jeu de données [!UICONTROL Parcourir], sélectionnez un jeu de données avec lequel interagir, puis **[!UICONTROL Jeu de données de Prévisualisation]**.
+
+![prévisualisation-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+Dans la fenêtre prévisualisation, sélectionnez une icône d&#39;empreinte digitale pour afficher les identités représentées par le biais de la visionneuse de graphiques d&#39;identité.
+
+>[!TIP]
+>
+>L’icône d’empreinte n’apparaît que si le jeu de données possède plusieurs identités.
+
+![empreinte digitale](../images/identity-graph-viewer/fingerprint.png)
 
 La visionneuse de graphiques d&#39;identité s&#39;affiche. Sur le côté gauche de l&#39;écran se trouve le graphique d&#39;identité qui affiche toutes les identités liées à l&#39;espace de nommage sélectionné et la valeur d&#39;identité saisie. Chaque noeud d’identité est constitué d’un espace de nommage et de sa valeur d’ID correspondante. Vous pouvez sélectionner et conserver toute identité pour faire glisser et interagir avec le graphique. Vous pouvez également placer le pointeur de la souris sur une identité pour afficher des informations sur sa valeur d’identifiant. La sortie du graphique s’affiche également sous la forme d’une liste déposée au centre de l’écran.
 
@@ -109,8 +125,9 @@ Des erreurs peuvent se produire lors de l&#39;accès à la visionneuse de graphi
 
 En lisant ce document, vous avez appris à explorer les graphiques d’identité de vos clients dans l’interface utilisateur de la plate-forme. Pour plus d&#39;informations sur les identités dans Platform, consultez la [Présentation du service d&#39;identité](../home.md).
 
-## Ressources supplémentaires
+## Journal des modifications
 
-La vidéo suivante est destinée à vous aider à comprendre le lecteur de graphique d&#39;identité.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Date | Action |
+| ---- | ------ |
+| 2021-01 | <ul><li>Prise en charge Ajoutée de la diffusion en flux continu des données imbriquées et du sandbox hors production.</li><li>Correction de bogues mineurs.</li></ul> |
+| 2021-02 | <ul><li>Le lecteur de graphique d’identité est rendu accessible par le biais de la prévisualisation de jeux de données.</li><li>Correction de bogues mineurs.</li><li>Le lecteur de graphique d’identité est rendu disponible en général.</li></ul> |
