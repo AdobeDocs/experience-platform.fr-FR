@@ -2,19 +2,19 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; Profil client en temps réel ; Service d'identité ;
 solution: Experience Platform
 title: Tutoriels sur Real-time Customer Profile
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 26%
+source-wordcount: '795'
+ht-degree: 29%
 
 ---
 
 
-# Configurer [!DNL Real-time Customer Profile] et [!DNL Identity Service]
+# Configuration [!DNL Real-time Customer Profile]
 
 Pour configurer [!DNL Real-time Customer Profile] pour votre organisation, vous devez exécuter plusieurs workflows distincts. Ce document décrit les étapes à suivre et fournit des liens vers des tutoriels pour effectuer chaque workflow séparément.
 
@@ -32,16 +32,7 @@ Pour en savoir plus, consultez le [Guide de l’utilisateur du Profil client en 
 
 ## API Real-time Customer Profile
 
-L’API Profil client en temps réel comprend plusieurs points de terminaison. Profile vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client. Pour plus d&#39;informations sur chacun des points de terminaison disponibles et leurs cas d&#39;utilisation, consultez la [Présentation de l&#39;API Profil client en temps réel](../profile/api/overview.md).
-
-**Les guides suivants à l’intention des développeurs d’API sont disponibles :**
-- [Attributs calculés (alpha)  ](../profile/api/computed-attributes.md) - Découvrez les cas d&#39;utilisation des attributs calculés ainsi que comment configurer, accéder, mettre à jour et supprimer un attribut calculé.
-- [Projections](../profile/api/edge-projections.md)  Edge - Découvrez comment créer, vue, mettre à jour, supprimer et liste des destinations de projection. De plus, ce document contient des informations sur l&#39;inscription et la création de configurations de projection et fournit des exemples d&#39;utilisation des sélecteurs.
-- [Entités (accès au Profil)](../profile/api/entities.md)  - Apprenez à accéder aux données du profil par identité ou liste d&#39;identités. En outre, apprenez à accéder à des événements de séries chronologiques pour plusieurs profils à l’aide d’identités, d’un seul profil par identité et d’un accès à plusieurs entités de schéma.
-- [Tâches d’exportation (exportation de Profil)](../profile/api/export-jobs.md)  - Découvrez comment créer, vue, surveiller et annuler des tâches d’exportation.
-- [Fusionner les stratégies](../profile/api/merge-policies.md)  - Découvrez les composants des stratégies de fusion ainsi que comment accéder, créer, mettre à jour et supprimer une stratégie de fusion.
-- [Etat de l&#39;échantillon de prévisualisation (prévisualisation de Profil)](../profile/api/preview-sample-status.md)  - Découvrez comment vue votre dernier état d&#39;échantillon, la distribution des profils de liste par jeu de données et la distribution des profils de liste par espace de nommage.
-- [Tâches du système de profil (supprimer des requêtes)](../profile/api/profile-system-jobs.md)  - Découvrez comment vue, créer et supprimer une requête de suppression pour un jeu de données ou un lot dans le magasin de Profils.
+L’API Profil client en temps réel comprend plusieurs points de terminaison. Pour plus d&#39;informations sur chacun des points de terminaison disponibles et leurs cas d&#39;utilisation, consultez la [Présentation de l&#39;API Profil client en temps réel](../profile/api/overview.md).
 
 Pour en savoir plus et obtenir les valeurs requises pour effectuer des opérations CRUD avec l’API Profil client en temps réel, consultez le [guide de prise en main](../profile/api/getting-started.md).
 
