@@ -4,10 +4,10 @@ title: Guide de l’API de Profil client en temps réel
 topic: guide
 description: L’API Profil client en temps réel permet aux développeurs d’explorer et d’utiliser des données de Profil, y compris des profils de vue, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de Profil et de supprimer des données de Profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 26%
+source-wordcount: '895'
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 26%
 
 [!DNL Real-time Customer Profile] offre une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
-L&#39;API [!DNL Real-time Customer Profile] comprend plusieurs points de terminaison, décrits ci-dessous. Consultez les guides des points de terminaison individuels pour plus de détails et consultez le [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
+L&#39;API [!DNL Real-time Customer Profile] comprend plusieurs points de terminaison, décrits ci-dessous. Consultez les guides individuels des points de terminaison pour plus de détails et consultez le [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, la lecture d&#39;exemples d&#39;appels d&#39;API, etc.
 
 Pour vue de tous les points de terminaison et opérations CRUD disponibles, consultez la [swagger de référence d’API de Profil client en temps réel ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
@@ -28,7 +28,11 @@ Pour obtenir un guide sur l&#39;utilisation des données [!DNL Real-time Custome
 >
 >La fonctionnalité des attributs calculés est une version alpha et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
 
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agréger des valeurs sur tous les enregistrements et tous les événements. Chaque attribut calculé contient une expression, ou « règle », qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil ou dans un événement. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Vous pouvez créer, vue, modifier et supprimer des attributs calculés à l’aide du point de terminaison `config/computedAttributes`. Pour savoir comment utiliser ce point de terminaison, consultez le [guide des points de terminaison des attributs calculés](computed-attributes.md).
+Les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
+
+Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur résultante dans un attribut de profil. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Ces valeurs d’attribut calculées peuvent ensuite être visualisées dans un profil, utilisées pour créer un segment ou accessibles via plusieurs modèles d’accès différents.
+
+Vous pouvez créer, vue, modifier et supprimer des attributs calculés à l’aide du point de terminaison `config/computedAttributes`. Pour savoir comment utiliser les attributs calculés, consultez l&#39;[aperçu des attributs calculés](../computed-attributes/overview.md). Pour les opérations d’API, consultez le [guide du point de terminaison de l’API des attributs calculés](../computed-attributes/ca-api.md).
 
 ## Projections de périphérie {#edge-projections}
 
