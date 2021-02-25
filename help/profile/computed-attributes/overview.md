@@ -3,11 +3,11 @@ keywords: Experience Platform ; profil ; profil client en temps réel ; dépanna
 title: Présentation des attributs calculés
 topic: guide
 type: Documentation
-description: Les attributs calculés sont des fonctions permettant d'agrégat des données au niveau du événement dans des attributs de niveau profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
+description: Les attributs calculés sont des fonctions permettant d'agrégat des données au niveau du événement dans des attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
 translation-type: tm+mt
-source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '730'
 ht-degree: 41%
 
 ---
