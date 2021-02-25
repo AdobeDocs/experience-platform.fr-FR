@@ -5,9 +5,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources ou structures, et étiquetez et améliorez les données déjà importées.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 16%
 
 ---
@@ -53,7 +53,7 @@ ht-degree: 16%
       - [Apache Hive sur le connecteur Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark sur Azure HDInsights connector](connectors/databases/spark.md)
       - [Connecteur de Data Explorer Azure](connectors/databases/data-explorer.md)
-      - [Connecteur Analytics Azure Synapse](connectors/databases/synapse-analytics.md)
+      - [Connecteur Analytics d’Azure synapse](connectors/databases/synapse-analytics.md)
       - [Connecteur d&#39;Enregistrement de table Azure](connectors/databases/ats.md)
       - [Connecteur Couchbase](connectors/databases/couchbase.md)
       - [Connecteur Google BigQuery](connectors/databases/bigquery.md)
@@ -101,7 +101,7 @@ ht-degree: 16%
          - [Apache Hive sur Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Data Explorer Azure](tutorials/api/create/databases/data-explorer.md)
-         - [Analytics Azure Synapse](tutorials/api/create/databases/synapse-analytics.md)
+         - [Analyses d’Azure synapse](tutorials/api/create/databases/synapse-analytics.md)
          - [Enregistrement de table Azure](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 16%
    - [Créer une connexion à un jeu de données](tutorials/api/create-dataset-base-connection.md)
    - [Surveiller les flux de données](tutorials/api/monitor.md)
    - [Mettre à jour les connexions](tutorials/api/update.md)
+   - [Mettre à jour les flux de données](tutorials/api/update-dataflows.md)
    - [Suppression des connexions](tutorials/api/delete.md)
    - [Supprimer des flux de données](tutorials/api/delete-dataflows.md)
 - Didacticiels d’interface utilisateur {#ui-tutorials}
@@ -184,7 +185,7 @@ ht-degree: 16%
          - [Apache Hive sur Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark sur Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Data Explorer Azure](tutorials/ui/create/databases/data-explorer.md)
-         - [Analytics Azure Synapse](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Analyses d’Azure synapse](tutorials/ui/create/databases/synapse-analytics.md)
          - [Enregistrement de table Azure](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Requête](tutorials/ui/create/databases/bigquery.md)
