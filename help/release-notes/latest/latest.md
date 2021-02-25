@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 36%
+source-wordcount: '1069'
+ht-degree: 34%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 36%
 
 **Date de publication : 24 février 2021**
 
+Nouvelles fonctionnalités d’Adobe Experience Platform :
+
+- [(bêta) Tableaux de bord](#dashboards)
+
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (Bêta) Tableaux de bord {#dashboards}
+
+Adobe Experience Platform fournit plusieurs tableaux de bord grâce auxquels vous pouvez vue des informations importantes sur les données de votre entreprise, telles qu’elles sont capturées lors de captures d’écran quotidiennes.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Profils, segments, destinations et Tableaux de bord d’utilisation des licences (bêta) | **Remarque : La fonctionnalité de tableau de bord est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.**<br/><br/> Les tableaux de bord fournissent un rapports prêt à l’emploi sur les données de votre entreprise et sont directement intégrés au processus du spécialiste du marketing dans Platform. Ces tableaux de bord sont disponibles sans besoin d&#39;un support informatique supplémentaire, ni du temps et des efforts qu&#39;il faudrait autrement pour exporter et traiter les données avec une conception et une mise en oeuvre d&#39;entrepôts de données supplémentaires. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service] vous aide à mieux vue de votr
 | Graphique d’identités lecteur | La visionneuse de graphiques d’identité vous permet de valider et de visualiser les identités assemblées ensemble dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d&#39;informations, consultez le [document du lecteur de graphique d&#39;identité](../../identity-service/ui/identity-graph-viewer.md). |
 
 Pour plus d&#39;informations générales sur [!DNL Identity Service], consultez la [Présentation du service d&#39;identité](../../identity-service/home.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider les données client en une vue unifiée offrant un compte horodaté interactif de chaque interaction client.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Attributs calculés (Alpha) | ***Remarque : Cette fonctionnalité est actuellement en alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Voici quelques exemples de ces fonctions : count, sum, average, min, max, true/false. Les attributs calculés sont actuellement disponibles uniquement par API. Pour plus d&#39;informations, consultez l&#39;[aperçu des attributs calculés](../../profile/computed-attributes/overview.md). |
+
+Pour plus d&#39;informations sur le Profil client en temps réel, y compris des didacticiels et les meilleures pratiques pour l&#39;utilisation des données [!DNL Profile], veuillez commencer par lire la [Présentation du Profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
