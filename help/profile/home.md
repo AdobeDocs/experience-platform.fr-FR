@@ -4,10 +4,10 @@ title: Présentation du Profil client en temps réel
 topic: guide
 description: Real-time Customer Profile est une banque d’entités de recherche générique qui fusionne les données de différentes ressources de données d’entreprise, puis fournit un accès à ces données sous la forme de profils client individuels et d’événements de série temporelle connexes. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 40%
+source-wordcount: '1825'
+ht-degree: 37%
 
 ---
 
@@ -36,11 +36,11 @@ Le magasin de Profils utilise une infrastructure de base de données Microsoft A
 
 L’Experience Platform fournit une série de garde-fous pour vous aider à éviter de créer des [schémas de modèle de données d’expérience (XDM)](../xdm/home.md) que le Profil client en temps réel ne peut pas prendre en charge. Cela inclut des limites souples qui entraîneront une dégradation des performances, ainsi que des limites strictes qui entraîneront des erreurs et des pannes système. Pour plus d&#39;informations, y compris une liste de directives et des exemples d&#39;utilisation, veuillez lire la [documentation sur les garde-Profils](guardrails.md).
 
-### (Alpha) tableau de bord de Profil {#profile-dashboard}
+### (Bêta) tableau de bord de Profil {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->La fonctionnalité de tableau de bord est actuellement en alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
+>La fonctionnalité de tableau de bord est actuellement en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.
 
 L’interface utilisateur de l’Experience Platform fournit un tableau de bord grâce auquel vous pouvez vue des informations importantes sur vos données de Profil client en temps réel, telles qu’elles sont capturées au cours d’un instantané quotidien. Pour savoir comment accéder au tableau de bord [!DNL Profile] et l&#39;utiliser dans l&#39;interface utilisateur, ainsi que pour obtenir des informations détaillées sur les mesures affichées dans le tableau de bord, consultez le [guide de l&#39;interface utilisateur du tableau de bord de Profil](ui/profile-dashboard.md).
 
@@ -78,9 +78,9 @@ Pour en savoir plus sur les schémas d’union, y compris sur la façon d’acc�
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’attribut calculée est en alpha. La documentation et les fonctionnalités peuvent changer.
+>La fonctionnalité d&#39;attribut calculé est en alpha. La documentation et les fonctionnalités peuvent être modifiées.
 
-Les attributs calculés vous permettent de calculer automatiquement la valeur des champs en fonction d’autres valeurs, calculs et expressions. Les attributs calculés fonctionnent au niveau du profil, ce qui signifie que vous pouvez agréger des valeurs sur tous les enregistrements et tous les événements. Chaque attribut calculé contient une expression, ou « règle », qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil ou dans un événement. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Pour plus d&#39;informations sur les attributs calculés et pour obtenir des instructions détaillées sur l&#39;utilisation de ces attributs à l&#39;aide de l&#39;API [!DNL Real-time Customer Profile], consultez le [guide du point de terminaison des attributs calculés](api/computed-attributes.md). Ce guide vous aidera à mieux comprendre le rôle que jouent les attributs calculés dans Adobe Experience Platform et comprend des exemples d’appels d’API pour effectuer des opérations CRUD de base.
+Les attributs calculés sont des fonctions utilisées pour agrégat des données au niveau du événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Pour plus d&#39;informations sur les attributs calculés, y compris la compréhension du rôle que jouent les attributs calculés dans Adobe Experience Platform, veuillez commencer par lire l&#39;[aperçu des attributs calculés](computed-attributes/overview.md).
 
 ## Profils et segments
 
