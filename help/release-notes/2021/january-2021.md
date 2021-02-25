@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 39%
+source-wordcount: '712'
+ht-degree: 35%
 
 ---
 
@@ -21,6 +21,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -52,6 +53,19 @@ Pour plus d’informations, reportez-vous à la [[!DNL Data Prep] présentation 
 | Correspondance d’ID avancée | Améliorations des fonctionnalités de taux de correspondance d&#39;audience dans [!DNL Facebook Custom Audiences] et [!DNL Google Customer Match], en ajoutant la prise en charge de la correspondance d&#39;identité supplémentaire, telle que les identifiants externes, les numéros de téléphone et les identifiants de périphérique mobile. Pour plus d’informations, consultez la documentation suivante : <ul><li>[Destination Facebook](../../destinations/catalog/social/facebook.md)</li><li>[Destination de la correspondance client Google](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activation de profils et de segments vers une destination](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 Pour en savoir plus, consultez la [présentation des destinations](../../destinations/home.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Real-time Customer Profile offre une vue d’ensemble de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. [!DNL Profile] vous permet de consolider les données client en une vue unifiée offrant un compte horodaté interactif de chaque interaction client.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Supprimer un jeu de données du magasin de Profils | Lorsque vous supprimez un jeu de données du lac Data Experience Platform, il est automatiquement supprimé du magasin de Profils. Vous n’avez plus besoin d’utiliser le point de terminaison API des tâches du système de Profil pour effectuer une demande de suppression afin de supprimer explicitement le jeu de données du magasin de Profils. Pour plus d&#39;informations, consultez le [profil system jobs API endpoint guide](../../profile/api/profile-system-jobs.md). |
+| Estimation du nombre d’espaces de nommage d’ID pour un segment donné | Pour une estimation du nombre de profils, l’API de prévisualisation signale maintenant :<ul><li>Nombre total de profils estimés dans un segment pour un espace de nommage donné.</li><li>Nombre total de profils estimés dans le Schéma d&#39;Union de Profil pour un espace de nommage donné.</li></ul>Pour en savoir plus, consultez le [guide du point de terminaison de l&#39;API de prévisualisation de profil](../../profile/api/preview-sample-status.md). |
+
+Pour plus d&#39;informations sur le Profil client en temps réel, y compris des didacticiels et les meilleures pratiques pour l&#39;utilisation des données [!DNL Profile], veuillez commencer par lire la [Présentation du Profil client en temps réel](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
