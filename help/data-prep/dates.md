@@ -1,21 +1,39 @@
 ---
-keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; date ; fonctions de date ; dates ;
+keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; date ; fonctions de date ; dates ; fonction de date ; date
 solution: Experience Platform
 title: Fonctions de date d’aperçu des données
-topic: overview
-description: Ce document présente les fonctions de date utilisées avec l’aperçu des données.
+topic: aperçu
+description: Ce document introduit la fonction de date utilisée avec l’aperçu des données.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# Fonctions de date d’aperçu des données
+# Date, fonction
 
 Data Prep prend en charge les fonctions de date, à la fois sous forme de chaînes et d’objets datetime.
+
+## Format de la fonction Date
+
+La fonction de date convertit les chaînes et les objets datetime en objet ZonedDateTime au format ISO 8601.
+
+**Format**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Paramètre | Description |
+| --------- | ----------- |
+| `{DATE}` | Obligatoire. Chaîne représentant la date. |
+| `{FORMAT}` | Facultatif. Chaîne représentant le format de la date. Pour plus d&#39;informations sur le formatage des chaînes, consultez la section [Chaîne de format de date/heure](#format). |
+| `{DEFAULT_DATE}` | Facultatif. Date par défaut à renvoyer si la date fournie est nulle. |
+
+Par exemple, l’expression `date(orderDate, "yyyy-MM-dd")` convertit une valeur `orderDate` de &quot;31 décembre 2020&quot; en une valeur datetime de &quot;2020-12-31&quot;.
 
 ## Conversions de la fonction de date
 
@@ -46,7 +64,7 @@ Lorsque les champs de chaîne des données entrantes sont mappés aux champs de 
 >
 > L’outil d’aperçu des données tentera de convertir les chaînes en dates de la meilleure façon possible. Cependant, ces conversions peuvent entraîner des résultats indésirables. Par exemple, la valeur de chaîne &quot;12112020&quot; correspond au modèle &quot;Jour&quot;, mais l’utilisateur a peut-être prévu que la date soit lue avec le modèle &quot;jjMMaaaa&quot;. Par conséquent, les utilisateurs doivent mentionner explicitement le format de date pour les chaînes.
 
-## Chaînes de format de date/heure
+## Chaînes de format de date/heure {#format}
 
 Le tableau suivant indique les lettres de modèle définies pour les chaînes de format. Veuillez noter que les lettres sont sensibles à la casse.
 
@@ -76,8 +94,4 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 | X | Fuseau horaire | Fuseau horaire ISO 8601 | -08; -0800; -08:00 |
 | V | ID fuseau horaire | Texte | Amérique/Los_Angeles |
 | O | Décalage du fuseau horaire | Texte | GMT+8 |
-| Q/q | Trimestre de l&#39;année | Nombre/Texte | 3 ; 03 ; T3 ; 3e trimestre |
-
-**Exemple**
-
-L’expression `date(orderDate, "yyyy-MM-dd")` convertira une valeur `orderDate` de &quot;31 décembre 2020&quot; en une valeur datetime de &quot;2020-12-31&quot;.
+| Q/q | Trimestre de l&#39;année | Nombre/Texte | 3 ; 03 ; 3e trimestre ; 3e trimestre |
