@@ -2,9 +2,9 @@
 title: Intégration de la prise en charge d’IAB TCF 2.0 à l’aide de Platform launch et de la plate-forme Web SDK Extension
 description: Découvrez comment configurer le consentement IAB TCF 2.0 avec Adobe Experience Platform Launch et l’extension Adobe Experience Platform Web SDK.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ En outre, ce guide vous demande de bien comprendre le SDK Web de Adobe Experienc
 
 ## Définition du consentement par défaut
 
-Dans la configuration de l&#39;extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les Événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez ce paramètre sur `pending`.
+Dans la configuration de l&#39;extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les Événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez ce paramètre sur `pending`. Vous pouvez également utiliser un élément de données pour définir dynamiquement la valeur de consentement par défaut.
 
->[!NOTE]
->
->Actuellement, il n’existe aucun moyen de définir cette variable de manière dynamique par le biais de l’extension Experience Platform Launch.
-
-Pour plus d’informations sur le consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) de la documentation de configuration du SDK.
+Pour plus d’informations sur la configuration du consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) du guide de configuration du SDK.
 
 ## Mise à jour du Profil avec les informations de consentement {#consent-code-1}
 
@@ -69,7 +65,7 @@ Ce code personnalisé effectue deux opérations :
 * Valeur : &quot;%IAB TCF Consent String%&quot;
 * GDPR s&#39;applique : &quot;%IAB TCF Consent GDPR%&quot;
 
-![Action de consentement du jeu IAB](../../../assets/iab_set_consent_action.png)
+![Action de consentement du jeu IAB](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
