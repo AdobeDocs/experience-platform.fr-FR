@@ -3,11 +3,11 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; adresse ip ; ad
 description: Les adresses IP doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source.
 solution: Experience Platform
 title: LISTE AUTORISÉE d'adresses IP pour les connexions source
-topic: overview
+topic: aperçu
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,15 @@ Vous pouvez définir des contrôles d&#39;accès réseau via votre pare-feu rés
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
+
+## East US 2 region
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
 
 ## Région de l&#39;Europe occidentale
 
