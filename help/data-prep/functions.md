@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; mapper csv ; mapper le fichier csv ; mapper le fichier csv à xdm ; mapper csv à xdm ; ui guide ; mapper ; mapper ; champs de mappage ; fonctions de mappage ;
 solution: Experience Platform
 title: Fonctions de mappage des préférences de données
-topic: overview
+topic: aperçu
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 18%
 
 ---
@@ -23,7 +23,7 @@ Un nom de champ peut être n’importe quel identifiant légal - une séquence i
 
 Si un nom de champ ne respecte pas cette convention, le nom de champ doit être encapsulé avec `${}`. Par exemple, si le nom du champ est &quot;Prénom&quot; ou &quot;Prénom&quot;, le nom doit être encapsulé comme `${First Name}` ou `${First.Name}` respectivement.
 
-De plus, les noms de champ sont **n** des mots-clés réservés suivants ; ils doivent être encapsulés avec `${}` :
+De plus, si un nom de champ est **n** des mots-clés réservés suivants, il doit être encapsulé avec `${}` :
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau. Pour plus d&#39;informations sur la fonction `date`, consultez le [guide de la fonction de date](./dates.md).
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 -------- | ----------- | ---------- | -------| ---------- | -------------
