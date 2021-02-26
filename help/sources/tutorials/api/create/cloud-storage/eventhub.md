@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; événement hub ; Azure événement hub ; Événement hub
 solution: Experience Platform
 title: Création d'une connexion à la source des concentrateurs de Événement Azure à l'aide de l'API du service de flux
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 description: Découvrez comment connecter Adobe Experience Platform à un compte Azure Événement Hubs à l'aide de l'API Flow Service.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 25%
+source-wordcount: '568'
+ht-degree: 26%
 
 ---
 
@@ -90,7 +90,7 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",
