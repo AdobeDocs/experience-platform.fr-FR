@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
+source-git-commit: 2eea954217a8f0cca605cd0435bace59200cacda
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1126'
 ht-degree: 34%
 
 ---
@@ -25,6 +25,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -65,6 +66,16 @@ Les flux de données sont une représentation des tâches de données qui dépla
 | Nouveau tableau de bord de surveillance | Vous pouvez désormais utiliser le tableau de bord de surveillance pour une transparence entre services et des informations exploitables pour les ingérations de données source. Le nouveau tableau de bord de surveillance fournit une vue complète des données traitées de [!DNL Data Lake] à [!DNL Identity Service] et à [!DNL Profile], tout en vous permettant de surveiller les taux d&#39;assimilation, les réussites et les échecs. Pour plus d’informations, consultez le didacticiel sur [la surveillance des flux de données source dans l’interface utilisateur](../../dataflows/ui/monitor-sources.md). |
 
 Pour des informations plus générales sur les flux de données, consultez l&#39;[aperçu des flux de données](../../dataflows/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sont des intégrations préétablies avec des plateformes de destination qui permettent une activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Nouvelles destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | La connexion [!DNL LinkedIn Matched Audiences] vous permet d’activer des audiences dans la plateforme sociale [!DNL LinkedIn]. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
