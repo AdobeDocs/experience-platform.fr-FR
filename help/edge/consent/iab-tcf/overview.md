@@ -3,7 +3,7 @@ title: Prise en charge d’IAB TCF 2.0 dans le SDK Web Adobe Experience Platform
 description: Découvrez comment prendre en charge les préférences de consentement IAB TCF 2.0 à l’aide du Adobe Experience Platform Web SDK
 keywords: consentement ; setConsent ; Mélange de confidentialité des Profils ; Mélange de confidentialité des Événements d’expérience ; Mélange de confidentialité ; IAB TCF 2.0 ; CDP en temps réel ; Profil de données client en temps réel
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 2%
@@ -66,7 +66,7 @@ Les sections ci-dessous décrivent les principaux points d’intégration entre 
 
 Le consentement par défaut est utilisé lorsqu’aucune préférence de consentement n’est déjà enregistrée pour un client. Cela signifie que les options de consentement par défaut peuvent contrôler le comportement du SDK Web Adobe Experience Platform et modifier en fonction de la région du client.
 
-Par exemple, si vous avez un client qui n&#39;est pas dans la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGPD, le consentement par défaut peut être défini sur `pending`. Votre plate-forme de gestion de cloud (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut.
+Par exemple, si vous avez un client qui n&#39;est pas dans la juridiction du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`, mais dans la juridiction du RGPD, le consentement par défaut peut être défini sur `pending`. Votre plateforme de gestion du consentement (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut.
 
 Pour plus d’informations sur le consentement par défaut, consultez la section [consentement par défaut](../../fundamentals/configuring-the-sdk.md#default-consent) de la documentation de configuration du SDK.
 
