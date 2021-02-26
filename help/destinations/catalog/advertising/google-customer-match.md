@@ -3,21 +3,15 @@ keywords: correspondance client Google ; correspondance client Google ; correspo
 title: Connexion Google Customer Match
 description: Google Customer Match vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées par Google, telles que Search, Shopping, Gmail et YouTube.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Google Customer Match] connexion
-
->[!IMPORTANT]
->
->Nous migrons actuellement les clients vers la nouvelle version de cette destination.
->
-> Les instructions de cet article s&#39;appliquent aux deux versions, avec la remarque suivante : pendant que cette migration est en cours, vous ne verrez que la version actuelle de la destination [!DNL Google Customer Match] dans l’interface utilisateur, où vous pouvez uniquement utiliser les identités [!UICONTROL EMAIL] et [!UICONTROL EMAIL_LC_SHA_256] pour l’activation.
 
 [Les ](https://support.google.com/google-ads/answer/6379332?hl=en) correspondances clients de Google vous permettent d&#39;utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, par exemple :  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] et  [!DNL YouTube].
 
