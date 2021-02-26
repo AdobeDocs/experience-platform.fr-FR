@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; assimilation en flux continu ; assimilation ; données de séries chronologiques ; données de séries chronologiques de flux ;
 solution: Experience Platform
 title: Diffusion en continu des données de série chronologique à l’aide des API d’importation en flux continu
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
-ht-degree: 78%
+source-wordcount: '1313'
+ht-degree: 72%
 
 ---
 
@@ -316,9 +316,11 @@ L’insertion de données de série chronologique sur une connexion de flux cont
 
 L&#39;exemple de requête ci-dessous ingère des données de série chronologique avec un nom source manquant à la plate-forme. Si le nom de la source est absent des données, l’ID source est ajouté à partir de la définition de connexion de flux continu.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Vous devrez générer vos propres `xdmEntity._id` et `xdmEntity.timestamp`. Un bon moyen de générer un identifiant est d’utiliser un UUID. De plus, l’appel API suivant ne nécessite **pas** d’en-têtes d’authentification.
+>Vous devrez générer vos propres `xdmEntity._id` et `xdmEntity.timestamp`. L’utilisation de la fonction UUID dans la préparation des données constitue un bon moyen de générer un identifiant. Pour plus d&#39;informations sur la fonction UUID, consultez le [Guide des fonctions de préparation des données](../../data-prep/functions.md). L&#39;attribut `xdmEntity._id` représente un identifiant unique pour l&#39;enregistrement lui-même, **pas** un identifiant unique de la personne ou du périphérique dont il s&#39;agit. L&#39;ID de personne ou d&#39;appareil sera spécifique dans tous les attributs attribués en tant que personne ou identifiant de dispositif du schéma.
+>
+>`xdmEntity._id` et `xdmEntity.timestamp` sont les seuls champs obligatoires pour les données de série chronologique. De plus, l’appel API suivant ne nécessite **pas** d’en-têtes d’authentification.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
