@@ -3,21 +3,15 @@ keywords: connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour un ciblage, une personnalisation et une suppression de l’audience basés sur des e-mails hachés.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 11%
+source-wordcount: '942'
+ht-degree: 12%
 
 ---
 
 
 # [!DNL Facebook] connexion
-
->[!IMPORTANT]
->
->Nous migrons actuellement les clients vers la nouvelle version de cette destination, [!DNL Facebook Custom Audience].
->
-> Les instructions de cet article s&#39;appliquent aux deux versions, avec la remarque suivante : pendant que cette migration est en cours, vous ne verrez que la version actuelle de la destination [!DNL Facebook] dans l’interface utilisateur, où vous pouvez uniquement utiliser les identités [!UICONTROL EMAIL] et [!UICONTROL EMAIL_LC_SHA_256] pour l’activation.
 
 Activez les profils de vos campagnes [!DNL Facebook] pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 
