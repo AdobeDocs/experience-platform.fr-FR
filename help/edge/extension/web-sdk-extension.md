@@ -2,71 +2,64 @@
 title: Extension SDK Web Adobe Experience Platform Présentation
 description: En savoir plus sur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 53%
+source-wordcount: '560'
+ht-degree: 19%
 
 ---
 
 
 # Présentation de l’extension SDK Web Adobe Experience Platform
 
-L’extension Adobe Experience Platform Web SDK envoie des données au Adobe Experience Cloud à partir de propriétés web, via Adobe Experience Platform Edge Network. L’extension SDK Web Adobe Experience Platform permet la diffusion en flux continu de données dans la plateforme, la synchronisation des identités, l’accord préalable et la collecte automatique de données contextuelles.
+L’extension Adobe Experience Platform Web SDK envoie des données à Adobe Experience Cloud à partir de propriétés web via Adobe Experience Platform Edge Network. L’extension vous permet de diffuser des données dans la plate-forme, de synchroniser les identités, de traiter les signaux de consentement des clients et de collecter automatiquement des données contextuelles.
+
+Ce document explique comment configurer l’extension dans l’interface utilisateur Adobe Experience Platform Launch.
 
 ## Configurez l’extension
 
-Cette section fournit une référence pour les options disponibles pendant la configuration de l’extension SDK Web Adobe Experience Platform.
+Si l&#39;extension Platform Web SDK a déjà été installée pour une propriété, ouvrez la propriété dans l&#39;interface utilisateur du Platform launch et sélectionnez l&#39;onglet **[!UICONTROL Extensions]**. Sous Platform Web SDK, sélectionnez **[!UICONTROL Configurer]**.
 
-Si l’extension Adobe Experience Platform Web SDK n’est pas encore installée, ouvrez votre propriété, puis sélectionnez **[!UICONTROL Extensions > Catalog]**, passez la souris sur l’extension Adobe Experience Platform Web SDK et sélectionnez **[!UICONTROL Installer]**.
+![](../images/extension/overview/configure.png)
 
-Pour configurer l&#39;extension, ouvrez l&#39;onglet **[!UICONTROL Extensions]**, passez la souris sur l&#39;extension, puis sélectionnez **[!UICONTROL Configurer]**.
+Si vous n’avez pas encore installé l’extension, sélectionnez l’onglet **[!UICONTROL Catalogue]**. Dans la liste des extensions disponibles, recherchez l&#39;extension Platform Web SDK et sélectionnez **[!UICONTROL Installer]**.
 
-![](./assets/ext-aep-config.png)
+![](../images/extension/overview/install.png)
 
-### Nom d’instance
+Dans les deux cas, vous accédez à la page de configuration du SDK Web de la plate-forme. Les sections ci-dessous décrivent les options de configuration de l&#39;extension.
 
-L’extension Adobe Experience Platform Web SDK prend en charge plusieurs instances sur la page. Elle permet d’envoyer des données à plusieurs organisations à l’aide d’une configuration Adobe Experience Platform Launch unique. Le **[!UICONTROL nom]** est par défaut un alliage. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide. L’extension Adobe Experience Platform exige que chaque instance ait un **[!UICONTROL ID de configuration]** différent et un **[!UICONTROL ID d’organisation]** différent.
+![](../images/extension/overview/config-screen.png)
 
-## **[!UICONTROL ID de configuration]**
+## Options de configuration générales
 
-**[!UICONTROL L&#39;ID de configuration]** indique à Adobe Experience Platform où les données doivent être routées et quelles configurations doivent être utilisées sur le serveur. Cela est nécessaire au fonctionnement de l’extension Adobe Experience Platform. Vous pouvez obtenir un ID de configuration en contactant le service à la clientèle.
+Les options de configuration situées en haut de la page indiquent à Adobe Experience Platform où router les données et quelles configurations doivent être utilisées sur le serveur.
 
+### [!UICONTROL Nom]
 
-### **[!UICONTROL ID d’organisation]**
+L’extension Adobe Experience Platform Web SDK prend en charge plusieurs instances sur la page. Elle permet d’envoyer des données à plusieurs organisations à l’aide d’une configuration  Platform Launch unique.
 
-**[!UICONTROL ID d&#39;organisation]** est l&#39;organisation à laquelle vous souhaitez envoyer les données à l&#39;Adobe. La plupart du temps, vous devez utiliser la valeur par défaut renseignée automatiquement. Si vous avez plusieurs instances sur la page, indiquez la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
+Le nom de l&#39;extension est par défaut &quot;[!DNL alloy]&quot;. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
+
+### **[!UICONTROL Identifiant IMS de l’organisation]**
+
+[!UICONTROL L&#39;ID d&#39;organisation IMS] est l&#39;organisation à laquelle vous souhaitez envoyer les données à l&#39;Adobe. La plupart du temps, vous devez utiliser la valeur par défaut renseignée automatiquement. Lorsque la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
 
 ### **[!UICONTROL Domaine Edge]**
 
-Le **[!UICONTROL domaine Edge]** est le domaine à partir duquel l&#39;extension Adobe Experience Platform envoie et reçoit des données. L’extension exige l’utilisation d’un CNAME propriétaire pour le trafic de production. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html).
+Le [!UICONTROL domaine Edge] est le domaine à partir duquel l&#39;extension Adobe Experience Platform envoie et reçoit des données. L’extension exige l’utilisation d’un CNAME propriétaire pour le trafic de production. Le domaine tiers par défaut fonctionne pour les environnements de développement, mais ne convient pas aux environnements de production. Les instructions de configuration d’un CNAME propriétaire sont répertoriées [ici](https://docs.adobe.com/content/help/fr-FR/core-services/interface/ec-cookies/cookies-first-party.html).
 
-### **[!UICONTROL Activer les erreurs]**
+## [!UICONTROL Configurations Edge]
 
-En cas d’erreur avec l’extension, l’erreur est consignée par défaut dans la console. Si vous souhaitez masquer les erreurs dans un environnement de production, vous pouvez décocher la case **[!UICONTROL Activer les erreurs]**. Les erreurs seront toujours imprimées lorsque le débogage est activé dans Platform Launch.
+Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, un ID de configuration Edge est utilisé pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
-### **[!UICONTROL Activer l’inclusion]**
+Pour plus d&#39;informations, consultez le guide sur les [configurations des arêtes](../fundamentals/edge-configuration.md).
 
-Si **[!UICONTROL Activer l’inclusion]** est activé, l’extension peut contenir les accès jusqu’à ce que l’inclusion soit reçue. L’extension expose une action permettant de définir les préférences de l’inclusion.
+## [!UICONTROL Confidentialité]
 
-### **[!UICONTROL Activer la migration ECID]**
+La section [!UICONTROL Confidentialité] permet de configurer la manière dont le SDK traite les signaux de consentement des clients à partir de votre site Web. En particulier, il vous permet de sélectionner le niveau de consentement par défaut supposé d’un client si aucune autre préférence explicite de consentement n’a été fournie. Le tableau suivant ventile ce que chaque option implique :
 
-L’extension Platform Web SDK utilise un nouveau cookie pour stocker l’ECID. Ce paramètre assure la compatibilité entre le nouveau cookie et l’ancien cookie à des fins de migration. Adobe recommande vivement de l’activer, sauf si aucun visiteur existant ne dispose d’un ECID.
-
-### **[!UICONTROL Utiliser des cookies tiers]**
-
-Adobe Experience Platform stocke toujours les cookies dans le domaine propriétaire. Cette option vous permet d’utiliser un cookie tiers défini sur demdex.net en plus du cookie du domaine propriétaire. Cela peut s’avérer utile lorsque des utilisateurs se déplacent entre plusieurs domaines. Cela désactive les appels vers demdex.net.
-
-### **[!UICONTROL Contexte]**
-
-L’extension recueille automatiquement des informations sur le contexte de la requête (par exemple, des détails sur l’URL et sur le navigateur). Vous pouvez désactiver cette option en désélectionnant des contextes spécifiques.
-
-- **[!UICONTROL web]**  - Détails sur la page Web tels que l’URL, le parrain, etc.
-- **[!UICONTROL périphérique]**  - Détails sur le périphérique, tels que l’orientation de l’écran, la hauteur d’écran et la largeur d’écran.
-- **[!UICONTROL environnement]**  - Informations sur l&#39;environnement informatique (Navigateur, connexion, etc.)
-- **[!UICONTROL emplacement]**  - Informations limitées sur l&#39;emplacement de l&#39;utilisateur
-
-## Eléments à suivre
-
-1. Définissez [types d&#39;action](action-types.md).
-2. Définissez [types d’éléments de données](data-element-types.md).
+| [!UICONTROL Niveau de consentement par défaut] | Description |
+| --- | --- |
+| [!UICONTROL In] | Inscription. Utilisez cette option si vous supposez que le consentement du client est donné par défaut et que vous n’acceptez que les signaux d’exclusion. |
+| [!UICONTROL En attente] | Les clients avec le consentement &quot;en attente&quot; sont supposés être exclus jusqu’à ce qu’un signal d’inclusion soit envoyé. Utilisez cette option si vous avez besoin du consentement explicite du client pour vos activités commerciales. |
+| [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |
