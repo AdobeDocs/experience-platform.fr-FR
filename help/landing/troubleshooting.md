@@ -4,12 +4,12 @@ solution: Experience Platform
 title: FAQ et guide de dépannage d’Adobe Experience Platform
 description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
 landing-page-description: Trouvez des réponses aux questions fréquemment posées et obtenez un guide afin de résoudre les problèmes courants dans Experience Platform.
-topic: getting started
+topic: démarrage
 type: Documentation
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 73%
 
 ---
@@ -220,7 +220,7 @@ Ce message d’erreur s’affiche lorsqu’un en-tête d’organisation IMS (`x-
 }
 ```
 
-Ce message d’erreur s’affiche lorsque l’utilisateur ou l’intégration Adobe I/O (identifié par le [jeton d&#39;accès](#how-do-i-get-an-access-token) dans l’en-tête `Authorization`) n’est pas autorisé à invoquer les API [!DNL Experience Platform] pour l’organisation IMS fournie dans l’en-tête `x-gw-ims-org-id`. Vérifiez que vous avez indiqué le bon identifiant pour votre organisation IMS dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
+Ce message d’erreur s’affiche lorsque l’intégration d’utilisateur ou d’Adobe I/O (identifiée par le [jeton d&#39;accès](#how-do-i-get-an-access-token) dans l’en-tête `Authorization`) n’est pas autorisée à invoquer les API [!DNL Experience Platform] pour l’organisation IMS fournie dans l’en-tête `x-gw-ims-org-id`. Vérifiez que vous avez indiqué le bon identifiant pour votre organisation IMS dans l’en-tête avant de réessayer. Si vous ne connaissez pas l’identifiant de votre organisation, vous pouvez le trouver dans la [console Adobe I/O](https://console.adobe.io) : dans l’onglet **Intégrations**, accédez à la section **Aperçu** pour une intégration spécifique afin de trouver l’identifiant sous **Informations d’identification du client**.
 
 ### Type de contenu valide non spécifié
 
