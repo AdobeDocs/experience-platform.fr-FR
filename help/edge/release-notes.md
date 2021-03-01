@@ -1,12 +1,12 @@
 ---
 title: Notes de mise à jour du SDK web Adobe Experience Platform
-description: Notes de mise à jour les plus récentes pour le SDK Web de Adobe Experience Platform.
+description: Notes de mise à jour les plus récentes pour le SDK Web Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK ; Platform Web SDK ; Web SDK ; notes de mise à jour ;
 translation-type: tm+mt
 source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
