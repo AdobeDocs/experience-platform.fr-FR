@@ -1,14 +1,14 @@
 ---
 product: experience-platform
 audience: user
-user-guide-title: Aide sur les Tableaux de bord Adobe Experience Platform
+user-guide-title: Aide sur les tableaux de bord dʼAdobe Experience Platform
 breadcrumb-title: Guide des tableaux de bord
-user-guide-description: Visualisez les données Experience Platform sur les tableaux de bord personnalisables.
+user-guide-description: Visualisez les données dʼExperience Platform sur des tableaux de bord personnalisables.
 translation-type: tm+mt
 source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
 workflow-type: tm+mt
 source-wordcount: '34'
-ht-degree: 20%
+ht-degree: 61%
 
 ---
 
