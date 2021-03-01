@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Glossaire de Adobe Experience Platform
-topic: getting started
+topic: démarrage
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7137'
+source-wordcount: '7139'
 ht-degree: 12%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 12%
 
 **Action** : Dans  [!DNL Platform Launch]le cas présent, une action est un type spécifique de composant de règle qui définit ce qui doit se produire une fois qu’un événement s’est produit et que les conditions ont été évaluées et transmises.
 
-**Activer** : Activer est l’action entreprise par un utilisateur pour mapper un segment ou des profils à une destination telle que  [!DNL Oracle Eloqua],  [!DNL Google] ou  [!DNL Salesforce Marketing Cloud].
+**Activer** : Activer est l’action effectuée par un utilisateur pour mapper un segment ou des profils à une destination telle que  [!DNL Oracle Eloqua],  [!DNL Google] ou  [!DNL Salesforce Marketing Cloud].
 
 **Activité** : Dans  [!DNL Offer Decisioning], une activité contient la logique qui sous-tend la sélection d’une offre.
 
@@ -41,7 +41,7 @@ ht-degree: 12%
 
 **Adobe Intelligent Services** : Les services intelligents tels que l&#39;Attribution AI et l&#39;intelligence artificielle sont des modèles d&#39;apprentissage automatique basés sur l&#39;intelligence artificielle qui sont conçus de manière ciblée et nécessitent l&#39;intervention et le fonctionnement d&#39;un Experience Platform.
 
-**Adobe I/O** : Adobe I/O fait partie de l’Experience Platform et fournit un accès à tout ce dont les développeurs ont besoin pour intégrer, étendre et personnaliser les plateformes, y compris les API, les événements, la console de développement et des outils utiles.
+**Adobe I/O** : Adobe I/O fait partie de l’Experience Platform et permet aux développeurs d’accéder à tout ce dont ils ont besoin pour intégrer, étendre et personnaliser les plateformes, y compris les API, les événements, la console de développement et des outils utiles.
 
 **Adobe Sensei** : Adobe Sensei est le cadre du renseignement qui donne le pouvoir aux Experience Platform. Il fournit également un ensemble de services d’IA qui permet aux marques d’améliorer leur capacité à fournir des expériences client personnalisées en temps réel.
 
