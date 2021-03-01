@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; ui ; IU ; XDM ; système XDM ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données d’expérience ; modèle de données ; modèle de données ; modèle de données ; éditeur de schémas ; éditeur de Schémas ; schéma ; Schéma ; schémas ; Schémas ; créer
 solution: Experience Platform
 title: Création d’un Schéma à l’aide de l’éditeur de Schéma
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 18%
 
 ---
@@ -270,7 +270,7 @@ Dans la section **[!UICONTROL Structure]** de l’éditeur, sélectionnez le cha
 >
 >Chaque schéma ne peut contenir qu’un seul champ d’identité principal. Une fois qu&#39;un champ de schéma a été défini comme identité Principale, vous recevrez un message d&#39;erreur si vous tentez par la suite de définir un autre champ d&#39;identité dans le schéma comme Principal.
 
-Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste d&#39;espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
+Ensuite, vous devez fournir un **[!UICONTROL espace de nommage d&#39;identité]** à partir de la liste des espaces de nommage prédéfinis dans la liste déroulante. `loyaltyId` étant l’adresse électronique du client, sélectionnez &quot;[!UICONTROL Courriel]&quot; dans la liste déroulante. Sélectionnez **[!UICONTROL Appliquer]** pour confirmer les mises à jour du champ `loyaltyId`.
 
 ![](../images/tutorials/create-schema/loyaltyId_primary_identity.png)
 
