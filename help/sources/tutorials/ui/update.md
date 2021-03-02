@@ -3,13 +3,13 @@ keywords: Experience Platform ; accueil ; rubriques populaires ; mettre à jour 
 description: Dans certains cas, il peut être nécessaire de mettre à jour les détails d'un compte de sources existantes. L’espace de travail Sources vous permet d’ajouter, de modifier et de supprimer des détails d’une connexion existante par lot ou en flux continu, y compris son nom, sa description et ses informations d’identification.
 solution: Experience Platform
 title: Mettre à jour les détails du compte de connexion à la source dans l’interface utilisateur
-topic: overview
-type: Tutorial
+topic: aperçu
+type: Tutoriel
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -26,8 +26,8 @@ Ce didacticiel décrit les étapes à suivre pour mettre à jour les détails et
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Sources](../../home.md) : L’Experience Platform DNL permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme.
-- [Sandbox](../../../sandboxes/home.md) : DNL Experience Platform fournit des sandbox virtuels qui partitionnent une instance de plateforme unique en environnements virtuels distincts pour aider à développer et développer des applications d&#39;expérience numérique.
+- [Sources](../../home.md) : Experience Platform permet l’assimilation de données à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de plate-forme.
+- [Environnements de test](../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 ## Mettre à jour les comptes
 
