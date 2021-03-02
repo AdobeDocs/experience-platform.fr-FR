@@ -4,7 +4,7 @@ title: Détails de la destination de la vue
 description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 seo-description: 'La page de détails d’une destination individuelle offre un aperçu des détails de la destination, tels que le nom de destination, l’identifiant, les segments mappés à la destination et les commandes permettant de modifier l’activation, d’activer et de désactiver le flux de données. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 15%
@@ -79,7 +79,7 @@ Pour vue les détails d&#39;une exécution de flux de données particulière, s�
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Données d’Activation]
+## [!UICONTROL Données d’Activation] {#activation-data}
 
 L&#39;onglet [!UICONTROL Données d&#39;Activation] affiche une liste de segments qui ont été mappés à la destination, y compris leur date de début et leur date de fin (le cas échéant). Pour vue les détails d’un segment particulier, sélectionnez son nom dans la liste.
 
