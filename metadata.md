@@ -1,6 +1,7 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
+feature-set: Platform
 solution-title: Présentation de Platform
 solution-hub-url: https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
@@ -13,10 +14,10 @@ solution: Experience Platform
 type: Documentation
 index: true
 translation-type: tm+mt
-source-git-commit: ffa637c7a0c30bb1b41746b2278f00e40aa2e11e
+source-git-commit: 100e17f44c3af2a888d92d982ae3b2de1ed45ec5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '146'
+ht-degree: 100%
 
 ---
 
