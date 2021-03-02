@@ -6,10 +6,10 @@ topic: aperçu
 type: Tutoriel
 description: Découvrez comment connecter Adobe Experience Platform à un compte Kinesis à l’aide de l’API de service de flux.
 translation-type: tm+mt
-source-git-commit: 4f3d88e1241fd19dc9963f34dd60086ae2135557
+source-git-commit: ed14fe464a4dc82f54902c8dc92fe00bc2a5381e
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '561'
+ht-degree: 26%
 
 ---
 
@@ -92,8 +92,9 @@ curl -X POST \
         "auth": {
             "specName": "Aws Kinesis authentication credentials",
             "params": {
-                "accessKeyId": "accessKeyId",
-                "secretKey": "secretKey"
+                "accessKeyId": "{ACCESS_KEY_ID}",
+                "secretKey": "{SECRET_KEY}",
+                "region: "{REGION}
             }
         },
         "connectionSpec": {
@@ -107,7 +108,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | ID de clé d&#39;accès pour votre compte [!DNL Kinesis]. |
 | `auth.params.secretKey` | Clé d&#39;accès secrète pour votre compte [!DNL Kinesis]. |
-| `auth.params.region` | Région de votre compte [!DNL Kinesis]. |
+| `auth.params.region` | Région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions, voir le document sur [liste autorisée d’adresse IP](../../../../ip-address-allow-list.md). |
 | `connectionSpec.id` | ID de spécification de connexion [!DNL Kinesis] : `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Réponse**
