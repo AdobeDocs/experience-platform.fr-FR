@@ -4,10 +4,10 @@ title: Présentation de l’espace de travail Destinations
 description: 'L’espace de travail Destinations se compose de quatre sections : Catalogue, Parcourir, Comptes et Vue du système, décrites dans les sections ci-dessous.'
 seo-description: Dans Adobe Experience Platform, sélectionnez Destinations dans la barre de navigation de gauche pour accéder à l’espace de travail des destinations.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 43%
+source-wordcount: '939'
+ht-degree: 41%
 
 ---
 
@@ -97,7 +97,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : peut être S3 ou FTP.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Segments] | Le nombre de segments activés pour cette destination. |
+| [!UICONTROL Données d’Activation] | Indique le nombre de segments activés pour cette destination. Sélectionnez ce contrôle pour en savoir plus sur les segments activés. Pour plus d’informations sur les segments activés, voir [Données d’Activation](/help/destinations/ui/destination-details-page.md#activation-data) dans la page des détails de destination. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. |
 | [!UICONTROL État] | `Active` ou `Inactive`. Indique si les données sont actuellement activées vers cette destination. Pour modifier le statut, consultez [Désactiver l’activation](./activate-destinations.md#disable-activation). |
 
