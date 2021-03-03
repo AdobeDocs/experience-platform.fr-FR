@@ -3,11 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Guide de préparation des données
 user-guide-description: Préparez vos données pour l’ingestion dans Adobe Experience Platform.
+feature: data Management, Ingestion des données
 translation-type: tm+mt
-source-git-commit: c9daf77f4b7db113b972ee268681999bc7f7fa8d
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '29'
-ht-degree: 62%
+source-wordcount: '33'
+ht-degree: 54%
 
 ---
 
