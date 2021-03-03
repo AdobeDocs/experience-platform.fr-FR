@@ -5,9 +5,9 @@ title: Fonctions de mappage des préférences de données
 topic: aperçu
 description: Ce document présente les fonctions de mappage utilisées avec l’API de données.
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 18%
 
 ---
@@ -149,6 +149,8 @@ Les tableaux ci-dessous liste toutes les fonctions de mappage prises en charge, 
 | coalesce | Renvoie le premier objet non nul dans un tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le premier objet non nul.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Récupère le premier élément du tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le premier élément.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Récupère le dernier élément du tableau donné. | <ul><li>ENTRÉE : **Obligatoire** Tableau dont vous souhaitez trouver le dernier élément.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | Ajoute les éléments à la fin du tableau. | <ul><li>ARRAY : **Obligatoire** Tableau auquel vous ajoutez des éléments.</li><li>VALEURS : Eléments que vous souhaitez ajouter au tableau.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
+| join_array | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Tableau auquel vous ajoutez des éléments.</li><li>VALEURS : La ou les baies à ajouter à la baie parent.</li></ul> | join_array &#x200B;(ARRAY, VALUES) | join_array &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d&#39;entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur booléenne pour indiquer s&#39;il faut inclure ou non des valeurs NULL dans le tableau de réponses.</li><li>VALEURS : **Obligatoire** Éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### Opérateurs logiques
