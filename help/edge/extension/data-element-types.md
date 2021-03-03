@@ -2,10 +2,10 @@
 title: Types d’éléments de données dans l’extension Adobe Experience Platform Web SDK
 description: Découvrez les différents types d’éléments de données fournis par l’extension Adobe Experience Platform Web SDK à Adobe Experience Platform Launch.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 78%
+source-wordcount: '305'
+ht-degree: 47%
 
 ---
 
@@ -22,18 +22,18 @@ Lorsque cet élément de données est utilisé, il fournit un identifiant de fus
 
 ## Mappage d’identités
 
-L’élément de données de carte Identité vous permet de créer des identités à partir d’autres éléments de données ou d’autres valeurs que vous spécifiez. Toutes les identités que vous créez doivent être liées à un espace de noms correspondant. Cet élément de données présente une liste déroulante qui affiche tous les espaces de noms par défaut, ainsi que tous ceux que vous avez créés.
+L’élément de données de carte Identité vous permet de créer des identités à partir d’autres éléments de données ou d’autres valeurs que vous spécifiez. Toutes les identités que vous créez doivent être liées à un espace de noms correspondant. Cet élément de données fournit une liste déroulante qui affiche tous les espaces de nommage par défaut, ainsi que tous ceux que vous avez créés.
 
 ![](./assets/identity-map-data-element.png)
 
 ## Objet XDM
 
-Toutes les données envoyées au SDK Web Adobe Experience Platform doivent être au format XDM. Le formatage de vos données est plus facile avec l’élément de données d’objet XDM. La première fois que vous ouvrez cet élément de données, sélectionnez le sandbox et le schéma Adobe Experience Platform appropriés. Quand vous aurez sélectionné votre schéma, vous en verrez la structure et vous pourrez facilement la compléter.
+Utilisez le format XDM pour envoyer toutes les données au Adobe Experience Platform Web SDK. Le formatage de vos données est plus facile avec l’élément de données d’objet XDM. La première fois que vous ouvrez cet élément de données, sélectionnez le sandbox et le schéma Adobe Experience Platform appropriés. Après avoir sélectionné votre schéma, vous voyez la structure de votre schéma, que vous pouvez facilement remplir.
 
 ![](./assets/XDM-object.png)
 
-Veuillez noter que lorsque vous ouvrez certains champs de votre schéma, par exemple `web.webPageDetails.URL`, certains éléments sont automatiquement collectés. Bien que plusieurs éléments soient automatiquement collectés, vous avez la possibilité de les remplacer, si nécessaire. Toutes les valeurs peuvent être renseignées manuellement ou en utilisant d’autres éléments de données.
+Veuillez noter que lorsque vous ouvrez certains champs de votre schéma, par exemple `web.webPageDetails.URL`, certains éléments sont automatiquement collectés. Bien que plusieurs éléments soient automatiquement collectés, vous pouvez en remplacer certains, si nécessaire. Toutes les valeurs peuvent être renseignées manuellement ou en utilisant d’autres éléments de données.
 
 >[!NOTE]
 >
->Vous n’avez qu’à remplir les renseignements que vous souhaitez recueillir. Tout ce qui n’est pas renseigné sera omis lorsque les données seront envoyées aux solutions.
+>Renseignez uniquement les informations que vous souhaitez recueillir. Tout élément non renseigné est omis lorsque les données sont envoyées aux solutions.
