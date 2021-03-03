@@ -2,10 +2,10 @@
 title: Extension SDK Web Adobe Experience Platform Présentation
 description: En savoir plus sur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 19%
+source-wordcount: '553'
+ht-degree: 14%
 
 ---
 
@@ -32,17 +32,17 @@ Dans les deux cas, vous accédez à la page de configuration du SDK Web de la pl
 
 ## Options de configuration générales
 
-Les options de configuration situées en haut de la page indiquent à Adobe Experience Platform où router les données et quelles configurations doivent être utilisées sur le serveur.
+Les options de configuration situées en haut de la page indiquent à Adobe Experience Platform où router les données et les configurations à utiliser sur le serveur.
 
 ### [!UICONTROL Nom]
 
-L’extension Adobe Experience Platform Web SDK prend en charge plusieurs instances sur la page. Elle permet d’envoyer des données à plusieurs organisations à l’aide d’une configuration  Platform Launch unique.
+L’extension Adobe Experience Platform Web SDK prend en charge plusieurs instances sur la page. Le nom est utilisé pour envoyer des données à plusieurs organisations avec une configuration de Platform launch unique.
 
 Le nom de l&#39;extension est par défaut &quot;[!DNL alloy]&quot;. Vous pouvez toutefois remplacer le nom de l’instance par n’importe quel nom d’objet JavaScript valide.
 
 ### **[!UICONTROL Identifiant IMS de l’organisation]**
 
-[!UICONTROL L&#39;ID d&#39;organisation IMS] est l&#39;organisation à laquelle vous souhaitez envoyer les données à l&#39;Adobe. La plupart du temps, vous devez utiliser la valeur par défaut renseignée automatiquement. Lorsque la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
+[!UICONTROL L&#39;ID d&#39;organisation IMS] est l&#39;organisation à laquelle vous souhaitez envoyer les données à l&#39;Adobe. La plupart du temps, utilisez la valeur par défaut qui est automatiquement renseignée. Lorsque la page contient plusieurs instances, renseignez ce champ avec la valeur de la deuxième organisation à laquelle vous souhaitez envoyer des données.
 
 ### **[!UICONTROL Domaine Edge]**
 
@@ -50,7 +50,7 @@ Le [!UICONTROL domaine Edge] est le domaine à partir duquel l&#39;extension Ado
 
 ## [!UICONTROL Configurations Edge]
 
-Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, un ID de configuration Edge est utilisé pour référencer la configuration côté serveur. Cela vous permet de mettre à jour la configuration sans avoir à modifier le code de votre site Web.
+Lorsqu’une requête est envoyée au réseau Edge de Adobe Experience Platform, un ID de configuration Edge est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à modifier le code de votre site Web.
 
 Pour plus d&#39;informations, consultez le guide sur les [configurations des arêtes](../fundamentals/edge-configuration.md).
 
@@ -61,5 +61,5 @@ La section [!UICONTROL Confidentialité] permet de configurer la manière dont l
 | [!UICONTROL Niveau de consentement par défaut] | Description |
 | --- | --- |
 | [!UICONTROL In] | Inscription. Utilisez cette option si vous supposez que le consentement du client est donné par défaut et que vous n’acceptez que les signaux d’exclusion. |
-| [!UICONTROL En attente] | Les clients avec le consentement &quot;en attente&quot; sont supposés être exclus jusqu’à ce qu’un signal d’inclusion soit envoyé. Utilisez cette option si vous avez besoin du consentement explicite du client pour vos activités commerciales. |
+| [!UICONTROL En attente] | Les clients avec le consentement &quot;en attente&quot; sont désactivés jusqu’à ce qu’un signal d’inclusion soit envoyé. Utilisez cette option si vous avez besoin du consentement explicite du client pour vos activités commerciales. |
 | [!UICONTROL Fourni par l’élément de données] | Le niveau de consentement par défaut est déterminé par un élément de données distinct que vous définissez. Lorsque vous utilisez cette option, vous devez spécifier l’élément de données à l’aide du menu déroulant fourni. |
