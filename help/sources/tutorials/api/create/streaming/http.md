@@ -2,14 +2,14 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; connexion en flux continu ; créer une connexion en flux continu ; guide d’API ; didacticiel ; créer une connexion en flux continu ; assimilation en flux continu ; assimilation ;
 solution: Experience Platform
 title: Création d’une connexion de diffusion en continu à l’aide de l’API
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 5932d63820dd0e50acccd18573746061232e099e
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 43%
+source-wordcount: '885'
+ht-degree: 42%
 
 ---
 
@@ -25,7 +25,7 @@ Ce didacticiel utilise l&#39;API [!DNL Flow Service] pour vous guider dans les �
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organiser les données d’expérience.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de sources multiples.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à des API d’ingestion par flux.
 
