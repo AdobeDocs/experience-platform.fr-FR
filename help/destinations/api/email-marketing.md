@@ -3,13 +3,13 @@ keywords: Experience Platform ; accueil ; rubriques populaires
 solution: Experience Platform
 title: Se connecter aux destinations de marketing par courrier électronique et activer les données à l’aide d’appels d’API
 description: Ce document couvre la création de destinations de marketing par courrier électronique à l’aide de l’API Adobe Experience Platform.
-topic: tutorial
-type: Tutorial
+topic: didacticiel
+type: Tutoriel
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
-ht-degree: 73%
+source-wordcount: '1681'
+ht-degree: 72%
 
 ---
 
@@ -360,6 +360,12 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 ```
 
 ### Indication de l’emplacement de stockage et du format des données
+
+[!DNL Adobe Experience Platform] exporte des données pour le marketing par courrier électronique et les destinations d’enregistrement cloud sous la forme de  [!DNL CSV] fichiers.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] sépare automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
 
 **Format d’API**
 
