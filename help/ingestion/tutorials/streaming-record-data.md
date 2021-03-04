@@ -6,10 +6,10 @@ topic: didacticiel
 type: Tutoriel
 description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API d’Adobe Experience Platform Data Ingestion Service.
 translation-type: tm+mt
-source-git-commit: 27a7855492f2f8e7a92651cd97371c904dd1561d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1165'
-ht-degree: 77%
+source-wordcount: '1166'
+ht-degree: 75%
 
 ---
 
@@ -23,7 +23,7 @@ Ce didacticiel vous aidera à commencer à utiliser les API d&#39;assimilation e
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel  [!DNL Platform] organiser les données d’expérience.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil unifié et en temps réel pour les consommateurs, basé sur des données agrégées provenant de sources multiples.
 - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points de terminaison disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
 
 De plus, pour suivre ce tutoriel, vous devez avoir déjà créé une connexion en continu. Pour plus d’informations sur la création d’une connexion en continu, consultez le [tutoriel de création d’une connexion en continu](./create-streaming-connection.md).
