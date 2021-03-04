@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; segmentation ; Segmentation ; Service de segmentation ; Segmentation en flux continu ; Segmentation en flux continu ; Segmentation en flux continu ; Évaluation continue ;
 solution: Experience Platform
 title: 'Évaluer les Événements en temps quasi réel avec la segmentation en flux continu '
-topic: developer guide
+topic: guide du développeur
 description: Ce document contient des exemples d’utilisation de la segmentation en flux continu avec l’API Adobe Experience Platform Segmentation Service.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 49%
+source-wordcount: '1341'
+ht-degree: 48%
 
 ---
 
@@ -31,7 +31,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 Ce guide du développeur nécessite une bonne compréhension des différents services [!DNL Adobe Experience Platform] impliqués dans la segmentation en flux continu. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Fournit un profil unifié pour les consommateurs en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Segmentation]](../home.md): Permet de créer des segments et des audiences à partir de vos  [!DNL Real-time Customer Profile] données.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
