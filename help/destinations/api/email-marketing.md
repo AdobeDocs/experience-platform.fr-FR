@@ -6,10 +6,10 @@ description: Ce document couvre la création de destinations de marketing par co
 topic: didacticiel
 type: Tutoriel
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 72%
+source-wordcount: '1701'
+ht-degree: 71%
 
 ---
 
@@ -366,6 +366,8 @@ Une réponse réussie contient l’identifiant unique de la connexion de base (`
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] sépare automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
+>
+>Les noms de fichier fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, en tant que tel : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **Format d’API**
 
