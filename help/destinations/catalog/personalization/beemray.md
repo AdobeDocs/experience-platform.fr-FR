@@ -3,17 +3,17 @@ keywords: beemray,beemray extension
 title: Extension Beemray
 description: L'extension Beemray est une destination de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 46%
+source-wordcount: '521'
+ht-degree: 45%
 
 ---
 
 
 # [!DNL Beemray] Extension {#beemray-extension}
 
-[!DNL Beemray] permet d’accélérer votre produit dans un contexte situationnel. Elle permet d’obtenir des informations, de créer de nouvelles expériences, de favoriser les interactions et de vous impliquer dans les moments importants. Beemray automatise l’intelligence contextuelle à l’aide de l’apprentissage automatique. Beemray se connecte à Adobe Experience Cloud et au reste de vos partenaires technologiques. Tout se déroule en temps réel. Cette extension installe [!DNL Beemray] SDK sur votre site.
+[!DNL Beemray] permet d’accélérer votre produit dans un contexte situationnel. Elle permet d’obtenir des informations, de créer de nouvelles expériences, de favoriser les interactions et de vous impliquer dans les moments importants. Beemray automatise l’intelligence contextuelle à l’aide de l’apprentissage automatique. Beemray se connecte à Adobe Experience Cloud et au reste de vos partenaires technologiques. Tout se passe en temps réel. Cette extension installe [!DNL Beemray] SDK sur votre site.
 
 Beemray est une extension de personnalisation à Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
@@ -37,7 +37,7 @@ Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.
 
 Cliquez sur la destination pour la mettre en évidence, puis sélectionnez **[!UICONTROL Configurer]** dans le rail de droite. Si le contrôle **[!UICONTROL Configure]** est grisé, l&#39;autorisation **[!UICONTROL manage_properties]** vous manque. Voir les [Conditions préalables](#prerequisites).
 
-Dans la fenêtre **[!UICONTROL Sélectionner la propriété de lancement de plateforme disponible]**, sélectionnez la propriété [!DNL Platform Launch] dans laquelle vous souhaitez installer l&#39;extension. Vous pouvez aussi créer une nouvelle propriété dans [!DNL Platform Launch]. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de [!DNL Launch]
+Dans la fenêtre **[!UICONTROL Sélectionner la propriété de Platform launch disponible]**, sélectionnez la propriété [!DNL Platform Launch] dans laquelle vous souhaitez installer l&#39;extension. Vous pouvez aussi créer une nouvelle propriété dans [!DNL Platform Launch]. Une propriété est un ensemble de règles, d’éléments de données, d’extensions configurées, d’environnements et de bibliothèques. Pour en savoir plus sur les propriétés, consultez la [section de la page Propriétés](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html#properties-page) de la documentation de [!DNL Launch]
 
 Le flux de travail vous conduit à [!DNL Platform Launch] pour terminer l&#39;installation.
 
