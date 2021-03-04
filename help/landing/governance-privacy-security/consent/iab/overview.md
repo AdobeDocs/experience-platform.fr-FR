@@ -2,12 +2,12 @@
 keywords: Experience Platform ; accueil ; IAB ; IAB 2.0 ; consentement ; consentement
 solution: Experience Platform
 title: Prise en charge d’IAB TCF 2.0 dans l’Experience Platform
-topic: privacy events
+topic: événements de confidentialité
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Ce guide nécessite également une compréhension pratique des services de plate
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : Cadre normalisé selon lequel l’Experience Platform organise les données d’expérience client.
 * [Service](../../../../identity-service/home.md) d&#39;identité Adobe Experience Platform : Résout le défi fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les périphériques et les systèmes.
-* [Real-time Customer Profile](../../../../profile/home.md)[!DNL Identity Service] : exploite pour créer en temps réel des profils clients détaillés à partir de vos jeux de données. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
+* [Profil](../../../../profile/home.md) client en temps réel : Exploite  [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md) : Bibliothèque JavaScript côté client qui vous permet d’intégrer divers services de plate-forme à votre site Web destiné aux clients.
    * [Commandes](../../../../edge/consent/supporting-consent.md) de consentement SDK : Présentation des cas d’utilisation des commandes du SDK liées au consentement, présentée dans ce guide.
 * [Service](../../../../segmentation/home.md) de segmentation Adobe Experience Platform : Permet de diviser  [!DNL Real-time Customer Profile] les données en groupes d’individus partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
@@ -165,7 +165,7 @@ alloy("setConsent", {
 | `standard` | Norme de consentement utilisée. Cette valeur doit être définie sur `IAB` pour le traitement du consentement TCF 2.0. |
 | `version` | Numéro de version de la norme de consentement indiquée sous `standard`. Cette valeur doit être définie sur `2.0` pour le traitement du consentement TCF 2.0. |
 | `value` | Chaîne de consentement codée en base 64 générée par le CMP. |
-| `gdprApplies` | Valeur booléenne qui indique si le RGD s’applique au client actuellement connecté. Pour que TCF 2.0 soit appliqué à ce client, la valeur doit être définie sur `true`. |
+| `gdprApplies` | Valeur booléenne qui indique si le RGD s’applique au client actuellement connecté. Pour que TCF 2.0 soit appliqué à ce client, la valeur doit être définie sur `true`. La valeur par défaut est `true` si elle n’est pas définie. |
 
 La commande `setConsent` doit être utilisée dans le cadre d&#39;un hook CMP qui détecte les modifications des paramètres de consentement. Le code JavaScript suivant fournit un exemple d&#39;utilisation de la commande `setConsent` pour le hook `OnConsentChanged` de OneTrust :
 
@@ -219,7 +219,7 @@ alloy("sendEvent", {
 | `consentStandard` | Norme de consentement utilisée. Cette valeur doit être définie sur `IAB` pour le traitement du consentement TCF 2.0. |
 | `consentStandardVersion` | Numéro de version de la norme de consentement indiquée sous `standard`. Cette valeur doit être définie sur `2.0` pour le traitement du consentement TCF 2.0. |
 | `consentStringValue` | Chaîne de consentement codée en base 64 générée par le CMP. |
-| `gdprApplies` | Valeur booléenne qui indique si le RGD s’applique au client actuellement connecté. Pour que TCF 2.0 soit appliqué à ce client, la valeur doit être définie sur `true`. |
+| `gdprApplies` | Valeur booléenne qui indique si le RGD s’applique au client actuellement connecté. Pour que TCF 2.0 soit appliqué à ce client, la valeur doit être définie sur `true`. La valeur par défaut est `true` si elle n’est pas définie. |
 
 ### Gestion des réponses au SDK
 
@@ -233,7 +233,7 @@ Toutes les commandes [!DNL Platform SDK] renvoient des promesses indiquant si l&
 
 Une fois que vous avez collecté les données de consentement des clients et créé des segments d’audience contenant les attributs de consentement requis, vous pouvez ensuite appliquer la conformité TCF 2.0 lors de l’exportation de ces segments vers des destinations en aval.
 
-Pour autant que le paramètre de consentement `gdprApplies` soit défini sur `true` pour un ensemble de profils client, toutes les données des profils exportés vers les destinations en aval sont filtrées en fonction des préférences de consentement pour chaque profil. Tout profil qui ne respecte pas les préférences de consentement requises est ignoré pendant le processus d’exportation.
+Pour autant que le paramètre de consentement `gdprApplies` soit défini sur `true` pour un ensemble de profils client, toutes les données des profils exportés vers les destinations en aval sont filtrées en fonction des préférences de consentement TCF pour chaque profil. Tout profil qui ne respecte pas les préférences de consentement requises est ignoré pendant le processus d’exportation.
 
 Les clients doivent consentir aux objectifs suivants (décrits par les [stratégies TCF 2.0](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions)) afin que leurs profils soient inclus dans les segments qui sont exportés vers les destinations :
 
