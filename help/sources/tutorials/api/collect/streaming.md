@@ -6,9 +6,9 @@ topic: aperçu
 type: Tutoriel
 description: Ce didacticiel décrit les étapes à suivre pour récupérer les données en flux continu et les amener sur la plate-forme à l’aide des connecteurs et des API source.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 20%
 
 ---
@@ -385,11 +385,11 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `xdmSchema` | `$id` du schéma XDM cible. |
+| `xdmSchema` | `$id` du schéma XDM de cible. |
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du mappage nouvellement créé, y compris son identifiant unique (`id`). Cet ID est requis à une étape ultérieure pour créer un flux de données.
+Une réponse réussie renvoie les détails du nouveau mappage, y compris son identifiant unique (`id`). Cet identifiant est nécessaire à une étape ultérieure pour créer un flux de données.
 
 ```json
 {
@@ -404,7 +404,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Rechercher les spécifications de flux de données {#specs}
 
-Un flux de données est chargé de collecter les données des sources et de les importer dans [!DNL Platform]. Pour créer un flux de données, vous devez d&#39;abord obtenir les spécifications du flux de données en effectuant une demande de GET à l&#39;API [!DNL Flow Service]. Les spécifications des flux de données sont responsables de la collecte des données à partir d&#39;un connecteur de diffusion.
+Un flux de données est chargé de collecter les données provenant de sources et de les intégrer à [!DNL Platform]. Pour créer un flux de données, vous devez d&#39;abord obtenir les spécifications du flux de données en exécutant une demande de GET à l&#39;API [!DNL Flow Service]. Les spécifications de flux de données sont responsables de la collecte de données à partir d&#39;un connecteur de flux continu.
 **Format d’API**
 
 ```http
@@ -423,7 +423,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la spécification de flux de données qui est responsable de l&#39;importation des données de votre connecteur de diffusion dans [!DNL Platform]. Cet ID est requis à l’étape suivante pour créer un nouveau flux de données.
+Une réponse réussie renvoie les détails de la spécification de flux de données responsable de l&#39;importation des données de votre connecteur de diffusion en continu dans [!DNL Platform]. Cet identifiant est requis à l’étape suivante pour créer un nouveau flux de données.
 
 ```json
 {
@@ -495,14 +495,14 @@ Une réponse réussie renvoie les détails de la spécification de flux de donn�
 
 ## Création d’un flux de données
 
-La dernière étape vers la collecte de données en flux continu consiste à créer un flux de données. À l’heure actuelle, les valeurs requises suivantes sont préparées :
+La dernière étape de la collecte des données en flux continu consiste à créer un flux de données. A l’heure actuelle, les valeurs requises suivantes sont préparées :
 
 - [ID de connexion source](#source)
-- [ID de connexion cible](#target)
+- [ID de connexion à la cible](#target)
 - [ID de mappage](#mapping)
 - [ID de spécification du flux de données](#specs)
 
-Un flux de données est responsable de la planification et de la collecte des données d&#39;une source. Vous pouvez créer un flux de données en exécutant une demande de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
+Un flux de données est responsable de la planification et de la collecte des données d’une source. Vous pouvez créer un flux de données en exécutant une requête de POST tout en fournissant les valeurs mentionnées précédemment dans la charge utile.
 
 **Format d’API**
 
@@ -546,10 +546,10 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `flowSpec.id` | L&#39;[ID de spécification de flux](#specs) a été récupéré à l&#39;étape précédente. |
-| `sourceConnectionIds` | L&#39;[ID de connexion source](#source) a été récupéré lors d&#39;une étape précédente. |
-| `targetConnectionIds` | L&#39;[ID de connexion cible](#target-connection) a été récupéré lors d&#39;une étape précédente. |
-| `transformations.params.mappingId` | L&#39;[ID de mappage](#mapping) a été récupéré lors d&#39;une étape précédente. |
+| `flowSpec.id` | ID de la spécification de flux [](#specs) récupéré à l’étape précédente. |
+| `sourceConnectionIds` | L&#39;[identifiant de connexion source](#source) a été récupéré lors d&#39;une étape précédente. |
+| `targetConnectionIds` | L&#39;[ID de connexion de cible](#target-connection) a été récupéré lors d&#39;une étape précédente. |
+| `transformations.params.mappingId` | ID de mappage [](#mapping) récupéré lors d’une étape précédente. |
 
 **Réponse**
 
@@ -564,7 +564,7 @@ Une réponse réussie renvoie l&#39;identifiant (`id`) du flux de données nouve
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour collecter des données en flux continu à partir de votre connecteur de diffusion. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
+En suivant ce didacticiel, vous avez créé un flux de données pour collecter des données en flux continu à partir de votre connecteur de flux continu. Les données entrantes peuvent désormais être utilisées par les services [!DNL Platform] en aval tels que [!DNL Real-time Customer Profile] et [!DNL Data Science Workspace]. Pour plus d’informations, voir les documents suivants :
 
 - [Présentation du profil client en temps réel](../../../../profile/home.md)
 - [Présentation de Data Science Workspace](../../../../data-science-workspace/home.md)
