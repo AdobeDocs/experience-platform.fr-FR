@@ -2,13 +2,13 @@
 keywords: Experience Platform ; accueil ; rubriques populaires ; service catalogue ; catalogue ; service catalogue ; Catalogue
 solution: Experience Platform
 title: Guide de l’API du service de catalogue
-topic: developer guide
+topic: guide du développeur
 description: L’API Catalog Service permet aux développeurs de gérer les métadonnées de jeux de données dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 49%
+source-wordcount: '602'
+ht-degree: 46%
 
 ---
 
@@ -25,7 +25,7 @@ Ce guide du développeur décrit les étapes à suivre pour vous aider à démar
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
-* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données en temps réel dans à partir de périphériques côté client et côté serveur.
+* [Prise en charge](../../ingestion/streaming-ingestion/overview.md) en flux continu : Comment  [!DNL Experience Platform] ingère et stocke les données des périphériques client et serveur en temps réel.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître ou connaître pour pouvoir invoquer l&#39;API [!DNL Catalog Service].
 
