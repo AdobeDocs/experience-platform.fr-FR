@@ -5,9 +5,9 @@ title: Présentation des jeux de données
 topic: datasets
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '708'
 ht-degree: 43%
 
 ---
