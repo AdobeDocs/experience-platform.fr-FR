@@ -5,10 +5,10 @@ topic: guide
 type: Documentation
 description: Le guide de prise en main de l’API de Profil décrit les concepts clés et les fonctionnalités de base que vous devez connaître pour utiliser les points de terminaison de l’API de Profil client en temps réel afin d’effectuer des opérations CRUD de base sur les données de Profil.
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 31%
+source-wordcount: '413'
+ht-degree: 28%
 
 ---
 
@@ -19,7 +19,7 @@ Les points de terminaison de l’API Profil client en temps réel vous permetten
 
 L&#39;utilisation du guide du développeur nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l&#39;utilisation de [!DNL Profile] données. Avant de commencer à travailler avec l&#39;API [!DNL Real-time Customer Profile], consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-time Customer Profile]](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
+* [[!DNL Real-time Customer Profile]](../home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant les identités entre les périphériques et les systèmes.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md) : permet de créer des segments d’audience à partir de données Real-time Customer Profile.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Cadre normalisé selon lequel la plate-forme organise les données d’expérience client.
