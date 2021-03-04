@@ -6,9 +6,9 @@ seo-title: Activation de profils et de segments vers une destination
 description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 seo-description: Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2164'
 ht-degree: 15%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 15%
 
 # Activation de profils et de segments vers une destination
 
-Activez les données dont vous disposez dans Adobe Experience Platform en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
+Activez les données que vous avez dans [!DNL Adobe Experience Platform] en mappant les segments aux destinations. Pour ce faire, suivez la procédure décrite ci-après.
 
 ## Conditions préalables  {#prerequisites}
 
@@ -38,7 +38,9 @@ Sélectionnez le nom de la destination pour accéder au processus d’activation
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Notez que si un processus d’activation existe déjà pour une destination, vous pouvez voir les segments actuellement activés pour cette destination. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite et suivez les étapes ci-dessous pour modifier les informations sur l’activation.
+>[!NOTE]
+>
+>Si un processus d’activation existe déjà pour une destination, vous pouvez voir les segments qui sont actuellement activés pour la destination. Sélectionnez **[!UICONTROL Modifier l’activation]** dans le rail de droite et suivez les étapes ci-dessous pour modifier les informations sur l’activation.
 
 Une fois que vous avez sélectionné une destination, sélectionnez **[!UICONTROL Activer]**.
 
@@ -62,7 +64,7 @@ Pour les destinations sociales, vous devez sélectionner des attributs source ou
 
 #### Exemple : activation des données d&#39;audience dans [!DNL Facebook Custom Audience] {#example-facebook}
 
-Il s&#39;agit d&#39;un exemple de mappage d&#39;identité correct lors de l&#39;activation des données d&#39;audience dans [!DNL Facebook].
+Vous trouverez ci-dessous un exemple de mappage d&#39;identité correct lors de l&#39;activation des données d&#39;audience dans [!DNL Facebook].
 
 Sélection des champs source :
 
@@ -76,7 +78,7 @@ Sélection des champs source :
 
 Sélection de champs de cible :
 
-* Sélectionnez l&#39;espace de nommage `Email_LC_SHA256` en tant qu&#39;identité de cible lorsque vos espaces de nommage sources sont soit `Email`, soit `Email_LC_SHA256`.
+* Sélectionnez l&#39;espace de nommage `Email_LC_SHA256` comme identité de cible lorsque vos espaces de nommage sources sont `Email` ou `Email_LC_SHA256`.
 * Sélectionnez l&#39;espace de nommage `Phone_SHA256` comme identité de cible lorsque vos espaces de nommage sources sont `PHONE_E.164` ou `Phone_SHA256`.
 * Sélectionnez les espaces de nommage `IDFA` ou `GAID` comme identité de cible lorsque vos espaces de nommage sources sont `IDFA` ou `GAID`.
 * Sélectionnez l&#39;espace de nommage `Extern_ID` comme identité de cible lorsque votre espace de nommage source est personnalisé.
@@ -140,13 +142,17 @@ S&#39;applique à : Destinations marketing par courriel et destinations d’enre
 
 ![Configuration de l’étape](../assets/ui/activate-destinations/configure-icon.png)
 
-À l&#39;étape **[!UICONTROL Configurer]**, vous pouvez configurer la planification et les noms de fichier pour chaque segment que vous exportez. La configuration de la planification est obligatoire, mais la configuration du nom de fichier est facultative.
+[!DNL Adobe Experience Platform] exporte des données pour le marketing par courrier électronique et les destinations d’enregistrement cloud sous la forme de  [!DNL CSV] fichiers. À l&#39;étape **[!UICONTROL Configurer]**, vous pouvez configurer la planification et les noms de fichier pour chaque segment que vous exportez. La configuration de la planification est obligatoire, mais la configuration du nom de fichier est facultative.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] sépare automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
 
 Pour ajouter une planification pour le segment, sélectionnez **[!UICONTROL Créer une planification]**.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-Une fenêtre contextuelle s’affiche, présentant les options de création de la planification des segments.
+Une boîte de dialogue s’affiche, présentant les options permettant de créer la planification des segments.
 
 * **Exportation** de fichier : Vous avez la possibilité d’exporter des fichiers complets ou des fichiers incrémentiels. L’exportation d’un fichier complet publie un instantané complet de tous les profils admissibles pour ce segment. L’exportation d’un fichier incrémentiel publie le delta des profils qui remplissent les critères pour ce segment depuis la dernière exportation.
 * **Fréquence** : Si  **[!UICONTROL Exporter la]** fichiers complète est sélectionné, vous avez la possibilité d’exporter  **** une fois par  **[!UICONTROL jour]** ou une fois. Si **[!UICONTROL Exporter des fichiers incrémentiels]** est sélectionné, vous avez la possibilité d’exporter **[!UICONTROL Quotidien]**. L’exportation d’un fichier **[!UICONTROL Une fois]** exporte le fichier une seule fois. L’exportation d’un fichier **[!UICONTROL Quotidien]** exporte le fichier tous les jours de la date du début à la date de fin à 12h00 UTC (19h00 HNE) si des fichiers complets sont sélectionnés et à 12h00 UTC (7h00 HNE) si des fichiers incrémentiels sont sélectionnés.
@@ -182,7 +188,7 @@ S&#39;applique à : destinations publicitaires, destinations sociales
 
 ![étape de planification du segment](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-Sur la page **[!UICONTROL Planification des segments]**, vous pouvez définir la date de début pour l’envoi des données vers la destination, ainsi que la fréquence d’envoi des données vers la destination.
+Sur la page **[!UICONTROL Planification du segment]**, vous pouvez définir la date de début pour l’envoi des données vers la destination et la fréquence d’envoi des données vers la destination.
 
 >[!IMPORTANT]
 >
